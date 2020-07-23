@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting"
+title: "Troubleshooting Xamarin.Forms"
 description: "Common error conditions and how to resolve them"
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -11,7 +11,7 @@ ms.date: 04/25/2017
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Troubleshooting
+# Troubleshooting Xamarin.Forms
 
 _Common error conditions and how to resolve them_
 
@@ -41,20 +41,20 @@ numbers might be different):
 
 This error may occur if you attempt to update _all_ the packages.
 
-This is because with Android projects set to a target/compile version of 
-Android 6.0 (API 23) or below, Xamarin.Forms has a hard dependency on *specific* 
-versions of the Android support packages. Although updated versions of those 
+This is because with Android projects set to a target/compile version of
+Android 6.0 (API 23) or below, Xamarin.Forms has a hard dependency on *specific*
+versions of the Android support packages. Although updated versions of those
 packages may be available, Xamarin.Forms is not necessarily compatible with them.
 
-In this case you should update _only_ the **Xamarin.Forms** package as this will 
-ensure that the dependencies remain on compatible versions. Other packages 
-that you have added to your project may also be updated individually as long as they 
+In this case you should update _only_ the **Xamarin.Forms** package as this will
+ensure that the dependencies remain on compatible versions. Other packages
+that you have added to your project may also be updated individually as long as they
 do not cause the Android support packages to update.
 
 > [!NOTE]
-> If you are using Xamarin.Forms 2.3.4 or higher **and** your Android project's 
-target/compile version is set to Android 7.0 (API 24) or higher, then the hard 
-dependencies mentioned above no longer apply and you may update the support packages 
+> If you are using Xamarin.Forms 2.3.4 or higher **and** your Android project's
+target/compile version is set to Android 7.0 (API 24) or higher, then the hard
+dependencies mentioned above no longer apply and you may update the support packages
 independently of the Xamarin.Forms package.
 
 ### Fix: Remove all packages, and re-add Xamarin.Forms

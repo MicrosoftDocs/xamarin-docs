@@ -10,7 +10,7 @@ ms.date: 03/24/2017
 
 # Multi-Process Debugging
 
-It is very common for modern solutions developed in Visual Studio for Mac to have multiple projects that target different platforms. For example, a solution might have a mobile application project that relies on the data provided by a web service project. While developing this solution, a developer might need to have both projects running concurrently to troubleshoot errors. Beginning in the [Cycle 9 release of Xamarin](https://releases.xamarin.com/stable-release-cycle-9/), it is now possible for Visual Studio for Mac to debug multiple processes that are running at the same time. This makes it possible to set breakpoints, to inspect variables, and to view threads in more than one running project. This is known as _multiple process debugging_. 
+It is very common for modern solutions developed in Visual Studio for Mac to have multiple projects that target different platforms. For example, a solution might have a mobile application project that relies on the data provided by a web service project. While developing this solution, a developer might need to have both projects running concurrently to troubleshoot errors. Beginning in the [Cycle 9 release of Xamarin](https://releases.xamarin.com/stable-release-cycle-9/), it is now possible for Visual Studio for Mac to debug multiple processes that are running at the same time. This makes it possible to set breakpoints, to inspect variables, and to view threads in more than one running project. This is known as _multiple process debugging_.
 
 This guide will discuss some of the changes made to Visual Studio for Mac to support debugging multiple processes, how to configure solutions to debug multiple processes, and how to attach to existing processes with Visual Studio for Mac.
 
@@ -69,7 +69,7 @@ When debugging multiple processes, it is possible to switch the active thread to
 
 When two (or more) projects have break points, Visual Studio for Mac will pause both processes. It is only possible to **Step Over** code in the active thread. The other process will be paused until a scope change makes it possible for the debugger to switch focus from the active thread. For example, consider the following screenshot of Visual Studio for Mac debugging two projects:
 
-![](multi-process-debugging-images/mpd09-xs.png  "Visual Studio for Mac debugging two projects")
+![Visual Studio for Mac debugging two projects](multi-process-debugging-images/mpd09-xs.png)
 
 In this screenshot, each solution has its own breakpoint. When debugging starts, the first breakpoint to be encountered is on **line 10** of `MainClass` in **SecondProject**. Because both projects have breakpoints, each process is halted. Once the breakpoint is encountered, each invocation of the **Step Over** will cause Visual Studio for Mac to step over code in the active thread.
 
@@ -87,7 +87,7 @@ It is possible to pause or resume a process by right-clicking on the process and
 
 The appearance of the debug toolbar will change depending on the state of the projects that are being debugged. When multiple projects are running, the debug toolbar will display both the **Pause** and **Resume** button where there is at least one project running and one project paused:
 
-![](multi-process-debugging-images/mpd07-xs.png  "Debug toolbar")
+![Debug toolbar](multi-process-debugging-images/mpd07-xs.png)
 
 Clicking the **Pause** button in the **Debug toolbar** will pause all processes that are being debugged, while clicking the **Resume** buttons will resume all paused processes.
 
@@ -95,7 +95,7 @@ Clicking the **Pause** button in the **Debug toolbar** will pause all processes 
 
 It is also possible to debug a second project once the first project is started by Visual Studio for Mac. Once the first project is started, **Right Click* on the project in the **Solution Pad** and select **Start Debugging Item**:
 
-![](multi-process-debugging-images/mpd13-xs.png  "Start Debugging Item")
+![Start Debugging Item](multi-process-debugging-images/mpd13-xs.png)
 
 ## Creating a Solution Configuration
 
@@ -109,7 +109,7 @@ To create a new solution configuration in Xamaring Studio:
 
 2. Click on the **New** button, and enter the name of the new solution configuration, and click **Create**. The new solution configuration will appear in the **Configurations** window:
 
-    ![](multi-process-debugging-images/mpd11-xs.png  "Naming a new solution configuration")
+    ![Naming a new solution configuration](multi-process-debugging-images/mpd11-xs.png)
 
 3. Select the new run configuration in the configurations list. The **Solution Options** dialog will display each project in the solution. Check off each project that should be started when a debugging session is initiated:
 

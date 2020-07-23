@@ -295,11 +295,11 @@ To help reduce the size of applications, the Xamarin platform includes a linker 
 
 The following screenshot shows the linker options in Visual Studio for Mac for a Xamarin.iOS project:
 
-![](memory-perf-best-practices-images/linker-options-ios.png)
+![Linker options for Xamarin.iOS](memory-perf-best-practices-images/linker-options-ios.png)
 
 The following screenshot shows the linker options in Visual Studio for Mac for a Xamarin.Android project:
 
-![](memory-perf-best-practices-images/linker-options-droid.png)
+![Linker options for Xamarin.Android](memory-perf-best-practices-images/linker-options-droid.png)
 
 The linker provides three different settings to control its behavior:
 

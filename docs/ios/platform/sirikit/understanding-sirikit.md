@@ -131,7 +131,7 @@ Siri knows that more is required to send a message than just a recipient, so it 
 
 In the example above, the user has responded, *"Please send more bananas"*, which Siri will bundle into a structured **Intent**:
 
-[![](understanding-sirikit-images/monkeychat05.png "Siri will bundle the user's response into a structured Intent")](understanding-sirikit-images/monkeychat05.png#lightbox)
+[![Siri will bundle the user's response into a structured Intent](understanding-sirikit-images/monkeychat05.png)](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 The structured Intent will contain the following information:
 

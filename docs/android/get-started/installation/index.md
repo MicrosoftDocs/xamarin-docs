@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/22/2018
 ---
 
-# Setup and Installation
+# Install and setup Xamarin.Android
 
 The topics in this section explain how to install and configure
 Xamarin.Android to work with Visual Studio on Windows and macOS, how to

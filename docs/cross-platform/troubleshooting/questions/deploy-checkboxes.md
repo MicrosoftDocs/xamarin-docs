@@ -14,7 +14,7 @@ Since Xamarin 3.5, Xamarin.iOS projects deployed automatically whenever you pres
 
 Because of this, the **Deploy** checkboxes are intentionally disabled in the Visual Studio Configuration Manager for Xamarin.iOS projects:
 
-![](deploy-checkboxes-images/configuration.png "Visual Studio Configuration Manager showing the 'Deploy' checkbox disabled for a Xamarin.iOS project in Xamarin 3.5")
+![Visual Studio Configuration Manager showing the Deploy checkbox disabled for a Xamarin.iOS project in Xamarin 3.5](deploy-checkboxes-images/configuration.png)
 
 This change eliminates an error that could appear in older versions of Xamarin (version 3.3 and earlier) when the Xamarin.iOS app project was not set to deploy:
 

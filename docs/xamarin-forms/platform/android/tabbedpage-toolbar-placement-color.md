@@ -54,7 +54,7 @@ In addition, the [`TabbedPage.SetBarItemColor`](xref:Xamarin.Forms.PlatformConfi
 
 The result is that the toolbar placement, the color of toolbar items, and the color of the selected toolbar item can be set on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
-![](tabbedpage-toolbar-placement-color-images/tabbedpage-toolbar-placement.png)
+![TabbedPage toolbar configuration](tabbedpage-toolbar-placement-color-images/tabbedpage-toolbar-placement.png)
 
 ## Related links
 

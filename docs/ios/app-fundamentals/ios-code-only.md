@@ -157,7 +157,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Every controller has an associated view, which is accessible from the `View` property. The above code changes the view's `BackgroundColor` property to `UIColor.LightGray` so that it will be visible, as shown below:
 
- [![](ios-code-only-images/image1.png "The View's background is a visible light gray")](ios-code-only-images/image1.png#lightbox)
+ [![The View's background is a visible light gray](ios-code-only-images/image1.png)](ios-code-only-images/image1.png#lightbox)
 
 We could set any `UIViewController` subclass as the `RootViewController` in this way as well, including controllers from UIKit as well as those we write ourselves. For example, the following code adds a `UINavigationController` as the `RootViewController`:
 
@@ -299,7 +299,7 @@ For example, let's edit the `CustomViewController` to create a login screen wher
 
 ### Adding the text fields
 
-First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section. 
+First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section.
 
 Add a control for the username by creating and initializing a `UITextField` and then adding it to the view hierarchy, as shown below:
 

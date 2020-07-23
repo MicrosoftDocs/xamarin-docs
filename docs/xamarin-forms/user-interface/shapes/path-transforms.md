@@ -289,11 +289,39 @@ In addition, the `Matrix` struct exposes a series of methods that can be used to
 
 The following table shows the structure of a Xamarin.Forms matrix:
 
-| | | |
-|---------|---------|-----|
-| M11     | M12     | 0.0 |
-| M21     | M22     | 0.0 |
-| OffsetX | OffsetY | 1.0 |
+:::row:::
+    :::column:::
+        M11
+    :::column-end:::
+    :::column:::
+        M12
+    :::column-end:::
+    :::column:::
+        0.0
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        M21
+    :::column-end:::
+    :::column:::
+        M22
+    :::column-end:::
+    :::column:::
+        0.0
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        OffsetX
+    :::column-end:::
+    :::column:::
+        OffsetY
+    :::column-end:::
+    :::column:::
+        1.0
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > An affine transformation matrix has its final column equal to (0,0,1), so only the members in the first two columns need to be specified.

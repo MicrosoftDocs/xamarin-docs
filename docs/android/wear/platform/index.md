@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# Platform Features
+# Wear OS Platform Features with Xamarin.Android
 
 Documents in this section cover features specific to Android Wear. Here
 you'll find a topic that describes how to create a WatchFace.

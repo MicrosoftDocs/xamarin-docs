@@ -48,7 +48,7 @@ The Siri Remote's Touch Surface is able to detect a variety of single-finger ges
 
 |Swipe|Click|Tap|
 |---|---|---|
-|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|![Moves selection](remote-bluetooth-images/Gesture01.png)|![Actives the selected item](remote-bluetooth-images/Gesture02.png)|![Directional buttons](remote-bluetooth-images/Gesture03.png)|
 |Moves selection (focus) between UI elements on screen (up, down left, right). Swiping can be used to scroll through large lists of content quickly using inertia.|Activates the selected (in-focus) item or acts like the primary button in a game. Clicking and holding can activate contextual menus or secondary functions.|Lightly tapping the Touch Surface on the edges acts like directional buttons on a D-Pad, moving focus up, down, left or right depending on the area tapped. Depending on the app, can be used to reveal hidden controls.|
 
 Apple provides the following suggestions for working with Touch Surface gestures:

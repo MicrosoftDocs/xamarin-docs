@@ -45,7 +45,7 @@ This document will refer to the storage directory for private files on external 
 
 The parameter for `GetExternalFilesDir()` is a string that specifies an _application directory_. This is a directory intended to provide a standard location for a logical organization of files. The string values are available through constants on the `Android.OS.Environment` class:
 
-| `Android.OS.Environment` | Directory |
+| Android.OS.Environment | Directory |
 |-|-|
 | DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
 | DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |

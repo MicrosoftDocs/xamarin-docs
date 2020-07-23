@@ -72,7 +72,7 @@ Many modern web-based solutions make use of web services, hosted by web servers,
 
 Testing models and view models from MVVM applications is identical to testing any other classes, and the same tools and techniques can be used. However, there are some patterns that are typical to model and view model classes, that can benefit from specific unit testing techniques.
 
-## Feedback
+## Community Site
 
 This project has a community site, on which you can post questions, and provide feedback. The community site is located on [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Alternatively, feedback about the eBook can be emailed to [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
 

@@ -19,7 +19,7 @@ iOS 11 has added the ability for rows to automatically expand. Headers, footers,
 
 Open the storyboard for the Table View that you want to have the Row's auto-resize for in the iOS Designer, select the Cell's *Prototype* and design the layout of the cell. For example:
 
-[![](autosizing-row-height-images/table01.png "The Cell's Prototype design")](autosizing-row-height-images/table01.png#lightbox)
+[![The Cell's Prototype design](autosizing-row-height-images/table01.png)](autosizing-row-height-images/table01.png#lightbox)
 
 For each element in the Prototype, add constraints to keep the elements in the correct position as the Table View is resized for rotation or different iOS Device screen sizes. For example, pinning the `Title` to the top, left and right of the Cell's *Content View*:
 
@@ -48,7 +48,7 @@ For each element of our Cell Prototype, assign a **Name** to expose it to C# cod
 
 [![Assign a Name to expose it to C# code](autosizing-row-height-images/table05.png)](autosizing-row-height-images/table05.png#lightbox)
 
-Next, add a custom class for the `UITableViewController`, the `UITableView` and the `UITableCell` (Prototype). For example: 
+Next, add a custom class for the `UITableViewController`, the `UITableView` and the `UITableCell` (Prototype). For example:
 
 [![Adding a custom class for the UITableViewController, the UITableView and the UITableCell](autosizing-row-height-images/table06.png)](autosizing-row-height-images/table06.png#lightbox)
 

@@ -68,11 +68,11 @@ This screenshot
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
+![This screenshot is the Watch Extension's Info.plist file](project-references-images/infoplist-extension.png)
 
 # [Visual Studio](#tab/windows)
 
-![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
+![This screenshot is the Watch Extension's Info.plist file](project-references-images/infoplist-extension-vs.png)
 
 -----
 

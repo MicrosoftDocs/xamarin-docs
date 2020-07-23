@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# Deployment and Testing
+# Deployment and Testing of Wear OS Apps
 
 This section explains how to test your Android Wear app on an Android
 Wear device (or on an Android emulator configured for Wear). It also

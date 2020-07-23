@@ -39,7 +39,7 @@ Watches are no different - you now need to add your Apple Watch
 When you know the Watch's UDID, add it to the device list
   in the Dev Center:
 
-![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
+![The Watch's UDID in the device list](device-images/devices-watch-sml.png)
 
 Once the Watch device has been added, ensure it is selected
   in any new or existing development or ad-hoc provisioning

@@ -70,7 +70,7 @@ For more information on creating a new iTunes Connect record, refer to the [Crea
 
 The form should reflect exactly the information in your app's Info.plist file, as illustrated below:
 
-[![](testflight-images/infoplist.png "The app's Info.plist")](testflight-images/infoplist.png#lightbox)
+[![The app's Info.plist](testflight-images/infoplist.png)](testflight-images/infoplist.png#lightbox)
 [![The form on iTunes Connect](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
 
 - **Name** — The descriptive name used when setting up the App Bundle. This must be an exact match to the **Application name** entry in your `Info.plist`.
@@ -222,7 +222,7 @@ You can now start to prepare invitations and add up to 2000 external testers thr
 
 If you have a large number of external testers, you can use the **Import File** link to import a `CSV` file with the following format per line:
 
-``` 
+```
 first name, last name, email address
 ```
 

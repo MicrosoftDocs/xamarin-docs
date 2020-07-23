@@ -816,7 +816,7 @@ Do the following:
 
 6. Select the application's archive and click the **Export...** button:
 
-    [![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
+    [![The application's archive](intro-to-cloudkit-images/shipping05.png)](intro-to-cloudkit-images/shipping05.png#lightbox)
 
 7. Select a method for export and click the **Next** button:
 

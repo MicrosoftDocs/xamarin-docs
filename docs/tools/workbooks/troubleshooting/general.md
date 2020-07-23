@@ -56,7 +56,7 @@ There is a [bug in the Monaco editor][monaco-bug] in Safari/WebKit,
 which is used in the Mac Workbooks app, that results in code
 tooltips rendering without text.
 
-![](general-images/monaco-signature-help-bug.png)
+![Monaco tooltips rendering without text](general-images/monaco-signature-help-bug.png)
 
 ### Workaround
 

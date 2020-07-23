@@ -21,7 +21,7 @@ Apple Watch solutions require two sets of icons:
 
 ## Apple Watch Icons
 
-| | | |
+|Icon|Description|Appearance|
 |-|-|-|
 |iOS App Icon|Appears on the iPhone and starts the Parent app|![iOS app icon](icons-images/icon-ios.png)|
 |Watch App Icon|Appears on the Apple Watch home screen|![watchOS app icon](icons-images/icon-home.png)|

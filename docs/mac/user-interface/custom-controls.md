@@ -337,7 +337,7 @@ Next, drag a `Custom View` into the User Interface design:
 
 With the Custom View still selected, switch to the **Identity Inspector** and change the view's **Class** to `NSFlipSwitch`:
 
-[![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
+[![Setting the View's class](custom-controls-images/custom04.png)](custom-controls-images/custom04.png#lightbox)
 
 Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewController.h` file and not the `.m` file):
 

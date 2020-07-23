@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/21/2018
 ---
 
-# Platform Features
+# Xamarin.Android Platform Features
 
 _Documents in this section cover features specific to Android. Here you'll find topics such as using Fragments, working with maps, and encapsulating data with Content Providers._
 
@@ -53,7 +53,7 @@ to handle app-links for the domain.
 
 This article provides an outline of using AndroidX within your
 Xamarin.Android projects and provides links to documentation
-that illustrates how to migrate your application from the 
+that illustrates how to migrate your application from the
 Android Support Library to AndroidX.
 
 ## [Android 10](~/android/platform/android-10.md)

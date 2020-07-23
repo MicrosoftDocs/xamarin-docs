@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# Deployment and Testing
+# Deployment and Testing of Xamarin.Android Apps
 
 This section includes guides that explain how to test an application,
 optimize its performance, prepare it for release, sign it with a
@@ -24,7 +24,7 @@ development.
 
 ## [Apply Changes](apply-changes.md)
 
-This guide covers the Apply Changes feature which lets you push 
+This guide covers the Apply Changes feature which lets you push
 resource changes to your running app without restarting your app.
 
 ## [Building Apps](building-apps/index.md)
@@ -85,7 +85,7 @@ performance and memory usage of an Android app.
 ## [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
 
 After an application has been coded and tested, it is necessary to
-prepare a package for distribution. The first task in preparing 
+prepare a package for distribution. The first task in preparing
 this package is to build the application for release, which mainly entails
 setting some application attributes.
 

@@ -21,7 +21,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views for presentation
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>BoxView</h3>Displays a rectangle of a particular color.<p align="center">![Screenshot of a BoxView](xaml-controls-images/BoxView.png "BoxView")</p>[API](xref:Xamarin.Forms.BoxView) / [Guide](~/xamarin-forms/user-interface/boxview.md) | <p valign="center"><pre>&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>Ellipse</h3>Displays an ellipse or circle.<p align="center">![Screenshot of an Ellipse](xaml-controls-images/Ellipse.png "Ellipse")</p>[API](xref:Xamarin.Forms.Shapes.Ellipse) / [Guide](~/xamarin-forms/user-interface/shapes/ellipse.md) | <p valign="center"><pre>&lt;Ellipse Fill="Red"<br />         WidthRequest="150"<br />         HeightRequest="50"<br />         HorizontalOptions="Center" /&gt;</pre></p> |
@@ -40,7 +40,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views that initiate commands
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>Button</h3>Displays text in a rectangular object.<p align="center">![Screenshot of a Button](xaml-controls-images/Button.png "Button")</p>[API](xref:Xamarin.Forms.Button) / [Guide](~/xamarin-forms/user-interface/button.md) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>Displays an image in a rectangular object.<p align="center">![Screenshot of an ImageButton](xaml-controls-images/ImageButton.png "ImageButton")</p>[API](xref:Xamarin.Forms.ImageButton) / [Guide](~/xamarin-forms/user-interface/imagebutton.md) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
@@ -52,7 +52,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views for setting values
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>CheckBox</h3>Allows the selection of a `boolean` value.<p align="center">![Screenshot of a CheckBox](xaml-controls-images/CheckBox.png "CheckBox")</p> [Guide](~/xamarin-forms/user-interface/checkbox.md) | <p valign="center"><pre>&lt;CheckBox IsChecked="true"<br />          HorizontalOptions="Center"<br />          VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Slider</h3>Allows the selection of a `double` value from a continuous range.<p align="center">![Screenshot of a Slider](xaml-controls-images/Slider.png "Slider")</p>[API](xref:Xamarin.Forms.Slider) / [Guide](~/xamarin-forms/user-interface/slider.md) | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
@@ -64,7 +64,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views for editing text
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>Entry</h3>Allows a single line of text to be entered and edited.<p align="center">![Screenshot of an Entry](xaml-controls-images/Entry.png "Entry")</p>[API](xref:Xamarin.Forms.Entry) / [Guide](~/xamarin-forms/user-interface/text/entry.md) | <p valign="center"><pre>&lt;Entry Keyboard="Email"<br />       Placeholder="Enter email address"<br />       VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Editor</h3>Allows multiple lines of text to be entered and edited.<p align="center">![Screenshot of an Editor](xaml-controls-images/Editor.png "Label")</p>[API](xref:Xamarin.Forms.Editor) / [Guide](~/xamarin-forms/user-interface/text/editor.md) | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
@@ -72,7 +72,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views to indicate activity
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>ActivityIndicator</h3>Displays an animation to show that the application is engaged in a lengthy activity, without giving any indication of progress.<p align="center">![Screenshot of an ActivityIndicator](xaml-controls-images/ActivityIndicator.png "ActivityIndicator")</p>[API](xref:Xamarin.Forms.ActivityIndicator) / [Guide](~/xamarin-forms/user-interface/activityindicator.md) | <p valign="center"><pre>&lt;ActivityIndicator IsRunning="True"<br />                   VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>ProgressBar</h3>Displays an animation to show that the application is progressing through a lengthy activity.<p align="center">![Screenshot of a ProgressBar](xaml-controls-images/ProgressBar.png "ProgressBar")</p>[API](xref:Xamarin.Forms.ProgressBar) / [Guide](~/xamarin-forms/user-interface/progressbar.md) | <p valign="center"><pre>&lt;ProgressBar Progress=".5"<br />             VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
@@ -80,7 +80,7 @@ All of the views that are defined in Xamarin.Forms can be referenced from XAML f
 
 ## Views that display collections
 
-|     |     |
+| View | Example |
 | --- | --- |
 | <h3>CarouselView</h3>Displays a scrollable list of data items.<p align="center">![Screenshot of a CarouselView](xaml-controls-images/CarouselView.png "CarouselView")</p>[Guide](~/xamarin-forms/user-interface/carouselview/index.md) | <p valign="center"><pre>&lt;CarouselView ItemsSource="{Binding Monkeys}"&gt;<br/>              ItemTemplate="{StaticResource MonkeyTemplate}" /&gt;</pre></p>|
 | <h3>CollectionView</h3>Displays a scrollable list of selectable data items, using different layout specifications.<p align="center">![Screenshot of a CollectionView](xaml-controls-images/CollectionView.png "CollectionView")</p>[Guide](~/xamarin-forms/user-interface/collectionview/index.md) | <p valign="center"><pre>&lt;CollectionView ItemsSource="{Binding Monkeys}"&gt;<br/>                ItemTemplate="{StaticResource MonkeyTemplate}"<br />    &lt;CollectionView.ItemsLayout&gt;<br />       &lt;GridItemsLayout Orientation="Vertical"<br />                        Span="2" /&gt;<br />    &lt;/CollectionView.ItemsLayout&gt;<br />&lt;/CollectionView/&gt;</pre></p> |

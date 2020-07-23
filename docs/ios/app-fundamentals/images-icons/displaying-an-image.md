@@ -36,11 +36,11 @@ To create a new image set and add images to it, do the following:
 
     ![The Image Set editor](displaying-an-image-images/imageset03.png)
 4. From here, drag in images for each of the different devices and resolutions required.
-5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![](displaying-an-image-images/imageset04.png "Editing the new image set's Name")
+5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![Editing the new image set's Name](displaying-an-image-images/imageset04.png)
 
 When using an **Image Set** in the iOS Designer, simply select the set's name from the dropdown list in the Property Editor:
 
-![](displaying-an-image-images/imageset06.png "Select an image set's name from the dropdown list")
+![Select an image set's name from the dropdown list](displaying-an-image-images/imageset06.png)
 
 # [Visual Studio](#tab/windows)
 

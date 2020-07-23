@@ -228,9 +228,9 @@ of Mono on the Mac.
 Progress is indicated by various prompts, as shown by the following
 screenshots (click to zoom):
 
-||Install Check|Downloading|Installing
+|Mono|Install Check|Downloading|Installing
 |---|---|---|---|
-|Mono|[![Missing Mono installation](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![Downloading Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![Installing Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
+||[![Missing Mono installation](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![Downloading Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![Installing Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
 
 ### Xamarin.iOS
 
@@ -251,9 +251,9 @@ installed on the Windows machine.
 Progress is indicated by various prompts, as shown by the following
 screenshots (click to zoom):
 
-||Install Check|Downloading|Installing
+|Xamarin.iOS|Install Check|Downloading|Installing
 |---|---|---|---|
-|Xamarin.iOS|[![Missing Xamarin.iOS installation](images/xamios-missing.png "Missing Xamarin.iOS installation")](images/xamios-missing-large.png#lightbox)|[![Downloading Xamarin.iOS](images/xamios-downloading.png "Downloading Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installing Xamarin.iOS](images/xamios-installing.png "Installing Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+||[![Missing Xamarin.iOS installation](images/xamios-missing.png "Missing Xamarin.iOS installation")](images/xamios-missing-large.png#lightbox)|[![Downloading Xamarin.iOS](images/xamios-downloading.png "Downloading Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installing Xamarin.iOS](images/xamios-installing.png "Installing Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### Xcode tools and license
 
@@ -262,9 +262,9 @@ and its license accepted. While Pair to Mac does not install Xcode, it
 does prompt for license acceptance, as shown in the following screenshots
 (click to zoom):
 
-||Install Check|License Acceptance|
+|Xcode|Install Check|License Acceptance|
 |---|---|---|
-|Xcode|[![Missing Xcode installation](images/xcode-missing.png "Missing Xcode installation")](images/xcode-missing-large.png#lightbox)|[![Xcode license](images/xcode-license.png "Xcode license")](images/xcode-license-large.png#lightbox)|
+||[![Missing Xcode installation](images/xcode-missing.png "Missing Xcode installation")](images/xcode-missing-large.png#lightbox)|[![Xcode license](images/xcode-license.png "Xcode license")](images/xcode-license-large.png#lightbox)|
 
 Additionally, Pair to Mac will install or update various packages
 distributed with Xcode. For example:

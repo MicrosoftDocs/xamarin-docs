@@ -247,13 +247,13 @@ by default.
 
 To enable this feature, make sure the **Debug project code only; do not step into framework code** option is deselected under the _Visual Studio for Mac > Preferences > Debugger_ menu as illustrated below:
 
-[![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
+[![Debugging Mono's Class Libraries](debugging-in-xamarin-ios-images/debugging6.png)](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
 To debug the class libraries in Visual Studio, you must disable **Just My Code** under the _Debug > Options_ menu. In the _Debugging > General_ node, clear the **Enable Just My Code** checkbox:
 
-[![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
+[![Debugging Mono's Class Libraries](debugging-in-xamarin-ios-images/debugging6vs.png)](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

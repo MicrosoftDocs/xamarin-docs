@@ -1,5 +1,5 @@
 ---
-title: "Installing and Setting Up Wear OS onXamarin.Android "
+title: "Installing and Setting Up Wear OS on Xamarin.Android "
 description: "This article walks through the installation steps and configuration details required to prepare your computer and devices for Android Wear development. By the end of this article, you'll have a working Xamarin.Android Wear installation integrated into Visual Studio for Mac and/or Microsoft Visual Studio, and you'll be ready to start building your first Xamarin.Android Wear application."
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# Setup and Installation
+# Install and setup Wear OS on Xamarin.Android
 
 _This article walks through the installation steps and configuration details required to prepare your computer and devices for Android Wear development. By the end of this article, you'll have a working Xamarin.Android Wear installation integrated into Visual Studio for Mac and/or Microsoft Visual Studio, and you'll be ready to start building your first Xamarin.Android Wear application._
 
@@ -40,8 +40,8 @@ if you are developing specifically for API level 23 or earlier.
 
 ## Installation
 
-After you have installed Xamarin.Android, perform the following steps 
-so that you're ready to build and test Android Wear apps: 
+After you have installed Xamarin.Android, perform the following steps
+so that you're ready to build and test Android Wear apps:
 
 1. Install the required Android SDK and tools.
 2. Configure a test device.
@@ -49,9 +49,9 @@ so that you're ready to build and test Android Wear apps:
 
 These steps are described in the following sections.
 
-### Install Android SDK and tools 
+### Install Android SDK and tools
 
-Launch the **Android SDK Manager**: 
+Launch the **Android SDK Manager**:
 
 # [Visual Studio](#tab/windows)
 
@@ -69,9 +69,9 @@ Ensure that you have the following Android SDK and tools installed:
 - Android 4.4W (API20), or
 - Android 5.0.1 (API21) or higher.
 
-If you do not have the latest SDK and tools installed, download the 
-required SDK tools *and* the API bits (you may need to scroll a bit to 
-find them &ndash; the API selection is shown below): 
+If you do not have the latest SDK and tools installed, download the
+required SDK tools *and* the API bits (you may need to scroll a bit to
+find them &ndash; the API selection is shown below):
 
 # [Visual Studio](#tab/windows)
 
@@ -85,8 +85,8 @@ find them &ndash; the API selection is shown below):
 
 ## Configuration
 
-Before you can use test your app, you must configure an Android Wear 
-emulator or an actual Android Wear device. 
+Before you can use test your app, you must configure an Android Wear
+emulator or an actual Android Wear device.
 
 ### Android Wear Emulator
 
@@ -115,19 +115,19 @@ information about developing with a Wear device, see
 
 ## Create Your First Android Wear App
 
-Follow the [Hello, Wear](~/android/wear/get-started/hello-wear.md) 
+Follow the [Hello, Wear](~/android/wear/get-started/hello-wear.md)
 instructions to build your first watch app.
 
 ## Packaging Your App
 
-Android wear applications are always distributed with a companion 
-Android phone app. 
+Android wear applications are always distributed with a companion
+Android phone app.
 
-When you add your Android Wear application as a reference to your main 
-Android application it is automatically assumed to be an Android Wear 
-project and will generate all necessary XML and metadata for you. In 
-addition, it will verify that package and version numbers match so you 
-can easily ship your apps to Google Play. 
+When you add your Android Wear application as a reference to your main
+Android application it is automatically assumed to be an Android Wear
+project and will generate all necessary XML and metadata for you. In
+addition, it will verify that package and version numbers match so you
+can easily ship your apps to Google Play.
 
 To learn more about packaging Wear apps, see
 [Working with Packaging](~/android/wear/deploy-test/packaging.md).

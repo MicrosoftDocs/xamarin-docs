@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# User Interface
+# User Interfaces with Xamarin.Android
 
 The following sections explain the various tools and building blocks
 that are used to compose user interfaces in Xamarin.Android apps.

@@ -108,7 +108,7 @@ else
 
 If this code is run on an iOS 9 device, a new contact will be added to the user's collection. For example:
 
-[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
+[![A new contact added to the user's collection](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 ### Contact Formatting and Localization
 

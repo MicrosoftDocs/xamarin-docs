@@ -14,7 +14,7 @@ This page lists recent iOS releases as well as highlighting some of the Apple fr
 
 ## iOS releases
 
-|  |  |
+| Release | Description |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Introduction to iOS 13](~/ios/platform/ios13/index.md) | This document describes Xamarin.iOS 13.|
 | [Introduction to iOS 12](~/ios/platform/introduction-to-ios12/index.md) | This document describes iOS 12 features available for use when building Xamarin.iOS applications.|

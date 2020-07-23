@@ -10,9 +10,9 @@ ms.date: 08/21/2018
 ---
 # Fragments walkthrough &ndash; phone
 
-This is the first part of a walkthrough that will create a  Xamarin.Android app that targets an Android device in portrait orientation. This walkthrough will discuss how to create fragments in Xamarin.Android and how to add them to a sample.
+This is the first part of a walkthrough that will create a Xamarin.Android app that targets an Android device in portrait orientation. This walkthrough will discuss how to create fragments in Xamarin.Android and how to add them to a sample.
 
-[![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
+[![Walkthrough app screenshot](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 The following classes will be created for this app:
 

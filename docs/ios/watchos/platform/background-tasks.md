@@ -11,11 +11,11 @@ ms.date: 03/13/2017
 
 # watchOS Background Tasks in Xamarin
 
-With watchOS 3, there are three main ways that a watch app can keep its information up-to-date: 
+With watchOS 3, there are three main ways that a watch app can keep its information up-to-date:
 
-- Using one of the several new background tasks. 
-- Having one of its Complications on the watch face (giving it extra time to update). 
-- Having the user pin to app to the new Dock (where its kept in memory and updated often). 
+- Using one of the several new background tasks.
+- Having one of its Complications on the watch face (giving it extra time to update).
+- Having the user pin to app to the new Dock (where its kept in memory and updated often).
 
 ## Keeping an App Up-To-Date
 
@@ -38,7 +38,7 @@ By using the new APIs Apple has included in watchOS 3, the app can schedule for 
 
 [![An example of the Weather Complication](background-tasks-images/update01.png)](background-tasks-images/update01.png#lightbox)
 
-1. The app schedules to be woken up by the system at a specific time. 
+1. The app schedules to be woken up by the system at a specific time.
 2. The app fetches the information that it will require to generate the update.
 3. The app regenerates its User Interface to reflect the new data.
 4. When the user glances at the app's Complication, it has up-to-date information without the user having to wait for the update.
@@ -185,7 +185,7 @@ It is critical that a watchOS app behaves responsibly within this ecosystem by l
 
 Take a look at the following scenario:
 
-[![](background-tasks-images/update13.png "A watchOS app limits its drain on the system's shared resources")](background-tasks-images/update13.png#lightbox)
+[![A watchOS app limits its drain on the system's shared resources](background-tasks-images/update13.png)](background-tasks-images/update13.png#lightbox)
 
 1. The user launches a watchOS app at 1:00 PM.
 2. The app schedules a task to wake up and download new content in an hour at 2:00 PM.
@@ -198,7 +198,7 @@ While every app is different, Apple suggests finding patterns of usage, like tho
 
 ## Implementing Background Tasks
 
-For the sake of example, this document will use the fake MonkeySoccer sports app that reports soccer scores to the user. 
+For the sake of example, this document will use the fake MonkeySoccer sports app that reports soccer scores to the user.
 
 Take a look at the following typical usage scenario:
 
@@ -210,7 +210,7 @@ The user's favorite soccer team is playing a big match from 7:00 PM to 9:00 PM s
 2. The app receives the Task and updates its data and UI, then schedules for another background Task 30 minutes later. It is important that the developer remembers to schedule another background Task, or the app will never be re-awoken to get more updates.
 3. Again, the app receives the Task and updates its data, updates its UI and schedules another background Task 30 minutes later.
 4. The same process repeats again.
-5. The last background Task is received and the app again updates its data and UI. Since this is the final score it doesn't schedule for a new background refresh. 
+5. The last background Task is received and the app again updates its data and UI. Since this is the final score it doesn't schedule for a new background refresh.
 
 <a name="Scheduling-for-Background-Update"></a>
 
@@ -224,7 +224,7 @@ private void ScheduleNextBackgroundUpdate ()
   // Create a fire date 30 minutes into the future
   var fireDate = NSDate.FromTimeIntervalSinceNow (30 * 60);
 
-  // Create 
+  // Create
   var userInfo = new NSMutableDictionary ();
   userInfo.Add (new NSString ("LastActiveDate"), NSDate.FromTimeIntervalSinceNow(0));
   userInfo.Add (new NSString ("Reason"), new NSString ("UpdateScore"));
@@ -255,7 +255,7 @@ Next, take a closer look at the 5 minute window showing the steps required to up
 
 1. At 7:30:02 PM the app is awakened by the system and given the update background Task. Its first priority is to get the latest scores from the server. See [Scheduling a NSUrlSession](#Scheduling-a-NSUrlSession) below.
 2. At 7:30:05 the app completes the original Task, the system puts the app to sleep and continues to download the requested data in the background.
-3. When the system completes the download, it creates a new Task to wake the app so it can process the downloaded information. See [Handling Background Tasks](#Handling-Background-Tasks) and [Handling the Download Completing](#Handling-the-Download-Completing) below. 
+3. When the system completes the download, it creates a new Task to wake the app so it can process the downloaded information. See [Handling Background Tasks](#Handling-Background-Tasks) and [Handling the Download Completing](#Handling-the-Download-Completing) below.
 4. The app saves the updated information and marks the Task completed. The developer may be tempted to update the app's User Interface at this time, however Apple suggests scheduling a Snapshot Task to handle that process. See [Scheduling a Snapshot Update](#Scheduling-a-Snapshot-Update) below.
 5. The app receives the Snapshot Task, updates its User Interface and marks the Task completed. See [Handling a Snapshot Update](#Handling-a-Snapshot-Update) below.
 
@@ -303,7 +303,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
     #endregion
 
     ...
-    
+
     #region Public Methods
     public void CompleteTask (WKRefreshBackgroundTask task)
     {
@@ -311,7 +311,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
       task.SetTaskCompleted ();
       PendingTasks.Remove (task);
     }
-    #endregion 
+    #endregion
 
     #region Override Methods
     public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backgroundTasks)
@@ -336,7 +336,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
       }
     }
     #endregion
-    
+
     ...
   }
 }
@@ -516,7 +516,7 @@ Additionally, it also tells the Snapshot Task that the app is not returning to t
 
 ## Working Efficiently
 
-As seen in the above example of the five minute window that the MonkeySoccer app took to update its scores, by working efficiently and using the new watchOS 3 background Tasks, the app was only active for a total of 15 seconds: 
+As seen in the above example of the five minute window that the MonkeySoccer app took to update its scores, by working efficiently and using the new watchOS 3 background Tasks, the app was only active for a total of 15 seconds:
 
 [![The app was only active for a total of 15 seconds](background-tasks-images/update16.png)](background-tasks-images/update16.png#lightbox)
 
@@ -526,7 +526,7 @@ This lowers the impact that the app will have on both available Apple Watch reso
 
 ## How Scheduling Works
 
-While a watchOS 3 app is in the foreground, it is always scheduled to run and can do any type of processing required such as update data or redraw its UI. When the app moves into the background, it is usually suspended by the system and all runtime operations are halted. 
+While a watchOS 3 app is in the foreground, it is always scheduled to run and can do any type of processing required such as update data or redraw its UI. When the app moves into the background, it is usually suspended by the system and all runtime operations are halted.
 
 While the app is in the background, it may be targeted by the system to quickly run a specific task. So, in watchOS 2, the system might temporarily wake a background app to do things like handling a long look notification or to update the app's Complication. In watchOS 3, there are several new ways that an app can be run in the background.
 
@@ -633,7 +633,7 @@ There might be times when the system decides it needs a fresh Snapshot of the ap
 
 <a name="Best-Practices"></a>
 
-## Best Practices 
+## Best Practices
 
 Apple suggests the following best practices when working with Background Tasks:
 
@@ -646,7 +646,7 @@ Apple suggests the following best practices when working with Background Tasks:
   - Background refreshes.
 - Use `ScheduleBackgroundRefresh` for general-purpose background runtime such as:
   - Polling the system for information.
-  - Schedule future `NSURLSessions` to request background data. 
+  - Schedule future `NSURLSessions` to request background data.
   - Known time transitions.
   - Triggering Complication updates.
 

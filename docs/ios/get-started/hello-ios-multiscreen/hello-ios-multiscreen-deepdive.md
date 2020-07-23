@@ -97,7 +97,7 @@ The navigation controller serves three primary functions:
 
 - **Optionally Provides a Back Button** - When we push a new item onto the navigation stack, the title bar can automatically display a  *back button* that allows the user to navigate backwards. Pressing the back button  *pops* the current view controller off the navigation stack, and loads the previous Content View hierarchy into the Window:  
 
-    [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+    [![This diagram illustrates popping a card off the stack](hello-ios-multiscreen-deepdive-images/03.png)](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 - **Provides a Title Bar** – The top portion of the  navigation controller is called the  *Title Bar* . It’s responsible for displaying the view controller title, as illustrated by the diagram below:  
 
@@ -120,7 +120,7 @@ Root view controller, like we did in the Phoneword app:
 ### Additional navigation options
 
 The navigation controller is a common way of handling navigation in
-iOS, but it is not the only option. For example, a 
+iOS, but it is not the only option. For example, a
 [Tab Bar Controller](~/ios/user-interface/controls/creating-tabbed-applications.md)
 can split an application into different functional areas and a
 [Split view controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)

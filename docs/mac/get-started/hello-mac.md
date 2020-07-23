@@ -322,7 +322,7 @@ Follow these steps to use Interface Builder:
 
 3. Click on the **Title** property in the **Attribute Inspector** and change the button's title to **Click Me**:
 
-    [![](hello-mac-images/xcode09.png "Setting the button's properties")](hello-mac-images/xcode09.png#lightbox)
+    [![Setting the button's properties](hello-mac-images/xcode09.png)](hello-mac-images/xcode09.png#lightbox)
 
 4. Drag a **Label** from the **Library Section**:
 

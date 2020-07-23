@@ -182,7 +182,7 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 4. Scroll to the **Name** section.
 5. Fill in all the required information:
 
-    [![](itunesconnect-images/name01.png "Editing Name, Description, What's New, Keywords and URLs in iTunes Connect")](itunesconnect-images/name01.png#lightbox)
+    [![Editing Name, Description, What's New, Keywords and URLs in iTunes Connect](itunesconnect-images/name01.png)](itunesconnect-images/name01.png#lightbox)
 6. Click the **Save** button at the top of the screen to save your changes.
 
 > [!IMPORTANT]

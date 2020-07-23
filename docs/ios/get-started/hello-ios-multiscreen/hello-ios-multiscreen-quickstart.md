@@ -64,7 +64,7 @@ Then, move the **Phoneword** scene next to the **navigation controller**:
 
 8. Double-click on the **Phoneword** screen’s **Title** bar and change the **Title** to **Phoneword**:
 
-    ![](hello-ios-multiscreen-quickstart-images/09.png "Change the Title to 'Phoneword'")
+    ![Change the Title to Phoneword](hello-ios-multiscreen-quickstart-images/09.png)
 
 9. Drag a **Button** from the **Toolbox** and place it under the **Call Button**. Drag the
 handles to make the new **Button** the same width as the **Call Button**:
@@ -91,7 +91,7 @@ handles to make the new **Button** the same width as the **Call Button**:
     ![The CallHistoryController.cs file in the Solution Pad](hello-ios-multiscreen-quickstart-images/14new.png)
 
 13. Double-click on the **CallHistoryController.cs** file to open it and replace the contents with the following code:
-    
+
     ```csharp
     using System;
     using Foundation;
@@ -323,7 +323,7 @@ This walkthrough will add a Call History screen to our **Phoneword** application
 10. In the **Properties Explorer**, change the **Name** of the **Button** to `CallHistoryButton`
   and change the **Title** to **Call History**:
 
-    ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
+    ![Change the Name of the Button to CallHistoryButton and the Title to Call History](hello-ios-multiscreen-quickstart-images/image9.png)
 
 11. Create the **Call History** screen. From the **Toolbox**, drag a **table view controller**
   onto the design surface:

@@ -26,7 +26,7 @@ iPhone 5.
 
 Collection Views allow content to be displayed using arbitrary layouts. They
 allow easily creating grid-like layouts out of the box, while supporting custom
-layouts as well. For more information see, the [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)guide.
+layouts as well. For more information see, the [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md) guide.
 
 ## [Introduction to PassKit](~/ios/platform/passkit.md)
 
