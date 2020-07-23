@@ -50,7 +50,7 @@ Which type of service to use is very dependent on application requirements. As a
 
 While most services run in the background, there is a special sub-category known as a _foreground service_. This is a service that is given a higher priority (compared to a normal service) to perform some work for the user (such as playing music). 
 
-It is also possible to run a service in it's own process on the same device, this is sometimes referred to as a _remote service_ or as an _out-of-process service_. This does require more effort to create, but can be useful for when an application needs to share functionality with other applications, and can, in some cases, improve the user experience of an application. 
+It is also possible to run a service in its own process on the same device, this is sometimes referred to as a _remote service_ or as an _out-of-process service_. This does require more effort to create, but can be useful for when an application needs to share functionality with other applications, and can, in some cases, improve the user experience of an application. 
 
 ### Background Execution Limits in Android 8.0
 
