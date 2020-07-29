@@ -42,7 +42,7 @@ The `ShellRenderer` class exposes the following overridable methods:
 The `FlyoutItem` and `TabBar` classes are aliases for the `ShellItem` class, and the `Tab` class is an alias for the `ShellSection` class. Therefore, the `CreateShellItemRenderer` method should be overridden when creating a custom renderer for `FlyoutItem` objects, and the `CreateShellSectionRenderer` method should be overridden when creating a custom renderer for `Tab` objects.
 
 > [!IMPORTANT]
-> There are additional Shell renderer classes, such as `ShellSectionRenderer` and `ShellItemRenderer`, on both iOS and Android. However, these additional renderer classes are created by overrides in the `ShellRenderer` class. Therefore, customizing the behavior of these additional renderer classes can be achieved by subclassing them, and creating an instance of the subclass in the appropriate override in the subclassed `ShellRenderer` class.
+> There are additional Shell renderer classes, such as `ShellSectionRenderer` and `ShellItemRenderer`, on iOS, Android, and UWP. However, these additional renderer classes are created by overrides in the `ShellRenderer` class. Therefore, customizing the behavior of these additional renderer classes can be achieved by subclassing them, and creating an instance of the subclass in the appropriate override in the subclassed `ShellRenderer` class.
 
 ### iOS example
 
