@@ -6,7 +6,7 @@ ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 07/29/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -35,14 +35,14 @@ The process for creating a Shell custom renderer class is as follows:
 
 The `ShellRenderer` class exposes the following overridable methods:
 
-| iOS | Android |
-| --- | --- |
-| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+| iOS | Android | UWP |
+| --- | --- | --- |
+| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` | `CreateShellFlyoutTemplateSelector`<br />`CreateShellHeaderRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateFlyoutBackdropColor`<br />`UpdateFlyoutBackgroundColor` |
 
 The `FlyoutItem` and `TabBar` classes are aliases for the `ShellItem` class, and the `Tab` class is an alias for the `ShellSection` class. Therefore, the `CreateShellItemRenderer` method should be overridden when creating a custom renderer for `FlyoutItem` objects, and the `CreateShellSectionRenderer` method should be overridden when creating a custom renderer for `Tab` objects.
 
 > [!IMPORTANT]
-> There are additional Shell renderer classes, such as `ShellSectionRenderer` and `ShellItemRenderer`, on both iOS and Android. However, these additional renderer classes are created by overrides in the `ShellRenderer` class. Therefore, customizing the behavior of these additional renderer classes can be achieved by subclassing them, and creating an instance of the subclass in the appropriate override in the subclassed `ShellRenderer` class.
+> There are additional Shell renderer classes, such as `ShellSectionRenderer` and `ShellItemRenderer`, on iOS, Android, and UWP. However, these additional renderer classes are created by overrides in the `ShellRenderer` class. Therefore, customizing the behavior of these additional renderer classes can be achieved by subclassing them, and creating an instance of the subclass in the appropriate override in the subclassed `ShellRenderer` class.
 
 ### iOS example
 

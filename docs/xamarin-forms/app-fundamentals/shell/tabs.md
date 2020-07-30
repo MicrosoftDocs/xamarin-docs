@@ -261,7 +261,7 @@ In a Shell application, every [`ContentPage`](xref:Xamarin.Forms.ContentPage) ob
 </Shell>
 ```
 
-This XAML creates and displays `CatsPage`, because it's the first item of content declared in the subclassed `Shell` object. `CatsPage` and `MonkeysPage` can be navigated to via bottom tabs, and these pages are only created when the user navigates to them. The advantage of this approach is that the poor startup experience is avoided, as pages are created on demand in response to navigation, rather than at application startup.
+This XAML creates and displays `CatsPage`, because it's the first item of content declared in the subclassed `Shell` object. `DogsPage` and `MonkeysPage` can be navigated to via bottom tabs, and these pages are only created when the user navigates to them. The advantage of this approach is that the poor startup experience is avoided, as pages are created on demand in response to navigation, rather than at application startup.
 
 ## Tab appearance
 
