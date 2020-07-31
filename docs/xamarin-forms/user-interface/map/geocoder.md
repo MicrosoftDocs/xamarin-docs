@@ -10,11 +10,16 @@ ms.date: 10/22/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
+
+
 # Xamarin.Forms Map Geocoding
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace provides a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) class, which converts between string addresses and latitude and longitude coordinates that are stored in [`Position`](xref:Xamarin.Forms.Maps.Position) objects. For more information about the [`Position`](xref:Xamarin.Forms.Maps.Position) struct, see [Map Position and Distance](position-distance.md).
+
+> [!NOTE]
+> An alternitive Geocoding API is avalible in the Xamarin Essentials Nuget packages. This option offers structured address data when Geo Coding addresses as opposed to the strings returned by this API. [See Docs Here](https://docs.microsoft.com/en-us/xamarin/essentials/geocoding)
 
 ## Geocode an address
 
