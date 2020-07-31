@@ -10,8 +10,6 @@ ms.date: 10/22/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-
-
 # Xamarin.Forms Map Geocoding
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
