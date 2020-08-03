@@ -16,6 +16,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 The [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace provides a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) class, which converts between string addresses and latitude and longitude coordinates that are stored in [`Position`](xref:Xamarin.Forms.Maps.Position) objects. For more information about the [`Position`](xref:Xamarin.Forms.Maps.Position) struct, see [Map Position and Distance](position-distance.md).
 
+> [!NOTE]
+> An alternative geocoding API is avalible in Xamarin.Essentials. The Xamarin.Essentials `Geocoding` API offers structured address data when geocoding addresses, as opposed to the strings returned by this API. For more information, see [Xamarin.Essentials: Geocoding](~/essentials/geocoding.md).
+
 ## Geocode an address
 
 A street address can be geocoded into latitude and longitude coordinates by creating a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) instance and calling the [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync*) method on the `Geocoder` instance:
