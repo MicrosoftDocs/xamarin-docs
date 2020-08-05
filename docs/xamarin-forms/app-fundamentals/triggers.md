@@ -326,7 +326,7 @@ You can provide *both* `EnterActions` and `ExitActions` as  well as `Setter`s in
         <Trigger TargetType="Entry"
                  Property="Entry.IsFocused" Value="True">
             <Trigger.EnterActions>
-                <local:FadeTriggerAction StartsFrom="0"" />
+                <local:FadeTriggerAction StartsFrom="0" />
             </Trigger.EnterActions>
 
             <Trigger.ExitActions>
@@ -369,7 +369,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## State triggers
 
-State triggers are a specialized group of triggers that define the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied. 
+State triggers are a specialized group of triggers that define the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
 State triggers are added to the [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) collection of a [`VisualState`](xref:Xamarin.Forms.VisualState). This collection can contain a single state trigger, or multiple state triggers. A [`VisualState`](xref:Xamarin.Forms.VisualState) will be applied when any state triggers in the collection are active.
 
