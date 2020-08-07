@@ -1,5 +1,5 @@
 ---
-title: "Adding a swipe gesture recognizer"
+title: "Add a swipe gesture recognizer"
 description: "This article explains how to recognize a swipe gesture occurring on a view."
 ms.prod: xamarin
 ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
@@ -10,7 +10,7 @@ ms.date: 08/14/2018
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Adding a swipe gesture recognizer
+# Add a swipe gesture recognizer
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 

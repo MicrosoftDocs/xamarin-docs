@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen
 
-![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png)
 
 Dual-screen devices like the Microsoft Surface Duo facilitate new user-experience possibilities for your applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for dual-screen devices.
 
@@ -34,7 +34,7 @@ Follow these steps to add dual-screen capabilities to a Xamarin.Forms app:
 5. Update the `Activity` attribute on the Android project's `MainActivity` class, so that it includes _all_ these `ConfigurationChanges` options:
 
     ```@csharp
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
         | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
     ```
 

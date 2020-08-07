@@ -177,6 +177,7 @@ The `ShellContent` class includes the following properties that control tab cont
 - `Icon`, of type `ImageSource`, defines the icon to display in parts of the chrome which are not the flyout.
 - `IsChecked`, of type `boolean`, defines if the item is currently highlighted in the flyout.
 - `IsEnabled`, of type `boolean`, defines if the item is selectable in the chrome.
+- `IsVisible`, of type `bool`, indicates if the `ShellContent` is hidden from all UI structures. Its default value is `true`.
 - `MenuItems`, of type `MenuItemCollection`, the menu items to display in the flyout when this `ShellContent` is the presented page.
 - `Title`, of type `string`, the title to display in the UI.
 

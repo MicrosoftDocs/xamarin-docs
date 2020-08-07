@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Fill rules
 
-![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -31,6 +31,7 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -72,6 +73,7 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -108,6 +110,7 @@ A more complex shape with segments running in different directions is required t
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Fill="#CCCCFF">
      <Path.Data>
          <GeometryGroup FillRule="Nonzero">

@@ -6,7 +6,7 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
+ms.date: 07/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -217,6 +217,7 @@ The `SearchHandler` class defines the following properties that affect its appea
 - `HorizontalTextAlignment`, of type `TextAlignment`, is the horizontal alignment of the search box text.
 - `PlaceholderColor`, of type `Color`, is the color of the placeholder search box text.
 - `TextColor`, of type `Color`, is the color of the search box text.
+- `TextTransform`, of type `TextTransform`, determines the casing of the search box text.
 - `VerticalTextAlignment`, of type `TextAlignment`, is the vertical alignment of the search box text.
 
 ## SearchHandler keyboard
@@ -313,6 +314,7 @@ The `SearchHandler` class defines the following properties that control its appe
 - `SelectedItem`, of type `object`, the selected item in the search results. This property is read only, and has a default value of `null`.
 - `ShowsResults`, of type `bool`, indicates whether search results should be expected in the suggestion area, on text entry. The default value is `false`.
 - `TextColor`, of type `Color`, is the color of the search box text.
+- `TextTransform`, of type `TextTransform`, determines the casing of the search box text.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 

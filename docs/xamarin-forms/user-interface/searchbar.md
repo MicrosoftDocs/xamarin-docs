@@ -6,7 +6,7 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 11/04/2019
+ms.date: 07/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -33,6 +33,7 @@ The `SearchBar` class defines the following properties:
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) is an `object` that specifies the parameter that should be passed to the `SearchCommand`.
 * [`Text`](xref:Xamarin.Forms.InputView.Text) is a `string` containing the query text in the `SearchBar`.
 * [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) is a `Color` that defines the query text color.
+* `TextTransform` is a `TextTransform` value that determines the casing of the `SearchBar` text.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means the `SearchBar` can be customized and be the target of data bindings. Specifying font properties on the `SearchBar` is consistent with customizing text on other [Xamarin.Forms Text controls](~/xamarin-forms/user-interface/text/index.md). For more information, see [Fonts in Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -59,6 +60,7 @@ The `SearchBar` control defines many properties that customize the appearance of
            CancelButtonColor="Orange"
            PlaceholderColor="Orange"
            TextColor="Orange"
+           TextTransform="Lowercase"
            HorizontalTextAlignment="Center"
            FontSize="Medium"
            FontAttributes="Italic" />
@@ -72,6 +74,7 @@ SearchBar searchBar = new SearchBar
     Placeholder = "Search items...",
     PlaceholderColor = Color.Orange,
     TextColor = Color.Orange,
+    TextTransform = TextTransform.Lowercase,
     HorizontalTextAlignment = TextAlignment.Center,
     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(SearchBar)),
     FontAttributes = FontAttributes.Italic

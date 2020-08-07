@@ -1,5 +1,5 @@
 ---
-title: "Adding a tap gesture recognizer"
+title: "Add a tap gesture recognizer"
 description: "This article explains how to use the tap gesture for tap detection in a Xamarin.Forms application. Tap detection is implemented with the TapGestureRecognizer class."
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -10,7 +10,7 @@ ms.date: 01/21/2016
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Adding a tap gesture recognizer
+# Add a tap gesture recognizer
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 

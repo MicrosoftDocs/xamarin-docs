@@ -6,7 +6,7 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2019
+ms.date: 07/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -419,7 +419,8 @@ The `Button` inherits or defines several properties that affect its appearance:
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) indicates if the text is italic or bold
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) is the width of the border
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) is the corner radius of the `Button`
-- `CharacterSpacing` is the spacing between characters of the `Button` text
+- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing) is the spacing between characters of the `Button` text.
+- `TextTransform` determines the casing of the `Button` text.
 
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).

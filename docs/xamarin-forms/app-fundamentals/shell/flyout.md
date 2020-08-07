@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/10/2020
+ms.date: 07/30/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -227,6 +227,7 @@ The `FlyoutItem` class includes the following properties that control flyout ite
 - `IsChecked`, of type `boolean`, defines if the item is currently highlighted in the flyout.
 - `IsEnabled`, of type `boolean`, defines if the item is selectable in the chrome.
 - `IsTabStop`, of type `bool`, indicates whether a `FlyoutItem` is included in tab navigation. Its default value is `true`, and when its value is `false` the `FlyoutItem` is ignored by the tab-navigation infrastructure, irrespective if a `TabIndex` is set.
+- `IsVisible`, of type `bool`, indicates if the `FlyoutItem` is hidden on the flyout menu. Its default value is `true`.
 - `TabIndex`, of type `int`, indicates the order in which `FlyoutItem` objects receive focus when the user navigates through items by pressing the Tab key. The default value of the property is 0.
 - `Title`, of type `string`, the title to display in the UI.
 - `Route`, of type `string`, the string used to address the item.
@@ -242,6 +243,46 @@ In addition, the `FlyoutItem` class exposes the following overridable methods:
 - `OnTabStopPropertyChanged`, that's called whenever the `IsTabStop` property changes.
 - `TabIndexDefaultValueCreator`, returns an `int`, and is called to set the default value of the `TabIndex` property.
 - `TabStopDefaultValueCreator`, returns a `bool`, and is called to set the default value of the `TabStop` property.
+
+## Flyout backdrop
+
+The backdrop of the flyout, which is the appearance of the flyout overlay, can be specified by setting the `Shell.FlyoutBackdrop` attached property to a `Brush`:
+
+```xaml
+<Shell ...
+       FlyoutBackdrop="Silver">
+    ...
+</Shell>
+```
+
+In this example, the flyout backdrop is painted with a silver `SolidColorBrush`.
+
+> [!IMPORTANT]
+> Th `FlyoutBackdrop` attached property can be set on any Shell element, but will only be applied when it's set on `Shell`, `FlyoutItem`, or `TabBar` objects.
+
+The following example shows setting the flyout backdrop on a `FlyoutItem` to a `LinearGradientBrush`:
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...>
+      <Shell.FlyoutBackdrop>
+          <LinearGradientBrush StartPoint="0,0"
+                               EndPoint="1,1">
+              <GradientStop Color="#8A2387"
+                            Offset="0.1" />
+              <GradientStop Color="#E94057"
+                            Offset="0.6" />
+              <GradientStop Color="#F27121"
+                            Offset="1.0" />
+          </LinearGradientBrush>
+      </Shell.FlyoutBackdrop>
+      ...
+    </FlyoutItem>
+    ...
+</Shell>
+```
+
+For more information about brushes, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 ## Flyout vertical scroll
 
@@ -645,3 +686,4 @@ In addition, custom style classes can be defined and applied to `FlyoutItem` and
 - [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms Style Classes](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)

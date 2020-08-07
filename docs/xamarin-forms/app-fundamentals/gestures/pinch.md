@@ -1,5 +1,5 @@
 ---
-title: "Adding a pinch gesture recognizer"
+title: "Add a pinch gesture recognizer"
 description: "This article explains how to use the pinch gesture to perform interactive zoom of an image at the pinch location."
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
@@ -10,7 +10,7 @@ ms.date: 01/21/2016
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Adding a pinch gesture recognizer
+# Add a pinch gesture recognizer
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 

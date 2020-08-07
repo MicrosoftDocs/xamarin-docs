@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen triggers
 
-![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png)
 
 The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers:
 
