@@ -463,7 +463,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 ```
 
 > [!NOTE]
-> Registering for remote notifications can fail in situations such as no network connection. You can choose to override the `FailedToRegisterForRemoveNotifications` method to handle registration failure.
+> Registering for remote notifications can fail in situations such as no network connection. You can choose to override the `FailedToRegisterForRemoteNotifications` method to handle registration failure.
 
 ### Add APNS notifications to Xamarin.Forms UI
 
