@@ -38,7 +38,7 @@
 
     Set breakpoints in the two event handlers and enter text into the [`Entry`](xref:Xamarin.Forms.Entry) and observe the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) and [`Completed`](xref:Xamarin.Forms.Entry.Completed) events firing.
 
-    For more information about [`Entry`](xref:Xamarin.Forms.Entry) events, see [Events and Interactivity](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) in the [Xamarin.Forms Entry](~/xamarin-forms/user-interface/text/entry.md) guide.
+    For more information about [`Entry`](xref:Xamarin.Forms.Entry) events, see [Events and interactivity](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) in the [Xamarin.Forms Entry](~/xamarin-forms/user-interface/text/entry.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 

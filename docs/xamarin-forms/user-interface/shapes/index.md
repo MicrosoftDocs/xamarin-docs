@@ -6,13 +6,13 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/22/2020
+ms.date: 07/30/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Shapes
 
-![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png)
 
 A `Shape` is a type of [`View`](xref:Xamarin.Forms.View) that enables you to draw a shape to the screen. `Shape` objects can be used inside layout classes and most controls, because the `Shape` class derives from the `View` class.
 
@@ -24,13 +24,14 @@ Xamarin.Forms Shapes is available in the `Xamarin.Forms.Shapes` namespace on iOS
 `Shape` defines the following properties:
 
 - `Aspect`, of type `Stretch`, describes how the shape fills its allocated space. The default value of this property is `Stretch.None`.
-- `Fill`, of type [`Color`](xref:Xamarin.Forms.Color), indicates the color used to paint the shape's interior.
-- `Stroke`, of type [`Color`](xref:Xamarin.Forms.Color), indicates the color used to paint the shape's outline.
+- `Fill`, of type `Brush`, indicates the brush used to paint the shape's interior.
+- `Stroke`, of type `Brush`, indicates the brush used to paint the shape's outline.
 - `StrokeDashArray`, of type `DoubleCollection`, which represents a collection of `double` values that indicate the pattern of dashes and gaps that are used to outline a shape.
 - `StrokeDashOffset`, of type `double`, specifies the distance within the dash pattern where a dash begins. The default value of this property is 0.0.
 - `StrokeLineCap`, of type `PenLineCap`, describes the shape at the start and end of a line or segment. The default value of this property is `PenLineCap.Flat`.
 - `StrokeLineJoin`, of type `PenLineJoin`, specifies the type of join that is used at the vertices of a shape. The default value of this property is `PenLineJoin.Miter`.
-- `StrokeThickness`, of type `double`, indicates the width of the shape outline. The default value of this property is 1.0.
+- `StrokeMiterLimit`, of type `double`, specifies the limit on the ratio of the miter length to half the `StrokeThickness` of a shape. The default value of this property is 10.0.
+- `StrokeThickness`, of type `double`, indicates the width of the shape outline. The default value of this property is 0.0.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
@@ -38,7 +39,7 @@ Xamarin.Forms defines a number of objects that derive from the `Shape` class. Th
 
 ## Paint shapes
 
-[`Color`](xref:Xamarin.Forms.Color) objects are used to paint a shapes's `Stroke` and `Fill`:
+`Brush` objects are used to paint a shapes's `Stroke` and `Fill`:
 
 ```xaml
 <Ellipse Fill="DarkBlue"
@@ -54,9 +55,11 @@ In this example, the stroke and fill of an `Ellipse` are specified:
 ![Paint shapes](images/ellipse.png "Paint shapes")
 
 > [!IMPORTANT]
-> If you don't specify a [`Color`](xref:Xamarin.Forms.Color) value for `Stroke`, or if you set `StrokeThickness` to 0, then the border around the shape is not drawn.
+> `Brush` objects use a type converter that enables [`Color`](xref:Xamarin.Forms.Color) values to specified for the `Stroke` property.
 
-For more information about valid [`Color`](xref:Xamarin.Forms.Color) values, see [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md).
+If you don't specify a `Brush` object for `Stroke`, or if you set `StrokeThickness` to 0, then the border around the shape is not drawn.
+
+For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md). For more information about valid [`Color`](xref:Xamarin.Forms.Color) values, see [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md).
 
 ## Stretch shapes
 
@@ -74,6 +77,7 @@ The following XAML shows how to set the `Aspect` property:
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
+      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"
@@ -151,6 +155,9 @@ In this example, the red line is rounded at the start and end of the line:
 - `Bevel`, which represents beveled vertices.
 - `Round`, which represents rounded vertices.
 
+> [!NOTE]
+> When the `StrokeLineJoin` property is set to `Miter`, the `StrokeMiterLimit` property can be set to a `double` to limit the miter length of line joins in the shape.
+
 The following XAML shows how to set the `StrokeLineJoin` property:
 
 ```xaml
@@ -167,4 +174,5 @@ In this example, the dark blue polyline has rounded joins at its vertices:
 ## Related links
 
 - [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)
 - [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

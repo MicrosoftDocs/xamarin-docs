@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/09/2020
+ms.date: 07/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -48,6 +48,32 @@ The following screenshots show the `TextDecorations` enumeration members applied
 
 > [!NOTE]
 > Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#formatted-text).
+
+## Transform text
+
+A [`Label`](xref:Xamarin.Forms.Entry) can transform the casing of its text, stored in the `Text` property, by setting the `TextTransform` property to a value of the `TextTransform` enumeration. This enumeration has four values:
+
+- `None` indicates that the text won't be transformed.
+- `Default` indicates that the default behavior for the platform will be used. This is the default value of the `TextTransform` property.
+- `Lowercase` indicates that the text will be transformed to lowercase.
+- `Uppercase` indicates that the text will be transformed to uppercase.
+
+The following example shows transforming text to uppercase:
+
+```xaml
+<Label Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Label label = new Label
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
 
 ## Character spacing
 

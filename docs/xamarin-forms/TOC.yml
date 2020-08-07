@@ -289,6 +289,8 @@
               href: app-fundamentals/gestures/pan.md
             - name: Swipe
               href: app-fundamentals/gestures/swipe.md
+            - name: Drag and Drop
+              href: app-fundamentals/gestures/drag-and-drop.md
         - name: Local Notifications
           href: app-fundamentals/local-notifications.md
         - name: Localization
@@ -428,7 +430,7 @@
                 - name: Polyline
                   href: user-interface/shapes/polyline.md
                 - name: Rectangle
-                  href: user-interface/shapes/rectangle.md              
+                  href: user-interface/shapes/rectangle.md
             - name: WebView
               href: user-interface/webview.md
         - name: Initiate commands
@@ -546,6 +548,20 @@
                   href: user-interface/animation/easing.md
                 - name: Custom Animations
                   href: user-interface/animation/custom.md
+            - name: Brushes
+              items:
+                - name: Overview
+                  href: user-interface/brushes/index.md
+                - name: Solid Colors
+                  href: user-interface/brushes/solidcolor.md
+                - name: Gradients
+                  items:
+                  - name: Overview
+                    href: user-interface/brushes/gradient.md
+                  - name: Linear Gradients
+                    href: user-interface/brushes/lineargradient.md
+                  - name: Radial Gradients
+                    href: user-interface/brushes/radialgradient.md
             - name: Colors
               href: user-interface/colors.md
             - name: DataPages

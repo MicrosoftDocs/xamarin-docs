@@ -6,7 +6,7 @@ ms.prod: xamarin
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/17/2020
+ms.date: 08/06/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -19,9 +19,6 @@ Devices typically include light and dark themes, which each refer to a broad set
 The system theme may change for a variety of reasons, depending on the device configuration. This includes the system theme being explicitly changed by the user, it changing due to the time of day, and it changing due to environmental factors such as low light.
 
 Xamarin.Forms applications can respond to system theme changes by consuming resources with the `AppThemeBinding` markup extension, and the `SetAppThemeColor` and `SetOnAppTheme<T>`  extension methods.
-
-> [!IMPORTANT]
-> Responding to a system theme change is currently experimental, and can only be used by setting the `AppTheme_Experimental` flag. For more information, see [Experimental Flags](~/xamarin-forms/internals/experimental-flags.md).
 
 The following requirements must be met for Xamarin.Forms to respond to a system theme change:
 

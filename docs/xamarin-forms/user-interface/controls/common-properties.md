@@ -6,7 +6,7 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 06/19/2020
+ms.date: 07/22/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -25,6 +25,10 @@ The `AnchorX` property is a `double` value that defines the center point on the 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
 The `AnchorY` property is a `double` value that defines the center point on the X axis for transforms such as scale and rotation. The default value is 0.5.
+
+### `Background`
+
+The `Background` property is a `Brush` value that enables brushes to be used as the background in any control. The default value is `Brush.Default`.
 
 ### [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor)
 

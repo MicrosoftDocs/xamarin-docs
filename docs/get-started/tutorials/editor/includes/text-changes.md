@@ -39,7 +39,7 @@
 
     Set breakpoints in the two event handlers, enter text into the [`Editor`](xref:Xamarin.Forms.Editor), and observe the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event firing. Unfocus the `Editor` to observe the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event firing.
 
-    For more information about [`Editor`](xref:Xamarin.Forms.Editor) events, see [Interactivity](~/xamarin-forms/user-interface/text/editor.md#interactivity) in the [Xamarin.Forms Editor](~/xamarin-forms/user-interface/text/editor.md) guide.
+    For more information about [`Editor`](xref:Xamarin.Forms.Editor) events, see [Events and interactivity](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity) in the [Xamarin.Forms Editor](~/xamarin-forms/user-interface/text/editor.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -82,4 +82,4 @@
 
     Set breakpoints in the two event handlers, enter text into the [`Editor`](xref:Xamarin.Forms.Editor), and observe the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event firing. Unfocus the `Editor` to observe the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event firing.
 
-    For more information about [`Editor`](xref:Xamarin.Forms.Editor) events, see [Interactivity](~/xamarin-forms/user-interface/text/editor.md#interactivity) in the [Xamarin.Forms Editor](~/xamarin-forms/user-interface/text/editor.md) guide.
+    For more information about [`Editor`](xref:Xamarin.Forms.Editor) events, see [Events and interactivity](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity) in the [Xamarin.Forms Editor](~/xamarin-forms/user-interface/text/editor.md) guide.

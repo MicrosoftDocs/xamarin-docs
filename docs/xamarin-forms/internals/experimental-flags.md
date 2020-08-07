@@ -6,7 +6,7 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/15/2020
+ms.date: 07/31/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -16,8 +16,9 @@ When a new Xamarin.Forms feature is implemented, it's sometimes put behind an ex
 
 Xamarin.Forms includes the following experimental flags:
 
-- `AppTheme_Experimental`
+- `Brush_Experimental`
 - `CarouselView_Experimental`
+- `DragAndDrop_Experimental`
 - `Expander_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
