@@ -66,6 +66,7 @@ You can also use the `HOTRESTART` preprocessor symbol to prevent certain code fr
 - Storyboard and XIB files are not supported and the app may crash if it attempts to load these at runtime. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing.
 - Static iOS libraries and frameworks are not supported and you may see runtime errors or crashes if your app attempts to load these. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing. Dynamic iOS libraries are supported.
 - You cannot use Xamarin Hot Restart to create app bundles for publishing. You will still need a Mac machine to do a full compilation, signing, and deployment for your application to production.
+- Asset Catalogs are currently not supported. When using Hot Restart, your app will show the default icon and launch screen for Xamarin apps. When paired to a Mac, or developing on a Mac, your Asset Catalogs will work.
 
 ## Troubleshoot
 
