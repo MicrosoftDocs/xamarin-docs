@@ -51,7 +51,7 @@ For more information about [`MessagingCenter`](xref:Xamarin.Forms.MessagingCente
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) messages are strings that are used to identify messages. The following code example shows the messages defined within the eShopOnContainers mobile app:
 
 ```csharp
-public class MessengerKeys  
+public class MessageKeys  
 {  
     // Add product to basket  
     public const string AddProduct = "AddProduct";  
@@ -71,7 +71,7 @@ In this example, messages are defined using constants. The advantage of this app
 Publishers notify subscribers of a message with one of the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) overloads. The following code example demonstrates publishing the `AddProduct` message:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies three arguments:
@@ -111,7 +111,7 @@ A subscriber might not need to handle every instance of a published message, and
 Subscribers can unsubscribe from messages they no longer want to receive. This is achieved with one of the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overloads, as demonstrated in the following code example:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method syntax reflects the type arguments specified when subscribing to receive the `AddProduct` message.
