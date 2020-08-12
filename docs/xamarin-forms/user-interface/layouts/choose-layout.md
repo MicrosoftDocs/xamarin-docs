@@ -227,7 +227,7 @@ In this example, layout works as follows:
 > [!CAUTION]
 > Avoid using the [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) property whenever possible, as it will cause the layout engine to perform additional layout calculations.
 
-For more information, see [Xamarin.Forms AbsoluteLayout](absolute-layout.md).
+For more information, see [Xamarin.Forms AbsoluteLayout](absolutelayout.md).
 
 ## Input transparency
 
@@ -248,7 +248,7 @@ In addition, page rendering performance can also be improved by using layout com
 - [Xamarin.Forms StackLayout](stacklayout.md)
 - [Xamarin.Forms Grid](grid.md)
 - [Xamarin.Forms FlexLayout](flex-layout.md)
-- [Xamarin.Forms AbsoluteLayout](absolute-layout.md)
+- [Xamarin.Forms AbsoluteLayout](absolutelayout.md)
 - [Xamarin.Forms RelativeLayout](relative-layout.md)
 - [Optimize layout performance](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Layout compression](layout-compression.md)

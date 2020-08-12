@@ -63,7 +63,7 @@ Here's the result:
 
 If the `VerticalOptions` and `HorizontalOptions` properties are removed from the `BoxView` tag or are set to `Fill`, then the `BoxView` becomes constrained by the size of the page, and expands to fill the page.
 
-A `BoxView` can also be a child of an `AbsoluteLayout`. In that case, both the location and size of the `BoxView` are set using the `LayoutBounds` attached bindable property. The `AbsoluteLayout` is discussed in the article [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md).
+A `BoxView` can also be a child of an `AbsoluteLayout`. In that case, both the location and size of the `BoxView` are set using the `LayoutBounds` attached bindable property. The `AbsoluteLayout` is discussed in the article [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolutelayout.md).
 
 You'll see examples of all these cases in the sample programs that follow.
 

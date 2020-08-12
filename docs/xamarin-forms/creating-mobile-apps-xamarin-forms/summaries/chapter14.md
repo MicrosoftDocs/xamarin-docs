@@ -99,5 +99,5 @@ The [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 - [Chapter 14 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
 - [Chapter 14 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
-- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolute-layout.md)
+- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolutelayout.md)
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
