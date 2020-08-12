@@ -660,5 +660,9 @@
         "source_path": "docs/xamarin-forms/user-interface/layouts/scroll-view.md",
         "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/scrollview.md"
     },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/layouts/absolute-layout.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/absolutelayout.md"
+    }
   ]
 }

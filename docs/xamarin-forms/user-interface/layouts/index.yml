@@ -13,7 +13,7 @@ metadata:
   ms.author: dabritch
   ms.date: 01/03/2020
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-  
+
 landingContent:
   - title: Core layouts
     linkLists:
@@ -22,7 +22,7 @@ landingContent:
           - text: Choose a layout
             url: choose-layout.md
           - text: AbsoluteLayout
-            url: absolute-layout.md
+            url: absolutelayout.md
           - text: FlexLayout
             url: flex-layout.md
           - text: Grid
