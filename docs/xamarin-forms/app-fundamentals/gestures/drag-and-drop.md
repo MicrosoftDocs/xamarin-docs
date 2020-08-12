@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Pre-release API](~/media/shared/preview.png)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithGestures/DragAndDropGesture)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 A drag and drop gesture enables items, and their associated data packages, to be dragged from one onscreen location to another location using a continuous gesture. Drag and drop can take place in a single application, or it can start in one application and end in another.
 
@@ -305,4 +305,4 @@ In this example, the `Square` object is retrieved from the property bag of the d
 
 ## Related links
 
-- [Drag and drop gesture (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithGestures/DragAndDropGesture)
+- [Drag and drop gesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)

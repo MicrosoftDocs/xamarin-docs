@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Preview API](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 The `LinearGradientBrush` class derives from the `GradientBrush` class, and paints an area with a linear gradient, which blends two or more colors along a line known as the gradient axis. `GradientStop` objects are used to specify the colors in the gradient and their positions. For more information about `GradientStop` objects, see [Xamarin.Forms Brushes: Gradients](gradient.md).
 
@@ -127,5 +127,5 @@ In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is pa
 
 ## Related links
 
-- [BrushesDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+- [BrushesDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 - [Xamarin.Forms Brushes: Gradients](gradient.md)
