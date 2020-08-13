@@ -6,7 +6,7 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/31/2020
+ms.date: 08/13/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -73,3 +73,17 @@ Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experim
 
 > [!WARNING]
 > Never call the `SetFlags` method more than once, as subsequent calls will overwrite the result of previous calls.
+
+## Previous experimental flags
+
+The following table lists experimental flags for features that are now in general availability, and the Xamarin.Forms release in which the feature entered general availability:
+
+| Flag | Xamarin.Forms Release |
+| ---- | --------------------- |
+| `AppTheme_Experimental` | 4.8 |
+| `CollectionView_Experimental` | 4.3 |
+| `FastRenderers_Experimental` | 4.0 |
+| `IndicatorView_Experimental` | 4.7 |
+| `Shell_Experimental` | 4.0  |
+| `StateTriggers_Experimental` | 4.7 |
+| `Visual_Experimental` | 3.6 |
