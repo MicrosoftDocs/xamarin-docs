@@ -76,7 +76,7 @@ Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experim
 
 ## Old experimental flags
 
-The following table lists experimental flags for features that are now in general availability, and the Xamarin.Forms release in which the feature entered general availability:
+The following table lists experimental flags for features that are now in general availability, and the Xamarin.Forms release in which the experimental flag was removed:
 
 | Flag | Xamarin.Forms Release |
 | ---- | --------------------- |
