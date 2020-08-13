@@ -74,7 +74,7 @@ Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experim
 > [!WARNING]
 > Never call the `SetFlags` method more than once, as subsequent calls will overwrite the result of previous calls.
 
-## Previous experimental flags
+## Old experimental flags
 
 The following table lists experimental flags for features that are now in general availability, and the Xamarin.Forms release in which the feature entered general availability:
 
