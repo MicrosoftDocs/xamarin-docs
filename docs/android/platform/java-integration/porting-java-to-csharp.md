@@ -1,27 +1,22 @@
 ---
-title: "Porting Java to C#"
+title: "Porting Java to C# for Xamarin.Android"
 description: "A third option for using Java in a Xamarin.Android application is to port the Java source code to C#."
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/05/2016
 ---
 
-# Porting Java to C#
-
-_A third option for using Java in a Xamarin.Android application is to port the Java source code to C#._
-
-## Overview
+# Porting Java to C# for Xamarin.Android
 
 This approach may be of interest to organizations
 that:
 
--  **Are switching technology stacks from Java to C#.**
--  **Must maintain a C# and a Java version of the same product.**
--  **Wish to have a .NET version of a popular Java library.**
-
+- **Are switching technology stacks from Java to C#.**
+- **Must maintain a C# and a Java version of the same product.**
+- **Wish to have a .NET version of a popular Java library.**
 
 There are two ways to port Java code to C#. The first way is to port the code
 manually. This involves skilled developers who understand both .NET and Java and
@@ -39,8 +34,8 @@ exist in both languages and that require some parity between the two.
 
 An example of when an automated code conversion tool makes sense can be seen
 in the [ngit](https://github.com/mono/ngit) project.
-Ngit is a port of the Java project [jgit](http://eclipse.org/).
-Jgit itself is a Java implementation of the [Git](http://git-scm.com/) source code management
+Ngit is a port of the Java project [jgit](https://eclipse.org/).
+Jgit itself is a Java implementation of the [Git](https://git-scm.com/) source code management
 system. To generate C# code from Java, the ngit programmers use a custom
 automated system to extract the Java code from jgit, apply some patches to
 accommodate the conversion process, and then run Sharpen, which generates the C#
@@ -51,8 +46,6 @@ There is often a non-trivial amount of work involved with bootstrapping an
 automated code conversion tool, and this may prove to be a barrier to use. In
 many cases, it may be simpler and easier to port Java to C# by hand.
 
-
-
-## Related Links
+## Related links
 
 - [Sharpen Conversion Tool](https://github.com/mono/sharpen)

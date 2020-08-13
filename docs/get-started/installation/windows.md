@@ -6,16 +6,17 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Installing Xamarin in Visual Studio 2019
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 Check the [system requirements](~/cross-platform/get-started/requirements.md) before you begin.
 
 ## Installation
 
-[!include[](~/cross-platform/includes/install-xamarin-windows.md)]
+[!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
 
 In Visual Studio 2019, verify that Xamarin is installed by
 clicking the **Help** menu. If Xamarin is installed, you should
@@ -41,13 +42,13 @@ platform apps.
 
 ### iOS
 
-For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide. 
+For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide.
 
 1. [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Connect Visual Studio to your Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [iOS Developer Setup](~/ios/get-started/installation/device-provisioning/index.md) - Required to run your application on device
-5. [Remoted iOS Simulator](~/tools/ios-simulator/index.md)
-6. [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
+4. [Remoted iOS Simulator](~/tools/ios-simulator/index.md)
+5. [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### Android
 

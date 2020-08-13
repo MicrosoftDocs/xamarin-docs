@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Easing Functions in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/easing/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
 _Xamarin.Forms includes an Easing class that allows you to specify a transfer function that controls how animations speed up or slow down as they're running. This article demonstrates how to consume the pre-defined easing functions, and how to create custom easing functions._
-
 
 The [`Easing`](xref:Xamarin.Forms.Easing) class defines a number of easing functions that can be consumed by animations:
 
@@ -32,7 +32,7 @@ The [`Easing`](xref:Xamarin.Forms.Easing) class defines a number of easing funct
 
 The `In` and `Out` suffixes indicate if the effect provided by the easing function is noticeable at the beginning of the animation, at the end, or both.
 
-In addition, custom easing functions can be created. For more information, see [Custom Easing Functions](#customeasing).
+In addition, custom easing functions can be created. For more information, see [Custom Easing Functions](#custom-easing-functions).
 
 ## Consuming an Easing Function
 
@@ -50,8 +50,6 @@ By specifying an easing function for an animation, the animation velocity become
 
 For more information about using the animation extension methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class, see [Simple Animations](~/xamarin-forms/user-interface/animation/simple.md). Easing functions can also be consumed by the [`Animation`](xref:Xamarin.Forms.Animation) class. For more information, see [Custom Animations](~/xamarin-forms/user-interface/animation/custom.md).
 
-<a name="customeasing" />
-
 ## Custom Easing Functions
 
 There are three main approaches to creating a custom easing function:
@@ -67,12 +65,12 @@ In all three cases, the custom easing function should return 0 for an argument o
 A custom easing function can be defined as a method that takes a `double` argument, and returns a `double` result, as demonstrated in the following code example:
 
 ```csharp
-await image.TranslateTo(0, 200, 2000, CustomEase);
-
 double CustomEase (double t)
 {
   return t == 0 || t == 1 ? t : (int)(5 * t) / 5.0;
 }
+
+await image.TranslateTo(0, 200, 2000, (Easing)CustomEase);
 ```
 
 The `CustomEase` method truncates the incoming value to the values 0, 0.2, 0.4, 0.6, 0.8, and 1. Therefore, the [`Image`](xref:Xamarin.Forms.Image) instance is translated in discrete jumps, rather than smoothly.
@@ -82,11 +80,11 @@ The `CustomEase` method truncates the incoming value to the values 0, 0.2, 0.4, 
 A custom easing function can also be defined as a `Func<double, double>`, as demonstrated in the following code example:
 
 ```csharp
-Func<double, double> CustomEase = t => 9 * t * t * t - 13.5 * t * t + 5.5 * t;
-await image.TranslateTo(0, 200, 2000, CustomEase));
+Func<double, double> CustomEaseFunc = t => 9 * t * t * t - 13.5 * t * t + 5.5 * t;
+await image.TranslateTo(0, 200, 2000, CustomEaseFunc);
 ```
 
-The `CustomEase` `Func` represents an easing function that starts off fast, slows down and reverses course, and then reverses course again to accelerate quickly towards the end. Therefore, while the overall movement of the [`Image`](xref:Xamarin.Forms.Image) instance is downwards, it also temporarily reverses course halfway through the animation.
+The `CustomEaseFunc` represents an easing function that starts off fast, slows down and reverses course, and then reverses course again to accelerate quickly towards the end. Therefore, while the overall movement of the [`Image`](xref:Xamarin.Forms.Image) instance is downwards, it also temporarily reverses course halfway through the animation.
 
 ### Custom Easing Constructor
 
@@ -102,11 +100,9 @@ The custom easing function is specified as a lambda function argument to the [`E
 
 This article demonstrated how to consume the pre-defined easing functions, and how to create custom easing functions. Xamarin.Forms includes an [`Easing`](xref:Xamarin.Forms.Easing) class that allows you to specify a transfer function that controls how animations speed up or slow down as they're running.
 
-
-
 ## Related Links
 
 - [Async Support Overview](~/cross-platform/platform/async.md)
-- [Easing Functions (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/easing/)
+- [Easing Functions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 - [Easing](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

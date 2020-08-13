@@ -4,8 +4,8 @@ description: "This document describes visual design updates introduced in iOS 11
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 
@@ -62,9 +62,10 @@ In iOS 10 and before, all views had a minimum margin size to which they would al
 ViewRespectsSystemMinimumLayoutMargins = false;
 View.LayoutMargins = UIEdgeInsets.Zero;
 ```
+
 ![Image showing margin with zero inset in ios 11](visual-design-images/image9.png)
 
-<a name="fullscreen" />
+<a name="fullscreen"></a>
 
 ## Full Screen Content
 
@@ -109,11 +110,9 @@ iOS 11 has expanded the functionality of row actions. `UISwipeActionsConfigurati
 
 Table Views have support for drag and drop in iOS 11. For more information, see the [Drag and Drop](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) guide.
 
-
 ## Related Links
 
 - [What’s New in iOS 11 (Apple)](https://developer.apple.com/ios/)
 - [Updated App Store Product Page (Apple)](https://developer.apple.com/app-store/product-page/)
 - [Designing for iPhone X (Apple) (video)](https://developer.apple.com/videos/play/fall2017/801/)
 - [Updating Your App for iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)
-

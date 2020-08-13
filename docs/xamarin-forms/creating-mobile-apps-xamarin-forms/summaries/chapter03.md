@@ -7,6 +7,7 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 3. Deeper into text
@@ -58,7 +59,7 @@ You can also use several static methods to create `Color` values:
 - [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Double,System.Double,System.Double,System.Double)) for `double` RGB values with transparency
 - [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) for integer RGB values with transparency
 - [`Color.FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) for `double` HSL values with transparency
-- [`Color.FromUint`](xref:Xamarin.Forms.Color.FromUint(System.UInt32)) for a `uint` value calculated as (B + 256 * (G + 256 * (R + 256 * A)))
+- [`Color.FromUint`](xref:Xamarin.Forms.Color.FromUint(System.UInt32)) for a `uint` value calculated as (B + 256 \* (G + 256 \* (R + 256 \* A)))
 - [`Color.FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) for a `string` format of hexadecimal digits in the form "#AARRGGBB" or "#RRGGBB" or "#ARGB" or "#RGB", where each letter corresponds to a hexadecimal digit for the alpha, red, green, and blue channels. This method is primary used for XAML color conversions as discussed in [Chapter 7, XAML vs. code](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md).
 
 Once created, a `Color` value is immutable. The characteristics of the color can be obtained from the following properties:
@@ -130,8 +131,6 @@ The [**VariableFormattedText**](https://github.com/xamarin/xamarin-forms-book-sa
 [![Triple screenshot of variable formatted paragraph](images/ch03fg06-small.png "Variable Formatted Label Text")](images/ch03fg06-large.png#lightbox "Variable Formatted Label Text")
 
 The [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) program uses a single `Label` and a `FormattedString` object to display all of the named font sizes for each platform.
-
-
 
 ## Related links
 

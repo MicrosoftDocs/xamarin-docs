@@ -4,8 +4,8 @@ description: "This document provides a high-level description of some iOS 12 API
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
 ---
 # Introduction to iOS 12
@@ -53,7 +53,7 @@ The Natural Language framework enables applications to perform various
 types of language analysis. For example, it can identify parts of speech
 and determine the language represented by a block of text.
 
-## Vision framework
+## [Vision framework](~/ios/platform/introduction-to-ios11/vision.md)
 
 The Vision framework includes an improved face detector that can detect
 faces in various orientations. Also, request revisions can select
@@ -113,7 +113,3 @@ With iOS 12, Apple has deprecated:
 to adopt Metal.
 - [`UIWebView`](xref:UIKit.UIWebView),
 [in favor of `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
-
-## Related links
-
-- [Get Ready for iOS 12 (Apple)](https://developer.apple.com/ios/)

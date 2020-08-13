@@ -3,8 +3,8 @@ title: "Google Licensing Services"
 ms.prod: xamarin
 ms.assetid: E96BDCC3-454A-A797-5819-905E2BB1AC41
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/20/2017
 ---
 
@@ -39,19 +39,18 @@ license status:
 
 The above diagram illustrates this workflow: 
 
--   The application provides the package name, a *nonce* (a 
+- The application provides the package name, a *nonce* (a 
     cryptographic authenticator) that is used to validate server 
     response, and a callback that can handle the response 
     asynchronously. 
 
--   Google Play provides information such as the Google account and the 
+- Google Play provides information such as the Google account and the 
     device itself, such as the IMSI number. 
 
 Google Licensing service is also a key component of APK expansion files
 (which are discussed later in this document). APK expansion files utilize Google
 Licensing services to obtain the URLs of the expansion files that will be
 downloaded.
-
 
 ## Requirements
 

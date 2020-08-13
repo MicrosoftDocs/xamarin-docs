@@ -4,8 +4,8 @@ description: "This article covers working with alerts in a Xamarin.Mac applicati
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -17,11 +17,11 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 An alert is a special type of dialog that appears when a serious problem occurs (such as an error) or as a warning (such as preparing to delete a file). Because an alert is a dialog, it also requires a user response before it can be closed.
 
-[![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
+[![An example alert](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 In this article, we'll cover the basics of working with Alerts in a Xamarin.Mac application. 
 
-<a name="Introduction_to_Alerts" />
+<a name="Introduction_to_Alerts"></a>
 
 ## Introduction to Alerts
 
@@ -38,7 +38,7 @@ Apple suggest the following guidelines:
 
 For more information, see the [Alerts](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
-<a name="Anatomy_of_an_Alert" />
+<a name="Anatomy_of_an_Alert"></a>
 
 ## Anatomy of an Alert
 
@@ -46,23 +46,23 @@ As stated above, alerts should be shown to your application's user when a seriou
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Critical,
-	InformativeText = "We need to save the document here...",
-	MessageText = "Save Document",
+  AlertStyle = NSAlertStyle.Critical,
+  InformativeText = "We need to save the document here...",
+  MessageText = "Save Document",
 };
 alert.RunModal ();
 ```
 
 The code above displays an alert with the applications icon superimposed on the warning icon, a title, a warning message and a single **OK** button:
 
-[![](alert-images/alert01.png "An alert with a OK button")](alert-images/alert01.png#lightbox)
+[![An alert with a OK button](alert-images/alert01.png)](alert-images/alert01.png#lightbox)
 
 Apple provides several properties that can be used to customize an alert:
 
 - **AlertStyle** defines the type of an alert as one of the following:
-	- **Warning** - Used to warn the user a current or impending event that is not critical. This is the default style.
-	- **Informational** - Used to warn the user about a current or impending event. Currently, there is no visible difference between a **Warning** and a **Informational**
-	- **Critical** - Used to warn the user about severe consequences of an impending event (such as deleting a file). This type of alert should be used sparingly.
+  - **Warning** - Used to warn the user a current or impending event that is not critical. This is the default style.
+  - **Informational** - Used to warn the user about a current or impending event. Currently, there is no visible difference between a **Warning** and a **Informational**
+  - **Critical** - Used to warn the user about severe consequences of an impending event (such as deleting a file). This type of alert should be used sparingly.
 - **MessageText** - This is the main message or title of the alert and should quickly define the situation to the user.
 - **InformativeText** - This is the body of the alert where you should define the situation clearly and present workable options to the user.
 - **Icon** - Allows a custom icon to be displayed to the user.
@@ -71,7 +71,7 @@ Apple provides several properties that can be used to customize an alert:
 - **ShowsSuppressionButton** - If `true` displays a checkbox that the user can use to suppress the alert for subsequent occurrences of the event that triggered it.
 - **AccessoryView** - Allows you to attach another subview to the alert to provide extra information, such as adding a **Text Field** for data entry. If you set a new **AccessoryView** or modify an existing one, you need to call the `Layout()` method to adjust the visible layout of the alert.
 
-<a name="Displaying_an_Alert" />
+<a name="Displaying_an_Alert"></a>
 
 ## Displaying an Alert
 
@@ -79,33 +79,33 @@ There are two different ways that an alert can be displayed, Free-Floating or as
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.RunModal ();
 ```
+
 If this code is run, the following is displayed:
 
-[![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
+[![A simple alert](alert-images/alert02.png)](alert-images/alert02.png#lightbox)
 
 The following code displays the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.BeginSheet (this);
 ```
 
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
+[![An alert displayed as a sheet](alert-images/alert03.png)](alert-images/alert03.png#lightbox)
 
-
-<a name="Working_with_Alert_Buttons" />
+<a name="Working_with_Alert_Buttons"></a>
 
 ## Working with Alert Buttons
 
@@ -113,9 +113,9 @@ By default, an Alert displays only the **OK** button. However, you are not limit
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -131,31 +131,32 @@ The very first button added will be the _Default Button_ that will be activated 
 
 If we run the code , the following will be displayed:
 
-[![](alert-images/alert04.png "An alert with three button options")](alert-images/alert04.png#lightbox)
+[![An alert with three button options](alert-images/alert04.png)](alert-images/alert04.png#lightbox)
 
 Here is the code for the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}", result);
+  Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
+
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)
+[![A three button alert displayed as a sheet](alert-images/alert05.png)](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > You should never add more than three buttons to an alert.
 
-<a name="Showing_the_Suppress_Button" />
+<a name="Showing_the_Suppress_Button"></a>
 
 ## Showing the Suppress Button
 
@@ -163,9 +164,9 @@ If the Alert's `ShowSuppressButton` property is `true`, the alert displays a che
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -179,30 +180,30 @@ If the value of the `alert.SuppressionButton.State` is `NSCellStateValue.On`, th
 
 If the code is run, the following will be displayed:
 
-[![](alert-images/alert06.png "An alert with a suppress button")](alert-images/alert06.png#lightbox)
+[![An alert with a suppress button](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 Here is the code for the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.ShowsSuppressionButton = true;
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
+[![An alert with a suppress button display as a sheet](alert-images/alert07.png)](alert-images/alert07.png#lightbox)
 
-<a name="Adding_a_Custom_SubView" />
+<a name="Adding_a_Custom_SubView"></a>
 
 ## Adding a Custom SubView
 
@@ -214,7 +215,7 @@ var input = new NSTextField (new CGRect (0, 0, 300, 20));
 var alert = new NSAlert () {
 AlertStyle = NSAlertStyle.Informational,
 InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -230,7 +231,7 @@ The key lines here are `var input = new NSTextField (new CGRect (0, 0, 300, 20))
 
 If we run the code, the following will be displayed:
 
-[![](alert-images/alert08.png "If we run the code, the following will be displayed")](alert-images/alert08.png#lightbox)
+[![If we run the code, the following will be displayed](alert-images/alert08.png)](alert-images/alert08.png#lightbox)
 
 Here is the same alert as a sheet:
 
@@ -238,9 +239,9 @@ Here is the same alert as a sheet:
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
 
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -249,15 +250,15 @@ alert.ShowsSuppressionButton = true;
 alert.AccessoryView = input;
 alert.Layout ();
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
 If we run this code, the following will be displayed:
 
-[![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
+[![An alert with a custom view](alert-images/alert09.png)](alert-images/alert09.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
@@ -265,7 +266,7 @@ This article has taken a detailed look at working with Alerts in a Xamarin.Mac a
 
 ## Related Links
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

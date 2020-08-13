@@ -4,8 +4,8 @@ description: "This document describes how to allow for the restoration of past p
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -19,9 +19,9 @@ This functionality allows a customer to add the product to additional devices or
 to restore the product to the same device after being wiped clean or removing
 and re-installing the app. The following product types are restorable:
 
--  Non-consumable products
--  Auto-renewable subscriptions
--  Free subscriptions
+- Non-consumable products
+- Auto-renewable subscriptions
+- Free subscriptions
 
 The restore process should update the records you keep on the device to
 fulfill your products. The customer can choose to restore at any time, on any of
@@ -189,7 +189,7 @@ new issues of a magazine. So that the application can discover these news
 products and display them to the user, the additional server should store and
 deliver this information.   
    
-[![](transactions-and-verification-images/image38.png "Getting Prices for Server-Delivered Products")](transactions-and-verification-images/image38.png#lightbox)   
+[![Getting Prices for Server-Delivered Products](transactions-and-verification-images/image38.png)](transactions-and-verification-images/image38.png#lightbox)   
    
 1. Product information must be stored in multiple places: on your server
 and in iTunes Connect. In addition, each product will have content files
@@ -224,7 +224,7 @@ along for authentication. The remote server forwards that data to iTunes for
 verification and, if successful, includes the product content in the response to
 the application.   
    
- [![](transactions-and-verification-images/image39.png "Purchasing Server-Delivered Products")](transactions-and-verification-images/image39.png#lightbox)   
+ [![Purchasing Server-Delivered Products](transactions-and-verification-images/image39.png)](transactions-and-verification-images/image39.png#lightbox)   
    
 1. The app adds an `SKPayment` to the queue. If required the
 user will be prompted for their Apple ID, and asked to confirm the payment.   

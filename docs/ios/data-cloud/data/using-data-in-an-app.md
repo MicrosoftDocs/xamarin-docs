@@ -4,8 +4,8 @@ description: "This document describes the DataAccess_Adv sample, which demonstra
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
 ---
 
@@ -15,13 +15,13 @@ The **DataAccess_Adv** sample shows a working application that allows user input
 
 After adding some data the application screens look like this on iOS:
 
- ![](using-data-in-an-app-images/image9.png "iOS sample list")
+ ![iOS sample list](using-data-in-an-app-images/image9.png)
 
- ![](using-data-in-an-app-images/image10.png "iOS sample detail")
+ ![iOS sample detail](using-data-in-an-app-images/image10.png)
 
 The iOS Project is shown below – the code shown in this section is contained within the **Orm** directory:
 
- ![](using-data-in-an-app-images/image13.png "iOS project tree")
+ ![iOS project tree](using-data-in-an-app-images/image13.png)
 
 The native UI code for the ViewControllers in iOS  is out of scope for this document.
 Refer to the [iOS Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md)
@@ -31,9 +31,8 @@ guide for more information on the UI controls.
 
 There are a couple of read operations in the sample:
 
--  Reading the list
--  Reading individual records
-
+- Reading the list
+- Reading individual records
 
 The two methods in the `StockDatabase` class are:
 
@@ -76,8 +75,6 @@ public int SaveStock (Stock item)
 }
 ```
 
-
-
 Real world applications will usually require some validation
 (such as required fields, minimum lengths or other business rules).
 Good cross-platform applications implement as much of the validation
@@ -106,9 +103,8 @@ SQLite database file with your app and copying it to a writable directory before
 accessing it. Because SQLite is a standard file format that is used on many platforms,
 there are a number of tools available to create an SQLite database file:
 
--  **SQLite Manager Firefox Extension** – Works on Mac and Windows and produces files that are compatible with iOS and Android.
--  **Command Line** – See  [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
-
+- **SQLite Manager Firefox Extension** – Works on Mac and Windows and produces files that are compatible with iOS and Android.
+- **Command Line** – See  [www.sqlite.org/sqlite.html](https://www.sqlite.org/sqlite.html) .
 
 When creating a database file for distribution with your app, take care with the
 naming of tables and columns to ensure they match what your code expects, especially
@@ -133,10 +129,9 @@ if (!File.Exists (Database.DatabaseFilePath))
 
 Any data access code (whether ADO.NET or using SQLite.NET) that executes after this has completed will have access to the pre-populated data.
 
-
 ## Related Links
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

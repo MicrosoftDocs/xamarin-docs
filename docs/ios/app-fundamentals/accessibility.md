@@ -4,8 +4,8 @@ description: "This document describes accessibility in iOS, discussing various p
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
 ---
 
@@ -35,7 +35,7 @@ text input or an image that is purely decorative) – the
 The **Properties Pad** contains an accessibility section that allows these
 settings to be edited when a control is selected in the iOS UI Designer:
 
-![](accessibility-images/ios-designer-sml.png "Accessibility Settings")
+![Accessibility Settings](accessibility-images/ios-designer-sml.png)
 
 **C#**
 
@@ -56,7 +56,7 @@ be used to refer to user interface elements via the UIAutomation API.
 The value of `AccessibilityIdentifier` is never spoken or displayed
 to the user.
 
-<a name="postnotification" />
+<a name="postnotification"></a>
 
 ## PostNotification
 
@@ -85,7 +85,6 @@ UIAccessibility.PostNotification (
   UIAccessibilityPostNotification.LayoutChanged,
     someControl);  // someControl gets focus
 ```
-
 
 ## Accessibility and Localization
 
@@ -130,14 +129,14 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 Refer to the [iOS localization guide](~/ios/app-fundamentals/localization/index.md)
 for more details on localizing content.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing Accessibility
 
 VoiceOver is enabled in the **Settings** app by navigating to
 **General > Accessibility > VoiceOver**:
 
-![](accessibility-images/settings-sml.png "Setting the speaking rate")
+![Setting the speaking rate](accessibility-images/settings-sml.png)
 
 The **Accessibility** screen also provides settings for zoom,
 text size, color & contrast options, speech settings, and
@@ -146,7 +145,6 @@ other configuration options.
 Follow these [VoiceOver instructions](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)
 to test accessibility on iOS devices.
 
-
 ## Simulator Testing
 
 When testing in the simulator, the **Accessibility Inspector**
@@ -154,23 +152,21 @@ is available to help verify accessibility properties and events are
 correctly configured. Turn on the inspector
 in the **Settings** app by navigating to **General > Accessibility > Accessibility Inspector**:
 
-![](accessibility-images/settings-inspector-sml.png "Enable Accessibility Inspector")
+![Enable Accessibility Inspector](accessibility-images/settings-inspector-sml.png)
 
 Once enabled, the inspector window hovers over the iOS screen at all times.
 Here is an example of the output when a table view row is selected – notice
 the **Label** contains a sentence that gives the content of the row and
 also that it is "done" (ie. the tick is visible):
 
-![](accessibility-images/tableview-a11y-sml.png "Using Accessibility Inspector")
+![Using Accessibility Inspector](accessibility-images/tableview-a11y-sml.png)
 
 While the inspector is visible, use the "X" icon at the top-left
 to temporarily show and hide the overlay and enable/disable
 accessibility settings.
 
-
-
 ## Related Links
 
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS Accessibility (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS VoiceOver](https://www.apple.com/accessibility/ios/voiceover/)

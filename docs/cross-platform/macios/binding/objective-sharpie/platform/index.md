@@ -3,8 +3,8 @@ title: "Objective Sharpie Features"
 description: "This document links to various guides that help describe Objective Sharpie, how to use it, and the output that it generates."
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 
@@ -26,9 +26,3 @@ Objective Sharpie lets you use these libraries with the `-framework` option.
 
 Objective Sharpie add `Verify` attributes to signal that you need to
 manually inspect and update the generated binding. 
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
-

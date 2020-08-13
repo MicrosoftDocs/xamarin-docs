@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: Compass"
 description: "This document describes the Compass class in Xamarin.Essentials, which lets you monitor the device's magnetic north heading."
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Compass
@@ -71,15 +73,15 @@ public class CompassTest
 
 # [Android](#tab/android)
 
-Android does not provide a API for retrieving the compass heading. We utilize the accelerometer and magnetometer to calculate the magnetic north heading, which is recommended by Google.
+Android does not provide an API for retrieving the compass heading. We utilize the accelerometer and magnetometer to calculate the magnetic north heading, which is recommended by Google.
 
 In rare instances, you maybe see inconsistent results because the sensors need to be calibrated, which involves moving your device in a figure-8 motion. The best way of doing this is to open Google Maps, tap on the dot for your location, and select **Calibrate compass**.
 
-Be aware that running multiple sensors from your app at the same time may adjust the sensor speed.
+Running multiple sensors from your app at the same time may adjust the sensor speed.
 
 ## Low Pass Filter
 
-Due to how the Android compass values are updated and calculated there may be a need to smooth out the values. A _Low Pass Filter_ can be applied that averages the sine and cosine values of the angles and can be turned on by using the `Start` method overload which accepts the `bool applyLowPassFilter` parameter:
+Due to how the Android compass values are updated and calculated there may be a need to smooth out the values. A _Low Pass Filter_ can be applied that averages the sine and cosine values of the angles and can be turned on by using the `Start` method overload, which accepts the `bool applyLowPassFilter` parameter:
 
 ```csharp
 Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
@@ -91,5 +93,11 @@ This is only applied on the Android platform, and the parameter is ignored on iO
 
 ## API
 
-- [Compass source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Compass source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [Compass API documentation](xref:Xamarin.Essentials.Compass)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Compass-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

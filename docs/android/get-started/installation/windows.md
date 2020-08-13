@@ -4,15 +4,14 @@ description: "This guide describes the steps for installing Xamarin.Android for 
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
 ---
 
 # Windows Installation
 
 _This guide describes the steps for installing Xamarin.Android for Visual Studio on Windows, and it explains how to configure Xamarin.Android for building your first Xamarin.Android application._
-
 
 ## Overview
 
@@ -23,16 +22,16 @@ Visual Studio installer to download and install Xamarin.Android tools.
 earlier versions of Xamarin.Android are no longer necessary.) In this
 guide, you will learn the following:
 
--   How to configure custom locations for the Java Development Kit,
+- How to configure custom locations for the Java Development Kit,
     Android SDK, and Android NDK.
 
--   How to launch the Android SDK Manager to download and install
+- How to launch the Android SDK Manager to download and install
     additional Android SDK components.
 
--   How to prepare an Android device or emulator for debugging and
+- How to prepare an Android device or emulator for debugging and
     testing.
 
--   How to create your first Xamarin.Android app project.
+- How to create your first Xamarin.Android app project.
 
 By the end of this guide, you will have a working Xamarin.Android
 installation integrated into Visual Studio, and you will be ready to
@@ -44,7 +43,6 @@ For detailed information on installing Xamarin for use with Visual
 Studio on Windows, see the
 [Windows Install](~/get-started/installation/windows.md)
 guide.
-
 
 ## Configuration
 
@@ -74,7 +72,6 @@ if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
-
 
 ### Android SDK Manager
 
@@ -112,9 +109,9 @@ The [Android Emulator](https://developer.android.com/studio/run/emulator) can be
 
 Emulating an Android device on a computer involves the following components:
 
-* **Google Android Emulator** &ndash; This is an emulator based on [QEMU](https://www.qemu.org/) that creates a virtualized device running on the developer's workstation.
-* **An Emulator Image** &ndash; An _emulator image_ is a template or a specification of the hardware and operating system that is meant to be virtualized. For example, one emulator image would identify the hardware requirements for a Nexus 5X running Android 7.0 with Google Play Services installed. Another emulator image might specific a 10" table running Android 6.0.
-* **Android Virtual Device (AVD)** &ndash; An _Android Virtual Device_ is an emulated Android device created from an emulator image. When running and testing Android apps, Xamarin.Android will start the Android Emulator, starting a specific AVD, install the APK, and then run the app.
+- **Google Android Emulator** &ndash; This is an emulator based on [QEMU](https://www.qemu.org/) that creates a virtualized device running on the developer's workstation.
+- **An Emulator Image** &ndash; An _emulator image_ is a template or a specification of the hardware and operating system that is meant to be virtualized. For example, one emulator image would identify the hardware requirements for a Nexus 5X running Android 7.0 with Google Play Services installed. Another emulator image might specific a 10" table running Android 6.0.
+- **Android Virtual Device (AVD)** &ndash; An _Android Virtual Device_ is an emulated Android device created from an emulator image. When running and testing Android apps, Xamarin.Android will start the Android Emulator, starting a specific AVD, install the APK, and then run the app.
 
 A significant improvement in performance when developing on x86 based computers can be achieved by using special emulator images that are optimized for x86 architecture and one of two virtualization technologies:
 
@@ -127,8 +124,7 @@ For more information about the Android Emulator, Hyper-V, and HAXM, please see [
 > On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
 to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
-
-<a name="device" />
+<a name="device"></a>
 
 ### Android Device
 
@@ -137,7 +133,6 @@ good time to set it up for development use. See
 [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md)
 to configure your Android device for development, then connect it to
 your computer for running and debugging Xamarin.Android applications.
-
 
 ## Create an Application
 
@@ -157,7 +152,6 @@ click **OK**:
 That's it! Now you are ready to use Xamarin.Android to create
 Android applications!
 
-
 ## Summary
 
 In this article, you learned how to set up and install the
@@ -170,7 +164,6 @@ start building your first application.
 The next step is to have a look at the 
 [Hello, Android](~/android/get-started/hello-android/index.md)
 tutorials to learn how to create a working Xamarin.Android app.
-
 
 ## Related Links
 

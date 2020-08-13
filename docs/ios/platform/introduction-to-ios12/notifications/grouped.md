@@ -4,8 +4,8 @@ description: "With iOS 12, it is possible to group notifications in Notification
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Grouped notifications in Xamarin.iOS
@@ -21,7 +21,7 @@ to find and interact with the specific information they're interested in.
 ## Sample app: GroupedNotifications
 
 To learn how to use grouped notifications with Xamarin.iOS, take
-a look at the [GroupedNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/GroupedNotifications)
+a look at the [GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
 sample app.
 
 This sample app simulates conversations with various friends, sending a
@@ -173,7 +173,7 @@ However, it does not set the `ThreadIdentifier` on the
 
 ## Related links
 
-- [Sample app – GroupedNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/GroupedNotifications)
+- [Sample app – GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Using Grouped Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/711/)

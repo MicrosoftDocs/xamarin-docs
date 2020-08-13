@@ -7,15 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Implementing a video player
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 It is sometimes desirable to play video files in a Xamarin.Forms application. This series of articles discusses how to write custom renderers for iOS, Android, and the Universal Windows Platform (UWP) for a Xamarin.Forms class named `VideoPlayer`.
 
-In the [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) sample, all the files that implement and support `VideoPlayer` are in folders named `FormsVideoLibrary` and identified with the namespace `FormsVideoLibrary` or namespaces that begin `FormsVideoLibrary`. This organization and naming should make it easy to copy the video player files into your own Xamarin.Forms solution.
+In the [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) sample, all the files that implement and support `VideoPlayer` are in folders named `FormsVideoLibrary` and identified with the namespace `FormsVideoLibrary` or namespaces that begin `FormsVideoLibrary`. This organization and naming should make it easy to copy the video player files into your own Xamarin.Forms solution.
 
 `VideoPlayer` can play video files from three types of sources:
 
@@ -61,10 +62,6 @@ Although the video players on each platform provide their own transport controls
 
 Each of the platform video players has a position bar that shows the progress of the video and allows you to skip ahead or back to a particular position. This article demonstrates how you can replace that position bar with a custom control.
 
-
-
-
-
 ## Related Links
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

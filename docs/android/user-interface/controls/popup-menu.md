@@ -4,21 +4,20 @@ description: "How to add a popup menu that is anchored to a particular view."
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
 ---
 
-# PopUp Menu
+# Xamarin.Android PopUp Menu
 
-The [PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/)
+The [PopupMenu](xref:Android.Widget.PopupMenu)
 (also called a _shortcut menu_) is a menu that is anchored to a
 particular view. In the following example, a single Activity contains a
 button. When the user taps the button, a three-item popup menu is
 displayed:
 
 [![Example of an app with a button and three-item pop-up menu](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
-
 
 ## Creating a Popup Menu
 
@@ -58,9 +57,9 @@ showPopupMenu.Click += (s, arg) => {
 
 Finally, the popup menu must be *inflated* with the menu resource that
 was created earlier. In the following example, the call to the menu's
-[Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/)
+[Inflate](xref:Android.Views.LayoutInflater.Inflate*)
 method is added and its
-[Show](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/)
+[Show](xref:Android.Widget.PopupMenu.Show)
 method is called to display it:
 
 ```csharp
@@ -71,15 +70,14 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
 ## Handling Menu Events
 
 When the user selects a menu item, the
-[MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/)
+[MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick)
 click event will be raised and the menu will be dismissed. Tapping
 anywhere outside the menu will simply dismiss it. In either case, when
 the menu is dismissed, its
-[DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/)
+[DismissEvent](xref:Android.Widget.PopupMenu.Dismiss)
 will be raised. The following code adds event handlers for both the
 `MenuItemClick` and `DismissEvent` events:
 
@@ -99,8 +97,6 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
-
 ## Related Links
 
-- [PopupMenuDemo (sample)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
+- [PopupMenuDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo)

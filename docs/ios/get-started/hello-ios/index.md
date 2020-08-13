@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: cf04736b-c95a-4e6f-b49f-b7f2b7ff62b9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 # Sample App: Hello, iOS
@@ -21,4 +21,4 @@ The second part of this document reviews what application built and provides the
 
 ## Related Links
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)

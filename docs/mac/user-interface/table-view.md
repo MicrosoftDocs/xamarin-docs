@@ -4,8 +4,8 @@ description: "This article covers working with table views in a Xamarin.Mac appl
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -17,13 +17,13 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 A Table View displays data in a tabular format containing one or more columns of information in multiple rows. Based on the type of Table View being created, the user can sort by column, reorganize columns, add columns, remove columns or edit the data contained within the table.
 
-[![](table-view-images/intro01.png "An example table")](table-view-images/intro01.png#lightbox)
+[![An example table](table-view-images/intro01.png)](table-view-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of working with Table Views in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="Introduction_to_Table_Views" />
+<a name="Introduction_to_Table_Views"></a>
 
 ## Introduction to Table Views
 
@@ -35,34 +35,34 @@ A Table View's behavior can be customized by providing a subclass of the Table V
 
 When creating Table Views, Apple suggests the following:
 
-* Allow the user to sort the table by clicking on a Column Headers.
-* Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
+- Allow the user to sort the table by clicking on a Column Headers.
+- Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
 
 For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
-<a name="Creating-and-Maintaining-Table-Views-in-Xcode" />
+<a name="Creating-and-Maintaining-Table-Views-in-Xcode"></a>
 
 ## Creating and Maintaining Table Views in Xcode
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
-[![](table-view-images/edit01.png "Selecting the main storyboard")](table-view-images/edit01.png#lightbox)
+[![Selecting the main storyboard](table-view-images/edit01.png)](table-view-images/edit01.png#lightbox)
 
 This will open the window design in Xcode's Interface Builder:
 
-[![](table-view-images/edit02.png "Editing the UI in Xcode")](table-view-images/edit02.png#lightbox)
+[![Editing the UI in Xcode](table-view-images/edit02.png)](table-view-images/edit02.png#lightbox)
 
 Type `table` into the **Library Inspector's** Search Box to make it easier to find the Table View controls:
 
-[![](table-view-images/edit03.png "Selecting a Table View from the Library")](table-view-images/edit03.png#lightbox)
+[![Selecting a Table View from the Library](table-view-images/edit03.png)](table-view-images/edit03.png#lightbox)
 
 Drag a Table View onto the View Controller in the **Interface Editor**, make it fill the content area of the View Controller and set it to where it shrinks and grows with the window in the **Constraint Editor**:
 
-[![](table-view-images/edit04.png "Editing constraints")](table-view-images/edit04.png#lightbox)
+[![Editing constraints](table-view-images/edit04.png)](table-view-images/edit04.png#lightbox)
 
 Select the Table View in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](table-view-images/edit05.png "The Attribute Inspector")](table-view-images/edit05.png#lightbox)
+[![The Attribute Inspector](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
 
 - **Content Mode** - Allows you to use either Views (`NSView`) or Cells (`NSCell`) to display the data in the rows and columns. Starting with macOS 10.7, you should use Views.
 - **Floats Group Rows** - If `true`, the Table View will draw grouped cells as if they are floating.
@@ -78,10 +78,10 @@ Select the Table View in the **Interface Hierarchy** and the following propertie
 - **Grid Color** - Sets the cell border color.
 - **Background** - Sets the cell background color.
 - **Selection** - Allow you to control how the user can select cells in the table as:
-	- **Multiple** - If `true`, the user can select multiple rows and columns.
-	- **Column** - If `true`,the user can select columns.
-	- **Type Select** - If `true`, the user can type a character to select a row.
-	- **Empty** - If `true`, the user is not required to select a row or column, the table allows for no selection at all.
+  - **Multiple** - If `true`, the user can select multiple rows and columns.
+  - **Column** - If `true`,the user can select columns.
+  - **Type Select** - If `true`, the user can type a character to select a row.
+  - **Empty** - If `true`, the user is not required to select a row or column, the table allows for no selection at all.
 - **Autosave** - The name that the tables format is automatically save under.
 - **Column Information** - If `true`, the order and width of the columns will be automatically saved.
 - **Line Breaks** - Select how the cell handles line breaks.
@@ -92,7 +92,7 @@ Select the Table View in the **Interface Hierarchy** and the following propertie
 
 Select a Table Column in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](table-view-images/edit06.png "The Attribute Inspector")](table-view-images/edit06.png#lightbox)
+[![The Attribute Inspector](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
 
 - **Title** - Sets the title of the column.
 - **Alignment** - Set the alignment of the text within the cells.
@@ -110,19 +110,19 @@ Let's select the each Column in our Table View and give the first column a **Tit
 
 Select a Table Cell View (`NSTableViewCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](table-view-images/edit07.png "The Attribute Inspector")](table-view-images/edit07.png#lightbox)
+[![The Attribute Inspector](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
 
 These are all of the properties of a standard View. You also have the option of resizing the rows for this column here.
 
 Select a Table View Cell (by default, this is a `NSTextField`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](table-view-images/edit08.png "The Attribute Inspector")](table-view-images/edit08.png#lightbox)
+[![The Attribute Inspector](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
 
 You'll have all the properties of a standard text field to set here. By default, a standard Text Field is used to display data for a cell in a column.
 
 Select a Table Cell View (`NSTableFieldCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](table-view-images/edit09.png "The Attribute Inspector")](table-view-images/edit09.png#lightbox)
+[![The Attribute Inspector](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
 
 The most important settings here are:
 
@@ -136,11 +136,11 @@ The most important settings here are:
 
 Select the Table Cell View (`NSTableFieldCell`) at the bottom of a Table Column in the **Interface Hierarchy**:
 
-[![](table-view-images/edit10.png "Selecting the Table Cell View")](table-view-images/edit10.png#lightbox)
+[![Selecting the Table Cell View](table-view-images/edit10.png)](table-view-images/edit10.png#lightbox)
 
 This allows you to edit the Table Cell View used as the base _Pattern_ for all cells created for the given column.
 
-<a name="Adding_Actions_and_Outlets" />
+<a name="Adding_Actions_and_Outlets"></a>
 
 ### Adding Actions and Outlets
 
@@ -150,19 +150,19 @@ The process is the same for any Table View element that we want to expose:
 
 1. Switch to the **Assistant Editor** and ensure that the `ViewController.h` file is selected: 
 
-	[![](table-view-images/edit11.png "The Assistant Editor")](table-view-images/edit11.png#lightbox)
+    [![The Assistant Editor](table-view-images/edit11.png)](table-view-images/edit11.png#lightbox)
 2. Select the Table View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
 3. Create an **Outlet** for the Table View called `ProductTable`: 
 
-	[![](table-view-images/edit13.png "Configuring an Outlet")](table-view-images/edit13.png#lightbox)
+    [![Configuring an Outlet](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
 4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`: 
 
-	[![](table-view-images/edit14.png "Configuring an Outlet")](table-view-images/edit14.png#lightbox)
+    [![Configuring an Outlet](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
 5. Save you changes and return to Visual Studio for Mac to sync with Xcode.
 
 Next, we'll write the code display some data for the table when the application is run.
 
-<a name="Populating_the_Table_View" />
+<a name="Populating_the_Table_View"></a>
 
 ## Populating the Table View
 
@@ -170,7 +170,7 @@ With our Table View designed in Interface Builder and exposed via an **Outlet**,
 
 First, let's create a new `Product` class to hold the information for the individual rows. In the **Solution Explorer**, right-click the Project and select **Add** > **New File...** Select **General** > **Empty Class**, enter `Product` for the **Name** and click the **New** button:
 
-[![](table-view-images/populate01.png "Creating an empty class")](table-view-images/populate01.png#lightbox)
+[![Creating an empty class](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
 
 Make the `Product.cs` file look like the following:
 
@@ -179,25 +179,25 @@ using System;
 
 namespace MacTables
 {
-	public class Product
-	{
-		#region Computed Properties
-		public string Title { get; set;} = "";
-		public string Description { get; set;} = "";
-		#endregion
+  public class Product
+  {
+    #region Computed Properties
+    public string Title { get; set;} = "";
+    public string Description { get; set;} = "";
+    #endregion
 
-		#region Constructors
-		public Product ()
-		{
-		}
+    #region Constructors
+    public Product ()
+    {
+    }
 
-		public Product (string title, string description)
-		{
-			this.Title = title;
-			this.Description = description;
-		}
-		#endregion
-	}
+    public Product (string title, string description)
+    {
+      this.Title = title;
+      this.Description = description;
+    }
+    #endregion
+  }
 }
 
 ```
@@ -216,25 +216,25 @@ using System.Collections.Generic;
 
 namespace MacTables
 {
-	public class ProductTableDataSource : NSTableViewDataSource
-	{
-		#region Public Variables
-		public List<Product> Products = new List<Product>();
-		#endregion
+  public class ProductTableDataSource : NSTableViewDataSource
+  {
+    #region Public Variables
+    public List<Product> Products = new List<Product>();
+    #endregion
 
-		#region Constructors
-		public ProductTableDataSource ()
-		{
-		}
-		#endregion
+    #region Constructors
+    public ProductTableDataSource ()
+    {
+    }
+    #endregion
 
-		#region Override Methods
-		public override nint GetRowCount (NSTableView tableView)
-		{
-			return Products.Count;
-		}
-		#endregion
-	}
+    #region Override Methods
+    public override nint GetRowCount (NSTableView tableView)
+    {
+      return Products.Count;
+    }
+    #endregion
+  }
 }
 
 ```
@@ -255,53 +255,53 @@ using System.Collections.Generic;
 
 namespace MacTables
 {
-	public class ProductTableDelegate: NSTableViewDelegate
-	{
-		#region Constants 
-		private const string CellIdentifier = "ProdCell";
-		#endregion
+  public class ProductTableDelegate: NSTableViewDelegate
+  {
+    #region Constants 
+    private const string CellIdentifier = "ProdCell";
+    #endregion
 
-		#region Private Variables
-		private ProductTableDataSource DataSource;
-		#endregion
+    #region Private Variables
+    private ProductTableDataSource DataSource;
+    #endregion
 
-		#region Constructors
-		public ProductTableDelegate (ProductTableDataSource datasource)
-		{
-			this.DataSource = datasource;
-		}
-		#endregion
+    #region Constructors
+    public ProductTableDelegate (ProductTableDataSource datasource)
+    {
+      this.DataSource = datasource;
+    }
+    #endregion
 
-		#region Override Methods
-		public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-		{
-			// This pattern allows you reuse existing views when they are no-longer in use.
-			// If the returned view is null, you instance up a new view
-			// If a non-null view is returned, you modify it enough to reflect the new data
-			NSTextField view = (NSTextField)tableView.MakeView (CellIdentifier, this);
-			if (view == null) {
-				view = new NSTextField ();
-				view.Identifier = CellIdentifier;
-				view.BackgroundColor = NSColor.Clear;
-				view.Bordered = false;
-				view.Selectable = false;
-				view.Editable = false;
-			}
+    #region Override Methods
+    public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+    {
+      // This pattern allows you reuse existing views when they are no-longer in use.
+      // If the returned view is null, you instance up a new view
+      // If a non-null view is returned, you modify it enough to reflect the new data
+      NSTextField view = (NSTextField)tableView.MakeView (CellIdentifier, this);
+      if (view == null) {
+        view = new NSTextField ();
+        view.Identifier = CellIdentifier;
+        view.BackgroundColor = NSColor.Clear;
+        view.Bordered = false;
+        view.Selectable = false;
+        view.Editable = false;
+      }
 
-			// Setup view based on the column selected
-			switch (tableColumn.Title) {
-			case "Product":
-				view.StringValue = DataSource.Products [(int)row].Title;
-				break;
-			case "Details":
-				view.StringValue = DataSource.Products [(int)row].Description;
-				break;
-			}
+      // Setup view based on the column selected
+      switch (tableColumn.Title) {
+      case "Product":
+        view.StringValue = DataSource.Products [(int)row].Title;
+        break;
+      case "Details":
+        view.StringValue = DataSource.Products [(int)row].Description;
+        break;
+      }
 
-			return view;
-		}
-		#endregion
-	}
+      return view;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -312,35 +312,35 @@ To populate the table, let's edit the `ViewController.cs` file and make the `Awa
 ```csharp
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+  base.AwakeFromNib ();
 
-	// Create the Product Table Data Source and populate it
-	var DataSource = new ProductTableDataSource ();
-	DataSource.Products.Add (new Product ("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
-	DataSource.Products.Add (new Product ("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
-	DataSource.Products.Add (new Product ("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
+  // Create the Product Table Data Source and populate it
+  var DataSource = new ProductTableDataSource ();
+  DataSource.Products.Add (new Product ("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
+  DataSource.Products.Add (new Product ("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
+  DataSource.Products.Add (new Product ("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
 
-	// Populate the Product Table
-	ProductTable.DataSource = DataSource;
-	ProductTable.Delegate = new ProductTableDelegate (DataSource);
+  // Populate the Product Table
+  ProductTable.DataSource = DataSource;
+  ProductTable.Delegate = new ProductTableDelegate (DataSource);
 }
 ```
 
 If we run the application, the following is displayed:
 
-[![](table-view-images/populate02.png "A sample app run")](table-view-images/populate02.png#lightbox)
+[![A sample app run](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
 
-<a name="Sorting_by_Column" />
+<a name="Sorting_by_Column"></a>
 
 ## Sorting by Column
 
 Let's allow the user to sort the data in the table by clicking on a Column Header. First, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the `Product` column, enter `Title` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
-[![](table-view-images/sort01.png "Setting the sort key")](table-view-images/sort01.png#lightbox)
+[![Setting the sort key](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
 
 Select the `Details` column, enter `Description` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
-[![](table-view-images/sort02.png "Setting the sort key")](table-view-images/sort02.png#lightbox)
+[![Setting the sort key](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -349,40 +349,40 @@ Now let's edit the `ProductTableDataSource.cs` file and add the following method
 ```csharp
 public void Sort(string key, bool ascending) {
 
-	// Take action based on key
-	switch (key) {
-	case "Title":
-		if (ascending) {
-			Products.Sort ((x, y) => x.Title.CompareTo (y.Title));
-		} else {
-			Products.Sort ((x, y) => -1 * x.Title.CompareTo (y.Title));
-		}
-		break;
-	case "Description":
-		if (ascending) {
-			Products.Sort ((x, y) => x.Description.CompareTo (y.Description));
-		} else {
-			Products.Sort ((x, y) => -1 * x.Description.CompareTo (y.Description));
-		}
-		break;
-	}
+  // Take action based on key
+  switch (key) {
+  case "Title":
+    if (ascending) {
+      Products.Sort ((x, y) => x.Title.CompareTo (y.Title));
+    } else {
+      Products.Sort ((x, y) => -1 * x.Title.CompareTo (y.Title));
+    }
+    break;
+  case "Description":
+    if (ascending) {
+      Products.Sort ((x, y) => x.Description.CompareTo (y.Description));
+    } else {
+      Products.Sort ((x, y) => -1 * x.Description.CompareTo (y.Description));
+    }
+    break;
+  }
 
 }
 
 public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescriptor[] oldDescriptors)
 {
-	// Sort the data
-	if (oldDescriptors.Length > 0) {
-		// Update sort
-		Sort (oldDescriptors [0].Key, oldDescriptors [0].Ascending);
-	} else {
-		// Grab current descriptors and update sort
-		NSSortDescriptor[] tbSort = tableView.SortDescriptors; 
-		Sort (tbSort[0].Key, tbSort[0].Ascending); 
-	}
-			
-	// Refresh table
-	tableView.ReloadData ();
+  // Sort the data
+  if (oldDescriptors.Length > 0) {
+    // Update sort
+    Sort (oldDescriptors [0].Key, oldDescriptors [0].Ascending);
+  } else {
+    // Grab current descriptors and update sort
+    NSSortDescriptor[] tbSort = tableView.SortDescriptors; 
+    Sort (tbSort[0].Key, tbSort[0].Ascending); 
+  }
+      
+  // Refresh table
+  tableView.ReloadData ();
 }
 ```
 
@@ -390,25 +390,24 @@ The `Sort` method allow us to sort the data in the Data Source based on a given 
 
 If we run the application and click in the Column Headers, the rows will be sorted by that column:
 
-[![](table-view-images/sort03.png "An example app run")](table-view-images/sort03.png#lightbox)
+[![An example app run](table-view-images/sort03.png)](table-view-images/sort03.png#lightbox)
 
-<a name="Row_Selection" />
+<a name="Row_Selection"></a>
 
 ## Row Selection
 
 If you want to allow the user to select a single row, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and uncheck the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![](table-view-images/select01.png "The Attribute Inspector")](table-view-images/select01.png#lightbox)
+[![The Attribute Inspector](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
-
 
 Next, edit the `ProductTableDelegate.cs` file and add the following method:
 
 ```csharp
 public override bool ShouldSelectRow (NSTableView tableView, nint row)
 {
-	return true;
+  return true;
 }
 ```
 
@@ -421,23 +420,22 @@ The Table View (`NSTableView`) contains the following methods for working with r
 - `SelectedRow` - Returns the current row selected in the table.
 - `IsRowSelected(nint)` - Returns `true` if the given row is selected.
 
-<a name="Multiple_Row_Selection" />
+<a name="Multiple_Row_Selection"></a>
 
 ## Multiple Row Selection
 
 If you want to allow the user to select a multiple rows, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![](table-view-images/select02.png "The Attribute Inspector")](table-view-images/select02.png#lightbox)
+[![The Attribute Inspector](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
-
 
 Next, edit the `ProductTableDelegate.cs` file and add the following method:
 
 ```csharp
 public override bool ShouldSelectRow (NSTableView tableView, nint row)
 {
-	return true;
+  return true;
 }
 ```
 
@@ -455,13 +453,13 @@ The Table View (`NSTableView`) contains the following methods for working with r
 - `SelectedRowCount` - Returns the number of selected rows.
 - `IsRowSelected(nint)` - Returns `true` if the given row is selected.
 
-<a name="Type_to_Select_Row" />
+<a name="Type_to_Select_Row"></a>
 
 ## Type to Select Row
 
 If you want to allow the user to type a character with the Table View selected and select the first row that has that character, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Type Select** checkbox in the **Attribute Inspector**:
 
-[![](table-view-images/type01.png "Setting the selection type")](table-view-images/type01.png#lightbox)
+[![Setting the selection type](table-view-images/type01.png)](table-view-images/type01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -470,16 +468,16 @@ Now let's edit the `ProductTableDelegate.cs` file and add the following method:
 ```csharp
 public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRow, nint endRow, string searchString)
 {
-	nint row = 0;
-	foreach(Product product in DataSource.Products) {
-		if (product.Title.Contains(searchString)) return row;
+  nint row = 0;
+  foreach(Product product in DataSource.Products) {
+    if (product.Title.Contains(searchString)) return row;
 
-		// Increment row counter
-		++row;
-	}
+    // Increment row counter
+    ++row;
+  }
 
-	// If not found select the first row
-	return 0;
+  // If not found select the first row
+  return 0;
 }
 ```
 
@@ -487,15 +485,15 @@ The `GetNextTypeSelectMatch` method takes the given `searchString` and returns t
 
 If we run the application and type a character, a row is selected:
 
-[![](table-view-images/type02.png "A sample app run")](table-view-images/type02.png#lightbox)
+[![A sample app run](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
 
-<a name="Reordering_Columns" />
+<a name="Reordering_Columns"></a>
 
 ## Reordering Columns
 
 If you want to allow the user to drag reorder columns in the Table View, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Reordering** checkbox in the **Attribute Inspector**:
 
-[![](table-view-images/reorder01.png "The Attribute Inspector")](table-view-images/reorder01.png#lightbox)
+[![The Attribute Inspector](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
 
 If we give a value for the **Autosave** property and check the **Column Information** field, any changes we make to the table's layout will automatically be saved for us and restored the next time the application is run.
 
@@ -506,7 +504,7 @@ Now let's edit the `ProductTableDelegate.cs` file and add the following method:
 ```csharp
 public override bool ShouldReorder (NSTableView tableView, nint columnIndex, nint newColumnIndex)
 {
-	return true;
+  return true;
 }
 ```
 
@@ -514,9 +512,9 @@ The `ShouldReorder` method should return `true` for any column that it want to a
 
 If we run the application, we can drag Column Headers around to reorder our columns:
 
-[![](table-view-images/reorder02.png "An example of the reordered columns")](table-view-images/reorder02.png#lightbox)
+[![An example of the reordered columns](table-view-images/reorder02.png)](table-view-images/reorder02.png#lightbox)
 
-<a name="Editing_Cells" />
+<a name="Editing_Cells"></a>
 
 ## Editing Cells
 
@@ -525,54 +523,54 @@ If you want to allow the user to edit the values for a given cell, edit the `Pro
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
-	// This pattern allows you reuse existing views when they are no-longer in use.
-	// If the returned view is null, you instance up a new view
-	// If a non-null view is returned, you modify it enough to reflect the new data
-	NSTextField view = (NSTextField)tableView.MakeView (tableColumn.Title, this);
-	if (view == null) {
-		view = new NSTextField ();
-		view.Identifier = tableColumn.Title;
-		view.BackgroundColor = NSColor.Clear;
-		view.Bordered = false;
-		view.Selectable = false;
-		view.Editable = true;
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTextField view = (NSTextField)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTextField ();
+    view.Identifier = tableColumn.Title;
+    view.BackgroundColor = NSColor.Clear;
+    view.Bordered = false;
+    view.Selectable = false;
+    view.Editable = true;
 
-		view.EditingEnded += (sender, e) => {
-					
-			// Take action based on type
-			switch(view.Identifier) {
-			case "Product":
-				DataSource.Products [(int)view.Tag].Title = view.StringValue;
-				break;
-			case "Details":
-				DataSource.Products [(int)view.Tag].Description = view.StringValue;
-				break; 
-			}
-		};
-	}
+    view.EditingEnded += (sender, e) => {
+          
+      // Take action based on type
+      switch(view.Identifier) {
+      case "Product":
+        DataSource.Products [(int)view.Tag].Title = view.StringValue;
+        break;
+      case "Details":
+        DataSource.Products [(int)view.Tag].Description = view.StringValue;
+        break; 
+      }
+    };
+  }
 
-	// Tag view
-	view.Tag = row;
+  // Tag view
+  view.Tag = row;
 
-	// Setup view based on the column selected
-	switch (tableColumn.Title) {
-	case "Product":
-		view.StringValue = DataSource.Products [(int)row].Title;
-		break;
-	case "Details":
-		view.StringValue = DataSource.Products [(int)row].Description;
-		break;
-	}
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.StringValue = DataSource.Products [(int)row].Title;
+    break;
+  case "Details":
+    view.StringValue = DataSource.Products [(int)row].Description;
+    break;
+  }
 
-	return view;
+  return view;
 }
 ```
 
 Now if we run the application, the user can edit the cells in the Table View:
 
-[![](table-view-images/editing01.png "An example of editing a cell")](table-view-images/editing01.png#lightbox)
+[![An example of editing a cell](table-view-images/editing01.png)](table-view-images/editing01.png#lightbox)
 
-<a name="Using_Images_in_Table_Views" />
+<a name="Using_Images_in_Table_Views"></a>
 
 ## Using Images in Table Views
 
@@ -582,62 +580,62 @@ To include an image as part of the cell in a `NSTableView`, you'll need to chang
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
 
-	// This pattern allows you reuse existing views when they are no-longer in use.
-	// If the returned view is null, you instance up a new view
-	// If a non-null view is returned, you modify it enough to reflect the new data
-	NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
-	if (view == null) {
-		view = new NSTableCellView ();
-		if (tableColumn.Title == "Product") {
-			view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-			view.AddSubview (view.ImageView);
-			view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-		} else {
-			view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-		}
-		view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-		view.AddSubview (view.TextField);
-		view.Identifier = tableColumn.Title;
-		view.TextField.BackgroundColor = NSColor.Clear;
-		view.TextField.Bordered = false;
-		view.TextField.Selectable = false;
-		view.TextField.Editable = true;
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTableCellView ();
+    if (tableColumn.Title == "Product") {
+      view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+      view.AddSubview (view.ImageView);
+      view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+    } else {
+      view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+    }
+    view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+    view.AddSubview (view.TextField);
+    view.Identifier = tableColumn.Title;
+    view.TextField.BackgroundColor = NSColor.Clear;
+    view.TextField.Bordered = false;
+    view.TextField.Selectable = false;
+    view.TextField.Editable = true;
 
-		view.TextField.EditingEnded += (sender, e) => {
+    view.TextField.EditingEnded += (sender, e) => {
 
-			// Take action based on type
-			switch(view.Identifier) {
-			case "Product":
-				DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
-				break;
-			case "Details":
-				DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-				break; 
-			}
-		};
-	}
+      // Take action based on type
+      switch(view.Identifier) {
+      case "Product":
+        DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
+        break;
+      case "Details":
+        DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
+        break; 
+      }
+    };
+  }
 
-	// Tag view
-	view.TextField.Tag = row;
+  // Tag view
+  view.TextField.Tag = row;
 
-	// Setup view based on the column selected
-	switch (tableColumn.Title) {
-	case "Product":
-		view.ImageView.Image = NSImage.ImageNamed ("tags.png");
-		view.TextField.StringValue = DataSource.Products [(int)row].Title;
-		break;
-	case "Details":
-		view.TextField.StringValue = DataSource.Products [(int)row].Description;
-		break;
-	}
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.ImageView.Image = NSImage.ImageNamed ("tags.png");
+    view.TextField.StringValue = DataSource.Products [(int)row].Title;
+    break;
+  case "Details":
+    view.TextField.StringValue = DataSource.Products [(int)row].Description;
+    break;
+  }
 
-	return view;
+  return view;
 }
 ```
 
 For more information, please see the [Using Images with Table Views](~/mac/app-fundamentals/image.md) section of our [Working with Image](~/mac/app-fundamentals/image.md) documentation.
 
-<a name="Adding-a-Delete-Button-to-a-Row" />
+<a name="Adding-a-Delete-Button-to-a-Row"></a>
 
 ## Adding a Delete Button to a Row
 
@@ -645,7 +643,7 @@ Based on the requirements of your app, there might be occasions where you need t
 
 First, edit the `Main.storyboard` in Xcode's Interface Builder, select the Table View and increase the number of columns to three (3). Next, change the **Title** of the new column to `Action`:
 
-[![](table-view-images/delete01.png "Editing the column name")](table-view-images/delete01.png#lightbox)
+[![Editing the column name](table-view-images/delete01.png)](table-view-images/delete01.png#lightbox)
 
 Save the changes to the Storyboard and return to Visual Studio for Mac to sync the changes.
 
@@ -654,7 +652,7 @@ Next, edit the `ViewController.cs` file and add the following public method:
 ```csharp
 public void ReloadTable ()
 {
-	ProductTable.ReloadData ();
+  ProductTable.ReloadData ();
 }
 ```
 
@@ -677,8 +675,8 @@ private ViewController Controller;
 #region Constructors
 public ProductTableDelegate (ViewController controller, ProductTableDataSource datasource)
 {
-	this.Controller = controller;
-	this.DataSource = datasource;
+  this.Controller = controller;
+  this.DataSource = datasource;
 }
 #endregion
 ```
@@ -688,32 +686,32 @@ Next, add the following new private method to the class:
 ```csharp
 private void ConfigureTextField (NSTableCellView view, nint row)
 {
-	// Add to view
-	view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-	view.AddSubview (view.TextField);
+  // Add to view
+  view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+  view.AddSubview (view.TextField);
 
-	// Configure
-	view.TextField.BackgroundColor = NSColor.Clear;
-	view.TextField.Bordered = false;
-	view.TextField.Selectable = false;
-	view.TextField.Editable = true;
+  // Configure
+  view.TextField.BackgroundColor = NSColor.Clear;
+  view.TextField.Bordered = false;
+  view.TextField.Selectable = false;
+  view.TextField.Editable = true;
 
-	// Wireup events
-	view.TextField.EditingEnded += (sender, e) => {
+  // Wireup events
+  view.TextField.EditingEnded += (sender, e) => {
 
-		// Take action based on type
-		switch (view.Identifier) {
-		case "Product":
-			DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
-			break;
-		case "Details":
-			DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-			break;
-		}
-	};
+    // Take action based on type
+    switch (view.Identifier) {
+    case "Product":
+      DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
+      break;
+    case "Details":
+      DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
+      break;
+    }
+  };
 
-	// Tag view
-	view.TextField.Tag = row;
+  // Tag view
+  view.TextField.Tag = row;
 }
 ```
 
@@ -725,88 +723,88 @@ Finally, edit the `GetViewForItem` method and make it look like the following:
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
 
-	// This pattern allows you reuse existing views when they are no-longer in use.
-	// If the returned view is null, you instance up a new view
-	// If a non-null view is returned, you modify it enough to reflect the new data
-	NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
-	if (view == null) {
-		view = new NSTableCellView ();
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTableCellView ();
 
-		// Configure the view
-		view.Identifier = tableColumn.Title;
+    // Configure the view
+    view.Identifier = tableColumn.Title;
 
-		// Take action based on title
-		switch (tableColumn.Title) {
-		case "Product":
-			view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-			view.AddSubview (view.ImageView);
-			view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-			ConfigureTextField (view, row);
-			break;
-		case "Details":
-			view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-			ConfigureTextField (view, row);
-			break;
-		case "Action":
-			// Create new button
-			var button = new NSButton (new CGRect (0, 0, 81, 16));
-			button.SetButtonType (NSButtonType.MomentaryPushIn);
-			button.Title = "Delete";
-			button.Tag = row;
+    // Take action based on title
+    switch (tableColumn.Title) {
+    case "Product":
+      view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+      view.AddSubview (view.ImageView);
+      view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+      ConfigureTextField (view, row);
+      break;
+    case "Details":
+      view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+      ConfigureTextField (view, row);
+      break;
+    case "Action":
+      // Create new button
+      var button = new NSButton (new CGRect (0, 0, 81, 16));
+      button.SetButtonType (NSButtonType.MomentaryPushIn);
+      button.Title = "Delete";
+      button.Tag = row;
 
-			// Wireup events
-			button.Activated += (sender, e) => {
-				// Get button and product
-				var btn = sender as NSButton;
-				var product = DataSource.Products [(int)btn.Tag];
+      // Wireup events
+      button.Activated += (sender, e) => {
+        // Get button and product
+        var btn = sender as NSButton;
+        var product = DataSource.Products [(int)btn.Tag];
 
-				// Configure alert
-				var alert = new NSAlert () {
-					AlertStyle = NSAlertStyle.Informational,
-					InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
-					MessageText = $"Delete {product.Title}?",
-				};
-				alert.AddButton ("Cancel");
-				alert.AddButton ("Delete");
-				alert.BeginSheetForResponse (Controller.View.Window, (result) => {
-					// Should we delete the requested row?
-					if (result == 1001) {
-						// Remove the given row from the dataset
-						DataSource.Products.RemoveAt((int)btn.Tag);
-						Controller.ReloadTable ();
-					}
-				});
-			};
+        // Configure alert
+        var alert = new NSAlert () {
+          AlertStyle = NSAlertStyle.Informational,
+          InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
+          MessageText = $"Delete {product.Title}?",
+        };
+        alert.AddButton ("Cancel");
+        alert.AddButton ("Delete");
+        alert.BeginSheetForResponse (Controller.View.Window, (result) => {
+          // Should we delete the requested row?
+          if (result == 1001) {
+            // Remove the given row from the dataset
+            DataSource.Products.RemoveAt((int)btn.Tag);
+            Controller.ReloadTable ();
+          }
+        });
+      };
 
-			// Add to view
-			view.AddSubview (button);
-			break;
-		}
+      // Add to view
+      view.AddSubview (button);
+      break;
+    }
 
-	}
+  }
 
-	// Setup view based on the column selected
-	switch (tableColumn.Title) {
-	case "Product":
-		view.ImageView.Image = NSImage.ImageNamed ("tag.png");
-		view.TextField.StringValue = DataSource.Products [(int)row].Title;
-		view.TextField.Tag = row;
-		break;
-	case "Details":
-		view.TextField.StringValue = DataSource.Products [(int)row].Description;
-		view.TextField.Tag = row;
-		break;
-	case "Action":
-		foreach (NSView subview in view.Subviews) {
-			var btn = subview as NSButton;
-			if (btn != null) {
-				btn.Tag = row;
-			}
-		}
-		break;
-	}
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.ImageView.Image = NSImage.ImageNamed ("tag.png");
+    view.TextField.StringValue = DataSource.Products [(int)row].Title;
+    view.TextField.Tag = row;
+    break;
+  case "Details":
+    view.TextField.StringValue = DataSource.Products [(int)row].Description;
+    view.TextField.Tag = row;
+    break;
+  case "Action":
+    foreach (NSView subview in view.Subviews) {
+      var btn = subview as NSButton;
+      if (btn != null) {
+        btn.Tag = row;
+      }
+    }
+    break;
+  }
 
-	return view;
+  return view;
 }
 ```
 
@@ -831,26 +829,26 @@ The Button's `Tag` property is used to hold the number of the Row that is curren
 ```csharp
 // Wireup events
 button.Activated += (sender, e) => {
-	// Get button and product
-	var btn = sender as NSButton;
-	var product = DataSource.Products [(int)btn.Tag];
+  // Get button and product
+  var btn = sender as NSButton;
+  var product = DataSource.Products [(int)btn.Tag];
 
-	// Configure alert
-	var alert = new NSAlert () {
-		AlertStyle = NSAlertStyle.Informational,
-		InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
-		MessageText = $"Delete {product.Title}?",
-	};
-	alert.AddButton ("Cancel");
-	alert.AddButton ("Delete");
-	alert.BeginSheetForResponse (Controller.View.Window, (result) => {
-		// Should we delete the requested row?
-		if (result == 1001) {
-			// Remove the given row from the dataset
-			DataSource.Products.RemoveAt((int)btn.Tag);
-			Controller.ReloadTable ();
-		}
-	});
+  // Configure alert
+  var alert = new NSAlert () {
+    AlertStyle = NSAlertStyle.Informational,
+    InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
+    MessageText = $"Delete {product.Title}?",
+  };
+  alert.AddButton ("Cancel");
+  alert.AddButton ("Delete");
+  alert.BeginSheetForResponse (Controller.View.Window, (result) => {
+    // Should we delete the requested row?
+    if (result == 1001) {
+      // Remove the given row from the dataset
+      DataSource.Products.RemoveAt((int)btn.Tag);
+      Controller.ReloadTable ();
+    }
+  });
 };
 ```
 
@@ -868,22 +866,22 @@ Finally, if the Table View Cell is being reused instead of being created new, th
 // Setup view based on the column selected
 switch (tableColumn.Title) {
 case "Product":
-	view.ImageView.Image = NSImage.ImageNamed ("tag.png");
-	view.TextField.StringValue = DataSource.Products [(int)row].Title;
-	view.TextField.Tag = row;
-	break;
+  view.ImageView.Image = NSImage.ImageNamed ("tag.png");
+  view.TextField.StringValue = DataSource.Products [(int)row].Title;
+  view.TextField.Tag = row;
+  break;
 case "Details":
-	view.TextField.StringValue = DataSource.Products [(int)row].Description;
-	view.TextField.Tag = row;
-	break;
+  view.TextField.StringValue = DataSource.Products [(int)row].Description;
+  view.TextField.Tag = row;
+  break;
 case "Action":
-	foreach (NSView subview in view.Subviews) {
-		var btn = subview as NSButton;
-		if (btn != null) {
-			btn.Tag = row;
-		}
-	}
-	break;
+  foreach (NSView subview in view.Subviews) {
+    var btn = subview as NSButton;
+    if (btn != null) {
+      btn.Tag = row;
+    }
+  }
+  break;
 }
 
 ```
@@ -892,17 +890,17 @@ For the **Action** column, all Sub Views are scanned until the `NSButton` is fou
 
 With these changes in place, when the app is run each row will have a **Delete** button:
 
-[![](table-view-images/delete02.png "The table view with deletion buttons")](table-view-images/delete02.png#lightbox)
+[![The table view with deletion buttons](table-view-images/delete02.png)](table-view-images/delete02.png#lightbox)
 
 When the user clicks a **Delete** button, an alert will be displayed asking them to delete the given Row:
 
-[![](table-view-images/delete03.png "A delete row alert")](table-view-images/delete03.png#lightbox)
+[![A delete row alert](table-view-images/delete03.png)](table-view-images/delete03.png#lightbox)
 
 If the user chooses delete, the row will be removed and the table will be redrawn:
 
-[![](table-view-images/delete04.png "The table after the row is deleted")](table-view-images/delete04.png#lightbox)
+[![The table after the row is deleted](table-view-images/delete04.png)](table-view-images/delete04.png#lightbox)
 
-<a name="Data_Binding_Table_Views" />
+<a name="Data_Binding_Table_Views"></a>
 
 ## Data Binding Table Views
 
@@ -912,7 +910,7 @@ Key-Value Coding (KVC) is a mechanism for accessing an object’s properties ind
 
 For more information, please see the [Table View Data Binding](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) section of our [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
@@ -920,8 +918,8 @@ This article has taken a detailed look at working with Table Views in a Xamarin.
 
 ## Related Links
 
-- [MacTables (sample)](https://developer.xamarin.com/samples/mac/MacTables/)
-- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacTables (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
+- [MacImages (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Outline Views](~/mac/user-interface/outline-view.md)
 - [Source Lists](~/mac/user-interface/source-list.md)

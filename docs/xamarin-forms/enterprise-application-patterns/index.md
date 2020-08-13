@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Enterprise Application Patterns using Xamarin.Forms eBook
 
 _Architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise applications_
 
-![](images/cover-sml.png "Enterprise Application Patterns using Xamarin.Forms eBook")
+![Enterprise Application Patterns using Xamarin.Forms eBook](images/cover-sml.png)
 
 This eBook provides guidance on how to implement the Model-View-ViewModel (MVVM) pattern, dependency injection, navigation, validation, and configuration management, while maintaining loose coupling. In addition, there's also guidance on performing authentication and authorization with IdentityServer, accessing data from containerized microservices, and unit testing.
 
@@ -71,10 +72,9 @@ Many modern web-based solutions make use of web services, hosted by web servers,
 
 Testing models and view models from MVVM applications is identical to testing any other classes, and the same tools and techniques can be used. However, there are some patterns that are typical to model and view model classes, that can benefit from specific unit testing techniques.
 
-## Feedback
+## Community Site
 
 This project has a community site, on which you can post questions, and provide feedback. The community site is located on [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Alternatively, feedback about the eBook can be emailed to [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
-
 
 ## Related Links
 

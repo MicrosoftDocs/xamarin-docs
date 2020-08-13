@@ -4,14 +4,14 @@ description: "This document provide links to documentation relevant for Xamarin.
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
 ---
 
 # Xamarin.Mac – Related Documentation
 
-In addition to the Mac section of [developer.xamarin.com](~/mac/get-started/index.md) there are three great sources of documentation that can also be of assistance with Xamarin.Mac questions:
+In addition to the Mac section of [Microsoft Docs](~/mac/get-started/index.md) there are three great sources of documentation that can also be of assistance with Xamarin.Mac questions:
 
 - [**Xamarin.iOS documentation**](~/ios/get-started/index.md) - For many APIs (primarily outside of AppKit/UIKit) there are only small differences between the iOS and macOS versions. In some cases where a given iOS API has a name of `UIFoo`, a similar API named `NSFoo` can be found on macOS. These examples will be generally in C# already.
 

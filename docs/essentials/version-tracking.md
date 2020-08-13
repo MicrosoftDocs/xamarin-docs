@@ -4,7 +4,9 @@ description: "The VersionTracking class in Xamarin.Essentials lets you check the
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 05/28/2019
+ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Version Tracking
@@ -73,5 +75,11 @@ All version information is stored using the [Preferences](preferences.md) API in
 
 ## API
 
-- [Version Tracking source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
+- [Version Tracking source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/VersionTracking)
 - [Version Tracking API documentation](xref:Xamarin.Essentials.VersionTracking)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Version-Tracking-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

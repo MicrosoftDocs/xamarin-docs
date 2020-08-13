@@ -4,8 +4,8 @@ description: "This document describes how to create a watchOS layout using Xamar
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -32,7 +32,7 @@ The key point is: make your user interface readable and useable
   ensure text is readable. Use the built-in text styles to get
   automatic Dynamic Type support.
 
-![](layout-images/type.png "Example of Dynamic Type support")
+![Example of Dynamic Type support](layout-images/type.png)
 
 - Focus on touch target sizes. Buttons/tappable table rows with
   text labels should span the whole screen. Apple says
@@ -42,7 +42,6 @@ The key point is: make your user interface readable and useable
 - Use the [`Menu` control](~/ios/watchos/user-interface/menu.md) to
   expose less-frequently used functionality to keep your app
   design clear and concise.
-
 
 ## Implementation
 
@@ -59,20 +58,19 @@ The design surface for the interface controller behaves
   onto the interface controller and they will be
   automatically laid-out one above the other:
 
-![](layout-images/controller-scene.png "Controls are automatically laid-out one above the other")
+![Controls are automatically laid-out one above the other](layout-images/controller-scene.png)
 
 You can set the **Position** and **Size** properties
   on each control to control their appearance:
 
-![](layout-images/positionsize-attributes.png "Set the Position and Size properties on each control")
+![Set the Position and Size properties on each control](layout-images/positionsize-attributes.png)
 
 When the size is set to **Relative to Container**
   you can provide a proportional value and an offset
   adjustment. This screenshot shows a button that has
   been set to use 80% of the watch screen's width (**0.8**):
 
-![](layout-images/button-attributes.png "Provide a proportional value and an offset adjustment")
-
+![Provide a proportional value and an offset adjustment](layout-images/button-attributes.png)
 
 ### Group
 
@@ -82,14 +80,13 @@ When the size is set to **Relative to Container**
   by default, but you can modify the spacing (and insets)
   in the **Attributes** inspector.
 
-![](layout-images/group-attributes.png "Modify the spacing and insets in the Attributes inspector")
+![Modify the spacing and insets in the Attributes inspector](layout-images/group-attributes.png)
 
 Groups can themselves be sized and positioned relative
   to the controls around them, and groups can be nested
   to create complex layouts.
 
-![](layout-images/group-scene.png "Groups can be nested to create complex layouts")
-
+![Groups can be nested to create complex layouts](layout-images/group-scene.png)
 
 ### Separator
 
@@ -98,7 +95,7 @@ The separator control is intended to help provide
   (or background colors or images) to help the user
   understand which content is related on your screen.
 
-![](layout-images/separator-scene.png "Example of Separator usage")
+![Example of Separator usage](layout-images/separator-scene.png)
 
 Note the blue and green separators that don't use the full width
   of the screen have been configured with either
@@ -112,10 +109,8 @@ No layout would be complete without the `Label`, `Image`,
   These can be positioned in your layouts using **Groups**
   or the position and size settings on each control.
 
-
-
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple's Layout reference](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
 - [Apple's Color & Typography reference](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

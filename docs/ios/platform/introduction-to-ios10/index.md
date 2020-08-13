@@ -4,16 +4,12 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
 # Introduction to iOS 10
-
-_This article introduces all of the new and modified APIs and features available in iOS 10 for Xamarin.iOS developers._
-
-## Introducing iOS 10
 
 With the new iOS 10 SDK, Apple has included new APIs and services that enable the developer to create new categories of apps and features. An iOS app can now extend the Messages, Siri, Phone and Maps apps to provide rich, engaging functionality to the end user that was previously unavailable.
 
@@ -22,7 +18,6 @@ For more information on iOS 10, please see Apple's [iOS + Apps](https://develope
 ## What's New in iOS 10
 
 Apple has added several new APIs and services in iOS 10 along with many enhancements to existing features, including:
-
 
 ## Adapting to the True Tone Display
 
@@ -35,8 +30,6 @@ The following values are available:
 - `UIWhitePointAdaptivityStyleGame` - Used for game-focused apps.
 - `UIWhitePointAdaptivityStyleVideo` - Used for video-focused apps.
 - `UIWhitePointAdaptivityStylePhoto` - Used for photography-focused apps where color fidelity is more important than environmental white-point adjustments.
-
-<a name="app-extensions" />
 
 ## App Extensions
 
@@ -82,13 +75,12 @@ To find out more, please see our [Apple Pay Enhancements](~/ios/platform/apple-p
 
 Apple has added several enhancements to iOS 10.3 that allow an app to manage its icon:
 
- - `ApplicationIconBadgeNumber` - Gets or sets the badge of the app icon in the Springboard.
- - `SupportsAlternateIcons` - If `true` the app has an alternate set of icons.
- - `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
- - `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
+- `ApplicationIconBadgeNumber` - Gets or sets the badge of the app icon in the Springboard.
+- `SupportsAlternateIcons` - If `true` the app has an alternate set of icons.
+- `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
+- `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
 
 To find out more, please see our [Alternate App Icons](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) guide.
-
 
 ## Introduction to CallKit
 
@@ -128,7 +120,7 @@ iOS 10 presents new ways of driving engagement to an app by allowing the system 
 - CarPlay
 - Maps
 - Siri Interactions
-- QuickType Suggestions 
+- QuickType Suggestions
 
 An app exposes this functionality to the system using a collection of technologies such as [NSUserActivity](xref:Foundation.NSUserActivity), web markup, Core Spotlight, MapKit, Media Player and UIKit.
 
@@ -223,7 +215,7 @@ The following APIs have been deprecated in iOS 10:
 
 - The `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` and `CKFetchRecordChangesOperation` classes have been deprecated in CloudKit for iOS 10. Use the [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) and [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classes (which support record sharing) instead.
 - Several [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (such as zone-based and query-based subscriptions) have been deprecated. Use the [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) and [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) APIs instead.
-- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) symbols related to ubiquitous content have been deprecated.
+- [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) symbols related to ubiquitous content have been deprecated.
 - `ADBannerView`, `ADInterstitialAd` and related symbols in the [UIViewController](xref:UIKit.UIViewController) class have been deprecated.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) symbols related to floating point values have been deprecated.
 - The `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` and `UIUserNotificationSettings` classes of UIKit have been deprecated. Use the [User Notifications](#user-notifications) framework instead.
@@ -233,9 +225,6 @@ The following APIs have been deprecated in iOS 10:
 
 See Apple's [iOS 9.3 to iOS 10.0 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) documentation for a complete list of deprecations.
 
-
-
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
-- [What's new in iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

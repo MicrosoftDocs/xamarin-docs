@@ -4,8 +4,8 @@ description: "This document describes C# for Objective-C developers. It compares
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -13,7 +13,7 @@ ms.date: 06/05/2017
 
 _Xamarin.iOS allows platform-agnostic code written in C# to be shared across platforms. However, existing iOS applications may want to leverage Objective-C code that has already been created. This article serves as a short primer for Objective-C developers looking to move to Xamarin and the C# language._
 
-iOS and OS X applications developed in Objective-C can benefit from Xamarin by leveraging C# in places where platform-specific code is not required, allowing such code to be used on non-Apple devices. Things such as web services, JSON and XML parsing, and custom algorithms can then be used in a cross-platform manner.
+iOS and macOS applications developed in Objective-C can benefit from Xamarin by leveraging C# in places where platform-specific code is not required, allowing such code to be used on non-Apple devices. Things such as web services, JSON and XML parsing, and custom algorithms can then be used in a cross-platform manner.
 
 To take advantage of Xamarin while maintaining existing Objective-C assets, the former can be exposed to C# in a technology from Xamarin known as bindings, which surface Objective-C code to the managed, C# world. Also, if desired, code can be ported line-by-line to C# as well. Regardless of the approach however, whether it be binding or porting, some knowledge of both Objective-C and C# is necessary to effectively leverage existing Objective-C code with Xamarin.iOS.
 
@@ -27,7 +27,7 @@ For details on creating bindings see the other documents in [Binding Objective-C
 
 ## Language Comparison
 
-Objective-C and C# are very different languages both syntactically and from a runtime standpoint. Objective-C is a dynamic language and uses a message passing scheme, whereas C# is statically typed. Syntax-wise, Objective-C is like Smalltalk, whereas C# derives much of its fundamental syntax from Java, although it has matured to included many capabilities beyond Java in recent years.
+Objective-C and C# are very different languages both syntactically and from a runtime standpoint. Objective-C is a dynamic language and uses a message passing scheme, whereas C# is statically typed. Syntax-wise, Objective-C is like Smalltalk, whereas C# derives much of its fundamental syntax from Java, although it has matured to include many capabilities beyond Java in recent years.
 
 That said there are several language features of both Objective-C and C# that are similar in function. When creating a binding to Objective-C code from C# or when porting Objective-C to C#, understanding these similarities is useful.
 
@@ -44,22 +44,22 @@ Extension methods let you add static methods to a class, where static methods in
 ```csharp
 public static class UITextViewExtensions
 {
-	public static void ScrollToBottom (this UITextView textView)
-	{
-		// code to scroll textView
-	}
+    public static void ScrollToBottom (this UITextView textView)
+    {
+        // code to scroll textView
+    }
 }
 ```
 
 Then, when an instance of a `UITextView` is created in code, the method will be available in the autocomplete list as shown below:
 
- ![](primer-images/01-extensionmethodintellisense.png "The method available in the autocomplete")
+ ![The method available in the autocomplete](primer-images/01-extensionmethodintellisense.png)
 
 When the extension method is called the instance is passed to the argument, such as the `textView` in this example.
 
 ### Frameworks vs. Assemblies
 
-Objective-C packages related classes in special directories known as frameworks. In C# and .NET however, assemblies are used to provide reusable bits of precompiled code. In environments outside of iOS, assemblies contain intermediate language code (IL) that is just in time (JIT) compiled at runtime. However, Apple does not allow JIT in iOS applications. Therefore C# code targeting iOS with Xamarin is ahead of time compiled (AOT), producing a single Unix executable along with metadata files that are included in the application bundle.
+Objective-C packages related classes in special directories known as frameworks. In C# and .NET however, assemblies are used to provide reusable bits of precompiled code. In environments outside of iOS, assemblies contain intermediate language code (IL) that is just in time (JIT) compiled at runtime. However, Apple does not allow execution of JIT compiled code in iOS applications released on the App Store. Therefore C# code targeting iOS with Xamarin is ahead of time compiled (AOT), producing a single Unix executable along with metadata files that are included in the application bundle.
 
 ### Selectors vs. Named Parameters
 
@@ -80,10 +80,10 @@ Being a superset of C, Objective-C uses headers for public declarations that are
 For example, the following code includes the `UIKit` namespace, making every class in that namespace available to the implementation:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
-	// implementation of classes
+    // implementation of classes
 }
 ```
 
@@ -100,13 +100,13 @@ public string Name { get; set; }
 // property implemented with a backing field
 string address;
 public string Address {
-	get {
-		// could add additional code here
-		return address;
-	}
-	set {
-		address = value;
-	}
+    get {
+        // could add additional code here
+        return address;
+    }
+    set {
+        address = value;
+    }
 }
 ```
 
@@ -134,7 +134,7 @@ Objective-C uses *blocks* to create closures, where you can create a function in
 
 ```csharp
 (args) => {
-	//  implementation code
+    //  implementation code
 };
 ```
 

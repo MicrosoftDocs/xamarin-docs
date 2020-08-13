@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
 
@@ -18,4 +18,3 @@ ms.date: 04/03/2018
 ```
 
 This issue occurs when the *hidden* `.monotouch-32` and `.monotouch-64` folders are missing from the `.xcarchive` for signing / IPA creation, triggering the runtime error.
-

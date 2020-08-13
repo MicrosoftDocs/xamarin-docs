@@ -1,15 +1,15 @@
 ---
 title: "Get Started With Xamarin"
-description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, provides a general introduction to mobile development, and takes a look at training with Xamarin University."
+description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, and provides a general introduction to mobile development."
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2017
 ---
 
-# Building Mobile Apps
+# Building mobile apps
 
 Before you begin, check out the [system requirements](requirements.md)
 and [installation instructions](~/get-started/installation/index.md) to make sure everything's
@@ -25,39 +25,39 @@ If you'd like to build an app using native UI technologies (like Android XML or 
 - [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md)
 - [iOS Quick Start](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
 
-## Getting Started with Mobile Development
+## Get started with mobile development
 
 To learn more about how Xamarin works, and how to approach mobile app development projects,
 read the guides below:
 
-### [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
+### [What is Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 
-This document explains *how Xamarin works* at a high-level and links through to the getting-started guides for iOS, Android, and Xamarin.Forms.
+This document explains *how Xamarin works* at a high-level and links through to the getting-started guides for Xamarin.Forms, Android, and iOS.
 
-### [Introduction to the Mobile Software Development Lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
+### [Mobile software development lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 This article discusses the software development lifecycle with respect to mobile applications, and discusses some of the considerations required when building mobile projects. For developers wishing to just jump right in and start building, this guide can be skipped and read later for a more complete understanding of mobile development.
 
-## [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+## [Building cross-platform applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 By choosing Xamarin and keeping a few things in mind when you design and
 develop your mobile applications, you can realize tremendous code sharing across
 mobile platforms, reduce your time to market, leverage existing talent, meet
 customer demand for mobile access, and reduce cross-platform
-complexity.&nbsp;This document outlines key guidelines to realizing these
+complexity. This document outlines key guidelines to realizing these
 advantages for utility and productivity applications.
 
 ### [Introducing Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/)
 
 Learn more about Visual Studio for Mac, the Integrated Development Environment (IDE) for macOS.
 
-## Get Started with Xamarin University
+## Get started video
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 
-**Building Your First Xamarin.Forms App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
+**Building Your First Xamarin.Forms App with Xamarin for Visual Studio**
 
-## Related Links
+## Related links
 
 - [System Requirements](requirements.md)
 - [Installation Instructions](~/get-started/installation/index.md)

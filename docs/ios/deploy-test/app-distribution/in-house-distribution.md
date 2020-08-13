@@ -4,8 +4,8 @@ description: "This document gives a brief overview of distribution of applicatio
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -17,7 +17,7 @@ Once your Xamarin.iOS app has been developed, the next step in the software deve
 
 - Your application does not need to be submitted for review by Apple.
 - There are no limits to the amount of devices onto which you can deploy an application
-	- It is important to note that Apple makes it very clear that In-House applications are for internal use only.
+  - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
 
 It is also important to note that the Enterprise Program:
 
@@ -26,13 +26,13 @@ It is also important to note that the Enterprise Program:
 
 All apps still need to be signed by Apple.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing your Application
 
 Testing your application is carried out by using Ad Hoc distribution. For more information about testing, follow the steps in the [Ad-Hoc Distribution](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) guide. Be aware that you can only test on up to a maximum of 100 devices.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## Getting Set Up for Distribution
 
@@ -42,7 +42,7 @@ Apple Developer Enterprise Program certificates will last for three years, and p
 
 It is important to note that expired certificates cannot be renewed, and instead, you will have to replace the expired certificate with a new one, as detailed [below](#certificate).
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## Creating a Distribution Certificate
 
@@ -51,15 +51,15 @@ It is important to note that expired certificates cannot be renewed, and instead
 3. Click the **+** button to create a new Certificate.
 4. Under the *Production* heading, select **In-House and Ad Hoc**:
 
-   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![Select In-House and Ad Hoc](in-house-distribution-images/createcertmanually01.png)](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Click Continue, and follow the instructions to create a Certificate Signing Request via Keychain Access:
 
-   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![Create a Certificate Signing Request via Keychain Access](in-house-distribution-images/createcertmanually02.png)](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Once you have created your CSR as instructed, click Continue, and upload your CSR to the Member Center:
 
-   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![Upload the CSR to the Member Center](in-house-distribution-images/createcertmanually03.png)](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Click Generate to create your certificate.
 8. Download the completed certificate and double-click on the file to install it.
@@ -69,26 +69,25 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 1. Select your team, and click *View Details*:
 
-	[![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
+   [![Select your team](in-house-distribution-images/selectteam.png)](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Next, click the **Create** button next to **iOS Distribution Certificate**:
 
-   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
+   [![Create the iOS Distribution Certificate](in-house-distribution-images/selectcert.png)](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Next, click the **plus (+)** button and select **iOS App Store**:
+3. Next, click the **plus (+)** button and select **iOS App Store**:
 
-   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
+   [![Select iOS App Store](in-house-distribution-images/selectcert.png)](in-house-distribution-images/selectcert.png#lightbox)
 
-<a name="profile" />
+<a name="profile"></a>
 
 ## Creating a Distribution Provisioning Profile
 
-<a name="appid" />
+<a name="appid"></a>
 
 ### Creating an App ID
 
 As with any other Provisioning Profile you create, an App ID will be required to identify the App that you will be distributing to the user's device. If you haven't already created this, follow the steps below to create one:
-
 
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
 2. Click the **+** button and provide a **Name** which will identify it in the Portal.
@@ -100,25 +99,25 @@ Once you have the required components needed for creating a Distribution Profile
 
 1. Return to the Apple Provisioning Portal and select **Provisioning** > **Distribution**:
 
-   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
+   [![Select Provisioning > Distribution](in-house-distribution-images/distribute01.png)](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Click the **+** button and select the type of Distribution Profile that you want to create as **In-House**:
 
-   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
+   [![Create an In-House Distribution Profile](in-house-distribution-images/distribute02.png)](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Click the **Continue** button and select App ID from the dropdown list that you want to create a Distribution Profile for:
 
-   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
+   [![Select App ID from the dropdown list](in-house-distribution-images/distribute03.png)](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Click the **Continue** button and select distribution certificate required to sign the application:
 
-   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
+   [![Select distribution certificate required to sign the application](in-house-distribution-images/distribute04.png)](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
+5. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
-   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
+   [![Enter a Name for the new Distribution Profile](in-house-distribution-images/distribute06.png)](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Click the **Generate** button to create the new profile and finalize the process.
+6. Click the **Generate** button to create the new profile and finalize the process.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -130,11 +129,11 @@ You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refr
 
 -----
 
-<a name="inhouse" />
+<a name="inhouse"></a>
 
 ## Distributing your App In-House
 
-With the Apple Developer Enterprise Program, the licensee is the person responsible for distributing the application, and for adhering to the [guidelines](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf) set by Apple.
+With the Apple Developer Enterprise Program, the licensee is the person responsible for distributing the application, and for adhering to the [guidelines](https://developer.apple.com/programs/enterprise/) set by Apple.
 
 Your app can be distributed securely using a variety of different means, such as:
 
@@ -145,13 +144,11 @@ Your app can be distributed securely using a variety of different means, such as
 
 To distribute your app in any of these ways you must first create an IPA file, as explained in the next section.
 
-
 ### Creating an IPA for In-House Deployment
 
 Once provisioned, applications can be packaged into a file known as an *IPA*. This is a zip file that contains the application, along with additional metadata and icons. The IPA is used to add an application locally into iTunes so that it can be synced directly to a device that is included in the provisioning profile.
 
 For more information on creating an IPA see [IPA Support](~/ios/deploy-test/app-distribution/ipa-support.md) guide.
-
 
 ## Summary
 

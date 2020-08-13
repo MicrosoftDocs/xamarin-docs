@@ -1,5 +1,5 @@
 ---
-title: "Adding a pan gesture recognizer"
+title: "Add a pan gesture recognizer"
 description: "This article explains how to use a pan gesture to horizontally and vertically pan an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions."
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Adding a pan gesture recognizer
+# Add a pan gesture recognizer
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 
 _The pan gesture is used for detecting the movement of fingers around the screen and applying that movement to content, and is implemented with the `PanGestureRecognizer` class. A common scenario for the pan gesture is to horizontally and vertically pan an image, so that all of the image content can be viewed when it's being displayed in a viewport smaller than the image dimensions. This is accomplished by moving the image within the viewport, and is demonstrated in this article._
 
@@ -43,9 +44,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
   // Handle the pan
 }
 ```
-
-> [!NOTE]
-> Correct panning on Android requires the [Xamarin.Forms 2.1.0-pre1 NuGet package](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) at a minimum.
 
 ## Creating a pan container
 
@@ -142,10 +140,10 @@ This method updates the viewable content of the wrapped user interface element, 
 When panning content in an element that does not occupy the full screen, the height and width of the viewport can be obtained from the element's [`Height`](xref:Xamarin.Forms.VisualElement.Height) and [`Width`](xref:Xamarin.Forms.VisualElement.Width) properties.
 
 > [!NOTE]
-> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## Related Links
 
-- [PanGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+- [PanGesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

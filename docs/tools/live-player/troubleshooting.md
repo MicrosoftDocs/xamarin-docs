@@ -3,17 +3,21 @@ title: "Troubleshooting Xamarin Live Player"
 description: "This document describes known issues with the Xamarin Live Player and potential fixes. It discusses connection issues, configuration issues, and more."
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: lobrien
-ms.author: laobri
-ms.date: 08/08/2018
+author: davidortinau
+ms.author: daortin
+ms.date: 06/13/2019
 ---
 
 # Troubleshooting Xamarin Live Player
 
 ![Preview feature](~/media/shared/preview.png)
 
-> [!NOTE]
-> Live Player Preview is only available in Visual Studio 2017.
+> [!WARNING]
+> The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017..
+
+> [!TIP]
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> Visual Studio for Mac to view your screen designs as you edit them.
 
 This article explains the limitations of Live Player, and some common problems with steps to correct them.
 
@@ -73,10 +77,10 @@ This error is often experienced when the mobile device running Xamarin Live Play
 same network as the computer running Visual Studio; this often happens when connecting to a device that was previously
 paired successfully.
 
-* Check that both the device and computer are on the same Wi-Fi network.
-* The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player. The following ports are required for the Xamarin Live Player:
-  * 37847 – Internal network access 
-  * 8090 – External network access
+- Check that both the device and computer are on the same Wi-Fi network.
+- The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player. The following ports are required for the Xamarin Live Player:
+  - 37847 – Internal network access 
+  - 8090 – External network access
 
 ## Manually Configure Device
 
@@ -86,8 +90,8 @@ If you can not connect to your device over Wi-Fi you can attempt to manually con
 
 Head to your application data folder:
 
-* Windows: **%userprofile%\AppData\Roaming**
-* macOS: **~/Users/$USER/.config**
+- Windows: **%userprofile%\AppData\Roaming**
+- macOS: **~/Users/$USER/.config**
 
 In this folder you will find **PlayerDeviceList.xml** if it does not exist you will need to create one.
 
@@ -164,4 +168,3 @@ uses these names; renaming them will cause rendering issues.
 ## Related Links
 
 - [Setup](~/tools/live-player/install.md)
-- [Samples to use with Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

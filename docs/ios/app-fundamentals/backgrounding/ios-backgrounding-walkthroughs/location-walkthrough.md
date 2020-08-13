@@ -4,8 +4,8 @@ description: "This document provides a walkthrough of how to use location inform
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -17,7 +17,6 @@ This walkthrough explains some key backgrounding concepts, including registering
 
 ## Application set up
 
-
 1. First, create a new **iOS > App > Single View Application (C#)**. Call it _Location_ and ensure that both iPad and iPhone have been selected.
 
 1. A location application qualifies as a background-necessary application in iOS. Register the application as a Location application by editing the **Info.plist** file for the project.
@@ -26,7 +25,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 
     In Visual Studio for Mac, it will look like something like this:
 
-    [![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
+    [![Place a check by both the Enable Background Modes and the Location Updates checkboxes](location-walkthrough-images/image7.png)](location-walkthrough-images/image7.png#lightbox)
 
     In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
 
@@ -42,47 +41,43 @@ This walkthrough explains some key backgrounding concepts, including registering
 1. In the code, create a new class called `LocationManager` that provides a single place for various screens and code to subscribe to location updates. In the `LocationManager` class, make an instance of the `CLLocationManager` called `LocMgr`:
 
     ```csharp
-	public class LocationManager
-	{
-		protected CLLocationManager locMgr;
+    public class LocationManager
+    {
+        protected CLLocationManager locMgr;
 
-		public LocationManager () {
-			this.locMgr = new CLLocationManager();
-			this.locMgr.PausesLocationUpdatesAutomatically = false;
+        public LocationManager () {
+            this.locMgr = new CLLocationManager();
+            this.locMgr.PausesLocationUpdatesAutomatically = false;
 
-			// iOS 8 has additional permissions requirements
-			if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-				locMgr.RequestAlwaysAuthorization (); // works in background
-				//locMgr.RequestWhenInUseAuthorization (); // only in foreground
-			}
+            // iOS 8 has additional permissions requirements
+            if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
+                locMgr.RequestAlwaysAuthorization (); // works in background
+                //locMgr.RequestWhenInUseAuthorization (); // only in foreground
+            }
 
-			if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
-				locMgr.AllowsBackgroundLocationUpdates = true;
-			}
-		}
+            if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
+                locMgr.AllowsBackgroundLocationUpdates = true;
+            }
+        }
 
-		public CLLocationManager LocMgr {
-			get { return this.locMgr; }
-		}
-	}
+        public CLLocationManager LocMgr {
+            get { return this.locMgr; }
+        }
+    }
     ```
 
     The code above sets a number of properties and permissions on the [CLLocationManager](xref:CoreLocation.CLLocationManager) class:
 
-	- `PausesLocationUpdatesAutomatically` – This is a Boolean that can be set depending on whether the system is allowed to pause location updates. On some device it defaults to `true`, which can cause the device to stop getting background location updates after about 15 minutes.
-	- `RequestAlwaysAuthorization` - You should pass this method to give the app user the option to allow the location to be accessed in the background. `RequestWhenInUseAuthorization` can also be passed if you wish to give the user the option to allow the location to be accessed only when the app is in the foreground.
-	- `AllowsBackgroundLocationUpdates` – This is a Boolean property, introduced in iOS 9 that can be set to allow an app to receive location updates when suspended.
+    - `PausesLocationUpdatesAutomatically` – This is a Boolean that can be set depending on whether the system is allowed to pause location updates. On some device it defaults to `true`, which can cause the device to stop getting background location updates after about 15 minutes.
+    - `RequestAlwaysAuthorization` - You should pass this method to give the app user the option to allow the location to be accessed in the background. `RequestWhenInUseAuthorization` can also be passed if you wish to give the user the option to allow the location to be accessed only when the app is in the foreground.
+    - `AllowsBackgroundLocationUpdates` – This is a Boolean property, introduced in iOS 9 that can be set to allow an app to receive location updates when suspended.
 
     > [!IMPORTANT]
     > iOS 8 (and greater) also requires an entry in the **Info.plist** file to show the user as part of the authorization request.
 
-1. Add a key `NSLocationAlwaysUsageDescription`
-or `NSLocationWhenInUseUsageDescription` with a
-string that will be displayed to the user in the alert
-that requests location data access.
+1. Add **Info.plist** keys for the permission types the app requires – `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`, and/or `NSLocationAlwaysAndWhenInUseUsageDescription` – with a string that will be displayed to the user in the alert that requests location data access.
 
 1. iOS 9 requires that when using `AllowsBackgroundLocationUpdates` the **Info.plist** includes the key `UIBackgroundModes` with the value `location`. If you have completed step 2 of this walkthrough, this should already been in your Info.plist file.
-
 
 1. Inside the `LocationManager` class, create a method called `StartLocationUpdates` with the following code. This code shows the how to start receiving location updates from the   `CLLocationManager`:
 
@@ -139,29 +134,29 @@ public class LocationUpdatedEventArgs : EventArgs
 
     The layout should resemble the following:
 
-    ![](location-walkthrough-images/image8.png "An example UI layout in the iOS Designer")
+    ![An example UI layout in the iOS Designer](location-walkthrough-images/image8.png)
 
 1. In the Solution Pad, double-click the `ViewController.cs` file and edit it to create a new instance of the LocationManager and call `StartLocationUpdates`on it.
   Change the code to look like the following:
 
     ```csharp
-	#region Computed Properties
-	public static bool UserInterfaceIdiomIsPhone {
-				get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-			}
+    #region Computed Properties
+    public static bool UserInterfaceIdiomIsPhone {
+        get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+    }
 
-	public static LocationManager Manager { get; set;}
-	#endregion
+    public static LocationManager Manager { get; set;}
+    #endregion
 
-	#region Constructors
-	public ViewController (IntPtr handle) : base (handle)
-	{
-	// As soon as the app is done launching, begin generating location updates in the location manager
-		Manager = new LocationManager();
-		Manager.StartLocationUpdates();
-	}
+    #region Constructors
+    public ViewController (IntPtr handle) : base (handle)
+    {
+    // As soon as the app is done launching, begin generating location updates in the location manager
+        Manager = new LocationManager();
+        Manager.StartLocationUpdates();
+    }
 
-	#endregion
+    #endregion
     ```
 
     This will start the location updates on application start-up, although no data will be displayed.
@@ -170,20 +165,20 @@ public class LocationUpdatedEventArgs : EventArgs
 
     ```csharp
     #region Public Methods
-	public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
-	{
-		// Handle foreground updates
-		CLLocation location = e.Location;
+    public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
+    {
+        // Handle foreground updates
+        CLLocation location = e.Location;
 
-		LblAltitude.Text = location.Altitude + " meters";
-		LblLongitude.Text = location.Coordinate.Longitude.ToString ();
-		LblLatitude.Text = location.Coordinate.Latitude.ToString ();
-		LblCourse.Text = location.Course.ToString ();
-		LblSpeed.Text = location.Speed.ToString ();
+        LblAltitude.Text = location.Altitude + " meters";
+        LblLongitude.Text = location.Coordinate.Longitude.ToString ();
+        LblLatitude.Text = location.Coordinate.Latitude.ToString ();
+        LblCourse.Text = location.Course.ToString ();
+        LblSpeed.Text = location.Speed.ToString ();
 
-		Console.WriteLine ("foreground updated");
-	}
-	#endregion
+        Console.WriteLine ("foreground updated");
+    }
+    #endregion
     ```
 
 We still need to subscribe to the `LocationUpdated` event in our AppDelegate, and call the new method to update the UI. Add the following code in `ViewDidLoad,` right after the `StartLocationUpdates` call:
@@ -191,75 +186,74 @@ We still need to subscribe to the `LocationUpdated` event in our AppDelegate, an
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// It is better to handle this with notifications, so that the UI updates
-	// resume when the application re-enters the foreground!
-	Manager.LocationUpdated += HandleLocationChanged;
+    // It is better to handle this with notifications, so that the UI updates
+    // resume when the application re-enters the foreground!
+    Manager.LocationUpdated += HandleLocationChanged;
 
 }
 ```
 
-
 Now, when the application is run, it should look something like this:
 
-[![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png#lightbox)
+[![An example app run](location-walkthrough-images/image5.png)](location-walkthrough-images/image5.png#lightbox)
 
 ## Handling Active and Background states
 
 1. The application is outputting location updates while it is in the foreground and active. To demonstrate what happens when the app enters the background, override the `AppDelegate` methods that track application state changes so that the application writes to the console when it transitions between the foreground and the background:
 
     ```csharp
-	public override void DidEnterBackground (UIApplication application)
-	{
-		Console.WriteLine ("App entering background state.");
-	}
+    public override void DidEnterBackground (UIApplication application)
+    {
+        Console.WriteLine ("App entering background state.");
+    }
 
-	public override void WillEnterForeground (UIApplication application)
-	{
-		Console.WriteLine ("App will enter foreground");
-	}
+    public override void WillEnterForeground (UIApplication application)
+    {
+        Console.WriteLine ("App will enter foreground");
+    }
     ```
 
-	Add the following code in the `LocationManager` to continuously print updated location data to the application output, to verify the location information is still available in the background:
+    Add the following code in the `LocationManager` to continuously print updated location data to the application output, to verify the location information is still available in the background:
 
     ```csharp
-	public class LocationManager
-	{
-		public LocationManager ()
-		{
-		...
-		LocationUpdated += PrintLocation;
-		}
-		...
+    public class LocationManager
+    {
+        public LocationManager ()
+        {
+        ...
+        LocationUpdated += PrintLocation;
+        }
+        ...
 
-		//This will keep going in the background and the foreground
-		public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
-		CLLocation location = e.Location;
-		Console.WriteLine ("Altitude: " + location.Altitude + " meters");
-		Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
-		Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
-		Console.WriteLine ("Course: " + location.Course);
-		Console.WriteLine ("Speed: " + location.Speed);
-		}
-	}
+        //This will keep going in the background and the foreground
+        public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
+        CLLocation location = e.Location;
+        Console.WriteLine ("Altitude: " + location.Altitude + " meters");
+        Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
+        Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
+        Console.WriteLine ("Course: " + location.Course);
+        Console.WriteLine ("Speed: " + location.Speed);
+        }
+    }
     ```
 
 1. There is one remaining issue with the code: attempting to update the UI when the app is backgrounded will cause iOS will terminate it. When the app goes into the background, the code needs to unsubscribe from location updates and stop updating the UI.
 
-	iOS provides us notifications when the app is about to transition to a different application states. In this case, we can subscribe to the `ObserveDidEnterBackground` Notification.
+    iOS provides us notifications when the app is about to transition to a different application states. In this case, we can subscribe to the `ObserveDidEnterBackground` Notification.
 
-	The following code snippet shows how to use a notification to let the view know when to halt UI updates. This will go in `ViewDidLoad`:
+    The following code snippet shows how to use a notification to let the view know when to halt UI updates. This will go in `ViewDidLoad`:
 
     ```csharp
-	UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
-		Manager.LocationUpdated -= HandleLocationChanged;
-	});
+    UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
+        Manager.LocationUpdated -= HandleLocationChanged;
+    });
     ```
 
-	When the app is running, the output will look something like this:
+    When the app is running, the output will look something like this:
 
-	![](location-walkthrough-images/image6.png "Example of the location output in the console")
+    ![Example of the location output in the console](location-walkthrough-images/image6.png)
 
 1. The application prints location updates to the screen when operating in the foreground, and continues to print data to the application output window while operating in the background.
 
@@ -277,8 +271,7 @@ Now the UI will begin updating when the application is first started, and resume
 
 In this walkthrough, we built a well-behaved, background-aware iOS application that prints location data to both the screen and the application output window.
 
-
 ## Related Links
 
-- [Location (Part 4) (sample)](https://developer.xamarin.com/samples/monotouch/Location/)
+- [Location (Part 4) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
 - [Core Location Framework Reference](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

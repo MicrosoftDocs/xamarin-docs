@@ -4,8 +4,8 @@ description: "This document describes how to read near field communication tags 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
 ---
 
@@ -14,7 +14,7 @@ ms.date: 09/25/2017
 _Reading Near Field Communication (NFC) tags using iOS 11_
 
 CoreNFC is a new framework in iOS 11 that provides access to the
-_Near Field Communication_ (NFC) radio to read tags from within apps. It works on iPhone 7, 7 Plus, 8, 8 Plus, and X.
+_Near Field Communication_ (NFC) radio to read tags from within apps. CoreNFC works on iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, and iPhone 11 models (while iPhone 6 and iPhone 6 Plus models have NFC payment functionality, they do not support CoreNFC).
 
 The NFC tag reader in iOS devices supports all NFC tag types 1 through 5 that
 contain _NFC Data Exchange Format_ (NDEF) information.
@@ -27,7 +27,7 @@ There are some restrictions to be aware of:
 - CoreNFC can only be tested on real devices (not on the simulator).
 
 This page describes the configuration required to use CoreNFC
-and shows how to use the API using the ["NFCTagReader" sample code](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
+and shows how to use the API using the ["NFCTagReader" sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
 ## Configuration
 
@@ -125,7 +125,7 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 Once a session has been invalidated, a new session object must
 be created to scan again.
 
-<a name="step2" />
+<a name="step2"></a>
 
 ### 2. Start an `NFCNdefReaderSession`
 
@@ -142,7 +142,6 @@ The parameters for the `NFCNdefReaderSession` constructor are as follows:
 - `delegate` – An implementation of `INFCNdefReaderSessionDelegate`. In the sample code, the delegate is implemented in the table view controller, therefore `this` is used as the delegate parameter.
 - `queue` – The queue that callbacks are handled on. It can be `null`, in which case be sure to use the `DispatchQueue.MainQueue` when updating user interface controls (as shown in the sample).
 - `invalidateAfterFirstRead` – When `true`, the scan stops after the first successful scan; when `false` scanning will continue and multiple results returned until the scan is cancelled or the 60 second timeout is reached.
-
 
 ### 3. Cancel the scanning session
 
@@ -167,8 +166,7 @@ CoreNFC enables your app to read data from NFC tags. It supports
 reading a variety of tag formats (NDEF types 1 through 5), but does
 not support writing or formatting.
 
-
 ## Related Links
 
-- [NFCTagReader (sample)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+- [NFCTagReader (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
 - [Introducing Core NFC (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/718/)

@@ -7,15 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms DataPages
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
 Xamarin.Forms DataPages were announced at Evolve 2016 and are available as a
 preview for customers to try and provide feedback.
@@ -27,7 +27,7 @@ will automatically render the data, and can be customized using themes.
 To see how the Evolve keynote demo works, check out the
 [getting started guide](get-started.md).
 
-[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application](images/demo-sml.png)](images/demo.png#lightbox "DataPages Sample Application")
 
 ## Introduction
 
@@ -36,19 +36,18 @@ and easily consume a supported data source and render it using built-in
 UI scaffolding that can be customized with themes.
 
 DataPages are added to a Xamarin.Forms application by including
-the **Xamarin.Forms.Pages** Nuget package.
+the **Xamarin.Forms.Pages** NuGet package.
 
 ### Data Sources
 
 The Preview has some prebuilt data sources available for use:
 
 * **JsonDataSource**
-* **AzureDataSource** (separate Nuget)
-* **AzureEasyTableDataSource** (separate Nuget)
+* **AzureDataSource** (separate NuGet)
+* **AzureEasyTableDataSource** (separate NuGet)
 
 See the [getting started guide](get-started.md) for an example
 using a `JsonDataSource`.
-
 
 ### Pages & Controls
 
@@ -64,8 +63,6 @@ to the supplied data sources:
 * **ListItem** – a pre-built view with a layout similar to native iOS and Android list items.
 
 See the [DataPages controls reference](controls.md) for examples.
-
-
 
 ### Under the Hood
 

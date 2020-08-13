@@ -4,8 +4,8 @@ description: "This document links to various guides that describe concepts found
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
 ---
 # Xamarin.iOS application fundamentals
@@ -29,6 +29,10 @@ Background processing or backgrounding is the process of letting applications pe
 ## [Creating iOS applications in code](~/ios/app-fundamentals/ios-code-only.md)
 
 This article examines how to create iOS applications entirely in code using Visual Studio and Visual Studio for Mac. It shows how to start from an empty project template to build an application screen in a controller by creating a hierarchy of views from UIKit. Then, it discusses how to create custom views that can be loaded in a controller.
+
+## [Exception marshaling](~/ios/platform/exception-marshaling.md)
+
+Describes how Objective-C and managed exceptions are marshaled between native and managed frames.
 
 ## [Events, protocols, and delegates](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 

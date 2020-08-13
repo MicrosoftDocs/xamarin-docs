@@ -4,8 +4,8 @@ description: "This document describes how to populate a table with data in a Xam
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -21,8 +21,7 @@ This guide covers:
 - Adding an Index
 - Adding Headers and Footers
 
-
-<a name="Subclassing_UITableViewSource" />
+<a name="Subclassing_UITableViewSource"></a>
 
 ## Subclassing UITableViewSource
 
@@ -31,9 +30,8 @@ each cell view populated with data.
 
 There are only two mandatory methods required to make a table display data:
 
--   **RowsInSection** – return an  [`nint`](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) count of the total number of rows of data the table should display.
--   **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
-
+- **RowsInSection** – return an  [`nint`](~/cross-platform/macios/nativetypes.md) count of the total number of rows of data the table should display.
+- **GetCell** – return a  `UITableViewCell` populated with data for the corresponding row index passed to the method.
 
 The BasicTable sample file **TableSource.cs** has the simplest possible
 implementation of `UITableViewSource`. You can see in code snippet below that it accepts an array of strings to display in the table and returns a default cell style containing each
@@ -42,32 +40,34 @@ string:
 ```csharp
 public class TableSource : UITableViewSource {
 
-		string[] TableItems;
-		string CellIdentifier = "TableCell";
+        string[] TableItems;
+        string CellIdentifier = "TableCell";
 
-		public TableSource (string[] items)
-		{
-			TableItems = items;
-		}
+        public TableSource (string[] items)
+        {
+            TableItems = items;
+        }
 
-	    public override nint RowsInSection (UITableView tableview, nint section)
-	    {
-	        return TableItems.Length;
-	    }
+        public override nint RowsInSection (UITableView tableview, nint section)
+        {
+            return TableItems.Length;
+        }
 
-    	public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-		{
-			UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
-			string item = TableItems[indexPath.Row];
+        public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
+            string item = TableItems[indexPath.Row];
 
-			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+            //if there are no cells to reuse, create a new one
+            if (cell == null)
+            { 
+                cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); 
+            }
 
-			cell.TextLabel.Text = item;
+            cell.TextLabel.Text = item;
 
-			return cell;
-		}
+            return cell;
+        }
 }
 ```
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 The resulting table looks like this:
 
- [![](populating-a-table-with-data-images/image3.png "Sample table running")](populating-a-table-with-data-images/image3.png#lightbox)
+ [![Sample table running](populating-a-table-with-data-images/image3.png)](populating-a-table-with-data-images/image3.png#lightbox)
 
 Most tables allow the user to touch a row to select it and perform some other
 action (such as playing a song, or calling a contact, or showing another
@@ -97,11 +97,11 @@ screen). To achieve this, there are a few things we need to do. First, let's cre
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
-	okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-	...
+    UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    ...
 
-	tableView.DeselectRow (indexPath, true);
+    tableView.DeselectRow (indexPath, true);
 }
 ```
 
@@ -110,40 +110,39 @@ Next, create an instance of our View Controller:
 ```csharp
 HomeScreen owner;
 ```
+
 Add a constructor to your UITableViewSource class which takes a view controller as a parameter and saves it in a field:
 
 ```csharp
 public TableSource (string[] items, HomeScreen owner)
 {
-	...
-	this.owner = owner;
+    ...
+    this.owner = owner;
 
 }
 ```
+
 Modify the ViewDidLoad method where the UITableViewSource class is created to pass the `this` reference:
 
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
+
 Finally, back in your `RowSelected` method, call `PresentViewController` on the cached field:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	...
-	owner.PresentViewController (okAlertController, true, null);
+    ...
+    owner.PresentViewController (okAlertController, true, null);
 
-	...
+    ...
 }
 ```
 
-
 Now the user can touch a row and an alert will appear:
 
-
-
- [![](populating-a-table-with-data-images/image4.png "The row selected alert")](populating-a-table-with-data-images/image4.png#lightbox)
-
+ [![The row selected alert](populating-a-table-with-data-images/image4.png)](populating-a-table-with-data-images/image4.png#lightbox)
 
 ## Cell Reuse
 
@@ -225,7 +224,7 @@ public class MyCell : UITableViewCell
 
 You can see examples of the topics explained above in the **BasicTable** sample linked to this article.
 
-<a name="Adding_an_Index" />
+<a name="Adding_an_Index"></a>
 
 ## Adding an Index
 
@@ -235,7 +234,7 @@ alphabetically although you can index by whatever criteria you wish. The
 demonstrate the index. Each item in the index corresponds to a ‘section’ of
 the table.
 
- [![](populating-a-table-with-data-images/image5.png "The Index display")](populating-a-table-with-data-images/image5.png#lightbox)
+ [![The Index display](populating-a-table-with-data-images/image5.png)](populating-a-table-with-data-images/image5.png#lightbox)
 
 To support ‘sections’ the data behind the table needs to be grouped, so
 the BasicTableIndex sample creates a `Dictionary<>` from the
@@ -256,10 +255,9 @@ keys = indexedTableItems.Keys.ToArray ();
 The `UITableViewSource` subclass then needs the following methods
 added or modified to use the `Dictionary<>` :
 
--   **NumberOfSections** – this method is optional, by default the table assumes one section. When displaying an index this method should return the number of items in the index (for example, 26 if the index contains all the letters of the English alphabet).
--   **RowsInSection** – returns the number of rows in a given section.
--   **SectionIndexTitles** – returns the array of strings that will be used to display the index. The sample code returns an array of letters.
-
+- **NumberOfSections** – this method is optional, by default the table assumes one section. When displaying an index this method should return the number of items in the index (for example, 26 if the index contains all the letters of the English alphabet).
+- **RowsInSection** – returns the number of rows in a given section.
+- **SectionIndexTitles** – returns the array of strings that will be used to display the index. The sample code returns an array of letters.
 
 The updated methods in the sample file **BasicTableIndex/TableSource.cs** look
 like this:
@@ -281,8 +279,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Indexes are generally only used with the Plain table style.
 
-
-<a name="Adding_Headers_and_Footers" />
+<a name="Adding_Headers_and_Footers"></a>
 
 ## Adding Headers and Footers
 
@@ -291,14 +288,13 @@ structure required is very similar to adding an index – a `Dictionary<>` works
 to group the cells, this example will group the vegetables by botanical type.
 The output looks like this:
 
- [![](populating-a-table-with-data-images/image6.png "Sample Headers and Footers")](populating-a-table-with-data-images/image6.png#lightbox)
+ [![Sample Headers and Footers](populating-a-table-with-data-images/image6.png)](populating-a-table-with-data-images/image6.png#lightbox)
 
 To display headers and footers the `UITableViewSource` subclass
 requires these additional methods:
 
--   **TitleForHeader** – returns the text to use as the header
--   **TitleForFooter** – returns the text to use as the footer.
-
+- **TitleForHeader** – returns the text to use as the header
+- **TitleForFooter** – returns the text to use as the footer.
 
 The updated methods in the sample file
 **BasicTableHeaderFooter/Code/TableSource.cs** look like this:
@@ -317,7 +313,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 You can further customize the appearance of the header and footer with a View
 object, using the `GetViewForHeader` and `GetViewForFooter` method overrides on `UITableViewSource`.
 
-
 ## Related Links
 
-- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

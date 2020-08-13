@@ -3,8 +3,8 @@ title: "Getting started with macOS"
 description: "This document describes how get started using .NET Embedding with macOS. It discusses requirements, and presents a sample application to demonstrate how to bind the managed assembly and use the generated output in an Xcode project."
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
 ---
 
@@ -28,10 +28,10 @@ Replace the code in the **MyClass.cs** file with the following snippet:
 using AppKit;
 public class MyNSView : NSTextView
 {
-	public MyNSView ()
-	{
-		Value = "Hello from C#";
-	}
+    public MyNSView ()
+    {
+        Value = "Hello from C#";
+    }
 }
 ```
 
@@ -80,7 +80,7 @@ Open **ViewController.m**, and replace the contents with:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -92,5 +92,3 @@ Open **ViewController.m**, and replace the contents with:
 Finally, run the Xcode project, and something like this will show up:
 
 ![Hello from C# sample running in the simulator](macos-images/hello-from-csharp-mac.png)
-
-A more complete and better-looking sample [is available here](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

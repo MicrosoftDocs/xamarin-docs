@@ -3,8 +3,8 @@ title: "Getting Started with the Xamarin Workbooks SDK"
 description: "This document describes how to get started with the Xamarin Workbooks SDK, which can be used to develop integrations for Xamarin Workbooks."
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -68,7 +68,7 @@ you're ready to begin building your integration.
 We'll build a simple integration. We really love the color green, so we'll
 add the color green as a representation to each object. First, create a new
 class called `SampleIntegration`, and make it implement our
-[`IAgentIntegration`][integration-type] interface:
+`IAgentIntegration` interface:
 
 ```csharp
 using Xamarin.Interactive;
@@ -83,8 +83,8 @@ public class SampleIntegration : IAgentIntegration
 
 What we want to do is add a [representation](~/tools/workbooks/sdk/representations.md) for every object that is a
 green color. We'll do this using a representation provider. Providers inherit
-from the [`RepresentationProvider`][reppr] class—for ours, we just need to
-override [`ProvideRepresentations`][prrep]:
+from the `RepresentationProvider` class—for ours, we just need to
+override `ProvideRepresentations`:
 
 ```csharp
 using Xamarin.Interactive.Representations;
@@ -99,7 +99,7 @@ class SampleRepresentationProvider : RepresentationProvider
 }
 ```
 
-We're returning a [`Color`][color], a pre-built representation type in our SDK.
+We're returning a `Color`, a pre-built representation type in our SDK.
 You'll notice that the return type here is an `IEnumerable<object>`&mdash;one
 representation provider may return many representations for an object! All
 representation providers are called for every object, so it's important to not
@@ -123,7 +123,7 @@ convenience:
 ````
 
 During development, you may find it more convenient to
-use [`AddProvider` overloads][addprovider] on `RepresentationManager` that allow
+use `AddProvider` overloads on `RepresentationManager` that allow
 you to register a simple callback to provide representations inside a workbook,
 and then move that code into your `RepresentationProvider` implementation once
 you're finished. An example for rendering an [`OxyPlot`][oxyplot] `PlotModel`
@@ -139,8 +139,8 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 
 > [!NOTE]
 > These APIs give you a quick way to get up and running, but we would not
-  recommend shipping an entire integration only using them&mdash;they provide very
-  little control over how your types are processed by the client.
+> recommend shipping an entire integration only using them&mdash;they provide very
+> little control over how your types are processed by the client.
 
 With the representation registered, your integration is ready to ship!
 
@@ -202,13 +202,6 @@ moving pieces that make up the SDK, and our [sample integrations](~/tools/workbo
 additional things you can do from your integration, like providing custom
 JavaScript that is run in the Workbooks client.
 
-[integration-type]: https://developer.xamarin.com/api/type/Xamarin.Interactive.IAgentIntegration/
-[repman-api]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
-[xir]: https://developer.xamarin.com/api/namespace/Xamarin.Interactive.Representations/
-[reppr]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[prrep]: https://developer.xamarin.com/api/member/Xamarin.Interactive.Representations.RepresentationProvider.ProvideRepresentations/p/System.Object/
 [nugetorg]: https://nuget.org
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration
-[addprovider]: https://developer.xamarin.com/api/member/Xamarin.Interactive.Representations.IRepresentationManager.AddProvider/
 [oxyplot]: http://www.oxyplot.org/

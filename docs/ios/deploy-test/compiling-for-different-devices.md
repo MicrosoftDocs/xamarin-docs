@@ -4,45 +4,43 @@ description: "This document describes various build configuration options that c
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
-# Compiling for Different Devices in Xamarin.iOS
+# Compiling for different devices in Xamarin.iOS
 
 The build properties of your executable can be configured from the Project's **iOS Build** properties page, which is found by right-clicking on the Project name and browsing to **Options > iOS Build** in Visual Studio for Mac, and **Properties** in Visual Studio:
 
 # [Visual Studio for Mac](#tab/macos)
 
-
-[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
+[![The Projects iOS Build properties page](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-[![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png#lightbox)
+[![The Projects iOS Build properties page](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
 In addition to the configuration options available on the UI, you can also pass
 your own set of command line options to the [Xamarin.iOS build tool (mtouch)](~/ios/deploy-test/mtouch.md).
 
-[http://iossupportmatrix.com/](http://iossupportmatrix.com/) is a helpful resource that can be used to make sure you are including all the required devices, architectures, and iOS versions.
-
- <a name="SDK_Options" />
-
-
-## SDK Options
+## SDK options
 
 Visual Studio for Mac lets you configure two important properties related to the SDK: the iOS SDK version used to build your software and the Deployment Target (or the minimum required iOS version).
 
 The iOS **SDK version** option lets you use different
 versions of an Apple published SDK, this directs Xamarin.iOS to the compilers,
-linkers and libraries it should reference during your build. 
+linkers and libraries it should reference during your build. Right-click on the project and choose **Options**, then **iOS Build** in the options window:
+
+[![Choose the SDK version on the options window](compiling-for-different-devices-images/sdk-version-sml.png)](compiling-for-different-devices-images/sdk-version.png#lightbox)
 
 The **Deployment Target** setting is used to select the minimum
-required version of the operating system on which your application will run. This is set in your Project's Info.plist file. You should pick the
+required version of the operating system on which your application will run. This is set in your project's **Info.plist** file. You should pick the
 minimum version that has all the APIs that you need to run your application.
+
+[![Set the deployment target in the Info.plist file](compiling-for-different-devices-images/deployment-target-sml.png)](compiling-for-different-devices-images/deployment-target.png#lightbox)
 
 In general, the Xamarin.iOS API exposes all the methods available in the latest
 version of the SDK, and when necessary, we provide convenience properties that
@@ -50,19 +48,13 @@ allow you to detect if the functionality is available at runtime (for example,
 `UIDevice.UserInterfaceIdiom` and `UIDevice.IsMultitaskingSupported` always work on
 Xamarin.iOS, we do all the work behind the scenes).
 
- <a name="Linking" />
-
-
 ## Linking
 
 See our dedicated page on the [Linker](~/ios/deploy-test/linker.md) to learn more about how the
 linker helps you reduce the size of your executables and to find out how to use
 it effectively.
 
- <a name="Code_Generation_Engine" />
-
-
-## Code Generation Engine
+## Code generation engine
 
 Starting with Xamarin.iOS 4.0, there are two code generation backends to
 Xamarin.iOS. The regular Mono code generation engine and one based on the LLVM
@@ -78,16 +70,11 @@ the Mono engine does, at the cost of long compile times.
 
 You can enable these from iOS Build options in Visual Studio for Mac or Visual Studio.
 
-[![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
+[![Enabling LLVM](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
+[![Enabling LLVM](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
 
- <a name="ARMV7_and_ARMV7s_support" />
-
-
-## Architecture Support
-
-<a name="armv6-discontinued" />
+## Architecture support
 
 ### ARMv6 (Xamarin.iOS discontinued support for ARMv6 with v8.10)
 
@@ -124,19 +111,13 @@ If you target only the ARMv7s processor, the code generated will be slightly fas
 
 Note that any builds submitted to the App Store must contain 64 bit support, this is a requirement set by [Apple](https://developer.apple.com/news/?id=12172014b). Additionally, iOS 11 only supports 64-bit applications.
 
- <a name="ARM_Thumb_Support" />
-
-
-### ARM Thumb-2 Support
+### ARM Thumb-2 support
 
 Thumb is a more compact instruction set used by ARM processors. By enabling
 the Thumb support, you can reduce the size of your executable, at the expense of
 slower execution times. Thumb is supported on ARMv7 and ARMv7s.
 
- <a name="Conditional_framwork_useage" />
-
-
-## Conditional Framework Usage
+## Conditional framework usage
 
 If your project wants to leverage some of the features in the newer iOS
 releases, you may need to conditionally rely on certain new frameworks. A prime
@@ -148,21 +129,16 @@ framework is required.
 
 To do this you should take the following steps:
 
--  Open your **Project Options** and navigate to the **iOS Build** pane.
--  Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
+- Open your **Project Options** and navigate to the **iOS Build** pane.
+- Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
 
-
-[![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
-
+[![Additional Options](compiling-for-different-devices-images/image3.png)](compiling-for-different-devices-images/image3.png#lightbox)
 
 In addition to this you will need to guard your usage of the types from
 running on older versions of iOS where they may not exist. There are several
 methods to accomplish this, but one of which is parsing
 `UIDevice.CurrentDevice.SystemVersion`.
 
-
-
-## Related Links
+## Related links
 
 - [Linker](~/ios/deploy-test/linker.md)
-- [External - iOS Support Matrix](http://iossupportmatrix.com/)

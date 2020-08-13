@@ -5,6 +5,7 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Magnetometer
@@ -66,11 +67,11 @@ public class MagnetometerTest
 }
 ```
 
-All data is returned in µ (microteslas).
+All data is returned in µT (microteslas).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## API
 
-- [Magnetometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [Magnetometer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Magnetometer)
 - [Magnetometer API documentation](xref:Xamarin.Essentials.Magnetometer)

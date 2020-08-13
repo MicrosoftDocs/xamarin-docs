@@ -3,8 +3,8 @@ title: "Introduction to Web Services"
 description: "This guide demonstrates how to consume different web service technologies. Topics covered include communicating with REST services, SOAP services, and Windows Communication Foundation services."
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -14,7 +14,7 @@ _This guide demonstrates how to consume different web service technologies. Topi
 
 To function correctly, many mobile applications are dependent on the cloud, and so integrating web services into mobile applications is a common scenario. The Xamarin platform supports consuming different web service technologies, and includes in-built and third-party support for consuming RESTful, ASMX, and Windows Communication Foundation (WCF) services.
 
-For customers using Xamarin.Forms, there are complete examples using each of these technologies in the [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.md)
+For customers using Xamarin.Forms, there are complete examples using each of these technologies in the [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.yml)
 documentation.
 
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ The simplicity of REST has helped make it the primary method for accessing web s
 
 ## Consuming REST Services
 
-There are a number of libraries and classes that can be used to consume REST services, and the following subsections discuss them. For more information about consuming a REST service, see [Consuming a RESTful Web Service](~/xamarin-forms/data-cloud/consuming/rest.md).
+There are a number of libraries and classes that can be used to consume REST services, and the following subsections discuss them. For more information about consuming a REST service, see [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 ### HttpClient
 
@@ -55,24 +55,24 @@ The [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.N
 
 The `HttpResponseMessage` class represents an HTTP response message received from the web service after an HTTP request has been made. It contains information about the response, including the status code, headers, and body. The `HttpContent` class represents the HTTP body and content headers, such as `Content-Type` and `Content-Encoding`. The content can be read using any of the `ReadAs` methods, such as `ReadAsStringAsync` and `ReadAsByteArrayAsync`, depending upon the format of the data.
 
-For more information about the `HttpClient` class, see [Creating the HTTPClient Object](~/xamarin-forms/data-cloud/consuming/rest.md).
+For more information about the `HttpClient` class, see [Creating the HTTPClient Object](~/xamarin-forms/data-cloud/web-services/rest.md).
 
-<a name="Using_HTTPWebRequest" />
+<a name="Using_HTTPWebRequest"></a>
 
 ### HTTPWebRequest
 
 Calling web services with `HTTPWebRequest` involves:
 
--  Creating the request instance for a particular URI.
--  Setting various HTTP properties on the request instance.
--  Retrieving an  `HttpWebResponse` from the request.
--  Reading data out of the response.
+- Creating the request instance for a particular URI.
+- Setting various HTTP properties on the request instance.
+- Retrieving an  `HttpWebResponse` from the request.
+- Reading data out of the response.
 
 For example, the following code retrieves data from the U.S. National Library of Medicine web service:
 
 ```csharp
 var rxcui = "198440";
-var request = HttpWebRequest.Create(string.Format(@"http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
+var request = HttpWebRequest.Create(string.Format(@"https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
 request.ContentType = "application/json";
 request.Method = "GET";
 
@@ -97,7 +97,7 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 
 The above example creates an `HttpWebRequest` that will return data formatted as JSON. The data is returned in an `HttpWebResponse`, from which a `StreamReader` can be obtained to read the data.
 
-<a name="Using_RESTSHARP" />
+<a name="Using_RESTSHARP"></a>
 
 ### RestSharp
 
@@ -115,7 +115,7 @@ rxTerm = DeserializeRxTerm(response.Content);
 
 `DeserializeRxTerm` is a method that will take the raw JSON string from the `RestSharp.RestResponse.Content` property and convert it into a C# object. Deserializing data returned from web services is discussed later in this article.
 
-<a name="Using_NSUrlconnection" />
+<a name="Using_NSUrlconnection"></a>
 
 ### NSUrlConnection
 
@@ -125,7 +125,7 @@ The following code example shows how to call the U.S. National Library of Medici
 
 ```csharp
 var rxcui = "198440";
-var request = new NSMutableUrlRequest(new NSUrl(string.Format("http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
+var request = new NSMutableUrlRequest(new NSUrl(string.Format("https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
        NSUrlRequestCachePolicy.ReloadRevalidatingCacheData, 20);
 request["Accept"] = "application/json";
 
@@ -161,11 +161,11 @@ public class RxTermNSURLConnectionDelegate : NSUrlConnectionDelegate
 
 Generally, platform-specific classes for consuming web services should be limited to scenarios where native code is being ported to C#. Where possible, web service access code should be portable so that it can be shared cross-platform.
 
-<a name="Using_ServiceStack_Client" />
+<a name="Using_ServiceStack_Client"></a>
 
 ### ServiceStack
 
-Another option for calling web services is the [Service Stack](http://www.servicestack.net/) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
+Another option for calling web services is the [Service Stack](https://servicestack.net) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
 
 ```csharp
 client.GetAsync<CustomersResponse>("",
@@ -182,14 +182,13 @@ client.GetAsync<CustomersResponse>("",
 > [!IMPORTANT]
 > While tools like ServiceStack and RestSharp make it easy to call and consume REST services, it is sometimes non-trivial to consume XML or JSON that does not conform to the standard _DataContract_ serialization conventions. If necessary, invoke the request and handle the appropriate serialization explicitly using the ServiceStack.Text library discussed below.
 
-
-<a name="Options_for_consuming_RESTful_data" />
+<a name="Options_for_consuming_RESTful_data"></a>
 
 ## Consuming RESTful Data
 
 RESTful web services typically use JSON messages to return data to the client. JSON is a text-based, data-interchange format that produces compact payloads, which results in reduced bandwidth requirements when sending data. In this section, mechanisms for consuming RESTful responses in JSON and Plain-Old-XML (POX) will be examined.
 
-<a name="Using_System.JSON" />
+<a name="Using_System.JSON"></a>
 
 ### System.JSON
 
@@ -208,11 +207,11 @@ term.Strength = properties["strength"];
 
 However, it’s important to be aware that the `System.Json` tools load the entirety of the data into memory.
 
-<a name="Using_JSON.NET" />
+<a name="Using_JSON.NET"></a>
 
 ### JSON.NET
 
-The [NewtonSoft JSON.NET library](http://www.newtonsoft.com/json) is a widely used library for serializing and deserializing JSON messages. The following
+The [NewtonSoft JSON.NET library](https://www.newtonsoft.com/json) is a widely used library for serializing and deserializing JSON messages. The following
 code example shows how to use JSON.NET to deserialize a JSON message into a C# object:
 
 ```csharp
@@ -227,7 +226,7 @@ term.Strength = properties["strength"].Value<string>();
 term.RxCUI = properties["rxcui"].Value<string>();
 ```
 
-<a name="Using_ServiceStack.Text" />
+<a name="Using_ServiceStack.Text"></a>
 
 ### ServiceStack.Text
 
@@ -249,7 +248,7 @@ var result = JsonObject.Parse(json).Object("rxtermsProperties")
        });
 ```
 
-<a name="Using_System.Xml.Linq" />
+<a name="Using_System.Xml.Linq"></a>
 
 ### System.Xml.Linq
 
@@ -270,7 +269,7 @@ var result = doc.Root.Descendants("rxtermsProperties")
        });
 ```
 
-<a name="asmx" />
+<a name="asmx"></a>
 
 ## ASP.NET Web Service (ASMX)
 
@@ -295,11 +294,11 @@ The web service URL can either be a hosted remote source or local file system re
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![](images/add-webreference-dialog.png "The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix")](images/add-webreference-dialog.png#lightbox)
+[![The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
 
 This generates the proxy in the Web or Service References folder of the project. Since a proxy is generated code, it should not be modified.
 
-<a name="Manually_adding_a_proxy_to_a_project" />
+<a name="Manually_adding_a_proxy_to_a_project"></a>
 
 #### Manually Adding a Proxy to a Project
 
@@ -330,9 +329,9 @@ The Task Parallel Library (TPL) can simplify the process of consuming an APM beg
 
 For more information about APM, see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
 
-For more information about consuming an ASMX service, see [Consuming an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
+For more information about consuming an ASMX service, see [Consume an ASP.NET Web Service (ASMX)](~/xamarin-forms/data-cloud/web-services/asmx.md).
 
-<a name="wcf" />
+<a name="wcf"></a>
 
 ## Windows Communication Foundation (WCF)
 
@@ -356,7 +355,7 @@ A *proxy* must be generated to consume a WCF service, which allows the applicati
 
 An alternative to creating the proxy using the Microsoft WCF Web Service Reference Provider in Visual Studio 2017 is to use the ServiceModel Metadata Utility Tool (svcutil.exe). For more information, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
-<a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
+<a name="Calling_a_WCF_Service_with_Client_Credential_Security"></a>
 
 ### Configuring the Proxy
 
@@ -408,9 +407,9 @@ The Task Parallel Library (TPL) can simplify the process of consuming an APM beg
 
 For more information about APM, see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
 
-For more information about consuming a WCF service, see [Consuming a Windows Communication Foundation (WCF) Web Service](~/xamarin-forms/data-cloud/consuming/wcf.md).
+For more information about consuming a WCF service, see [Consume a Windows Communication Foundation (WCF) Web Service](~/xamarin-forms/data-cloud/web-services/wcf.md).
 
-<a name="Calling_a_WCF_Service_with_Transport_Security" />
+<a name="Calling_a_WCF_Service_with_Transport_Security"></a>
 
 #### Using Transport Security
 
@@ -424,7 +423,7 @@ System.Net.ServicePointManager.ServerCertificateValidationCallback +=
 
 This maintains transport encryption while ignoring the server-side certificate validation. However, this approach effectively disregards the trust concerns associated with the certificate and may not be appropriate. For more information, see [Using Trusted Roots Respectfully](https://www.mono-project.com/UsingTrustedRootsRespectfully) on [mono-project.com](https://www.mono-project.com).
 
-<a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
+<a name="Calling_a_WCF_Service_with_Client_Credential_Security"></a>
 
 #### Using Client Credential Security
 
@@ -441,12 +440,10 @@ client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
 
-In the example above, if you get the message “Ran out of trampolines of type 0” you can increase the number of type 0 trampolines by adding the `–aot “trampolines={number of trampolines}”` argument to the build. For more information, see [Troubleshooting](~/ios/troubleshooting/troubleshooting.md#trampolines).
-
 For more information about HTTP basic authentication, although in the context of a REST web service, see [Authenticating a RESTful Web Service](~/xamarin-forms/data-cloud/authentication/rest.md).
 
 ## Related Links
 
-- [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.md)
+- [Web Services in Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

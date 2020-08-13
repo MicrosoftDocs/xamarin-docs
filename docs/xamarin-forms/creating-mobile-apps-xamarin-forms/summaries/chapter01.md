@@ -7,6 +7,7 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 1. How does Xamarin.Forms fit in?
@@ -82,7 +83,7 @@ The Xamarin and Microsoft web sites contain information on how to do this:
 
 - [Getting Started with iOS](~/ios/get-started/index.md)
 - [Getting Started with Android](~/android/get-started/index.md)
-- [Windows Dev Center](http://dev.windows.com)
+- [Windows Dev Center](https://dev.windows.com)
 
 Once you can create and run projects for these individual platforms, you should have no problem creating and running a Xamarin.Forms application.
 

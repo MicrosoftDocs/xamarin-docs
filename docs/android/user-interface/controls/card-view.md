@@ -4,15 +4,14 @@ description: "The Cardview widget is a UI component that presents text and image
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
-# CardView
+# Xamarin.Android CardView
 
 _The Cardview widget is a UI component that presents text and image content in views that resemble cards. This guide explains how to use and customize CardView in Xamarin.Android applications while maintaining backward compatibility with earlier versions of Android._
-
 
 ## Overview
 
@@ -34,21 +33,21 @@ this guide provides a detailed list of `CardView` attributes that you
 can change, including attributes to help you use `CardView` on versions
 of Android earlier than Android 5.0 Lollipop.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## Requirements
 
 The following is required to use new Android 5.0 and later features
 (including `CardView`) in Xamarin-based apps:
 
--  **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
+- **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
    installed and configured with either Visual Studio or Visual Studio for Mac.
 
--  **Android SDK** &ndash; Android 5.0 (API 21) or later must be
+- **Android SDK** &ndash; Android 5.0 (API 21) or later must be
    installed via the Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically
-    targetting API level 23 and earlier. JDK 1.8 is available from
+- **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically
+    targeting API level 23 and earlier. JDK 1.8 is available from
    [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Your app must also include the `Xamarin.Android.Support.v7.CardView`
@@ -79,7 +78,6 @@ To learn how to configure an Android 5.0 app project,
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
 
 ## Introducing CardView
 
@@ -128,7 +126,6 @@ easier to see. For more information about theming Android 5.0 apps, see
 the next section, we'll learn how to customize `CardView` for an
 application.
 
-
 ## Customizing CardView
 
 You can modify the basic `CardView` attributes to customize the
@@ -144,8 +141,8 @@ positioned below the `ImageView` for displaying the title of the image.
 In this example layout, the `CardView` has the following
 customizations:
 
--  The `cardElevation` is increased to 4dp to cast a larger shadow.
--  The `cardCornerRadius` is increased to 5dp to make the
+- The `cardElevation` is increased to 4dp to cast a larger shadow.
+- The `cardCornerRadius` is increased to 5dp to make the
    corners appear more rounded.
 
 Because `CardView` is provided by the Android v7 support library, its
@@ -211,7 +208,7 @@ in the following screenshot:
 [![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 This screenshot is taken from the
-[RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+[RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 sample app, which uses a `RecyclerView` widget to present a scrolling
 list of `CardView` images for viewing photos. For more information
 about `RecyclerView`, see the
@@ -225,7 +222,6 @@ the content area is comprised of a `ListView` that contains an
 arranged vertically, you can also arrange them horizontally (see
 [Creating a Custom View Style](~/android/user-interface/material-theme.md#customview)
 for an example screenshot).
-
 
 ### CardView Layout Options
 
@@ -243,10 +239,9 @@ color) accept a dimension value, which is a decimal number followed by
 the unit. For example, `11.5dp` specifies 11.5 density-independent
 pixels.
 
-
 #### Padding
-`
-CardView` offers five padding attributes to position content within the
+
+`CardView` offers five padding attributes to position content within the
 card. You can set them in your layout XML or you can call
 analogous methods in your code:
 
@@ -254,19 +249,19 @@ analogous methods in your code:
 
 The padding attributes are explained as follows:
 
--  `contentPadding` &ndash; Inner padding between the child views of
+- `contentPadding` &ndash; Inner padding between the child views of
     the `CardView` and all edges of the card.
 
--  `contentPaddingBottom` &ndash; Inner padding between the child views of
+- `contentPaddingBottom` &ndash; Inner padding between the child views of
     the `CardView` and the bottom edge of the card.
 
--  `contentPaddingLeft` &ndash; Inner padding between the child views of
+- `contentPaddingLeft` &ndash; Inner padding between the child views of
     the `CardView` and the left edge of the card.
 
--  `contentPaddingRight` &ndash; Inner padding between the child views of
+- `contentPaddingRight` &ndash; Inner padding between the child views of
     the `CardView` and the right edge of the card.
 
--  `contentPaddingTop` &ndash; Inner padding between the child views of
+- `contentPaddingTop` &ndash; Inner padding between the child views of
     the `CardView` and the top edge of the card.
 
 Content padding attributes are relative to the boundary of the content
@@ -274,8 +269,6 @@ area rather than to any given widget located within the content area.
 For example, if `contentPadding` were sufficiently increased in the photo
 viewing app, the `CardView` would crop both the image and the text shown
 on the card.
-
-
 
 #### Elevation
 
@@ -286,9 +279,9 @@ as a result, the size of its shadow:
 
 The elevation attributes are explained as follows:
 
--  `cardElevation` &ndash; The elevation of the `CardView` (represents its Z axis).
+- `cardElevation` &ndash; The elevation of the `CardView` (represents its Z axis).
 
--  `cardMaxElevation` &ndash; The maximum value of the `CardView`'s elevation.
+- `cardMaxElevation` &ndash; The maximum value of the `CardView`'s elevation.
 
 Larger values of `cardElevation` increase the shadow size to make
 `CardView` seem to float higher above the background. The
@@ -300,7 +293,6 @@ The `cardMaxElevation` setting is useful for when your app changes
 elevation dynamically &ndash; it prevents the shadow from extending
 past the limit that you define with this setting.
 
-
 #### Corner Radius and Background Color
 
 `CardView` offers attributes that you can use to control its
@@ -311,13 +303,12 @@ you change the overall style of the `CardView`:
 
 These attributes are explained as follows:
 
--  `cardCornerRadius` &ndash; The corner radius of all corners of the `CardView`.
+- `cardCornerRadius` &ndash; The corner radius of all corners of the `CardView`.
 
--  `cardBackgroundColor` &ndash; The background color of the `CardView`.
+- `cardBackgroundColor` &ndash; The background color of the `CardView`.
 
 In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 `cardBackgroundColor` is set to `"#FFFFCC"` (light yellow).
-
 
 ## Compatibility
 
@@ -330,22 +321,22 @@ as described in [Requirements](#requirements), above.
 `CardView` exhibits slightly different behavior on devices before
 Lollipop (API level 21):
 
--  `CardView` uses a programmatic shadow implementation that adds
+- `CardView` uses a programmatic shadow implementation that adds
    additional padding.
 
--  `CardView` does not clip child views that intersect with the
+- `CardView` does not clip child views that intersect with the
    `CardView`'s rounded corners.
 
 To help in managing these compatibility differences, `CardView`
 provides several additional attributes that you can configure in your
 layout:
 
--   `cardPreventCornerOverlap` &ndash; Set this attribute to `true` to
+- `cardPreventCornerOverlap` &ndash; Set this attribute to `true` to
     add padding when your app is running on earlier Android versions (API
     level 20 and earlier). This setting prevents `CardView` content from
     intersecting with the `CardView`'s rounded corners.
 
--   `cardUseCompatPadding` &ndash; Set this attribute to `true` to add
+- `cardUseCompatPadding` &ndash; Set this attribute to `true` to add
     padding when your app is running in versions of Android at or
     greater than API level 21. If you want to use `CardView` on
     pre-Lollipop devices and have it look the same on Lollipop (or
@@ -358,7 +349,6 @@ layout:
 For more information about maintaining compatibility with earlier versions of Android, see
 [Maintaining Compatibility](https://developer.android.com/training/material/compatibility.html).
 
-
 ## Summary
 
 This guide introduced the new `CardView` widget included in Android
@@ -370,9 +360,8 @@ how to use `CardView` on Android devices earlier than Android 5.0
 Lollipop. For more information about `CardView`, see the
 [CardView class reference](https://developer.android.com/reference/android/support/v7/widget/CardView.html).
 
-
 ## Related Links
 
-- [RecyclerView (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerView (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduction to Lollipop](~/android/platform/lollipop.md)
 - [CardView class reference](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

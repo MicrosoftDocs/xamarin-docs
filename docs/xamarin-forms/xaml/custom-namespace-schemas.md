@@ -7,17 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Custom Namespace Schemas in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/CustomNamespaceSchemas/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
 Types in a library can be referenced in XAML by declaring a XAML namespace for the library, with the namespace declaration specifying the Common Language Runtime (CLR) namespace name and an assembly name:
 
 ```xaml
 <ContentPage ...
-             xmlns:controls="clr-namespace:MyCompany.Controls;assembly="MyCompany.Controls">
+             xmlns:controls="clr-namespace:MyCompany.Controls;assembly=MyCompany.Controls">
     ...
 </ContentPage>
 ```
@@ -138,6 +139,6 @@ The result is that two `CircleButton` instances are displayed:
 
 ## Related links
 
-- [Custom Namespace Schemas (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/CustomNamespaceSchemas/)
+- [Custom Namespace Schemas (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [XAML Namespace Recommended Prefixes](custom-prefix.md)
 - [XAML Namespaces in Xamarin.Forms](namespaces.md)

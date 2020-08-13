@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ---
@@ -59,16 +59,15 @@ To use the Android Device Manager, you will need the following items:
 
 - The following packages must be installed (via the
   [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
-    - **Android SDK Tools version 26.1.1** or later
-    - **Android SDK Platform-Tools 27.0.1** or later
-    - **Android SDK Build-Tools 27.0.3** or later 
-    - **Android Emulator 27.2.7** or later. 
+  - **Android SDK Tools version 26.1.1** or later
+  - **Android SDK Platform-Tools 27.0.1** or later
+  - **Android SDK Build-Tools 27.0.3** or later 
+  - **Android Emulator 27.2.7** or later. 
 
   These packages should be displayed with **Installed** status as seen in
   the following screenshot:
 
   [![Installing Android SDK Tools](device-manager-images/win/02-sdk-tools-sml.png)](device-manager-images/win/02-sdk-tools.png#lightbox)
-
 
 ## Launching the Device Manager
 
@@ -82,7 +81,6 @@ If the following error dialog is presented on launch, see the
 instructions:
 
 ![Android SDK instance error dialog](device-manager-images/win/04-sdk-error.png)
-
 
 ## Main Screen
 
@@ -197,7 +195,6 @@ following steps:
 
     [![Newly-created device ready to launch](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
 
-
 ### Edit Device
 
 To edit an existing virtual device, select the device and click the
@@ -223,7 +220,6 @@ is being changed from **480** to **240**:
 After you have made the necessary configuration changes, click the **Save** button.
 For more information about changing virtual device properties, see
 [Editing Android Virtual Device Properties](~/android/get-started/installation/android-emulator/device-properties.md).
-
 
 ### Additional Options
 
@@ -267,7 +263,6 @@ The additional options menu contains the following items:
 
   ![Delete device dialog](device-manager-images/win/28-delete-device-w158.png)
 
-
 ::: zone-end
 ::: zone pivot="macos"
 
@@ -300,15 +295,14 @@ To use the Android Device Manager, you will need the following items:
 
 - The following packages must be installed (via the
   [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
-    -  **SDK tools version 26.1.1** or later
-    -  **Android SDK Platform-Tools 28.0.1** or later 
-    -  **Android SDK Build-Tools 26.0.3** or later
+  - **SDK tools version 26.1.1** or later
+  - **Android SDK Platform-Tools 28.0.1** or later 
+  - **Android SDK Build-Tools 26.0.3** or later
 
   These packages should be displayed with **Installed** status as seen in
   the following screenshot:
 
   [![Installing Android SDK Tools](device-manager-images/mac/02-sdk-tools-sml.png)](device-manager-images/mac/02-sdk-tools.png#lightbox)
-
 
 ## Launching the Device Manager
 
@@ -321,7 +315,6 @@ If the following error dialog is presented on launch, see the
 instructions:
 
 ![Android SDK instance error dialog](device-manager-images/mac/04-sdk-instance-error.png)
-
 
 ## Main Screen
 
@@ -440,7 +433,6 @@ screen:
 
     [![Newly-created device ready to launch](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
 
-
 ### Edit Device
 
 To edit an existing virtual device, select the **Additional Options**
@@ -466,7 +458,6 @@ is being changed from **480** to **240**:
 After you have made the necessary configuration changes, click the **Save** button.
 For more information about changing virtual device properties, see
 [Editing Android Virtual Device Properties](~/android/get-started/installation/android-emulator/device-properties.md).
-
 
 ### Additional Options
 
@@ -514,14 +505,15 @@ The additional options menu contains the following items:
 
 -----
 
-
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## Troubleshooting
 
 The following sections explain how to diagnose and work around problems
 that may occur when using the Android Device Manager to configure
 virtual devices.
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -563,7 +555,6 @@ To work around this problem, use the following steps:
 After making this change to **user.config**, you should be able to
 launch the Android Device Manager.
 
-
 ### Wrong Version of Android SDK Tools
 
 If Android SDK tools 26.1.1 or later is not installed, you may see this
@@ -578,7 +569,6 @@ tab and install the following packages:
 - **Android SDK Tools 26.1.1** or later
 - **Android SDK Platform-Tools 27.0.1** or later
 - **Android SDK Build-Tools 27.0.3** or later
-
 
 ### Snapshot disables WiFi on Android Oreo
 
@@ -601,7 +591,6 @@ To work around this problem,
 
 After these changes are made, the AVD will restart in a state that
 allows Wi-Fi to work again.
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -655,7 +644,6 @@ Report**:
 
 [![Location of menu item for filing a bug report](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 If you find a problem with the Android Device Manager that
@@ -675,7 +663,6 @@ selecting an Android virtual device (AVD) to run, creating new virtual
 devices, and how to edit a virtual device. It explained how to
 edit profile hardware properties for further customization, and it
 provided troubleshooting tips for common problems.
-
 
 ## Related Links
 

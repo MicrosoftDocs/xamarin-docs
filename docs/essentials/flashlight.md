@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: Flashlight"
 description: "This document describes the Flashlight class in Xamarin.Essentials, which has the ability to turn on or off the device's camera flash to turn it into a flashlight."
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Flashlight
@@ -45,6 +47,8 @@ By adding these permissions [Google Play will automatically filter out devices](
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 # [iOS](#tab/ios)
 
@@ -101,7 +105,7 @@ On newer API levels, [Torch Mode](https://developer.android.com/reference/androi
 
 #### API Level 22 and Lower
 
-A camera surface texture is created to turn on or off the `FlashMode` of the camera unit. 
+A camera surface texture is created to turn on or off the `FlashMode` of the camera unit.
 
 ### [iOS](#tab/ios)
 
@@ -115,5 +119,11 @@ A camera surface texture is created to turn on or off the `FlashMode` of the cam
 
 ## API
 
-- [Flashlight source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Flashlight source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Flashlight)
 - [Flashlight API documentation](xref:Xamarin.Essentials.Flashlight)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Flashlight-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

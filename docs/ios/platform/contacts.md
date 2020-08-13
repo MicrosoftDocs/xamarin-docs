@@ -4,8 +4,8 @@ description: "This article covers working with the new Contacts and Contacts UI 
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -19,35 +19,32 @@ that replace the existing Address Book and Address Book UI frameworks used by iO
 The two new frameworks contain the following functionality:
 
 - [**Contacts**](#contacts) - Provides access to the user's contact list data.
-	Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
+  Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
 
 - [**ContactsUI**](#contactsui) - Provides Xamarin.iOS UI elements to display, edit, select
-	and create contacts on iOS devices.
+  and create contacts on iOS devices.
 
-[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
+[![An example Contact Sheet on an iOS device](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > The existing `AddressBook` and `AddressBookUI` frameworks use by iOS 8 (and prior) have been deprecated in iOS 9 and should be replaced with the new `Contacts` and `ContactsUI` frameworks as soon as possible for any existing Xamarin.iOS app. New apps should be written against the new frameworks.
 
-
-
-
 In the following sections, we'll take a look at these new frameworks and how to
 implement them in a Xamarin.iOS app.
 
-<a name="contacts" />
+<a name="contacts"></a>
 
 ## The Contacts Framework
 
 The Contacts Framework provides Xamarin.iOS access to the user's contact information. Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
 
-<a name="Contact_Objects" />
+<a name="Contact_Objects"></a>
 
 ### Contact Objects
 
 The `CNContact` class provides thread safe, read-only access to a contact's properties such as Name, Address or Phone Numbers. `CNContact` functions like a `NSDictionary` and contains multiple, read-only collections of properties (such as addresses or phone numbers):
 
-[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
+[![Contact Object overview](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
 For any property that can have multiple values (such as email address or phone numbers), they will be represented as an array of `NSLabeledValue` objects. `NSLabeledValue` is a thread safe tuple consisting of a read-only set of labels and values where the label defines the value to the user (for example Home or Work email). The Contacts framework provides a selection of predefined labels (via the `CNLabelKey`  and `CNLabelPhoneNumberKey` static classes) that you can use in your app or you have the option of defining custom labels for your needs.
 
@@ -76,19 +73,19 @@ contact.PhoneNumbers = new CNLabeledValue<CNPhoneNumber>[] { cellPhone, workPhon
 // Add work address
 var workAddress = new CNMutablePostalAddress()
 {
-	Street = "1 Infinite Loop",
-	City = "Cupertino",
-	State = "CA",
-	PostalCode = "95014"
+    Street = "1 Infinite Loop",
+    City = "Cupertino",
+    State = "CA",
+    PostalCode = "95014"
 };
 contact.PostalAddresses = new CNLabeledValue<CNPostalAddress>[] { new CNLabeledValue<CNPostalAddress>(CNLabelKey.Work, workAddress) };
 
 // Add birthday
 var birthday = new NSDateComponents()
 {
-	Day = 1,
-	Month = 4,
-	Year = 1984
+    Day = 1,
+    Month = 4,
+    Year = 1984
 };
 contact.Birthday = birthday;
 
@@ -101,17 +98,17 @@ saveRequest.AddContact(contact, store.DefaultContainerIdentifier);
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error))
 {
-	Console.WriteLine("New contact saved");
+    Console.WriteLine("New contact saved");
 }
 else
 {
-	Console.WriteLine("Save error: {0}", error);
+    Console.WriteLine("Save error: {0}", error);
 }
 ```
 
 If this code is run on an iOS 9 device, a new contact will be added to the user's collection. For example:
 
-[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
+[![A new contact added to the user's collection](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 ### Contact Formatting and Localization
 
@@ -179,11 +176,11 @@ You can easily check to see if a given contact has the desired property by using
 ```csharp
 // Does the contact contain the requested key?
 if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
-	// No, re-request to pull required info
-	var fetchKeys = new NSString[] {CNContactKey.GivenName, CNContactKey.FamilyName, CNContactKey.PostalAddresses};
-	var store = new CNContactStore();
-	NSError error;
-	contact = store.GetUnifiedContact(contact.Identifier, fetchKeys, out error);
+    // No, re-request to pull required info
+    var fetchKeys = new NSString[] {CNContactKey.GivenName, CNContactKey.FamilyName, CNContactKey.PostalAddresses};
+    var store = new CNContactStore();
+    NSError error;
+    contact = store.GetUnifiedContact(contact.Identifier, fetchKeys, out error);
 }
 ```
 
@@ -194,7 +191,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 A user might have different sources of contact information for a single person in their contact database (like iCloud, Facebook or Google Mail). In iOS and OS X apps, this contact information will automatically be linked together and displayed to the user as a single, _Unified Contact_:
 
-[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
+[![Unified Contacts overview](contacts-images/unified01.png)](contacts-images/unified01.png#lightbox)
 
 This Unified Contact is a temporary, in-memory view of the link contact information that will be given its own unique identifier (which should be used to refetch the contact if required). By default, the Contacts framework will return a Unified Contact whenever possible.
 
@@ -217,9 +214,9 @@ saveRequest.AddContact(contact, store.DefaultContainerIdentifier);
 
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error)) {
-	Console.WriteLine("New contact saved");
+    Console.WriteLine("New contact saved");
 } else {
-	Console.WriteLine("Save error: {0}", error);
+    Console.WriteLine("Save error: {0}", error);
 }
 ```
 
@@ -245,9 +242,9 @@ saveRequest.UpdateContact(mutable);
 
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error)) {
-	Console.WriteLine("Contact updated.");
+    Console.WriteLine("Contact updated.");
 } else {
-	Console.WriteLine("Update error: {0}", error);
+    Console.WriteLine("Update error: {0}", error);
 }
 ```
 
@@ -259,13 +256,13 @@ Whenever a contact is modified, the Contact Store posts a `CNContactStoreDidChan
 
 A user's contacts can exist either locally on the user's device or as contacts synced to the device from one or more server accounts (like Facebook or Google). Each pool of contacts has its own _Container_ and a given Contact can only exist in one container.
 
-[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
+[![Containers and Groups overview](contacts-images/containers01.png)](contacts-images/containers01.png#lightbox)
 
 Some Containers allow for Contacts to be arranged into one or more _Groups_ or _Sub-Groups_. This behavior is dependent on the backing store for a given Container. For example, iCloud has only one Container but can have many Groups (but no Sub-Groups). Microsoft Exchange on the other hand, does not support groups but can have multiple Containers (one for each Exchange Folder).
 
-[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
+[![Overlap within Containers and Groups](contacts-images/containers02.png)](contacts-images/containers02.png#lightbox)
 
-<a name="contactsui" />
+<a name="contactsui"></a>
 
 ## The ContactsUI Framework
 
@@ -291,36 +288,36 @@ using ContactsUI;
 
 namespace iOS9Contacts
 {
-	public class ContactPickerDelegate: CNContactPickerDelegate
-	{
-		#region Constructors
-		public ContactPickerDelegate ()
-		{
-		}
+    public class ContactPickerDelegate: CNContactPickerDelegate
+    {
+        #region Constructors
+        public ContactPickerDelegate ()
+        {
+        }
 
-		public ContactPickerDelegate (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        public ContactPickerDelegate (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ContactPickerDidCancel (CNContactPickerViewController picker)
-		{
-			Console.WriteLine ("User canceled picker");
+        #region Override Methods
+        public override void ContactPickerDidCancel (CNContactPickerViewController picker)
+        {
+            Console.WriteLine ("User canceled picker");
 
-		}
+        }
 
-		public override void DidSelectContact (CNContactPickerViewController picker, CNContact contact)
-		{
-			Console.WriteLine ("Selected: {0}", contact);
-		}
+        public override void DidSelectContact (CNContactPickerViewController picker, CNContact contact)
+        {
+            Console.WriteLine ("Selected: {0}", contact);
+        }
 
-		public override void DidSelectContactProperty (CNContactPickerViewController picker, CNContactProperty contactProperty)
-		{
-			Console.WriteLine ("Selected Property: {0}", contactProperty);
-		}
-		#endregion
-	}
+        public override void DidSelectContactProperty (CNContactPickerViewController picker, CNContactProperty contactProperty)
+        {
+            Console.WriteLine ("Selected Property: {0}", contactProperty);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -362,10 +359,9 @@ of objects that the Contact framework provides and how you use them to create ne
 or access existing contacts. It also examined the Contact UI framework to select
 existing contacts and display contact information.
 
-
 ## Related Links
 
-- [QuickContacts Sample](https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/)
+- [Contacts Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts/)
 - [What's New in iOS 9](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Contacts Framework Reference](https://developer.apple.com/documentation/contacts?language=objc)
 - [ContactsUI Framework Reference](https://developer.apple.com/documentation/contactsui?language=objc)

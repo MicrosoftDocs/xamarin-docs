@@ -7,6 +7,7 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 17. Mastering the Grid
@@ -97,8 +98,6 @@ The `Grid` can help structure a program to respond to orientation changes. The
 [**GridRgbSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) sample demonstrates a technique that moves an element between a second row of a portrait-oriented phone and the second column of a landscape-oriented phone.
 
 The program initializes `Slider` elements to a range of 0 to 255, and uses data bindings to display the value of the sliders in hexadecimal. Because the `Slider` values are floating point, and the .NET formatting string for hexadecimal only works with integers, a [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library helps out.
-
-
 
 ## Related links
 

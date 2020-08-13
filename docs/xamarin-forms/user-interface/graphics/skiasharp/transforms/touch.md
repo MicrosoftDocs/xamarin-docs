@@ -7,17 +7,18 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Touch Manipulations
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use matrix transforms to implement touch dragging, pinching, and rotation_
 
 In multi-touch environments such as those on mobile devices, users often use their fingers to manipulate objects on the screen. Common gestures such as a one-finger drag and a two-finger pinch can move and scale objects, or even rotate them. These gestures are generally implemented using transform matrices, and this article shows you how to do that.
 
-![](touch-images/touchmanipulationsexample.png "A bitmap subjected to translation, scaling, and rotation")
+![A bitmap subjected to translation, scaling, and rotation](touch-images/touchmanipulationsexample.png)
 
 All the samples shown here use the Xamarin.Forms touch-tracking effect presented in the article [**Invoking Events from Effects**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
@@ -753,7 +754,6 @@ class TouchManipulationManager
 }
 ```
 
-
 However, you'll probably want to avoid the `AnisotropicScale` option. It's very easy with this option to manipulate the bitmap so that one of the scaling factors becomes zero. That makes the bitmap disappear from sight, never to return. If you truly do need anisotropic scaling, you'll want to enhance the logic to avoid undesirable outcomes.
 
 `TouchManipulationManager` makes use of vectors, but since there is no `SKVector` structure in SkiaSharp, `SKPoint` is used instead. `SKPoint` supports the subtraction operator, and the result can be treated as a vector. The only vector-specific logic that needed to be added is a `Magnitude` calculation:
@@ -913,7 +913,7 @@ public partial class TouchManipulationPage : ContentPage
 
 The `PaintSurface` handler concludes by displaying a `MatrixDisplay` object showing the accumulated touch matrix:
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
+[![Triple screenshot of the Touch Manipulation page](touch-images/touchmanipulation-small.png)](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
 
 ## Manipulating Multiple Bitmaps
 
@@ -1051,7 +1051,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 The code loops through the collection and displays the pile of bitmaps from the beginning of the collection to the end:
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
+[![Triple screenshot of the Bitmap Scatter View page](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
 
 ## Single-Finger Scaling
 
@@ -1267,5 +1267,5 @@ This code effectively divides the area of the bitmap into an interior diamond sh
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Invoking Events from Effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

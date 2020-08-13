@@ -4,8 +4,8 @@ description: "This document links to guides that describe features introduced in
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _iOS 6 includes a variety of new technologies for developing apps, which Xamarin.iOS 6 brings to C# developers._
 
-[ ![](images/ios6-large.jpg "The iOS 6 logo")](images/ios6-large.jpg#lightbox)
+[![The iOS 6 logo](images/ios6-large.jpg)](images/ios6-large.jpg#lightbox)
 
 With iOS 6 and Xamarin.iOS 6, developers now have a wealth of capability at
 their disposal to create iOS applications, including ones that target iPhone 5.
@@ -22,44 +22,37 @@ and links to articles for each topic. In addition it touches on a couple changes
 that will be important as developers move to iOS 6 and the new resolution of
 iPhone 5.
 
-
 ## [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md)
 
 Collection Views allow content to be displayed using arbitrary layouts. They
 allow easily creating grid-like layouts out of the box, while supporting custom
-layouts as well. For more information see, the [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)guide.
-
+layouts as well. For more information see, the [Introduction to Collection Views](~/ios/user-interface/controls/uicollectionview.md) guide.
 
 ## [Introduction to PassKit](~/ios/platform/passkit.md)
 
 The PassKit framework allows applications to interact with digital passes
 that are managed in the Passbook app. For more information see, the [Introduction to Pass Kit guide](~/ios/platform/passkit.md).
 
-
-##  [Introduction to EventKit](~/ios/platform/eventkit.md)
+## [Introduction to EventKit](~/ios/platform/eventkit.md)
 
 The EventKit framework provides a way to access the Calendars, Calendar
 Events, and Reminders data that Calendar Database stores. Access to the
 calendars and calendar events has been available since iOS 4, but iOS 6 now
 exposes access to reminders data. For more information, see the [I](~/ios/platform/eventkit.md) [ntroduction to EventKit](~/ios/platform/eventkit.md) guide.
 
-
-##  [Introduction to the Social Framework](~/ios/platform/social-framework.md)
+## [Introduction to the Social Framework](~/ios/platform/social-framework.md)
 
 The Social Framework provides a unified API for interacting with social
 networks including Twitter and Facebook, as well as SinaWeibo for users in
 China. For more information see, the [Introduction to the Social Framework](~/ios/platform/social-framework.md) guide.
 
-
-##  [Changes to StoreKit](changes-to-storekit.md)
+## [Changes to StoreKit](changes-to-storekit.md)
 
 Apple has introduced two new features in Store Kit: purchasing and
 downloading iTunes or App Store content from within your app, and hosting your
 content files for in-app purchases!. For more information see, the [Changes to Store Kit](changes-to-storekit.md) guide.
 
-
 ## Other Changes
-
 
 ### ViewWillUnload and ViewDidUnload Deprecated
 
@@ -81,9 +74,7 @@ void ReleaseDesignerOutlets ()
 ```
 
 However, in iOS 6, it is no longer necessary to call `ReleaseDesignerOutlets`.   
-   
-   
-   
+
 For cleanup code, iOS 6 applications should use `DidReceiveMemoryWarning`. However, code that
 calls `Dispose` should be used sparingly and only for memory
 intensive objects as shown below:
@@ -102,21 +93,20 @@ general the most applications should do is to remove event handlers.
 
 For the case of saving state, applications can perform this in `ViewWillDisappear` and `ViewDidDisappear` instead of `ViewWillUnload`.
 
-
 ### iPhone 5 Resolution
 
 iPhone 5 devices have a 640x1136 resolution. Applications that targeted
 previous versions of iOS will appear letterboxed when run on an iPhone 5, as
 shown below:
 
- [![](images/01-letterboxed.png "Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5")](images/01-letterboxed.png#lightbox)
+ [![Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5](images/01-letterboxed.png)](images/01-letterboxed.png#lightbox)
 
 In order for the application to appear full-screen on iPhone 5, simply add an
 image named `Default-568h@2x.png` having a resolution of 640x1136. The
 following screenshot shows the application running after this image has been
 included:
 
- [![](images/02-fullscreen.png "This screenshot shows the application running after this image has been included")](images/02-fullscreen.png#lightbox)
+ [![This screenshot shows the application running after this image has been included](images/02-fullscreen.png)](images/02-fullscreen.png#lightbox)
 
 ### Subclassing UINavigationBar
 
@@ -156,7 +146,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 Using this `UINavigationBar` subclass results in the image view
 being displayed as shown in the following screenshot:
 
- [![](images/03-navbar.png "Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot")](images/03-navbar.png#lightbox)
+ [![Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot](images/03-navbar.png)](images/03-navbar.png#lightbox)
 
 ### Interface Orientation
 

@@ -4,8 +4,8 @@ description: "This document describes in-app purchases in Xamarin.iOS, discussin
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -17,21 +17,20 @@ iTunes servers to get product information and perform transactions. The
 provisioning profile must be configured for in-app purchasing and product
 information must be entered in iTunes Connect.
 
- [![](in-app-purchase-basics-and-configuration-images/image1.png "StoreKit manages all communication with Apple’s as shown in this chart")](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
+ [![StoreKit manages all communication with Apple’s as shown in this chart](in-app-purchase-basics-and-configuration-images/image1.png)](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
 
 Using the App Store to provide in-app purchasing requires the
 following setup and configuration:
 
--  **iTunes Connect** – Configuring the products to sell and setting up sandbox user accounts to test purchasing. You must also have provided your banking and tax information to Apple so they can remit funds collected on your behalf.
--   **iOS Provisioning Portal** – Creating a Bundle Identifier and enabling App Store access for your app.
--  **Store Kit** – Adding code to your app for displaying products, purchasing products and restoring transactions.
--  **Custom code** – To track purchases made by customers and provide the products or services they’ve purchased. You may also need implement a server-side process to validate receipts if your products consist of content downloaded from a server (such as books and magazine issues).
-
+- **iTunes Connect** – Configuring the products to sell and setting up sandbox user accounts to test purchasing. You must also have provided your banking and tax information to Apple so they can remit funds collected on your behalf.
+- **iOS Provisioning Portal** – Creating a Bundle Identifier and enabling App Store access for your app.
+- **Store Kit** – Adding code to your app for displaying products, purchasing products and restoring transactions.
+- **Custom code** – To track purchases made by customers and provide the products or services they’ve purchased. You may also need implement a server-side process to validate receipts if your products consist of content downloaded from a server (such as books and magazine issues).
 
 There are two Store Kit “server environments”:
 
--  **Production** – Transactions with real money. Only accessible via applications that have been submitted and approved by Apple. In-app purchase products must also be reviewed and approved before they are available on the production environment.
--  **Sandbox** – Where your testing happens. Products are available here immediately after creation (the approval process only applies to the Production environment). Transactions in the sandbox require test users (not real Apple IDs) to perform transactions.
+- **Production** – Transactions with real money. Only accessible via applications that have been submitted and approved by Apple. In-app purchase products must also be reviewed and approved before they are available on the production environment.
+- **Sandbox** – Where your testing happens. Products are available here immediately after creation (the approval process only applies to the Production environment). Transactions in the sandbox require test users (not real Apple IDs) to perform transactions.
 
 ## In-App Purchase Rules
 
@@ -64,26 +63,25 @@ different price tier in different markets.
 ## Configuration
 
 Before writing any in-app purchasing code you must do some set-up work in
-iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
+iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 These three steps
 should be complete before writing any code:
 
--  **Apple Developer Account** – Submit your banking and taxation information to Apple.
--  **iOS Provisioning Portal** – Ensure your app has a valid App ID (not a wildcard with an asterisk * in it) and has In App Purchasing enabled.
--  **iTunes Connect Application Management** – Add products to your application.
-
+- **Apple Developer Account** – Submit your banking and taxation information to Apple.
+- **iOS Provisioning Portal** – Ensure your app has a valid App ID (not a wildcard with an asterisk * in it) and has In App Purchasing enabled.
+- **iTunes Connect Application Management** – Add products to your application.
 
 ### Apple Developer Account
 
 Building and distributing free apps requires very little configuration in [iTunes Connect](https://itunesconnect.apple.com), however to sell paid apps or in-app purchases requires you to
 provide Apple with banking and taxation information. Click on **Agreements, Tax and Banking** from the main menu shown here:
 
- [![](in-app-purchase-basics-and-configuration-images/image2.png "Click on Agreements, Tax and Banking from the main menu")](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
+ [![Click on Agreements, Tax and Banking from the main menu](in-app-purchase-basics-and-configuration-images/image2.png)](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
 
 Your Developer Account should have an **iOS Paid Applications** contract in effect, as shown in this screenshot:
 
- [![](in-app-purchase-basics-and-configuration-images/image3.png "Your Developer Account should have an iOS Paid Applications contract in effect")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
+ [![Your Developer Account should have an iOS Paid Applications contract in effect](in-app-purchase-basics-and-configuration-images/image3.png)](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
 You will not be able to test any StoreKit functionality until you
 have an **iOS Paid Applications** contract – StoreKit calls in
@@ -93,12 +91,11 @@ your code will fail until Apple has processed your **Contracts, Tax, and Banking
 
 New applications are set up in the **App IDs** section of the **iOS Provisioning Portal**. To create a new App ID, go to the [Member Center of the iOS Provisioning Portal](https://developer.apple.com/membercenter/index.action), navigate to **Certificates, Identifiers, and Profiles** section of the Portal, and click on **Identifiers** under *iOS Apps*. Then, click the "+" on the top right to generate a new App ID.
 
-
 The form for creating new **App IDs**
 
  looks like this:
 
- [![](in-app-purchase-basics-and-configuration-images/image4.png "The form for creating new App IDs")](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
+ [![The form for creating new App IDs](in-app-purchase-basics-and-configuration-images/image4.png)](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
 
 Enter something appropriate for the *Description*, so you can easily identify this App ID in a list. For the *App ID Prefix*, select the Team ID.
 
@@ -119,7 +116,7 @@ multiple applications, however _wild-card App IDs cannot be used for In-AppPurch
 
 Note that **In-App Purchase** will be automatically enabled in the Services list:
 
- [![](in-app-purchase-basics-and-configuration-images/image5.png "In-App Purchase will be automatically enabled in the Services list")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
+ [![In-App Purchase will be automatically enabled in the Services list](in-app-purchase-basics-and-configuration-images/image5.png)](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
 
 #### Provisioning Profiles
 
@@ -134,24 +131,23 @@ Click **My Apps** in iTunes Connect to create
 or edit an iOS application entry. The application overview page is shown
 here:
 
- [![](in-app-purchase-basics-and-configuration-images/image6.png "The application overview page")](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
+ [![The application overview page](in-app-purchase-basics-and-configuration-images/image6.png)](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
 
 Click **In-App Purchases** to create or edit
 your products for sale. This screenshot shows the sample app with several products
 already added:
 
- [![](in-app-purchase-basics-and-configuration-images/image7.png "The sample app with several products already added")](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
+ [![The sample app with several products already added](in-app-purchase-basics-and-configuration-images/image7.png)](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
 
 The process to add new products has two steps:
 
-1.   Choose the product type: 
-	[![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
-	[![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1. Choose the product type: 
+    [![Choose the product type](in-app-purchase-basics-and-configuration-images/image8.png)](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
+    [![Entering the products attributes](in-app-purchase-basics-and-configuration-images/image9.png)](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
 below:
-
 
 ### Reference Name
 
@@ -191,16 +187,15 @@ users, but it is used to reference the product in your application code.
 
 There are five types of in-app purchase product you can offer:
 
-1.  **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
-1.  **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
-1.  **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
-1.  **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
-1.  **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
-
+1. **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
+1. **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
+1. **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
+1. **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
+1. **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
 
  *This document currently covers only the first two product types (Consumable and Non-Consumable).*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### Price Tiers
 
@@ -215,7 +210,7 @@ provides a price matrix to help you select the correct tier for the
 currency/price that you want. An excerpt of the price matrix (August 2012) is
 shown here:
 
- [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
+ [![An excerpt of the price matrix August 2012](in-app-purchase-basics-and-configuration-images/image10.png)](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
 At the time of writing (June 2013) there are 87 tiers from USD
 0.99 to USD 999.99. The Pricing Matrix shows the price that your customers will
@@ -231,7 +226,7 @@ date. This screenshot shows how a future-dated price change is added – the
 price is being temporarily changed from tier 1 to tier 3 for the month of
 September only:
 
- [![](in-app-purchase-basics-and-configuration-images/image11.png "A future-dated price change where the price is being temporarily changed from tier 1 to tier 3 for the month of September only")](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
+ [![A future-dated price change where the price is being temporarily changed from tier 1 to tier 3 for the month of September only](in-app-purchase-basics-and-configuration-images/image11.png)](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
 
 ### Free Products Not Supported
 
@@ -246,11 +241,9 @@ In iTunes Connect you can enter different Name and Description text for any
 number of supported languages. Each language can be added/edited in via a
 popup:
 
- [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- When you display product information in your app, the localized
+ [![Each language can be added/edited in via a popup](in-app-purchase-basics-and-configuration-images/image12.png)](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
+
+When you display product information in your app, the localized
 text is available for you to display via StoreKit. The currency display must
 also be localized to show the correct symbol and decimal formatting – this
 formatting is covered later in the document.
@@ -269,11 +262,9 @@ new app, or the functionality has been added to an existing one) you must also
 choose some products to submit with it. The iTunes Connect portal will prompt
 you to do this, as shown in this screenshot:
 
- [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- The application and the in-app purchases will be reviewed
+ [![The iTunes Connect portal will prompt you to submit some products as well](in-app-purchase-basics-and-configuration-images/image13.png)](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
+
+The application and the in-app purchases will be reviewed
 together, so that they all get approved at once (so that app doesn’t go into
 the store without any approved products!).
 

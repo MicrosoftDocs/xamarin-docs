@@ -7,11 +7,12 @@ ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 These articles focus on the [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) property of [`SKPaint`](xref:SkiaSharp.SKPaint). The `BlendMode` property is of type [`SKBlendMode`](xref:SkiaSharp.SKBlendMode), an enumeration with 29 members.
 
@@ -19,7 +20,7 @@ The `BlendMode` property determines what happens when a graphical object (often 
 
 ## The SKBlendModes enumeration
 
-The SkiaSharp blend modes correspond closely to those described in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification. The Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference) also provides helpful background information. For a general introduction to blend modes, the [**Blend modes**](https://en.wikipedia.org/wiki/Blend_modes) article in Wikipedia is a good start. Blend modes are supported in Adobe Photoshop, so there is much additional online information about blend modes in that context.
+The SkiaSharp blend modes correspond closely to those described in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification. The Skia [**SkBlendMode Overview**](https://skia.org/user/api/SkBlendMode_Overview) also provides helpful background information. For a general introduction to blend modes, the [**Blend modes**](https://en.wikipedia.org/wiki/Blend_modes) article in Wikipedia is a good start. Blend modes are supported in Adobe Photoshop, so there is much additional online information about blend modes in that context.
 
 The 29 members of the `SKBlendMode` enumeration can be divided into three categories:
 
@@ -71,7 +72,7 @@ BackgroundColor = Color.Red;
 
 You'll see this red background behind your SkiaSharp graphics because the SkiaSharp canvas itself is transparent.
 
-The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes. 
+The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes.
 
 ## [SkiaSharp Porter-Duff blend modes](porter-duff.md)
 
@@ -88,4 +89,4 @@ Use the non-separable blend modes to alter hue, saturation, or luminosity.
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

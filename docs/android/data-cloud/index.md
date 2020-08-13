@@ -4,8 +4,8 @@ description: "The guides in this section examine how to access data and make use
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -23,7 +23,7 @@ services.
 
 This section discusses data access in Xamarin.Android using SQLite as
 the database engine.
- 
+
 ## [Google Messaging](~/android/data-cloud/google-messaging/index.md)
 
 Google provides both Firebase Cloud Messaging and legacy Google Cloud
@@ -32,5 +32,3 @@ server applications. This section provides overviews for each service
 provided by step-by-step explanation of how to use these services to
 implement remote notifications (also called push notifications) in
 Xamarin.Android applications.
-
-

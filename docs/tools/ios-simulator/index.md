@@ -3,9 +3,9 @@ title: "Remoted iOS Simulator for Windows"
 description: "The Remoted iOS Simulator for Windows allows you to test your apps on an iOS simulator displayed in Windows alongside Visual Studio 2019."
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-author: lobrien
-ms.author: laobri
-ms.date: 04/02/2019
+author: davidortinau
+ms.author: daortin
+ms.date: 04/26/2019
 ---
 
 # Remoted iOS Simulator for Windows
@@ -20,7 +20,7 @@ iOS simulator displayed in Windows alongside Visual Studio 2019 and Visual Studi
 The Remoted iOS Simulator for Windows is installed automatically as part
 of Xamarin in Visual Studio 2019 and Visual Studio 2017. To use it, follow these steps:
 
-1. [Pair Visual 2019 to a Mac Build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. [Pair Visual Studio 2019 to a Mac Build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. In Visual Studio, start debugging an iOS or tvOS project. The
 Remoted iOS Simulator for Windows will appear on your Windows machine.
 
@@ -67,6 +67,11 @@ with physical iOS devices.
 Similarly, the Remoted iOS Simulator for Windows treats Windows Stylus
 input as Apple Pencil input.
 
+## Sound handling
+
+Sounds played by the simulator will come from the host Mac's speakers.
+iOS sounds are not heard on the Windows computer.
+
 ## Disabling the Remoted iOS Simulator for Windows
 
 To disable the Remoted iOS Simulator for Windows, navigate to
@@ -76,3 +81,12 @@ To disable the Remoted iOS Simulator for Windows, navigate to
 [![checkbox to use simulator](images/options-sml.png "checkbox to use simulator")](images/options.png#lightbox)
 
 With this option disabled, debugging opens the iOS Simulator on the connected Mac build host.
+
+## Troubleshooting
+
+If you experience issues with the Remoted iOS Simulator, you can view the logs in these locations:
+
+- **Mac** – `~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+
+If you [report a problem in Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), attaching these logs might be helpful (there are options to keep uploads private).

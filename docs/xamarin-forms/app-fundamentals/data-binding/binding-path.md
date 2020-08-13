@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Binding Path
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In all the previous data-binding examples, the [`Path`](xref:Xamarin.Forms.Binding.Path) property of the `Binding` class (or the [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) property of the `Binding` markup extension) has been set to a single property. It's actually possible to set `Path` to a *sub-property* (a property of a property), or to a member of a collection.
 
@@ -35,7 +36,7 @@ That example and several others are shown in the **Path Variations** page:
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:globe="clr-namespace:System.Globalization;assembly=mscorlib"
+             xmlns:globe="clr-namespace:System.Globalization;assembly=netstandard"
              x:Class="DataBindingDemos.PathVariationsPage"
              Title="Path Variations"
              x:Name="page">
@@ -119,7 +120,7 @@ The fourth `Label` does something similar but for the culture associated with Fr
 </Label>
 ```
 
-See [Passing Constructor Arguments](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) for more details on specifying constructor arguments in XAML.
+See [Passing Constructor Arguments](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments) for more details on specifying constructor arguments in XAML.
 
 Finally, the last example is similar to the second, except that it references one of the children of the `StackLayout`:
 
@@ -158,9 +159,7 @@ As Xamarin.Forms processes the binding path, it installs a `PropertyChanged` han
 
 If a property in the binding path does not implement `INotifyPropertyChanged`, any changes to that property will be ignored. Some changes could entirely invalidate the binding path, so you should use this technique only when the string of properties and sub-properties never become invalid.
 
-
-
 ## Related Links
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

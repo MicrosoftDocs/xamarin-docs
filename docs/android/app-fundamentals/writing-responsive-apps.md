@@ -3,8 +3,8 @@ title: "Writing Responsive Applications"
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 
@@ -88,7 +88,7 @@ E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 This is because you must update the GUI from the GUI thread. Our code updates
 the GUI from the ThreadPool thread, causing the app to crash. We need to
 calculate our value on the background thread, but then do our update on the GUI
-thread, which is handled with [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+thread, which is handled with [Activity.RunOnUIThread](xref:Android.App.Activity.RunOnUiThread*):
 
 ```csharp
 public class ThreadDemo : Activity

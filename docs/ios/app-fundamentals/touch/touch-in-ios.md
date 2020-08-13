@@ -4,8 +4,8 @@ description: "This document describes how to work with touch events, multi-touch
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -15,11 +15,11 @@ It is important to understand the touch events and touch APIs in an iOS applicat
 
 ## Enabling Touch
 
-Controls in `UIKit` – those subclassed from UIControl – are so dependant on user interaction that they have gestures built in to UIKit and therefore it is not necessary to enable Touch. It is already enabled.
+Controls in `UIKit` – those subclassed from UIControl – are so dependent on user interaction that they have gestures built in to UIKit and therefore it is not necessary to enable Touch. It is already enabled.
 
 However, many of the views in `UIKit` do not have touch enabled by default. There are two ways to enable touch on a control. The first way is to check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer, as shown in the following screenshot:
 
- [![](touch-in-ios-images/image1.png "Check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer")](touch-in-ios-images/image1.png#lightbox)
+ [![Check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer](touch-in-ios-images/image1.png)](touch-in-ios-images/image1.png#lightbox)
 
 We can also use a controller to set the `UserInteractionEnabled` property to true on a `UIView` class. This is required if the UI is created in code.
 
@@ -33,10 +33,9 @@ imgTouchMe.UserInteractionEnabled = true;
 
 There are three phases of touch that occur when the user touches the screen, moves their finger, or removes their finger. These methods are defined in `UIResponder`, which is the base class for UIView. iOS will override the associated methods on the `UIView` and the `UIViewController` to handle touch:
 
--  `TouchesBegan` – This is called when the screen is first touched.
--  `TouchesMoved` – This is called when the location of the touch changes as the user is sliding their fingers around the screen.
--  `TouchesEnded` or  `TouchesCancelled` –  `TouchesEnded` is called when the user’s fingers are lifted off the screen.  `TouchesCancelled` gets called if iOS cancels the touch – for example, if a user slides his or her finger away from a button to cancel a press.
-
+- `TouchesBegan` – This is called when the screen is first touched.
+- `TouchesMoved` – This is called when the location of the touch changes as the user is sliding their fingers around the screen.
+- `TouchesEnded` or  `TouchesCancelled` –  `TouchesEnded` is called when the user’s fingers are lifted off the screen.  `TouchesCancelled` gets called if iOS cancels the touch – for example, if a user slides his or her finger away from a button to cancel a press.
 
 Touch events travel recursively down through the stack of UIViews, to check if the touch event is within the bounds of a view object. This is often called _Hit-testing_. They will first be called on the topmost `UIView` or `UIViewController` and then will be called on the `UIView` and `UIViewControllers` below them in the view hierarchy.
 
@@ -77,7 +76,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Multi-touch is not enabled by default on controls. Multi-touch can be enabled in the iOS Designer, as illustrated by the following screenshot:
 
- [![](touch-in-ios-images/image2.png "Multi-touch enabled in the iOS Designer")](touch-in-ios-images/image2.png#lightbox)
+ [![Multi-touch enabled in the iOS Designer](touch-in-ios-images/image2.png)](touch-in-ios-images/image2.png#lightbox)
 
 It is also possible to set multi-touch programmatically by setting the `MultipleTouchEnabled` property as shown in the following line of code:
 
@@ -114,21 +113,20 @@ Gesture recognizers can greatly simplify and reduce the programming effort to su
 
 Xamarin.iOS provides the class `UIGestureRecognizer` as a base class for the following built-in gesture recognizers:
 
--  *UITapGestureRecognizer* – This is for one or more taps.
--  *UIPinchGestureRecognizer* – Pinching and spreading apart fingers.
--  *UIPanGestureRecognizer* – Panning or dragging.
--  *UISwipeGestureRecognizer* – Swiping in any direction.
--  *UIRotationGestureRecognizer* – Rotating two fingers in a clockwise or counter-clockwise motion.
--  *UILongPressGestureRecognizer* – Press and hold, sometimes referred to as a long-press or long-click.
-
+- *UITapGestureRecognizer* – This is for one or more taps.
+- *UIPinchGestureRecognizer* – Pinching and spreading apart fingers.
+- *UIPanGestureRecognizer* – Panning or dragging.
+- *UISwipeGestureRecognizer* – Swiping in any direction.
+- *UIRotationGestureRecognizer* – Rotating two fingers in a clockwise or counter-clockwise motion.
+- *UILongPressGestureRecognizer* – Press and hold, sometimes referred to as a long-press or long-click.
 
 The basic pattern to using a gesture recognizer is as follows:
 
-1.  **Instantiate the gesture recognizer** – First, instantiate a  `UIGestureRecognizer` subclass. The object that is instantiated will be associated by a view and will be garbage collected when the view is disposed of. It is not necessary to create this view as a class level variable.
-1.  **Configure any gesture settings** – The next step is to configure the gesture recognizer. Consult Xamarin’s documentation on  `UIGestureRecognizer` and its subclasses for a list of properties that can be set to control the behavior of a  `UIGestureRecognizer` instance.
-1.  **Configure the target** – Because of its Objective-C heritage, Xamarin.iOS doesn’t raise events when a gesture recognizer matches a gesture.  `UIGestureRecognizer` has a method – `AddTarget` – that can accept an anonymous delegate or an Objective-C selector with the code to execute when the gesture recognizer makes a match.
-1.  **Enable gesture recognizer** – Just like with touch events, gestures are only recognized if touch interactions are enabled.
-1.  **Add the gesture recognizer to the view** – The final step is to add the gesture to a view by calling  `View.AddGestureRecognizer` , and passing it a gesture recognizer object.
+1. **Instantiate the gesture recognizer** – First, instantiate a  `UIGestureRecognizer` subclass. The object that is instantiated will be associated by a view and will be garbage collected when the view is disposed of. It is not necessary to create this view as a class level variable.
+1. **Configure any gesture settings** – The next step is to configure the gesture recognizer. Consult Xamarin’s documentation on  `UIGestureRecognizer` and its subclasses for a list of properties that can be set to control the behavior of a  `UIGestureRecognizer` instance.
+1. **Configure the target** – Because of its Objective-C heritage, Xamarin.iOS doesn’t raise events when a gesture recognizer matches a gesture.  `UIGestureRecognizer` has a method – `AddTarget` – that can accept an anonymous delegate or an Objective-C selector with the code to execute when the gesture recognizer makes a match.
+1. **Enable gesture recognizer** – Just like with touch events, gestures are only recognized if touch interactions are enabled.
+1. **Add the gesture recognizer to the view** – The final step is to add the gesture to a view by calling  `View.AddGestureRecognizer` , and passing it a gesture recognizer object.
 
 Refer to the [gesture recognizer samples](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) for more information on how to implement them in code.
 
@@ -144,20 +142,18 @@ Each `UIGestureRecognizer` has a State property that provides important informat
 
 Gestures can be summarized as one of two types:
 
-1.  *Discrete* – These gestures only fire the first time they are recognized.
-1.  *Continuous* – These gestures continue to fire as long as they are recognized.
-
+1. *Discrete* – These gestures only fire the first time they are recognized.
+1. *Continuous* – These gestures continue to fire as long as they are recognized.
 
 Gesture recognizers exists in one of the following states:
 
--  *Possible* – This is the initial state of all gesture recognizers. This is the default value the State property.
--  *Began* – When a continuous gesture is first recognized, the state is set to Began. This allows subscribes to differentiate between when gesture recognition starts and when it is changed.
--  *Changed* – After a continuous gesture has begun, but hasn’t finished, the state will be set to Changed every time a touch moves or changes, as long as it’s still within the expected parameters of the gesture.
--  *Cancelled* – This state will be set if the recognizer went from Began to Changed, and then the touches changed in such a way as to no longer fit the pattern of the gesture.
--  *Recognized* – The state will be set when the gesture recognizer matches a set of touches and will inform the subscriber that the gesture has finished.
--  *Ended* – This is an alias for the Recognized state.
--  *Failed* – When the gesture recognizer can no longer match the touches it is listening for, the state will changed to Failed.
-
+- *Possible* – This is the initial state of all gesture recognizers. This is the default value the State property.
+- *Began* – When a continuous gesture is first recognized, the state is set to Began. This allows subscribes to differentiate between when gesture recognition starts and when it is changed.
+- *Changed* – After a continuous gesture has begun, but hasn’t finished, the state will be set to Changed every time a touch moves or changes, as long as it’s still within the expected parameters of the gesture.
+- *Cancelled* – This state will be set if the recognizer went from Began to Changed, and then the touches changed in such a way as to no longer fit the pattern of the gesture.
+- *Recognized* – The state will be set when the gesture recognizer matches a set of touches and will inform the subscriber that the gesture has finished.
+- *Ended* – This is an alias for the Recognized state.
+- *Failed* – When the gesture recognizer can no longer match the touches it is listening for, the state will changed to Failed.
 
 Xamarin.iOS represents these values in the `UIGestureRecognizerState` enumeration.
 
@@ -171,9 +167,8 @@ gesture.ShouldRecognizeSimultaneously += (UIGestureRecognizer r) => { return tru
 
 It is also possible to disable a gesture in iOS. There are two delegate properties that allow a gesture recognizer to examine the state of an application and the current touch events, to make decisions on how and if a gesture should be recognized. The two events are:
 
-1.  *ShouldReceiveTouch* – This delegate is called right before the gesture recognizer is passed a touch event, and provides an opportunity to examine the touches and decide which touches will be handled by the gesture recognizer.
-1.  *ShouldBegin* – This is called when a recognizer attempts to change state from Possible to some other state. Returning false will force the state of the gesture recognizer to be changed to Failed.
-
+1. *ShouldReceiveTouch* – This delegate is called right before the gesture recognizer is passed a touch event, and provides an opportunity to examine the touches and decide which touches will be handled by the gesture recognizer.
+1. *ShouldBegin* – This is called when a recognizer attempts to change state from Possible to some other state. Returning false will force the state of the gesture recognizer to be changed to Failed.
 
 You can override these methods with a strongly typed `UIGestureRecognizerDelegate`, a weak delegate, or bind via the event handler syntax, as illustrated by the following code snippet:
 
@@ -191,9 +186,8 @@ singleTapGesture.RequireGestureRecognizerToFail(doubleTapGesture);
 
 Although iOS provides some default gesture recognizers, it may be necessary to create custom gesture recognizers in certain cases. Creating a custom gesture recognizer involves the following steps:
 
-1.  Subclass  `UIGestureRecognizer` .
-1.  Override the appropriate touch event methods.
-1.  Bubble up recognition status via the base class’ State property.
-
+1. Subclass  `UIGestureRecognizer` .
+1. Override the appropriate touch event methods.
+1. Bubble up recognition status via the base class’ State property.
 
 A practical example of this will be covered in the [Using Touch in iOS](ios-touch-walkthrough.md) walkthrough.

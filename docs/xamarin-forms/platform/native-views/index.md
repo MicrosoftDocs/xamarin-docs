@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Native Views in Xamarin.Forms
@@ -20,7 +21,6 @@ Native views from iOS, Android, and UWP can be directly referenced from Xamarin.
 ## [Native Views in C#](code.md)
 
 Native views from iOS, Android, and UWP can be directly referenced from Xamarin.Forms pages created using C#.
-
 
 ## Related Links
 

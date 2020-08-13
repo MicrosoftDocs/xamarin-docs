@@ -1,16 +1,16 @@
 ---
-title: "Spinner"
+title: "Xamarin.Android Spinner"
 ms.prod: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
-# Spinner
+# Xamarin.Android Spinner
 
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/)
+[`Spinner`](xref:Android.Widget.Spinner)
 is a widget that presents a drop-down list for selecting items. This 
 guide explains how to create a simple app that displays a list of 
 choices in a Spinner, followed by modifications that display other
@@ -51,12 +51,12 @@ Open **Resources/Layout/Main.axml** and insert the following XML:
 ```
 
 Notice that the
-[`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)'s `android:text`
+[`TextView`](xref:Android.Widget.TextView)'s `android:text`
 attribute and the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/)'s `android:prompt`
+[`Spinner`](xref:Android.Widget.Spinner)'s `android:prompt`
 attribute both reference the same string resource. This text
 behaves as a title for the widget. When applied to the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/), the title text will
+[`Spinner`](xref:Android.Widget.Spinner), the title text will
 appear in the selection dialog that appears upon selecting the
 widget.
 
@@ -83,11 +83,11 @@ like this:
 
 The second `<string>` element defines the title string referenced
 by the
-[`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) and
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) in the layout above.
+[`TextView`](xref:Android.Widget.TextView) and
+[`Spinner`](xref:Android.Widget.Spinner) in the layout above.
 The `<string-array>` element defines the list of strings that will
 be displayed as the list in the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) widget.
+[`Spinner`](xref:Android.Widget.Spinner) widget.
 
 Now open **MainActivity.cs** and add the following `using`
 statement:
@@ -97,7 +97,7 @@ using System;
 ```
 
 Next, insert the following code for the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*))
 method:
 
 ```csharp
@@ -120,32 +120,32 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 After the `Main.axml` layout is set as the content view, the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) widget is captured
+[`Spinner`](xref:Android.Widget.Spinner) widget is captured
 from the layout with
-[`FindViewById<>(int)`](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/p/System.Int32/).
+[`FindViewById<>(int)`](xref:Android.App.Activity.FindViewById*).
 The
-[`CreateFromResource()`](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter.CreateFromResource/p/Android.Content.Context/System.Int32/System.Int32/)
+[`CreateFromResource()`](xref:Android.Widget.ArrayAdapter.CreateFromResource*)
 method then creates a new
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/), which
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), which
 binds each item in the string array to the initial appearance for
 the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) (which is how each
+[`Spinner`](xref:Android.Widget.Spinner) (which is how each
 item will appear in the spinner when selected). The
 `Resource.Array.planets_array` ID references the `string-array`
 defined above and the `Android.Resource.Layout.SimpleSpinnerItem`
 ID references a layout for the standard spinner appearance, defined
 by the platform.
-[`SetDropDownViewResource`](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter.SetDropDownViewResource/p/System.Int32/)
+[`SetDropDownViewResource`](xref:Android.Widget.ArrayAdapter.SetDropDownViewResource*)
 is called to define the appearance for each item when the widget is
 opened. Finally, the
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) is set to
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) is set to
 associate all of its items with the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) by setting the
-[`Adapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter) property.
+[`Spinner`](xref:Android.Widget.Spinner) by setting the
+[`Adapter`](xref:Android.Widget.ArrayAdapter) property.
 
 Now provide a callback method that notifys the application when an
 item has been selected from the
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/). Here's what this
+[`Spinner`](xref:Android.Widget.Spinner). Here's what this
 method should look like:
 
 ```csharp
@@ -158,11 +158,11 @@ private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventA
 ```
 
 When an item is selected, the sender is cast to a
-[`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) so that items can be
+[`Spinner`](xref:Android.Widget.Spinner) so that items can be
 accessed. Using the `Position` property on the `ItemEventArgs`, you
 can find out the text of the selected object, and use it to display
 a
-[`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/).
+[`Toast`](xref:Android.Widget.Toast).
 
 Run the application; it should look like this:
 
@@ -249,15 +249,13 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 Run the application; the toast should look like this:
 
 [![Example of planet selection displaying temperature](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
-   
-  
 
 ## Resources
 
--   [`Resource.Layout`](https://developer.xamarin.com/api/type/Android.Resource+Layout/) 
--   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 
--   [`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) 
+- [`Resource.Layout`](xref:Android.Resource.Layout)
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`Spinner`](xref:Android.Widget.Spinner)
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

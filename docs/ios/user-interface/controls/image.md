@@ -4,8 +4,8 @@ description: "This document describes how to display images in Xamarin.iOS. It c
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
 ---
 # Displaying images with Xamarin.iOS
@@ -20,7 +20,7 @@ Visual Studio for Mac also supports a special directory called **Resources** tha
 
 This screenshot shows the **Build Action** options that appear when a file is right-clicked:
 
- [![](image-images/image30a.png "Build Action menu")](image-images/image30a.png#lightbox)
+ [![Build Action menu](image-images/image30a.png)](image-images/image30a.png#lightbox)
 
 Visual Studio for Mac will typically choose the correct **Build Action** automatically but you should be aware of these settings, especially if you move files around in your project.
 
@@ -28,23 +28,22 @@ Visual Studio for Mac will typically choose the correct **Build Action** automat
 
 To add an image file to your project, first right-click the project and choose **Add Files...**
 
- [![](image-images/image31a.png "Add Files... menu")](image-images/image31a.png#lightbox)
+ [![Add Files... menu](image-images/image31a.png)](image-images/image31a.png#lightbox)
 
 Select the image (or images) you wish to include in the standard file dialog. The default build action for images will be **BundleResource** – don’t override this value unless you have a specific reason.
 
- [![](image-images/image32a.png "Add Files dialog")](image-images/image32a.png#lightbox)
+ [![Add Files dialog](image-images/image32a.png)](image-images/image32a.png#lightbox)
 
 The image will be added to your project and available to be loaded and displayed in code. This screenshot shows an image added to an iOS application project:
 
- [![](image-images/image33a.png "Image in project")](image-images/image33a.png#lightbox)
+ [![Image in project](image-images/image33a.png)](image-images/image33a.png#lightbox)
 
 ### What is the Resources directory?
 
 Files placed in the **Resources** directory are treated differently from regular files – the contents of the **Resources** folder are copied to the root of the application and can be referenced from there in your code. This can be useful for many reasons:
 
--  Storing the images configured in the application’s properties, such as the default start-up images and application icons.
--  Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
-
+- Storing the images configured in the application’s properties, such as the default start-up images and application icons.
+- Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
 
 The **Resources** directory is especially useful in a library project, since the code can assume that those images will be copied into the root of the consuming application, making it easier to write shared code libraries that require image, sound, video, XML or other files.
 
@@ -54,11 +53,11 @@ The **Resources** directory must be so named, and all files should have the buil
 
 In the iOS Designer, use an **Image View** to display an image or animated series of images. The **Image View** icon from the Toolbox is shown below:
 
- [![](image-images/image35a.png "ImageView in Toolbox")](image-images/image35.png#lightbox)
+ [![ImageView in Toolbox](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Drag the **Image View** from the **Toolbox** onto the view controller. Then, under **Image View > Image** the drop-down list will provide a list of all available image files in your project. Select any of these to add it to your image view.
 
- [![](image-images/image36a.png "ImageView in Toolbox")](image-images/image36.png#lightbox)
+ [![ImageView in Toolbox](image-images/image36a.png)](image-images/image36.png#lightbox)
 
 ### Displaying the image programmatically
 
@@ -78,4 +77,4 @@ Resource file references never need to include the **Resources** folder.
 
 ## Related links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)

@@ -4,8 +4,8 @@ description: "This document describes the internal workings of Xamarin.Mac. In p
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/25/2017
 ---
 
@@ -15,7 +15,7 @@ Most of the time the developer will never have to worry about the internal "magi
 
 In Xamarin.Mac, an application bridges two worlds: There is the Objective-C based runtime containing instances of native classes (`NSString`, `NSApplication`, etc) and there is the C# runtime containing instances of managed classes (`System.String`, `HttpClient`, etc). In between these two worlds, Xamarin.Mac creates a two way bridge so an app can call methods (selectors) in Objective-C (such as `NSApplication.Init`) and Objective-C can call the app's C# methods back (like methods on an app delegate). In general, calls into Objective-C are handled transparently via **P/Invokes** and some runtime code Xamarin provides.
 
-<a name="exposing-classes" />
+<a name="exposing-classes"></a>
 
 ## Exposing C# classes / methods to Objective-C
 
@@ -115,7 +115,7 @@ There are several different options that can be adjusted when enabling AOT compi
 - `core` - AOT compiles the `Xamarin.Mac`, `System` and `mscorlib` assemblies.
 - `sdk` - AOT compiles the `Xamarin.Mac` and Base Class Libraries (BCL) assemblies.
 - `|hybrid` - Adding this to one of the above options enables hybrid AOT which allows for IL stripping, but will result in longer compile times.
-- `+` - Includes a single for to AOT compilation.
+- `+` - Includes a single file for AOT compilation.
 - `-` - Removes a single file from AOT compilation.
 
 For example, `--aot:all,-MyAssembly.dll` would enable AOT compilation on all of the assemblies in the MonoBundle _except_ `MyAssembly.dll` and `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` would enable hybrid, code AOT include the `MyOtherAssembly.dll` and excluding the `mscorlib.dll`.
@@ -155,4 +155,3 @@ Here are some more detailed explanations of how things work internally:
 - [Theading Fundamentals](~/ios/app-fundamentals/threading.md)
 - [Delegates, Protocols, and Events](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [About `newrefcount`](~/ios/internals/newrefcount.md)
-

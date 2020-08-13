@@ -3,8 +3,8 @@ title: "Advanced (manual) Real-World Example"
 description: "This document describes how to use the output of xcodebuild as the input to Objective Sharpie, which provides insight into what Objective Sharpie does under the hood."
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -14,7 +14,7 @@ ms.date: 03/29/2017
 
 This section covers a more advanced approach to binding, where we will use Apple's `xcodebuild` tool to first build the POP project, and then manually deduce input for Objective Sharpie. This essentially covers what Objective Sharpie is doing under the hood in the previous section.
 
-```
+```bash
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -24,24 +24,24 @@ $ cd pop
 
 Because the POP library has an Xcode project (`pop.xcodeproj`), we can just use `xcodebuild` to build POP. This process may in turn generate header files that Objective Sharpie may need to parse. This is why building before binding is important. When building via `xcodebuild` ensure you pass the same SDK identifier and architecture that you intend to pass to Objective Sharpie (and remember, Objective Sharpie 3.0 can usually do this for you!):
 
-```
+```bash
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
     ARCHS = arm64
     SDKROOT = iphoneos8.1
- 
+
 === BUILD TARGET pop OF PROJECT pop WITH THE DEFAULT CONFIGURATION (Release) ===
- 
+
 ...
- 
+
 CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
     cd /Users/aaron/src/sharpie/pop
     export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/aaron/bin::/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/aaron/.rvm/bin"
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/aaron/src/sharpie/pop/pop/POPAnimationTracer.h /Users/aaron/src/sharpie/pop/build/Headers/POP
- 
+
 ...
- 
+
 ** BUILD SUCCEEDED **
 ```
 
@@ -49,7 +49,7 @@ There will be a lot of build information output in the console as part of `xcode
 
 We are now ready to bind POP. We know that we want to build for SDK `iphoneos8.1` with the `arm64` architecture, and that the header files we care about are in `build/Headers` under the POP git checkout. If we look in the `build/Headers` directory, we'll see a number of header files:
 
-```
+```bash
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -61,7 +61,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 If we look at `POP.h`, we can see it is the library's main top-level header file that `#import`s other files. Because of this, we only need to pass `POP.h` to Objective Sharpie, and clang will do the rest behind the scenes:
 
-```
+```bash
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64
@@ -119,7 +119,13 @@ Done.
 
 You will notice that we passed a `-scope build/Headers` argument to Objective Sharpie. Because C and Objective-C libraries must `#import` or `#include` other header files that are implementation details of the library and not API you wish to bind, the `-scope` argument tells Objective Sharpie to ignore any API that is not defined in a file somewhere within the `-scope` directory.
 
-You will find the `-scope` argument is often optional for cleanly implemented libraries, however there is no harm in explicitly providing it.
+You will find the `-scope` argument is often optional for cleanly implemented libraries, however there is no harm in explicitly providing it. 
+
+> [!TIP]
+> If the library's headers import any iOS SDK headers, e.g. `#import <Foundation.h>`,
+> then you will need to set the scope otherwise Objective Sharpie will generate binding
+> definitions for the iOS SDK header that was imported, resulting in a huge binding that will 
+> likely generate errors when compiling the binding project. 
 
 Additionally, we specified `-c -Ibuild/headers`. Firstly, the `-c` argument tells Objective Sharpie to stop interpreting command line arguments and pass any subsequent arguments _directly to the clang compiler_. Therefore, `-Ibuild/Headers` is a clang compiler argument that instructs clang to search for includes under `build/Headers`, which is where the POP headers live. Without this argument, clang would not know where to locate the files that `POP.h` is `#import`ing. _Almost all "issues" with using Objective Sharpie boil down to figuring out what to pass to clang_.
 
@@ -140,8 +146,3 @@ tools to produce the final binding.
 
 For a thorough description of the binding process, please see our
 [Complete Walkthrough instructions](~/ios/platform/binding-objective-c/walkthrough.md).
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -4,8 +4,8 @@ description: "This document describes how to deploy watchOS apps built with Xama
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -41,7 +41,7 @@ ms.date: 03/17/2017
 
 Read specific tips related to these items below. See the [Troubleshooting](#troubleshooting) section if you have problems.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## Distribution Provisioning Profiles
 
@@ -54,13 +54,13 @@ If you have a wildcard App ID, *only one Provisioning Profile
   project then you'll need a provisioning profile for each
   App ID:
 
-![](appstore-images/provisioningprofile-distribution-sml.png "The App Store Distribution profile")
+![The App Store Distribution profile](appstore-images/provisioningprofile-distribution-sml.png)
 
 Once you've created all three profiles, they'll appear
   in the list. Remember to download and install each one
   (by double-clicking on it):
 
-![](appstore-images/provisioningprofiles-sml.png "The list of available profiles")
+![The list of available profiles](appstore-images/provisioningprofiles-sml.png)
 
 You can verify the provisioning profile in the **Project Options**
   by selecting the **Build > iOS Bundle Signing** screen
@@ -70,9 +70,9 @@ The **Provisioning Profile** list will show all matching
   profiles - you should see the matching profiles that
   you've created in this drop-down list.
 
-![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
+![The iOS Bundle Signing dialog](appstore-images/options-selectprofile-sml.png)
 
-<a name="iTunes_Connect"/>
+<a name="iTunes_Connect"></a>
 
 ## iTunes Connect
 
@@ -84,7 +84,7 @@ Follow the [app distribution overview](~/ios/deploy-test/app-distribution/index.
 When configuring the app in iTunes Connect, don't forget to
   add the Watch icon and screenshots:
 
-![](appstore-images/itunesconnect-watch-sml.png "The Watch icon and screenshots in iTunes Connect")
+![The Watch icon and screenshots in iTunes Connect](appstore-images/itunesconnect-watch-sml.png)
 
 The icon file should be 1024x1024 pixels, and will have a circular
   mask applied to it when it is displayed. The icon should not have
@@ -94,30 +94,29 @@ At least one screenshot is required, up to five may be submitted.
   They should be 312x390 pixels and demonstrate your Watch App in action.
   You can use the 42mm watch simulator to take screenshots at this size.
 
-
-<a name="xamarin_studio" />
+<a name="xamarin_studio"></a>
 
 ## Visual Studio for Mac
 
 1. Ensure that the iOS app is the startup project. If not,
-  right-click to set it:
+   right-click to set it:
 
-  ![](appstore-images/xs-startup.png "Setting the startup project")
+   ![Setting the startup project](appstore-images/xs-startup.png)
 
 2. Choose the **AppStore** build configuration:
 
-  ![](appstore-images/xs-appstore.png "The AppStore build configuration")
+   ![The AppStore build configuration](appstore-images/xs-appstore.png)
 
 3. Choose the **Build > Archive** menu item to start the archive process:
 
-  ![](appstore-images/xs-archive.png "The Build menu")
+   ![The Build menu](appstore-images/xs-archive.png)
 
 You can also choose the **View > Archives...** menu item to
   see archives that have been created previously.
 
-  ![](appstore-images/xs-archives-sml.png "The Archives view")
+  ![The Archives view](appstore-images/xs-archives-sml.png)
 
-<a name="xcode" />
+<a name="xcode"></a>
 
 ## Xcode
 
@@ -125,31 +124,30 @@ Xcode will automatically show archives created in Visual Studio for Mac.
 
 1. Start Xcode and choose **Window > Organizer**:
 
-  ![](appstore-images/xc-organizer.png "The Window menu")
+   ![The Window menu](appstore-images/xc-organizer.png)
 
 2. Switch to the **Archives** tab and select the archive that
   was created with Visual Studio for Mac:
 
-  ![](appstore-images/xc-archives.png "The Archives tab")
+   ![The Archives tab](appstore-images/xc-archives.png)
 
 3. Optionally **Validate...** the archive, then choose **Submit...**
-  to upload the app to iTunes Connect.
+   to upload the app to iTunes Connect.
 
 4. Choose the development team (if you belong to more than one)
-  and then confirm the submission:
+   and then confirm the submission:
 
-  ![](appstore-images/xc-submit1.png "The development team section")
+   ![The development team section](appstore-images/xc-submit1.png)
 
 5. Visit iTunes Connect again to see the uploaded binary. Go to
-  your app's configuration page and choose **Prerelease** from the top
-  menu to see the **Builds** list:
+   your app's configuration page and choose **Prerelease** from the top
+   menu to see the **Builds** list:
 
-  [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![The apps configuration page in iTunes Connect](appstore-images/itc-prerelease-sml.png)](appstore-images/itc-prerelease.png#lightbox)
 
 You can then submit the app for approval on the **Versions** page. Refer to the
  [iOS app distribution overview](~/ios/deploy-test/app-distribution/index.md)
  for more information.
-
 
 ## Troubleshooting
 
@@ -213,12 +211,8 @@ Ensure you have the latest version of Visual Studio for Mac, and that your
 > [!IMPORTANT]
 > There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).
 
-
-You
-cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
-edit the **Contents.json** file (to match [this sample](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
-
-
+You cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
+edit the **Contents.json** file.
 
 ### Invalid WatchKit Support
 
@@ -235,10 +229,7 @@ Ensure you are using the latest version of Xcode and Xamarin's tools.
 > [!IMPORTANT]
 > You must **Archive** your app in Visual Studio for Mac and then switch to Xcode 6.2+ to validate and upload to iTunes Connect.
 
-
 Use the Stable Xamarin channel, and Xcode 6.2+.
-
-
 
 ### Invalid Provisioning Profile
 
@@ -310,8 +301,6 @@ Error MT5309: Native linking error: clang: error: no such file or directory:
 This error is likely the result of your having renamed your
 Xcode installation from **Xcode.app**. For instance, this
 error will occur if you rename your installation to **XCode 6.2.app**.
-
-
 
 ## Related Links
 

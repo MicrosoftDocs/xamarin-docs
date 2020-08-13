@@ -4,8 +4,8 @@ description: "This article describes the RequestReview method that Apple added t
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -15,7 +15,7 @@ _This article covers the RequestReview method that Apple added to iOS 10 and how
 
 New to iOS 10.3, the `RequestReview()` method allows an iOS app to ask the user to rate or review it. When this method is called in a shipping app that the user has installed from the App Store, iOS 10 will handle the entire rating and review process for the developer. Because this process is governed by App Store policy, an alert may or may not be displayed.
 
-![](request-app-review-images/review01.png "A sample Review Request alert")
+![A sample Review Request alert](request-app-review-images/review01.png)
 
 ## Requesting a Rating or Review
 
@@ -32,22 +32,22 @@ using UIKit;
 
 namespace iOSTenThree
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
-	{
-		...
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate
+    {
+        ...
 
-		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-		{
-			// Request a review from the user
-			SKStoreReviewController.RequestReview ();
+        public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+        {
+            // Request a review from the user
+            SKStoreReviewController.RequestReview ();
 
-			return true;
-		}
-		
-		...
-		
-	}
+            return true;
+        }
+
+        ...
+
+    }
 }
 ```
 
@@ -64,8 +64,6 @@ In addition to the new `RequestReview` method, the developer can still provide a
 
 This article has covered the RequestReview method that Apple added to iOS 10 and how to implement it in Xamarin.iOS.
 
-
-
 ## Related Links
 
-- [iOSTenThree Sample](https://developer.xamarin.com/samples/ios/iOS10/iOSTenThree)
+- [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)

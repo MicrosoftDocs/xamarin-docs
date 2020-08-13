@@ -4,8 +4,8 @@ description: "With iOS 12, a notification content extension can add, remove, and
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Dynamic notification action buttons in Xamarin.iOS
@@ -18,7 +18,7 @@ and the user's interaction with it.
 ## Sample app: RedGreenNotifications
 
 The code snippets in this guide come from the
-[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+[RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 sample app, which demonstrates how to use Xamarin.iOS to work with
 notification action buttons in iOS 12.
 
@@ -228,7 +228,7 @@ stay open.
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [Declaring Your Actionable Notification Types](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)

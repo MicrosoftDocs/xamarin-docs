@@ -4,8 +4,8 @@ description: "HomeKit is Apple's framework for controlling home automation devic
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 _HomeKit is Apple's framework for controlling home automation devices. This article introduces HomeKit and covers configuring test accessories in the HomeKit Accessory Simulator and writing a simple Xamarin.iOS app to interact with these accessories._
 
-[![](homekit-images/accessory01.png "An example HomeKit enabled App")](homekit-images/accessory01.png#lightbox)
+[![An example HomeKit enabled App](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
 Apple introduced HomeKit in iOS 8 as a way to seamlessly integrate multiple home automation devices from a variety vendors into a single, coherent unit. By promoting a common protocol for discovering, configuring and controlling home automation devices, HomeKit allows devices from non-related vendors to work together, all without the individual vendors having to coordinate efforts.
 
@@ -25,7 +25,7 @@ With HomeKit, you can create a Xamarin.iOS app that controls any HomeKit enabled
 
 In addition to serving devices in the Home Configuration Database to HomeKit enabled apps, HomeKit provides access to Siri voice commands. Given an appropriately configured HomeKit setup, the user can issue voice commands such as "Siri, turn on the lights in the living room."
 
-<a name="Home-Configuration-Database" />
+<a name="Home-Configuration-Database"></a>
 
 ## The Home Configuration Database
 
@@ -39,7 +39,7 @@ The Home Collection is stored in a Home Configuration Database that will automat
 - `HMService` - Represents a service provided by a given `HMAccessory`, such as the on/off state of a light or its color (if color changing is supported). Each `HMAccessory` can have more than one service, such as a garage door opener that also includes a light. Additionally, an given `HMAccessory` might have services, such as firmware update, that are outside of user control.
 - `HMZone` - Allows the user to group a collection of `HMRoom` objects into logical zones, such as Upstairs, Downstairs or Basement. While optional, this allows for interactions like asking Siri to turn all of the light downstairs off.
 
-<a name="Provisioning-a-HomeKit-App" />
+<a name="Provisioning-a-HomeKit-App"></a>
 
 ## Provisioning a HomeKit App
 
@@ -52,22 +52,22 @@ Do the following:
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
 4. Ensure that the **HomeKit** service has been checked for the given ID: 
 
-	[![](homekit-images/provision01.png "Enable the HomeKit service for the given ID")](homekit-images/provision01.png#lightbox)
+    [![Enable the HomeKit service for the given ID](homekit-images/provision01.png)](homekit-images/provision01.png#lightbox)
 5. Save your changes.
-4. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for your app: 
+6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for your app: 
 
-	[![](homekit-images/provision02.png "Create a new development provisioning profile for the app")](homekit-images/provision02.png#lightbox)
-5. Either download and install the new provisioning profile or use Xcode to download and install the profile.
-6. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created: 
+    [![Create a new development provisioning profile for the app](homekit-images/provision02.png)](homekit-images/provision02.png#lightbox)
+7. Either download and install the new provisioning profile or use Xcode to download and install the profile.
+8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created: 
 
-	[![](homekit-images/provision03.png "Select provisioning profile just created")](homekit-images/provision03.png#lightbox)
-7. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
+    [![Select provisioning profile just created](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
+9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
 
-	[![](homekit-images/provision04.png "Set the App ID ")](homekit-images/provision04.png#lightbox)
-8. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected: 
+    [![Set the App ID ](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
+10. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected: 
 
-	[![](homekit-images/provision05.png "Enable the HomeKit entitlement")](homekit-images/provision05.png#lightbox)
-9. Save the changes to all files.
+    [![Enable the HomeKit entitlement](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
+11. Save the changes to all files.
 
 With these settings in place, the application is now ready to access the HomeKit Framework APIs. For detailed information on provisioning, please see our [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Provisioning Your App](~/ios/get-started/installation/device-provisioning/index.md) guides.
 
@@ -87,7 +87,7 @@ Do the following:
 1. In a web browser, visit [Downloads for Apple Developers](https://developer.apple.com/download/more/?name=for%20Xcode)
 2. Download the **Additional Tools for Xcode xxx** (where xxx is the version of Xcode that you have installed): 
 
-	[![](homekit-images/simulator01.png "Download the Additional Tools for Xcode")](homekit-images/simulator01.png#lightbox)
+    [![Download the Additional Tools for Xcode](homekit-images/simulator01.png)](homekit-images/simulator01.png#lightbox)
 3. Open the disk image and install the tools in your **Applications** directory.
 
 With the HomeKit Accessory Simulator installed, virtual accessories can be created for testing.
@@ -98,22 +98,22 @@ To start the HomeKit Accessory Simulator and create a few virtual accessories, d
 
 1. From the Applications folder, start the HomeKit Accessory Simulator: 
 
-	[![](homekit-images/simulator02.png "The HomeKit Accessory Simulator")](homekit-images/simulator02.png#lightbox)
+    [![The HomeKit Accessory Simulator](homekit-images/simulator02.png)](homekit-images/simulator02.png#lightbox)
 2. Click the **+** button and select **New Accessory...**: 
 
-	[![](homekit-images/simulator03.png "Add a new accessory")](homekit-images/simulator03.png#lightbox)
+    [![Add a new accessory](homekit-images/simulator03.png)](homekit-images/simulator03.png#lightbox)
 3. Fill out the information about the new accessory and click the **Finish** button: 
 
-	[![](homekit-images/simulator04.png "Fill out the information about the new accessory")](homekit-images/simulator04.png#lightbox)
+    [![Fill out the information about the new accessory](homekit-images/simulator04.png)](homekit-images/simulator04.png#lightbox)
 4. Click the **Add Service..** button, and select a service type from the dropdown: 
 
-	[![](homekit-images/simulator05.png "Select a service type from the dropdown")](homekit-images/simulator05.png#lightbox)
+    [![Select a service type from the dropdown](homekit-images/simulator05.png)](homekit-images/simulator05.png#lightbox)
 5. Provide a **Name** for the service and click the **Finish** button: 
 
-	[![](homekit-images/simulator06.png "Enter a Name for the service")](homekit-images/simulator06.png#lightbox)
+    [![Enter a Name for the service](homekit-images/simulator06.png)](homekit-images/simulator06.png#lightbox)
 6. You can provide optional characteristics for a service by clicking the **Add Characteristic** button and configuring the required settings: 
 
-	[![](homekit-images/simulator07.png "Configuring the required settings")](homekit-images/simulator07.png#lightbox)
+    [![Configuring the required settings](homekit-images/simulator07.png)](homekit-images/simulator07.png#lightbox)
 7. Repeat the steps above to create one of each type of virtual home automation device that HomeKit supports.
 
 With some sample virtual HomeKit accessories created and configured, you can now consume and control these devices from your Xamarin.iOS app.
@@ -122,7 +122,7 @@ With some sample virtual HomeKit accessories created and configured, you can now
 
 New for iOS 10 (and greater), the developer will need to add the `NSHomeKitUsageDescription` key to the app's `Info.plist` file and provide a string declaring why the app wants to access the user's HomeKit database. This string will be presented to the user the first time they run the app:
 
-[![](homekit-images/info01.png "The HomeKit permission dialog")](homekit-images/info01.png#lightbox)
+[![The HomeKit permission dialog](homekit-images/info01.png)](homekit-images/info01.png#lightbox)
 
 To set this key, do the following:
 
@@ -131,10 +131,10 @@ To set this key, do the following:
 3. Add a new **Entry** to the list.
 4. From the dropdown list, select **Privacy - HomeKit Usage Description**: 
 
-	[![](homekit-images/info02.png "Select Privacy - HomeKit Usage Description")](homekit-images/info02.png#lightbox)
+    [![Select Privacy - HomeKit Usage Description](homekit-images/info02.png)](homekit-images/info02.png#lightbox)
 5. Enter a description for why the app wants to access the user's HomeKit database: 
 
-	[![](homekit-images/info03.png "Enter a description")](homekit-images/info03.png#lightbox)
+    [![Enter a description](homekit-images/info03.png)](homekit-images/info03.png#lightbox)
 6. Save the changes to the file.
 
 > [!IMPORTANT]
@@ -184,7 +184,7 @@ public override void FinishedLaunching (UIApplication application)
 
 When the application is first run, the user will be asked if they want to allow it to access their HomeKit information:
 
-[![](homekit-images/home01.png "The user will be asked if they want to allow it to access their HomeKit information")](homekit-images/home01.png#lightbox)
+[![The user will be asked if they want to allow it to access their HomeKit information](homekit-images/home01.png)](homekit-images/home01.png#lightbox)
 
 If the user answers **OK**, then the application will be able to work with their HomeKit Accessories otherwise it will not and any calls to HomeKit will fail with an error.
 
@@ -262,7 +262,6 @@ You should also monitor the Home Manager’s `DidAddHome` and `DidRemoveHome` ev
 > [!IMPORTANT]
 > The `AlertView.PresentOKAlert` method used in the sample code above is a helper class in the HomeKitIntro application that makes working with the iOS Alerts easier.
 
-
 ## Finding New Accessories
 
 Once a Primary Home has been defined or loaded from the Home Manager, your Xamarin.iOS app can call the `HMAccessoryBrowser` to find any new home automation accessories and add them to a home.
@@ -278,7 +277,7 @@ The `DiscoveredAccessories` list will contain a collection of `HMAccessory` obje
 
 Once the new accessory has been found, it should be presented to the user and so they can select it and add it to a home. Example:
 
-[![](homekit-images/accessory01.png "Finding a new accessory")](homekit-images/accessory01.png#lightbox)
+[![Finding a new accessory](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
 Call the `AddAccessory` method to add the selected accessory to the home's collection. For example:
 
@@ -295,11 +294,11 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 If the `err` property is not `null`, an error has occurred and it should be presented to the user. Otherwise, the user will be asked to enter the setup code for the device to add:
 
-[![](homekit-images/accessory02.png "Enter the setup code for the device to add")](homekit-images/accessory02.png#lightbox)
+[![Enter the setup code for the device to add](homekit-images/accessory02.png)](homekit-images/accessory02.png#lightbox)
 
 In the HomeKit Accessory Simulator this number can be found under the **Setup Code** field:
 
-[![](homekit-images/accessory03.png "The Setup Code field in the HomeKit Accessory Simulator")](homekit-images/accessory03.png#lightbox)
+[![The Setup Code field in the HomeKit Accessory Simulator](homekit-images/accessory03.png)](homekit-images/accessory03.png#lightbox)
 
 For real HomeKit accessories, the setup code will either be printed on a label on the device itself, on the product box or in the accessory’s user manual.
 
@@ -315,7 +314,7 @@ For the sake of this example, we'll be keeping things simple and work with a hom
 
 The `HMHome` object contains a list of assigned accessory that can be presented to the user in its `Accessories` property. For example:
 
-[![](homekit-images/accessory04.png "An example accessory")](homekit-images/accessory04.png#lightbox)
+[![An example accessory](homekit-images/accessory04.png)](homekit-images/accessory04.png#lightbox)
 
 Form here, the user can select a given accessory and work with the services that it provides.
 
@@ -363,13 +362,13 @@ The following Service Types are available via the `HMServiceType` enum:
 
 After you load a `HMAccessory` you can query the individual `HNService` objects it provides and display that information to the user:
 
-[![](homekit-images/accessory05.png "Displaying Service Information")](homekit-images/accessory05.png#lightbox)
+[![Displaying Service Information](homekit-images/accessory05.png)](homekit-images/accessory05.png#lightbox)
 
 You should always should check the `Reachable` property of a `HMAccessory` before attempting to work with it. An accessory can be unreachable the user is not within range of the device or if it has been unplugged.
 
 Once a service has been selected, the user can view or modify one or more characteristics of that service to monitor or control a given home automation device.
 
-<a name="Working-with-Characteristics" />
+<a name="Working-with-Characteristics"></a>
 
 ## Working with Characteristics
 
@@ -379,77 +378,77 @@ Each `HMService` object can contain a collection of `HMCharacteristic` objects t
 
 The `HMCharacteristicType` enum provides a set of Characteristic Metadata values that can be defined or modified as follows:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Brightness
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - CurrentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Hue
- - Identify
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Logs
- - Manufacturer
- - Model
- - MotionDetected
- - Name
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - Saturation
- - SerialNumber
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Version
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Brightness
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- CurrentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Hue
+- Identify
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Logs
+- Manufacturer
+- Model
+- MotionDetected
+- Name
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- Saturation
+- SerialNumber
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- Version
 
 ### Working with a Characteristic’s Value
 
@@ -467,161 +466,161 @@ using CoreGraphics;
 
 namespace HomeKitIntro
 {
-	/// <summary>
-	/// NS object converter is a helper class that helps to convert NSObjects into
-	/// C# objects
-	/// </summary>
-	public static class NSObjectConverter
-	{
-		#region Static Methods
-		/// <summary>
-		/// Converts to an object.
-		/// </summary>
-		/// <returns>The object.</returns>
-		/// <param name="nsO">Ns o.</param>
-		/// <param name="targetType">Target type.</param>
-		public static Object ToObject (NSObject nsO, Type targetType)
-		{
-			if (nsO is NSString) {
-				return nsO.ToString ();
-			}
+    /// <summary>
+    /// NS object converter is a helper class that helps to convert NSObjects into
+    /// C# objects
+    /// </summary>
+    public static class NSObjectConverter
+    {
+        #region Static Methods
+        /// <summary>
+        /// Converts to an object.
+        /// </summary>
+        /// <returns>The object.</returns>
+        /// <param name="nsO">Ns o.</param>
+        /// <param name="targetType">Target type.</param>
+        public static Object ToObject (NSObject nsO, Type targetType)
+        {
+            if (nsO is NSString) {
+                return nsO.ToString ();
+            }
 
-			if (nsO is NSDate) {
-				var nsDate = (NSDate)nsO;
-				return DateTime.SpecifyKind ((DateTime)nsDate, DateTimeKind.Unspecified);
-			}
+            if (nsO is NSDate) {
+                var nsDate = (NSDate)nsO;
+                return DateTime.SpecifyKind ((DateTime)nsDate, DateTimeKind.Unspecified);
+            }
 
-			if (nsO is NSDecimalNumber) {
-				return decimal.Parse (nsO.ToString (), CultureInfo.InvariantCulture);
-			}
+            if (nsO is NSDecimalNumber) {
+                return decimal.Parse (nsO.ToString (), CultureInfo.InvariantCulture);
+            }
 
-			if (nsO is NSNumber) {
-				var x = (NSNumber)nsO;
+            if (nsO is NSNumber) {
+                var x = (NSNumber)nsO;
 
-				switch (Type.GetTypeCode (targetType)) {
-				case TypeCode.Boolean:
-					return x.BoolValue;
-				case TypeCode.Char:
-					return Convert.ToChar (x.ByteValue);
-				case TypeCode.SByte:
-					return x.SByteValue;
-				case TypeCode.Byte:
-					return x.ByteValue;
-				case TypeCode.Int16:
-					return x.Int16Value;
-				case TypeCode.UInt16:
-					return x.UInt16Value;
-				case TypeCode.Int32:
-					return x.Int32Value;
-				case TypeCode.UInt32:
-					return x.UInt32Value;
-				case TypeCode.Int64:
-					return x.Int64Value;
-				case TypeCode.UInt64:
-					return x.UInt64Value;
-				case TypeCode.Single:
-					return x.FloatValue;
-				case TypeCode.Double:
-					return x.DoubleValue;
-				}
-			}
+                switch (Type.GetTypeCode (targetType)) {
+                case TypeCode.Boolean:
+                    return x.BoolValue;
+                case TypeCode.Char:
+                    return Convert.ToChar (x.ByteValue);
+                case TypeCode.SByte:
+                    return x.SByteValue;
+                case TypeCode.Byte:
+                    return x.ByteValue;
+                case TypeCode.Int16:
+                    return x.Int16Value;
+                case TypeCode.UInt16:
+                    return x.UInt16Value;
+                case TypeCode.Int32:
+                    return x.Int32Value;
+                case TypeCode.UInt32:
+                    return x.UInt32Value;
+                case TypeCode.Int64:
+                    return x.Int64Value;
+                case TypeCode.UInt64:
+                    return x.UInt64Value;
+                case TypeCode.Single:
+                    return x.FloatValue;
+                case TypeCode.Double:
+                    return x.DoubleValue;
+                }
+            }
 
-			if (nsO is NSValue) {
-				var v = (NSValue)nsO;
+            if (nsO is NSValue) {
+                var v = (NSValue)nsO;
 
-				if (targetType == typeof(IntPtr)) {
-					return v.PointerValue;
-				}
+                if (targetType == typeof(IntPtr)) {
+                    return v.PointerValue;
+                }
 
-				if (targetType == typeof(CGSize)) {
-					return v.SizeFValue;
-				}
+                if (targetType == typeof(CGSize)) {
+                    return v.SizeFValue;
+                }
 
-				if (targetType == typeof(CGRect)) {
-					return v.RectangleFValue;
-				}
+                if (targetType == typeof(CGRect)) {
+                    return v.RectangleFValue;
+                }
 
-				if (targetType == typeof(CGPoint)) {
-					return v.PointFValue;
-				}
-			}
+                if (targetType == typeof(CGPoint)) {
+                    return v.PointFValue;
+                }
+            }
 
-			return nsO;
-		}
+            return nsO;
+        }
 
-		/// <summary>
-		/// Convert to string
-		/// </summary>
-		/// <returns>The string.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static string ToString(NSObject nsO) {
-			return (string)ToObject (nsO, typeof(string));
-		}
+        /// <summary>
+        /// Convert to string
+        /// </summary>
+        /// <returns>The string.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static string ToString(NSObject nsO) {
+            return (string)ToObject (nsO, typeof(string));
+        }
 
-		/// <summary>
-		/// Convert to date time
-		/// </summary>
-		/// <returns>The date time.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static DateTime ToDateTime(NSObject nsO){
-			return (DateTime)ToObject (nsO, typeof(DateTime));
-		}
+        /// <summary>
+        /// Convert to date time
+        /// </summary>
+        /// <returns>The date time.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static DateTime ToDateTime(NSObject nsO){
+            return (DateTime)ToObject (nsO, typeof(DateTime));
+        }
 
-		/// <summary>
-		/// Convert to decimal number
-		/// </summary>
-		/// <returns>The decimal.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static decimal ToDecimal(NSObject nsO){
-			return (decimal)ToObject (nsO, typeof(decimal));
-		}
+        /// <summary>
+        /// Convert to decimal number
+        /// </summary>
+        /// <returns>The decimal.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static decimal ToDecimal(NSObject nsO){
+            return (decimal)ToObject (nsO, typeof(decimal));
+        }
 
-		/// <summary>
-		/// Convert to boolean
-		/// </summary>
-		/// <returns><c>true</c>, if bool was toed, <c>false</c> otherwise.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static bool ToBool(NSObject nsO){
-			return (bool)ToObject (nsO, typeof(bool));
-		}
+        /// <summary>
+        /// Convert to boolean
+        /// </summary>
+        /// <returns><c>true</c>, if bool was toed, <c>false</c> otherwise.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static bool ToBool(NSObject nsO){
+            return (bool)ToObject (nsO, typeof(bool));
+        }
 
-		/// <summary>
-		/// Convert to character
-		/// </summary>
-		/// <returns>The char.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static char ToChar(NSObject nsO){
-			return (char)ToObject (nsO, typeof(char));
-		}
+        /// <summary>
+        /// Convert to character
+        /// </summary>
+        /// <returns>The char.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static char ToChar(NSObject nsO){
+            return (char)ToObject (nsO, typeof(char));
+        }
 
-		/// <summary>
-		/// Convert to integer
-		/// </summary>
-		/// <returns>The int.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static int ToInt(NSObject nsO){
-			return (int)ToObject (nsO, typeof(int));
-		}
+        /// <summary>
+        /// Convert to integer
+        /// </summary>
+        /// <returns>The int.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static int ToInt(NSObject nsO){
+            return (int)ToObject (nsO, typeof(int));
+        }
 
-		/// <summary>
-		/// Convert to float
-		/// </summary>
-		/// <returns>The float.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static float ToFloat(NSObject nsO){
-			return (float)ToObject (nsO, typeof(float));
-		}
+        /// <summary>
+        /// Convert to float
+        /// </summary>
+        /// <returns>The float.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static float ToFloat(NSObject nsO){
+            return (float)ToObject (nsO, typeof(float));
+        }
 
-		/// <summary>
-		/// Converts to double
-		/// </summary>
-		/// <returns>The double.</returns>
-		/// <param name="nsO">Ns o.</param>
-		public static double ToDouble(NSObject nsO){
-			return (double)ToObject (nsO, typeof(double));
-		}
-		#endregion
-	}
+        /// <summary>
+        /// Converts to double
+        /// </summary>
+        /// <returns>The double.</returns>
+        /// <param name="nsO">Ns o.</param>
+        public static double ToDouble(NSObject nsO){
+            return (double)ToObject (nsO, typeof(double));
+        }
+        #endregion
+    }
 }
 ```
 
@@ -653,7 +652,7 @@ When working with `HMCharacteristics` and simulated accessories, modifications t
 
 With the **HomeKitIntro** app running on real iOS Device Hardware, changes to a characteristic’s value should be seen nearly instantly in the HomeKit Accessory Simulator. For example, changing the state of a light in the iOS app:
 
-[![](homekit-images/test01.png "Changing the state of a light in an iOS app")](homekit-images/test01.png#lightbox)
+[![Changing the state of a light in an iOS app](homekit-images/test01.png)](homekit-images/test01.png#lightbox)
 
 Should change the state of the light in the HomeKit Accessory Simulator. If the value does not change, check the state of the error message when writing new characteristic values and ensure that the accessory is still reachable.
 
@@ -672,9 +671,9 @@ Since these features use the same techniques presented above, they should be eas
 
 Before submitting a HomeKit enabled Xamarin.iOS app to iTunes Connect for release in the iTunes App Store, ensure that you follow Apple's guidelines for HomeKit enabled apps:
 
- - The app's primary purpose _must_ be home automation if using the HomeKit framework.
- - The app's marketing text must notify users that HomeKit is being used and they must provide a privacy policy.
- - Gathering user information or using HomeKit for advertising is strictly prohibited.
+- The app's primary purpose _must_ be home automation if using the HomeKit framework.
+- The app's marketing text must notify users that HomeKit is being used and they must provide a privacy policy.
+- Gathering user information or using HomeKit for advertising is strictly prohibited.
 
 For the full review guidelines, please see Apple's [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
 
@@ -701,11 +700,9 @@ For more information about the new features of HomeKit in iOS 9, please see Appl
 
 This article has introduced Apple's HomeKit home automation framework. It showed how to setup and configure test devices using the HomeKit Accessory Simulator and how to create a simple Xamarin.iOS app to discover, communicate with and control home automation devices using HomeKit.
 
-
-
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

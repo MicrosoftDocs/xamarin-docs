@@ -3,8 +3,8 @@ title: "Cross-Platform Performance"
 description: "This document describes various techniques that can be used to improve the performance of a mobile application. It discusses the Profiler, IDisposable resource, weak references, the SGen garbage collector, size reduction techniques, and more."
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -12,7 +12,7 @@ ms.date: 03/24/2017
 
 Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## Use the Profiler
 
@@ -26,7 +26,7 @@ The following best practices are recommended when profiling an app:
 - Ideally, profiling should be performed on a variety of devices, as taking performance measurements on one device won't always show the performance characteristics of other devices. However, at a minimum, profiling should be performed on a device that has the lowest anticipated specification.
 - Close all other applications to ensure that the full impact of the application being profiled is being measured, rather than the other applications.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## Release IDisposable Resources
 
@@ -84,7 +84,7 @@ The `StreamReader` class implements `IDisposable`, and the `finally` block calls
 
 For more information, see [IDisposable Interface](xref:System.IDisposable).
 
-<a name="events" />
+<a name="events"></a>
 
 ## Unsubscribe from Events
 
@@ -155,7 +155,7 @@ public class Subscriber : IDisposable
 
 The `handler` field maintains the reference to the anonymous method, and is used for event subscription and unsubscribe.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## Use Weak References to Prevent Immortal Objects
 
@@ -164,12 +164,11 @@ The `handler` field maintains the reference to the anonymous method, and is used
 > [avoiding circular references in iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references)
 > to ensure their apps use memory efficiently.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## Delay the Cost of Creating Objects
 
 Lazy initialization can be used to defer the creation of an object until it's first used. This technique is primarily used to improve performance, avoid computation, and reduce memory requirements.
-
 
 Consider using lazy initialization for objects that are expensive to create in this two scenarios:
 
@@ -207,7 +206,7 @@ Lazy initialization occurs the first time the `Lazy<T>.Value` property is access
 
 For more information about lazy initialization, see [Lazy Initialization](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
-<a name="async" />
+<a name="async"></a>
 
 ## Implement Asynchronous Operations
 
@@ -244,11 +243,9 @@ Long running operations should also support cancellation. For example, continuin
 > [!IMPORTANT]
 > The `CancellationTokenSource` class implements the `IDisposable` interface, and so the `CancellationTokenSource.Dispose` method should be invoked once the `CancellationTokenSource` instance is finished with.
 
-
-
 For more information, see [Async Support Overview](~/cross-platform/platform/async.md).
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## Use the SGen Garbage Collector
 
@@ -259,11 +256,13 @@ Managed languages such as C# use garbage collection to reclaim memory that is al
 
 SGen utilizes one of three heaps to allocate space for objects:
 
--  **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
--  **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
--  **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
+- **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
+- **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
+- **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
 
 One of the advantages of SGen is that the time it takes to perform a minor garbage collection is proportional to the number of new live objects that were created since the last minor garbage collection. This will reduce the impact of garbage collection on the performance of an application, as these minor garbage collections will take less time than a major garbage collection. Major garbage collections will still occur, but less frequently.
+
+The SGen garbage collector is the default in Xamarin.iOS 9.2.1 and greater, and therefore it will be used automatically. Please note that the ability to change garbage collector has been removed from newer versions of Visual Studio. For more information, see [New Reference Counting System](~/ios/internals/newrefcount.md).
 
 ### Reducing Pressure on the Garbage Collector
 
@@ -272,7 +271,7 @@ When SGen starts a garbage collection, it will stop the application’s threads 
 1. **Frequency** – How often garbage collection occurs. The frequency of garbage collections will increase as more memory is allocated between collections.
 1. **Duration** – How long each individual garbage collection will take. This is roughly proportional to the number of live objects that are being collected.
 
-Collectively this mean that if many objects are allocated but do not stay alive, there will be many short garbage collections. Conversely, if new objects are allocated slowly and the objects stay alive, there will be fewer but longer garbage collections.
+Collectively this means that if many objects are allocated but do not stay alive, there will be many short garbage collections. Conversely, if new objects are allocated slowly and the objects stay alive, there will be fewer but longer garbage collections.
 
 To reduce pressure on the garbage collector, follow these guidelines:
 
@@ -280,7 +279,7 @@ To reduce pressure on the garbage collector, follow these guidelines:
 - Explicitly release resources such as streams, network connections, large blocks of memory, and files once they are no longer required. For more information, see [Release IDisposable Resources](#idisposable).
 - De-register event handlers once they are no longer required, to make objects collectable. For more information, see [Unsubscribe from Events](#events).
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## Reduce the Size of the Application
 
@@ -296,24 +295,24 @@ To help reduce the size of applications, the Xamarin platform includes a linker 
 
 The following screenshot shows the linker options in Visual Studio for Mac for a Xamarin.iOS project:
 
-![](memory-perf-best-practices-images/linker-options-ios.png)
+![Linker options for Xamarin.iOS](memory-perf-best-practices-images/linker-options-ios.png)
 
 The following screenshot shows the linker options in Visual Studio for Mac for a Xamarin.Android project:
 
-![](memory-perf-best-practices-images/linker-options-droid.png)
+![Linker options for Xamarin.Android](memory-perf-best-practices-images/linker-options-droid.png)
 
 The linker provides three different settings to control its behavior:
 
--  **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
--  **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
--  **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
+- **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
+- **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
+- **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
 
 The *Link All Assemblies* should be used with caution as it may break the application in unexpected ways. The static analysis that is performed by the linker may not correctly identify all of the code that is required, resulting in too much code being removed from the compiled application. This situation will manifest itself only at runtime when the application crashes. Because of this it is important to thoroughly test an application after changing the linker behavior.
 
 If testing does reveal that the linker has incorrectly removed a class or method it is possible to mark types or methods that are not statically referenced but are required by the application by using one of the following attributes:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
--  `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
+- `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
+- `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
 
 For instance, it may be necessary to preserve the default constructors of types that are dynamically instantiated. Also, the use of XML serialization may require that the properties of types are preserved.
 
@@ -332,9 +331,9 @@ The following steps can be used to further reduce the application executable siz
 
 Android apps can also be split into a separate APK for each ABI ("architecture").
 Learn more in this blog post:
-[How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+[How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## Optimize Image Resources
 
@@ -342,7 +341,7 @@ Images are some of the most expensive resources that applications use, and are o
 
 Regardless of the image resolution, displaying image resources can greatly increase the app's memory footprint. Therefore, they should only be created when required and should be released as soon as the application no longer requires them.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## Reduce the Application Activation Period
 
@@ -352,7 +351,7 @@ Before an application displays its initial UI, it should provide a splash screen
 
 During the activation period, applications execute activation logic, which often includes the loading and processing of resources. The activation period can be reduced by ensuring that required resources are packaged within the app, instead of being retrieved remotely. For example, in some circumstances it may be appropriate during the activation period to load locally stored placeholder data. Then, once the initial UI is displayed, and the user is able to interact with the app, the placeholder data can be progressively replaced from a remote source. In addition, the app's activation logic should only perform work that's required to let the user start using the application. This can help if it delays loading additional assemblies, as assemblies are loaded the first time they are used.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## Reduce Web Service Communication
 
@@ -378,4 +377,3 @@ This article described and discussed techniques for increasing the performance o
 - [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
 - [Async Support Overview](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
-- [Avoiding Common Pitfalls in Xamarin Apps (video)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

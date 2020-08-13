@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Xamarin.Forms platform features
+summary: Learn how to take advantage of platform-specific features in Xamarin.Forms, using a variety of techniques.
+
+metadata:
+  title: Xamarin.Forms platform features
+  description: Learn how to take advantage of platform-specific features in Xamarin.Forms, using a variety of techniques.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 12/30/2019
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
+landingContent:
+  - title: Android
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: ListView fast scrolling
+            url: android/listview-fast-scrolling.md
+          - text: TabbedPage page swiping
+            url: android/tabbedpage-page-swiping.md
+          - text: Material design
+            url: android/appcompat-material-design.md
+          - text: VisualElement elevation
+            url: android/visualelement-elevation.md
+          - text: See more >
+            url: android/index.md
+
+  - title: iOS
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Entry cursor color
+            url: ios/entry-cursor-color.md
+          - text: Large page titles
+            url: ios/page-large-title.md
+          - text: Page home indicator visibility
+            url: ios/page-home-indicator.md
+          - text: Slider thumb tap
+            url: ios/slider-thumb.md
+          - text: See more >
+            url: ios/index.md
+
+  - title: Windows
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: ListView selection mode
+            url: windows/listview-selectionmode.md
+          - text: RefreshView pull direction
+            url: windows/refreshview-pulldirection.md
+          - text: SearchBar spell check
+            url: windows/searchbar-spell-check.md
+          - text: TabbedPage tab icons
+            url: windows/tabbedpage-icons.md
+          - text: See more >
+            url: windows/index.md
+
+  - title: Platform features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Create platform-specifics
+            url: platform-specifics/index.md
+          - text: Device class
+            url: device.md
+          - text: Native forms
+            url: native-forms.md
+          - text: Native views
+            url: native-views/index.md
+          - text: Sign in with Apple
+            url: sign-in-with-apple/index.md

@@ -5,9 +5,9 @@ ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
-ms.date: 10/05/2018
+author: davidortinau
+ms.author: daortin
+ms.date: 10/16/2019
 ---
 
 # Get Started with Xamarin.iOS
@@ -18,9 +18,12 @@ Xamarin.iOS allows developers to create native iOS applications using the same U
 
 To build for Xamarin.iOS, the following are required:
 
+- the latest version of Visual Studio
 - the latest iOS SDK
 - the latest version of Xcode
-- macOS High Sierra (10.13) and above
+- the minimum version of macOS required by Xcode
+
+For specific version requirements, refer to the [latest Xamarin.iOS release notes](/xamarin/ios/release-notes/).
 
 The latest version of Xcode can be downloaded from the [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (login required), or via the Mac App Store:
 
@@ -44,8 +47,8 @@ This two-part guide explores expanding the application created in the Hello, iOS
 
 Provides information for Objective-C developers transitioning to the Xamarin platform.
 
-## Xamarin University Video
+## Video
 
 > [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
 
-**Building Your First iOS App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
+**Building Your First iOS App with Xamarin for Visual Studio**

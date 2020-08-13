@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: Geolocation"
 description: "This document describes the Geolocation class in Xamarin.Essentials, which provides APIs to retrieve the device's current geolocation coordinates."
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 03/13/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Geolocation
@@ -45,17 +47,19 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 
 Or right-click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **ACCESS_COARSE_LOCATION** and **ACCESS_FINE_LOCATION** permissions. This will automatically update the **AndroidManifest.xml** file.
 
+[!include[](~/essentials/includes/android-permissions.md)]
+
 # [iOS](#tab/ios)
 
 Your app's **Info.plist** must contain the `NSLocationWhenInUseUsageDescription` key in order to access the device’s location.
 
-Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display the user.
+Open the plist editor and add the **Privacy - Location When In Use Usage Description** property and fill in a value to display to the user.
 
-Or manually edit the file and add the following:
+Or manually edit the file and add the following and update the rationale:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # [UWP](#tab/uwp)
@@ -74,7 +78,7 @@ using Xamarin.Essentials;
 
 The Geolocation API will also prompt the user for permissions when necessary.
 
-You can get the last known [location](xref:Xamarin.Essentials.Location) of the device by calling the `GetLastKnownLocationAsync` method. This is often faster then doing a full query, but can be less accurate.
+You can get the last known [location](xref:Xamarin.Essentials.Location) of the device by calling the `GetLastKnownLocationAsync` method. This is often faster then doing a full query, but can be less accurate and may return `null` if no cached location exists.
 
 ```csharp
 try
@@ -104,7 +108,7 @@ catch (Exception ex)
 }
 ```
 
-The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above sea level. 
+The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above sea level.
 
 To query the current device's [location](xref:Xamarin.Essentials.Location) coordinates, the `GetLocationAsync` can be used. It is best to pass in a full `GeolocationRequest` and `CancellationToken` since it may take some time to get the device's location.
 
@@ -181,7 +185,7 @@ The following table outlines accuracy per platform:
 | iOS | ~0 |
 | UWP | <= 10 |
 
-<a name="calculate-distance" />
+<a name="calculate-distance"></a>
 
 ## Detecting Mock Locations
 Some devices may return a mock location from the provider or by an application that provides mock locations. You can detect this by using the `IsFromMockProvider` on any [`Location`](xref:Xamarin.Essentials.Location).
@@ -213,7 +217,31 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 
 The `Location` constructor has latitude and longitude arguments in that order. Positive latitude values are north of the equator, and positive longitude values are east of the Prime Meridian. Use the final argument to `CalculateDistance` to specify miles or kilometers. The `UnitConverters` class also defines `KilometersToMiles` and `MilesToKilometers` methods for converting between the two units.
 
+## Platform Differences
+
+Altitude is calculated differently on each platform.
+
+# [Android](#tab/android)
+
+On Android, [altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), if available, is returned in meters above the WGS 84 reference ellipsoid. If this location does not have an altitude then 0.0 is returned.
+
+# [iOS](#tab/ios)
+
+On iOS, [altitude](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) is measured in meters. Positive values indicate altitudes above sea level, while negative values indicate altitudes below sea level.
+
+# [UWP](#tab/uwp)
+
+On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
+
+-----
+
 ## API
 
-- [Geolocation source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
+- [Geolocation source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geolocation)
 - [Geolocation API documentation](xref:Xamarin.Essentials.Geolocation)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Geolocation-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

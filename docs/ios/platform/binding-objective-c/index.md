@@ -5,12 +5,15 @@ ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
 # Binding iOS Libraries
+
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
 Follow these links to learn about binding Objective-C libraries and CocoaPods
 for Xamarin.iOS and Xamarin.Mac:
@@ -42,15 +45,13 @@ view controller that allow the user to select a color based on its HSB
 representation, making color selection more user-friendly.
 Objective Sharpie will be used to assist in the binding process.
 
-## Xamarin University Lightning Lecture
+## Video
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS Bindings in C/C++, by [Xamarin University](https://university.xamarin.com/)**
+**iOS Bindings in C/C++ video**
 
 ## Related Links
 
 - [Binding Objective-C](~/cross-platform/macios/binding/index.md)
 - [Mac Binding](~/mac/platform/binding.md)
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

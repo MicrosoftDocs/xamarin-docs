@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Namespaces in Xamarin.Forms
@@ -17,7 +18,7 @@ _XAML uses the xmlns XML attribute for namespace declarations. This article intr
 
 There are two XAML namespace declarations that are always within the root element of a XAML file. The first defines the default namespace, as shown in the following XAML code example:
 
-```csharp
+```xaml
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
@@ -25,7 +26,7 @@ The default namespace specifies that elements defined within the XAML file with 
 
 The second namespace declaration uses the `x` prefix, as shown in the following XAML code example:
 
-```csharp
+```xaml
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
@@ -44,7 +45,7 @@ The following table outlines the `x` namespace attributes supported by Xamarin.F
 |`x:Name`|Specifies a runtime object name for the XAML element. Setting `x:Name` is similar to declaring a variable in code.|
 |`x:TypeArguments`|Specifies the generic type arguments to the constructor of a generic type.|
 
-For more information about the `x:DataType` attribute, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). For more information about the `x:FieldModifier` attribute, see [Field Modifiers](~/xamarin-forms/xaml/field-modifiers.md). For more information about the `x:Arguments`, `x:FactoryMethod`, and `x:TypeArguments` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
+For more information about the `x:DataType` attribute, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). For more information about the `x:FieldModifier` attribute, see [Field Modifiers](~/xamarin-forms/xaml/field-modifiers.md). For more information about the `x:Arguments` and `x:FactoryMethod` attributes, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md). For more information about the `x:TypeArguments` attribute, see [Generics in XAML with Xamarin.Forms](generics.md).
 
 > [!NOTE]
 > In addition to the namespace attributes listed above, Xamarin.Forms also includes markup extensions that can be consumed through the `x` namespace prefix. For more information, see [Consuming XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/consuming.md).
@@ -103,3 +104,4 @@ This article introduced the XAML namespace syntax, and demonstrated how to decla
 ## Related Links
 
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)
+- [Generics in XAML with Xamarin.Forms](generics.md)

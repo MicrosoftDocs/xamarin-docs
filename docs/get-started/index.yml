@@ -1,169 +1,96 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Get Started with Xamarin
+### YamlMime:Landing
+
+title: Get started with Xamarin
+summary: Xamarin.Forms is a cross-platform UI toolkit that allows developers to efficiently create native user interface layouts that can be shared across iOS, Android, and Universal Windows Platform apps.
+
 metadata:
-  title: Get Started with Xamarin
+  title: Get started with Xamarin
   description: Articles, quickstarts, and tutorials about developing Xamarin applications with Visual Studio and Visual Studio for Mac.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 0F440777-74A2-4AE5-AD1E-5B51EB8BD228
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/15/2018
-abstract:
-  description: Xamarin.Forms is a cross-platform UI toolkit that allows developers to efficiently create native user interface layouts that can be shared across iOS, Android, and Universal Windows Platform apps. For the full Xamarin.Forms documentation, see <a href="/xamarin/xamarin-forms/">Xamarin.Forms Documentation</a>.
-sections:
-- title: Get Started
-  items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items:
-    - href: requirements.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_tasks.svg
-      title: Requirements
-    - href: installation/index.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      title: Installation
-    - href: first-app/index.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: Build your first app
-- title: Quickstarts
-  items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items:
-    - href: quickstarts/single-page.md
-      html: <p></p>
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-      title: Create a single page Xamarin.Forms application
-    - href: quickstarts/multi-page.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_class.svg
-      title: Perform navigation in a multi-page Xamarin.Forms application
-    - href: quickstarts/database.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-      title: Store data in a local SQLite.NET database
-    - href: quickstarts/styling.md
-      html: <p></p>
-      image:
-        src: ~/media/icons/i_user-interface.svg
-      title: Style a cross-platform Xamarin.Forms application
-    - href: quickstarts/deepdive.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-      title: Quickstart deep dive
-- title: Tutorials
-  items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items:
-    - href: tutorials/stacklayout/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_dashboard.svg
-      title: StackLayout
-    - href: tutorials/label/
-      html: <p></p>
-      image:
-        src: ~/media/icons/i_form-label.svg
-      title: Label
-    - href: tutorials/button/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_button.svg
-      title: Button
-    - href: tutorials/entry/
-      html: <p></p>
-      image:
-        src: ~/media/icons/i_form-entry.svg
-      title: Entry
-    - href: tutorials/editor/
-      html: <p></p>
-      image:
-        src: ~/media/icons/i_form-editor.svg
-      title: Editor
-    - href: tutorials/image/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_account-management.svg
-      title: Image
-    - href: tutorials/grid/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_table.svg
-      title: Grid
-    - href: tutorials/listview/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
-      title: ListView
-    - href: tutorials/pop-ups/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_alert.svg
-      title: Pop-ups
-    - href: tutorials/app-lifecycle/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_agile.svg
-      title: App Lifecycle
-    - href: tutorials/local-database/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-      title: Local Database
-    - href: tutorials/web-service/
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_server.svg
-      title: Web services
-- title: Learn about Xamarin
-  items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items:
-    - href: ~/cross-platform/get-started/introduction-to-mobile-development.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_xamarin.svg
-      title: Native apps
-    - href: ~/cross-platform/desktop/index.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_NET.svg
-      title: .NET developers
-    - href: ~/android/get-started/java-developers.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_java.svg
-      title: Java developers
-    - href: ~/ios/get-started/objective-c-developers/index.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_xcode.svg
-      title: Objective-C developers
-    - href: ~/xamarin-forms/data-cloud/index.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_azure.svg
-      title: Azure
+  ms.date: 12/23/2019
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]  
+
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Xamarin?
+            url: ~/get-started/what-is-xamarin.md
+          - text: Supported platforms
+            url: supported-platforms.md
+      - linkListType: how-to-guide
+        links:
+          - text: Installation
+            url: installation/index.md
+          - text: Build your first app
+            url: first-app/index.md
+
+  - title: Quickstarts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create a single page Xamarin.Forms application
+            url: quickstarts/single-page.md
+          - text: Perform navigation in a multi-page Xamarin.Forms application
+            url: quickstarts/multi-page.md
+          - text: Store data in a local SQLite.NET database
+            url: quickstarts/database.md
+          - text: Style a cross-platform Xamarin.Forms application
+            url: quickstarts/styling.md
+      - linkListType: concept
+        links:
+          - text: Quickstart deep dive
+            url: quickstarts/deepdive.md
+
+  - title: User interface tutorials
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: StackLayout
+            url: tutorials/stacklayout/index.yml
+          - text: Label
+            url: tutorials/label/index.yml
+          - text: Button
+            url: tutorials/button/index.yml
+          - text: Entry
+            url: tutorials/entry/index.yml
+          - text: Editor
+            url: tutorials/editor/index.yml
+          - text: Image
+            url: tutorials/image/index.yml
+          - text: Grid
+            url: tutorials/grid/index.yml
+          - text: ListView
+            url: tutorials/listview/index.yml
+          - text: Pop-ups
+            url: tutorials/pop-ups/index.yml
+
+  - title: App fundamentals tutorials
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: App lifecycle
+            url: tutorials/app-lifecycle/index.yml
+          - text: Local database
+            url: tutorials/local-database/index.yml
+          - text: Web services
+            url: tutorials/web-service/index.yml
+
+
+  - title: Learn about Xamarin
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: .NET developers
+            url: ~/cross-platform/desktop/index.md
+          - text: Java developers
+            url: ~/android/get-started/java-developers.md
+          - text: Objective-C developers
+            url: ~/ios/get-started/objective-c-developers/index.md
+          - text: Azure
+            url: ~/xamarin-forms/data-cloud/index.yml

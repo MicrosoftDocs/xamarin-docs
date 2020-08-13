@@ -4,8 +4,8 @@ description: "This article covers working with Handoff in a Xamarin.iOS app to t
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -17,7 +17,7 @@ Apple introduced Handoff in iOS 8 and OS X Yosemite (10.10) to provide a common
 mechanism for the user to transfer activities started on one of their devices,
 to another device running the same app or another app that supports the same activity.
 
-[![](handoff-images/handoff02.png "An example of performing a Handoff operation")](handoff-images/handoff02.png#lightbox)
+[![An example of performing a Handoff operation](handoff-images/handoff02.png)](handoff-images/handoff02.png#lightbox)
 
 This article will take a quick look at enabling activity sharing in a Xamarin.iOS
 app and cover the Handoff framework in detail:
@@ -44,7 +44,7 @@ Handoff passes the bare minimum of information to define the activity to be cont
 
 On the receiving device, the user will receive a notification that an activity is available for continuation. If the user chooses to continue the activity on the new device, the specified app is launched (if not already running) and the payload from the `NSUserActivity` is used to restart the activity.
 
-[![](handoff-images/handoffinteractions.png "An overview of Continuing User Activities")](handoff-images/handoffinteractions.png#lightbox)
+[![An overview of Continuing User Activities](handoff-images/handoffinteractions.png)](handoff-images/handoffinteractions.png#lightbox)
 
 Only apps that share the same developer Team ID and respond to a given _Activity Type_ are eligible for continuation. An app defines the Activity Types that it supports under the `NSUserActivityTypes` key of its **Info.plist** file. Given this, a continuing device chooses the app to perform the continuation based on the Team ID, Activity Type and optionally the _Activity Title_.
 
@@ -113,22 +113,22 @@ Do the following:
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
 4. Ensure that the **iCloud** service has been checked for the given ID:
 
-	[![](handoff-images/provision01.png "Enable the iCloud service for the given ID")](handoff-images/provision01.png#lightbox)
+    [![Enable the iCloud service for the given ID](handoff-images/provision01.png)](handoff-images/provision01.png#lightbox)
 5. Save your changes.
-4. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app:
+6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app:
 
-	[![](handoff-images/provision02.png "Create a new development provisioning profile for the app")](handoff-images/provision02.png#lightbox)
-5. Either download and install the new provisioning profile or use Xcode to download and install the profile.
-6. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
+    [![Create a new development provisioning profile for the app](handoff-images/provision02.png)](handoff-images/provision02.png#lightbox)
+7. Either download and install the new provisioning profile or use Xcode to download and install the profile.
+8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
 
-	[![](handoff-images/provision03.png "Select the provisioning profile just created")](handoff-images/provision03.png#lightbox)
-7. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
+    [![Select the provisioning profile just created](handoff-images/provision03.png)](handoff-images/provision03.png#lightbox)
+9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
 
-	[![](handoff-images/provision04.png "Set App ID")](handoff-images/provision04.png#lightbox)
-8. Scroll to the **Background Modes** section and check the following items:
+    [![Set App ID](handoff-images/provision04.png)](handoff-images/provision04.png#lightbox)
+10. Scroll to the **Background Modes** section and check the following items:
 
-	[![](handoff-images/provision05.png "Enable the required background modes")](handoff-images/provision05.png#lightbox)
-9. Save the changes to all files.
+    [![Enable the required background modes](handoff-images/provision05.png)](handoff-images/provision05.png#lightbox)
+11. Save the changes to all files.
 
 With these settings in place, the application is now ready to access the Handoff Framework APIs. For detailed information on provisioning, please see our [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Provisioning Your App](~/ios/get-started/installation/device-provisioning/index.md) guides.
 
@@ -150,11 +150,11 @@ The _Activity Type Identifier_ is a short string added to the `NSUserActivityTyp
 
 The Activity Type Identifier is used when creating a `NSUserActivity` instance to identify the type of activity. When an activity is continued on another device, the Activity Type (along with the app’s Team ID) determines which app to launch to continue the activity.
 
-As an example, we are going to create a sample app called **MonkeyBrowser** ([download here](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/)). This app will present four tabs, each with a different URL open in a web browser view. The user will be able to continue any tab on a different iOS device running the app.
+As an example, we are going to create a sample app called **MonkeyBrowser** ([download here](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)). This app will present four tabs, each with a different URL open in a web browser view. The user will be able to continue any tab on a different iOS device running the app.
 
 To create the required Activity Type Identifiers to support this behavior, edit the **Info.plist** file and switch to the **Source** view. Add a `NSUserActivityTypes` key and create the following identifiers:
 
-[![](handoff-images/type01.png "The NSUserActivityTypes key and required identifiers in the plist editor")](handoff-images/type01.png#lightbox)
+[![The NSUserActivityTypes key and required identifiers in the plist editor](handoff-images/type01.png)](handoff-images/type01.png#lightbox)
 
 We created four new Activity Type Identifiers, one for each of the tabs in the example **MonkeyBrowser** app. When creating your own apps, replace the contents of the `NSUserActivityTypes` array with the Activity Type Identifiers specific to the activities your app supports.
 
@@ -170,32 +170,32 @@ using UIKit;
 
 namespace MonkeyBrowse
 {
-	public class UserActivityDelegate : NSUserActivityDelegate
-	{
-		#region Constructors
-		public UserActivityDelegate ()
-		{
-		}
-		#endregion
+    public class UserActivityDelegate : NSUserActivityDelegate
+    {
+        #region Constructors
+        public UserActivityDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void UserActivityReceivedData (NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)
-		{
-			// Log
-			Console.WriteLine ("User Activity Received Data: {0}", userActivity.Title);
-		}
+        #region Override Methods
+        public override void UserActivityReceivedData (NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)
+        {
+            // Log
+            Console.WriteLine ("User Activity Received Data: {0}", userActivity.Title);
+        }
 
-		public override void UserActivityWasContinued (NSUserActivity userActivity)
-		{
-			Console.WriteLine ("User Activity Was Continued: {0}", userActivity.Title);
-		}
+        public override void UserActivityWasContinued (NSUserActivity userActivity)
+        {
+            Console.WriteLine ("User Activity Was Continued: {0}", userActivity.Title);
+        }
 
-		public override void UserActivityWillSave (NSUserActivity userActivity)
-		{
-			Console.WriteLine ("User Activity will be Saved: {0}", userActivity.Title);
-		}
-		#endregion
-	}
+        public override void UserActivityWillSave (NSUserActivity userActivity)
+        {
+            Console.WriteLine ("User Activity will be Saved: {0}", userActivity.Title);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -267,31 +267,31 @@ public FourthViewController Tab4 { get; set; }
 
 public override bool WillContinueUserActivity (UIApplication application, string userActivityType)
 {
-	// Report Activity
-	Console.WriteLine ("Will Continue Activity: {0}", userActivityType);
+    // Report Activity
+    Console.WriteLine ("Will Continue Activity: {0}", userActivityType);
 
-	// Take action based on the user activity type
-	switch (userActivityType) {
-	case "com.xamarin.monkeybrowser.tab1":
-		// Inform view that it's going to be modified
-		Tab1.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab2":
-		// Inform view that it's going to be modified
-		Tab2.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab3":
-		// Inform view that it's going to be modified
-		Tab3.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab4":
-		// Inform view that it's going to be modified
-		Tab4.PreparingToHandoff ();
-		break;
-	}
+    // Take action based on the user activity type
+    switch (userActivityType) {
+    case "com.xamarin.monkeybrowser.tab1":
+        // Inform view that it's going to be modified
+        Tab1.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab2":
+        // Inform view that it's going to be modified
+        Tab2.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab3":
+        // Inform view that it's going to be modified
+        Tab3.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab4":
+        // Inform view that it's going to be modified
+        Tab4.PreparingToHandoff ();
+        break;
+    }
 
-	// Inform system we handled this
-	return true;
+    // Inform system we handled this
+    return true;
 }
 ```
 
@@ -326,41 +326,41 @@ The `ContinueUserActivity` of the `AppDelegate` will be called to actually conti
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Report Activity
-	Console.WriteLine ("Continuing User Activity: {0}", userActivity.ToString());
+    // Report Activity
+    Console.WriteLine ("Continuing User Activity: {0}", userActivity.ToString());
 
-	// Get input and output streams from the Activity
-	userActivity.GetContinuationStreams ((NSInputStream arg1, NSOutputStream arg2, NSError arg3) => {
-		// Send required data via the streams
-		// ...
-	});
+    // Get input and output streams from the Activity
+    userActivity.GetContinuationStreams ((NSInputStream arg1, NSOutputStream arg2, NSError arg3) => {
+        // Send required data via the streams
+        // ...
+    });
 
-	// Take action based on the Activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.monkeybrowser.tab1":
-		// Preform handoff
-		Tab1.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab1});
-		break;
-	case "com.xamarin.monkeybrowser.tab2":
-		// Preform handoff
-		Tab2.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab2});
-		break;
-	case "com.xamarin.monkeybrowser.tab3":
-		// Preform handoff
-		Tab3.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab3});
-		break;
-	case "com.xamarin.monkeybrowser.tab4":
-		// Preform handoff
-		Tab4.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab4});
-		break;
-	}
+    // Take action based on the Activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.monkeybrowser.tab1":
+        // Preform handoff
+        Tab1.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab1});
+        break;
+    case "com.xamarin.monkeybrowser.tab2":
+        // Preform handoff
+        Tab2.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab2});
+        break;
+    case "com.xamarin.monkeybrowser.tab3":
+        // Preform handoff
+        Tab3.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab3});
+        break;
+    case "com.xamarin.monkeybrowser.tab4":
+        // Preform handoff
+        Tab4.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab4});
+        break;
+    }
 
-	// Inform system we handled this
-	return true;
+    // Inform system we handled this
+    return true;
 }
 ```
 
@@ -382,21 +382,21 @@ private void HideBusy() {
 
 public void PerformHandoff(NSUserActivity activity) {
 
-	// Hide busy indicator
-	HideBusy ();
+    // Hide busy indicator
+    HideBusy ();
 
-	// Extract URL from dictionary
-	var url = activity.UserInfo ["Url"].ToString ();
+    // Extract URL from dictionary
+    var url = activity.UserInfo ["Url"].ToString ();
 
-	// Display value
-	URL.Text = url;
+    // Display value
+    URL.Text = url;
 
-	// Display the give webpage
-	WebView.LoadRequest(new NSUrlRequest(NSUrl.FromString(url)));
+    // Display the give webpage
+    WebView.LoadRequest(new NSUrlRequest(NSUrl.FromString(url)));
 
-	// Save activity
-	UserActivity = activity;
-	UserActivity.BecomeCurrent ();
+    // Save activity
+    UserActivity = activity;
+    UserActivity.BecomeCurrent ();
 
 }
 ```
@@ -605,19 +605,19 @@ The successful implementation of the seamless continuation of a User Activity vi
 
 ## Example Handoff App
 
-As an example of using Handoff in a Xamarin.iOS app, we have included the [**MonkeyBrowser**](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) sample app with this guide. The app has four tabs that the user can use to browse the web, each with a given activity type: Weather, Favorite, Coffee Break and Work.
+As an example of using Handoff in a Xamarin.iOS app, we have included the [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) sample app with this guide. The app has four tabs that the user can use to browse the web, each with a given activity type: Weather, Favorite, Coffee Break and Work.
 
 On any tab, when the user enters a new URL and taps the **Go** button, a new `NSUserActivity` is created for that tab that contains the URL that the user is currently browsing:
 
-[![](handoff-images/handoff01.png "Example Handoff App")](handoff-images/handoff01.png#lightbox)
+[![Example Handoff App](handoff-images/handoff01.png)](handoff-images/handoff01.png#lightbox)
 
 If another of the user’s devices has the **MonkeyBrowser** app installed, is signed into iCloud using the same user account, is on the same network and in close proximity to the above device, the Handoff Activity will be displayed on the home screen (in the lower left hand corner):
 
-[![](handoff-images/handoff02.png "The Handoff Activity displayed on the home screen in the lower left hand corner")](handoff-images/handoff02.png#lightbox)
+[![The Handoff Activity displayed on the home screen in the lower left hand corner](handoff-images/handoff02.png)](handoff-images/handoff02.png#lightbox)
 
 If the user drags upward on the Handoff icon, the app will be launched and the User Activity specified in the `NSUserActivity` will be continued on the new device:
 
-[![](handoff-images/handoff03.png "The User Activity continued on the new device")](handoff-images/handoff03.png#lightbox)
+[![The User Activity continued on the new device](handoff-images/handoff03.png)](handoff-images/handoff03.png#lightbox)
 
 When the User Activity has been successfully sent to another Apple device, the sending device’s `NSUserActivity` will receive a call to the `UserActivityWasContinued`  method on its `NSUserActivityDelegate` to let it know that the User Activity has been successfully transferred to another device.
 
@@ -628,12 +628,10 @@ User Activity between multiple of the user's Apple devices. Next, it showed how
 to enable and implement Handoff in a Xamarin.iOS app. Finally, it discussed the
 different types of Handoff continuations available and the Handoff best practices.
 
-
-
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
-- [MonkeyBrowser Sample](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [MonkeyBrowser Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

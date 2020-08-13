@@ -3,8 +3,8 @@ title: "Accessibility on Android"
 ms.prod: xamarin
 ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/28/2018
 ---
 
@@ -17,7 +17,6 @@ Refer to the
 [iOS accessibility](~/ios/app-fundamentals/accessibility.md)
 and [OS X accessibility](~/mac/app-fundamentals/accessibility.md) pages for
 other platform APIs.
-
 
 ## Describing UI Elements
 
@@ -68,7 +67,6 @@ In XML layout files use the `android:hint` attribute:
     android:id="@+id/someText"
     android:hint="Enter some text" />
 ```
-
 
 ### LabelFor links input fields with labels
 
@@ -149,7 +147,6 @@ attributes, typically set in the layout AXML. Use these attributes
 to ensure the user can navigate easily through the controls
 on the screen.
 
-
 ## Accessibility and Localization
 
 In the examples above the hint and content description are set
@@ -159,8 +156,8 @@ in a **Strings.xml** file, such as this:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="enter_info">Enter some text</string>
-	<string name="save_info">Save data</string>
+    <string name="enter_info">Enter some text</string>
+    <string name="save_info">Save data</string>
 </resources>
 ```
 
@@ -196,7 +193,6 @@ translations of the file can be provided in your app. See the
 [Android localization guide](~/android/app-fundamentals/localization.md)
 to learn how add localized string files to an application project.
 
-
 ## Testing Accessibility
 
 Follow [these steps](https://developer.android.com/training/accessibility/testing.html#how-to)
@@ -204,7 +200,6 @@ to enable TalkBack and Explore by Touch to test accessibility on Android devices
 
 You may need to install [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
 from Google Play if it does not appear in **Settings > Accessibility**.
-
 
 ## Related Links
 

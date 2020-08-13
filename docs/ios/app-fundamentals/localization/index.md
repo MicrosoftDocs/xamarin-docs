@@ -4,8 +4,8 @@ description: "This document describes iOS localization features and how to use t
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
 ---
 
@@ -186,7 +186,7 @@ There can be a number of different **.strings** files in each language directory
 - **Localizable.strings** – the main list of localized text.
 - **InfoPlist.strings** – certain specific keys are allowed in this file to
   translate things such as the application name.
-- **<storyboard-name>.strings** – optional file that contains translations
+- **\<storyboard-name>.strings** – optional file that contains translations
   for user interface elements in a storyboard.
 
 The **Build Action** for these files should be **Bundle Resource**.
@@ -202,9 +202,9 @@ The syntax for localized string values is:
 
 You should escape the following characters in strings:
 
-* `\"` quote
-* `\\` backslash
-* `\n` newline
+- `\"` quote
+- `\\` backslash
+- `\n` newline
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 
@@ -312,7 +312,7 @@ Medium,None: 7/8/2015
 Refer to the Apple [Date Formatters](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) documentation for more information. When testing locale-sensitive
 date and time formatting, check both **iPhone Language** and **Region** settings.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### Right-to-Left (RTL) layout
 
@@ -330,16 +330,16 @@ The following screenshots show the
 [localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 in Arabic and Hebrew (although English has been entered in the fields):
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
+[![Localization in Arabic](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Arabic")
 
-[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
+[![Localization in Hebrew](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebrew")
 
 iOS automatically reverses the `UINavigationController`, and the other controls
 are placed inside `UIStackView` or aligned with Auto-Layout.
 RTL text is localized using **.strings** files in the same
 way as LTR text.
 
-<a name="code"/>
+<a name="code"></a>
 
 ## Localizing the UI in code
 
@@ -349,7 +349,7 @@ built in code (rather than XIBs or storyboards).
 
 ### Project Structure
 
-![](images/solution-code.png "Resources tree")
+![Resources tree](images/solution-code.png)
 
 ### Localizable.strings file
 
@@ -383,7 +383,7 @@ var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional")
 someControl.Text = localizedString;
 ```
 
-<a name="storyboard"/>
+<a name="storyboard"></a>
 
 ## Localizing storyboard UIs
 
@@ -399,7 +399,7 @@ The other language directories contain a **Localizable.strings** file for any
 string resources referenced in code, as well as a **MainStoryboard.strings** file
 that contains translations for text in the storyboard.
 
-![](images/solution-storyboard.png "Resources tree")
+![Resources tree](images/solution-storyboard.png)
 
 The language directories should contain a copy of any images that
 have been localized, to override the one present in **Base.lproj**.
@@ -415,7 +415,7 @@ and check the ID to use for localization:
 This string value often has a form such as "NF3-h8-xmR", as shown in the
 following screenshot:
 
-![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
+![Xcode view of Storyboard localization](images/xs-designer-localization-id.png)
 
 This value is used in the **.strings** file to assign translated text automatically
 to each control.
@@ -450,9 +450,9 @@ property; and `UIButton`s default text is set using `normalTitle`:
 > **MainStoryboard~iphone.strings** and **MainStoryboard~ipad.strings**, as
 > shown in the following screenshot:
 >
-> ![](images/xs-dup-strings.png "Strings files")
+> ![Strings files](images/xs-dup-strings.png)
 
-<a name="appstore" />
+<a name="appstore"></a>
 
 ## App Store listing
 

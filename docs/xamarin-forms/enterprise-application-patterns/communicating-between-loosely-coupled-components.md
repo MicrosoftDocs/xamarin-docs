@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Communicating Between Loosely Coupled Components
@@ -21,7 +22,7 @@ The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class 
 
 The [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class provides multicast publish-subscribe functionality. This means that there can be multiple publishers that publish a single message, and there can be multiple subscribers listening for the same message. Figure 4-1 illustrates this relationship:
 
-![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
+![Multicast publish-subscribe functionality](communicating-between-loosely-coupled-components-images/messagingcenter.png)
 
 **Figure 4-1:** Multicast publish-subscribe functionality
 
@@ -31,14 +32,14 @@ Internally, the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class us
 
 The eShopOnContainers mobile app uses the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class to communicate between loosely coupled components. The app defines three messages:
 
--   The `AddProduct` message is published by the `CatalogViewModel` class when an item is added to the shopping basket. In return, the `BasketViewModel` class subscribes to the message and increments the number of items in the shopping basket in response. In addition, the `BasketViewModel` class also unsubscribes from this message.
--   The `Filter` message is published by the `CatalogViewModel` class when the user applies a brand or type filter to the items displayed from the catalogue. In return, the `CatalogView` class subscribes to the message and updates the UI so that only items that match the filter criteria are displayed.
--   The `ChangeTab` message is published by the `MainViewModel` class when the `CheckoutViewModel` navigates to the `MainViewModel` following the successful creation and submission of a new order. In return, the `MainView` class subscribes to the message and updates the UI so that the **My profile** tab is active, to show the user's orders.
+- The `AddProduct` message is published by the `CatalogViewModel` class when an item is added to the shopping basket. In return, the `BasketViewModel` class subscribes to the message and increments the number of items in the shopping basket in response. In addition, the `BasketViewModel` class also unsubscribes from this message.
+- The `Filter` message is published by the `CatalogViewModel` class when the user applies a brand or type filter to the items displayed from the catalogue. In return, the `CatalogView` class subscribes to the message and updates the UI so that only items that match the filter criteria are displayed.
+- The `ChangeTab` message is published by the `MainViewModel` class when the `CheckoutViewModel` navigates to the `MainViewModel` following the successful creation and submission of a new order. In return, the `MainView` class subscribes to the message and updates the UI so that the **My profile** tab is active, to show the user's orders.
 
 > [!NOTE]
 > While the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class permits communication between loosely-coupled classes, it does not offer the only architectural solution to this issue. For example, communication between a view model and a view can also be achieved by the binding engine and through property change notifications. In addition, communication between two view models can also be achieved by passing data during navigation.
 
-In the eShopOnContainers mobile app,[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) is used to update in the UI in response to an action occurring in another class. Therefore, messages are published on the UI thread, with subscribers receiving the message on the same thread.
+In the eShopOnContainers mobile app, [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) is used to update in the UI in response to an action occurring in another class. Therefore, messages are published on the UI thread, with subscribers receiving the message on the same thread.
 
 > [!TIP]
 > Marshal to the UI thread when performing UI updates. If a message that's sent from a background thread is required to update the UI, process the message on the UI thread in the subscriber by invoking the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
@@ -50,7 +51,7 @@ For more information about [`MessagingCenter`](xref:Xamarin.Forms.MessagingCente
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) messages are strings that are used to identify messages. The following code example shows the messages defined within the eShopOnContainers mobile app:
 
 ```csharp
-public class MessengerKeys  
+public class MessageKeys  
 {  
     // Add product to basket  
     public const string AddProduct = "AddProduct";  
@@ -70,14 +71,14 @@ In this example, messages are defined using constants. The advantage of this app
 Publishers notify subscribers of a message with one of the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) overloads. The following code example demonstrates publishing the `AddProduct` message:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies three arguments:
 
--   The first argument specifies the sender class. The sender class must be specified by any subscribers who wish to receive the message.
--   The second argument specifies the message.
--   The third argument specifies the payload data to be sent to the subscriber. In this case the payload data is a `CatalogItem` instance.
+- The first argument specifies the sender class. The sender class must be specified by any subscribers who wish to receive the message.
+- The second argument specifies the message.
+- The third argument specifies the payload data to be sent to the subscriber. In this case the payload data is a `CatalogItem` instance.
 
 The [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method will publish the message, and its payload data, using a fire-and-forget approach. Therefore, the message is sent even if there are no subscribers registered to receive the message. In this situation, the sent message is ignored.
 
@@ -110,7 +111,7 @@ A subscriber might not need to handle every instance of a published message, and
 Subscribers can unsubscribe from messages they no longer want to receive. This is achieved with one of the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overloads, as demonstrated in the following code example:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method syntax reflects the type arguments specified when subscribing to receive the `AddProduct` message.
@@ -118,7 +119,6 @@ In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscr
 ## Summary
 
 The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references. This mechanism allows publishers and subscribers to communicate without having a reference to each other, helping to reduce dependencies between components, while also allowing components to be independently developed and tested.
-
 
 ## Related Links
 

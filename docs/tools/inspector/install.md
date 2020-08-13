@@ -3,8 +3,8 @@ title: "Inspector Installation and Requirements"
 description: "This document describes how to install the Xamarin Inspector and discusses supported operating system, IDEs, and app platforms."
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
 ---
 
@@ -44,18 +44,18 @@ ms.date: 06/19/2018
 
 Live app inspection is available for enterprise customers.
 
-<a name="supported-platforms" />
+<a name="supported-platforms"></a>
 
 ### Supported App Platforms
 
 |App Platform|IDE Support|Notes|
 |--- |--- |--- |
 |Mac|Only supported in Visual Studio for Mac|
-|iOS|Supported in Visual Studio 2017 and Visual Studio for Mac| Linker behavior must be set to **Don't Link** (under **iOS Build** Project options) |
+|iOS|Supported in Visual Studio 2017 and Visual Studio for Mac| Linker behavior must be set to [**Don't Link**](~/ios/deploy-test/linker.md) (under **iOS Build** Project options) |
 |Android|Supported in Visual Studio 2017 and Visual Studio for Mac|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
 |WPF|Only supported in Visual Studio 2017|
 
-<a name="reporting-bugs" />
+<a name="reporting-bugs"></a>
 
 ## Reporting Bugs
 

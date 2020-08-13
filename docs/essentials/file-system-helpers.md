@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: File System Helpers"
 description: "The FileSystem class in Xamarin.Essentials contains a series of helpers to find the application's cache and data directories and open files inside of the app package."
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: File System Helpers
@@ -23,7 +25,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-To get the application's directory to store **cache data**. Cache data can be used for any data that needs to persist longer than temporary data, but should not be data that is required to properly operate.
+To get the application's directory to store **cache data**. Cache data can be used for any data that needs to persist longer than temporary data, but should not be data that is required to properly operate, as the OS dictates when this storage is cleared.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;
@@ -61,6 +63,9 @@ Add any file into the **Assets** folder in the Android project and mark the Buil
 - **CacheDirectory** – Returns the [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory.
 - **AppDataDirectory** – Returns the [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory that is backed up by iTunes and iCloud.
 
+> [!IMPORTANT]
+> In the iOS Simulator, the Application ID (which is part of the directory name) changes on every build so you have to retrieve the correct ID each time you build your application for the Simulator.
+
 Add any file into the **Resources** folder in the iOS project and mark the Build Action as **BundledResource** to use it with `OpenAppPackageFileAsync`.
 
 # [UWP](#tab/uwp)
@@ -74,5 +79,11 @@ Add any file into the root in the UWP project and mark the Build Action as **Con
 
 ## API
 
-- [File System Helpers source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
+- [File System Helpers source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FileSystem)
 - [File System API documentation](xref:Xamarin.Essentials.FileSystem)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/File-System-Helpers-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

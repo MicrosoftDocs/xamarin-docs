@@ -7,11 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # TabbedPage Toolbar Placement and Color on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+
+> [!IMPORTANT]
+> The platform-specifics that set the color of the toolbar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) are now obsolete and have been replaced by the [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) and [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) properties. For more information, see [Create a TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#create-a-tabbedpage).
 
 These platform-specifics are used to set the placement and color of the toolbar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). They are consumed in XAML by setting the [`TabbedPage.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) attached property to a value of the [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) enumeration, and the [`TabbedPage.BarItemColor`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) and [`TabbedPage.BarSelectedItemColor`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) attached properties to a [`Color`](xref:Xamarin.Forms.Color):
 
@@ -50,11 +54,11 @@ In addition, the [`TabbedPage.SetBarItemColor`](xref:Xamarin.Forms.PlatformConfi
 
 The result is that the toolbar placement, the color of toolbar items, and the color of the selected toolbar item can be set on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
-![](tabbedpage-toolbar-placement-color-images/tabbedpage-toolbar-placement.png)
+![TabbedPage toolbar configuration](tabbedpage-toolbar-placement-color-images/tabbedpage-toolbar-placement.png)
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

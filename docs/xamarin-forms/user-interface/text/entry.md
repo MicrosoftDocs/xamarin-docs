@@ -6,22 +6,19 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
+ms.date: 07/21/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-
-_Single-line text or password input_
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line text input. The `Entry`, like the [`Editor`](xref:Xamarin.Forms.Editor) view, supports multiple keyboard types. Additionally, the `Entry` can be used as a password field.
 
-## Display Customization
+## Set and read text
 
-### Setting and Reading Text
-
-The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.Entry.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
+The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.InputView.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -39,9 +36,9 @@ To read text, access the `Text` property in C#:
 var text = MyEntry.Text;
 ```
 
-### Setting Placeholder Text
+## Set placeholder text
 
-The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.Entry.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
+The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Entry Placeholder="Username" PlaceholderColor="Olive" />
@@ -54,7 +51,7 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 > [!NOTE]
 > The width of an `Entry` can be defined by setting its `WidthRequest` property. Do not depend on the width of an `Entry` being defined based on the value of its `Text` property.
 
-### Preventing Text Entry
+## Prevent text entry
 
 Users can be prevented from modifying the text in an [`Entry`](xref:Xamarin.Forms.Entry) by setting the `IsReadOnly` property, which has a default value of `false`, to `true`:
 
@@ -70,7 +67,33 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 > [!NOTE]
 > The `IsReadonly` property does not alter the visual appearance of an [`Entry`](xref:Xamarin.Forms.Entry), unlike the `IsEnabled` property that also changes the visual appearance of the `Entry` to gray.
 
-### Limiting Input Length
+## Transform text
+
+An [`Entry`](xref:Xamarin.Forms.Entry) can transform the casing of its text, stored in the `Text` property, by setting the `TextTransform` property to a value of the `TextTransform` enumeration. This enumeration has four values:
+
+- `None` indicates that the text won't be transformed.
+- `Default` indicates that the default behavior for the platform will be used. This is the default value of the `TextTransform` property.
+- `Lowercase` indicates that the text will be transformed to lowercase.
+- `Uppercase` indicates that the text will be transformed to uppercase.
+
+The following example shows transforming text to uppercase:
+
+```xaml
+<Entry Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Entry entry = new Entry
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
+
+## Limit input length
 
 The [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property can be used to limit the input length that's permitted for the [`Entry`](xref:Xamarin.Forms.Entry). This property should be set to a positive integer:
 
@@ -84,7 +107,27 @@ var entry = new Entry { ... MaxLength = 10 };
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Entry`](xref:Xamarin.Forms.Entry), indicates that there is no effective limit on the number of characters that may be entered.
 
-### Password Fields
+## Character spacing
+
+Character spacing can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) by setting the `Entry.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Entry ...
+       CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Entry entry = new Entry { CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Entry`](xref:Xamarin.Forms.Entry) are spaced `CharacterSpacing` device-independent units apart.
+
+> [!NOTE]
+> The `CharacterSpacing` property value is applied to the text displayed by the `Text` and `Placeholder` properties.
+
+## Password fields
 
 `Entry` provides the `IsPassword` property. When `IsPassword` is `true`, the contents of the field will be presented as black circles:
 
@@ -100,7 +143,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Entry IsPassword Example")
+![Entry IsPassword Example](entry-images/password.png)
 
 Placeholders may be used with instances of `Entry` that are configured as password fields:
 
@@ -116,11 +159,11 @@ In C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Entry IsPassword and Placeholder Example")
+![Entry IsPassword and Placeholder Example](entry-images/passwordplaceholder.png)
 
-### Setting the Cursor Position and Text Selection Length
+## Set the cursor position and text selection length
 
-The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.Entry.Text) property:
+The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.InputView.Text) property:
 
 ```xaml
 <Entry Text="Cursor position set" CursorPosition="5" />
@@ -144,7 +187,31 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
 
 The default value of the [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) property is 0, which indicates that no text is selected.
 
-### Customizing the Keyboard
+## Display a clear button
+
+The `ClearButtonVisibility` property can be used to control whether an [`Entry`](xref:Xamarin.Forms.Entry) displays a clear button, which enables the user to clear the text. This property should be set to a `ClearButtonVisibility` enumeration member:
+
+- `Never` indicates that a clear button will never be displayed. This is the default value for the `Entry.ClearButtonVisibility` property.
+- `WhileEditing` indicates that a clear button will be displayed in the [`Entry`](xref:Xamarin.Forms.Entry), while it has focus and text.
+
+The following example shows setting the property in XAML:
+
+```xaml
+<Entry Text="Xamarin.Forms"
+       ClearButtonVisibility="WhileEditing" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearButtonVisibility.WhileEditing };
+```
+
+The following screenshots show an [`Entry`](xref:Xamarin.Forms.Entry) with the clear button enabled:
+
+![Screenshot of an Entry with a clear button, on iOS and Android](entry-images/entry-clear-button.png)
+
+## Customize the keyboard
 
 The keyboard that's presented when users interact with an [`Entry`](xref:Xamarin.Forms.Entry) can be set programmatically via the [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) property, to one of the following properties from the [`Keyboard`](xref:Xamarin.Forms.Keyboard) class:
 
@@ -203,7 +270,7 @@ var entry = new Entry { Placeholder = "Enter text here" };
 entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-#### Customizing the Return Key
+### Customize the return key
 
 The appearance of the return key on the soft keyboard, which is displayed when an [`Entry`](xref:Xamarin.Forms.Entry) has focus, can be customized by setting the [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) property to a value of the [`ReturnType`](xref:Xamarin.Forms.ReturnType) enumeration:
 
@@ -231,7 +298,7 @@ var entry = new Entry { ReturnType = ReturnType.Send };
 
 When the return key is pressed, the [`Completed`](xref:Xamarin.Forms.Entry.Completed) event fires and any `ICommand` specified by the [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) property is executed. In addition, any `object` specified by the [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) property will be passed to the `ICommand` as a parameter. For more information about commands, see [The Command Interface](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
-### Enabling and Disabling Spell Checking
+## Enable and disable spell checking
 
 The [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property controls whether spell checking is enabled. By default, the property is set to `true`. As the user enters text, misspellings are indicated.
 
@@ -248,7 +315,7 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > When the [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) property is set to `false`, and a custom keyboard isn't being used, the native spell checker will be disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables spell checking, such as [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat), the `IsSpellCheckEnabled` property is ignored. Therefore, the property cannot be used to enable spell checking for a `Keyboard` that explicitly disables it.
 
-### Enabling and Disabling Text Prediction
+## Enable and disable text prediction
 
 The [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) property controls whether text prediction and automatic text correction is enabled. By default, the property is set to `true`. As the user enters text, word predictions are presented.
 
@@ -265,7 +332,7 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > When the [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) property is set to `false`, and a custom keyboard isn't being used, text prediction and automatic text correction is disabled. However, if a [`Keyboard`](xref:Xamarin.Forms.Keyboard) has been set that disables text prediction, the `IsTextPredictionEnabled` property is ignored. Therefore, the property cannot be used to enable text prediction for a `Keyboard` that explicitly disables it.
 
-### Colors
+## Colors
 
 Entry can be set to use a custom background and text colors via the following bindable properties:
 
@@ -289,7 +356,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Entry TextColor Example")
+![Entry TextColor Example](entry-images/textcolor.png)
 
 Note that the placeholder is not affected by the specified `TextColor`.
 
@@ -306,15 +373,15 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Entry BackgroundColor Example")
+![Entry BackgroundColor Example](entry-images/textbackgroundcolor.png)
 
 Be careful to make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 
-## Events and Interactivity
+## Events and interactivity
 
 Entry exposes two events:
 
-- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
+- [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 > [!NOTE]
@@ -322,7 +389,7 @@ Entry exposes two events:
 
 ### Completed
 
-The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
+The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by pressing the return key on the keyboard (or by pressing the Tab key on UWP). The handler for the event is a generic event handler, taking the sender and `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -373,8 +440,7 @@ var entry = new Entry ();
 entry.TextChanged += Entry_TextChanged;
 ```
 
-
 ## Related Links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Entry API](xref:Xamarin.Forms.Entry)

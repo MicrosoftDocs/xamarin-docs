@@ -7,13 +7,14 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 13. Bitmaps
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
-> [!NOTE] 
+> [!NOTE]
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
 The Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) element displays a bitmap. All the Xamarin.Forms platforms support the JPEG, PNG, GIF, and BMP file formats.
@@ -27,7 +28,7 @@ Bitmaps in Xamarin.Forms come from four places:
 
 Bitmap resources in the shared library are platform-independent, while bitmap resources in the platform projects are platform-specific.
 
-> [!NOTE] 
+> [!NOTE]
 > The text of the book makes references to Portable Class Libraries, which have been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries.
 
 The bitmap is specified by setting the [`Source`](xref:Xamarin.Forms.Image.Source) property of `Image` to an object of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), an abstract class with three derivatives:
@@ -88,9 +89,9 @@ The [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree
 The [**ImageBrowser**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) sample allows the user to browse through stock images stored on the Xamarin web site. It uses the .NET [`WebRequest`](xref:System.Net.WebRequest) class to download a JSON file with the list of bitmaps.
 
 > [!NOTE]
-> Xamarin.Forms programs should use [`HttpClient`](xref:System.Net.Http.HttpClient) rather than [`WebRequest`](xref:System.Net.WebRequest) for accessing files over the internet. 
+> Xamarin.Forms programs should use [`HttpClient`](xref:System.Net.Http.HttpClient) rather than [`WebRequest`](xref:System.Net.WebRequest) for accessing files over the internet.
 
-The program uses an [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) to indicate that something's going on. As each bitmap is loading, the read-only [`IsLoading`](xref:Xamarin.Forms.Image.IsLoading) property of `Image` is `true`. The `IsLoading` property is backed by a bindable property, so a `PropertyChanged` event is fired when that property changes. The program attaches a handler to this event, and uses the current setting of `IsLoaded` to set the [`IsRunning`](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) property of the `ActivityIndicator`.
+The program uses an [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) to indicate that something's going on. As each bitmap is loading, the read-only [`IsLoading`](xref:Xamarin.Forms.Image.IsLoading) property of `Image` is `true`. The `IsLoading` property is backed by a bindable property, so a `PropertyChanged` event is fired when that property changes. The program attaches a handler to this event, and uses the current setting of `IsLoaded` to set the [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) property of the `ActivityIndicator`.
 
 ## Streaming bitmaps
 

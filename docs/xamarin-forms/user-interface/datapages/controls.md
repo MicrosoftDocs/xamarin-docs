@@ -7,18 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # DataPages Controls Reference
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
-
-The Xamarin.Forms DataPages Nuget includes a number of controls that can
+The Xamarin.Forms DataPages NuGet includes a number of controls that can
 take advantage of data source binding.
 
 To use these controls in XAML, ensure the namespace has been included,
@@ -34,14 +33,12 @@ for example see the `xmlns:pages` declaration below:
 
 The examples below include `DynamicResource` references which would need
 to exist in the project's resources dictionary to work. There is
-also an example of how to build a [custom control](#custom)
+also an example of how to build a [custom control](#custom-control-example).
 
 ## Built-in Controls
 
 * [HeroImage](#heroimage)
 * [ListItem](#listitem)
-
-<a name="heroimage" />
 
 ### HeroImage
 
@@ -62,14 +59,11 @@ The `HeroImage` control has four properties:
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "HeroImage Control on Android") ![](controls-images/heroimage-dark-android.png "HeroImage Control on Android")
+![HeroImage Control on Android](controls-images/heroimage-light-android.png) ![HeroImage Control on Android](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage Control on iOS")
-
-
-<a name="listitem" />
+![HeroImage Control on iOS](controls-images/heroimage-light-ios.png) ![HeroImage Control on iOS](controls-images/heroimage-dark-ios.png)
 
 ### ListItem
 
@@ -101,12 +95,11 @@ both the Light and Dark themes:
 
 **Android**
 
-![](controls-images/listitem-light-android.png "ListItem Control on Android") ![](controls-images/listitem-dark-android.png "ListItem Control on Android")
+![ListItem Control on Android](controls-images/listitem-light-android.png) ![ListItem Control on Android](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png "ListItem Control on iOS")
-
+![ListItem Control on iOS](controls-images/listitem-light-ios.png) ![ListItem Control on iOS](controls-images/listitem-dark-ios.png)
 
 ## Custom Control Example
 
@@ -134,25 +127,21 @@ to the built-in Light and Dark themes:
 
 **Android**
 
-![](controls-images/cardview-light-android.png "CardView Custom Control on Android") ![](controls-images/cardview-dark-android.png "CardView Custom Control on Android")
+![CardView Custom Control on Android](controls-images/cardview-light-android.png) ![CardView Custom Control on Android](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "CardView Custom Control on iOS") ![](controls-images/cardview-dark-ios.png "CardView Custom Control on iOS")
-
-<a name="custom" />
+![CardView Custom Control on iOS](controls-images/cardview-light-ios.png) ![CardView Custom Control on iOS](controls-images/cardview-dark-ios.png)
 
 ### Building the Custom CardView
 
-1. [DataView subclass](#1)
-2. [Define Font, Layout, and Margins](#2)
-3. [Create Styles for the Control's Children](#3)
-4. [Create the Control Layout Template](#4)
-5. [Add the Theme-specific Resources](#5)
-6. [Set the ControlTemplate for the CardView class](#6)
-7. [Add the Control to a Page](#7)
-
-<a name="1" />
+1. [DataView subclass](#1-dataview-subclass)
+2. [Define Font, Layout, and Margins](#2-define-font-layout-and-margins)
+3. [Create Styles for the Control's Children](#3-create-styles-for-the-controls-children)
+4. [Create the Control Layout Template](#4-create-the-control-layout-template)
+5. [Add the Theme-specific Resources](#5-add-the-theme-specific-resources)
+6. [Set the ControlTemplate for the CardView class](#6-set-the-controltemplate-for-the-cardview-class)
+7. [Add the Control to a Page](#7-add-the-control-to-a-page)
 
 #### 1. DataView Subclass
 
@@ -194,8 +183,6 @@ public class CardView : DataView
 }
 ```
 
-<a name="2" />
-
 #### 2. Define Font, Layout, and Margins
 
 The control designer would figure out these values as part of the
@@ -203,7 +190,7 @@ user-interface design for the custom control. Where platform-specific
 specifications are required, the `OnPlatform` element is used.
 
 Note that some values refer to `StaticResource`s – these will be defined
-in [step 5](#5).
+in [step 5](#5-add-the-theme-specific-resources).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -255,8 +242,6 @@ in [step 5](#5).
 </OnPlatform>
 ```
 
-<a name="3" />
-
 #### 3. Create Styles for the Control's Children
 
 Reference all the elements defined about to create the children that
@@ -288,8 +273,6 @@ will be used in the custom control:
 </Style>
 ```
 
-<a name="4" />
-
 #### 4. Create the Control Layout Template
 
 The visual design of the custom control is explicitly declared in the control
@@ -320,7 +303,6 @@ template, using the resources defined above:
       Style="{ StaticResource CardViewTextStyle }"
     />
 
-
     <!-- CARDVIEW DETAIL -->
     <Label
       Text="{ TemplateBinding Detail }"
@@ -332,8 +314,6 @@ template, using the resources defined above:
 
 </ControlTemplate>
 ```
-
-<a name="5" />
 
 #### 5. Add the Theme-specific Resources
 
@@ -367,12 +347,10 @@ the theme you are using the resource dictionary:
             <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
-<a name="6" />
-
 #### 6. Set the ControlTemplate for the CardView class
 
-Finally, ensure the C# class created in [step 1](#1) uses the control template
-defined in [step 4](#4) using a `Style` `Setter` element
+Finally, ensure the C# class created in [step 1](#1-dataview-subclass) uses the control template
+defined in [step 4](#4-create-the-control-layout-template) using a `Style` `Setter` element
 
 ```xml
 <Style TargetType="local:CardView">
@@ -381,8 +359,6 @@ defined in [step 4](#4) using a `Style` `Setter` element
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>
 ```
-
-<a name="7" />
 
 #### 7. Add the Control to a Page
 

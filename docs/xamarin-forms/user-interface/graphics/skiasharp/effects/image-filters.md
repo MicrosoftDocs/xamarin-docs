@@ -7,11 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp image filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Image filters are effects that operate on all the color bits of pixels that make up an image. They are more versatile than mask filters, which only operate on the alpha channel as described in the article [**SkiaSharp mask filters**](mask-filters.md). To use an image filter, set the [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) property of `SKPaint` to an object of type [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) that you've created by calling one of the class's static methods.
 
@@ -33,7 +34,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
 
 The method has two sigma values &mdash; the first for the blur extent in the horizontal direction and the second for the vertical direction. You can cascade image filters by specifying another image filter as the optional third argument. A cropping rectangle can also be specified.
 
-The **Image Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) includes two `Slider` views that let you experiment with setting various levels of blur:
+The **Image Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) includes two `Slider` views that let you experiment with setting various levels of blur:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -72,7 +73,6 @@ The **Image Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://deve
 
 The code-behind file uses the two `Slider` values to call `SKImageFilter.CreateBlur` for the `SKPaint` object used to display both text and a bitmap:
 
-
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage
 {
@@ -83,8 +83,8 @@ public partial class ImageBlurExperimentPage : ContentPage
                             "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
     public ImageBlurExperimentPage ()
-	{
-		InitializeComponent ();
+    {
+        InitializeComponent ();
     }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -227,10 +227,10 @@ public partial class DropShadowExperimentPage : ContentPage
 {
     const string TEXT = "Drop Shadow";
 
-	public DropShadowExperimentPage ()
-	{
-		InitializeComponent ();
-	}
+    public DropShadowExperimentPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {
@@ -439,4 +439,4 @@ An alternative approach to embossed and engraved text was demonstrated in the ar
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

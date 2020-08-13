@@ -4,8 +4,8 @@ description: "These articles show how include a Message App Extension in a Xamar
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2016
 ---
 
@@ -15,7 +15,6 @@ _These articles show how include a Message App Extension in a Xamarin.iOS soluti
 
 New to iOS 10, a Message App Extension integrates with the **Messages** app and presents new functionality to the user. The extension can send text, stickers, media files and interactive messages.
 
-	
 ## [Message App Extension Basics](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
 This article shows how include a Message App Extension in a Xamarin.iOS solution that integrates with the **Messages** app and presents new functionality to the user.
@@ -24,9 +23,8 @@ This article shows how include a Message App Extension in a Xamarin.iOS solution
 
 This article shows advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the **Messages** app and presents new functionality to the user.
 
-
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [Messages Reference](https://developer.apple.com/reference/messages)
 - [App Extension Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

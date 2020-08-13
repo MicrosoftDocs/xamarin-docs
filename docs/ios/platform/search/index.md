@@ -4,8 +4,8 @@ description: "This article covers using the new App Search APIs provided by iOS 
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -24,22 +24,22 @@ without prior search implementation experience. Because of this, Apple claims
 that it typically takes a few hours to make an iOS 9 app's content universally
 searchable using App Search.
 
-[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
+[![An example of iOS 9 app content universally searchable using App Search](images/intro01.png)](images/intro01.png#lightbox)
 
 App Search is composed of three separate APIs:
 
 1. [**NSUserActivity**](nsuseractivity.md) - This is an extension of the Handoff API that Apple
-	released in iOS 8. It is used to make app interaction history searchable
-	both publicly and privately) by the user.
+    released in iOS 8. It is used to make app interaction history searchable
+    both publicly and privately) by the user.
 
 2. [**Core Spotlight**](corespotlight.md) - Allows an app to index its content to be presented in
-	search results. It works like a database API where items can be added and
-	removed and it is the best way to index private content within an app.
+    search results. It works like a database API where items can be added and
+    removed and it is the best way to index private content within an app.
 
 3. [**WebMarkup**](web-markup.md) - For apps that provide access to their content via a web
-	interface (not only from within the app). Web content can be marked up with
-	special links that will be crawled by Apple and provide deep linking to your
-	app on the user's iOS 9 device.
+    interface (not only from within the app). Web content can be marked up with
+    special links that will be crawled by Apple and provide deep linking to your
+    app on the user's iOS 9 device.
 
 ## Selecting an App Search Approach
 
@@ -49,13 +49,13 @@ provided by your app and the type of content it presents.
 Use the following guidelines:
 
 - [**NSUserActivity**](nsuseractivity.md) – Use this framework to provide searchability for both
-	public and private content and also searchability of navigation points within your app.
+  public and private content and also searchability of navigation points within your app.
 
 - [**Core Spotlight**](corespotlight.md) – Use this framework to provide
-	searchability for private data stored on the device.
+  searchability for private data stored on the device.
 
 - [**Web Markup**](web-markup.md) – Use this framework to provide searchability for apps that present
-	their content not only from within the app, but from the app's website as well.
+  their content not only from within the app, but from the app's website as well.
 
 Each of the App Search approaches are distinct and can be used individually,
 however Apple designed them to work together. When using more than one approach
@@ -75,10 +75,10 @@ interact with your content, thus raising its ranking.
 Apple provides the following suggestions as to what content and actions to provide
 search indexes for in your app:
 
- - Any content viewed, created or curated by the user from within your app.
- - Navigation points and features within the app.
- - Things like new messages, content or other types of items displayed by your app that
-	have recently been downloaded to the device.
+- Any content viewed, created or curated by the user from within your app.
+- Navigation points and features within the app.
+- Things like new messages, content or other types of items displayed by your app that
+have recently been downloaded to the device.
 
 ## App Search Enhancements
 
@@ -114,11 +114,9 @@ Xamarin.iOS apps. It covered [NSUserActivity](nsuseractivity.md), [Core Spotligh
 and [Web Markup](web-markup.md) methods for indexing content. It finished with a short discussion
 of when a given search approach should be used and what types of content should be indexed.
 
-
-
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [App Search Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

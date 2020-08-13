@@ -4,15 +4,14 @@ description: "This article examines the constituent parts of a Xamarin.Android a
 ms.prod: xamarin
 ms.assetid: 8D70CDDD-3D3C-9949-8045-AB8F93D18E74
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
 ---
 
 # Application Package Size
 
 _This article examines the constituent parts of a Xamarin.Android application package and the associated strategies that can be used for efficient package deployment during debug and release stages of development._
-
 
 ## Overview
 
@@ -21,7 +20,6 @@ maintaining an efficient debug and release deploy process. In this article, we
 look at the Xamarin.Android release and debug deployment workflow and how the
 Xamarin.Android platform ensures that we build and release small application
 packages.
-
 
 ## Release Packages
 
@@ -61,7 +59,6 @@ size because ApiDemo uses more of the BCL than Hello, World does:
 As illustrated here, your application package size will generally be about
 2.9 MB larger than your application and its dependencies.
 
-
 ## Debug Packages
 
 Things are handled slightly differently for debug builds. When redeploying
@@ -97,18 +94,17 @@ modified since the last deployment.
 
 To enable *Fast Assembly Deployment*, do the following:
 
-1.  Right click on the Android Project in the Solution Explorer and select **Options**.
+1. Right click on the Android Project in the Solution Explorer and select **Options**.
 
-2.  From the Project Options dialog select **Android Build** :  
+2. From the Project Options dialog select **Android Build** :  
 
     ![Project Options Android Build](app-package-size-images/fastdev0.png)
 
-3.  Check the  **Use shared Mono runtime checkbox** and the  **Fast assembly deployment** checkboxes:  
+3. Check the  **Use shared Mono runtime checkbox** and the  **Fast assembly deployment** checkboxes:  
 
     ![Checkboxes selected under Packaging tab](app-package-size-images/fastdev.png)
 
-4.  Click the  **OK** button to save the changes and close the Project Options dialog.
-
+4. Click the  **OK** button to save the changes and close the Project Options dialog.
 
 The next time the application is built for debug, the assemblies will be installed directly on the device (if they haven't already been) and a
 smaller application package (that does not include the assemblies) will be installed on the device. This will shorten the time it takes to get changes
@@ -117,7 +113,6 @@ to the application up and running for testing.
 By enduring the long first deploy of the shared runtime and shared platform,
 every time we make a change to the application, we can deploy the new version
 quickly and painlessly, so we can have a fast change/deploy/run cycle.
-
 
 ## Summary
 

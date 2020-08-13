@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
 
@@ -19,56 +19,56 @@ Note that modifying the `.ipa` file is not necessary in normal use. This article
 
 For this example assume that the name of the Xamarin.iOS project is `iPhoneApp1` and the `generated session id` is `cc530d20d6b19da63f6f1c6f67a0a254`
 
-1.  Build the `.ipa` file as normal from Visual Studio.
+1. Build the `.ipa` file as normal from Visual Studio.
 
-2.  Switch over to the Mac build host.
+2. Switch over to the Mac build host.
 
-3.  Find the build in the `~/Library/Caches/Xamarin/mtbs/builds` folder. You can paste this path into **Finder > Go > Go to Folder** to browse the folder in Finder. Look for the folder that matches the project name. Within that folder, look for the folder that matches the `generated session id` of the build. This will most likely be the subfolder that has the most recent modification time.
+3. Find the build in the `~/Library/Caches/Xamarin/mtbs/builds` folder. You can paste this path into **Finder > Go > Go to Folder** to browse the folder in Finder. Look for the folder that matches the project name. Within that folder, look for the folder that matches the `generated session id` of the build. This will most likely be the subfolder that has the most recent modification time.
 
-4.  Open a new `Terminal.app` window.
+4. Open a new `Terminal.app` window.
 
-5.  Type `cd ` into the Terminal.app window, and then drag & drop the `generated session id` folder into the `Terminal.app` window:
+5. Type `cd` into the Terminal.app window, and then drag & drop the `generated session id` folder into the `Terminal.app` window:
 
-    ![](modify-ipa-images/session-id-folder.png "Locating the generated session id folder in Finder")
+    ![Locating the generated session id folder in Finder](modify-ipa-images/session-id-folder.png)
 
-6.  Type the return key to change directory into the `generated session id` folder.
+6. Type the return key to change directory into the `generated session id` folder.
 
-7.  Unzip the `.ipa` file into a temporary `old/` folder using the following command. Adjust the `Ad-Hoc` and `iPhoneApp1` names as needed for your particular project.
+7. Unzip the `.ipa` file into a temporary `old/` folder using the following command. Adjust the `Ad-Hoc` and `iPhoneApp1` names as needed for your particular project.
 
     > ditto -xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa old/
 
-8.  Keep the `Terminal.app` window open.
+8. Keep the `Terminal.app` window open.
 
-9.  Delete the desired files from the `.ipa`. You can either move them to the Trash using Finder, or delete them on the command line using `Terminal.app`. To view the contents of the `Payload/iPhone` file in Finder, Control-click the file and select **Show Package Contents**.
+9. Delete the desired files from the `.ipa`. You can either move them to the Trash using Finder, or delete them on the command line using `Terminal.app`. To view the contents of the `Payload/iPhone` file in Finder, Control-click the file and select **Show Package Contents**.
 
-10.  Using the same general approach as in step 3, find the log file under `~/Library/Logs/Xamarin/MonoTouchVS/` that has both the project name and the `generated session id` in the name:
-    ![](modify-ipa-images/build-log.png "Locate the project build log in Finder")
+10. Using the same general approach as in step 3, find the log file under `~/Library/Logs/Xamarin/MonoTouchVS/` that has both the project name and the `generated session id` in the name:
+    ![Locate the project build log in Finder](modify-ipa-images/build-log.png)
 
-11.  Open the build log from step 10, for example by double-clicking it.
+11. Open the build log from step 10, for example by double-clicking it.
 
-12.  Find the line that includes `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
+12. Find the line that includes `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Type `/usr/bin/codesign ` into the Terminal.app window from step 8.
+13. Type `/usr/bin/codesign` into the Terminal.app window from step 8.
 
-14.  Copy all of the arguments starting with `-v` from the line in step 12, and paste them into the Terminal.app window.
+14. Copy all of the arguments starting with `-v` from the line in step 12, and paste them into the Terminal.app window.
 
-15.  Change the last argument to be the `.app` bundle located within the `old/Payload/` folder, and then run the command.
+15. Change the last argument to be the `.app` bundle located within the `old/Payload/` folder, and then run the command.
 
-```bash
-/usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
-```
+    ```bash
+    /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
+    ```
 
-16.  Change into the `old/` directory in Terminal:
+16. Change into the `old/` directory in Terminal:
 
-```bash
-cd old
-```
+    ```bash
+    cd old
+    ```
 
-17.  Zip up the contents of the directory into a new `.ipa` file using the `zip` command. You can change the `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argument to output the `.ipa` file wherever you'd like:
+17. Zip up the contents of the directory into a new `.ipa` file using the `zip` command. You can change the `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argument to output the `.ipa` file wherever you'd like:
 
-```bash
-zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
-```
+    ```bash
+    zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
+    ```
 
 ## Common error messages
 

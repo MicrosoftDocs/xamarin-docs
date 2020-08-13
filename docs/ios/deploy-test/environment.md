@@ -4,8 +4,8 @@ description: "This document describes how to set up temporary and permanent envi
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -39,4 +39,3 @@ executable, and will be set even if the app is not launched from Visual Studio f
 # to pass multipe environment variables, use --setenv multiple times
 --setenv:MONO_TRACE=E:all --setenv:GC_DONT_GC=1
 ```
-

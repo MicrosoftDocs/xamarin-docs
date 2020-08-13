@@ -4,8 +4,8 @@ description: "This document provides troubleshooting tips related to code signin
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/23/2017
 ---
 
@@ -15,19 +15,19 @@ ms.date: 08/23/2017
 
 Code Signing & Provisioning with iOS can be quite awkward, and so it is important to make sure that the code signing certificates and provisioning profiles are in order.
 
-* Large teams should refrain from using the "Fix issue" button in Xcode, illustrated here:
+- Large teams should refrain from using the "Fix issue" button in Xcode, illustrated here:
 
-    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png#lightbox)
+    [![The Fix Issues dialog](troubleshooting-images/fixissue.png)](troubleshooting-images/fixissue.png#lightbox)
 
     This will create new provisioning profiles and certificates. At best this will create a provisioning profile every time a team member clicks it, causing disorganization with profiles. At worst, it will revoke certificates for everyone else in the company, causing their apps to stop working.
 
-* Keep Keychain Access organized and delete expired certificates and profiles. Enterprise certificates last for three years, while others last only a year. Certificates cannot be renewed, so it will be necessary to create new certificates just before the old ones expire. Make sure to revoke and delete old certificates, and re-sign apps with new certificates.
+- Keep Keychain Access organized and delete expired certificates and profiles. Enterprise certificates last for three years, while others last only a year. Certificates cannot be renewed, so it will be necessary to create new certificates just before the old ones expire. Make sure to revoke and delete old certificates, and re-sign apps with new certificates.
 
-* Remove the old provisioning profiles as the new ones are installed. This means that Visual Studio for Mac is not in a position where it has to decide which profile to use. To achieve this, first make sure to delete the profile in the Apple developer center, and then browse to *Preferences > Your Account > View Details...*. Select the provisioning profile and click **Show in Finder**. This will reveal the location of the profile in the Mac file system, where it can then be deleted using Finder.
+- Remove the old provisioning profiles as the new ones are installed. This means that Visual Studio for Mac is not in a position where it has to decide which profile to use. To achieve this, first make sure to delete the profile in the Apple developer center, and then browse to *Preferences > Your Account > View Details...*. Select the provisioning profile and click **Show in Finder**. This will reveal the location of the profile in the Mac file system, where it can then be deleted using Finder.
 
-* Ensure that all the required certificates and the corresponding private keys are available. For each team  will need a developer certificate (to install apps on a own device), and a distribution certificate (to install on other devices)
+- Ensure that all the required certificates and the corresponding private keys are available. For each team  will need a developer certificate (to install apps on a own device), and a distribution certificate (to install on other devices)
 
-* Relaunch Xcode and Visual Studio for Mac / Visual Studio when a new Provisioning Profile or Certificate is installed.
+- Relaunch Xcode and Visual Studio for Mac / Visual Studio when a new Provisioning Profile or Certificate is installed.
 
 ## TestFlight
 
@@ -47,7 +47,7 @@ Sometimes, testing doesn’t go quite as smoothly as planned.  The following ste
 
 - Users that belong to or own a another iTunes Connect account cannot be internal testers. They only can be added as external testers.
 
-- Internal and External users are added, selected, and invited separately. Each list must be seperately managed.
+- Internal and External users are added, selected, and invited separately. Each list must be separately managed.
 
 - Apple must approve each build that will be distributed to external testers. If the version of a build changes, a new beta review by Apple is required. If the build number changes, then the review is optional.
 
@@ -55,7 +55,7 @@ Sometimes, testing doesn’t go quite as smoothly as planned.  The following ste
 
 - Only two builds can be submitted for review each day. Since changing the version forces a review, this means that version numbers can only be changed twice per day.
 
-<a name="Automatically_copy_app_bundles_back_to_Windows" />
+<a name="Automatically_copy_app_bundles_back_to_Windows"></a>
 
 ## Automatically copy .app bundles back to Windows
 

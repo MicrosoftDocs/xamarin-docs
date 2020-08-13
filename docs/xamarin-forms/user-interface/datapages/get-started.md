@@ -7,33 +7,32 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Getting Started with DataPages
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
-
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
 To get started building a simple data-driven page using the DataPages Preview,
 follow the steps below. This demo uses a hardcoded style ("Events") in
 the Preview builds that only works with the specific JSON format
 in the code.
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "DataPages Sample Application")
 
 ## 1. Add NuGet Packages
 
-Add these Nuget packages to your Xamarin.Forms .NET Standard library and application projects:
+Add these NuGet packages to your Xamarin.Forms .NET Standard library and application projects:
 
-* Xamarin.Forms.Pages
-* Xamarin.Forms.Theme.Base
-* A theme implementation Nuget (eg. Xamarin.Forms.Themes.Light)
+- Xamarin.Forms.Pages
+- Xamarin.Forms.Theme.Base
+- A theme implementation NuGet (eg. Xamarin.Forms.Theme.Light)
 
 ## 2. Add Theme Reference
 
@@ -51,10 +50,10 @@ and ensure the theme is merged into the application's resource dictionary:
 </Application>
 ```
 
-**IMPORTANT:** You should also follow the steps to [load theme assemblies (below)](#loadtheme)
-by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
-be improved in a future preview release.
-
+> [!IMPORTANT]
+> You should also follow the steps to [load theme assemblies (below)](#troubleshooting)
+> by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
+> be improved in a future preview release.
 
 ## 3. Add a XAML Page
 
@@ -106,10 +105,11 @@ Delete the `Content` element and replace it with a `p:ListDataPage.DataSource`
 to populate the page with data. In the example below a remote Json data
 file is being loaded from a URL.
 
-**Note:** the preview *requires* a `StyleClass` attribute to
-provide rendering hints for the data source. The `StyleClass="Events"`
-refers to a layout that is predefined in the preview and contains styles
-*hardcoded* to match the JSON data source being used.
+> [!NOTE]
+> The preview *requires* a `StyleClass` attribute to
+> provide rendering hints for the data source. The `StyleClass="Events"`
+> refers to a layout that is predefined in the preview and contains styles
+> *hardcoded* to match the JSON data source being used.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -128,8 +128,7 @@ refers to a layout that is predefined in the preview and contains styles
 
 **JSON data**
 
-An example of the JSON data from the [demo source](http://demo3143189.mockable.io/sessions)
-is shown below:
+An example of the JSON data from the demo source is shown below:
 
 ```json
 [{
@@ -149,9 +148,9 @@ is shown below:
 
 The above steps should result in a working data page:
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "DataPages Sample Application")
 
-This works because the pre-built style **"Events"** exists in the Light Theme Nuget package
+This works because the pre-built style **"Events"** exists in the Light Theme NuGet package
 and has styles defined that match the data source (eg. "title", "image", "presenter").
 
 The "Events" `StyleClass` is built to display the `ListDataPage` control
@@ -166,7 +165,7 @@ The inherited style can be overridden by specifying a
 template and using data source bindings. The XAML below declares
 a custom template for each row using the new `ListItemControl`
 and `{p:DataSourceBinding}`
-syntax which is included in the **Xamarin.Forms.Pages** Nuget:
+syntax which is included in the **Xamarin.Forms.Pages** NuGet:
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>
@@ -188,7 +187,7 @@ syntax which is included in the **Xamarin.Forms.Pages** Nuget:
 By providing a `DataTemplate` this code overrides the `StyleClass`
 and instead uses the default layout for a `ListItemControl`.
 
-[![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application](get-started-images/custom-sml.png)](get-started-images/custom.png#lightbox "DataPages Sample Application")
 
 Developers that prefer C# to XAML can create data source bindings too
 (remember to include a `using Xamarin.Forms.Pages;` statement):
@@ -197,15 +196,9 @@ Developers that prefer C# to XAML can create data source bindings too
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
-It's a little more work to create themes from scratch
-(see the [Themes guide](~/xamarin-forms/user-interface/themes/index.md))
-but future preview releases will make this easier to do.
-
+It's a little more work to create themes from scratch but future preview releases will make this easier to do.
 
 ## Troubleshooting
-
-<a name="loadtheme" />
 
 ## Could not load file or assembly 'Xamarin.Forms.Theme.Light' or one of its dependencies
 
@@ -231,8 +224,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## Related Links
 

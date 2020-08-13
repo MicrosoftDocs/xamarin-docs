@@ -3,8 +3,8 @@ title: "Xamarin Inspector"
 description: "This document links to guides that describe how to install and use the Xamarin Inspector to explore and debug applications."
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
 ---
 
@@ -18,7 +18,7 @@ Live app inspection is available for enterprise customers. Let us know if
 you [run into any bugs](~/tools/inspector/install.md#reporting-bugs). We have a
 [forum](https://forums.xamarin.com/categories/inspector) too!
 
-[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Live app inspection is available for enterprise customers")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
+[![Live app inspection is available for enterprise customers](images/interactive-1.0.0-bike-inspect-3d-small.png)](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## [Installation and Requirements](~/tools/inspector/install.md)
 
@@ -29,5 +29,3 @@ Windows computer.
 
 Discusses how to use the Inspector to attach to a app while it is being run from
 the IDE, allowing its state to be explored and manipulated without pausing.
-
-

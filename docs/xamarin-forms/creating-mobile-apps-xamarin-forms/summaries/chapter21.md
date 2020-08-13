@@ -7,6 +7,7 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 21. Transforms
@@ -34,7 +35,7 @@ Transforms are supported with eight properties of type `double` defined by the `
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-All these properties are backed by bindable properties. They can be targets of data binding and styled. [**Chapter 22. Animation**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstrates how these properties can be animated, but some samples in this chapter show how you can animate them using the Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#Device_StartTimer).
+All these properties are backed by bindable properties. They can be targets of data binding and styled. [**Chapter 22. Animation**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstrates how these properties can be animated, but some samples in this chapter show how you can animate them using the Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer).
 
 Transform properties affect only how the element is rendered, and do *not* affect how the element is perceived in layout.
 
@@ -121,8 +122,6 @@ The `AnchorX` property affects `RotationY` but not `RotationX`. The `AnchorY` pr
 The 3D coordinate system implied by Xamarin.Forms is left-handed. If you point the forefinger of your left hand in the direction of increasing X coordinates (to the right) and your middle finger in the direction of increasing Y coordinates (down), then your thumb points in the direction of increasing Z coordinates (out of the screen).
 
 Also, for any of the three axis, if you point your left-hand thumb in the direction of increasing values, then the curve of your fingers indicates the direction of rotation for positive rotating angles.
-
-
 
 ## Related links
 

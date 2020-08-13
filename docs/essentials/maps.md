@@ -4,8 +4,9 @@ description: "The Map class in Xamarin.Essentials enables an application to open
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 05/26/2020
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Map
@@ -34,7 +35,14 @@ public class MapTest
         var location = new Location(47.645160, -122.1306032);
         var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Map.OpenAsync(location, options);
+        try
+        {
+            await Map.OpenAsync(location, options);
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open
+        }
     }
 }
 ```
@@ -60,7 +68,14 @@ public class MapTest
             };
         var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Map.OpenAsync(placemark, options);
+        try
+        {
+            await Map.OpenAsync(placemark, options);
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open or placemark can not be located
+        }
     }
 }
 ```
@@ -74,7 +89,14 @@ public class MapTest
 {
     public async Task OpenPlacemarkOnMap(Placemark placemark)
     {
-        await placemark.OpenMapAsync();
+        try
+        {
+            await placemark.OpenMapAsync();
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open
+        }
     }
 }
 ```
@@ -130,7 +152,7 @@ No platform-specific implementation details.
 
 ## API
 
-- [Map source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Map)
+- [Map source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Map)
 - [Map API documentation](xref:Xamarin.Essentials.Map)
 
 ## Related Video

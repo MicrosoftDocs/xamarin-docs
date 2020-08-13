@@ -3,8 +3,8 @@ title: "Why doesn't Visual Studio include my referenced library project in my bu
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: b9009db8-e716-43aa-b40e-6f28a8eb1b82
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
 ---
 
@@ -23,4 +23,4 @@ Some templates that are generated with a referenced library project will already
 > [!NOTE]
 > Greyed out boxes are handled automatically, and shouldn't need any changes.
 
-Screencast of these steps: [http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)
+Screencast of these steps: [https://screencast.com/t/zLoQOpEn](https://screencast.com/t/zLoQOpEn)

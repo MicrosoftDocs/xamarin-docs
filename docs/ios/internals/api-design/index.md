@@ -1,29 +1,29 @@
 ---
 title: "Xamarin.iOS API Design"
-description: "This document describes some of the guiding principles that used to architect the Xamarin.iOS APIs and how these relate to Objective-C."
+description: "Guiding principles that were used to architect the Xamarin.iOS APIs and how these relate to Objective-C."
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
 # Xamarin.iOS API Design
 
 In addition to the core Base Class Libraries that are part of Mono,
-[Xamarin.iOS](http://www.xamarin.com/iOS) ships with bindings for
+[Xamarin.iOS](~/ios/index.yml) ships with bindings for
 various iOS APIs to allow developers to create native iOS
 applications with Mono.
 
 At the core of Xamarin.iOS, there is an interop engine that bridges
 the C# world with the Objective-C world, as well as bindings for the
-iOS C-based APIs like CoreGraphics and [OpenGL ES](#OpenGLES).
+iOS C-based APIs like CoreGraphics and [OpenGL ES](#opengles).
 
-The low-level runtime to communicate with Objective-C code is in 
-[MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). On top of this,
-bindings for [Foundation](#MonoTouch.Foundation), CoreFoundation, and
-[UIKit](#MonoTouch.UIKit) are provided.
+The low-level runtime to communicate with Objective-C code is in
+[MonoTouch.ObjCRuntime](#objcruntime). On top of this,
+bindings for [Foundation](#foundation), CoreFoundation, and
+[UIKit](#uikit) are provided.
 
 ## Design Principles
 
@@ -53,19 +53,20 @@ macOS):
 - Encourage in-IDE exploration of the APIs:
 
   - For example, instead of exposing a weakly-typed array like this:
-    
+
     ```objc
     NSArray *getViews
     ```
+
     Expose a strong type, like this:
-	
+
     ```csharp
     NSView [] Views { get; set; }
     ```
-	
+
     This gives Visual Studio for Mac the ability to do auto-completion while
-    browsing the API, makes all of the `System.Array` operations available 
-    on the returned value, and allows the return value to participate in 
+    browsing the API, makes all of the `System.Array` operations available
+    on the returned value, and allows the return value to participate in
     LINQ.
 
 - Native C# types:
@@ -73,18 +74,18 @@ macOS):
   - [`NSString` becomes `string`](~/ios/internals/api-design/nsstring.md)
   - Turn `int` and `uint` parameters that should have been enums into C#
     enumerations and C# enumerations with `[Flags]` attributes
-  - Instead of type-neutral `NSArray` objects, expose arrays as 
+  - Instead of type-neutral `NSArray` objects, expose arrays as
     strongly-typed arrays.
   - For events and notifications, give users a choice between:
 
-	- A strongly-typed version by default
-	- A weakly-typed version for advanced use cases
+    - A strongly-typed version by default
+    - A weakly-typed version for advanced use cases
 
 - Support the Objective-C delegate pattern:
 
-	- C# event system
-	- Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
-      to Objective-C APIs as blocks
+  - C# event system
+  - Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`)
+    to Objective-C APIs as blocks
 
 ### Assemblies
 
@@ -93,17 +94,13 @@ Xamarin.iOS includes a number of assemblies that constitute the
 [Assemblies](~/cross-platform/internals/available-assemblies.md) page has more
 information.
 
-### Major Namespaces 
-
-<a name="MonoTouch.ObjCRuntime" />
+### Major Namespaces
 
 #### ObjCRuntime
 
 The [ObjCRuntime](xref:ObjCRuntime)
 namespace allows developers to bridge the worlds between C# and Objective-C.
 This is a new binding, designed specifically for the iOS, based on the experience from Cocoa# and Gtk#.
-
-<a name="MonoTouch.Foundation" />
 
 #### Foundation
 
@@ -114,22 +111,19 @@ for object oriented programming in Objective-C.
 
 Xamarin.iOS mirrors in C# the hierarchy of classes from
 Objective-C. For example, the Objective-C base class
-[NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)
-is usable from C# via
-[Foundation.NSObject](xref:Foundation.NSObject).
+NSObject is usable from C# via [Foundation.NSObject](xref:Foundation.NSObject).
 
 Although this namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
 underlying types to .NET types. For example:
 
-- Instead of dealing with  [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
+- Instead of dealing with NSString and [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
 
 - Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
 For more details on binding APIs, see the [Xamarin.iOS Binding
 Generator](~/cross-platform/macios/binding/binding-types-reference.md)
 section.
-
 
 ##### NSObject
 
@@ -159,8 +153,7 @@ The parameter to Dispose is "bool disposing", and if set to true it
 means that your Dispose method is being called because the user
 explicitly called Dispose () on the object. If the value is false,
 this means that your Dispose(bool disposing) method is being called
-from the finalizer on the finalizer thread. []()
-
+from the finalizer on the finalizer thread.
 
 ##### Categories
 
@@ -171,26 +164,32 @@ This is done using the `Category` attribute, specifying the type to
 extend as an argument to the attribute. The following example will for
 instance extend NSString.
 
-    [Category (typeof (NSString))]
+```csharp
+[Category (typeof (NSString))]
+```
 
 Each category method is using the normal mechanism for exporting
 methods to Objective-C using the `Export` attribute:
 
-    [Export ("today")]
-    public static string Today ()
-    {
-        return "Today";
-    }
+```csharp
+[Export ("today")]
+public static string Today ()
+{
+    return "Today";
+}
+```
 
 All managed extension methods must be static, but it’s possible to
 create Objective-C instance methods using the standard syntax for
 extension methods in C#:
 
-    [Export ("toUpper")]
-    public static string ToUpper (this NSString self)
-    {
-        return self.ToString ().ToUpper ();
-    }
+```csharp
+[Export ("toUpper")]
+public static string ToUpper (this NSString self)
+{
+    return self.ToString ().ToUpper ();
+}
+```
 
 and the first argument to the extension method will be the instance on
 which the method was invoked.
@@ -216,7 +215,7 @@ class, which can be invoked from Objective-C.
 [Category (typeof (UIViewController))]
 public static class MyViewControllerCategory
 {
-    [Export ("shouldAudoRotate")]
+    [Export ("shouldAutoRotate")]
     static bool GlobalRotate ()
     {
         return true;
@@ -239,7 +238,6 @@ class Rotation_IOS6 {
 }
 ```
 
-
 ##### PreserveAttribute
 
 PreserveAttribute is a custom attribute that is used to tell mtouch – the Xamarin.iOS deployment tool – to preserve a type, or a member of a type, during the phase when the application is processed to reduce its size.
@@ -254,8 +252,6 @@ You can apply this attribute on every member of a type, or on the type
 itself. If you want to preserve the whole type, you can use the syntax [Preserve
 (AllMembers = true)] on the type.
 
-<a name="MonoTouch.UIKit" />
-
 #### UIKit
 
 The [UIKit](xref:UIKit)
@@ -263,26 +259,20 @@ namespace contains a one-to-one mapping to all of the UI components that make up
 CocoaTouch in the form of C# classes. The API has been modified to follow the
 conventions used in the C# language.
 
-C# delegates are provided for common operations. See the [delegates](#Delegates) section for more information.
-
-<a name="OpenGLES" />
+C# delegates are provided for common operations. See the [delegates](#delegates) section for more information.
 
 #### OpenGLES
 
 For OpenGLES, we distribute a [modified version](xref:OpenTK)
-of the [OpenTK](http://www.opentk.com/) API, an object-oriented
+of the [OpenTK](https://opentk.net/) API, an object-oriented
 binding to OpenGL that has been modified to use CoreGraphics data types and
 structures, as well as only exposing the functionality that is available on iOS.
 
-OpenGLES 1.1 functionality is available through the ES11.GL type, documented [here](xref:OpenTK.Graphics.ES11.GL)
-type.
+OpenGLES 1.1 functionality is available through the [ES11.GL type](xref:OpenTK.Graphics.ES11.GL).
 
-OpenGLES 2.0 functionality is available through the ES20.GL type, documented [here](xref:OpenTK.Graphics.ES20.GL)
-type.
+OpenGLES 2.0 functionality is available through the [ES20.GL type](xref:OpenTK.Graphics.ES20.GL).
 
-OpenGLES 3.0 functionality is available through the ES30.GL type, documented [here](xref:OpenTK.Graphics.ES30.GL)
-type.
-
+OpenGLES 3.0 functionality is available through the [ES30.GL type](xref:OpenTK.Graphics.ES30.GL).
 
 ### Binding Design
 
@@ -295,8 +285,6 @@ Just as P/Invoke is a useful tool to invoke native libraries on Windows and Linu
 The discussion in the next few sections is not necessary for users that are
 creating Xamarin.iOS applications, but will help developers understand how things
 are done and will assist them when creating more complicated applications.
-
-
 
 #### Types
 
@@ -325,14 +313,11 @@ Additionally, in the **Classic API** instead of exposing `CGRect`, `CGPoint` and
 CoreGraphics API, we replaced those with the `System.Drawing` implementations
 `RectangleF`, `PointF` and `SizeF` as they would help developers preserve existing OpenGL code that uses OpenTK. When using the new 64-bit **Unified API**, the CoreGraphics API should be used.
 
-<a name="Inheritance" />
-
 #### Inheritance
 
 The Xamarin.iOS API design allows developers to extend native Objective-C types in the same way that they would extend a C# type, using the "override" keyword on a derived class, as well as chaining up to the base implementation using the "base" C# keyword.
 
 This design allows developers to avoid dealing with Objective-C selectors as part of their development process, because the entire Objective-C system is already wrapped inside the Xamarin.iOS libraries.
-
 
 #### Types and Interface Builder
 
@@ -348,9 +333,6 @@ public partial class void MyView : UIView {
 }
 ```
 
-<a name="Delegates" />
-
-
 #### Delegates
 
 Objective-C and C# have different meanings for the word delegate in each
@@ -363,10 +345,9 @@ difference being that the methods are not always mandatory.
 
 These delegates play an important role in UIKit and other CocoaTouch APIs. They are used to accomplish various tasks:
 
--  To provide notifications to your code (Similar to event delivery in C# or Gtk+).
--  To implement models for data visualization controls.
--  To drive the behavior of a control.
-
+- To provide notifications to your code (Similar to event delivery in C# or Gtk+).
+- To implement models for data visualization controls.
+- To drive the behavior of a control.
 
 The programming pattern was designed to minimize the creation of derived
 classes to alter behavior for a control. This solution is similar in spirit to
@@ -381,16 +362,11 @@ In Objective-C classes, you will see that classes that use this programming patt
 In Xamarin.iOS three mutually exclusive mechanisms to bind to these
 delegates are offered:
 
-1.  [Via events](#Via_Events).
-2.  [Strongly typed via a `Delegate` property](#StrongDelegate)
-3.  [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
+1. [Via events](#via-events).
+2. [Strongly typed via a `Delegate` property](#strongly-typed-via-a-delegate-property)
+3. [Loosely typed via a `WeakDelegate` property](#loosely-typed-via-the-weakdelegate-property)
 
-For example, consider the [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
-class. This dispatches to a [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
-instance, which is assigned to the [delegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)
-property.
-
-<a name="Via_Events" />
+For example, consider the UIWebView class. This dispatches to a UIWebViewDelegate instance, which is assigned to the delegate property.
 
 ##### Via Events
 
@@ -398,9 +374,9 @@ For many types, Xamarin.iOS will automatically create an appropriate delegate
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
--  The  [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
--  The  [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
--  The  [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
+- The webViewDidStartLoad method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
+- The webViewDidFinishLoad method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
+- The webView:didFailLoadWithError method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
 
 For example, this simple program records the start and end times when loading a web view:
 
@@ -410,7 +386,6 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.LoadStarted += (o, e) => startTime = DateTime.Now;
 web.LoadFinished += (o, e) => endTime = DateTime.Now;
 ```
-
 
 ##### Via Properties
 
@@ -437,8 +412,6 @@ delegate that returns a bool value and determines whether the TextField should
 do something with the Return button being pressed. In our method, we return *true*
 to the caller, but we also remove the keyboard from the screen (this happens
 when the textfield calls `ResignFirstResponder`).
-
-<a name="StrongDelegate"/>
 
 ##### Strongly Typed via a Delegate Property
 
@@ -485,8 +458,6 @@ load a page or not.
 The pattern is also used to provide the data on demand for a few controls. For example, the [UITableView](xref:UIKit.UITableView)
 control is a powerful table-rendering control – and both the look and the contents are driven by an instance of a [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
-<a name="WeakDelegate"/>
-
 ### Loosely Typed via the WeakDelegate Property
 
 In addition to the strongly typed property, there is also a weak typed
@@ -526,12 +497,11 @@ Note that once the `WeakDelegate` property has been assigned, the `Delegate` pro
 the method in an inherited base class that you wish to [Export], you must make it
 a public method.
 
-
-## Mapping of the Objective-C delegate pattern to C&#35;
+## Mapping of the Objective-C delegate pattern to C\#
 
 When you see Objective-C samples that look like this:
 
-```csharp
+```objc
 foo.delegate = [[SomethingDelegate] alloc] init]
 ```
 
@@ -548,8 +518,7 @@ Objective-C delegate classes. To use them, you will be subclassing and
 overriding the methods defined by Xamarin.iOS's implementation. For more
 information on how they work, see the section "Models" below.
 
-
-##### Mapping Delegates to C&#35;
+### Mapping Delegates to C\#
 
 UIKit in general uses Objective-C delegates in two forms.
 
@@ -602,7 +571,6 @@ web.LoadStarted += () => { startTime = DateTime.Now; }
 web.LoadFinished += () => { endTime = DateTime.Now; }
 ```
 
-
 #### Responding to Events
 
 In Objective-C code, sometimes event handlers for multiple controls
@@ -648,8 +616,6 @@ the strings passed to the [Export] attribute.
 When using this style of programming, ensure that the C# parameters
 match the actual types that the runtime engine will pass.
 
-<a name="Models" />
-
 #### Models
 
 In UIKit storage facilities, or in responders that are implemented
@@ -663,13 +629,12 @@ the protocol to work.
 There are two ways of implementing a model. You can either implement
 it manually or use the existing strongly typed definitions.
 
-
 The manual mechanism is necessary when you try to implement a class
 that has not been bound by Xamarin.iOS. It is very easy to do:
 
--  Flag your class for registration with the runtime
--  Apply the [Export] attribute with the actual selector name on each method you want to override
--  Instantiate the class, and pass it.
+- Flag your class for registration with the runtime
+- Apply the [Export] attribute with the actual selector name on each method you want to override
+- Instantiate the class, and pass it.
 
 For example, the following implement only one of the optional methods
 in the UIApplicationDelegate protocol definition:
@@ -727,13 +692,12 @@ public class AppController : UIApplicationDelegate {
 The advantages are that there is no need to dig into the Objective-C header
 files to find the selector, the types of the arguments, or the mapping to C#, and that you get intellisense from Visual Studio for Mac, along with strong types
 
-
-#### XIB Outlets and C&#35;
+#### XIB Outlets and C\#
 
 > [!IMPORTANT]
 > This section explains the IDE integration with outlets when using XIB files. When using the Xamarin Designer for iOS, this is all replaced by entering a name under **Identity > Name** in the Properties section of your IDE, as shown below:
 >
-> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
+> [![Entering an item Name in the iOS Designer](images/designeroutlet.png)](images/designeroutlet.png#lightbox)
 >
 >For more information on the iOS Designer, please review the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md#how-it-works) document.
 
@@ -750,12 +714,11 @@ necessary to bind some of the controls to your managed code.
 
 This is done in a few steps:
 
-1.  Add the **outlet declaration** to your **File's owner**.
-1.  Connect your control to the **File's owner**.
-1.  Store the UI plus the connections into your XIB/NIB file.
-1.  Load the NIB file at runtime.
-1.  Access the outlet variable.
-
+1. Add the **outlet declaration** to your **File's owner**.
+1. Connect your control to the **File's owner**.
+1. Store the UI plus the connections into your XIB/NIB file.
+1. Load the NIB file at runtime.
+1. Access the outlet variable.
 
 The steps (1) through (3) are covered in Apple's documentation for building
 interfaces with Interface Builder.
@@ -875,9 +838,7 @@ public Foo (NSCoder coder)
 ```
 
 This constructor is provided for the cases where the object is being
-initialized from an NSCoding instance. For more information, see
-Apple's [Archives and Serialization Programming
-Guide.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+initialized from an NSCoding instance.
 
 #### Exceptions
 

@@ -1,22 +1,21 @@
 ---
-title: "Switch"
+title: "Xamarin.Android Switch"
 description: "How to use the Switch widget in a Xamarin.Android application"
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/29/2018
 ---
 
-# Switch
+# Xamarin.Android Switch
 
 The `Switch` widget (shown below) allows a user
 to toggle between two states, such as ON or OFF. The `Switch` default
 value is OFF. The widget is shown below in both its ON and OFF states:
 
 [![Screenshots of a Switch widget in OFF and ON states](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
-
 
 ## Creating a Switch
 
@@ -32,7 +31,6 @@ This creates a basic switch as shown below:
 
 [![Screenshot of demo app displaying a Switch in the OFF state](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
-
 ## Changing Default Values
 
 Both the text that the control displays for the ON and OFF states and
@@ -47,8 +45,6 @@ default to ON and read NO/YES instead of OFF/ON, we can set the
         android:textOn="YES"
         android:textOff="NO" />
 ```
-
-
 
 ## Providing a Title
 
@@ -84,8 +80,7 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
 };
 ```
 
-
 ## Related Links
 
-- [SwitchDemo (sample)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
+- [SwitchDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/switchdemo)
 - [Tab Layout Tutorial](~/android/user-interface/layouts/tab-layout/index.md)

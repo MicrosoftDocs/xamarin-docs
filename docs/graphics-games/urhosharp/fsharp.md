@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/29/2017
 ---
 
-# Programming UrhoSharp with F#
+# Programming UrhoSharp with F\#
 
 UrhoSharp can be programmed with F# using the same libraries and concepts used by C# programmers. The [Using UrhoSharp](~/graphics-games/urhosharp/using.md) article gives an overview of the UrhoSharp engine and should be read prior to this article.
 
@@ -33,7 +33,7 @@ You are now ready to begin defining your game's classes. At a minimum, you will 
 
 Your project structure should now look like:
 
-![](fsharp-images/solutionpane.png "The project structure should now look like")
+![The project structure should now look like](fsharp-images/solutionpane.png)
 
 Define your newly-created class as a subtype of `Urho.Application` and override its `Start` method:
 
@@ -92,20 +92,13 @@ type AppDelegate () =
         true
 ```
 
-The `ApplicationOptions.Default` provides the default options for a landscape-mode application. Pass these `ApplicationOptions` to the default constructor for your `Application` subclass (note that when you defined the `HelloWorld` class, the line `inherit Application(o)` calls the base-class constructor). 
+The `ApplicationOptions.Default` provides the default options for a landscape-mode application. Pass these `ApplicationOptions` to the default constructor for your `Application` subclass (note that when you defined the `HelloWorld` class, the line `inherit Application(o)` calls the base-class constructor).
 
-The `Run` method of your `Application` initiates the program. It is defined as returning an `int`, which can be piped to `ignore`. 
+The `Run` method of your `Application` initiates the program. It is defined as returning an `int`, which can be piped to `ignore`.
 
-The resulting program should look like:
+The resulting program should look like this screenshot:
 
-![](fsharp-images/helloworldfsharp.png "The resulting program should look like")
-
-
-
-
-
-
-
+![Screenshot of the resulting program](fsharp-images/helloworldfsharp.png)
 
 ## Related Links
 

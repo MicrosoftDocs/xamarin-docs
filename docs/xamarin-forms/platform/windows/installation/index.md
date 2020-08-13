@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Setup Windows Projects
@@ -30,11 +31,11 @@ Windows 10 phones, tablets, and desktops:
  1 . Right-click on the solution and select **Add > New Project...**
   and add a **Blank App (Universal Windows)** project:
 
-  ![](universal-images/add-wu.png "Add New Project Dialog")
+  ![Add New Project Dialog](universal-images/add-wu.png)
 
  2 . In the **New Universal Windows Platform Project** dialog, select the minimum and target versions of Windows 10 that the app will run on:
 
-  ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
+  ![New Universal Windows Platform Project Dialog](universal-images/target-version.png)
 
  3 . Right-click on the UWP project and select **Manage NuGet Packages...** and
   add the **Xamarin.Forms** package. Ensure the other projects in the solution
@@ -44,12 +45,12 @@ Windows 10 phones, tablets, and desktops:
  (this probably won't have happened by default). Tick the **Build** and **Deploy**
  boxes for the Universal project:
 
-  [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
+  [![Configuration Manager Window](universal-images/configuration-sml.png)](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
  5 . Right-click on the project and select **Add > Reference** and create a
   reference to the Xamarin.Forms application project (.NET Standard or Shared Project).
 
-  ![](universal-images/addref-sml.png "Reference Manager Dialog")
+  ![Reference Manager Dialog](universal-images/addref-sml.png)
 
  6 . In the UWP project, edit **App.xaml.cs** to include the `Init` method call
     inside the `OnLaunched` method around line 52:
@@ -97,6 +98,9 @@ this.InitializeComponent();
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
 
+> [!NOTE]
+> The argument to the `LoadApplication` method is the `Xamarin.Forms.Application` instance defined in your .NET standard project.
+
 <!--
 11 . Double-click **Package.appxmanifest** to set these capabilities
   that are often required:
@@ -110,8 +114,6 @@ LoadApplication(new YOUR_NAMESPACE.App());
 12 . Add any local resources (eg. image files) from the existing platform projects that are required.
 
 ## Troubleshooting
-
-<a name="target-invocation-exception" />
 
 ### "Target Invocation Exception" when using "Compile with .NET Native tool chain"
 

@@ -4,8 +4,8 @@ description: "The Social Framework provides a unified API for interacting with s
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -18,9 +18,6 @@ networks from a single API without having to manage authentication. It includes
 a system provided view controller for composing posts as well as an abstraction
 that allows consuming each social network’s API over HTTP.
 
-> [!IMPORTANT]
-> For a cross-platform API to connect to various social networks, see the [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) component in the Xamarin Component Store.
-
 ## Connecting to Twitter
 
 ### Twitter Account Settings
@@ -28,7 +25,7 @@ that allows consuming each social network’s API over HTTP.
 To connect to Twitter using the Social Framework, an account needs to be
 configured in the device settings as shown below:
 
- [![](social-framework-images/twitter01.png "Twitter Account Settings")](social-framework-images/twitter01.png#lightbox)
+ [![Twitter Account Settings](social-framework-images/twitter01.png)](social-framework-images/twitter01.png#lightbox)
 
 Once an account has been entered and verified with Twitter, any application
 on the device that uses the Social Framework classes to access Twitter will use
@@ -40,7 +37,7 @@ The Social Framework includes a controller called `SLComposeViewController` that
 editing and sending a tweet. The following screenshot shows an example of this
 view:
 
- [![](social-framework-images/twitter02.png "This screenshot shows an example of the SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
+ [![This screenshot shows an example of the SLComposeViewController](social-framework-images/twitter02.png)](social-framework-images/twitter02.png#lightbox)
 
 To use an `SLComposeViewController` with Twitter, an instance of
 the controller must be created by calling the `FromService` method
@@ -63,10 +60,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
  `SLComposeViewController` never sends a tweet directly without
 user interaction. However, it can be initialized with the following methods:
 
--   `SetInitialText` – Adds the initial text to show in the tweet. 
--  `AddUrl` – Adds a Url to the tweet.
--  `AddImage` – Adds an image to the tweet.
-
+- `SetInitialText` – Adds the initial text to show in the tweet.
+- `AddUrl` – Adds a Url to the tweet.
+- `AddImage` – Adds an image to the tweet.
 
 Once initialized, calling `PresentVIewController` displays the
 view created by the `SLComposeViewController`. The user can then
@@ -95,57 +91,57 @@ using UIKit;
 
 namespace SocialFrameworkDemo
 {
-	public partial class ViewController : UIViewController
-	{
-		#region Private Variables
-		private SLComposeViewController _twitterComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
-		#endregion
+    public partial class ViewController : UIViewController
+    {
+        #region Private Variables
+        private SLComposeViewController _twitterComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
+        #endregion
 
-		#region Computed Properties
-		public bool isTwitterAvailable {
-			get { return SLComposeViewController.IsAvailable (SLServiceKind.Twitter); }
-		}
+        #region Computed Properties
+        public bool isTwitterAvailable {
+            get { return SLComposeViewController.IsAvailable (SLServiceKind.Twitter); }
+        }
 
-		public SLComposeViewController TwitterComposer {
-			get { return _twitterComposer; }
-		}
-		#endregion
+        public SLComposeViewController TwitterComposer {
+            get { return _twitterComposer; }
+        }
+        #endregion
 
-		#region Constructors
-		protected ViewController (IntPtr handle) : base (handle)
-		{
-			
-		}
-		#endregion
+        #region Constructors
+        protected ViewController (IntPtr handle) : base (handle)
+        {
 
-		#region Override Methods
-		public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
+        }
+        #endregion
 
-			// Update UI based on state
-			SendTweet.Enabled = isTwitterAvailable;
-		}
-		#endregion
+        #region Override Methods
+        public override void ViewWillAppear (bool animated)
+        {
+            base.ViewWillAppear (animated);
 
-		#region Actions
-		partial void SendTweet_TouchUpInside (UIButton sender)
-		{
-			// Set initial message
-			TwitterComposer.SetInitialText ("Hello Twitter!");
-			TwitterComposer.AddImage (UIImage.FromFile ("Icon.png"));
-			TwitterComposer.CompletionHandler += (result) => {
-				InvokeOnMainThread (() => {
-					DismissViewController (true, null);
-					Console.WriteLine ("Results: {0}", result);
-				});
-			};
+            // Update UI based on state
+            SendTweet.Enabled = isTwitterAvailable;
+        }
+        #endregion
 
-			// Display controller
-			PresentViewController (TwitterComposer, true, null);
-		}
-		#endregion
-	}
+        #region Actions
+        partial void SendTweet_TouchUpInside (UIButton sender)
+        {
+            // Set initial message
+            TwitterComposer.SetInitialText ("Hello Twitter!");
+            TwitterComposer.AddImage (UIImage.FromFile ("Icon.png"));
+            TwitterComposer.CompletionHandler += (result) => {
+                InvokeOnMainThread (() => {
+                    DismissViewController (true, null);
+                    Console.WriteLine ("Results: {0}", result);
+                });
+            };
+
+            // Display controller
+            PresentViewController (TwitterComposer, true, null);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -167,70 +163,70 @@ private ACAccount _twitterAccount;
 
 #region Computed Properties
 public ACAccount TwitterAccount {
-	get { return _twitterAccount; }
+    get { return _twitterAccount; }
 }
 #endregion
 
 #region Override Methods
 public override void ViewWillAppear (bool animated)
 {
-	base.ViewWillAppear (animated);
+    base.ViewWillAppear (animated);
 
-	// Update UI based on state
-	SendTweet.Enabled = isTwitterAvailable;
-	RequestTwitterTimeline.Enabled = false;
+    // Update UI based on state
+    SendTweet.Enabled = isTwitterAvailable;
+    RequestTwitterTimeline.Enabled = false;
 
-	// Initialize Twitter Account access 
-	var accountStore = new ACAccountStore ();
-	var accountType = accountStore.FindAccountType (ACAccountType.Twitter);
+    // Initialize Twitter Account access
+    var accountStore = new ACAccountStore ();
+    var accountType = accountStore.FindAccountType (ACAccountType.Twitter);
 
-	// Request access to Twitter account
-	accountStore.RequestAccess (accountType, (granted, error) => {
-		// Allowed by user?
-		if (granted) {
-			// Get account
-			_twitterAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
-			InvokeOnMainThread (() => {
-				// Update UI
-				RequestTwitterTimeline.Enabled = true;
-			});
-		}
-	});
+    // Request access to Twitter account
+    accountStore.RequestAccess (accountType, (granted, error) => {
+        // Allowed by user?
+        if (granted) {
+            // Get account
+            _twitterAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
+            InvokeOnMainThread (() => {
+                // Update UI
+                RequestTwitterTimeline.Enabled = true;
+            });
+        }
+    });
 }
 #endregion
 
 #region Actions
 partial void RequestTwitterTimeline_TouchUpInside (UIButton sender)
 {
-	// Initialize request
-	var parameters = new NSDictionary ();
-	var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
-	var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
+    // Initialize request
+    var parameters = new NSDictionary ();
+    var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
+    var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 
-	// Request data
-	request.Account = TwitterAccount;
-	request.PerformRequest ((data, response, error) => {
-		// Was there an error?
-		if (error == null) {
-			// Was the request successful?
-			if (response.StatusCode == 200) {
-				// Yes, display it
-				InvokeOnMainThread (() => {
-					Results.Text = data.ToString ();
-				});
-			} else {
-				// No, display error
-				InvokeOnMainThread (() => {
-					Results.Text = string.Format ("Error: {0}", response.StatusCode);
-				});
-			}
-		} else {
-			// No, display error
-			InvokeOnMainThread (() => {
-				Results.Text = string.Format ("Error: {0}", error);
-			});
-		}
-	});
+    // Request data
+    request.Account = TwitterAccount;
+    request.PerformRequest ((data, response, error) => {
+        // Was there an error?
+        if (error == null) {
+            // Was the request successful?
+            if (response.StatusCode == 200) {
+                // Yes, display it
+                InvokeOnMainThread (() => {
+                    Results.Text = data.ToString ();
+                });
+            } else {
+                // No, display error
+                InvokeOnMainThread (() => {
+                    Results.Text = string.Format ("Error: {0}", response.StatusCode);
+                });
+            }
+        } else {
+            // No, display error
+            InvokeOnMainThread (() => {
+                Results.Text = string.Format ("Error: {0}", error);
+            });
+        }
+    });
 }
 #endregion
 ```
@@ -247,15 +243,15 @@ Next, it asks the user if your app can have access to their Twitter account and,
 ```csharp
 // Request access to Twitter account
 accountStore.RequestAccess (accountType, (granted, error) => {
-	// Allowed by user?
-	if (granted) {
-		// Get account
-		_twitterAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
-		InvokeOnMainThread (() => {
-			// Update UI
-			RequestTwitterTimeline.Enabled = true;
-		});
-	}
+    // Allowed by user?
+    if (granted) {
+        // Get account
+        _twitterAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
+        InvokeOnMainThread (() => {
+            // Update UI
+            RequestTwitterTimeline.Enabled = true;
+        });
+    }
 });
 ```
 
@@ -267,38 +263,39 @@ var parameters = new NSDictionary ();
 var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
+
 This example is limiting the returned results to the last ten entries by including `?count=10` in the URL. Finally, it attaches the request to the Twitter account (that was loaded above) and performs the call to Twitter to fetch the data:
 
 ```csharp
 // Request data
 request.Account = TwitterAccount;
 request.PerformRequest ((data, response, error) => {
-	// Was there an error?
-	if (error == null) {
-		// Was the request successful?
-		if (response.StatusCode == 200) {
-			// Yes, display it
-			InvokeOnMainThread (() => {
-				Results.Text = data.ToString ();
-			});
-		} else {
-			// No, display error
-			InvokeOnMainThread (() => {
-				Results.Text = string.Format ("Error: {0}", response.StatusCode);
-			});
-		}
-	} else {
-		// No, display error
-		InvokeOnMainThread (() => {
-			Results.Text = string.Format ("Error: {0}", error);
-		});
-	}
+    // Was there an error?
+    if (error == null) {
+        // Was the request successful?
+        if (response.StatusCode == 200) {
+            // Yes, display it
+            InvokeOnMainThread (() => {
+                Results.Text = data.ToString ();
+            });
+        } else {
+            // No, display error
+            InvokeOnMainThread (() => {
+                Results.Text = string.Format ("Error: {0}", response.StatusCode);
+            });
+        }
+    } else {
+        // No, display error
+        InvokeOnMainThread (() => {
+            Results.Text = string.Format ("Error: {0}", error);
+        });
+    }
 });
 ```
 
 If the data was successfully loaded, the raw JSON data will be displayed (as in the example output below):
 
-[![](social-framework-images/twitter03.png "An example of the raw JSON data display")](social-framework-images/twitter03.png#lightbox)
+[![An example of the raw JSON data display](social-framework-images/twitter03.png)](social-framework-images/twitter03.png#lightbox)
 
 In a real app, the JSON results could then be parsed as normal and the results presented to the user. See [Introduction Web Services](~/cross-platform/data-cloud/web-services/index.md) for information on how to parse JSON.
 
@@ -310,7 +307,7 @@ Connecting to Facebook with the Social Framework is nearly identical to the
 process used for Twitter shown above. A Facebook user account must be configured
 in the device settings as shown below:
 
-[![](social-framework-images/facebook01.png "Facebook Account Settings")](social-framework-images/facebook01.png#lightbox)
+[![Facebook Account Settings](social-framework-images/facebook01.png)](social-framework-images/facebook01.png#lightbox)
 
 Once configured, any application on the device that uses the Social Framework
 will use this account to connect to Facebook.
@@ -332,64 +329,64 @@ using UIKit;
 
 namespace SocialFrameworkDemo
 {
-	public partial class ViewController : UIViewController
-	{
-		#region Private Variables
-		private SLComposeViewController _facebookComposer = SLComposeViewController.FromService (SLServiceType.Facebook);
-		#endregion
+    public partial class ViewController : UIViewController
+    {
+        #region Private Variables
+        private SLComposeViewController _facebookComposer = SLComposeViewController.FromService (SLServiceType.Facebook);
+        #endregion
 
-		#region Computed Properties
-		public bool isFacebookAvailable {
-			get { return SLComposeViewController.IsAvailable (SLServiceKind.Facebook); }
-		}
+        #region Computed Properties
+        public bool isFacebookAvailable {
+            get { return SLComposeViewController.IsAvailable (SLServiceKind.Facebook); }
+        }
 
-		public SLComposeViewController FacebookComposer {
-			get { return _facebookComposer; }
-		}
-		#endregion
+        public SLComposeViewController FacebookComposer {
+            get { return _facebookComposer; }
+        }
+        #endregion
 
-		#region Constructors
-		protected ViewController (IntPtr handle) : base (handle)
-		{
-			
-		}
-		#endregion
+        #region Constructors
+        protected ViewController (IntPtr handle) : base (handle)
+        {
 
-		#region Override Methods
-		public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
+        }
+        #endregion
 
-			// Update UI based on state
-			PostToFacebook.Enabled = isFacebookAvailable;
-		}
-		#endregion
+        #region Override Methods
+        public override void ViewWillAppear (bool animated)
+        {
+            base.ViewWillAppear (animated);
 
-		#region Actions
-		partial void PostToFacebook_TouchUpInside (UIButton sender)
-		{
-			// Set initial message
-			FacebookComposer.SetInitialText ("Hello Facebook!");
-			FacebookComposer.AddImage (UIImage.FromFile ("Icon.png"));
-			FacebookComposer.CompletionHandler += (result) => {
-				InvokeOnMainThread (() => {
-					DismissViewController (true, null);
-					Console.WriteLine ("Results: {0}", result);
-				});
-			};
+            // Update UI based on state
+            PostToFacebook.Enabled = isFacebookAvailable;
+        }
+        #endregion
 
-			// Display controller
-			PresentViewController (FacebookComposer, true, null);
-		}
-		#endregion
-	}
+        #region Actions
+        partial void PostToFacebook_TouchUpInside (UIButton sender)
+        {
+            // Set initial message
+            FacebookComposer.SetInitialText ("Hello Facebook!");
+            FacebookComposer.AddImage (UIImage.FromFile ("Icon.png"));
+            FacebookComposer.CompletionHandler += (result) => {
+                InvokeOnMainThread (() => {
+                    DismissViewController (true, null);
+                    Console.WriteLine ("Results: {0}", result);
+                });
+            };
+
+            // Display controller
+            PresentViewController (FacebookComposer, true, null);
+        }
+        #endregion
+    }
 }
 ```
 
 When used with Facebook, the `SLComposeViewController` displays a
 view that looks nearly identical to the Twitter example, showing **Facebook** as the title in this case:
 
-[![](social-framework-images/facebook02.png "The SLComposeViewController display")](social-framework-images/facebook02.png#lightbox)
+[![The SLComposeViewController display](social-framework-images/facebook02.png)](social-framework-images/facebook02.png#lightbox)
 
 ### Calling Facebook Graph API
 
@@ -407,37 +404,37 @@ private ACAccount _facebookAccount;
 
 #region Computed Properties
 public ACAccount FacebookAccount {
-	get { return _facebookAccount; }
+    get { return _facebookAccount; }
 }
 #endregion
 
 #region Override Methods
 public override void ViewWillAppear (bool animated)
 {
-	base.ViewWillAppear (animated);
+    base.ViewWillAppear (animated);
 
-	// Update UI based on state
-	PostToFacebook.Enabled = isFacebookAvailable;
-	RequestFacebookTimeline.Enabled = false;
+    // Update UI based on state
+    PostToFacebook.Enabled = isFacebookAvailable;
+    RequestFacebookTimeline.Enabled = false;
 
-	// Initialize Facebook Account access 
-	var accountStore = new ACAccountStore ();
-	var options = new AccountStoreOptions ();
-	var options.FacebookAppId = ""; // Enter your specific Facebook App ID here
-	accountType = accountStore.FindAccountType (ACAccountType.Facebook);
+    // Initialize Facebook Account access
+    var accountStore = new ACAccountStore ();
+    var options = new AccountStoreOptions ();
+    var options.FacebookAppId = ""; // Enter your specific Facebook App ID here
+    accountType = accountStore.FindAccountType (ACAccountType.Facebook);
 
-	// Request access to Facebook account
-	accountStore.RequestAccess (accountType, options, (granted, error) => {
-		// Allowed by user?
-		if (granted) {
-			// Get account
-			_facebookAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
-			InvokeOnMainThread (() => {
-				// Update UI
-				RequestFacebookTimeline.Enabled = true;
-			});
-		}
-	});
+    // Request access to Facebook account
+    accountStore.RequestAccess (accountType, options, (granted, error) => {
+        // Allowed by user?
+        if (granted) {
+            // Get account
+            _facebookAccount = accountStore.Accounts [accountStore.Accounts.Length - 1];
+            InvokeOnMainThread (() => {
+                // Update UI
+                RequestFacebookTimeline.Enabled = true;
+            });
+        }
+    });
 
 }
 #endregion
@@ -445,35 +442,35 @@ public override void ViewWillAppear (bool animated)
 #region Actions
 partial void RequestFacebookTimeline_TouchUpInside (UIButton sender)
 {
-	// Initialize request
-	var parameters = new NSDictionary ();
-	var url = new NSUrl ("https://graph.facebook.com/283148898401104");
-	var request = SLRequest.Create (SLServiceKind.Facebook, SLRequestMethod.Get, url, parameters);
+    // Initialize request
+    var parameters = new NSDictionary ();
+    var url = new NSUrl ("https://graph.facebook.com/283148898401104");
+    var request = SLRequest.Create (SLServiceKind.Facebook, SLRequestMethod.Get, url, parameters);
 
-	// Request data
-	request.Account = FacebookAccount;
-	request.PerformRequest ((data, response, error) => {
-		// Was there an error?
-		if (error == null) {
-			// Was the request successful?
-			if (response.StatusCode == 200) {
-				// Yes, display it
-				InvokeOnMainThread (() => {
-					Results.Text = data.ToString ();
-				});
-			} else {
-				// No, display error
-				InvokeOnMainThread (() => {
-					Results.Text = string.Format ("Error: {0}", response.StatusCode);
-				});
-			}
-		} else {
-			// No, display error
-			InvokeOnMainThread (() => {
-				Results.Text = string.Format ("Error: {0}", error);
-			});
-		}
-	});
+    // Request data
+    request.Account = FacebookAccount;
+    request.PerformRequest ((data, response, error) => {
+        // Was there an error?
+        if (error == null) {
+            // Was the request successful?
+            if (response.StatusCode == 200) {
+                // Yes, display it
+                InvokeOnMainThread (() => {
+                    Results.Text = data.ToString ();
+                });
+            } else {
+                // No, display error
+                InvokeOnMainThread (() => {
+                    Results.Text = string.Format ("Error: {0}", response.StatusCode);
+                });
+            }
+        } else {
+            // No, display error
+            InvokeOnMainThread (() => {
+                Results.Text = string.Format ("Error: {0}", error);
+            });
+        }
+    });
 }
 #endregion
 ```
@@ -487,7 +484,7 @@ var options.FacebookAppId = ""; // Enter your specific Facebook App ID here
 
 // Request access to Facebook account
 accountStore.RequestAccess (accountType, options, (granted, error) => {
-	...
+    ...
 });
 ```
 
@@ -501,8 +498,7 @@ the device settings. It also discussed how to use the `SLComposeViewController` 
 social networks. Additionally, it examined the `SLRequest` class that
 is used to call each social network’s API.
 
-
 ## Related Links
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
 - [Introduction to Web Services](~/cross-platform/data-cloud/web-services/index.md)

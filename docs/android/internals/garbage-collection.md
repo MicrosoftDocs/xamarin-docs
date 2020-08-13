@@ -3,8 +3,8 @@ title: "Garbage Collection"
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -15,8 +15,8 @@ Xamarin.Android uses Mono's
 This is a mark-and-sweep garbage collector with two generations and a *large 
 object space*, with two kinds of collections: 
 
--   Minor collections (collects Gen0 heap) 
--   Major collections (collects Gen1 and large object space heaps). 
+- Minor collections (collects Gen0 heap) 
+- Major collections (collects Gen1 and large object space heaps). 
 
 > [!NOTE]
 > In the absence of an explicit collection via
@@ -26,7 +26,6 @@ a reference counting system*; objects *will not be collected as soon as
 there are no outstanding references*, or when a scope has exited. The
 GC will run when the minor heap has run out of memory for new
 allocations. If there are no allocations, it will not run.
-
 
 Minor collections are cheap and frequent, and are used to collect 
 recently allocated and dead objects. Minor collections are performed 
@@ -44,54 +43,50 @@ or by calling
 with the argument 
 [GC.MaxGeneration](xref:System.GC.MaxGeneration). 
 
-
-
 ## Cross-VM Object Collections
 
 There are three categories of object types.
 
--   **Managed objects**: types which do *not* inherit from 
-    [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+- **Managed objects**: types which do *not* inherit from
+    [Java.Lang.Object](xref:Java.Lang.Object) 
     , e.g. 
     [System.String](xref:System.String). 
     These are collected normally by the GC. 
 
--   **Java objects**: Java types which are present within the Android 
+- **Java objects**: Java types which are present within the Android 
     runtime VM but not exposed to the Mono VM. These are boring, and 
     won't be discussed further. These are collected normally by the 
     Android runtime VM. 
 
--   **Peer objects**: types which implement 
-    [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 
+- **Peer objects**: types which implement
+    [IJavaObject](xref:Android.Runtime.IJavaObject) 
     , e.g. all 
-    [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+    [Java.Lang.Object](xref:Java.Lang.Object) 
     and 
-    [Java.Lang.Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) 
+    [Java.Lang.Throwable](xref:Java.Lang.Throwable) 
     subclasses. Instances of these types have two "halfs" a *managed 
     peer* and a *native peer*. The managed peer is an instance of the 
     C# class. The native peer is an instance of a Java class within the 
     Android runtime VM, and the C# 
-    [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) 
+    [IJavaObject.Handle](xref:Android.Runtime.IJavaObject.Handle) 
     property contains a JNI global reference to the native peer. 
-
 
 There are two types of native peers:
 
--   **Framework peers** : "Normal" Java types which know nothing of
+- **Framework peers** : "Normal" Java types which know nothing of
     Xamarin.Android, e.g.
-    [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
+    [android.content.Context](xref:Android.Content.Context).
 
--   **User peers** :
+- **User peers** :
     [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md)
     which are generated at build time for each Java.Lang.Object
     subclass present within the application.
 
-
 As there are two VMs within a Xamarin.Android process, there are two
 types of garbage collections:
 
--   Android runtime collections 
--   Mono collections 
+- Android runtime collections 
+- Mono collections 
 
 Android runtime collections operate normally, but with a caveat: a JNI
 global reference is treated as a GC root. Consequently, if there is a
@@ -102,13 +97,13 @@ collection.
 Mono collections are where the fun happens. Managed objects are collected
 normally. Peer objects are collected by performing the following process:
 
-1.  All Peer objects eligible for Mono collection have their JNI global 
+1. All Peer objects eligible for Mono collection have their JNI global 
     reference replaced with a JNI weak global reference. 
 
-2.  An Android runtime VM GC is invoked. Any Native peer instance may be 
+2. An Android runtime VM GC is invoked. Any Native peer instance may be 
     collected. 
 
-3.  The JNI weak global references created in (1) are checked. If the 
+3. The JNI weak global references created in (1) are checked. If the 
     weak reference has been collected, then the Peer object is 
     collected. If the weak reference has *not* been collected, then the 
     weak reference is replaced with a JNI global reference and the Peer 
@@ -122,16 +117,15 @@ lifetime of Native peers will be extended beyond what they would
 otherwise live, as the Native peer won't be collectible until both the
 Native peer and the Managed peer are collectible.
 
-
 ## Object Cycles
 
 Peer objects are logically present within both the Android runtime and Mono 
 VM's. For example, an 
-[Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 
+[Android.App.Activity](xref:Android.App.Activity) 
 managed peer instance will have a corresponding 
 [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) 
 framework peer Java instance. All objects that inherit from 
-[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+[Java.Lang.Object](xref:Java.Lang.Object) 
 can be expected to have representations within both VMs. 
 
 All objects that have representation in both VMs will have lifetimes 
@@ -145,22 +139,21 @@ needs to ensure that the object isn't referenced by either VM before
 collecting it. 
 
 To shorten object lifetime, 
-[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) 
+[Java.Lang.Object.Dispose()](xref:Java.Lang.Object.Dispose) 
 should be invoked. This will manually "sever" the connection on the 
 object between the two VMs by freeing the global reference, thus 
 allowing the objects to be collected faster. 
 
-
 ## Automatic Collections
 
 Beginning with
-[Release 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), 
+[Release 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), 
 Xamarin.Android automatically performs a full GC when a gref 
 threshold is crossed. This threshold is 90% of the known maximum grefs 
 for the platform: 1800 grefs on the emulator (2000 max), and 46800 
 grefs on hardware (maximum 52000). *Note:* Xamarin.Android only counts 
 the grefs created by 
-[Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), 
+[Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv), 
 and will not know about any other grefs created in the process. This is 
 a heuristic *only*. 
 
@@ -188,12 +181,12 @@ which peer objects needs their "liveness" verified with the Android
 runtime heap. The GC Bridge makes this determination by doing 
 the following steps (in order):
 
-1.  Induce the mono reference graph of unreachable peer objects into 
+1. Induce the mono reference graph of unreachable peer objects into 
     the Java objects they represent. 
 
-2.  Perform a Java GC.
+2. Perform a Java GC.
 
-3.  Verify which objects are really dead. 
+3. Verify which objects are really dead. 
 
 This complicated process is what enables subclasses of 
 `Java.Lang.Object` to freely reference any objects; it removes any 
@@ -203,28 +196,27 @@ noticeable pauses in an application. If the application is experiencing
 significant pauses, it's worth investigating one of the following three 
 GC Bridge implementations: 
 
--   **Tarjan** - A completely new design of the GC Bridge 
+- **Tarjan** - A completely new design of the GC Bridge 
     based on [Robert Tarjan's algorithm and backwards reference propagation](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     It has the best performance under our simulated workloads, but it also has 
     the larger share of experimental code. 
 
--   **New** - A major overhaul of the original code, fixing two 
+- **New** - A major overhaul of the original code, fixing two 
     instances of quadratic behavior but keeping the core algorithm 
     (based on 
     [Kosaraju's 
     algorithm](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) for 
     finding strongly connected components). 
 
--   **Old** - The original implementation (considered the most 
+- **Old** - The original implementation (considered the most 
     stable of the three). This is the bridge that an application should 
     use if the `GC_BRIDGE` pauses are acceptable. 
-
 
 The only way to figure out which GC Bridge works best is by experimenting 
 in an application and analyzing the output. There are two ways to 
 collect the data for benchmarking: 
 
--   **Enable logging** - Enable logging (as describe in the 
+- **Enable logging** - Enable logging (as describe in the 
     [Configuration](~/android/internals/garbage-collection.md) 
     section) for each GC Bridge option, then capture and compare the 
     log outputs from each setting. Inspect the `GC` messages for each 
@@ -232,34 +224,34 @@ collect the data for benchmarking:
     for non-interactive applications are tolerable, but pauses above 60ms 
     for very interactive applications (such as games) are a problem. 
 
--   **Enable bridge accounting** - Bridge accounting will display the 
+- **Enable bridge accounting** - Bridge accounting will display the 
     average cost of the objects pointed by each object involved in the 
     bridge process. Sorting this information by size will provide hints 
     as to what is holding the largest amount of extra objects. 
 
+The default setting is **Tarjan**. If you find a regression, you 
+may find it necessary to set this option to **Old**. Also, you may 
+choose to use the more stable **Old** option if **Tarjan** does not 
+produce an improvement in performance.
 
-To specify which `GC_BRIDGE` option an application should us, pass 
+To specify which `GC_BRIDGE` option an application should use, pass 
 `bridge-implementation=old`, `bridge-implementation=new` or 
 `bridge-implementation=tarjan` to the `MONO_GC_PARAMS` environment 
-variable, for example: 
+variable. This is accomplished by adding a new file to your project 
+with a **Build action** of `AndroidEnvironment`. For example: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-The default setting is **Tarjan**. If you find a regression, you 
-may find it necessary to set this option to **Old**. Also, you may 
-choose to use the more stable **Old** option if **Tarjan** does not 
-produce an improvement in performance. 
+For more information, see [Configuration](#configuration).
 
-<a name="Helping_the_GC" />
+<a name="Helping_the_GC"></a>
 
 ## Helping the GC
 
 There are multiple ways to help the GC to reduce memory use and collection
 times.
-
-
 
 ### Disposing of Peer instances
 
@@ -267,13 +259,13 @@ The GC has an incomplete view of the process and may not run when
 memory is low because the GC doesn't know that memory is low. 
 
 For example, an instance of a 
-[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+[Java.Lang.Object](xref:Java.Lang.Object) 
 type or derived type is at least 20 bytes in size (subject to change 
 without notice, etc., etc.). 
 [Managed Callable 
 Wrappers](~/android/internals/architecture.md) do not add 
 additional instance members, so when you have a 
-[Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) 
+[Android.Graphics.Bitmap](xref:Android.Graphics.Bitmap) 
 instance that refers to a 10MB blob of memory, Xamarin.Android's GC 
 won't know that &ndash; the GC will see a 20-byte object and will be unable to determine 
 that it's linked to Android runtime-allocated objects that's keeping 10MB of 
@@ -287,8 +279,7 @@ object graph you may need to manually call
 to prompt a GC to release the Java-side memory, or you can explicitly 
 dispose of *Java.Lang.Object* subclasses, breaking the mapping between 
 the managed callable wrapper and the Java instance. For example, see 
-[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
-
+[Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
 > [!NOTE]
 > You must be *extremely* careful when disposing of
@@ -297,19 +288,17 @@ the managed callable wrapper and the Java instance. For example, see
 To minimize the possibility of memory corruption, observe the following
 guidelines when calling `Dispose()`.
 
-
 #### Sharing Between Multiple Threads
 
 If the *Java or managed* instance may be shared between multiple 
 threads, *it should not be `Dispose()`d*, **ever**. For example, 
-[`Typeface.Create()`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/(System.String%2cAndroid.Graphics.TypefaceStyle)) 
+[`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
 may return a *cached instance*. If multiple threads provide the same 
 arguments, they will obtain the *same* instance. Consequently, 
 `Dispose()`ing of the `Typeface` instance from one thread may 
 invalidate other threads, which can result in `ArgumentException`s from 
 `JNIEnv.CallVoidMethod()` (among others) because the instance was 
 disposed from another thread. 
-
 
 #### Disposing Bound Java Types
 
@@ -329,11 +318,11 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
 ```
 
 The above is safe because the Peer that 
-[Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) 
+[Drawable.CreateFromPath()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) 
 returns will refer to a Framework peer, *not* a User peer. The 
 `Dispose()` call at the end of the `using` block will break the 
 relationship between the managed 
-[Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) 
+[Drawable](xref:Android.Graphics.Drawables.Drawable) 
 and framework 
 [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) 
 instances, allowing the Java instance to be collected as soon as the 
@@ -341,7 +330,6 @@ Android runtime needs to. This would *not* be safe if Peer instance
 referred to a User peer; here we're using "external" information to 
 *know* that the `Drawable` cannot refer to a User peer, and thus the 
 `Dispose()` call is safe. 
-
 
 #### Disposing Other Types 
 
@@ -369,11 +357,10 @@ using (var listener = new MyClickListener ())
     b.SetOnClickListener (listener);
 ```
 
-
 #### Using Explicit Checks to Avoid Exceptions
 
 If you've implemented a 
-[Java.Lang.Object.Dispose](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose(System.Boolean)/) 
+[Java.Lang.Object.Dispose](xref:Java.Lang.Object.Dispose*) 
 overload method, avoid touching objects that involve JNI. Doing so 
 may create a *double-dispose* situation that makes it possible for 
 your code to (fatally) attempt to access an underlying Java object that has 
@@ -443,7 +430,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-
 ### Reduce Referenced Instances
 
 Whenever an instance of a `Java.Lang.Object` type or subclass is 
@@ -457,16 +443,16 @@ Consider the following class:
 ```csharp
 class BadActivity : Activity {
 
-	private List<string> strings;
+    private List<string> strings;
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
 
@@ -486,46 +472,45 @@ inherit from Java.Lang.Object:
 ```csharp
 class HiddenReference<T> {
 
-	static Dictionary<int, T> table = new Dictionary<int, T> ();
-	static int idgen = 0;
+    static Dictionary<int, T> table = new Dictionary<int, T> ();
+    static int idgen = 0;
 
-	int id;
+    int id;
 
-	public HiddenReference ()
-	{
-		lock (table) {
-			id = idgen ++;
-		}
-	}
+    public HiddenReference ()
+    {
+        lock (table) {
+            id = idgen ++;
+        }
+    }
 
-	~HiddenReference ()
-	{
-		lock (table) {
-			table.Remove (id);
-		}
-	}
+    ~HiddenReference ()
+    {
+        lock (table) {
+            table.Remove (id);
+        }
+    }
 
-	public T Value {
-		get { lock (table) { return table [id]; } }
-		set { lock (table) { table [id] = value; } }
-	}
+    public T Value {
+        get { lock (table) { return table [id]; } }
+        set { lock (table) { table [id] = value; } }
+    }
 }
 
 class BetterActivity : Activity {
 
-	HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
+    HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
-
 
 ## Minor Collections
 
@@ -539,11 +524,9 @@ If your application has a "duty cycle" in which the same thing is done
 over and over, it may be advisable to manually perform a minor 
 collection once the duty cycle has ended. Example duty cycles include: 
 
--  The rendering cycle of a single game frame.
--  The whole interaction with a given app dialog (opening, filling, closing) 
--  A group of network requests to refresh/sync app data.
-
-
+- The rendering cycle of a single game frame.
+- The whole interaction with a given app dialog (opening, filling, closing) 
+- A group of network requests to refresh/sync app data.
 
 ## Major Collections
 
@@ -556,25 +539,21 @@ on an Android-style device when collecting a 512MB heap.
 
 Major collections should only be manually invoked, if ever: 
 
--   At the end of lengthy duty cycles and when a long pause won't 
+- At the end of lengthy duty cycles and when a long pause won't 
     present a problem to the user. 
 
--   Within an overridden 
-    [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) 
+- Within an overridden
+    [Android.App.Activity.OnLowMemory()](xref:Android.App.Activity.OnLowMemory) 
     method. 
-
-
 
 ## Diagnostics
 
 To track when global references are created and destroyed, you can set 
 the [debug.mono.log](~/android/troubleshooting/index.md) 
 system property to contain 
-[ *gref*](~/android/troubleshooting/index.md) 
+[*gref*](~/android/troubleshooting/index.md) 
 and/or 
-[ *gc*](~/android/troubleshooting/index.md). 
-
-
+[*gc*](~/android/troubleshooting/index.md). 
 
 ## Configuration
 
@@ -586,20 +565,20 @@ with a Build action of
 The `MONO_GC_PARAMS` environment variable is a comma-separated list of 
 the following parameters: 
 
--   `nursery-size` = *size* : Sets the size of the nursery. The size is 
+- `nursery-size` = *size* : Sets the size of the nursery. The size is 
     specified in bytes and must be a power of two. The suffixes `k` , 
     `m` and `g` can be used to specify kilo-, mega- and gigabytes, 
     respectively. The nursery is the first generation (of two). A 
     larger nursery will usually speed up the program but will obviously 
     use more memory. The default nursery size 512 kb. 
 
--   `soft-heap-limit` = *size* : The target maximum managed memory 
+- `soft-heap-limit` = *size* : The target maximum managed memory 
     consumption for the app. When memory use is below the specified 
     value, the GC is optimized for execution time (fewer collections). 
     Above this limit, the GC is optimized for memory usage (more 
     collections). 
 
--   `evacuation-threshold` = *threshold* : Sets the evacuation 
+- `evacuation-threshold` = *threshold* : Sets the evacuation 
     threshold in percent. The value must be an integer in the range 0 
     to 100. The default is 66. If the sweep phase of the collection 
     finds that the occupancy of a specific heap block type is less than 
@@ -607,11 +586,11 @@ the following parameters:
     type in the next major collection, thereby restoring occupancy to 
     close to 100 percent. A value of 0 turns evacuation off. 
 
--   `bridge-implementation` = *bridge implementation* : This will set 
+- `bridge-implementation` = *bridge implementation* : This will set 
     the GC Bridge option to help address GC performance issues. There 
     are three possible values: *old* , *new* , *tarjan*.
 
--   `bridge-require-precise-merge`: The Tarjan bridge contains an
+- `bridge-require-precise-merge`: The Tarjan bridge contains an
     optimization which may, on rare occasions, cause an object to
     be collected one GC after it first becomes garbage. Including
     this option disables that optimization, making GCs more

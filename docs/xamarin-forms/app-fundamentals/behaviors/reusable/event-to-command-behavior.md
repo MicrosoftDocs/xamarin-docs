@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Reusable EventToCommandBehavior
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _Behaviors can be used to associate commands with controls that were not designed to interact with commands. This article demonstrates creating and consuming a Xamarin.Forms behavior to invoke a command when an event fires._
 
@@ -30,7 +31,7 @@ The following optional behavior properties can also be set:
 - **Converter** – an [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) implementation that will change the format of the event argument data as it's passed between *source* and *target* by the binding engine.
 
 > [!NOTE]
-> The `EventToCommandBehavior` is a custom class that can be located in the [EventToCommand Behavior sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/), and is not part of Xamarin.Forms.
+> The `EventToCommandBehavior` is a custom class that can be located in the [EventToCommand Behavior sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior), and is not part of Xamarin.Forms.
 
 ## Creating the Behavior
 
@@ -193,7 +194,7 @@ The `Command` property of the behavior is data bound to the `OutputAgeCommand` p
 
 At runtime, the behavior will respond to interaction with the control. When an item is selected in the [`ListView`](xref:Xamarin.Forms.ListView), the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event will fire, which will execute the `OutputAgeCommand` in the ViewModel. In turn this updates the ViewModel `SelectedItemText` property that the [`Label`](xref:Xamarin.Forms.Label) binds to, as shown in the following screenshots:
 
-[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
+[![Sample Application with EventToCommandBehavior](event-to-command-behavior-images/screenshots-sml.png)](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
 
 The advantage of using this behavior to execute a command when an event fires, is that commands can be associated with controls that weren't designed to interact with commands. In addition, this removes boiler-plate event handling code from code-behind files.
 
@@ -203,6 +204,6 @@ This article demonstrated using a Xamarin.Forms behavior to invoke a command whe
 
 ## Related Links
 
-- [EventToCommand Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [EventToCommand Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

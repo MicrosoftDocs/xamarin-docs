@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
 ---
 
@@ -59,14 +59,12 @@ connectivity, use the following steps:
    SDK Manager**, apply all updates, then try launching the
    emulator again.
 
-
 ### MMIO access error
 
 If the message **An MMIO access error has occurred** is displayed,
 restart the emulator.
 
-
-<a name="gps-win" />
+<a name="gps-win"></a>
 
 ## Missing Google Play Services
 
@@ -88,8 +86,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 > Google Play Store images are available only for some base device types such 
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
-
-<a name="perf-win" />
+<a name="perf-win"></a>
 
 ## Performance issues
 
@@ -114,7 +111,6 @@ If this error message is displayed, see
 [Hardware acceleration issues](#accel-issues-win) below for steps you
 can take to verify and enable hardware acceleration.
 
-
 ### Acceleration is enabled but the emulator runs too slowly 
 
 A common cause for this problem is not using an x86-based image in your
@@ -124,8 +120,7 @@ be sure to select an x86-based system image:
 
 [![Selecting an x86 system image for a virtual device](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
-
-<a name="accel-issues-win" />
+<a name="accel-issues-win"></a>
 
 ## Hardware acceleration issues
 
@@ -193,7 +188,6 @@ properly, the emulator should run successfully with hardware acceleration.
 However, problems may still result due to issues that are specific to
 Hyper-V and HAXM, as explained next.
 
-
 ### Hyper-V issues
 
 In some cases, enabling both **Hyper-V** and **Windows Hypervisor
@@ -229,6 +223,7 @@ following steps:
     ```powershell
     Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
     ```
+
     If the Hypervisor is not enabled, a message similar to the following example will be 
     displayed to indicate that the state of HypervisorPlatform is **Disabled**:
 
@@ -255,7 +250,6 @@ For more information about enabling Hyper-V (including techniques for
 enabling Hyper-V using the Deployment Image Servicing and Management
 tool), see
 [Install Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-
 
 ### HAXM issues
 
@@ -288,8 +282,7 @@ SERVICE_NAME: intelhaxm
 If `STATE` is not set to `RUNNING`, see
 [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) to resolve the problem.
 
-
-<a name="virt-conflicts" />
+<a name="virt-conflicts"></a>
 
 #### HAXM virtualization conflicts
 
@@ -311,7 +304,6 @@ such as Hyper-V, Windows Device Guard, and some antivirus software:
   or uninstall this software, reboot, and retry the Android
   emulator.
 
-
 #### Incorrect BIOS settings
 
 If you are using HAXM on a Windows PC, HAXM will not work unless
@@ -326,7 +318,7 @@ To correct this error, boot the computer into the BIOS, enable both
 VT-x and SLAT (Second-Level Address Translation), then restart the
 computer back into Windows.
 
-<a name="disable-hyperv" />
+<a name="disable-hyperv"></a>
 
 #### Disabling Hyper-V
 
@@ -365,7 +357,7 @@ unable to disable Hyper-V (or it seems to be disabled but HAXM
 installation still fails), use the steps in the next section to disable
 Device Guard and Credential Guard.
 
-<a name="disable-devguard" />
+<a name="disable-devguard"></a>
 
 #### Disabling Device Guard
 
@@ -389,7 +381,7 @@ If Device Guard is enabled, use the following steps to disable it:
 1. Ensure that **Hyper-V** is disabled (under **Turn Windows Features
    on or off**) as described in the previous section.
 
-2. In the Windows Search Box, enter **gpedit** and select the **Edit
+2. In the Windows Search Box, enter **gpedit.msc** and select the **Edit
    group policy** search result. These steps launch the **Local Group
    Policy Editor**.
 
@@ -409,14 +401,16 @@ If Device Guard is enabled, use the following steps to disable it:
    (if drive **Z:** is in use, pick an unused drive letter to use
    instead):
 
-        mountvol Z: /s
-        copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
-        bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
-        bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
-        mountvol Z: /d
+    ```cmd
+    mountvol Z: /s
+    copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
+    bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
+    bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
+    mountvol Z: /d
+    ```
 
 7. Restart your computer. On the boot screen, you should see a prompt similar to 
    the following message:
@@ -433,7 +427,6 @@ computer may prevent you from disabling Device Guard or Credential
 Guard. In this case, you can request an exemption from your domain
 administrator to allow you to opt out of Credential Guard. Alternately,
 you can use a computer that is not domain-joined if you must use HAXM.
-
 
 ## Additional troubleshooting tips
 
@@ -487,8 +480,6 @@ HAXM was not found on the computer:
 Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
 ```
 
-
-
 ::: zone-end
 ::: zone pivot="macos"
 
@@ -532,13 +523,12 @@ the following steps:
    SDK Manager**, apply all updates, then try launching the
    emulator again.
 
-
 ### MMIO access error
 
 If **An MMIO access error has occurred** is displayed,
 restart the emulator.
 
-<a name="gps-mac" />
+<a name="gps-mac"></a>
 
 ## Missing Google Play Services
 
@@ -560,8 +550,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 > Google Play Store images are available only for some base device types such 
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
-
-<a name="perf-mac" />
+<a name="perf-mac"></a>
 
 ## Performance issues
 
@@ -583,7 +572,6 @@ which technology is providing the acceleration), see
 [Hardware acceleration issues](#accel-issues-mac) below for steps you can
 take to verify and enable hardware acceleration.
 
-
 ### Acceleration is enabled but the emulator runs too slowly 
 
 A common cause for this problem is not using an x86-based image in your
@@ -593,7 +581,7 @@ be sure to select an x86-based system image:
 
 [![Selecting an x86 system image for a virtual device](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
-<a name="accel-issues-mac" />
+<a name="accel-issues-mac"></a>
 
 ## Hardware acceleration issues
 
@@ -602,7 +590,7 @@ acceleration of the emulator, you may run into problems caused by
 installation issues or an out-of-date version of macOS. The following
 sections can help you resolve this issue.
 
-<a name="hypervisor-issues" />
+<a name="hypervisor-issues"></a>
 
 ### Hypervisor Framework issues
 
@@ -629,7 +617,6 @@ If the Hypervisor Framework is not available on your Mac, you can
 follow the steps in [Accelerating with HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#haxm-mac)
 to use HAXM for acceleration instead.
 
-
 ### HAXM issues
 
 If the Android Emulator does not start properly, this problem is often
@@ -638,7 +625,6 @@ conflicts with other virtualization technologies, incorrect settings,
 or an out-of-date HAXM driver. Try reinstalling the HAXM driver, using
 the steps detailed in
 [Installing HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac).
-
 
 ## Additional troubleshooting tips
 

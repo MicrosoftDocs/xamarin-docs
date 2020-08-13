@@ -4,8 +4,8 @@ description: "This document describes how to implement drag and drop in Xamarin.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2017
 ---
 
@@ -42,7 +42,7 @@ to enable dragging multiple items at once.
 `UITextView` and `UITextField` automatically support dragging selected
 text out, and dropping text content in.
 
-<a name="uitableview" />
+<a name="uitableview"></a>
 
 ## Drag and Drop with UITableView
 
@@ -54,7 +54,7 @@ There are two interfaces involved:
 - `IUITableViewDragDelegate` – Packages information when a drag is initiated in the table view.
 - `IUITableViewDropDelegate` – Processes information when a drop is being attempted and completed.
 
-In the [DragAndDropTableView sample](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/)
+In the [DragAndDropTableView sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
 these two interfaces are both implemented on the `UITableViewController`
 class, along with the delegate and data source. They're assigned in the
 `ViewDidLoad` method:
@@ -208,17 +208,16 @@ Additional code can be added to asynchronously load large data objects.
 
 ### Testing Drag and Drop
 
-You must use an iPad to test the [sample](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/).
+You must use an iPad to test the [sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview).
 Open the sample alongside another app (such as Notes) and
 drag rows and text between them:
 
 ![screenshot of drag operation in progress](drag-and-drop-images/01-sml.png)
 
-
 ## Related Links
 
 - [Drag and Drop Human Interface Guidelines (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
-- [Drag and Drop Table View Sample](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/)
-- [Drag and Drop Collection View Sample](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
+- [Drag and Drop Table View Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Drag and Drop Collection View Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
 - [Introducing Drag and Drop (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/203/)
 - [Drag and Drop with Collection and Table View (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/223/)

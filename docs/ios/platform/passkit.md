@@ -4,8 +4,8 @@ description: "The Wallet app allows iOS users to store digital passes on their d
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
 ---
 
@@ -20,7 +20,7 @@ programmatically.
 
 This document introduces Wallet and using the PassKit API with Xamarin.iOS.
 
- [![](passkit-images/image1.png "The Wallet stores and organizes all the passes on a phone")](passkit-images/image1.png#lightbox)
+ [![The Wallet stores and organizes all the passes on a phone](passkit-images/image1.png)](passkit-images/image1.png#lightbox)
 
 ## Requirements
 
@@ -33,17 +33,17 @@ The key problem that PassKit solves is the distribution and management of
 barcodes. Some real-world examples of how barcodes are currently used
 include:
 
--   **Buying movie tickets online** – Customers are typically emailed a barcode that represents their tickets. This barcode is printed and taken to the cinema to be scanned for entry.
--   **Loyalty cards** – Customers carry a number of different store-specific cards in their wallet or purse, for display and scanning when they purchase goods.
--   **Coupons** – Coupons are distributed via email, as printable web pages, through letterboxes and as barcodes in newspapers and magazines. Customers bring them to a store for scanning, to receive goods, services or discounts in return.
--   **Boarding passes** – Similar to buying a movie ticket.
+- **Buying movie tickets online** – Customers are typically emailed a barcode that represents their tickets. This barcode is printed and taken to the cinema to be scanned for entry.
+- **Loyalty cards** – Customers carry a number of different store-specific cards in their wallet or purse, for display and scanning when they purchase goods.
+- **Coupons** – Coupons are distributed via email, as printable web pages, through letterboxes and as barcodes in newspapers and magazines. Customers bring them to a store for scanning, to receive goods, services or discounts in return.
+- **Boarding passes** – Similar to buying a movie ticket.
 
 PassKit offers an alternative for each of these scenarios:
 
--   **Movie tickets** – After purchase, the customer adds an event ticket pass (via email or a website link). As the time for the movie approaches, the pass will automatically appear on the lock-screen as a reminder, and on arrival at the cinema the pass is easily retrieved and displayed in Wallet for scanning.
--   **Loyalty cards** – Rather than (or in addition to) providing a physical card, stores can issue (via email or after a website login) a Store Card Pass. The store can provide additional features such as updating the balance of the account on the pass via push notifications, and using geolocation services the pass could automatically appear on the lock-screen when the customer is near a store location.
--   **Coupons** – Coupon passes can easily be generated with unique characteristics to help with tracking, and distributed via email or website links. Downloaded coupons can automatically appear on the lock-screen when the user is near a specific location, and/or on a given date (such as when the expiry date is approaching). Because the coupons are stored on the user’s phone, they are always handy and do not get misplaced. Coupons might encourage customers to download Companion Apps because App Store links can be incorporated into the Pass, increasing engagement with the customer.
--   **Boarding passes** – After an online check-in process, the customer would receive their boarding pass via email or a link. A Companion App provided by the transport provider could include the check-in process, and also allow the customer to perform additional functions like choosing their seat or meal. The transport provider can use push notifications to update the pass if transport is delayed or canceled. As the boarding time approaches the pass will appear on the lock-screen as a reminder and to provide quick access to the Pass.
+- **Movie tickets** – After purchase, the customer adds an event ticket pass (via email or a website link). As the time for the movie approaches, the pass will automatically appear on the lock-screen as a reminder, and on arrival at the cinema the pass is easily retrieved and displayed in Wallet for scanning.
+- **Loyalty cards** – Rather than (or in addition to) providing a physical card, stores can issue (via email or after a website login) a Store Card Pass. The store can provide additional features such as updating the balance of the account on the pass via push notifications, and using geolocation services the pass could automatically appear on the lock-screen when the customer is near a store location.
+- **Coupons** – Coupon passes can easily be generated with unique characteristics to help with tracking, and distributed via email or website links. Downloaded coupons can automatically appear on the lock-screen when the user is near a specific location, and/or on a given date (such as when the expiry date is approaching). Because the coupons are stored on the user’s phone, they are always handy and do not get misplaced. Coupons might encourage customers to download Companion Apps because App Store links can be incorporated into the Pass, increasing engagement with the customer.
+- **Boarding passes** – After an online check-in process, the customer would receive their boarding pass via email or a link. A Companion App provided by the transport provider could include the check-in process, and also allow the customer to perform additional functions like choosing their seat or meal. The transport provider can use push notifications to update the pass if transport is delayed or canceled. As the boarding time approaches the pass will appear on the lock-screen as a reminder and to provide quick access to the Pass.
 
 At its core, PassKit provides a simple and convenient way to store and
 display barcodes on your iOS device. With the additional time
@@ -58,15 +58,15 @@ ecosystem of apps, data and services that facilitate the secure sharing and
 management of barcodes and other data. This high-level diagram shows the
 different entities that can be involved in creating and using passes:
 
- [![](passkit-images/image2.png "This high level diagram shows the entities involved in creating and using passes")](passkit-images/image2.png#lightbox)
+ [![This high level diagram shows the entities involved in creating and using passes](passkit-images/image2.png)](passkit-images/image2.png#lightbox)
 
 Each piece of the ecosystem has a clearly-defined role:
 
--   **Wallet** – Apple’s built-in iOS app that stores and displays passes. This is the only place that passes are rendered for use in the real world (ie the barcode is displayed, along with all the localized data in the pass).
--   **Companion Apps** – iOS 6 apps built by pass providers to extend the functionality of the passes they issue, such as adding value to a store card, changing the seat on a boarding pass or other business-specific function. Companion Apps are not required for a pass to be useful.
--   **Your server** – A secure server where passes can be generated and signed for distribution. Your Companion App may connect to your server to generate new passes or request updates to existing passes. You may optionally implement the web service API that Wallet would call to update passes.
--   **APNS Servers** – Your server has the ability to notify Wallet of updates to a pass on a given device using APNS. Push a notification to Wallet which will then contact your server for details of the change. Companion apps do not need to implement APNS for this feature (they can listen to the  `PKPassLibraryDidChangeNotification` ).
--   **Conduit Apps** – Applications that don’t directly manipulate passes (like companion apps do), but which can improve their utility by recognizing passes and allowing them to be added to Wallet. Mail clients, social network browsers and other data aggregation apps may all encounter attachments or links to passes.
+- **Wallet** – Apple’s built-in iOS app that stores and displays passes. This is the only place that passes are rendered for use in the real world (ie the barcode is displayed, along with all the localized data in the pass).
+- **Companion Apps** – iOS 6 apps built by pass providers to extend the functionality of the passes they issue, such as adding value to a store card, changing the seat on a boarding pass or other business-specific function. Companion Apps are not required for a pass to be useful.
+- **Your server** – A secure server where passes can be generated and signed for distribution. Your Companion App may connect to your server to generate new passes or request updates to existing passes. You may optionally implement the web service API that Wallet would call to update passes.
+- **APNS Servers** – Your server has the ability to notify Wallet of updates to a pass on a given device using APNS. Push a notification to Wallet which will then contact your server for details of the change. Companion apps do not need to implement APNS for this feature (they can listen to the  `PKPassLibraryDidChangeNotification` ).
+- **Conduit Apps** – Applications that don’t directly manipulate passes (like companion apps do), but which can improve their utility by recognizing passes and allowing them to be added to Wallet. Mail clients, social network browsers and other data aggregation apps may all encounter attachments or links to passes.
 
 The entire ecosystem looks complex, so it’s worth noting that some
 components are optional and much simpler PassKit implementations are
@@ -85,17 +85,16 @@ description is available in Apple’s [About Pass Files](https://developer.apple
 Currently five supported types, which can be distinguished in the Wallet
 app by the layout and top edge of the pass:
 
--  **Event Ticket** – small semicircular cutout.
--   **Boarding Pass** – notches in side, transport-specific icon can be specified (eg. bus, train, airplane).
--   **Store Card** – rounded top, like a credit or debit card.
--  **Coupon** – perforated along the top.
--  **Generic** – same as Store Card, rounded top.
-
+- **Event Ticket** – small semicircular cutout.
+- **Boarding Pass** – notches in side, transport-specific icon can be specified (eg. bus, train, airplane).
+- **Store Card** – rounded top, like a credit or debit card.
+- **Coupon** – perforated along the top.
+- **Generic** – same as Store Card, rounded top.
 
 The five pass types are shown in this screenshot (in order: coupon, generic,
 store card, boarding pass and event ticket):
 
- [![](passkit-images/image3.png "The five pass types are shown in this screenshot")](passkit-images/image3.png#lightbox)
+ [![The five pass types are shown in this screenshot](passkit-images/image3.png)](passkit-images/image3.png#lightbox)
 
 ### File Structure
 
@@ -103,18 +102,18 @@ A pass file is actually a ZIP archive with a **.pkpass** extension, containing
 some specific JSON files (required), a variety of image files (optional) as well
 as localized strings (also optional).
 
--   **pass.json** – required. Contains all the information for the pass.
--   **manifest.json** – required. Contains SHA1 hashes for each file in the pass except the signature file and this file (manifest.json).
--   **signature** – required. Created by signing the  `manifest.json` file with the certificate generated in the iOS Provisioning Portal.
--  **logo.png** – optional.
--  **background.png** – optional.
--  **icon.png** – optional.
--  **Localizable strings files** – optional.
+- **pass.json** – required. Contains all the information for the pass.
+- **manifest.json** – required. Contains SHA1 hashes for each file in the pass except the signature file and this file (manifest.json).
+- **signature** – required. Created by signing the  `manifest.json` file with the certificate generated in the iOS Provisioning Portal.
+- **logo.png** – optional.
+- **background.png** – optional.
+- **icon.png** – optional.
+- **Localizable strings files** – optional.
 
 Directory structure of a pass file is shown below (this is the contents of
 the ZIP archive):
 
- [![](passkit-images/image4.png "Directory structure of a pass file is shown here")](passkit-images/image4.png#lightbox)
+ [![Directory structure of a pass file is shown here](passkit-images/image4.png)](passkit-images/image4.png#lightbox)
 
 ### pass.json
 
@@ -122,14 +121,14 @@ JSON is the format because passes are typically created on a server – it
 means that the generation code is platform-agnostic on the server. The three key
 pieces of information in every pass are:
 
--   **teamIdentifier** – This links all passes you generate to your App Store account. This value is visible in the iOS Provisioning Portal.
--   **passTypeIdentifier** – Register in Provisioning Portal to group passes together (if you produce more than one type). For example, a coffee shop might create a store card pass type to allow their customers to earn loyalty credits, but also a separate coupon pass type to create and distribute discount coupons. That same coffee shop might even hold live music events and issue Event Ticket passes for those.
--   **serialNumber** – A unique string within this  `passTypeidentifier` . The value is opaque to Wallet, but is important for tracking specific passes when communicating with your server.
+- **teamIdentifier** – This links all passes you generate to your App Store account. This value is visible in the iOS Provisioning Portal.
+- **passTypeIdentifier** – Register in Provisioning Portal to group passes together (if you produce more than one type). For example, a coffee shop might create a store card pass type to allow their customers to earn loyalty credits, but also a separate coupon pass type to create and distribute discount coupons. That same coffee shop might even hold live music events and issue Event Ticket passes for those.
+- **serialNumber** – A unique string within this  `passTypeidentifier` . The value is opaque to Wallet, but is important for tracking specific passes when communicating with your server.
 
 There is a large number of other JSON keys in each Pass, an example of which
 is shown below:
 
-``` 
+```
 {
    "passTypeIdentifier":"com.xamarin.passkitdoc.banana",  //Type Identifier (iOS Provisioning Portal)
    "formatVersion":1,                                     //Always 1 (for now)
@@ -239,17 +238,15 @@ root.
 Passes are signed with a private certificate that you generate in the iOS
 Provisioning Portal. The steps to sign the pass are:
 
-1.  Calculate a SHA1 hash for each file in the pass directory (do not include the  `manifest.json` or  `signature` file, neither of which should exist at this stage anyway).
-1.  Write  `manifest.json` as a JSON key/value list of each filename with its hash.
-1.  Use the certificate to sign the  `manifest.json` file and write the result to a file called  `signature` .
-1.  ZIP the everything up and give the resulting file a `.pkpass` file extension.
-
+1. Calculate a SHA1 hash for each file in the pass directory (do not include the  `manifest.json` or  `signature` file, neither of which should exist at this stage anyway).
+1. Write  `manifest.json` as a JSON key/value list of each filename with its hash.
+1. Use the certificate to sign the  `manifest.json` file and write the result to a file called  `signature` .
+1. ZIP the everything up and give the resulting file a `.pkpass` file extension.
 
 Because your private key is required to sign the pass, this process should
 only be done on a secure server that you control. DO NOT distribute your keys to
 try and generate passes in an application.
 
- 
 ## Configuration and Setup
 
 This section contains instructions to help setup your provisioning details
@@ -259,8 +256,8 @@ and create your first pass.
 
 In order for a pass to enter the App Store, it must be linked to a developer account. This requires two steps:
 
-1.  The pass must be registered using a unique identifier, called the Pass Type ID.
-1.  A valid Certificate must be generated to sign the pass with the developer's digital signature.
+1. The pass must be registered using a unique identifier, called the Pass Type ID.
+1. A valid Certificate must be generated to sign the pass with the developer's digital signature.
 
 To create a Pass Type ID do the following.
 
@@ -269,32 +266,29 @@ To create a Pass Type ID do the following.
 The first step is to set up a Pass Type ID for each different _type_ of pass to be supported. The Pass ID (or Pass Type identifier) creates a unique identifier for the Pass. We will use this ID to link the pass with your developer account using a Certificate.
 
 1. In the  [Certificates, Identifiers, and Profiles section of the iOS Provisioning Portal](https://developer.apple.com/account/overview.action), navigate to  **Identifiers** and select  **Pass Type IDs** . Then select the **+** button to create a new pass type:
-  [![](passkit-images/passid.png "Create a new pass type")](passkit-images/passid.png#lightbox)
+  [![Create a new pass type](passkit-images/passid.png)](passkit-images/passid.png#lightbox)
 
-2.   Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
-  [![](passkit-images/register.png "Provide a Description and Identifier")](passkit-images/register.png#lightbox)
+2. Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
+  [![Provide a Description and Identifier](passkit-images/register.png)](passkit-images/register.png#lightbox)
 
-
-3.   Confirm the Pass ID by pressing the **Register** button.
+3. Confirm the Pass ID by pressing the **Register** button.
 
 #### Generate A Certificate
 
 To create a new Certificate for this Pass Type ID, do the following:
 
-1.  Select the newly created Pass ID from the list, and click **Edit** :
-  [![](passkit-images/pass-done.png "Select the new Pass ID from the list")](passkit-images/pass-done.png#lightbox)
+1. Select the newly created Pass ID from the list, and click **Edit** :
+  [![Select the new Pass ID from the list](passkit-images/pass-done.png)](passkit-images/pass-done.png#lightbox)
 
     Then, select  **Create Certificate…** :
 
-    [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
+    [![Select Create Certificate](passkit-images/cert-dist.png)](passkit-images/cert-dist.png#lightbox)
 
-
-2.  Follow the steps to create a Certificate Signing Request (CSR).
+2. Follow the steps to create a Certificate Signing Request (CSR).
   
 3. Press the **Continue** button on the developer portal and upload the CSR to generate your certificate.
 
 4. Download the certificate and double-click on it to install it in your keychain.
-
 
 Now that we have created a certificate for this Pass Type ID, the next
 section describes how to build a pass manually.
@@ -306,25 +300,24 @@ For more information on Provisioning for Wallet, refer to the [Working with Capa
 Now that we’ve created the Pass Type we can manually craft a pass to test
 on the simulator or a device. The steps to create a pass are:
 
--  Create a directory to contain the pass files.
--  Create a pass.json file that contains all the required data.
--  Include images in folder (if required).
--  Calculate SHA1 hashes for every file in the folder, and write to manifest.json.
--  Sign manifest.json with the downloaded certificate .p12 file.
--  ZIP the directory’s contents and rename with .pkpass extension.
+- Create a directory to contain the pass files.
+- Create a pass.json file that contains all the required data.
+- Include images in folder (if required).
+- Calculate SHA1 hashes for every file in the folder, and write to manifest.json.
+- Sign manifest.json with the downloaded certificate .p12 file.
+- ZIP the directory’s contents and rename with .pkpass extension.
 
-
-There are some source files in the [sample code](https://developer.xamarin.com/samples/monotouch/PassKit/) for this article that can be
+There are some source files in the [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) for this article that can be
 used to generate a pass. Use the files in the `CouponBanana.raw`
 directory of the CreateAPassManually directory. The following files are
 present:
 
- [![](passkit-images/image18.png "These files are present")](passkit-images/image18.png#lightbox)
+ [![These files are present](passkit-images/image18.png)](passkit-images/image18.png#lightbox)
 
 Open pass.json and edit the JSON. You must at least update the `passTypeIdentifier` and `teamIdentifer` to match your
 Apple Developer account.
 
-```csharp
+```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
 "teamIdentifier" : "?????????",
 ```
@@ -332,7 +325,7 @@ Apple Developer account.
 You must then calculate the hashes for each file and create the `manifest.json` file. It will look something like this when you’re
 done:
 
-```csharp
+```json
 {
   "icon@2x.png" : "30806547dcc6ee084a90210e2dc042d5d7d92a41",
   "icon.png" : "87e9ffb203beb2cce5de76113f8e9503aeab6ecc",
@@ -356,12 +349,12 @@ If you were to examine the output of these tools (by setting the filename to
 .zip and then opening it), you would see the following files (note the addition
 of the `manifest.json` and `signature` files):
 
- [![](passkit-images/image19.png "Examining the output of these tools")](passkit-images/image19.png#lightbox)
+ [![Examining the output of these tools](passkit-images/image19.png)](passkit-images/image19.png#lightbox)
 
 Once you have signed, ZIPped and renamed the file (eg. to `BananaCoupon.pkpass`) you can drag it into the simulator to test, or
 email it to yourself to retrieve on a real device. You should see a screen to **Add** the pass, like this:
 
- [![](passkit-images/image20.png "Add the pass screen")](passkit-images/image20.png#lightbox)
+ [![Add the pass screen](passkit-images/image20.png)](passkit-images/image20.png#lightbox)
 
 Normally that process would be automated on a server, however manual pass
 creation might be an option for small businesses that are only creating coupons
@@ -372,25 +365,25 @@ that do not require the support of a back-end server.
 Wallet is the central piece of the PassKit ecosystem. This screenshot
 shows the empty Wallet, and how the pass list and individual passes look:
 
- [![](passkit-images/image21.png "This screenshot shows the empty Wallet, and how the pass list and individual passes look")](passkit-images/image21.png#lightbox)
+ [![This screenshot shows the empty Wallet, and how the pass list and individual passes look](passkit-images/image21.png)](passkit-images/image21.png#lightbox)
 
 Features of Wallet include:
 
--  It is the only place that passes are rendered with their barcode for scanning.
--  User can change the settings for updates. If enabled, push notifications can trigger updates to the data in the Pass.
--  User can enable or disable lock-screen integration. If enabled, this allows the pass to automatically appear on their lock screen, based on relevant time and location data embedded in the pass.
--  The reverse side of the pass supports pull-to-refresh, if a web-server-URL is supplied in the pass JSON.
--  Companion Apps can be opened (or downloaded) if the app’s ID is supplied in the pass JSON.
--  Passes can be deleted (with a cute shredding animation).
+- It is the only place that passes are rendered with their barcode for scanning.
+- User can change the settings for updates. If enabled, push notifications can trigger updates to the data in the Pass.
+- User can enable or disable lock-screen integration. If enabled, this allows the pass to automatically appear on their lock screen, based on relevant time and location data embedded in the pass.
+- The reverse side of the pass supports pull-to-refresh, if a web-server-URL is supplied in the pass JSON.
+- Companion Apps can be opened (or downloaded) if the app’s ID is supplied in the pass JSON.
+- Passes can be deleted (with a cute shredding animation).
 
 ## Adding Passes into Wallet
 
 Passes can be added to Wallet in the following ways:
 
-* **Conduit Apps** – These do not manipulate passes directly, they simply load pass files
+- **Conduit Apps** – These do not manipulate passes directly, they simply load pass files
 and present the user with the option of adding them to Wallet. 
 
-* **Companion Apps** – These are written by providers to distribute passes and offer
+- **Companion Apps** – These are written by providers to distribute passes and offer
 additional functionality to browse or edit them. Xamarin.iOS applications have
 complete access to the PassKit API to create and manipulate passes. Passes can
 then be added to Wallet using the `PKAddPassesViewController`. This
@@ -403,26 +396,24 @@ behalf of a user, and should be programmed to recognize their content-type and
 provide functionality to add to the Wallet. Examples of conduit apps
 include:
 
--   **Mail** – Recognizes attachment as a Pass.
--   **Safari** – Recognizes the pass Content-Type when a pass URL link is clicked.
--   **Other custom apps** – Any app that receive attachments or open links (social media clients, mail readers, etc).
-
+- **Mail** – Recognizes attachment as a Pass.
+- **Safari** – Recognizes the pass Content-Type when a pass URL link is clicked.
+- **Other custom apps** – Any app that receive attachments or open links (social media clients, mail readers, etc).
 
 This screenshot shows how **Mail** in iOS 6 recognizes a
 pass attachment and (when touched) offers to **Add** it to
 Wallet.
 
- [![](passkit-images/image22.png "This screenshot shows how Mail in iOS 6 recognizes a pass attachment")](passkit-images/image22.png#lightbox)
+ [![This screenshot shows how Mail in iOS 6 recognizes a pass attachment](passkit-images/image22.png)](passkit-images/image22.png#lightbox)
 
- [![](passkit-images/image23.png "This screenshot shows how Mail offers to add a pass attachment to Wallet")](passkit-images/image23.png#lightbox)
+ [![This screenshot shows how Mail offers to add a pass attachment to Wallet](passkit-images/image23.png)](passkit-images/image23.png#lightbox)
 
 If you are building an app that could be a conduit for passes, they can be
 recognized by:
 
--  **File extension** - .pkpass
--  **MIME Type** - application/vnd.apple.pkpass
--  **UTI** – com.apple.pkpass
-
+- **File extension** - .pkpass
+- **MIME Type** - application/vnd.apple.pkpass
+- **UTI** – com.apple.pkpass
 
 The basic operation of a conduit application is to retrieve the pass file and
 call PassKit’s `PKAddPassesViewController` to give the user the
@@ -458,12 +449,11 @@ To set entitlements do the following:
 
 Double-click on the **Entitlements.plist** file in the Solution Pad to open the Entitlements.plist editor:
 
-![](passkit-images/image31.png "Entitlements.plst editor")
+![Entitlements.plst editor](passkit-images/image31.png)
 
 Under the Wallet section, select the **Enable Wallet** option
 
-![](passkit-images/image32.png "Enable wallet entitlement")
-
+![Enable wallet entitlement](passkit-images/image32.png)
 
 The default option is for your app to allow all pass types. However, it is possible to restrict your app and only allow a subset of team pass types. To enable this select the **Allow subset of team pass types** and enter the pass type identifier of the subset that you wish to allow.
 
@@ -473,7 +463,7 @@ Double-click the **Entitlements.plist** file to open the XML source file.
 
 To add the Wallet entitlement, set the **Property** to `Passbook Identifiers` in the dropdown, which will automatically set the **Type** `Array`. Then, set the String **Value** to `$(TeamIdentifierPrefix)*`:
 
-![](passkit-images/image33.png "Enable wallet entitlement")
+![Enable wallet entitlement](passkit-images/image33.png)
 
 This will enable your app to allow all pass types. To restrict your app and only allow a subset of team pass types, set the string value to:
 
@@ -492,7 +482,7 @@ options.
 
 If you experience this error when deploying:
 
-```csharp
+```
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 
@@ -504,15 +494,15 @@ Pass Type IDs and your Team ID are correct.
 
 The following PassKit classes are available for apps to access passes:
 
--  **PKPass** – An instance of a Pass.
--  **PKPassLibrary** – Provides the API to access the passes on the device.
--  **PKAddPassesViewController** – Used to display a pass for the user to save in their Wallet.
--  **PKAddPassesViewControllerDelegate** – Xamarin.iOS developers
+- **PKPass** – An instance of a Pass.
+- **PKPassLibrary** – Provides the API to access the passes on the device.
+- **PKAddPassesViewController** – Used to display a pass for the user to save in their Wallet.
+- **PKAddPassesViewControllerDelegate** – Xamarin.iOS developers
 
 ## Example
 
 Refer to the PassLibrary project in the [sample
-code](https://developer.xamarin.com/samples/monotouch/PassKit/) for this
+code](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) for this
 article. It demonstrates the following common functions that would be
 required in a Wallet Companion Application:
 
@@ -551,10 +541,10 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 Note that the simulator does not filter the list of passes returned, so this
 method should always be tested on real devices. This list can be
-displayed in a UITableView. The [sample app](https://developer.xamarin.com/samples/monotouch/PassKit/) looks like
+displayed in a UITableView. The [sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) looks like
 this after two coupons have been added:
 
- [![](passkit-images/image29.png "The sample app look like this after two coupons have been added")](passkit-images/image29.png#lightbox)
+ [![The sample app look like this after two coupons have been added](passkit-images/image29.png)](passkit-images/image29.png#lightbox)
 
 ### Displaying Passes
 
@@ -575,9 +565,9 @@ string passInfo =
                 + "\nPassUrl:" + pass.PassUrl;
 ```
 
-This string is shown as an alert in the [sample](https://developer.xamarin.com/samples/monotouch/PassKit/):
+This string is shown as an alert in the [sample](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit):
 
- [![](passkit-images/image30.png "The Coupon Selected alert in the sample")](passkit-images/image30.png#lightbox)
+ [![The Coupon Selected alert in the sample](passkit-images/image30.png)](passkit-images/image30.png#lightbox)
 
 You can also use the `LocalizedValueForFieldKey()` method to
 retrieve data from fields in the passes you have designed (since you will know
@@ -603,7 +593,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 The pass is presented with **Add** and **Cancel** options:
 
- [![](passkit-images/image20.png "The pass presented with Add and Cancel options")](passkit-images/image20.png#lightbox)
+ [![The pass presented with Add and Cancel options](passkit-images/image20.png)](passkit-images/image20.png#lightbox)
 
 ### Replace an Existing Pass
 
@@ -686,7 +676,7 @@ how to access the PassKit APIs from a Xamarin.iOS application.
 ## Related Links
 
 - [Wallet for Developers](https://developer.apple.com/wallet/)
-- [PassKit Sample](https://developer.xamarin.com/samples/monotouch/PassKit/)
+- [PassKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)
 - [Wallet Developer Guide](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/PassKit_PG/index.html#//apple_ref/doc/uid/TP40012195-CH1-SW1)
 - [Frameworks – Apple Pay and Wallet (WWDC videos)](https://developer.apple.com/videos/frameworks/apple-pay-and-wallet)
 - [PassKit Framework Reference](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Framework/_index.html)

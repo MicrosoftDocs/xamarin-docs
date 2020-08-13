@@ -4,21 +4,21 @@ description: "How to use the EditText widget to accept user input."
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
 ---
 
-# Edit Text
+# Xamarin.Android Edit Text
 
 In this section, you will use the
-[EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
+[EditText](xref:Android.Widget.EditText)
 widget to create a text field for user input. Once text has been
 entered into the field, the **Enter** key will display the text in a
 toast message.
 
 Open **Resources/layout/activity_main.axml** and add the
-[EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
+[EditText](xref:Android.Widget.EditText)
 element to a containing layout. The following example
 **activity_main.axml** has an `EditText` that has been added to a `LinearLayout`:
 
@@ -47,14 +47,14 @@ action so that tapping the **Enter** key triggers the `KeyPress` input handler.
 to the target of a URL that is typed in.)
 
 To handle user text input, add the following code to the end of the
-[OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/)
+[OnCreate](xref:Android.App.Activity.OnCreate*)
 method in **MainActivity.cs**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
 edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
     e.Handled = false;
-    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) 
+    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
     {
         Toast.MakeText(this, edittext.Text, ToastLength.Short).Show();
         e.Handled = true;
@@ -70,15 +70,15 @@ using Android.Views;
 ```
 
 This code example inflates the
-[EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
+[EditText](xref:Android.Widget.EditText)
 element from the layout and adds a
-[KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/)
+[KeyPress](xref:Android.Views.View.KeyPress)
 handler that defines the action to be made when a key is pressed while
 the widget has focus. In this case, the method is defined to listen for
 the **Enter** key (when tapped) and then pop up a
-[Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+[Toast](xref:Android.Widget.Toast)
 message with the text that has been entered. Note that the
-[Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/)
+[Handled](xref:Android.Views.View.KeyEventArgs.Handled)
 property should always be `true` if the event has been handled. This is
 necessary to prevent the event from bubbling up (which would result in
 a carriage return in the text field).
@@ -88,9 +88,8 @@ press the **Enter** key, the toast will be displayed as shown on the right:
 
 [![Examples of entering text into EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Portions of this page are modifications based on work created and* [ *shared by the Android Open Source Project*](http://code.google.com/policies.html) *and used according to terms described in the* [ *Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [ *Android Form Stuff tutorial*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
-
+*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [*Android Form Stuff tutorial*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## Related Links
 
-- [EditTextSample](https://developer.xamarin.com/samples/monodroid/UserInterface/EditTextSample/)
+- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)

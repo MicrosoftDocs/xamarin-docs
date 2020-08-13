@@ -4,8 +4,8 @@ description: "This document provides several troubleshooting tips useful when wo
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -91,5 +91,5 @@ SpriteKit and SceneKit scenes will be paused when an app enters the background i
 
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
 - [What's new in watchOS 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

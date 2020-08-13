@@ -4,8 +4,8 @@ description: "This document describes how to create create generic subclasses of
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -13,31 +13,28 @@ ms.date: 03/21/2017
 
 ## Using generics with NSObjects
 
-Starting with Xamarin.iOS 7.2.1 you can use generics in
-subclasses of `NSObject` (for example [UIView](xref:UIKit.UIView).
-
-You can now create generic classes, like this one:
+It's possible to use generics in
+subclasses of `NSObject`, for example [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
-	public Foo (CGRect x) : base (x) {}
-	public override void Draw (CoreGraphics.CGRect rect)
-	{
-		Console.WriteLine ("T: {0}. Type: {1}", typeof (T), GetType ().Name);
-	}
+    public Foo (CGRect x) : base (x) {}
+    public override void Draw (CoreGraphics.CGRect rect)
+    {
+        Console.WriteLine ("T: {0}. Type: {1}", typeof (T), GetType ().Name);
+    }
 }
 ```
 
 Since objects that subclass `NSObject` are registered with
 the Objective-C runtime there are some limitations as to what
 is possible with generic subclasses of `NSObject` types.
-	
+
 ## Considerations for generic subclasses of NSObject
 
 This document details the limitations in the limited
-support for generic subclasses of `NSObjects` introduced with
-Xamarin.iOS 7.2.1.
-	
+support for generic subclasses of `NSObjects`.
+
 ### Generic Type Arguments in Member Signatures
 
 All generic type arguments in a member signature exposed to
@@ -48,10 +45,10 @@ Objective-C must have an `NSObject` constraint.
 ```csharp
 class Generic<T> : NSObject where T: NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+    }
 }
 ```
 
@@ -65,10 +62,10 @@ it).
 ```csharp
 class Generic<T> : NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+    }
 }
 ```
 
@@ -82,12 +79,12 @@ type of the generic type `T`.
 ```csharp
 class Generic<T> : NSObject
 {
-	T storage;
+    T storage;
 
-	[Export ("myMethod:")]
-	public void MyMethod (NSObject value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (NSObject value)
+    {
+    }
 }
 ```
 
@@ -100,33 +97,33 @@ member signature.
 ```csharp
 class Generic<T, U> : NSObject where T: NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-		Console.WriteLine (typeof (U));
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+        Console.WriteLine (typeof (U));
+    }
 }
 ```
 
 **Reason**: the `T` parameter in the Objective-C exported
 `MyMethod` is constrained to be an `NSObject`, the unconstrained
 type `U` is not part of the signature.
-	
+
 ### Instantiations of Generic Types from Objective-C
 
 Instantiation of generic types from Objective-C is not
 allowed. This typically occurs when a managed type is used in
-a xib.
+a xib or a storyboard.
 
 Consider this class definition, which exposes a constructor
 that takes an `IntPtr` (the Xamarin.iOS way of constructing a C#
 object from a native Objective-C instance):
-	
-```
+
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	public Generic () {}
-	public Generic (IntPtr ptr) : base (ptr) {}
+    public Generic () {}
+    public Generic (IntPtr ptr) : base (ptr) {}
 }
 ```
 
@@ -135,17 +132,17 @@ throw an exception at if Objective-C tries to create an
 instance of it.
 
 This is happens because Objective-C has no concept of
-generic types, and it cannot  specify the exact generic type
+generic types, and it cannot specify the exact generic type
 to create.
 
 This problem can be worked around by creating a specialized
-subclass of the generic type.   For example:
-	
-```
+subclass of the generic type. For example:
+
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	public Generic () {}
-	public Generic (IntPtr ptr) : base (ptr) {}
+    public Generic () {}
+    public Generic (IntPtr ptr) : base (ptr) {}
 }
 
 class GenericUIView : Generic<UIView>
@@ -154,7 +151,7 @@ class GenericUIView : Generic<UIView>
 ```
 
 Now there is no ambiguity anymore, the
-class `GenericUIView` can be used in xibs.
+class `GenericUIView` can be used in xibs or storyboards.
 
 ## No support for generic methods
 
@@ -165,10 +162,10 @@ The following code will not compile:
 ```csharp
 class MyClass : NSObject
 {
-	[Export ("myMethod")]
-	public void MyMethod<T> (T argument)
-	{
-	}
+    [Export ("myMethod")]
+    public void MyMethod<T> (T argument)
+    {
+    }
 }
 ```
 
@@ -181,14 +178,14 @@ An alternative is to create a specialized method and export that instead:
 ```csharp
 class MyClass : NSObject
 {
-	[Export ("myMethod")]
-	public void MyUIViewMethod (UIView argument)
-	{
-		MyMethod<UIView> (argument);
-	}
-	public void MyMethod<T> (T argument)
-	{
-	}
+    [Export ("myMethod")]
+    public void MyUIViewMethod (UIView argument)
+    {
+        MyMethod<UIView> (argument);
+    }
+    public void MyMethod<T> (T argument)
+    {
+    }
 }
 ```
 
@@ -202,65 +199,56 @@ Example of an unsupported scenario:
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	[Export ("myMethod:")]
-	public static void MyMethod ()
-	{
-	}
+    [Export ("myMethod:")]
+    public static void MyMethod ()
+    {
+    }
 
-	[Export ("myProperty")]
-	public static T MyProperty { get; set; }
+    [Export ("myProperty")]
+    public static T MyProperty { get; set; }
 }
 ```
 
 **Reason:** Just like generic methods, the Xamarin.iOS runtime
 needs to be able to know what type to use for the generic type
-argument T.
+argument `T`.
 
 For instance members the instance itself is used (since
-there will never be an instance Generic<T>, it will
-always be Generic<SomeSpecificClass>), but for static
+there will never be an instance `Generic<T>`, it will
+always be `Generic<SomeSpecificClass>`), but for static
 members this information is not present.
 
 Note that this applies even if the member in question does
-not use the type argument T in any way.
+not use the type argument `T` in any way.
 
 The alternative in this case is to create a specialized subclass:
 
 ```csharp
 class GenericUIView : Generic<UIView>
 {
-	[Export ("myUIViewMethod")]
-	public static void MyUIViewMethod ()
-	{
-		MyMethod ();
-	}
+    [Export ("myUIViewMethod")]
+    public static void MyUIViewMethod ()
+    {
+        MyMethod ();
+    }
 
-	[Export ("myProperty")]
-	public static UIView MyUIVIewProperty {
-		get { return MyProperty; }
-		set { MyProperty = value; }
-	}
+    [Export ("myProperty")]
+    public static UIView MyUIViewProperty {
+        get { return MyProperty; }
+        set { MyProperty = value; }
+    }
 }
 
 class Generic<T> : NSObject where T : NSObject
 {
-	public static void MyMethod () {}
-	public static T MyProperty { get; set; }
+    public static void MyMethod () {}
+    public static T MyProperty { get; set; }
 }
 ```
 
-### Requires new Static Registrar
-
-The generics support requires the new [registration system](~/ios/internals/registrar.md).
-
-If you try to use the old legacy registration system will
-show warnings when it encounters generic types (in addition to not
-generate correct code, resulting in undefined behavior).
-	
 ## Performance
 
 The static registrar can't resolve an exported member in a generic
 type at build time as it usually does, it has to be looked up at
-runtime. This means	that invoking such a method from Objective-C
+runtime. This means    that invoking such a method from Objective-C
 is slightly slower than invoking members from non-generic classes.
-

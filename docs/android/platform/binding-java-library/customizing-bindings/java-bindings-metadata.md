@@ -4,15 +4,17 @@ description: "C# code in Xamarin.Android calls Java libraries through bindings, 
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
 # Java Bindings Metadata
 
-_C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata._
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
+_C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata._
 
 ## Overview
 
@@ -69,31 +71,30 @@ mapping files when creating the binding assembly
 These XML mapping files may be found in the **Transforms** folder of
 the project:
 
--   **MetaData.xml** &ndash; Allows changes to be made to the final API, 
+- **MetaData.xml** &ndash; Allows changes to be made to the final API, 
     such as changing the namespace of the generated binding. 
 
--   **EnumFields.xml** &ndash; Contains the mapping between Java `int` 
+- **EnumFields.xml** &ndash; Contains the mapping between Java `int` 
     constants and C# `enums` . 
 
--   **EnumMethods.xml** &ndash; Allows changing method parameters and 
+- **EnumMethods.xml** &ndash; Allows changing method parameters and 
     return types from Java `int` constants to C# `enums` . 
 
 The **MetaData.xml** file is the most import of these files as it
 allows general-purpose changes to the binding such as:
 
--   Renaming namespaces, classes, methods, or fields so they follow 
+- Renaming namespaces, classes, methods, or fields so they follow 
     .NET conventions. 
 
--   Removing namespaces, classes, methods, or fields that aren't 
+- Removing namespaces, classes, methods, or fields that aren't 
     needed. 
 
--   Moving classes to different namespaces. 
+- Moving classes to different namespaces. 
 
--   Adding additional support classes to make the design of the binding 
+- Adding additional support classes to make the design of the binding 
     follow .NET framework patterns. 
 
 Lets move on to discuss **Metadata.xml** in more detail.
-
 
 ## Metadata.xml Transform File
 
@@ -111,9 +112,9 @@ metadata spec include a path attribute to identify the node to which
 the rule is to be applied. The rules are applied in the following
 order:
 
-* **add-node** &ndash; Appends a child node to the node specified by the path attribute.
-* **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
-* **remove-node** &ndash; Removes nodes matching a specified XPath.
+- **add-node** &ndash; Appends a child node to the node specified by the path attribute.
+- **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
+- **remove-node** &ndash; Removes nodes matching a specified XPath.
 
 The following is an example of a **Metadata.xml** file:
 
@@ -136,15 +137,13 @@ The following is an example of a **Metadata.xml** file:
 The following lists some of the more commonly used XPath elements for
 the Java API's:
 
--   `interface` &ndash; Used to locate a Java interface. e.g. `/interface[@name='AuthListener']`.
+- `interface` &ndash; Used to locate a Java interface. e.g. `/interface[@name='AuthListener']`.
 
--   `class` &ndash; Used to locate a class . e.g. `/class[@name='MapView']`.
+- `class` &ndash; Used to locate a class . e.g. `/class[@name='MapView']`.
 
--   `method` &ndash; Used to locate a method on a Java class or interface. e.g. `/class[@name='MapView']/method[@name='setTitleSource']`.
+- `method` &ndash; Used to locate a method on a Java class or interface. e.g. `/class[@name='MapView']/method[@name='setTitleSource']`.
 
--   `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
-
-
+- `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
 
 ### Adding Types
 
@@ -161,7 +160,6 @@ constructor and a single field:
     </class>
 </add-node>
 ```
-
 
 ### Removing Types
 
@@ -212,7 +210,7 @@ example:
     name="managedName">NewName</attr>
 ```
 
-<a name="Renaming_EventArg_Wrapper_Classes" />
+<a name="Renaming_EventArg_Wrapper_Classes"></a>
 
 #### Renaming `EventArg` Wrapper Classes
 
@@ -237,15 +235,13 @@ NavigationManager.2DSignNextManueverEventArgs
 This is not a legal C# class name. To correct this problem, the binding
 author must use the `argsType` attribute and provide a valid C# name
 for the `EventArgs` subclass:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
     method[@name='on2DSignNextManeuver']" 
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
-
- 
 
 ## Supported Attributes
 
@@ -294,19 +290,20 @@ possible solution in this situation is to change the return type of the
 method.
 
 For example, the Bindings Generator believes that the Java method
-`de.neom.neoreadersdk.resolution.compareTo()` should return an `int`,
+`de.neom.neoreadersdk.resolution.compareTo()` should return an `int` and take `Object` as parameters,
 which results in the error message **Error CS0535:
 'DE.Neom.Neoreadersdk.Resolution' does not implement interface member
-'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. The following
-snippet demonstrates how to change the return type of the generated C#
-method from an `int` to a `Java.Lang.Object`: 
+'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. 
+The following
+snippet demonstrates how to change the first parameter's type of the generated C#
+method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
     class[@name='Resolution']/
     method[@name='compareTo' and count(parameter)=1 and
     parameter[1][@type='de.neom.neoreadersdk.Resolution']]/
-    parameter[1]"name="managedType">Java.Lang.Object</attr> 
+    parameter[1]" name="managedType">Java.Lang.Object</attr> 
 ```
 
 ### managedReturn
@@ -330,8 +327,8 @@ Tools that obfuscate Java libraries may interfere with the
 Xamarin.Android Binding Generator and its ability to generate C#
 wrapper classes. Characteristics of obfuscated classes include: 
 
-* The class name includes a **$**, i.e. **a$.class**
-* The class name is entirely compromised of lower case characters, i.e. **a.class**
+- The class name includes a **$**, i.e. **a$.class**
+- The class name is entirely compromised of lower case characters, i.e. **a.class**
 
 This snippet is an example of how to generate an "un-obfuscated" C# type:
 
@@ -451,7 +448,6 @@ Xamarin.Android to set the `MeasurementUnit`:
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## Summary
 
 This article discussed how Xamarin.Android uses metadata to transform
@@ -460,8 +456,6 @@ changes that are possible using *Metadata.xml*, it examined the
 limitations encountered when renaming members and it presented the list
 of supported XML attributes, describing when each attribute should be
 used.
-
-
 
 ## Related Links
 

@@ -4,17 +4,15 @@ description: "This guide explains how to launch and debug apps in Visual Studio 
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
 ---
 
-# Debugging on the Android Emulator
+# Debug on the Android Emulator
 
 _In this guide, you will learn how to launch a virtual device in the
 Android Emulator to debug and test your app._
-
-## Overview
 
 The Android Emulator (installed as part of the **Mobile development with
 .NET** workload), can be run in a variety of configurations to simulate
@@ -25,7 +23,6 @@ information about configuring the Android Emulator and creating new
 virtual devices, see 
 [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 
-
 ## Using a Pre-Configured Virtual Device
 
 # [Visual Studio](#tab/windows)
@@ -34,13 +31,13 @@ Visual Studio includes pre-configured virtual devices that appear in
 the device drop-down menu. For example, in the following Visual Studio
 2017 screenshot, several pre-configured virtual devices are available:
 
--   **VisualStudio\_android-23\_arm\_phone**
+- **VisualStudio\_android-23\_arm\_phone**
 
--   **VisualStudio\_android-23\_arm\_tablet**
+- **VisualStudio\_android-23\_arm\_tablet**
 
--   **VisualStudio\_android-23\_x86\_phone** 
+- **VisualStudio\_android-23\_x86\_phone** 
 
--   **VisualStudio\_android-23\_x86\_tablet** 
+- **VisualStudio\_android-23\_x86\_tablet** 
 
 [![Virtual devices](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
 
@@ -76,9 +73,9 @@ Visual Studio for Mac includes pre-configured virtual devices that
 appear in the device drop-down menu. For example, in the following
 screenshot, two pre-configured virtual devices are available:
 
--   **Android\_Accelerated\_x86**
+- **Android\_Accelerated\_x86**
 
--   **Android\_ARMv7a**
+- **Android\_ARMv7a**
 
 [![Virtual devices](debug-on-emulator-images/mac/01-virtual-devices-sml.png)](debug-on-emulator-images/mac/01-virtual-devices.png#lightbox)
 
@@ -97,8 +94,7 @@ emulator. (If you are not yet familiar with Android API levels, see
 To modify virtual devices (or to create new ones), you must use the
 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-
-<a name="launching" />
+<a name="launching"></a>
 
 ## Launching the Emulator
 
@@ -139,7 +135,7 @@ the first Xamarin.Android app is deployed to the emulator &ndash;
 subsequent deployments are faster because only the app is copied to the
 emulator.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## Quick Boot
 
@@ -149,8 +145,8 @@ close the emulator, it takes a snapshot of the virtual device state so
 that it can be quickly restored from that state when it is restarted.
 To access this feature, you will need the following:
 
--   Android Emulator version 27.0.2 or later
--   Android SDK Tools version 26.1.1 or later
+- Android Emulator version 27.0.2 or later
+- Android SDK Tools version 26.1.1 or later
 
 When the above-listed versions of the emulator and SDK tools are
 installed, the Quick Boot feature is enabled by default. 
@@ -170,12 +166,10 @@ simply restores the state at which you closed the emulator.
 
 ![Loading state on restart](debug-on-emulator-images/loading-state.png)
 
-
 ## Troubleshooting
 
 For tips and workarounds for common emulator problems, see
 [Android Emulator Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md).
-
 
 ## Summary
 
@@ -188,10 +182,10 @@ Visual Studio.
 For more information about using the Android Emulator, see
 the following Android Developer topics:
 
--   [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate)
+- [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate)
 
--   [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks)
+- [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks)
 
--   [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended)
+- [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended)
 
--   [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot)
+- [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot)

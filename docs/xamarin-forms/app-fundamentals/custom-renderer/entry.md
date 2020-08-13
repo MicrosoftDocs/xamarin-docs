@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Customizing an Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -19,20 +20,18 @@ Every Xamarin.Forms control has an accompanying renderer for each platform that 
 
 The following diagram illustrates the relationship between the [`Entry`](xref:Xamarin.Forms.Entry) control and the corresponding native controls that implement it:
 
-![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
+![Relationship Between Entry Control and Implementing Native Controls](entry-images/entry-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for the [`Entry`](xref:Xamarin.Forms.Entry) control on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Custom_Entry_Control) a Xamarin.Forms custom control.
-1. [Consume](#Consuming_the_Custom_Control) the custom control from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the control on each platform.
+1. [Create](#creating-the-custom-entry-control) a Xamarin.Forms custom control.
+1. [Consume](#consuming-the-custom-control) the custom control from Xamarin.Forms.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the control on each platform.
 
 Each item will now be discussed in turn, to implement an [`Entry`](xref:Xamarin.Forms.Entry) control that has a different background color on each platform.
 
 > [!IMPORTANT]
-> This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#providing-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
-
-<a name="Creating_the_Custom_Entry_Control" />
+> This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 ## Creating the Custom Entry Control
 
@@ -45,8 +44,6 @@ public class MyEntry : Entry
 ```
 
 The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](xref:Xamarin.Forms.Entry) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## Consuming the Custom Control
 
@@ -91,8 +88,6 @@ This code instantiates a new [`ContentPage`](xref:Xamarin.Forms.ContentPage) obj
 
 A custom renderer can now be added to each application project to customize the control's appearance on each platform.
 
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
-
 ## Creating the Custom Renderer on each Platform
 
 The process for creating the custom renderer class is as follows:
@@ -106,11 +101,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
+![MyEntry Custom Renderer Project Responsibilities](entry-images/solution-structure.png)
 
 The `MyEntry` control is rendered by platform-specific `MyEntryRenderer` classes, which all derive from the `EntryRenderer` class for each platform. This results in each `MyEntry` control being rendered with a platform-specific background color, as shown in the following screenshots:
 
-![](entry-images/screenshots.png "MyEntry Control on each Platform")
+![MyEntry Control on each Platform](entry-images/screenshots.png)
 
 The `EntryRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms control is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `MyEntry` control.
 
@@ -208,7 +203,6 @@ The call to the base class's `OnElementChanged` method instantiates a `TextBox` 
 
 This article has demonstrated how to create a custom control renderer for the Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control, enabling developers to override the default native rendering with their own platform-specific rendering. Custom renderers provide a powerful approach to customizing the appearance of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
 
-
 ## Related Links
 
-- [CustomRendererEntry (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
+- [CustomRendererEntry (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

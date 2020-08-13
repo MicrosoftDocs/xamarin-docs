@@ -3,8 +3,8 @@ title: "Fonts"
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/09/2018
 ---
 # Fonts
@@ -13,7 +13,7 @@ ms.date: 09/09/2018
 
 Beginning with API level 26, the Android SDK allows fonts to be treated as resources, just like a layouts or drawables. The [Android Support Library 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) will backport the new font API's to those apps that target API level 14 or higher.
 
-After targetting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
+After targeting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
 
 1. **Package the font as an Android resource** &ndash; this ensures that the font is always available to the application, but will increase the size of the APK.
 2. **Download the fonts** &ndash; Android also supports downloading a font from a _font provider_. The font provider checks if the font is already on the device. If necessary, the font will be downloaded and cached on the device. This font can be shared between multiple applications.
@@ -61,7 +61,7 @@ Packaging a font into an Android APK ensures that it is always available to the 
 
 When there are many similar font files (for example, the same font with different weights or styles) it is possible to group them into a font family.
 
-<a name="font_families" />
+<a name="font_families"></a>
 
 ### Font Families
 
@@ -98,20 +98,20 @@ The following XML is an example of a font family for the _Sources Sans Pro_ font
 
 The `fontStyle` attribute has two possible values:
 
-* **normal** &ndash; a normal font
-* **italic** &ndash; an italic font
+- **normal** &ndash; a normal font
+- **italic** &ndash; an italic font
 
 The `fontWeight` attribute corresponds to the CSS `font-weight` attribute and refers to the thickness of the font. This is a value in the range of 100 - 900. The following list describes the common font weight values and their name:
 
-* **Thin** &ndash; 100
-* **Extra Light** &ndash; 200
-* **Light** &ndash; 300
-* **Normal** &ndash; 400
-* **Medium** &ndash; 500
-* **Semi Bold** &ndash; 600
-* **Bold** &ndash; 700
-* **Extra Bold** &ndash; 800
-* **Black** &ndash; 900
+- **Thin** &ndash; 100
+- **Extra Light** &ndash; 200
+- **Light** &ndash; 300
+- **Normal** &ndash; 400
+- **Medium** &ndash; 500
+- **Semi Bold** &ndash; 600
+- **Bold** &ndash; 700
+- **Extra Bold** &ndash; 800
+- **Black** &ndash; 900
 
 Once a font family has been defined, it can be used declaratively by setting the `fontFamily`, `textStyle`, and `fontWeight` attributes in the layout file.  For example the following XML snippet sets a 600 weight font (normal) and an italic text style:
 
@@ -149,7 +149,7 @@ textView1.Typeface = typeface;
 
 Instead of packaging fonts as an application resource, Android can download fonts from a remote source. This will have the desirable effect of reducing the size of the APK.
 
-Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](http://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
+Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](https://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
 
 When an app makes a request for a font, the font provider will first check to see if the font is already on the device. If not, it will then attempt to download the font. If the font cannot be downloaded, then Android will use the default system font. Once the font has been downloaded, it is available to all applications on the device, not just the app that made the initial request.
 
@@ -255,8 +255,8 @@ In the previous snippet `FontToDownload` is a query that will help the font from
 
 Before passing the `FontRequest` to the `FontContractCompat.RequestFont` method, there are two objects that must be created:
 
-* **`FontsContractCompat.FontRequestCallback`** &ndash; This is an abstract class which must be extended. It is a callback that will be invoked when `RequestFont` is finished. A Xamarin.Android app must subclass `FontsContractCompat.FontRequestCallback` and override the `OnTypefaceRequestFailed` and `OnTypefaceRetrieved`, providing the actions to be taken when the download fails or succeeds respectively.
-* **`Handler`** &ndash; This is a `Handler` which will be used by `RequestFont` to download the font on a thread, if necessary. Fonts should **not** be downloaded on the UI thread.
+- **`FontsContractCompat.FontRequestCallback`** &ndash; This is an abstract class which must be extended. It is a callback that will be invoked when `RequestFont` is finished. A Xamarin.Android app must subclass `FontsContractCompat.FontRequestCallback` and override the `OnTypefaceRequestFailed` and `OnTypefaceRetrieved`, providing the actions to be taken when the download fails or succeeds respectively.
+- **`Handler`** &ndash; This is a `Handler` which will be used by `RequestFont` to download the font on a thread, if necessary. Fonts should **not** be downloaded on the UI thread.
 
 This snippet is an example of a C# class that will asynchronously download a font from Google Fonts Open Source collection. It implements the `FontRequestCallback` interface, and raises a C# event when `FontRequest` has finished.
 
@@ -272,7 +272,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     {
         // just an empty delegate to avoid null reference exceptions.  
     };
-
 
     public void DownloadFonts(Context context)
     {

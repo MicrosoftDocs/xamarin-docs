@@ -3,8 +3,8 @@ title: "Getting Started with Fingerprint Authentication"
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/17/2018
 ---
 
@@ -125,9 +125,9 @@ consult the Android guide
 
 ## Related Links
 
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
-- [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
+- [Context](xref:Android.Content.Context)
+- [KeyguardManager](xref:Android.App.KeyguardManager)
+- [ContextCompat](https://developer.android.com/reference/android/support/v4/content/ContextCompat)
 - [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
 - [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
 - [Requesting Permissions at Run-Time](https://developer.android.com/training/permissions/requesting.html)

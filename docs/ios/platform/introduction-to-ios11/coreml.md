@@ -4,8 +4,8 @@ description: "This document describes CoreML, which enables machine learning on 
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
 ---
 
@@ -20,11 +20,11 @@ This introduction covers the following:
 - [Getting Started with CoreML](#coreml)
 - [Using CoreML with the Vision framework](#coremlvision)
 
-<a name="coreml" />
+<a name="coreml"></a>
 
 ## Getting Started with CoreML
 
-These steps describe how to add CoreML to an iOS project. Refer to the [Mars Habitat Pricer sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) for a practical example.
+These steps describe how to add CoreML to an iOS project. Refer to the [Mars Habitat Pricer sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) for a practical example.
 
 ![Mars Habitat Price Predictor sample screenshot](coreml-images/marspricer-heading.png)
 
@@ -85,7 +85,7 @@ accessed using `GetFeatureValue` with the name of each output parameter (such as
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
 ```
 
-<a name="coremlvision" />
+<a name="coremlvision"></a>
 
 ## Using CoreML with the Vision Framework
 
@@ -94,7 +94,7 @@ operations on image, such as shape recognition, object identification, and other
 tasks.
 
 The steps below describe how CoreML and Vision are used together in the
-[CoreMLVision sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/). The sample combines
+[CoreMLVision sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). The sample combines
 the [rectangles recognition](~/ios/platform/introduction-to-ios11/vision.md#rectangles) from the Vision framework with the _MNINSTClassifier_ CoreML model to identify a handwritten digit in a photograph.
 
 ![Image recognition of number 3](coreml-images/vision3.png) ![Image recognition of number 5](coreml-images/vision5.png)
@@ -188,17 +188,17 @@ void HandleClassification(VNRequest request, NSError error){
 
 There are three CoreML samples to try:
 
-* The [Mars Habitat Price Predictor sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) has simple numeric inputs and outputs.
+- The [Mars Habitat Price Predictor sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) has simple numeric inputs and outputs.
 
-* The [Vision & CoreML sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/) accepts an image parameter, and uses the Vision framework to identify square regions in the image, which are passed to a CoreML model that recognizes single digits.
+- The [Vision & CoreML sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) accepts an image parameter, and uses the Vision framework to identify square regions in the image, which are passed to a CoreML model that recognizes single digits.
 
-* Finally, the [CoreML Image Recognition sample](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/) uses CoreML to identify features in a photo. By default it uses the smaller **SqueezeNet** model (5MB), but it's been written so that you can download and incorporate the larger **VGG16** model (553MB). For more information, see the [sample's readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+- Finally, the [CoreML Image Recognition sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) uses CoreML to identify features in a photo. By default it uses the smaller **SqueezeNet** model (5MB), but it's been written so that you can download and incorporate the larger **VGG16** model (553MB). For more information, see the [sample's readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## Related Links
 
 - [Machine Learning (Apple)](https://developer.apple.com/machine-learning/)
-- [CoreML Example (Mars Habitat) (sample)](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/)
-- [CoreML and Vision (Number Recognition) (sample)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/)
-- [CoreML Image Recognition (sample)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/)
-- [CoreML with Azure Custom Vision (sample)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
+- [CoreML Example (Mars Habitat) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
+- [CoreML and Vision (Number Recognition) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+- [CoreML Image Recognition (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML with Azure Custom Vision (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [Introducing CoreML (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/703/)

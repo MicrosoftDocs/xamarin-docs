@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
 ---
 
@@ -39,17 +39,17 @@ development computer's graphics card for rendering.
 
 You can change properties by using the following guidelines:
 
--   To change a boolean property, click the check mark to the right of
+- To change a boolean property, click the check mark to the right of
     the boolean property:
 
     ![Changing a boolean property](device-properties-images/win/02-boolean-value.png)
 
--   To change an *enum* (enumerated) property, click the down-arrow to
+- To change an *enum* (enumerated) property, click the down-arrow to
     the right of the property and choose a new value.
 
     ![Changing an enum property](device-properties-images/win/04-enum-value.png)
 
--   To change a string or integer property, double-click the current
+- To change a string or integer property, double-click the current
     string or integer setting in the value column and enter a new value.
 
     ![Changing an integer property](device-properties-images/win/03-integer-value.png)
@@ -79,17 +79,17 @@ development computer's graphics card for rendering.
 
 You can change properties by using the following guidelines:
 
--   To change a boolean property, click the check mark to the right of
+- To change a boolean property, click the check mark to the right of
     the boolean property:
 
     ![Changing a boolean property](device-properties-images/mac/02-boolean-value.png)
 
--   To change an *enum* (enumerated) property, click the pull-down menu
+- To change an *enum* (enumerated) property, click the pull-down menu
     to the right of the property and choose a new value.
 
     ![Changing an enum property](device-properties-images/mac/04-enum-value.png)
 
--   To change a string or integer property, double-click the current
+- To change a string or integer property, double-click the current
     string or integer setting in the value column and enter a new value.
 
     ![Changing an integer property](device-properties-images/mac/03-integer-value.png)
@@ -103,4 +103,3 @@ listed in the **New Device** and **Device Editor** screens:
 
 For more information about these properties, see
 [Hardware Profile Properties](https://developer.android.com/studio/run/managing-avds.html#hpproperties).
-

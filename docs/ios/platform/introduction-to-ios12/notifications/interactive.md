@@ -4,8 +4,8 @@ description: "With iOS 12, it is possible to create interactive user interfaces 
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Interactive notification user interfaces in Xamarin.iOS
@@ -17,7 +17,7 @@ contain interactive elements such as buttons and sliders.
 
 ## Sample App: RedGreenNotifications
 
-The [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+The [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 sample app contains a notification content extension with an interactive
 user interface.
 
@@ -135,7 +135,7 @@ the image displayed in the notification's interface:
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

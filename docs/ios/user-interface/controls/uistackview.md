@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -24,7 +24,7 @@ responds to the orientation and screen size of the iOS device.
 The layout of all subviews attached to a Stack View are managed by it based on
 developer defined properties such as axis, distribution, alignment and spacing:
 
-[![](uistackview-images/stacked01.png "Stack View layout diagram")](uistackview-images/stacked01.png#lightbox)
+[![Stack View layout diagram](uistackview-images/stacked01.png)](uistackview-images/stacked01.png#lightbox)
 
 When using a `UIStackView` in a Xamarin.iOS app, the developer can either define
 the subviews either inside a Storyboard in the iOS Designer, or by adding and removing subviews in C# code.
@@ -34,7 +34,7 @@ first stack view, and then some more technical details about how it works.
 
 > [!VIDEO https://youtube.com/embed/p3po6507Ip8]
 
-**UIStackView, by [Xamarin University](https://university.xamarin.com/)**
+**UIStackView video**
 
 ## UIStackView Quickstart
 
@@ -44,11 +44,11 @@ As a quick introduction to the `UIStackView` control, we are going to create a s
 
 Start a new Xamarin.iOS project and edit the **Main.storyboard** file in Xcode's Interface Builder. First, drag a single **Vertical Stack View** on the **View Controller**:
 
-[![](uistackview-images/quick01.png "Drag a single Vertical Stack View on the View Controller")](uistackview-images/quick01.png#lightbox)
+[![Drag a single Vertical Stack View on the View Controller](uistackview-images/quick01.png)](uistackview-images/quick01.png#lightbox)
 
 In the **Attribute Inspector**, set the following options:
 
-[![](uistackview-images/quick02.png "Set the Stack View options")](uistackview-images/quick02.png#lightbox)
+[![Set the Stack View options](uistackview-images/quick02.png)](uistackview-images/quick02.png#lightbox)
 
 Where:
 
@@ -66,17 +66,17 @@ When working with a Stack View, you can think of the **Alignment** as the **X** 
 
 Continue to layout the app's interface by adding a Label, ImageView, two Buttons and a Horizontal Stack View so that it resembles the following:
 
-[![](uistackview-images/quick03.png "Laying out the Stack View UI")](uistackview-images/quick03.png#lightbox)
+[![Laying out the Stack View UI](uistackview-images/quick03.png)](uistackview-images/quick03.png#lightbox)
 
 Configure the Horizontal Stack View with the following options:
 
-[![](uistackview-images/quick04.png "Configure the Horizontal Stack View options")](uistackview-images/quick04.png#lightbox)
+[![Configure the Horizontal Stack View options](uistackview-images/quick04.png)](uistackview-images/quick04.png#lightbox)
 
 Because we don't want the icon that represents each "point" in the rating to be stretched when it's added to the Horizontal Stack View, we've set the **Alignment** to **Center** and the **Distribution** to **Fill Equally**.
 
 Finally, wire up the following **Outlets** and **Actions**:
 
-[![](uistackview-images/quick05.png "The Stack View Outlets and Actions")](uistackview-images/quick05.png#lightbox)
+[![The Stack View Outlets and Actions](uistackview-images/quick05.png)](uistackview-images/quick05.png#lightbox)
 
 ### Populate a UIStackView from Code
 
@@ -88,47 +88,47 @@ public int Rating { get; set;} = 0;
 
 partial void IncreaseRating (Foundation.NSObject sender) {
 
-	// Maximum of 5 "stars"
-	if (++Rating > 5 ) {
-		// Abort
-		Rating = 5;
-		return;
-	}
+    // Maximum of 5 "stars"
+    if (++Rating > 5 ) {
+        // Abort
+        Rating = 5;
+        return;
+    }
 
-	// Create new rating icon and add it to stack
-	var icon = new UIImageView (new UIImage("icon.png"));
-	icon.ContentMode = UIViewContentMode.ScaleAspectFit;
-	RatingView.AddArrangedSubview(icon);
+    // Create new rating icon and add it to stack
+    var icon = new UIImageView (new UIImage("icon.png"));
+    icon.ContentMode = UIViewContentMode.ScaleAspectFit;
+    RatingView.AddArrangedSubview(icon);
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 
 }
 
 partial void DecreaseRating (Foundation.NSObject sender) {
 
-	// Minimum of zero "stars"
-	if (--Rating < 0) {
-		// Abort
-		Rating =0;
-		return;
-	}
+    // Minimum of zero "stars"
+    if (--Rating < 0) {
+        // Abort
+        Rating =0;
+        return;
+    }
 
-	// Get the last subview added
-	var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
+    // Get the last subview added
+    var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 
-	// Remove from stack and screen
-	RatingView.RemoveArrangedSubview(icon);
-	icon.RemoveFromSuperview();
+    // Remove from stack and screen
+    RatingView.RemoveArrangedSubview(icon);
+    icon.RemoveFromSuperview();
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 }
 ```
 
@@ -173,7 +173,7 @@ With all the required UI elements and code in place, you can now run and test th
 
 When the user taps the **Increase Rating** button, another "star" is added to the screen (up to a maximum of 5):
 
-[![](uistackview-images/intro01.png "The sample app run")](uistackview-images/intro01.png#lightbox)
+[![The sample app run](uistackview-images/intro01.png)](uistackview-images/intro01.png#lightbox)
 
 The "stars" will be automatically centered and equally distributed in the Horizontal Stack View. When the user taps the **Decrease Rating** button, a "star" is removed (until none are left).
 
@@ -197,16 +197,16 @@ While the Stack View has total control over the layout of any subview (based on 
 
 Generally, this means pinning at least two edges of the Stack View to expand and contract, thus defining its position. Without any additional constraints, the Stack View will automatically be resized to fit all of its subviews as follows:
 
- - The size along its `Axis` will be the sum of all subview sizes plus any space that has been defined between each subview.
- - If the `LayoutMarginsRelativeArrangement` property is `true`, the Stack Views size will also include room for the margins.
- - The size perpendicular to the `Axis` will be set to the largest subview in the collection.
+- The size along its `Axis` will be the sum of all subview sizes plus any space that has been defined between each subview.
+- If the `LayoutMarginsRelativeArrangement` property is `true`, the Stack Views size will also include room for the margins.
+- The size perpendicular to the `Axis` will be set to the largest subview in the collection.
 
 Additionally, you can specify constraints for the Stack View's **Height** and **Width**. In this case, the subviews will be laid out (sized) to fill the space specified by the Stack View as determined by the `Distribution` and `Alignment` properties.
 
 If the `BaselineRelativeArrangement` property is `true`, the subviews will be laid out based on the first or last subview's baseline, instead of using the **Top**, **Bottom** or **Center**- **Y** position. These are calculated on the Stack View's content as follows:
 
- - A Vertical Stack View will return the first subview for the first baseline and the last for the last. If either of these subviews are themselves Stack Views, then their first or last baseline will be used.
- - A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
+- A Vertical Stack View will return the first subview for the first baseline and the last for the last. If either of these subviews are themselves Stack Views, then their first or last baseline will be used.
+- A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
 
 > [!IMPORTANT]
 > Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
@@ -216,9 +216,9 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
 There are several layout types that work well with Stack View controls. According to Apple, here are a few of the more common uses:
 
 - **Define the Size Along the Axis** – By pinning both edges along the Stack View's `Axis` and one of the adjacent edges to set the position, the Stack view will grow along the axis to fit the space defined by its subviews.
- -  **Define the Subview's Position** – By pinning to adjacent edges of the Stack View to it's parent view, the Stack View will grow in both dimensions to fit it's containing subviews.
+- **Define the Subview's Position** – By pinning to adjacent edges of the Stack View to it's parent view, the Stack View will grow in both dimensions to fit it's containing subviews.
 - **Define the Size and Position of the Stack** – By pinning all four edges of the Stack View to the parent view, the Stack View arranges the subviews based on the space defined within the Stack View.
- -  **Define the Size Perpendicular the Axis** – By pinning both edges perpendicular to the Stack View's `Axis` and one of the edges along the axis to set the position, the Stack view will grow perpendicular to the axis to fit the space defined by its subviews.
+- **Define the Size Perpendicular the Axis** – By pinning both edges perpendicular to the Stack View's `Axis` and one of the edges along the axis to set the position, the Stack view will grow perpendicular to the axis to fit the space defined by its subviews.
 
 ### Managing the Appearance
 
@@ -241,14 +241,14 @@ You can further fine-tune the UIs appearance by adding additional constraints to
 
 The Stack View will ensure that its `ArrangedSubviews` property is always a subset of its `Subviews` property using the following rules:
 
- - If a subview is added to the `ArrangedSubviews` collection, it will automatically be added to the `Subviews` collection (unless it's already part of that collection).
- - If a subview is removed from the `Subviews` collection (removed from display), it is also removed from the `ArrangedSubviews` collection.
- - Removing a subview from the `ArrangedSubviews` collection does not remove it from the `Subviews` collection. So it will no longer be laid out by the Stack View, but will still be visible on screen.
+- If a subview is added to the `ArrangedSubviews` collection, it will automatically be added to the `Subviews` collection (unless it's already part of that collection).
+- If a subview is removed from the `Subviews` collection (removed from display), it is also removed from the `ArrangedSubviews` collection.
+- Removing a subview from the `ArrangedSubviews` collection does not remove it from the `Subviews` collection. So it will no longer be laid out by the Stack View, but will still be visible on screen.
 
 The `ArrangedSubviews` collection is always a subset of the `Subview` collection, however the order of the individual subviews within each collection is separate and controlled by the following:
 
- - The order of the subviews within the `ArrangedSubviews` collection determine their display order within the stack.
- - The order of the subviews within the `Subview` collection determines their Z-Order (or layering) within the view back to front.
+- The order of the subviews within the `ArrangedSubviews` collection determine their display order within the stack.
+- The order of the subviews within the `Subview` collection determines their Z-Order (or layering) within the view back to front.
 
 ### Dynamically Changing Content
 
@@ -259,8 +259,8 @@ Layout changes can be animated by placing them within an Animation Block, for ex
 ```csharp
 // Animate stack
 UIView.Animate(0.25, ()=>{
-	// Adjust stack view
-	RatingView.LayoutIfNeeded();
+    // Adjust stack view
+    RatingView.LayoutIfNeeded();
 });
 ```
 
@@ -273,11 +273,9 @@ subviews in either a horizontally or vertically arranged stack in a Xamarin.iOS 
 It began with a simple example of using Stack Views to create a UI, and finished
 with a more detailed look at Stack Views and their properties and features.
 
-
-
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [UIStackView Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)

@@ -4,12 +4,12 @@ description: "How to install and configure Xamarin.Android to work with Visual S
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
 ---
 
-# Setup and Installation
+# Install and setup Xamarin.Android
 
 The topics in this section explain how to install and configure
 Xamarin.Android to work with Visual Studio on Windows and macOS, how to
@@ -18,7 +18,6 @@ and components that are required for building and testing your app, how
 to configure the Android emulator for debugging, and how to connect a
 physical Android device to your development computer for debugging and
 final testing your app.
-
 
 ## [Windows Installation](~/android/get-started/installation/windows.md)
 

@@ -7,12 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ms.custom: video
 ---
 
 # Xamarin.Forms Basic Bindings
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 A Xamarin.Forms data binding links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the *target* and the *source*:
 
@@ -192,7 +193,7 @@ Running this program might be a little surprising:
 
 The iOS screen on the left shows how the screen looks when the page first appears. Where is the `Label`?
 
-The problem is that the `Slider` has an initial value of 0. This causes the `Scale` property of the `Label` to be also set to 0, overriding its default value of 1. This results in the `Label` being initially invisible. As the Android and Universal Windows Platform (UWP) screenshots demonstrate, you can manipulate the `Slider` to make the `Label` appear again, but its initial disappearance is disconcerting.
+The problem is that the `Slider` has an initial value of 0. This causes the `Scale` property of the `Label` to be also set to 0, overriding its default value of 1. This results in the `Label` being initially invisible. As the Android screenshot demonstrates, you can manipulate the `Slider` to make the `Label` appear again, but its initial disappearance is disconcerting.
 
 You'll discover in the [next article](binding-mode.md) how to avoid this problem by initializing the `Slider` from the default value of the `Scale` property.
 
@@ -324,10 +325,9 @@ The `BindingContext` property of the `StackLayout` is set to the `slider` object
 
 In the [next article](binding-mode.md), you'll see how the *binding mode* can change the flow of data between target and source objects.
 
-
 ## Related Links
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## Related Video

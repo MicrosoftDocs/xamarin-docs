@@ -4,8 +4,8 @@ description: "This document provides a walkthrough of building a simple watchOS 
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 12/14/2016
 ---
 
@@ -26,42 +26,40 @@ You should be able to run your Watch App now, but because the storyboard file wi
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](hello-watch-images/projectstructure.png "The Solution Explorer")
+![The Solution Explorer](hello-watch-images/projectstructure.png)
 
 # [Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
+![The Solution Explorer](hello-watch-images/vs-projectstructure.png)
 
 -----
 
 # [Visual Studio for Mac](#tab/macos)
-	
+
 Double-click on the Interface.storyboard in your Watch App to
   start the Xamarin iOS Designer (if you are on a Mac you can
   also right-click and **Open With > Xcode Interface Builder**)
 
+1. Ensure the **Toolbox** and **Properties** pads are visible,
+1. Click to select the Interface Controller,
+1. Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**,
+1. Verify the **Class** is set to  **InterfaceController**
 
-1.  Ensure the **Toolbox** and **Properties** pads are visible,
-1.  Click to select the Interface Controller,
-1.  Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**,
-1.  Verify the **Class** is set to  **InterfaceController**
-
-	![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
+    ![Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch](hello-watch-images/interfacecontrollerattributes.png)
 
 # [Visual Studio](#tab/windows)
 
 Double-click on the Interface.storyboard in your Watch App
   to edit with the Xamarin iOS Designer in Visual Studio:
 
-1.  Open the Properties pane;
-1.  Change the Class to **InterfaceController**;
-1.  Click the Interface Controller; and
-1.  Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**.
+1. Open the Properties pane;
+1. Change the Class to **InterfaceController**;
+1. Click the Interface Controller; and
+1. Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**.
 
-	![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
+    ![Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch](hello-watch-images/vs-interfacecontrollerattributes.png)
 
 -----
-
 
 Create your UI:
 
@@ -71,11 +69,11 @@ Create your UI:
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
+![Set the text and attributes of the controls as shown](hello-watch-images/draganddrop.png)
 
 # [Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
+![Set the text and attributes of the controls as shown](hello-watch-images/vs-draganddrop.png)
 
 -----
 
@@ -89,7 +87,7 @@ Create your UI:
   The action will appear in the list, and a partial method will automatically
   be created in C#.
 
-![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
+![The OnButtonPress Action added to a button](hello-watch-images/buttonaction.png)
 
 After you save the storyboard, the **InterfaceController.designer.cs**
   gets updated with the control names and actions.. If you open this file after it
@@ -109,29 +107,29 @@ After you save the storyboard, the **InterfaceController.designer.cs**
 [Register ("InterfaceController")]
 partial class InterfaceController
 {
-	[Outlet]
-	[GeneratedCode ("iOS Designer", "1.0")]
-	WatchKit.WKInterfaceButton myButton { get; set; }
+    [Outlet]
+    [GeneratedCode ("iOS Designer", "1.0")]
+    WatchKit.WKInterfaceButton myButton { get; set; }
 
-	[Outlet]
-	[GeneratedCode ("iOS Designer", "1.0")]
-	WatchKit.WKInterfaceLabel myLabel { get; set; }
+    [Outlet]
+    [GeneratedCode ("iOS Designer", "1.0")]
+    WatchKit.WKInterfaceLabel myLabel { get; set; }
 
-	[Action ("OnButtonPress:")]
-	[GeneratedCode ("iOS Designer", "1.0")]
-	partial void OnButtonPress (WatchKit.WKInterfaceButton sender);
+    [Action ("OnButtonPress:")]
+    [GeneratedCode ("iOS Designer", "1.0")]
+    partial void OnButtonPress (WatchKit.WKInterfaceButton sender);
 
-	void ReleaseDesignerOutlets ()
-	{
-		if (myButton != null) {
-			myButton.Dispose ();
-			myButton = null;
-		}
-		if (myLabel != null) {
-			myLabel.Dispose ();
-			myLabel = null;
-		}
-	}
+    void ReleaseDesignerOutlets ()
+    {
+        if (myButton != null) {
+            myButton.Dispose ();
+            myButton = null;
+        }
+        if (myLabel != null) {
+            myLabel.Dispose ();
+            myLabel = null;
+        }
+    }
 }
 ```
 
@@ -157,16 +155,14 @@ If it is not already the Startup Project,
 
 1. Press the **Debug** button to trigger a build and simulator launch.
 
-	[![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png#lightbox)
+    [![The Visual Studio interface elements](hello-watch-images/readytodebug-sml.png)](hello-watch-images/readytodebug.png#lightbox)
 
 When the Simulator launches, press the button to increment the label.
   Congratulations, you’ve got yourself a Watch App!
 
-![](hello-watch-images/running.png "The app running in the Simulator")
-
+![The app running in the Simulator](hello-watch-images/running.png)
 
 ## Related Links
 
-- [Getting Started (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/GettingStarted/)
 - [Setup and Installation](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)

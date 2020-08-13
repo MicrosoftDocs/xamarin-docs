@@ -7,11 +7,12 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # The non-separable blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**SkiaSharp separable blend modes**](separable.md), the separable blend modes perform operations on the red, green, and blue channels separately. The non-separable blend modes do not. By operating upon the Hue, Saturation, and Luminosity levels of color, the non-separable blend modes can alter colors in interesting ways:
 
@@ -203,11 +204,11 @@ It is generally not the case that you'll want to use one of the non-separable bl
 
 ## A matte for a separable mode
 
-Here's one of the bitmaps included as a resource in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample. The filename is **Banana.jpg**:
+Here's one of the bitmaps included as a resource in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **Banana.jpg**:
 
 ![Banana Monkey](non-separable-images/Banana.jpg "Banana Monkey")
 
-It's possible to create a matte that encompasses just the banana. This is also a resource in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample. The filename is **BananaMatte.png**:
+It's possible to create a matte that encompasses just the banana. This is also a resource in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **BananaMatte.png**:
 
 ![Banana Matte](non-separable-images/BananaMatte.png "Banana Matte")
 
@@ -287,4 +288,4 @@ Try changing the blend mode to `SKBlendMode.Saturation`. The banana remains yell
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

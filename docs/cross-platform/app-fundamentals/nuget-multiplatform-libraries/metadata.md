@@ -3,8 +3,8 @@ title: "Editing NuGet Metadata"
 description: "This document describes how to use the project options to edit NuGet metadata for multiplatform libraries. It discusses both required and optional metadata."
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -22,9 +22,9 @@ The **Metadata** section configures the values used in the
 
 The **General** tab contains four fields that must be entered to generate a NuGet package:
 
-[![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
+[![NuGet package required metadata window](metadata-images/metadata-general-sml.png)](metadata-images/metadata-general.png#lightbox)
 
-- **ID** – The package identifier, which should be unique within Nuget.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
+- **ID** – The package identifier, which should be unique within NuGet.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
 - **Version** – Choose a version number consistent with [NuGet's versioning rules](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
 - **Authors** – Comma-separated list of names.
 - **Description** – Overview of the package's features which is displayed when users are selecting the package.
@@ -45,14 +45,13 @@ for more information, as well as these detailed instructions on [Choosing a uniq
 
 The **Details** tab contains optional fields to be included in the NuGet package manifest file.
 
-[![](metadata-images/metadata-detail-sml.png "NuGet package optional metadata window")](metadata-images/metadata-detail.png#lightbox)
+[![NuGet package optional metadata window](metadata-images/metadata-detail-sml.png)](metadata-images/metadata-detail.png#lightbox)
 
 Refer to the [Optional Elements Reference](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements)
 for more information about the required and optional fields.
 
 > [!NOTE]
 > If the NuGet package is being distributed on [NuGet.org](https://www.nuget.org) it is recommended to supply as much information as possible.
-
 
 ## Related Links
 

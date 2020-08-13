@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3F7376E3-59CC-4722-AEED-BB50E4D952AA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2017
 ---
 
@@ -16,16 +16,15 @@ ms.date: 06/19/2017
 
 A bug in Xamarin.Studio 5.1 previously corrupted .csproj files by partially or completely deleting the xml code in the .csproj file. This would cause important parts of the Android build system (such as updating the Android Resource.designer.cs) to fail. As of the 5.1.4 stable release on July 15th, this bug has been fixed; but in many cases the project file has to be repaired manually, as described below.
 
-
 ## Two possible approaches to fixing up the project file
 
-### Either:
+**Either:**
 
-1) Create a brand new Xamarin.Android application project, set all the project properties to match your old project, and add all of your resources, source files, etc. back into the project.
+1. Create a brand new Xamarin.Android application project, set all the project properties to match your old project, and add all of your resources, source files, etc. back into the project.
 
-### OR
+   **OR**
 
-2) Make a backup copy of your original project's .csproj file, then open it in a text editor, and add back in the missing elements from a cleanly generated .csproj file.
+2. Make a backup copy of your original project's .csproj file, then open it in a text editor, and add back in the missing elements from a cleanly generated .csproj file.
 
 ### If this does not solve the problem
 

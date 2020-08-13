@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Using CocosSharp in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp can be used to add precise shape, image, and text rendering to an application for advanced visualization_
 
@@ -23,73 +24,61 @@ _CocosSharp can be used to add precise shape, image, and text rendering to an ap
 
 CocosSharp is a flexible, powerful technology for displaying graphics, reading
 touch input, playing audio, and managing content. This guide explains how to add
-CocosSharp to a Xamarin.Forms application. It covers the following:
-
-* [What is CocosSharp?](#what)
-* [Adding the CocosSharp Nuget packages](#nuget)
-* [Walkthrough: Adding CocosSharp to a Xamarin.Forms app](#add)
-
-<a name="what" />
+CocosSharp to a Xamarin.Forms application.
 
 ## What is CocosSharp?
 
-[CocosSharp](~/graphics-games/cocossharp/index.md) is an open source game engine
+[CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) is an open source game engine
 that is available on the Xamarin platform.
 CocosSharp is a runtime-efficient library which includes the following features:
 
-* Image rendering using the [CCSprite class](https://developer.xamarin.com/api/type/CocosSharp.CCSprite/)
-* Shape rendering using the [CCDrawNode class](https://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
-* Every-frame logic using the [CCNode.Schedule method](https://developer.xamarin.com/api/member/CocosSharp.CCNode.Schedule/p/System.Action%7BSystem.Single%7D/)
-* Content management (loading and unloading of resources such as .png files) using the [CCTextureCache class](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)
-* Animations using the [CCAction class](https://developer.xamarin.com/api/type/CocosSharp.CCAction/)
+- Image rendering using the `CCSprite` class
+- Shape rendering using the `CCDrawNode` class
+- Every-frame logic using the `CCNode.Schedule` class
+- Content management (loading and unloading of resources such as .png files) using the `CCTextureCache`
+- Animations using the `CCAction` class
 
 CocosSharp’s primary focus is to simplify the creation of cross-platform 2D games; however, it can also be a great addition to Xamarin Form applications. Since games typically require efficient rendering and precise control over visuals, CocosSharp can be used to add powerful visualization and effects to non-game applications.
 
 Xamarin.Forms is built upon native, platform-specific UI systems. For example, [`Button`s](xref:Xamarin.Forms.Button) appear differently on iOS and Android, and may even differ by operating system version. By contrast, CocosSharp does not use any platform-specific visual objects, so all visual objects appear identical on all platforms. Of course, resolution and aspect ratio differ between devices, and this can impact how CocosSharp renders its visuals. These details will be discussed later in this guide.
 
-More detailed information can be found in the [CocosSharp section](~/graphics-games/cocossharp/index.md).
+More detailed information can be found in the [CocosSharp section](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md).
 
-<a name="nuget" />
-
-## Adding the CocosSharp Nuget packages
+## Adding the CocosSharp NuGet packages
 
 Before using CocosSharp, developers need to make a few additions to their Xamarin.Forms project.
 This guide assumes a Xamarin.Forms project with an iOS, Android, and .NET Standard library project.
 All of the code will be written in the .NET Standard library project; however, libraries must be added to the iOS and Android projects.
 
-The CocosSharp Nuget package contains all of the objects needed to create CocosSharp objects.
-The CocosSharp.Forms nuget package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
+The CocosSharp NuGet package contains all of the objects needed to create CocosSharp objects.
+The CocosSharp.Forms NuGet package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
 Add the **CocosSharp.Forms** NuGet and **CocosSharp** will be automatically added as well.
-To do this, right-click on the <span class="UIItem">Packages</span> folder in the .NET Standard library project
-and select <span class="UIItem">Add Packages...</span>. Enter the search term
-<span class="UIItem">CocosSharp.Forms</span>, select <span class="UIItem">CocosSharp for Xamarin.Forms</span>,
-then click <span class="UIItem">Add Package</span>.
+To do this, right-click on the **Packages** folder in the .NET Standard library project
+and select **Add Packages...**. Enter the search term
+**CocosSharp.Forms**, select **CocosSharp for Xamarin.Forms**,
+then click **Add Package**.
 
-![](cocossharp-images/image1.png "Add Packages Dialog")
+![Add Packages Dialog](cocossharp-images/image1.png)
 
 Both **CocosSharp** and **CocosSharp.Forms** NuGet packages will be added to the project:
 
-![](cocossharp-images/image2.png "Packages Folder")
+![Packages Folder](cocossharp-images/image2.png)
 
 Repeat the above steps for platform-specific projects (such as iOS and Android).
-
-<a name="add" />
 
 ## Walkthrough: Adding CocosSharp to a Xamarin.Forms app
 
 Follow these steps to add a simple CocosSharp view to a Xamarin.Forms app:
 
-1. [Creating a Xamarin Forms Page](#1)
-1. [Adding a CocosSharpView](#2)
-1. [Creating the GameScene](#3)
-1. [Adding a Circle](#4)
-1. [Interacting with CocosSharp](#5)
+1. [Creating a Xamarin Forms Page](#1-creating-a-xamarin-forms-page)
+1. [Adding a CocosSharpView](#2-adding-a-cocossharpview)
+1. [Creating the GameScene](#3-creating-the-gamescene)
+1. [Adding a Circle](#4-adding-a-circle)
+1. [Interacting with CocosSharp](#5-interacting-with-cocossharp)
 
 Once you've successfully added a CocosSharp view to a Xamarin.Forms app, visit the
-[CocosSharp documentation](~/graphics-games/cocossharp/index.md)
+[CocosSharp documentation](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md)
 to learn more about creating content with CocosSharp.
-
-<a name="1" />
 
 ### 1. Creating a Xamarin Forms Page
 
@@ -98,7 +87,6 @@ uses a page called `HomePage`. `HomePage` is split in half by a `Grid` to
 show how Xamarin.Forms and CocosSharp can be rendered simultaneously on the same page.
 
 First, set up the Page so it contains a `Grid` and two `Button` instances:
-
 
 ```csharp
 public class HomePage : ContentPage
@@ -144,14 +132,11 @@ public HomePage ()
 
 On iOS, the `HomePage` appears as shown in the following image:
 
-![](cocossharp-images/image3.png "HomePage Screenshot")
-
-<a name="2" />
+![HomePage Screenshot](cocossharp-images/image3.png)
 
 ### 2. Adding a CocosSharpView
 
 The `CocosSharpView` class is used to embed CocosSharp into a Xamarin.Forms app. Since `CocosSharpView` inherits from the [Xamarin.Forms.View](xref:Xamarin.Forms.View) class, it provides a familiar interface for layout, and it can be used within layout containers such as [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Add a new `CocosSharpView` to the project by completing the `CreateTopHalf` method:
-
 
 ```csharp
 void CreateTopHalf(Grid grid)
@@ -170,7 +155,6 @@ void CreateTopHalf(Grid grid)
 ```
 
 CocosSharp initialization is not immediate, so register an event for when the `CocosSharpView` has finished its creation. Do this in the `HandleViewCreated` method:
-
 
 ```csharp
 void HandleViewCreated (object sender, EventArgs e)
@@ -192,8 +176,6 @@ The `HandleViewCreated` method has two important details that we’ll be looking
 
 The second important detail is the `DesignResolution` property, which defines the game’s visible area for CocosSharp objects. The `DesignResolution` property will be looked at after creating `GameScene`.
 
-<a name="3" />
-
 ### 3. Creating the GameScene
 
 The `GameScene` class inherits from CocosSharp’s `CCScene`. `GameScene` is the first point where we deal purely with CocosSharp. Code contained in `GameScene` will function in any CocosSharp app, whether it is housed within a Xamarin.Forms project or not.
@@ -202,12 +184,11 @@ The `CCScene` class is the visual root of all CocosSharp rendering. Any visible 
 
 The following graph can help visualize a typical CocosSharp hierarchy:
 
-![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
+![Typical CocosSharp Hierarchy](cocossharp-images/image4.png)
 
-Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [BouncingGame walkthrough](~/graphics-games/cocossharp/bouncing-game.md).
+Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [BouncingGame walkthrough](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md).
 
 Initially the `GameScene` class will be nearly empty – we’ll just create it to satisfy the reference in `HomePage`. Add a new class to your .NET Standard library project named `GameScene`. It should inherit from the `CCScene` class as follows:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -221,7 +202,6 @@ public class GameScene : CCScene
 
 Now that `GameScene` is defined, we can return to `HomePage` and add a field:
 
-
 ```csharp
 // Keep the GameScene at class scope
 // so the button click events can access it:
@@ -230,16 +210,13 @@ GameScene gameScene;
 
 We can now compile our project and run it to see CocosSharp running. We haven’t added anything to our `GameScene,` so the top half of our page is black – the default color of a CocosSharp scene:
 
-![](cocossharp-images/image5.png "Blank GameScene")
-
-<a name="4" />
+![Blank GameScene](cocossharp-images/image5.png)
 
 ### 4. Adding a Circle
 
-The app currently has a running instance of the CocosSharp engine, displaying an empty `CCScene`. Next, we’ll add a visual object: a circle. The `CCDrawNode` class can be used to draw a variety of geometric shapes, as outlined in the [Drawing Geometry with CCDrawNode guide](~/graphics-games/cocossharp/ccdrawnode.md).
+The app currently has a running instance of the CocosSharp engine, displaying an empty `CCScene`. Next, we’ll add a visual object: a circle. The `CCDrawNode` class can be used to draw a variety of geometric shapes, as outlined in the [Drawing Geometry with CCDrawNode guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 Add a circle to our `GameScene` class and instantiate it in the constructor as shown in the following code:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -265,8 +242,7 @@ public class GameScene : CCScene
 
 Running the app now shows a circle on the left side of the CocosSharp display area:
 
-![](cocossharp-images/image6.png "Circle in GameScene")
-
+![Circle in GameScene](cocossharp-images/image6.png)
 
 #### Understanding DesignResolution
 
@@ -274,25 +250,21 @@ Now that a visual CocosSharp object is displayed, we can investigate the `Design
 
 The `DesignResolution` represents the width and height of the CocosSharp area for placing and sizing objects. The actual resolution of the area is measured in *pixels* while the `DesignResolution` is measured in world *units*. The following diagram shows the resolution of various parts of the view as displayed on an iPhone 5 with a screen resolution of 640x1136 pixels:
 
-![](cocossharp-images/image7.png "iPhone 5s Design Resolution")
+![iPhone 5s Design Resolution](cocossharp-images/image7.png)
 
 The diagram above displays pixel dimensions on the outside of the screen in black text. Units are displayed on the inside of the diagram in white text. Here are some important details displayed above:
 
-* The origin of the CocosSharp display is at the bottom left. Moving to the right increases the X value, and moving up increases the Y value. Notice that the Y value is inverted compared to some other 2D layout engines, where (0,0) is the top-left of the canvas.
-* The default behavior of CocosSharp is to maintain the aspect ratio of its view. Since the first row in the grid is wider than it is tall, CocosSharp does not fill the entire width of its cell, as shown by the dotted white rectangle. This behavior can be changed, as described in the [Handling Multiple Resolutions in CocosSharp guide](~/graphics-games/cocossharp/resolutions.md).
-* In this example, CocosSharp will maintain a display area of 100 units wide and tall regardless of the size or aspect ratio of its device. This means that code can assume that X=100 represents the far-right bound of the CocosSharp display, keeping layout consistent on all devices.
-
+- The origin of the CocosSharp display is at the bottom left. Moving to the right increases the X value, and moving up increases the Y value. Notice that the Y value is inverted compared to some other 2D layout engines, where (0,0) is the top-left of the canvas.
+- The default behavior of CocosSharp is to maintain the aspect ratio of its view. Since the first row in the grid is wider than it is tall, CocosSharp does not fill the entire width of its cell, as shown by the dotted white rectangle. This behavior can be changed, as described in the [Handling Multiple Resolutions in CocosSharp guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md).
+- In this example, CocosSharp will maintain a display area of 100 units wide and tall regardless of the size or aspect ratio of its device. This means that code can assume that X=100 represents the far-right bound of the CocosSharp display, keeping layout consistent on all devices.
 
 #### CCDrawNode Details
 
-Our simple app uses the `CCDrawNode` class to draw a circle. This class can be very useful for business apps since it provides vector-based geometry rendering – a feature missing from Xamarin.Forms. In addition to circles, the `CCDrawNode` class can be used to draw rectangles, splines, lines, and custom polygons. `CCDrawNode` is also easy to use since it does not require the use of image files (such as .png). A more detailed discussion of CCDrawNode can be found in the [Drawing Geometry with CCDrawNode guide](~/graphics-games/cocossharp/ccdrawnode.md).
-
-<a name="5" />
+Our simple app uses the `CCDrawNode` class to draw a circle. This class can be very useful for business apps since it provides vector-based geometry rendering – a feature missing from Xamarin.Forms. In addition to circles, the `CCDrawNode` class can be used to draw rectangles, splines, lines, and custom polygons. `CCDrawNode` is also easy to use since it does not require the use of image files (such as .png). A more detailed discussion of CCDrawNode can be found in the [Drawing Geometry with CCDrawNode guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 ### 5. Interacting with CocosSharp
 
 CocosSharp visual elements (such as `CCDrawNode`) inherit from the `CCNode` class. `CCNode` provides two properties which can be used to position an object relative to its parent: `PositionX` and `PositionY`. Our code currently uses these two properties to position the center of the circle, as shown in this code snippet:
-
 
 ```csharp
 circle.PositionX = 20;
@@ -302,7 +274,6 @@ circle.PositionY = 50;
 It’s important to note that CocosSharp objects are positioned by explicit position values, as opposed to most Xamarin.Forms views, which are automatically positioned according to the behavior of their parent layout controls.
 
 We’ll add code to allow the user to click one of the two buttons to move the circle to the left or to the right by 10 units (not pixels, since the circle draws in the CocosSharp world unit space). First we’ll create two public methods in the `GameScene` class:
-
 
 ```csharp
 public void MoveCircleLeft()
@@ -317,7 +288,6 @@ public void MoveCircleRight()
 ```
 
 Next, we’ll add handlers to the two buttons in `HomePage` to respond to clicks. When finished, our `CreateBottomHalf` method contains the following code:
-
 
 ```csharp
 void CreateBottomHalf(Grid grid)
@@ -346,17 +316,14 @@ void CreateBottomHalf(Grid grid)
 
 The CocosSharp circle now moves in response to clicks. We can also clearly see the boundaries of the CocosSharp canvas by moving the circle far enough to the left or right:
 
-![](cocossharp-images/image8.png "GameScene with Moving Circle")
+![GameScene with Moving Circle](cocossharp-images/image8.png)
 
 ## Summary
 
 This guide shows how to add CocosSharp to an existing Xamarin.Forms project, how to create interaction between Xamarin.Forms and CocosSharp, and discusses various considerations when creating layouts in CocosSharp.
 
-The CocosSharp game engine offers a lot of functionality and depth, so this guide only scratches the surface of what CocosSharp can do. Developers interested in reading more about CocosSharp can find many articles in the [CocosSharp section](~/graphics-games/cocossharp/index.md).
-
-
+The CocosSharp game engine offers a lot of functionality and depth, so this guide only scratches the surface of what CocosSharp can do. Developers interested in reading more about CocosSharp can find many articles in the [CocosSharp archive](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/).
 
 ## Related Links
 
-- [CocosSharp APIs](https://developer.xamarin.com/api/root/CocosSharp/)
-- [CocosSharpForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

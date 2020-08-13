@@ -4,8 +4,8 @@ description: "This article presents the new Speech API and shows how to implemen
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -28,7 +28,7 @@ According to Apple, the Speech Recognition API has the following features and be
 
 Speech Recognition is implemented in an iOS app by acquiring either live or pre-recorded audio (in any of the spoken languages that the API supports) and passing it to a Speech Recognizer which returns a plain-text transcription of the spoken words.
 
-[![](speech-images/speech01.png "How Speech Recognition Works")](speech-images/speech01.png#lightbox)
+[![How Speech Recognition Works](speech-images/speech01.png)](speech-images/speech01.png#lightbox)
 
 ### Keyboard Dictation
 
@@ -84,8 +84,8 @@ There are four major steps that the developer must take to adopt speech recognit
 - Provide a usage description in the app's `Info.plist` file using the `NSSpeechRecognitionUsageDescription` key. For example, a camera app might include the following description, _"This allows you to take a photo just by saying the word 'cheese'."_
 - Request authorization by calling the `SFSpeechRecognizer.RequestAuthorization` method to present an explanation (provided in the `NSSpeechRecognitionUsageDescription` key above) of why the app wants speech recognition access to the user in a dialog box and allow them to accept or decline.
 - Create a Speech Recognition Request:
-	* For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
-	* For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
+  - For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
+  - For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
 - Pass the Speech Recognition Request to a Speech Recognizer (`SFSpeechRecognizer`) to begin recognition. The app can optionally hold onto the returned `SFSpeechRecognitionTask` to monitor and track the recognition results.
 
 These steps will be covered in detail below.
@@ -99,33 +99,30 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 1. Double-click the `Info.plist` file to open it for editing.
 2. Switch to the **Source** view: 
 
-	[![](speech-images/speech02.png "The Source view")](speech-images/speech02.png#lightbox)
+    [![The Source view](speech-images/speech02.png)](speech-images/speech02.png#lightbox)
 3. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-	[![](speech-images/speech03.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
+    [![Adding NSSpeechRecognitionUsageDescription](speech-images/speech03.png)](speech-images/speech03.png#lightbox)
 4. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-	[![](speech-images/speech04.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
-4. Save the changes to the file.
+    [![Adding NSMicrophoneUsageDescription](speech-images/speech04.png)](speech-images/speech04.png#lightbox)
+5. Save the changes to the file.
 
 # [Visual Studio](#tab/windows)
 
 1. Double-click the `Info.plist` file to open it for editing.
-3. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+2. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-	[![](speech-images/speech03w.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+    [![Adding NSSpeechRecognitionUsageDescription](speech-images/speech03w.png)](speech-images/speech03w.png#lightbox)
+3. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-	[![](speech-images/speech04w.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
+    [![Adding NSMicrophoneUsageDescription](speech-images/speech04w.png)](speech-images/speech04w.png#lightbox)
 4. Save the changes to the file.
 
 -----
 
 > [!IMPORTANT]
 > Failing to provide either of the above `Info.plist` keys (`NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription`) can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio.
-
-
-
 
 ### Requesting Authorization
 
@@ -138,41 +135,41 @@ using Speech;
 
 namespace MonkeyTalk
 {
-	public partial class ViewController : UIViewController
-	{
-		protected ViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
+    public partial class ViewController : UIViewController
+    {
+        protected ViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Request user authorization
-			SFSpeechRecognizer.RequestAuthorization ((SFSpeechRecognizerAuthorizationStatus status) => {
-				// Take action based on status
-				switch (status) {
-				case SFSpeechRecognizerAuthorizationStatus.Authorized:
-					// User has approved speech recognition
-					...
-					break;
-				case SFSpeechRecognizerAuthorizationStatus.Denied:
-					// User has declined speech recognition
-					...
-					break;
-				case SFSpeechRecognizerAuthorizationStatus.NotDetermined:
-					// Waiting on approval
-					...
-					break;
-				case SFSpeechRecognizerAuthorizationStatus.Restricted:
-					// The device is not permitted
-					...
-					break;
-				}
-			});
-		}
-	}
+            // Request user authorization
+            SFSpeechRecognizer.RequestAuthorization ((SFSpeechRecognizerAuthorizationStatus status) => {
+                // Take action based on status
+                switch (status) {
+                case SFSpeechRecognizerAuthorizationStatus.Authorized:
+                    // User has approved speech recognition
+                    ...
+                    break;
+                case SFSpeechRecognizerAuthorizationStatus.Denied:
+                    // User has declined speech recognition
+                    ...
+                    break;
+                case SFSpeechRecognizerAuthorizationStatus.NotDetermined:
+                    // Waiting on approval
+                    ...
+                    break;
+                case SFSpeechRecognizerAuthorizationStatus.Restricted:
+                    // The device is not permitted
+                    ...
+                    break;
+                }
+            });
+        }
+    }
 }
 ```
 
@@ -196,35 +193,35 @@ using Foundation;
 
 public void RecognizeFile (NSUrl url)
 {
-	// Access new recognizer
-	var recognizer = new SFSpeechRecognizer ();
+    // Access new recognizer
+    var recognizer = new SFSpeechRecognizer ();
 
-	// Is the default language supported?
-	if (recognizer == null) {
-		// No, return to caller
-		return;
-	}
+    // Is the default language supported?
+    if (recognizer == null) {
+        // No, return to caller
+        return;
+    }
 
-	// Is recognition available?
-	if (!recognizer.Available) {
-		// No, return to caller
-		return;
-	}
+    // Is recognition available?
+    if (!recognizer.Available) {
+        // No, return to caller
+        return;
+    }
 
-	// Create recognition task and start recognition
-	var request = new SFSpeechUrlRecognitionRequest (url);
-	recognizer.GetRecognitionTask (request, (SFSpeechRecognitionResult result, NSError err) => {
-		// Was there an error?
-		if (err != null) {
-			// Handle error
-			...
-		} else {
-			// Is this the final translation?
-			if (result.Final) {
-				Console.WriteLine ("You said, \"{0}\".", result.BestTranscription.FormattedString);
-			}
-		}
-	});
+    // Create recognition task and start recognition
+    var request = new SFSpeechUrlRecognitionRequest (url);
+    recognizer.GetRecognitionTask (request, (SFSpeechRecognitionResult result, NSError err) => {
+        // Was there an error?
+        if (err != null) {
+            // Handle error
+            ...
+        } else {
+            // Is this the final translation?
+            if (result.Final) {
+                Console.WriteLine ("You said, \"{0}\".", result.BestTranscription.FormattedString);
+            }
+        }
+    });
 }
 ```
 
@@ -258,51 +255,51 @@ private SFSpeechRecognitionTask RecognitionTask;
 
 public void StartRecording ()
 {
-	// Setup audio session
-	var node = AudioEngine.InputNode;
-	var recordingFormat = node.GetBusOutputFormat (0);
-	node.InstallTapOnBus (0, 1024, recordingFormat, (AVAudioPcmBuffer buffer, AVAudioTime when) => {
-		// Append buffer to recognition request
-		LiveSpeechRequest.Append (buffer);
-	});
+    // Setup audio session
+    var node = AudioEngine.InputNode;
+    var recordingFormat = node.GetBusOutputFormat (0);
+    node.InstallTapOnBus (0, 1024, recordingFormat, (AVAudioPcmBuffer buffer, AVAudioTime when) => {
+        // Append buffer to recognition request
+        LiveSpeechRequest.Append (buffer);
+    });
 
-	// Start recording
-	AudioEngine.Prepare ();
-	NSError error;
-	AudioEngine.StartAndReturnError (out error);
+    // Start recording
+    AudioEngine.Prepare ();
+    NSError error;
+    AudioEngine.StartAndReturnError (out error);
 
-	// Did recording start?
-	if (error != null) {
-		// Handle error and return
-		...
-		return;
-	}
+    // Did recording start?
+    if (error != null) {
+        // Handle error and return
+        ...
+        return;
+    }
 
-	// Start recognition
-	RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpeechRecognitionResult result, NSError err) => {
-		// Was there an error?
-		if (err != null) {
-			// Handle error
-			...
-		} else {
-			// Is this the final translation?
-			if (result.Final) {
-				Console.WriteLine ("You said \"{0}\".", result.BestTranscription.FormattedString);
-			}
-		}
-	});
+    // Start recognition
+    RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpeechRecognitionResult result, NSError err) => {
+        // Was there an error?
+        if (err != null) {
+            // Handle error
+            ...
+        } else {
+            // Is this the final translation?
+            if (result.Final) {
+                Console.WriteLine ("You said \"{0}\".", result.BestTranscription.FormattedString);
+            }
+        }
+    });
 }
 
 public void StopRecording ()
 {
-	AudioEngine.Stop ();
-	LiveSpeechRequest.EndAudio ();
+    AudioEngine.Stop ();
+    LiveSpeechRequest.EndAudio ();
 }
 
 public void CancelRecording ()
 {
-	AudioEngine.Stop ();
-	RecognitionTask.Cancel ();
+    AudioEngine.Stop ();
+    RecognitionTask.Cancel ();
 }
 ```
 
@@ -321,8 +318,8 @@ It uses AV Foundation to record audio that will be passed to a `SFSpeechAudioBuf
 var node = AudioEngine.InputNode;
 var recordingFormat = node.GetBusOutputFormat (0);
 node.InstallTapOnBus (0, 1024, recordingFormat, (AVAudioPcmBuffer buffer, AVAudioTime when) => {
-	// Append buffer to recognition request
-	LiveSpeechRequest.Append (buffer);
+    // Append buffer to recognition request
+    LiveSpeechRequest.Append (buffer);
 });
 ```
 
@@ -335,9 +332,9 @@ AudioEngine.StartAndReturnError (out error);
 
 // Did recording start?
 if (error != null) {
-	// Handle error and return
-	...
-	return;
+    // Handle error and return
+    ...
+    return;
 }
 ```
 
@@ -345,7 +342,7 @@ The recognition task is started and a handle is kept to the Recognition Task (`S
 
 ```csharp
 RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpeechRecognitionResult result, NSError err) => {
-	...
+    ...
 });
 ```
 
@@ -375,8 +372,8 @@ It is important to call `RecognitionTask.Cancel` if the user cancels the transla
 Apple imposes the following limitations when working with Speech Recognition in an iOS app:
 
 - Speech Recognition is free to all apps, but its usage is not unlimited:
-	- Individual iOS devices have a limited number of recognitions that can be performed per day.
-	- Apps will be throttled globally on a request-per-day basis.
+  - Individual iOS devices have a limited number of recognitions that can be performed per day.
+  - Apps will be throttled globally on a request-per-day basis.
 - The app must be prepared to handle Speech Recognition network connection and usage rate limit failures.
 - Speech Recognition can have a high cost in both battery drain and high network traffic on the user's iOS device, because of this, Apple imposes a strict audio duration limit of approximately one minute of speech max.
 
@@ -394,8 +391,6 @@ Apple has the following suggestion for being transparent and respecting the user
 
 This article has presented the new Speech API and showed how to implement it in a Xamarin.iOS app to support continuous speech recognition and transcribe speech (from live or recorded audio streams) into text. 
 
-
-
 ## Related Links
 
-- [SpeakToMe (sample)](https://developer.xamarin.com/samples/monotouch/ios10/SpeakToMe/)
+- [SpeakToMe (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-speaktome)

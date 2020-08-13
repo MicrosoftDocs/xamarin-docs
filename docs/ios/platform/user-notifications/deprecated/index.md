@@ -4,8 +4,8 @@ description: "This document describes iOS notification technologies that have be
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2016
 ---
 
@@ -21,26 +21,26 @@ This section shows how to implement local and push notifications
 
 ## Sections
 
-<a name="Local Notifications In iOS" />
+<a name="Local Notifications In iOS"></a>
 
-##  [Local Notifications in iOS](local-notifications-in-ios.md)
+## [Local Notifications in iOS](local-notifications-in-ios.md)
 
 This section will discuss how to implement local notifications in Xamarin.iOS. It will
     explain the various
     UI elements of an iOS notification and discuss the API's involved with creating and displaying a notification.
 
-<a name="Local Notifications Walkthrough" />
+<a name="Local Notifications Walkthrough"></a>
 
-##  [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
+## [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
 In this section we'll walk through how to use local notifications in a
     Xamarin.iOS application. It will
     demonstrate the basics of creating and publishing a notification that will pop
     up an alert when received by the app.
 
-<a name="Remote Notifications In iOS" />
+<a name="Remote Notifications In iOS"></a>
 
-##  [Remote Notifications in iOS](remote-notifications-in-ios.md)
+## [Remote Notifications in iOS](remote-notifications-in-ios.md)
 
 This section will cover push notifications in iOS. It introduces the Apple Push
     Notifications Gateway Service (APNS) and the role it plays in publishing notifications to iOS applications. It will explain how to create the security certificates
@@ -48,4 +48,4 @@ This section will cover push notifications in iOS. It introduces the Apple Push
 
 ## Related Links
 
-- [Notifications (sample)](https://developer.xamarin.com/samples/monotouch/Notifications/)
+- [Notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)

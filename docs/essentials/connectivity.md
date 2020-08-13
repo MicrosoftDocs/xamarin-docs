@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/08/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Connectivity
@@ -96,7 +97,7 @@ public class ConnectivityTest
         Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
     }
 
-    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
+    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
     {
         var access = e.NetworkAccess;
         var profiles = e.ConnectionProfiles;
@@ -110,7 +111,7 @@ It is important to note that it is possible that `Internet` is reported by `Netw
 
 ## API
 
-* [Connectivity source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Connectivity source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Connectivity)
 * [Connectivity API documentation](xref:Xamarin.Essentials.Connectivity)
 
 ## Related Video

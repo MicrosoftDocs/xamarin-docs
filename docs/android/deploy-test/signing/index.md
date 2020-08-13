@@ -4,8 +4,8 @@ description: "How to sign the Android Application Package (APK) for publication"
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/02/2018
 ---
 
@@ -22,7 +22,7 @@ through an app store.
 # [Visual Studio](#tab/windows)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
-the **Distribution Channel** dialog presented two choices for
+the **Distribution Channel** dialog presents two choices for
 distribution. Select **Ad-Hoc**:
 
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
@@ -37,9 +37,9 @@ distribution. Select **Ad-Hoc** and click **Next**:
 
 -----
 
-<a name="newcertvs" />
-<a name="newcert" />
-<a name="newcertxs" />
+<a name="newcertvs"></a>
+<a name="newcert"></a>
+<a name="newcertxs"></a>
 
 ## Create a New Certificate
 
@@ -57,7 +57,7 @@ An existing certificate can be used by clicking the **Import** button and then p
 [![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 The **Create Android Key Store** dialog is displayed; use this dialog
-to create a new signing certificate that can use for signing
+to create a new signing certificate that can be used for signing
 Android applications. Enter the required information (outlined in red)
 as shown in this dialog:
 
@@ -76,8 +76,10 @@ key in the following location:
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-> [!NOTE]
-> Be sure to back up the resulting keystore file and password in a
+> [!IMPORTANT]
+> The AppData folder is hidden by default and you may need to unhide it to access it.
+>
+> In addition, be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or
 > reinstalled Windows), you will be unable to
@@ -112,7 +114,6 @@ For example, the above steps might create a new signing
 key in the following location:
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
-
 
 > [!NOTE]
 > Be sure to back up the resulting keystore file and password in a
@@ -169,7 +170,6 @@ app, **MyApp.MyApp.apk**:
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 As seen here, a new certificate was added to the key store. To publish
 an app on Google Play, click **Cancel** and go to
 [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
@@ -209,8 +209,6 @@ and try it out before distribution. See
 for more information about publishing an *ad-hoc* APK.
 
 -----
-
-
 
 ## Next Steps
 

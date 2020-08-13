@@ -15,11 +15,11 @@ Users who have read through the [guide on rendering Models](~/graphics-games/mon
 
 To help visualize how vertices are used to create 3D objects, let’s consider the following sphere:
 
-![](part2-images/image1.png "To help visualize how vertices are used to create 3D objects, consider this sphere")
+![To help visualize how vertices are used to create 3D objects, consider this sphere](part2-images/image1.png)
 
 As shown above, the sphere is clearly composed of multiple triangles. We can view the wireframe of the sphere to see how the vertices connect to form triangles:
 
-![](part2-images/image2.png "View the wireframe of the sphere to see how the vertices connect to form triangles")
+![View the wireframe of the sphere to see how the vertices connect to form triangles](part2-images/image2.png)
 
 This walkthrough will cover the following topics:
 
@@ -32,15 +32,15 @@ This walkthrough will cover the following topics:
 
 The finished project will contain a checkered floor which will be drawn using a vertex array:
 
-![](part2-images/image3.png "The finished project will contain a checkered floor which will be drawn using a vertex array")
+![The finished project will contain a checkered floor which will be drawn using a vertex array](part2-images/image3.png)
 
 ## Creating a Project
 
-First, we’ll download a project which will serve as our starting point. We’ll use the Model project [which can be found here](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/).
+First, we’ll download a project which will serve as our starting point. We’ll use the Model project [which can be found here](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
 
 Once downloaded and unzipped, open and run the project. We expect to see six robot models being drawn on-screen:
 
-![](part2-images/image4.png "Six robot models being drawn on-screen")
+![Six robot models being drawn on-screen](part2-images/image4.png)
 
 By the end of this project we’ll be combining our own custom vertex rendering with the robot `Model`, so we aren’t going to delete the robot rendering code. Instead, we’ll just clear out the `Game1.Draw` call to remove the drawing of the 6 robots for now. To do this, open the **Game1.cs** file and locate the `Draw` method. Modify it so it contains the following code:
 
@@ -54,7 +54,7 @@ protected override void Draw(GameTime gameTime)
 
 This will result in our game displaying an empty blue screen:
 
-![](part2-images/image5.png "This will result in the game displaying an empty blue screen")
+![This will result in the game displaying an empty blue screen](part2-images/image5.png)
 
 ## Creating the Vertices
 
@@ -79,7 +79,7 @@ Our plane will serve as a floor, and we’ll want to apply a texture when perfor
 First, we’ll add a member to our Game1 class:
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 Next, define our vertices in `Game1.Initialize`. Notice that the provided template referenced earlier in this article does not contain a `Game1.Initialize` method, so we need to add the entire method to `Game1`:
@@ -87,21 +87,21 @@ Next, define our vertices in `Game1.Initialize`. Notice that the provided templa
 ```csharp
 protected override void Initialize ()
 {
-	floorVerts = new VertexPositionTexture[6];
-	floorVerts [0].Position = new Vector3 (-20, -20, 0);
-	floorVerts [1].Position = new Vector3 (-20,  20, 0);
-	floorVerts [2].Position = new Vector3 ( 20, -20, 0);
-	floorVerts [3].Position = floorVerts[1].Position;
-	floorVerts [4].Position = new Vector3 ( 20,  20, 0);
-	floorVerts [5].Position = floorVerts[2].Position;
-	// We’ll be assigning texture values later
-	base.Initialize ();
+    floorVerts = new VertexPositionTexture[6];
+    floorVerts [0].Position = new Vector3 (-20, -20, 0);
+    floorVerts [1].Position = new Vector3 (-20,  20, 0);
+    floorVerts [2].Position = new Vector3 ( 20, -20, 0);
+    floorVerts [3].Position = floorVerts[1].Position;
+    floorVerts [4].Position = new Vector3 ( 20,  20, 0);
+    floorVerts [5].Position = floorVerts[2].Position;
+    // We’ll be assigning texture values later
+    base.Initialize ();
 }
 ```
 
 To help visualize what our vertices will look like, consider the following diagram:
 
-![](part2-images/image6.png "To help visualize what the vertices will look like, consider this diagram")
+![To help visualize what the vertices will look like, consider this diagram](part2-images/image6.png)
 
 We need to rely on our diagram to visualize the vertices until we finish implementing our rendering code.
 
@@ -110,7 +110,6 @@ We need to rely on our diagram to visualize the vertices until we finish impleme
 Now that we have the positions for our geometry defined, we can write our rendering code.
 
 First, we’ll need to define a `BasicEffect` instance which will hold parameters for rendering such as position and lighting. To do this, add a `BasicEffect` member to the `Game1` class below where the `floorVerts` field is defined:
-
 
 ```csharp
 ...
@@ -163,7 +162,6 @@ void DrawGround()
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
 
-
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
         pass.Apply ();
@@ -173,7 +171,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -187,17 +185,17 @@ We'll need to call `DrawGround` in our `Game1.Draw`:
 ```csharp
 protected override void Draw (GameTime gameTime)
 {
-	GraphicsDevice.Clear (Color.CornflowerBlue);
+    GraphicsDevice.Clear (Color.CornflowerBlue);
 
-	DrawGround ();
+    DrawGround ();
 
-	base.Draw (gameTime);
+    base.Draw (gameTime);
 }
 ```
 
 The app will display the following when executed:
 
-![](part2-images/image7.png "The app will display this when executed")
+![The app will display this when executed](part2-images/image7.png)
 
 Let’s look at some of the details in the code above.
 
@@ -207,7 +205,7 @@ The `View` and `Projection` properties control how we view the scene. We’ll be
 
 ### Techniques and Passes
 
-Once we’ve assigned properties on our effect we can perform the actual rendering. 
+Once we’ve assigned properties on our effect we can perform the actual rendering.
 
 We won’t be changing the `CurrentTechnique` property in this walkthrough, but more advanced games may have a single effect which can perform drawing in different ways (such as how the color value is applied). Each of these rendering modes can be represented as a technique which can be assigned prior to rendering. Furthermore, each technique may require multiple passes to render properly. Effects may need multiple passes if rendering complex visuals such as a glowing surface or fur.
 
@@ -225,7 +223,7 @@ Finally, we specify how many triangles to render. Our vertex array contains two 
 
 ## Rendering with a Texture
 
-At this point our app renders a white plane (in perspective). Next we’ll add a texture to our project to be used when rendering our plane. 
+At this point our app renders a white plane (in perspective). Next we’ll add a texture to our project to be used when rendering our plane.
 
 To keep things simple we’ll add the .png directly to our project rather than using the MonoGame Pipeline tool. To do this, download [this .png file](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) to your computer. Once downloaded, right-click on the **Content** folder in the Solution pad and select **Add>Add Files...** . If working on Android, then this folder will be located under the **Assets** folder in the Android-specific project. If on iOS, then this folder will be in the root of the iOS project. Navigate to the location where **checkerboard.png** is saved and select this file. Select to copy the file to the directory.
 
@@ -239,7 +237,6 @@ Texture2D checkerboardTexture;
 ```
 
 Modify `Game1.LoadContent` as follows:
-
 
 ```csharp
 protected override void LoadContent()
@@ -300,7 +297,6 @@ void DrawGround()
 
 Finally, we need to modify the `Game1.Initialize` method to also assign texture coordinates on our vertices:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -326,23 +322,22 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 If we run the code, we can see that our plane now displays a checkerboard pattern:
 
-![](part2-images/image8.png "The plane now displays a checkerboard pattern")
+![The plane now displays a checkerboard pattern](part2-images/image8.png)
 
 ## Modifying Texture Coordinates
 
 MonoGame uses normalized texture coordinates, which are coordinates between 0 and 1 rather than between 0 and the texture’s width or height. The following diagram can help visualize normalized coordinates:
 
-![](part2-images/image9.png "This diagram can help visualize normalized coordinates")
+![This diagram can help visualize normalized coordinates](part2-images/image9.png)
 
 Normalized texture coordinates allow texture resizing without needing to rewrite code or recreate models (such as .fbx files). This is possible because normalized coordinates represent a ratio rather than specific pixels. For example, (1,1) will always represent the bottom-right corner regardless of the texture size.
 
 We can change the texture coordinate assignment to use a single variable for the number of repetitions:
-
 
 ```csharp
 protected override void Initialize ()
@@ -375,8 +370,7 @@ protected override void Initialize ()
 
 This results in the texture repeating 20 times:
 
-![](part2-images/image10.png "This results in the texture repeating 20 times")
-
+![This results in the texture repeating 20 times](part2-images/image10.png)
 
 ## Rendering Vertices with Models
 
@@ -398,7 +392,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 We will also create a `Vector3` in `Game1` to represent our camera’s position. We’ll add a field under our `checkerboardTexture` declaration:
@@ -407,7 +401,7 @@ We will also create a `Vector3` in `Game1` to represent our camera’s position.
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Next, remove the local `cameraPosition` variable from the `DrawModel` method:
@@ -428,7 +422,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -444,12 +438,12 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 Now if we run the code we can see both the models and the ground at the same time:
 
-![](part2-images/image11.png "Both the models and the ground are displayed at the same time")
+![Both the models and the ground are displayed at the same time](part2-images/image11.png)
 
 If we modify the camera position (such as by increasing its X value, which in this case moves the camera to the left) we can see that the value impacts both the ground and the models:
 
@@ -459,7 +453,7 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 This code results in the following:
 
-![](part2-images/image3.png "This code results in this view")
+![This code results in this view](part2-images/image3.png)
 
 ## Summary
 
@@ -468,4 +462,4 @@ This walkthrough showed how to use a vertex array to perform custom rendering. I
 ## Related Links
 
 - [Checkerboard file (sample)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [Completed project (sample)](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)
+- [Completed project (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)

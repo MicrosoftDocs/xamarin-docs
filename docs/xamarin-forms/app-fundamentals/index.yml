@@ -1,0 +1,69 @@
+### YamlMime:Landing
+
+title: Xamarin.Forms application fundamentals
+summary: Learn about the fundamentals of mobile application development using Xamarin.Forms.
+
+metadata:
+  title: Xamarin.Forms application fundamentals
+  description: Learn about the fundamentals of mobile application development using Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 12/30/2019
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+
+landingContent:
+  - title: Core concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App class
+            url: application-class.md
+          - text: App lifecycle
+            url: app-lifecycle.md
+          - text: Data binding
+            url: data-binding/index.md
+          - text: Gestures
+            url: gestures/index.md
+          - text: Localization
+            url: localization/index.md
+          - text: MessagingCenter
+            url: messaging-center.md
+          - text: Navigation
+            url: navigation/index.md
+          - text: Shell
+            url: shell/index.md
+          - text: Templates
+            url: templates/index.md
+          - text: Triggers
+            url: triggers.md
+
+  - title: Extend Xamarin.Forms
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Behaviors
+            url: behaviors/index.md
+          - text: Custom renderers
+            url: custom-renderer/index.md
+          - text: DependencyService
+            url: dependency-service/index.md
+          - text: Effects
+            url: effects/index.md
+
+  - title: Polish your application
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Accessibility
+            url: accessibility/index.md
+          - text: Application indexing and deep linking
+            url: deep-linking.md
+          - text: Dual-screen
+            url: dual-screen/index.md
+          - text: Local notifications
+            url: local-notifications.md
+          - text: Localization
+            url: localization/index.md

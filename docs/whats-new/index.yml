@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Xamarin documentation - what's new?
+summary: "Welcome to what's new in Xamarin docs."
+
+metadata:
+  title: Xamarin documentation - what's new?
+  description: What's new in Xamarin docs.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 02/28/2020
+
+landingContent:
+  - title: "What's new?"
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: June 2020
+            url: 2020-06.md
+          - text: April 2020
+            url: 2020-04.md
+          - text: February 2020
+            url: 2020-02.md
+          - text: December 2019
+            url: 2019-12.md
+          - text: October 2019
+            url: 2019-10.md
+          - text: August 2019
+            url: 2019-08.md
+          - text: July 2019
+            url: 2019-07.md
+          - text: June 2019
+            url: 2019-06.md
+          - text: March 2019
+            url: 2019-03.md
+
+  - title: "Open source contributions"
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Xamarin docs repository
+            url: https://github.com/MicrosoftDocs/xamarin-docs
+          - text: Contributor guide
+            url: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
+      - linkListType: reference
+        links:
+          - text: Xamarin.Forms API docs repository
+            url: https://github.com/xamarin/Xamarin.Forms-api-docs
+          - text: Xamarin.iOS and Mac API docs repository
+            url: https://github.com/xamarin/apple-api-docs
+          - text: Xamarin.Android API docs repository
+            url: https://github.com/xamarin/android-api-docs
+          - text: SkiaSharp API docs repository
+            url: https://github.com/mono/skiasharp-api-docs
+
+  - title: "Related pages"
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: .NET docs updates
+            url: https://docs.microsoft.com/dotnet/whats-new/
+          - text: Xamarin.Forms release notes
+            url: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+          - text: Xamarin.Essentials release notes
+            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+          - text: Xamarin.iOS release notes
+            url: https://docs.microsoft.com/xamarin/ios/release-notes/
+          - text: Xamarin.Android release notes
+            url: https://docs.microsoft.com/xamarin/android/release-notes/
+          - text: Xamarin.Mac release notes
+            url: https://docs.microsoft.com/xamarin/mac/release-notes/
+          - text: Xamarin tools release notes
+            url: https://docs.microsoft.com/xamarin/tools/

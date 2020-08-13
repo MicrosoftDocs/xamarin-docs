@@ -1,106 +1,55 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Xamarin.Forms Tutorials
+### YamlMime:Landing
+
+title: Xamarin.Forms tutorials
+summary: Learn about the basics of creating mobile applications with Xamarin.Forms.
+
 metadata:
-  title: Xamarin.Forms Tutorials
-  description: Tutorials about developing Xamarin.Forms applications with Visual Studio and Visual Studio for Mac.
+  title: Xamarin.Forms tutorials
+  description: Tutorials about the basics of creating Xamarin.Forms applications with Visual Studio and Visual Studio for Mac.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/14/2018
-abstract:
-  description: This page links to tutorials for learning about the basics of creating mobile applications with Xamarin.Forms. For the full Xamarin.Forms documentation, see <a href="/xamarin/xamarin-forms/">Xamarin.Forms Documentation</a>.
-sections:
-- title: Layouts
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: stacklayout/
-      html: Learn how to organize views in a one-dimensional stack, either horizontally or vertically.
-      image:
-        src: https://docs.microsoft.com/media/common/i_dashboard.svg
-        href: stacklayout/
-      title: StackLayout
-    - href: grid/
-      html: Learn how to organize views into rows and columns, which can have proportional or absolute sizes.
-      image:
-        src: https://docs.microsoft.com/media/common/i_table.svg
-        href: grid/
-      title: Grid
-- title: Views
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: label/
-      html: Learn how to display text, in both single and multiple lines.
-      image:
-        src: ~/media/icons/i_form-label.svg
-        href: label/
-      title: Label
-    - href: button/
-      html: Learn how to respond to a tap or click of a button, that directs an application to carry out a particular task.
-      image:
-        src: https://docs.microsoft.com/media/common/i_button.svg
-        href: button/
-      title: Button
-    - href: entry/
-      html: Learn how to accept single-line text input.
-      image:
-        src: ~/media/icons/i_form-entry.svg
-        href: entry/
-      title: Entry
-    - href: editor/
-      html: Learn how to accept multi-line text input.
-      image:
-        src: ~/media/icons/i_form-editor.svg
-        href: editor/
-      title: Editor
-    - href: image/
-      html: Learn how to display images on a page.
-      image:
-        src: https://docs.microsoft.com/media/common/i_account-management.svg
-        href: image/
-      title: Image
-    - href: listview/
-      html: Learn how to present lists of data.
-      image:
-        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
-        href: listview/
-      title: ListView
-- title: App Fundamentals
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: pop-ups/
-      html: Learn how to display alerts and action sheets with Xamarin.Forms, to ask users simple questions, and to guide users through tasks.
-      image:
-        src: https://docs.microsoft.com/media/common/i_alert.svg
-        href: pop-ups/
-      title: Pop-ups
-    - href: app-lifecycle/
-      html: Learn about the Xamarin.Forms app lifecycle, and how to persist data across lifecycle state changes.
-      image:
-        src: https://docs.microsoft.com/media/common/i_agile.svg
-        href: app-lifecycle/
-      title: App lifecycle
-    - href: local-database/
-      html: Learn how to use the SQLite.NET NuGet package to incorporate local database operations into an app.
-      image:
-        src: https://docs.microsoft.com/media/common/i_generic-database.svg
-        href: local-database/
-      title: Local database
-    - href: web-service/
-      html: Learn how to consume REST-based web services from Xamarin.Forms.
-      image:
-        src: https://docs.microsoft.com/media/common/i_server.svg
-        href: web-service/
-      title: Web services
+  ms.date: 12/23/2019
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]  
+
+landingContent:
+  - title: Layouts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: StackLayout
+            url: stacklayout/index.yml
+          - text: Grid
+            url: grid/index.yml
+
+  - title: Controls
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Label
+            url: label/index.yml
+          - text: Button
+            url: button/index.yml
+          - text: Entry
+            url: entry/index.yml
+          - text: Editor
+            url: editor/index.yml
+          - text: Image
+            url: image/index.yml
+          - text: ListView
+            url: listview/index.yml
+          - text: Pop-ups
+            url: pop-ups/index.yml
+
+  - title: App fundamentals
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: App lifecycle
+            url: app-lifecycle/index.yml
+          - text: Local database
+            url: local-database/index.yml
+          - text: Web services
+            url: web-service/index.yml

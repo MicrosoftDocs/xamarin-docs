@@ -4,8 +4,8 @@ description: "This article covers the quick interaction techniques Apple has add
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -42,12 +42,12 @@ Because of the glanceable nature of Apple Watch apps, Apple suggests that the id
 Apple has added several new features and APIs to WatchKit to assist the developer in adding quick interactions to their Apple Watch apps:
 
 - watchOS 3 provides access to new kinds of user input such as:
-	- Gesture Recognizers
-	- Digital Crown rotation 
+  - Gesture Recognizers
+  - Digital Crown rotation 
 - watchOS 3 provides new ways of displaying and updating information, such as:
-	- Enhanced Table navigation
-	- New User Notification framework support
-	- SpriteKit and SceneKit integration
+  - Enhanced Table navigation
+  - New User Notification framework support
+  - SpriteKit and SceneKit integration
 
 By implementing these new features, the developer can ensure that their watchOS 3 app is Glanceable, Actionable and Responsive.
 
@@ -58,11 +58,11 @@ If the developer has implemented Gesture Recognizers in iOS, they should be very
 watchOS 3 will support the four following Gesture Recognizers:
 
 - Discrete gestures types:
-	- The Swipe Gesture (`WKSwipeGestureRecognizer`).
-	- The Tap Gesture (`WKTapGestureRecognizer`).
+  - The Swipe Gesture (`WKSwipeGestureRecognizer`).
+  - The Tap Gesture (`WKTapGestureRecognizer`).
 - Continuous gesture types:
-	- The Pan Gesture (`WKPanGestureRecognizer`).
-	- The Long-Press Gesture (`WKLongPressGestureRecognizer`).
+  - The Pan Gesture (`WKPanGestureRecognizer`).
+  - The Long-Press Gesture (`WKLongPressGestureRecognizer`).
 
 To implement one of the new Gesture Recognizers, simply drag it onto a design surface in the iOS Designer in Visual Studio for Mac and configure its properties.
 
@@ -72,7 +72,7 @@ In code, respond to the Action of the recognizer to handle the gesture being tri
 
 For Discrete Gestures, the Action is called when the gesture is recognized and a State (`WKGestureRecognizerState`) is assigned as:
 
-[![](quick-interaction-techniques-images/quick01.png "Discrete Gesture States")](quick-interaction-techniques-images/quick01.png#lightbox)
+[![Discrete Gesture States](quick-interaction-techniques-images/quick01.png)](quick-interaction-techniques-images/quick01.png#lightbox)
 
 All Discrete Gestures start out in the `Possible` state and transition into either the `Failed` or `Recognized` state. When using Discrete Gestures, the developer generally doesn't deal directly with the State. Instead, they rely on the Action being called when the gesture is recognized only.
 
@@ -80,7 +80,7 @@ All Discrete Gestures start out in the `Possible` state and transition into eith
 
 Continuous Gestures are slightly different from Discrete Gestures, where the Action is called multiple times as the gesture is being recognized:
 
-[![](quick-interaction-techniques-images/quick02.png "Continuous Gesture States")](quick-interaction-techniques-images/quick02.png#lightbox)
+[![Continuous Gesture States](quick-interaction-techniques-images/quick02.png)](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Again, Continuous Gestures starts out in the `Possible` state, but they progress over multiple updates. Here the developer will need to consider recognizer's state and update the app's UI during the `Changed` phase until the gesture is finally `Recognized` or `Canceled`.
 
@@ -91,9 +91,9 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Add the Gesture Recognizers to Group Elements instead of individual Controls. Since the Apple Watch has a smaller physical screen size, Group Elements tend to be bigger and easier targets for the user to hit. Also, the Gesture Recognizers can conflict with built in gestures already in the native UI Controls.
 - Set dependency relationships in the watch app's Storyboard.
 - Some gesture take precedence over other gesture types, such as:
-	- Scrolling
-	- Force Touch
- 
+  - Scrolling
+  - Force Touch
+
 ### Digital Crown Rotation
 
 By implementing Digital Crown Support in their watchOS 3 apps, a developer can provide increased navigation speed and precision interactions for their users.
@@ -132,28 +132,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-	public class CrownDelegate : WKCrownDelegate
-	{
-		#region Computed Properties
-		public double AccumulatedRotations { get; set;}
-		#endregion
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
 
-		#region Constructors
-		public CrownDelegate ()
-		{
-		}
-		#endregion
+    #region Constructors
+    public CrownDelegate ()
+    {
+    }
+    #endregion
 
-		#region Override Methods
-		public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-		{
-			base.CrownDidRotate (crownSequencer, rotationalDelta);
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
 
-			// Accumulate rotations
-			AccumulatedRotations += rotationalDelta;
-		}
-		#endregion
-	}
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -163,8 +163,7 @@ Apple has left it up to the developer to determine how the rotation counts corre
 
 The sign (`+/-`) of the Rotational Delta indicates the direction that the user is turning the Digital Crown:
 
-[![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
+[![The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown](quick-interaction-techniques-images/quick03.png)](quick-interaction-techniques-images/quick03.png#lightbox)
 
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 
@@ -184,15 +183,15 @@ It is up to the developer to determine when their custom interface element needs
 
 The standard way that a user navigates a Table View in a watchOS app is to scroll to the desired piece of data, tap on a specific row to display the Detailed View, tap the back button when finished viewing the details and repeat the process for any other information that they are interested in from within the table:
 
-[![](quick-interaction-techniques-images/quick04.png "Moving between a table and the Detail view")](quick-interaction-techniques-images/quick04.png#lightbox)
+[![Moving between a table and the Detail view](quick-interaction-techniques-images/quick04.png)](quick-interaction-techniques-images/quick04.png#lightbox)
 
 New to watchOS 3, the developer can enable Vertical Paging on their Table View controls. With this feature enabled, the user can scroll to find a Table View row and tap the row to view its detail as before. However, they can now swipe up to select the next row in the table or down to select the previous row (or use the Digital Crown), all without having to return to the Table View first:
 
-[![](quick-interaction-techniques-images/quick05.png "Moving between a table and the Detail view and swiping up and down to move between the other rows")](quick-interaction-techniques-images/quick05.png#lightbox)
+[![Moving between a table and the Detail view and swiping up and down to move between the other rows](quick-interaction-techniques-images/quick05.png)](quick-interaction-techniques-images/quick05.png#lightbox)
 
 To enable this mode, open the watchOS app's Storyboard in Xcode for editing, select the Table View and check the **Vertical Detail Paging** checkbox:
 
-[![](quick-interaction-techniques-images/quick06.png "Check the Vertical Detail Paging checkbox")](quick-interaction-techniques-images/quick06.png#lightbox)
+[![Check the Vertical Detail Paging checkbox](quick-interaction-techniques-images/quick06.png)](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Ensure that the Table is using Segues to display the Detailed View and Save the changes to the Storyboard and return to Visual Studio for Mac to sync.
 
@@ -220,21 +219,21 @@ There are several ways that a user may respond to the Notification:
 - For a well defined and presented Notification, the user will do nothing and simply dismiss the Notification.
 - They might also tap of the Notification to launch the watchOS app.
 - For a Notification that supports Custom Actions, the user might select one of the custom actions. These can either be:
-	- **Foreground Actions** - These launch the app to perform the action.
-	- **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
+  - **Foreground Actions** - These launch the app to perform the action.
+  - **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
 
 New for watchOS 3:
 
-* Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
-* Local Notification can be scheduled on the Apple Watch.
-* Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
+- Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
+- Local Notification can be scheduled on the Apple Watch.
+- Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
 
 #### Notification Scheduling and Delivery
 
 Notification from the user's iPhone will be forward to the Apple Watch when the following occurs:
 
-* The iPhone's screen is off.
-* The Apple Watch is being worn and has been unlocked.
+- The iPhone's screen is off.
+- The Apple Watch is being worn and has been unlocked.
 
 In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the developer to schedule a corresponding iPhone Notification if it is required by the app.
 
@@ -308,7 +307,7 @@ A well designed quick interaction experience will give the user the confidence t
 
 Where this specifically becomes an issue is when the watch app is doing any type of network connection or sharing information with its companion iPhone app. This can often lead to a waiting indicator while the transaction is taking place, which is not desirable during a quick interaction. Take the following example:
 
-[![](quick-interaction-techniques-images/quick07.png "Diagram of the watch app doing a network connection and sharing information with its companion iPhone app")](quick-interaction-techniques-images/quick07.png#lightbox)
+[![Diagram of the watch app doing a network connection and sharing information with its companion iPhone app](quick-interaction-techniques-images/quick07.png)](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. The user chooses an item to purchase on the watch.
 2. They tap the buy button.
@@ -320,7 +319,7 @@ From the time the user taps the buy button until the transaction is completed, t
 
 Using Apple's suggested model, take a look at the same quick interaction again:
 
-[![](quick-interaction-techniques-images/quick08.png "Apples suggested model diagram")](quick-interaction-techniques-images/quick08.png#lightbox)
+[![Apples suggested model diagram](quick-interaction-techniques-images/quick08.png)](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. The user chooses an item to purchase on the watch.
 2. They tap the buy button.
@@ -350,4 +349,4 @@ This article has covered the quick interaction techniques Apple has added in wat
 
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)

@@ -8,33 +8,33 @@ ms.author: crdun
 ms.date: 03/29/2017
 ---
 
-# Using UrhoSharp To Build A 3D Game
+# Using UrhoSharp to build a 3D game
 
 Before you write your first game, you want to get familiarized with
 the basics: how to setup your scene, how to load resources (this
 contains your artwork) and how to create simple interactions for your
 game.
 
-<a name="scenenodescomponentsandcameras"/>
+<a name="scenenodescomponentsandcameras"></a>
 
-## Scenes, Nodes, Components and Cameras
+## Scenes, nodes, components, and cameras
 
 The scene model can be described as a component-based scene graph. The
 Scene consists of a hierarchy of scene nodes, starting from the root
-node, which also represents the whole scene. Each [`Node`](https://developer.xamarin.com/api/type/Urho.Node/) has a 3D
+node, which also represents the whole scene. Each `Node` has a 3D
 transform (position, rotation and scale), a name, an ID, plus an
 arbitrary number of components.  Components bring a node to life, they
-can make add a visual representation ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), they can emit
-sound ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), they can provide a collision boundary and so on.
+can make add a visual representation (`StaticModel`), they can emit
+sound (`SoundSource`), they can provide a collision boundary and so on.
 
 You can create your scenes and setup nodes using the [Urho Editor](#urhoeditor), or
 you can do things from your C# code.  In this document we will explore
 setting things up using code, as they illustrate the elements
 necessary to get things to show up on your screen
 
-In addition to setting up your scene, you need to setup a [`Camera`](https://developer.xamarin.com/api/type/Urho.Camera/), this is what determines what will get shown to the user.
+In addition to setting up your scene, you need to setup a `Camera`, this is what determines what will get shown to the user.
 
-### Setting up your Scene
+### Setting up your scene
 
 You would typically create this form your Start method:
 
@@ -62,7 +62,7 @@ planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 
 Rendering 3D objects, sound playback, physics and scripted logic
 updates are all enabled by creating different Components into the
-nodes by calling [`CreateComponent<T>()`](https://developer.xamarin.com/api/member/Urho.Node.CreateComponent%3CT%3E/p/Urho.CreateMode/System.UInt32/).  For example, setup your node
+nodes by calling `CreateComponent<T>()`.  For example, setup your node
 and light component like this:
 
 ```csharp
@@ -77,7 +77,7 @@ lightNode.SetDirection (new Vector3(0.6f, -1.0f, 0.8f));
 
 We have created above a node with the name "`DirectionalLight`" and
 set a direction for it, but nothing else.  Now, we can turn the above
-node into a light-emitting node, by attaching a [`Light`](https://developer.xamarin.com/api/type/Urho.Light/) component to it,
+node into a light-emitting node, by attaching a `Light` component to it,
 with `CreateComponent`:
 
 ```csharp
@@ -88,16 +88,16 @@ Components created into the `Scene` itself have a special role: to
 implement scene-wide functionality. They should be created before all
 other components, and include the following:
 
-* [`Octree`](https://developer.xamarin.com/api/type/Urho.Octree/): implements spatial partitioning and accelerated visibility queries. Without this 3D objects can not be rendered.
-* [`PhysicsWorld`](https://developer.xamarin.com/api/type/Urho.Physics.PhysicsWorld/): implements physics simulation. Physics components such as [`RigidBody`](https://developer.xamarin.com/api/type/Urho.Physics.RigidBody/) or [`CollisionShape`](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) can not function properly without this.
-* [`DebugRenderer`](https://developer.xamarin.com/api/type/Urho.DebugRenderer/): implements debug geometry rendering.
+ `Octree`: implements spatial partitioning and accelerated visibility queries. Without this 3D objects can not be rendered.
+ `PhysicsWorld`: implements physics simulation. Physics components such as `RigidBody` or `CollisionShape` can not function properly without this.
+ `DebugRenderer`: implements debug geometry rendering.
 
 Ordinary components like
-[`Light`](https://developer.xamarin.com/api/type/Urho.Light),
-[`Camera`](https://developer.xamarin.com/api/type/Urho.Camera) or
-[`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)
+`Light`,
+`Camera` or
+`StaticModel`
 should not be created directly into the
-[`Scene`](https://developer.xamarin.com/api/type/Urho.Scene), but
+`Scene`, but
 rather into child nodes.
 
 The library comes with a wide variety of components that you can
@@ -111,10 +111,10 @@ As a convenience, various shapes are available as simple nodes in the
 Urho.Shapes namespace.  These include boxes, spheres, cones, cylinders
 and planes.
 
-### Camera and Viewport
+### Camera and viewport
 
 Just like the light, cameras are components, so you will need to
-attach the component to a node, this is done like this:
+attach the component to a node, like this:
 
 ```csharp
 var CameraNode = scene.CreateChild ("camera");
@@ -139,7 +139,7 @@ Unlike nodes, components do not have names; components inside the same
 node are only identified by their type, and index in the node's
 component list, which is filled in creation order, for example, you
 can retrieve the
-[`Light`](https://developer.xamarin.com/api/type/Urho.Light) component
+`Light` component
 out of the `lightNode` object above like this:
 
 ```csharp
@@ -147,12 +147,12 @@ var myLight = lightNode.GetComponent<Light>();
 ```
 
 You can also get a list of all the components by retrieving the
-[`Components`](https://developer.xamarin.com/api/property/Urho.Node.Components/) property which returns an `IList<Component>` that you can
+`Components` property which returns an `IList<Component>` that you can
 use.
 
 When created, both nodes and components get scene-global integer
 IDs. They can be queried from the Scene by using the functions
-[`GetNode(uint id)`](https://developer.xamarin.com/api/member/Urho.Scene.GetNode/p/System.UInt32/) and [`GetComponent(uint id)`](https://developer.xamarin.com/api/member/Urho.Scene.GetComponent/p/System.UInt32/). This is much faster than
+`GetNode(uint id)` and `GetComponent(uint id)`. This is much faster than
 for example doing recursive name-based scene node queries.
 
 There is no built-in concept of an entity or a game object; rather it
@@ -160,7 +160,7 @@ is up to the programmer to decide the node hierarchy, and in which
 nodes to place any scripted logic. Typically, free-moving objects in
 the 3D world would be created as children of the root node. Nodes can
 be created either with or without a name using
-[`CreateChild()`](https://developer.xamarin.com/api/member/Urho.Node.CreateChild/p/System.String/Urho.CreateMode/System.UInt32/). Uniqueness of node names is not enforced.
+`CreateChild`. Uniqueness of node names is not enforced.
 
 Whenever there is some hierarchical composition, it is recommended
 (and in fact necessary, because components do not have their own 3D
@@ -168,18 +168,18 @@ transforms) to create a child node.
 
 For example if a character was holding an object in his hand, the
 object should have its own node, which would be parented to the
-character's hand bone (also a [`Node`](https://developer.xamarin.com/api/type/Urho.Node/)).  The exception is the physics
-[`CollisionShape`](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape), which can be offsetted and rotated individually in
+character's hand bone (also a `Node`).  The exception is the physics
+`CollisionShape`, which can be offsetted and rotated individually in
 relation to the node.
 
-Note that [`Scene`](https://developer.xamarin.com/api/type/Urho.Node/)'s own transform is purposefully ignored as an
+Note that `Scene`'s own transform is purposefully ignored as an
 optimization when calculating world derived transforms of child nodes,
 so changing it has no effect and it should be left as it is (position
 at origin, no rotation, no scaling.)
 
-[`Scene`](https://developer.xamarin.com/api/type/Urho.Node/) nodes can be freely reparented. In contrast components always
+`Scene` nodes can be freely reparented. In contrast components always
 belong to the node they attached to, and can not be moved between
-nodes. Both nodes and components provide a [`Remove()`](https://developer.xamarin.com/api/member/Urho.Node.Remove()/) function to
+nodes. Both nodes and components provide a `Remove` function to
 accomplish this without having to go through the parent. Once the node
 is removed, no operations on the node or component in question are
 safe after calling that function.
@@ -195,17 +195,17 @@ later will cause those components to not work correctly.
 ### Scene updates
 
 A Scene whose updates are enabled (default) will be automatically
-updated on each main loop iteration.  The application's [`SceneUpdate`](https://developer.xamarin.com/api/event/Urho.Scene.SceneUpdate/)
+updated on each main loop iteration.  The application's `SceneUpdate`
 event handler is invoked on it.
 
 Nodes and components can be excluded from the scene update by
-disabling them, see [`Enabled`](https://developer.xamarin.com/api/member/Urho.Node.Enabled).  The behavior depends on
+disabling them, see `Enabled`.  The behavior depends on
 the specific component, but for example disabling a drawable component
 also makes it invisible, while disabling a sound source component
 mutes it. If a node is disabled, all of its components are treated as
 disabled regardless of their own enable/disable state.
 
-## Adding Behavior to Your Components
+## Adding behavior to your components
 
 The best way to structure your game is to make your own component that
 encapsulate an actor or element on your game.  This makes the feature
@@ -265,32 +265,32 @@ parallel:
 
 In the above example the cloud will move and fade out at the same time.
 
-You will notice that these are using C# await, which allows you to
+You will notice that these are using C# `await`, which allows you to
 think linearly about the behavior you want to achieve.
 
-### Basic Actions
+### Basic actions
 
 These are the actions supported in UrhoSharp:
 
-* Moving nodes: [`MoveTo`](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo), [`MoveBy`](https://developer.xamarin.com/api/type/Urho.Actions.MoveBy), [`Place`](https://developer.xamarin.com/api/type/Urho.Actions.Place), [`BezierTo`](https://developer.xamarin.com/api/type/Urho.Actions.BezierTo), [`BezierBy`](https://developer.xamarin.com/api/type/Urho.Actions.BezierBy), [`JumpTo`](https://developer.xamarin.com/api/type/Urho.Actions.JumpTo), [`JumpBy`](https://developer.xamarin.com/api/type/Urho.Actions.JumpBy)
-* Rotating nodes: [`RotateTo`](https://developer.xamarin.com/api/type/Urho.Actions.RotateTo), [`RotateBy`](https://developer.xamarin.com/api/type/Urho.Actions.RotateBy)
-* Scaling nodes: [`ScaleTo`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo), [`ScaleBy`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleBy)
-* Fading nodes: [`FadeIn`](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn), [`FadeTo`](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo), [`FadeOut`](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut), [`Hide`](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
-* Tinting: [`TintTo`](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
-* Instants: [`Hide`](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Show`](https://developer.xamarin.com/api/type/Urho.Actions.Show), [`Place`](https://developer.xamarin.com/api/type/Urho.Actions.Place), [`RemoveSelf`](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
-* Looping: [`Repeat`](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [`RepeatForever`](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
+- Moving nodes: `MoveTo`, `MoveBy`, `Place`, `BezierTo`, `BezierBy`, `JumpTo`, `JumpBy`
+- Rotating nodes: `RotateTo`, `RotateBy`
+- Scaling nodes: `ScaleTo`, `ScaleBy`
+- Fading nodes: `FadeIn`, `FadeTo`, `FadeOut`, `Hide`, `Blink`
+- Tinting: `TintTo`, `TintBy`
+- Instants: `Hide`, `Show`, `Place`, `RemoveSelf`, `ToggleVisibility`
+- Looping: `Repeat`, `RepeatForever`, `ReverseTime`
 
-Other advanced features include the combination of the [`Spawn`](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) and [`Sequence`](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) actions.
+Other advanced features include the combination of the `Spawn` and `Sequence` actions.
 
-### Easing - Controlling the Speed of Your Actions
+### Easing - controlling the speed of your actions
 
 Easing is a way that directs the way that the animation will unfold,
 and it can make your animations a lot more pleasant.  By default your
-actions will have a linear behavior, for example a [`MoveTo`](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo) action would
+actions will have a linear behavior, for example a `MoveTo` action would
 have a very robotic movement.  You can wrap your Actions into an
 Easing action to change the behavior, for example, one that would
 slowly start the movement, accelerate and slowly reach the end
-([`EasyInOut`](https://developer.xamarin.com/api/type/Urho.Actions.EasyInOut)).
+(`EasyInOut`).
 
 You do this by wrapping an existing Action into an easing action, for
 example:
@@ -309,9 +309,9 @@ controlling over the period of time, from start to finish:
 easing types and their behavior on the value of the object they are
 controlling over the period of time")
 
-### Using Actions and Async Code
+### Using actions and async code
 
-In your [`Component`](https://developer.xamarin.com/api/type/Urho.Component/) subclass, you should introduce an async method that
+In your `Component` subclass, you should introduce an async method that
 prepares your component behavior and drives the functionality for it.
 Then you would invoke this method using the C# `await` keyword from
 another part of your program, either your `Application.Start` method or
@@ -377,11 +377,11 @@ alive.  And to make things more interesting, the robot will keep
 shooting simultaneously.  The shooting will only start every 0.1
 seconds.
 
-### Frame-based Behavior Programming
+### Frame-based behavior programming
 
 If you want to control the behavior of your component on a
 frame-by-frame basis instead of using actions, what you would do is to
-override the [`OnUpdate`](https://developer.xamarin.com/api/member/Urho.Component.OnUpdate) method of your [`Component`](https://developer.xamarin.com/api/type/Urho.Component) subclass.  This
+override the `OnUpdate` method of your `Component` subclass.  This
 method is invoked once per frame, and is invoked only if you set the
 ReceiveSceneUpdates property to true.
 
@@ -398,9 +398,9 @@ class Rotator : Component {
     protected override void OnUpdate(float timeStep)
     {
         Node.Rotate(new Quaternion(
-            RotationSpeed.X * timeStep,
-            RotationSpeed.Y * timeStep,
-            RotationSpeed.Z * timeStep),
+            RotationSpeed.X  timeStep,
+            RotationSpeed.Y  timeStep,
+            RotationSpeed.Z  timeStep),
             TransformSpace.Local);
     }
 }
@@ -414,7 +414,7 @@ var rotator = new Rotator() { RotationSpeed = rotationSpeed };
 boxNode.AddComponent (rotator);
 ```
 
-### Combining Styles
+### Combining styles
 
 You can use the async/action based model for programming much of the
 behavior which is great for fire-and-forget style of programming, but
@@ -440,7 +440,7 @@ components point toward the user by setting direction of the node with
 ## Loading and saving scenes
 
 Scenes can be loaded and saved in XML format; see the functions
-[`LoadXml`](https://developer.xamarin.com/api/member/Urho.Scene.LoadXml) and [`SaveXML()`](https://developer.xamarin.com/api/member/Urho.Scene.SaveXml). When a scene is loaded, all existing content
+`LoadXml` and `SaveXML`. When a scene is loaded, all existing content
 in it (child nodes and components) is removed first. Nodes and
 components that are marked temporary with the `Temporary` property
 will not be saved. The serializer handles all built-in components and
@@ -448,42 +448,42 @@ properties but it's not smart enough to handle custom properties and
 fields defined in your Component subclasses. However it provides two
 virtual methods for this:
 
-* [`OnSerialize`](https://developer.xamarin.com/api/member/Urho.Component.OnSerialize) where you can register you custom states for the serialization
+ `OnSerialize` where you can register you custom states for the serialization
 
-* [`OnDeserialized`](https://developer.xamarin.com/api/member/Urho.Component.OnDeserialize) where you can obtain your saved custom states.
+ `OnDeserialized` where you can obtain your saved custom states.
 
 Typically, a custom component will look like the following:
 
 ```csharp
 class MyComponent : Component {
-	// Constructor needed for deserialization
-	public MyComponent(IntPtr handle) : base(handle) { }
-	public MyComponent() { }
-	// user defined properties (managed state):
-	public Quaternion MyRotation { get; set; }
-	public string MyName { get; set; }
+    // Constructor needed for deserialization
+    public MyComponent(IntPtr handle) : base(handle) { }
+    public MyComponent() { }
+    // user defined properties (managed state):
+    public Quaternion MyRotation { get; set; }
+    public string MyName { get; set; }
 
-	public override void OnSerialize(IComponentSerializer ser)
-	{
-		// register our properties with their names as keys using nameof()
-		ser.Serialize(nameof(MyRotation), MyRotation);
-		ser.Serialize(nameof(MyName), MyName);
-	}
+    public override void OnSerialize(IComponentSerializer ser)
+    {
+        // register our properties with their names as keys using nameof()
+        ser.Serialize(nameof(MyRotation), MyRotation);
+        ser.Serialize(nameof(MyName), MyName);
+    }
 
-	public override void OnDeserialize(IComponentDeserializer des)
-	{
-		MyRotation = des.Deserialize<Quaternion>(nameof(MyRotation));
-		MyName = des.Deserialize<string>(nameof(MyName));
-	}
-	// called when the component is attached to some node
-	public override void OnAttachedToNode()
-	{
-		var node = this.Node;
-	}
+    public override void OnDeserialize(IComponentDeserializer des)
+    {
+        MyRotation = des.Deserialize<Quaternion>(nameof(MyRotation));
+        MyName = des.Deserialize<string>(nameof(MyName));
+    }
+    // called when the component is attached to some node
+    public override void OnAttachedToNode()
+    {
+        var node = this.Node;
+    }
 }
 ```
 
-### Object Prefabs
+### Object prefabs
 
 Just loading or saving whole scenes is not flexible enough for games
 where new objects need to be dynamically created. On the other hand,
@@ -494,11 +494,11 @@ attributes. These can later conveniently be loaded as a group.  Such a
 saved object is often referred to as a prefab. There are three ways to
 do this:
 
-- In code by calling [`Node.SaveXml`](https://developer.xamarin.com/api/member/Urho.Node.SaveXml) on the Node
+- In code by calling `Node.SaveXml` on the Node
 - In the editor, by selecting the node in the hierarchy window and choosing "Save node as" from the "File" menu.
 - Using the "node" command in `AssetImporter`, which will save the scene node hierarchy and any models contained in the input asset (eg. a Collada file)
 
-To instantiate the saved node into a scene, call [`InstantiateXml()`](https://developer.xamarin.com/api/member/Urho.Scene.InstantiateXml). The
+To instantiate the saved node into a scene, call `InstantiateXml`. The
 node will be created as a child of the Scene but can be freely
 reparented after that. Position and rotation for placing the node need
 to be specified. The following code demonstrates how to instantiate a
@@ -538,7 +538,7 @@ public void override Start ()
 
 void HandleMouseButtonDown(MouseButtonDownEventArgs args)
 {
-	Console.WriteLine ("button pressed");
+    Console.WriteLine ("button pressed");
 }
 ```
 
@@ -563,7 +563,7 @@ Subscription mouseSub;
 public void override Start ()
 {
     mouseSub = UI.SubscribeToMouseButtonDown (args => {
-	Console.WriteLine ("button pressed");
+    Console.WriteLine ("button pressed");
       mouseSub.Unsubscribe ();
     };
 }
@@ -573,7 +573,7 @@ The parameter received by the event handler is a strongly typed
 event arguments class that will be specific to each event and contains the
 event payload.
 
-## Responding to User Input
+## Responding to user input
 
 You can subscribe to various events, like keystrokes down by
 subscribing to the event, and responding to the input being delivered:
@@ -605,34 +605,34 @@ protected override void OnUpdate(float timeStep)
     // Read WASD keys and move the camera scene node to the
     // corresponding direction if they are pressed
     if (input.GetKeyDown(Key.W))
-        CameraNode.Translate(Vector3.UnitY * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitY  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.S))
-        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.A))
-        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.D))
-        CameraNode.Translate(Vector3.UnitX * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitX  moveSpeed  timeStep, TransformSpace.Local);
 }
 ```
 
-## Resources (Assets)
+## Resources (assets)
 
 Resources include most things in UrhoSharp that are loaded from mass storage during initialization or runtime:
 
-- [`Animation`](https://developer.xamarin.com/api/type/Urho.Animation/) - used for skeletal animations
-- [`Image`](https://developer.xamarin.com/api/type/Urho.Resources.Image) - represents images stored in a variety of graphic formats
-- [`Model`](https://developer.xamarin.com/api/type/Urho.Model/) - 3D Models
-- [`Material`](https://developer.xamarin.com/api/type/Urho.Material) - materials used to render Models.
-- [`ParticleEffect`](https://developer.xamarin.com/api/type/Urho.ParticleEffect)- [describes](http://urho3d.github.io/documentation/1.4/_particles.html) how a particle emitter works, see "[Particles](#particles)" below.
-- [`Shader`](https://developer.xamarin.com/api/type/Urho.Shader) - custom shaders
-- [`Sound`](https://developer.xamarin.com/api/type/Urho.Audio.Sound) - sounds to playback, see "[Sound](#sound)" below.
-- [`Technique`](https://developer.xamarin.com/api/type/Urho.Technique/) - material rendering techniques
-- [`Texture2D`](https://developer.xamarin.com/api/type/Urho.Urho2D.Texture2D/) - 2D texture
-- [`Texture3D`](https://developer.xamarin.com/api/type/Urho.Texture3D/) - 3D texture
-- [`TextureCube`](https://developer.xamarin.com/api/type/Urho.TextureCube/) - Cube texture
+- `Animation` - used for skeletal animations
+- `Image` - represents images stored in a variety of graphic formats
+- `Model` - 3D Models
+- `Material` - materials used to render Models.
+- `ParticleEffect`- [describes](https://urho3d.github.io/documentation/1.4/_particles.html) how a particle emitter works, see "[Particles](#particles)" below.
+- `Shader` - custom shaders
+- `Sound` - sounds to playback, see "[Sound](#sound)" below.
+- `Technique` - material rendering techniques
+- `Texture2D` - 2D texture
+- `Texture3D` - 3D texture
+- `TextureCube` - Cube texture
 - `XmlFile`
 
-They are managed and loaded by the [`ResourceCache`](https://developer.xamarin.com/api/type/Urho.Resources.ResourceCache/) subsystem (available as [`Application.ResourceCache`](https://developer.xamarin.com/api/property/Urho.Application.ResourceCache/)).
+They are managed and loaded by the `ResourceCache` subsystem (available as `Application.ResourceCache`).
 
 The resources themselves are identified by their file paths, relative
 to the registered resource directories or package files. By default,
@@ -658,13 +658,13 @@ memory than allowed, the oldest resources will be removed from the
 cache if not in use anymore. By default the memory budgets are set to
 unlimited.
 
-### Bringing 3D-Models and Images
+### Bringing 3D-models and images
 
 Urho3D tries to use existing file formats whenever possible, and
 define custom file formats only when absolutely necessary such as for
-models (*.mdl) and for animations (*.ani). For these types of assets,
+models (.mdl) and for animations (.ani). For these types of assets,
 Urho provides a converter -
-[AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html)
+[AssetImporter](https://urho3d.github.io/documentation/1.4/_tools.html)
 which can consume many popular 3D formats such as fbx, dae, 3ds, and
 obj, etc.
 
@@ -683,7 +683,7 @@ in framerate drops.
 
 If you know in advance what resources you need, you can request them
 to be loaded in a background thread by calling
-`BackgroundLoadResource()`. You can subscribe to the Resource
+`BackgroundLoadResource`. You can subscribe to the Resource
 Background Loaded event by using the
 `SubscribeToResourceBackgroundLoaded` method. it will tell if the
 loading actually was a success or a failure. Depending on the
@@ -693,8 +693,8 @@ needs to happen in the main thread. Note that if you call one of the
 resource loading methods for a resource that is queued for background
 loading, the main thread will stall until its loading is complete.
 
-The asynchronous scene loading functionality `LoadAsync()` and
-`LoadAsyncXML()` has the option to background load the resources first
+The asynchronous scene loading functionality `LoadAsync` and
+`LoadAsyncXML` has the option to background load the resources first
 before proceeding to load the scene content. It can also be used to
 only load the resources without modifying the scene, by specifying the
 `LoadMode.ResourcesOnly`. This allows to prepare a scene or object
@@ -704,16 +704,16 @@ Finally the maximum time (in milliseconds) spent each frame on
 finishing background loaded resources can be configured by setting the
 `FinishBackgroundResourcesMs` property on the `ResourceCache`.
 
-<a name="sound"/>
+<a name="sound"></a>
 
 ## Sound
 
 Sound is an important part of game play, and the UrhoSharp framework
 provides a way of playing sounds in your game.  You play sounds by
 attaching a
-[`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource/)
+`SoundSource`
 component to a
-[`Node`](https://developer.xamarin.com/api/type/Urho.Node) and then
+`Node` and then
 playing a named file from your resources.
 
 This is how it is done:
@@ -726,7 +726,7 @@ soundSource.Gain = 0.5f;
 soundSource.AutoRemove = true;
 ```
 
-<a name="particles"/>
+<a name="particles"></a>
 
 ## Particles
 
@@ -774,7 +774,7 @@ And this is what it looks if you use a blocky texture:
 
 ![Particles with a box texture](using-images/image-2.png "And this is what it looks if using a blocky texture")
 
-## Multithreading Support
+## Multi-threading support
 
 UrhoSharp is a single threaded library.  This means that you should
 not attempt to invoke methods in UrhoSharp from a background thread,
@@ -783,7 +783,7 @@ application.
 
 If you want to run some code in the background and then update Urho
 components on the main UI, you can use the
-[`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
+`Application.InvokeOnMain(Action)`
 method.  Additionally, you can use C# await and the .NET task APIs to
 ensure that the code is executed on the proper thread.
 

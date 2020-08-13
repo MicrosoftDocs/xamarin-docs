@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # TabbedPage Page Swiping on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific is used to enable swiping with a horizontal finger gesture between pages in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). It's consumed in XAML by setting the [`TabbedPage.IsSwipePagingEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) attached property to a `boolean` value:
 
@@ -39,11 +40,11 @@ The `TabbedPage.On<Android>` method specifies that this platform-specific will o
 
 The result is that swipe paging through the pages displayed by a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is enabled:
 
-![](tabbedpage-page-swiping-images/tabbedpage-swipe.png)
+![Swipe paging through a TabbedPage](tabbedpage-page-swiping-images/tabbedpage-swipe.png)
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

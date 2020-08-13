@@ -6,32 +6,31 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/14/2018
+ms.date: 03/10/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Hierarchical Navigation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _The NavigationPage class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of Page objects. This article demonstrates how to use the NavigationPage class to perform navigation in a stack of pages._
 
 To move from one page to another, an application will push a new page onto the navigation stack, where it will become the active page, as shown in the following diagram:
 
-![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
+![Pushing a Page to the Navigation Stack](hierarchical-images/pushing.png)
 
 To return back to the previous page, the application will pop the current page from the navigation stack, and the new topmost page becomes the active page, as shown in the following diagram:
 
-![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
+![Popping a Page from the Navigation Stack](hierarchical-images/popping.png)
 
 Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
-
-<a name="Performing_Navigation" />
 
 ## Performing Navigation
 
 In hierarchical navigation, the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class is used to navigate through a stack of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. The following screenshots show the main components of the `NavigationPage` on each platform:
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
+![NavigationPage Components](hierarchical-images/navigationpage-components.png)
 
 The layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is dependent on the platform:
 
@@ -39,7 +38,7 @@ The layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is depende
 - On Android, a navigation bar is present at the top of the page that displays a title, an icon, and a *Back* button that returns to the previous page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project.
 - On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title.
 
-On all the platforms, the value of the [`Page.Title`](xref:Xamarin.Forms.Page.Title) property will be displayed as the page title.
+On all the platforms, the value of the [`Page.Title`](xref:Xamarin.Forms.Page.Title) property will be displayed as the page title. In addition, the `IconColor` property can be set to a [`Color`](xref:Xamarin.Forms.Color) that's applied to the icon in the navigation bar.
 
 > [!NOTE]
 > It's recommended that a `NavigationPage` should be populated with `ContentPage` instances only.
@@ -57,7 +56,7 @@ public App ()
 
 This causes the `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance to be pushed onto the navigation stack, where it becomes the active page and the root page of the application. This is shown in the following screenshots:
 
-![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
+![Root Page of Navigation Stack](hierarchical-images/mainpage.png)
 
 > [!NOTE]
 > The [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) property of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance provides access to the first page in the navigation stack.
@@ -75,7 +74,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 This causes the `Page2Xaml` instance to be pushed onto the navigation stack, where it becomes the active page. This is shown in the following screenshots:
 
-![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
+![Page Pushed onto Navigation Stack](hierarchical-images/secondpage.png)
 
 When the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method is invoked, the following events occur:
 
@@ -146,8 +145,6 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 Setting the `boolean` parameter to `false` disables the page-transition animation, while setting the parameter to `true` enables the page-transition animation, provided that it is supported by the underlying platform. However, the push and pop methods that lack this parameter enable the animation by default.
 
-<a name="Passing_Data_when_Navigating" />
-
 ## Passing Data when Navigating
 
 Sometimes it's necessary for a page to pass data to another page during navigation. Two techniques for accomplishing this are passing data through a page constructor, and by setting the new page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) to the data. Each will now be discussed in turn.
@@ -177,7 +174,7 @@ public MainPage (string date)
 
 The data is then displayed on the page by setting the [`Label.Text`](xref:Xamarin.Forms.Label.Text) property, as shown in the following screenshots:
 
-![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
+![Data Passed Through a Page Constructor](hierarchical-images/passing-data-constructor.png)
 
 ### Passing Data through a BindingContext
 
@@ -263,11 +260,9 @@ public class SecondPageCS : ContentPage
 
 The data is then displayed on the page by a series of [`Label`](xref:Xamarin.Forms.Label) controls, as shown in the following screenshots:
 
-![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
+![Data Passed Through a BindingContext](hierarchical-images/passing-data-bindingcontext.png)
 
 For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Manipulating_the_Navigation_Stack" />
 
 ## Manipulating the Navigation Stack
 
@@ -275,11 +270,11 @@ The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property expo
 
 The [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
 
-![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
+![Inserting a Page in the Navigation Stack](hierarchical-images/insert-page-before.png)
 
 The [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) method removes the specified page from the navigation stack, as shown in the following diagram:
 
-![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
+![Removing a Page from the Navigation Stack](hierarchical-images/remove-page.png)
 
 These methods enable a custom navigation experience, such as replacing a login page with a new page, following a successful login. The following code example demonstrates this scenario:
 
@@ -305,7 +300,7 @@ Provided that the user's credentials are correct, the `MainPage` instance is ins
 
 Any Xamarin.Forms [`View`](xref:Xamarin.Forms.View) can be displayed in the navigation bar of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). This is accomplished by setting the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property to a `View`. This attached property can be set on any [`Page`](xref:Xamarin.Forms.Page), and when the `Page` is pushed onto a `NavigationPage`, the `NavigationPage` will respect the value of the property.
 
-The following example, taken from the [Title View sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), shows how to set the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property from XAML:
+The following example, taken from the [Title View sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), shows how to set the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property from XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -357,10 +352,9 @@ There are a number of limitations to be aware of when displaying a [`View`](xref
 ## Related Links
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Hierarchical (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
-- [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
-- [LoginFlow (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
-- [TitleView (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
-- [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video) Sample](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
-- [How to Create a Sign In Screen Flow in Xamarin.Forms (Xamarin University Video)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
+- [Hierarchical (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+- [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [LoginFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
+- [TitleView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
+- [How to Create a Sign In Screen Flow in Xamarin.Forms video](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Containerized Microservices
@@ -15,7 +16,7 @@ Developing client-server applications has resulted in a focus on building tiered
 
 Particularly concerning in the age of the cloud, is that individual components can't be easily scaled. A monolithic application contains domain-specific functionality, and is typically divided by functional layers such as front end, business logic, and data storage. A monolithic application is scaled by cloning the entire application onto multiple machines, as illustrated in Figure 8-1.
 
-![](containerized-microservices-images/monolithicapp.png "Monolithic application scaling approach")
+![Monolithic application scaling approach](containerized-microservices-images/monolithicapp.png)
 
 **Figure 8-1**: Monolithic application scaling approach
 
@@ -25,7 +26,7 @@ Microservices offer a different approach to application development and deployme
 
 Microservices can scale-out independently, as compared to giant monolithic applications that scale together. This means that a specific functional area, that requires more processing power or network bandwidth to support demand, can be scaled rather than unnecessarily scaling-out other areas of the application. Figure 8-2 illustrates this approach, where microservices are deployed and scaled independently, creating instances of services across machines.
 
-![](containerized-microservices-images/microservicesapp.png "Microservices application scaling approach")
+![Microservices application scaling approach](containerized-microservices-images/microservicesapp.png)
 
 **Figure 8-2**: Microservices application scaling approach
 
@@ -37,19 +38,19 @@ Microservices also support independent updates. This loose coupling between micr
 
 Therefore, microservice applications have many benefits over monolithic applications:
 
--   Each microservice is relatively small, easy to manage and evolve.
--   Each microservice can be developed and deployed independently of other services.
--   Each microservice can be scaled-out independently. For example, a catalog service or shopping basket service might need to be scaled-out more than an ordering service. Therefore, the resulting infrastructure will more efficiently consume resources when scaling out.
--   Each microservice isolates any issues. For example, if there is an issue in a service it only impacts that service. The other services can continue to handle requests.
--   Each microservice can use the latest technologies. Because microservices are autonomous and run side-by-side, the latest technologies and frameworks can be used, rather than being forced to use an older framework that might be used by a monolithic application.
+- Each microservice is relatively small, easy to manage and evolve.
+- Each microservice can be developed and deployed independently of other services.
+- Each microservice can be scaled-out independently. For example, a catalog service or shopping basket service might need to be scaled-out more than an ordering service. Therefore, the resulting infrastructure will more efficiently consume resources when scaling out.
+- Each microservice isolates any issues. For example, if there is an issue in a service it only impacts that service. The other services can continue to handle requests.
+- Each microservice can use the latest technologies. Because microservices are autonomous and run side-by-side, the latest technologies and frameworks can be used, rather than being forced to use an older framework that might be used by a monolithic application.
 
 However, a microservice based solution also has potential drawbacks:
 
--   Choosing how to partition an application into microservices can be challenging, as each microservice has to be completely autonomous, end-to-end, including responsibility for its data sources.
--   Developers must implement inter-service communication, which adds complexity and latency to the application.
--   Atomic transactions between multiple microservices usually aren't possible. Therefore, business requirements must embrace eventual consistency between microservices.
--   In production, there is an operational complexity in deploying and managing a system compromised of many independent services.
--   Direct client-to-microservice communication can make it difficult to refactor the contracts of microservices. For example, over time how the system is partitioned into services might need to change. A single service might split into two or more services, and two services might merge. When clients communicate directly with microservices, this refactoring work can break compatibility with client apps.
+- Choosing how to partition an application into microservices can be challenging, as each microservice has to be completely autonomous, end-to-end, including responsibility for its data sources.
+- Developers must implement inter-service communication, which adds complexity and latency to the application.
+- Atomic transactions between multiple microservices usually aren't possible. Therefore, business requirements must embrace eventual consistency between microservices.
+- In production, there is an operational complexity in deploying and managing a system compromised of many independent services.
+- Direct client-to-microservice communication can make it difficult to refactor the contracts of microservices. For example, over time how the system is partitioned into services might need to change. A single service might split into two or more services, and two services might merge. When clients communicate directly with microservices, this refactoring work can break compatibility with client apps.
 
 ## Containerization
 
@@ -59,7 +60,7 @@ A container is an isolated, resource controlled, and portable operating environm
 
 There are many similarities between containers and virtual machines, as illustrated in Figure 8-3.
 
-![](containerized-microservices-images/containersvsvirtualmachines.png "Microservices application scaling approach")
+![Microservices application scaling approach](containerized-microservices-images/containersvsvirtualmachines.png)
 
 **Figure 8-3**: Comparison of virtual machines and containers
 
@@ -69,33 +70,31 @@ The advantage of a container-oriented development and deployment approach is tha
 
 The key concepts when creating and working with containers are:
 
--   Container Host: The physical or virtual machine configured to host containers. The container host will run one or more containers.
--   Container Image: An image consists of a union of layered filesystems stacked on top of each other, and is the basis of a container. An image does not have state and it never changes as it's deployed to different environments.
--   Container: A container is a runtime instance of an image.
--   Container OS Image: Containers are deployed from images. The container operating system image is the first layer in potentially many image layers that make up a container. A container operating system is immutable, and can't be modified.
--   Container Repository: Each time a container image is created, the image and its dependencies are stored in a local repository. These images can be reused many times on the container host. The container images can also be stored in a public or private registry, such as [Docker Hub](https://hub.docker.com/), so that they can be used across different container hosts.
+- Container Host: The physical or virtual machine configured to host containers. The container host will run one or more containers.
+- Container Image: An image consists of a union of layered filesystems stacked on top of each other, and is the basis of a container. An image does not have state and it never changes as it's deployed to different environments.
+- Container: A container is a runtime instance of an image.
+- Container OS Image: Containers are deployed from images. The container operating system image is the first layer in potentially many image layers that make up a container. A container operating system is immutable, and can't be modified.
+- Container Repository: Each time a container image is created, the image and its dependencies are stored in a local repository. These images can be reused many times on the container host. The container images can also be stored in a public or private registry, such as [Docker Hub](https://hub.docker.com/), so that they can be used across different container hosts.
 
 Enterprises are increasingly adopting containers when implementing microservice based applications, and Docker has become the standard container implementation that has been adopted by most software platforms and cloud vendors.
 
 The eShopOnContainers reference application uses Docker to host four containerized back-end microservices, as illustrated in Figure 8-4.
 
-![](containerized-microservices-images/microservicesarchitecture.png "eShopOnContainers reference application back-end microservices")
+![eShopOnContainers reference application back-end microservices](containerized-microservices-images/microservicesarchitecture.png)
 
 **Figure 8-4**: eShopOnContainers reference application back-end microservices
 
 The architecture of the back-end services in the reference application is decomposed into multiple autonomous sub-systems in the form of collaborating microservices and containers. Each microservice provides a single area of functionality: an identity service, a catalog service, an ordering service, and a basket service.
 
-Each microservice has its own database, allowing it to be fully decoupled from the other microservices. Where necessary, consistency between databases from different microservices is achieved using application-level events. For more information, see [Communication Between Microservices](#communication_between_microservices).
+Each microservice has its own database, allowing it to be fully decoupled from the other microservices. Where necessary, consistency between databases from different microservices is achieved using application-level events. For more information, see [Communication Between Microservices](#communication-between-microservices).
 
 For more information about the reference application, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
-
-<a name="communication_between_client_and_microservices" />
 
 ## Communication Between Client and Microservices
 
 The eShopOnContainers mobile app communicates with the containerized back-end microservices using *direct client-to-microservice* communication, which is shown in Figure 8-5.
 
-![](containerized-microservices-images/directclienttomicroservicecommunication.png "Microservices application scaling approach")
+![Microservices application scaling approach](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
 **Figure 8-5**: Direct client-to-microservice communication
 
@@ -103,8 +102,6 @@ With direct client-to-microservice communication, the mobile app makes requests 
 
 > [!TIP]
 > Consider using API gateway communication. Direct client-to-microservice communication can have drawbacks when building a large and complex microservice based application, but it's more than adequate for a small application. When designing a large microservice based application with tens of microservices, consider using API gateway communication. For more information, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
-
-<a name="communication_between_microservices" />
 
 ## Communication Between Microservices
 
@@ -116,19 +113,19 @@ Asynchronous messaging based event-driven communication is critical when propaga
 
 An event bus allows publish-subscribe communication between microservices, without requiring the components to be explicitly aware of each other, as shown in Figure 8-6.
 
-![](containerized-microservices-images/eventbus.png "Publish-subscribe with an event bus")
+![Publish-subscribe with an event bus](containerized-microservices-images/eventbus.png)
 
 **Figure 8-6:** Publish-subscribe with an event bus
 
 From an application perspective, the event bus is simply a publish-subscribe channel exposed via an interface. However, the way the event bus is implemented can vary. For example, an event bus implementation could use RabbitMQ, Azure Service Bus, or other service buses such as NServiceBus and MassTransit. Figure 8-7 shows how an event bus is used in the eShopOnContainers reference application.
 
-![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Asynchronous event-driven communication in the reference application")
+![Asynchronous event-driven communication in the reference application](containerized-microservices-images/microservicesarchitecturewitheventbus.png)
 
 **Figure 8-7:** Asynchronous event-driven communication in the reference application
 
 The eShopOnContainers event bus, implemented using RabbitMQ, provides one-to-many asynchronous publish-subscribe functionality. This means that after publishing an event, there can be multiple subscribers listening for the same event. Figure 8-9 illustrates this relationship.
 
-![](containerized-microservices-images/eventdrivencommunication.png "One-to-many communication")
+![One-to-many communication](containerized-microservices-images/eventdrivencommunication.png)
 
 **Figure 8-9**: One-to-many communication
 
@@ -144,7 +141,6 @@ For information about the event bus implementation, see [.NET Microservices: Arc
 Microservices offer an approach to application development and deployment that's suited to the agility, scale, and reliability requirements of modern cloud applications. One of the main advantages of microservices is that they can be scaled-out independently, which means that a specific functional area can be scaled that requires more processing power or network bandwidth to support demand, without unnecessarily scaling areas of the application that are not experiencing increased demand.
 
 A container is an isolated, resource controlled, and portable operating environment, where an application can run without touching the resources of other containers, or the host. Enterprises are increasingly adopting containers when implementing microservice based applications, and Docker has become the standard container implementation that has been adopted by most software platforms and cloud vendors.
-
 
 ## Related Links
 

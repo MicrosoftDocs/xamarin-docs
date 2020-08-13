@@ -4,8 +4,8 @@ description: "Android 4.4 (KitKat) comes loaded with a cornucopia of features fo
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -19,23 +19,22 @@ Android 4.4 (API Level 19), also known as "KitKat", was released in
 late 2013. KitKat offers a variety of new features and improvements,
 including:
 
--  [User Experience](#user_experience) &ndash; Easy animations with
-   transition framework, translucent status and navigation bars, and
-   full-screen immersive mode help create a better experience for the
-   user.
+- [User Experience](#user_experience) &ndash; Easy animations with
+  transition framework, translucent status and navigation bars, and
+  full-screen immersive mode help create a better experience for the
+  user.
 
--  [User Content](#user_content) &ndash; User file management
-   simplified with storage access framework; printing pictures, web
-   sites, and other content is easier with improved printing APIs.
+- [User Content](#user_content) &ndash; User file management
+  simplified with storage access framework; printing pictures, web
+  sites, and other content is easier with improved printing APIs.
 
--  [Hardware](#hardware) &ndash; Turn any app into an NFC card with NFC
-   Host-Based Card Emulation; run low-power sensors with the
-   `SensorManager` .
+- [Hardware](#hardware) &ndash; Turn any app into an NFC card with NFC
+  Host-Based Card Emulation; run low-power sensors with the
+  `SensorManager` .
 
--  [Developer Tools](#developer_tools) &ndash; Screencast applications
-   in action with the Android Debug Bridge client, available as part of
-   the Android SDK.
-
+- [Developer Tools](#developer_tools) &ndash; Screencast applications
+  in action with the Android Debug Bridge client, available as part of
+  the Android SDK.
 
 This guide provides guidance for migrating an existing Xamarin.Android
 application to KitKat, as well as a high-level overview of KitKat for
@@ -50,7 +49,7 @@ screenshot:
 
 [![Selecting Android 4.4 in the Android SDK Manager](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
-<a name="Migrating_Your_App_to_KitKat" />
+<a name="Migrating_Your_App_to_KitKat"></a>
 
 ## Migrating Your App to KitKat
 
@@ -78,7 +77,7 @@ time, KitKat prefers to group several applications that are registered
 to wake during the same time interval, and wake them at the same time.
 To tell Android to wake an app during a specified time interval, call
 `SetWindow` on the
-[`AlarmManager`](https://developer.xamarin.com/api/type/Android.App.AlarmManager/),
+[`AlarmManager`](xref:Android.App.AlarmManager),
 passing in the minimum and maximum time, in milliseconds, that can
 elapse before the app is woken, and the operation to perform at wakeup.
 The following code provides an example of an application that needs to
@@ -100,7 +99,7 @@ alarmManager.SetExact (AlarmType.Rtc, AlarmManager.IntervalDay, pendingIntent);
 
 KitKat no longer lets you set an exact repeating alarm. Applications
 that use
-[`SetRepeating`](https://developer.xamarin.com/api/member/Android.App.AlarmManager.SetRepeating/p/Android.App.AlarmType/System.Int64/System.Int64/Android.App.PendingIntent/)
+[`SetRepeating`](xref:Android.App.AlarmManager.SetRepeating*)
 and require exact alarms to work will now need to trigger each alarm
 manually.
 
@@ -113,20 +112,20 @@ special permissions. Interacting with data on shared storage now
 requires the `READ_EXTERNAL_STORAGE` or `WRITE_EXTERNAL_STORAGE`
 permission. The two types can be classified as such:
 
--  If you're getting a file or directory path by calling a method on
-   `Context` - for example,
-   [`GetExternalFilesDir`](https://developer.xamarin.com/api/member/Android.Content.Context.GetExternalFilesDir/p/System.String/)
-   or
-   [`GetExternalCacheDirs`](https://developer.xamarin.com/api/member/Android.Content.Context.GetExternalCacheDirs%28%29/)
-   - your app requires no extra permissions.
+- If you're getting a file or directory path by calling a method on
+  `Context` - for example,
+  [`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
+  or
+  [`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+  - your app requires no extra permissions.
 
--  If you're getting a file or directory path by accessing a property or calling a method on
-   `Environment` , such as
-   [`GetExternalStorageDirectory`](https://developer.xamarin.com/api/property/Android.OS.Environment.ExternalStorageDirectory/)
-   or
-   [`GetExternalStoragePublicDirectory`](https://developer.xamarin.com/api/member/Android.OS.Environment.GetExternalStoragePublicDirectory/p/System.String/)
-   , your app requires the `READ_EXTERNAL_STORAGE` or
-   `WRITE_EXTERNAL_STORAGE` permission.
+- If you're getting a file or directory path by accessing a property or calling a method on
+  `Environment` , such as
+  [`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
+  or
+  [`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  , your app requires the `READ_EXTERNAL_STORAGE` or
+  `WRITE_EXTERNAL_STORAGE` permission.
 
 > [!NOTE]
 > `WRITE_EXTERNAL_STORAGE` implies the
@@ -141,12 +140,12 @@ responsible for making the app selectable as the default messaging
 application, and behaving appropriately in code and in life if the
 application is not selected. For more information on transitioning your
 SMS app to KitKat, refer to the
-[Getting Your SMS Apps Ready for KitKat](http://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html)
+[Getting Your SMS Apps Ready for KitKat](https://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html)
 guide from Google.
 
 ### WebView Apps
 
-[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)
+[WebView](xref:Android.Webkit.WebView)
 got a makeover in KitKat. The biggest change is added security for
 loading content into a `WebView`. While most applications targeting
 older API versions should work as expected, testing applications that
@@ -156,7 +155,7 @@ about affected WebView APIs refer to the Android
 4.4](https://developer.android.com/guide/webapps/migrating.html)
 documentation.
 
-<a name="user_experience" />
+<a name="user_experience"></a>
 
 ## User Experience
 
@@ -176,7 +175,7 @@ code, or customize transitions using *Scenes*.
 The new Android Transitions library simplifies the code behind property
 animations. The framework allows you to perform simple animations with
 minimal code. For example, the following code sample uses
-[`TransitionManager.BeginDelayedTransition`](https://developer.xamarin.com/api/member/Android.Transitions.TransitionManager.BeginDelayedTransition/p/Android.Views.ViewGroup/Android.Transitions.Transition/)
+[`TransitionManager.BeginDelayedTransition`](xref:Android.Transitions.TransitionManager.BeginDelayedTransition*)
 to animate showing and hiding a `TextView`:
 
 ```csharp
@@ -234,7 +233,7 @@ You can get more control over the transition with Scenes, which are covered in t
 
 #### Android Scenes
 
-[Scenes](https://developer.xamarin.com/api/type/Android.Transitions.Scene/)
+[Scenes](xref:Android.Transitions.Scene)
 were introduced as part of the transition framework to give the
 developer more control over animations. Scenes create a dynamic area in
 the UI: you specify a container and several versions, or "scenes", for
@@ -302,10 +301,10 @@ XML is as follows:
 
 The example above uses `merge` to make the view code shorter and
 simplify the view hierarchy. You can read more about `merge` layouts
-[here](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
+[here](https://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
 A Scene is created by calling
-[`Scene.GetSceneForLayout`](https://developer.xamarin.com/api/member/Android.Transitions.Scene.GetSceneForLayout/p/Android.Views.ViewGroup/System.Int32/Android.Content.Context/),
+[`Scene.GetSceneForLayout`](xref:Android.Transitions.Scene.GetSceneForLayout*),
 passing in the container object, the Resource ID of the Scene's layout
 file, and the current `Context`, as illustrated by the code example
 below:
@@ -340,15 +339,13 @@ The screenshot below illustrates the scene after the animation:
 
 [![Screenshot of app after the animation completes](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
-
 > [!NOTE]
 > There is a
-[known bug](https://code.google.com/p/android/issues/detail?id=62450)
-in the Android Transitions library that causes Scenes created using
-`GetSceneForLayout` to break when a user navigates through an Activity
-the second time. A java workaround is described
-[here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
-
+> [known bug](https://code.google.com/p/android/issues/detail?id=62450)
+> in the Android Transitions library that causes Scenes created using
+> `GetSceneForLayout` to break when a user navigates through an Activity
+> the second time. A java workaround is described
+> [here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
 
 ##### Custom Transitions in Scenes
 
@@ -370,7 +367,7 @@ seconds and uses the
 ```
 
 The transition is created in the Activity using the
-[TransitionInflater](https://developer.xamarin.com/api/type/Android.Transitions.TransitionInflater/),
+[TransitionInflater](xref:Android.Transitions.TransitionInflater),
 as illustrated by the code below:
 
 ```csharp
@@ -391,17 +388,16 @@ translucent status and navigation bars. You can change the
 translucency of system UI elements in the same XML file you use to
 define your Android theme. KitKat introduces the following properties:
 
--  `windowTranslucentStatus` - When set to true, makes the top status
-   bar translucent.
+- `windowTranslucentStatus` - When set to true, makes the top status
+  bar translucent.
 
--  `windowTranslucentNavigation` - When set to true, makes the bottom
-   navigation bar translucent.
+- `windowTranslucentNavigation` - When set to true, makes the bottom
+  navigation bar translucent.
 
--  `fitsSystemWindows` - Setting the top or bottom bar to transcluent
-   shifts content under the transparent UI elements by default. Setting
-   this property to `true` is a simple way to prevent content from
-   overlapping with the translucent system UI elements.
-
+- `fitsSystemWindows` - Setting the top or bottom bar to transcluent
+  shifts content under the transparent UI elements by default. Setting
+  this property to `true` is a simple way to prevent content from
+  overlapping with the translucent system UI elements.
 
 The following code defines a theme with translucent status and
 navigation bars:
@@ -428,7 +424,7 @@ navigation bars:
 
 [![Example screenshot of app with translucent status and navigation bars](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
-<a name="user_content" />
+<a name="user_content"></a>
 
 ## User Content
 
@@ -447,7 +443,7 @@ that require content from providers need to be updated to a new way of
 requesting content. Second, applications that write data to a
 `ContentProvider` need to be modified to use the new framework. Both
 scenarios depend on the new
-[`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+[`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
 API.
 
 #### DocumentsProvider
@@ -542,7 +538,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 ```
 
 Note that
-[`ContentResolver.OpenOutputStream(Android.Net.Uri)`](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.OpenOutputStream/(Android.Net.Uri))
+[`ContentResolver.OpenOutputStream(Android.Net.Uri)`](xref:Android.Content.ContentResolver.OpenOutputStream*)
 returns a `System.IO.Stream`, so the entire streaming process can be
 written in .NET.
 
@@ -553,7 +549,7 @@ Storage Access Framework, refer to the
 ### Printing
 
 Printing content is simplified in KitKat with the introduction of the
-[Print Services](https://developer.xamarin.com/api/namespace/Android.PrintServices/)
+[Print Services](xref:Android.PrintServices)
 and `PrintManager`. KitKat is also the first API version to fully
 leverage the
 [Google's Cloud Print service APIs](https://developers.google.com/cloud-print/) using the
@@ -566,22 +562,19 @@ settings by navigating to **Settings > System > Printing**:
 
 [![Example screenshot of the Print settings screen](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
-
 > [!NOTE]
 > Although the printing APIs are set up to work with
-Google Cloud Print by default, Android still lets developers prepare
-print content using the new APIs, and send it to other applications to
-handle printing.
-
-
+> Google Cloud Print by default, Android still lets developers prepare
+> print content using the new APIs, and send it to other applications to
+> handle printing.
 
 #### Printing HTML Content
 
 KitKat automatically creates a
-[`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) for
+[`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) for
 a web view with `WebView.CreatePrintDocumentAdapter`. Printing web
 content is a coordinated effort between a
-[`WebViewClient`](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) that
+[`WebViewClient`](xref:Android.Webkit.WebViewClient) that
 waits for the HTML content to load and lets the Activity know to make
 the print option available in the options menu, and the Activity, which
 waits for the user to select the Print option and calls `Print`on the
@@ -601,10 +594,9 @@ the top right corner of the screen, and looks like this:
 
 [![Example screenshot of Print menu item displayed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
-
 Additional menu items can be defined in the *menu*directory under
 *Resources*. The code below defines a sample menu item called
-[Print](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
+[Print](xref:Android.Print.PrintManager):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -694,9 +686,9 @@ void PrintPage ()
 
 `Print` takes as arguments: a name for the print job ("MyWebPage" in
 this example), a
-[`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
+[`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter)
 that generates the print document from the content, and
-[`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
+[`PrintAttributes`](xref:Android.Print.PrintAttributes)
 (`null` in the example above). You can specify `PrintAttributes` to
 help lay out content on the printed page, although the default
 attributes should handle most scenarios.
@@ -709,7 +701,7 @@ content to a PDF, as illustrated by the screenshots below:
 
 [![Screenshot of PrintHtmlActivity displaying the Save as PDF menu](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
-<a name="hardware" />
+<a name="hardware"></a>
 
 ## Hardware
 
@@ -743,14 +735,13 @@ application using HCE is not running. We can accomplish this by writing
 the HCE code as a `Service`. An HCE Service implements the
 `HostApduService` interface, which implements the following methods:
 
--  *ProcessCommandApdu* - An Application Protocol Data Unit (APDU) is
-   what gets sent between the NFC Reader and the HCE Service. This
-   method consumes an ADPU from the reader, and returns a data unit in
-   response.
+- *ProcessCommandApdu* - An Application Protocol Data Unit (APDU) is
+  what gets sent between the NFC Reader and the HCE Service. This
+  method consumes an ADPU from the reader, and returns a data unit in
+  response.
 
--  *OnDeactivated* - The `HostAdpuService` is deactivated when the HCE
-   Service is no longer communicating with the NFC Reader.
-
+- *OnDeactivated* - The `HostAdpuService` is deactivated when the HCE
+  Service is no longer communicating with the NFC Reader.
 
 An HCE Service also needs to be registered with the application's
 manifest, and decorated with the proper permissions, intent filter, and
@@ -762,21 +753,21 @@ guide):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
-	IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-	MetaData("android.nfc.cardemulation.host.apdu_service",
-	Resource="@xml/hceservice")]
+    IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
+    MetaData("android.nfc.cardemulation.host.apdu_service",
+    Resource="@xml/hceservice")]
 
 class HceService : HostApduService
 {
-	public override byte[] ProcessCommandApdu(byte[] apdu, Bundle extras)
-	{
-		...
-	}
+    public override byte[] ProcessCommandApdu(byte[] apdu, Bundle extras)
+    {
+        ...
+    }
 
-	public override void OnDeactivated (DeactivationReason reason)
-	{
-		...
-	}
+    public override void OnDeactivated (DeactivationReason reason)
+    {
+        ...
+    }
 }
 ```
 
@@ -820,18 +811,18 @@ For more information on using NFC with Xamarin, check out the
 ### Sensors
 
 KitKat provides access to the device's sensors through a
-[`SensorManager`](https://developer.xamarin.com/api/type/Android.Hardware.SensorManager/).
+[`SensorManager`](xref:Android.Hardware.SensorManager).
 The `SensorManager` allows the OS to schedule the delivery of sensor
 information to an application in batches, preserving battery life.
 
 KitKat also ships with two new sensor types for tracking the user's
 steps. These are based on accelerometer and include:
 
--  *StepDetector* - App is notified/woken when the user takes a step,
-   and the detector provides a time value for when the step occurred.
+- *StepDetector* - App is notified/woken when the user takes a step,
+  and the detector provides a time value for when the step occurred.
 
--  *StepCounter* - Keeps track of the number of steps the user has
-   taken since the sensor was registered *until the next device reboot*.
+- *StepCounter* - Keeps track of the number of steps the user has
+  taken since the sensor was registered *until the next device reboot*.
 
 The screenshot below depicts the step counter in action:
 
@@ -842,7 +833,7 @@ You can create a `SensorManager` by calling
 `SensorManager`. To use the step counter, call `GetDefaultSensor` on
 the `SensorManager`. You can register the sensor and listen to changes
 in step count with the help of the
-[`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+[`ISensorEventListener`](xref:Android.Hardware.ISensorEventListener)
 interface, as illustrated by the code sample below:
 
 ```csharp
@@ -903,17 +894,15 @@ extra code to ensure it is reporting an accurate count for the
 application, regardless of other applications using the sensor or the
 state of the device.
 
-
 > [!NOTE]
 > While the API for the step detection and counting
-ships with KitKat, not all phones are outfitted with the sensor. You
-can check if the sensor is available by running
-`PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,
-or check to ensure the returned value of `GetDefaultSensor` isn't
-`null`.
+> ships with KitKat, not all phones are outfitted with the sensor. You
+> can check if the sensor is available by running
+> `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,
+> or check to ensure the returned value of `GetDefaultSensor` isn't
+> `null`.
 
-
-<a name="developer_tools" />
+<a name="developer_tools"></a>
 
 ## Developer Tools
 
@@ -945,66 +934,64 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 You can find your video on your device - it will appear in your Gallery
 when the recording is complete.
 
-
 ## Other KitKat Additions
 
 In addition to the changes described above, KitKat allows you to:
 
--  *Use the Full Screen* - KitKat introduces a new
-   [Immersive mode](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
-   for browsing content, playing games, and running other applications
-   that could benefit from a full-screen experience.
+- *Use the Full Screen* - KitKat introduces a new
+  [Immersive mode](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
+  for browsing content, playing games, and running other applications
+  that could benefit from a full-screen experience.
 
--  *Customize Notifications* - Get additional details about system
-   notifications with the
-   [`NotificationListenerService`](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/)
-   . This lets you present the information in a different way inside
-   your app.
+- *Customize Notifications* - Get additional details about system
+  notifications with the
+  [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+  . This lets you present the information in a different way inside
+  your app.
 
--  *Mirror Drawable Resources* - Drawable resources have a new
-   [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
-   attribute that tells the system create a mirrored version for images
-   that require flipping for left-to-right layouts.
+- *Mirror Drawable Resources* - Drawable resources have a new
+  [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+  attribute that tells the system create a mirrored version for images
+  that require flipping for left-to-right layouts.
 
--  *Pause Animations* - Pause and resume animations created with the
-   [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
-   class.
+- *Pause Animations* - Pause and resume animations created with the
+  [`Animator`](xref:Android.Animation.Animator)
+  class.
 
--  *Read Dynamically Changing Text* - Denote parts of UI that update
-   dynamically with new text as "live regions" with the new
-   [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
-   attribute so the new text will be read automatically in
-   accessibility mode.
+- *Read Dynamically Changing Text* - Denote parts of UI that update
+  dynamically with new text as "live regions" with the new
+  [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+  attribute so the new text will be read automatically in
+  accessibility mode.
 
--  *Enhance Audio Experience* - Make tracks louder with the
-   [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
-   , find the Peak and RMS of an audio stream with the
-   [`Visualizer`](https://developer.xamarin.com/api/field/Android.Media.Audiofx.Visualizer.MeasurementModePeakRms/)
-   class, and get information from an
-   [audio timestamp](https://developer.xamarin.com/api/type/Android.Media.AudioTimestamp/)
-   to help with audio-video synchronization.
+- *Enhance Audio Experience* - Make tracks louder with the
+  [`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
+  , find the Peak and RMS of an audio stream with the
+  [`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+  class, and get information from an
+  [audio timestamp](xref:Android.Media.AudioTimestamp)
+  to help with audio-video synchronization.
 
--  *Sync ContentResolver at Custom Interval* - KitKat adds some
-   variability to the time that a sync request is performed. Sync a
-   `ContentResolver` at custom time or interval by calling
-   `ContentResolver.RequestSync` and passing in a `SyncRequest`.
+- *Sync ContentResolver at Custom Interval* - KitKat adds some
+  variability to the time that a sync request is performed. Sync a
+  `ContentResolver` at custom time or interval by calling
+  `ContentResolver.RequestSync` and passing in a `SyncRequest`.
 
--  *Distinguish Between Controllers* - In KitKat, controllers are
-   assigned unique integer identifiers that can be accessed through the
-   device's `ControllerNumber` property. This makes it easier to tell
-   apart players in a game.
+- *Distinguish Between Controllers* - In KitKat, controllers are
+  assigned unique integer identifiers that can be accessed through the
+  device's `ControllerNumber` property. This makes it easier to tell
+  apart players in a game.
 
--  *Remote Control* - With a few changes on both the hardware and
-   software side, KitKat allows you to turn a device outfitted with an
-   IR transmitter into a remote control using the `ConsumerIrService`,
-   and interact with peripheral devices with the new
-   [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
-   APIs.
+- *Remote Control* - With a few changes on both the hardware and
+  software side, KitKat allows you to turn a device outfitted with an
+  IR transmitter into a remote control using the `ConsumerIrService`,
+  and interact with peripheral devices with the new
+  [`RemoteController`](xref:Android.Media.RemoteController)
+  APIs.
 
 For more information on the above API changes, please refer to the
 Google [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 overview.
-
 
 ## Summary
 
@@ -1020,9 +1007,8 @@ steps. Finally, it demonstrated capturing real-time demos of
 applications with *screen recording*, and provided a detailed list of
 KitKat API changes and additions.
 
-
 ## Related Links
 
-- [KitKat Sample](https://developer.xamarin.com/samples/KitKat/)
+- [KitKat Sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/kitkat)
 - [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 - [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

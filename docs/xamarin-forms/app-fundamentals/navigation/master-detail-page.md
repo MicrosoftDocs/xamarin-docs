@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Master-Detail Page
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of information – a master page that presents items, and a detail page that presents details about items on the master page. This article explains how to use a MasterDetailPage and navigate between its pages of information._
 
@@ -19,7 +20,7 @@ _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of 
 
 A master page typically displays a list of items, as shown in the following screenshots:
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![Master Page Components](master-detail-page-images/masterpage-components.png)](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
 
 The location of the list of items is identical on each platform, and selecting one of the items will navigate to the corresponding detail page. In addition, the master page also features a navigation bar that contains a button that can be used to navigate to the active detail page:
 
@@ -29,7 +30,7 @@ The location of the list of items is identical on each platform, and selecting o
 
 A detail page displays data that corresponds to the item selected on the master page, and the main components of the detail page are shown in the following screenshots:
 
-![](master-detail-page-images/detailpage-components.png "Detail Page Components")
+![Detail Page Components](master-detail-page-images/detailpage-components.png)
 
 The detail page contains a navigation bar, whose contents are platform-dependent:
 
@@ -43,11 +44,11 @@ The behavior of the navigation experience between master and detail pages is pla
 
 - On iOS, the detail page *slides* to the right as the master page slides from the left, and the left part of the detail page is still visible.
 - On Android, the detail and master pages are *overlaid* on each other.
-- On UWP, the master page slides from the left over part of the detail page, provided that the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property is set to `Popover`. For more information, see [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior).
+- On UWP, the master page slides from the left over part of the detail page, provided that the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property is set to `Popover`. For more information, see [Controlling the Detail Page Display Behavior](#controlling-the-detail-page-display-behavior).
 
 Similar behavior will be observed in landscape mode, except that the master page on iOS and Android has a similar width as the master page in portrait mode, so more of the detail page will be visible.
 
-For information about controlling the navigation behavior, see [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior).
+For information about controlling the navigation behavior, see [Controlling the Detail Page Display Behavior](#controlling-the-detail-page-display-behavior).
 
 ## Creating a MasterDetailPage
 
@@ -106,7 +107,7 @@ The following XAML code example shows the declaration of the `MasterPage` object
              xmlns:local="using:MasterDetailPageNavigation"
              x:Class="MasterDetailPageNavigation.MasterPage"
              Padding="0,40,0,0"
-             Icon="hamburger.png"
+             IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
@@ -140,7 +141,7 @@ The page consists of a [`ListView`](xref:Xamarin.Forms.ListView) that's populate
 
 A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is assigned to the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property, to display each `MasterPageItem`. The `DataTemplate` contains a [`ViewCell`](xref:Xamarin.Forms.ViewCell) that consists of an [`Image`](xref:Xamarin.Forms.Image) and a [`Label`](xref:Xamarin.Forms.Label). The [`Image`](xref:Xamarin.Forms.Image) displays the `IconSource` property value, and the [`Label`](xref:Xamarin.Forms.Label) displays the `Title` property value, for each `MasterPageItem`.
 
-The page has its [`Title`](xref:Xamarin.Forms.Page.Title) and [`Icon`](xref:Xamarin.Forms.Page.Icon) properties set. The icon will appear on the detail page, provided that the detail page has a title bar. This must be enabled on iOS by wrapping the detail page instance in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance.
+The page has its [`Title`](xref:Xamarin.Forms.Page.Title) and [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) properties set. The icon will appear on the detail page, provided that the detail page has a title bar. This must be enabled on iOS by wrapping the detail page instance in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance.
 
 > [!NOTE]
 > The [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) page must have its [`Title`](xref:Xamarin.Forms.Page.Title) property set, or an exception will occur.
@@ -193,7 +194,7 @@ public class MasterPageCS : ContentPage
       SeparatorVisibility = SeparatorVisibility.None
     };
 
-    Icon = "hamburger.png";
+    IconImageSource = "hamburger.png";
     Title = "Personal Organiser";
     Content = new StackLayout
     {
@@ -205,7 +206,7 @@ public class MasterPageCS : ContentPage
 
 The following screenshots show the master page on each platform:
 
-![](master-detail-page-images/masterpage.png "Master Page Example")
+![Master Page Example](master-detail-page-images/masterpage.png)
 
 ### Creating and Displaying the Detail Page
 
@@ -234,15 +235,13 @@ public partial class MainPage : MasterDetailPage
 
 The `OnItemSelected` method performs the following actions:
 
-- It retrieves the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) from the [`ListView`](xref:Xamarin.Forms.ListView) instance, and provided that it's not `null`, sets the detail page to a new instance of the page type stored in the `TargetType` property of the `MasterPageItem`. The page type is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance to ensure that the icon referenced through the [`Icon`](xref:Xamarin.Forms.Page.Icon) property on the `MasterPage` is shown on the detail page in iOS.
+- It retrieves the [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) from the [`ListView`](xref:Xamarin.Forms.ListView) instance, and provided that it's not `null`, sets the detail page to a new instance of the page type stored in the `TargetType` property of the `MasterPageItem`. The page type is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance to ensure that the icon referenced through the [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) property on the `MasterPage` is shown on the detail page in iOS.
 - The selected item in the [`ListView`](xref:Xamarin.Forms.ListView) is set to `null` to ensure that none of the `ListView` items will be selected next time the `MasterPage` is presented.
 - The detail page is presented to the user by setting the [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) property to `false`. This property controls whether the master or detail page is presented. It should be set to `true` to display the master page, and to `false` to display the detail page.
 
 The following screenshots show the `ContactPage` detail page, which is shown after it's been selected on the master page:
 
-![](master-detail-page-images/detailpage.png "Detail Page Example")
-
-<a name="Controlling_the_Detail_Page_Display_Behavior" />
+![Detail Page Example](master-detail-page-images/detailpage.png)
 
 ### Controlling the Detail Page Display Behavior
 
@@ -290,5 +289,5 @@ This article demonstrated how to use a [`MasterDetailPage`](xref:Xamarin.Forms.M
 ## Related Links
 
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [MasterDetailPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
+- [MasterDetailPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 - [MasterDetailPage](xref:Xamarin.Forms.MasterDetailPage)

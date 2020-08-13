@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 
@@ -38,7 +38,6 @@ article lists some common error messages that you may see if JDK 9 or
 later is installed, along with instructions for checking the JDK
 version.
 
-
 ### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](install-android-support-library.md)
 
 This guide provides example steps for installing the
@@ -63,7 +62,7 @@ This guide covers methods when using the Android emulator.
 
 This guide covers steps for setting up an Android NUnit test project,
 _not_ a Xamarin.UITest project. Xamarin.UITest guides can be found
-[here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+[here](/appcenter/test-cloud/preparing-for-upload).
 
 ### [Why can't my Android release build connect to the Internet?](android-internet.md)
 
@@ -84,8 +83,6 @@ will encounter duplicate type errors.
 
 This article explains how to resolve a **PathTooLongException** error
 that may occur while building a Xamarin.Android project.
-
-
 
 ## Deprecated
 
@@ -124,6 +121,3 @@ updating the Android Resource.designer.cs) to fail. As of the 5.1.4
 stable release on July 15th, this bug has been fixed; but in many cases
 the project file has to be repaired manually, as described in this
 guide.
-
-
-

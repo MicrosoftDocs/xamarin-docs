@@ -4,8 +4,8 @@ description: "This article shows how to use Proactive Suggestions in a watchOS 3
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -13,9 +13,7 @@ ms.date: 03/17/2017
 
 _This article shows how to use Proactive Suggestions in a watchOS 3 app to drive engagement by allowing the system to proactively present helpful information automatically to the user._
 
-
 New to watchOS 3, Proactive Suggestions present news ways for users to engage with a Xamarin.iOS app by proactively present helpful information automatically to the user at appropriate times.
-
 
 ## About Proactive Suggestions
 
@@ -56,7 +54,7 @@ All of these features have one thing in common, they all use `NSUserActivity` in
 
 As stated above, `NSUserActivity` helps the system understand what information the user is currently working with on screen. `NSUserActivity` is a light-weight state caching mechanism to capture the user's activity as they navigate through the app. For example, looking at the restaurant app:
 
-[![](proactive-suggestions-images/activity02.png "The restaurant app")](proactive-suggestions-images/activity02.png#lightbox)
+[![The restaurant app](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
 With the following interactions:
 
@@ -66,7 +64,7 @@ With the following interactions:
 
 Take a closer look at the last screen:
 
-[![](proactive-suggestions-images/activity03.png "The NSUserActivity payload")](proactive-suggestions-images/activity03.png#lightbox)
+[![The NSUserActivity payload](proactive-suggestions-images/activity03.png)](proactive-suggestions-images/activity03.png#lightbox)
 
 Here the app is creating a `NSUserActivity` and it has been populated with information to recreate the state later. The app has also included some metadata such as the location's name and address. With this activity created, the app lets iOS know that it represents the user's current state.
 
@@ -164,9 +162,9 @@ The following section will take a look at enabling two other new iOS 10 features
 Take the example of the restaurant search app above. If it has implemented `NSUserActivity` and correctly populated all of the metadata and attributes, the user would be able to do the following:
 
 1. Find a restaurant in the app that they would like to meet a friend at.
-4. If the user switches to the Maps app, the restaurant's address is automatically suggested as a destination.
-5. This even works for 3rd Party apps (that support `NSUserActivity`), so the user can switch to a ride-sharing app and the restaurant's address is automatically suggested as a destination there as well.
-6. It also provides context to Siri, so the user can invoke Siri within the restaurant app and ask *"Get directions..."* and Siri will provide directions to the restaurant the user is viewing.
+2. If the user switches to the Maps app, the restaurant's address is automatically suggested as a destination.
+3. This even works for 3rd Party apps (that support `NSUserActivity`), so the user can switch to a ride-sharing app and the restaurant's address is automatically suggested as a destination there as well.
+4. It also provides context to Siri, so the user can invoke Siri within the restaurant app and ask *"Get directions..."* and Siri will provide directions to the restaurant the user is viewing.
 
 All of the above functionality has one thing in common, they all indicate where the suggestion is originally coming from. In the case of the example above, it's the fictitious restaurant review app.
 
@@ -270,6 +268,7 @@ Finally, the app can indicate if the instance is suitable for navigation and pho
 attributes.SupportsPhoneCalls = true;
 attributes.SupportsNavigation = true;
 ```
+
 ## Activities Best Practices
 
 Apple suggests the following best practices when working with activities:
@@ -294,7 +293,6 @@ This section will take a look at consuming Location Suggestions directly from wi
 
 When the app is started with a MapKit `MKDirectionsRequest` object, it should automatically start giving the user directions to the requested location, or present a UI that makes it easy for the user to start getting directions. For example:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -304,29 +302,29 @@ using CoreLocation;
 
 namespace MonkeyChat
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
-	{
-		...
-		
-		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-		{
-			if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
-				var request = new MKDirectionsRequest (url);
-				var coordinate = request.Destination?.Placemark.Location?.Coordinate;
-				var address = request.Destination.Placemark.AddressDictionary;
-				if (coordinate.IsValid()) {
-					var geocoder = new CLGeocoder ();
-					geocoder.GeocodeAddress (address, (place, err) => {
-						// Handle the display of the address
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+    {
+        ...
 
-					});
-				}
-			}
+        public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
+        {
+            if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
+                var request = new MKDirectionsRequest (url);
+                var coordinate = request.Destination?.Placemark.Location?.Coordinate;
+                var address = request.Destination.Placemark.AddressDictionary;
+                if (coordinate.IsValid()) {
+                    var geocoder = new CLGeocoder ();
+                    geocoder.GeocodeAddress (address, (place, err) => {
+                        // Handle the display of the address
 
-			return true;
-		}
-	}		
+                    });
+                }
+            }
+
+            return true;
+        }
+    }
 }
 ```
 
@@ -347,8 +345,8 @@ New in watchOS 3, the app can be sent an address that does not have geo-coordina
 ```csharp
 var geocoder = new CLGeocoder();
 geocoder.GeocodeAddress(address, (place, err)=> {
-	// Handle the display of the address
-	
+    // Handle the display of the address
+
 });
 
 ```
@@ -357,8 +355,7 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 
 This article has covered Proactive Suggestions and showed how the developer can use them to drive traffic to a Xamarin.iOS app for watchOS. It covered the step to implement Proactive Suggestions and presented usage guidelines.
 
-
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
 - [SiriKit Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Introduction to Custom Renderers
@@ -51,7 +52,7 @@ The `local` namespace prefix can be anything. However, the `namespace` and `asse
 
 The `MyEntry` custom control is then rendered on each platform, with a gray background, as shown in the following screenshots:
 
-![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
+![MyEntry Custom Control on each Platform](introduction-images/screenshots.png)
 
 Changing the background color of the control on each platform has been accomplished purely through subclassing the control. However, this technique is limited in what it can achieve as it is not possible to take advantage of platform-specific enhancements and customizations. When they are required, custom renderers must be implemented.
 
@@ -87,7 +88,6 @@ This creates a reference to the `ClassInPCL` type, indicating that it's required
 ## Summary
 
 This article has provided an introduction to custom renderers, and has outlined the process for creating a custom renderer. Custom renderers provide a powerful approach for customizing the appearance and behavior of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
-
 
 ## Related Links
 

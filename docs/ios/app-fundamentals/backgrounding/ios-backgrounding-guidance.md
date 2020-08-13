@@ -4,8 +4,8 @@ description: "This diagrams presented in this document provide guidance about wh
 ms.prod: xamarin
 ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 
@@ -13,9 +13,8 @@ ms.date: 06/05/2018
 
 Refer to the following diagram to choose a backgrounding technique in iOS 6:
 
- [![](ios-backgrounding-guidance-images/image10.png "Choose a backgrounding technique in iOS 6")](ios-backgrounding-guidance-images/image10.png#lightbox)
+ [![Choose a backgrounding technique in iOS 6](ios-backgrounding-guidance-images/image10.png)](ios-backgrounding-guidance-images/image10.png#lightbox)
 
 Refer to the following diagram to choose a backgrounding technique in iOS 7:
 
- [![](ios-backgrounding-guidance-images/image10b.png "Choose a backgrounding technique in iOS 7")](ios-backgrounding-guidance-images/image10b.png#lightbox)
-
+ [![Choose a backgrounding technique in iOS 7](ios-backgrounding-guidance-images/image10b.png)](ios-backgrounding-guidance-images/image10b.png#lightbox)

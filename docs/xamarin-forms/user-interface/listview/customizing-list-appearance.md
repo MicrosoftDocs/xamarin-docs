@@ -1,5 +1,5 @@
 ---
-title: "Customizing ListView Appearance"
+title: "ListView Appearance"
 description: "This article explains how to customize ListViews in Xamarin.Forms applications by using headers, footers, groups, and variable height cells."
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Customizing ListView Appearance
+# ListView appearance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) has the ability to control the presentation of the list, in addition to the [`ViewCell`](xref:Xamarin.Forms.ViewCell) instances for each row in the list.
-
-<a name="Grouping" />
+The Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) allows you to customize the presentation of the list, in addition to the [`ViewCell`](xref:Xamarin.Forms.ViewCell) instances for each row in the list.
 
 ## Grouping
-Often, large sets of data can become unwieldy when presented in a continuously scrolling list. Enabling grouping can improve the user experience in these cases by better organizing the content and activating platform-specific controls that make navigating data easier.
+
+Large sets of data can become unwieldy when presented in a continuously scrolling list. Enabling grouping can improve the user experience in these cases by better organizing the content and activating platform-specific controls that make navigating data easier.
 
 When grouping is activated for a `ListView`, a header row is added for each group.
 
@@ -58,7 +58,7 @@ will be populated at program start:
 static PageTypeGroup()
 {
     List<PageTypeGroup> Groups = new List<PageTypeGroup> {
-            new PageTypeGroup ("Alfa", "A"){
+            new PageTypeGroup ("Alpha", "A"){
                 new PageModel("Amelia", "Cedar", new switchCellPage(),""),
                 new PageModel("Alfie", "Spruce", new switchCellPage(), "grapefruit.jpg"),
                 new PageModel("Ava", "Pine", new switchCellPage(), "grapefruit.jpg"),
@@ -70,32 +70,31 @@ static PageTypeGroup()
                 new PageModel("Bella", "Desire", new switchCellPage(), "grapefruit.jpg"),
                 new PageModel("Ben", "Chocolate", new switchCellPage(), "grapefruit.jpg")
             }
-        }
+        };
         All = Groups; //set the publicly accessible list
 }
 ```
 
-In the above code, we can also call `Add` on elements of `groups`,
-which are instances of type `PageTypeGroup`. This is possible because
-`PageTypeGroup` inherits from `List<PageModel>`. This is an example of the
-list of lists pattern noted above.
+In the above code, we can also call `Add` on elements of `Groups`,
+which are instances of type `PageTypeGroup`. This method is possible because
+`PageTypeGroup` inherits from `List<PageModel>`.
 
 Here is the XAML for displaying the grouped list:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="DemoListView.GroupingViewPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoListView.GroupingViewPage"
     <ContentPage.Content>
         <ListView  x:Name="GroupedView"
-        GroupDisplayBinding="{Binding Title}"
-        GroupShortNameBinding="{Binding ShortName}"
-        IsGroupingEnabled="true">
+                   GroupDisplayBinding="{Binding Title}"
+                   GroupShortNameBinding="{Binding ShortName}"
+                   IsGroupingEnabled="true">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}"
-                     Detail="{Binding Subtitle}" />
+                              Detail="{Binding Subtitle}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -103,18 +102,18 @@ x:Class="DemoListView.GroupingViewPage"
 </ContentPage>
 ```
 
-This results in the following:
-
-![](customizing-list-appearance-images/grouping-depth.png "ListView Grouping Example")
-
-Note that we have:
+This XAML performs the following actions:
 
 - Set `GroupShortNameBinding` to the `ShortName` property defined in our group class
 - Set `GroupDisplayBinding` to the `Title` property defined in our group class
 - Set `IsGroupingEnabled` to true
 - Changed the `ListView`'s `ItemsSource` to the grouped list
 
-### Customizing Grouping
+This following screenshot shows the resulting UI:
+
+![ListView Grouping Example](customizing-list-appearance-images/grouping-depth.png)
+
+### Customizing grouping
 
 If grouping has been enabled in the list, the group header can also be customized.
 
@@ -126,28 +125,28 @@ An example of customizing the group header in XAML is shown here:
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="DemoListView.GroupingViewPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoListView.GroupingViewPage">
     <ContentPage.Content>
         <ListView x:Name="GroupedView"
-         GroupDisplayBinding="{Binding Title}"
-         GroupShortNameBinding="{Binding ShortName}"
-         IsGroupingEnabled="true">
+                  GroupDisplayBinding="{Binding Title}"
+                  GroupShortNameBinding="{Binding ShortName}"
+                  IsGroupingEnabled="true">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}"
-                    Detail="{Binding Subtitle}"
-                    TextColor="#f35e20"
-                    DetailColor="#503026" />
+                              Detail="{Binding Subtitle}"
+                              TextColor="#f35e20"
+                              DetailColor="#503026" />
                 </DataTemplate>
             </ListView.ItemTemplate>
             <!-- Group Header Customization-->
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}"
-                    Detail="{Binding ShortName}"
-                    TextColor="#f35e20"
-                    DetailColor="#503026" />
+                              Detail="{Binding ShortName}"
+                              TextColor="#f35e20"
+                              DetailColor="#503026" />
                 </DataTemplate>
             </ListView.GroupHeaderTemplate>
             <!-- End Group Header Customization -->
@@ -156,33 +155,33 @@ x:Class="DemoListView.GroupingViewPage">
 </ContentPage>
 ```
 
-<a name="Headers_and_Footers" />
+## Headers and footers
 
-## Headers and Footers
-It is possible for a ListView to present a header and footer that scroll with the elements of the list. The header and footer can be strings of text or a more complicated layout. Note that this is separate from [section groups](#Grouping).
+It is possible for a ListView to present a header and footer that scroll with the elements of the list. The header and footer can be strings of text or a more complicated layout. This behavior is separate from [section groups](#grouping).
 
-You can set the `Header` and/or `Footer` to a simple string value,
-or you can set them to a more complex layout.
-There are also `HeaderTemplate` and
-`FooterTemplate` properties that let you create more complex
-layouts for the header and footer that support data binding.
+You can set the `Header` and/or `Footer` to a `string` value, or you can set them to a more complex layout. There are also `HeaderTemplate` and `FooterTemplate` properties that let you create more complex layouts for the header and footer that support data binding.
 
-To create a simple header/footer, just set the Header or Footer properties to the text you want to display. In code:
+To create a basic header/footer, just set the Header or Footer properties to the text you want to display. In code:
 
 ```csharp
-ListView HeaderList = new ListView() {
+ListView HeaderList = new ListView()
+{
     Header = "Header",
     Footer = "Footer"
-    };
+};
 ```
 
 In XAML:
 
 ```xaml
-<ListView  x:Name="HeaderList"  Header="Header" Footer="Footer"></ListView>
+<ListView x:Name="HeaderList" 
+          Header="Header"
+          Footer="Footer">
+    ...
+</ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
+![ListView with Header and Footer](customizing-list-appearance-images/header-default.png)
 
 To create a customized header and footer, define the Header and Footer views:
 
@@ -190,43 +189,42 @@ To create a customized header and footer, define the Header and Footer views:
 <ListView.Header>
     <StackLayout Orientation="Horizontal">
         <Label Text="Header"
-        TextColor="Olive"
-        BackgroundColor="Red" />
+               TextColor="Olive"
+               BackgroundColor="Red" />
     </StackLayout>
 </ListView.Header>
 <ListView.Footer>
     <StackLayout Orientation="Horizontal">
         <Label Text="Footer"
-        TextColor="Gray"
-        BackgroundColor="Blue" />
+               TextColor="Gray"
+               BackgroundColor="Blue" />
     </StackLayout>
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+![ListView with Customized Header and Footer](customizing-list-appearance-images/header-custom.png)
 
-## Scrollbar Visibility
+## Scrollbar visibility
 
-[`ListView`](xref:Xamarin.Forms.ListView) has `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the horizontal, or vertical, scroll bar is visible. Both properties can be set to the following values:
+The [`ListView`](xref:Xamarin.Forms.ListView) class has `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) value that represents when the horizontal, or vertical, scroll bar is visible. Both properties can be set to the following values:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content fits in the view.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, even if the content doesn't fit in the view.
 
-<a name="Row_Separators" />
+## Row separators
 
-## Row Separators
 Separator lines are displayed between `ListView` elements by default on iOS and Android. If you'd prefer to hide the separator lines on iOS and Android, set the `SeparatorVisibility` property on your ListView. The options for `SeparatorVisibility` are:
 
-* **Default** - shows a separator line on iOS and Android.
-* **None** - hides the separator on all platforms.
+- **Default** - shows a separator line on iOS and Android.
+- **None** - hides the separator on all platforms.
 
 Default Visibility:
 
 C#:
 
 ```csharp
-SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
+SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
 XAML:
@@ -235,14 +233,14 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
+![ListView with Default Row Separators](customizing-list-appearance-images/separator-default.png)
 
 None:
 
 C#:
 
 ```csharp
-SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
+SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
 XAML:
@@ -251,14 +249,14 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
 ```
 
-![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
+![ListView without Row Separators](customizing-list-appearance-images/separator-none.png)
 
 You can also set the color of the separator line via the `SeparatorColor` property:
 
 C#:
 
 ```csharp
-SepratorDemoListView.SeparatorColor = Color.Green;
+SeparatorDemoListView.SeparatorColor = Color.Green;
 ```
 
 XAML:
@@ -267,14 +265,13 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
 ```
 
-![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
+![ListView with Green Row Separators](customizing-list-appearance-images/separator-custom.png)
 
 > [!NOTE]
 > Setting either of these properties on Android after loading the `ListView` incurs a large performance penalty.
 
-<a name="Row_Heights" />
+## Row height
 
-## Row Heights
 All rows in a ListView have the same height by default. ListView has two properties that can be used to change that behavior:
 
 - `HasUnevenRows` &ndash; `true`/`false` value, rows have varying heights if set to `true`. Defaults to `false`.
@@ -282,7 +279,7 @@ All rows in a ListView have the same height by default. ListView has two propert
 
 You can set the height of all rows by setting the `RowHeight` property on the `ListView`.
 
-### Custom Fixed Row Height
+### Custom fixed row height
 
 C#:
 
@@ -296,16 +293,11 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
+![ListView with Fixed Row Height](customizing-list-appearance-images/height-custom.png)
 
+### Uneven rows
 
-### Uneven Rows
-
-If you'd like individual rows to have different heights, you can set the
-`HasUnevenRows` property to `true`.
-Note that row heights don't have to be manually set once `HasUnevenRows` has
-been set to `true`, because the heights will be automatically calculated by Xamarin.Forms.
-
+If you'd like individual rows to have different heights, you can set the `HasUnevenRows` property to `true`. Row heights don't have to be manually set once `HasUnevenRows` has been set to `true`, because the heights will be automatically calculated by Xamarin.Forms.
 
 C#:
 
@@ -319,9 +311,9 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView with Uneven Rows")
+![ListView with Uneven Rows](customizing-list-appearance-images/height-uneven.png)
 
-### Runtime Resizing of Rows
+### Resize rows at runtime
 
 Individual `ListView` rows can be programmatically resized at runtime, provided that the `HasUnevenRows` property is set to `true`. The [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method updates a cell's size, even when it isn't currently visible, as demonstrated in the following code example:
 
@@ -340,16 +332,15 @@ void OnImageTapped (object sender, EventArgs args)
 
 The `OnImageTapped` event handler is executed in response to an [`Image`](xref:Xamarin.Forms.Image) in a cell being tapped, and increases the size of the `Image` displayed in the cell so that it's easily viewed.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
+![ListView with Runtime Row Resizing](customizing-list-appearance-images/dynamic-row-resizing.png)
 
-Note that there is a strong possibility of performance degradation if this feature is overused.
+> [!WARNING]
+> Overuse of runtime row resizing can cause performance degradation.
 
+## Related links
 
-
-## Related Links
-
-- [Grouping (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Custom Renderer View (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Dynamic Resizing of Rows (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
-- [1.4 release notes](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [1.3 release notes](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)
+- [Grouping (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Custom Renderer View (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Dynamic Resizing of Rows (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
+- [1.4 release notes](https://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
+- [1.3 release notes](https://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

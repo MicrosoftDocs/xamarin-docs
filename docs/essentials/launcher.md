@@ -3,8 +3,10 @@ title: "Xamarin.Essentials Launcher"
 description: "The Launcher class in Xamarin.Essentials enables an application to open a URI by the system."
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 08/20/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Launcher
@@ -37,6 +39,59 @@ public class LauncherTest
 }
 ```
 
+This can be combined into a single call with `TryOpenAsync`, which checks if the parameter can be opened and if so open it.
+
+```csharp
+public class LauncherTest
+{
+    public async Task<bool> OpenRideShareAsync()
+    {
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+    }
+}
+```
+
+### Additional Platform Setup
+
+# [Android](#tab/android)
+
+No additional setup.
+
+# [iOS](#tab/ios)
+
+In iOS 9 and greater, Apple enforces what schemes an application can query for. To specify which schemes you would like to use, you must specify `LSApplicationQueriesSchemes` in your `Info.plist` file.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# [UWP](#tab/uwp)
+
+No additional setup.
+
+-----
+
+## Files
+
+This features enables an app to request other apps to open and view a file. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be opened.
+
+Here is a sample of writing text to disk and requesting it be opened:
+
+```csharp
+var fn = "File.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+await Launcher.OpenAsync(new OpenFileRequest
+{
+    File = new ReadOnlyFile(file)
+});
+```
+
 ## Platform Differences
 
 # [Android](#tab/android)
@@ -59,5 +114,11 @@ No platform differences.
 
 ## API
 
-- [Launcher source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Launcher source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Launcher)
 - [Launcher API documentation](xref:Xamarin.Essentials.Launcher)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Launcher-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

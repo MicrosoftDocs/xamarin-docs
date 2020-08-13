@@ -4,8 +4,8 @@ description: "This article describes the features of the Xamarin.Android Designe
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -19,7 +19,6 @@ various configurations, such as themes, languages, and device
 configurations, as well as how to design for alternative views such as
 landscape and portrait._
 
-
 ## Overview
 
 Xamarin.Android supports both a declarative style of user interface design
@@ -32,17 +31,15 @@ the process of UI creation less laborious.
 This article surveys the many features of the Xamarin.Android Designer. It
 explains the following:
 
-1.  The basics of using the Designer.
-2.  The various parts that make up the Designer.
-3.  How to load an Android layout into the Designer.
-4.  How to add widgets.
-5.  How to edit properties.
-6.  How to work with various resources and device configurations.
-7.  How to modify a user interface for alternative views such as landscape and portrait. 
-8.  How to handle conflicts that may arise when working with alternative views. 
-9.  How to use Material Design tools to build Material Design-compliant apps.
-
-
+1. The basics of using the Designer.
+2. The various parts that make up the Designer.
+3. How to load an Android layout into the Designer.
+4. How to add widgets.
+5. How to edit properties.
+6. How to work with various resources and device configurations.
+7. How to modify a user interface for alternative views such as landscape and portrait. 
+8. How to handle conflicts that may arise when working with alternative views. 
+9. How to use Material Design tools to build Material Design-compliant apps.
 
 ## Sections
 
@@ -56,7 +53,9 @@ explains the following:
 
  [Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
 
-
+ [Android Layout Diagnostics](~/android/user-interface/android-designer/diagnostics.md)
+ 
+ [Android Designer Diagnostic Analyzers](~/android/user-interface/android-designer/diagnostic-analyzers.md)
 
 ## Summary
 
@@ -69,8 +68,6 @@ resources and device configurations. Finally, it examined how to use
 the Designer to develop user interfaces that are built specifically for
 alternative views, such as landscape and portrait, as well as how to
 resolve conflicts that may arise between such views.
-
-
 
 ## Related links
 

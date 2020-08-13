@@ -4,8 +4,8 @@ description: "iOS 7 introduces a plethora of user interface changes. This articl
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -27,7 +27,7 @@ All of the views in UIKit conform to the new look and feel of iOS 7. This sectio
 
 Buttons created from the `UIButton` class are now borderless, with no background by default, as shown below:
 
- ![](ios7-ui-images/button.png "Sample UIButton")
+ ![Sample UIButton](ios7-ui-images/button.png)
 
 The `UIButtonType.RoundedRect` style has been deprecated. If used in iOS 7, `UIButtonType.RoundedRect` will result in `UIButtonType.System` being used, which produces the default button style with no background or visible edges, as shown above.
 
@@ -35,13 +35,13 @@ The `UIButtonType.RoundedRect` style has been deprecated. If used in iOS 7, `UIB
 
 Similar to `UIButton`, bar buttons are also borderless, defaulting to the new `UIBarButtonItemStyle.Plain` style shown below:
 
- ![](ios7-ui-images/barbuttonplain.png "Sample UIBarButtonItem")
+ ![Sample UIBarButtonItem](ios7-ui-images/barbuttonplain.png)
 
 Additionally, the `UIBarButtonItemStyle.Bordered` style has been deprecated. Setting `UIBarButtonItemStyle.Bordered` in iOS 7 will result in the `UIBarButtonItemStyle.Plain` style being used.
 
 The `UIBarButtonItemStyle.Done` style has not been deprecated. However, it will also create a borderless button, only with a bold text style as shown:
 
- ![](ios7-ui-images/barbuttondone.png "Sample UIBarButtonItem in the Done style")
+ ![Sample UIBarButtonItem in the Done style](ios7-ui-images/barbuttondone.png)
 
 ### UIAlertView
 
@@ -50,28 +50,28 @@ In addition to the style change for the new iOS 7 look and feel, alert views no 
 ```csharp
 UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle.Plain, (s,e) =>
 {
-	UIAlertView alert = new UIAlertView ("Title", "Message", null, "Cancel", "OK");
+    UIAlertView alert = new UIAlertView ("Title", "Message", null, "Cancel", "OK");
 
-	alert.AddSubview (new UIView () {
-		Frame = new CGRect(50, 50,100, 100),
-		BackgroundColor = UIColor.Green
-	});
+    alert.AddSubview (new UIView () {
+        Frame = new CGRect(50, 50,100, 100),
+        BackgroundColor = UIColor.Green
+    });
 
-	alert.Show ();
+    alert.Show ();
 });
 ```
 
 This produces a standard alert view, with the subview being ignored, as shown below:
 
- ![](ios7-ui-images/alert.png "Sample UIAlertView")
- 
+ ![Sample UIAlertView](ios7-ui-images/alert.png)
+
  Note: UIAlertView was deprecated in iOS 8. View the [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) recipe on using an Alert View in iOS 8 and above.
 
 ### UISegmentedControl
 
 Segmented controls in iOS 7 are transparent and support tint color. The tint color is used for the text and border color. When a segment is selected, the color is swapped between the background and the text, with the tint color used to highlight the selected segment, as shown below:
 
- ![](ios7-ui-images/segmentedcontrol.png "Sample UISegmentedControl")
+ ![Sample UISegmentedControl](ios7-ui-images/segmentedcontrol.png)
 
 Additionally, the `UISegmentedControlStyle` has been deprecated in iOS 7.
 
@@ -79,7 +79,7 @@ Additionally, the `UISegmentedControlStyle` has been deprecated in iOS 7.
 
 The API for picker views is largely unchanged; however, iOS 7 design guidelines now state picker views should be presented inline rather than as input views animated from the bottom of the screen or via a new controller pushed onto a navigation controller’s stack, as in previous iOS versions. This can be seen in the system calendar app:
 
- ![](ios7-ui-images/inlinepicker.png "This can be seen in the system calendar app")
+ ![This can be seen in the system calendar app](ios7-ui-images/inlinepicker.png)
 
 ### UISearchDisplayController
 
@@ -87,7 +87,7 @@ The search bar is now shown inside the navigation bar when the `UISearchDisplayC
 
 The following screenshot shows the search bar within a `UISearchDisplayController`:
 
- ![](ios7-ui-images/searchbar.png "Sample UISearchDisplayController")
+ ![Sample UISearchDisplayController](ios7-ui-images/searchbar.png)
 
 ### UITableView
 
@@ -97,7 +97,7 @@ The APIs around `UITableView` are mainly unchanged; however, the style has chang
 
 The grouped style changed has updated, with the content now extending to the edges of the screen as shown below:
 
- ![](ios7-ui-images/table1.png "Sample Grouped Table Style")
+ ![Sample Grouped Table Style](ios7-ui-images/table1.png)
 
 #### SeparatorInset
 
@@ -109,13 +109,13 @@ cell.SeparatorInset = new UIEdgeInsets (0, 50, 0, 0);
 
 This produces in the table view with indented cells as shown below:
 
- ![](ios7-ui-images/separatorinset.png "Sample UITableView SeparatorInset")
+ ![Sample UITableView SeparatorInset](ios7-ui-images/separatorinset.png)
 
 #### Table Button Styles
 
 The various buttons used in table views have all changed. The following screenshot presents a table view in editing mode:
 
- ![](ios7-ui-images/table2.png "This screenshot presents a table view in editing mode")
+ ![This screenshot presents a table view in editing mode](ios7-ui-images/table2.png)
 
 ### Additional Control Changes
 
@@ -125,11 +125,11 @@ Other UIKit controls have changed as well, including sliders, switches and stepp
 
 In addition to the changes in UIKit, iOS 7 introduces a variety of visual changes to the UI, including:
 
--  Full Screen Content
--  Bar Appearance
--  Tint Color
+- Full Screen Content
+- Bar Appearance
+- Tint Color
 
-<a name="fullscreen" />
+<a name="fullscreen"></a>
 
 ### Full-Screen Content
 
@@ -141,29 +141,29 @@ As you prepare your application for iOS 7, you can realign subviews visually usi
 
  `TopLayoutGuide` and `BottomLayoutGuide` serve as a reference for where views should begin or end, so that the content is not overlapped by a translucent `UIKit` bar, as in the following example:
 
- [![](ios7-ui-images/clipped.png "Sample content not overlapped by a translucent UIKit bar")](ios7-ui-images/clipped.png#lightbox)
+ [![Sample content not overlapped by a translucent UIKit bar](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
 These APIs can be used to calculate a view's displacement from the top or bottom of the screen, and adjust content placement accordingly:
 
 ```csharp
 public override void ViewDidLayoutSubviews ()
 {
-	base.ViewDidLayoutSubviews ();
+    base.ViewDidLayoutSubviews ();
 
-	if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
-		nfloat displacement_y = this.TopLayoutGuide.Length;
+    if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
+        nfloat displacement_y = this.TopLayoutGuide.Length;
 
-		//load subviews with displacement
-	}
+        //load subviews with displacement
+    }
 
 }
 ```
 
 We can use the value calculated above to set our `ImageView`'s displacement from the top of the screen, so the whole image is visible:
 
- [![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png#lightbox)
+ [![Example ImageViews displacement from the top of the screen](ios7-ui-images/good2.png)](ios7-ui-images/good2.png#lightbox)
 
-Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) for a working sample.
+Refer to the [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) for a working sample.
 
 The displacement value is generated dynamically after the View has been added to the hierarchy, so attempting to read `TopLayoutGuide` and `BottomLayoutGuide` values in `ViewDidLoad` will return 0. Calculate the value after the View has loaded - for example, in the `ViewDidLayoutSubviews`.
 
@@ -174,37 +174,37 @@ The displacement value is generated dynamically after the View has been added to
 
 This API specifies which edges of a view should be extended to full screen, regardless of bar translucency. In iOS 7, navigation bars and toolbars appear layered above the controller’s view - unlike in previous iOS versions, where they didn’t take up the same space. The iOS 7 Photos application illustrates the default `UIViewController.EdgesForExtendedLayout` value, `UIRectEdge.All`. This setting fills all four edges in the view with content, creating the overlapping and full-screen effect:
 
- [![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
+ [![Sample EdgesForExtendedLayout](ios7-ui-images/photos.png)](ios7-ui-images/photos.png#lightbox)
 
 Tapping the image removes the bars and shows the image full-screen:
 
- [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout with the bars removed")](ios7-ui-images/photos2.png#lightbox)
+ [![EdgesForExtendedLayout with the bars removed](ios7-ui-images/photos2.png)](ios7-ui-images/photos2.png#lightbox)
 
 Because full-screen content is the default, applications configured for iOS 6 will have part of the view clipped, as in the screenshot below:
 
- [![](ios7-ui-images/clipped.png "Apps configured for iOS 6 will have part of the view clipped, as in this screenshot")](ios7-ui-images/clipped.png#lightbox)
+ [![Apps configured for iOS 6 will have part of the view clipped, as in this screenshot](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
 Modifying the `UIViewController.EdgesForExtendedLayout` property adjusts for this behavior. We can specify that the view not fill any edges, so our view will avoid displaying content in the space occupied by navigation or toolbars (at every orientation):
 
 ```csharp
 if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
-	this.EdgesForExtendedLayout = UIRectEdge.None;
+    this.EdgesForExtendedLayout = UIRectEdge.None;
 }
 ```
 
 In our app, we'll see the view is again repositioned, so the whole image is visible:
 
- [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
+ [![Example with whole image visible](ios7-ui-images/good.png)](ios7-ui-images/good.png#lightbox)
 
 Note that while the effects of the `TopLayoutGuide/BottomLayoutGuide` and `EdgesForExtendedLayout` APIs are similar, they are meant to fill different goals. Changing the `EdgesForExtendedLayout` setting from the default may fix clipped views in applications designed for iOS 6, but a good iOS 7 design should honor the full-screen aesthetic and provide a full-screen viewing experience, relying on `TopLayoutGuide` and `BottomLayoutGuide` to properly position content that's meant to be manipulated into a comfortable place for the user.
 
-Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) for a working sample.
+Refer to the [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) for a working sample.
 
 ### Status and Navigation Bars
 
 The status bar and navigation bars are rendered with transparency. Status bars are transparent, while toolbars and navigation bars are translucent and blurred to convey the feeling of depth in the user interface. The following screenshot shows this blurring and transparency, where the blue background color of the collection view shows through both the status and navigation bars, giving them a light blue appearance:
 
- ![](ios7-ui-images/transparent-navbar.png "Sample Status and Navigation Bar blurring")
+ ![Sample Status and Navigation Bar blurring](ios7-ui-images/transparent-navbar.png)
 
 #### Status Bar Styles
 
@@ -215,26 +215,26 @@ For example, the following code overrides the `PreferredStatusBarStyle` method o
 ```csharp
 public override UIStatusBarStyle PreferredStatusBarStyle ()
 {
-	return UIStatusBarStyle.LightContent;
+    return UIStatusBarStyle.LightContent;
 }
 ```
 
 This causes the status bar to appear as below:
 
- ![](ios7-ui-images/light-status-bar.png "Sample Status Bar")
+ ![Sample Status Bar](ios7-ui-images/light-status-bar.png)
 
 To hide the status bar from the view controller’s code, override `PrefersStatusBarHidden`, as shown below:
 
 ```csharp
 public override bool PrefersStatusBarHidden ()
 {
-	return true;
+    return true;
 }
 ```
 
 This hides the status bar:
 
- ![](ios7-ui-images/status-bar-hidden.png "Status Bar hidden")
+ ![Status Bar hidden](ios7-ui-images/status-bar-hidden.png)
 
 ### Tint Color
 
@@ -242,13 +242,12 @@ Buttons are now displayed as chrome-less text. The text color can be controlled 
 
 For example, the following screenshot shows the effect of changing the tint color on a navigation controller’s view to purple:
 
- ![](ios7-ui-images/tint-color.png "Purple tint color on a navigation controllers view")
+ ![Purple tint color on a navigation controllers view](ios7-ui-images/tint-color.png)
 
 The tint color can be applied to images as well when the `RenderingMode` is set to `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
 > Tint color cannot be set using `UIAppearance`.
-
 
 ### Dynamic Type
 
@@ -260,4 +259,4 @@ This article covers the changes to user interface elements in iOS 7. It examines
 
 ## Related Links
 
-- [ImageViewer (sample)](https://developer.xamarin.com/samples/monotouch/iOS7-ui-updates)
+- [ImageViewer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)

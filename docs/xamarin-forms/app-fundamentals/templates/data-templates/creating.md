@@ -7,25 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Creating a Xamarin.Forms DataTemplate
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Data templates can be created inline, in a ResourceDictionary, or from a custom type or appropriate Xamarin.Forms cell type. This article explores each technique._
 
 A common usage scenario for a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is displaying data from a collection of objects in a [`ListView`](xref:Xamarin.Forms.ListView). The appearance of the data for each cell in the [`ListView`](xref:Xamarin.Forms.ListView) can be managed by setting the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). There are a number of techniques that can be used to accomplish this:
 
-- [Creating an Inline DataTemplate](#inline).
-- [Creating a DataTemplate with a Type](#type).
-- [Creating a DataTemplate as a Resource](#resource).
+- [Creating an Inline DataTemplate](#creating-an-inline-datatemplate).
+- [Creating a DataTemplate with a Type](#creating-a-datatemplate-with-a-type).
+- [Creating a DataTemplate as a Resource](#creating-a-datatemplate-as-a-resource).
 
 Regardless of the technique being used, the result is that the appearance of each cell in the [`ListView`](xref:Xamarin.Forms.ListView) is defined by a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), as shown in the following screenshots:
 
-![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
-
-<a name="inline" />
+![ListView with a DataTemplate](creating-images/data-template-appearance.png)
 
 ## Creating an Inline DataTemplate
 
@@ -106,8 +105,6 @@ public class WithDataTemplatePageCS : ContentPage
 ```
 
 In C#, the inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is created using a constructor overload that specifies a `Func` argument.
-
-<a name="type" />
 
 ## Creating a DataTemplate with a Type
 
@@ -213,8 +210,6 @@ public class PersonCellCS : ViewCell
 > [!NOTE]
 > Note that Xamarin.Forms also includes cell types that can be used to display simple data in [`ListView`](xref:Xamarin.Forms.ListView) cells. For more information, see [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-<a name="resource" />
-
 ## Creating a DataTemplate as a Resource
 
 Data templates can also be created as reusable objects in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). This is achieved by giving each declaration a unique `x:Key` attribute, which provides it with a descriptive key in the `ResourceDictionary`, as shown in the following XAML code example:
@@ -284,9 +279,8 @@ The [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is added to the [`Resource
 
 This article has explained how to create data templates, inline, from a custom type, or in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). An inline template should be used if there's no need to reuse the data template elsewhere. Alternatively, a data template can be reused by defining it as a custom type, or as a control-level, page-level, or application-level resource.
 
-
 ## Related Links
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Data Templates (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [Data Templates (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

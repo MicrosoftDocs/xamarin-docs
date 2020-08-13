@@ -3,8 +3,8 @@ title: "Overview of Objective-C Bindings"
 description: "This document provides an overview of different ways to create C# bindings for Objective-C code, including command-line bindings, binding projects, and Objective Sharpie. It also discusses how binding works."
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 
@@ -15,29 +15,28 @@ _Details of how the binding process works_
 Binding an Objective-C library for use with Xamarin takes of three steps:
 
 1. Write a C# "API definition" to describe how the native API is exposed in .NET, and how it
-  maps to the underlying Objective-C. This is done using standard
-  C# constructs like `interface` and various binding **attributes**
-  (see this [simple example](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+   maps to the underlying Objective-C. This is done using standard
+   C# constructs like `interface` and various binding **attributes**
+   (see this [simple example](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Once you have written the "API definition" in C#, you compile it
-  to produce a "binding" assembly. This can be done on the [**command line**](#commandline) or
-  using a [**binding project**](#bindingproject) in Visual Studio for Mac or Visual Studio.
+   to produce a "binding" assembly. This can be done on the [**command line**](#command-line-bindings) or
+   using a [**binding project**](#bindingproject) in Visual Studio for Mac or Visual Studio.
 
 3. That "binding" assembly is then added to your Xamarin application project,
-  so you can access the native functionality using the API you defined.
-  The binding project is completely separate from your application projects.
+   so you can access the native functionality using the API you defined.
+   The binding project is completely separate from your application projects.
 
-**NOTE:** Step 1 can be automated with the assistance of
-  [**Objective Sharpie**](#objectivesharpie). It examines the Objective-C API
-  and generates a proposed C# "API definition." You can customize the files
-  created by Objective Sharpie and use them in a binding project
-  (or on the command line) to create your binding assembly. Objective Sharpie
-  does not create bindings by itself, it's merely an optional part of the larger process.
+   > [!NOTE]
+   > Step 1 can be automated with the assistance of
+   > [**Objective Sharpie**](#objectivesharpie). It examines the Objective-C API
+   > and generates a proposed C# "API definition." You can customize the files
+   > created by Objective Sharpie and use them in a binding project
+   > (or on the command line) to create your binding assembly. Objective Sharpie
+   > does not create bindings by itself, it's merely an optional part of the larger process.
 
 You can also read more technical details of [how it works](#howitworks), which will
 help you to write your bindings.
-
-<a name="Command_Line_Bindings" /><a name="commandline" />
 
 ## Command Line Bindings
 
@@ -46,7 +45,6 @@ You can use the `btouch-native` for Xamarin.iOS
 works by passing the C# API definitions that you've created by hand
 (or using Objective Sharpie) to the command line tool (`btouch-native` for
 iOS or `bmac-native` for Mac).
-
 
 The general syntax for invoking these tools is:
 
@@ -65,8 +63,7 @@ directory, and it will contain the fully bound library that you can use in your
 project. This is the tool that Visual Studio for Mac uses to create your bindings if you use a
 binding project (described [below](#bindingproject)).
 
-
-<a name="bindingproject" />
+<a name="bindingproject"></a>
 
 ## Binding Project
 
@@ -77,7 +74,7 @@ definitions for binding (versus using the command line).
 Follow this [getting started guide](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started)
 to see how to create and use a binding project to produce a binding.
 
-<a name="objectivesharpie" />
+<a name="objectivesharpie"></a>
 
 ## Objective Sharpie
 
@@ -90,7 +87,7 @@ Read the [Objective Sharpie docs](~/cross-platform/macios/binding/objective-shar
 to learn how to parse native libraries, native frameworks, and CocoaPods into
 API defintions that can be built into bindings.
 
-<a name="howitworks" />
+<a name="howitworks"></a>
 
 ## How Binding Works
 
@@ -100,7 +97,7 @@ It is possible to use the [[Register]](xref:Foundation.RegisterAttribute) attrib
 together to manually bind new (previously unbound) Objective-C types.
 
 First, find a type that you wish to bind. For discussion purposes (and
-simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
+simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
 is just for example purposes).
 
 Second, we need to create the C# type. We'll likely want to place this into a
@@ -224,8 +221,3 @@ namespace Example.Binding {
     }
 }
 ```
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

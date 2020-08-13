@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Authentication and Authorization
@@ -32,16 +33,16 @@ OpenID Connect is an authentication layer on top of the OAuth 2.0 protocol. OAut
 
 The combination of OpenID Connect and OAuth 2.0 combine the two fundamental security concerns of authentication and API access, and IdentityServer 4 is an implementation of these protocols.
 
-In applications that use direct client-to-microservice communication, such as the eShopOnContainers reference application, a dedicated authentication microservice acting as a Security Token Service (STS) can be used to authenticate users, as shown in Figure 9-1. For more information about direct client-to-microservice communication, see [Communication Between Client and Microservices](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices).
+In applications that use direct client-to-microservice communication, such as the eShopOnContainers reference application, a dedicated authentication microservice acting as a Security Token Service (STS) can be used to authenticate users, as shown in Figure 9-1. For more information about direct client-to-microservice communication, see [Communication Between Client and Microservices](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices).
 
-![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
+![Authentication by a dedicated authentication microservice](authentication-and-authorization-images/authentication.png)
 
 **Figure 9-1:** Authentication by a dedicated authentication microservice
 
 The eShopOnContainers mobile app communicates with the identity microservice, which uses IdentityServer 4 to perform authentication, and access control for APIs. Therefore, the mobile app requests tokens from IdentityServer, either for authenticating a user or for accessing a resource:
 
--   Authenticating users with IdentityServer is achieved by the mobile app requesting an *identity* token, which represents the outcome of an authentication process. At a bare minimum, it contains an identifier for the user, and information about how and when the user authenticated. It can also contain additional identity data.
--   Accessing a resource with IdentityServer is achieved by the mobile app requesting an *access* token, which allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client, and the user (if present). APIs then use that information to authorize access to their data.
+- Authenticating users with IdentityServer is achieved by the mobile app requesting an *identity* token, which represents the outcome of an authentication process. At a bare minimum, it contains an identifier for the user, and information about how and when the user authenticated. It can also contain additional identity data.
+- Accessing a resource with IdentityServer is achieved by the mobile app requesting an *access* token, which allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client, and the user (if present). APIs then use that information to authorize access to their data.
 
 > [!NOTE]
 > A client must be registered with IdentityServer before it can request tokens.
@@ -87,14 +88,15 @@ public void ConfigureServices(IServiceCollection services)
 
 After calling the `services.AddIdentityServer` method, additional fluent APIs are called to configure the following:
 
--   Credentials used for signing.
--   API and identity resources that users might request access to.
--   Clients that will be connecting to request tokens.
--   ASP.NET Core Identity.
+- Credentials used for signing.
+- API and identity resources that users might request access to.
+- Clients that will be connecting to request tokens.
+- ASP.NET Core Identity.
 
->💡 **Tip**: Dynamically load the IdentityServer 4 configuration. IdentityServer 4's APIs allow for configuring IdentityServer from an in-memory list of configuration objects. In the eShopOnContainers reference application, these in-memory collections are hard-coded into the application. However, in production scenarios they can be loaded dynamically from a configuration file or from a database.
+> [!TIP]
+> Dynamically load the IdentityServer 4 configuration. IdentityServer 4's APIs allow for configuring IdentityServer from an in-memory list of configuration objects. In the eShopOnContainers reference application, these in-memory collections are hard-coded into the application. However, in production scenarios they can be loaded dynamically from a configuration file or from a database.
 
-For information about configuring IdentityServer to use ASP.NET Core Identity, see [Using ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) in the IdentityServer documentation.
+For information about configuring IdentityServer to use ASP.NET Core Identity, see [Using ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/6_aspnet_identity.html) in the IdentityServer documentation.
 
 #### Configuring API Resources
 
@@ -139,10 +141,10 @@ IdentityServer also supports defining custom identity resources. For more inform
 
 Clients are applications that can request tokens from IdentityServer. Typically, the following settings must be defined for each client as a minimum:
 
--   A unique client ID.
--   The allowed interactions with the token service (known as the grant type).
--   The location where identity and access tokens are sent to (known as a redirect URI).
--   A list of resources that the client is allowed access to (known as scopes).
+- A unique client ID.
+- The allowed interactions with the token service (known as the grant type).
+- The location where identity and access tokens are sent to (known as a redirect URI).
+- A list of resources that the client is allowed access to (known as scopes).
 
 When configuring clients, the `AddInMemoryClients` method expects an `IEnumerable<Client>` collection. The following code example shows the configuration for the eShopOnContainers mobile app in the `GetClients` method that provides this collection in the eShopOnContainers reference application:
 
@@ -184,27 +186,25 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 This configuration specifies data for the following properties:
 
--   `ClientId`: A unique ID for the client.
--   `ClientName`: The client display name, which is used for logging and the consent screen.
--   `AllowedGrantTypes`: Specifies how a client wants to interact with IdentityServer. For more information see [Configuring the Authentication Flow](#configuring_the_authentication_flow).
--   `ClientSecrets`: Specifies the client secret credentials that are used when requesting tokens from the token endpoint.
--   `RedirectUris`: Specifies the allowed URIs to which to return tokens or authorization codes.
--   `RequireConsent`: Specifies whether a consent screen is required.
--   `RequirePkce`: Specifies whether clients using an authorization code must send a proof key.
--   `PostLogoutRedirectUris`: Specifies the allowed URIs to redirect to after logout.
--   `AllowedCorsOrigins`: Specifies the origin of the client so that IdentityServer can allow cross-origin calls from the origin.
--   `AllowedScopes`: Specifies the resources the client has access to. By default, a client has no access to any resources.
--   `AllowOfflineAccess`: Specifies whether the client can request refresh tokens.
-
-<a name="configuring_the_authentication_flow" />
+- `ClientId`: A unique ID for the client.
+- `ClientName`: The client display name, which is used for logging and the consent screen.
+- `AllowedGrantTypes`: Specifies how a client wants to interact with IdentityServer. For more information see [Configuring the Authentication Flow](#configuring-the-authentication-flow).
+- `ClientSecrets`: Specifies the client secret credentials that are used when requesting tokens from the token endpoint.
+- `RedirectUris`: Specifies the allowed URIs to which to return tokens or authorization codes.
+- `RequireConsent`: Specifies whether a consent screen is required.
+- `RequirePkce`: Specifies whether clients using an authorization code must send a proof key.
+- `PostLogoutRedirectUris`: Specifies the allowed URIs to redirect to after logout.
+- `AllowedCorsOrigins`: Specifies the origin of the client so that IdentityServer can allow cross-origin calls from the origin.
+- `AllowedScopes`: Specifies the resources the client has access to. By default, a client has no access to any resources.
+- `AllowOfflineAccess`: Specifies whether the client can request refresh tokens.
 
 #### Configuring the Authentication Flow
 
 The authentication flow between a client and IdentityServer can be configured by specifying the grant types in the `Client.AllowedGrantTypes` property. The OpenID Connect and OAuth 2.0 specifications define a number of authentication flows, including:
 
--   Implicit. This flow is optimized for browser-based applications and should be used either for user authentication-only, or authentication and access token requests. All tokens are transmitted via the browser, and therefore advanced features like refresh tokens are not permitted.
--   Authorization code. This flow provides the ability to retrieve tokens on a back channel, as opposed to the browser front channel, while also supporting client authentication.
--   Hybrid. This flow is a combination of the implicit and authorization code grant types. The identity token is transmitted via the browser channel and contains the signed protocol response along with other artifacts such as the authorization code. After successful validation of the response, the back channel should be used to retrieve the access and refresh token.
+- Implicit. This flow is optimized for browser-based applications and should be used either for user authentication-only, or authentication and access token requests. All tokens are transmitted via the browser, and therefore advanced features like refresh tokens are not permitted.
+- Authorization code. This flow provides the ability to retrieve tokens on a back channel, as opposed to the browser front channel, while also supporting client authentication.
+- Hybrid. This flow is a combination of the implicit and authorization code grant types. The identity token is transmitted via the browser channel and contains the signed protocol response along with other artifacts such as the authorization code. After successful validation of the response, the back channel should be used to retrieve the access and refresh token.
 
 > [!TIP]
 > Use the hybrid authentication flow. The hybrid authentication flow mitigates a number of attacks that apply to the browser channel, and is the recommended flow for native applications that want to retrieve access tokens (and possibly refresh tokens).
@@ -217,7 +217,7 @@ For IdentityServer to issue tokens on behalf of a user, the user must sign-in to
 
 The eShopOnContainers mobile app authenticates with IdentityServer with the hybrid authentication flow, which is illustrated in Figure 9-2.
 
-![](authentication-and-authorization-images/sign-in.png "High-level overview of the sign-in process")
+![High-level overview of the sign-in process](authentication-and-authorization-images/sign-in.png)
 
 **Figure 9-2:** High-level overview of the sign-in process
 
@@ -225,7 +225,7 @@ A sign-in request is made to `<base endpoint>:5105/connect/authorize`. Following
 
 The eShopOnContainers mobile app signs-out of IdentityServer by sending a request to `<base endpoint>:5105/connect/endsession`, with additional parameters. After sign-out occurs, IdentityServer responds by sending a post logout redirect URI back to the mobile app. Figure 9-3 illustrates this process.
 
-![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
+![High-level overview of the sign-out process](authentication-and-authorization-images/sign-out.png)
 
 **Figure 9-3:** High-level overview of the sign-out process
 
@@ -259,7 +259,7 @@ public string CreateAuthorizationRequest()
     dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
     dic.Add("response_type", "code id_token");
     dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
+    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
     dic.Add("nonce", Guid.NewGuid().ToString("N"));
     dic.Add("code_challenge", CreateCodeChallenge());
     dic.Add("code_challenge_method", "S256");
@@ -281,7 +281,7 @@ This method creates the URI for IdentityServer's [authorization endpoint](https:
 
 The returned URI is stored in the `LoginUrl` property of the `LoginViewModel` class. When the `IsLogin` property becomes `true`, the [`WebView`](xref:Xamarin.Forms.WebView) in the `LoginView` becomes visible. The `WebView` data binds its [`Source`](xref:Xamarin.Forms.WebView.Source) property to the `LoginUrl` property of the `LoginViewModel` class, and so makes a sign-in request to IdentityServer when the `LoginUrl` property is set to IdentityServer's authorization endpoint. When IdentityServer receives this request and the user isn't authenticated, the `WebView` will be redirected to the configured login page, which is shown in Figure 9-4.
 
-![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
+![Login page displayed by the WebView](authentication-and-authorization-images/login.png)
 
 **Figure 9-4:** Login page displayed by the WebView
 
@@ -312,18 +312,19 @@ private async Task NavigateAsync(string url)
 
 This method parses the authentication response that's contained in the return URI, and provided that a valid authorization code is present, it makes a request to IdentityServer's [token endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), passing the authorization code, the PKCE secret verifier, and other required parameters. The token endpoint is at `/connect/token` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
->💡 **Tip**: Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location , to prevent open-redirect attacks.
+> [!TIP]
+> Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location, to prevent open-redirect attacks.
 
 If the token endpoint receives a valid authorization code and PKCE secret verifier, it responds with an access token, identity token, and refresh token. The access token (which allows access to API resources) and identity token are then stored as application settings, and page navigation is performed. Therefore, the overall effect in the eShopOnContainers mobile app is this: provided that users are able to successfully authenticate with IdentityServer, they are navigated to the `MainView` page, which is a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) that displays the `CatalogView` as its selected tab.
 
-For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](xref:Xamarin.Forms.WebView) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](xref:Xamarin.Forms.WebView) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking-navigation-using-behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > The eShopOnContainers also allows a mock sign-in when the app is configured to use mock services in the `SettingsView`. In this mode, the app doesn't communicate with IdentityServer, instead allowing the user to sign-in using any credentials.
 
 #### Signing-out
 
-When the user taps the **LOG OUT** button in the `ProfileView`, the `LogoutCommand` in the `ProfileViewModel` class is executed, which in turn executes the `LogoutAsync` method. This method performs page navigation to the `LoginView` page, passing a `LogoutParameter` instance set to `true` as a parameter. For more information about passing parameters during page navigation, see [Passing Parameters During Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
+When the user taps the **LOG OUT** button in the `ProfileView`, the `LogoutCommand` in the `ProfileViewModel` class is executed, which in turn executes the `LogoutAsync` method. This method performs page navigation to the `LoginView` page, passing a `LogoutParameter` instance set to `true` as a parameter. For more information about passing parameters during page navigation, see [Passing Parameters During Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing-parameters-during-navigation).
 
 When a view is created and navigated to, the `InitializeAsync` method of the view's associated view model is executed, which then executes the `Logout` method of the `LoginViewModel` class, which is shown in the following code example:
 
@@ -375,12 +376,10 @@ private async Task NavigateAsync(string url)
 
 This method clears both the identity token and the access token from application settings, and sets the `IsLogin` property to `false`, which causes the [`WebView`](xref:Xamarin.Forms.WebView) on the `LoginView` page to become invisible. Finally, the `LoginUrl` property is set to the URI of IdentityServer's [authorization endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html), with the required parameters, in preparation for the next time the user initiates a sign-in.
 
-For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](xref:Xamarin.Forms.WebView) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+For information about page navigation, see [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). For information about how [`WebView`](xref:Xamarin.Forms.WebView) navigation causes a view model method to be executed, see [Invoking Navigation using Behaviors](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking-navigation-using-behaviors). For information about application settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > The eShopOnContainers also allows a mock sign-out when the app is configured to use mock services in the SettingsView. In this mode, the app doesn't communicate with IdentityServer, and instead clears any stored tokens from application settings.
-
-<a name="authorization" />
 
 ## Authorization
 
@@ -403,7 +402,7 @@ If an unauthorized user attempts to access a controller or action that's marked 
 
 IdentityServer can be integrated into the authorization workflow so that the access tokens it provides control authorization. This approach is shown in Figure 9-5.
 
-![](authentication-and-authorization-images/authorization.png "Authorization by access token")
+![Authorization by access token](authentication-and-authorization-images/authorization.png)
 
 **Figure 9-5:** Authorization by access token
 
@@ -470,7 +469,6 @@ For more information about how the eShopOnContainers mobile app makes web reques
 There are many approaches to integrating authentication and authorization into a Xamarin.Forms app that communicates with an ASP.NET MVC web application. The eShopOnContainers mobile app performs authentication and authorization with a containerized identity microservice that uses IdentityServer 4. IdentityServer is an open source OpenID Connect and OAuth 2.0 framework for ASP.NET Core that integrates with ASP.NET Core Identity to perform bearer token authentication.
 
 The mobile app requests security tokens from IdentityServer, either for authenticating a user or for accessing a resource. When accessing a resource, an access token must be included in the request to APIs that require authorization. IdentityServer's middleware validates incoming access tokens to ensure that they are sent from a trusted issuer, and that they are valid to be used with the API that receives them.
-
 
 ## Related Links
 

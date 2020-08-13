@@ -4,8 +4,8 @@ description: "This guide discusses  Xamarin.Android services, which are Android 
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2018
 ---
 
@@ -18,7 +18,7 @@ _This guide discusses  Xamarin.Android services, which are Android components th
 Mobile apps are not like desktop apps. Desktops have copious amounts of resources such as screen real estate, memory, storage space, and a connected power supply, mobile devices do not. These constraints force mobile apps to behave differently. For example, the small screen on a mobile device typically means that only one app (i.e. Activity) is visible at a time. Other Activities are moved to the background and pushed into a suspended state where they cannot perform any work. However, just because an Android application is in the background does not mean that it is impossible for app to keep working. 
 
 Android applications are made up of at least one of the following four primary components: _Activities_, _Broadcast Receivers_, _Content Providers_, and _Services_. Activities are the cornerstone of many great Android applications because they provide the UI that allows a user to interact with the application. However, when it comes to performing concurrent or background work, Activities are not always the best choice.
- 
+
 The primary mechanism for background work in Android is the _service_. An Android service is a component that is designed to do some work  without a user interface. A service might download a file, play music, or apply a filter to an image. Services can also be used for interprocess communication (_IPC_) between Android applications. For example one Android app might use the music player service that is from another app or an app might expose data (such as a person's contact information) to other apps via a service. 
 
 Services, and their ability to perform background work, are crucial to providing a smooth and fluid user interface. All Android applications have a _main thread_ (also known as a _UI thread_) on which the Activities are run. To keep the device responsive, Android must be able to update the user interface at the rate of 60 frames per second. If an Android app performs too much work on the main thread, then Android will drop frames, which in turn causes the UI to appear jerky (also sometimes referred to as _janky_). This means that any work performed on the UI thread should complete in the time span between two frames, approximately 16 milliseconds (1 second every 60 frames). 
@@ -50,7 +50,7 @@ Which type of service to use is very dependent on application requirements. As a
 
 While most services run in the background, there is a special sub-category known as a _foreground service_. This is a service that is given a higher priority (compared to a normal service) to perform some work for the user (such as playing music). 
 
-It is also possible to run a service in it's own process on the same device, this is sometimes referred to as a _remote service_ or as an _out-of-process service_. This does require more effort to create, but can be useful for when an application needs to share functionality with other applications, and can, in some cases, improve the user experience of an application. 
+It is also possible to run a service in its own process on the same device, this is sometimes referred to as a _remote service_ or as an _out-of-process service_. This does require more effort to create, but can be useful for when an application needs to share functionality with other applications, and can, in some cases, improve the user experience of an application. 
 
 ### Background Execution Limits in Android 8.0
 
@@ -61,6 +61,7 @@ Starting in Android 8.0 (API level 26), an Android application no longer have th
 * Another app is in the foreground and is using components from an app that would be otherwise in the background. An example of this is if Application A, which is in the foreground, is bound to a service provided by Application B. Application B would then also be considered in the foreground, and not terminated by Android for being in the background.
 
 There are some situations where, even though an app is in the background,  Android will wake up the app and relax these restrictions for a few minutes, allowing the app to perform some work:
+
 * A high priority Firebase Cloud Message is received by the app.
 * The app receives a broadcast. 
 * The application receives and executes a `PendingIntent` in response to a Notification.

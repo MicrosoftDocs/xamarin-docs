@@ -2,8 +2,8 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: "WPF vs. Xamarin.Forms: Similarities & Differences"
 description: "This document compares and contrasts WPF to Xamarin.Forms. It discusses control templates, XAML, binding infrastructure, data templates, ItemsControl, UserControl, navigation, and URL navigation."
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
 ---
 
@@ -22,7 +22,7 @@ Common usages for this are things such as authentication dialogs, prompts and to
 3. `ContentPresenter`
 4. `TemplateBinding`
 
-But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## XAML
 
@@ -60,6 +60,7 @@ One of the core concepts carried over is a data binding infrastructure to connec
 ### Defining bindable properties
 
 The definition for a bindable property in Xamarin.Forms is the same as WPF:
+
 1. The object must derive from `BindableObject`.
 2. There must be a public static field of type `BindableProperty` declared to define the backing storage key for the property.
 3. There should be a public instance property wrapper that uses `GetValue` and `SetValue` to retrieve and change the properties value.
@@ -68,31 +69,31 @@ For a complete example, see [Bindable Properties in Xamarin.Forms](~/xamarin-for
 
 ### Attached properties
 
-Attached properties are a subset of the bindable property and they work the same way they do in WPF. The primary difference is that the property wrapper is ommitted in this case and replaced with a set of static get/set methods on the owning class. See [Attached Properties in Xamarin.Forms](~/xamarin-forms/xaml/attached-properties.md) for more information.
+Attached properties are a subset of the bindable property and they work the same way they do in WPF. The primary difference is that the property wrapper is omitted in this case and replaced with a set of static get/set methods on the owning class. See [Attached Properties in Xamarin.Forms](~/xamarin-forms/xaml/attached-properties.md) for more information.
 
 ### Using the binding engine
 
-The process for using the binding engine is the same as it is in WPF. It can be utilized in code-behind by creating a `Binding` object tied to a source object (any .NET type) and an optional property value (if ommitted, it treats the source object as the property itself - just like WPF). You can then use `SetBinding` on any `BindableObject` to associate the binding to a `BindableProperty`.
+The process for using the binding engine is the same as it is in WPF. It can be utilized in code-behind by creating a `Binding` object tied to a source object (any .NET type) and an optional property value (if omitted, it treats the source object as the property itself - just like WPF). You can then use `SetBinding` on any `BindableObject` to associate the binding to a `BindableProperty`.
 
 Alternatively, you can define the binding relationship in XAML using the `BindingExtension`. It has the same basic values as the extension in WPF.
 
 The binding support and engine are more similar to the Silverlight implementation than WPF. There are several missing features which were not implemented in Xamarin.Forms:
 
 - There is no support for the following features in bindings:
-    - BindingGroupName
-    - BindsDirectlyToSource
-    - IsAsync
-    - MultiBinding
-    - NotifyOnSourceUpdated
-    - NotifyOnTargetUpdated
-    - NotifyOnValidationError
-    - UpdateSourceTrigger
-    - UpdateSourceExceptionFilter
-    - ValidatesOnDataErrors
-    - ValidatesOnExceptions
-    - ValidationRules collection
-    - XPath
-    - XmlNamespaceManager
+  - BindingGroupName
+  - BindsDirectlyToSource
+  - IsAsync
+  - MultiBinding
+  - NotifyOnSourceUpdated
+  - NotifyOnTargetUpdated
+  - NotifyOnValidationError
+  - UpdateSourceTrigger
+  - UpdateSourceExceptionFilter
+  - ValidatesOnDataErrors
+  - ValidatesOnExceptions
+  - ValidationRules collection
+  - XPath
+  - XmlNamespaceManager
 
 #### RelativeSource
 

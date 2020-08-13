@@ -4,8 +4,8 @@ description: "This article covers working with menus in a Xamarin.Mac applicatio
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -79,7 +79,7 @@ Why is this important? In the next section will see how these automatically-defi
 
 Later we'll be using these built-in actions to enable and disable items from code and provide our own functionality when they are selected.
 
-<a name="Built-In_Menu_Functionality" />
+<a name="Built-In_Menu_Functionality"></a>
 
 ### Built-in menu functionality
 
@@ -414,7 +414,7 @@ viewController.View.Window.RepresentedUrl = url;
 NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 ```
 
-<a name="Working-with-Custom-Window-Actions" />
+<a name="Working-with-Custom-Window-Actions"></a>
 
 ### Working with custom window actions
 
@@ -450,7 +450,7 @@ Save the changes to the storyboard and return to Visual Studio for Mac to sync t
 
 [![Testing the new action](menu-images/action05.png "Testing the new action")](menu-images/action05-large.png#lightbox)
 
-<a name="Adding,_Editing_and_Deleting_Menus" />
+<a name="Adding,_Editing_and_Deleting_Menus"></a>
 
 ### Adding, editing, and deleting menus
 
@@ -857,7 +857,7 @@ FormattingCommands.Add (Headings);
 FormattingCommands.Add(new LanguageFormatCommand ());
 FormattingCommands.Add(new LanguageFormatCommand("Link","[","]()"));
 FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
-FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![](",")](LinkImageHere)"));
+FormattingCommands.Add(new LanguageFormatCommand("Image Link","[![](",")](LinkImageHere)"));
 ```
 
 And that collection passed to the `AssembleMenu` function (with the **Format** Menu set as the base), the following dynamic menus and menu items would be created:
@@ -882,7 +882,7 @@ public void UnpopulateFormattingMenu(NSMenu menu) {
 
 In the case of the code above, the first four menu items are created in Xcode's Interface Builder and aways available in the app, so they are not removed dynamically.
 
-<a name="Contextual_Menus" />
+<a name="Contextual_Menus"></a>
 
 ## Contextual menus
 
@@ -1035,7 +1035,7 @@ Now if we run our application and right-click on its icon in the Dock, our new m
 
 If we select one of the custom items from the menu, the text in our text view will be modified.
 
-<a name="Pop-up_Menus_and_Pull-Down_Lists" />
+<a name="Pop-up_Menus_and_Pull-Down_Lists"></a>
 
 ## Pop-up button and pull-down lists
 
@@ -1067,10 +1067,9 @@ You can create and work with pull-down lists in the exact same way as pop-up but
 
 This article has taken a detailed look at working with menus and menu items in a Xamarin.Mac application. First we examined the application's menu bar, then we looked at creating contextual menus, next we examined status bar menus and custom dock menus. Finally, we covered pop-up menus and pull-down Lists.
 
-
 ## Related Links
 
-- [MacMenus (sample)](https://developer.xamarin.com/samples/mac/MacMenus/)
+- [MacMenus (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines - Menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introduction to Application Menus and Pop-up Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

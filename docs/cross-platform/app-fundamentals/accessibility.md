@@ -3,8 +3,8 @@ title: "Accessibility in Xamarin Apps"
 description: "This document provides various tips for the creation of accessible apps. For example, it includes recommendations about large fonts, high contrast, self-describing interfaces, and more."
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -20,7 +20,7 @@ such as large type, high contrast, zoom in, screen reading
 Desktop and mobile platforms like iOS, Android, and Windows provide
 built in APIs that help developers build accessible apps, such as
 [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and
-[Apple's VoiceOver](http://www.apple.com/accessibility/ios/voiceover/).
+[Apple's VoiceOver](https://www.apple.com/accessibility/ios/voiceover/).
 
 ## Platform-Specific APIs
 
@@ -32,13 +32,13 @@ by each platform:
 - [**OS X Accessibility**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
-<a name="checklist" />
+<a name="checklist"></a>
 
 ## Accessibility Checklist
 
 Follow these tips to ensure that your apps are accessible to
 the widest audience possible. Check out the [Android Accessibility Testing Checklist](https://developer.android.com/training/accessibility/testing.html)
-and [Apple's Accessibility page](http://www.apple.com/accessibility/)
+and [Apple's Accessibility page](https://www.apple.com/accessibility/)
 for additional information.
 
 ### Support large fonts and high contrast
@@ -94,8 +94,6 @@ are easy to find and use.
 
 Accessibility descriptions can (and should) be localized
 where the application supports multiple languages.
-
-
 
 ## Related Links
 

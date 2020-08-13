@@ -4,8 +4,8 @@ description: "This document describes how to deploy a watchOS app built with Xam
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -19,7 +19,7 @@ After you've followed the [deployment steps](~/ios/watchos/deploy-test/index.md)
 - [Create Development Provisioning Profiles](#profiles), then
 - [Deploy and test](#testing) on an Apple Watch.
 
-<a name="devices" />
+<a name="devices"></a>
 
 ## Devices
 
@@ -27,30 +27,30 @@ Testing iOS apps on a real iPhone or iPad has always required
   the device to be registered on the Dev Center. The device list
   looks like this (click the plus sign **+** to add a new device):
 
-![](device-images/devices-sml.png "The device list looks like this")
+![The device list looks like this](device-images/devices-sml.png)
 
 Watches are no different - you now need to add your Apple Watch
   device before deploying apps to it. Find the watch's UDID using
   **Xcode** (**Windows > Devices** list). When the paired phone
   is connected the watch's information will also be displayed:
 
-[![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png#lightbox)
+[![Paired Watch Information](device-images/xcode-devices-sml.png)](device-images/xcode-devices.png#lightbox)
 
 When you know the Watch's UDID, add it to the device list
   in the Dev Center:
 
-![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
+![The Watch's UDID in the device list](device-images/devices-watch-sml.png)
 
 Once the Watch device has been added, ensure it is selected
   in any new or existing development or ad-hoc provisioning
   profiles you create:
 
-![](device-images/devices-provisioning.png "Available device list")
+![Available device list](device-images/devices-provisioning.png)
 
 Don't forget if you edit an existing provisioning profile
   to download and re-install it!
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## Development Provisioning Profiles
 
@@ -63,12 +63,12 @@ If you have a wildcard App ID, *only one Provisioning Profile
   project then you'll need a provisioning profile for each
   App ID:
 
-![](device-images/provisioningprofile-development.png "The Development Provisioning Profile")
+![The Development Provisioning Profile](device-images/provisioningprofile-development.png)
 
 Once you've created all three profiles, they'll appear
   in the list. Remember to download and install each one:
 
-![](device-images/provisioningprofiles.png "The available Development Provisioning Profiles")
+![The available Development Provisioning Profiles](device-images/provisioningprofiles.png)
 
 You can verify the provisioning profile in the **Project Options**
   by selecting the **Build > iOS Bundle Signing** screen
@@ -78,10 +78,9 @@ The **Provisioning Profile** list will show all matching
   profiles - you should see the matching profiles that
   you've created in this drop-down list:
 
-![](device-images/options-selectprofile.png "The Provisioning Profile list")
+![The Provisioning Profile list](device-images/options-selectprofile.png)
 
-
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing on a Watch device
 
@@ -111,7 +110,6 @@ Once you have configured your Device, App IDs, and Provisioning
 8. If the watch app is successfully installed, the icon will remain on the watch
   screen - touch it to start testing your app!
 
-
 ## Troubleshooting
 
 If an error occurs during deployment use the **View > Pads > Device Log** to
@@ -125,18 +123,16 @@ This may occur when building in DEBUG mode to deploy to an Apple Watch device.
 To *temporarily* work around this issue, disable **Incremental Builds** in the Watch Extension
 **Project Options > Build > watchOS Build** window:
 
-[![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
+[![The Incremental Builds checkbox](device-images/disable-incremental-sml.png)](device-images/disable-incremental.png#lightbox)
 
 This will be fixed in a future release, after which incremental builds can be
 re-enabled to take advantage of faster build times.
-
 
 ### Watch App fails to start while debugging on device
 
 When attempting to debug a watch app on a physical device, only the icon & loading
 spinner appear (and eventually time-out). This will be addressed in a future release;
 a workaround is to run a RELEASE build (which will not allow debugging).
-
 
 ### Invalid Application Executable or Application Verification Failed
 
@@ -145,7 +141,7 @@ Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "Invalid Application Executable alert")
+![Invalid Application Executable alert](device-images/invalid-application-executable.png)
 
 If these messages appear *on the watch screen* after the
   app has attempted to install, there could be a couple of
@@ -170,8 +166,6 @@ If these messages appear *on the watch screen* after the
 - The Watch App's **App ID** incorrectly has an entitlement
   enabled (such as App Groups) in the Dev Center that it shouldn't have.
 
-
-
 ### Install Never Finished
 
 ```csharp
@@ -184,7 +178,6 @@ This error could indicate unnecessary (and invalid) keys
   in the Watch App.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### "waiting for debugger to connect"
 
@@ -204,4 +197,3 @@ The **Microsoft.Bcl.Build.targets** file that is added to the
   extensions during deployment. You can track the [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
   A possible workaround is to edit the .csproj file and manually
   move the **Microsoft.Bcl.Build.targets** to be the last element.
-

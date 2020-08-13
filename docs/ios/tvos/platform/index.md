@@ -4,8 +4,8 @@ description: "This document links to articles describing the features included i
 ms.prod: xamarin
 ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 # tvOS platform features
@@ -39,7 +39,7 @@ controllers in tvOS apps built with Xamarin.
 
 ## Related links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS (Apple)](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides (Apple)](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS (Apple)](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

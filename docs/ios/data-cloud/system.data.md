@@ -4,8 +4,8 @@ description: "This document describes how to use System.Data and Mono.Data.Sqlit
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 
@@ -13,13 +13,13 @@ ms.date: 11/25/2015
 
 Xamarin.iOS 8.10 adds support for [System.Data](xref:System.Data), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
 
--  `System.Data.dll`
--  `System.Data.Service.Client.dll`
--  `System.Transactions.dll`
--  `Mono.Data.Tds.dll`
--  `Mono.Data.Sqlite.dll`
+- `System.Data.dll`
+- `System.Data.Service.Client.dll`
+- `System.Transactions.dll`
+- `Mono.Data.Tds.dll`
+- `Mono.Data.Sqlite.dll`
 
-<a name="Example" />
+<a name="Example"></a>
 
 ## Example
 
@@ -30,7 +30,7 @@ The following program creates a database in `Documents/mydb.db3`, and if the dat
 First, right-click on the **References** node and choose **Edit References...**
   then select `System.Data` and `Mono.Data.Sqlite`:
 
-[![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png#lightbox)
+[![Adding new references](system.data-images/edit-references-sml.png)](system.data-images/edit-references.png#lightbox)
 
 ### Sample Code
 
@@ -107,7 +107,6 @@ class Demo {
 > [!IMPORTANT]
 > As mentioned in the code sample above, it is bad practice to embed strings in SQL commands because it makes your code vulnerable to [SQL injection](https://en.wikipedia.org/wiki/SQL_injection).
 
-
 ### Using Command Parameters
 
 The following code shows how to use command parameters
@@ -129,27 +128,26 @@ using (var addCmd = conn.CreateCommand ()) {
 }
 ```
 
-<a name="Missing_Functionality" />
+<a name="Missing_Functionality"></a>
 
 ## Missing Functionality
 
 Both **System.Data** and **Mono.Data.Sqlite** are missing some functionality.
 
-<a name="System.Data" />
+<a name="System.Data"></a>
 
 ### System.Data
 
 Functionality missing from **System.Data.dll** consists of:
 
--  Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
--  XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
--   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
--   [System.Data.OleDb](xref:System.Data.OleDb)
--   [System.Data.Odbc](xref:System.Data.Odbc)
--  The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
+- Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+- XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+- [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
+- [System.Data.OleDb](xref:System.Data.OleDb)
+- [System.Data.Odbc](xref:System.Data.Odbc)
+- The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
-
-<a name="Mono.Data.Sqlite" />
+<a name="Mono.Data.Sqlite"></a>
 
 ### Mono.Data.Sqlite
 
@@ -165,9 +163,8 @@ Older version of iOS ship with the following versions of SQLite:
 The most common issues appear to be related to database schema querying, e.g. determining at runtime which columns exist on a given table, such as `Mono.Data.Sqlite.SqliteConnection.GetSchema` (overriding [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) and `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (overriding [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). In short, it seems that
 anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 
-<a name="Data_Binding" />
+<a name="Data_Binding"></a>
 
 ## Data Binding
 
 Data Binding is not supported at this time.
-

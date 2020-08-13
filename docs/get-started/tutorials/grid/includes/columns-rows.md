@@ -34,7 +34,7 @@
     The position of each [`Label`](xref:Xamarin.Forms.Label) in the [`Grid`](xref:Xamarin.Forms.Grid) is specified with the [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) and [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) attached properties, using a zero-based index. Therefore, the first column is column 0, and the first row is row 0. The first `Label` lacks these attached properties, because any child views that don't set them will automatically be rendered in column 0, row 0.
 
     > [!NOTE]
-    > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#spacing) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
+    > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
@@ -76,7 +76,7 @@
     The position of each [`Label`](xref:Xamarin.Forms.Label) in the [`Grid`](xref:Xamarin.Forms.Grid) is specified with the [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) and [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) attached properties, using a zero-based index. Therefore, the first column is column 0, and the first row is row 0. The first `Label` lacks these attached properties, because any child views that don't set them will automatically be rendered in column 0, row 0.
 
     > [!NOTE]
-    > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#spacing) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
+    > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 

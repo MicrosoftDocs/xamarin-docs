@@ -4,8 +4,8 @@ description: "This guide presents working with iOS Auto Layout constraints in C#
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -19,19 +19,19 @@ Typically when working with Auto Layout in iOS, you'll use the iOS Designer to g
 
 This guide will show you how to create and work with constraints using C# code instead of creating them graphically in the iOS Designer.
 
-<a name="Creating-Constraints-Programmatically" />
+<a name="Creating-Constraints-Programmatically"></a>
 
 ## Creating Constraints Programmatically
 
 As stated above, typically you'll be working with Auto Layout Constraints in the iOS Designer. For those times that you do have to create your constraints programmatically, you have three options to choose from:
 
-* [Layout Anchors](#Layout-Anchors) - This API provides access to the anchor properties (such as `TopAnchor`, `BottomAnchor` or `HeightAnchor`) of the UI items being constrained.
-* [Layout Constraints](#Layout-Constraints) - You can create constraints directly using the `NSLayoutConstraint` class.
-* [Visual Formatting Language](#Visual-Format-Language) - Provides an ASCII art like method to define your constraints.
+- [Layout Anchors](#Layout-Anchors) - This API provides access to the anchor properties (such as `TopAnchor`, `BottomAnchor` or `HeightAnchor`) of the UI items being constrained.
+- [Layout Constraints](#Layout-Constraints) - You can create constraints directly using the `NSLayoutConstraint` class.
+- [Visual Formatting Language](#Visual-Format-Language) - Provides an ASCII art like method to define your constraints.
 
 The following sections will go over each option in detail.
 
-<a name="Layout-Anchors" />
+<a name="Layout-Anchors"></a>
 
 ### Layout Anchors
 
@@ -64,7 +64,7 @@ OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 
 A typical Layout Constraint can be expressed simply as a linear expression. Take the following example:
 
-[![](programmatic-layout-constraints-images/graph01.png "A Layout Constraint expressed as a linear expression")](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![A Layout Constraint expressed as a linear expression](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 Which would be converted to the following line of C# code using Layout Anchors:
 
@@ -86,7 +86,7 @@ Where the parts of the C# code correspond to the given parts of the equation as 
 
 In addition to providing only the parameters that are required to solve a given layout constraint equation, each of the Layout Anchor methods enforce the type safety of the parameters passed to them. So horizontal constraint anchors such as `LeadingAnchor` or `TrailingAnchor` can only be used with other horizontal anchor types and multipliers are only provided to size constraints.
 
-<a name="Layout-Constraints" />
+<a name="Layout-Constraints"></a>
 
 ### Layout Constraints
 
@@ -107,17 +107,17 @@ Where the `NSLayoutAttribute` enum defines the value for the view's margins and 
 
 Unlike with the Layout Anchor API, the `NSLayoutConstraint` creation methods do not highlight the important aspects of a particular constraint and there are no compile time checks performed on the constraint. As a result, it is easy to construct an invalid constraint that will throw an exception at runtime.
 
-<a name="Visual-Format-Language" />
+<a name="Visual-Format-Language"></a>
 
 ### Visual Format Language
 
 The Visual Format Language allows you to define constraints using ASCII art like strings that provide a visual representation of the constraint being created. This has the following advantages and disadvantages:
 
 - The Visual Format Language enforces the creation of valid constraints only.
- - Auto Layout outputs constraints to the console using the Visual Format Language so the debugging messages will resemble the code used to create the constraint.
- - The Visual Format Language allows you to create multiple constraints at the same time with a very compact expression.
- - Since there is no compile-side validation of the Visual Format Language strings, issues can only be discovered at runtime.
- - Since the Visual Format Language emphasizes visualization over completeness some constraint types cannot be created with it (such as ratios).
+- Auto Layout outputs constraints to the console using the Visual Format Language so the debugging messages will resemble the code used to create the constraint.
+- The Visual Format Language allows you to create multiple constraints at the same time with a very compact expression.
+- Since there is no compile-side validation of the Visual Format Language strings, issues can only be discovered at runtime.
+- Since the Visual Format Language emphasizes visualization over completeness some constraint types cannot be created with it (such as ratios).
 
 You take the following steps when using the Visual Format Language to create a constraint:
 
@@ -148,7 +148,7 @@ For more complex UI designs, such as multiple child views on a single line, the 
 
 See Apple's [Visual Format Language Appendix](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1) for some examples of specifying common constraints and the Visual Format String Grammar.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

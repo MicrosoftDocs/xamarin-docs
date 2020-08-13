@@ -7,6 +7,7 @@ ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 18. MVVM
@@ -89,8 +90,6 @@ The [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 ## ViewModels and the application lifecycle
 
 The `AdderViewModel` used in the **AddingMachine** sample also defines two methods named `SaveState` and `RestoreState`. These methods are called from the application when it goes to sleep and when it starts up again.
-
-
 
 ## Related links
 

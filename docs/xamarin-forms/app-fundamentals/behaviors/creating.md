@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Create Xamarin.Forms behaviors
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior&lt;T&gt; class. This article demonstrates how to create and consume Xamarin.Forms behaviors._
 
@@ -79,7 +80,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-The `NumericValidationBehavior` derives from the [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class, where `T` is an [`Entry`](xref:Xamarin.Forms.Entry). The [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event, with the [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method de-registering the `TextChanged` event to prevent memory leaks. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered by the user into the `Entry`, and sets the [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) property to red if the value isn't a `double`.
+The `NumericValidationBehavior` derives from the [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class, where `T` is an [`Entry`](xref:Xamarin.Forms.Entry). The [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event, with the [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method de-registering the `TextChanged` event to prevent memory leaks. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered by the user into the `Entry`, and sets the [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) property to red if the value isn't a `double`.
 
 > [!NOTE]
 > Xamarin.Forms does not set the `BindingContext` of a behavior, because behaviors can be shared and applied to multiple controls through styles.
@@ -105,7 +106,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 At runtime the behavior will respond to interaction with the control, according to the behavior implementation. The following screenshots demonstrate the behavior responding to invalid input:
 
-[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
+[![Sample Application with Xamarin.Forms Behavior](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > Behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in an exception being thrown.
@@ -169,7 +170,7 @@ The following code example shows an *explicit* style for the `NumericValidationB
 </Style>
 ```
 
-The [`Style`](xref:Xamarin.Forms.Style) can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) control by setting its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
+The [`Style`](xref:Xamarin.Forms.Style) can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) control by setting its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to the `Style` instance using the `StaticResource` markup extension, as demonstrated in the following code example:
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
@@ -203,10 +204,9 @@ In addition, note that behaviors are not implicitly removed from controls when p
 
 This article demonstrated how to create and consume Xamarin.Forms behaviors. Xamarin.Forms behaviors are created by deriving from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class.
 
-
 ## Related Links
 
-- [Xamarin.Forms Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [Xamarin.Forms Behavior applied with a Style (sample)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Xamarin.Forms Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+- [Xamarin.Forms Behavior applied with a Style (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehaviorstyle)
 - [Behavior](xref:Xamarin.Forms.Behavior)
-- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)
+- [Behavior\<T>](xref:Xamarin.Forms.Behavior`1)

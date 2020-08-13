@@ -3,8 +3,8 @@ title: "Real-world example using CocoaPods"
 description: "This document demonstrates how to use Objective Sharpie to automatically generate the C# binding definitions from a CocoaPod."
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
 ---
 
@@ -93,10 +93,6 @@ After generating the **ApiDefinitions.cs** and **StructsAndEnums.cs** files,
 take a look at the following documentation to generate an assembly to use
 in your apps:
 
-- [Binding Objective-C
-  overview](~/cross-platform/macios/binding/overview.md)
+- [Binding Objective-C overview](~/cross-platform/macios/binding/overview.md)
 - [Binding Objective-C libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Walkthrough: Binding an iOS Objective-C
-  library](~/ios/platform/binding-objective-c/walkthrough.md)
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Walkthrough: Binding an iOS Objective-C library](~/ios/platform/binding-objective-c/walkthrough.md)

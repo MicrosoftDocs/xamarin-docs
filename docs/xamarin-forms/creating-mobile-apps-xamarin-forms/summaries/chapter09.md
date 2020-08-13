@@ -7,6 +7,7 @@ ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 9. Platform-specific API calls

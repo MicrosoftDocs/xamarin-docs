@@ -3,8 +3,8 @@ title: "Use .NET Standard Libraries to Share Code"
 description: "This document describes how to use .NET Standard Libraries to share code. It discusses creating a .NET Standard library, editing its settings, and using it in an application."
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 07/18/2018
 ---

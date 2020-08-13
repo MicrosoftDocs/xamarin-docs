@@ -3,8 +3,8 @@ title: "Updating Existing Xamarin.Forms Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Forms app from the Classic API to the Unified API."
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -43,14 +43,14 @@ Part of the migration requires upgrading Xamarin.Forms to version 1.3, which sup
 
 Click on the iOS project so that it's selected, then choose **Project > Migrate to Xamarin.iOS Unified API...** and agree to the warning message that appears.
 
-![](updating-xamarin-forms-apps-images/beta-tool1.png "Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears")
+![Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears](updating-xamarin-forms-apps-images/beta-tool1.png)
 
 This will automatically:
 
- - Change the project type to support the Unified 64-bit API.
- - Change the framework reference to **Xamarin.iOS** (replacing the old **monotouch** reference).
- - Change the namespace references in the code to remove the `MonoTouch` prefix.
- - Update the **csproj** file to use the correct build targets for the Unified API.
+- Change the project type to support the Unified 64-bit API.
+- Change the framework reference to **Xamarin.iOS** (replacing the old **monotouch** reference).
+- Change the namespace references in the code to remove the `MonoTouch` prefix.
+- Update the **csproj** file to use the correct build targets for the Unified API.
 
 **Clean** and **Build** the project to ensure there are no other errors to fix. No further action should be required. These steps are explained in more detail in the [Unified API docs](~/cross-platform/macios/unified/updating-ios-apps.md).
 
@@ -62,8 +62,8 @@ If you have added additional iOS native code (such as custom renderers or depend
 
 Once the iOS app has been updated to the Unified API, the rest of the solution needs to be updated to Xamarin.Forms version 1.3.1. This includes:
 
- - Updating the Xamarin.Forms NuGet package in each project.
- - Changing the code to use the new Xamarin.Forms `Application`,  `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), and `FormsApplicationPage` (Windows Phone) classes.
+- Updating the Xamarin.Forms NuGet package in each project.
+- Changing the code to use the new Xamarin.Forms `Application`,  `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), and `FormsApplicationPage` (Windows Phone) classes.
 
 These steps are explained below:
 
@@ -71,7 +71,8 @@ These steps are explained below:
 
 Update Xamarin.Forms to 1.3.1 pre-release using the NuGet Package Manager for all projects in the solution: PCL (if present), iOS, Android, and Windows Phone. It is recommended that you **delete and re-add** the Xamarin.Forms NuGet package to update to version 1.3.
 
-**NOTE:** Xamarin.Forms version 1.3.1 is currently in *pre-release*. This means you must select the **pre-release** option in NuGet (via a tick-box in Visual Studio for Mac or a drop-down-list in Visual Studio) to see the latest pre-release version.
+> [!NOTE]
+> Xamarin.Forms version 1.3.1 is currently in *pre-release*. This means you must select the **pre-release** option in NuGet (via a tick-box in Visual Studio for Mac or a drop-down-list in Visual Studio) to see the latest pre-release version.
 
 > [!IMPORTANT]
 > If you are using Visual Studio, ensure the latest version of the NuGet Package Manager is installed. Older versions of NuGet in Visual Studio will not correctly install the Unified version of Xamarin.Forms 1.3.1. Go to **Tools > Extensions and Updates...** and click on the **Installed** list to check that the **NuGet Package Manager for Visual Studio** is at least version 2.8.5. If it is older, click on the **Updates** list to download the latest version.
@@ -82,17 +83,17 @@ Once you've updated the NuGet package to Xamarin.Forms 1.3.1, make the following
 
 Change the **App.cs** file so that:
 
- - The `App` class now inherits from `Application`.
- - The `MainPage` property is set to the first content page you wish to display.
+- The `App` class now inherits from `Application`.
+- The `MainPage` property is set to the first content page you wish to display.
 
 ```csharp
 public class App : Application // superclass new in 1.3
 {
-	public App ()
-	{
-		// The root page of your application
-		MainPage = new ContentPage {...}; // property new in 1.3
-	}
+    public App ()
+    {
+        // The root page of your application
+        MainPage = new ContentPage {...}; // property new in 1.3
+    }
 ```
 
 We have completely removed the `GetMainPage` method, and instead set the `MainPage` *property* on the `Application` subclass.
@@ -105,22 +106,22 @@ The `App` class is then passed to a new `LoadApplication` method in each app pro
 
 Change the **AppDelegate.cs** file so that:
 
- - The class inherits from `FormsApplicationDelegate` (instead of `UIApplicationDelegate` previously).
- - `LoadApplication` is called with a new instance of `App`.
+- The class inherits from `FormsApplicationDelegate` (instead of `UIApplicationDelegate` previously).
+- `LoadApplication` is called with a new instance of `App`.
 
 ```csharp
 [Register ("AppDelegate")]
 public partial class AppDelegate :
     global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 {
-	public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-	{
-		global::Xamarin.Forms.Forms.Init ();
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init ();
 
-		LoadApplication (new App ());  // method is new in 1.3
+        LoadApplication (new App ());  // method is new in 1.3
 
-		return base.FinishedLaunching (app, options);
-	}
+        return base.FinishedLaunching (app, options);
+    }
 }
 ```
 
@@ -128,8 +129,8 @@ public partial class AppDelegate :
 
 Change the **MainActivity.cs** file so that:
 
- - The class inherits from `FormsApplicationActivity` (instead of `FormsActivity` previously).
- - `LoadApplication` is called with a new instance of `App`
+- The class inherits from `FormsApplicationActivity` (instead of `FormsActivity` previously).
+- `LoadApplication` is called with a new instance of `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -137,14 +138,14 @@ ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 public class MainActivity :
     global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 {
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		global::Xamarin.Forms.Forms.Init (this, bundle);
+        global::Xamarin.Forms.Forms.Init (this, bundle);
 
-		LoadApplication (new App ()); // method is new in 1.3
-	}
+        LoadApplication (new App ()); // method is new in 1.3
+    }
 }
 ```
 
@@ -154,8 +155,8 @@ We need to update the **MainPage** - both the XAML and the codebehind.
 
 Change the **MainPage.xaml** file so that:
 
- - The root XAML element should be `winPhone:FormsApplicationPage`.
- - The `xmlns:phone` attribute should be *changed* to `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- The root XAML element should be `winPhone:FormsApplicationPage`.
+- The `xmlns:phone` attribute should be *changed* to `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 An updated example is shown below - you should only have to edit these things (the rest of the attributes should remain the same):
 
@@ -169,8 +170,8 @@ An updated example is shown below - you should only have to edit these things (t
 
 Change the **MainPage.xaml.cs** file so that:
 
- - The class inherits from `FormsApplicationPage` (instead of `PhoneApplicationPage` previously).
- - `LoadApplication` is called with a new instance of the Xamarin.Forms `App` class. You may need to fully qualify this reference since Windows Phone has it's own `App` class already defined.
+- The class inherits from `FormsApplicationPage` (instead of `PhoneApplicationPage` previously).
+- `LoadApplication` is called with a new instance of the Xamarin.Forms `App` class. You may need to fully qualify this reference since Windows Phone has it's own `App` class already defined.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -190,14 +191,14 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 Occasionally you will see an error similar to this after updating the Xamarin.Forms NuGet package. It occurs when the NuGet updater does not completely remove references to older versions from your **csproj** files.
 
->YOUR\_PROJECT.csproj: Error: This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (YOUR\_PROJECT)
+>YOUR\_PROJECT.csproj: Error: This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (YOUR\_PROJECT)
 
 To fix these errors, open the **csproj** file in a text editor and look for `<Target` elements that refer to older versions of Xamarin.Forms, such as the element shown below. You should manually delete this entire element from the **csproj** file and save the changes.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>
@@ -238,4 +239,4 @@ As noted above, if your Xamarin.Forms app includes native code such as custom re
 - [Updating iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
 - [Updating Tips](~/cross-platform/macios/unified/updating-tips.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

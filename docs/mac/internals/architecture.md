@@ -4,8 +4,8 @@ description: "This guide explores Xamarin.Mac and its relationship to Objective-
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
 ---
 
@@ -106,27 +106,27 @@ Xamarin.Mac contains definitions for every Mac API. You can browse through any o
 [BaseType (typeof (NSView))]
 public interface NSBox {
 
-		…
+    …
 
-		[Export ("borderRect")]
-		CGRect BorderRect { get; }
+    [Export ("borderRect")]
+    CGRect BorderRect { get; }
 
-		[Export ("titleRect")]
-		CGRect TitleRect { get; }
+    [Export ("titleRect")]
+    CGRect TitleRect { get; }
 
-		[Export ("titleCell")]
-		NSObject TitleCell { get; }
+    [Export ("titleCell")]
+    NSObject TitleCell { get; }
 
-		[Export ("sizeToFit")]
-		void SizeToFit ();
+    [Export ("sizeToFit")]
+    void SizeToFit ();
 
-		[Export ("contentViewMargins")]
-		CGSize ContentViewMargins { get; set; }
+    [Export ("contentViewMargins")]
+    CGSize ContentViewMargins { get; set; }
 
-		[Export ("setFrameFromContentFrame:")]
-		void SetFrameFromContentFrame (CGRect contentFrame);
+    [Export ("setFrameFromContentFrame:")]
+    void SetFrameFromContentFrame (CGRect contentFrame);
 
-		…
+    …
 
 }
 ```

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin for Java Developers"
+title: "Xamarin for Java developers"
 description: "If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier."
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
 ---
 
-# Xamarin for Java Developers
+# Xamarin for Java developers
 
 _If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier._
-
 
 ## Overview
 
@@ -33,17 +32,17 @@ keywords.
 
 Many key characteristics of Java can be found in C#:
 
--   Class-based object-oriented programming
+- Class-based object-oriented programming
 
--   Strong typing
+- Strong typing
 
--   Support for interfaces
+- Support for interfaces
 
--   Generics
+- Generics
 
--   Garbage collection
+- Garbage collection
 
--   Runtime compilation
+- Runtime compilation
 
 Both Java and C# are compiled to an intermediate language that is run
 in a managed execution environment. Both C# and Java are
@@ -58,36 +57,35 @@ synchronization support.
 
 However, there are many differences between Java and C#. For example:
 
--   Java does not support implicitly-typed local variables (C#
+- Java (as used on Android) does not support implicitly-typed local variables (C#
     supports the `var` keyword).
 
--   In Java, you can pass parameters only by value, while in C# you can
+- In Java, you can pass parameters only by value, while in C# you can
     pass by reference as well as by value. (C# provides the `ref` and
     `out` keywords for passing parameters by reference; there is no
     equivalent to these in Java).
 
--   Java does not support preprocessor directives like `#define`.
+- Java does not support preprocessor directives like `#define`.
 
--   Java does not support unsigned integer types, while C# provides
+- Java does not support unsigned integer types, while C# provides
     unsigned integer types such as `ulong`, `uint`, `ushort` and
     `byte`.
 
--   Java does not support operator overloading; in C# you can overload
+- Java does not support operator overloading; in C# you can overload
     operators and conversions.
 
--   In a Java `switch` statement, code can fall through into the 
+- In a Java `switch` statement, code can fall through into the 
     next switch section, but in C# the end of every `switch` section must
     terminate the switch (the end of each section must close with a
     `break` statement).
 
--   In Java, you specify the exceptions thrown by a method with the
+- In Java, you specify the exceptions thrown by a method with the
     `throws` keyword, but C# has no concept of checked exceptions &ndash;
     the `throws` keyword is not supported in C#.
 
--   C# supports Language-Integrated Query (LINQ), which lets you use
+- C# supports Language-Integrated Query (LINQ), which lets you use
     the reserved words `from`, `select`, and `where` to write queries
     against collections in a way that is similar to database queries.
-
 
 Of course, there are many more differences between C# and Java than can
 be covered in this article. Also, both Java and C# continue to
@@ -96,14 +94,14 @@ supports C#-style lambda expressions) so these differences will change over
 time. Only the most important differences currently encountered by Java
 developers new to Xamarin.Android are outlined here.
 
--   [Going from Java to C# Development](#fundamentals) provides an
+- [Going from Java to C# Development](#fundamentals) provides an
     introduction to the fundamental differences between C# and Java.
 
--   [Object-Oriented Programming Features](#oopfeatures) outlines
+- [Object-Oriented Programming Features](#oopfeatures) outlines
     the most important object-oriented feature differences between
     the two languages.
 
--   [Keyword Differences](#keywords) provides a table of useful
+- [Keyword Differences](#keywords) provides a table of useful
     keyword equivalents, C#-only keywords, and links to C# keyword
     definitions.
 
@@ -111,27 +109,26 @@ C# brings many key features to Xamarin.Android that are not currently
 readily available to Java developers on Android. These features can
 help you to write better code in less time:
 
--   [Properties](#properties) &ndash; With C#'s property system, you can access
+- [Properties](#properties) &ndash; With C#'s property system, you can access
     member variables safely and directly without having to write setter
     and getter methods.
 
--   [Lambda Expressionss](#lambdas) &ndash; In C# you can use anonymous methods (also
+- [Lambda Expressions](#lambdas) &ndash; In C# you can use anonymous methods (also
     called *lambdas*) to express your functionality more succinctly and
     more efficiently. You can avoid the overhead of having to write
     one-time-use objects, and you can pass local state to a method
     without having to add parameters.
 
--   [Event Handling](#events) &ndash; C# provides language-level support for
+- [Event Handling](#events) &ndash; C# provides language-level support for
     *event-driven programming*, where an object can register to be
     notified when an event of interest occurs. The `event` keyword
     defines a multicast broadcast mechanism that a publisher
     class can use to notify event subscribers.
 
--   [Asynchronous Programming](#async) &ndash; The asynchronous
+- [Asynchronous Programming](#async) &ndash; The asynchronous
     programming features of C# (`async`/`await`) keep apps responsive.
     The language-level support of this feature makes async programming
     easy to implement and less error-prone.
-
 
 Finally, Xamarin allows you to
 [leverage existing Java assets](#interop) via a technology known as
@@ -140,17 +137,22 @@ libraries from C# by making use of Xamarin's automatic binding
 generators. To do this, you simply create a static library in Java and
 expose it to C# via a binding.
 
-<a name="fundamentals" />
+> [!NOTE]
+> Android programming uses a specific version of the Java language
+> that supports all Java 7 features [and a subset of Java 8](https://developer.android.com/studio/write/java8-support.html).
+>
+> Some features mentioned on this page (such as the `var` keyword in C#) are
+> available in newer versions of Java (e.g. [`var` in Java 10](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), but are still not available to Android developers.
 
-## Going From Java to C# Development
+<a name="fundamentals"></a>
+
+## Going from Java to C# development
 
 The following sections outline the basic "getting started" differences
 between C# and Java; a later section describes the object-oriented
 differences between these languages.
 
-
-
-### Libraries vs. Assemblies
+### Libraries vs. assemblies
 
 Java typically packages related classes in **.jar** files. In C# and
 .NET, however, reusable bits of precompiled code are packaged into
@@ -163,8 +165,7 @@ For more information about assemblies, see the
 [Assemblies and the Global Assembly Cache](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/)
 topic.
 
-
-### Packages vs. Namespaces
+### Packages vs. namespaces
 
 C# uses the `namespace` keyword to group related types together; this
 is similar to Java's `package` keyword. Typically, a Xamarin.Android
@@ -178,8 +179,7 @@ namespace WeatherApp
     ...
 ```
 
-
-### Importing Types
+### Importing types
 
 When you make use of types defined in external namespaces, you import
 these types with a `using` statement (which is very similar to the Java
@@ -218,8 +218,6 @@ using System.Threading.Tasks;
 These statements import functionality from the `System`, `Android.App`,
 `Android.Content`, etc. namespaces.
 
-
-
 ### Generics
 
 Both Java and C# support *generics*, which are placeholders that let
@@ -254,57 +252,54 @@ Note that there are some limitations in Xamarin.Android support for
 generic C# classes; for more information, see
 [Limitations](~/android/internals/limitations.md).
 
+<a name="oopfeatures"></a>
 
-<a name="oopfeatures" />
-
-## Object-Oriented Programming Features
+## Object-oriented programming features
 
 Both Java and C# use very similar object-oriented programming idioms:
 
--   All classes are ultimately derived from a single root object
+- All classes are ultimately derived from a single root object
     &ndash; all Java objects derive from `java.lang.Object`, while all
     C# objects derive from `System.Object`.
 
--   Instances of classes are reference types.
+- Instances of classes are reference types.
 
--   When you access the properties and methods of an instance, you
-    use the "<code>.</code>" operator.
+- When you access the properties and methods of an instance, you
+    use the "`.`" operator.
 
--   All class instances are created on the heap via the `new` operator.
+- All class instances are created on the heap via the `new` operator.
 
--   Because both languages use garbage collection, there is way to
+- Because both languages use garbage collection, there is no way to
     explicitly release unused objects (i.e., there is not a `delete`
     keyword as there is in C++).
 
--   You can extend classes through inheritance, and both languages
+- You can extend classes through inheritance, and both languages
     only allow a single base class per type.
 
--   You can define interfaces, and a class can inherit from (i.e.,
+- You can define interfaces, and a class can inherit from (i.e.,
     implement) multiple interface definitions.
 
 However, there are also some important differences:
 
--   Java has two powerful features that C# does not support: anonymous
+- Java has two powerful features that C# does not support: anonymous
     classes and inner classes. (However, C# does allow nesting of class
     definitions &ndash; C#'s nested classes are like Java's static
     nested classes.)
 
--   C# supports C-style structure types (`struct`) while Java does not.
+- C# supports C-style structure types (`struct`) while Java does not.
 
--   In C#, you can implement a class definition in separate source
+- In C#, you can implement a class definition in separate source
     files by using the `partial` keyword.
 
--   C# interfaces cannot declare fields.
+- C# interfaces cannot declare fields.
 
--   C# uses C++-style destructor syntax to express finalizers. The
+- C# uses C++-style destructor syntax to express finalizers. The
     syntax is different from Java's `finalize` method, but the
     semantics are nearly the same. (Note that in C#, destructors
     automatically call the base-class destructor &ndash; in contrast to
     Java where an explicit call to `super.finalize` is used.)
 
-
-
-### Class Inheritance
+### Class inheritance
 
 To extend a class in Java, you use the `extends` keyword. To extend a
 class in C#, you use a colon (`:`) to indicate derivation. For example,
@@ -344,9 +339,6 @@ class name with `final`.
 For more about C# class definitions, see the
 [Classes](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) and
 [Inheritance](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) topics.
-
-
-<a name="properties" />
 
 ### Properties
 
@@ -398,9 +390,7 @@ For more information about C# properties, see the
 [Properties](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties)
 topic.
 
-
-
-### Calling Base Class Methods
+### Calling base class methods
 
 To call a base-class constructor in C#, you use a colon (`:`) followed
 by the `base` keyword and an initializer list; this `base` constructor
@@ -415,7 +405,7 @@ app:
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...
@@ -446,17 +436,15 @@ In this case, the `OnCreate` method defined by the derived class
 (`MainActivity`) calls the `OnCreate` method of the base class
 (`Activity`).
 
-
-
-### Access Modifiers
+### Access modifiers
 
 Java and C# both support the `public`, `private`, and `protected`
 access modifiers. However, C# supports two additional access modifiers:
 
--   **`internal`** &ndash; The class member is accessible only within
+- **`internal`** &ndash; The class member is accessible only within
     the current assembly.
 
--   **`protected internal`** &ndash; The class member is accessible
+- **`protected internal`** &ndash; The class member is accessible
     within the defining assembly, the defining class, and derived
     classes (derived classes both inside and outside the assembly
     have access).
@@ -465,9 +453,7 @@ For more information about C# access modifiers, see the
 [Access Modifiers](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
 topic.
 
-
-
-### Virtual and Override Methods
+### Virtual and override methods
 
 Both Java and C# support *polymorphism*, the ability to treat related
 objects in the same manner. In both languages, you can use a base-class
@@ -480,26 +466,25 @@ Like Java, C# supports `abstract` classes and methods.
 However, there are some differences between Java and C# in how you
 declare virtual methods and override them:
 
--   In C#, methods are non-virtual by default. Parent classes must
+- In C#, methods are non-virtual by default. Parent classes must
     explicitly label which methods are to be overridden by using the
     `virtual` keyword. By contrast, all methods in Java are virtual
     methods by default.
 
--   To prevent a method from being overridden in C#, you simply leave
+- To prevent a method from being overridden in C#, you simply leave
     off the `virtual` keyword. By contrast, Java uses the `final`
     keyword to mark a method with "override is not allowed."
 
--   C# derived classes must use the `override` keyword to explicitly
+- C# derived classes must use the `override` keyword to explicitly
     indicate that a virtual base-class method is being overridden.
 
 For more information about C#'s support for polymorphism, see the
 [Polymorphism](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism)
 topic.
 
+<a name="lambdas"></a>
 
-<a name="lambdas" />
-
-## Lambda Expressions
+## Lambda expressions
 
 C# makes it possible to create *closures*: inline, anonymous methods
 that can access the state of the method in which they are enclosed.
@@ -549,10 +534,9 @@ For more information about C# and lambda expressions, see the
 [Lambda Expressions](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)
 topic.
 
+<a name="events"></a>
 
-<a name="events" />
-
-## Event Handling
+## Event handling
 
 An *event* is a way for an object to notify registered subscribers when
 something interesting happens to that object. Unlike in Java, where a
@@ -587,10 +571,10 @@ that UI control.
 
 To subscribe to an event:
 
-1.  Create a delegate object that refers to the method that you want
+1. Create a delegate object that refers to the method that you want
     to be invoked when the event occurs.
 
-2.  Use the `+=` operator to attach your delegate to the event
+2. Use the `+=` operator to attach your delegate to the event
     you are subscribing to.
 
 The following example defines a delegate (with an explicit
@@ -640,10 +624,9 @@ Xamarin.Android code), and you spend more time thinking about the
 business logic of your application and less time wading through
 syntactical overhead.
 
+<a name="async"></a>
 
-<a name="async" />
-
-## Asynchronous Programming
+## Asynchronous programming
 
 *Asynchronous programming* is a way to improve the overall
 responsiveness of your application. Asynchronous programming features
@@ -674,7 +657,6 @@ place in a background task.
 
 In the following example, a button click event handler causes an asynchronous
 operation to download an image from the web:
-
 
 ```csharp
 downloadButton.Click += downloadAsync;
@@ -715,10 +697,9 @@ For more information about Xamarin support of asynchronous programming
 features, see
 [Async Support Overview](~/cross-platform/platform/async.md).
 
+<a name="keywords"></a>
 
-<a name="keywords" />
-
-## Keyword Differences
+## Keyword differences
 
 Many language keywords used in Java are also used in C#. There are also
 a number of Java keywords that have an equivalent but differently-named
@@ -738,12 +719,11 @@ counterpart in C#, as listed in this table:
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|Used to access members of the parent class from within a derived class.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Wraps a critical section of code with lock acquisition and release.|
 
-
 Also, there are many keywords that are unique to C# and have no
-counterpart in Java. Xamarin.Android code often makes use of the
+counterpart in the Java used on Android. Xamarin.Android code often makes use of the
 following C# keywords (this table is useful to refer to when you
 are reading through Xamarin.Android
-[sample code](https://developer.xamarin.com/samples/android/all/)):
+[sample code](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)):
 
 |C#|Description|
 |---|---|
@@ -771,30 +751,27 @@ are reading through Xamarin.Android
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|References the value that client code wants to assign to a property.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Allows a method to be overridden in a derived class.|
 
+<a name="interop"></a>
 
-<a name="interop" />
-
-## Interoperating with Existing Java Code
+## Interoperating with existing java code
 
 If you have existing Java functionality that you do not want to convert
 to C#, you can reuse your existing Java libraries in Xamarin.Android
 applications via two techniques:
 
--  **Create a Java Bindings Library** &ndash; Using this approach, you use Xamarin
+- **Create a Java Bindings Library** &ndash; Using this approach, you use Xamarin
    tools to generate C# wrappers around Java types. These wrappers are called
    *bindings*. As a result, your Xamarin.Android application can use your *.jar*
    file by calling into these wrappers.
 
--  **Java Native Interface** &ndash; The *Java Native Interface* (JNI) is a
+- **Java Native Interface** &ndash; The *Java Native Interface* (JNI) is a
    framework that makes it possible for C# apps to call or be called by
    Java code.
 
 For more information about these techniques, see
 [Java Integration Overview](~/android/platform/java-integration/index.md).
 
-
-
-## For Further Reading
+## Further reading
 
 The MSDN [C# Programming Guide](https://docs.microsoft.com/dotnet/csharp/programming-guide/) is a
 great way to get started in learning the C# programming language, and you can use
@@ -816,8 +793,6 @@ can help you build your first Xamarin.Android application and further
 advance your understanding of the fundamentals of Android application
 development with Xamarin.
 
-
-
 ## Summary
 
 This article provided an introduction to the Xamarin.Android C#
@@ -834,8 +809,7 @@ important C# keywords, explained how to interoperate with existing Java
 libraries, and provided links to related documentation for further
 study.
 
-
-## Related Links
+## Related links
 
 - [Java Integration Overview](~/android/platform/java-integration/index.md)
 - [C# Programming Guide](https://docs.microsoft.com/dotnet/csharp/programming-guide/)

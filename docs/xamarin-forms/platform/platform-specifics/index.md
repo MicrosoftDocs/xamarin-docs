@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Platform-Specifics
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects._
 
@@ -48,11 +49,11 @@ The result of exposing an Effect as a platform-specific is that the Effect can b
 > [!NOTE]
 > It's envisaged that vendors will use this technique to create their own platform-specifics, for ease of consumption by users. While users may choose to create their own platform-specifics, it should be noted that it requires more code than creating and consuming an Effect.
 
-The [sample application](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control:
+The [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control:
 
-![](images/screenshots.png "Shadow Platform-Specific")
+![Shadow Platform-Specific](images/screenshots.png)
 
-The [sample application](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) implements the `Shadow` platform-specific on each platform, for ease of understanding. However, aside from each platform-specific Effect implementation, the implementation of the Shadow class is largely identical for each platform. Therefore, this guide focusses on the implementation of the Shadow class and associated Effect on a single platform.
+The [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implements the `Shadow` platform-specific on each platform, for ease of understanding. However, aside from each platform-specific Effect implementation, the implementation of the Shadow class is largely identical for each platform. Therefore, this guide focusses on the implementation of the Shadow class and associated Effect on a single platform.
 
 For more information about Effects, see [Customizing Controls with Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
@@ -272,8 +273,8 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
-- [ShadowPlatformSpecific (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
+- [PlatformSpecifics (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [iOS Platform-Specifics](~/xamarin-forms/platform/ios/index.md)
 - [Android Platform-Specifics](~/xamarin-forms/platform/android/index.md)
 - [Windows Platform-Specifics](~/xamarin-forms/platform/windows/index.md)

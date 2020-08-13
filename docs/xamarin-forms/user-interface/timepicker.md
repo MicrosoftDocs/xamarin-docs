@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms TimePicker
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
 _A Xamarin.Forms view that allows the user to select a time._
 
@@ -23,6 +24,7 @@ The Xamarin.Forms [`TimePicker`](xref:Xamarin.Forms.TimePicker) invokes the plat
 - [`FontAttributes`](xref:Xamarin.Forms.TimePicker.FontAttributes) of type [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), which defaults to [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None).
 - [`FontFamily`](xref:Xamarin.Forms.TimePicker.FontFamily) of type `string`, which defaults to `null`.
 - [`FontSize`](xref:Xamarin.Forms.TimePicker.FontSize) of type `double`, which defaults to -1.0.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the `TimePicker` text.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The [`Time`](xref:Xamarin.Forms.TimePicker.Time) property has a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that it can be a target of a data binding in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture.
 
@@ -74,7 +76,7 @@ However, this is not recommended. Depending on the setting of the [`Format`](xre
 
 ## TimePicker in an application
 
-The [**SetTimer**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/) sample includes [`TimePicker`](xref:Xamarin.Forms.TimePicker), [`Entry`](xref:Xamarin.Forms.Entry), and [`Switch`](xref:Xamarin.Forms.Switch) views on its page. The `TimePicker` can be used to select a time, and when that time occurs an alert dialog is displayed that reminds the user of the text in the `Entry`, provided the `Switch` is toggled on. Here's the XAML file:
+The [**SetTimer**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) sample includes [`TimePicker`](xref:Xamarin.Forms.TimePicker), [`Entry`](xref:Xamarin.Forms.Entry), and [`Switch`](xref:Xamarin.Forms.Switch) views on its page. The `TimePicker` can be used to select a time, and when that time occurs an alert dialog is displayed that reminds the user of the text in the `Entry`, provided the `Switch` is toggled on. Here's the XAML file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -174,5 +176,5 @@ As soon as the alert dialog is displayed, the [`Switch`](xref:Xamarin.Forms.Swit
 
 ## Related links
 
-- [SetTimer sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+- [SetTimer sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 - [TimePicker API](xref:Xamarin.Forms.TimePicker)

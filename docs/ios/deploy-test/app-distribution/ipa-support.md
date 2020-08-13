@@ -4,8 +4,8 @@ description: "This article covers how to create an IPA file that can be used to 
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -20,7 +20,7 @@ In addition to releasing an application for sale through the iTunes App Store, i
 
 In either case, an IPA package (a special type of zip file) must be created and digitally signed with the correct Distribution Provisioning Profile. This article covers the steps required to build the IPA package and install the package on an iOS device using iTunes on a Mac or Windows PC.
 
-<a name="iTunesMetadata" />
+<a name="iTunesMetadata"></a>
 
 ## The iTunesMetadata.plist File
 
@@ -30,7 +30,7 @@ iOS applications that are delivered either via Ad Hoc or In-House distribution, 
 
 A custom **iTunesMetadata.plist** can also be created to supply the additional information to a distribution. To find out more about the content of this file and how to create it, please see our [The iTunesMetadata.plist Contents](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_contents) and [Creating an iTunesMetadata.plist File](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_creating) documentation.
 
-<a name="iTunesArtwork" />
+<a name="iTunesArtwork"></a>
 
 ## iTunes Artwork
 
@@ -45,7 +45,7 @@ To specify the iTunes Artwork, do the following:
 
 Please see the [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md) documentation for more details.
 
-<a name="createipa" />
+<a name="createipa"></a>
 
 ## Creating an IPA
 
@@ -55,25 +55,23 @@ Creating an IPA is now built into the new publishing workflow. To do this, follo
 
 Before starting to create an IPA for a cross-platform solution, ensure that you have selected the iOS project as your startup project:
 
-![](ipa-support-images/setasstartup.png "Selected the iOS project as the startup project")
+![Selected the iOS project as the startup project](ipa-support-images/setasstartup.png)
 
 ### Build your Archive
 
 To build an IPA, an _archive_ of a release build of our application needs to be created. This Archive contains our app and identifying information about it.
 
-
 1. Select the **Release | Device** configuration in Visual Studio for Mac:  !
 
-    ![](ipa-support-images/buildxs01new.png "Select the Release | Device configuration")
+    ![Select the Release | Device configuration](ipa-support-images/buildxs01new.png)
 
 1. From the **Build** menu, select **Archive for Publishing**:
 
-    ![](ipa-support-images/buildxs02new.png "Select Archive for Publishing")
+    ![Select Archive for Publishing](ipa-support-images/buildxs02new.png)
 
 1. Once the archive has been created, the **Archives** view will be displayed:
 
-    ![](ipa-support-images/buildxs03new.png "The Archives view will be displayed")
-
+    ![The Archives view will be displayed](ipa-support-images/buildxs03new.png)
 
 ### Sign and Distribute your App
 
@@ -85,36 +83,33 @@ Note that for non-App Store builds the **iTunesMetadata.plist** file, and iTunes
 
 To sign your app and prepare it for distribution:
 
-
 1. Select the **Sign and Distribute...** button, illustrated below:
 
-    ![](ipa-support-images/buildxs04new.png "Select Sign and Distribute...")
+    ![Select Sign and Distribute...](ipa-support-images/buildxs04new.png)
 
 1. This will open the publishing wizard. Select the **Ad-Hoc** or **Enterprise**(In-House) distribution channel to create a package:
 
-    ![](ipa-support-images/distribute01.png "Select the Ad-Hoc or Enterprise In-House distribution")
+    ![Select the Ad-Hoc or Enterprise In-House distribution](ipa-support-images/distribute01.png)
 
 1. On the Provisioning Profile screen, select your signing identity and corresponding provisioning profile, or re-sign with another identity:
 
-    ![](ipa-support-images/distribute02.png "Select the signing identity and corresponding provisioning profile")
+    ![Select the signing identity and corresponding provisioning profile](ipa-support-images/distribute02.png)
 
 1. Verify the details of your package, and click **Publish**:
 
-    ![](ipa-support-images/distribute03.png "Verify the package details")
+    ![Verify the package details](ipa-support-images/distribute03.png)
 
 1. Finally, save your IPA to your machine:
 
-    ![](ipa-support-images/distribute04.png "Save the IPA to the computer")
-
+    ![Save the IPA to the computer](ipa-support-images/distribute04.png)
 
 ### Building via the Command Line (On Mac)
 
 In certain cases, such as in a CI environment, it may be necessary to build you IPA via the command line. Follow the steps below to achieve this:
 
-
 1. Ensure **Project Options > iOS IPA Options > Include iTunesArtwork images** is checked and **Build ad-hoc/enterprise package (IPA)** is checked:
 
-    ![](ipa-support-images/imagexs04.png "Include iTunesArtwork images and Build ad-hoc/enterprise package IPA is checked")
+    ![Include iTunesArtwork images and Build ad-hoc/enterprise package IPA is checked](ipa-support-images/imagexs04.png)
 
     If you prefer, you can instead edit the **.csproj** file in a text editor and manually add the two corresponding properties to the `PropertyGroup` for the configuration that will be used to build the app:
 
@@ -125,7 +120,7 @@ In certain cases, such as in a CI environment, it may be necessary to build you 
 
 1. If you are including an optional **iTunesMetadata.plist** file, click the **...** button, select it from the list and click the **OK** button:
 
-     ![](ipa-support-images/imagexs03.png "Select iTunesMetadata.plist from the list")
+     ![Select iTunesMetadata.plist from the list](ipa-support-images/imagexs03.png)
 
 1. Call **msbuild** directly and pass this property on the command line:
 
@@ -139,33 +134,33 @@ Once the provisioning profile has been created and selected, the optional **iTun
 
 1. In the **Solution Explorer**, right-click the Xamarin.iOS project name and select **Properties** to open them for editing:
 
-    ![](ipa-support-images/imagevs01.png "Select Properties")
+    ![Select Properties](ipa-support-images/imagevs01.png)
 
 2. Select **iOS IPA Options** and select **Ad-Hoc** from the **Configuration** dropdown list:
 
-    ![](ipa-support-images/imagevs02.png "Select Ad-Hoc from the Configuration dropdown list")
+    ![Select Ad-Hoc from the Configuration dropdown list](ipa-support-images/imagevs02.png)
 
     > [!NOTE]
     > An Ad-Hoc configuration may not be available for newer Xamarin.iOS projects. If it's not available, select the **Release** configuration.
 
 3. If you are including an option **iTunesMetadata.plist** file, click the **...** button, select it from the list and click the **Open** button:
 
-    ![](ipa-support-images/imagevs03.png "Select iTunesMetadata.plist from the list")
+    ![Select iTunesMetadata.plist from the list](ipa-support-images/imagevs03.png)
 
 4. You can optionally specify a **Package Name** for the IPA, if not specified it will have the same name as the Xamarin.iOS project.
 5. Save your changes to the Project Properties.
 6. Select **Ad Hoc** from the **Build Configuration** dropdown if it is available. Otherwise select **Release**:
 
-    ![](ipa-support-images/imagevs05.png "Select Ad Hoc from the Build Configuration dropdown")
+    ![Select Ad Hoc from the Build Configuration dropdown](ipa-support-images/imagevs05.png)
 
 7. Build the project to create the IPA package.
 8. The IPA will be build in the **Bin > iOS Device > Ad Hoc (or Release)** folder:
 
-    ![](ipa-support-images/imagevs06.png "The IPA in the file explorer")
+    ![The IPA in the file explorer](ipa-support-images/imagevs06.png)
 
 -----
 
-<a name="Customizing-the-IPA-Location" />
+<a name="Customizing-the-IPA-Location"></a>
 
 ## Customizing the IPA Location
 
@@ -214,13 +209,14 @@ A complete example that uses this approach might look similar to the following o
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
+
 Or the following on Mac:
 
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
-<a name="installipa" />
+<a name="installipa"></a>
 
 ## Installing an IPA using iTunes
 
@@ -230,22 +226,21 @@ The new iOS application will be shown in the **My Apps** section, where you can 
 
 # [Visual Studio for Mac](#tab/macos)
 
- ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
+ ![The new iOS application in the My Apps section](ipa-support-images/installxs01.png)
 
 # [Visual Studio](#tab/windows)
 
- ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
+ ![The new iOS application in the My Apps section](ipa-support-images/installvs01.png)
 
 -----
 
 The user can now sync iTunes with their device to install the new iOS application.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
 This article covered the setup required to prepare a Xamarin.iOS application for a non-App Store build. It showed how to create an IPA Package and has how to install the resulting iOS application on the end user's iOS device for testing or In-House Distribution.
-
 
 ## Related Links
 

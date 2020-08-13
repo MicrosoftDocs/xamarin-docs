@@ -4,8 +4,8 @@ description: "Core Image is a new framework introduced with iOS 5 to provide ima
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -19,10 +19,9 @@ detection.
 
 This document contains simple examples of:
 
--  Face detection.
--  Applying filters to an image
--  Listing the available filters.
-
+- Face detection.
+- Applying filters to an image
+- Listing the available filters.
 
 These examples should help get you started incorporating Core Image features
 into your Xamarin.iOS applications.
@@ -54,13 +53,12 @@ The features array will be populated with `CIFaceFeature` objects
 (if any faces were detected). There is a `CIFaceFeature` for each
 face. `CIFaceFeature` has the following properties:
 
--  HasMouthPosition – Whether a mouth was detected for this face.
--  HasLeftEyePosition – Whether the left eye was detected for this face.
--  HasRightEyePosition – Whether the right eye was detected for this face. 
--  MouthPosition – The coordinates of the mouth for this face.
--  LeftEyePosition – The coordinates of the left eye for this face.
--  RightEyePosition – The coordinates of the right eye for this face.
-
+- HasMouthPosition – Whether a mouth was detected for this face.
+- HasLeftEyePosition – Whether the left eye was detected for this face.
+- HasRightEyePosition – Whether the right eye was detected for this face. 
+- MouthPosition – The coordinates of the mouth for this face.
+- LeftEyePosition – The coordinates of the left eye for this face.
+- RightEyePosition – The coordinates of the right eye for this face.
 
 The coordinates for all these properties have their origin in the bottom-left
 – unlike UIKit which uses the top-left as the origin. When using the
@@ -238,7 +236,7 @@ default values for parameters and the maximum and minimum allowable values
 The List Categories output looks like this on the simulator – you can
 scroll through the list to see all the filters and their parameters.
 
- [![](introduction-to-coreimage-images/coreimage05.png "The List Categories output looks like this on the simulator")](introduction-to-coreimage-images/coreimage05.png#lightbox)
+ [![The List Categories output looks like this on the simulator](introduction-to-coreimage-images/coreimage05.png)](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 Each filter listed has been exposed as a class in Xamarin.iOS, so you can also
 explore the Xamarin.iOS.CoreImage API in the Assembly Browser or using
@@ -252,7 +250,7 @@ of different image filters available in the framework for you to use.
 
 ## Related Links
 
-- [Core Image (sample)](https://developer.xamarin.com/samples/CoreImage/)
+- [Core Image (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/coreimage)
 - [Adjust Contract and Brightness of an Image Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Using Core Image Filters](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

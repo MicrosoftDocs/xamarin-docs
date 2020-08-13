@@ -3,29 +3,28 @@ title: "Permissions In Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
 # Permissions In Xamarin.Android
-
 
 ## Overview
 
 Android applications run in their own sandbox and for security reasons do not have access to certain system resources or hardware on the device. The user must explicitly grant permission to the app before it may use these resources. For example, an application cannot access the GPS on a device without explicit permission from the user. Android will throw a `Java.Lang.SecurityException` if an app tries to access a protected resource without permission.
 
 Permissions are declared in the **AndroidManifest.xml** by the application developer when the app is developed. Android has two different workflows for obtaining the user's consent for those permissions:
- 
-* For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
-* Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
+
+- For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
+- Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
 
 ![Sample Permissions screen](permissions-images/01-permissions-check.png) 
 
 Android apps must check at run-time to see if they have permission to access a protected resource. If the app does not have permission, then it must make requests using the new APIs provided by the Android SDK for the user to grant the permissions. Permissions are divided into two categories:
 
-* **Normal Permissions** &ndash; These are permissions which pose little security risk to the user's security or privacy. Android 6.0 will automatically grant normal permissions at the time of installation. Please consult the Android documentation for a [complete list of normal permissions](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-* **Dangerous Permissions** &ndash; In contrast to normal permissions, dangerous permissions are those that protect the user's security or privacy. These must be explictly granted by the user. Sending or receiving an SMS message is an example of an action requiring a dangerous permission.
+- **Normal Permissions** &ndash; These are permissions which pose little security risk to the user's security or privacy. Android 6.0 will automatically grant normal permissions at the time of installation. Please consult the Android documentation for a [complete list of normal permissions](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
+- **Dangerous Permissions** &ndash; In contrast to normal permissions, dangerous permissions are those that protect the user's security or privacy. These must be explicitly granted by the user. Sending or receiving an SMS message is an example of an action requiring a dangerous permission.
 
 > [!IMPORTANT]
 > The category that a permission belongs to may change over time.  It is possible that a permission which was categorized as a "normal" permission may be elevated in future API levels to a dangerous permission.
@@ -42,17 +41,14 @@ The Android Support Library backports some of the new APIs for permissions to ol
 
 This document will discuss how to add permissions to a Xamarin.Android application and how apps that target Android 6.0 (API level 23) or higher should perform a run-time permission check.
 
-
 > [!NOTE]
 > It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
 
-
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## Requirements
 
 It is strongly recommended that Xamarin.Android projects include the [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet package. This package will backport permission specific APIs to older versions of Android, providing one common interface without the need to constantly check the version of Android that the app is running on.
-
 
 ## Requesting System Permissions
 
@@ -63,7 +59,6 @@ Apps that target Android 6.0 or higher cannot assume that because the user grant
 > [!NOTE]
 > Applications should only request the permissions that they require.
 
-
 ### Declaring Permissions in the Manifest
 
 Permissions are added to the  **AndroidManifest.xml** with the `uses-permission` element. For example, if an application is to locate the position of the device, it requires fine and course location permissions. The following two elements are added to the manifest: 
@@ -72,6 +67,8 @@ Permissions are added to the  **AndroidManifest.xml** with the `uses-permission`
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -111,13 +108,12 @@ Xamarin.Android will automatically add some permissions at build time to Debug b
 
 For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks. 
 
-
 ### Runtime Permission Checks in Android 6.0
 
-The `ContextCompat.CheckSelfPermission`  method (available with the Android Support Library) is used to check if a specific permission has been granted. This method will return a [`Android.Content.PM.Permission`](https://developer.xamarin.com/api/type/Android.Content.PM.Permission/) enum which has one of two values:
+The `ContextCompat.CheckSelfPermission`  method (available with the Android Support Library) is used to check if a specific permission has been granted. This method will return a [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum which has one of two values:
 
-* **`Permission.Granted`** &ndash; The specified permission has been granted.
-* **`Permission.Denied`** &ndash; The specified permission has not been granted.
+- **`Permission.Granted`** &ndash; The specified permission has been granted.
+- **`Permission.Denied`** &ndash; The specified permission has not been granted.
 
 This code snippet is an example of how to check for the Camera permission in an Activity: 
 
@@ -140,9 +136,9 @@ The `ActivityCompat.ShouldShowRequestPermissionRationale` method is used to dete
 
 If the user grants the permission, the `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` method should be called. This method requires the following parameters:
 
-* **activity** &ndash; This is the activity that is requesting the permissions and is to be informed by Android of the results.
-* **permissions** &ndash; A list of the permissions that are being requested.
-* **requestCode** &ndash; An integer value that is used to match the results of the permission request to a `RequestPermissions` call. This value should be greater than zero.
+- **activity** &ndash; This is the activity that is requesting the permissions and is to be informed by Android of the results.
+- **permissions** &ndash; A list of the permissions that are being requested.
+- **requestCode** &ndash; An integer value that is used to match the results of the permission request to a `RequestPermissions` call. This value should be greater than zero.
 
 This code snippet is an example of the two methods that were discussed. First, a check is made to determine if the permission rationale should be shown. If the rationale is to be shown, then a Snackbar is displayed with the rationale. If the user clicks **OK** in the Snackbar, then the app will request the permissions. If the user does not accept the rationale, then the app should not proceed to request permissions. If the rationale is not shown, then the Activity will request the permission:
 
@@ -204,11 +200,9 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-
 ## Summary
 
 This guide discussed how to add and check for permissions in an Android device. The differences in how permissions work between old Android apps (API level < 23) and new Android apps (API level > 22). It discussed how to perform run-time permission checks in Android 6.0.
-
 
 ## Related Links
 

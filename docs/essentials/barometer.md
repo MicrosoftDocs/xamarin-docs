@@ -5,6 +5,7 @@ ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Barometer
@@ -78,6 +79,8 @@ No platform-specific implementation details.
 
 This API uses [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) to monitor pressure changes, which is a hardware feature that was added to iPhone 6 and newer devices. A `FeatureNotSupportedException` will be thrown on devices that don't support the altimeter.
 
+`SensorSpeed` is not used as it is not supported on iOS.
+
 # [UWP](#tab/uwp)
 
 No platform-specific implementation details.
@@ -86,5 +89,5 @@ No platform-specific implementation details.
 
 ## API
 
-- [Barometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Barometer)
+- [Barometer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Barometer)
 - [Barometer API documentation](xref:Xamarin.Essentials.Barometer)

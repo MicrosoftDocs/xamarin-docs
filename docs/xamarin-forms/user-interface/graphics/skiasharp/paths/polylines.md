@@ -7,17 +7,18 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Polylines and Parametric Equations
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use SkiaSharp to render any line that you can define with parametric equations_
 
 In the [**SkiaSharp Curves and Paths**](../curves/index.md) section of this guide, you'll see the various methods that [`SKPath`](xref:SkiaSharp.SKPath) defines to render certain types of curves. However, it's sometimes necessary to draw a type of curve that isn't directly supported by `SKPath`. In such a case, you can use a polyline (a collection of connected lines) to draw any curve that you can mathematically define. If you make the lines small enough and numerous enough, the result will look like a curve. This spiral is actually 3,600 little lines:
 
-![](polylines-images/spiralexample.png "A spiral")
+![A spiral](polylines-images/spiralexample.png)
 
 Generally it's best to define a curve in terms of a pair of parametric equations. These are equations for X and Y coordinates that depend on a third variable, sometimes called `t` for time. For example, the following parametric equations define a circle with a radius of 1 centered at the point (0, 0) for *t* from 0 to 1:
 
@@ -112,12 +113,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The result is also called an *arithmetic spiral* because the offset between each loop is constant:
 
-[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
+[![Triple screenshot of the Archimedean Spiral page](polylines-images/archimedeanspiral-small.png)](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
 
 Notice that the `SKPath` is created in a `using` block. This `SKPath` consumes more memory than the `SKPath` objects in the previous programs, which suggests that a `using` block is more appropriate to dispose any unmanaged resources.
-
 
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

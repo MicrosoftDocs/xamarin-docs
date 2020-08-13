@@ -4,8 +4,8 @@ description: "This document describes how Xamarin.iOS transparently converts NSS
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -46,7 +46,7 @@ you can still use the C# string data type, but you must use the
 attribute to inform the binding generator that this string
 should not be marshaled as an `NSString`, but instead as a C string.
 
- <a name="Exceptions_to_the_Rule" />
+ <a name="Exceptions_to_the_Rule"></a>
 
 ## Exceptions to the Rule
 
@@ -61,6 +61,7 @@ class Foo {
      public NSString FooNotification { get; }
 }
 ```
+
 Notifications are keys that are used for the `NSNotification` class when you want to register for a particular event being broadcast by the runtime.
 
 Keys usually look something like this:

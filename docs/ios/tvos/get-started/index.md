@@ -4,8 +4,8 @@ description: "This document describes how to get started building tvOS apps with
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
 ---
 
@@ -21,10 +21,9 @@ To build tvOS apps with Xamarin, install the latest stable version of Xamarin.iO
 
 This article provides a quick start to developing apps for tvOS by creating a simple "Hello, tvOS" app. It covers the basics of tvOS device provisioning, interface creation, coding for tvOS and testing on both the tvOS simulator and on real tvOS hardware.
 
-
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

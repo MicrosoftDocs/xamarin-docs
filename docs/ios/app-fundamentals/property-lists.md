@@ -4,8 +4,8 @@ description: "This document introduces Visual Studio for Mac's graphical and adv
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -19,14 +19,13 @@ Visual Studio for Mac features a graphical .plist editor that makes editing app 
 
 The Information Property List ( `Info.plist`) is a required iOS file that provides information about your application's configuration to the system. Visual Studio for Mac's custom `Info.plist` editor features three panels controlled by tabs at the bottom left of the editor window:
 
- [![](property-lists-images/tabs.png "The Info.plist editor tabs at the bottom left of the editor window")](property-lists-images/tabs.png#lightbox)
+ [![The Info.plist editor tabs at the bottom left of the editor window](property-lists-images/tabs.png)](property-lists-images/tabs.png#lightbox)
 
 Each panel controls different properties, as outlined below:
 
--  **Application Panel** - A graphical interface to set common application properties as well as icons and launch images; specify maps integration and backgrounding modes.
--  **Advanced Panel** - The advanced panel is the place to specify supported document types, UTIs, and URL types.
--  **Source Panel** - The source panel controls less common properties as well as custom properties for the application.
-
+- **Application Panel** - A graphical interface to set common application properties as well as icons and launch images; specify maps integration and backgrounding modes.
+- **Advanced Panel** - The advanced panel is the place to specify supported document types, UTIs, and URL types.
+- **Source Panel** - The source panel controls less common properties as well as custom properties for the application.
 
 The next three sections investigate the features of each panel in more detail.
 
@@ -34,18 +33,16 @@ The next three sections investigate the features of each panel in more detail.
 
 Visual Studio for Mac features a graphical interface for editing common `Info.plist` entries for an application:
 
-1.  Application properties
-1.  Supported device types
-1.  Support orientations for each device type
-1.  Status bar style and color
-1.  Icons and start-up screens
-1.  Maps and Background Modes
-
+1. Application properties
+1. Supported device types
+1. Support orientations for each device type
+1. Status bar style and color
+1. Icons and start-up screens
+1. Maps and Background Modes
 
 These are described in more detail in the next sections.
 
- <a name="iOS_Application_Target" />
-
+ <a name="iOS_Application_Target"></a>
 
 ### iOS Application Target
 
@@ -55,11 +52,11 @@ Identifier that is entered in iTunes Connect (for App Store apps) and also in
 the iOS Provisioning Portal App IDs list and Development and Distribution
 certificates.
 
- [![](property-lists-images/image24.png "iOS Application Target")](property-lists-images/image24.png#lightbox)
+ [![iOS Application Target](property-lists-images/image24.png)](property-lists-images/image24.png#lightbox)
 
 ### Device Deployment
 
- [![](property-lists-images/deployment.png "Device Deployment")](property-lists-images/deployment.png#lightbox)
+ [![Device Deployment](property-lists-images/deployment.png)](property-lists-images/deployment.png#lightbox)
 
 The device **Deployment** info sections are displayed
 selectively, depending on the selection in the **Devices** dropdown in the **Application Target** section above. The **Main Interface** drop-down is set to **MainStoryboard** in Storyboard-driven applications. If the user
@@ -75,27 +72,23 @@ support all orientations.
 
 The **Status Bar Styles** section is a graphical interface for editing an application's `UIStatusBarStyle`:
 
- [![](property-lists-images/status.png "Status Bar Styles")](property-lists-images/status.png#lightbox)
+ [![Status Bar Styles](property-lists-images/status.png)](property-lists-images/status.png#lightbox)
 
- <a name="Icons" />
-
+ <a name="Icons"></a>
 
 ### Icons, Launch Images, and iTunes Artwork
 
 Information on using icons, images, and artwork in your Info.plist file can be found in the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) guide.
 
-
-
-
 ### Maps Integration and Background Modes
 
 The `Info.plist` contains special sections to specify maps integration and backgrounding modes. Choosing the options you want to support will add the required properties to your application for you.
 
- [![](property-lists-images/maps.png "Maps Integration")](property-lists-images/maps.png#lightbox)
+ [![Maps Integration](property-lists-images/maps.png)](property-lists-images/maps.png#lightbox)
 
 For more information on working with maps, refer to the Xamarin [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) guide.
 
- [![](property-lists-images/bging.png "Background Modes")](property-lists-images/bging.png#lightbox)
+ [![Background Modes](property-lists-images/bging.png)](property-lists-images/bging.png#lightbox)
 
 For more information on Background Modes, refer to the Xamarin [Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) guide.
 
@@ -103,10 +96,9 @@ For more information on Background Modes, refer to the Xamarin [Backgrounding in
 
 The advanced panel controls the document types and URL schemes that the application supports.
 
- [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
+ [![Advanced Panel](property-lists-images/image34.png)](property-lists-images/image34.png#lightbox)
 
- <a name="Document_Types" />
-
+ <a name="Document_Types"></a>
 
 ## Document Types
 
@@ -121,7 +113,7 @@ how to configure these values.
 
 Sometimes an application needs to support opening a custom file type. For example, we may want to open image files with a custom extension *.xam*. To specify a custom file type, we'll create a custom UTI - Universal Type Identifier - using the `UIExportedTypeDeclarations` key. The screenshot below illustrates how to create a custom UTI for the .xam extension:
 
- [![](property-lists-images/uti.png "UTIs Editor")](property-lists-images/uti.png#lightbox)
+ [![UTIs Editor](property-lists-images/uti.png)](property-lists-images/uti.png#lightbox)
 
 Just as exported type UTIs specify custom UTIs specific to your app, the *imported type UTIs* ( `UIImportedTypeDeclarations` key) specify custom types supported but not owned by your application.
 
@@ -131,9 +123,7 @@ For more information on using custom UTIs, refer to Apple's [Registering File Ty
 
 A URL scheme name (also called protocol) is the first part of the URL. For example, `http://` and `https://` are common URL schemes. You have the option of creating a custom URL scheme for your application. Custom URL schemes are used to communicate and send data back and forth with other applications. The following screenshot illustrates creating a new custom URL scheme called `monkeys://`:
 
- [![](property-lists-images/url.png "Custom URLs")](property-lists-images/url.png#lightbox)
-
-
+ [![Custom URLs](property-lists-images/url.png)](property-lists-images/url.png#lightbox)
 
 For more information on implementing custom URL schemes, refer to Apple's [Implementing Custom URL Schemes section of this guide](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 
@@ -143,24 +133,23 @@ The **Source** tab of the `Info.plist` file
 allows custom values to be added or edited. Visual Studio for Mac provides a list of the
 most common properties:
 
- [![](property-lists-images/image31.png "Adding a new property from a dropdown")](property-lists-images/image31.png#lightbox)
+ [![Adding a new property from a dropdown](property-lists-images/image31.png)](property-lists-images/image31.png#lightbox)
 
 For known properties Visual Studio for Mac will a list of valid values, as illustrated by the following screenshot:
 
- [![](property-lists-images/image32.png "Select a value from a know value list")](property-lists-images/image32.png#lightbox)
+ [![Select a value from a know value list](property-lists-images/image32.png)](property-lists-images/image32.png#lightbox)
 
 Visual Studio for Mac also detects the Property Type, as shown:
 
- [![](property-lists-images/image33.png "The available property types")](property-lists-images/image33.png#lightbox)
+ [![The available property types](property-lists-images/image33.png)](property-lists-images/image33.png#lightbox)
 
 Review Apple’s [App Related Resources](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) links for additional information on optional properties.
 
- <a name="Entitlements" />
+ <a name="Entitlements"></a>
 
 ## Summary
 
 This article demonstrated using the graphical and advanced .plist editors to edit common app configurations as well as to specify icons and launch images. It also introduced the `Entitlements.plist` for adding and managing app capabilities.
-
 
 ## Related Links
 

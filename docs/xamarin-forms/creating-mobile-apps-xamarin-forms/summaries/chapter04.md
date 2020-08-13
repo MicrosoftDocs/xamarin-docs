@@ -7,6 +7,7 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 4. Scrolling the stack
@@ -46,7 +47,7 @@ The [**ReflectedColors**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## The Expands option
 
-When a `StackLayout` stacks its children, each child occupies a particular slot within the total height of the `StackLayout` that depends on the child's size and the settings of its `HorizontalOptions` and `VerticalOptions` properties. These properties are assigned values of type [`LayoutOptions`](http://developer.xamstage.com/api/type/Xamarin.Forms.LayoutOptions/).
+When a `StackLayout` stacks its children, each child occupies a particular slot within the total height of the `StackLayout` that depends on the child's size and the settings of its `HorizontalOptions` and `VerticalOptions` properties. These properties are assigned values of type [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions).
 
 The `LayoutOptions` structure defines two properties:
 
@@ -108,13 +109,11 @@ The trick is to give the `ScrollView` child of the `StackLayout` a `VerticalOpti
 
 The **BlackCat** sample also demonstrates how to define and access program resources that are embedded in the shared library. This can also be achieved with Shared Asset Projects (SAPs) but the process is a little trickier, as the [**BlackCatSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) sample demonstrates.
 
-
-
 ## Related links
 
 - [Chapter 4 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [Chapter 4 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 - [Chapter 4 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
-- [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
-- [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)
+- [ScrollView](~/xamarin-forms/user-interface/layouts/scrollview.md)
 - [BoxView](~/xamarin-forms/user-interface/boxview.md)

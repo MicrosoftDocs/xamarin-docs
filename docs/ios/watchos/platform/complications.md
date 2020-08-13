@@ -4,8 +4,8 @@ description: "This document describes how to work with watchOS complications in 
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/03/2017
 ---
 
@@ -23,13 +23,13 @@ Start by reading
 to determine whether your app is suitable for a complication. There are 5 `CLKComplicationFamily` types
 of display to choose from:
 
-[![](complications-images/all-complications-sml.png "The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large")](complications-images/all-complications.png#lightbox)
+[![The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large](complications-images/all-complications-sml.png)](complications-images/all-complications.png#lightbox)
 
 Apps can implement just one style, or all five, depending on the data being displayed.
 You can also support Time Travel, providing values
 for past and/or future times as the user turns the Digital Crown.
 
-<a name="adding" />
+<a name="adding"></a>
 
 ## Adding a Complication
 
@@ -43,7 +43,7 @@ to an existing solution.
 The **Add New Project...** wizard includes a checkbox that will automatically
 create a complication controller class and configure the **Info.plist** file:
 
-![](complications-images/file-new-project-sml.png "The Include Complication checkbox")
+![The Include Complication checkbox](complications-images/file-new-project-sml.png)
 
 ### Existing Projects
 
@@ -56,7 +56,7 @@ To add a complication to an existing project:
 
 These steps are described in more detail below.
 
-<a name="clkcomplicationcontroller" />
+<a name="clkcomplicationcontroller"></a>
 
 ### CLKComplicationDataSource Class
 
@@ -69,16 +69,16 @@ public class ComplicationController : CLKComplicationDataSource
 {
   public ComplicationController ()
   {
-	}
+  }
   public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
-	{
-	}
+  {
+  }
   public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
-	{
-	}
+  {
+  }
   public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
-	{
-	}
+  {
+  }
 }
 ```
 
@@ -90,7 +90,7 @@ The watch extension's **Info.plist** file should specify the name of the
 `CLKComplicationDataSource` and which complication families you wish to
 support:
 
-[![](complications-images/complications-config-sml.png "The complication family types")](complications-images/complications-config.png#lightbox)
+[![The complication family types](complications-images/complications-config-sml.png)](complications-images/complications-config.png#lightbox)
 
 The **Data Source Class** entry list will show class names that subclass
 `CLKComplicationDataSource` subclass that includes your complication logic.
@@ -117,7 +117,7 @@ You must implement the following methods for the complication to run:
 
 Complications that display personal data
 
-* `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` or `HideOnLockScreen`
+- `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` or `HideOnLockScreen`
 
 If this method returns `HideOnLockScreen` then the complication will show either
 an icon or the application name (and not any data) when the watch is locked.
@@ -140,7 +140,7 @@ must implement the following methods
 - `GetTimelineEntriesBeforeDate`
 - `GetTimelineEntriesAfterDate`
 
-<a name="writing" />
+<a name="writing"></a>
 
 ## Writing a Complication
 
@@ -164,47 +164,46 @@ on a watch, it displays **MY COMPLICATION** and when *running* it displays the t
 [Register ("ComplicationController")]
 public class ComplicationController : CLKComplicationDataSource
 {
-	public ComplicationController ()
-	{
-	}
-	public ComplicationController (IntPtr p) : base (p)
-	{
-	}
-	public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
-	{
-		CLKComplicationTimelineEntry entry = null;
+    public ComplicationController ()
+    {
+    }
+    public ComplicationController (IntPtr p) : base (p)
+    {
+    }
+    public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
+    {
+        CLKComplicationTimelineEntry entry = null;
     var complicationDisplay = "MINUTE " + DateTime.Now.Minute.ToString(); // text to display on watch face
-		if (complication.Family == CLKComplicationFamily.UtilitarianLarge)
-		{
-			var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat();
-			textTemplate.TextProvider = CLKSimpleTextProvider.FromText(complicationDisplay); // dynamic display
-			entry = CLKComplicationTimelineEntry.Create(NSDate.Now, textTemplate);
-		} else {
-			Console.WriteLine("Complication family timeline not supported (" + complication.Family + ")");
-		}
-		handler (entry);
-	}
-	public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
-	{
-		CLKComplicationTemplate template = null;
-		if (complication.Family == CLKComplicationFamily.UtilitarianLarge) {
-			var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat ();
-			textTemplate.TextProvider = CLKSimpleTextProvider.FromText ("MY COMPLICATION"); // static display
-			template = textTemplate;
-		} else {
-			Console.WriteLine ("Complication family placeholder not not supported (" + complication.Family + ")");
-		}
-		handler (template);
-	}
-	public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
-	{
-		handler (CLKComplicationTimeTravelDirections.None);
-	}
+        if (complication.Family == CLKComplicationFamily.UtilitarianLarge)
+        {
+            var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat();
+            textTemplate.TextProvider = CLKSimpleTextProvider.FromText(complicationDisplay); // dynamic display
+            entry = CLKComplicationTimelineEntry.Create(NSDate.Now, textTemplate);
+        } else {
+            Console.WriteLine("Complication family timeline not supported (" + complication.Family + ")");
+        }
+        handler (entry);
+    }
+    public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
+    {
+        CLKComplicationTemplate template = null;
+        if (complication.Family == CLKComplicationFamily.UtilitarianLarge) {
+            var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat ();
+            textTemplate.TextProvider = CLKSimpleTextProvider.FromText ("MY COMPLICATION"); // static display
+            template = textTemplate;
+        } else {
+            Console.WriteLine ("Complication family placeholder not not supported (" + complication.Family + ")");
+        }
+        handler (template);
+    }
+    public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
+    {
+        handler (CLKComplicationTimeTravelDirections.None);
+    }
 }
 ```
 
-
-<a name="templates" />
+<a name="templates"></a>
 
 ## Complication Templates
 
@@ -259,8 +258,6 @@ These template class names are all prefixed with `CLKComplicationTemplateUtilita
 
 There's only one template for this complication style: `CLKComplicationTemplateUtilitarianLargeFlat`.
 It displays a single image and some text, all on a single line.
-
-
 
 ## Related Links
 

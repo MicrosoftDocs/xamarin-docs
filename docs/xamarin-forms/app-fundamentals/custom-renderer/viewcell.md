@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Customizing a ViewCell
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control. This stops the Xamarin.Forms layout calculations from being repeatedly called during ListView scrolling._
 
@@ -19,17 +20,15 @@ Every Xamarin.Forms cell has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`ViewCell`](xref:Xamarin.Forms.ViewCell) and the corresponding native controls that implement it:
 
-![](viewcell-images/viewcell-classes.png "Relationship Between the ViewCell Control and the Implementing Native Controls")
+![Relationship Between the ViewCell Control and the Implementing Native Controls](viewcell-images/viewcell-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Custom_Cell) a Xamarin.Forms custom cell.
-1. [Consume](#Consuming_the_Custom_Cell) the custom cell from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the cell on each platform.
+1. [Create](#creating-the-custom-cell) a Xamarin.Forms custom cell.
+1. [Consume](#consuming-the-custom-cell) the custom cell from Xamarin.Forms.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the cell on each platform.
 
 Each item will now be discussed in turn, to implement a `NativeCell` renderer that takes advantage of a platform-specific layout for each cell hosted inside a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## Creating the Custom Cell
 
@@ -63,9 +62,8 @@ public class NativeCell : ViewCell
   }
 }
 ```
-The `NativeCell` class is created in the .NET Standard library project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-<a name="Consuming_the_Custom_Cell" />
+The `NativeCell` class is created in the .NET Standard library project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## Consuming the Custom Cell
 
@@ -140,13 +138,11 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control is used to display a list of data, which is populated through the [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property. The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy attempts to minimize the `ListView` memory footprint and execution speed by recycling list cells. For more information, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control is used to display a list of data, which is populated through the [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property. The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy attempts to minimize the `ListView` memory footprint and execution speed by recycling list cells. For more information, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
 Each row in the list contains three items of data – a name, a category, and an image filename. The layout of each row in the list is defined by the `DataTemplate` that's referenced through the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) bindable property. The `DataTemplate` defines that each row of data in the list will be a `NativeCell` that displays its `Name`, `Category`, and `ImageFilename` properties through data binding. For more information about the `ListView` control, see [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 A custom renderer can now be added to each application project to customize the platform-specific layout for each cell.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 
@@ -161,11 +157,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![](viewcell-images/solution-structure.png "NativeCell Custom Renderer Project Responsibilities")
+![NativeCell Custom Renderer Project Responsibilities](viewcell-images/solution-structure.png)
 
 The `NativeCell` custom cell is rendered by platform-specific renderer classes, which all derive from the `ViewCellRenderer` class for each platform. This results in each `NativeCell` custom cell being rendered with platform-specific layout, as shown in the following screenshots:
 
-![](viewcell-images/screenshots.png "NativeCell on each Platform")
+![NativeCell on each Platform](viewcell-images/screenshots.png)
 
 The `ViewCellRenderer` class exposes platform-specific methods for rendering the custom cell. This is the `GetCell` method on the iOS platform, the `GetCellCore` method on the Android platform, and the `GetTemplate` method on UWP.
 
@@ -568,8 +564,7 @@ The `DataTemplate` specifies the controls used to display the contents of the ce
 
 This article has demonstrated how to create a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) that's hosted inside a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
 
-
 ## Related Links
 
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+- [CustomRendererViewCell (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

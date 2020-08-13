@@ -4,7 +4,8 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 02/26/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials
@@ -23,6 +24,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 
 * [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) – Retrieve acceleration data of the device in three dimensional space.
 * [App Information](app-information.md?context=xamarin/xamarin-forms) – Find out information about the application.
+* [App Theme](app-theme.md?context=xamarin/xamarin-forms) – Detect the current theme requested for the application.
 * [Barometer](barometer.md?context=xamarin/xamarin-forms) – Monitor the barometer for pressure changes.
 * [Battery](battery.md?context=xamarin/xamarin-forms) – Easily detect battery level, source, and state.
 * [Clipboard](clipboard.md?context=xamarin/xamarin-forms) – Quickly and easily set or read text on the clipboard.
@@ -44,6 +46,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Maps](maps.md?content=xamarin/xamarin-forms) – Open the maps application to a specific location.
 * [Open Browser](open-browser.md?context=xamarin/xamarin-forms) – Quickly and easily open a browser to a specific website.
 * [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) – Retrieve the orientation of the device in three dimensional space.
+* [Permissions](permissions.md?context=xamarin/xamarin-forms) – Check and request permissions from users.
 * [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) – Open the phone dialer.
 * [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) – Helper methods for converting Rect, Size, and Point.
 * [Preferences](preferences.md?context=xamarin/xamarin-forms) – Quickly and easily add persistent preferences.
@@ -54,10 +57,15 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms) – Helper methods to convert units.
 * [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) – Track the applications version and build numbers.
 * [Vibrate](vibrate.md?context=xamarin/xamarin-forms) – Make the device vibrate.
+* [Web Authenticator](web-authenticator.md?context=xamarin/xamarin-forms) - Start web authentication flows and listen for a callback.
 
 ## [Troubleshooting](troubleshooting.md?context=xamarin/xamarin-forms)
 
 Find help if you are running into issues.
+
+## [Release Notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+
+Find full release notes for each release of Xamarin.Essentials.
 
 ## [API Documentation](xref:Xamarin.Essentials)
 

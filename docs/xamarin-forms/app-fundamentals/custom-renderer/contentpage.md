@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Customizing a ContentPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -19,17 +20,15 @@ Every Xamarin.Forms control has an accompanying renderer for each platform that 
 
 The following diagram illustrates the relationship between the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and the corresponding native controls that implement it:
 
-![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
+![Relationship Between ContentPage Class and Implementing Native Controls](contentpage-images/contentpage-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Xamarin.Forms_Page) a Xamarin.Forms page.
-1. [Consume](#Consuming_the_Xamarin.Forms_Page) the page from Xamarin.Forms.
-1. [Create](#Creating_the_Page_Renderer_on_each_Platform) the custom renderer for the page on each platform.
+1. [Create](#creating-the-xamarinforms-page) a Xamarin.Forms page.
+1. [Consume](#consuming-the-xamarinforms-page) the page from Xamarin.Forms.
+1. [Create](#creating-the-page-renderer-on-each-platform) the custom renderer for the page on each platform.
 
 Each item will now be discussed in turn, to implement a `CameraPage` that provides a live camera feed and the ability to capture a photo.
-
-<a name="Creating_the_Xamarin.Forms_Page" />
 
 ## Creating the Xamarin.Forms Page
 
@@ -70,8 +69,6 @@ public class CameraPageCS : ContentPage
 
 An instance of the `CameraPage` will be used to display the live camera feed on each platform. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `CameraPage` class.
 
-<a name="Consuming_the_Xamarin.Forms_Page" />
-
 ## Consuming the Xamarin.Forms Page
 
 The empty `CameraPage` must be displayed by the Xamarin.Forms application. This occurs when a button on the `MainPage` instance is tapped, which in turn executes the `OnTakePhotoButtonClicked` method, as shown in the following code example:
@@ -84,8 +81,6 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 ```
 
 This code simply navigates to the `CameraPage`, on which custom renderers will customize the page's appearance on each platform.
-
-<a name="Creating_the_Page_Renderer_on_each_Platform" />
 
 ## Creating the Page Renderer on each Platform
 
@@ -100,11 +95,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationship between them:
 
-![](contentpage-images/solution-structure.png "CameraPage Custom Renderer Project Responsibilities")
+![CameraPage Custom Renderer Project Responsibilities](contentpage-images/solution-structure.png)
 
 The `CameraPage` instance is rendered by platform-specific `CameraPageRenderer` classes, which all derive from the `PageRenderer` class for that platform. This results in each `CameraPage` instance being rendered with a live camera feed, as shown in the following screenshots:
 
-![](contentpage-images/screenshots.png "CameraPage on each Platform")
+![CameraPage on each Platform](contentpage-images/screenshots.png)
 
 The `PageRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms page is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `CameraPage` instance.
 
@@ -194,7 +189,7 @@ namespace CustomRenderer.Droid
 
 The call to the base class's `OnElementChanged` method instantiates an Android `ViewGroup` control, which is a group of views. The live camera stream is only rendered provided that the renderer isn't already attached to an existing Xamarin.Forms element, and provided that a page instance exists that is being rendered by the custom renderer.
 
-The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`. Note that on Android it's also necessary to override the `OnLayout` method to perform measure and layout operations on the view. For more information, see the [ContentPage renderer sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
+The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`. Note that on Android it's also necessary to override the `OnLayout` method to perform measure and layout operations on the view. For more information, see the [ContentPage renderer sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### Creating the Page Renderer on UWP
 
@@ -249,7 +244,6 @@ When implementing a custom renderer that derives from `PageRenderer` on UWP, the
 
 This article has demonstrated how to create a custom renderer for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) page, enabling developers to override the default native rendering with their own platform-specific customization. A `ContentPage` is a visual element that displays a single view and occupies most of the screen.
 
-
 ## Related Links
 
-- [CustomRendererContentPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
+- [CustomRendererContentPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

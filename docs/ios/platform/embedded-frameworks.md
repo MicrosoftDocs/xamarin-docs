@@ -4,8 +4,8 @@ description: "This document describes how to share code with embedded frameworks
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 
@@ -37,13 +37,13 @@ There are two ways to consume frameworks in Xamarin.iOS:
 
 Right-click on Project and Browse to Add Native References
 
-![](embedded-frameworks-images/xam-native-refs.png "Select Add native references in Visual Studio for Mac")
+![Select Add native references in Visual Studio for Mac](embedded-frameworks-images/xam-native-refs.png)
 
 # [Visual Studio](#tab/windows)
 
 Right-click on Project and Browse to Add Native References
 
-![](embedded-frameworks-images/vs-native-refs.png "Select Add native references in Visual Studio")
+![Select Add native references in Visual Studio](embedded-frameworks-images/vs-native-refs.png)
 
 -----
 
@@ -90,4 +90,3 @@ between releases, and even between apps). The Mono framework adds approximately 
 per architecture, which means that for a single-architecture app without any extensions,
 making the app link with the Mono runtime as a framework will shrink the executable by
 ~1.7MB, but add a ~2.3MB framework, resulting in a ~0.6MB bigger app alltogether.
-

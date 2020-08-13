@@ -3,8 +3,8 @@ title: "Creating a CryptoObject"
 ms.prod: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -52,7 +52,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);
@@ -100,10 +100,10 @@ The cipher is instantiated with a call to `Cipher.GetInstance`, taking a _transf
 
 It is important to realize that there are some situations where Android may invalidate the key: 
 
-* A new fingerprint has been enrolled with the device.
-* There are no fingerprints enrolled with the device.
-* The user has disabled the screen lock.
-* The user has changed the screen lock (the type of the screenlock or the PIN/pattern used).
+- A new fingerprint has been enrolled with the device.
+- There are no fingerprints enrolled with the device.
+- The user has disabled the screen lock.
+- The user has changed the screen lock (the type of the screenlock or the PIN/pattern used).
 
 When this happens, `Cipher.Init` will throw a [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). The above sample code will trap that exception, delete the key, and then create a new one.
 
@@ -111,17 +111,17 @@ The next section will discuss how to create the key and store it on the device.
 
 ## Creating a Secret Key
 
-The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
+The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
 
 A `KeyGenerator` is instantiated using the `GetInstance` factory method. The sample code uses the [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) as the encryption algorithm. AES will break the data up into blocks of a fixed size and encrypt each of those blocks.
 
 Next, a `KeyGenParameterSpec` is created using the `KeyGenParameterSpec.Builder`. The `KeyGenParameterSpec.Builder` wraps the following information about the key that is to be created:
 
-* The name of the key.
-* The key must be valid for both encrypting and decrypting.
-* In the sample code the  `BLOCK_MODE` is set to _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), meaning that each block is XORed with the previous block (creating dependencies between each block). 
-* The `CryptoObjectHelper` uses [_Public Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) to generate the bytes that will pad out the blocks to ensure that they are all of the same size.
-* `SetUserAuthenticationRequired(true)` means that user authentication is required before the key can be used.
+- The name of the key.
+- The key must be valid for both encrypting and decrypting.
+- In the sample code the  `BLOCK_MODE` is set to _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), meaning that each block is XORed with the previous block (creating dependencies between each block). 
+- The `CryptoObjectHelper` uses [_Public Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) to generate the bytes that will pad out the blocks to ensure that they are all of the same size.
+- `SetUserAuthenticationRequired(true)` means that user authentication is required before the key can be used.
 
 Once the `KeyGenParameterSpec` is created, it is used to initialize the `KeyGenerator`, which will generate a key and  securely store it on the device. 
 
@@ -150,14 +150,12 @@ protected void FingerPrintAuthenticationExample()
 
 Now that we have seen how to create a `CryptoObject`, lets move on to see how the `FingerprintManager.AuthenticationCallbacks` are used to transfer the results of fingerprint scanner service to an Android application.
 
-
-
 ## Related Links
 
-- [Cipher](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
+- [Cipher](xref:Javax.Crypto.Cipher)
 - [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
 - [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
+- [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
 - [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
 - [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)

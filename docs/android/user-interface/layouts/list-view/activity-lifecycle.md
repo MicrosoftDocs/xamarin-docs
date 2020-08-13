@@ -1,14 +1,14 @@
 ---
-title: "ListView and the Activity Lifecycle"
+title: "Xamarin.Android ListView and the Activity Lifecycle"
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
-# ListView and the Activity Lifecycle
+# Xamarin.Android ListView and the Activity Lifecycle
 
 Activities go through certain states as your application runs, such as
 starting up, running, being paused and being stopped. For more
@@ -35,7 +35,6 @@ remember to release those resources in the complementary method to
 where they were instantiated (eg. objects created in `OnStart` can be
 disposed of in `OnStop`).
 
-
 ## Configuration Changes
 
 It's important to remember that configuration changes &ndash; especially
@@ -57,4 +56,3 @@ recreated as a result of configuration changes:
 The Activity should then override `OnConfigurationChanged` to respond
 to those changes appropriately. For more details on how to handle
 configuration changes see the documentation.
-

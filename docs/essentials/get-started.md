@@ -5,33 +5,28 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 11/04/2018
+ms.date: 05/11/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Get Started with Xamarin.Essentials
 
-Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created.
-
-## Platform Support
-
-Xamarin.Essentials supports the following platforms and operating systems:
-
-| Platform | Version |
-| --- | --- |
-| Android | 4.4 (API 19) or higher |
-| iOS |10.0 or higher |
-| UWP | 10.0.16299.0 or higher |
+Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created. See the [platform & feature support guide](platform-feature-support.md) for more information on supported operating systems.
 
 ## Installation
 
-Xamarin.Essentials is available as a NuGet package that can be added to any existing or new project using Visual Studio.
+Xamarin.Essentials is available as a NuGet package and is included in every new project in Visual Studio. It can also be added to any existing using Visual Studio with the follow steps.
 
-1. Download and install [Visual Studio](http://visualstudio.com) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
+1. Download and install [Visual Studio](https://visualstudio.microsoft.com/) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
 
-2. Open an existing project, or create a new project using the Blank App template under **Visual Studio C#** (Android, iPhone & iPad, or Cross-Platform). **Important**: If adding to a UWP project ensure Build 16299 or higher is set in the project properties.
+2. Open an existing project, or create a new project using the Blank App template under **Visual Studio C#** (Android, iPhone & iPad, or Cross-Platform).
 
-3. Add the **Xamarin.Essentials** NuGet package to each project:
+    > [!IMPORTANT]
+    > If adding to a UWP project ensure Build 16299 or higher is set in the project properties.
 
+3. Add the [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet package to each project:
+
+    <!--markdownlint-disable MD023 -->
     # [Visual Studio](#tab/windows)
 
     In the Solution Explorer panel, right click on the solution name and select **Manage NuGet Packages**. Search for **Xamarin.Essentials** and install the package into **ALL** projects including Android, iOS, UWP, and .NET Standard libraries.
@@ -52,11 +47,13 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
 
     # [Android](#tab/android)
 
-    Xamarin.Essentials supports a minimum Android version of 4.4, corresponding to API level 19, but the target Android version for compiling must be 9.0, corresponding to API level 28. (In Visual Studio, these two versions are set in the Project Properties dialog for the Android project, in the Android Manifest tab. In Visual Studio for Mac, they're set in the Project Options dialog for the Android project, in the Android Application tab.)
+    Xamarin.Essentials supports a minimum Android version of 4.4, corresponding to API level 19, but the target Android version for compiling must be 9.0 or 10.0, corresponding to API level 28 and level 29. (In Visual Studio, these two versions are set in the Project Properties dialog for the Android project, in the Android Manifest tab. In Visual Studio for Mac, they're set in the Project Options dialog for the Android project, in the Android Application tab.)
 
-    Xamarin.Essentials installs version 28.0.0.1 of the Xamarin.Android.Support libraries that it requires. Any other Xamarin.Android.Support libraries that your application requires should also be updated to version 28.0.0.1 using the NuGet package manager. All Xamarin.Android.Support libraries used by your application should be the same, and should be at least version 28.0.0.1. Refer to the [troubleshooting page](troubleshooting.md) if you have issues adding the Xamarin.Essentials NuGet or updating NuGets in your solution.
+    When compiling against Android 9.0, Xamarin.Essentials installs version 28.0.0.3 of the Xamarin.Android.Support libraries that it requires. Any other Xamarin.Android.Support libraries that your application requires should also be updated to version 28.0.0.3 using the NuGet package manager. All Xamarin.Android.Support libraries used by your application should be the same, and should be at least version 28.0.0.3. Refer to the [troubleshooting page](troubleshooting.md) if you have issues adding the Xamarin.Essentials NuGet or updating NuGets in your solution.
 
-    In the Android project's `MainLauncher` or any `Activity` that is launched Xamarin.Essentials must be initialized in the `OnCreate` method:
+    Starting with version 1.5.0 when compiling against Android 10.0, Xamarin.Essentials install AndroidX support libraries that it requires. Read through the [AndroidX documentation](https://docs.microsoft.com/xamarin/android/platform/androidx) if you have not made the transition yet.
+
+    In the Android project's `MainLauncher` or any `Activity` that is launched, Xamarin.Essentials must be initialized in the `OnCreate` method:
 
     ```csharp
     protected override void OnCreate(Bundle savedInstanceState) {
@@ -69,7 +66,7 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
     To handle runtime permissions on Android, Xamarin.Essentials must receive any `OnRequestPermissionsResult`. Add the following code to all `Activity` classes:
 
     ```csharp
-    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
     {
         Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 

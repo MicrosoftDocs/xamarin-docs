@@ -4,14 +4,14 @@ description: "This document describes minor changes and enhancements to existing
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
 # Additional macOS Sierra Framework Changes
 
-<a name="Accelerate-Framework-Enhancements" />
+<a name="Accelerate-Framework-Enhancements"></a>
 
 ## Accelerate Framework Enhancements
 
@@ -21,27 +21,27 @@ The following enhancement have been made to the Accelerate Framework for macOS S
 - Added Basic functions for constructing neural networks.
 - Added Geometric predicate functions to test for things like the intersection of two geometric objects.
 
-<a name="AppKit-Framework-Enhancements" />
+<a name="AppKit-Framework-Enhancements"></a>
 
 ## AppKit Framework Enhancements
 
 The following enhancement have been made to the AppKit Framework for macOS Sierra:
 
 - Several enhancements to `NSCollectionView` such as:
-	- **Collapsible Sections** - Allows the user to collapse a Collection View section into a single horizontal row.
-	- **Floating Headers** - Headers and Footers can now be floated (in a flow layout) using the same API as [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
-	- **Scrollable Background Views** - A collection Views background can now be set to scroll along with the content.
+  - **Collapsible Sections** - Allows the user to collapse a Collection View section into a single horizontal row.
+  - **Floating Headers** - Headers and Footers can now be floated (in a flow layout) using the same API as [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
+  - **Scrollable Background Views** - A collection Views background can now be set to scroll along with the content.
 - The deferred view layout pass has been optimized and extended.
 - The drag-and-drop API now includes the new `NSFilePromiseProvider` and `NSFilePromiseReceiver` classes to support drag flocking.
 - Several convenience constructors have been added to existing controls:
-	-  `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
-	-  `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
-	-  `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
-	-  `NSSlider` includes new constructors for creating horizontal linear sliders.
-	-  `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
--  The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
+  - `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
+  - `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
+  - `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
+  - `NSSlider` includes new constructors for creating horizontal linear sliders.
+  - `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
+- The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
 
-<a name="AVFoundation-Framework-Enhancements" />
+<a name="AVFoundation-Framework-Enhancements"></a>
 
 ## AVFoundation Framework Enhancements
 
@@ -51,7 +51,7 @@ The following enhancement have been made to the AVFoundation Framework for macOS
 - The new `AVPlayerLooper` class makes it easier to loop a given piece of media during playback.
 - The `AVAssetDownloadURLSession` class allows for the downloading and later playback of FairPlay encrypted HLS streams.
 
-<a name="Core-Data-Framework-Enhancements" />
+<a name="Core-Data-Framework-Enhancements"></a>
 
 ## Core Data Framework Enhancements
 
@@ -65,7 +65,7 @@ The following enhancement have been made to the Core Data Framework for macOS Si
 
 For more information, please see Apple's [Core Data Framework Reference](https://developer.apple.com/reference/coredata).
 
-<a name="Core-Image-Framework-Enhancements" />
+<a name="Core-Image-Framework-Enhancements"></a>
 
 ## Core Image Framework Enhancements
 
@@ -76,7 +76,7 @@ The following enhancement have been made to the Core Image Framework for macOS S
 - The Core Image kernel can now request a specific pixel output format.
 - The following new image filters have been added: `CINinePartTitled`, `CINinePartStretched`, `CIHueSaturationValueGradient`, `CIEdgePreserveUpsampleFilter` and `CIClamp`.
 
-<a name="Foundation-Framework-Enhancements" />
+<a name="Foundation-Framework-Enhancements"></a>
 
 ## Foundation Framework Enhancements
 
@@ -90,17 +90,17 @@ The following enhancement have been made to the Foundation Framework for macOS S
 
 For more information, please see Apple's [Foundation Release Notes for OS X v10.12 and iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/RN-Foundation-OSX10.12/index.html).
 
-<a name="GameKit-Framework-Enhancements" />
+<a name="GameKit-Framework-Enhancements"></a>
 
 ## GameKit Framework Enhancements
 
 The following enhancement have been made to the GameKit Framework for macOS Sierra:
 
-- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc. 
+- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc.
 - A new iCloud-only account type has been implemented by the [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) class.
 - The new [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) class provides a generalized solution for managing persistent data storage on Game Center. `GKGameSession` maintains a list of players and the app is responsible form implementing how and when participant date is stored, retrieved or exchanged between players. In many instances Game Sessions can replace existing turn-based matches, real-time matches or persistent game save methods.
 
-<a name="GamePlayKit-Framework-Enhancements" />
+<a name="GamePlayKit-Framework-Enhancements"></a>
 
 ## GamePlayKit Framework Enhancements
 
@@ -114,7 +114,7 @@ The following enhancement have been made to the GamePlayKit Framework for macOS 
 - Use the new [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) class to provide high-performance, natural-looking paths.
 - The new [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) and [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) classes make combining GameplayKit and SpriteKit easier than ever.
 
-<a name="Metal-Framework-Enhancements" />
+<a name="Metal-Framework-Enhancements"></a>
 
 ## Metal Framework Enhancements
 
@@ -126,7 +126,7 @@ The following enhancement have been made to the Metal Framework for macOS Sierra
 
 To learn more, please see Apple's [Metal Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
 
-<a name="ModelIO-Framework-Enhancements" />
+<a name="ModelIO-Framework-Enhancements"></a>
 
 ## Model I/O Framework Enhancements
 
@@ -137,7 +137,7 @@ The following enhancement have been made to the Model I/O Framework for macOS Si
 - Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
 - Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
 
-<a name="Photos-Framework-Enhancements" />
+<a name="Photos-Framework-Enhancements"></a>
 
 ## Photos Framework Enhancements
 
@@ -148,7 +148,7 @@ The following enhancement have been made to the Photos Framework for macOS Sierr
 - Use the [CIImageProcessorInput](https://developer.apple.com/reference/coreimage/ciimageprocessorinput) and [CIImageProcessorOutput](https://developer.apple.com/reference/coreimage/ciimageprocessoroutput) classes to take advantage of the new Core Image processor feature to perform edits.
 - To support Live Photos, the [PHLivePhoto](https://developer.apple.com/reference/photos/phlivephoto) and [PHLivePhotoView](https://developer.apple.com/reference/photosui/phlivephotoview) classes have been ported from iOS to macOS.
 
-<a name="SceneKit-Framework-Enhancements" />
+<a name="SceneKit-Framework-Enhancements"></a>
 
 ## SceneKit Framework Enhancements
 
@@ -164,9 +164,9 @@ The following enhancement have been made to the SceneKit Framework for macOS Sie
 - SceneKit interprets color component values in a linear RGB color space for all shader types.
 - Since SceneKit reads and adjust for color profile information in texture images, use Asset Catalogs for all images to ensure this information is provided.
 - Both linear color space rendering and wide-color can be disabled by specifying the `SCNDisableLinearSpaceRendering` and `SCNDisableWideGamut` keys in the app's `Info.plist`.
-- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) class.
+- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon?language=objc) class.
 
-<a name="Security-Framework-Enhancements" />
+<a name="Security-Framework-Enhancements"></a>
 
 ## Security Framework Enhancements
 
@@ -174,7 +174,7 @@ The following enhancement have been made to the Security Framework for macOS Sie
 
 - The `SecKey` interface has been modernized and unified across all platforms (iOS, tvOS, watchOS and macOS).
 
-<a name="SpriteKit-Framework-Enhancements" />
+<a name="SpriteKit-Framework-Enhancements"></a>
 
 ## SpriteKit Framework Enhancements
 
@@ -185,7 +185,7 @@ The following enhancement have been made to the SpriteKit Framework for macOS Si
 - Custom shaders can provide attributes (`SKAttribute`) that can be configured separately by each node that uses the shader by supplying an Attribute Value (`SKAttributeValue`).
 - The [SKView](https://developer.apple.com/reference/spritekit/skview) class provides several new methods to give fine-grained control over when and how a scene is rendered.
 
-<a name="New-Frameworks" />
+<a name="New-Frameworks"></a>
 
 ## New Frameworks
 
@@ -196,5 +196,5 @@ The following frameworks have been added to macOS Sierra:
 
 ## Related Links
 
-- [Mac Samples](https://developer.xamarin.com/samples/mac/)
+- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

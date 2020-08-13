@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Tizen .NET
 
 _Tizen .NET allows you to develop Tizen applications to run on Samsung devices, including TVs, wearables, mobile devices, and other IoT devices._
 
-Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET framework. Xamarin.Forms allows you to easily create user interfaces, while the TizenFX API provides interfaces to the hardware that's found in modern TV, mobile, wearable, and IoT devices. For more information about Tizen .NET, see [Introduction to Tizen .NET Application](https://developer.tizen.org/development/training/.net-application).
+Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET framework. The Tizen .NET platform is supported by Samsung. Xamarin.Forms allows you to easily create user interfaces, while the TizenFX API provides interfaces to the hardware that's found in modern TV, mobile, wearable, and IoT devices. For more information about Tizen .NET, see [Introduction to Tizen .NET Application](https://developer.tizen.org/development/training/.net-application).
 
 ## Get started
 

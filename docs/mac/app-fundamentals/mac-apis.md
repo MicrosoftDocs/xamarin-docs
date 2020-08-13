@@ -4,8 +4,8 @@ description: "This document describes how to read Objective-C selectors and how 
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/02/2017
 ---
 
@@ -42,7 +42,7 @@ This selector invocation can be read the same way:
 - The instance `v` is having its `canDragRowsWithIndexes:atPoint` selector called with two parameters, `set` and `point`, passed in.
 - In C#, The method invocation looks like this: `x.CanDragRows (set, point);`
 
-<a name="finding_selector" />
+<a name="finding_selector"></a>
 
 ## Finding the C# member for a given selector
 
@@ -50,16 +50,16 @@ Now that you’ve found the Objective-C selector you need to invoke, the next st
 
 1. Use the auto completion list to quickly scan for something of the same name. Since we know it is an instance of `NSTableView` you can type:
 
-	- `NSTableView x;`
-	- `x.` [ctrl+space if the list does not appear).
-	- `CanDrag` [enter]
-	- Right-click the method, go to declaration to open the Assembly Browser where you can compare the `Export` attribute to the selector in question
+    - `NSTableView x;`
+    - `x.` [ctrl+space if the list does not appear).
+    - `CanDrag` [enter]
+    - Right-click the method, go to declaration to open the Assembly Browser where you can compare the `Export` attribute to the selector in question
 
 2. Search the entire class binding. Since we know it is an instance of `NSTableView` you can type:
 
-	- `NSTableView x;`
-	- Right-click `NSTableView`, go to declaration to Assembly Browser
-	- Search for the selector in question
+    - `NSTableView x;`
+    - Right-click `NSTableView`, go to declaration to Assembly Browser
+    - Search for the selector in question
 
 3. You can use the [Xamarin.Mac API online documentation](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 

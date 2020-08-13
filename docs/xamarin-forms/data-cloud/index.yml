@@ -1,0 +1,83 @@
+### YamlMime:Landing
+
+title: Data & Azure cloud services
+summary: Learn how to store data, and build connected Xamarin.Forms applications with Azure cloud services.
+
+metadata:
+  title: Data & Azure cloud services
+  description: Learn how to store data, and build connected Xamarin.Forms applications with Azure cloud services.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 12/27/2019
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
+landingContent:
+  - title: Local data storage
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Files
+            url: data/files.md
+          - text: Local databases
+            url: data/databases.md
+
+  - title: Azure services
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure Cosmos DB document database
+            url: azure-services/azure-cosmosdb.md
+          - text: Azure notification hubs
+            url: azure-services/azure-notification-hub.md
+          - text: Azure storage
+            url: azure-services/azure-storage.md
+          - text: Azure search
+            url: azure-services/azure-search.md
+          - text: Azure functions
+            url: azure-services/azure-functions.md
+          - text: Azure SignalR service
+            url: azure-services/azure-signalr.md
+
+  - title: Azure cognitive services
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Introduction
+            url: azure-cognitive-services/index.md
+          - text: Speech recognition
+            url: azure-cognitive-services/speech-recognition.md
+          - text: Spell check
+            url: azure-cognitive-services/spell-check.md
+          - text: Text translation
+            url: azure-cognitive-services/text-translation.md
+          - text: Emotion recognition
+            url: azure-cognitive-services/emotion-recognition.md
+
+  - title: Web services
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Introduction
+            url: web-services/introduction.md
+          - text: ASMX
+            url: web-services/asmx.md
+          - text: WCF
+            url: web-services/wcf.md
+          - text: REST
+            url: web-services/rest.md
+
+  - title: Authentication
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: REST
+            url: authentication/rest.md
+          - text: Identity provider
+            url: authentication/oauth.md
+          - text: Azure Active Directory B2C
+            url: authentication/azure-ad-b2c.md
+          - text: Azure Cosmos DB document database authentication
+            url: authentication/azure-cosmosdb-auth.md

@@ -3,8 +3,8 @@ title: "Alternate Resources"
 ms.prod: xamarin
 ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
 ---
 
@@ -34,13 +34,12 @@ screen density, screen size, and orientation:
 # [Visual Studio](#tab/windows)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 The following rules apply when adding qualifiers to a resource type:
 
@@ -74,9 +73,9 @@ The possible qualifiers are listed below for reference:
   qualifier of `fr` is used. To target French-Canadian locales, the
   `fr-rCA` would be used. For a complete list of language codes and
   region codes, see
-  [Codes for the Representation of Names Of Languages](http://www.loc.gov/standards/iso639-2/php/English_list.php)
+  [Codes for the Representation of Names Of Languages](https://www.loc.gov/standards/iso639-2/php/English_list.php)
   and
-  [Country names and code elements](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
+  [Country names and code elements](https://www.iso.org/iso-3166-country-codes.html).
 
 - **Smallest Width** &ndash; Specifies the smallest screen width the
   application is meant to execute on. Covered in more detail in 
@@ -130,18 +129,18 @@ The possible qualifiers are listed below for reference:
   given area on the physical screen. Typically expressed as dots per
   inch (dpi). Possible values are:
 
-    - `ldpi` &ndash; Low density screens.
+  - `ldpi` &ndash; Low density screens.
 
-    - `mdpi` &ndash; Medium density screens
+  - `mdpi` &ndash; Medium density screens
 
-    - `hdpi` &ndash; High density screens
+  - `hdpi` &ndash; High density screens
 
-    - `xhdpi` &ndash; Extra high density screens
+  - `xhdpi` &ndash; Extra high density screens
 
-    - `nodpi` &ndash; Resources that are not to be scaled
+  - `nodpi` &ndash; Resources that are not to be scaled
 
-    - `tvdpi` &ndash; Introduced in API level 13 (Android 3.2) for
-      screens between mdpi and hdpi.
+  - `tvdpi` &ndash; Introduced in API level 13 (Android 3.2) for
+    screens between mdpi and hdpi.
 
 - **Touchscreen Type** &ndash; Specifies the type of touchscreen a
   device may have. Possible values are `notouch` (no touch screen),
@@ -153,56 +152,53 @@ The possible qualifiers are listed below for reference:
   &ndash; for example when a user opens a hardware keyboard. Possible
   values are:
 
-    - `keysexposed` &ndash; The device has a keyboard available. If
-      there is no software keyboard enabled, then this is only used
-      when the hardware keyboard is opened.
+  - `keysexposed` &ndash; The device has a keyboard available. If
+    there is no software keyboard enabled, then this is only used
+    when the hardware keyboard is opened.
 
-    - `keyshidden` &ndash; The device does have a hardware keyboard but
-      it is hidden and no software keyboard is enabled.
+  - `keyshidden` &ndash; The device does have a hardware keyboard but
+    it is hidden and no software keyboard is enabled.
 
-    - `keyssoft` &ndash; the device has a software keyboard enabled.
+  - `keyssoft` &ndash; the device has a software keyboard enabled.
 
 - **Primary Text Input Method** &ndash; Use to specify what kinds of
   hardware keys are available for input. Possible values are:
 
-    - `nokeys` &ndash; There are no hardware keys for input.
+  - `nokeys` &ndash; There are no hardware keys for input.
 
-    - `qwerty` &ndash; There is a qwerty keyboard available.
+  - `qwerty` &ndash; There is a qwerty keyboard available.
 
-    - `12key` &ndash; There is a 12-key hardware keyboard
-
+  - `12key` &ndash; There is a 12-key hardware keyboard
 
 - **Navigation Key Availability** &ndash; For when 5-way or d-pad
   (directional-pad) navigation is available. This can change during the
   lifetime of your application. Possible values are:
 
-    - `navexposed` &ndash; the navigational keys are available to the user
+  - `navexposed` &ndash; the navigational keys are available to the user
 
-    - `navhidden` &ndash; the navigational keys are not available.
+  - `navhidden` &ndash; the navigational keys are not available.
 
--  **Primary Non-Touch Navigation Method** &ndash; The kind of
-   navigation available on the device. Possible values are:
+- **Primary Non-Touch Navigation Method** &ndash; The kind of
+  navigation available on the device. Possible values are:
 
-    - `nonav` &ndash; the only navigation facility available is the
-      touch screen
+  - `nonav` &ndash; the only navigation facility available is the
+    touch screen
 
-    - `dpad` &ndash; a d-pad (directional-pad) is available for navigation
+  - `dpad` &ndash; a d-pad (directional-pad) is available for navigation
 
-    - `trackball` &ndash; the device has a trackball for navigation
+  - `trackball` &ndash; the device has a trackball for navigation
 
-    - `wheel` &ndash; the uncommon scenario where there are one or more
-      directional wheels available
+  - `wheel` &ndash; the uncommon scenario where there are one or more
+    directional wheels available
 
--  **Platform Version (API level)** &ndash; The API level supported by
-   the device in the format v*N*, where *N* is the API level that is
-   being targeted. For example, v11 will target an API level 11
-   (Android 3.0) device.
-
+- **Platform Version (API level)** &ndash; The API level supported by
+  the device in the format v*N*, where *N* is the API level that is
+  being targeted. For example, v11 will target an API level 11
+  (Android 3.0) device.
 
 For more complete information about resource qualifiers see
 [Providing Resources](https://developer.android.com/guide/topics/resources/providing-resources.html)
 on the Android Developers website.
-
 
 ## How Android Determines What Resources to Use
 
@@ -247,14 +243,16 @@ resource which would require a factor of 0.75.
 As an example, consider an application that has the following drawable
 resource directories:
 
-    drawable
-    drawable-en
-    drawable-fr-rCA
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-fr-rCA
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
 And now the application is run on a device with the following configuration:
 
@@ -267,13 +265,15 @@ And now the application is run on a device with the following configuration:
 To begin with, the French resources are eliminated as they conflict
 with the locale of `en-GB`, leaving us with:
 
-    drawable
-    drawable-en
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
 Next, the first qualifier is selected from the qualifiers table above:
 MCC and MNC. There are no resource directories that contain this
@@ -283,19 +283,25 @@ The next qualifier is selected, which is Language. There are resources that
 match the language code. All resource directories that do not match the language
 code of `en` are rejected, so that the list of resources is now:
 
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+```
 
 The next qualifier that is present is for screen orientation, so all resource
 directories that do not match the screen orientation of `port` are eliminated:
 
-    drawable-en-port
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-port-ldpi
+```
 
 Next is the qualifier for screen density, `ldpi`, which results in the exclusion of one more resource directory:
 
-    drawable-en-port-ldpi
+```
+drawable-en-port-ldpi
+```
 
 As a result of this process, Android will use the drawable resources in the
 resource directory `drawable-en-port-ldpi` for the device.

@@ -4,8 +4,8 @@ description: "This guide will discuss file access on external storage in Xamarin
 ms.prod: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/23/2018
 ---
 
@@ -43,10 +43,9 @@ The primary location for private external files is found by calling the method `
 
 This document will refer to the storage directory for private files on external storage as _PRIVATE\_EXTERNAL\_STORAGE_.
 
-
 The parameter for `GetExternalFilesDir()` is a string that specifies an _application directory_. This is a directory intended to provide a standard location for a logical organization of files. The string values are available through constants on the `Android.OS.Environment` class:
 
-| `Android.OS.Environment` | Directory |
+| Android.OS.Environment | Directory |
 |-|-|
 | DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
 | DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
@@ -62,7 +61,7 @@ The parameter for `GetExternalFilesDir()` is a string that specifies an _applica
 For devices that have multiple external storage partitions, each partition will have a directory that is intended for private files. The method `Android.Content.Context.GetExternalFilesDirs(string type)` will return an array of `Java.IO.Files`. Each object will represent a private application-specific directory on all shared/external storage devices where the application can place the files it owns.
 
 > [!IMPORTANT]
-> The exact path to the private exteral storage directory can vary from device to device and between versions of Android. Because of this, apps must not hard code the path to this directory, and instead use the Xamarin.Android APIs, such as `Android.Content.Context.GetExternalFilesDir()`.
+> The exact path to the private external storage directory can vary from device to device and between versions of Android. Because of this, apps must not hard code the path to this directory, and instead use the Xamarin.Android APIs, such as `Android.Content.Context.GetExternalFilesDir()`.
 
 ### Public external files
 
@@ -74,8 +73,7 @@ Public files are files that exist on external storage that are not stored in the
 
 This document will refer to the storage directory for public files on external storage as _PUBLIC\_EXTERNAL\_STORAGE_.
 
-
-Android also supports the concept of application directories on _PUBLIC\_EXTERNAL\_STORAGE_. These directories are exactly the same as the application directories for `_PRIVATE\_EXTERNAL\_STORAGE_` and are described in the table in the previous section. The method `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` will return a `Java.IO.File` object that correspond to a public application directory. The `directoryType` parameter is a mandatory parameter and cannot be `null`.
+Android also supports the concept of application directories on _PUBLIC\_EXTERNAL\_STORAGE_. These directories are exactly the same as the application directories for `PRIVATE_EXTERNAL_STORAGE` and are described in the table in the previous section. The method `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` will return a `Java.IO.File` object that correspond to a public application directory. The `directoryType` parameter is a mandatory parameter and cannot be `null`.
 
 For example, calling `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` will return a string which will resemble:
 
@@ -112,7 +110,6 @@ The first step before writing to external storage is to check that it is readabl
 | MediaUnknown         | The state of the media is unrecognized by Android. |
 | MediaUnmountable     | The media is present but cannot be mounted by Android. |
 | MediaUnmounted       | The media is present but is not mounted. |
-
 
 Most Android apps will only need to check if external storage is mounted. The following code snippet shows how to verify that external storage is mounted for read-only access or read-write access:
 

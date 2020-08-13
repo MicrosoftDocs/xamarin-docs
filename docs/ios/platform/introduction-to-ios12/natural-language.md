@@ -4,8 +4,8 @@ description: "This document describes the Natural Language Framework. Introduced
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/20/2018
 ---
 # Using the Natural Language framework with Xamarin.iOS
@@ -26,7 +26,7 @@ preferred mechanism to use for Natural Language processing.
 ## Sample app: XamarinNL
 
 To learn how to use the Natural Language framework with Xamarin.iOS, take
-a look at the [XamarinNL sample app](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL).
+a look at the [XamarinNL sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl).
 This sample app demonstrates how to use the Natural Language framework to:
 
 - [Recognize languages](#recognizing-languages).
@@ -301,6 +301,6 @@ enum API documentation.
 
 ## Related links
 
-- [Sample app – XamarinNL](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL)
+- [Sample app – XamarinNL](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl)
 - [Introducing Natural Language Framework](https://developer.apple.com/videos/play/wwdc2018/713/)
 - [Natural Language (Apple)](https://developer.apple.com/documentation/naturallanguage?language=objc)

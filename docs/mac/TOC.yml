@@ -224,4 +224,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/mac/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

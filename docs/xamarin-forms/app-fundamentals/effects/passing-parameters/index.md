@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Passing Parameters to an Effect
@@ -20,4 +21,3 @@ Common Language Runtime (CLR) properties can be used to define effect parameters
 ## [Passing Effect Parameters as Attached Properties](attached-properties.md)
 
 Attached properties can be used to define effect parameters that respond to runtime property changes. This article demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.
-

@@ -4,8 +4,8 @@ description: "This document describes how to use Xamarin.iOS to take advantage o
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Notification management in Xamarin.iOS
@@ -18,7 +18,7 @@ notifications the app sends.
 ## Sample app: RedGreenNotifications
 
 To see an example of how notification management works, take a look at the
-[RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+[RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 sample app.
 
 This sample app sends two types of notifications – red and green – and
@@ -135,7 +135,7 @@ public void OpenSettings(UNUserNotificationCenter center, UNNotification notific
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
+- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

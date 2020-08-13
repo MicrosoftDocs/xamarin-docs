@@ -9,11 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Store Data in a Local SQLite.NET Database
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 In this quickstart, you will learn how to:
 
@@ -22,12 +23,12 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to store data in a local SQLite.NET database. The final application is shown below:
 
-[![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
-[![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes Page](database-images/screenshots1-sml.png)](database-images/screenshots1.png#lightbox "Notes Page")
+[![Note Entry Page](database-images/screenshots2-sml.png)](database-images/screenshots2.png#lightbox "Note Entry Page")
 
-### Prerequisites
+## Prerequisites
 
-You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -37,11 +38,11 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In **Solution Explorer**, select the **Notes** project, right-click and select **Manage NuGet Packages...**:
 
-    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
+    ![Add NuGet Packages](database-images/vs/add-nuget-packages.png)    
 
 3. In the **NuGet Package Manager**, select the **Browse** tab, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Install** button to add it to the project:
 
-    ![](database-images/vs/add-package.png "Add Package")
+    ![Add Package](database-images/vs/add-package.png)
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
@@ -172,7 +173,21 @@ You should successfully complete the [previous quickstart](multi-page.md) before
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -240,11 +255,11 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In the **Solution Pad**, select the **Notes** project, right-click and select **Add > Add NuGet Packages...**:
 
-    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
+    ![Add NuGet Packages](database-images/vsmac/add-nuget-packages.png)    
 
 3. In the **Add Packages** window, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Add Package** button to add it to the project:
 
-    ![](database-images/vsmac/add-package.png "Add Package")
+    ![Add Package](database-images/vsmac/add-package.png)
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
@@ -375,7 +390,21 @@ You should successfully complete the [previous quickstart](multi-page.md) before
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -450,5 +479,5 @@ To style the application with XAML styles, continue to the next quickstart.
 
 ## Related links
 
-- [Notes (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

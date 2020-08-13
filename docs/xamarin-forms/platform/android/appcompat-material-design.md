@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Adding AppCompat and Material Design
@@ -25,7 +26,7 @@ Android version of your Xamarin.Forms apps.
 ### 1. Update Xamarin.Forms
 
 Ensure the solution is using Xamarin.Forms 2.0 or newer. Update the Xamarin.Forms
-  Nuget package to 2.0 if required.
+  NuGet package to 2.0 if required.
 
 ### 2. Check Android version
 
@@ -33,14 +34,14 @@ Ensure the Android project's target framework is Android 6.0 (Marshmallow). Chec
   the **Android project > Options > Build > General** settings to ensure
   the corrent framework is selected:
 
- ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
+ ![Android General Build Configuration](appcompat-images/target-android-6-sml.png)
 
 ### 3. Add new themes to support Material Design
 
 Create the following three files in your Android project and paste
   in the contents below. Google provides a
-  [style guide](http://www.google.com/design/spec/style/color.html#color-color-palette)
-  and a [color palette generator](http://www.materialpalette.com/) to help
+  [style guide](https://www.google.com/design/spec/style/color.html#color-color-palette)
+  and a [color palette generator](https://www.materialpalette.com/) to help
   you choose an alternate color scheme to the one specified.
 
 **Resources/values/colors.xml**
@@ -145,7 +146,6 @@ to learn more.
 In these files we're creating specific theme for the toolbar that may vary for your application.
 Refer to the [Hello Toolbar](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/)
 blog post to learn more.
-
 
 ### 6. Update the `MainActivity`
 

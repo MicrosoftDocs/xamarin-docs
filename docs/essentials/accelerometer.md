@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Accelerometer
@@ -85,7 +86,7 @@ Examples:
 
 ## API
 
-- [Accelerometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Accelerometer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [Accelerometer API documentation](xref:Xamarin.Essentials.Accelerometer)
 
 ## Related Video
@@ -93,4 +94,3 @@ Examples:
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Accelerometer-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]
-

@@ -3,8 +3,8 @@ title: "Part 1 – Understanding the Xamarin Mobile Platform"
 description: "This document describes the Xamarin platform at a high level, looking at the compilation process, platform SDK access, code sharing, user interface creation, visual designers, and more."
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -13,10 +13,10 @@ ms.date: 03/23/2017
 The Xamarin platform consists of a number of elements that allow you to
 develop applications for iOS and Android:
 
--   **C# language** – Allows you to use a familiar syntax and sophisticated features like Generics, LINQ and the Parallel Task Library.
--   **Mono .NET framework** – Provides a cross-platform implementation of the extensive features in Microsoft’s .NET framework.
--   **Compiler** – Depending on the platform, produces a native app (eg. iOS) or an integrated .NET application and runtime (eg. Android). The compiler also performs many optimizations for mobile deployment such as linking away un-used code.
--   **IDE tools** – The Visual Studio on Mac and Windows allows you to create, build, and deploy Xamarin projects.
+- **C# language** – Allows you to use a familiar syntax and sophisticated features like Generics, LINQ and the Parallel Task Library.
+- **Mono .NET framework** – Provides a cross-platform implementation of the extensive features in Microsoft’s .NET framework.
+- **Compiler** – Depending on the platform, produces a native app (eg. iOS) or an integrated .NET application and runtime (eg. Android). The compiler also performs many optimizations for mobile deployment such as linking away un-used code.
+- **IDE tools** – The Visual Studio on Mac and Windows allows you to create, build, and deploy Xamarin projects.
 
 In addition, because the underlying language is C# with the .NET framework,
 projects can be structured to share code that can also be deployed to Windows
@@ -33,11 +33,10 @@ different.
 The C# source makes its way into a native app in very different ways on each
 platform:
 
--   **iOS** – C# is ahead-of-time (AOT) compiled to ARM assembly language. The .NET framework is included, with unused classes being stripped out during linking to reduce the application size. Apple does not allow runtime code generation on iOS, so some language features are not available (see  [Xamarin.iOS Limitations](~/ios/internals/limitations.md) ).
--   **Android** – C# is compiled to IL and packaged with MonoVM + JIT’ing. Unused classes in the framework are stripped out during linking. The application runs side-by-side with Java/ART (Android runtime) and interacts with the native types via JNI (see  [Xamarin.Android Limitations](~/android/internals/limitations.md) ).
--   **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to re-use the code on iOS and Android.
+- **iOS** – C# is ahead-of-time (AOT) compiled to ARM assembly language. The .NET framework is included, with unused classes being stripped out during linking to reduce the application size. Apple does not allow runtime code generation on iOS, so some language features are not available (see  [Xamarin.iOS Limitations](~/ios/internals/limitations.md) ).
+- **Android** – C# is compiled to IL and packaged with MonoVM + JIT’ing. Unused classes in the framework are stripped out during linking. The application runs side-by-side with Java/ART (Android runtime) and interacts with the native types via JNI (see  [Xamarin.Android Limitations](~/android/internals/limitations.md) ).
+- **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to re-use the code on iOS and Android.
   Note that the Universal Windows Platform also has a **.NET Native** option which behaves similarly to Xamarin.iOS' AOT compilation.
-
 
 The linker documentation for [Xamarin.iOS](~/ios/deploy-test/linker.md) and [Xamarin.Android](~/android/deploy-test/linker.md) provides more
 information about this part of the compilation process.
@@ -52,9 +51,9 @@ Some reflection features do work (eg. MonoTouch.Dialog uses it for the Reflectio
 
 Xamarin makes the features provided by the platform-specific SDK easily accessible with familiar C# syntax:
 
--   **iOS** – Xamarin.iOS exposes Apple’s CocoaTouch SDK frameworks as namespaces that you can reference from C#. For example the UIKit framework that contains all the user interface controls can be included with a simple  `using UIKit;` statement.
--   **Android** – Xamarin.Android exposes Google’s Android SDK as namespaces, so you can reference any part of the supported SDK with a using statement, such as  `using Android.Views;` to access the user interface controls.
--   **Windows** – Windows apps are built using Visual Studio on Windows. Project types include Windows Forms, WPF, WinRT, and the Universal Windows Platform (UWP).
+- **iOS** – Xamarin.iOS exposes Apple’s CocoaTouch SDK frameworks as namespaces that you can reference from C#. For example the UIKit framework that contains all the user interface controls can be included with a simple  `using UIKit;` statement.
+- **Android** – Xamarin.Android exposes Google’s Android SDK as namespaces, so you can reference any part of the supported SDK with a using statement, such as  `using Android.Views;` to access the user interface controls.
+- **Windows** – Windows apps are built using Visual Studio on Windows. Project types include Windows Forms, WPF, WinRT, and the Universal Windows Platform (UWP).
 
 ## Seamless Integration for Developers
 
@@ -159,7 +158,7 @@ Each platform has a different method for visually laying out screens:
 These screenshots show the visual screen designers available on each
 platform:
 
- [ ![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "These screenshots show the visual screen designers available on each platform")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![These screenshots show the visual screen designers available on each platform](understanding-the-xamarin-mobile-platform-images/designer-all1.png)](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 In all cases the elements that you create visually can be referenced in your
 code.

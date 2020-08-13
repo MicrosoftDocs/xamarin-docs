@@ -3,63 +3,62 @@ title: "How do I perform a thorough uninstall for Xamarin for Visual Studio?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
 ---
 
 # How do I perform a thorough uninstall for Xamarin for Visual Studio?
 
+1. From the Windows Control Panel, uninstall any of the following that are present:
 
-1.  From the Windows Control Panel, uninstall any of the following that are present:
+    - Xamarin
+    - Xamarin for Windows
+    - Xamarin.Android
+    - Xamarin.iOS
+    - Xamarin for Visual Studio
 
-    -   Xamarin
-    -   Xamarin for Windows
-    -   Xamarin.Android
-    -   Xamarin.iOS
-    -   Xamarin for Visual Studio
-
-2.  In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both _Program Files_ and _Program Files (x86)_):
+2. In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both _Program Files_ and _Program Files (x86)_):
 
     _C:\\Program Files\*\\Microsoft Visual Studio 1\*.0\\Common7\\IDE\\Extensions\\Xamarin_
 
-3.  Delete Visual Studio's MEF component cache directory as well:
+3. Delete Visual Studio's MEF component cache directory as well:
 
     _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0\\ComponentModelCache_
 
     In fact, this step by itself is often sufficient to resolve errors such as:
 
-    -   "The 'XamarinShellPackage' package did not load correctly"
+    - "The 'XamarinShellPackage' package did not load correctly"
 
-    -   "The project file ... cannot be opened. There is a missing project subtype"
+    - "The project file ... cannot be opened. There is a missing project subtype"
 
-    -   "Object reference not set to an instance of an object.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
+    - "Object reference not set to an instance of an object.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
 
-    -   "SetSite failed for package" (in Visual Studio's _ActivityLog.xml_)
+    - "SetSite failed for package" (in Visual Studio's _ActivityLog.xml_)
 
-    -   "LegacySitePackage failed for package" (in Visual Studio's _ActivityLog.xml_)
+    - "LegacySitePackage failed for package" (in Visual Studio's _ActivityLog.xml_)
 
     (See also the [Clear MEF Component Cache](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) Visual Studio extension.  And see [Bug 40781, Comment 19](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) for a bit more context about the upstream issue in Visual Studio that can cause these errors.)
 
-4.  Also check in the _VirtualStore_ directory to see if Windows might have stored any overlay files for the _Extensions\\Xamarin_ or _ComponentModelCache_ directories there:
+4. Also check in the _VirtualStore_ directory to see if Windows might have stored any overlay files for the _Extensions\\Xamarin_ or _ComponentModelCache_ directories there:
 
     _%LOCALAPPDATA%\\VirtualStore_
 
-5.  Open the registry editor (`regedit`).
+5. Open the registry editor (`regedit`).
 
-6.  Look for the following key:
+6. Look for the following key:
 
     _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
 
-7.  Find and delete any entries that match this pattern:
+7. Find and delete any entries that match this pattern:
 
     _C:\\Program Files\*\\Microsoft Visual Studio 1\*.0\\Common7\\IDE\\Extensions\\Xamarin_
 
-8.  Look for this key:
+8. Look for this key:
 
     _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
 
-9.  Delete any entries that look like they might be related to Xamarin.  For example, here's one that used to cause trouble in older versions of Xamarin:
+9. Delete any entries that look like they might be related to Xamarin.  For example, here's one that used to cause trouble in older versions of Xamarin:
 
     _Mono.VisualStudio.Shell,1.0_
 
@@ -78,14 +77,14 @@ ms.date: 12/02/2016
 
 In cases where the above steps do not resolve the "package did not load correctly" error, here are a few more steps to try.
 
-1.  Create a new Windows user account.
+1. Create a new Windows user account.
 
-2.  Check if the Xamarin Visual Studio extensions load without error for the new user.
+2. Check if the Xamarin Visual Studio extensions load without error for the new user.
 
-3.  If the extensions load correctly, then the problem is most likely caused by some of the stored settings for the original user:
+3. If the extensions load correctly, then the problem is most likely caused by some of the stored settings for the original user:
 
-    -   **In Explorer** –  _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0_
-    -   **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0_
-    -   **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\_Config_
+    - **In Explorer** –  _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0_
+    - **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0_
+    - **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\_Config_
 
-4.  If those stored settings do indeed appear to be the problem, you can try backing them up and then deleting them.
+4. If those stored settings do indeed appear to be the problem, you can try backing them up and then deleting them.

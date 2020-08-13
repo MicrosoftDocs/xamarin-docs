@@ -4,8 +4,8 @@ description: "Visual Studio includes an Android SDK Manager that you use to down
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
 ---
 
@@ -46,22 +46,21 @@ The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
 several JDK alternatives to choose from:
 
--   By default, Xamarin.Android uses
+- By default, Xamarin.Android uses
     [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
     which is required if you are developing for API level 24 or greater
     (JDK 8 also supports API levels earlier than 24).
 
--   You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
     if you are developing specifically for API level 23 or earlier.
 
--   If you are using Visual Studio 15.8 Preview 5 or later, you can try
-    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
+- If you are using Visual Studio 15.8 Preview 5 or later, you can try
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) 
     rather than JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
 
- 
 ## SDK Manager 
 
 To start the SDK Manager in Visual Studio, click **Tools > Android >
@@ -77,7 +76,6 @@ Tools** screen. This screen has two tabs &ndash; **Platforms** and
 
 The **Android SDKs and Tools** screen is described in more detail in
 the following sections.
-
 
 ### Android SDK location
 
@@ -102,14 +100,12 @@ the Android SDK. In the following screenshot, the Android SDK under
 When you click **OK**, the SDK Manager will manage the Android SDK that
 is installed at the selected location.
 
-
 ### Tools tab
 
 The **Tools** tab displays a list of _tools_ and _extras_. Use this tab
 to install the Android SDK tools, platform tools, and build tools.
 Also, you can install the Android Emulator, the low-level debugger
 (LLDB), the NDK, HAXM acceleration, and Google Play libraries.
-
 
 For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
@@ -155,7 +151,7 @@ click **Apply Changes**:
 
 [![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
-To install only specfic components, click the box next to the platform
+To install only specific components, click the box next to the platform
 once. You can then select any individual components that you need:
 
 [![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
@@ -171,7 +167,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to
@@ -194,38 +190,37 @@ To switch back to the supported repository of platforms and tools,
 click **Microsoft (Recommended)**. This restores the list of packages
 and tools to the default selection.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## Requirements
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
--   Visual Studio for Mac 7.5 (or later).
+- Visual Studio for Mac 7.5 (or later).
 
 The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
 several JDK alternatives to choose from:
 
--   By default, Xamarin.Android uses
+- By default, Xamarin.Android uses
     [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
     which is required if you are developing for API level 24 or greater
     (JDK 8 also supports API levels earlier than 24).
 
--   You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
     if you are developing specifically for API level 23 or earlier.
 
--   If you are using Visual Studio for Mac 7.7 or later, you can try
-    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
+- If you are using Visual Studio for Mac 7.7 or later, you can try
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md)
     rather than JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
- 
+
 ## SDK Manager 
 
 To start the SDK Manager in Visual Studio for Mac, click **Tools > SDK Manager**:
- 
+
 [![Location of the Android SDK Manager menu item](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 The **Android SDK Manager** opens in the **Preferences window**, which
@@ -235,7 +230,6 @@ contains three tabs, **Platforms**, **Tools**, and **Locations**:
 
 The tabs of the Android SDK Manager are described in the
 following sections.
-
 
 ### Locations tab
 
@@ -282,7 +276,6 @@ of the window, a progress bar indicates download and installation
 progress. After the installation completes, the **Tools** tab will show
 that the selected tools and extras were installed.
 
-
 ### Platforms tab
 
 The **Platforms** tab displays a list of platform SDK versions along
@@ -326,7 +319,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to
@@ -350,12 +343,10 @@ and tools to the default selection.
 
 -----
 
- 
 ## Summary
 
 This guide explained how to install and use the Xamarin Android SDK
 Manager tool in Visual Studio and Visual Studio for Mac.
-
 
 ## Related Links
 

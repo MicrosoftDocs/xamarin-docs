@@ -141,6 +141,10 @@
               href: user-interface/android-designer/alternative-layout-views.md
             - name: Material Design Features
               href: user-interface/android-designer/material-design-features.md
+            - name: Android Layout Diagnostics
+              href: user-interface/android-designer/diagnostics.md
+            - name: Android Designer Diagnostic Analyzers
+              href: user-interface/android-designer/diagnostic-analyzers.md
         - name: Material Theme
           href: user-interface/material-theme.md
         - name: User Profile
@@ -303,6 +307,10 @@
               href: platform/fragments/providing-backwards-compatibility.md
         - name: App Linking
           href: platform/app-linking.md
+        - name: AndroidX
+          href: platform/androidx.md
+        - name: Android 10
+          href: platform/android-10.md
         - name: Android 9 Pie
           href: platform/pie.md
         - name: Android 8 Oreo
@@ -371,6 +379,11 @@
                   href: platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md
             - name: Troubleshooting Bindings
               href: platform/binding-java-library/troubleshooting-bindings.md
+        - name: Bind a Kotlin Library
+          href: platform/binding-kotlin-library/index.md
+          items:
+            - name: Walkthrough
+              href: platform/binding-kotlin-library/walkthrough.md
         - name: Using Native Libraries
           href: platform/native-libraries.md
         - name: Renderscript
@@ -380,10 +393,14 @@
       items:
         - name: Getting Started
           href: ~/essentials/get-started.md?context=xamarin/android
+        - name: Platform & Feature Support
+          href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: Accelerometer
           href: ~/essentials/accelerometer.md?context=xamarin/android
         - name: App Information
           href: ~/essentials/app-information.md?context=xamarin/android
+        - name: App Theme
+          href: ~/essentials/app-theme.md?context=xamarin/android
         - name: Barometer
           href: ~/essentials/barometer.md?context=xamarin/android
         - name: Battery
@@ -426,8 +443,10 @@
           href: ~/essentials/open-browser.md?context=xamarin/android
         - name: Orientation Sensor
           href: ~/essentials/orientation-sensor.md?context=xamarin/android
+        - name: Permissions
+          href: ~/essentials/permissions.md?context=xamarin/android
         - name: Phone Dialer
-          href: ~/essentials/phone-dialer.md?context=xamarin/android  
+          href: ~/essentials/phone-dialer.md?context=xamarin/android
         - name: Platform Extensions(Size, Rect, Point)
           href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: Preferences
@@ -446,6 +465,10 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Vibrate
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Web Authenticator
+          href: ~/essentials/web-authenticator.md?context=xamarin/android
+        - name: Xamarin.Essentials release notes
+          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/android
     - name: Data and Cloud Services
@@ -496,6 +519,8 @@
       items:
         - name: App Package Size
           href: deploy-test/app-package-size.md
+        - name: Apply Changes
+          href: deploy-test/apply-changes.md
         - name: Building Apps
           href: deploy-test/building-apps/index.md
           items:
@@ -613,8 +638,8 @@
           href: troubleshooting/resolving-library-installation-errors.md
         - name: Changes to the Android SDK Tooling
           href: troubleshooting/sdk-cli-tooling-changes.md
-        - name: Xamarin.Android Errors Reference
-          href: troubleshooting/errors.md
+        - name: Xamarin.Android errors and warnings reference
+          href: /xamarin/android/errors-and-warnings/
     - name: Wear
       href: wear/index.md
       items:
@@ -654,4 +679,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/android/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

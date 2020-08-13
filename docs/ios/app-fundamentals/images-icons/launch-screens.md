@@ -4,8 +4,8 @@ description: "This article explains how to create an app Launch Screen for all i
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
 ---
 
@@ -26,7 +26,7 @@ Designer to add an Image View and a Label to the Storyboard, to set
 constraints on those views, and to verify that the Storyboard looks correct
 for various devices and orientations.
 
-<a name="storyboard" />
+<a name="storyboard"></a>
 
 ## Managing Launch Screens with Storyboards
 
@@ -127,7 +127,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 12. Test other devices and orientations to verify that the design looks as
     intended in all scenarios. In cases where adjustments need to be made
     for a specific device or orientation, use the **Edit Traits** button to
-    add constaints for specific size classes:
+    add constraints for specific size classes:
 
     ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch12.png)
 
@@ -188,7 +188,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 7. Choose a device and orientation on which to preview the Launch Screen
    Storyboard in the iOS Designer. Open the device selection panel on the
    bottom toolbar and select **iPhone 4S** and **Portrait**: 
- 
+
     ![The device selection toolbar](launch-screens-images/launch07-vs.png)
 
     - Note that selecting a device and orientation only changes how the iOS
@@ -247,7 +247,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 15. Test other devices and orientations to verify that the design looks as
     intended in all scenarios. In cases where adjustments need to be made
     for a specific device or orientation, use the **Edit Traits** button to
-    add constaints for specific size classes:
+    add constraints for specific size classes:
 
     ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch15-vs.png) 
 
@@ -272,42 +272,41 @@ guide.
 
 When updating an existing app to use Storyboards for its Launch Screens, right click the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**. Select **iOS** > **Launch Screen** and click the **New** button:
 
-![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
+![Select an iOS Launch Screen](launch-screens-images/storyboard02.png)
 
 Next, double-click the `Info.plist` file in the **Solution Explorer** to open it for editing. Under **Launch Screen**, select the new Storyboard file created above.
 
-![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
-
+![Select the new Storyboard file created above](launch-screens-images/storyboard09.png)
 
 To use the new Storyboard as a launch screen, do the following:
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll to the **Universal Launch Images** section of the editor, open the **Launch Screen** dropdown and select the name of the storyboard created above: 
 
-	![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
+    ![Setting the launch screen to the storyboard](launch-screens-images/storyboard08.png)
 
 # [Visual Studio](#tab/windows)
 
 1. Right-click on the project name in the **Solution Explorer** and select **Add** > **New File...**: 
 
-	![](launch-screens-images/image012.png "Add new file")
+    ![Add new file](launch-screens-images/image012.png)
 2. Enter a name for the launch screen and click the **Add** button: 
 
-	![](launch-screens-images/image013.png "Enter a name for the launch screen")
+    ![Enter a name for the launch screen](launch-screens-images/image013.png)
 3. In the **Solution Explorer**, double-click the newly created storyboard file to open it for editing.
 4. Ensure that the **Size Class** is set to **any:any** and the **View As** is **Generic**: 
 
-	![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+    ![Ensure that the Size Class is set to any:any and the View As is Generic](launch-screens-images/image016.png)
 5. Assembly the launch screen from Size Classes, simple UI elements (such as `UIImageView`) and images that you have included in the application's bundle: 
 
-	![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+    ![Assembly the launch screen in the iOS Designer](launch-screens-images/image017.png)
 6. Save the changes to the Storyboard.
 
 -----
 
 ## Related Links
 
-- [Dynamic Launch Screens (sample)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
+- [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS Designer Basics](~/ios/user-interface/designer/index.md)
 - [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)

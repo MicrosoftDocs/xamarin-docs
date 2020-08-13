@@ -7,6 +7,7 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 20. Async and file I/O
@@ -83,7 +84,7 @@ However, if you search for these `System.IO` classes in a Xamarin.Forms PCL, you
 This means that you'll need to use the [`DependencyService`](xref:Xamarin.Forms.DependencyService) (first discussed in [**Chapter 9. Platform-specific API calls**](chapter09.md) to implement file I/O.
 
 > [!NOTE]
-> Portable Class Libaries have been replaced with .NET Standard 2.0 libraries, and .NET Standard 2.0 supports [`System.IO`](xref:System.IO) types for all Xamarin.Forms platforms. It is no longer necessary to use a `DependencyService` for most file I/O tasks. See [File Handling in Xamarin.Forms](~/xamarin-forms/app-fundamentals/files.md) for a more modern approach to file I/O.
+> Portable Class Libaries have been replaced with .NET Standard 2.0 libraries, and .NET Standard 2.0 supports [`System.IO`](xref:System.IO) types for all Xamarin.Forms platforms. It is no longer necessary to use a `DependencyService` for most file I/O tasks. See [File Handling in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) for a more modern approach to file I/O.
 
 ### A first shot at cross-platform file I/O
 
@@ -171,10 +172,8 @@ The [`WebRequest`](xref:System.Net.WebRequest) class used in some samples uses a
 [**ApmToTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap)
 sample demonstrates this.
 
-
-
 ## Related links
 
 - [Chapter 20 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [Chapter 20 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [Working with Files](~/xamarin-forms/app-fundamentals/files.md)
+- [Working with Files](~/xamarin-forms/data-cloud/data/files.md)

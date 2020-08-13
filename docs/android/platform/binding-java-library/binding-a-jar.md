@@ -4,12 +4,15 @@ description: "This walkthrough provides step-by-step instructions for creating a
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/11/2018
 ---
 
 # Binding a .JAR
+
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
 _This walkthrough provides step-by-step instructions for creating a Xamarin.Android Java Bindings Library from an Android .JAR file._
 
@@ -27,9 +30,9 @@ Xamarin tooling can generate a Bindings Library from one or more input
 .JAR files. The Bindings Library (.DLL assembly) contains the 
 following: 
 
--   The contents of the original .JAR file(s).
+- The contents of the original .JAR file(s).
 
--   Managed Callable Wrappers (MCW), which are C# types that wrap corresponding
+- Managed Callable Wrappers (MCW), which are C# types that wrap corresponding
     Java types within the .JAR file(s).
 
 The generated MCW code uses JNI (Java Native Interface) to forward your 
@@ -51,11 +54,10 @@ required. For an overview of Java library binding in general (with a
 basic code example), see 
 [Binding a Java Library](~/android/platform/binding-java-library/index.md). 
 
- 
 ## Walkthrough
 
 In the following walkthrough, we'll create a Bindings Library for 
-[Picasso](http://square.github.io/picasso/), a popular Android .JAR 
+[Picasso](https://square.github.io/picasso/), a popular Android .JAR 
 that provides image loading and caching functionality. We will use the 
 following steps to bind **picasso-2.x.x.jar** to create a new .NET 
 assembly that we can use in a Xamarin.Android project: 
@@ -99,7 +101,6 @@ Picasso.With (this)
 
 ```
 
-
 ### Creating the Bindings Library
 
 Before commencing with the steps below, please download 
@@ -134,9 +135,9 @@ whether the .JAR is to be embedded in the Bindings Library
 or packaged separately. To do that, you specify one of the 
 following *build actions*: 
 
--   **EmbeddedJar** &ndash; the .JAR will be embedded in the Bindings Library.
+- **EmbeddedJar** &ndash; the .JAR will be embedded in the Bindings Library.
 
--   **InputJar** &ndash; the .JAR will be kept separate from the Bindings
+- **InputJar** &ndash; the .JAR will be kept separate from the Bindings
     Library.
 
 Typically, you use the **EmbeddedJar** build action so that the 
@@ -166,20 +167,17 @@ API level 19):
 
 [![Target API level set to API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 Finally, build the Bindings Library. Although some warning messages may be displayed,
 the Bindings Library project should build successfully and produce an output .DLL
 at the following location: **JarBinding/bin/Debug/JarBinding.dll**
-    
-
 
 ### Using the Bindings Library
 
 To consume this .DLL in your Xamarin.Android app, do the following:
 
-1.  Add a reference to the Bindings Library.
+1. Add a reference to the Bindings Library.
 
-2.  Make calls into the .JAR through the Managed Callable Wrappers. 
+2. Make calls into the .JAR through the Managed Callable Wrappers. 
 
 In the following steps, we'll create a minimal app that uses the 
 Bindings Library to download and display an image in an `ImageView`; 
@@ -261,16 +259,13 @@ the following screenshot:
 
 Congratulations! You've successfully bound a Java library .JAR and used it in your 
 Xamarin.Android app.
- 
- 
+
 ## Summary
 
 In this walkthrough, we created a Bindings Library for a third-party 
 .JAR file, added the Bindings Library to a minimal test app, and then 
 ran the app to verify that our C# code can call Java code residing in 
 the .JAR file. 
-
-
 
 ## Related Links
 

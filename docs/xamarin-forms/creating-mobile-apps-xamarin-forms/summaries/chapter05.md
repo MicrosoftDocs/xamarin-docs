@@ -7,6 +7,7 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 5. Dealing with sizes
@@ -82,8 +83,6 @@ The **EstimatedFontSize** program and the **FitToSizeClock** program both contai
 Another way to fit text to a rectangle is to empirically calculate the rendered text size and adjust it up or down. The program in the book calls [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) on a visual element to obtain the element's desired size. That method has been deprecated, and programs should instead call [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
 For a `Label`, the first argument should be the width of the container (to allow wrapping), while the second argument should be set to `Double.PositiveInfinity` to make the height unconstrained. The [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) sample demonstrates this technique.
-
-
 
 ## Related links
 

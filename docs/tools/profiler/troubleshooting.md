@@ -3,8 +3,8 @@ title: "Xamarin Profiler Troubleshooting"
 description: "This document provides troubleshooting information related to the Xamarin Profiler. It describes issues related to logging and diagnostics, the IDE, and other topics."
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/27/2017
 ---
 
@@ -26,7 +26,7 @@ On Windows these are saved to `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Prof
 
 We’re adding more logging as we go, so this output should grow and become more useful over time.
 
-<a name="gen_mlpd" />
+<a name="gen_mlpd"></a>
 
 ### Generating .mlpd Files
 
@@ -38,11 +38,11 @@ The **.mlpd** for a current session can also be saved by choosing **File > Save 
 
 **Visual Studio for Mac**:
 
-![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
+![Saving .mlpd file in Visual Studio for Mac](troubleshooting-images/image17.png)
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
+![Saving .mlpd file in Visual Studio](troubleshooting-images/image17-vs.png)
 
 It is important to note that **.mlpd** contain a lot of information, and the file size will be large.
 
@@ -51,7 +51,7 @@ It is important to note that **.mlpd** contain a lot of information, and the fil
 The list below shows common gotchas, workarounds, and tips and tricks for using the Profiler.
 
 > [!NOTE]
-> **NOTE**: You need to be a Visual Studio **Enterprise** subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac.
+> You need to be a Visual Studio **Enterprise** subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac.
 
 #### I can't see the iOS profiler option, or it is greyed out [Visual Studio and Visual Studio for Mac]
 
@@ -68,7 +68,7 @@ Check the following settings to resolve this:
 
 If you run into this error box when using the profiler in Visual Studio :
 
-![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
+![Error box when using the profiler in Visual Studio](troubleshooting-images/error.png)
 
 It is normally due to being unable to launch to the Simulator / Emulator. Try and run the app normally, fix the issues that it gives, and then try to use the Profiler again.
 
@@ -86,4 +86,4 @@ RunOnUiThread (() => {
 
 - [Walkthrough - Using the Xamarin Profiler](~/tools/profiler/index.md)
 - [Memory and Performance Best Practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Release Notes](https://developer.xamarin.com/releases/profiler/preview/)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

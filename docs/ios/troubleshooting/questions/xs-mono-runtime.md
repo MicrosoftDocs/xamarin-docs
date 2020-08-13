@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1176CEA9-C7F1-411B-8F1A-99374E8AFF33
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/31/2017
 ---
 
@@ -24,4 +24,4 @@ To permanently set an environment variable for an app, you need to add this as a
 To see the environment variables that can be set, refer to the Mono man page:  [http://docs.go-mono.com/?link=man%3amono(1)](http://docs.go-mono.com/?link=man%3amono(1))
 See the section titled: `ENVIRONMENT VARIABLES`
 
-![](xs-mono-runtime-images/environment-variables.jpg "Setting environment variables for a project")
+![Setting environment variables for a project](xs-mono-runtime-images/environment-variables.jpg)

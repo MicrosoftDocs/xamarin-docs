@@ -7,11 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Path Information and Enumeration
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Get information about paths and enumerate the contents_
 
@@ -21,7 +22,7 @@ It is sometimes useful to determine the total length of all the lines and curves
 
 It is also sometimes useful to obtain all the drawing operations and points that make up a path. At first, this facility might seem unnecessary: If your program has created the path, the program already knows the contents. However, you've seen that paths can also be created by [path effects](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) and by converting [text strings into paths](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). You can also obtain all the drawing operations and points that make up these paths. One possibility is to apply an algorithmic transform to all the points, for example, to wrap text around a hemisphere:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Text wrapped on a hemisphere](information-images/pathenumerationsample.png)
 
 ## Getting the Path Length
 
@@ -107,7 +108,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The `Length` property of the newly created `SKPathMeasure` object obtains the length of the path. The path length is divided by the `baseTextWidth` value (which is the width of the text based on a text size of 10) and then multiplied by the base text size of 10. The result is a new text size for displaying the text along that path:
 
-[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
+[![Triple screenshot of the Path Length page](information-images/pathlength-small.png)](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
 
 As the Bézier curve gets longer or shorter, you can see the text size change.
 
@@ -133,7 +134,7 @@ The members of the [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatr
 
 The **Unicycle Half-Pipe** page animates a stick figure on a unicycle that seems to ride back and forth along a cubic Bézier curve:
 
-[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
+[![Triple screenshot of the Unicycle Half-Pipe page](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
 
 The `SKPaint` object used for stroking both the half-pipe and the unicycle is defined as a field in the `UnicycleHalfPipePage` class. Also defined is the `SKPath` object for the unicycle:
 
@@ -244,13 +245,13 @@ The problematic verb, however, is `Close`. This command draws a straight line fr
 
 It is sometimes desirable to apply an algorithmic transform to a path to malform it in some way:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Text wrapped on a hemisphere](information-images/pathenumerationsample.png)
 
 Most of these letters consist of straight lines, yet these straight lines have apparently been twisted into curves. How is this possible?
 
 The key is that the original straight lines are broken into a series of smaller straight lines. These individual smaller straight lines can then be manipulated in different ways to form a curve.
 
-To help with this process, the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample contains a static [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) class with an `Interpolate` method that breaks down a straight line into numerous short lines that are only one unit in length. In addition, the class contains several methods that convert the three types of Bézier curves into a series of tiny straight lines that approximate the curve. (The parametric formulas were presented in the article [**Three Types of Bézier Curves**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) This process is called _flattening_ the curve:
+To help with this process, the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample contains a static [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) class with an `Interpolate` method that breaks down a straight line into numerous short lines that are only one unit in length. In addition, the class contains several methods that convert the three types of Bézier curves into a series of tiny straight lines that approximate the curve. (The parametric formulas were presented in the article [**Three Types of Bézier Curves**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) This process is called _flattening_ the curve:
 
 ```csharp
 static class PathExtensions
@@ -323,6 +324,7 @@ static class PathExtensions
             float y = (1 - t) * (1 - t) * pt0.Y + 2 * weight * t * (1 - t) * pt1.Y + t * t * pt2.Y;
             x /= denominator;
             y /= denominator;
+            points[i] = new SKPoint(x, y);
         }
 
         return points;
@@ -432,7 +434,7 @@ Notice that the method retains the first point of each contour in the variable c
 
 The **GlobularText** sample uses this extension method to seemingly wrap text around a hemisphere in a 3D effect:
 
-[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
+[![Triple screenshot of the Globular Text page](information-images/globulartext-small.png)](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
 
 The [`GlobularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) class constructor performs this transform. It creates an `SKPaint` object for the text, and then obtains an `SKPath` object from the `GetTextPath` method. This is the path passed to the `CloneWithTransform` extension method along with a transform function:
 
@@ -518,4 +520,4 @@ This is a very versatile technique. If the array of path effects described in th
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

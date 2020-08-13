@@ -7,11 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Matrix Transforms in SkiaSharp
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Dive deeper into SkiaSharp transforms with the versatile transform matrix_
 
@@ -19,7 +20,7 @@ All the transforms applied to the `SKCanvas` object are consolidated in a single
 
 As you've seen, you can use transforms in SkiaSharp without knowing about the transform matrix, but the transform matrix is important from a theoretical perspective, and it is crucial when using transforms to modify paths or for handling complex touch input, both of which are demonstrated in this article and the next.
 
-![](matrix-images/matrixtransformexample.png "A bitmap subjected to an affine transform")
+![A bitmap subjected to an affine transform](matrix-images/matrixtransformexample.png)
 
 The current transform matrix applied to the `SKCanvas` is available at any time by accessing the read-only [`TotalMatrix`](xref:SkiaSharp.SKCanvas.TotalMatrix) property. You can set a new transform matrix using the [`SetMatrix`](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) method, and you can restore that transform matrix to default values by calling [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix).
 
@@ -400,7 +401,7 @@ public class PathTransformPage : ContentPage
 
 It appears in the upper-left corner of the canvas:
 
-[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
+[![Triple screenshot of the Path Transform page](matrix-images/pathtransform-small.png)](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
 
 The constructor of this program applies the matrix to the path with the following call:
 
@@ -586,7 +587,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 The iOS screen below shows the bitmap when the page is first loaded, while the two other screens show it after some manipulation:
 
-[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
+[![Triple screenshot of the Show Affine Matrix page](matrix-images/showaffinematrix-small.png)](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
 
 Although it seems as if the touch points drag the corners of the bitmap, that's only an illusion. The matrix calculated from the touch points transforms the bitmap so that the corners coincide with the touch points.
 
@@ -646,8 +647,7 @@ The `SKMatrix` structure in SkiaSharp defines properties for that third row:
 
 Non-zero values of `Persp0` and `Persp1` result in transforms that move objects off the two-dimensional plane where Z equals 1. What happens when those objects are moved back to that plane is covered in the article on [**Non-Affine Transforms**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

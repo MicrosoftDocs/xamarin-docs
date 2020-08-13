@@ -3,8 +3,8 @@ title: "Debugging integrations"
 description: "This document describes how to debug Xamarin Workbooks integrations, both agent-side and client-side on Windows and Mac."
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
 ---
 
@@ -13,8 +13,7 @@ ms.date: 06/19/2018
 ## Debugging agent-side integrations
 
 Debugging agent-side integrations is best done by using the logging methods
-provided by the `Log` class in `Xamarin.Interactive.Logging`. See the
-[`API docs`](https://developer.xamarin.com/api/type/Xamarin.Interactive.Logging.Log/) for the methods to call.
+provided by the `Log` class in `Xamarin.Interactive.Logging`.
 
 On macOS, log messages appear in both the log viewer menu (**Window > Log Viewer**)
 and in the client log. On Windows, messages only appear in the client log,

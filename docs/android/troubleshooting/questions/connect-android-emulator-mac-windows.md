@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
 ---
 
@@ -14,15 +14,15 @@ ms.date: 06/21/2018
 To connect to the Android Emulator running on a Mac from a Windows
 virtual machine, use the following steps:
 
-1.  Start the emulator on the Mac.
+1. Start the emulator on the Mac.
 
-2.  Kill the `adb` server on the Mac:
+2. Kill the `adb` server on the Mac:
 
     ```bash
     adb kill-server
     ```
 
-3.  Note that the emulator is listening on 2 TCP ports on the loopback
+3. Note that the emulator is listening on 2 TCP ports on the loopback
     network interface:
 
     ```bash
@@ -35,8 +35,7 @@ virtual machine, use the following steps:
     The odd-numbered port is the one used to connect to `adb`. See also
     [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4.  _Option 1_: Use
-    [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4. _Option 1_: Use `nc`
     to forward inbound TCP packets received externally on port 5555 (or
     any other port you like) to the odd-numbered port on the loopback
     interface (**127.0.0.1 5555** in this example), and to forward the
@@ -53,13 +52,12 @@ virtual machine, use the following steps:
     the Terminal window to quit the `nc` commands once you're done
     using the emulator.
 
-    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.) 
+    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.)
 
-    _Option 2_: Use
-    [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Option 2_: Use `pfctl`
     to redirect TCP packets from port `5555` (or any other port you
     like) on the
-    [Shared Networking](http://kb.parallels.com/en/4948) interface to
+    [Shared Networking](https://kb.parallels.com/en/4948) interface to
     the odd-numbered port on the loopback interface (`127.0.0.1:5555`
     in this example):
 
@@ -74,9 +72,9 @@ virtual machine, use the following steps:
     the name of the special *NAT device* for the *Shared Networking*
     mode in VMWare Fusion. The appropriate network interface in
     Parallels is likely
-    [vnic0](http://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
+    [vnic0](https://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
 
-5.  Connect to the emulator from the Windows machine:
+5. Connect to the emulator from the Windows machine:
 
     ```cmd
     C:\> adb connect ip-address-of-the-mac:5555
@@ -88,19 +86,19 @@ virtual machine, use the following steps:
 
 If you have enabled _Remote Login_ on the Mac, then you can use `ssh` port forwarding to connect to the emulator.
 
-1.  Install an SSH client on Windows. One option is to install
+1. Install an SSH client on Windows. One option is to install
     [Git for Windows](https://git-for-windows.github.io/). The `ssh`
     command will then be available in the **Git Bash** command prompt.
 
-2.  Follow steps 1-3 from above to start the emulator, kill the
+2. Follow steps 1-3 from above to start the emulator, kill the
     `adb` server on the Mac, and identify the emulator ports.
 
-3.  Run `ssh` on Windows to set up two-way port forwarding between a
+3. Run `ssh` on Windows to set up two-way port forwarding between a
     local port on Windows (`localhost:15555` in this example) and the
     odd-numbered emulator port on the Mac's loopback interface
     (`127.0.0.1:5555` in this example):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 
@@ -108,7 +106,7 @@ If you have enabled _Remote Login_ on the Mac, then you can use `ssh` port forwa
     `whoami`. Replace `ip-address-of-the-mac` with the IP address of
     the Mac.
 
-4.  Connect to the emulator using the local port on Windows:
+4. Connect to the emulator using the local port on Windows:
 
     ```cmd
     C:\> adb connect localhost:15555
@@ -139,6 +137,5 @@ suite for Xamarin, so it could break in the future.
 If you notice that the technique no longer works, or if you notice any
 other mistakes in the document, feel free to add to the discussion on
 the following forum thread:
-[http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
+[http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Thanks!
-

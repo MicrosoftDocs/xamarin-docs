@@ -3,8 +3,8 @@ title: "Sharing Code Overview"
 description: "This document compares the different methods of sharing code between cross-platform projects: Shared Projects, Portable Class Libraries, and .NET Standard, including the benefits and disadvantages of each."
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/06/2018
 ---
 # Sharing code overview
@@ -23,7 +23,7 @@ The goal of a code-sharing strategy is to support the architecture shown in this
 
 This article compares the methods available to help you choose the right project type for your applications.
 
-<a name="Net_Standard" />
+<a name="Net_Standard"></a>
 
 ## .NET Standard Libraries
 
@@ -48,7 +48,7 @@ like Xamarin.Android and Xamarin.iOS. .NET Standard 2.0 is recommended for maxim
 
 .NET Standard is [similar to PCL](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries), but with a simpler model for platform support and a greater number of classes from the BCL.
 
-<a name="Shared_Projects" />
+<a name="Shared_Projects"></a>
 
 ## Shared Projects
 
@@ -96,13 +96,13 @@ shared across all three projects.
 - Refactorings that affect code inside 'inactive' compiler directives will not update the code inside those directives.
 - Unlike most other project types, a Shared Project has no 'output' assembly. During compilation, the files are treated as part of the referencing project and compiled into that assembly. If you wish to share your code as a assembly then .NET Standard or Portable Class Libraries are a better solution.
 
-<a name="Shared_Remarks" />
+<a name="Shared_Remarks"></a>
 
 ### Remarks
 
 A good solution for application developers writing code that is only intended for sharing in their app (and not distributing to other developers).
 
-<a name="Portable_Class_Libraries" />
+<a name="Portable_Class_Libraries"></a>
 
 ## Portable Class Libraries
 

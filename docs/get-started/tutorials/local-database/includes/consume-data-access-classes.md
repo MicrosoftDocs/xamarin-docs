@@ -28,7 +28,7 @@ In this exercise you will create a user interface to consume the previously crea
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of two [`Entry`](xref:Xamarin.Forms.Entry) instances, a [`Button`](xref:Xamarin.Forms.Button), and a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). Each `Entry` has its [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property set, which specifies the placeholder text that's shown prior to user input. The `Button` sets its [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event to an event handler named `OnButtonClicked` that will be created in the next step. The `ListView` sets its [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which uses a [`TextCell`](xref:Xamarin.Forms.TextCell) to define the appearance of each row in the [`ListView`](xref:Xamarin.Forms.ListView). The `TextCell` data binds its [`Text`](xref:Xamarin.Forms.TextCell.Text) and [`Detail`](xref:Xamarin.Forms.TextCell.Detail) properties to the `Name` and `Age` properties of each `Person` object, respectively.
+    This code declaratively defines the user interface for the page, which consists of two [`Entry`](xref:Xamarin.Forms.Entry) instances, a [`Button`](xref:Xamarin.Forms.Button), and a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). Each `Entry` has its [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property set, which specifies the placeholder text that's shown prior to user input. The `Button` sets its [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event to an event handler named `OnButtonClicked` that will be created in the next step. The `ListView` sets its [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which uses a [`TextCell`](xref:Xamarin.Forms.TextCell) to define the appearance of each row in the [`ListView`](xref:Xamarin.Forms.ListView). The `TextCell` data binds its [`Text`](xref:Xamarin.Forms.TextCell.Text) and [`Detail`](xref:Xamarin.Forms.TextCell.Detail) properties to the `Name` and `Age` properties of each `Person` object, respectively.
 
     In addition, the [`Entry`](xref:Xamarin.Forms.Entry) instances and [`ListView`](xref:Xamarin.Forms.ListView) have names specified with the `x:Name` attribute. This enables the code-behind file to access these objects using the assigned names.
 
@@ -68,7 +68,7 @@ In this exercise you will create a user interface to consume the previously crea
 
     [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
-    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/app-fundamentals/databases.md)
+    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/data-cloud/data/databases.md)
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -98,7 +98,7 @@ In this exercise you will create a user interface to consume the previously crea
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of two [`Entry`](xref:Xamarin.Forms.Entry) instances, a [`Button`](xref:Xamarin.Forms.Button), and a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). Each `Entry` has its [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property set, which specifies the placeholder text that's shown prior to user input. The `Button` sets its [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event to an event handler named `OnButtonClicked` that will be created in the next step. The `ListView` sets its [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which uses a [`TextCell`](xref:Xamarin.Forms.TextCell) to define the appearance of each row in the [`ListView`](xref:Xamarin.Forms.ListView). The `TextCell` data binds its [`Text`](xref:Xamarin.Forms.TextCell.Text) and [`Detail`](xref:Xamarin.Forms.TextCell.Detail) properties to the `Name` and `Age` properties of each `Person` object, respectively.
+    This code declaratively defines the user interface for the page, which consists of two [`Entry`](xref:Xamarin.Forms.Entry) instances, a [`Button`](xref:Xamarin.Forms.Button), and a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). Each `Entry` has its [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property set, which specifies the placeholder text that's shown prior to user input. The `Button` sets its [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event to an event handler named `OnButtonClicked` that will be created in the next step. The `ListView` sets its [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which uses a [`TextCell`](xref:Xamarin.Forms.TextCell) to define the appearance of each row in the [`ListView`](xref:Xamarin.Forms.ListView). The `TextCell` data binds its [`Text`](xref:Xamarin.Forms.TextCell.Text) and [`Detail`](xref:Xamarin.Forms.TextCell.Detail) properties to the `Name` and `Age` properties of each `Person` object, respectively.
 
     In addition, the [`Entry`](xref:Xamarin.Forms.Entry) instances and [`ListView`](xref:Xamarin.Forms.ListView) have names specified with the `x:Name` attribute. This enables the code-behind file to access these objects using the assigned names.
 
@@ -138,4 +138,4 @@ In this exercise you will create a user interface to consume the previously crea
 
     [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
-    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/app-fundamentals/databases.md)
+    For more information local databases in Xamarin.Forms, see [Xamarin.Forms Local Databases (guide)](~/xamarin-forms/data-cloud/data/databases.md)

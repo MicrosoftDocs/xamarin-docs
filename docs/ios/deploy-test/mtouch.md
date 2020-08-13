@@ -4,8 +4,8 @@ description: "This document describes mtouch, a tool that drives many of the ste
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -56,10 +56,9 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 The `mtouch` command can compile your code in three different
 ways:
 
--  Compile for simulator testing.
--  Compile for device deployment.
--  Deploy your executable to the device.
-
+- Compile for simulator testing.
+- Compile for device deployment.
+- Deploy your executable to the device.
 
 ### Building for the Simulator
 
@@ -85,11 +84,9 @@ In this particular case, we are using the "iPhone Developer: Miguel de Icaza"
 certificate to sign the application. This step is very important, or the
 physical device will refuse to load the application.
 
- <a name="Running_your_Application" />
-
+ <a name="Running_your_Application"></a>
 
 ## Running your Application
-
 
 ### Launching on the Simulator
 
@@ -113,8 +110,6 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-
-
 It is strongly recommended that you also keep a log of the standard output
 and standard error files to assist in your debugging. The output of
 `Console.WriteLine` goes to `stdout`, and the output from `Console.Error.WriteLine`
@@ -128,7 +123,6 @@ To do this, use the `--stdout` and `--stderr` flags:
 
 If your application fails, you can see the output and error to diagnose
 the problem.
-
 
 ### Deploying to a Device
 
@@ -152,8 +146,3 @@ These steps are typically performed by Visual Studio for Mac.
 See the [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) manual page for details on the other command line
 options.
 
-
-
-## Related Links
-
-- [mtouch(1)](http://iosapi.xamarin.com/?link=man%3amtouch(1))

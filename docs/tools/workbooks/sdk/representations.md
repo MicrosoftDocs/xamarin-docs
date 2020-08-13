@@ -3,8 +3,8 @@ title: "Representations in Xamarin Workbooks"
 description: "This document describes the Xamarin Workbooks representation pipeline, which enables the rendering of rich results for any code that returns a value."
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -22,7 +22,7 @@ depth are safely supported (including cycles and infinite enumerables) due to
 lazy and interactive reflection and remoting.
 
 Xamarin Workbooks provides a few types common to all agents and clients that
-allow for rich rendering of results. [`Color`][xir-color] is one example of such a type,
+allow for rich rendering of results. `Color` is one example of such a type,
 where for example on iOS, the agent is responsible for converting `CGColor` or
 `UIColor` objects into a `Xamarin.Interactive.Representations.Color` object.
 
@@ -32,10 +32,10 @@ in the client.
 
 ## External Representations
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] provides the ability to
-register a [`RepresentationProvider`][repp], which an integration must implement to
+`Xamarin.Interactive.IAgent.RepresentationManager` provides the ability to
+register a `RepresentationProvider`, which an integration must implement to
 convert from an arbitrary object to an agnostic form to render. These agnostic
-forms must implement the [`ISerializableObject`][serobj] interface.
+forms must implement the `ISerializableObject` interface.
 
 Implementing the `ISerializableObject` interface adds a Serialize method
 that precisely controls how objects are serialized. The `Serialize`
@@ -115,7 +115,3 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 Here, `PersonRenderer` implements the `Renderer` interface. See the [typings][typings] for more details.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
-[xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
-[repman]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[repp]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[serobj]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Serialization.ISerializableObject/

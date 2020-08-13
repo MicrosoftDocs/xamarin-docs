@@ -4,8 +4,8 @@ description: "This document describes how to configure a Xamarin.Mac app for pub
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
 ---
 
@@ -43,9 +43,9 @@ The **Mac Build** section of the **Project Options** dialog allows the developer
 
  [![Editing the build settings](app-configuration-images/config03.png "Editing the build settings")](app-configuration-images/config03-large.png#lightbox)
 
-## Related Links
+## Related links
 
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
 - [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

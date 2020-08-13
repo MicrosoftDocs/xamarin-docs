@@ -4,8 +4,8 @@ description: "This article describes how to use Apple's Instruments tool to diag
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -14,7 +14,7 @@ ms.date: 03/19/2017
 _This article walks through how to use Apple’s Instruments tool to diagnose memory issues in an iOS application built with Xamarin. It demonstrates how to launch Instruments, take heap snapshots and analyze memory growth. It also shows how to use Instruments to display and pinpoint the exact lines of code that cause the memory issue._
 
 This page demonstrates how to use **Xcode's Instruments tool** to diagnose a memory issue in an iOS application.
-First, download the [MemoryDemo Sample](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) and open the
+First, download the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) and open the
 **before** solution in Visual Studio for Mac.
 
 ## Diagnosing the Memory Issues
@@ -23,11 +23,11 @@ First, download the [MemoryDemo Sample](https://developer.xamarin.com/samples/mo
 2. Upload the application to the device by choosing the  **Run > Upload to Device** menu item.
 3. Choose the **Allocations** template (orange icon with white box)
 
-    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choose the Allocations template")
+    ![Choose the Allocations template](walkthrough-apples-instrument-images/00-allocations-tempate.png)
 
 4. Select the **Memory Demo** application in the **Choose a profiling template for:** list at the top of the window. Click on the iOS device first to expand the menu that shows installed applications.
 
-    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Select the Memory Demo application")
+    ![Select the Memory Demo application](walkthrough-apples-instrument-images/01-mem-demo.png)
 
 5. Press **Choose** button (bottom right of window) to start **Instruments**. ThiJs template will show two items in the top pane: Allocations and VM Tracker.
 
@@ -35,7 +35,7 @@ First, download the [MemoryDemo Sample](https://developer.xamarin.com/samples/mo
 
 7. Select the **VM Tracker** row in the top pane (now that the app is running, it will contain two sections: Dirty and Resident Size). In the **Inspector** pane, choose the **Show Display Settings** option (the gear icon) then tick the **Automatic Snapshotting** checkbox, shown in the bottom-right of this screenshot:
 
-    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
+    ![Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox](walkthrough-apples-instrument-images/02-auto-snapshot.png)
 
 8. Select **Allocations** row in the top pane (now that the app is running, it will say *All Heap and Anonymous VM*)
 9. In the **Inspector** pane, choose the **Show Display Settings** option (the gear icon) then click the press **Mark Generation** button to establish a baseline. A small red flag will appear in the timeline at the top of the window
@@ -46,15 +46,15 @@ First, download the [MemoryDemo Sample](https://developer.xamarin.com/samples/mo
 
 14. Notice the  **&lt;non-object>** node shows excessive memory growth. Click the arrow next to this node to see more details - right click in the stack trace to add **Source Location** to the pane:
 
-    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
+    ![Add Source Location to the pane](walkthrough-apples-instrument-images/03-mem-growth.png)
 
 15. Sort by **Size** and display the  **Extended Detail** view:
 
-    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
+    ![Sort by Size and display the  Extended Detail view](walkthrough-apples-instrument-images/04-extended-detail.png)
 
 16. Click on the desired entry in the call stack to see the related code:
 
-    ![](walkthrough-apples-instrument-images/05-related-code.png "Viewing the related code")
+    ![Viewing the related code](walkthrough-apples-instrument-images/05-related-code.png)
 
 In this case, a new image is created and stored in a collection for each cell, nor are the existing collection view cells being reused.
 
@@ -81,12 +81,12 @@ Now, when the application is run, memory usage is greatly reduced -- the **Growt
 generations is now measured in Kib (kilobytes) rather than MiB (megabytes) as it was before
 fixing the code:
 
-![](walkthrough-apples-instrument-images/06-reduced-memory.png "Showing the app memory usage")
+![Showing the app memory usage](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
-The improved code is available in the [MemoryDemo Sample](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) in the
+The improved code is available in the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) in the
 **after** solution in Visual Studio for Mac.
 
-This community blog about [Xamarin.iOS Garbage Collection](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+This community blog about [Xamarin.iOS Garbage Collection](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
 is a useful reference for dealing with memory issues with Xamarin.iOS.
 
 ## Summary
@@ -98,5 +98,5 @@ Finally, the application was re-examined to verify the problem was corrected.
 
 ## Related Links
 
-- [MemoryDemo Sample](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/)
-- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
+- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

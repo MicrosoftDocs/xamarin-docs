@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/12/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Loading XAML at Runtime in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 The [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace includes two [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) extension methods that can be used to load, and parse XAML at runtime.
 
@@ -60,7 +61,7 @@ Button navigationButton = new Button().LoadFromXaml(navigationButtonXAML);
 _stackLayout.Children.Add(navigationButton);
 ```
 
-In this example, a [`Button`](xref:Xamarin.Forms.Button) instance is created, with it's [`Text`](xref:Xamarin.Forms.Button.Text) property value being set from the XAML defined in the `string`. The `Button` is then added to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that has been defined in the XAML for the page.
+In this example, a [`Button`](xref:Xamarin.Forms.Button) instance is created, with its [`Text`](xref:Xamarin.Forms.Button.Text) property value being set from the XAML defined in the `string`. The `Button` is then added to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that has been defined in the XAML for the page.
 
 > [!NOTE]
 > The [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) extension methods allow a generic type argument to be specified. However, it's rarely necessary to specify the type argument, as it will be inferred from the type of the instance its operating on.
@@ -92,8 +93,8 @@ monkeyLabel.Text = "Seated Monkey";
 ...
 ```
 
-In this example, the XAML for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) is inflated. This XAML includes a [`Label`](xref:Xamarin.Forms.Label) named `monkeyName`, which is retrieved using the [`FindByName`](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) method, before it's [`Text`](xref:Xamarin.Forms.Label.Text) property is set.
+In this example, the XAML for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) is inflated. This XAML includes a [`Label`](xref:Xamarin.Forms.Label) named `monkeyName`, which is retrieved using the [`FindByName`](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) method, before its [`Text`](xref:Xamarin.Forms.Label.Text) property is set.
 
 ## Related links
 
-- [LoadRuntimeXAML (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+- [LoadRuntimeXAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

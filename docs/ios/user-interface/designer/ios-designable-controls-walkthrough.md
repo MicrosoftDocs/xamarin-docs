@@ -4,8 +4,8 @@ description: "This document describes how to create a custom control and use it 
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -22,185 +22,176 @@ This guide assumes a familiarity with the contents covered in the [Getting Start
 > [!IMPORTANT]
 > Starting in Xamarin.Studio 5.5, the way in which custom controls are created is slightly different to earlier versions. To create a custom control, either the `IComponent` interface is required (with the associated implementation methods) or the class can be annotated with `[DesignTimeVisible(true)]`. The latter method is being used in the following walkthrough example.
 
-
 1. Create a new solution from the **iOS > App > Single View Application > C#** template, name it `ScratchTicket`, and continue through the New Project wizard:
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "Create a new solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
+    [![Create a new solution](ios-designable-controls-walkthrough-images/01new.png)](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 1. Create a new empty class file named `ScratchTicketView`:
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "Create a new ScratchTicketView class")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
+    [![Create a new ScratchTicketView class](ios-designable-controls-walkthrough-images/02new.png)](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 1. Add the following code for `ScratchTicketView` class:
 
     ```csharp
-	using System;
-	using System.ComponentModel;
-	using CoreGraphics;
-	using Foundation;
-	using UIKit;
-	
-	namespace ScratchTicket
-	{
-	    [Register("ScratchTicketView"), DesignTimeVisible(true)]
-	    public class ScratchTicketView : UIView
-	    {
-	        CGPath path;
-	        CGPoint initialPoint;
-	        CGPoint latestPoint;
-	        bool startNewPath = false;
-	        UIImage image;
-	
-	        [Export("Image"), Browsable(true)]
-	        public UIImage Image
-	        {
-	            get { return image; }
-	            set
-	            {
-	                image = value;
-	                SetNeedsDisplay();
-	            }
-	        }
-	
-	        public ScratchTicketView(IntPtr p)
-	            : base(p)
-	        {
-	            Initialize();
-	        }
-	
-	        public ScratchTicketView()
-	        {
-	            Initialize();
-	        }
-	
-	        void Initialize()
-	        {
-	            initialPoint = CGPoint.Empty;
-	            latestPoint = CGPoint.Empty;
-	            BackgroundColor = UIColor.Clear;
-	            Opaque = false;
-	            path = new CGPath();
-	            SetNeedsDisplay();
-	        }
-	
-	        public override void TouchesBegan(NSSet touches, UIEvent evt)
-	        {
-	            base.TouchesBegan(touches, evt);
-	
-	            var touch = touches.AnyObject as UITouch;
-	
-	            if (touch != null)
-	            {
-	                initialPoint = touch.LocationInView(this);
-	            }
-	        }
-	
-	        public override void TouchesMoved(NSSet touches, UIEvent evt)
-	        {
-	            base.TouchesMoved(touches, evt);
-	
-	            var touch = touches.AnyObject as UITouch;
-	
-	            if (touch != null)
-	            {
-	                latestPoint = touch.LocationInView(this);
-	                SetNeedsDisplay();
-	            }
-	        }
-	
-	        public override void TouchesEnded(NSSet touches, UIEvent evt)
-	        {
-	            base.TouchesEnded(touches, evt);
-	            startNewPath = true;
-	        }
-	
-	        public override void Draw(CGRect rect)
-	        {
-	            base.Draw(rect);
-	
-	            using (var g = UIGraphics.GetCurrentContext())
-	            {
-	                if (image != null)
-	                    g.SetFillColor((UIColor.FromPatternImage(image).CGColor));
-	                else
-	                    g.SetFillColor(UIColor.LightGray.CGColor);
-	                g.FillRect(rect);
-	
-	                if (!initialPoint.IsEmpty)
-	                {
-	                    g.SetLineWidth(20);
-	                    g.SetBlendMode(CGBlendMode.Clear);
-	                    UIColor.Clear.SetColor();
-	
-	                    if (path.IsEmpty || startNewPath)
-	                    {
-	                        path.AddLines(new CGPoint[] { initialPoint, latestPoint });
-	                        startNewPath = false;
-	                    }
-	                    else
-	                    {
-	                        path.AddLineToPoint(latestPoint);
-	                    }
-	
-	                    g.SetLineCap(CGLineCap.Round);
-	                    g.AddPath(path);		
-	                    g.DrawPath(CGPathDrawingMode.Stroke);
-	                }
-	            }
-	        }
-	    }
-	}
-	```
+    using System;
+    using System.ComponentModel;
+    using CoreGraphics;
+    using Foundation;
+    using UIKit;
 
+    namespace ScratchTicket
+    {
+        [Register("ScratchTicketView"), DesignTimeVisible(true)]
+        public class ScratchTicketView : UIView
+        {
+            CGPath path;
+            CGPoint initialPoint;
+            CGPoint latestPoint;
+            bool startNewPath = false;
+            UIImage image;
+
+            [Export("Image"), Browsable(true)]
+            public UIImage Image
+            {
+                get { return image; }
+                set
+                {
+                    image = value;
+                    SetNeedsDisplay();
+                }
+            }
+
+            public ScratchTicketView(IntPtr p)
+                : base(p)
+            {
+                Initialize();
+            }
+
+            public ScratchTicketView()
+            {
+                Initialize();
+            }
+
+            void Initialize()
+            {
+                initialPoint = CGPoint.Empty;
+                latestPoint = CGPoint.Empty;
+                BackgroundColor = UIColor.Clear;
+                Opaque = false;
+                path = new CGPath();
+                SetNeedsDisplay();
+            }
+
+            public override void TouchesBegan(NSSet touches, UIEvent evt)
+            {
+                base.TouchesBegan(touches, evt);
+
+                var touch = touches.AnyObject as UITouch;
+
+                if (touch != null)
+                {
+                    initialPoint = touch.LocationInView(this);
+                }
+            }
+
+            public override void TouchesMoved(NSSet touches, UIEvent evt)
+            {
+                base.TouchesMoved(touches, evt);
+
+                var touch = touches.AnyObject as UITouch;
+
+                if (touch != null)
+                {
+                    latestPoint = touch.LocationInView(this);
+                    SetNeedsDisplay();
+                }
+            }
+
+            public override void TouchesEnded(NSSet touches, UIEvent evt)
+            {
+                base.TouchesEnded(touches, evt);
+                startNewPath = true;
+            }
+
+            public override void Draw(CGRect rect)
+            {
+                base.Draw(rect);
+
+                using (var g = UIGraphics.GetCurrentContext())
+                {
+                    if (image != null)
+                        g.SetFillColor((UIColor.FromPatternImage(image).CGColor));
+                    else
+                        g.SetFillColor(UIColor.LightGray.CGColor);
+                    g.FillRect(rect);
+
+                    if (!initialPoint.IsEmpty)
+                    {
+                        g.SetLineWidth(20);
+                        g.SetBlendMode(CGBlendMode.Clear);
+                        UIColor.Clear.SetColor();
+
+                        if (path.IsEmpty || startNewPath)
+                        {
+                            path.AddLines(new CGPoint[] { initialPoint, latestPoint });
+                            startNewPath = false;
+                        }
+                        else
+                        {
+                            path.AddLineToPoint(latestPoint);
+                        }
+
+                        g.SetLineCap(CGLineCap.Round);
+                        g.AddPath(path);
+                        g.DrawPath(CGPathDrawingMode.Stroke);
+                    }
+                }
+            }
+        }
+    }
+    ```
 
 1. Add the `FillTexture.png`, `FillTexture2.png` and `Monkey.png` files (available [from GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) to the **Resources** folder.
-	
+
 1. Double-click the `Main.storyboard` file to open it in the designer:
 
-    [![](ios-designable-controls-walkthrough-images/03new.png "The iOS Designer")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
-
+    [![The iOS Designer](ios-designable-controls-walkthrough-images/03new.png)](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 1. Drag/drop an **Image View** from the **Toolbox** onto the view in the storyboard.
 
-    [![](ios-designable-controls-walkthrough-images/04new.png "An Image View added to the layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
-
+    [![An Image View added to the layout](ios-designable-controls-walkthrough-images/04new.png)](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 1. Select the **Image View** and change its **Image** property to `Monkey.png`.
 
-    [![](ios-designable-controls-walkthrough-images/05new.png "Setting Image View Image property to Monkey.png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
+    [![Setting Image View Image property to Monkey.png](ios-designable-controls-walkthrough-images/05new.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
-	
 1. As we are using size classes we'll need to constrain this image view. Click on the image twice to put it into constraint mode. Let's constrain it to the center by clicking the center-pinning handle and align it both vertically and horizontally:
 
-    [![](ios-designable-controls-walkthrough-images/06new.png "Centering the image")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+    [![Centering the image](ios-designable-controls-walkthrough-images/06new.png)](ios-designable-controls-walkthrough-images/06new.png#lightbox)
 
 1. To constrain the height and width, click on the size-pinning handles (the 'bone' shaped handles) and select width and height respectively:
 
-    [![](ios-designable-controls-walkthrough-images/07new.png "Adding Constraints")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
-
+    [![Adding Constraints](ios-designable-controls-walkthrough-images/07new.png)](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 1. Update the frame based on constraints by clicking the update button in the toolbar:
 
-    [![](ios-designable-controls-walkthrough-images/08new.png "The Constraints toolbar")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
-
+    [![The Constraints toolbar](ios-designable-controls-walkthrough-images/08new.png)](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 1. Next, build the project so that the **Scratch Ticket View** will appear under **Custom Components** in the Toolbox:
 
-    [![](ios-designable-controls-walkthrough-images/09new.png "The Custom Components toolbox")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
-
+    [![The Custom Components toolbox](ios-designable-controls-walkthrough-images/09new.png)](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 1. Drag and drop a **Scratch Ticket View** so that it appears over the monkey image. Adjust the drag handles so the Scratch Ticket View covers the monkey completely, as shown below:
 
-    [![](ios-designable-controls-walkthrough-images/10new.png "A Scratch Ticket View over the Image View")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
+    [![A Scratch Ticket View over the Image View](ios-designable-controls-walkthrough-images/10new.png)](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. Constrain the Scratch Ticket View to the Image View by drawing a bounding rectangle to select both views. Select the options to constrain it to the Width, Height, Center and Middle and update frames based on constraints, as shown below:
 
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centering and adding Constraints")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
-
+    [![Centering and adding Constraints](ios-designable-controls-walkthrough-images/11new.png)](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 1. Run the application and “scratch off” the image to reveal the monkey.
 
-    [![](ios-designable-controls-walkthrough-images/10-app.png "A sample app run")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+    [![A sample app run](ios-designable-controls-walkthrough-images/10-app.png)](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## Adding Design-Time Properties
 
@@ -210,13 +201,13 @@ Add the following code to the `ScratchTicketView` class for the property:
 
 ```csharp
 [Export("Image"), Browsable(true)]
-public UIImage Image 
+public UIImage Image
 {
-	get { return image; }
-	set { 
-			image = value;
-		  	SetNeedsDisplay ();
-		}
+    get { return image; }
+    set {
+            image = value;
+              SetNeedsDisplay ();
+        }
 }
 ```
 
@@ -229,11 +220,11 @@ public override void Draw(CGRect rect)
 
     using (var g = UIGraphics.GetCurrentContext())
     {
-		if (image != null)
-			g.SetFillColor ((UIColor.FromPatternImage (image).CGColor));
-		else
-			g.SetFillColor (UIColor.LightGray.CGColor);
-			
+        if (image != null)
+            g.SetFillColor ((UIColor.FromPatternImage (image).CGColor));
+        else
+            g.SetFillColor (UIColor.LightGray.CGColor);
+
         g.FillRect(rect);
 
         if (!initialPoint.IsEmpty)
@@ -253,7 +244,7 @@ public override void Draw(CGRect rect)
              }
 
              g.SetLineCap(CGLineCap.Round);
-             g.AddPath(path);		
+             g.AddPath(path);
              g.DrawPath(CGPathDrawingMode.Stroke);
         }
     }
@@ -262,15 +253,13 @@ public override void Draw(CGRect rect)
 
 Including an `ExportAttribute` and a `BrowsableAttribute` with the argument set to `true` results in the property being displayed in the designer’s **Property** panel. Changing the property to another image included with the project, such as `FillTexture2.png`, results in the control updating at design time, as shown below:
 
- [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editing Design Time properties")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+ [![Editing Design Time properties](ios-designable-controls-walkthrough-images/11-customproperty.png)](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## Summary
 
 In this article we walked through how to create a custom control, as well as consume it in an iOS application using the iOS designer. We saw how to create and build the control to make it available to an application in the designer’s **Toolbox**. Additionally, we looked at how to implement the control such that it renders properly at both design time and runtime, as well as how to expose custom control properties in the designer.
 
-
-
 ## Related Links
 
-- [ScratchTicket (sample)](https://developer.xamarin.com/samples/monotouch/ScratchTicket/)
+- [ScratchTicket (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/scratchticket)
 - [required images (sample)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

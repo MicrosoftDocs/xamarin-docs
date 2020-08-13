@@ -7,20 +7,21 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Automation Properties in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms allows accessibility values to be set on user interface elements by using attached properties from the AutomationProperties class, which in turn set native accessibility values. This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page._
 
 Xamarin.Forms allows automation properties to be set on user interface elements via the following attached properties:
 
-- `AutomationProperties.IsInAccessibleTree` – indicates whether the element is available to an accessible application. For more information, see [AutomationProperties.IsInAccessibleTree](#isinaccessibletree).
-- `AutomationProperties.Name` – a short description of the element that serves as a speakable identifier for the element. For more information, see [AutomationProperties.Name](#name).
-- `AutomationProperties.HelpText` – a longer description of the element, which can be thought of as tooltip text associated with the element. For more information, see [AutomationProperties.HelpText](#helptext).
-- `AutomationProperties.LabeledBy` – allows another element to define accessibility information for the current element. For more information, see [AutomationProperties.LabeledBy](#labeledby).
+- `AutomationProperties.IsInAccessibleTree` – indicates whether the element is available to an accessible application. For more information, see [AutomationProperties.IsInAccessibleTree](#automationpropertiesisinaccessibletree).
+- `AutomationProperties.Name` – a short description of the element that serves as a speakable identifier for the element. For more information, see [AutomationProperties.Name](#automationpropertiesname).
+- `AutomationProperties.HelpText` – a longer description of the element, which can be thought of as tooltip text associated with the element. For more information, see [AutomationProperties.HelpText](#automationpropertieshelptext).
+- `AutomationProperties.LabeledBy` – allows another element to define accessibility information for the current element. For more information, see [AutomationProperties.LabeledBy](#automationpropertieslabeledby).
 
 These attached properties set native accessibility values so that a screen reader can speak about the element. For more information about attached properties, see [Attached Properties](~/xamarin-forms/xaml/attached-properties.md).
 
@@ -43,8 +44,6 @@ Screen readers also read different accessibility values. In the sample applicati
 
 In addition, Narrator will prioritize `AutomationProperties.Name`, `AutomationProperties.LabeledBy`, and then `AutomationProperties.HelpText`. On Android, TalkBack may combine the `AutomationProperties.Name` and `AutomationProperties.HelpText` values. Therefore, it's recommended that thorough accessibility testing is carried out on each platform to ensure an optimal experience.
 
-<a name="isinaccessibletree" />
-
 ## AutomationProperties.IsInAccessibleTree
 
 The `AutomationProperties.IsInAccessibleTree` attached property is a `boolean` that determines if the element is accessible, and hence visible, to screen readers. It must be set to `true` to use the other accessibility attached properties. This can be accomplished in XAML as follows:
@@ -62,8 +61,6 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property – `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
-
-<a name="name" />
 
 ## AutomationProperties.Name
 
@@ -84,8 +81,6 @@ AutomationProperties.SetName(activityIndicator, "Progress indicator");
 
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.Name` attached property – `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
-
-<a name="helptext" />
 
 ## AutomationProperties.HelpText
 
@@ -108,9 +103,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.HelpText` attached property – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-On some platforms, for edit controls such as an [`Entry`](xref:Xamarin.Forms.Entry), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property that places the text in the control prior to the user's actual input.
-
-<a name="labeledby" />
+On some platforms, for edit controls such as an [`Entry`](xref:Xamarin.Forms.Entry), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property that places the text in the control prior to the user's actual input.
 
 ## AutomationProperties.LabeledBy
 
@@ -144,23 +137,23 @@ On Android, to set the text that screen readers will read for the back arrow in 
 
 ### MasterDetailPage
 
-On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `Icon` property of the `Master` page.
+On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `IconImageSource` property of the `Master` page.
 
 On Android, to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), add string resources to the Android project:
 
 ```xml
 <resources>
-	    <string name="app_name">Xamarin Forms Control Gallery</string>
-	    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
-	    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+    <string name="app_name">Xamarin Forms Control Gallery</string>
+    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
 </resources>
 ```
 
-Then set the `AutomationId` property of the `Icon` property of the `Master` page to the appropriate string:
+Then set the `AutomationId` property of the `IconImageSource` property of the `Master` page to the appropriate string:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### ToolbarItem
@@ -174,4 +167,4 @@ On Android, the `AutomationProperties.Name` and/or `AutomationProperties.HelpTex
 ## Related Links
 
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
-- [Accessibility (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

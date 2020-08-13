@@ -4,8 +4,8 @@ description: "This section shows how to implement local notifications in Xamarin
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
 ---
 # Notifications in Xamarin.iOS
@@ -30,7 +30,7 @@ iOS makes it fairly simple to create and handle local notifications.
 First, iOS 8 requires applications to ask for the user's permission
 to display notifications. Add the following code to your app before
 attempting to send a local notification - the 
-[attached sample](https://developer.xamarin.com/samples/monotouch/LocalNotifications/) 
+[attached sample](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) 
 places it in the **AppDelegate**'s **FinishedLaunching** method.
 
 ```csharp
@@ -50,7 +50,7 @@ minute in the future, and display an alert with a message:
 
 ```csharp
 UILocalNotification notification = new UILocalNotification();
-NSDate.FromTimeIntervalSinceNow(15);
+notification.FireDate = NSDate.FromTimeIntervalSinceNow(15);
 //notification.AlertTitle = "Alert Title"; // required for Apple Watch notifications
 notification.AlertAction = "View Alert";
 notification.AlertBody = "Your 15 second alert has fired!";
@@ -59,7 +59,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 The following screenshot shows what this alert looks like:
 
-[![](local-notifications-in-ios-images/image2-sml.png "An example alert")](local-notifications-in-ios-images/image2.png#lightbox)
+[![An example alert](local-notifications-in-ios-images/image2-sml.png)](local-notifications-in-ios-images/image2.png#lightbox)
 
 Note that if the user chose to *not allow* notifications then nothing
 will be displayed.
@@ -155,8 +155,8 @@ to notifications by overriding the `ReceivedLocalNotification` method or the `Re
 
 ## Related links
 
-- [Local notifications (sample)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
+- [Local notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UILocalNotification](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UILocalNotification)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UILocalNotification](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)

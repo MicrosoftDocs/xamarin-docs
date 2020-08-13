@@ -4,11 +4,13 @@ description: "This article examines the fundamentals of application development 
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
+ms.custom: video
 ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Quickstart Deep Dive
@@ -21,7 +23,7 @@ In the [Xamarin.Forms Quickstart](~/get-started/index.yml), the Notes applicatio
 
 Visual Studio organizes code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Notes application consists of one solution containing four projects, as shown in the following screenshot:
 
-![](deepdive-images/vs/solution.png "Visual Studio Solution Explorer")
+![Visual Studio Solution Explorer](deepdive-images/vs/solution.png)
 
 The projects are:
 
@@ -34,7 +36,7 @@ The projects are:
 
 The following screenshot shows the contents of the Notes .NET Standard library project in Visual Studio:
 
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard Project Contents")
+![Phoneword .NET Standard Project Contents](deepdive-images/vs/net-standard-project.png)
 
 The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
@@ -48,7 +50,7 @@ The project has a **Dependencies** node that contains **NuGet** and **SDK** node
 
 [Visual Studio for Mac](/visualstudio/mac/) follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Notes application consists of one solution containing three projects, as shown in the following screenshot:
 
-![](deepdive-images/vsmac/solution.png "Visual Studio for Mac Solution Pane")
+![Visual Studio for Mac Solution Pane](deepdive-images/vsmac/solution.png)
 
 The projects are:
 
@@ -60,7 +62,7 @@ The projects are:
 
 The following screenshot shows the contents of the Notes .NET Standard library project in Visual Studio for Mac:
 
-![](deepdive-images/vsmac/net-standard-project.png "Phoneword .NET Standard Library Project Contents")
+![Phoneword .NET Standard Library Project Contents](deepdive-images/vsmac/net-standard-project.png)
 
 The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
@@ -89,12 +91,12 @@ A Xamarin.Forms application is architected in the same way as a traditional cros
 
 ::: zone pivot="windows"
 
-![](deepdive-images/vs/architecture.png "Notes Architecture")
+![Notes Architecture](deepdive-images/vs/architecture.png)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-![](deepdive-images/vsmac/architecture.png "Notes Architecture")
+![Notes Architecture](deepdive-images/vsmac/architecture.png)
 
 ::: zone-end
 
@@ -260,7 +262,7 @@ By default the [`StackLayout`](xref:Xamarin.Forms.StackLayout) assumes a vertica
 > [!NOTE]
 > The size of views can be set through the `HeightRequest` and `WidthRequest` properties.
 
-For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout) class, see [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout) class, see [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
 ### Responding to user interaction
 
@@ -377,9 +379,9 @@ For more information about hierarchical navigation, see [Hierarchical Navigation
 
 Data binding is used to simplify how a Xamarin.Forms application displays and interacts with its data. It establishes a connection between the user interface and the underlying application. The [`BindableObject`](xref:Xamarin.Forms.BindableObject) class contains much of the infrastructure to support data binding.
 
-Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.Editor.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
+Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.InputView.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
 
-![](deepdive-images/data-binding.png "Data Binding")
+![Data Binding](deepdive-images/data-binding.png)
 
 The main benefit of data binding is that you no longer have to worry about synchronizing data between your views and data source. Changes in the *source* object are automatically pushed to the *target* object behind-the-scenes by the binding framework, and changes in the target object can be optionally pushed back to the *source* object.
 
@@ -426,7 +428,7 @@ The [`Editor`](xref:Xamarin.Forms.Editor) in `NoteEntryPage` then binds to the `
         ... />
 ```
 
-A binding between the [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) property and the `Text` property of the *source* object is established. Changes made in the `Editor` will automatically be propagated to the `Note` object. Similarly, if changes are made to the `Note.Text` property, the Xamarin.Forms binding engine will also update the contents of the `Editor`. This is known as a *two-way binding*.
+A binding between the [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) property and the `Text` property of the *source* object is established. Changes made in the `Editor` will automatically be propagated to the `Note` object. Similarly, if changes are made to the `Note.Text` property, the Xamarin.Forms binding engine will also update the contents of the `Editor`. This is known as a *two-way binding*.
 
 For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -527,11 +529,17 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 
 ## Related links
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
+- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Getting Started Samples](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
 - [Xamarin.Forms API reference](xref:Xamarin.Forms)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided/)
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

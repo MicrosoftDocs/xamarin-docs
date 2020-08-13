@@ -6,49 +6,51 @@ ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2016
+ms.date: 09/12/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Customizing ListView Cell Appearance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-[`ListView`](xref:Xamarin.Forms.ListView) presents scrollable lists, which can be customized through the use of `ViewCell`s. `ViewCells` can be used for displaying text and images, indicating a true/false state and receiving user input.
-
-<a name="Built_in_Cells" />
+The Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) class is used to present scrollable lists, which can be customized through the use of `ViewCell` elements. A `ViewCell` element can display text and images, indicate a true/false state, and receive user input.
 
 ## Built in Cells
-Xamarin.Forms comes with built-in cells that work for many simple applications:
+Xamarin.Forms comes with built-in cells that work for many applications:
 
-- **TextCell** &ndash; for displaying text
-- **ImageCell** &ndash; for displaying an image with text.
+- [`TextCell`](#textcell) controls are used for displaying text with an optional second line for detail text.
+- [`ImageCell`](#imagecell) controls are similar to `TextCell`s but include an image to the left of the text.
+- `SwitchCell` controls are used to present and capture on/off or true/false states.
+- `EntryCell` controls are used to present text data that the user can edit.
 
-Two additional cells, [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) and [`EntryCell`](~/xamarin-forms/user-interface/tableview.md#entrycell) are available, however they aren't commonly used with `ListView`. See [`TableView`](~/xamarin-forms/user-interface/tableview.md) for more information about these cells.
-
-<a name="TextCell" />
+The [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) and [`EntryCell`](~/xamarin-forms/user-interface/tableview.md#entrycell) controls are more commonly used in the context of a [`TableView`](~/xamarin-forms/user-interface/tableview.md).
 
 ### TextCell
 
-[`TextCell`](xref:Xamarin.Forms.TextCell) is a cell for displaying text, optionally with a second line as detail text.
+[`TextCell`](xref:Xamarin.Forms.TextCell) is a cell for displaying text, optionally with a second line as detail text. The following screenshot shows `TextCell` items on iOS and Android:
 
-TextCells are rendered as native controls at runtime, so performance is very good compared to a custom `ViewCell`. TextCells are customizable, allowing you to set:
+![Default TextCell Example](customizing-cell-appearance-images/text-cell-default.png)
+
+TextCells are rendered as native controls at runtime, so performance is very good compared to a custom `ViewCell`. TextCells are customizable, allowing you to set the following properties:
 
 - `Text` &ndash; the text that is shown on the first line, in large font.
 - `Detail` &ndash; the text that is shown underneath the first line, in a smaller font.
 - `TextColor` &ndash; the color of the text.
 - `DetailColor` &ndash; the color of the detail text
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+The following screenshot shows `TextCell` items with customized color properties:
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Customized TextCell Example")
-
-<a name="ImageCell" />
+![Custom TextCell Example](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### ImageCell
 
 [`ImageCell`](xref:Xamarin.Forms.ImageCell), like `TextCell`, can be used for displaying text and secondary detail text, and it offers great performance by using each platform's native controls. `ImageCell` differs from `TextCell` in that it displays an image to the left of the text.
 
-`ImageCell` is useful when you need to display a list of data with a visual aspect, such as a list of contacts or movies. ImageCells are customizable, allowing you to set:
+The following screenshot shows `ImageCell` items on iOS and Android:
+!["Default ImageCell Example"](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
+
+`ImageCell` is useful when you need to display a list of data with a visual aspect, such as a list of contacts or movies. `ImageCell`s are customizable, allowing you to set:
 
 - `Text` &ndash; the text that is shown on the first line, in large font
 - `Detail` &ndash; the text that is shown underneath the first line, in a smaller font
@@ -56,25 +58,22 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 - `DetailColor` &ndash; the color of the detail text
 - `ImageSource` &ndash; the image to display next to the text
 
-![](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
-
-![](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
-
-<a name="customcells" />
+The following screenshot shows `ImageCell` items with customized color properties:
+!["Customized ImageCell Example"](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
 
 ## Custom Cells
-When the built-in cells don't provide the required layout, custom cells implemented the required layout. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
+Custom cells allow you to create cell layouts that aren't supported by the built-in cells. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
 
 All custom cells must derive from [`ViewCell`](xref:Xamarin.Forms.ViewCell), the same base class that all of the built-in cell types use.
 
-Xamarin.Forms 2 introduced a new [caching behavior](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) on the `ListView` control which can be set to improve scrolling performance for some types of custom cells.
+Xamarin.Forms offers a [caching behavior](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy) on the `ListView` control which can improve scrolling performance for some types of custom cells.
 
-This is an example of a custom cell:
+The following screenshot shows an example of a custom cell:
 
-![](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
+!["Custom Cell Example"](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
 
 ### XAML
-The XAML to create the above layout is below:
+The custom cell shown in the previous screenshot can be created with the following XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -105,18 +104,18 @@ x:Class="demoListView.ImageCellPage">
 </ContentPage>
 ```
 
-The XAML above is doing a lot. Let's break it down:
+The XAML works as follows:
 
-- The custom cell is nested inside a `DataTemplate`, which is inside `ListView.ItemTemplate`. This is the same process as using any other cell.
-- `ViewCell` is the type of the custom cell. The child of the `DataTemplate` element must be of or derive from type `ViewCell`.
-- Notice that inside the `ViewCell`, layout is managed by a `StackLayout`. This layout allows us to customize the background color. Note that any property of `StackLayout` that is bindable can be bound inside a custom cell, although that is not shown here.
-- Inside the `ViewCell`, layout can be managed by any Xamarin.Forms layout. 
+- The custom cell is nested inside a `DataTemplate`, which is inside `ListView.ItemTemplate`. This is the same process as using any built-in cell.
+- `ViewCell` is the type of the custom cell. The child of the `DataTemplate` element must be of, or derive from, the `ViewCell` class.
+- Inside the `ViewCell`, layout can be managed by any Xamarin.Forms layout. In this example, layout is managed by a `StackLayout`, which allows the background color to be customized.
 
-### C&num;
+> [!NOTE]
+> Any property of `StackLayout` that is bindable can be bound inside a custom cell. However, this capability is not shown in the XAML example.
 
-Specifying a custom cell in C# is a bit more verbose than the XAML equivalent. Let's take a look:
+### Code
 
-First, define a custom cell class, with `ViewCell` as the base class:
+A custom cell can also be created in code. First, a custom class that derives from `ViewCell` must be created:
 
 ```csharp
 public class CustomCell : ViewCell
@@ -152,7 +151,7 @@ public class CustomCell : ViewCell
     }
 ```
 
-In your constructor for the page with the `ListView`, set the ListView's `ItemTemplate` property to a new `DataTemplate`:
+In the page constructor, the ListView's `ItemTemplate` property is set to a `DataTemplate` with the `CustomCell` type specified:
 
 ```csharp
 public partial class ImageCellPage : ContentPage
@@ -164,10 +163,6 @@ public partial class ImageCellPage : ContentPage
         }
     }
 ```
-
-Note that the constructor for `DataTemplate` takes a type. The typeof operator gets the CLR type for `CustomCell`.
-
-<a name="binding-context-changes" />
 
 ### Binding Context Changes
 
@@ -185,17 +180,20 @@ public class CustomCell : ViewCell
     public static readonly BindableProperty LocationProperty =
         BindableProperty.Create ("Location", typeof(string), typeof(CustomCell), "Location");
 
-    public string Name {
+    public string Name
+    {
         get { return(string)GetValue (NameProperty); }
         set { SetValue (NameProperty, value); }
     }
 
-    public int Age {
+    public int Age
+    {
         get { return(int)GetValue (AgeProperty); }
         set { SetValue (AgeProperty, value); }
     }
 
-    public string Location {
+    public string Location
+    {
         get { return(string)GetValue (LocationProperty); }
         set { SetValue (LocationProperty, value); }
     }
@@ -205,7 +203,8 @@ public class CustomCell : ViewCell
     {
         base.OnBindingContextChanged ();
 
-        if (BindingContext != null) {
+        if (BindingContext != null)
+        {
             nameLabel.Text = Name;
             ageLabel.Text = Age.ToString ();
             locationLabel.Text = Location;
@@ -243,16 +242,17 @@ customCell.SetBinding (CustomCell.NameProperty, "Name");
 customCell.SetBinding (CustomCell.AgeProperty, "Age");
 customCell.SetBinding (CustomCell.LocationProperty, "Location");
 
-var listView = new ListView {
+var listView = new ListView
+{
     ItemsSource = people,
     ItemTemplate = customCell
 };
 ```
 
-On iOS and Android, if the [`ListView`](xref:Xamarin.Forms.ListView) is recycling elements and the custom cell uses a custom renderer, the custom renderer must correctly implement property change notification. When cells are reused their property values will change when the binding context is updated to that of an available cell, with `PropertyChanged` events being raised. For more information, see [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). For more information about cell recycling, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+On iOS and Android, if the [`ListView`](xref:Xamarin.Forms.ListView) is recycling elements and the custom cell uses a custom renderer, the custom renderer must correctly implement property change notification. When cells are reused their property values will change when the binding context is updated to that of an available cell, with `PropertyChanged` events being raised. For more information, see [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). For more information about cell recycling, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
 ## Related Links
 
-- [Built in Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [Custom Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [Binding Context Changed (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BindingContextChanged)
+- [Built in Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Custom Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [Binding Context Changed (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

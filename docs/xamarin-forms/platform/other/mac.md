@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Mac Platform Setup
@@ -18,7 +19,7 @@ Before you start, create (or use an existing) Xamarin.Forms project. You can onl
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
-**Adding a macOS project to Xamarin.Forms, by [Xamarin University](https://university.xamarin.com/)**
+**Adding a macOS project to Xamarin.Forms video**
 
 ## Adding a Mac App
 

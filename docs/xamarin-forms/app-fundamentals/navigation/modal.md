@@ -7,41 +7,38 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Modal Pages
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 _Xamarin.Forms provides support for modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled. This article demonstrates how to navigate to modal pages._
 
 This article discusses the following topics:
 
-- [Performing navigation](#Performing_Navigation) – pushing pages to the modal stack, popping pages from the modal stack, disabling the back button, and animating page transitions.
-- [Passing data when navigating](#Passing_Data_when_Navigating) – passing data through a page constructor, and through a `BindingContext`.
+- [Performing navigation](#performing-navigation) – pushing pages to the modal stack, popping pages from the modal stack, disabling the back button, and animating page transitions.
+- [Passing data when navigating](#passing-data-when-navigating) – passing data through a page constructor, and through a `BindingContext`.
 
 ## Overview
 
 A modal page can be any of the [Page](~/xamarin-forms/user-interface/controls/pages.md) types supported by Xamarin.Forms. To display a modal page the application will push it onto the modal stack, where it will become the active page, as shown in the following diagram:
 
-![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
+![Pushing a Page to the Modal Stack](modal-images/pushing.png)
 
 To return to the previous page the application will pop the current page from the modal stack, and the new topmost page becomes the active page, as shown in the following diagram:
 
-![](modal-images/popping.png "Popping a Page from the Modal Stack")
-
-<a name="Performing_Navigation" />
+![Popping a Page from the Modal Stack](modal-images/popping.png)
 
 ## Performing Navigation
 
-Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#Pushing_Pages_to_the_Modal_Stack) onto the modal stack, and [pop modal pages](#Popping_Pages_from_the_Modal_Stack) from the modal stack.
+Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#pushing-pages-to-the-modal-stack) onto the modal stack, and [pop modal pages](#popping-pages-from-the-modal-stack) from the modal stack.
 
 The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property also exposes a [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) property from which the modal pages in the modal stack can be obtained. However, there is no concept of performing modal stack manipulation, or popping to the root page in modal navigation. This is because these operations are not universally supported on the underlying platforms.
 
 > [!NOTE]
 > A [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance is not required for performing modal page navigation.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### Pushing Pages to the Modal Stack
 
@@ -60,7 +57,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 This causes the `ModalPage` instance to be pushed onto the modal stack, where it becomes the active page, provided that an item has been selected in the [`ListView`](xref:Xamarin.Forms.ListView) on the `MainPage` instance. The `ModalPage` instance is shown in the following screenshots:
 
-![](modal-images/modalpage.png "Modal Page Example")
+![Modal Page Example](modal-images/modalpage.png)
 
 When [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) is invoked, the following events occur:
 
@@ -72,8 +69,6 @@ However, the precise order that these events occur is platform dependent. For mo
 
 > [!NOTE]
 > Calls to the [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) and [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### Popping Pages from the Modal Stack
 
@@ -119,8 +114,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 Setting the `boolean` parameter to `false` disables the page-transition animation, while setting the parameter to `true` enables the page-transition animation, provided that it is supported by the underlying platform. However, the push and pop methods that lack this parameter enable the animation by default.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## Passing Data when Navigating
 
@@ -253,9 +246,8 @@ For more information about data binding, see [Data Binding Basics](~/xamarin-for
 
 This article demonstrated how to navigate to modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled.
 
-
 ## Related Links
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Modal (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
-- [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
+- [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+- [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)

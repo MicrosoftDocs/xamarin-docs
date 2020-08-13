@@ -4,15 +4,15 @@ description: "This document describes how to replace your component references w
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
 ---
 
 # Updating component references to NuGet
 
 > [!IMPORTANT]
-> The Component Store has been discontinued as of May 15, 2018 (this closure was 
+> The Component Store has been discontinued as of May 15, 2018 (this closure was
 > originally [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) in November 2017).
 >
 > Xamarin Components are no longer supported in Visual Studio, and should be replaced by
@@ -27,7 +27,7 @@ A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/Xam
 
 ## Manually removing component references
 
-The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
+The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project.
 
 # [Visual Studio](#tab/windows)
 
@@ -37,7 +37,7 @@ If you load a project into Visual Studio, the following dialog is displayed, exp
 
 To remove a component from your project:
 
-1. Open the **.csproj** file. To do this, right-click on the project name and select **Unload Project**. 
+1. Open the **.csproj** file. To do this, right-click on the project name and select **Unload Project**.
 
 2. Right-click again on the unloaded project and select **Edit {your-project-name}.csproj**.
 
@@ -117,7 +117,7 @@ If you are using a component that does not appear to have an
 equivalent NuGet package, read the
 [components without a NuGet migration path](#require-update) section below.
 
-<a name="contain" />
+<a name="contain"></a>
 
 ## Components that contain NuGet packages
 
@@ -145,12 +145,11 @@ To update your solution, delete the **Component** entry from the solution:
 
 The NuGet package will remain listed in the **Packages** node and your
 app will compile and run as usual. In future, updates to this package
-will be performed via the **Nuget** update feature:
+will be performed via the **NuGet** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 
-
-<a name="replace" />
+<a name="replace"></a>
 
 ## Components with NuGet replacements
 
@@ -161,7 +160,7 @@ you will need to find the equivalent NuGet package manually.
 
 Note that the **Packages** tab will probably be empty:
 
-![](component-nuget-images/packages-tab-empty-sml.png)
+![Packages tab](component-nuget-images/packages-tab-empty-sml.png)
 
 _It may contain NuGet dependencies, but these can be ignored._
 
@@ -192,7 +191,7 @@ until you add the equivalent NuGet package to replace it.
 1. Right-click on the **Packages** node and choose **Add Packages...**.
 2. Search for the NuGet replacement by name or author:
 
-  ![](component-nuget-images/nuget-search-sml.png)
+    ![NuGet search](component-nuget-images/nuget-search-sml.png)
 
 3. Press **Add Package**.
 
@@ -200,7 +199,7 @@ The NuGet package will be added to your project, along with any dependencies.
 This should fix the build. If the build continues to fail, investigate each
 error to see if there were API differences between the component and the NuGet package.
 
-<a name="require-update" />
+<a name="require-update"></a>
 
 ## Components without a NuGet migration path
 
@@ -214,16 +213,16 @@ This means if you open the solution on a new computer, the component will
 not be downloaded and installed; and the author will not be able to provide you
 with updates. You should plan to:
 
-* Extract the assemblies from the component and reference them directly in your project.
-* Contact the component author and ask about plans to migrate to NuGet.
-* Investigate alternative NuGet packages, or seek the source code if the component is open-source.
+- Extract the assemblies from the component and reference them directly in your project.
+- Contact the component author and ask about plans to migrate to NuGet.
+- Investigate alternative NuGet packages, or seek the source code if the component is open-source.
 
 Many component vendors are still working on migrating to NuGet, and others
 (including commercially available products) may be investigating
 alternative delivery options.
 
-
 ## Related Links
+
 - [List of popular Xamarin Plugins and Libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Install and use a NuGet package (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Including a NuGet package (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

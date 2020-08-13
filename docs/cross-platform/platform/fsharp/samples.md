@@ -3,8 +3,8 @@ title: "F# Samples for Xamarin"
 description: "F# can be used to build Xamarin applications. This document links to various iOS, Mac, and Xamarin.Forms sample Xamarin app projects written in F#."
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -14,21 +14,14 @@ This page links to some F# samples using Xamarin.
 
 ## iOS
 
-The [FSSceneKit City](https://developer.xamarin.com/samples/monotouch/ios8/FSSceneKit/) sample shows how to
+The [FSSceneKit City](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-fsscenekit/) sample shows how to
 create a randomly generated city using [SceneKit](xref:SceneKit)
-and F#. There's also an ["Oculus Thrift" (Google Cardboard) Edition](https://developer.xamarin.com/samples/monotouch/ios8/SceneKitFSharp/).
+and F#. There's also an ["Oculus Thrift" (Google Cardboard) Edition](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-scenekitfsharp/).
 
-[![](samples-images/fxscenekit-sml.png "Theres also an Oculus Thrift Google Cardboard Edition")](samples-images/fxscenekit.png#lightbox)
+[![Theres also an Oculus Thrift Google Cardboard Edition](samples-images/fxscenekit-sml.png)](samples-images/fxscenekit.png#lightbox)
 
 [Shallow](https://github.com/dvdsgl/shallow) demonstrates a fun
 swipe-user-interface built with F# for iOS.
-
-## Mac
-
-[FSEvent Watcher](https://developer.xamarin.com/samples/mac/FSEvents/) is a sample Mac OS X app written
-with F#.
-
-[![](samples-images/fsevents-sml.png "FSEvent Watcher is a sample Mac OS X app written with F#")](samples-images/fsevents.png#lightbox)
 
 ## Xamarin.Forms
 
@@ -42,4 +35,3 @@ have been ported to F#. These links take you to the github location for each cha
 - [Chapter 6. Button clicks](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Chapter 7. XAML vs. code](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [Chapter 8. Code and XAML in harmony](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
-

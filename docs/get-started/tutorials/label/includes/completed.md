@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Label`](xref:Xamarin.Forms.Label) in XAML.
 > - Change the appearance of the `Label`.
 > - Present text, in a single `Label`, that has multiple formats.
@@ -14,6 +15,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [LabelTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [LabelTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Xamarin.Forms Label (guide)](~/xamarin-forms/user-interface/text/label.md)
 - [Label API](xref:Xamarin.Forms.Label)

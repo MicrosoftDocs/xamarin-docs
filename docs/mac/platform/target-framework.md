@@ -4,8 +4,8 @@ description: "This article covers the target frameworks (Base Class Libraries) a
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
 ---
 
@@ -39,7 +39,7 @@ To change to the Target Framework type for a Xamarin.Mac project, do the followi
 2. In the **Solution Explorer**, double-click the project file to open the **Project Options** dialog box.
 3. From the **General** tab, select the type of **Target Framework** that suits your application's needs:
 
-  [![Using the Project Options window to choose a target framework](target-framework-images/select-target-full.png "Using the Project Options window to choose a target framework")](target-framework-images/select-target-full-large.png#lightbox)
+    [![Using the Project Options window to choose a target framework](target-framework-images/select-target-full.png "Using the Project Options window to choose a target framework")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. Click the **OK** button to save your changes.
 
@@ -48,7 +48,6 @@ You should **Clean** and then **Rebuild** your Xamarin.Mac project after switchi
 ## Summary
 
 This article has briefly covered the different types of Target Frameworks (Base Class Libraries) available to a Xamarin.Mac application and when each type of framework should be used.
-
 
 ## Related Links
 

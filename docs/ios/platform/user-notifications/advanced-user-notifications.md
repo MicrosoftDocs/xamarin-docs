@@ -4,8 +4,8 @@ description: "This article takes a deeper look at the User Notifications framewo
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
 ---
 # Advanced user notifications in Xamarin.iOS
@@ -63,17 +63,17 @@ For a Remote Notification to be modified by a Service Extension, its payload mus
 
 ```csharp
 {
-	aps : {
-		alert : "New Photo Available",
-		mutable-content: 1
-	},
-	my-attachment : "https://example.com/photo.jpg"
+    aps : {
+        alert : "New Photo Available",
+        mutable-content: 1
+    },
+    my-attachment : "https://example.com/photo.jpg"
 }
 ```
 
 Take a look at the following overview of the process:
 
-[![](advanced-user-notifications-images/extension02.png "Adding Media Attachments process")](advanced-user-notifications-images/extension02.png#lightbox)
+[![Adding Media Attachments process](advanced-user-notifications-images/extension02.png)](advanced-user-notifications-images/extension02.png#lightbox)
 
 Once the Remote Notification is delivered to the device (via APNs), the Service Extension can then download the required image via any means desired (such as an `NSURLSession`) and after it receives the image, it can modify the contents of the Notification and display it to the user.
 
@@ -87,44 +87,44 @@ using UserNotifications;
 
 namespace MonkeyNotification
 {
-	public class NotificationService : UNNotificationServiceExtension
-	{
-		#region Constructors
-		public NotificationService ()
-		{
-		}
-		#endregion
+    public class NotificationService : UNNotificationServiceExtension
+    {
+        #region Constructors
+        public NotificationService ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidReceiveNotificationRequest (UNNotificationRequest request, Action<UNNotificationContent> contentHandler)
-		{
-			// Get file URL
-			var attachementPath = request.Content.UserInfo.ObjectForKey (new NSString ("my-attachment"));
-			var url = new NSUrl (attachementPath.ToString ());
+        #region Override Methods
+        public override void DidReceiveNotificationRequest (UNNotificationRequest request, Action<UNNotificationContent> contentHandler)
+        {
+            // Get file URL
+            var attachementPath = request.Content.UserInfo.ObjectForKey (new NSString ("my-attachment"));
+            var url = new NSUrl (attachementPath.ToString ());
 
-			// Download the file
-			var localURL = new NSUrl ("PathToLocalCopy");
+            // Download the file
+            var localURL = new NSUrl ("PathToLocalCopy");
 
-			// Create attachment
-			var attachmentID = "image";
-			var options = new UNNotificationAttachmentOptions ();
-			NSError err;
-			var attachment = UNNotificationAttachment.FromIdentifier (attachmentID, localURL, options , out err);
+            // Create attachment
+            var attachmentID = "image";
+            var options = new UNNotificationAttachmentOptions ();
+            NSError err;
+            var attachment = UNNotificationAttachment.FromIdentifier (attachmentID, localURL, options , out err);
 
-			// Modify contents
-			var content = request.Content.MutableCopy() as UNMutableNotificationContent;
-			content.Attachments = new UNNotificationAttachment [] { attachment };
+            // Modify contents
+            var content = request.Content.MutableCopy() as UNMutableNotificationContent;
+            content.Attachments = new UNNotificationAttachment [] { attachment };
 
-			// Display notification
-			contentHandler (content);
-		}
+            // Display notification
+            contentHandler (content);
+        }
 
-		public override void TimeWillExpire ()
-		{
-			// Handle service timing out
-		}
-		#endregion
-	}
+        public override void TimeWillExpire ()
+        {
+            // Handle service timing out
+        }
+        #endregion
+    }
 }
 ```
 
@@ -149,7 +149,7 @@ To support user interaction with a User Notification, Custom Actions should be c
 
 When a User Notification with a Custom UI is presented to the user, it will have the following elements:
 
-[![](advanced-user-notifications-images/customui01.png "A User Notification with a Custom UI elements")](advanced-user-notifications-images/customui01.png#lightbox)
+[![A User Notification with a Custom UI elements](advanced-user-notifications-images/customui01.png)](advanced-user-notifications-images/customui01.png#lightbox)
 
 If the user interacts with the Custom Actions (presented below the Notification), the User Interface can be updated to give the user feedback as the what happened when they invoked a given action.
 
@@ -157,19 +157,21 @@ If the user interacts with the Custom Actions (presented below the Notification)
 
 To implement a Custom User Notification UI in a Xamarin.iOS app, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Notification Content Extensions** and click the **Next** button: 
 
-	[![](advanced-user-notifications-images/notify01.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.png#lightbox)
+    [![Select Notification Content Extensions](advanced-user-notifications-images/notify01.png)](advanced-user-notifications-images/notify01.png#lightbox)
 4. Enter a **Name** for the extension and click the **Next** button: 
 
-	[![](advanced-user-notifications-images/notify02.png "Enter a Name for the extension")](advanced-user-notifications-images/notify02.png#lightbox)
+    [![Enter a Name for the extension](advanced-user-notifications-images/notify02.png)](advanced-user-notifications-images/notify02.png#lightbox)
 5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
 
-	[![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png#lightbox)
+    [![Adjust the Project Name and/or Solution Name](advanced-user-notifications-images/notify03.png)](advanced-user-notifications-images/notify03.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -177,7 +179,7 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.
 3. Select **Visual C# > iOS Extensions > Notification Content Extension**:
 
-	[![](advanced-user-notifications-images/notify01.w157-sml.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.w157.png#lightbox)
+    [![Select Notification Content Extensions](advanced-user-notifications-images/notify01.w157-sml.png)](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button.
 
 -----
@@ -197,39 +199,38 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
-	public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
-	{
-		#region Constructors
-		protected NotificationViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+    public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
+    {
+        #region Constructors
+        protected NotificationViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Do any required interface initialization here.
-		}
-		#endregion
+            // Do any required interface initialization here.
+        }
+        #endregion
 
-		#region Public Methods
-		[Export ("didReceiveNotification:")]
-		public void DidReceiveNotification (UNNotification notification)
-		{
-			label.Text = notification.Request.Content.Body;
+        #region Public Methods
+        [Export ("didReceiveNotification:")]
+        public void DidReceiveNotification (UNNotification notification)
+        {
+            label.Text = notification.Request.Content.Body;
 
-			// Grab content
-			var content = notification.Request.Content;
+            // Grab content
+            var content = notification.Request.Content;
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -246,17 +247,17 @@ The system needs to be informed on how to find the app's Notification Content Ex
 3. Expand the `NSExtension` key.
 4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
 
-	[![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png#lightbox)
+    [![Add the UNNotificationExtensionCategory key](advanced-user-notifications-images/customui02.png)](advanced-user-notifications-images/customui02.png#lightbox)
 5. Save your changes.
 
 # [Visual Studio](#tab/windows)
 
 1. Double-click the Extension's `Info.plist` file in the **Solution Explorer** to open it for editing.
-3. Expand the `NSExtension` key.
-4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
+2. Expand the `NSExtension` key.
+3. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
 
-	[![](advanced-user-notifications-images/customui02w.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02w.png#lightbox)
-5. Save your changes.
+    [![Add the UNNotificationExtensionCategory key](advanced-user-notifications-images/customui02w.png)](advanced-user-notifications-images/customui02w.png#lightbox)
+4. Save your changes.
 
 -----
 
@@ -264,11 +265,11 @@ Notification Content Extension Categories (`UNNotificationExtensionCategory`) us
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui03.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03.png#lightbox)
+[![Notification Content Extension Categories](advanced-user-notifications-images/customui03.png)](advanced-user-notifications-images/customui03.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui03w.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03w.png#lightbox)
+[![Notification Content Extension Categories](advanced-user-notifications-images/customui03w.png)](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
@@ -278,11 +279,11 @@ In the situation where the Custom Notification UI will be displaying the same co
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui04.png "Finding default information")](advanced-user-notifications-images/customui04.png#lightbox)
+[![Finding default information](advanced-user-notifications-images/customui04.png)](advanced-user-notifications-images/customui04.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui04w.png "Finding default information")](advanced-user-notifications-images/customui04w.png#lightbox)
+[![Finding default information](advanced-user-notifications-images/customui04w.png)](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
@@ -305,50 +306,49 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
-	public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
-	{
-		#region Constructors
-		protected NotificationViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+    public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
+    {
+        #region Constructors
+        protected NotificationViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Do any required interface initialization here.
-		}
-		#endregion
+            // Do any required interface initialization here.
+        }
+        #endregion
 
-		#region Public Methods
-		[Export ("didReceiveNotification:")]
-		public void DidReceiveNotification (UNNotification notification)
-		{
-			label.Text = notification.Request.Content.Body;
+        #region Public Methods
+        [Export ("didReceiveNotification:")]
+        public void DidReceiveNotification (UNNotification notification)
+        {
+            label.Text = notification.Request.Content.Body;
 
-			// Grab content
-			var content = notification.Request.Content;
+            // Grab content
+            var content = notification.Request.Content;
 
-			// Display content in the UILabels
-			EventTitle.Text = content.Title;
-			EventDate.Text = content.Subtitle;
-			EventMessage.Text = content.Body;
+            // Display content in the UILabels
+            EventTitle.Text = content.Title;
+            EventDate.Text = content.Subtitle;
+            EventMessage.Text = content.Body;
 
-			// Get location and display
-			var location = content.UserInfo ["location"].ToString ();
-			if (location != null) {
-				Event.Location.Text = location;
-			}
+            // Get location and display
+            var location = content.UserInfo ["location"].ToString ();
+            if (location != null) {
+                Event.Location.Text = location;
+            }
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -362,11 +362,11 @@ To eliminate this effect, edit the `Info.plist` file for the Extension and set t
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png#lightbox)
+[![The UNNotificationExtensionInitialContentSizeRatio key](advanced-user-notifications-images/customui05.png)](advanced-user-notifications-images/customui05.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png#lightbox)
+[![The UNNotificationExtensionInitialContentSizeRatio key](advanced-user-notifications-images/customui05w.png)](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 
@@ -385,55 +385,55 @@ using UserNotificationsUI;
 
 namespace MonkeyChatNotifyExtension
 {
-	public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
-	{
-		#region Constructors
-		protected NotificationViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+    public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
+    {
+        #region Constructors
+        protected NotificationViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Do any required interface initialization here.
-		}
-		#endregion
+            // Do any required interface initialization here.
+        }
+        #endregion
 
-		#region Public Methods
-		[Export ("didReceiveNotification:")]
-		public void DidReceiveNotification (UNNotification notification)
-		{
-			label.Text = notification.Request.Content.Body;
+        #region Public Methods
+        [Export ("didReceiveNotification:")]
+        public void DidReceiveNotification (UNNotification notification)
+        {
+            label.Text = notification.Request.Content.Body;
 
-			// Grab content
-			var content = notification.Request.Content;
+            // Grab content
+            var content = notification.Request.Content;
 
-			// Display content in the UILabels
-			EventTitle.Text = content.Title;
-			EventDate.Text = content.Subtitle;
-			EventMessage.Text = content.Body;
+            // Display content in the UILabels
+            EventTitle.Text = content.Title;
+            EventDate.Text = content.Subtitle;
+            EventMessage.Text = content.Body;
 
-			// Get location and display
-			var location = content.UserInfo ["location"].ToString ();
-			if (location != null) {
-				Event.Location.Text = location;
-			}
+            // Get location and display
+            var location = content.UserInfo ["location"].ToString ();
+            if (location != null) {
+                Event.Location.Text = location;
+            }
 
-			// Get Media Attachment
-			if (content.Attachements.Length > 1) {
-				var attachment = content.Attachments [0];
-				if (attachment.Url.StartAccessingSecurityScopedResource ()) {
-					EventImage.Image = UIImage.FromFile (attachment.Url.Path);
-					attachment.Url.StopAccessingSecurityScopedResource ();
-				}
-			}
-		}
-		#endregion
-	}
+            // Get Media Attachment
+            if (content.Attachements.Length > 1) {
+                var attachment = content.Attachments [0];
+                if (attachment.Url.StartAccessingSecurityScopedResource ()) {
+                    EventImage.Image = UIImage.FromFile (attachment.Url.Path);
+                    attachment.Url.StopAccessingSecurityScopedResource ();
+                }
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -461,66 +461,66 @@ using UserNotificationsUI;
 using CoreGraphics;
 
 namespace myApp {
-	public class NotificationViewController : UIViewController, UNNotificationContentExtension {
+    public class NotificationViewController : UIViewController, UNNotificationContentExtension {
 
-		public override void ViewDidLoad() {
-			base.ViewDidLoad();
+        public override void ViewDidLoad() {
+            base.ViewDidLoad();
 
-			// Adjust the size of the content area
-			var size = View.Bounds.Size
-			PreferredContentSize = new CGSize(size.Width, size.Width/2);
-		}
+            // Adjust the size of the content area
+            var size = View.Bounds.Size
+            PreferredContentSize = new CGSize(size.Width, size.Width/2);
+        }
 
-		public void DidReceiveNotification(UNNotification notification) {
+        public void DidReceiveNotification(UNNotification notification) {
 
-			// Grab content
-			var content = notification.Request.Content;
+            // Grab content
+            var content = notification.Request.Content;
 
-			// Display content in the UILabels
-			EventTitle.Text = content.Title;
-			EventDate.Text = content.Subtitle;
-			EventMessage.Text = content.Body;
+            // Display content in the UILabels
+            EventTitle.Text = content.Title;
+            EventDate.Text = content.Subtitle;
+            EventMessage.Text = content.Body;
 
-			// Get location and display
-			var location = Content.UserInfo["location"] as string;
-			if (location != null) {
-				Event.Location.Text = location;
-			}
+            // Get location and display
+            var location = Content.UserInfo["location"] as string;
+            if (location != null) {
+                Event.Location.Text = location;
+            }
 
-			// Get Media Attachment
-			if (content.Attachements.Length > 1) {
-				var attachment = content.Attachments[0];
-				if (attachment.Url.StartAccessingSecurityScopedResource()) {
-					EventImage.Image = UIImage.FromFile(attachment.Url.Path);
-					attachment.Url.StopAccessingSecurityScopedResource();
-				}
-			}
-		}
+            // Get Media Attachment
+            if (content.Attachements.Length > 1) {
+                var attachment = content.Attachments[0];
+                if (attachment.Url.StartAccessingSecurityScopedResource()) {
+                    EventImage.Image = UIImage.FromFile(attachment.Url.Path);
+                    attachment.Url.StopAccessingSecurityScopedResource();
+                }
+            }
+        }
 
-		[Export ("didReceiveNotificationResponse:completionHandler:")]
-		public void DidReceiveNotification (UNNotificationResponse response, Action<UNNotificationContentExtensionResponseOption> completionHandler)
-		{
+        [Export ("didReceiveNotificationResponse:completionHandler:")]
+        public void DidReceiveNotification (UNNotificationResponse response, Action<UNNotificationContentExtensionResponseOption> completionHandler)
+        {
 
-			// Update UI when the user interacts with the
-			// Notification
-			Server.PostEventResponse += (response) {
-				// Take action based on the response
-				switch(response.ActionIdentifier){
-				case "accept":
-					EventResponse.Text = "Going!";
-					EventResponse.TextColor = UIColor.Green;
-					break;
-				case "decline":
-					EventResponse.Text = "Not Going.";
-					EventResponse.TextColor = UIColor.Red;
-					break;
-				}
+            // Update UI when the user interacts with the
+            // Notification
+            Server.PostEventResponse += (response) {
+                // Take action based on the response
+                switch(response.ActionIdentifier){
+                case "accept":
+                    EventResponse.Text = "Going!";
+                    EventResponse.TextColor = UIColor.Green;
+                    break;
+                case "decline":
+                    EventResponse.Text = "Not Going.";
+                    EventResponse.TextColor = UIColor.Red;
+                    break;
+                }
 
-				// Close Notification
-				completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
-			};
-		}
-	}
+                // Close Notification
+                completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
+            };
+        }
+    }
 }
 ```
 
@@ -544,133 +544,132 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
-	public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
-	{
-		#region Computed Properties
-		// Allow to take input
-		public override bool CanBecomeFirstResponder {
-			get { return true; }
-		}
+    public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
+    {
+        #region Computed Properties
+        // Allow to take input
+        public override bool CanBecomeFirstResponder {
+            get { return true; }
+        }
 
-		// Return the custom created text input view with the
-		// required buttons and return here
-		public override UIView InputAccessoryView {
-			get { return InputView; }
-		}
-		#endregion
+        // Return the custom created text input view with the
+        // required buttons and return here
+        public override UIView InputAccessoryView {
+            get { return InputView; }
+        }
+        #endregion
 
-		#region Constructors
-		protected NotificationViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+        #region Constructors
+        protected NotificationViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Do any required interface initialization here.
-		}
-		#endregion
+            // Do any required interface initialization here.
+        }
+        #endregion
 
-		#region Private Methods
-		private UNNotificationCategory MakeExtensionCategory ()
-		{
+        #region Private Methods
+        private UNNotificationCategory MakeExtensionCategory ()
+        {
 
-			// Create Accept Action
-			...
+            // Create Accept Action
+            ...
 
-			// Create decline Action
-			...
+            // Create decline Action
+            ...
 
-			// Create Text Input Action
-			var commentID = "comment";
-			var commentTitle = "Comment";
-			var textInputButtonTitle = "Send";
-			var textInputPlaceholder = "Enter comment here...";
-			var commentAction = UNTextInputNotificationAction.FromIdentifier (commentID, commentTitle, UNNotificationActionOptions.None, textInputButtonTitle, textInputPlaceholder);
+            // Create Text Input Action
+            var commentID = "comment";
+            var commentTitle = "Comment";
+            var textInputButtonTitle = "Send";
+            var textInputPlaceholder = "Enter comment here...";
+            var commentAction = UNTextInputNotificationAction.FromIdentifier (commentID, commentTitle, UNNotificationActionOptions.None, textInputButtonTitle, textInputPlaceholder);
 
-			// Create category
-			var categoryID = "event-invite";
-			var actions = new UNNotificationAction [] { acceptAction, declineAction, commentAction };
-			var intentIDs = new string [] { };
-			var category = UNNotificationCategory.FromIdentifier (categoryID, actions, intentIDs, UNNotificationCategoryOptions.None);
+            // Create category
+            var categoryID = "event-invite";
+            var actions = new UNNotificationAction [] { acceptAction, declineAction, commentAction };
+            var intentIDs = new string [] { };
+            var category = UNNotificationCategory.FromIdentifier (categoryID, actions, intentIDs, UNNotificationCategoryOptions.None);
 
-			// Return new category
-			return category;
+            // Return new category
+            return category;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Public Methods
-		[Export ("didReceiveNotification:")]
-		public void DidReceiveNotification (UNNotification notification)
-		{
-			label.Text = notification.Request.Content.Body;
+        #region Public Methods
+        [Export ("didReceiveNotification:")]
+        public void DidReceiveNotification (UNNotification notification)
+        {
+            label.Text = notification.Request.Content.Body;
 
-			// Grab content
-			var content = notification.Request.Content;
+            // Grab content
+            var content = notification.Request.Content;
 
-			// Display content in the UILabels
-			EventTitle.Text = content.Title;
-			EventDate.Text = content.Subtitle;
-			EventMessage.Text = content.Body;
+            // Display content in the UILabels
+            EventTitle.Text = content.Title;
+            EventDate.Text = content.Subtitle;
+            EventMessage.Text = content.Body;
 
-			// Get location and display
-			var location = content.UserInfo ["location"].ToString ();
-			if (location != null) {
-				Event.Location.Text = location;
-			}
+            // Get location and display
+            var location = content.UserInfo ["location"].ToString ();
+            if (location != null) {
+                Event.Location.Text = location;
+            }
 
-			// Get Media Attachment
-			if (content.Attachements.Length > 1) {
-				var attachment = content.Attachments [0];
-				if (attachment.Url.StartAccessingSecurityScopedResource ()) {
-					EventImage.Image = UIImage.FromFile (attachment.Url.Path);
-					attachment.Url.StopAccessingSecurityScopedResource ();
-				}
-			}
-		}
+            // Get Media Attachment
+            if (content.Attachements.Length > 1) {
+                var attachment = content.Attachments [0];
+                if (attachment.Url.StartAccessingSecurityScopedResource ()) {
+                    EventImage.Image = UIImage.FromFile (attachment.Url.Path);
+                    attachment.Url.StopAccessingSecurityScopedResource ();
+                }
+            }
+        }
 
-		[Export ("didReceiveNotificationResponse:completionHandler:")]
-		public void DidReceiveNotification (UNNotificationResponse response, Action<UNNotificationContentExtensionResponseOption> completionHandler)
-		{
+        [Export ("didReceiveNotificationResponse:completionHandler:")]
+        public void DidReceiveNotification (UNNotificationResponse response, Action<UNNotificationContentExtensionResponseOption> completionHandler)
+        {
 
-			// Is text input?
-			if (response is UNTextInputNotificationResponse) {
-				var textResponse = response as UNTextInputNotificationResponse;
-				Server.Send (textResponse.UserText, () => {
-					// Close Notification
-					completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
-				});
-			}
+            // Is text input?
+            if (response is UNTextInputNotificationResponse) {
+                var textResponse = response as UNTextInputNotificationResponse;
+                Server.Send (textResponse.UserText, () => {
+                    // Close Notification
+                    completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
+                });
+            }
 
-			// Update UI when the user interacts with the
-			// Notification
-			Server.PostEventResponse += (response) {
-				// Take action based on the response
-				switch (response.ActionIdentifier) {
-				case "accept":
-					EventResponse.Text = "Going!";
-					EventResponse.TextColor = UIColor.Green;
-					break;
-				case "decline":
-					EventResponse.Text = "Not Going.";
-					EventResponse.TextColor = UIColor.Red;
-					break;
-				}
+            // Update UI when the user interacts with the
+            // Notification
+            Server.PostEventResponse += (response) {
+                // Take action based on the response
+                switch (response.ActionIdentifier) {
+                case "accept":
+                    EventResponse.Text = "Going!";
+                    EventResponse.TextColor = UIColor.Green;
+                    break;
+                case "decline":
+                    EventResponse.Text = "Not Going.";
+                    EventResponse.TextColor = UIColor.Red;
+                    break;
+                }
 
-				// Close Notification
-				completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
-			};
-		}
-		#endregion
-	}
+                // Close Notification
+                completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
+            };
+        }
+        #endregion
+    }
 }
 ```
 
@@ -679,11 +678,11 @@ This code creates a new text input action and adds it to the Extension's categor
 ```csharp
 // Is text input?
 if (response is UNTextInputNotificationResponse) {
-	var textResponse = response as UNTextInputNotificationResponse;
-	Server.Send (textResponse.UserText, () => {
-		// Close Notification
-		completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
-	});
+    var textResponse = response as UNTextInputNotificationResponse;
+    Server.Send (textResponse.UserText, () => {
+        // Close Notification
+        completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
+    });
 }
 ```
 
@@ -692,13 +691,13 @@ If the design calls for adding custom buttons to the Text Input Field, add the f
 ```csharp
 // Allow to take input
 public override bool CanBecomeFirstResponder {
-	get {return true;}
+    get {return true;}
 }
 
 // Return the custom created text input view with the
 // required buttons and return here
 public override UIView InputAccessoryView {
-	get {return InputView;}
+    get {return InputView;}
 }
 ```
 
@@ -708,17 +707,17 @@ When the comment action is triggered by the user, both the view controller and t
 // Update UI when the user interacts with the
 // Notification
 Server.PostEventResponse += (response) {
-	// Take action based on the response
-	switch(response.ActionIdentifier){
-	...
-	case "comment":
-		BecomeFirstResponder();
-		TextField.BecomeFirstResponder();
-		break;
-	}
+    // Take action based on the response
+    switch(response.ActionIdentifier){
+    ...
+    case "comment":
+        BecomeFirstResponder();
+        TextField.BecomeFirstResponder();
+        break;
+    }
 
-	// Close Notification
-	completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
+    // Close Notification
+    completionHandler (UNNotificationContentExtensionResponseOption.Dismiss);
 
 };
 ```
@@ -729,7 +728,7 @@ This article has taken an advanced look at using the new User Notification frame
 
 ## Related links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [UserNotifications Framework Reference](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Local and Remote Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

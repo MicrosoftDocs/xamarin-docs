@@ -3,8 +3,8 @@ title: "Xamarin Workbooks"
 description: "Xamarin Workbooks provide a blend of documentation and code that is perfect for experimentation, learning, and creating guides and teaching aids."
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/23/2018
 ---
 
@@ -26,7 +26,7 @@ Give it a try and let us know what you think, or if
 you [run into any bugs](~/tools/workbooks/install.md#reporting-bugs). We have a
 [forum](https://forums.xamarin.com/categories/inspector) too!
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "A sample UrhoSharp based workbook")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![A sample UrhoSharp based workbook](images/interactive-1.0.0-urho-planet-earth-small.png)](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## [Installation and Requirements](install.md)
 

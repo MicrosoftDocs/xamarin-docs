@@ -3,8 +3,8 @@ title: "GDB"
 ms.prod: xamarin
 ms.assetid: CD0BE462-FA38-4881-B481-82AD05B3B8FE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
 ---
 
@@ -21,15 +21,14 @@ Android NDK be installed.
 
 There are three ways to use `gdb`:
 
-1.  [Debug builds with Fast Deployment enabled](#Debug_Builds_with_Fast_Deployment) .
-1.  [Debug builds with Fast Deployment disabled](#Debug_Builds_without_Fast_Deployment) .
-1.  [Release builds](#Release_Builds) .
-
+1. [Debug builds with Fast Deployment enabled](#Debug_Builds_with_Fast_Deployment) .
+1. [Debug builds with Fast Deployment disabled](#Debug_Builds_without_Fast_Deployment) .
+1. [Release builds](#Release_Builds) .
 
 When things go wrong, please see the
 [Troubleshooting](#Troubleshooting) section.
 
-<a name="Debug_Builds_with_Fast_Deployment" />
+<a name="Debug_Builds_with_Fast_Deployment"></a>
 
 ### Debug Builds with Fast Deployment
 
@@ -49,8 +48,8 @@ command line will be printed:
 ```bash
 $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 ...
-	Target _Gdb:
-		"/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
+    Target _Gdb:
+        "/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
 ...
 ```
 
@@ -61,7 +60,6 @@ Services and other Android constructs is not supported at this time.
 
 The `_Gdb` target will create a `gdb-symbols` directory
 and copy the contents of your target's `/system/lib` and `$APPDIR/lib` directories there.
-
 
 > [!NOTE]
 > The contents of the `gdb-symbols` directory are tied
@@ -84,7 +82,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Debug_Builds_without_Fast_Deployment" />
+<a name="Debug_Builds_without_Fast_Deployment"></a>
 
 ## Debug Builds without Fast Deployment
 
@@ -95,8 +93,8 @@ exist.
 
 There are two workarounds:
 
--   Set the `debug.mono.log` system property so that the `.__override__` directory is created.
--   Include `gdbserver` within your `.apk`.
+- Set the `debug.mono.log` system property so that the `.__override__` directory is created.
+- Include `gdbserver` within your `.apk`.
 
 ### Setting the `debug.mono.log` System Property
 
@@ -121,7 +119,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### Including `gdbserver` in your app
 
@@ -154,15 +151,15 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Release_Builds" />
+<a name="Release_Builds"></a>
 
 ## Release Builds
 
 `gdb` support requires three things:
 
-1.  The `INTERNET` permission.
-2.  App Debugging enabled.
-3.  An accessible `gdbserver`.
+1. The `INTERNET` permission.
+2. App Debugging enabled.
+3. An accessible `gdbserver`.
 
 The `INTERNET` permission is enabled by default in Debug apps. If it is
 not already present in your application, you may add it either by
@@ -170,7 +167,7 @@ editing **Properties/AndroidManifest.xml** or by editing the
 [Project Properties](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
 App debugging can be enabled by either setting the
-[ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/)
+[ApplicationAttribute.Debugging](xref:Android.App.ApplicationAttribute.Debuggable)
 custom attribute property to `true`, or by editing
 **Properties/AndroidManifest.xml** and setting the
 `//application/@android:debuggable` attribute to `true`:
@@ -185,7 +182,7 @@ An accessible `gdbserver` may be provided by following the
 One wrinkle: The `_Gdb` MSBuild target will kill any previously running
 app instances. This will not work on pre-Android v4.0 targets.
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## Troubleshooting
 

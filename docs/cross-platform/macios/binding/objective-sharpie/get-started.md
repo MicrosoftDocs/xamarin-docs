@@ -3,8 +3,8 @@ title: "Getting Started With Objective Sharpie"
 description: "This document provides a high-level overview of Objective Sharpie, the tool used to automate the creation of C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
 ---
 
@@ -17,7 +17,7 @@ ms.date: 10/11/2017
 > knowledge of how to build the native library on the command line (and a
 > good understanding of how the native library works).
 
-<a name="installing" />
+<a name="installing"></a>
 
 ## Installing Objective Sharpie
 
@@ -58,7 +58,7 @@ you can use in Xamarin apps.
 > must absolutely pass it the correct clang compiler command line arguments
 > in order to ensure proper parsing. This is because the Objective Sharpie
 > parsing phase is simply a tool [implemented against the clang libtooling
-> API](http://clang.llvm.org/docs/LibTooling.html).
+> API](https://clang.llvm.org/docs/LibTooling.html).
 
 This means that Objective Sharpie has the full power of Clang
 (the C/Objective-C/C++ compiler that actually compiles the native library
@@ -88,8 +88,3 @@ line with the Clang toolchain.
 If the library you're interested in is available as a CocoaPod,
 we recommend you start by attempting to bind the CocoaPod with
 Objective Sharpie (versus attempting to bind against the source directly).
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

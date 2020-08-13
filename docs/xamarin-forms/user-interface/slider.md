@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Slider
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Use a Slider for selecting from a range of continuous values._
 
@@ -44,18 +45,18 @@ The `Slider` also defines several properties that affect its appearance:
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) is the bar color on the left side of the thumb.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) is the bar color on the right side of the thumb.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) is the thumb color.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) is the image to use for the thumb, of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource).
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) is the image to use for the thumb, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource).
 
 > [!NOTE]
-> The `ThumbColor` and `ThumbImage` properties are mutually exclusive. If both properties are set, the `ThumbImage` property will take precedence.
+> The `ThumbColor` and `ThumbImageSource` properties are mutually exclusive. If both properties are set, the `ThumbImageSource` property will take precedence.
 
 ## Basic Slider code and markup
 
-The [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) sample begins with three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and the third is able to avoid the event handler by using data binding in the XAML file.
+The [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample begins with three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and the third is able to avoid the event handler by using data binding in the XAML file.
 
 ### Creating a Slider in code
 
-The **Basic Slider Code** page in the [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) sample shows show to create a `Slider` and two `Label` objects in code:
+The **Basic Slider Code** page in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample shows show to create a `Slider` and two `Label` objects in code:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -104,11 +105,11 @@ public class BasicSliderCodePage : ContentPage
 
 The `Slider` is initialized to have a `Maximum` property of 360. The `ValueChanged` handler of the `Slider` uses the `Value` property of the `slider` object to set the `Rotation` property of the first `Label` and uses the `String.Format` method with the `NewValue` property of the event arguments to set the `Text` property of the second `Label`. These two approaches to obtain the current value of the `Slider` are interchangeable.
 
-Here's the program running on iOS, Android, and Universal Windows Platform (UWP) devices:
+Here's the program running on iOS and Android devices:
 
 [![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
+The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#platform-implementation-differences).
 
 ### Creating a Slider in XAML
 
@@ -202,8 +203,6 @@ The **Basic Slider Bindings** page shows how to write a nearly equivalent progra
 
 The `Rotation` property of the first `Label` is bound to the `Value` property of the `Slider`, as is the `Text` property of the second `Label` with a `StringFormat` specification. The **Basic Slider Bindings** page functions a little differently from the two previous pages: When the page first appears, the second `Label` displays the text string with the value. This is a benefit of using data binding. To display text without data binding, you'd need to specifically initialize the `Text` property of the `Label` or simulate a firing of the `ValueChanged` event by calling the event handler from the class constructor.
 
-<a name="precautions" />
-
 ## Precautions
 
 The value of the `Minimum` property must always be less than the value of the `Maximum` property. The following code snippet causes the `Slider` to raise an exception:
@@ -276,21 +275,19 @@ If a `ValueChanged` event handler has been attached at the time that the `Value`
 
 When `Minimum` is set to 10, `Value` is also set to 10, and the `ValueChanged` event is fired. This might occur before the rest of the page has been constructed, and the handler might attempt to reference other elements on the page that have not yet been created. You might want to add some code to the `ValueChanged` handler that checks for `null` values of other elements on the page. Or, you can set the `ValueChanged` event handler after the `Slider` values have been initialized.
 
-<a name="implementations" />
-
 ## Platform implementation differences
 
 The screenshots shown earlier display the value of the `Slider` with a different number of decimal points. This relates to how the `Slider` is implemented on the Android and UWP platforms.
 
 ### The Android implementation
 
-The Android implementation of `Slider` is based on the Android [`SeekBar`](https://developer.xamarin.com/api/type/Android.Widget.SeekBar/) and always sets the [`Max`](https://developer.xamarin.com/api/property/Android.Widget.ProgressBar.Max/) property to 1000. This means that the `Slider` on Android has only 1,001 discrete values. If you set the `Slider` to have a `Minimum` of 0 and a `Maximum` of 5000, then as the `Slider` is manipulated, the `Value` property has values of 0, 5, 10, 15, and so forth.
+The Android implementation of `Slider` is based on the Android [`SeekBar`](xref:Android.Widget.SeekBar) and always sets the [`Max`](xref:Android.Widget.ProgressBar.Max) property to 1000. This means that the `Slider` on Android has only 1,001 discrete values. If you set the `Slider` to have a `Minimum` of 0 and a `Maximum` of 5000, then as the `Slider` is manipulated, the `Value` property has values of 0, 5, 10, 15, and so forth.
 
 ### The UWP implementation
 
-The UWP implementation of `Slider` is based on the UWP [`Slider`](/uwp/api/windows.ui.xaml.controls.slider) control. The `StepFrequency` property of the UWP `Slider` is set to the difference of the `Maximum` and `Minimum` properties divided by 10, but not greater than 1.
+The UWP implementation of `Slider` is based on the UWP [`Slider`](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) control. The `StepFrequency` property of the UWP `Slider` is set to the difference of the `Maximum` and `Minimum` properties divided by 10, but not greater than 1.
 
-For example, for the default range of 0 to 1, the `StepFrequency` property is set to 0.1. As the `Slider` is manipulated, the `Value` property is restricted to 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, and 1.0. (This is evident in the last page in the [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) sample.) When the difference between the `Maximum` and `Minimum` properties is 10 or greater, then `StepFrequency` is set to 1, and the `Value` property has integral values.
+For example, for the default range of 0 to 1, the `StepFrequency` property is set to 0.1. As the `Slider` is manipulated, the `Value` property is restricted to 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, and 1.0. (This is evident in the last page in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample.) When the difference between the `Maximum` and `Minimum` properties is 10 or greater, then `StepFrequency` is set to 1, and the `Value` property has integral values.
 
 ### The StepSlider solution
 
@@ -298,7 +295,7 @@ A more versatile `StepSlider` is discussed in [Chapter 27. Custom renderers](htt
 
 ## Sliders for color selection
 
-The final two pages in the [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) sample both use three `Slider` instances for color selection. The first page handles all the interactions in the code-behind file, while the second page shows how to use data binding with a ViewModel.
+The final two pages in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample both use three `Slider` instances for color selection. The first page handles all the interactions in the code-behind file, while the second page shows how to use data binding with a ViewModel.
 
 ### Handling Sliders in the code-behind file
 
@@ -500,9 +497,9 @@ As the `Slider` elements are manipulated, the `BoxView` and `Label` elements are
 
 [![HSL Color Sliders](slider-images/HslColorSliders.png "HSL Color Sliders")](slider-images/HslColorSliders-Large.png#lightbox)
 
-The `StringFormat` component of the `Binding` markup extension is set for a format of "F2" to display two decimal places. (String formatting in data bindings is discussed in the article [String Formatting](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) However, the UWP version of the program is limited to values of 0, 0.1, 0.2, ... 0.9, and 1.0. This is a direct result of the implementation of the UWP `Slider` as described above in the section [Platform implementation differences](#implementations).
+The `StringFormat` component of the `Binding` markup extension is set for a format of "F2" to display two decimal places. (String formatting in data bindings is discussed in the article [String Formatting](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) However, the UWP version of the program is limited to values of 0, 0.1, 0.2, ... 0.9, and 1.0. This is a direct result of the implementation of the UWP `Slider` as described above in the section [Platform implementation differences](#platform-implementation-differences).
 
 ## Related Links
 
-- [Slider Demos sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+- [Slider Demos sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [Slider API](xref:Xamarin.Forms.Slider)

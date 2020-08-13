@@ -7,26 +7,27 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Dependency resolution in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
-_This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations. The code examples in this article are taken from the [Dependency Resolution using Containers](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) sample._
+_This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations. The code examples in this article are taken from the [Dependency Resolution using Containers](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) sample._
 
 In the context of a Xamarin.Forms application that uses the Model-View-ViewModel (MVVM) pattern, a dependency injection container can be used for registering and resolving view models, and for registering services and injecting them into view models. During view model creation, the container injects any dependencies that are required. If those dependencies have not been created, the container creates and resolves the dependencies first. For more information about dependency injection, including examples of injecting dependencies into view models, see [Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
 Control over the creation and lifetime of types in platform projects is traditionally performed by Xamarin.Forms, which uses the `Activator.CreateInstance` method to create instances of custom renderers, effects, and [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementations. Unfortunately, this limits developer control over the creation and lifetime of these types, and the ability to inject dependencies into them. This behavior can be changed by injecting a dependency resolution method into Xamarin.Forms that controls how types will be created – either by the application's dependency injection container, or by Xamarin.Forms. However, note that there is no requirement to inject a dependency resolution method into Xamarin.Forms. Xamarin.Forms will continue to create and manage the lifetime of types in platform projects if a dependency resolution method isn't injected.
 
 > [!NOTE]
-> While this article focuses on injecting a dependency resolution method into Xamarin.Forms that resolves registered types using a dependency injection container, it's also possible to inject a dependency resolution method that uses factory methods to resolve registered types. For more information, see the [Dependency Resolution using Factory Methods](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/FactoriesDemo/) sample.
+> While this article focuses on injecting a dependency resolution method into Xamarin.Forms that resolves registered types using a dependency injection container, it's also possible to inject a dependency resolution method that uses factory methods to resolve registered types. For more information, see the [Dependency Resolution using Factory Methods](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-factoriesdemo) sample.
 
 ## Injecting a dependency resolution method
 
-The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
+The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using the [`ResolveUsing`](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
 
-The following example shows how to set the dependency resolution method with the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method:
+The following example shows how to set the dependency resolution method with the [`ResolveUsing`](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method:
 
 ```csharp
 using Autofac;
@@ -296,7 +297,7 @@ When the [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.R
 
 ## Related links
 
-- [Dependency resolution using containers (sample)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
+- [Dependency resolution using containers (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 - [Dependency injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementing a video player](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invoking events from effects](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

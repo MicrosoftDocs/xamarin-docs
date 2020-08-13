@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Validation in Enterprise Apps
@@ -15,7 +16,7 @@ Any app that accepts input from users should ensure that the input is valid. An 
 
 In the context of the Model-View-ViewModel (MVVM) pattern, a view model or model will often be required to perform data validation and signal any validation errors to the view so that the user can correct them. The eShopOnContainers mobile app performs synchronous client-side validation of view model properties and notifies the user of any validation errors by highlighting the control that contains the invalid data, and by displaying error messages that inform the user of why the data is invalid. Figure 6-1 shows the classes involved in performing validation in the eShopOnContainers mobile app.
 
-[![](validation-images/validation.png "Validation classes in the eShopOnContainers mobile app")](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
+[![Validation classes in the eShopOnContainers mobile app](validation-images/validation.png)](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
 
 **Figure 6-1**: Validation classes in the eShopOnContainers mobile app
 
@@ -201,15 +202,13 @@ Validation can also be triggered whenever a bound property changes. For example,
 
 The [`Entry`](xref:Xamarin.Forms.Entry) control binds to the `UserName.Value` property of the `ValidatableObject<T>` instance, and the control's `Behaviors` collection has an `EventToCommandBehavior` instance added to it. This behavior executes the `ValidateUserNameCommand` in response to the [`TextChanged`] event firing on the `Entry`, which is raised when the text in the `Entry` changes. In turn, the `ValidateUserNameCommand` delegate executes the `ValidateUserName` method, which executes the `Validate` method on the `ValidatableObject<T>` instance. Therefore, every time the user enters a character in the `Entry` control for the username, validation of the entered data is performed.
 
-For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
-
-<a name="displaying_validation_errors" />
+For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 ## Displaying Validation Errors
 
 The eShopOnContainers mobile app notifies the user of any validation errors by highlighting the control that contains the invalid data with a red line, and by displaying an error message that informs the user why the data is invalid below the control containing the invalid data. When the invalid data is corrected, the line changes to black and the error message is removed. Figure 6-2 shows the LoginView in the eShopOnContainers mobile app when validation errors are present.
 
-![](validation-images/validation-login.png "Displaying validation errors during login")
+![Displaying validation errors during login](validation-images/validation-login.png)
 
 **Figure 6-2:** Displaying validation errors during login
 
@@ -278,7 +277,7 @@ public static class LineColorBehavior
 }
 ```
 
-The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 The `EntryLineColorEffect` subclasses the [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class, and is shown in the following code example:
 
@@ -373,7 +372,7 @@ The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Ent
 
 When valid data is entered in the [`Entry`](xref:Xamarin.Forms.Entry) control, it will apply a black line to the bottom of the control, to indicate that there is no validation error. Figure 6-3 shows an example of this.
 
-![](validation-images/validation-blackline.png "Black line indicating no validation error")
+![Black line indicating no validation error](validation-images/validation-blackline.png)
 
 **Figure 6-3**: Black line indicating no validation error
 
@@ -396,7 +395,7 @@ The [`Entry`](xref:Xamarin.Forms.Entry) control also has a [`DataTrigger`](xref:
 
 This [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) monitors the `UserName.IsValid` property, and if it's value becomes `false`, it executes the [`Setter`](xref:Xamarin.Forms.Setter), which changes the `LineColor` attached property of the `LineColorBehavior` attached behavior to red. Figure 6-4 shows an example of this.
 
-![](validation-images/validation-redline.png "Red line indicating validation error")
+![Red line indicating validation error](validation-images/validation-redline.png)
 
 **Figure 6-4**: Red line indicating validation error
 
@@ -420,7 +419,6 @@ Each [`Label`](xref:Xamarin.Forms.Label) binds to the `Errors` property of the v
 The eShopOnContainers mobile app performs synchronous client-side validation of view model properties and notifies the user of any validation errors by highlighting the control that contains the invalid data, and by displaying error messages that inform the user why the data is invalid.
 
 View model properties that require validation are of type `ValidatableObject<T>`, and each `ValidatableObject<T>` instance has validation rules added to its `Validations` property. Validation is invoked from the view model by calling the `Validate` method of the `ValidatableObject<T>` instance, which retrieves the validation rules and executes them against the `ValidatableObject<T>` `Value` property. Any validation errors are placed into the `Errors` property of the `ValidatableObject<T>`instance, and the `IsValid` property of the `ValidatableObject<T>` instance is updated to indicate whether validation succeeded or failed.
-
 
 ## Related Links
 

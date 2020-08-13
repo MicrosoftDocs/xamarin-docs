@@ -4,8 +4,8 @@ description: "This document describes how to use code to build a user interface 
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
 ---
 
@@ -17,7 +17,7 @@ The user interface of an iOS app is like a storefront – the application typica
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
 
-[![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
+[![This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
 These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
 
@@ -25,7 +25,7 @@ These view hierarchies can be constructed using the [Xamarin Designer for iOS](~
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and View Controller that bring the user interface to the device screen:
 
-[![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
+[![This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
 These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio for Mac, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
 
@@ -54,29 +54,26 @@ The Empty Project template adds 4 files to the project:
 1. **Info.plist** - Property list file that contains application configuration information.
 1. **Entitlements.plist** – Property list file that contains information about the capabilities and permissions of the application.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## iOS templates
-
 
 Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code.
 
 The steps below guide you through removing the Storyboard from an application:
 
-
 1. Use the Single View App template to create a new iOS Project:
 
-    [![](ios-code-only-images/single-view-app.png "Use the Single View App template")](ios-code-only-images/single-view-app.png#lightbox)
+    [![Use the Single View App template](ios-code-only-images/single-view-app.png)](ios-code-only-images/single-view-app.png#lightbox)
 
 1. Delete the `Main.Storyboard` and `ViewController.cs` files. Do **not** delete the `LaunchScreen.Storyboard`. The View Controller should be deleted as it is the code behind for the view controller that is created in the Storyboard:
 1. Make sure to select **Delete** from the pop-up dialog:
 
-    [![](ios-code-only-images/delete.png "Select Delete from the pop-up dialog")](ios-code-only-images/delete.png#lightbox)
+    [![Select Delete from the pop-up dialog](ios-code-only-images/delete.png)](ios-code-only-images/delete.png#lightbox)
 
 1. In the Info.plist, delete the information inside the **Deployment Info > Main Interface** option:
 
-    [![](ios-code-only-images/main-interface.png "Delete the information inside the Main Interface option")](ios-code-only-images/main-interface.png#lightbox)
+    [![Delete the information inside the Main Interface option](ios-code-only-images/main-interface.png)](ios-code-only-images/main-interface.png#lightbox)
 
 1. Finally, add the following code to your `FinishedLaunching` method in the AppDelegate class:
 
@@ -84,10 +81,10 @@ The steps below guide you through removing the Storyboard from an application:
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -113,10 +110,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -127,7 +124,7 @@ If you were to run this application now, you would likely get an exception throw
 
 ## Adding a controller
 
-Your app can contain many View Controllers, but it needs to have one Root View Controller to control all the View Controllers.  Add a controller to the window by creating a `UIViewController` instance and setting it to the `window.RootViewController` property:
+Your app can contain many View Controllers, but it needs to have one Root View Controller to control all the View Controllers.  Add a controller to the window by creating a `UIViewController` instance and setting it to the `Window.RootViewController` property:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -160,7 +157,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Every controller has an associated view, which is accessible from the `View` property. The above code changes the view's `BackgroundColor` property to `UIColor.LightGray` so that it will be visible, as shown below:
 
- [![](ios-code-only-images/image1.png "The View's background is a visible light gray")](ios-code-only-images/image1.png#lightbox)
+ [![The View's background is a visible light gray](ios-code-only-images/image1.png)](ios-code-only-images/image1.png#lightbox)
 
 We could set any `UIViewController` subclass as the `RootViewController` in this way as well, including controllers from UIKit as well as those we write ourselves. For example, the following code adds a `UINavigationController` as the `RootViewController`:
 
@@ -198,7 +195,7 @@ public class AppDelegate : UIApplicationDelegate
 
 This produces the controller nested within the navigation controller as shown below:
 
- [![](ios-code-only-images/image2.png "The controller nested within the navigation controller")](ios-code-only-images/image2.png#lightbox)
+ [![The controller nested within the navigation controller](ios-code-only-images/image2.png)](ios-code-only-images/image2.png#lightbox)
 
 ## Creating a view controller
 
@@ -208,11 +205,11 @@ Add a new class named `CustomViewController` as shown below:
 
 # [Visual Studio](#tab/windows)
 
-[![](ios-code-only-images/customviewcontroller.w157-sml.png "Add a new class named CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
+[![Add a new class named CustomViewController](ios-code-only-images/customviewcontroller.w157-sml.png)](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](ios-code-only-images/new-file.png "Add a new class named CustomViewController")](ios-code-only-images/new-file.png#lightbox)
+[![Add a new class named CustomViewController](ios-code-only-images/new-file.png)](ios-code-only-images/new-file.png#lightbox)
 
 -----
 
@@ -286,11 +283,11 @@ Window.RootViewController = navController;
 
 Now when the application loads, the `CustomViewController` is loaded inside a navigation controller:
 
- [![](ios-code-only-images/customvc.png "The CustomViewController is loaded inside a navigation controller")](ios-code-only-images/customvc.png#lightbox)
+ [![The CustomViewController is loaded inside a navigation controller](ios-code-only-images/customvc.png)](ios-code-only-images/customvc.png#lightbox)
 
 Clicking the button, will _push_ a new View Controller onto the navigation stack:
 
-[![](ios-code-only-images/customvca.png "A new View Controller pushed onto the navigation stack")](ios-code-only-images/customvca.png#lightbox)
+[![A new View Controller pushed onto the navigation stack](ios-code-only-images/customvca.png)](ios-code-only-images/customvca.png#lightbox)
 
 ## Building the view hierarchy
 
@@ -302,7 +299,7 @@ For example, let's edit the `CustomViewController` to create a login screen wher
 
 ### Adding the text fields
 
-First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section. 
+First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section.
 
 Add a control for the username by creating and initializing a `UITextField` and then adding it to the view hierarchy, as shown below:
 
@@ -336,7 +333,7 @@ When we create the `UITextField`, we set the `Frame` property to define its loca
 
 The application with the `UITextField` included is shown below:
 
- [![](ios-code-only-images/image4.png "The application with the UITextField included")](ios-code-only-images/image4.png#lightbox)
+ [![The application with the UITextField included](ios-code-only-images/image4.png)](ios-code-only-images/image4.png#lightbox)
 
 We can add a `UITextField` for the password in a similar fashion, only this time we set the `SecureTextEntry` property to true, as shown below:
 
@@ -364,7 +361,7 @@ public class CustomViewController : UIViewController
 
 Setting `SecureTextEntry = true` hides the text entered in the `UITextField` by the user as shown below:
 
- [![](ios-code-only-images/image4a.png "Setting SecureTextEntry true hides the text entered by the user")](ios-code-only-images/image4a.png#lightbox)
+ [![Setting SecureTextEntry true hides the text entered by the user](ios-code-only-images/image4a.png)](ios-code-only-images/image4a.png#lightbox)
 
 ### Adding the button
 
@@ -387,7 +384,7 @@ View.AddSubview(submitButton);
 
 With this in place, the login screen now appears as shown below:
 
- [![](ios-code-only-images/image5.png "The login screen")](ios-code-only-images/image5.png#lightbox)
+ [![The login screen](ios-code-only-images/image5.png)](ios-code-only-images/image5.png#lightbox)
 
 Unlike in previous versions of iOS, the default button background is transparent. Altering the button’s `BackgroundColor` property changes this:
 
@@ -403,7 +400,7 @@ submitButton.Layer.CornerRadius = 5f;
 
 With these changes, the view will look like this:
 
-[![](ios-code-only-images/image6.png "An example run of the view")](ios-code-only-images/image6.png#lightbox)
+[![An example run of the view](ios-code-only-images/image6.png)](ios-code-only-images/image6.png#lightbox)
 
 ## Adding multiple views to the view hierarchy
 
@@ -436,7 +433,7 @@ submitButton.TouchUpInside += (sender, e) => {
 
 The navigation is illustrated below:
 
-[![](ios-code-only-images/navigation.png "The navigation is illustrated in this chart")](ios-code-only-images/navigation.png#lightbox)
+[![The navigation is illustrated in this chart](ios-code-only-images/navigation.png)](ios-code-only-images/navigation.png#lightbox)
 
 Notice that by default, when you use a Navigation Controller, iOS gives the application a navigation bar and a back button to allow you to move back through the stack.
 
@@ -461,7 +458,7 @@ This, however will not work if the view being iterated for is a `UIView` as all 
 
 If the user rotates the device to landscape, the controls do not resize appropriately, as the following screenshot illustrates:
 
-[![](ios-code-only-images/image7.png "If the user rotates the device to landscape, the controls do not resize appropriately")](ios-code-only-images/image7.png#lightbox)
+[![If the user rotates the device to landscape, the controls do not resize appropriately](ios-code-only-images/image7.png)](ios-code-only-images/image7.png#lightbox)
 
 One way to fix this is by setting the `AutoresizingMask` property on each view. In this case we want the controls to stretch horizontally, so we would set each `AutoresizingMask`. The following example is for `usernameField`, but the same would need to be applied to each gadget in the view hierarchy.
 
@@ -471,7 +468,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 Now when we rotate the device or simulator, everything stretches to fill the additional space, as shown below:
 
-[![](ios-code-only-images/image8.png "All the controls stretch to fill the additional space")](ios-code-only-images/image8.png#lightbox)
+[![All the controls stretch to fill the additional space](ios-code-only-images/image8.png)](ios-code-only-images/image8.png#lightbox)
 
 ## Creating custom views
 
@@ -577,7 +574,7 @@ submitButton.TouchUpInside += delegate
 
 Now, when we run the application and tap the submit button, the new view with a circle is displayed:
 
-[![](ios-code-only-images/circles.png "The new view with a circle is displayed")](ios-code-only-images/circles.png#lightbox)
+[![The new view with a circle is displayed](ios-code-only-images/circles.png)](ios-code-only-images/circles.png#lightbox)
 
 ## Creating a launch screen
 
@@ -628,4 +625,4 @@ This article discussed how to develop iOS applications programmatically in Visua
 
 ## Related Links
 
-- [SimpleLogin (sample)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)

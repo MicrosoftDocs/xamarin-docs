@@ -3,8 +3,8 @@ title: "Creating Bindings with Objective Sharpie"
 description: "This section provides an introduction to Objective Sharpie, Xamarin's command line tool used to automate the process of creating a binding to an Objective-C Library"
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
 ---
 
@@ -43,11 +43,9 @@ However, Objective Sharpie is a very advanced tool that requires advanced knowle
 
 ## Related Links
 
-- [Objective Sharpie download](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+- [Objective Sharpie download](https://aka.ms/objective-sharpie)
 - [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin for Objective-C Developers](~/ios/get-started/objective-c-developers/index.md)
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

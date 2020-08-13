@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Passing Arguments in XAML
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _This article demonstrates using the XAML attributes that can be used to pass arguments to non-default constructors, to call factory methods, and to specify the type of a generic argument._
 
@@ -19,31 +20,29 @@ _This article demonstrates using the XAML attributes that can be used to pass ar
 
 It's often necessary to instantiate objects with constructors that require arguments, or by calling a static creation method. This can be achieved in XAML by using the `x:Arguments` and `x:FactoryMethod` attributes:
 
-- The `x:Arguments` attribute is used to specify constructor arguments for a non-default constructor, or for a factory method object declaration. For more information, see [Passing Constructor Arguments](#constructor_arguments).
-- The `x:FactoryMethod` attribute is used to specify a factory method that can be used to initialize an object. For more information, see [Calling Factory Methods](#factory_methods).
+- The `x:Arguments` attribute is used to specify constructor arguments for a non-default constructor, or for a factory method object declaration. For more information, see [Passing Constructor Arguments](#passing-constructor-arguments).
+- The `x:FactoryMethod` attribute is used to specify a factory method that can be used to initialize an object. For more information, see [Calling Factory Methods](#calling-factory-methods).
 
-In addition, the `x:TypeArguments` attribute can be used to specify the generic type arguments to the constructor of a generic type. For more information, see [Specifying a Generic Type Argument](#generic_type_arguments).
-
-<a name="constructor_arguments" />
+In addition, the `x:TypeArguments` attribute can be used to specify the generic type arguments to the constructor of a generic type. For more information, see [Specifying a Generic Type Argument](#specifying-a-generic-type-argument).
 
 ## Passing Constructor Arguments
 
 Arguments can be passed to a non-default constructor using the `x:Arguments` attribute. Each constructor argument must be delimited within an XML element that represents the type of the argument. Xamarin.Forms supports the following elements for basic types:
 
-- `x:Object`
+- `x:Array`
 - `x:Boolean`
 - `x:Byte`
+- `x:Char`
+- `x:DateTime`
+- `x:Decimal`
+- `x:Double`
 - `x:Int16`
 - `x:Int32`
 - `x:Int64`
+- `x:Object`
 - `x:Single`
-- `x:Double`
-- `x:Decimal`
-- `x:Char`
 - `x:String`
 - `x:TimeSpan`
-- `x:Array`
-- `x:DateTime`
 
 The following code example demonstrates using the `x:Arguments` attribute with three [`Color`](xref:Xamarin.Forms.Color) constructors:
 
@@ -86,9 +85,7 @@ The number of elements within the `x:Arguments` tag, and the types of these elem
 
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) constructor with the specified argument values:
 
-![](passing-arguments-images/passing-arguments.png "BoxView.Color specified with x:Arguments")
-
-<a name="factory_methods" />
+![BoxView.Color specified with x:Arguments](passing-arguments-images/passing-arguments.png)
 
 ## Calling Factory Methods
 
@@ -136,9 +133,7 @@ The number of elements within the `x:Arguments` tag, and the types of these elem
 
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) factory method with the specified argument values:
 
-![](passing-arguments-images/factory-methods.png "BoxView.Color specified with x:FactoryMethod and x:Arguments")
-
-<a name="generic_type_arguments" />
+![BoxView.Color specified with x:FactoryMethod and x:Arguments](passing-arguments-images/factory-methods.png)
 
 ## Specifying a Generic Type Argument
 
@@ -160,13 +155,11 @@ Generic type arguments for the constructor of a generic type can be specified us
 
 The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values. In this example, the [`StackLayout.Margin`](xref:Xamarin.Forms.View.Margin) property is set to a platform-specific [`Thickness`](xref:Xamarin.Forms.Thickness).
 
-## Summary
-
-This article demonstrated using the XAML attributes that can be used to pass arguments to non-default constructors, to call factory methods, and to specify the type of a generic argument.
-
+For more information about generic type arguments, see [Generics in Xamarin.Forms XAML](generics.md).
 
 ## Related Links
 
+- [Passing Constructor Arguments (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Calling Factory Methods (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Passing Constructor Arguments (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
-- [Calling Factory Methods (sample)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)
+- [Generics in Xamarin.Forms XAML](generics.md)

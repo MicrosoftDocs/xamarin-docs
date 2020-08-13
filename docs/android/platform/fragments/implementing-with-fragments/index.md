@@ -5,8 +5,8 @@ ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2018
 ---
 
@@ -45,7 +45,7 @@ The [second part of this walkthrough](./walkthrough-landscape.md) will discuss a
 
 ## Related Links
 
-- [FragmentsWalkthrough (sample)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
+- [FragmentsWalkthrough (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough)
 - [Designer Overview](~/android/user-interface/android-designer/index.md)
 - [Implementing Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)

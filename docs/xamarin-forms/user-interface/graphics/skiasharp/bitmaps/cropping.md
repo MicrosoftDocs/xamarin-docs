@@ -7,11 +7,12 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Cropping SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [**Creating and Drawing SkiaSharp Bitmaps**](drawing.md) article described how an `SKBitmap` object can be passed to an `SKCanvas` constructor. Any drawing method called on that canvas causes graphics to be rendered on the bitmap. These drawing methods include `DrawBitmap`, which means that this technique allows transferring part or all of one bitmap to another bitmap, perhaps with transforms applied.
 
@@ -71,7 +72,7 @@ class CroppingRectangle
             Rect = rect;
         }
     }
-    
+
     public SKRect Rect { set; get; }
     ···
 }
@@ -100,7 +101,7 @@ class CroppingRectangle
 }
 ```
 
-This array is used in the following method, which is called `HitTest`. The `SKPoint` parameter is a point corresponding to a finger touch or a mouse click. The method returns an index (0, 1, 2, or 3) corresponding to the corner that the finger or mouse pointer touched, within a distance given by the `radius` parameter: 
+This array is used in the following method, which is called `HitTest`. The `SKPoint` parameter is a point corresponding to a finger touch or a mouse click. The method returns an index (0, 1, 2, or 3) corresponding to the corner that the finger or mouse pointer touched, within a distance given by the `radius` parameter:
 
 ```csharp
 class CroppingRectangle
@@ -113,7 +114,7 @@ class CroppingRectangle
         for (int index = 0; index < corners.Length; index++)
         {
             SKPoint diff = point - corners[index];
-                
+
             if ((float)Math.Sqrt(diff.X * diff.X + diff.Y * diff.Y) < radius)
             {
                 return index;
@@ -263,7 +264,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
         canvas.Clear(SKColors.Gray);
 
-        // Calculate rectangle for displaying bitmap 
+        // Calculate rectangle for displaying bitmap
         float scale = Math.Min((float)info.Width / bitmap.Width, (float)info.Height / bitmap.Height);
         float x = (info.Width - scale * bitmap.Width) / 2;
         float y = (info.Height - scale * bitmap.Height) / 2;
@@ -322,7 +323,7 @@ class PhotoCropperCanvasView : SKCanvasView
     CroppingRectangle croppingRect;
     SKMatrix inverseBitmapMatrix;
 
-    // Touch tracking 
+    // Touch tracking
     TouchEffect touchEffect = new TouchEffect();
     struct TouchPoint
     {
@@ -376,7 +377,7 @@ class PhotoCropperCanvasView : SKCanvasView
                 if (touchPoints.ContainsKey(args.Id))
                 {
                     TouchPoint touchPoint = touchPoints[args.Id];
-                    croppingRect.MoveCorner(touchPoint.CornerIndex, 
+                    croppingRect.MoveCorner(touchPoint.CornerIndex,
                                             bitmapLocation - touchPoint.Offset);
                     InvalidateSurface();
                 }
@@ -420,10 +421,10 @@ class PhotoCropperCanvasView : SKCanvasView
         get
         {
             SKRect cropRect = croppingRect.Rect;
-            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width, 
+            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width,
                                                   (int)cropRect.Height);
             SKRect dest = new SKRect(0, 0, cropRect.Width, cropRect.Height);
-            SKRect source = new SKRect(cropRect.Left, cropRect.Top, 
+            SKRect source = new SKRect(cropRect.Left, cropRect.Top,
                                        cropRect.Right, cropRect.Bottom);
 
             using (SKCanvas canvas = new SKCanvas(croppedBitmap))
@@ -440,7 +441,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## Hosting the photo cropper canvas view
 
-With those two classes handling the cropping logic, the **Photo Cropping** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application has very little work to do. The XAML file instantiates a `Grid` to host the `PhotoCropperCanvasView` and a **Done** button:
+With those two classes handling the cropping logic, the **Photo Cropping** page in the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application has very little work to do. The XAML file instantiates a `Grid` to host the `PhotoCropperCanvasView` and a **Done** button:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,13 +526,11 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 You'll see the cropping rectangle restricted to a 16-to-9 aspect ratio characteristic of high-definition television.
 
-<a name="tile-division" />
-
 ## Dividing a bitmap into tiles
 
 A Xamarin.Forms version of the famous 14-15 puzzle appeared in Chapter 22 of the book [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) and can be downloaded as [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). However, the puzzle becomes more fun (and often more challenging) when it is based on an image from your own photo library.
 
-This version of the 14-15 puzzle is part of the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application, and consists of a series of pages titled **Photo Puzzle**.
+This version of the 14-15 puzzle is part of the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application, and consists of a series of pages titled **Photo Puzzle**.
 
 The **PhotoPuzzlePage1.xaml** file consists of a `Button`:
 
@@ -540,12 +539,12 @@ The **PhotoPuzzlePage1.xaml** file consists of a `Button`:
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SkiaSharpFormsDemos.Bitmaps.PhotoPuzzlePage1"
              Title="Photo Puzzle">
-    
+
     <Button Text="Pick a photo from your library"
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand"
             Clicked="OnPickButtonClicked"/>
-    
+
 </ContentPage>
 ```
 
@@ -554,10 +553,10 @@ The code-behind file implements a `Clicked` handler that uses the `IPhotoLibrary
 ```csharp
 public partial class PhotoPuzzlePage1 : ContentPage
 {
-	public PhotoPuzzlePage1 ()
-	{
-		InitializeComponent ();
-	}
+    public PhotoPuzzlePage1 ()
+    {
+        InitializeComponent ();
+    }
 
     async void OnPickButtonClicked(object sender, EventArgs args)
     {
@@ -579,19 +578,19 @@ The method then navigates to `PhotoPuzzlePage2`, passing to the constuctor the s
 
 It's possible that the photo selected from the library is not oriented as it appeared in the photo library, but is rotated or upside-down. (This is particularly a problem with iOS devices.) For that reason, `PhotoPuzzlePage2` allows you to rotate the image to a desired orientation. The XAML file contains three buttons labeled **90&#x00B0; Right** (meaning clockwise), **90&#x00B0; Left** (counterclockwise), and **Done**.
 
-The code-behind file implements the bitmap-rotation logic shown in the article **[Creating and Drawing on SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)**. The user can rotate the image 90 degrees clockwise or counter-clockwise any number of times: 
+The code-behind file implements the bitmap-rotation logic shown in the article **[Creating and Drawing on SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)**. The user can rotate the image 90 degrees clockwise or counter-clockwise any number of times:
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
 {
     SKBitmap bitmap;
 
-	public PhotoPuzzlePage2 (SKBitmap bitmap)
-	{
+    public PhotoPuzzlePage2 (SKBitmap bitmap)
+    {
         this.bitmap = bitmap;
 
-		InitializeComponent ();
-	}
+        InitializeComponent ();
+    }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
@@ -687,9 +686,9 @@ public partial class PhotoPuzzlePage3 : ContentPage
 {
     PhotoCropperCanvasView photoCropper;
 
-	public PhotoPuzzlePage3(SKBitmap bitmap)
-	{
-		InitializeComponent ();
+    public PhotoPuzzlePage3(SKBitmap bitmap)
+    {
+        InitializeComponent ();
 
         photoCropper = new PhotoCropperCanvasView(bitmap, 1f);
         canvasViewHost.Children.Add(photoCropper);
@@ -755,9 +754,9 @@ Pressing the **Randomize** button mixes up all the tiles:
 
 [![Photo Puzzle 2](cropping-images/PhotoPuzzle2.png "Photo Puzzle 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-Now you can put them back in the correct order. Any tiles in the same row or column as the blank square can be tapped to move them into the blank square. 
+Now you can put them back in the correct order. Any tiles in the same row or column as the blank square can be tapped to move them into the blank square.
 
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

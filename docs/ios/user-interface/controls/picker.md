@@ -4,8 +4,8 @@ description: "This document describes how to design and work with picker control
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/14/2018
 ---
 # Picker control in Xamarin.iOS
@@ -181,13 +181,14 @@ var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
 components.Year = -60;
-NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
+NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
 datePickerView.MinimumDate = minDate;
-datePickerView.MaximumDate = NSDate.Now;
+datePickerView.MaximumDate = currentDate;
 ```
 
 > [!TIP]
 > It's possible to explicitly cast a `DateTime` to an `NSDate`:
+>
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
 > DatePicker.MaximumDate = (NSDate)DateTime.Today.AddDays (7);
@@ -356,4 +357,4 @@ Various `NSDateFormatterStyle` values display dates as follows:
 
 ## Related links
 
-- [PickerControl (sample)](https://developer.xamarin.com/samples/monotouch/PickerControl/)
+- [PickerControl (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/pickercontrol)

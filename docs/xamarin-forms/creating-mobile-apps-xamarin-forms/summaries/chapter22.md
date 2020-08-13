@@ -7,6 +7,7 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 22. Animation
@@ -198,8 +199,6 @@ The [**ColorAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/
 ## Structuring your animations
 
 It's sometimes useful to express animations in XAML and use them in conjunction with MVVM. This is covered in the next chapter, [**Chapter 23. Triggers and Behaviors**](chapter23.md).
-
-
 
 ## Related links
 

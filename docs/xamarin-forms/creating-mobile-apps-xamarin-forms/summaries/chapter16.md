@@ -7,6 +7,7 @@ ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 16. Data binding
@@ -133,8 +134,6 @@ You can simplify custom controls using data bindings. The [`NewCheckBox.cs`](htt
 Instead the [`NewCheckBox.cs.xaml`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) file contains all the markup for the control's visuals through data bindings on the `Label` elements based on the properties defined in the code-behind file.
 
 The [**NewCheckBoxDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) sample demonstrates the `NewCheckBox` custom control.
-
-
 
 ## Related links
 

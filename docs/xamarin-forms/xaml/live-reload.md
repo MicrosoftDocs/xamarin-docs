@@ -8,12 +8,16 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin Live Reload (Preview)
 
 > [!NOTE]
-> The preview of Xamarin Live Reload has ended, and we want to thank everyone for your feedback and comments. Please read through our [roadmap](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) for Visual Studio 2019 to learn more about new productivity features that we are working on for Xamarin.Forms. This extension will remain available for Visual Studio 2017, but will not be receiving future updates.
+> The preview of Xamarin Live Reload has ended, and we want to thank everyone for your feedback and comments. 
+>
+> To edit your XAML while your app is running, use [XAML Hot Reload for Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md).
+>
 
 Xamarin Live Reload enables you to **make changes to your XAML and see them reflected live, without requiring another compile and deploy**. Any changes made to your XAML will be redeployed on save and reflected on your deploy target.
 
@@ -122,15 +126,15 @@ No. In fact, you can even start all your supported application targets (Android,
 
 * **XLR001**: *The current project references 'Xamarin.LiveReload' NuGet package version '[VERSION]' but the Xamarin Live Reload extension requires version '[VERSION]'.*
 
-  In order to allow rapid iteration and evolution of the Live Reload feature, the nuget package and the Visual Studio extension must match exactly. Update your nuget package to the same version of the extension you have installed.
+  In order to allow rapid iteration and evolution of the Live Reload feature, the NuGet package and the Visual Studio extension must match exactly. Update your NuGet package to the same version of the extension you have installed.
 
 * **XLR002**: *Live Reload requires at least the 'MqttHostname' property when building from the command line. Alternatively, set 'EnableLiveReload' to 'false' to disable the feature.*
 
   The properties required by Live Reload are not available when building from the command line (or in continuous integration), and must therefore be provided explicitly. 
 
-* **XLR003**: *Live Reload nuget package requires installing the Xamarin Live Reload Visual Studio extension.*
+* **XLR003**: *Live Reload NuGet package requires installing the Xamarin Live Reload Visual Studio extension.*
 
-  Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
+  Attempted to build a project that references the Live Reload NuGet package but the Visual Extension is not installed.  
 
 * *Exception while loading assemblies: System.IO.FileNotFoundException: Could not load assembly 'Xamarin.Live.Reload, Version=0.3.27.0, Culture=neutral, PublicKeyToken='.*
 
@@ -167,7 +171,7 @@ If you have an older preview and you have problems uninstalling it, follow these
 
 In scenarios where a connection from the running app to your machine (as denoted by using `localhost` or `127.0.0.1` in **Tools > Options > Xamarin > Live Reload**) is not possible (i.e. firewalls, different networks), you can configure a remote server instead, which both the IDE and the app will conect to.
 
-Live Reload uses the standard [MQTT protocol](http://mqtt.org/) to exchange messages, and can therefore communicate with [third party servers](https://github.com/mqtt/mqtt.github.io/wiki/servers). There are even [public servers](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (also known as *brokers*) available that you can use. Live Reload has been tested with `broker.hivemq.com` and `iot.eclipse.org` host names, as well as the services provided by [www.cloudmqtt.com](https://www.cloudmqtt.com) and [www.cloudamqp.com](https://www.cloudamqp.com). You can also deploy your own MQTT server in the cloud, such as [HiveMQ on Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
+Live Reload uses the standard [MQTT protocol](https://mqtt.org/) to exchange messages, and can therefore communicate with [third party servers](https://github.com/mqtt/mqtt.github.io/wiki/servers). There are even [public servers](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (also known as *brokers*) available that you can use. Live Reload has been tested with `broker.hivemq.com` and `iot.eclipse.org` host names, as well as the services provided by [www.cloudmqtt.com](https://www.cloudmqtt.com) and [www.cloudamqp.com](https://www.cloudamqp.com). You can also deploy your own MQTT server in the cloud, such as [HiveMQ on Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 You can configure any port, but it's common to use the default 1883 port for remote servers. Live Reload messages use strong end-to-end AES symmetric encryption, so it's safe to connect to remote servers. By default, both the encryption key and the initialization vector (IV) are regenerated on every Visual Studio session.
 

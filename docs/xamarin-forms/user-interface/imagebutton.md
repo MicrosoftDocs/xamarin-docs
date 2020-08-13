@@ -6,12 +6,13 @@ ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
+ms.date: 12/04/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms ImageButton
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _The ImageButton displays an image and responds to a tap or click that directs an application to carry out a particular task._
 
@@ -20,7 +21,7 @@ The `ImageButton` view combines the [`Button`](xref:Xamarin.Forms.Button) view a
 > [!NOTE]
 > While the [`Button`](xref:Xamarin.Forms.Button) view defines an [`Image`](xref:Xamarin.Forms.Button.Image) property, that allows you to display a image on the `Button`, this property is intended to be used when displaying a small icon next to the `Button` text.
 
-The code examples in this guide are taken from the [FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/).
+The code examples in this guide are taken from the [FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery).
 
 ## Setting the image source
 
@@ -51,6 +52,9 @@ The `Source` property specifies the image that appears in the `ImageButton`. In 
 [![Basic ImageButton](imagebutton-images/BasicImageButton.png "Basic ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "Basic ImageButton")
 
 By default, the `ImageButton` is rectangular, but you can give it rounded corners by using the `CornerRadius` property. For more information about `ImageButton` appearance, see [ImageButton appearance](#imagebutton-appearance).
+
+> [!NOTE]
+> While an `ImageButton` can load an animated GIF, it will only display the first frame of the GIF.
 
 The following example shows how to create a page that is functionally equivalent to the previous XAML example, but entirely in C#:
 
@@ -271,4 +275,4 @@ For more information about visual states, see [The Xamarin.Forms Visual State Ma
 
 ## Related links
 
-- [FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

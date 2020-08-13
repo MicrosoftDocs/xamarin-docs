@@ -4,8 +4,8 @@ description: "This document describes augmented reality in iOS 11 with ARKit. It
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
 ---
 
@@ -18,7 +18,7 @@ ARKit enables a wide variety of augmented reality applications and games. This s
 - [Getting Started with ARKit](#gettingstarted)
 - [Using ARKit with UrhoSharp](urhosharp.md)
 
-<a name="gettingstarted" />
+<a name="gettingstarted"></a>
 
 ## Getting Started with ARKit
 
@@ -31,7 +31,6 @@ To get started with augmented reality, the following instructions walk through a
 Assets should be added to the project with the **SceneKitAsset** build action.
 
 ![SceneKit assets in a project](images/scene-assets.png)
-
 
 ### 2. Configure the view
 
@@ -108,11 +107,10 @@ implement `IARSCNViewDelegate`, and additional methods be implemented.
 
 ARKit provides lots of more sophisticated features, such as surface tracking, and user interaction. See the [UrhoSharp demo](urhosharp.md) for an example combining ARKit tracking with UrhoSharp.
 
-
 ## Related Links
 
 - [Augmented Reality (Apple)](https://developer.apple.com/arkit/)
 - [Using ARKit with UrhoSharp](urhosharp.md)
-- [Simple ARKit (Jet) Sample](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
-- [ARKit Placing Objects (sample)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
+- [Simple ARKit (Jet) Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit Placing Objects (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introducing ARKit - Augmented Reality for iOS (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/602/)

@@ -4,8 +4,8 @@ description: "This guide will discuss how Android 6.0 supports app-linking, a te
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -44,20 +44,20 @@ Setting up app-links in Android 6.0 involves two major steps:
 1. **Adding one or more intent-filters for the website URI's** &ndash; the intent filters guide Android in how to handle a URL click in a mobile browser.
 2. **Publishing a *Digital Asset Links JSON* file on the website** &ndash; this is a file that is uploaded to a website and is used by Android to verify the relationship between the mobile app and the domain of the website. Without this,  Android cannot install the app as the default handle for URI's; the user must do so manually.
 
-<a name="configure-intent-filter" />
+<a name="configure-intent-filter"></a>
 
 ### Configuring the Intent Filter
 
-It is necessary to configure an intent filter that maps a URI (or possible a set of URIs) from a website to an Activity in an Android application. In Xamarin.Android, this relationship is established by  adorning an Activity with the [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). The intent filter must declare the following information:
+It is necessary to configure an intent filter that maps a URI (or possible a set of URIs) from a website to an Activity in an Android application. In Xamarin.Android, this relationship is established by  adorning an Activity with the [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). The intent filter must declare the following information:
 
-* **`Intent.ActionView`** &ndash; This will register the intent filter to respond to requests to view information
-* **`Categories`** &ndash;  The intent filter should register both **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** and **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** to be able to properly handle the web URI.
-* **`DataScheme`** &ndash; The intent filter must declare `http` and/or `https`. These are the only two valid schemes.
-* **`DataHost`** &ndash; This is the domain which the URIs will originate from.
-* **`DataPathPrefix`** &ndash; This is an optional path to resources on the website.
-* **`AutoVerify`** &ndash; The `autoVerify` attribute tells Android to verify the relationship between the application and the website. This will be discussed more below.
+- **`Intent.ActionView`** &ndash; This will register the intent filter to respond to requests to view information
+- **`Categories`** &ndash;  The intent filter should register both **[Intent.CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** and **[Intent.CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** to be able to properly handle the web URI.
+- **`DataScheme`** &ndash; The intent filter must declare `http` and/or `https`. These are the only two valid schemes.
+- **`DataHost`** &ndash; This is the domain which the URIs will originate from.
+- **`DataPathPrefix`** &ndash; This is an optional path to resources on the website.
+- **`AutoVerify`** &ndash; The `autoVerify` attribute tells Android to verify the relationship between the application and the website. This will be discussed more below.
 
-The following example shows how to use the [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) to handle links from `https://www.recipe-app.com/recipes` and from `http://www.recipe-app.com/recipes`:
+The following example shows how to use the [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) to handle links from `https://www.recipe-app.com/recipes` and from `http://www.recipe-app.com/recipes`:
 
 ```csharp
 [IntentFilter(new [] { Intent.ActionView },
@@ -85,9 +85,9 @@ The file is placed by the webmaster of the domain at the location **https://doma
 
 The Digital Asset File contains the meta-data necessary for Android to verify the association. An **assetlinks.json** file has the following key-value pairs:
 
-* `namespace` &ndash; the namespace of the Android application.
-* `package_name` &ndash; the package name of the Android application (declared in the application manifest).
-* `sha256_cert_fingerprints` &ndash; the SHA256 fingerprints of the signed application. Please see the guide [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) for more information on how to obtain the SHA1 fingerprint of an application.
+- `namespace` &ndash; the namespace of the Android application.
+- `package_name` &ndash; the package name of the Android application (declared in the application manifest).
+- `sha256_cert_fingerprints` &ndash; the SHA256 fingerprints of the signed application. Please see the guide [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) for more information on how to obtain the SHA1 fingerprint of an application.
 
 The following snippet is an example of **assetlinks.json** with a
 single application listed:
@@ -165,7 +165,7 @@ There are two tests that can be performed to ensure that the intent
 filters have been properly configured and that the app is set as the
 default handler for a URI:
 
-1.  The Digital Asset File is properly hosted as described above. The
+1. The Digital Asset File is properly hosted as described above. The
     first test will dispatch an intent which Android should redirect to
     the mobile application. The Android application should launch and
     display the Activity registered for the URL. At a command prompt
@@ -177,7 +177,7 @@ default handler for a URI:
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2.  Display the existing link handling policies for the applications
+2. Display the existing link handling policies for the applications
     installed on a given device. The following command will dump a
     listing of link policies for each user on the device with the
     following information. At the command prompt, type the following
@@ -187,9 +187,9 @@ default handler for a URI:
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    * **`Package`** &ndash; The package name of the application.
-    * **`Domain`** &ndash; The domains (separated by spaces) whose web links will be handled by the application
-    * **`Status`** &ndash; This is the current link-handling status for the app. A value of **always** means that the  application has `android:autoVerify=true` declared and has passed system verification. It is followed by a hexadecimal number representing the Android system's record of the preference.
+    - **`Package`** &ndash; The package name of the application.
+    - **`Domain`** &ndash; The domains (separated by spaces) whose web links will be handled by the application
+    - **`Status`** &ndash; This is the current link-handling status for the app. A value of **always** means that the  application has `android:autoVerify=true` declared and has passed system verification. It is followed by a hexadecimal number representing the Android system's record of the preference.
 
     For example:
 
@@ -209,11 +209,9 @@ covered how to configure an Android 6.0 application to support and
 respond to app links. It also discussed how to test app-linking in an
 Android application.
 
-
 ## Related Links
 
 - [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md)
-- [Activities and Intents](https://university.xamarin.com/classes#4)
-- [AppLinks](http://applinks.org/)
+- [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Google Digital Assets Links](https://developers.google.com/digital-asset-links/)
 - [Statement List Generator and Tester](https://developers.google.com/digital-asset-links/tools/generator)

@@ -4,8 +4,8 @@ description: "This article covers several tips, features and techniques a develo
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -13,15 +13,15 @@ ms.date: 03/14/2017
 
 _This article covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac._
 
-<a name="Building-Modern-Looks-with-Modern-Views" />
+<a name="Building-Modern-Looks-with-Modern-Views"></a>
 
 ## Building Modern Looks with Modern Views
 
 A modern look will include a modern Window and Toolbar appearance such as the example app shown below:
 
-[![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png#lightbox)
+[![An example of a modern Mac app UI](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
-<a name="Enabling-Full-Sized-Content-Views" />
+<a name="Enabling-Full-Sized-Content-Views"></a>
 
 ### Enabling Full Sized Content Views
 
@@ -36,30 +36,30 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Set window to use Full Size Content View
-			Window.StyleMask = NSWindowStyle.FullSizeContentView;
-		}
-		#endregion
-	}
+            // Set window to use Full Size Content View
+            Window.StyleMask = NSWindowStyle.FullSizeContentView;
+        }
+        #endregion
+    }
 }
 ```
 
 This feature can also be enabled in Xcode's Interface Builder by selecting the Window and checking **Full Sized Content View**:
 
-[![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png#lightbox)
+[![Editing the main storyboard in Xcode's Interface Builder](modern-cocoa-apps-images/content01.png)](modern-cocoa-apps-images/content01.png#lightbox)
 
 When using a Full Size Content View, the developer may need to offset the content beneath the title and tool bar areas so that specific content (such as labels) doesn't slide under them.
 
@@ -80,35 +80,35 @@ using Foundation;
 
 namespace MacModern
 {
-	public partial class ViewController : NSViewController
-	{
-		#region Computed Properties
-		public NSLayoutConstraint topConstraint { get; set; }
-		#endregion
+    public partial class ViewController : NSViewController
+    {
+        #region Computed Properties
+        public NSLayoutConstraint topConstraint { get; set; }
+        #endregion
 
-		...
+        ...
 
-		#region Override Methods
-		public override void UpdateViewConstraints ()
-		{
-			// Has the constraint already been set?
-			if (topConstraint == null) {
-				// Get the top anchor point
-				var contentLayoutGuide = ItemTitle.Window?.ContentLayoutGuide as NSLayoutGuide;
-				var topAnchor = contentLayoutGuide.TopAnchor;
+        #region Override Methods
+        public override void UpdateViewConstraints ()
+        {
+            // Has the constraint already been set?
+            if (topConstraint == null) {
+                // Get the top anchor point
+                var contentLayoutGuide = ItemTitle.Window?.ContentLayoutGuide as NSLayoutGuide;
+                var topAnchor = contentLayoutGuide.TopAnchor;
 
-				// Found?
-				if (topAnchor != null) {
-					// Assemble constraint and activate it
-					topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
-					topConstraint.Active = true;
-				}
-			}
+                // Found?
+                if (topAnchor != null) {
+                    // Assemble constraint and activate it
+                    topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
+                    topConstraint.Active = true;
+                }
+            }
 
-			base.UpdateViewConstraints ();
-		}
-		#endregion
-	}
+            base.UpdateViewConstraints ();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -134,54 +134,54 @@ topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
 topConstraint.Active = true;
 ```
 
-<a name="Enabling-Streamlined-Toolbars" />
+<a name="Enabling-Streamlined-Toolbars"></a>
 
 ### Enabling Streamlined Toolbars
 
 A normal macOS Window includes a standard Title Bar at runs along to top edge of the Window. If the Window also includes a Tool Bar, it will be displayed under this Title Bar area:
 
-[![](modern-cocoa-apps-images/content02.png "A standard Mac Toolbar")](modern-cocoa-apps-images/content02.png#lightbox)
+[![A standard Mac Toolbar](modern-cocoa-apps-images/content02.png)](modern-cocoa-apps-images/content02.png#lightbox)
 
 When using a Streamlined Toolbar, the Title Area disappears and the Tool Bar moves up into the Title Bar's position, in-line with the Window Close, Minimize and Maximize buttons:
 
-[![](modern-cocoa-apps-images/content03.png "A streamlined Mac Toolbar")](modern-cocoa-apps-images/content03.png#lightbox)
+[![A streamlined Mac Toolbar](modern-cocoa-apps-images/content03.png)](modern-cocoa-apps-images/content03.png#lightbox)
 
 The Streamlined Toolbar is enabled by overriding the `ViewWillAppear` method of the `NSViewController` and making it look like the following:
 
 ```csharp
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Enable streamlined Toolbars
-	View.Window.TitleVisibility = NSWindowTitleVisibility.Hidden;
+    // Enable streamlined Toolbars
+    View.Window.TitleVisibility = NSWindowTitleVisibility.Hidden;
 }
 ```
 
-This effect is typically used for _Shoebox Applications_ (one window apps) like Maps, Calendar, Notes and System Preferences. 
+This effect is typically used for _Shoebox Applications_ (one window apps) like Maps, Calendar, Notes and System Preferences.
 
-<a name="Using-Accessory-View-Controllers" />
+<a name="Using-Accessory-View-Controllers"></a>
 
 ### Using Accessory View Controllers
 
 Depending on the design of the app, the developer might also want to complement the Title Bar area with an Accessory View Controller that appears right below the Title/Tool Bar area to provide context sensitive controls to the user based on the activity they are currently engaged in:
 
-[![](modern-cocoa-apps-images/content04.png "An example Accessory View Controller")](modern-cocoa-apps-images/content04.png#lightbox)
+[![An example Accessory View Controller](modern-cocoa-apps-images/content04.png)](modern-cocoa-apps-images/content04.png#lightbox)
 
 The Accessory View controller will automatically be blurred and resized by the system without developer intervention.
 
 To add an Accessory View Controller, do the following:
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
-2. Drag a **Custom View Controller** into the Window's hierarchy: 
+2. Drag a **Custom View Controller** into the Window's hierarchy:
 
-	[![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
-3. Layout the Accessory View's UI: 
+    [![Adding a new Custom View Controller](modern-cocoa-apps-images/content05.png)](modern-cocoa-apps-images/content05.png#lightbox)
+3. Layout the Accessory View's UI:
 
-	[![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
-4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI: 
+    [![Designing the new view](modern-cocoa-apps-images/content06.png)](modern-cocoa-apps-images/content06.png#lightbox)
+4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI:
 
-	[![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
+    [![Adding the required OUtlet](modern-cocoa-apps-images/content07.png)](modern-cocoa-apps-images/content07.png#lightbox)
 5. Save the changes.
 6. Return to Visual Studio for Mac to sync the changes.
 
@@ -194,32 +194,32 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Create a title bar accessory view controller and attach
-			// the view created in Interface Builder
-			var accessoryView = new NSTitlebarAccessoryViewController ();
-			accessoryView.View = AccessoryViewGoBar;
+            // Create a title bar accessory view controller and attach
+            // the view created in Interface Builder
+            var accessoryView = new NSTitlebarAccessoryViewController ();
+            accessoryView.View = AccessoryViewGoBar;
 
-			// Set the location and attach the accessory view to the
-			// titlebar to be displayed
-			accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
-			Window.AddTitlebarAccessoryViewController (accessoryView);
+            // Set the location and attach the accessory view to the
+            // titlebar to be displayed
+            accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
+            Window.AddTitlebarAccessoryViewController (accessoryView);
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -237,13 +237,13 @@ accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
 
 Because macOS is now fully localized, the `Left` and `Right` `NSLayoutAttribute` properties have been deprecated and should be replaced with `Leading` and `Trailing`.
 
-<a name="Using-Tabbed-Windows" />
+<a name="Using-Tabbed-Windows"></a>
 
 ### Using Tabbed Windows
 
 Additionally, the macOS system might add Accessory View Controllers to the app's Window. For example, to create Tabbed Windows where several of the App's Windows are merged into one virtual Window:
 
-[![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png#lightbox)
+[![An example of a tabbed Mac Window](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
 Typically, the developer will need to take limited action use Tabbed Windows in their Xamarin.Mac apps, the system will handle them automatically as follows:
 
@@ -262,44 +262,44 @@ using Foundation;
 
 namespace MacModern
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : NSApplicationDelegate
-	{
-		#region Computed Properties
-		public int NewDocumentNumber { get; set; } = 0;
-		#endregion
+    [Register ("AppDelegate")]
+    public class AppDelegate : NSApplicationDelegate
+    {
+        #region Computed Properties
+        public int NewDocumentNumber { get; set; } = 0;
+        #endregion
 
-		#region Constructors
-		public AppDelegate ()
-		{
-		}
-		#endregion
+        #region Constructors
+        public AppDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidFinishLaunching (NSNotification notification)
-		{
-			// Insert code here to initialize your application
-		}
+        #region Override Methods
+        public override void DidFinishLaunching (NSNotification notification)
+        {
+            // Insert code here to initialize your application
+        }
 
-		public override void WillTerminate (NSNotification notification)
-		{
-			// Insert code here to tear down your application
-		}
-		#endregion
+        public override void WillTerminate (NSNotification notification)
+        {
+            // Insert code here to tear down your application
+        }
+        #endregion
 
-		#region Custom Actions
-		[Export ("newDocument:")]
-		public void NewDocument (NSObject sender)
-		{
-			// Get new window
-			var storyboard = NSStoryboard.FromName ("Main", null);
-			var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
+        #region Custom Actions
+        [Export ("newDocument:")]
+        public void NewDocument (NSObject sender)
+        {
+            // Get new window
+            var storyboard = NSStoryboard.FromName ("Main", null);
+            var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
 
-			// Display
-			controller.ShowWindow (this);
-		} 
-		#endregion
-	}
+            // Display
+            controller.ShowWindow (this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -314,73 +314,73 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Application Access
-		/// <summary>
-		/// A helper shortcut to the app delegate.
-		/// </summary>
-		/// <value>The app.</value>
-		public static AppDelegate App {
-			get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Application Access
+        /// <summary>
+        /// A helper shortcut to the app delegate.
+        /// </summary>
+        /// <value>The app.</value>
+        public static AppDelegate App {
+            get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		public void SetDefaultDocumentTitle ()
-		{
-			// Is this the first document?
-			if (App.NewDocumentNumber == 0) {
-				// Yes, set title and increment
-				Window.Title = "Untitled";
-				++App.NewDocumentNumber;
-			} else {
-				// No, show title and count
-				Window.Title = $"Untitled {App.NewDocumentNumber++}";
-			}
-		}
-		#endregion
+        #region Public Methods
+        public void SetDefaultDocumentTitle ()
+        {
+            // Is this the first document?
+            if (App.NewDocumentNumber == 0) {
+                // Yes, set title and increment
+                Window.Title = "Untitled";
+                ++App.NewDocumentNumber;
+            } else {
+                // No, show title and count
+                Window.Title = $"Untitled {App.NewDocumentNumber++}";
+            }
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Prefer Tabbed Windows
-			Window.TabbingMode = NSWindowTabbingMode.Preferred;
-			Window.TabbingIdentifier = "Main";
+            // Prefer Tabbed Windows
+            Window.TabbingMode = NSWindowTabbingMode.Preferred;
+            Window.TabbingIdentifier = "Main";
 
-			// Set default window title
-			SetDefaultDocumentTitle ();
+            // Set default window title
+            SetDefaultDocumentTitle ();
 
-			// Set window to use Full Size Content View
-			// Window.StyleMask = NSWindowStyle.FullSizeContentView;
+            // Set window to use Full Size Content View
+            // Window.StyleMask = NSWindowStyle.FullSizeContentView;
 
-			// Create a title bar accessory view controller and attach
-			// the view created in Interface Builder
-			var accessoryView = new NSTitlebarAccessoryViewController ();
-			accessoryView.View = AccessoryViewGoBar;
+            // Create a title bar accessory view controller and attach
+            // the view created in Interface Builder
+            var accessoryView = new NSTitlebarAccessoryViewController ();
+            accessoryView.View = AccessoryViewGoBar;
 
-			// Set the location and attach the accessory view to the
-			// titlebar to be displayed
-			accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
-			Window.AddTitlebarAccessoryViewController (accessoryView);
+            // Set the location and attach the accessory view to the
+            // titlebar to be displayed
+            accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
+            Window.AddTitlebarAccessoryViewController (accessoryView);
 
-		}
+        }
 
-		public override void GetNewWindowForTab (NSObject sender)
-		{
-			// Ask app to open a new document window
-			App.NewDocument (this);
-		}
-		#endregion
-	}
+        public override void GetNewWindowForTab (NSObject sender)
+        {
+            // Ask app to open a new document window
+            App.NewDocument (this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -399,12 +399,12 @@ And the following override method adds a plus button to the Tab Bar that will cr
 ```csharp
 public override void GetNewWindowForTab (NSObject sender)
 {
-	// Ask app to open a new document window
-	App.NewDocument (this);
+    // Ask app to open a new document window
+    App.NewDocument (this);
 }
 ```
 
-<a name="Using-Core-Animation" />
+<a name="Using-Core-Animation"></a>
 
 ### Using Core Animation
 
@@ -425,9 +425,9 @@ Additionally, Apple suggests using Layer Backed Views as opposed to adding a new
 
 Layer Backing can be enabled by setting the `WantsLayer` of a `NSView` to `true` or inside of Xcode's Interface Builder under the **View Effects Inspector** by checking **Core Animation Layer**:
 
-[![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png#lightbox)
+[![The View Effects Inspector](modern-cocoa-apps-images/content09.png)](modern-cocoa-apps-images/content09.png#lightbox)
 
-<a name="Redrawing-Views-with-Layers" />
+<a name="Redrawing-Views-with-Layers"></a>
 
 #### Redrawing Views with Layers
 
@@ -436,10 +436,10 @@ Another important step when using Layer Backed Views in a Xamarin.Mac app is set
 ```csharp
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Set the content redraw policy
-	View.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
+    // Set the content redraw policy
+    View.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
 }
 ```
 
@@ -462,44 +462,44 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainView : NSView
-	{
-		#region Computed Properties
-		public override bool WantsLayer {
-			get { return true; }
-		}
+    public partial class MainView : NSView
+    {
+        #region Computed Properties
+        public override bool WantsLayer {
+            get { return true; }
+        }
 
-		public override bool WantsUpdateLayer {
-			get { return true; }
-		}
-		#endregion
+        public override bool WantsUpdateLayer {
+            get { return true; }
+        }
+        #endregion
 
-		#region Constructor
-		public MainView (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructor
+        public MainView (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DrawRect (CoreGraphics.CGRect dirtyRect)
-		{
-			base.DrawRect (dirtyRect);
+        #region Override Methods
+        public override void DrawRect (CoreGraphics.CGRect dirtyRect)
+        {
+            base.DrawRect (dirtyRect);
 
-		}
+        }
 
-		public override void UpdateLayer ()
-		{
-			base.UpdateLayer ();
+        public override void UpdateLayer ()
+        {
+            base.UpdateLayer ();
 
-			// Draw view 
-			Layer.BackgroundColor = NSColor.Red.CGColor;
-		}
-		#endregion
-	}
+            // Draw view
+            Layer.BackgroundColor = NSColor.Red.CGColor;
+        }
+        #endregion
+    }
 }
 ```
 
-<a name="Using-Modern-Drag-and-Drop" />
+<a name="Using-Modern-Drag-and-Drop"></a>
 
 ## Using Modern Drag and Drop
 
@@ -517,27 +517,27 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainView : NSView, INSDraggingSource, INSDraggingDestination
-	{
-		#region Constructor
-		public MainView (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainView : NSView, INSDraggingSource, INSDraggingDestination
+    {
+        #region Constructor
+        public MainView (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void MouseDragged (NSEvent theEvent)
-		{
-			// Create group of string to be dragged
-			var string1 = new NSDraggingItem ((NSString)"Item 1");
-			var string2 = new NSDraggingItem ((NSString)"Item 2");
-			var string3 = new NSDraggingItem ((NSString)"Item 3");
+        #region Override Methods
+        public override void MouseDragged (NSEvent theEvent)
+        {
+            // Create group of string to be dragged
+            var string1 = new NSDraggingItem ((NSString)"Item 1");
+            var string2 = new NSDraggingItem ((NSString)"Item 2");
+            var string3 = new NSDraggingItem ((NSString)"Item 3");
 
-			// Drag a cluster of items
-			BeginDraggingSession (new [] { string1, string2, string3 }, theEvent, this);
-		}
-		#endregion
-	}
+            // Drag a cluster of items
+            BeginDraggingSession (new [] { string1, string2, string3 }, theEvent, this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -553,25 +553,25 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDataSource: NSTableViewDataSource
-	{
-		#region Constructors
-		public ContentsTableDataSource ()
-		{
-		}
-		#endregion
+    public class ContentsTableDataSource: NSTableViewDataSource
+    {
+        #region Constructors
+        public ContentsTableDataSource ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override INSPasteboardWriting GetPasteboardWriterForRow (NSTableView tableView, nint row)
-		{
-			// Return required pasteboard writer
-			...
-			
-			// Pasteboard writer failed
-			return null;
-		}
-		#endregion
-	}
+        #region Override Methods
+        public override INSPasteboardWriting GetPasteboardWriterForRow (NSTableView tableView, nint row)
+        {
+            // Return required pasteboard writer
+            ...
+
+            // Pasteboard writer failed
+            return null;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -581,7 +581,7 @@ When working with `NSCollectionViews`, again use the `PasteboardWriterForItemAt`
 
 The developer should always avoid putting large files on the pasteboard. New to macOS Sierra, _File Promises_ allow the developer to place references to given files on the pasteboard that will later be fulfilled when the user finishes the Drop operation using the new `NSFilePromiseProvider` and `NSFilePromiseReceiver` classes.
 
-<a name="Using-Modern-Event-Tracking" />
+<a name="Using-Modern-Event-Tracking"></a>
 
 ## Using Modern Event Tracking
 
@@ -592,24 +592,24 @@ To accomplish this in code, create a custom class for the element (such as `NSBu
 ```csharp
 public override void MouseDown (NSEvent theEvent)
 {
-	var shouldCallSuper = false;
+    var shouldCallSuper = false;
 
-	Window.TrackEventsMatching (NSEventMask.LeftMouseUp, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
-		// Handle event as normal
-		stop = true;
-		shouldCallSuper = true;
-	});
+    Window.TrackEventsMatching (NSEventMask.LeftMouseUp, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
+        // Handle event as normal
+        stop = true;
+        shouldCallSuper = true;
+    });
 
-	Window.TrackEventsMatching(NSEventMask.LeftMouseDragged, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
-		// Pass drag event to window
-		stop = true;
-		Window.PerformWindowDrag (evt);
-	});
+    Window.TrackEventsMatching(NSEventMask.LeftMouseDragged, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
+        // Pass drag event to window
+        stop = true;
+        Window.PerformWindowDrag (evt);
+    });
 
-	// Call super to handle mousedown
-	if (shouldCallSuper) {
-		base.MouseDown (theEvent);
-	}
+    // Call super to handle mousedown
+    if (shouldCallSuper) {
+        base.MouseDown (theEvent);
+    }
 }
 ```
 
@@ -622,13 +622,13 @@ Calling the `PerformWindowDrag` method of the `NSWindow` class provides the foll
 - The Spaces Bar will be displayed as normal.
 - Window snapping and alignment work as normal.
 
-<a name="Using-Modern-Container-View-Controls" />
+<a name="Using-Modern-Container-View-Controls"></a>
 
 ## Using Modern Container View Controls
 
 macOS Sierra provides many modern improvements to the existing Container View Controls available in previous version of the OS.
 
-<a name="Table View Enhancements" />
+<a name="Table View Enhancements"></a>
 
 ## Table View Enhancements
 
@@ -642,26 +642,26 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDelegate : NSTableViewDelegate
-	{
-		#region Constructors
-		public ContentsTableDelegate ()
-		{
-		}
-		#endregion
+    public class ContentsTableDelegate : NSTableViewDelegate
+    {
+        #region Constructors
+        public ContentsTableDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-		{
-			// Build new view
-			var view = new NSView ();
-			...
+        #region Override Methods
+        public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+        {
+            // Build new view
+            var view = new NSView ();
+            ...
 
-			// Return the view representing the item to display
-			return view;
-		}
-		#endregion
-	}
+            // Return the view representing the item to display
+            return view;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -675,49 +675,49 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDelegate : NSTableViewDelegate
-	{
-		#region Constructors
-		public ContentsTableDelegate ()
-		{
-		}
-		#endregion
+    public class ContentsTableDelegate : NSTableViewDelegate
+    {
+        #region Constructors
+        public ContentsTableDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-		{
-			// Build new view
-			var view = new NSView ();
-			...
+        #region Override Methods
+        public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+        {
+            // Build new view
+            var view = new NSView ();
+            ...
 
-			// Return the view representing the item to display
-			return view;
-		}
+            // Return the view representing the item to display
+            return view;
+        }
 
-		public override NSTableViewRowAction [] RowActions (NSTableView tableView, nint row, NSTableRowActionEdge edge)
-		{
-			// Take action based on the edge
-			if (edge == NSTableRowActionEdge.Trailing) {
-				// Create row actions
-				var editAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Regular, "Edit", (action, rowNum) => {
-					// Handle row being edited
-					...
-				});
+        public override NSTableViewRowAction [] RowActions (NSTableView tableView, nint row, NSTableRowActionEdge edge)
+        {
+            // Take action based on the edge
+            if (edge == NSTableRowActionEdge.Trailing) {
+                // Create row actions
+                var editAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Regular, "Edit", (action, rowNum) => {
+                    // Handle row being edited
+                    ...
+                });
 
-				var deleteAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Destructive, "Delete", (action, rowNum) => {
-					// Handle row being deleted
-					...
-				});
+                var deleteAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Destructive, "Delete", (action, rowNum) => {
+                    // Handle row being deleted
+                    ...
+                });
 
-				// Return actions
-				return new [] { editAction, deleteAction };
-			} else {
-				// No matching actions
-				return null;
-			}
-		}
-		#endregion
-	}
+                // Return actions
+                return new [] { editAction, deleteAction };
+            } else {
+                // No matching actions
+                return null;
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -726,9 +726,9 @@ The static `NSTableViewRowAction.FromStyle` is used to create a new Table Row Ac
 - `Regular` - Performs a standard non-destructive action such as edit the row's contents.
 - `Destructive` - Performs a destructive action such as delete the row from the table. These actions will be rendered with a red background.
 
-<a name="Scroll-View-Enhancements" />
+<a name="Scroll-View-Enhancements"></a>
 
-## Scroll View Enhancements 
+## Scroll View Enhancements
 
 When using a Scroll View (`NSScrollView`) directly, or as part of another control (such as `NSTableView`), the contents of the Scroll View can slide under the Title and Tool Bar areas in a Xamarin.Mac app using a Modern Look and Views.
 
@@ -745,7 +745,7 @@ By using the `ContentInsets` the developer can adjust the start of the Scroll Vi
 - A Search Field.
 - A Refresh or Update button.
 
-<a name="Auto-Layout-and-Localization-in-Modern-Apps" />
+<a name="Auto-Layout-and-Localization-in-Modern-Apps"></a>
 
 ## Auto Layout and Localization in Modern Apps
 
@@ -753,11 +753,11 @@ Apple has included several technologies in Xcode that allow the developer to eas
 
 For more information, please see Apple's [Internationalization and Localization Guide](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html).
 
-<a name="Implementing-Base-Internationalization" />
+<a name="Implementing-Base-Internationalization"></a>
 
-### Implementing Base Internationalization 
+### Implementing Base Internationalization
 
-By implementing Base Internationalization, the developer can provide a single Storyboard file to represent the app's UI and separate out all of the user-facing strings. 
+By implementing Base Internationalization, the developer can provide a single Storyboard file to represent the app's UI and separate out all of the user-facing strings.
 
 When the developer is creating the initial Storyboard file (or files) that define the app's User Interface, they will be built in the Base Internationalization (the language that the developer speaks).
 
@@ -765,7 +765,7 @@ Next, the developer can export localizations and the Base Internationalization s
 
 Later, these localizations can be imported and Xcode will generate the language-specific string files for the Storyboard.
 
-<a name="Implementing-Auto-Layout-to-Support-Localization" />
+<a name="Implementing-Auto-Layout-to-Support-Localization"></a>
 
 ### Implementing Auto Layout to Support Localization
 
@@ -781,13 +781,13 @@ Apple suggest doing the following:
 - **Test Layout Changes Constantly** - During development at app should be tested constantly in different languages. See Apple's [Testing Your Internationalized app](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) documentation for more details.
 - **Use NSStackViews to Pin Views Together** - `NSStackViews` allows their contents to shift and grow in predictable ways and the content change size based on the language selected.
 
-<a name="Localizing-in-Xcodes-Interface-Builder" />
+<a name="Localizing-in-Xcodes-Interface-Builder"></a>
 
 ### Localizing in Xcode's Interface Builder
 
 Apple has provided several features in Xcode's Interface Builder that the developer can use when designing or editing an app's UI to support localization. The **Text Direction** section of the **Attribute Inspector** allows the developer to provide hints on how direction should be used and updated on a select Text-Based View (such as `NSTextField`):
 
-[![](modern-cocoa-apps-images/content10.png "The Text Direction options")](modern-cocoa-apps-images/content10.png#lightbox)
+[![The Text Direction options](modern-cocoa-apps-images/content10.png)](modern-cocoa-apps-images/content10.png#lightbox)
 
 There are three possible values for the **Text Direction**:
 
@@ -815,17 +815,17 @@ Prior to macOS Sierra, controls  created in code would not be mirrored automatic
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Setting a button's mirroring based on the layout direction
-	var button = new NSButton ();
-	if (button.UserInterfaceLayoutDirection == NSUserInterfaceLayoutDirection.LeftToRight) {
-		button.Alignment = NSTextAlignment.Right;
-		button.ImagePosition = NSCellImagePosition.ImageLeft;
-	} else {
-		button.Alignment = NSTextAlignment.Left;
-		button.ImagePosition = NSCellImagePosition.ImageRight;
-	}
+    // Setting a button's mirroring based on the layout direction
+    var button = new NSButton ();
+    if (button.UserInterfaceLayoutDirection == NSUserInterfaceLayoutDirection.LeftToRight) {
+        button.Alignment = NSTextAlignment.Right;
+        button.ImagePosition = NSCellImagePosition.ImageLeft;
+    } else {
+        button.Alignment = NSTextAlignment.Left;
+        button.ImagePosition = NSCellImagePosition.ImageRight;
+    }
 }
 ```
 
@@ -835,18 +835,18 @@ macOS Sierra adds several new convenience constructors (via the static `CreateBu
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
-	// Take action when the button is pressed
-	...
+    // Take action when the button is pressed
+    ...
 });
 ```
 
-<a name="Using-System-Appearances" />
+<a name="Using-System-Appearances"></a>
 
 ## Using System Appearances
 
 Modern macOS apps can adopt a new Dark Interface Appearance that works well for image creation, editing or presentation apps:
 
-[![](modern-cocoa-apps-images/content11.png "An example of a dark Mac Window UI")](modern-cocoa-apps-images/content11.png#lightbox)
+[![An example of a dark Mac Window UI](modern-cocoa-apps-images/content11.png)](modern-cocoa-apps-images/content11.png#lightbox)
 
 This can be done by adding one line of code before the Window is presented. For example:
 
@@ -857,22 +857,22 @@ using Foundation;
 
 namespace MacModern
 {
-	public partial class ViewController : NSViewController
-	{
-		...
-	
-		#region Override Methods
-		public override void ViewWillAppear ()
-		{
-			base.ViewWillAppear ();
+    public partial class ViewController : NSViewController
+    {
+        ...
 
-			// Apply the Dark Interface Appearance
-			View.Window.Appearance = NSAppearance.GetAppearance (NSAppearance.NameVibrantDark);
+        #region Override Methods
+        public override void ViewWillAppear ()
+        {
+            base.ViewWillAppear ();
 
-			...
-		}
-		#endregion
-	}
+            // Apply the Dark Interface Appearance
+            View.Window.Appearance = NSAppearance.GetAppearance (NSAppearance.NameVibrantDark);
+
+            ...
+        }
+        #endregion
+    }
 }
 ```
 
@@ -885,7 +885,7 @@ Apple has the following suggestions for using System Appearances:
 
 A macOS app that uses the System Appearances will automatically work correctly for users that have enabled Accessibility features from the System Preferences app. As a result, Apple suggests that the developer should always use System Appearances in their macOS apps.
 
-<a name="Designing-UIs-with-Storyboards" />
+<a name="Designing-UIs-with-Storyboards"></a>
 
 ## Designing UIs with Storyboards
 
@@ -893,7 +893,7 @@ Storyboards allow the developer to not only design the individual elements that 
 
 Controllers allow the developer to collect elements into a unit of composition and Segues abstract and remove the typical "glue code" required to move throughout the View Hierarchy:
 
-[![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png#lightbox)
+[![Editing the UI in Xcode's Interface Builder](modern-cocoa-apps-images/content12.png)](modern-cocoa-apps-images/content12.png#lightbox)
 
 For more information, please see our [Introduction to Storyboards](~/mac/platform/storyboards/index.md) documentation.
 
@@ -922,7 +922,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 For more information, please see our [Segues](~/mac/platform/storyboards/indepth.md#Segues) documentation.
 
-<a name="Propagating-Actions" />
+<a name="Propagating-Actions"></a>
 
 ## Propagating Actions
 
@@ -930,7 +930,7 @@ Based on the design of the macOS app, there might be times when the best handler
 
 To handle this situation, the developer can create a Custom Action and pass the Action up the responder chain. For more information please see our [Working with Custom Window Actions](~/mac/user-interface/menu.md) documentation.
 
-<a name="Modern-Mac-Features" />
+<a name="Modern-Mac-Features"></a>
 
 ## Modern Mac Features
 
@@ -941,14 +941,12 @@ Apple has included several user-facing features in macOS Sierra that allow the d
 - **State Restoration** - When the user quits an app on macOS and then later relaunches it, the app will automatically be returned to its previous state. The developer can use the State Restoration API to encode and restore transient UI states before the User Interface is displayed to the user. If the app is `NSDocument` based, State Restoration is handled automatically. To enable State Restoration for non-`NSDocument` based apps, set the `Restorable` of the `NSWindow` class to `true`.
 - **Documents in the Cloud** - Prior to macOS Sierra, an app had to explicitly opt-in to working with documents in the user's iCloud Drive. In macOS Sierra the user's **Desktop** and **Documents** folders may be synced with their iCloud Drive automatically by the system. As a result, local copies of documents may be deleted to free up space on the user's machine. `NSDocument` based apps will automatically handle this change. All other app types will need to use a `NSFileCoordinator` to sync reading and writing of documents.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
 This article has covered several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac.
 
-
-
 ## Related Links
 
-- [macOS Samples](https://developer.xamarin.com/samples/mac/)
+- [macOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)

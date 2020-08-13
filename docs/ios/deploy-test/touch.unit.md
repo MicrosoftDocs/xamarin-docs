@@ -4,8 +4,8 @@ description: "This document provides an overview of how to unit test a Xamarin.i
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -24,13 +24,13 @@ by right-clicking on your solution and selecting **Add > Add New Project**. From
 list select **iOS > Tests > Unified API > iOS Unit Tests Project**
 (you can choose either C# or F#).
 
-![](touch.unit-images/00.png "Choose either C# or F#")
+![Choose either C# or F#](touch.unit-images/00.png)
 
 The above will create a basic project that contains a basic runner program
 and which references the new MonoTouch.NUnitLite assembly, your project will
 look like this:
 
-![](touch.unit-images/01.png "The project in the Solution Explorer")
+![The project in the Solution Explorer](touch.unit-images/01.png)
 
 The `AppDelegate.cs` class contains the test runner, and it looks like
 this:
@@ -117,10 +117,10 @@ or **Run Item**.
 The test runner allows you to see which tests are registered and select
 individually which tests can be executed.
 
-[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
+[![The list of registered tests](touch.unit-images/02-sml.png)](touch.unit-images/02.png#lightbox) 
+[![An individual text](touch.unit-images/03-sml.png)](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
+[![The run results](touch.unit-images/04-sml.png)](touch.unit-images/04.png#lightbox)
 
 You can run individual test fixtures by selecting the text fixture from the
 nested views, or you can run all of your tests with "Run Everything". If you run
@@ -129,7 +129,7 @@ one ignored test. This is what the report looks like, and you can drill down
 directly to the failing tests and find out more information about the
 failure:
 
-[![](touch.unit-images/05-sml.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "A sample report")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "A sample report")](touch.unit-images/07.png#lightbox)
+[![A sample report](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![A sample report](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![A sample report](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 You can also look at the Application Output window in your IDE to see
 which tests are being executed and their current status.
@@ -138,17 +138,15 @@ which tests are being executed and their current status.
 
 NUnitLite is a modified version of the NUnit called [Touch.Unit](https://github.com/xamarin/Touch.Unit)
 project. It is a lightweight testing framework for .NET, based on the
-ideas in [NUnit](http://nunit.com/) and providing a subset of its features.
+ideas in [NUnit](https://nunit.com/) and providing a subset of its features.
 It uses minimal resources and will run on resource-restricted platforms such as
-those used in embedded and mobile development. You can
-[browse the NUnitLite API](https://developer.xamarin.com/api/namespace/NUnitLite/) available to you in
+those used in embedded and mobile development. The NUnitLite API is available to you in
 Xamarin.iOS. With the basic skeleton provided by the unit test template, your
-main entry point are the [Assert class](https://developer.xamarin.com/api/type/NUnit.Framework.Assert/) methods.
+main entry point are the [Assert class](xref:NUnit.Framework.Assert) methods.
 
 In addition to the assert class methods, the unit testing functionality is
 split on the following namespaces that are part of NUnitLite:
 
-- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
-- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
-- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
-- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
+- [NUnit.Framework](xref:NUnit.Framework)
+- [NUnit.Constraints](xref:NUnit.Framework.Constraints)
+- [NUniteLite.Runner](xref:NUnitLite.Runner)

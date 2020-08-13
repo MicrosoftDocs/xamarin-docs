@@ -3,8 +3,8 @@ title: "Part 4 - Dealing with Multiple Platforms"
 description: "This document describes how to handle application divergence based on platform or capability. It discusses screen size, navigation metaphors, touch and gestures, push notifications, and interface paradigms such as lists and tabs."
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -36,11 +36,11 @@ There are some characteristics of mobile applications that are universal.
 These are higher-level concepts that are generally true of all devices and can
 therefore form the basis of your application’s design:
 
--  Feature selection via tabs or menus
--  Lists of data and scrolling
--  Single views of data
--  Editing single views of data
--  Navigating back
+- Feature selection via tabs or menus
+- Lists of data and scrolling
+- Single views of data
+- Editing single views of data
+- Navigating back
 
 When designing your high-level screen flow you can base a common user
 experience on these concepts.
@@ -51,11 +51,11 @@ In addition to the basic elements that exist on all platforms, you will need
 to address key platform differences in your design. You may need to consider
 (and write code specifically to handle) these differences:
 
--   **Screen sizes** – Some platforms (like iOS and earlier Windows Phone versions) have standardized screen sizes that are relatively simple to target. Android devices have a large variety of screen dimensions, which require more effort to support in your application.
--   **Navigation metaphors** – Differ across platforms (eg. hardware ‘back’ button, Panorama UI control) and within platforms (Android 2 and 4, iPhone vs iPad).
--   **Keyboards** – Some Android devices have physical keyboards while others only have a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
--   **Touch and gestures** – Operating system support for gesture recognition varies, especially in older versions of each operating system. Earlier versions of Android have very limited support for touch operations, meaning that supporting older devices may require separate code
--   **Push notifications** – There are different capabilities/implementations on each platform (eg. Live Tiles on Windows).
+- **Screen sizes** – Some platforms (like iOS and earlier Windows Phone versions) have standardized screen sizes that are relatively simple to target. Android devices have a large variety of screen dimensions, which require more effort to support in your application.
+- **Navigation metaphors** – Differ across platforms (eg. hardware ‘back’ button, Panorama UI control) and within platforms (Android 2 and 4, iPhone vs iPad).
+- **Keyboards** – Some Android devices have physical keyboards while others only have a software keyboard. Code that detects when a soft-keyboard is obscuring part of the screen needs to be sensitive to these differences.
+- **Touch and gestures** – Operating system support for gesture recognition varies, especially in older versions of each operating system. Earlier versions of Android have very limited support for touch operations, meaning that supporting older devices may require separate code
+- **Push notifications** – There are different capabilities/implementations on each platform (eg. Live Tiles on Windows).
 
 ### Device-specific features
 
@@ -65,19 +65,19 @@ will be required to detect features and disable functionality or offer
 alternatives (eg. an alternative to geo-location could be to let the user type a
 location or choose from a map):
 
--   **Camera** – Functionality differs across devices: some devices don’t have a camera, others have both front- and rear-facing cameras. Some cameras are capable of video recording.
--   **Geo-location & maps** – Support for GPS or Wi-Fi location is not present on all devices. Apps also need to cater for the varying levels of accuracy that’s supported by each method.
--   **Accelerometer, gyroscope and compass** – These features are often found in only a selection of devices on each platform, so apps almost always need to provide a fallback when the hardware isn’t supported.
--   **Twitter and Facebook** – only ‘built-in’ on iOS5 and iOS6 respectively. On earlier versions and other platforms you will need to provide your own authentication functions and interface directly with each services’ API.
--   **Near Field Communications (NFC)** – Only on (some) Android phones (at time of writing).
+- **Camera** – Functionality differs across devices: some devices don’t have a camera, others have both front- and rear-facing cameras. Some cameras are capable of video recording.
+- **Geo-location & maps** – Support for GPS or Wi-Fi location is not present on all devices. Apps also need to cater for the varying levels of accuracy that’s supported by each method.
+- **Accelerometer, gyroscope and compass** – These features are often found in only a selection of devices on each platform, so apps almost always need to provide a fallback when the hardware isn’t supported.
+- **Twitter and Facebook** – only ‘built-in’ on iOS5 and iOS6 respectively. On earlier versions and other platforms you will need to provide your own authentication functions and interface directly with each services’ API.
+- **Near Field Communications (NFC)** – Only on (some) Android phones (at time of writing).
 
 ## Dealing with Platform Divergence
 
 There are two different approaches to supporting multiple platforms from the
 same code-base, each with its own set of benefits and disadvantages.
 
--   **Platform Abstraction** – Business Façade pattern, provides a unified access across platforms and abstracts the particular platform implementations into a single, unified API.
--   **Divergent Implementation** – Invocation of specific platform features via divergent implementations via architectural tools such as interfaces and inheritance or conditional compilation.
+- **Platform Abstraction** – Business Façade pattern, provides a unified access across platforms and abstracts the particular platform implementations into a single, unified API.
+- **Divergent Implementation** – Invocation of specific platform features via divergent implementations via architectural tools such as interfaces and inheritance or conditional compilation.
 
 ## Platform Abstraction
 
@@ -156,6 +156,7 @@ these symbols).
 // Xamarin iOS or Android-specific code
 #endif
 ```
+
 #### iOS
 
 Xamarin.iOS defines `__IOS__` which you can use to detect iOS devices.
@@ -203,13 +204,12 @@ will be sufficient.
 
 #### Mac
 
-There is not currently a built-in symbol for Xamarin.Mac, but you can
-add your own in the Mac app project **Options > Build > Compiler** in the
-**Define symbols** box, or edit the **.csproj** file and add there (for
-example `__MAC__`)
+Xamarin.Mac defines `__MACOS__` which you can use to compile for macOS only:
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### Universal Windows Platform (UWP)
@@ -229,24 +229,26 @@ A simple case-study example of conditional compilation is setting the file
 location for the SQLite database file. The three platforms have slightly
 different requirements for specifying the file location:
 
--   **iOS** – Apple prefers non-user data to be placed in a specific location (the Library directory), but there is no system constant for this directory. Platform-specific code is required to build the correct path.
--   **Android** – The system path returned by  `Environment.SpecialFolder.Personal` is an acceptable location to store the database file.
--   **Windows Phone** – The isolated storage mechanism does not allow a full path to be specified, just a relative path and filename.
--   **Universal Windows Platform** – Uses `Windows.Storage` APIs.
+- **iOS** – Apple prefers non-user data to be placed in a specific location (the Library directory), but there is no system constant for this directory. Platform-specific code is required to build the correct path.
+- **Android** – The system path returned by  `Environment.SpecialFolder.Personal` is an acceptable location to store the database file.
+- **Windows Phone** – The isolated storage mechanism does not allow a full path to be specified, just a relative path and filename.
+- **Universal Windows Platform** – Uses `Windows.Storage` APIs.
 
 The following code uses conditional compilation to ensure the `DatabaseFilePath` is correct for each platform:
 
 ```csharp
-public static string DatabaseFilePath {
-        get {
-    var filename = "TodoDatabase.db3";
+public static string DatabaseFilePath
+{
+    get
+    {
+        var filename = "TodoDatabase.db3";
 #if SILVERLIGHT
-    // Windows Phone 8
-    var path = filename;
+        // Windows Phone 8
+        var path = filename;
 #else
 
 #if __ANDROID__
-    string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); ;
+        string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 #else
 #if __IOS__
         // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
@@ -258,9 +260,10 @@ public static string DatabaseFilePath {
         string libraryPath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 #endif
 #endif
-        var path = Path.Combine (libraryPath, filename);
+        var path = Path.Combine(libraryPath, filename);
 #endif
         return path;
+    }
 }
 ```
 

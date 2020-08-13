@@ -4,12 +4,12 @@ description: "How to test your Wear OS app on an Android device (or emulator) an
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# Deployment and Testing
+# Deployment and Testing of Wear OS Apps
 
 This section explains how to test your Android Wear app on an Android
 Wear device (or on an Android emulator configured for Wear). It also
@@ -29,8 +29,7 @@ How to configure an Android device so that Xamarin.Android Wear
 applications can be deployed to it directly from either Visual Studio
 or Visual Studio for Mac.
 
-##  [Packaging Wear Apps](~/android/wear/deploy-test/packaging.md)
+## [Packaging Wear Apps](~/android/wear/deploy-test/packaging.md)
 
 How to package Xamarin.Android Wear apps for distribution on Google
 Play.
-

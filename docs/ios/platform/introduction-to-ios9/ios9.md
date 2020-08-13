@@ -4,8 +4,8 @@ description: "Even if you don't plan to add iOS 9 features to your app straight 
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -21,9 +21,7 @@ _Even if you don't plan to add iOS 9 features to your app straight away, you sho
 > [introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
 When the first iOS 9 betas appeared, we identified two issues with older versions of
-Xamarin that manifested as older apps being unable to start on iOS 9.
-
-These two issues (as [detailed on our forums](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) were:
+Xamarin that manifested as older apps being unable to start on iOS 9:
 
 - Apps build for iOS 8 or earlier not being able to start on 32-bit devices (including apps built with the [Unified API](~/cross-platform/macios/unified/index.md)).
 - P/Invoke failing with the full path is not specified.
@@ -34,15 +32,12 @@ and then rebuilding and redeploying your apps, fixes these two issues.
 _Even if you aren't planning to update your app with iOS 9 features right away, we recommend
 you re-build with the latest version of Xamarin and re-submit to the App Store_.
 
-
-
 This will ensure that your app will run on iOS 9 after your customers upgrade.
 You can continue to support iOS 8 - rebuilding with the latest release does
 not affect the application target version.
 
 If you have further issues while testing your existing apps on iOS 9,
 read the [Improving Compatibility](#compat) section below.
-
 
 ### Updating with Visual Studio
 
@@ -55,13 +50,12 @@ Nugets you are using to address the two issues mentioned above.
 These issues are fixed simply by re-building your app with the
 latest Stable release of Xamarin.iOS.
 
-Similarly, Component vendors and Nuget authors are **not** required to submit
+Similarly, Component vendors and NuGet authors are **not** required to submit
 new builds just to fix the two issues mentioned above. However, if any a
-Component or Nuget uses `UICollectionView` or load views from **Xib** files, an update
+Component or NuGet uses `UICollectionView` or load views from **Xib** files, an update
 *may* be required to address the iOS 9 compatibility issues mentioned below.
 
-
-<a name="compat" />
+<a name="compat"></a>
 
 ## Improving Compatibility in Your Code
 
@@ -83,8 +77,6 @@ public YourCellClassName (CGRect frame) : base (frame)
 
 Related samples: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
-
-
 ### UIView fails to init with coder when loading a view from a Xib/Nib
 
 **Reason:** The `initWithCoder:` constructor is the one called when loading a view from an Interface Builder Xib file. If this constructor is not exported unmanaged code can’t call our managed version of it. Previously (eg. in iOS 8) the `IntPtr` constructor was invoked to initialize view.
@@ -100,7 +92,6 @@ public YourClassName (NSCoder coder) : base (coder)
 ```
 
 Related sample: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
-
 
 ### Dyld Message: no cache image with name...
 
@@ -120,8 +111,6 @@ private version of the framework instead of the public version.
 just target a later iOS version in your project (you can try iOS 7 in this case). Other frameworks might exhibit
 similar problems, for example the WebKit framework was made public in iOS 8 (and so targeting iOS 7 will result in
 this error; you should target iOS 8 to use WebKit in your app).
-
-
 
 ## Related Links
 

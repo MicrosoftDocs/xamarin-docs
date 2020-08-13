@@ -4,8 +4,8 @@ description: "This document describes how to work with macOS accessibility featu
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -43,15 +43,15 @@ Xamarin.Mac does not currently expose as `AccessibilityLabel` setter.  Add
 the following helper method to set the accessibility label:
 
 ```csharp
-public static class AccessibilityHelper
+public static class AccessibilityHelper
 {
-	[System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
-	extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
+    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
+    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
 
-	static public void SetAccessibilityLabel (this NSView view, string value)
-	{
-		objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
-	}
+    static public void SetAccessibilityLabel (this NSView view, string value)
+    {
+        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
+    }
 }
 ```
 
@@ -102,8 +102,6 @@ of each control:
 [![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running")](accessibility-images/accessibility-example-large.png#lightbox)
 
 For more information, read the [testing accessibility for OS X guide](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
-
-
 
 ## Related Links
 

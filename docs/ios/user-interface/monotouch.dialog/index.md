@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ---
 
 # Introduction to MonoTouch.Dialog for Xamarin.iOS
@@ -17,7 +17,7 @@ using information, rather than the tedium of creating view controllers, tables,
 etc. As such, it provides a significant simplification of UI development and
 code reduction. For example, consider the following screenshot:
 
- [![](images/image1.png "For example, consider this screenshot")](images/image1.png#lightbox)
+ [![For example, consider this screenshot](images/image1.png)](images/image1.png#lightbox)
 
 The following code was used to define this entire screen:
 
@@ -59,9 +59,8 @@ table creation. It then provides an abstraction on top of that API that allows
 for a declarative object binding syntax that makes it even easier. As such,
 there are two APIs available in MT.D:
 
--   **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
--   **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
-
+- **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
+- **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
 
 MT.D comes packed with a large set of built in UI elements for screen
 creation, but it also recognizes the need for customized elements and advanced
@@ -76,9 +75,9 @@ support.
 This article will take a comprehensive look at working with MT.D,
 including:
 
--   **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly. 
--   **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
--   **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
+- **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly. 
+- **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
+- **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
 
 ## Setting up MT.D
 
@@ -98,11 +97,10 @@ pieces of MT.D.
 
 MT.D builds screens using the following four parts:
 
--  **DialogViewController**
--  **RootElement**
--  **Section**
--  **Element**
-
+- **DialogViewController**
+- **RootElement**
+- **Section**
+- **Element**
 
 ### DialogViewController
 
@@ -124,7 +122,7 @@ A section is a group of cells in a table. As with a normal table section, it
 can optionally have a header and footer that can either be text, or even custom
 views, as in the following screenshot:
 
- [![](images/image2.png "As with a normal table section, it can optionally have a header and footer that can either be text, or even custom views, as in this screenshot")](images/image2.png#lightbox)
+ [![As with a normal table section, it can optionally have a header and footer that can either be text, or even custom views, as in this screenshot](images/image2.png)](images/image2.png#lightbox)
 
 ### Element
 
@@ -133,7 +131,7 @@ wide variety of Elements that represent different data types or different
 inputs. For example, the following screenshots illustrate a few of the available
 elements:
 
- [![](images/image3.png "For example, this screenshots illustrate a few of the available elements")](images/image3.png#lightbox)
+ [![For example, this screenshots illustrate a few of the available elements](images/image3.png)](images/image3.png#lightbox)
 
 ## More on Sections and RootElements
 
@@ -151,8 +149,8 @@ the screenshot below shows a table on the left with a cell containing the title
 of the detail screen on the right, “Dessert”, along with the value of the
 selected desert.
 
- [![](images/image4.png "This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert")](images/image4.png#lightbox) 
- [![](images/image5.png "This screenshot below shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert")](images/image5.png#lightbox)
+ [![This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert](images/image4.png)](images/image4.png#lightbox) 
+ [![This screenshot below shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert](images/image5.png)](images/image5.png#lightbox)
 
 Root elements can also be used inside Sections to trigger loading a new
 nested configuration page, as shown above. When used in this mode the caption
@@ -161,16 +159,16 @@ for the subpage. For example:
 
 ```csharp
 var root = new RootElement ("Meals") {
-    new Section ("Dinner"){
-            new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
-                new Section () {
-                    new RadioElement ("Ice Cream", "dessert"),
-                    new RadioElement ("Milkshake", "dessert"),
-                    new RadioElement ("Chocolate Cake", "dessert")
-                }
+    new Section ("Dinner") {
+        new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
+            new Section () {
+                new RadioElement ("Ice Cream", "dessert"),
+                new RadioElement ("Milkshake", "dessert"),
+                new RadioElement ("Chocolate Cake", "dessert")
             }
         }
     }
+};
 ```
 
 In the above example, when the user taps on "Dessert", MonoTouch.Dialog will
@@ -204,14 +202,14 @@ any UIView as the header or the footer. You can either use a string to create
 them like this:
 
 ```csharp
-var section = new Section ("Header", "Footer")
+var section = new Section ("Header", "Footer");
 ```
 
 To use views, just pass the views to the constructor:
 
 ```csharp
 var header = new UIImageView (Image.FromFile ("sample.png"));
-var section = new Section (header)
+var section = new Section (header);
 ```
 
 ### Getting Notified
@@ -225,8 +223,7 @@ shown below:
 
 ```csharp
 new Section () {
-        new StringElement ("Demo Callback", 
-                delegate { Console.WriteLine ("Handled"); })
+    new StringElement ("Demo Callback", delegate { Console.WriteLine ("Handled"); })
 }
 ```
 
@@ -237,25 +234,21 @@ retrieve the value set in other elements. For example, consider the following
 code:
 
 ```csharp
-var element = new EntryElement (task.Name, "Enter task description",
-        task.Description);
+var element = new EntryElement (task.Name, "Enter task description", task.Description);
                 
-var taskElement = new RootElement (task.Name){
-        new Section () { element },
-        new Section () { 
-                new DateElement ("Due Date", task.DueDate)
-        },
-        new Section ("Demo Retrieving Element Value") {
-                new StringElement ("Output Task Description", 
-                        delegate { Console.WriteLine (element.Value); })
-        }
+var taskElement = new RootElement (task.Name) {
+    new Section () { element },
+    new Section () { new DateElement ("Due Date", task.DueDate) },
+    new Section ("Demo Retrieving Element Value") {
+        new StringElement ("Output Task Description", delegate { Console.WriteLine (element.Value); })
+    }
 };
 ```
 
 This code creates a UI as shown below. For a complete walkthrough of this
 example, see the [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial.
 
- [![](images/image6.png "Combined with the Element.Value property, the callback can retrieve the value set in other elements")](images/image6.png#lightbox)
+ [![Combined with the Element.Value property, the callback can retrieve the value set in other elements](images/image6.png)](images/image6.png#lightbox)
 
 When the user presses the bottom table cell, the code in the anonymous
 function executes, writing the value from the `element` instance to
@@ -287,25 +280,24 @@ MonoTouch.Dialog, but it is not required for user-created elements.
 A `StringElement` shows a caption on the left side of a table cell
 and the string value on the right side of the cell.
 
- [![](images/image7.png "A StringElement shows a caption on the left side of a table cell and the string value on the right side of the cell")](images/image7.png#lightbox)
+ [![A StringElement shows a caption on the left side of a table cell and the string value on the right side of the cell](images/image7.png)](images/image7.png#lightbox)
 
 To use a `StringElement` as a button, provide a delegate.
 
 ```csharp
-new StringElement (
-        "Click me",
-        () => { new UIAlertView("Tapped", "String Element Tapped"
-, null, "ok", null).Show(); })
+new StringElement ("Click me", () => { 
+    new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
+});
 ```
 
- [![](images/image8.png "To use a StringElement as a button, provide a delegate")](images/image8.png#lightbox)
+ [![To use a StringElement as a button, provide a delegate](images/image8.png)](images/image8.png#lightbox)
 
 ### Styled String Element
 
 A `StyledStringElement` allows strings to be presented using
 either built-in table cell styles or with custom formatting.
 
- [![](images/image9.png "A StyledStringElement allows strings to be presented using either built-in table cell styles or with custom formatting")](images/image9.png#lightbox)
+ [![A StyledStringElement allows strings to be presented using either built-in table cell styles or with custom formatting](images/image9.png)](images/image9.png#lightbox)
 
 The `StyledStringElement` class derives from `StringElement`, but lets developers customize a handful of
 properties like the Font, text color, background cell color, line breaking mode,
@@ -313,7 +305,7 @@ number of lines to display, and whether an accessory should be displayed.
 
 ### Multiline Element
 
- [![](images/image10.png "Multiline Element")](images/image10.png#lightbox)
+ [![Multiline Element](images/image10.png)](images/image10.png#lightbox)
 
 ### Entry Element
 
@@ -321,14 +313,13 @@ The `EntryElement`, as the name implies, is used to get user
 input. It supports either regular strings or passwords, where characters are
 hidden.
 
- [![](images/image11.png "The EntryElement is used to get user input")](images/image11.png#lightbox)
+ [![The EntryElement is used to get user input](images/image11.png)](images/image11.png#lightbox)
 
 It is initialized with three values:
 
--  The caption for the entry that will be shown to the user.
--  Placeholder text (this is the greyed-out text that provides a hint to the user). 
--  The value of the text.
-
+- The caption for the entry that will be shown to the user.
+- Placeholder text (this is the greyed-out text that provides a hint to the user). 
+- The value of the text.
 
 The placeholder and value can be null. However, the caption is required.
 
@@ -339,19 +330,18 @@ time to the keyboard type style desired for the data entry. This can be used to
 configure the keyboard using the values of `UIKeyboardType` as listed
 below:
 
--  Numeric
--  Phone
--  Url
--  Email
-
+- Numeric
+- Phone
+- Url
+- Email
 
 ### Boolean Element
 
- [![](images/image12.png "Boolean Element")](images/image12.png#lightbox)
+ [![Boolean Element](images/image12.png)](images/image12.png#lightbox)
 
 ### Checkbox Element
 
- [![](images/image13.png "Checkbox Element")](images/image13.png#lightbox)
+ [![Checkbox Element](images/image13.png)](images/image13.png#lightbox)
 
 ### Radio Element
 
@@ -359,10 +349,10 @@ A `RadioElement` requires a `RadioGroup` to be
 specified in the `RootElement`.
 
 ```csharp
-mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
+mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
- [![](images/image14.png "A RadioElement requires a RadioGroup to be specified in the RootElement")](images/image14.png#lightbox)
+ [![A RadioElement requires a RadioGroup to be specified in the RootElement](images/image14.png)](images/image14.png#lightbox)
 
  `RootElements` are also used to coordinate radio elements. The `RadioElement` members can span multiple Sections (for example to
 implement something similar to the ring tone selector and separate custom ring
@@ -371,7 +361,7 @@ is currently selected. To use this, create the `RootElement` with the
 group constructor, like this:
 
 ```csharp
-var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
+var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
 ```
 
 The name of the group in `RadioGroup` is used to show the selected
@@ -380,56 +370,56 @@ is the index of the first selected item.
 
 ### Badge Element
 
- [![](images/image15.png "Badge Element")](images/image15.png#lightbox)
+ [![Badge Element](images/image15.png)](images/image15.png#lightbox)
 
 ### Float Element
 
- [![](images/image16.png "Float Element")](images/image16.png#lightbox)
+ [![Float Element](images/image16.png)](images/image16.png#lightbox)
 
 ### Activity Element
 
- [![](images/image17.png "Activity Element")](images/image17.png#lightbox)
+ [![Activity Element](images/image17.png)](images/image17.png#lightbox)
 
 ### Date Element
 
- ![](images/image18.png "Date Element")
+ ![Date Element](images/image18.png)
 
 When the cell corresponding to the DateElement is selected, a date picker is
 presented as shown below:
 
- [![](images/image19.png "When the cell corresponding to the DateElement is selected, a date picker is presented as shown")](images/image19.png#lightbox)
+ [![When the cell corresponding to the DateElement is selected, a date picker is presented as shown](images/image19.png)](images/image19.png#lightbox)
 
 ### Time Element
 
- [![](images/image20.png "Time Element")](images/image20.png#lightbox)
+ [![Time Element](images/image20.png)](images/image20.png#lightbox)
 
 When the cell corresponding to the TimeElement is selected, a time picker is
 presented as shown below:
 
- [![](images/image21.png "When the cell corresponding to the TimeElement is selected, a time picker is presented as shown")](images/image21.png#lightbox)
+ [![When the cell corresponding to the TimeElement is selected, a time picker is presented as shown](images/image21.png)](images/image21.png#lightbox)
 
 ### DateTime Element
 
- [![](images/image22.png "DateTime Element")](images/image22.png#lightbox)
+ [![DateTime Element](images/image22.png)](images/image22.png#lightbox)
 
 When the cell corresponding to the DateTimeElement is selected, a datetime
 picker is presented as shown below:
 
- [![](images/image23.png "When the cell corresponding to the DateTimeElement is selected, a datetime picker is presented as shown")](images/image23.png#lightbox)
+ [![When the cell corresponding to the DateTimeElement is selected, a datetime picker is presented as shown](images/image23.png)](images/image23.png#lightbox)
 
 ### HTML Element
 
- [![](images/image24.png "HTML Element")](images/image24.png#lightbox)
+ [![HTML Element](images/image24.png)](images/image24.png#lightbox)
 
 The `HTMLElement` displays the value of its `Caption`
 property in the table cell. Whe selected, the `Url` assigned to the
 element is loaded in a `UIWebView` control as shown below:
 
- [![](images/image25.png "Whe selected, the Url assigned to the element is loaded in a UIWebView control as shown below")](images/image25.png#lightbox)
+ [![Whe selected, the Url assigned to the element is loaded in a UIWebView control as shown below](images/image25.png)](images/image25.png#lightbox)
 
 ### Message Element
 
- [![](images/image26.png "Message Element")](images/image26.png#lightbox)
+ [![Message Element](images/image26.png)](images/image26.png#lightbox)
 
 ### Load More Element
 
@@ -459,16 +449,13 @@ Here's a very simple example of implementing the class:
 
 ```csharp
 public class SampleOwnerDrawnElement : OwnerDrawnElement
- {
+{
     public SampleOwnerDrawnElement (string text) : base(UITableViewCellStyle.Default, "sampleOwnerDrawnElement")
     {
         this.Text = text;
     }
 
-    public string Text
-    {
-        get;set;    
-    }
+    public string Text { get; set; }
 
     public override void Draw (RectangleF bounds, CGContext context, UIView view)
     {
@@ -483,7 +470,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
     {
         return 44.0f;
     }
- }
+}
 ```
 
 ### JSON Element
@@ -509,7 +496,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-For more information on using JSON with MT.D, see the [JSON Element Walkthrough](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) tutorial.
+For more information on using JSON with MT.D, see the [JSON Element Walkthrough](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) tutorial.
 
 ## Other Features
 
@@ -549,10 +536,9 @@ the visible fields and shows those to the user. The `DialogViewController` expos
 initiate, terminate or trigger a new filter operation on the results. These
 methods are listed below:
 
--  `StartSearch`
--  `FinishSearch`
--  `PerformFilter`
-
+- `StartSearch`
+- `FinishSearch`
+- `PerformFilter`
 
 The system is extensible, so you can alter this behavior if you want.
 
@@ -576,9 +562,9 @@ For example the following code loads an image from a Url into a `BadgeElement`:
 string uriString = "http://some-server.com/some image url";
 
 var rootElement = new RootElement("Image Loader") {
-        new Section(){
-                new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
-        }
+    new Section() {
+        new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
+    }
 };
 ```
 
@@ -597,12 +583,11 @@ function that is passed into each `StringElement`:
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
-from x in new string [] { "one", "two", "three" }
-select new Section (x) {
-from y in "Hello:World".Split (':')
-select (Element) new StringElement (y,
-delegate { Debug.WriteLine("cell tapped"); })
-}
+    from x in new string [] { "one", "two", "three" }
+    select new Section (x) {
+        from y in "Hello:World".Split (':')
+        select (Element) new StringElement (y, delegate { Debug.WriteLine("cell tapped"); })
+    }
 };
 ```
 
@@ -621,27 +606,29 @@ methods:
 
 ```csharp
 // To release any heavy resources that you might have
-    void Dispose (bool disposing);
+void Dispose (bool disposing);
 
-    // To retrieve the UITableViewCell for your element
-    // you would need to prepare the cell to be reused, in the
-    // same way that UITableView expects reusable cells to work
-    UITableViewCell GetCell (UITableView tv)
+// To retrieve the UITableViewCell for your element
+// you would need to prepare the cell to be reused, in the
+// same way that UITableView expects reusable cells to work
+UITableViewCell GetCell (UITableView tv);
 
-    // To retrieve a "summary" that can be used with
-    // a root element to render a summary one level up.  
-    string Summary ()
-    // To detect when the user has tapped on the cell
-    void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path)
-    // If you support search, to probe if the cell matches the user input
-    bool Matches (string text)
+// To retrieve a "summary" that can be used with
+// a root element to render a summary one level up.  
+string Summary ();
+
+// To detect when the user has tapped on the cell
+void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path);
+
+// If you support search, to probe if the cell matches the user input
+bool Matches (string text);
 ```
 
 If your element can have a variable size, you need to implement the `IElementSizing` interface, which contains one method:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
-    float GetHeight (UITableView tableView, NSIndexPath indexPath);
+float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
 If you are planning on implementing your `GetCell` method by
@@ -651,11 +638,11 @@ will be unique to your Element, like this:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
-    protected override NSString CellKey {
-        get {
-            return MyKey;
-        }
+protected override NSString CellKey {
+    get {
+        return MyKey;
     }
+}
 ```
 
 This works for most elements, but not for the `StringElement` and `StyledStringElement` as those use their own set of keys for various
@@ -673,9 +660,9 @@ For example, if you wanted to change the list style to be either `Grouped` or `P
 the property when you create the controller, like this:
 
 ```csharp
-var myController = new DialogViewController (root, true){
-        Style = UITableViewStyle.Grouped;
-    }
+var myController = new DialogViewController (root, true) {
+    Style = UITableViewStyle.Grouped;
+}
 ```
 
 For more advanced customizations of the `DialogViewController`,
@@ -722,7 +709,7 @@ suited for web pages and desktop applications do not map directly to the iPhone
 interaction model.
 
 If you want to do data validation, you should do this when the user triggers
-an action with the data entered. For example a <span class="ui">Done</span> or <span class="ui">Next</span> button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
+an action with the data entered. For example a **Done** or **Next** button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
 
 This is where you would perform basic input validation, and perhaps more
 complicated validation like checking for the validity of a user/password
@@ -740,11 +727,8 @@ table customizations supported by MT.D and discussed how MT.D can be extended
 with custom elements. Additionally it explained the JSON support in MT.D that
 allows creating elements dynamically from JSON.
 
-
 ## Related Links
 
-- [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Screencast - Easily create iOS user interfaces with MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Walkthrough: Creating an application using the Elements API](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Walkthrough: Creating an application using the Reflection API](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Walkthrough: Using a JSON Element to create a User Interface](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

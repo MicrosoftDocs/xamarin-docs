@@ -4,8 +4,8 @@ description: "This document describes how to work with SiriKit in iOS 11. In par
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2017
 ---
 
@@ -32,7 +32,7 @@ Other new features include:
 
 Some of these features are explained below. For more details on the others, refer to [Apple's SiriKit documentation](https://developer.apple.com/documentation/sirikit).
 
-<a name="listsnotes" />
+<a name="listsnotes"></a>
 
 ## Lists and Notes
 
@@ -50,7 +50,7 @@ tasks and notes via Siri voice requests.
 
 Both tasks and notes can be organized into groups. The rest of this section
 describes how to implement this new domain with SiriKit, using the
-[TasksNotes SiriKit Example](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/).
+[TasksNotes SiriKit Example](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample).
 
 ### How to Process a SiriKit Request
 
@@ -113,7 +113,7 @@ Learn more about these methods and responses in Apple's [SiriKit lists and notes
 
 ### Implementing Lists and Notes
 
-The [TasksNotes SiriKit Example](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/) was
+The [TasksNotes SiriKit Example](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample) was
 created using the following steps to add SiriKit support to a blank iOS app.
 
 First, to add SiriKit support, follow these steps for your iOS app:
@@ -162,6 +162,7 @@ going to handling lists and notes intents, it also implements
 `IINNotebookDomainHandling`.
 
 > [!NOTE]
+>
 > - There is a convention in .NET for interfaces to be prefixed with a
 >   capital `I`, which Xamarin adheres to when binding protocols from the 
 >   iOS SDK.
@@ -229,7 +230,7 @@ The following test phrases should work in the sample app:
 > If testing on real devices, don't forget to configure your App ID and
 > provisioning profiles for SiriKit support.
 
-<a name="alternativenames" />
+<a name="alternativenames"></a>
 
 ## Alternative Names
 
@@ -244,7 +245,6 @@ also work for the sample app (which is actually named **TasksNotes**):
 
 - "Make a grocery list with apples, bananas, and pears in _MonkeyNotes_"
 - "Add task WWDC in _MonkeyTodo_"
-
 
 ## Troubleshooting
 
@@ -262,9 +262,8 @@ _Objective-C exception thrown.  Name: NSInternalInconsistencyException Reason: U
 
 - (for device deployment) App ID has SiriKit enabled and provisioning profile downloaded.
 
-
 ## Related Links
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
-- [TasksNotes SiriKit Sample](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)
+- [TasksNotes SiriKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
 - [What's New in SiriKit (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/214/)

@@ -6,12 +6,16 @@ ms.assetid: C713B905-0C98-4442-B5CB-91C384A384DA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/08/2018
+ms.date: 10/04/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Other Platforms
 
 Xamarin.Forms supports additional platforms beyond iOS, Android, and Windows.
+
+> [!IMPORTANT]
+> For more information about supported Xamarin.Forms platforms, see [Xamarin.Forms Platform Support](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 ## [GTK](gtk.md)
 

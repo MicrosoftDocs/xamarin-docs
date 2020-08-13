@@ -1,22 +1,20 @@
 ---
-title: "Location Services"
+title: "Location services on Android"
 description: "This guide introduces location-awareness in Android applications and illustrates how to get the user's location using the Android Location Service API, as well as the fused location provider available with the Google Location Services API."
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2018
 ---
 
-# Location Services
+# Location services on Android
 
 _This guide introduces location-awareness in Android applications and illustrates how to get the user's location using the Android Location Service API, as well as the fused location provider available with the Google Location Services API._
 
-## Location Services Overview
-
 Android provides access to various location technologies such as cell tower location, Wi-Fi, and GPS. The details of each location technology are abstracted through *location providers*, allowing applications to obtain locations in the same way regardless of the provider used. This guide introduces the fused location provider, a part of the Google Play Services, which intelligently determines the best way to obtain the location of the devices based on what providers are available and how the device is being used. Android Location Service API and shows how to communicate with the system location Service using a `LocationManager`. The second part of the guide explores the Android Location Services API using the `LocationManager`.
- 
+
 As a general rule of thumb, applications should prefer to use the fused location provider, falling back the older Android Location Service API only when necessary.
 
 ## Location fundamentals
@@ -30,18 +28,18 @@ location. The hardware used depends on the type of *location provider*
 selected for the job of collecting data. Android uses three location
 providers:
 
--   **GPS Provider** &ndash; GPS gives the most accurate location, uses
+- **GPS Provider** &ndash; GPS gives the most accurate location, uses
     the most power, and works best outdoors. This provider uses a
     combination of GPS and assisted GPS
     ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), which returns
     GPS data collected by cellular towers.
 
--   **Network Provider** &ndash; Provides a combination of WiFi and
+- **Network Provider** &ndash; Provides a combination of WiFi and
     Cellular data, including aGPS data collected by cell towers. It
     uses less power than the GPS Provider, but returns location data of
     varying accuracy.
 
--   **Passive Provider** &ndash; A "piggyback" option using providers
+- **Passive Provider** &ndash; A "piggyback" option using providers
     requested by other applications or Services to generate location
     data in an application. This is a less reliable but power-saving
     option ideal for applications that don't require constant location
@@ -60,13 +58,13 @@ through appropriate permissions in the application's Android Manifest.
 There are two permissions available &ndash; depending on your application's
 requirements and your choice of API, you will want to allow one:
 
--   `ACCESS_FINE_LOCATION` &ndash; Allows an application access to GPS.
+- `ACCESS_FINE_LOCATION` &ndash; Allows an application access to GPS.
     Required for the *GPS Provider* and *Passive Provider* options
     (*Passive Provider needs permission to access GPS data collected by
     another application or Service*). Optional permission for the
     *Network Provider*.
 
--   `ACCESS_COARSE_LOCATION` &ndash; Allows an application access to
+- `ACCESS_COARSE_LOCATION` &ndash; Allows an application access to
     Cellular and Wi-Fi location. Required for *Network Provider* if
     `ACCESS_FINE_LOCATION` is not set.
 
@@ -107,11 +105,10 @@ else
 
 Apps must be tolerant of the scenario where the user will not grant permission (or has revoked the permission) and have a way to gracefully deal with that situation. Please see the [Permissions guide](~/android/app-fundamentals/permissions.md) for more details on implementing run-time permission checks in Xamarin.Android.
 
-
 ## Using the fused location provider
 
 The fused location provider is the preferred way for Android applications to receive location updates from the device because it will efficiently select the location provider during run time to provide the best location information in a battery-efficient fashion. For example, a user walking around outdoors gets the best location reading with GPS. If the user then walks indoors, where GPS works poorly (if at all), the fused location provider may automatically switch to WiFi, which works better indoors.
- 
+
 The fused location provider API provides a variety of other tools to
 empower location-aware applications, including geofencing and activity
 monitoring. In this section, we are going to focus on the basics of
@@ -125,7 +122,7 @@ properly in the application for the fused location provider API to
 work, and the device must have the Google Play Services APK installed.
 
 Before a Xamarin.Android application can use the fused location
-provider, it must add the **Xamarin.GooglePlayServices.Maps** package
+provider, it must add the **Xamarin.GooglePlayServices.Location** package
 to the project. In addition, the following `using` statements should be
 added to any source files that reference the classes described below:
 
@@ -156,7 +153,7 @@ bool IsGooglePlayServicesInstalled()
         var errorString = GoogleApiAvailability.Instance.GetErrorString(queryResult);
         Log.Error("MainActivity", "There is a problem with Google Play Services on this device: {0} - {1}",
                   queryResult, errorString);
-                  
+
         // Alternately, display the error to the user.
     }
 
@@ -214,9 +211,10 @@ A Xamarin.Android application can also subscribe to location updates from the fu
 ```csharp
 await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
 ```
+
 This method takes two parameters:
 
--   **`Android.Gms.Location.LocationRequest`** &ndash; A
+- **`Android.Gms.Location.LocationRequest`** &ndash; A
     `LocationRequest` object is how a Xamarin.Android application
     passes the parameters on how the fused location provider should
     work. The `LocationRequest` holds information such as how frequent
@@ -237,9 +235,8 @@ This method takes two parameters:
                                       .SetInterval(60 * 1000 * 5)
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
-                                          
 
--   **`Android.Gms.Location.LocationCallback`** &ndash; In order to
+- **`Android.Gms.Location.LocationCallback`** &ndash; In order to
     receive location updates, a Xamarin.Android application must
     subclass the `LocationProvider` abstract class. This class exposed
     two methods which maybe invoked by the fused location provider to
@@ -313,10 +310,10 @@ Location Service using a `LocationManager` and a
 
 To obtain the user's location using Android Location Service involves several steps:
 
-1.  Get a reference to the `LocationManager` service.
-2.  Implement the `ILocationListener` interface and handle events when the location changes.
-3.  Use the `LocationManager` to request location updates for a specified provider. The `ILocationListener` from the previous step will be used to receive callbacks from the `LocationManager`.
-4.  Stop location updates when the application it is no longer appropriate to receive updates.
+1. Get a reference to the `LocationManager` service.
+2. Implement the `ILocationListener` interface and handle events when the location changes.
+3. Use the `LocationManager` to request location updates for a specified provider. The `ILocationListener` from the previous step will be used to receive callbacks from the `LocationManager`.
+4. Stop location updates when the application it is no longer appropriate to receive updates.
 
 ### Location Manager
 
@@ -351,7 +348,7 @@ life and creates a better experience for the user.
 
 ### Responding to updates from the LocationManager
 
-Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates. 
+Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](xref:Android.Locations.ILocationListener) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates. 
 
 The following code shows the methods in the  `ILocationListener` interface:
 
@@ -405,7 +402,7 @@ guide for more information.
 
 The application above sets GPS as the location provider. However, GPS may not be available in all cases, such as if the device is indoors or does not have a GPS receiver. If this is the case, the result is a `null` return for the Provider.
 
-To get your app to work when GPS is not available, you use the `GetBestProvider` method to ask for the best available (device-supported and user-enabled) location provider at application launch. Instead of passing in a specific provider, you can tell `GetBestProvider` the requirements for the provider - such as accuracy and power - with a [`Criteria` object](https://developer.xamarin.com/api/type/Android.Locations.Criteria/). `GetBestProvider` returns the best provider for the given Criteria.
+To get your app to work when GPS is not available, you use the `GetBestProvider` method to ask for the best available (device-supported and user-enabled) location provider at application launch. Instead of passing in a specific provider, you can tell `GetBestProvider` the requirements for the provider - such as accuracy and power - with a [`Criteria` object](xref:Android.Locations.Criteria). `GetBestProvider` returns the best provider for the given Criteria.
 
 The following code shows how to get the best available provider and use
 it when requesting location updates:
@@ -428,18 +425,18 @@ else
 ```
 
 > [!NOTE]
->  If the user has disabled all location providers,
-`GetBestProvider` will return `null`. To see how this code works on a
-real device, be sure to enable GPS, Wi-Fi, and cellular networks under
-**Google Settings > Location > Mode** as shown in this screenshot:
-
-[![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-The screenshot below demonstrates the location application running using `GetBestProvider`:
-
-[![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
+> If the user has disabled all location providers,
+> `GetBestProvider` will return `null`. To see how this code works on a
+> real device, be sure to enable GPS, Wi-Fi, and cellular networks under
+> **Google Settings > Location > Mode** as shown in this screenshot:
+>
+> [![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> The screenshot below demonstrates the location application running using `GetBestProvider`:
+>
+> [![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
 
 ## Summary
 
@@ -447,15 +444,14 @@ This guide covered obtaining the user's location using both the Android
 Location Service and the fused location provider from Google Location
 Services API.
 
+## Related links
 
-## Related Links
-
-- [Location (sample)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [Location (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/location)
+- [FusedLocationProvider (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fusedlocationprovider)
 - [Google Play Services](https://developer.android.com/google/play-services/index.html)
-- [Criteria Class](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
-- [LocationManager Class](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
-- [LocationListener Class](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
+- [Criteria Class](xref:Android.Locations.Criteria)
+- [LocationManager Class](xref:Android.Locations.LocationManager)
+- [LocationListener Class](xref:Android.Locations.ILocationListener)
 - [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
 - [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

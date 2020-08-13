@@ -4,8 +4,8 @@ description: "Most applications have some requirement to save data on the device
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -43,7 +43,7 @@ Both sample solutions contain iOS and Android sample application
 projects.
 
 For Xamarin.Forms applications, read
-[working with databases](~/xamarin-forms/app-fundamentals/databases.md)
+[working with databases](~/xamarin-forms/data-cloud/data/databases.md)
 which explains how to work with SQLite in a PCL library with
 Xamarin.Forms.
 
@@ -62,10 +62,9 @@ For additional examples of cross-platform data access see our
 [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 case study.
 
-
 ## Related Links
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Android Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

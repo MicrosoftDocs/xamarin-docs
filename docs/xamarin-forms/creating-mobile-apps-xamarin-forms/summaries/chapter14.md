@@ -7,6 +7,7 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 14. Absolute layout
@@ -94,11 +95,9 @@ The [**DotMatrixClock**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 The [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) program animates two `Label` objects to bounce horizontally and vertically across the screen.
 
-
-
 ## Related links
 
 - [Chapter 14 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
 - [Chapter 14 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
-- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolute-layout.md)
+- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolutelayout.md)
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)

@@ -1,5 +1,5 @@
 ---
-title: "Adding a swipe gesture recognizer"
+title: "Add a swipe gesture recognizer"
 description: "This article explains how to recognize a swipe gesture occurring on a view."
 ms.prod: xamarin
 ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Adding a swipe gesture recognizer
+# Add a swipe gesture recognizer
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_A swipe gesture occurs when a finger is moved across the screen in a horizontal or vertical direction, and is often used to initiate navigation through content. The code examples in this article are taken from the [Swipe Gesture](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/) sample._
+_A swipe gesture occurs when a finger is moved across the screen in a horizontal or vertical direction, and is often used to initiate navigation through content. The code examples in this article are taken from the [Swipe Gesture](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) sample._
 
 To make a [`View`](xref:Xamarin.Forms.View) recognize a swipe gesture, create a [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) instance, set the [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) property to a [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) enumeration value (`Left`, `Right`, `Up`, or `Down`), optionally set the [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) property, handle the [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) event, and add the new gesture recognizer to the [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) collection on the view. The following code example shows a `SwipeGestureRecognizer` attached to a [`BoxView`](xref:Xamarin.Forms.BoxView):
 
@@ -202,6 +203,6 @@ When the [`BoxView`](xref:Xamarin.Forms.BoxView) receives a swipe gesture, the [
 
 ## Related links
 
-- [Swipe Gesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [Swipe Gesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

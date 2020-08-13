@@ -3,28 +3,30 @@ title: "Workbooks Installation and Requirements"
 description: "This document describes how to download and install Xamarin Workbooks, discussing supported platforms and system requirements."
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
 ---
 
 # Workbooks Installation and Requirements
 
-<a name="install" />
+<a name="install"></a>
 
 ## Download and Install
+
+<!-- markdownlint-disable MD001 -->
 
 # [Windows](#tab/windows)
 
 1. Check the [requirements](#requirements) below.
 2. Download and install [Xamarin Workbooks for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks.
 
 # [macOS](#tab/macos)
 
 1. Check the [requirements](#requirements) below.
 2. Download and install [Xamarin Workbooks for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+3. Start [playing around](~/tools/workbooks/workbook.md).
 
 -----
 
@@ -46,7 +48,6 @@ ms.date: 06/19/2018
 |WPF|Only supported on Windows|
 |Console (.NET Framework)|Supported on Mac and Windows|
 |Console (.NET Core)|Supported on Mac and Windows|
-
 
 ## Reporting Bugs
 
@@ -75,7 +76,7 @@ It is very helpful to know details about your Operating System and installed Xam
 
 From the main menu in Workbooks:
 
-* **Help > Copy Version Information**
+- **Help > Copy Version Information**
 
 #### Instructions for Workbooks 1.3 and earlier:
 
@@ -136,16 +137,16 @@ Control Panel on older versions of Windows.
 
 > **Start > Settings > System > Apps & features**
 
-![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
+![Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;](install-images/windows-remove.png)
 
 **You should still follow the procedure for the Visual Studio Installer to make
 sure Workbooks does not get reinstalled without your knowledge.**
 
-<a name="uninstall-macos" />
+<a name="uninstall-macos"></a>
 
 ### macOS
 
-Starting with [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/),
+Starting with [1.2.2](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/interactive/interactive-1.2.md),
 Xamarin Workbooks can be uninstalled from a terminal by running:
 
 ```bash
@@ -162,8 +163,8 @@ For older versions, you will need to manually remove the following:
 
 1. Delete the Workbooks app at `"/Applications/Xamarin Workbooks.app"`
 2. Delete the Inspector app at `"Applications/Xamarin Inspector.app"`
-2. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`
+3. Delete the add-ins: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` and `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Delete Inspector and supporting files here: `/Library/Frameworks/Xamarin.Interactive.framework` and `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## Downgrading
 

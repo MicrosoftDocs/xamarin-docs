@@ -6,8 +6,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 
@@ -122,7 +122,7 @@ guide.
 
 ::: zone-end
 
-<a name="anatomy" />
+<a name="anatomy"></a>
 
 ## Anatomy of a Xamarin.Android application
 
@@ -194,7 +194,6 @@ The items are summarized in the table below:
     such as images and bitmaps.
 
 - **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
-
 
 ::: zone pivot="windows"
 
@@ -276,6 +275,11 @@ files.
 
 ## User Interface
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** is the user interface layout file for the first screen in
@@ -340,8 +344,7 @@ of the designer view, as illustrated by the screenshot below:
 
 ::: zone-end
 
-This XML source code should contain the **Text (Large)**, **Plain
-Text**, and the two **Button** elements. For a more in-depth tour of
+This XML source code should contain four control elements: Two **TextView**s, one **EditText** and one **Button** element. For a more in-depth tour of
 the Android Designer, refer to the Xamarin Android
 [Designer Overview](~/android/user-interface/android-designer/index.md)
 guide.
@@ -372,7 +375,7 @@ care if it is named something else.
 When you open **MainActivity.cs**, you can see that the `MainActivity`
 class is a *subclass* of the `Activity` class, and that the Activity is
 adorned with the
-[Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) attribute:
+[Activity](xref:Android.App.ActivityAttribute) attribute:
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]
@@ -416,7 +419,7 @@ lifecycle methods in the diagram above to perform some important tasks:
 - **OnCreate** &ndash; Creates views, initializes variables, and
     performs other prep work that must be done before the user sees the
     Activity. This method is called only once when the Activity is
-    loaded into memory. 
+    loaded into memory.
 
 - **OnResume** &ndash; Performs any tasks that must happen every
     time the Activity returns to the device screen.
@@ -508,10 +511,10 @@ start programming them to respond to user interaction.
 
 ### Responding to user interaction
 
-In Android, the `Click` event listens for the user's touch. In this 
-app, the `Click` event is handled with a lambda, but a delegate or a 
-named event handler could be used instead. The final 
-**TranslateButton** code resembled the following: 
+In Android, the `Click` event listens for the user's touch. In this
+app, the `Click` event is handled with a lambda, but a delegate or a
+named event handler could be used instead. The final
+**TranslateButton** code resembled the following:
 
 ```csharp
 translateButton.Click += (sender, e) =>
@@ -618,7 +621,7 @@ approaches to generating custom app artwork:
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
@@ -626,35 +629,22 @@ approaches to generating custom app artwork:
 - Visual Studio &ndash; You can use this to create a simple icon set
     for your app directly in the IDE.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
-    icon sets for free download and purchase.
-
-- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](https://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12)
-    &ndash; Sketch is a Mac app for designing user interfaces, icons,
-    and more. This is the app that was used to design the Xamarin App Icons
-    and Launch Images set. Sketch 3 is available on the App Store and
-    costs about $80. You can try out the free
-    [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
-
-- [Pixelmator](http://www.pixelmator.com/) &ndash; A versatile image
+- [Pixelmator](https://www.pixelmator.com/) &ndash; A versatile image
     editing app for Mac that costs about $30.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
-    icon sets for free download and purchase.
-
-- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](https://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 

@@ -4,8 +4,8 @@ description: "This document describes how to localize watchOS apps built with Xa
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -13,7 +13,7 @@ ms.date: 03/17/2017
 
 _Adapting your watchOS apps for multiple languages_
 
-![](localization-images/both-languages-sml.png "Apple Watch displaying localized content")
+![Apple Watch displaying localized content](localization-images/both-languages-sml.png)
 
 watchOS apps are localized using the standard iOS
   methods:
@@ -73,7 +73,7 @@ By default the watch app is not configured for localization. You
 
 1. Create **Base.lproj** directory and move the **Interface.storyboard** into it.
 
-2. Create **<language>.lproj** directories for each language you wish to support.
+2. Create **\<language>.lproj** directories for each language you wish to support.
 
 3. The **.lproj** directories should contain an **Interface.strings** text file
   (the filename should match the storboard's name). You can optionally
@@ -82,14 +82,14 @@ By default the watch app is not configured for localization. You
 The watch app project looks like this after these changes have been made (only
   English and Spanish language files have been added):
 
-  ![](localization-images/watchapp-solution.png "The watch app project with English and Spanish language files")
+  ![The watch app project with English and Spanish language files](localization-images/watchapp-solution.png)
 
 #### Storyboard Text
 
 When you edit the storyboard, select each element and notice the
   **Localization ID** that appears in the **Properties** pad:
 
-  [![](localization-images/storyboard-sml.png "The Localization ID that appears in the Properties pad")](localization-images/storyboard.png#lightbox)
+  [![The Localization ID that appears in the Properties pad](localization-images/storyboard-sml.png)](localization-images/storyboard.png#lightbox)
 
 In the **Base.lproj** folder, create key-value pairs as shown
   below, where the key is formed by the **Localization ID**
@@ -126,7 +126,7 @@ Simply set the image's **Image** property in the storyboard
   and the correct image will be rendered on the watch according
   to the language selected by the user.
 
-![](localization-images/storyboard-image.png "Set the images Image property in the storyboard")
+![Set the images Image property in the storyboard](localization-images/storyboard-image.png)
 
 Note: because all Apple Watches have Retina displays, only the **@2x**
   version of the image is required. You do not need to specify **@2x**
@@ -139,7 +139,7 @@ The watch extension requires a similar directory
   is no storyboard. The localized strings in the extension
   are only those referenced by C# code.
 
-![](localization-images/watchextension-solution.png "The watch extension directory structure to support localization")
+![The watch extension directory structure to support localization](localization-images/watchextension-solution.png)
 
 #### Strings in Code
 
@@ -172,27 +172,27 @@ displayText.SetText (localizedDisplay);
 Images that are populated by code can be set in two ways.
 
 1. You can change an `Image` control by setting its value to the string
-  name of an image that already exists in the Watch App, eg
+    name of an image that already exists in the Watch App, eg
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. You can move an image from the extension to the watch
-  using `FromBundle` and the app will automatically choose
-  the correct image for the user's language selection. In the
-  example solution there is an image **language@2x.png** in
-  each language folder, and it is displayed on `DetailController`
-  using the following code:
+    using `FromBundle` and the app will automatically choose
+    the correct image for the user's language selection. In the
+    example solution there is an image **language@2x.png** in
+    each language folder, and it is displayed on `DetailController`
+    using the following code:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-  	displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Note that you do not need to specify the **@2x** when referring
-  to the image's filename.
+    Note that you do not need to specify the **@2x** when referring
+    to the image's filename.
 
 The second method is also applicable if you download an image from
 a remote server to render on the watch; however in this case you
@@ -267,16 +267,14 @@ The method to change language preferences differs between the simulator
 On the simulator, select the language to test using the
   iOS **Settings** app (the grey gears icon in the simulator home screen).
 
-  ![](localization-images/sim-settings-sml.png "The iOS Settings app Localization settings")
+  ![The iOS Settings app Localization settings](localization-images/sim-settings-sml.png)
 
 ### Watch device
 
 When testing with a watch, change the watch's language
   in the **Apple Watch** app on the paired iPhone.
 
-  ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
-
-
+  ![Change the watch's language in the Apple Watch app on the paired iPhone](localization-images/phone-settings-sml.png)
 
 ## Related Links
 

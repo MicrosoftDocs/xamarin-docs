@@ -4,8 +4,8 @@ description: "This document describes how to provision a device so that it can b
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
 ---
 # Device provisioning for Xamarin.iOS
@@ -14,7 +14,7 @@ While developing a Xamarin.iOS application it is essential to test it by deployi
 
 The highlighted sections in the image below show the steps required to get set up for iOS provisioning:
 
-[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
+[![The highlighted sections in this image show the steps required to get set up for iOS provisioning](images/provisioningdiagram.png)](images/provisioningdiagram.png#lightbox)
 
 After this, the next step is to distribute the application. For more information on deployment, visit the [App Distribution](~/ios/deploy-test/app-distribution/index.md) guides.
 
@@ -41,17 +41,17 @@ These steps ensure that everything that is created or used during the developmen
 
 There are two ways to provision your iOS device:
 
-* **Automatically (Recommended)** – Select the **Automatic Provisioning** scheme in your project to have Visual Studio automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles. For information on how to automatically manage provisioning, see the [Automatic Provisioning](automatic-provisioning.md) guide. This is the recommended way of provisioning an iOS device.
+- **Automatically (Recommended)** – Select the **Automatic Provisioning** scheme in your project to have Visual Studio automatically create and manage your Signing Identities, App IDs, and Provisioning Profiles. For information on how to automatically manage provisioning, see the [Automatic Provisioning](automatic-provisioning.md) guide. This is the recommended way of provisioning an iOS device.
 
-* **Manually** – Signing Identities, App IDs, and Provisioning Profiles can be created and managed via the Apple Developer Portal, as described in [manual provisioning](manual-provisioning.md) guide. These artifacts can then be managed as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide.
+- **Manually** – Signing Identities, App IDs, and Provisioning Profiles can be created and managed via the Apple Developer Portal, as described in [manual provisioning](manual-provisioning.md) guide. These artifacts can then be managed as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide.
 
 ## Provisioning for Application Services
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-* Create an App ID with the required app services.
-* Create a new [provisioning profile](#provisioning-your-device) that contains this App ID.
-* Set Entitlements in the Xamarin.iOS Project
+- Create an App ID with the required app services.
+- Create a new [provisioning profile](#provisioning-your-device) that contains this App ID.
+- Set Entitlements in the Xamarin.iOS Project
 
 ## Related links
 

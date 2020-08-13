@@ -4,8 +4,9 @@ description: "This document describes the Clipboard class in Xamarin.Essentials,
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 02/12/2019
+ms.date: 01/06/2020
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Clipboard
@@ -42,9 +43,30 @@ To read text from the **Clipboard**:
 var text = await Clipboard.GetTextAsync();
 ```
 
+Whenever any of the clipboard's content has changed an event is triggered:
+
+```csharp
+public class ClipboardTest
+{
+    public ClipboardTest()
+    {
+        // Register for clipboard changes, be sure to unsubscribe when needed
+        Clipboard.ClipboardContentChanged += OnClipboardContentChanged;
+    }
+
+    void OnClipboardContentChanged(object sender, EventArgs    e)
+    {
+        Console.WriteLine($"Last clipboard change at {DateTime.UtcNow:T}";);
+    }
+}
+```
+
+> [!TIP]
+> Access to the Clipboard must be done on the main user interface thread. See the [MainThread](~/essentials/main-thread.md) API to see how to invoke methods on the main user interface thread.
+
 ## API
 
-- [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
+- [Clipboard source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Clipboard)
 - [Clipboard API documentation](xref:Xamarin.Essentials.Clipboard)
 
 ## Related Video

@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: SMS"
 description: "The Sms class in Xamarin.Essentials enables an application to open the default SMS application with a specified message to send to a recipient."
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: SMS
@@ -73,5 +75,11 @@ public class SmsTest
 
 ## API
 
-- [Sms source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
+- [Sms source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Sms)
 - [Sms API documentation](xref:Xamarin.Essentials.Sms)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/SMS-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

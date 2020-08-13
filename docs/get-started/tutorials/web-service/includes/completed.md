@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Use the NuGet Package Manager to add Newtonsoft.Json to a Xamarin.Forms project.
 > - Create the web service classes.
 > - Consume the web service classes.
@@ -23,6 +24,6 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 
 ## Related links
 
-- [WebServiceTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/WebServiceTutorial)
-- [Consuming a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [WebServiceTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/)
+- [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Newtonsoft.Json NuGet Package](https://www.nuget.org/packages/Newtonsoft.Json/)

@@ -4,8 +4,8 @@ description: "This document describes new MapKit features in iOS 11: grouping ma
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
 ---
 
@@ -20,11 +20,11 @@ iOS 11 adds the following new features to MapKit:
 
 ![Map showing clustered markers and compass button](mapkit-images/cyclemap-heading.png)
 
-<a name="clustering" />
+<a name="clustering"></a>
 
 ## Automatically grouping markers while zooming
 
-The sample [MapKit Sample "Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) shows how to implement the new iOS 11 annotation clustering feature.
+The sample [MapKit Sample "Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) shows how to implement the new iOS 11 annotation clustering feature.
 
 ### 1. Create an `MKPointAnnotation` subclass
 
@@ -103,7 +103,7 @@ public class BikeView : MKMarkerAnnotationView
 
 While the annotation view that represents a cluster of markers _could_ be a simple image, users expect the app to provide visual cues about how many markers have been grouped together.
 
-The [sample code](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) uses CoreGraphics to render the number of markers in the cluster, as well as a circle-graph representation of the proportion of each marker type.
+The [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) uses CoreGraphics to render the number of markers in the cluster, as well as a circle-graph representation of the proportion of each marker type.
 
 You should also set:
 
@@ -194,11 +194,11 @@ in and out of clusters.
 Refer to the [Maps section](~/ios/user-interface/controls/ios-maps/index.md)
 for more information on displaying data with MapKit.
 
-<a name="compass" />
+<a name="compass"></a>
 
 ## Compass Button
 
-iOS 11 adds the ability to pop the compass out of the map and render it elsewhere in the view. See the [Tandm sample app](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) for an example.
+iOS 11 adds the ability to pop the compass out of the map and render it elsewhere in the view. See the [Tandm sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) for an example.
 
 Create a button that looks like a compass (including live animation when the map orientation is changed), and renders it on another control.
 
@@ -215,7 +215,7 @@ MapView.ShowsCompass = false; // so we don't have two compasses!
 
 The `ShowsCompass` property can be used to control visibility of the default compass inside the map view.
 
-<a name="scale" />
+<a name="scale"></a>
 
 ## Scale View
 
@@ -234,7 +234,7 @@ MapView.ShowsScale = false; // so we don't have two scale displays!
 
 The `ShowsScale` property can be used to control visibility of the default compass inside the map view.
 
-<a name="user-tracking" />
+<a name="user-tracking"></a>
 
 ## User Tracking Button
 
@@ -254,9 +254,8 @@ button.TranslatesAutoresizingMaskIntoConstraints = false;
 View.AddSubview(button); // constraints omitted for simplicity
 ```
 
-
 ## Related Links
 
-- [MapKit Sample 'Tandm'](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)
+- [MapKit Sample 'Tandm'](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
 - [What's New in MapKit (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/237/)

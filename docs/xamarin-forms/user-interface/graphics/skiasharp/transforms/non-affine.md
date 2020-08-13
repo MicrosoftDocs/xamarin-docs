@@ -7,11 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Non-Affine Transforms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Create perspective and taper effects with the third column of the transform matrix_
 
@@ -19,7 +20,7 @@ Translation, scaling, rotation, and skewing are all classified as *affine* trans
 
 However, SkiaSharp is also capable of non-affine transforms, which have the capability to transform a rectangle into any convex quadrilateral:
 
-![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
+![A bitmap transformed into a convex quadrilateral](non-affine-images/nonaffinetransformexample.png)
 
 A convex quadrilateral is a four-sided figure with interior angles always less than 180 degrees and sides that don't cross each other.
 
@@ -91,7 +92,7 @@ Now use this transform to render a 100-pixel square box positioned at the origin
 
 When x is 100, then the z' denominator is 2, so the x and y coordinates are effectively halved. The right side of the box becomes shorter than the left side:
 
-![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
+![A box subjected to a non-affine transform](non-affine-images/nonaffinetransform.png)
 
 The `Persp` part of these cell names refers to "perspective" because the foreshortening suggests that the box is now tilted with the right side further from the viewer.
 
@@ -225,7 +226,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Here are some sample images:
 
-[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
+[![Triple screenshot of the Test Perspective page](non-affine-images/testperspective-small.png)](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
 
 As you experiment with the sliders, you'll find that values beyond 0.0066 or below –0.0066 cause the image to suddenly become fractured and incoherent. The bitmap being transformed is 300-pixels square. It is transformed relative to its center, so the coordinates of the bitmap range from –150 to 150. Recall that the value of z' is:
 
@@ -237,7 +238,7 @@ Generally, you won't be setting `Persp0` and `Persp1` in isolation. It's also of
 
 One such non-affine transform is a *taper transform*. This type of non-affine transform retains the overall dimensions of a rectangle but tapers one side:
 
-![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
+![A box subjected to a taper transform](non-affine-images/tapertransform.png)
 
 The [`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) class performs a generalized calculation of a non-affine transform based on these parameters:
 
@@ -389,13 +390,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here are some examples:
 
-[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
+[![Triple screenshot of the Taper Transform page](non-affine-images/tapertransform-small.png)](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 
 Another type of generalized non-affine transforms is 3D rotation, which is demonstrated in the next article, [**3D Rotations**](3d-rotation.md).
 
 The non-affine transform can transform a rectangle into any convex quadrilateral. This is demonstrated by the **Show Non-Affine Matrix** page. It is very similar to the **Show Affine Matrix** page from the [**Matrix Transforms**](matrix.md) article except that it has a fourth `TouchPoint` object to manipulate the fourth corner of the bitmap:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
+[![Triple screenshot of the Show Non-Affine Matrix page](non-affine-images/shownonaffinematrix-small.png)](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
 
 As long as you don't attempt to make an interior angle of one of the corners of the bitmap greater than 180 degrees, or make two sides cross each other, the program successfully calculates the transform using this method from the [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) class:
 
@@ -464,8 +465,7 @@ The `a` and `b` values are calculated so that the third transform is affine. The
 
 Another use of non-affine transforms is to mimic three-dimensional graphics. In the next article, [**3D Rotations**](3d-rotation.md) you see how to rotate a two-dimensional graphic in 3D space.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

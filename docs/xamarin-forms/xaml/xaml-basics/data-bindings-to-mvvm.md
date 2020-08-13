@@ -2,16 +2,18 @@
 title: "Part 5. From Data Bindings to MVVM"
 description: "The MVVM pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel."
 ms.prod: xamarin
+ms.custom: video
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Part 5. From Data Bindings to MVVM
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _The Model-View-ViewModel (MVVM) architectural pattern was invented with XAML in mind. The pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel. The View and the ViewModel are often connected through data bindings defined in the XAML file. The BindingContext for the View is usually an instance of the ViewModel._
 
@@ -21,7 +23,7 @@ As an introduction to ViewModels, let’s first look at a program without one.
 Earlier you saw how to define a new XML namespace declaration to allow a XAML file to reference classes in other assemblies. Here’s a program that defines an XML namespace declaration for the `System` namespace:
 
 ```csharp
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 The program can use `x:Static` to obtain the current date and time from the static `DateTime.Now` property and set that `DateTime` value to the `BindingContext` on a `StackLayout`:
@@ -30,14 +32,14 @@ The program can use `x:Static` to obtain the current date and time from the stat
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` is a very special property: When you set the `BindingContext` on an element, it is inherited by all the children of that element. This means that all the children of the `StackLayout` have this same `BindingContext`, and they can contain simple bindings to properties of that object.
+`BindingContext` is a special property: When you set the `BindingContext` on an element, it is inherited by all the children of that element. This means that all the children of the `StackLayout` have this same `BindingContext`, and they can contain simple bindings to properties of that object.
 
 In the **One-Shot DateTime** program, two of the children contain bindings to properties of that `DateTime` value, but two other children contain bindings that seem to be missing a binding path. This means that the `DateTime` value itself is used for the `StringFormat`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="XamlSamples.OneShotDateTimePage"
              Title="One-Shot DateTime Page">
 
@@ -54,17 +56,17 @@ In the **One-Shot DateTime** program, two of the children contain bindings to pr
 </ContentPage>
 ```
 
-Of course, the big problem is that the date and time are set once when the page is first built, and never change:
+The problem is that the date and time are set once when the page is first built, and never change:
 
-[![](data-bindings-to-mvvm-images/oneshotdatetime.png "View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
+[![View Displaying Date and Time](data-bindings-to-mvvm-images/oneshotdatetime.png)](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
 
 A XAML file can display a clock that always shows the current time, but it needs some code to help out. When thinking in terms of MVVM, the Model and ViewModel are classes written entirely in code. The View is often a XAML file that references properties defined in the ViewModel through data bindings.
 
-A proper Model is ignorant of the ViewModel, and a proper ViewModel is ignorant of the View. However, very often a programmer tailors the data types exposed by the ViewModel to the data types associated with particular user interfaces. For example, if a Model accesses a database that contains 8-bit character ASCII strings, the ViewModel would need to convert between those strings to Unicode strings to accommodate the exclusive use of Unicode in the user interface.
+A proper Model is ignorant of the ViewModel, and a proper ViewModel is ignorant of the View. However, often a programmer tailors the data types exposed by the ViewModel to the data types associated with particular user interfaces. For example, if a Model accesses a database that contains 8-bit character ASCII strings, the ViewModel would need to convert between those strings to Unicode strings to accommodate the exclusive use of Unicode in the user interface.
 
 In simple examples of MVVM (such as those shown here), often there is no Model at all, and the pattern involves just a View and ViewModel linked with data bindings.
 
-Here’s a ViewModel for a clock with just a single property named `DateTime`, but which updates that `DateTime` property every second:
+Here’s a ViewModel for a clock with just a single property named `DateTime`, which updates that `DateTime` property every second:
 
 ```csharp
 using System;
@@ -139,7 +141,7 @@ Notice how the `ClockViewModel` is set to the `BindingContext` of the `Label` us
 
 The `Binding` markup extension on the `Text` property of the `Label` formats the `DateTime` property. Here’s the display:
 
-[![](data-bindings-to-mvvm-images/clock.png "View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
+[![View Displaying Date and Time via ViewModel](data-bindings-to-mvvm-images/clock.png)](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
 
 It’s also possible to access individual properties of the `DateTime` property of the ViewModel by separating the properties with periods:
 
@@ -149,7 +151,7 @@ It’s also possible to access individual properties of the `DateTime` property 
 
 ## Interactive MVVM
 
-MVVM is quite often used with two-way data bindings for an interactive view based on an underlying data model.
+MVVM is often used with two-way data bindings for an interactive view based on an underlying data model.
 
 Here’s a class named `HslViewModel` that converts a `Color` value into `Hue`, `Saturation`, and `Luminosity` values, and vice versa:
 
@@ -251,7 +253,7 @@ namespace XamlSamples
 }
 ```
 
-Changes to the `Hue`, `Saturation`, and `Luminosity` properties cause the `Color` property to change, and changes to `Color` causes the other three properties to change. This might seem like an infinite loop, except that the class doesn't invoke the `PropertyChanged` event unless the property has actually changed. This puts an end to the otherwise uncontrollable feedback loop.
+Changes to the `Hue`, `Saturation`, and `Luminosity` properties cause the `Color` property to change, and changes to `Color` causes the other three properties to change. This might seem like an infinite loop, except that the class doesn't invoke the `PropertyChanged` event unless the property has changed. This puts an end to the otherwise uncontrollable feedback loop.
 
 The following XAML file contains a `BoxView` whose `Color` property is bound to the `Color` property of the ViewModel, and three `Slider` and three `Label` views bound to the `Hue`, `Saturation`, and `Luminosity` properties:
 
@@ -289,7 +291,7 @@ The following XAML file contains a `BoxView` whose `Color` property is bound to 
 
 The binding on each `Label` is the default `OneWay`. It only needs to display the value. But the binding on each `Slider` is `TwoWay`. This allows the `Slider` to be initialized from the ViewModel. Notice that the `Color` property is set to `Aqua` when the ViewModel is instantiated. But a change in the `Slider` also needs to set a new value for the property in the ViewModel, which then calculates a new color.
 
-[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
+[![MVVM using Two-Way Data Bindings](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
 
 ## Commanding with ViewModels
 
@@ -299,32 +301,32 @@ However, sometimes the View needs to contain buttons that trigger various action
 
 To allow ViewModels to be more independent of particular user interface objects but still allow methods to be called within the ViewModel, a *command* interface exists. This command interface is supported by the following elements in Xamarin.Forms:
 
--  `Button`
--  `MenuItem`
--  `ToolbarItem`
--  `SearchBar`
--  `TextCell` (and hence also `ImageCell`)
--  `ListView`
--  `TapGestureRecognizer`
+- `Button`
+- `MenuItem`
+- `ToolbarItem`
+- `SearchBar`
+- `TextCell` (and hence also `ImageCell`)
+- `ListView`
+- `TapGestureRecognizer`
 
 With the exception of the `SearchBar` and `ListView` element, these elements define two properties:
 
--  `Command` of type  `System.Windows.Input.ICommand`
--  `CommandParameter` of type  `Object`
+- `Command` of type  `System.Windows.Input.ICommand`
+- `CommandParameter` of type  `Object`
 
 The `SearchBar` defines `SearchCommand` and `SearchCommandParameter` properties, while the `ListView` defines a `RefreshCommand` property of type `ICommand`.
 
 The `ICommand` interface defines two methods and one event:
 
--  `void Execute(object arg)`
--  `bool CanExecute(object arg)`
--  `event EventHandler CanExecuteChanged`
+- `void Execute(object arg)`
+- `bool CanExecute(object arg)`
+- `event EventHandler CanExecuteChanged`
 
 The ViewModel can define properties of type `ICommand`. You can then bind these properties to the `Command` property of each `Button` or other element, or perhaps a custom view that implements this interface. You can optionally set the `CommandParameter` property to identify individual `Button` objects (or other elements) that are bound to this ViewModel property. Internally, the `Button` calls the `Execute` method whenever the user taps the `Button`, passing to the `Execute` method its `CommandParameter`.
 
 The `CanExecute` method and `CanExecuteChanged` event are used for cases where a `Button` tap might be currently invalid, in which case the `Button` should disable itself. The `Button` calls `CanExecute` when the `Command` property is first set and whenever the `CanExecuteChanged` event is fired. If `CanExecute` returns `false`, the `Button` disables itself and doesn’t generate `Execute` calls.
 
-For help in adding commanding to your ViewModels, Xamarin.Forms defines two classes that implement `ICommand`: `Command` and `Command<T>` where `T` is the type of the arguments to `Execute` and `CanExecute`. These two classes define several constructors plus a `ChangeCanExecute` method that the ViewModel can call to force the `Command` object to fire the `CanExecuteChanged` event.
+For help with adding commanding to your ViewModels, Xamarin.Forms defines two classes that implement `ICommand`: `Command` and `Command<T>` where `T` is the type of the arguments to `Execute` and `CanExecute`. These two classes define several constructors plus a `ChangeCanExecute` method that the ViewModel can call to force the `Command` object to fire the `CanExecuteChanged` event.
 
 Here is a ViewModel for a simple keypad that is intended for entering telephone numbers. Notice that the `Execute` and `CanExecute` method are defined as lambda functions right in the constructor:
 
@@ -550,7 +552,7 @@ The following keypad is not as visually sophisticated as it could be. Instead, t
 
 The `Command` property of the first `Button` that appears in this markup is bound to the `DeleteCharCommand`; the rest are bound to the `AddCharCommand` with a `CommandParameter` that is the same as the character that appears on the `Button` face. Here’s the program in action:
 
-[![](data-bindings-to-mvvm-images/keypad.png "Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
+[![Calculator using MVVM and Commands](data-bindings-to-mvvm-images/keypad.png)](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
 
 ### Invoking Asynchronous Methods
 
@@ -576,7 +578,7 @@ void Download ()
 
 ## Implementing a Navigation Menu
 
-The [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
+The [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
 
 ```csharp
 public class PageDataViewModel
@@ -675,7 +677,7 @@ The XAML file for `MainPage` defines a `ListBox` whose `ItemsSource` property is
 
 The pages are shown in a scrollable list:
 
-[![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
+[![Scrollable list of pages](data-bindings-to-mvvm-images/mainpage.png)](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
 
 The handler in the code-behind file is triggered when the user selects an item. The handler sets the `SelectedItem` property of the `ListBox` back to `null` and then instantiates the selected page and navigates to it:
 
@@ -703,11 +705,18 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 XAML is a powerful tool for defining user interfaces in Xamarin.Forms applications, particularly when data-binding and MVVM are used. The result is a clean, elegant, and potentially toolable representation of a user interface with all the background support in code.
 
-
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+
+## Related Videos
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-MVVM-with-XAML-6-of-11/player]
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-Navigation-with-XAML-7-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

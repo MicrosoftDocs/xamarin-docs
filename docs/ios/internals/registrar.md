@@ -4,8 +4,8 @@ description: "This document describes the Xamarin.iOS type registrar, which make
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 # Type registrar for Xamarin.iOS
@@ -145,10 +145,10 @@ version, we made the new registrar the default.
 This new registration system offers the following new features:
 
 - Compile-time detection of programmer errors:
-    - Two classes being registered with the same name.
-    - More than one method exported to respond to the same selector
+  - Two classes being registered with the same name.
+  - More than one method exported to respond to the same selector
 - Removal of unused native code:
-    - The new registration system will add strong references to code used in
+  - The new registration system will add strong references to code used in
     static libraries, allowing the native linker to strip out unused native
     code from the resulting binary. On Xamarin's sample bindings, most
     applications become at least 300k smaller.
@@ -165,58 +165,58 @@ Below are some examples of the errors caught by the new registrar.
 
 - Exporting the same selector more than once in the same class:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo:")]
-        void Foo (NSString str);
-        [Export ("foo:")]
-        void Foo (string str)
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo:")]
+      void Foo (NSString str);
+      [Export ("foo:")]
+      void Foo (string str)
+  }
+  ```
 
 - Exporting more than one managed class with the same Objective-C name:
 
-    ```csharp
-    [Register ("Class")]
-    class MyClass : NSObject {}
+  ```csharp
+  [Register ("Class")]
+  class MyClass : NSObject {}
 
-    [Register ("Class")]
-    class YourClass : NSObject {}
-    ```
+  [Register ("Class")]
+  class YourClass : NSObject {}
+  ```
 
 - Exporting generic methods:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo")]
-	    void Foo<T> () {}
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo")]
+      void Foo<T> () {}
+  }
+  ```
 
 ### Limitations of the new registrar
 
 Some things to keep in mind about the new registrar:
 
 - Some third-party libraries must be updated to work with the new
-registration system. See [required modifications](#required-modifications)
-below for more details.
+  registration system. See [required modifications](#required-modifications)
+  below for more details.
 
 - A short-term downside is also that Clang must be used if the Accounts
-framework is used (this is because Apple's **accounts.h** header can only be
-compiled by Clang). Add `--compiler:clang` to the additional
-mtouch arguments to use Clang if you're using Xcode 4.6 or earlier
-(Xamarin.iOS will automatically select Clang in Xcode 5.0 or later.)
+  framework is used (this is because Apple's **accounts.h** header can only be
+  compiled by Clang). Add `--compiler:clang` to the additional
+  mtouch arguments to use Clang if you're using Xcode 4.6 or earlier
+  (Xamarin.iOS will automatically select Clang in Xcode 5.0 or later.)
 
 - If Xcode 4.6 (or earlier) is used, GCC/G++ must be
-selected if exported type names contain non-ASCII characters
-(this is because the version of Clang shipped with Xcode 4.6
-does not support non-ASCII characters inside identifiers in
-Objective-C code). Add `--compiler:gcc` to the
-additional mtouch arguments to use GCC.
+  selected if exported type names contain non-ASCII characters
+  (this is because the version of Clang shipped with Xcode 4.6
+  does not support non-ASCII characters inside identifiers in
+  Objective-C code). Add `--compiler:gcc` to the
+  additional mtouch arguments to use GCC.
 
 ## Selecting a registrar
 
@@ -243,7 +243,7 @@ The old registration system has the following drawbacks:
 - The set of methods that was exported was slightly different between dynamic and static builds.
 - It does not work properly when exporting generic classes (which exact generic implementation executed at runtime would be random, effectively resulting in undetermined behavior).
 
-<a name="required-modifications" />
+<a name="required-modifications"></a>
 
 ## New registrar: required changes to bindings
 

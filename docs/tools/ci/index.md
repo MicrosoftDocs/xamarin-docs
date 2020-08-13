@@ -1,10 +1,10 @@
 ---
-title: "Introduction to Continuous Integration with Xamarin"
+title: "Continuous Integration with Xamarin"
 description: "This document links to guides that describe continuous integration with Xamarin. Linked content provides an overview of continuous integration and discusses App Center Build, TeamCity, and Jenkins."
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/23/2018
 ---
 

@@ -4,8 +4,8 @@ description: "This document describes SceneKit, a 3D scene graph API that simpli
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
 ---
 
@@ -17,7 +17,7 @@ SceneKit is extremely easy to work with. It is a declarative API that takes care
 
 To work with SceneKit you create a scene graph using the `SCNScene` class. A scene contains a hierarchy of nodes, represented by instances of `SCNNode`, defining locations in 3D space. Each node has properties such as geometry, lighting and materials that affect its appearance, as illustrated by the following figure:
 
-![](scenekit-images/image7.png "The SceneKit hierarchy") 
+![The SceneKit hierarchy](scenekit-images/image7.png)
 
 ## Create a Scene
 
@@ -67,8 +67,8 @@ scene.RootNode.AddChildNode (ambientLightNode);
 
 With the lights in place, the sphere is now visible in the scene.
 
-![](scenekit-images/image8.png "The sphere is visible in the scene when lit")
- 
+![The sphere is visible in the scene when lit](scenekit-images/image8.png)
+
 ## Adding a Camera
 
 Adding a camera (SCNCamera) to the scene changes the point of view. The pattern to add the camera is similar. Create the camera, attach it to a node and add the node to the scene.
@@ -76,12 +76,12 @@ Adding a camera (SCNCamera) to the scene changes the point of view. The pattern 
 ```csharp
 // camera
 camera = new SCNCamera {
-	XFov = 80,
-	YFov = 80
+    XFov = 80,
+    YFov = 80
 };
 cameraNode = new SCNNode {
-	Camera = camera,
-	Position = new SCNVector3 (0, 0, 40)
+    Camera = camera,
+    Position = new SCNVector3 (0, 0, 40)
 };
 scene.RootNode.AddChildNode (cameraNode);
 ```
@@ -90,12 +90,12 @@ As you can see from the code above, SceneKit objects can be created using constr
 
 With the camera in place, the entire sphere is visible to the user:
 
-![](scenekit-images/image9.png "The entire sphere is visible to the user")
- 
+![The entire sphere is visible to the user](scenekit-images/image9.png)
+
 You can add additional lights to the scene as well. Here is what it looks like with a few more omnidirectional lights:
 
-![](scenekit-images/image10.png "The sphere with a few more omnidirectional lights")
- 
+![The sphere with a few more omnidirectional lights](scenekit-images/image10.png)
+
 Additionally, by setting `sceneView.AllowsCameraControl = true`, the user can change the point of view with a touch gesture.
 
 ### Materials
@@ -110,12 +110,12 @@ sphere.Materials = new SCNMaterial[] { material };
 
 This layers the image onto the node as shown below:
 
-![](scenekit-images/image11.png "Layering the image onto the sphere")
- 
+![Layering the image onto the sphere](scenekit-images/image11.png)
+
 A material can be set to respond to other types of lighting too. For example, the object can be made shiny and have its specular contents set to display specular reflection, resulting in a bright spot on the surface, as shown below:
 
-![](scenekit-images/image12.png "The object made shiny with specular reflection, resulting in a bright spot on the surface")
- 
+![The object made shiny with specular reflection, resulting in a bright spot on the surface](scenekit-images/image12.png)
+
 Materials are very flexible, allowing you to achieve a lot with very little code. For example, instead of setting the image to the diffuse contents, set it to the reflective contents instead.
 
 ```csharp

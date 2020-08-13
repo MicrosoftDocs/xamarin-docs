@@ -4,8 +4,8 @@ description: "This document describes common design patterns used when building 
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/17/2016
 ---
 
@@ -49,8 +49,6 @@ For more information on working with table VIews in a Xamarin.Mac application, p
 Protocols in Objective-C can be compared to interfaces in C#, and in many cases are used in similar situations. For example the `NSTableView` example above, both the delegate and the data source are actually protocols. Xamarin.Mac exposes these as  base classes with virtual methods you can override. The primary difference between C# interfaces and Objective-C protocols is that some methods in a protocol may be optional to implement. You’ll have to look at the documentation and/or definition of an API to determine what is optional.
 
 More information please see our [Delegates, Protocols and Events](~/ios/app-fundamentals/delegates-protocols-and-events.md) documentation.
-
-
 
 ## Related Links
 

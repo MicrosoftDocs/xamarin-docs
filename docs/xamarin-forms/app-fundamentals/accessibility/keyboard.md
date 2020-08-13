@@ -1,21 +1,22 @@
 ---
-title: "Keyboard Navigation"
-description: "Rather than using the default tab sequence, it's sometimes necessary to tune your UI by specifying the tab sequence with a combination of the TabIndex and IsTapStop properties."
+title: "Keyboard Accessibility"
+description: "Rather than using the default tab sequence, it's sometimes necessary to tune the accessibility of your UI by specifying the tab sequence with a combination of the TabIndex and IsTabStop properties."
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
+ms.date: 05/09/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Keyboard Navigation in Xamarin.Forms
+# Keyboard Accessibility in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
-Some users can have difficulty using applications that don't provide appropriate keyboard access. Specifying a tab order for controls enables keyboard navigation and prepares application pages to receive input in a particular order.
+Users who use screen readers, or have mobility issues, can have difficulty using applications that don't provide appropriate keyboard access. Xamarin.Forms applications can have an expected tab order specified to improve their usability and accessibility. Specifying a tab order for controls enables keyboard navigation, prepares application pages to receive input in a particular order, and permits screen readers to read focusable elements to the user.
 
-By default, the tab order of controls is the same order in which they are listed in XAML, or programmatically added to a child collection. This order is the order in which the controls will be navigated through with a keyboard, and often this default order is the best order. However, the default order is not always the same as the expected order, as shown in the following XAML code example:
+By default, the tab order of controls is the same order in which they are listed in XAML, or programmatically added to a child collection. This order is the order in which the controls will be navigated through with a keyboard and read by screen readers, and often this default order is the best order. However, the default order is not always the same as the expected order, as shown in the following XAML code example:
 
 ```xaml
 <Grid>
@@ -48,7 +49,7 @@ By default, the tab order of controls is the same order in which they are listed
 
 The following screenshot shows the default tab order for this code example:
 
-![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
+![Default Row-based Tab Order](keyboard-images/default-tab-order.png)
 
 The tab order here is row-based, and is the order the controls are listed in the XAML. Therefore, pressing the Tab key navigates through forename [`Entry`](xref:Xamarin.Forms.Entry) instances, followed by surname `Entry` instances. However, a more intuitive experience would be to use a column-first tab navigation, so that pressing the Tab key navigates through forename-surname pairs. This can be achieved by specifying the tab order of the input controls.
 
@@ -61,10 +62,10 @@ The `VisualElement.TabIndex` property is used to indicate the order in which [`V
 
 The following rules apply when using the default tab order, or setting the `TabIndex` property:
 
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` equal to 0 are added to the tab order based on their declaration order in XAML or child collections.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` greater than 0 are added to the tab order based on their `TabIndex` value.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` less than 0 are added to the tab order and appear before any zero value.
- - Conflicts on a `TabIndex` are resolved by declaration order.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` equal to 0 are added to the tab order based on their declaration order in XAML or child collections.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` greater than 0 are added to the tab order based on their `TabIndex` value.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` less than 0 are added to the tab order and appear before any zero value.
+- Conflicts on a `TabIndex` are resolved by declaration order.
 
 After defining a tab order, pressing the Tab key will cycle the focus through controls in ascending `TabIndex` order, wrapping around to the beginning once the final control is reached.
 
@@ -105,19 +106,22 @@ The following XAML example shows the `TabIndex` property set on input controls t
 
 The following screenshot shows the tab order for this code example:
 
-![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
+![Column-based Tab Order](keyboard-images/correct-tab-order.png)
 
 The tab order here is column-based. Therefore, pressing the Tab key navigates through forename-surname [`Entry`](xref:Xamarin.Forms.Entry) pairs.
+
+> [!IMPORTANT]
+> Screen readers on iOS and Android will respect the `TabIndex` of a [`VisualElement`](xref:Xamarin.Forms.VisualElement) when reading the accessible elements on the screen.
 
 ## Excluding controls from the tab order
 
 In addition to setting the tab order of controls, it may be necessary to exclude controls from the tab order. One way of achieving this is by setting the [`IsEnabled`](xref:Xamarin.Forms.VisualElement) property of controls to `false`, because disabled controls are excluded from the tab order.
 
-However, it may be necessary to exclude controls from the tab order even when they aren't disabled. This can be achieved with the `VisualElement.IsTapStop` property, which indicates whether a [`VisualElement`](xref:Xamarin.Forms.VisualElement) is included in tab navigation. Its default value is `true`, and when its value is `false` the control is ignored by the tab-navigation infrastructure, irrespective if a `TabIndex` is set.
+However, it may be necessary to exclude controls from the tab order even when they aren't disabled. This can be achieved with the `VisualElement.IsTabStop` property, which indicates whether a [`VisualElement`](xref:Xamarin.Forms.VisualElement) is included in tab navigation. Its default value is `true`, and when its value is `false` the control is ignored by the tab-navigation infrastructure, irrespective if a `TabIndex` is set.
 
 ## Supported controls
 
-The `TabIndex` and `IsTapStop` properties are supported on the following controls, which accept keyboard input on one or more platforms:
+The `TabIndex` and `IsTabStop` properties are supported on the following controls, which accept keyboard input on one or more platforms:
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
@@ -138,4 +142,4 @@ The `TabIndex` and `IsTapStop` properties are supported on the following control
 
 ## Related Links
 
-- [Accessibility (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -1,5 +1,5 @@
 ---
-title: "Authenticating a RESTful Web Service"
+title: "Authenticate a RESTful Web Service"
 description: "Basic authentication provides access to resources to only those clients that have the correct credentials. This article explains how to use basic authentication to protect access to RESTful web service resources."
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -7,9 +7,10 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Authenticating a RESTful Web Service
+# Authenticate a RESTful Web Service
 
 _HTTP supports the use of several authentication mechanisms to control access to resources. Basic authentication provides access to resources to only those clients that have the correct credentials. This article demonstrates how to use basic authentication to protect access to RESTful web service resources._
 
@@ -23,14 +24,14 @@ Basic authentication is the simplest authentication mechanism supported by HTTP,
 
 - If a web service receives a request for a protected resource, it rejects the request with an HTTP status code 401 (access denied) and sets the WWW-Authenticate response header, as shown in the following diagram:
 
-![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
+![Basic Authentication Failing](rest-images/basic-authentication-fail.png)
 
 - If a web service receives a request for a protected resource, with the `Authorization` header correctly set, the web service responds with an HTTP status code 200, which indicates that the request succeeded and that the requested information is in the response. This scenario is shown in the following diagram:
 
-![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
+![Basic Authentication Succeeding](rest-images/basic-authentication-success.png)
 
 > [!NOTE]
-> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the <code>Authorization</code> header can easily be decoded if the HTTP traffic is captured by an attacker.
+> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the `Authorization` header can easily be decoded if the HTTP traffic is captured by an attacker.
 
 ## Specifying Basic Authentication in a Web Request
 
@@ -67,19 +68,19 @@ public class RestService : IRestService
 
 Then when a request is made to a web service operation the request is signed with the `Authorization` header, indicating whether or not the user has permission to invoke the operation.
 
-> [!NOTE]
-> While this code stores credentials as constants, they should not be stored in an insecure format in a published application. The [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet provides functionality for securely storing credentials. For more information see [Storing and retrieving account information on devices](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> [!IMPORTANT]
+> While this code stores credentials as constants, they should not be stored in an insecure format in a published application.
 
 ## Processing the Authorization Header Server Side
 
 The REST service should decorate each action with the `[BasicAuthentication]` attribute. This attribute is used to parse the `Authorization` header and determine if the base64 encoded credentials are valid by comparing them against values stored in *Web.config*. While this approach is suitable for a sample service, it requires extending for a public-facing web service.
 
-In the basic authentication module used by IIS, users are authenticated against their Windows credentials. Therefore, users must have accounts on the server's domain. However, the Basic authentication model can be configured to allow custom authentication, where user accounts are authenticated against an external source, such as a database. For more information see [Basic Authentication in ASP.NET Web API](http://www.asp.net/web-api/overview/security/basic-authentication) on the ASP.NET website.
+In the basic authentication module used by IIS, users are authenticated against their Windows credentials. Therefore, users must have accounts on the server's domain. However, the Basic authentication model can be configured to allow custom authentication, where user accounts are authenticated against an external source, such as a database. For more information see [Basic Authentication in ASP.NET Web API](https://www.asp.net/web-api/overview/security/basic-authentication) on the ASP.NET website.
 
 > [!NOTE]
 > Basic authentication was not designed to manage logging out. Therefore, the standard basic authentication approach for logging out is to end the session.
 
 ## Related Links
 
-- [Consuming a RESTful web service](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Consume a RESTful web service](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

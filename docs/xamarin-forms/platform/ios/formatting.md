@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Adding iOS-specific Formatting
@@ -17,12 +18,10 @@ and set platform-specific styles and colors for each platform.
 
 Other options to control the way your Xamarin.Forms iOS app's appearance include:
 
-* Configuring display options in [**Info.plist**](#info-plist)
-* Setting control styles via the [`UIAppearance` API](#uiappearance)
+- Configuring display options in [**Info.plist**](#customizing-infoplist)
+- Setting control styles via the [`UIAppearance` API](#uiappearance-api)
 
 These alternatives are discussed below.
-
-<a name="info-plist"/>
 
 ## Customizing Info.plist
 
@@ -30,7 +29,7 @@ The **Info.plist** file lets you configure some aspects of an iOS
 application's renderering, such as how (and whether) the status bar is
 shown.
 
-For example, the [Todo sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/) uses the following
+For example, the [Todo sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) uses the following
 code to set the navigation bar color and text color on all platforms:
 
 ```csharp
@@ -43,13 +42,13 @@ The result is shown in the screen snippet below. Notice that the status bar
 items are black (this cannot be set within Xamarin.Forms because it is
 a platform-specific feature).
 
-![](theme-images/status-default-sml.png "iOS Theming")
+![iOS Theming](theme-images/status-default-sml.png)
 
 Ideally the status bar would also be white - something we can accomplish
 directly in the iOS project. Add the following entries to the **Info.plist** to
 force the status bar to be white:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![iOS Info.plist Entries](theme-images/info-plist.png)
 
 or edit the corresponding **Info.plist** file directly to include:
 
@@ -64,9 +63,7 @@ Now when the app is run, the navigation bar is green and its text is white
 (due to Xamarin.Forms formatting) *and* the status bar text is also white
 thanks to iOS-specific configuration:
 
-![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
+![iOS Theming](theme-images/status-white-sml.png)
 
 ## UIAppearance API
 
@@ -100,7 +97,7 @@ By default, the selected tab bar icon in a
 [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 would be blue:
 
-![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
+![Default iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-default.png)
 
 To change this behavior, set the `UITabBar.Appearance` property:
 
@@ -110,7 +107,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 This causes the selected tab to be green:
 
-![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
+![Green iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-custom.png)
 
 Using this API lets you customize the appearance of the Xamarin.Forms
 `TabbedPage` on iOS with very little code. Refer to the
@@ -127,16 +124,14 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 These two screen captures show the default `UISwitch` control on the left
 and the customized version (setting `Appearance`) on the right in the
-[Todo sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/):
+[Todo sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![](theme-images/switch-default.png "Default UISwitch Color") ![](theme-images/switch-custom.png "Customized UISwitch Color")
+![Default UISwitch Color](theme-images/switch-default.png) ![Customized UISwitch Color](theme-images/switch-custom.png)
 
 ### Other controls
 
 Many iOS user interface controls can have their default colors and other attributes set using
 the [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
-
-
 
 ## Related Links
 

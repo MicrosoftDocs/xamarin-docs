@@ -7,11 +7,12 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp noise and composing
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Simple vector graphics tend to look unnatural. The straight lines, smooth curves, and solid colors don't resemble the imperfections of real-world objects. While working on the computer-generated graphics for the 1982 movie _Tron_, computer scientist Ken Perlin began developing algorithms that used random processes to give these images more realistic textures. In 1997, Ken Perlin won an Academy Award for Technical Achievement. His work has come to be known as Perlin noise, and it is supported in SkiaSharp. Here's an example:
 
@@ -19,7 +20,7 @@ Simple vector graphics tend to look unnatural. The straight lines, smooth curves
 
 As you can see, each pixel is not a random color value. The continuity from pixel to pixel results in random shapes.
 
-The support of Perlin noise in Skia is based on a W3C specification for CSS and SVG. Section 8.20 of [**Filter Effects Module Level 1**](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) includes the underlying Perlin noise algorithms in C code.
+The support of Perlin noise in Skia is based on a W3C specification for CSS and SVG. Section 8.20 of [**Filter Effects Module Level 1**](https://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) includes the underlying Perlin noise algorithms in C code.
 
 ## Exploring Perlin noise
 
@@ -39,7 +40,7 @@ The `numOctaves` value is an integer of 1 or higher. It relates to an iteration 
 
 The `seed` parameter is the starting point for the random-number generator. Although specified as a floating-point value, the fraction is truncated before it's used, and 0 is the same as 1.
 
-The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
+The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -394,4 +395,4 @@ The final parameter is a member of the `SKBlendMode` enumeration, an enumeration
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

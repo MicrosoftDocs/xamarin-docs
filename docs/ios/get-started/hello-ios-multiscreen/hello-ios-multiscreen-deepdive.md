@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 # Hello, iOS Multiscreen – deep dive
@@ -23,7 +23,7 @@ In the [Hello, iOS](~/ios/get-started/hello-ios/index.md) tutorial, we learned t
 Phoneword walkthrough, we added a second screen to our application and passed some data – a list of phone numbers –
 between the two screens, as illustrated by the diagram below:
 
- [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
+ [![This diagram illustrates passing data between two screens](hello-ios-multiscreen-deepdive-images/08.png)](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 In our example, data was collected in the first screen, passed from the first view controller to the second, and displayed by
 the second screen. This separation of screens, view controllers, and data follows the *Model, View, Controller (MVC)* pattern. In
@@ -36,7 +36,7 @@ architecture for applications with a *Graphical User Interface (GUI)*. It assign
 the *Model* (data or application logic), the *View* (user interface), and the *Controller* (code behind). The diagram
 below illustrates the relationships between the three pieces of the MVC pattern and the user:
 
- [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
+ [![This diagram illustrates the relationships between the three pieces of the MVC pattern and the user](hello-ios-multiscreen-deepdive-images/00.png)](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 The MVC pattern is useful because it provides logical separation between different parts of a GUI application and makes it easier for us to
 reuse code and views. Let’s jump in and take a look at each of the three roles in more detail.
@@ -87,42 +87,40 @@ toolbar that includes a title, back button, and other optional features.
 The navigation controller is common in iOS applications and provides navigation for staple iOS applications like the **Settings** app,
 as illustrated by the screenshot below:
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "The navigation controller provides navigation for iOS applications like the Settings app shown here")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![The navigation controller provides navigation for iOS applications like the Settings app shown here](hello-ios-multiscreen-deepdive-images/01.png)](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 The navigation controller serves three primary functions:
 
--  **Provides Hooks for Forward Navigation** – The navigation controller uses a hierarchal navigation metaphor where Content View Hierarchies are  *pushed* onto a  *navigation stack* . You can think of a navigation stack as a stack of playing cards, in which only the top most card is visible, as illustrated by the diagram below:  
+- **Provides Hooks for Forward Navigation** – The navigation controller uses a hierarchal navigation metaphor where Content View Hierarchies are  *pushed* onto a  *navigation stack* . You can think of a navigation stack as a stack of playing cards, in which only the top most card is visible, as illustrated by the diagram below:  
 
-	[![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
+    [![This diagram illustrates navigation as a stack of cards](hello-ios-multiscreen-deepdive-images/02.png)](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
+- **Optionally Provides a Back Button** - When we push a new item onto the navigation stack, the title bar can automatically display a  *back button* that allows the user to navigate backwards. Pressing the back button  *pops* the current view controller off the navigation stack, and loads the previous Content View hierarchy into the Window:  
 
--  **Optionally Provides a Back Button** - When we push a new item onto the navigation stack, the title bar can automatically display a  *back button* that allows the user to navigate backwards. Pressing the back button  *pops* the current view controller off the navigation stack, and loads the previous Content View hierarchy into the Window:  
+    [![This diagram illustrates popping a card off the stack](hello-ios-multiscreen-deepdive-images/03.png)](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
-	[![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+- **Provides a Title Bar** – The top portion of the  navigation controller is called the  *Title Bar* . It’s responsible for displaying the view controller title, as illustrated by the diagram below:  
 
-
--  **Provides a Title Bar** – The top portion of the  navigation controller is called the  *Title Bar* . It’s responsible for displaying the view controller title, as illustrated by the diagram below:  
-
-	[![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the view controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
+    [![The Title Bar is responsible for displaying the view controller title](hello-ios-multiscreen-deepdive-images/04.png)](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### Root view controller
 
 A navigation controller doesn’t manage a Content View hierarchy, so it has nothing to display on its own.
 Instead, a navigation controller is paired with a *Root view controller*:
 
- [![](hello-ios-multiscreen-deepdive-images/05.png "A navigation controller is paired with a Root view controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
+ [![A navigation controller is paired with a Root view controller](hello-ios-multiscreen-deepdive-images/05.png)](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 The Root view controller represents the first view controller in the navigation controller’s stack, and the Root view controller’s
 Content View hierarchy is the first Content View hierarchy to be loaded into the Window. If we want to put our entire application on the
 navigation controller’s stack, we can move the Sourceless Segue to the navigation controller and set our first screen’s view controller as the
 Root view controller, like we did in the Phoneword app:
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens view controller as the Root view controller")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![The Sourceless Segue sets the first screens view controller as the Root view controller](hello-ios-multiscreen-deepdive-images/06.png)](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### Additional navigation options
 
 The navigation controller is a common way of handling navigation in
-iOS, but it is not the only option. For example, a 
+iOS, but it is not the only option. For example, a
 [Tab Bar Controller](~/ios/user-interface/controls/creating-tabbed-applications.md)
 can split an application into different functional areas and a
 [Split view controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)
@@ -140,7 +138,7 @@ then programmatically. Let’s explore both these options in more detail.
 When we add a Segue with a **Show** action to the Storyboard, we instruct iOS to push the second view controller onto the
 navigation controller’s stack:
 
- [![](hello-ios-multiscreen-deepdive-images/09.png "Setting the segue type from a dropdown list")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
+ [![Setting the segue type from a dropdown list](hello-ios-multiscreen-deepdive-images/09.png)](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 Adding a Segue to the Storyboard is enough to create a simple transition between screens. If we want to pass data between view controllers,
 we have to override the `PrepareForSegue` method and handle the data ourselves:
@@ -228,9 +226,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 The Phoneword application introduced several concepts not covered in this guide. These concepts include:
 
--  **Automatic Creation of view controllers** – When we enter a class name for the view controller in the  **Properties Pad** , the iOS designer checks if that class exists and then generates the view controller backing class for us. For more information on this and other iOS designer features, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
--  **Table view controller** – The  `CallHistoryController` is a Table view controller. A Table view controller contains a Table View, the most common layout and data display tool in iOS. Tables are beyond the scope of this guide. For more information on Table view controllers, please refer to the  [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) guide.
--   **Storyboard ID** – Setting the Storyboard ID creates a view controller class in Objective-C containing the code-behind for the view controller in the Storyboard. We use the Storyboard ID to find the Objective-C class and instantiate the view controller in the Storyboard. For more information on Storyboard IDs, please refer to the  [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide.
+- **Automatic Creation of view controllers** – When we enter a class name for the view controller in the  **Properties Pad** , the iOS designer checks if that class exists and then generates the view controller backing class for us. For more information on this and other iOS designer features, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
+- **Table view controller** – The  `CallHistoryController` is a Table view controller. A Table view controller contains a Table View, the most common layout and data display tool in iOS. Tables are beyond the scope of this guide. For more information on Table view controllers, please refer to the  [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) guide.
+- **Storyboard ID** – Setting the Storyboard ID creates a view controller class in Objective-C containing the code-behind for the view controller in the Storyboard. We use the Storyboard ID to find the Objective-C class and instantiate the view controller in the Storyboard. For more information on Storyboard IDs, please refer to the  [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide.
 
 ## Summary
 
@@ -243,6 +241,6 @@ Next, let’s learn to build cross-platform applications with Xamarin with the [
 
 ## Related links
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

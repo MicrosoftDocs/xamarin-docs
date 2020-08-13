@@ -4,8 +4,8 @@ description: "This document describes unified storyboards in Xamarin.iOS. Unifie
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -15,7 +15,7 @@ iOS 8 includes a new, simpler-to-use mechanism for creating the user interface �
 
 As the developer no longer needs to create a separate and specific storyboard for iPhone and iPad devices, they have the flexibility to design applications with a common interface and then customize that interface for different size classes. In this way, an application can be adapted to the strengths of each form factor and each user interface can be tuned to provide the best experience.
 
-<a name="size-classes" />
+<a name="size-classes"></a>
 
 ## Size Classes
 
@@ -23,13 +23,12 @@ Prior to iOS 8, the developer used `UIInterfaceOrientation` and `UIInterfaceIdio
 
 Devices are defined by Size Classes, in both vertical and horizontal axes, and there are two types of size classes in iOS 8:
 
--  **Regular** – This is for either a large screen size (such as an iPad) or a gadget that gives the impression of a large size (such as a `UIScrollView`
--  **Compact** – This is for smaller devices (such as an iPhone). This size takes into account the orientation of the device.
-
+- **Regular** – This is for either a large screen size (such as an iPad) or a gadget that gives the impression of a large size (such as a `UIScrollView`
+- **Compact** – This is for smaller devices (such as an iPhone). This size takes into account the orientation of the device.
 
 If the two concepts are used together, the result is a 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations, as seen in the following diagram:
 
- [![](unified-storyboards-images/sizeclassgrid.png "A 2 x 2 grid that defines the different possible sizes that can be used in Regular and Compact orientations")](unified-storyboards-images/sizeclassgrid.png#lightbox)
+ [![A 2 x 2 grid that defines the different possible sizes that can be used in Regular and Compact orientations](unified-storyboards-images/sizeclassgrid.png)](unified-storyboards-images/sizeclassgrid.png#lightbox)
 
 The developer can create a View Controller that uses any of the four possibilities that would result in different layouts (as seen in the graphics above).
 
@@ -37,23 +36,22 @@ The developer can create a View Controller that uses any of the four possibiliti
 
 The iPad, due to the size, has a **regular** class size for both orientations.
 
- [![](unified-storyboards-images/image1.png "iPad Size Classes")](unified-storyboards-images/image1.png#lightbox)
-
+ [![iPad Size Classes](unified-storyboards-images/image1.png)](unified-storyboards-images/image1.png#lightbox)
 
 ### iPhone Size Classes
 
 The iPhone has different size classes based on the orientation of the device:
 
- [![](unified-storyboards-images/iphonesizeclasses.png "iPhone Size Classes")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
+ [![iPhone Size Classes](unified-storyboards-images/iphonesizeclasses.png)](unified-storyboards-images/iphonesizeclasses.png#lightbox)
 
--  When the device is in portrait mode, the screen has a **compact** class horizontally and **regular** vertically
--  When the device is in landscape mode, the screen classes are reversed from portrait mode.
+- When the device is in portrait mode, the screen has a **compact** class horizontally and **regular** vertically
+- When the device is in landscape mode, the screen classes are reversed from portrait mode.
 
 ### iPhone 6 Plus Size Classes
 
 The sizes are the same as the earlier iPhones when in portrait orientation, but different in landscape:
 
-[![](unified-storyboards-images/iphone6sizeclasses.png "iPhone 6 Plus Size Classes")](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
+[![iPhone 6 Plus Size Classes](unified-storyboards-images/iphone6sizeclasses.png)](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
 
 Because the iPhone 6 Plus has a large enough screen, it is able to have a Regular Width Size Class in the Landscape mode.
 
@@ -66,9 +64,10 @@ The image loading behavior in iOS also recognizes an `@3x` suffix on image files
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 Or if they assign the image to a UI element using the iOS Designer as `MonkeyIcon.png`, the `MonkeyIcon@3x.png` will be used, again automatically, on the iPhone 6 Plus.
 
-<a name="dynamic-launch-screens" />
+<a name="dynamic-launch-screens"></a>
 
 ### Dynamic Launch Screens
 
@@ -86,18 +85,17 @@ All of the above states are wrapped up in a container that Apple refers to as a 
 
 Trait Environments are a new interface in iOS 8 and are able to return  a Trait Collection for the following objects:
 
--  Screens ( `UIScreens` ).
--  Windows ( `UIWindows` ).
--  View Controllers ( `UIViewController` ).
--  Views ( `UIView` ).
--  Presentation Controller ( `UIPresentationController` ).
-
+- Screens ( `UIScreens` ).
+- Windows ( `UIWindows` ).
+- View Controllers ( `UIViewController` ).
+- Views ( `UIView` ).
+- Presentation Controller ( `UIPresentationController` ).
 
 The developer uses the Trait Collection returned by a Trait Environment to determine how a user interface should be laid out.
 
 All of the Trait Environments make a hierarchy as seen in the following diagram:
 
- [![](unified-storyboards-images/viewhierarchy.png "The Trait Environments hierarchy diagram")](unified-storyboards-images/viewhierarchy.png#lightbox)
+ [![The Trait Environments hierarchy diagram](unified-storyboards-images/viewhierarchy.png)](unified-storyboards-images/viewhierarchy.png#lightbox)
 
 The Trait Collection that each of the above Trait Environments have will flow, by default, from the parent to the child environment.
 
@@ -185,17 +183,17 @@ When an iPhone is in Landscape, the Split View Controller will present its Views
 
 Trait Environments cascade from the parent container down to the child containers, as in the following graphic showing a Split View Controller on an iPad in the landscape orientation:
 
- [![](unified-storyboards-images/cascadingclasses01.png "A Split View Controller on an iPad in the landscape orientation")](unified-storyboards-images/cascadingclasses01.png#lightbox)
+ [![A Split View Controller on an iPad in the landscape orientation](unified-storyboards-images/cascadingclasses01.png)](unified-storyboards-images/cascadingclasses01.png#lightbox)
 
 Since the iPad has a Regular Size Class in both the horizontal and vertical orientations, the Split View will display both the master and detail views.
 
 On an iPhone, where the Size Class is compact in both orientations, the Split View Controller only displays the detail view, as seen below:
 
- [![](unified-storyboards-images/cascadingclasses02.png "The Split View Controller only displays the detail view")](unified-storyboards-images/cascadingclasses02.png#lightbox)
+ [![The Split View Controller only displays the detail view](unified-storyboards-images/cascadingclasses02.png)](unified-storyboards-images/cascadingclasses02.png#lightbox)
 
 In an application where the developer wants to display both the master and detail view on an iPhone in the landscape orientation, the developer must insert a parent container for the Split View Controller and override the Trait Collection. As seen in the graphic below:
 
- [![](unified-storyboards-images/cascadingclasses03.png "The developer must insert a parent container for the Split View Controller and override the Trait Collection")](unified-storyboards-images/cascadingclasses03.png#lightbox)
+ [![The developer must insert a parent container for the Split View Controller and override the Trait Collection](unified-storyboards-images/cascadingclasses03.png)](unified-storyboards-images/cascadingclasses03.png#lightbox)
 
 A `UIView` is set as the parent of the Split View Controller and the `SetOverrideTraitCollection` method is called on the view passing in a new Trait Collection and targeting the Split View Controller. The new Trait Collection overrides the `HorizontalSizeClass`, setting it to `Regular`, so that the Split View Controller will display both the master and detail views on an iPhone in the landscape orientation.
 
@@ -205,7 +203,7 @@ Note that the `VerticalSizeClass` was set to `unspecified`, which allows the new
 
 This section will take a look, in detail, at how the Trait Collections transition when the Trait Environment changes. For example, when the device is rotated from portrait to landscape.
 
- [![](unified-storyboards-images/traittransitions01.png "The portrait to landscape Trait Changes overview")](unified-storyboards-images/traittransitions01.png#lightbox)
+ [![The portrait to landscape Trait Changes overview](unified-storyboards-images/traittransitions01.png)](unified-storyboards-images/traittransitions01.png#lightbox)
 
 First, iOS 8 does some setup to prepare for the transition to take place. Next, the system animates the transition state. Finally, iOS 8 cleans-up any temporary states required during the transition.
 
@@ -225,17 +223,15 @@ The `TraitCollectionDidChange` is great for working with the `UIView` class, whe
 
 Now let's take a closer look at what happens when a Split View Controller collapses from a two column to a one column view. As part of this change, there are two processes that need to occur:
 
--  By default, the Split View Controller will use the primary view controller as the view after the collapse occurs. The developer can override this behavior by overriding the  `GetPrimaryViewControllerForCollapsingSplitViewController` method of the  `UISplitViewControllerDelegate` and providing any View Controller that they want to display in the collapsed state.
--  The Secondary View Controller has to get merged into the Primary View Controller. Generally the developer will not need to take any action for this step; the Split View Controller includes automatic handling of this phase based on the hardware device. However, there may be some special cases where the developer will want to interact with this change. Calling the  `CollapseSecondViewController` method of the  `UISplitViewControllerDelegate` allows the master view controller to be displayed when the collapse occurs, instead of the details view.
-
+- By default, the Split View Controller will use the primary view controller as the view after the collapse occurs. The developer can override this behavior by overriding the  `GetPrimaryViewControllerForCollapsingSplitViewController` method of the  `UISplitViewControllerDelegate` and providing any View Controller that they want to display in the collapsed state.
+- The Secondary View Controller has to get merged into the Primary View Controller. Generally the developer will not need to take any action for this step; the Split View Controller includes automatic handling of this phase based on the hardware device. However, there may be some special cases where the developer will want to interact with this change. Calling the  `CollapseSecondViewController` method of the  `UISplitViewControllerDelegate` allows the master view controller to be displayed when the collapse occurs, instead of the details view.
 
 ### Expanding the Split View Controller
 
 Now let's take a closer look at what happens when a Split View Controller is expanded from a collapsed state. Once again, there are two stages that need to occur:
 
--  First, define the new Primary View Controller. By default, the Split View Controller will automatically use the Primary View Controller from the collapsed view. Again, the developer can override this behavior using the  `GetPrimaryViewControllerForExpandingSplitViewController` method of the  `UISplitViewControllerDelegate` .
--  Once the Primary View Controller has been chosen, the Secondary View Controller must be recreated. Again, the Split View Controller includes automatic handling of this phase based on the hardware device. The developer can override this behavior by calling the  `SeparateSecondaryViewController` method of the  `UISplitViewControllerDelegate` .
-
+- First, define the new Primary View Controller. By default, the Split View Controller will automatically use the Primary View Controller from the collapsed view. Again, the developer can override this behavior using the  `GetPrimaryViewControllerForExpandingSplitViewController` method of the  `UISplitViewControllerDelegate` .
+- Once the Primary View Controller has been chosen, the Secondary View Controller must be recreated. Again, the Split View Controller includes automatic handling of this phase based on the hardware device. The developer can override this behavior by calling the  `SeparateSecondaryViewController` method of the  `UISplitViewControllerDelegate` .
 
 In a Split View Controller, the Primary View Controller plays a part in both the expanding and collapsing of the views by implementing the `CollapseSecondViewController` and `SeparateSecondaryViewController` methods of the `UISplitViewControllerDelegate`. `UINavigationController` implements these methods to automatically push and pop the Secondary View controller.
 
@@ -245,9 +241,8 @@ Another change that Apple has made to iOS 8 is in the way that the developer sho
 
 This presented a very tight coupling between the Navigation Controller and the environment that it was running in. In iOS 8, Apple has decoupled this by providing two new methods:
 
--  `ShowViewController` – Adapts to display the new view controller based on its environment. For example, in a  `UINavigationController` it simply pushes the new view onto the stack. In a Split View Controller, the new View Controller will be presented on the left side as the new Primary View Controller. If no container view controller is present, the new view will be displayed as a Modal View Controller.
--  `ShowDetailViewController` – Works in a similar fashion to  `ShowViewController`, but is implemented on a Split View Controller to replace the details view with the new View Controller being passed in. If the Split View Controller is collapsed (as might be seen in an iPhone Application), the call will be redirected to the  `ShowViewController` method, and the new view will be shown as the Primary View Controller. Again, if no container view controller is present, the new view will be displayed as a Modal View Controller.
-
+- `ShowViewController` – Adapts to display the new view controller based on its environment. For example, in a  `UINavigationController` it simply pushes the new view onto the stack. In a Split View Controller, the new View Controller will be presented on the left side as the new Primary View Controller. If no container view controller is present, the new view will be displayed as a Modal View Controller.
+- `ShowDetailViewController` – Works in a similar fashion to  `ShowViewController`, but is implemented on a Split View Controller to replace the details view with the new View Controller being passed in. If the Split View Controller is collapsed (as might be seen in an iPhone Application), the call will be redirected to the  `ShowViewController` method, and the new view will be shown as the Primary View Controller. Again, if no container view controller is present, the new view will be displayed as a Modal View Controller.
 
 These methods work by starting at the Leaf View Controller and walk up the view hierarchy until they find the right container view controller to handle the display of the new view.
 
@@ -257,13 +252,12 @@ Developers can implement `ShowViewController` and `ShowDetailViewController` in 
 
 In this section we will take a look at how these methods are actually implemented in iOS 8. First let’s look at the new `GetTargetForAction` method:
 
- [![](unified-storyboards-images/gettargetforaction.png "The new GetTargetForAction method")](unified-storyboards-images/gettargetforaction.png#lightbox)
+ [![The new GetTargetForAction method](unified-storyboards-images/gettargetforaction.png)](unified-storyboards-images/gettargetforaction.png#lightbox)
 
 This method walks the hierarchy chain until the correct container view controller is found. For example:
 
-1.  If a  `ShowViewController` method is called, the first View Controller in the chain that implements this method is the Navigation Controller, so it is used as the parent of the new view.
-1.  If a  `ShowDetailViewController` method was called instead, the Split View Controller is the first View Controller to implement it, so it is used as the parent.
-
+1. If a  `ShowViewController` method is called, the first View Controller in the chain that implements this method is the Navigation Controller, so it is used as the parent of the new view.
+1. If a  `ShowDetailViewController` method was called instead, the Split View Controller is the first View Controller to implement it, so it is used as the parent.
 
 The `GetTargetForAction` method works by locating a View Controller that implements a given Action and then asking that View Controller if it wants to receive that action. Since this method is public, developers can create their own custom methods that function just like the built in `ShowViewController` and `ShowDetailViewController` methods.
 
@@ -279,7 +273,7 @@ When the developer presents a View Controller using the `PresentViewController` 
 
 With a custom presentation style, developers have the option to use a custom Presentation Controller. This custom controller can be used to modify the appearance and behavior of the View it is allied to.
 
-<a name="size-classes"/>
+<a name="size-classes"></a>
 
 ## Working with Size Classes
 
@@ -293,7 +287,7 @@ Now let’s take a closer look at how the Adaptive Photos project is implementin
 
 When running the Adaptive Photos application on an iPhone, when the user rotates the device from portrait to landscape, the Split View Controller will display both the master and details view:
 
- [![](unified-storyboards-images/rotation.png "The Split View Controller will display both the master and details view as seen here")](unified-storyboards-images/rotation.png#lightbox)
+ [![The Split View Controller will display both the master and details view as seen here](unified-storyboards-images/rotation.png)](unified-storyboards-images/rotation.png#lightbox)
 
 This is accomplished by overriding the `UpdateConstraintsForTraitCollection` method of the View Controller and adjusting the constraints based on the value of the `VerticalSizeClass`. For example:
 
@@ -553,13 +547,13 @@ New to iOS 8, Unified Storyboards allow the developer to create one, unified sto
 
 The key benefits of Unified Storyboards are:
 
--  Use the same storyboard file for iPhone and iPad.
--  Deploy backwards to iOS 6 and iOS 7.
--  Preview the layout for different devices, orientations and OS versions all from within the Xamarin iOS Designer.
+- Use the same storyboard file for iPhone and iPad.
+- Deploy backwards to iOS 6 and iOS 7.
+- Preview the layout for different devices, orientations and OS versions all from within the Xamarin iOS Designer.
 
 This feature is fully supported in Visual Studio for Mac
 
-<a name="enabling-size-classes" />
+<a name="enabling-size-classes"></a>
 
 ### Enabling Size Classes
 
@@ -567,11 +561,11 @@ By default, any new Xamarin.iOS project will us size classes. To use Size Classe
 
 To do this open the Storyboard to be converted in the iOS Designer and check the **Use Size Classes** check box:
 
- [![](unified-storyboards-images/sizeclass01.png "The Use Size Classes check box")](unified-storyboards-images/sizeclass01.png#lightbox)
+ [![The Use Size Classes check box](unified-storyboards-images/sizeclass01.png)](unified-storyboards-images/sizeclass01.png#lightbox)
 
 The iOS Designer will confirm that the developer wants to convert the format of the storyboard to use Size Classes:
 
- [![](unified-storyboards-images/sizeclass02.png "The use Size Classes alert")](unified-storyboards-images/sizeclass02.png#lightbox)
+ [![The use Size Classes alert](unified-storyboards-images/sizeclass02.png)](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
 > Auto Layout must also be checked for Size Classes to work correctly.
@@ -580,41 +574,41 @@ The iOS Designer will confirm that the developer wants to convert the format of 
 
 Once the storyboard has been converted to use Size Classes, it will be redisplayed in the Design Surface and the **View As** device will be Generic:
 
- [![](unified-storyboards-images/sizeclass03.png "View as a Generic device type")](unified-storyboards-images/sizeclass03.png#lightbox)
+ [![View as a Generic device type](unified-storyboards-images/sizeclass03.png)](unified-storyboards-images/sizeclass03.png#lightbox)
 
 When the Generic device type is selected, all View Controllers will be resized to a 600 x 600 Square. This square represents sizes of any width and any height. When the iOS Designer is in this mode, any edits will apply to all of the Size Classes.
 
 The developer also has the option of viewing the design surface as an iPhone:
 
- [![](unified-storyboards-images/sizeclass04.png "Viewing the design surface as an iPhone")](unified-storyboards-images/sizeclass04.png#lightbox)
+ [![Viewing the design surface as an iPhone](unified-storyboards-images/sizeclass04.png)](unified-storyboards-images/sizeclass04.png#lightbox)
 
 Or viewing it as an iPad:
 
- [![](unified-storyboards-images/sizeclass05.png "Viewing the design surface as an iPad")](unified-storyboards-images/sizeclass05.png#lightbox)
+ [![Viewing the design surface as an iPad](unified-storyboards-images/sizeclass05.png)](unified-storyboards-images/sizeclass05.png#lightbox)
 
 ### Select a Size Class
 
 The Size Class Selector button is at the upper left hand corner of the Design Surface (near the View As dropdown). It allows the developer to select which Size Classes are currently being edited:
 
- [![](unified-storyboards-images/sizeclass06.png "Select a Size Class")](unified-storyboards-images/sizeclass06.png#lightbox)
+ [![Select a Size Class](unified-storyboards-images/sizeclass06.png)](unified-storyboards-images/sizeclass06.png#lightbox)
 
 The selector presents the Size Class selection as a 3 x 3 grid. Each of the squares in the grid represents a combination of a Width Class and a Height Class. The center square selects the Any Width/Any Height Size class (which is the default view for a Unified Storyboard). When this square is selected, the developer is editing the default layout, which is inherited by all the other configurations.
 
 The square in the upper left hand corner of the grid represents the Compact Width/Compact Height Size Class:
 
- [![](unified-storyboards-images/sizeclass07.png "The Compact Width/Compact Height Size Class")](unified-storyboards-images/sizeclass07.png#lightbox)
+ [![The Compact Width/Compact Height Size Class](unified-storyboards-images/sizeclass07.png)](unified-storyboards-images/sizeclass07.png#lightbox)
 
 This mode corresponds to an iPhone in the landscape orientation. The square in the lower right hand corner of the grid represents the Regular Width/Regular Height Size Class, which represents an iPad:
 
- [![](unified-storyboards-images/sizeclass08.png "The Regular Width/Regular Height Size Class")](unified-storyboards-images/sizeclass08.png#lightbox)
+ [![The Regular Width/Regular Height Size Class](unified-storyboards-images/sizeclass08.png)](unified-storyboards-images/sizeclass08.png#lightbox)
 
 To edit the layout for an iPhone in the portrait orientation, select the square in the lower left hand corner. This represents the Compact Width/Regular Height Size Class:
 
- [![](unified-storyboards-images/sizeclass09.png "The Compact Width/Regular Height Size Class")](unified-storyboards-images/sizeclass09.png#lightbox)
+ [![The Compact Width/Regular Height Size Class](unified-storyboards-images/sizeclass09.png)](unified-storyboards-images/sizeclass09.png#lightbox)
 
 Click in the square to select it and the Design Surface will change the size of the View Controllers to match the new selection:
 
- [![](unified-storyboards-images/sizeclass10.png "The Design Surface will change the size of the View Controllers to match the new selection as shown")](unified-storyboards-images/sizeclass10.png#lightbox)
+ [![The Design Surface will change the size of the View Controllers to match the new selection as shown](unified-storyboards-images/sizeclass10.png)](unified-storyboards-images/sizeclass10.png#lightbox)
 
 See the Size Class section of this article for more information on Size Classes and how they affect layout for iPhones and iPads.
 
@@ -629,49 +623,49 @@ Take the example of an iOS 8 Application that uses a Unified Storyboard with a S
 
 To achieve this effect, in the iOS Designer control-click on the button and drag a line to the View Controller to be displayed. When the mouse button is released, select `Show Detail` from the Segue Type Popup menu:
 
- [![](unified-storyboards-images/segue01.png "Select Show Detail from the Segue Type Popup menu")](unified-storyboards-images/segue01.png#lightbox)
+ [![Select Show Detail from the Segue Type Popup menu](unified-storyboards-images/segue01.png)](unified-storyboards-images/segue01.png#lightbox)
 
 The new segue will be created between the button and the View Controller. Now run the application in the iPhone Simulator and the Main Menu will be displayed:
 
- [![](unified-storyboards-images/segue02.png "The Main Menu")](unified-storyboards-images/segue02.png#lightbox)
+ [![The Main Menu](unified-storyboards-images/segue02.png)](unified-storyboards-images/segue02.png#lightbox)
 
 Click on the **Select Game** button and the item’s View Controller will be pushed onto the Navigation Stack:
 
- [![](unified-storyboards-images/segue03.png "The items View Controller will be pushed onto the Navigation Stack as shown")](unified-storyboards-images/segue03.png#lightbox)
+ [![The items View Controller will be pushed onto the Navigation Stack as shown](unified-storyboards-images/segue03.png)](unified-storyboards-images/segue03.png#lightbox)
 
 Stop the iPhone Simulator and run the Application in the iPad Simulator. Switch to the landscape orientation and the main menu is again displayed:
 
- [![](unified-storyboards-images/segue04.png "The main menu displayed")](unified-storyboards-images/segue04.png#lightbox)
+ [![The main menu displayed](unified-storyboards-images/segue04.png)](unified-storyboards-images/segue04.png#lightbox)
 
 Again, click on the **Select Game** button and the item’s View Controller is shown in the Details section of the Split View Controller:
 
- [![](unified-storyboards-images/segue05.png "The items View Controller shown in the Details section of the Split View Controller")](unified-storyboards-images/segue05.png#lightbox)
+ [![The items View Controller shown in the Details section of the Split View Controller](unified-storyboards-images/segue05.png)](unified-storyboards-images/segue05.png#lightbox)
 
 ### Excluding an Element from a Size Class
 
 There are times when a given element (such as a View, Control or a Constraint) is not required inside of a specific Size Class. To exclude an element from a Size Class, select the desired item to exclude in the **Design Surface**. Scroll to the bottom of the **Property Explorer** and click the **Gear** Dropdown menu. Select the combination of **Width** and **Height** to exclude the item from:
 
-[![](unified-storyboards-images/exclude-a.png "Select the combination of Width and Height")](unified-storyboards-images/exclude-a.png#lightbox)
+[![Select the combination of Width and Height](unified-storyboards-images/exclude-a.png)](unified-storyboards-images/exclude-a.png#lightbox)
 
 A new *Exclusion Case* will be added to the element in the bottom of the **Property Explorer**. Next, uncheck the **Installed** checkbox for the given Size Class:
 
-[![](unified-storyboards-images/exclude-b.png "Uncheck the Installed checkbox")](unified-storyboards-images/exclude-b.png#lightbox)
+[![Uncheck the Installed checkbox](unified-storyboards-images/exclude-b.png)](unified-storyboards-images/exclude-b.png#lightbox)
 
 Switch the Design Surface to the Width and Height that the item was excluded from, it has been removed from the given Size Class, but not the entire UI design:
 
- [![](unified-storyboards-images/exclude02.png "Switch the Design Surface to the Width and Height that the item was excluded from")](unified-storyboards-images/exclude02.png#lightbox)
+ [![Switch the Design Surface to the Width and Height that the item was excluded from](unified-storyboards-images/exclude02.png)](unified-storyboards-images/exclude02.png#lightbox)
 
 Switching back to the Any Width/Any Height size class and the element is still in place:
 
- [![](unified-storyboards-images/exclude03.png "Switching back to the Any Width/Any Height size class")](unified-storyboards-images/exclude03.png#lightbox)
+ [![Switching back to the Any Width/Any Height size class](unified-storyboards-images/exclude03.png)](unified-storyboards-images/exclude03.png#lightbox)
 
 When the application is run in the iPad Simulator, the element appears:
 
- [![](unified-storyboards-images/exclude04.png "The element shown when the running app in the iPad Simulator")](unified-storyboards-images/exclude04.png#lightbox)
+ [![The element shown when the running app in the iPad Simulator](unified-storyboards-images/exclude04.png)](unified-storyboards-images/exclude04.png#lightbox)
 
 And when the application is run on the iPhone Simulator, the element is missing:
 
- [![](unified-storyboards-images/exclude05.png "The element missing when the running app in the iPhone Simulator")](unified-storyboards-images/exclude05.png#lightbox)
+ [![The element missing when the running app in the iPhone Simulator](unified-storyboards-images/exclude05.png)](unified-storyboards-images/exclude05.png#lightbox)
 
 To remove an Exclusion Case from an element, simply select the element in the **Design Surface**, scroll to the bottom of the **Property Explorer** and click the **-** button beside the case to remove.
 
@@ -685,15 +679,14 @@ Factoring in the new iPhone 6 and iPhone 6 Plus devices (and the upcoming Apple 
 
 New to iOS 8, the developer can create a single, atomic `.xib` file in Xcode that uses Auto Layout and Size Classes to create a *Dynamic Launch Screen* that will work for every device, resolution and orientation. This not only reduces the amount of work required of the developer to create and maintain all the required image assets, but it greatly reduces the size of the application's installed bundle.
 
-
 Dynamic Launch Screens have the following limitations and considerations:
 
- - Use only `UIKit` classes.
- - Use a single root view that is a `UIView` or `UIViewController` object.
- - Don’t make any connections to the application's code (don’t add **Actions** or **Outlets**).
- - Don’t add `UIWebView` objects.
- - Don’t use any custom classes.
- - Don’t use runtime attributes.
+- Use only `UIKit` classes.
+- Use a single root view that is a `UIView` or `UIViewController` object.
+- Don’t make any connections to the application's code (don’t add **Actions** or **Outlets**).
+- Don’t add `UIWebView` objects.
+- Don’t use any custom classes.
+- Don’t use runtime attributes.
 
 With the above guidelines in mind, let's look at adding a Dynamic Launch Screen to an existing Xamarin iOS 8 project.
 
@@ -702,48 +695,48 @@ Do the following:
 1. Open **Visual Studio for Mac** and load the **Solution** to add the Dynamic Launch Screen to.
 2. In the **Solution Explorer**, right-click the `MainStoryboard.storyboard` file and select **Open With** > **Xcode Interface Builder**:
 
-    [![](unified-storyboards-images/dls01.png "Open With Xcode Interface Builder")](unified-storyboards-images/dls01.png#lightbox)
+    [![Open With Xcode Interface Builder](unified-storyboards-images/dls01.png)](unified-storyboards-images/dls01.png#lightbox)
 3. In Xcode, select **File** > **New** > **File...**:
 
-    [![](unified-storyboards-images/dls02.png "Select File / New")](unified-storyboards-images/dls02.png#lightbox)
+    [![Select File / New](unified-storyboards-images/dls02.png)](unified-storyboards-images/dls02.png#lightbox)
 4. Select **iOS** > **User Interface** > **Launch Screen** and click the **Next** button:
 
-    [![](unified-storyboards-images/dls03.png "Select iOS / User Interface / Launch Screen")](unified-storyboards-images/dls03.png#lightbox)
+    [![Select iOS / User Interface / Launch Screen](unified-storyboards-images/dls03.png)](unified-storyboards-images/dls03.png#lightbox)
 5. Name the file `LaunchScreen.xib` and click the **Create** button:
 
-    [![](unified-storyboards-images/dls04.png "Name the file LaunchScreen.xib")](unified-storyboards-images/dls04.png#lightbox)
+    [![Name the file LaunchScreen.xib](unified-storyboards-images/dls04.png)](unified-storyboards-images/dls04.png#lightbox)
 6. Edit the design of the launch screen by adding graphic elements and using Layout Constraints to position them for the given devices, orientations and screen sizes:
 
-    [![](unified-storyboards-images/dls05.png "Editing the design of the launch screen")](unified-storyboards-images/dls05.png#lightbox)
+    [![Editing the design of the launch screen](unified-storyboards-images/dls05.png)](unified-storyboards-images/dls05.png#lightbox)
 7. Save the changes to `LaunchScreen.xib`.
 8. Select the **Applications Target** and the **General** tab:
 
-    [![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)
+    [![Select the Applications Target and the General tab](unified-storyboards-images/dls06.png)](unified-storyboards-images/dls06.png#lightbox)
 9. Click the **Choose Info.plist** button, select the `Info.plist` for the Xamarin app and click the **Choose** button:
 
-    [![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
+    [![Select the Info.plist for the Xamarin app](unified-storyboards-images/dls07.png)](unified-storyboards-images/dls07.png#lightbox)
 10. In the **App Icons and Launch Images** section, open the **Launch Screen File** dropdown and choose the `LaunchScreen.xib` created above:
 
-    [![](unified-storyboards-images/dls08.png "Choose the LaunchScreen.xib")](unified-storyboards-images/dls08.png#lightbox)
+    [![Choose the LaunchScreen.xib](unified-storyboards-images/dls08.png)](unified-storyboards-images/dls08.png#lightbox)
 11. Save the changes to the file and return to Visual Studio for Mac.
 12. Wait for Visual Studio for Mac to finish syncing changes with Xcode.
 13. In the **Solution Explorer**, right-click on the **Resource** folder and select **Add** > **Add Files...**:
 
-    [![](unified-storyboards-images/dls09.png "Select Add / Add Files...")](unified-storyboards-images/dls09.png#lightbox)
+    [![Select Add / Add Files...](unified-storyboards-images/dls09.png)](unified-storyboards-images/dls09.png#lightbox)
 14. Select the `LaunchScreen.xib` file created above and click the **Open** button:
 
-    [![](unified-storyboards-images/dls10.png "Select the LaunchScreen.xib file")](unified-storyboards-images/dls10.png#lightbox)
+    [![Select the LaunchScreen.xib file](unified-storyboards-images/dls10.png)](unified-storyboards-images/dls10.png#lightbox)
 15. Build the application.
 
 ### Testing the Dynamic Launch Screen
 
 In Visual Studio for Mac, select the iPhone 4 Retina simulator and run the application. The Dynamic Launch Screen will be displayed in the correct format and orientation:
 
-[![](unified-storyboards-images/dls11.png "The Dynamic Launch Screen displayed in the vertical orientation")](unified-storyboards-images/dls11.png#lightbox)
+[![The Dynamic Launch Screen displayed in the vertical orientation](unified-storyboards-images/dls11.png)](unified-storyboards-images/dls11.png#lightbox)
 
 Stop the application in Visual Studio for Mac and select an iPad iOS 8 device. Run the application and the launch screen will be correctly formatted for this device and orientation:
 
-[![](unified-storyboards-images/dls12.png "The Dynamic Launch Screen displayed in the horizontal orientation")](unified-storyboards-images/dls12.png#lightbox)
+[![The Dynamic Launch Screen displayed in the horizontal orientation](unified-storyboards-images/dls12.png)](unified-storyboards-images/dls12.png#lightbox)
 
 Return to Visual Studio for Mac and stop the application from running.
 
@@ -751,7 +744,7 @@ Return to Visual Studio for Mac and stop the application from running.
 
 To maintain backward compatibility with iOS 7, just include the usual `Default.png` image assets as normal in the iOS 8 application. iOS will return to the previous behavior and use those files as the startup screen when running on an iOS 7 device.
 
-To see an implementation of a Dynamic Launch Screen in Xamarin, look at the [Dynamic Launch Screens](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/) sample iOS 8 application attached to this document.
+To see an implementation of a Dynamic Launch Screen in Xamarin, look at the [Dynamic Launch Screens](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) sample iOS 8 application attached to this document.
 
 ## Summary
 
@@ -761,10 +754,9 @@ Finally, this article covered the basics of creating Unified Storyboards with th
 
 ## Related Links
 
-- [Adaptive Photos (sample)](https://developer.xamarin.com/samples/monotouch/ios8/AdaptivePhotos/)
-- [StoryboardIntro Sample](https://developer.xamarin.com/samples/monotouch/StoryboardIntro/)
-- [Dynamic Launch Screens (sample)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
+- [Adaptive Photos (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
+- [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
-- [Dynamic Layouts in iOS8 - Evolve 2014 (video)](http://youtu.be/f3mMGlS-lM4)
+- [Dynamic Layouts in iOS8 - Evolve 2014 (video)](https://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)
 - [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset)

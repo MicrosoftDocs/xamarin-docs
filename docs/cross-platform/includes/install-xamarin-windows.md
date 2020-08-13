@@ -37,7 +37,7 @@ Xamarin can be installed as part of a _new_ Visual Studio 2017 installation, wit
 
     ![Location of Launch button](~/get-started/installation/windows-images/05-launch.png)
 
-<a name="vs2017" />
+<a name="vs2017"></a>
 
 ### Adding Xamarin to Visual Studio 2017
 

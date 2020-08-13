@@ -4,8 +4,8 @@ description: "iOS 6 introduces two changes to the Store Kit API: the ability to 
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -33,7 +33,7 @@ Previously applications would have to trigger iTunes, the App Store, or the
 iBookstore, which would result in the user leaving the original application. This
 new feature automatically returns the user to your app when they are done.
 
-[![](changes-to-storekit-images/image1.png "Automatically returning to an app after purchase")](changes-to-storekit-images/image1.png#lightbox)
+[![Automatically returning to an app after purchase](changes-to-storekit-images/image1.png)](changes-to-storekit-images/image1.png#lightbox)
 
 Examples of how this could be used include:
 
@@ -97,7 +97,7 @@ void Buy (int productId)
 The app looks like the screenshot below when running – download or purchasing occurs
 entirely within the `SKStoreProductViewController`:
 
-[![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
+[![The app looks like this when running](changes-to-storekit-images/image2.png)](changes-to-storekit-images/image2.png#lightbox)
 
 ### Supporting Older Operating Systems
 
@@ -110,7 +110,7 @@ You can implement a version check to determine which code to run, as shown here:
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
@@ -143,15 +143,15 @@ Apple ID for products that you wish to display, listed below:
 
 For applications that you publish, it is easy to find the **Apple ID** in iTunes Connect:
 
-[![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
+[![Finding the Apple ID in iTunes Connect](changes-to-storekit-images/image3.png)](changes-to-storekit-images/image3.png#lightbox)
 
- <a name="Search_API" />
+ <a name="Search_API"></a>
 
 ### Search API
 
 Apple provides a dynamic search API to query all the products in the App
 Store, iTunes, and the iBookstore. Information on how to access the search API
-can be found in [Apple's Affiliate Resources](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), although the API is exposed to
+can be found in Apple's Affiliate Resources, although the API is exposed to
 anyone (not just registered affiliates). The resulting JSON can be parsed to
 discover the `trackId` that is the Apple ID to use with `SKStoreProductViewController`.
 
@@ -160,17 +160,17 @@ and artwork URLs that can be used to render the product in your app.
 
 Here are some examples:
 
-- **iBooks app** – [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot and the Kangaroo iBook** – [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **iBooks app** – [https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot and the Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### Enterprise Partner Feed
 
 Apple provides approved partners with a complete data dump of all their
 products, in the form of downloadable database-ready flat files. If you qualify
-for access to the [Enterprise Partner Feed](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html),
+for access to the Enterprise Partner Feed,
 then the Apple ID for any product can be found in that dataset.
 
-Many users of the Enterprise Partner Feed are members of the [Affiliate Program](http://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
+Many users of the Enterprise Partner Feed are members of the [Affiliate Program](https://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
 time of writing).
 
 ### Direct Product Links
@@ -206,8 +206,8 @@ Consumable or Subscriptions). Advantages of using Apple’s hosting service
 include:
 
 - Save hosting & bandwidth costs.
-- Probably more scalable than whatever server host you are currently using. 
-- Less code to write, since you don’t have to build any server-side processing. 
+- Probably more scalable than whatever server host you are currently using.
+- Less code to write, since you don’t have to build any server-side processing.
 - Background downloading is implemented for you.
 
 Note: testing hosted in-app purchase content in iOS Simulator is not
@@ -230,7 +230,7 @@ content hosting for new in-app purchase products and modify your Store Kit code
 to take advantage of it. Product content files are then built using Xcode and
 uploaded to Apple’s servers for review and release.
 
-[![](changes-to-storekit-images/image4.png "The build and deliver process")](changes-to-storekit-images/image4.png#lightbox)
+[![The build and deliver process](changes-to-storekit-images/image4.png)](changes-to-storekit-images/image4.png#lightbox)
 
 Using the App Store to provide in-app purchasing *with hosted content*
 requires the following setup and configuration:
@@ -254,7 +254,7 @@ complex content could be used in a real application.
 
 The app looks like this before, during and after a purchase:
 
- [![](changes-to-storekit-images/image5.png "The app looks like this before, during and after a purchase")](changes-to-storekit-images/image5.png#lightbox)
+ [![The app looks like this before, during and after a purchase](changes-to-storekit-images/image5.png)](changes-to-storekit-images/image5.png#lightbox)
 
 The text file and image are downloaded and copied into the application’s
 Documents directory. For more information on the different
@@ -268,23 +268,23 @@ types do not support content hosting. Also, you should not enable content
 hosting for *existing* products that you sell; only turn on content
 hosting for new products.
 
- [![](changes-to-storekit-images/image6.png "Select the Non-Consumable product type")](changes-to-storekit-images/image6.png#lightbox)
+ [![Select the Non-Consumable product type](changes-to-storekit-images/image6.png)](changes-to-storekit-images/image6.png#lightbox)
 
 Enter a **Product ID**. This ID will be required later when
 you create the content for this product.
 
- [![](changes-to-storekit-images/image7.png "Enter a Product ID")](changes-to-storekit-images/image7.png#lightbox)
+ [![Enter a Product ID](changes-to-storekit-images/image7.png)](changes-to-storekit-images/image7.png#lightbox)
 
 Content hosting is set in the Details section. Prior to the in-app purchase
 going live, uncheck the **Host Content with Apple** checkbox if you
 wish to cancel (even if you have uploaded some test content). However content
 hosting cannot be removed after the in-app purchase has gone live.
 
- [![](changes-to-storekit-images/image8.png "Hosting content with Apple")](changes-to-storekit-images/image8.png#lightbox)
+ [![Hosting content with Apple](changes-to-storekit-images/image8.png)](changes-to-storekit-images/image8.png#lightbox)
 
 Once you have turned on hosting content, the product will enter **Waiting for Upload** status and show this message:
 
- [![](changes-to-storekit-images/image9.png "The product will enter Waiting for Upload status and show this message")](changes-to-storekit-images/image9.png#lightbox)
+ [![The product will enter Waiting for Upload status and show this message](changes-to-storekit-images/image9.png)](changes-to-storekit-images/image9.png#lightbox)
 
 The content package should be created with Xcode and uploaded using the Archive
 tool. Instructions for creating content packages are given in the next section **Creating .PKG Files**.
@@ -316,21 +316,20 @@ these packages that just contains your files and a plist.
 Our sample application has book chapters for sale – each chapter content
 package will contain:
 
--  a text file, and
--  an image to represent the chapter.
-
+- a text file, and
+- an image to represent the chapter.
 
 Start by selecting **File > New Project** from the
 menu, and choosing **In-App Purchase Content**:
 
- [![](changes-to-storekit-images/image10.png "Choose In-App Purchase Content")](changes-to-storekit-images/image10.png#lightbox)
+ [![Choose In-App Purchase Content](changes-to-storekit-images/image10.png)](changes-to-storekit-images/image10.png#lightbox)
 
 Enter the **Product Name** and **Company
 Identifier** such that the **Bundle Identifier**
 matches the **Product ID** you entered in iTunes Connect for
 this product.
 
-[![](changes-to-storekit-images/image11.png "Enter the  Name and Identifier")](changes-to-storekit-images/image11.png#lightbox)
+[![Enter the  Name and Identifier](changes-to-storekit-images/image11.png)](changes-to-storekit-images/image11.png#lightbox)
 
 Now you will have a blank **In-App Purchase Content**
 project. You can right-click and **Add Files…** or drag
@@ -340,7 +339,7 @@ later choose to update your content, remember to increment it).
 This screenshot shows Xcode with the content files included in the project
 and the plist entries visible in the main window:
 
-[![](changes-to-storekit-images/image12.png "This screenshot shows Xcode with the content files included in the project and the plist entries visible in the main window")](changes-to-storekit-images/image12.png#lightbox)
+[![This screenshot shows Xcode with the content files included in the project and the plist entries visible in the main window](changes-to-storekit-images/image12.png)](changes-to-storekit-images/image12.png#lightbox)
 
 Once you have added all your content files you can save this project and edit
 it again later, or begin the upload process.
@@ -351,23 +350,23 @@ The easiest way to upload content packages is with the **Xcode
 Archive Tool**. Choose **Product > Archive** from
 the menu to begin:
 
-![](changes-to-storekit-images/image13.png "Choose Archiven")
+![Choose Archiven](changes-to-storekit-images/image13.png)
 
-The content package will then appear in the archive as shown below. 
+The content package will then appear in the archive as shown below.
 The archive type and icon show this line is an **In-App Purchase
 Content Archive**. Click **Validate…** to check our
 content package for errors without actually performing the upload.
 
-[![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
+[![Validate the package](changes-to-storekit-images/image14.png)](changes-to-storekit-images/image14.png#lightbox)
 
 Login with your iTunes Connect credentials:
 
-[![](changes-to-storekit-images/image15.png "Login with your iTunes Connect credentials")](changes-to-storekit-images/image15.png#lightbox)
+[![Login with your iTunes Connect credentials](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 Choose the correct application and in-app purchase to associate this content
 with:
 
-[![](changes-to-storekit-images/image16.png "Choose the correct application and in-app purchase to associate this content with")](changes-to-storekit-images/image16.png#lightbox)
+[![Choose the correct application and in-app purchase to associate this content with](changes-to-storekit-images/image16.png)](changes-to-storekit-images/image16.png#lightbox)
 
 You should see a message like this screenshot:
 
@@ -383,21 +382,21 @@ Select the first option, to upload the content:
 
 Sign in again:
 
-[![](changes-to-storekit-images/image15.png "Login in")](changes-to-storekit-images/image15.png#lightbox)
+[![Login in](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 Choose the correct application and in-app purchase record to upload the
 content to:
 
-[![](changes-to-storekit-images/image20.png "Choose the application and in-app purchase record")](changes-to-storekit-images/image20.png#lightbox)
+[![Choose the application and in-app purchase record](changes-to-storekit-images/image20.png)](changes-to-storekit-images/image20.png#lightbox)
 
 Wait while your files are uploaded:
 
-[![](changes-to-storekit-images/image21.png "The content upload dialog")](changes-to-storekit-images/image21.png#lightbox)
+[![The content upload dialog](changes-to-storekit-images/image21.png)](changes-to-storekit-images/image21.png#lightbox)
 
 When the upload is complete, a message will appear to advise you that the
 content has been submitted to the App Store.
 
-[![](changes-to-storekit-images/image22.png "An example successful upload message")](changes-to-storekit-images/image22.png#lightbox)
+[![An example successful upload message](changes-to-storekit-images/image22.png)](changes-to-storekit-images/image22.png#lightbox)
 
 Once that has been done, when you return to the product page on iTunes
 Connect it will show the package details and be in **Ready to
@@ -405,7 +404,7 @@ Submit** status. When the product is in this status, you can begin testing
 in the sandbox environment. You do NOT need to ‘submit’ the product for
 testing in the sandbox.
 
-[![](changes-to-storekit-images/image23.png "iTunes Connect it will show the package details and be in Ready to Submit status")](changes-to-storekit-images/image23.png#lightbox)
+[![iTunes Connect it will show the package details and be in Ready to Submit status](changes-to-storekit-images/image23.png)](changes-to-storekit-images/image23.png#lightbox)
 
 It can take some time (eg. a few minutes) between uploading the archive and
 the iTunes Connect status being updated. You can submit the product for review
@@ -420,7 +419,7 @@ package means that you never see the contents of the package itself. The files
 and directories in the packages created for the sample app look like the screenshot below, with
 the **plist** file in the root and the product files in a **Contents** subdirectory:
 
-[![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
+[![The plist file in the root and the product files in a Contents subdirectory](changes-to-storekit-images/image24.png)](changes-to-storekit-images/image24.png#lightbox)
 
 Note the directory structure of the package (especially the location of the
 files in the `Contents` subdirectory) because you will need to
@@ -444,7 +443,7 @@ Before reading this section, review the existing [In-App Purchase documentation]
 The sequence of events that occurs when a product with hosted content is
 purchased and download is illustrated in this diagram:
 
-[![](changes-to-storekit-images/image25.png "The sequence of events that occurs when a product with hosted content is purchased and download")](changes-to-storekit-images/image25.png#lightbox)
+[![The sequence of events that occurs when a product with hosted content is purchased and download](changes-to-storekit-images/image25.png)](changes-to-storekit-images/image25.png#lightbox)
 
 1. New products can be created in iTunes Connect with Hosted Content enabled. The actual content is constructed separately in Xcode (as simply as dragging files into a folder) and then Archived and uploaded to iTunes (no coding is required). Each product is then submitted for approval, after which it becomes available for purchase. In the sample code these Product IDs are hardcoded, but hosting content with Apple is more flexible if you store the available product list on a remote server so that it can be updated when you submit new products and content to iTunes Connect.
 1. When the user purchases a product, a transaction is placed in the payment queue for processing.
@@ -483,7 +482,7 @@ Details of the new `SKDownload` class:
 The interactions between the classes in the sample code are shown in this
 diagram (the code specific to hosted content purchases is shown in green):
 
-[![](changes-to-storekit-images/image26.png "Hosted content purchases is shown in green in this diagram")](changes-to-storekit-images/image26.png#lightbox)
+[![Hosted content purchases is shown in green in this diagram](changes-to-storekit-images/image26.png)](changes-to-storekit-images/image26.png#lightbox)
 
 The sample code where these classes have been used is shown in the remainder
 of this section:
@@ -589,7 +588,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -605,7 +604,6 @@ public void SaveDownload (SKDownload download)
 When `FinishTransaction` is called, the downloaded files are no
 longer guaranteed to be in the `Cache` directory. All files should be
 copied before calling `FinishTransaction`.
-
 
 ## Other Considerations
 
@@ -668,11 +666,10 @@ functionality.
 
 ## Related Links
 
-- [StoreKit (sample)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
 - [In-App Purchasing](~/ios/platform/in-app-purchasing/index.md)
 - [StoreKit Framework Reference](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [SKStoreProductViewController Class Reference](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [iTunes Search API Reference](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

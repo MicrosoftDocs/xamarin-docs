@@ -3,8 +3,8 @@ title: "Interactive Workbooks"
 description: "This document describes how to use Xamarin Workbooks to create live documents containing C# code for experimenting, teaching, training, or exploring."
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -23,7 +23,7 @@ Workbooks can be saved and opened again later within the application. You can th
 The code editing window provides code completion, syntax coloring,
 inline live-diagnostics, and multi-line statement support.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support](workbook-images/inspector-0.6.0-repl-small.png)](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks are saved in a `.workbook` file, which is a CommonMark
 file with some metadata at the top (see [Workbooks File Types](#workbooks-files-types) for more
@@ -62,7 +62,7 @@ view hierarchy to help you understand your layouts.
 
 You can edit the text around your code using the rich text editor included, as illustrated below:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Edit the text around the code using the built-in rich text editor")
+![Edit the text around the code using the built-in rich text editor](workbook-images/inspector-0.6.2-editing.gif)
 
 ### Markdown Authoring
 
@@ -74,7 +74,7 @@ your CommonMark text may be reformatted.
 
 Please note that due to the CommonMark extension we use to enable YAML metadata in
 workbook files, `---` is reserved for that purpose. If you wish to create
-[thematic breaks](http://spec.commonmark.org/0.27/#thematic-break) in your text,
+[thematic breaks](https://spec.commonmark.org/0.27/#thematic-break) in your text,
 you should use `***` or `___` instead. Such breaks should be avoided in Workbooks 1.2
 and earlier due to a bug during save.
 

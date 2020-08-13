@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
 
@@ -17,7 +17,7 @@ You may see an error of this form:
 
 API changes in iOS 9 require that a callback constructor be used when calling unmanaged code, as the underlying API now expects it. Use the following line to add the callback constructor to the class: 
 
-`public foo (IntPtr handle) : base (handle) ` 
+`public foo (IntPtr handle) : base (handle)` 
 
 ### Next Steps
 

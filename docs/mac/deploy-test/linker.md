@@ -4,8 +4,8 @@ description: "This document describes linking in Xamarin.Mac. Linking is a power
 ms.prod: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
 ---
 
@@ -44,11 +44,10 @@ To change to the linker configuration for a Xamarin.Mac project, do the followin
 2. In the **Solution Explorer**, double-click the project file to open the **Project Options** dialog box.
 3. From the **Mac Build** tab, select the type of **Linker Behavior** that suits your application's needs:
 
-  ![Choose which linker behavior to use](linker-images/link-behavior.png "Choose which linker behavior to use")
+    ![Choose which linker behavior to use](linker-images/link-behavior.png "Choose which linker behavior to use")
 
 4. Platform linking for Full Target Frameworks will not appear in the IDE until a future update. Until then, add `--linkplatform`  to the **Additional mmp arguments** instead.
 5. Click the **OK** button to save your changes.
-
 
 ## Related Links
 

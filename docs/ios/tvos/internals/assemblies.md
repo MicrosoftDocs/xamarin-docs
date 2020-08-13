@@ -4,8 +4,8 @@ description: "In order to help clarify the features available to tvOS applicatio
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
 ---
 
@@ -31,14 +31,14 @@ This is a list of the assemblies supported by Xamarin for your Xamarin.tvOS apps
 |System.Drawing|1.0|System.Drawing API - Classic API ONLY.<br />_System.Drawing is not supported in the Unified API for the Xamarin.Mac .NET 4.5 or Mobile frameworks._|
 |System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) stack as present in [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|[WCF](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) stack as present in [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), plus types from the following namespaces: <ul><li>System</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
 |System.Transactions.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); part of [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) support.|
-|System.Web.Services|1.1|[Basic Web services](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) from the .NET 3.5 profile, with the server features removed.|
+|System.Web.Services|1.1|[Basic Web services](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) from the .NET 3.5 profile, with the server features removed.|
 |System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 |System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Portable Class Libraries
 

@@ -29,7 +29,7 @@ A typical game requires constant movement or change to be happening on the scree
 
 The following is a diagram of a simple game loop:
 
-![](images/image1.png "This is a diagram of a simple game loop")
+![This is a diagram of a simple game loop](images/image1.png)
 
 The technologies we discuss below will abstract away the actual while-loop, but despite this abstraction the concept of every-frame updates will be present.
 
@@ -50,9 +50,9 @@ Keep in mind that many of the activities listed above can change the state of th
 
 Manually loading and unloading (or disposing) content may be needed depending on which technology you are using in development. Manually loading and unloading of assets may be necessary for a number of reasons:
 
- - Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
- - Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
- - Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
+- Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
+- Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
+- Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
 
 Custom file formats may need processing at load time, requiring custom loading code.
 
@@ -62,7 +62,7 @@ Many games require more advanced mathematics than non-game applications. Of cour
 
 If you’re familiar with the Cartesian plane – that is using X and Y coordinates to position objects – then you know enough to get started with game development. The following shows a Cartesian plane with positive Y pointing upward:
 
-![](images/image2.png "This shows a Cartesian plane with positive Y pointing upward")
+![This shows a Cartesian plane with positive Y pointing upward](images/image2.png)
 
 > [!IMPORTANT]
 > Some engines/APIs use a coordinate system where increasing an object’s Y value will move it down, while other systems use a coordinate system where positive Y is up. Keep this in mind if you are moving between systems.
@@ -104,25 +104,11 @@ Remaking existing games is also an educational experience, although this may lim
 
 Developers using Xamarin.Android and Xamarin.iOS have a wide range of technologies available to them to assist in game development. This section will discuss some of the most popular cross-platform solutions.
 
-### CocosSharp
-
-CocosSharp is an open-source, cross-platform version of the Cocos 2D game engine. The engine provides access to Android, iOS, Mac OS X, Windows Desktop, Windows RT and Windows Phone.
-
-CocosSharp focuses on a simple programmer API for 2D game development. The growth in gaming on mobile devices has helped to reignite the popularity of 2D game development making CocosSharp viable technology for hobby and commercial projects alike. It is provided as source code or .dll files (which can be obtained through NuGet) but it does not offer a visual editor; therefore, any interaction with the CocosSharp engine requires knowledge of programming.
-
-To get started with CocosSharp, check out our [CocosSharp guides](~/graphics-games/cocossharp/index.md).
-
-The game Angry Ninjas is created with CocosSharp, and it can be a good starting point if you’re looking for an already-running game for multiple platforms:
-
-![](images/image3.png "The game Angry Ninjas was created with CocosSharp")
-
-You can download it and get more information at the [AngryNinjas Github page](https://github.com/xamarin/AngryNinjas).
-
 ### MonoGame
 
 MonoGame is an open-source, cross platform version of Microsoft’s XNA API. MonoGame can be used to make games for iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One, and Switch.
 
-Unlike CocosSharp, MonoGame is technically not a game engine, but rather a game development API. This means that working with MonoGame requires directly managing game objects, manually drawing objects, and implementing common objects such as cameras and *scene graphs* (the parent child hierarchy between game objects). To help understand the distinction, consider that CocosSharp is built on top of MonoGame. MonoGame generalizes some of the platform-specific technology, such as graphics, rendering, and audio, while CocosSharp provides code for organizing and implementing game logic.
+MonoGame is technically not a game engine, but rather a game development API. This means that working with MonoGame requires directly managing game objects, manually drawing objects, and implementing common objects such as cameras and *scene graphs* (the parent child hierarchy between game objects).
 
 MonoGame does not offer a standard visual development environment, so working with MonoGame requires programming knowledge.
 
@@ -130,11 +116,11 @@ Notable examples of games using MonoGame include:
 
 FEZ:
 
-![](images/image7.png "FEZ")
+![FEZ](images/image7.png)
 
 Bastion:
 
-![](images/image8.jpg "Bastion")
+![Bastion](images/image8.jpg)
 
 To start working with MonoGame, head over to our [MonoGame Guides](~/graphics-games/monogame/index.md).
 
@@ -144,7 +130,7 @@ UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used
 to create animated 3D and 2D scenes for your applications using geometries,
 materials, lights and cameras.
 
-![](images/urhosharp.gif "UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes")
+![UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes](images/urhosharp.gif)
 
 Check out the [UrhoSharp Guides](~/graphics-games/urhosharp/index.md) to get started.
 
@@ -154,10 +140,9 @@ The technologies highlighted above is only a sample of the technologies availabl
 
 - **Sprite Kit** – Xamarin provides support for Apple’s Sprite Kit game framework, which gives you access to all of the functionality of the native API. Since Sprite Kit is technology created by Apple, it provides deep integration with the rest of the iOS ecosystem. Of course, Sprite Kit is not cross-platform so it cannot be used on Android. For more information on using Sprite Kit, see this post:  [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
 - **Scene Kit** – Xamarin also provides support for Apple’s Scene Kit framework, which simplifies implementing 3D graphics into iOS apps. Scene Kit is also technology provided by Apple, so it has both the integration and platform-specific considerations mentioned above for Sprite Kit. For more information on Scene Kit, see this post: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (which stands for Open Tool Kit) provides low-level OpenGL access to iOS, Apple, and Mac hardware. For more information on OpenTK, see the main page at:  [http://www.opentk.com/](http://www.opentk.com/)
+- **OpenTK –** OpenTK (which stands for Open Tool Kit) provides low-level OpenGL access to iOS, Apple, and Mac hardware. For more information on OpenTK, see the main page at: [https://opentk.net/](https://opentk.net/)
 
 ## Related Links
 
-- [CocosSharp Guides](~/graphics-games/cocossharp/index.md)
 - [MonoGame Guides](~/graphics-games/monogame/index.md)
 - [UrhoSharp Guides](~/graphics-games/urhosharp/index.md)

@@ -4,8 +4,8 @@ description: "iOS lets you apply visual property settings at a static class leve
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/15/2018
 ---
 
@@ -40,7 +40,7 @@ There are two different ways to apply a custom appearance:
 The Appearance sample application demonstrates all three methods, as shown in
 these screenshots:
 
-[![](introduction-to-the-appearance-api-images/appearance01-sml.png "The Appearance sample application demonstrates all three methods")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![The Appearance sample application demonstrates all three methods](introduction-to-the-appearance-api-images/appearance01-sml.png)](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 As of iOS 8, the Appearance proxy has been extended to TraitCollections.
  `AppearanceForTraitCollection` can be used to set the default appearance on a
@@ -81,7 +81,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 ## Using UIAppearance in Xamarin.Forms
 
 The Appearance API can be useful when
-[styling the iOS app](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+[styling the iOS app](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)
 in Xamarin.Forms solutions. A few lines in the `AppDelegate` class can help
 to implement a specific color scheme without having to create a
 [custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
@@ -104,11 +104,11 @@ sg1.TintColor = UIColor.Magenta;
 
 Alternatively, set the value in the Properties pad of the Designer:
 
-[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Properties Pad Tint")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
+[![Properties Pad Tint](introduction-to-the-appearance-api-images/propertiespadtint.png)](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 The image below illustrates that this sets the tint on only the control named 'sg1'.
 
-[![](introduction-to-the-appearance-api-images/image53.png "Setting the individual control tint")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![Setting the individual control tint](introduction-to-the-appearance-api-images/image53.png)](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 To set many controls in this way would be completely inefficient, so we can instead set the static `Appearance` property on
 the class itself. This is shown in the code below:
@@ -119,7 +119,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 The Image below now illustrates both segmented controls with the appearance set to Magenta:
 
-[![](introduction-to-the-appearance-api-images/image54.png "Setting the Appearance control tint")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![Setting the Appearance control tint](introduction-to-the-appearance-api-images/image54.png)](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` properties should be set early in the application lifecycle, such as in the AppDelegate’s `FinishedLaunching`
 event, or in a ViewController before the affected controls are displayed.
@@ -128,6 +128,6 @@ Refer to the [Introduction to the Appearance API](~/ios/user-interface/ios-ui/in
 
 ## Related Links
 
-- [Appearance (sample)](https://developer.xamarin.com/samples/monotouch/Appearance/)
+- [Appearance (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
 - [UIAppearance Protocol Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)

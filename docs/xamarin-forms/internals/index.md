@@ -1,24 +1,35 @@
 ---
-title: "Advanced Concepts & Internals"
-description: "This guide introduces advanced concepts and internals for Xamarin.Forms. It currently includes articles about fast renderers and .NET Standard."
+title: "Xamarin.Forms advanced concepts & internals"
+description: "Learn about advanced concepts and the internals of Xamarin.Forms."
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/12/2018
+ms.date: 03/20/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Advanced Concepts & Internals
+# Xamarin.Forms advanced concepts & internals
 
-## [Dependency Resolution](dependency-resolution.md)
+_Learn about advanced concepts and the internals of Xamarin.Forms._
 
-This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and `DependencyService` implementations.
+## [Controls class hierarchy](class-hierarchy.md)
 
-## [Fast Renderers](fast-renderers.md)
+Learn about the hierarchy of types used to create the user interface of a Xamarin.Forms application.
 
-This article introduces fast renderers, which reduce the inflation and rendering costs of a Xamarin.Forms control on Android by flattening the resulting native control hierarchy.
+## [Dependency resolution](dependency-resolution.md)
 
-## [.NET Standard](net-standard.md)
+Learn how to inject a dependency resolution method into Xamarin.Forms, so that an application has control over the creation and lifetime of custom renderers, effect, and `DependencyService` implementations.
 
-This article explains how to convert a Xamarin.Forms application to use .NET Standard 2.0.
+## [Experimental flags](experimental-flags.md)
+
+Xamarin.Forms experimental flags enable the engineering team to ship new features to users more quickly, while still being able to change feature APIs before they move to a stable release.
+
+## [Fast renderers](fast-renderers.md)
+
+Learn about fast renderers, which reduce the inflation and rendering costs of a Xamarin.Forms control on Android by flattening the resulting native control hierarchy.
+
+## [Source Link](sourcelink.md)
+
+Learn how to debug your application into the Xamarin.Forms source code.

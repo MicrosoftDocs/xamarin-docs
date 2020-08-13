@@ -4,13 +4,13 @@ description: "This document describes how to work with the file system in Xamari
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/12/2018
 ---
 # File system access in Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
 
 You can use Xamarin.iOS and the `System.IO` classes in the *.NET Base Class Library (BCL)* to access the iOS file system. The `File` class lets you create, delete, and read files, and the `Directory` class allows you to create, delete, or enumerate the
 contents of directories. You can also use `Stream` subclasses, which
@@ -106,7 +106,7 @@ For more information see the [System.IO API reference](xref:System.IO).
 
 [Json.NET](http://www.newtonsoft.com/json) is a high-performance JSON framework that works with Xamarin.iOS and is available on NuGet. Add the NuGet package to your application project, using **Add NuGet** in Visual Studio for Mac:
 
-[![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
+[![Adding the NuGet package to the applications project](file-system-images/json01.png)](file-system-images/json01.png#lightbox)
 
 Next, add a class to act as the data model for serialization/deserialization (in this case `Account.cs`):
 
@@ -151,7 +151,7 @@ var filename = Path.Combine (documents, "account.json");
 File.WriteAllText(filename, json);
 ```
 
-For more information about working with json data in a .NET application, see Json.NET's [documentation](http://www.newtonsoft.com/json/help).
+For more information about working with json data in a .NET application, see Json.NET's [documentation](https://www.newtonsoft.com/json/help).
 
 ## Special considerations
 
@@ -257,7 +257,7 @@ These directories, how to determine their path, and their purposes are listed be
 
 This screenshot shows the directory structure in a Finder window:
 
-[![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png#lightbox)
+[![This screenshot shows the directory structure in a Finder window](file-system-images/08-library-directory.png)](file-system-images/08-library-directory.png#lightbox)
 
 ### Accessing other directories programmatically
 
@@ -296,7 +296,7 @@ iOS 11 introduced the **Files** app - a file browser for iOS that allows the use
 
 ![Set LSSupportsOpeningDocumentsInPlace in Info.plist](file-system-images/51-supports-opening.png)
 
-The app's **Documents** directory will now be available for browsing in the **Files** app. In the **Files** app, navigate to **On My iPhone** and each app with shared files will be visible. The screenshots below show what the [FileSystem sample app](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/) looks like:
+The app's **Documents** directory will now be available for browsing in the **Files** app. In the **Files** app, navigate to **On My iPhone** and each app with shared files will be visible. The screenshots below show what the [FileSystem sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode) looks like:
 
 ![iOS 11 Files app](file-system-images/50-files-app-1-sml.png) ![Browse my iPhone files](file-system-images/50-files-app-2-sml.png) ![Sample app files](file-system-images/50-files-app-3-sml.png)
 
@@ -366,7 +366,7 @@ Apple introduced *iCloud Backup* functionality with iOS 5. When iCloud
 Backup is enabled, all the files in your application’s home directory
 (excluding directories that are not normally backed up, e.g., the app bundle, `Caches`, and `tmp`) are backed-up to iCloud servers. This feature provides the user with a complete backup in case their device is lost, stolen, or damaged.
 
-Because iCloud only provides 5 Gb of ‘free’ space to each user and to
+Because iCloud only provides 5 Gb of free space to each user and to
 avoid unnecessarily using bandwidth, Apple expects applications to only backup
 essential user-generated data. To comply with the iOS Data Storage Guidelines,
 you should limit the amount of data that gets backed up by adhering to the
@@ -448,6 +448,6 @@ application upgrades and backups.
 
 ## Related links
 
-- [FileSystem sample code](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+- [FileSystem sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
 - [File System Programming Guide](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [Registering the File Types your App Supports](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

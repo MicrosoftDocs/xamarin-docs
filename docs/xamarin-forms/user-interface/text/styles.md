@@ -7,18 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Text Styles
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Styling text in Xamarin.Forms_
 
 Styles can be used to adjust the appearance of labels, entries, and editors. Styles can be defined once and used by many views, but a style can only be used with views of one type.
 Styles can be given a `Key` and applied selectively using a specific control's `Style` property.
-
-<a name="Built-In_Styles" />
 
 ## Built-In Styles
 
@@ -43,9 +42,7 @@ In C#, built-in styles are selected from `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Device Styles Example")
-
-<a name="Custom_Styles" />
+![Device Styles Example](styles-images/builtinstyles.png)
 
 ## Custom Styles
 
@@ -85,9 +82,7 @@ In XAML:
 
 Note that resources (including all styles) are defined within `ContentPage.Resources`, which is a sibling of the more familiar `ContentPage.Content` element.
 
-![](styles-images/customstyle.png "Custom Styles Example")
-
-<a name="Applying_Styles" />
+![Custom Styles Example](styles-images/customstyle.png)
 
 ## Applying Styles
 
@@ -132,18 +127,17 @@ Consider the following example of the same page of views styled with the built-i
 
 Disabled:
 
-![](styles-images/pre-access.png "Device Styles with Accessibility Disabled")
+![Device Styles with Accessibility Disabled](styles-images/pre-access.png)
 
 Enabled:
 
-![](styles-images/post-access.png "Device Styles with Accessibility Enabled")
+![Device Styles with Accessibility Enabled](styles-images/post-access.png)
 
 To ensure accessibility, make sure that built-in styles are used as the basis for any text-related styles within your app, and that you are using styles consistently. See [Styles](~/xamarin-forms/user-interface/styles/index.md) for more details on extending and working with styles in general.
-
 
 ## Related Links
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Style](xref:Xamarin.Forms.Style)

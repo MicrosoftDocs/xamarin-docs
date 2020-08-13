@@ -3,8 +3,8 @@ title: "Using F# With Xamarin"
 description: "F# is a strongly-typed functional programming language designed to run on .NET. This document provides a high-level overview of its features and links to samples built with F#."
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -36,4 +36,3 @@ include:
 - Code navigation
 - Syntax highlighting in F# Interactive
 - F# templates for Xamarin.Forms, iOS, and Android
-- [*and more...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)

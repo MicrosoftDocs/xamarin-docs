@@ -4,8 +4,8 @@ description: "This document provides a description of Xamarin.iOS for Objective-
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -15,17 +15,16 @@ Xamarin offers a path for developers targeting iOS to move their non-user interf
 
 Additionally, Xamarin allows you to leverage existing Objective-C assets via a technology know as bindings. You simply create a static library in Objective-C and expose it to C# via a binding, as illustrated in the following diagram:
 
- [![](images/01-bindings.png "A static library in Objective-C exposed to C# via a binding")](images/01-bindings.png#lightbox)
+ [![A static library in Objective-C exposed to C# via a binding](images/01-bindings.png)](images/01-bindings.png#lightbox)
 
 This doesn't need to be limited to non-UI code. Bindings can expose user interface code developed in Objective-C as well.
 
 ## Transitioning from Objective-C
 
-You'll find a plethora of information on our documentation site to help ease the tranistion to Xamarin, showing how to integrate C# code with what you already know. Some highlights to get you started include:
+You'll find a plethora of information on our documentation site to help ease the transition to Xamarin, showing how to integrate C# code with what you already know. Some highlights to get you started include:
 
--   [C# Primer for Objective-C Developers](primer.md) - A short primer for Objective-C developers looking to move to Xamarin and the C# language. 
--   [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) - A step-by-step walkthrough for reusing existing Objective-C code in a Xamarin.iOS application. 
-
+- [C# Primer for Objective-C Developers](primer.md) - A short primer for Objective-C developers looking to move to Xamarin and the C# language. 
+- [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) - A step-by-step walkthrough for reusing existing Objective-C code in a Xamarin.iOS application. 
 
 ## Binding Objective-C
 
@@ -33,4 +32,4 @@ Once you have a grasp of how C# compares to Objective-C and have worked through 
 
 ## Cross-Platform Development
 
-Finally, after moving to Xamarin.iOS, you'll want to check out the cross-platform guidance we have, including case studies of reference applications we have devleoped, along with best practices for creating reusable, cross-platform code contained in the [Building Cross Platform Applications section](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
+Finally, after moving to Xamarin.iOS, you'll want to check out the cross-platform guidance we have, including case studies of reference applications we have developed, along with best practices for creating reusable, cross-platform code contained in the [Building Cross-Platform Applications section](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).

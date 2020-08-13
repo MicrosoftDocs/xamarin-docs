@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Layout for Tablet and Desktop apps
@@ -14,16 +15,14 @@ ms.date: 02/01/2016
 Xamarin.Forms supports all device types available on the supported platforms,
 so in addition to phones, apps can also run on:
 
-* iPads,
-* Android tablets,
-* Windows tablets and desktop computers (running Windows 10).
+- iPads,
+- Android tablets,
+- Windows tablets and desktop computers (running Windows 10).
 
 This page briefly discusses:
 
-* the supported [device types](#Device_Types), and
-* how to [optimize](#optimize) layouts for tablets versus phones.
-
-<a name="Device_Types" />
+- the supported [device types](#device-types), and
+- how to [optimize](#optimize-for-tablet-and-desktop) layouts for tablets versus phones.
 
 ## Device Types
 
@@ -47,7 +46,7 @@ iPads can now perform [split screen multitasking](~/ios/platform/multitasking.md
 This means your app could take up just a slim column on the side of the screen,
 50% of the width of the screen, or the entire screen.
 
-[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
+[![iPad Split Screen Example](tablet-images/ipad-sml.png)](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 Split-screen functionality means you should design your app to work well
 with as little as 320 pixels wide, or as much as 1366 pixels wide.
@@ -74,18 +73,14 @@ To support tablets and desktop computers running Windows, you'll need to use [Wi
 Apps running on Windows tablets and desktops can be resized to arbitrary
 dimensions in addition to running full-screen.
 
-[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
+[![Windows Split Screen Example](tablet-images/splitscreen-sml.png)](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
-
-<a name="optimize" />
-
-## Optimizing for Tablet and Desktop
+## Optimize for Tablet and Desktop
 
 You can adjust your Xamarin.Forms user interface depending on whether
 a phone or tablet/desktop device is being used. This means you can optimize
 the user-experience for large-screen devices such as tablets and desktop
 computers.
-
 
 ### Device.Idiom
 
@@ -105,20 +100,18 @@ if (Device.Idiom == TargetIdiom.Phone)
 This approach can be expanded to make significant changes to individual
 page layouts, or even to render entirely different pages on larger screens.
 
-### Leveraging MasterDetailPage
+### Leverage MasterDetailPage
 
 The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 is ideal for larger screens, especially on the iPad
 where it uses the [`UISplitViewController`](xref:UIKit.UISplitViewController)
 to provide a native iOS experience.
 
-Review [this Xamarin blog post](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+Review [this Xamarin blog post](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 to see how you can adapt your user interface so that phones use one
 layout and larger screens can use another (with the `MasterDetailPage`).
 
-
-
 ## Related Links
 
-- [Xamarin Blog](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+- [Xamarin Blog](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 - [MyShoppe sample](https://github.com/jamesmontemagno/myshoppe)

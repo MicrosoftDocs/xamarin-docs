@@ -4,8 +4,8 @@ description: "This document explores changes to the App Store in iOS 11. It disc
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 
@@ -28,7 +28,6 @@ The redesigned app store has the following sections:
 Store icons (or marketing icons) are no longer managed in iTunes Connect, and instead must be contained as an [asset catalog](~/ios/app-fundamentals/images-icons/app-icons.md) in your app binary, similar to app icons. A 1024 x 1024 store icon in PNG format must be included in an asset catalog for successful submission of iOS 11 apps.
 
 App thinning makes sure that this additional asset catalog doesn't increase the app size.
-
 
 ## In-App Purchases promoted in the App Store
 
@@ -56,15 +55,15 @@ The following changes have been made to the product page:
 
 - Titles are now set to a maximum of 30 characters
 - A Subtitle has been added
-    - It should be a brief summary that compliments the title.
-    - Subtitle should have a maximum of 30 characters
+  - It should be a brief summary that compliments the title.
+  - Subtitle should have a maximum of 30 characters
 - App Previews
-    - You can now have three videos or screenshots.
-    - Videos autoplay when a user visits the page.
-    - For more information, see Apple's [App Preview](https://developer.apple.com/app-store/app-previews/) page.
+  - You can now have three videos or screenshots.
+  - Videos autoplay when a user visits the page.
+  - For more information, see Apple's [App Preview](https://developer.apple.com/app-store/app-previews/) page.
 - Promotional text
-    - This new feature provides 170 characters of text allowing you to describe frequently changing information about your app.
-    - It can be updated at any time without needing to submit a new version of the app.
+  - This new feature provides 170 characters of text allowing you to describe frequently changing information about your app.
+  - It can be updated at any time without needing to submit a new version of the app.
 
 ## Customer Communication
 
@@ -80,7 +79,7 @@ There are a few things to be aware of when replying to users:
 
 For more information, see Apple's [Responding to Reviews](https://developer.apple.com/app-store/responding-to-reviews/) page.
 
-<a name="Phased_Release"/>
+<a name="Phased_Release"></a>
 
 ## Phased Release
 
@@ -91,7 +90,6 @@ Phased Releases are enabled in iTunes Connect. Click on your app in the sidebar,
 ![Option showing phased release for automatic updates](app-store-changes-images/image6.png)
 
 Your update is available immediately for download in the Updates tab of the App Store. Phased releases are only available for users who have automatic downloads selected.
-
 
 ## Related Links
 

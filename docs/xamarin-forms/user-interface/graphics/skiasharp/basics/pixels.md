@@ -7,23 +7,24 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Pixels and Device-Independent Units
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore the differences between SkiaSharp coordinates and Xamarin.Forms coordinates_
 
 This article explores the differences in the coordinate system used in SkiaSharp and Xamarin.Forms. You can obtain information to convert between the two coordinate systems and also draw graphics that fill a particular area:
 
-![](pixels-images/screenfillexample.png "An oval that fills the screen")
+![An oval that fills the screen](pixels-images/screenfillexample.png)
 
 If you've been programming in Xamarin.Forms for a while, you might have a feel for Xamarin.Forms coordinates and sizes. The circles drawn in the two previous articles might seem a little small to you.
 
 Those circles *are* small in comparison with Xamarin.Forms sizes. By default, SkiaSharp draws in units of pixels while Xamarin.Forms bases coordinates and sizes on a device-independent unit established by the underlying platform. (More information on the Xamarin.Forms coordinate system can be found in [Chapter 5. Dealing with Sizes](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) of the book *Creating Mobile Apps with Xamarin.Forms*.)
 
-The page in the [**SkewSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+The page in the [**SkewSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 program entitled **Surface Size** uses SkiaSharp text output to show the size of the display surface from three different sources:
 
 - The normal Xamarin.Forms [`Width`](xref:Xamarin.Forms.VisualElement.Width) and [`Height`](xref:Xamarin.Forms.VisualElement.Height) properties of the `SKCanvasView` object.
@@ -97,7 +98,7 @@ The method begins the first line of text with an X coordinate of 20 (for a littl
 
 Here's the program running:
 
-[![](pixels-images/surfacesize-small.png "Triple screenshot of the Surface Size  page")](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Triple screenshot of the Surface Size  page](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
 
 As you can see, the `CanvasSize` property of the `SKCanvasView` and the `Size` property of the `SKImageInfo` value are consistent in reporting the pixel dimensions. The `Height` and `Width` properties of the `SKCanvasView` are Xamarin.Forms properties, and report the size of the view in the device-independent units defined by the platform.
 
@@ -140,7 +141,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![](pixels-images/ellipsefill-small.png "Triple screenshot of the Surface Size  page")](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Triple screenshot of the Surface Size  page](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
 
 The other [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) method has an [`SKRect`](xref:SkiaSharp.SKRect) argument, which is a rectangle defined in terms of the X and Y coordinates of its upper-left corner and lower-right corner. The oval fills that rectangle, which suggests that it might be possible to use it in the **Ellipse Fill** page like this:
 
@@ -159,8 +160,7 @@ SKRect rect = new SKRect(strokeWidth / 2,
 canvas.DrawOval(rect, paint);
 ```
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

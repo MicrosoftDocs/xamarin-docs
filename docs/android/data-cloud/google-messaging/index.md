@@ -4,8 +4,8 @@ description: "This section contains guides that describe how to implement Xamari
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2018
 ---
 
@@ -50,5 +50,3 @@ This section provides a step-by-step explanation of how to implement
 remote notifications in Xamarin.Android using Google Cloud Messaging.
 It explains the various components that must be leveraged to enable
 Google Cloud Messaging in an Android application.
-
-

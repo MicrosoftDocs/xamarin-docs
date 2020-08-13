@@ -4,8 +4,8 @@ description: "This guide introduces iOS Auto Layout and describes how to use the
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -37,17 +37,16 @@ The next section covers working with constraints using the iOS Designer, includi
 
 The default iOS Designer configuration has constraint mode enabled. However, should you need to enable or disable it manually, you can do so in two steps:
 
-1.  Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
-1.  Check or uncheck the **Use Autolayout** checkbox in the property panel:
+1. Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
+1. Check or uncheck the **Use Autolayout** checkbox in the property panel:
 
-	![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
-
+    ![The Use Autolayout checkbox in the property panel](designer-auto-layout-images/image01.png)
 
 By default, no constraints are created or visible on the surface. Instead, they are automatically inferred from the frame information at compile time. To add constraints, we need to select an element on the design surface and add constraints to it. We can do that using the **Constraint Toolbar**.
 
 ## Constraints Toolbar
 
- [![](designer-auto-layout-images/toolbarnew.png "The Context Menu Commands")](designer-auto-layout-images/toolbarnew.png#lightbox)
+ [![The Context Menu Commands](designer-auto-layout-images/toolbarnew.png)](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 The constraints toolbar has been updated and now consists of two main parts:
 
@@ -61,10 +60,24 @@ The constraints toolbar has been updated and now consists of two main parts:
   - In Constraint editing mode this button adjusts the constraints to match the element frame.
   - In Frame editing mode this button adjusts the element frame to match the position the constraints are defining.
 
+## Constraints editing popover
+
+The constraints editor pop-up allows us to add and update the multiple constraints at once for a select view. We can create multiple spacing, aspect ratio, and alignment constraints, such as align a view to the left edges of two views.
+
+For editing constraints on the selected view, click the ellipsis to display the popover:
+![constraints editing popover](designer-auto-layout-images/constraints-popup.png)
+
+On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them.
+
+The **W** will set width and **H** will set height constraint. When you check **Aspect Ratio**, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
+
+![constraints spacing](designer-auto-layout-images/constraints-spacing.png)
+
+Four combo boxes for spacing constraints lists the neighboring views to anchor the constraint
 
 ## Surface-Based Constraint Editing
 
-In the previous section, we learned to add default constraints and remove constraints using the Constraints Toolbar. For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
+For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
 
 ### Creating Constraints
 
@@ -78,14 +91,12 @@ The 4 T-shaped handles on each side of the element define the *top*, *right*, *b
 
 To create a constraint, pick a handle and drag it somewhere on the design surface. When you start the drag, a series of green lines/boxes will appear on the surface telling you what you can constrain. For example, in the screenshot below, we are constraining the top side of the middle button:
 
- [![](designer-auto-layout-images/image07.png "Constraining the top side of the middle button")](designer-auto-layout-images/image07.png#lightbox)
+ [![Constraining the top side of the middle button](designer-auto-layout-images/image07.png)](designer-auto-layout-images/image07.png#lightbox)
 
 Note the three dashed green lines across the other two buttons. The green lines indicate *drop areas*, or the attributes of other elements to which we can constrain. In the screenshot above, the other two buttons offer 3 vertical drop areas ( *bottom*, *centerY*, *top*) to constrain our button. The dashed green line at the top of the view means the view controller offers a constraint at the top of the view, and the solid green box means the view controller offers a constraint below the top layout guide.
 
 > [!IMPORTANT]
 > Layout guides are special types of constraint targets that allow us to create top and bottom constraints that take into account the presence of system bars, such as status bars or toolbars. One of the main uses is to have an app compatible between iOS 6 and iOS 7 since the newest version has the container view extending below the status bar. For more information on the top layout guide, refer to the [Apple documentation](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 The next three sections introduce working with different types of constraints.
 
@@ -93,13 +104,13 @@ The next three sections introduce working with different types of constraints.
 
 With size constraints - *height* and *width* - you have two options. The first option is to drag the handle to constrain to a neighbor element size, as illustrated by the example above. The other option is to double-click the handle to create a self-constraint. This allows us to specify a constant size value, as illustrated by the screenshot below:
 
- [![](designer-auto-layout-images/sizec.png "Drag the handle to constrain to a neighbor element size, as illustrated here")](designer-auto-layout-images/sizec.png#lightbox)
+ [![Drag the handle to constrain to a neighbor element size, as illustrated here](designer-auto-layout-images/sizec.png)](designer-auto-layout-images/sizec.png#lightbox)
 
 ### Center Constraints
 
 The square handle will create a *centerX* or *centerY* constraint, depending on the context. Dragging the square handle will light up the other elements to offer both vertical and horizontal drop areas, as illustrated by the screenshot below:
 
- [![](designer-auto-layout-images/centerc.png "Center Constraints")](designer-auto-layout-images/centerc.png#lightbox)
+ [![Center Constraints](designer-auto-layout-images/centerc.png)](designer-auto-layout-images/centerc.png#lightbox)
 
 If you choose a vertical drop area, a *centerY* constraint will be created. If you choose a horizontal drop area, the constraint will be based on *centerX*.
 
@@ -107,26 +118,25 @@ If you choose a vertical drop area, a *centerY* constraint will be created. If y
 
 To create both alignment and size equality constraints between two elements, you can select items from a top toolbar to specify - in order - horizontal alignment, vertical alignment and size equalities, as illustrated by the screenshot below:
 
- [![](designer-auto-layout-images/image06.png "Combinational Constraints")](designer-auto-layout-images/image06.png#lightbox)
+ [![Combinational Constraints](designer-auto-layout-images/image06.png)](designer-auto-layout-images/image06.png#lightbox)
 
 ### Visualizing and Editing Constraints
 
 When you add a constraint, it will be displayed on the design surface as a blue line when you select an item:
 
- [![](designer-auto-layout-images/image09.png "Visualizing Constraints")](designer-auto-layout-images/image09.png#lightbox)
+ [![Visualizing Constraints](designer-auto-layout-images/image09.png)](designer-auto-layout-images/image09.png#lightbox)
 
 You can select a constraint by clicking on a blue line and editing the constraint values directly in the property panel. Alternatively, double-clicking on a blue line will bring up a popover that lets you edit the values directly on the design surface:
 
- [![](designer-auto-layout-images/image08.png "Editing Constraints")](designer-auto-layout-images/image08.png#lightbox)
+ [![Editing Constraints](designer-auto-layout-images/image08.png)](designer-auto-layout-images/image08.png#lightbox)
 
 ## Constraint Issues
 
 Several types of issues can arise when using constraints:
 
--  **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
--  **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
--  **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
-
+- **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
+- **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
+- **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
 
 This section elaborates on the three issues listed above, and provides details on how to handle them.
 
@@ -134,31 +144,31 @@ This section elaborates on the three issues listed above, and provides details o
 
 Conflicting constraints are marked in red and have a warning symbol. Hovering over the warning symbols brings up a popover with information about the conflict:
 
- [![](designer-auto-layout-images/image11.png "Conflicting Constraints warning")](designer-auto-layout-images/image11.png#lightbox)
+ [![Conflicting Constraints warning](designer-auto-layout-images/image11.png)](designer-auto-layout-images/image11.png#lightbox)
 
 ### Underconstrained Items
 
 Underconstrained items appear in orange and trigger the appearance of an orange marker icon in the view controller object bar:
 
- [![](designer-auto-layout-images/image02.png "Underconstrained items appear in orange")](designer-auto-layout-images/image02.png#lightbox)
+ [![Underconstrained items appear in orange](designer-auto-layout-images/image02.png)](designer-auto-layout-images/image02.png#lightbox)
 
 If you click on that marker icon, you can get information about underconstrained items in the scene and solve the issues by either fully constraining them or by removing their constraints, as illustrated by the screenshot below:
 
- [![](designer-auto-layout-images/image10.png "Fixing Underconstrained Items")](designer-auto-layout-images/image10.png#lightbox)
+ [![Fixing Underconstrained Items](designer-auto-layout-images/image10.png)](designer-auto-layout-images/image10.png#lightbox)
 
 ### Frame Misplacement
 
 Frame misplacement uses the same color code as underconstrained items. The item will always be rendered on the surface using its native frame, but in the case of a frame misplacement a red rectangle will mark where the item will end up when the application runs, as illustrated by the screenshot below:
 
- [![](designer-auto-layout-images/image05.png "Sample Frame Misplacement view")](designer-auto-layout-images/image05.png#lightbox)
+ [![Sample Frame Misplacement view](designer-auto-layout-images/image05.png)](designer-auto-layout-images/image05.png#lightbox)
 
 To resolve frame misplacement errors, select the **Update Frames Based on Constraints** button from the constraints toolbar (far right button):
 
- [![](designer-auto-layout-images/image03.png "Update Frames based on Constraints toolbar button")](designer-auto-layout-images/image03.png#lightbox)
+ [![Update Frames based on Constraints toolbar button](designer-auto-layout-images/image03.png)](designer-auto-layout-images/image03.png#lightbox)
 
 This will automatically adjust the element frame to match the positions defined by the controls.
 
-<a name="modifying-in-code" />
+<a name="modifying-in-code"></a>
 
 ## Modifying Constraints in Code
 
@@ -169,10 +179,10 @@ To access a Constraint in code, you first have to expose it in the iOS Designer 
 1. Create the Constraint as normal (using any of the methods listed above).
 2. In the **Document Outline Explorer**, find the desired Constraint and select it:
 
-	[![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
+    [![The Document Outline Explorer](designer-auto-layout-images/modify01.png)](designer-auto-layout-images/modify01.png#lightbox)
 3. Next, assign a **Name** to the Constraint in the **Widget** tab of the **Properties Explorer**:
 
-	[![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
+    [![The Widget Tab](designer-auto-layout-images/modify02.png)](designer-auto-layout-images/modify02.png#lightbox)
 4. Save your changes.
 
 With the above changes in place, you can access the Constraint in code and modify its properties. For example, you can use the following to set the height of the attached View to zero:
@@ -183,13 +193,13 @@ ViewInfoHeight.Constant = 0;
 
 Given the following setting for the Constraint in the iOS Designer:
 
-[![](designer-auto-layout-images/modify03.png "Editing a Constraint in the Property Explorer")](designer-auto-layout-images/modify03.png#lightbox)
+[![Editing a Constraint in the Property Explorer](designer-auto-layout-images/modify03.png)](designer-auto-layout-images/modify03.png#lightbox)
 
 ### The Deferred Layout Pass
 
 Instead of instantly updating the attached View in response to Constraint changes, the Auto Layout Engine schedules a _Deferred Layout Pass_ for the near future. During this deferred pass, not only is the given View's Constraint updated, the Constraints for every View in the hierarchy are recalculated and updated to adjust for the new layout.
 
-At any point, you can schedule your own Deferred Layout Pass by calling the `SetNeedsLayout` or `SetNeedsUpdateConstraints` methods of the parent View. 
+At any point, you can schedule your own Deferred Layout Pass by calling the `SetNeedsLayout` or `SetNeedsUpdateConstraints` methods of the parent View.
 
 The Deferred Layout Pass consists of two unique passes through the view hierarchy:
 
@@ -222,4 +232,3 @@ This guide introduced iOS Auto (or “adaptive”) Layout and the concept of con
 - [iOS Designable Controls Walkthrough](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Android Designer Overview](~/android/user-interface/android-designer/index.md)
 - [Programmatic Constraints](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Apple - Auto Layout Guide](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

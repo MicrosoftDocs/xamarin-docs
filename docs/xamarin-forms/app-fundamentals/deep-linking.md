@@ -8,28 +8,28 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Application Indexing and Deep Linking
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep linking allows applications to respond to a search result that contains application data, typically by navigating to a page referenced from a deep link. This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Deep Linking with Xamarin.Forms and Azure, by [Xamarin University](https://university.xamarin.com/)**
-
+**Deep Linking with Xamarin.Forms and Azure video**
 
 Xamarin.Forms application indexing and deep linking provide an API for publishing metadata for application indexing as users navigate through applications. Indexed content can then be searched for in Spotlight Search, in Google Search, or in a web search. Tapping on a search result that contains a deep link will fire an event that can be handled by an application, and is typically used to navigate to the page referenced from the deep link.
 
 The sample application demonstrates a Todo list application where the data is stored in a local SQLite database, as shown in the following screenshots:
 
-![](deep-linking-images/screenshots.png "TodoList Application")
+![TodoList Application](deep-linking-images/screenshots.png)
 
 Each `TodoItem` instance created by the user is indexed. Platform-specific search can then be used to locate indexed data from the application. When the user taps on a search result item for the application, the application is launched, the `TodoItemPage` is navigated to, and the `TodoItem` referenced from the deep link is displayed.
 
-For more information about using an SQLite database, see [Xamarin.Forms Local Databases](~/xamarin-forms/app-fundamentals/databases.md).
+For more information about using an SQLite database, see [Xamarin.Forms Local Databases](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
 > Xamarin.Forms application indexing and deep linking functionality is only available on the iOS and Android platforms, and requires a minimum of iOS 9 and API 23 respectively.
@@ -75,6 +75,9 @@ AndroidAppLinks.Init(this);
 ```
 
 When **google-services.json** is added to the project (and the *GoogleServicesJson** build action is set), the build process extracts the client ID and API key and then adds these credentials to the generated manifest file.
+
+> [!NOTE]
+> In this article, the terms application links and deep links are often used interchangeably. However, on Android these terms have separate meanings. On Android, a deep link is an intent filter that allows users to directly enter a specific activity in the app. Clicking on a deep link might open a disambiguation dialog, which allows the user to select one of multiple apps that can handle the URL. An Android app link is a deep link based on your website URL, which has been verified to belong to your website. Clicking on an app link opens your app if it's installed, without opening a disambiguation dialog.
 
 For more information, see [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) on the Xamarin blog.
 
@@ -131,7 +134,7 @@ This adds the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance to the 
 
 Once an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
 
-![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
+![Indexed Content in Search Results on iOS](deep-linking-images/ios-search.png)
 
 ## De-registering Indexed Content
 
@@ -145,8 +148,6 @@ This removes the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance from
 
 > [!NOTE]
 > On Android it's not possible to remove indexed content from search results.
-
-<a name="responding" />
 
 ## Responding to a Deep Link
 
@@ -243,7 +244,7 @@ This article explained how to use application indexing and deep linking to make 
 
 ## Related Links
 
-- [Deep Linking (sample)](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+- [Deep Linking (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [iOS Search APIs](~/ios/platform/search/index.md)
 - [App-Linking in Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

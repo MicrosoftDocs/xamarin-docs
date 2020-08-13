@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Browser
@@ -30,9 +31,9 @@ The Browser functionality works by calling the `OpenAsync` method with the `Uri`
 
 public class BrowserTest
 {
-    public async Task<bool> OpenBrowser(Uri uri)
+    public async Task OpenBrowser(Uri uri)
     {
-        return await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
@@ -41,7 +42,7 @@ This method returns after the browser was _launched_ and not necessarily _closed
 
 ## Customization
 
-When using the system preferred browser there are several customization options available for iOS and Android. This includes a `TitleMode` (Android only), and preferred color options for the `Toolbar` (iOS and Android) and `Controls` (iOS only) that appear. 
+When using the system preferred browser there are several customization options available for iOS and Android. This includes a `TitleMode` (Android only), and preferred color options for the `Toolbar` (iOS and Android) and `Controls` (iOS only) that appear.
 
 These options are specified using `BrowserLaunchOptions` when calling `OpenAsync`.
 
@@ -65,7 +66,7 @@ The Launch Mode determines how the browser is launched:
 
 ## System Preferred
 
-[Chrome Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs) will attempted to be used load the Uri and keep navigation awareness.
+[Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs) will attempted to be used to load the Uri and keep navigation awareness.
 
 ## External
 
@@ -89,7 +90,7 @@ The user's default browser will always be launched regardless of the `BrowserLau
 
 ## API
 
-- [Browser source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [Browser source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Browser)
 - [Browser API documentation](xref:Xamarin.Essentials.Browser)
 
 ## Related Video
@@ -97,4 +98,3 @@ The user's default browser will always be launched regardless of the `BrowserLau
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]
-

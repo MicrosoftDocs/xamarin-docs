@@ -3,8 +3,8 @@ title: "Known Issues & Workarounds"
 description: "This document describes known issues and workarounds for Xamarin Workbooks. It discusses CultureInfo issues, JSON issues, and more."
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -19,13 +19,14 @@ a [bug in Mono's `AppContext.SetSwitch`][appcontext-bug] implementation.
 
 ### Workarounds
 
-* Set the application-domain-local `DefaultThreadCurrentCulture`:
+- Set the application-domain-local `DefaultThreadCurrentCulture`:
+
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* Or, update to Workbooks 1.2.1 or newer , which will rewrite
+- Or, update to Workbooks 1.2.1 or newer , which will rewrite
   assignments to `System.Threading.CurrentThread.CurrentCulture` and
   `System.Globalization.CultureInfo.CurrentCulture` to provide for
   the desired behavior (working around the Mono bug).
@@ -34,7 +35,7 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 
 ### Workaround
 
-* Update to Workbooks 1.2.1, which will install Newtonsoft.Json 9.0.1.
+- Update to Workbooks 1.2.1, which will install Newtonsoft.Json 9.0.1.
   Workbooks 1.3, currently in the alpha channel, supports versions 10
   and newer.
 
@@ -55,13 +56,13 @@ There is a [bug in the Monaco editor][monaco-bug] in Safari/WebKit,
 which is used in the Mac Workbooks app, that results in code
 tooltips rendering without text.
 
-![](general-images/monaco-signature-help-bug.png)
+![Monaco tooltips rendering without text](general-images/monaco-signature-help-bug.png)
 
 ### Workaround
 
-* Clicking on the tooltip after it appears will force the text to render.
+- Clicking on the tooltip after it appears will force the text to render.
 
-* Or update to Workbooks 1.2.1 or newer
+- Or update to Workbooks 1.2.1 or newer
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -74,7 +75,7 @@ our [SDK](~/tools/workbooks/sdk/index.md).
 
 ### Workaround
 
-* Update SkiaSharp to the latest version in NuGet. At the time of writing, this
+- Update SkiaSharp to the latest version in NuGet. At the time of writing, this
   is 1.57.1.
 
 ## Related Links

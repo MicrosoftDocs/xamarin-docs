@@ -4,17 +4,17 @@ description: "This document examines various lifecycle events handled by the app
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/17/2018
 ---
 # Application lifecycle demo for Xamarin.iOS
 
-This article and [sample code](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/) demonstrates the four application states in iOS, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
+This article and [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) demonstrates the four application states in iOS, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
 
-[![](application-lifecycle-demo-images/image3-sml.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
+[![The sample app](application-lifecycle-demo-images/image3-sml.png)](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
+[![The app will print updates to the console whenever the app changes state](application-lifecycle-demo-images/image4.png)](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## Walkthrough
 
@@ -49,7 +49,7 @@ This article and [sample code](https://developer.xamarin.com/samples/monotouch/L
 1. Hit the Home button on the simulator or device to bring the application to the background. `OnResignActivation` and `DidEnterBackground` will be called as the app transitions from `Active` to `Inactive` and into the `Backgrounded` state. Since there is no application code set to execute in the background, the application is considered _suspended_ in memory.
 1. Navigate back to the app to bring it back into the foreground. `WillEnterForeground` and `OnActivated` will both be called:
 
-    ![](application-lifecycle-demo-images/image4.png "State changes printed to the console")
+    ![State changes printed to the console](application-lifecycle-demo-images/image4.png)
 
     The following line of code in the view controller is executed when the application has entered the foreground from the background, and changes the text displayed on the screen:
 
@@ -71,4 +71,4 @@ iOS will terminate the application. Note that `WillTerminate` is not called beca
 
 ## Related links
 
-- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)

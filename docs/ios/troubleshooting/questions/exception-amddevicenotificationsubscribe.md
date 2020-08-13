@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -14,16 +14,15 @@ ms.date: 03/21/2017
 > [!IMPORTANT]
 > This issue has been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
 
-
 ## Fix
 
-1.  Kill the `usbmuxd` process so that the system will restart it:
+1. Kill the `usbmuxd` process so that the system will restart it:
 
     ```csharp
     sudo killall -QUIT usbmuxd
     ```
 
-2.  If that doesn't solve the problem, reboot the Mac.
+2. If that doesn't solve the problem, reboot the Mac.
 
 ## Error message
 
@@ -58,4 +57,4 @@ Based on the errors from `system.log` it appears that this problem might be rela
 
 ## References
 
-*   [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe returned: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+* [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe returned: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

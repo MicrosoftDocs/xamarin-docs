@@ -3,8 +3,8 @@ title: "ApiDefinitions & StructsAndEnums Files"
 description: "This document describes the ApiDefinitions.cs and StructsAndEnums.cs files that Objective Sharpie generates. These files are then used to access the Objective-C code from C#."
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -31,12 +31,7 @@ Some of the next steps include:
 See the [binding an API](~/cross-platform/macios/binding/objective-c-libraries.md)
 description to see how these files fit into the binding process, as shown in the diagram below:
 
-![](apidefinitions-structsandenums-images/binding-flowchart.png "The binding process is shown in this diagram")
+![The binding process is shown in this diagram](apidefinitions-structsandenums-images/binding-flowchart.png)
 
 Refer to the [binding Types reference](~/cross-platform/macios/binding/binding-types-reference.md)
 for more information on the contents of these files.
-
-## Related Links
-
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

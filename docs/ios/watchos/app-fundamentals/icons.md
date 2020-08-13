@@ -4,8 +4,8 @@ description: "This document describes the various icons necessary for a watchOS 
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/26/2018
 ---
 
@@ -13,15 +13,15 @@ ms.date: 07/26/2018
 
 Apple Watch solutions require two sets of icons:
 
-* The iOS app icons that will appear on the iPhone.
-* Apple Watch icons that will be rendered in a circle
+- The iOS app icons that will appear on the iPhone.
+- Apple Watch icons that will be rendered in a circle
   on the watch menu and in notification screens. The watch
   app icon also appears in the [Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
   iOS app.
 
 ## Apple Watch Icons
 
-| | | |
+|Icon|Description|Appearance|
 |-|-|-|
 |iOS App Icon|Appears on the iPhone and starts the Parent app|![iOS app icon](icons-images/icon-ios.png)|
 |Watch App Icon|Appears on the Apple Watch home screen|![watchOS app icon](icons-images/icon-home.png)|
@@ -58,35 +58,35 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
   asset catalog to the watch app.
 
 1. Right-click on the Watch App Project and select
-  **File > Add > New File... > iOS > Asset Catalog** to add an
-  asset catalog to the project.
+    **File > Add > New File... > iOS > Asset Catalog** to add an
+    asset catalog to the project.
 
- ![](icons-images/newasset.png "Add an asset catalog to the project")
+    ![Add an asset catalog to the project](icons-images/newasset.png)
 
 2. Double-click on the **AppIcon.appiconset/Contents.json** file
 
-  ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
+    ![The AppIcon contents](icons-images/xcassets-iconset-sml.png)
 
 3. Add all the watchOS images, as shown in this screenshot:
 
-  [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
+    [![Add all the watchOS images, as shown in this screenshot](icons-images/appicons-sml.png)](icons-images/appicons.png#lightbox)
 
-  Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
-  (the dimensions are also shown on the screen). Remember
-  that these icons will be automatically clipped to render
-  in a circle.
+    Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
+    (the dimensions are also shown on the screen). Remember
+    that these icons will be automatically clipped to render
+    in a circle.
 
-  Your icon list should look something like this:
+    Your icon list should look something like this:
 
-  ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
+    ![The icon list in the Solution Explorer](icons-images/xcassets-complete-sml.png)
 
 4. To ensure the asset catalog is included in the app, add
   the following key and value to the **Watch App's Info.plist**:
 
-```xml
-<key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcon.appiconset</string>
-```
+    ```xml
+    <key>XSAppIconAssets</key>
+    <string>Images.xcassets/AppIcon.appiconset</string>
+    ```
 
 You can verify the icons are configured correct by checking
   the [Apple Watch settings app](~/ios/watchos/app-fundamentals/settings.md)
@@ -95,7 +95,6 @@ You can verify the icons are configured correct by checking
 
 > [!NOTE]
 > Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
-
 
 ## Related Links
 

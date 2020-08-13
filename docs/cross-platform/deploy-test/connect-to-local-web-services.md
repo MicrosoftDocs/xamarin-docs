@@ -5,12 +5,12 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/22/2019
+ms.date: 04/29/2020
 ---
 
-# Connect to Local Web Services from iOS Simulators and Android Emulators
+# Connect to local web services from iOS simulators and Android emulators
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Many mobile applications consume web services. During the development phase, it's common to deploy a web service locally and consume it from a mobile application running in the iOS simulator or Android emulator. This avoids having to deploy the web service to a hosted endpoint, and enables a straightforward debugging experience because both the mobile application and web service are running locally.
 
@@ -22,7 +22,7 @@ Mobile applications running in the iOS simulator or Android emulator can consume
 However, additional work is necessary for an application running in the iOS simulator or Android emulator to consume a local web service that is exposed over HTTPS. For this scenario, the process is as follows:
 
 1. Create a self-signed development certificate on your machine. For more information, see [Create a development certificate](#create-a-development-certificate).
-1. Configure your project to use the managed `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
+1. Configure your project to use the appropriate `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
 1. Specify the address of your local machine. For more information, see [Specify the local machine address](#specify-the-local-machine-address).
 1. Bypass the local development certificate security check. For more information, see [Bypass the certificate security check](#bypass-the-certificate-security-check).
 
@@ -32,13 +32,13 @@ Each item will be discussed in turn.
 
 Installing the .NET Core SDK installs the ASP.NET Core HTTPS development certificate to the local user certificate store. However, while the certificate has been installed, it's not trusted. To trust the certificate, perform the following one-time step to run the dotnet `dev-certs` tool:
 
-```console
+```dotnetcli
 dotnet dev-certs https --trust
 ```
 
 The following command provides help on the `dev-certs` tool:
 
-```console
+```dotnetcli
 dotnet dev-certs https --help
 ```
 
@@ -55,15 +55,11 @@ Xamarin applications running on iOS and Android can specify which networking sta
 
 ### iOS
 
-Xamarin applications running on iOS can use the managed network stack, or the native `CFNetwork` or `NSUrlSession` network stacks. By default, new iOS platform projects use the `NSUrlSession` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size.
-
-However, when an application needs to connect to a secure web service running locally, for developer testing, it's easier to use the managed network stack. Therefore, it's recommended to set debug simulator build profiles to use the managed network stack, and release build profiles to use the `NSUrlSession` network stack. Each network stack can be set programmatically or via a selector in the project options. For more information, see [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md).
+Xamarin applications running on iOS can use the managed network stack, or the native `CFNetwork` or `NSUrlSession` network stacks. By default, new iOS platform projects use the `NSUrlSession` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information, see [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md).
 
 ### Android
 
-Xamarin applications running on Android can use the managed `HttpClientHandler` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size.
-
-However, when an application needs to connect to a secure web service running locally, for developer testing, it's easier to use the managed network stack. Therefore it's recommended to set debug emulator build profiles to use the managed network stack, and release build profiles to use the native network stack. Each network stack can be set programmatically or via a selector in the project options. For more information, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
+Xamarin applications running on Android can use the managed `HttpClient` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information about Android network stacks, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
 
 ## Specify the local machine address
 
@@ -94,29 +90,38 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 ## Bypass the certificate security check
 
-Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android.
+Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android. Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. This can be accomplished when using both the managed and native network stacks on iOS and Android, by setting the `ServerCertificateCustomValidationCallback` property on a `HttpClientHandler` object to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
 
-Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. This can be accomplished, when using the managed network stack, by setting the `ServicePointManager.ServerCertificateValidationCallback` property to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
+```csharp
+// This method must be in a class in a platform project, even if
+// the HttpClient object is constructed in a shared project.
+public HttpClientHandler GetInsecureHandler()
+{
+    HttpClientHandler handler = new HttpClientHandler();
+    handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+    {
+        if (cert.Issuer.Equals("CN=localhost"))
+            return true;
+        return errors == System.Net.Security.SslPolicyErrors.None;
+    };
+    return handler;
+}
+```
+
+In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. The resulting `HttpClientHandler` object should be passed as an argument to the `HttpClient` constructor for debug builds:
 
 ```csharp
 #if DEBUG
-    System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
-    {
-        if (certificate.Issuer.Equals("CN=localhost"))
-            return true;
-        return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
-    };
+    HttpClientHandler insecureHandler = GetInsecureHandler();
+    HttpClient client = new HttpClient(insecureHandler);
+#else
+    HttpClient client = new HttpClient();
 #endif
 ```
 
-In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. This code should be added to the `AppDelegate.FinishedLaunching` method on iOS and the `MainActivity.OnCreate` method on Android, prior to the `LoadApplication(new App())` method call.
-
-> [!NOTE]
-> The native network stacks on iOS and Android don't hook into the `ServerCertificateValidationCallback`.
-
 ## Related links
 
-- [TodoREST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [TodoREST (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Enable local HTTPS](/aspnet/core/getting-started#enable-local-https)
 - [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md)

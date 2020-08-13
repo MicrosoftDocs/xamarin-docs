@@ -4,8 +4,8 @@ description: "This document describes iCloud and its use in Xamarin.iOS applicat
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/09/2016
 ---
 
@@ -48,17 +48,17 @@ Applications must be configured to use iCloud both in the [Apple Provisioning Po
 
 To correctly configure an application to access iCloud:
 
--   **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
+- **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
 
--   **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
+- **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
 
- [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
+ [![Check iCloud as an allowed service](introduction-to-icloud-images/icloud-sml.png)](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **Create a new Provisioning Profile** - To create a Provisioning Profile, follow the steps outlined in the  [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 - **Add the Container Identifier to Entitlements.plist** - the container identifier format is `TeamID.BundleID`. For more information refer to the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-- **Configure the project properties** - In the Info.plist file ensure the **Bundle Identifier** matches the **Bundle ID** set when [creating an App ID ](~/ios/deploy-test/provisioning/capabilities/index.md); The iOS Bundle
+- **Configure the project properties** - In the Info.plist file ensure the **Bundle Identifier** matches the **Bundle ID** set when [creating an App ID](~/ios/deploy-test/provisioning/capabilities/index.md); The iOS Bundle
 Signing uses a **Provisioning Profile** that contain an App ID with the iCloud App Service, and the **Custom Entitlements** file selected. This can all be done in Visual Studio under the project Properties pane.
 
 - **Enable iCloud on your device** - go to **Settings > iCloud** and ensure that the device is logged in.
@@ -67,7 +67,6 @@ Select and turn on the **Documents & Data** option.
 - **You must use a device to test iCloud** - it will not work on the Simulator.
 In fact, you really need two or more devices all signed in with the same Apple
 ID to see iCloud in action.
-
 
 ## Key-Value Storage
 
@@ -101,9 +100,7 @@ This screenshot shows the sample in use. When change notifications are
 received from iCloud they are printed in the scrolling text view at the bottom
 of the screen and updated in the input fields.
 
-
-
- [![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
+ [![The flow of messages between devices](introduction-to-icloud-images/icloud-kv-arrows.png)](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### Setting and retrieving data
 
@@ -192,7 +189,7 @@ UbiquityContainer must be done via FilePresenter/FileCoordinator to prevent
 concurrent access. The `UIDocument` class implements those for you; this
 example shows how to use UIDocument.
 
- [![](introduction-to-icloud-images/icloud-overview.png "The document storage overview")](introduction-to-icloud-images/icloud-overview.png#lightbox)
+ [![The document storage overview](introduction-to-icloud-images/icloud-overview.png)](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 The iCloudUIDoc example implements a simple `UIDocument` subclass that
 contains a single text field. The text is rendered in a `UITextView` and
@@ -204,7 +201,7 @@ This screenshot shows the sample application - after changing the text and
 pressing **UpdateChangeCount** the document is synchronized via
 iCloud to other devices.
 
- [![](introduction-to-icloud-images/iclouduidoc.png "This screenshot shows the sample application after changing the text and pressing UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
+ [![This screenshot shows the sample application after changing the text and pressing UpdateChangeCount](introduction-to-icloud-images/iclouduidoc.png)](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 There are five parts to the iCloudUIDoc sample:
 
@@ -415,8 +412,8 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 ### Displaying iCloud Documents
 
-Displaying a UIDocument shouldn't be any different to any other model class
-- properties are displayed in UI controls, possibly edited by the user and
+Displaying a UIDocument shouldn't be any different to any other model class -
+properties are displayed in UI controls, possibly edited by the user and
 then written back to the model.
 
 In the example **iCloudUIDoc\MonkeyDocumentViewController.cs** displays the
@@ -494,17 +491,15 @@ the file list and swipe to delete. Application code should be able to handle the
 situation where documents are deleted by the user. Do not store internal
 application data in the **Documents** directory.
 
- [![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png#lightbox)
-
-
+ [![Managing iCloud Documents workflow](introduction-to-icloud-images/icloudstorage.png)](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 Users will also receive different warnings when they attempt to remove an
 iCloud-enabled application from their device, to inform them of the status of
 iCloud documents related to that application.
 
- [![](introduction-to-icloud-images/icloud-delete1.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
+ [![Sample dialog when the user attempts to remove an iCloud-enabled application from their device](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [![](introduction-to-icloud-images/icloud-delete2.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
+ [![Sample dialog when the user attempts to remove an iCloud-enabled application from their device](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## iCloud Backup
 
@@ -537,11 +532,9 @@ across multiple devices via iCloud.
 
 Finally it included a brief discussion on how the addition of iCloud Backup should influence your application design.
 
-
-
 ## Related Links
 
-- [Introduction To iCloud (sample)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
+- [Introduction To iCloud (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
 - [iCloud Seminar Sample Code](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud Seminar Slides](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)

@@ -4,8 +4,8 @@ description: "This article covers working with NSUserDefaults to save default se
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
 ---
 
@@ -13,12 +13,11 @@ ms.date: 06/07/2016
 
 _This article covers working with NSUserDefault to save default settings in a Xamarin.iOS App or Extension._
 
-
 The `NSUserDefaults` class provides a way for iOS Apps and Extensions to programmatically interact with the system-wide Defaults System. By using the Defaults System, the user can configure an app's behavior or styling to meet their preferences (based on the design of the app). For example, to present data in Metric vs Imperial measurements or select a given UI Theme.
 
 When used with App Groups, `NSUserDefaults` also provides a way to communicate between apps (or Extensions) within a given group.
 
-<a name="About-User-Defaults" />
+<a name="About-User-Defaults"></a>
 
 ## About User Defaults
 
@@ -31,7 +30,7 @@ When your app first executes, `NSUserDefaults` reads the keys and values from th
 
 The `NSUserDefaults` class contains several convenience methods for reading and writing preference values for common data types such as: string, integer, float, boolean and URLs. Other types of data can be archived using `NSData`, then read from or written to the User Defaults Database. For more information, please see Apple's [Preferences and Settings Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
-<a name="Accessing-the-Shared-NSUserDefaults-Instance" />
+<a name="Accessing-the-Shared-NSUserDefaults-Instance"></a>
 
 ## Accessing the Shared NSUserDefaults Instance 
 
@@ -50,7 +49,7 @@ To access the Shared User Defaults Instance, use the following code:
 var plist = NSUserDefaults.StandardUserDefaults;
 ```
 
-<a name="Accessing-an-App-Group-NSUserDefaults-Instance" />
+<a name="Accessing-an-App-Group-NSUserDefaults-Instance"></a>
 
 ## Accessing an App Group NSUserDefaults Instance
 
@@ -67,7 +66,7 @@ var plist = new NSUserDefaults ("group.com.xamarin.todaysharing", NSUserDefaults
 
 Where `group.com.xamarin.todaysharing` is the App Group created in **Certificates, Identifiers & Profiles** that you want to access. For more information, please see the [App Group Capabilities](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentation.
 
-<a name="Reading-Default-Values" />
+<a name="Reading-Default-Values"></a>
 
 ## Reading Default Values
 
@@ -96,7 +95,7 @@ var useHeader = plist.BoolForKey("UseHeader");
 
 ```
 
-<a name="Writing-Default-Values" />
+<a name="Writing-Default-Values"></a>
 
 ## Writing Default Values
 
@@ -124,17 +123,14 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > When your App first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required.
 
-
-
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
 This article has covered the `NSUserDefaults` class and how it can be used to provide a set of options that the end user can use to configure your Xamarin.iOS App. Additionally, it covered using App Groups to communicate between an extension and its Parent App or between apps in a group.
 
-
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [Preferences and Settings Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)
 - [NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/doc/constant_group/NSUserDefaults_Domains)

@@ -4,8 +4,8 @@ description: "An example app that demonstrates how to use RecyclerView."
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/30/2018
 ---
 
@@ -13,7 +13,7 @@ ms.date: 07/30/2018
 
 To understand how `RecyclerView` works in a typical application, this
 topic explores the
-[RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample
+[RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) sample
 app, a simple code example that uses `RecyclerView` to display a large
 collection of photos: 
 
@@ -25,7 +25,6 @@ implement each photograph item in the `RecyclerView` layout. Because
 of `RecyclerView`'s performance advantages, this sample app is able
 to quickly scroll through a large collection of photos smoothly and
 without noticeable delays.
-
 
 ### An Example Data Source
 
@@ -62,8 +61,7 @@ Because the implementation details of `PhotoAlbum` are not relevant to
 understanding `RecyclerView`, the `PhotoAlbum` source code is not
 presented here. The source code to `PhotoAlbum` is available at
 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs)
- in the [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample app.
-
+ in the [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) sample app.
 
 ### Layout and Initialization
 
@@ -156,7 +154,7 @@ through the collection of photos. Later in this guide, you will see an
 example of how to modify the layout by swapping in a different layout
 manager.
 
-<a name="view-holder" />
+<a name="view-holder"></a>
 
 ### View Holder
 
@@ -185,6 +183,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 In this code example, the `PhotoViewHolder` constructor is passed a
 reference to the parent item view (the `CardView`) that
 `PhotoViewHolder` wraps. Note that you always forward the parent item
@@ -197,7 +196,6 @@ retrieves view references from these properties when it updates this
 
 For more information about `RecyclerView.ViewHolder`, see the
 [RecyclerView.ViewHolder class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
 
 ### Adapter
 
@@ -231,18 +229,17 @@ that is passed into the constructor; the constructor copies the photo
 album into this member variable. The following required
 `RecyclerView.Adapter` methods are implemented:
 
--   **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
+- **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
     view holder.
 
--   **`OnBindViewHolder`** &ndash; Loads the data at the specified position
+- **`OnBindViewHolder`** &ndash; Loads the data at the specified position
     into the views whose references are stored in the given view holder.
 
--   **`ItemCount`** &ndash; Returns the number of items in the data source.
+- **`ItemCount`** &ndash; Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. The implementation of these methods is
 examined in the following sections.
-
 
 #### OnCreateViewHolder
 
@@ -319,7 +316,6 @@ public override RecyclerView.ViewHolder
 The resulting view holder instance, `vh`, is returned back to the
 caller (the layout manager).
 
-
 #### OnBindViewHolder
 
 When the layout manager is ready to display a particular view in the
@@ -360,7 +356,6 @@ the position can be used as an array index into the photo album;
 however, more complex data sources may require extra code to establish
 such a mapping.
 
-
 #### ItemCount
 
 The `ItemCount` method returns the number of items in the data
@@ -376,7 +371,6 @@ public override int ItemCount
 
 For more information about `RecyclerView.Adapter`, see the
 [RecyclerView.Adapter class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
-
 
 ### Putting it All Together
 
@@ -483,9 +477,6 @@ respond to item-touch events, nor does it handle changes in the
 underlying data. This functionality is added in
 [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-
-
-
 ### Changing the LayoutManager
 
 Because of `RecyclerView`'s flexibility, it's easy to modify the app to
@@ -517,11 +508,9 @@ In the next topic,
 this basic sample app is extended to handle item-click events and
 update `RecyclerView` when the underlying data source changes.
 
-
-
 ## Related Links
 
-- [RecyclerViewer (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerViewer (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
 - [RecyclerView Parts and Functionality](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
 - [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md)

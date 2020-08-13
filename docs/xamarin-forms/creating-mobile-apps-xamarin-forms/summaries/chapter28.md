@@ -7,6 +7,7 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 28. Location and maps
@@ -61,7 +62,7 @@ The iOS implementation of `ILocationTracker` is a [`LocationTracker`](https://gi
 
 #### The Android location manager
 
-The Android implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) class that makes use of the Android [`LocationManager`](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/) class.
+The Android implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) class that makes use of the Android [`LocationManager`](xref:Android.Locations.LocationManager) class.
 
 #### The UWP geo locator
 
@@ -231,10 +232,8 @@ The [**Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) assembly also contains a [
 
 The [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) file and [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) code-behind file demonstrate this facility.
 
-
-
 ## Related links
 
 - [Chapter 28 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [Chapter 28 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [Xamarin.Forms Map](~/xamarin-forms/user-interface/map.md)
+- [Xamarin.Forms Map](~/xamarin-forms/user-interface/map/index.md)

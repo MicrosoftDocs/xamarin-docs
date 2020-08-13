@@ -7,17 +7,18 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Path Effects in SkiaSharp
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Discover the various path effects that allow paths to be used for stroking and filling_
 
 A *path effect* is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that is created with one of eight static creation methods defined by the class. The `SKPathEffect` object is then set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of an [`SKPaint`](xref:SkiaSharp.SKPaint) object for a variety of interesting effects, for example, stroking a line with a small replicated path:
 
-![](effects-images/patheffectsample.png "The Linked Chain sample")
+![The Linked Chain sample](effects-images/patheffectsample.png)
 
 Path effects allow you to:
 
@@ -46,7 +47,7 @@ The ends of the dashes are affected by the `StrokeCap` property of `SKPaint`. Fo
 
 The **Animated Dotted Text** page is similar to the **Outlined Text** page described in the article [**Integrating Text and Graphics**](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) in that it displays outlined text characters by setting the `Style` property of the `SKPaint` object to `SKPaintStyle.Stroke`. In addition, **Animated Dotted Text** uses `SKPathEffect.CreateDash` to give this outline a dotted appearance, and the program also animates the `phase` argument of the `SKPathEffect.CreateDash` method to make the dots seem to travel around the text characters. Here's the page in landscape mode:
 
-[![](effects-images/animateddottedtext-small.png "Triple screenshot of the Animated Dotted Text page")](effects-images/animateddottedtext-large.png#lightbox "Triple screenshot of the Animated Dotted Text page")
+[![Triple screenshot of the Animated Dotted Text page](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
 The [`AnimatedDottedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) class begins by defining some constants, and also overrides the `OnAppearing` and `OnDisappearing` methods for the animation:
 
@@ -154,7 +155,7 @@ It's possible to adjust the length of the dash pattern to fit the length of the 
 
 The **Dot / Dash Morph** program animates the dash pattern itself so that dashes seem to divide into dots, which combine to form dashes again:
 
-[![](effects-images/dotdashmorph-small.png "Triple screenshot of the Dot Dash Morph page")](effects-images/dotdashmorph-large.png#lightbox "Triple screenshot of the Dot Dash Morph page")
+[![Triple screenshot of the Dot Dash Morph page](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
 The [`DotDashMorphPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) class overrides the `OnAppearing` and `OnDisappearing` methods just as the previous program did, but the class defines the `SKPaint` object as a field:
 
@@ -393,7 +394,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 The `PaintSurface` handler creates a Bézier curve that loops around itself, and accesses the picker to determine which `PathEffect` should be used to stroke it. The three options — `Translate`, `Rotate`, and `Morph` — are shown from left to right:
 
-[![](effects-images/1dpatheffect-small.png "Triple screenshot of the 1D Path Effect page")](effects-images/1dpatheffect-large.png#lightbox "Triple screenshot of the 1D Path Effect page")
+[![Triple screenshot of the 1D Path Effect page](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
 The path specified in the `SKPathEffect.Create1DPath` method is always filled. The path specified in the `DrawPath` method is always stroked if the `SKPaint` object has its `PathEffect` property set to a 1D path effect. Notice that the `pathPaint` object has no `Style` setting, which normally defaults to `Fill`, but the path is stroked regardless.
 
@@ -405,7 +406,7 @@ The rectangle shape in the `Morph` example is 50 pixels wide with an `advance` s
 
 If the `advance` argument is less than the size of the path, then the replicated paths can overlap. This can result in some interesting effects. The **Linked Chain** page displays a series of overlapping circles that seem to resemble a linked chain, which hangs in the distinctive shape of a catenary:
 
-[![](effects-images/linkedchain-small.png "Triple screenshot of the Linked Chain page")](effects-images/linkedchain-large.png#lightbox "Triple screenshot of the Linked Chain page")
+[![Triple screenshot of the Linked Chain page](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
 Look very close and you'll see that those aren't actually circles. Each link in the chain is two arcs, sized and positioned so they seem to connect with adjoining links.
 
@@ -544,7 +545,7 @@ This program defines the path used in `Create1DPath` to have its (0, 0) point in
 
 The **Conveyor Belt** page creates a path resembling an oblong conveyor belt with a curved top and bottom that is sized to the dimensions of the window. That path is stroked with a simple `SKPaint` object 20 pixels wide and colored gray, and then stroked again with another `SKPaint` object with an `SKPathEffect` object referencing a path resembling a little bucket:
 
-[![](effects-images/conveyorbelt-small.png "Triple screenshot of the Conveyor Belt page")](effects-images/conveyorbelt-large.png#lightbox "Triple screenshot of the Conveyor Belt page")
+[![Triple screenshot of the Conveyor Belt page](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
 The (0, 0) point of the bucket path is the handle, so when the `phase` argument is animated, the buckets seem to revolve around the conveyor belt, perhaps scooping up water at the bottom and dumping it out at the top.
 
@@ -793,7 +794,7 @@ If you look carefully at the results, you'll see that the red and blue hatch lin
 
 The `PaintSurface` handler concludes with a call to simply stroke the rounded rectangle, so you can see the discrepancy with the red and blue hatch lines:
 
-[![](effects-images/hatchfill-small.png "Triple screenshot of the Hatch Fill page")](effects-images/hatchfill-large.png#lightbox "Triple screenshot of the Hatch Fill page")
+[![Triple screenshot of the Hatch Fill page](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
 The Android screen doesn't really look like that: The scaling of the screenshot has caused the thin red lines and thin spaces to consolidate into seemingly wider red lines and wider spaces.
 
@@ -847,7 +848,7 @@ public class PathTileFillPage : ContentPage
 
 In the `PaintSurface` handler, the `SKPathEffect.Create2DPath` calls sets the horizontal and vertical spacing to 64 to cause the 80-pixel square tiles to overlap. Fortunately, the path resembles a puzzle piece, meshing nicely with adjoining tiles:
 
-[![](effects-images/pathtilefill-small.png "Triple screenshot of the Path Tile Fill page")](effects-images/pathtilefill-large.png#lightbox "Triple screenshot of the Path Tile Fill page")
+[![Triple screenshot of the Path Tile Fill page](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
 The scaling from the original screenshot causes some distortion, particularly on the Android screen.
 
@@ -922,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 You can use this effect with either stroking or filling based on the `Style` property of the `SKPaint` object. Here it is running:
 
-[![](effects-images/anotherroundedheptagon-small.png "Triple screenshot of the Another Rounded Heptagon page")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple screenshot of the Another Rounded Heptagon page")
+[![Triple screenshot of the Another Rounded Heptagon page](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
 You'll see that this rounded heptagon is identical to the earlier program. If you need more convincing that the corner radius is truly 100 rather than the 50 specified in the `SKPathEffect.CreateCorner` call, you can uncomment the final statement in the program and see a 100-radius circle superimposed on the corner.
 
@@ -938,10 +939,9 @@ You can use this path effect for either stroking or filling. Lines are separated
 
 The final argument is a seed used to generate the pseudo-random sequence used for the effect. The jitter effect will look a little different for different seeds. The argument has a default value of zero, which means that the effect is the same whenever you run the program. If you want different jitter whenever the screen is repainted, you can set the seed to the `Millisecond` property of a `DataTime.Now` value (for example).
 
-
 The **Jitter Experiment** page allows you to experiment with different values in stroking a rectangle:
 
-[![](effects-images/jitterexperiment-small.png "Triple screenshot of the Jitter Experiment page")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![Triple screenshot of the JitterExperiment page](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
 The program is straightforward. The [**JitterExperimentPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) file instantiates two `Slider` elements and an `SKCanvasView`:
 
@@ -1067,7 +1067,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running in landscape mode:
 
-[![](effects-images/jittertext-small.png "Triple screenshot of the Jitter Text page")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![Triple screenshot of the JitterText page](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## Path Outlining
 
@@ -1168,11 +1168,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 The circle is filled and stroked as you'd expect:
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Triple screenshot of the normal Tap To Outline The Path page")](effects-images/taptooutlinethepathnormal-large.png#lightbox "Triple screenshot of the normal Tap To Outline The Path page")
+[![Triple screenshot of the normal Tap To Outline The Path page](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
 When you tap the screen, `outlineThePath` is set to `true`, and the `PaintSurface` handler creates a fresh `SKPath` object and uses that as the destination path in a call to `GetFillPath` on the `redThickStroke` paint object. That destination path is then filled and stroked with `redThinStroke`, resulting in the following:
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Triple screenshot of the outlined Tap To Outline The Path page")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "Triple screenshot of the outlined Tap To Outline The Path page")
+[![Triple screenshot of the outlined Tap To Outline The Path page](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
 The two red circles clearly indicate that the original circular path has been converted into two circular contours.
 
@@ -1236,7 +1236,7 @@ You've already seen how the `GetFillPath` method of `SKPaint` can convert one pa
 
 One obvious use of `CreateSum` is to define an `SKPaint` object that fills a path with one path effect, and strokes the path with another path effect. This is demonstrated in the **Cats in Frame** sample, which displays an array of cats within a frame with scalloped edges:
 
-[![](effects-images/catsinframe-small.png "Triple screenshot of the Cats In Frame page")](effects-images/catsinframe-large.png#lightbox "Triple screenshot of the Cats In Frame page")
+[![Triple screenshot of the Cats In Frame page](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
 The [`CatsInFramePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) class begins by defining several fields. You might recognize the first field from the [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) class from the [**SVG Path Data**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) article. The second path is based on a line and arc for the scallop pattern of the frame:
 
@@ -1404,13 +1404,11 @@ public class DashedHatchLinesPage : ContentPage
 
 As you've already discovered, the hatch lines aren't precisely restricted to the interior of the area, and in this example, they always begin at the left with a whole dash:
 
-[![](effects-images/dashedhatchlines-small.png "Triple screenshot of the Dashed Hatch Lines page")](effects-images/dashedhatchlines-large.png#lightbox "Triple screenshot of the Dashed Hatch Lines page")
+[![Triple screenshot of the Dashed Hatch Lines page](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Now that you've seen path effects that range from simple dots and dashes to strange combinations, use your imagination and see what you can create.
-
-
 
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

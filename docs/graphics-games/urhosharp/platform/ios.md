@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/29/2017
 ---
 
-# UrhoSharp iOS and tvOS Support
+# UrhoSharp iOS and tvOS support
 
 While Urho is a portable class library, and allows the same API to be
 used across the various platform for your game logic, you still need
@@ -22,13 +22,13 @@ In the pages below, assume that `MyGame` is a sublcass of the
 
 **Supported architectures:** armv7, arm64, i386
 
-## Creating a Project
+## Creating a project
 
 Create an iOS project, and then add Data to the Resources directory and make sure all files have **BundleResource** as the **Build Action**.
 
 ![Project Setup](ios-images/image-4.png "Add Data to the Resources directory")
 
-## Configuring and Launching Urho
+## Configuring and launching Urho
 
 Add using statements for the `Urho` and `Urho.iOS` namespaces, and then
 add this code for initializing Urho, as well as launching your
@@ -59,7 +59,7 @@ It is important that you disable PNG optimizations because the default
 iOS PNG optimizer will generate images that Urho can not currently
 properly consume
 
-## Custom Embedding of Urho
+## Custom embedding of Urho
 
 You can alternatively to having Urho take over the entire application
 screen, and to use it as a component of your application, you can
@@ -81,4 +81,3 @@ This will host your Urho class, so then you would do:
 ```csharp
 new MyGame().Run ();
 ```
-

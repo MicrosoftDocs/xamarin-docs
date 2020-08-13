@@ -4,8 +4,8 @@ description: "This document describes HealthKit, a framework introduced in iOS 8
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -25,7 +25,7 @@ This article will not cover more advanced topics, such as querying the database,
 
 In this article, we will be creating a sample application to record the user's heart rate:
 
-[![](healthkit-images/image01.png "A sample application to record the users heart rate")](healthkit-images/image01.png#lightbox)
+[![A sample application to record the users heart rate](healthkit-images/image01.png)](healthkit-images/image01.png#lightbox)
 
 ## Requirements
 
@@ -37,9 +37,6 @@ The following are required to complete the steps presented in this article:
 
 > [!IMPORTANT]
 > Health Kit was introduced in iOS 8. Currently, Health Kit is not available on the iOS simulator, and debugging requires connection to a physical iOS device.
-
-
-
 
 ## Creating and Provisioning A Health Kit App
 Before a Xamarin iOS 8 application can use the HealthKit API, it must be properly configured and provisioned. This section will cover the steps required to properly setup your Xamarin Application.
@@ -54,35 +51,33 @@ Health Kit apps require:
 
 To find out more about provisioning an iOS app, the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) article in Xamarin’s **Getting Started** series describes the relationship between Developer Certificates, App IDs, Provisioning Profiles, and App Entitlements.
 
-<a name="explicit-appid" />
+<a name="explicit-appid"></a>
 
 ### Explicit App ID and Provisioning Profile
 
 The creation of an explicit **App ID** and an appropriate **Provisioning Profile** is done within Apple’s [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action). 
 
 Your current **App IDs** are listed within the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section of the Dev Center. Often, this list will show **ID** values of `*`, indicating that the **App ID** - **Name** can be used with any number of suffixes. Such *Wildcard App IDs* cannot be used with Health Kit.
- 
+
 To create an explicit **App ID**, click the **+** button in the upper-right to take you to the **Register iOS App ID** page:
 
-
-[![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
+[![Registering an app on the Apple Developer Portal](healthkit-images/image02.png)](healthkit-images/image02.png#lightbox)
 
 As shown in the image above, after creating an app description, use the **Explicit App ID** section to create an ID for your application. In the **App Services** section, check **Health Kit** in the **Enable Services** section.
 
 When you are done, press the **Continue** button to register the **App ID** in your account. You will be brought back to the **Certificates, Identifiers, and Profiles** page. Click **Provisioning Profiles** to take you to the list of your current provisioning profiles, and click the **+** button in the upper-right corner to take you to the **Add iOS Provisioning Profile** page. Select the **iOS App Development** option and click **Continue** to get to the **Select App ID** page. Here, select the explicit **App ID** that you previously specified:
 
-
-[![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
+[![Select the explicit App ID](healthkit-images/image03.png)](healthkit-images/image03.png#lightbox)
 
 Click **Continue** and work through the remaining screens, where you will specify your **Developer Certificate(s)**, **Device(s)**, and a **Name** for this **Provisioning Profile**:
 
-[![](healthkit-images/image04.png "Generating the Provisioning Profile")](healthkit-images/image04.png#lightbox)
+[![Generating the Provisioning Profile](healthkit-images/image04.png)](healthkit-images/image04.png#lightbox)
 
 Click **Generate** and await the creation of your profile. Download the file and double-click it to install in Xcode. You can confirm it’s installation under **Xcode > Preferences > Accounts > View Details…** You should see your just-installed provisioning profile, and it should have the icon for Health Kit and any other special services in its **Entitlements** row:
 
-[![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
+[![Viewing the profile in Xcode](healthkit-images/image05.png)](healthkit-images/image05.png#lightbox)
 
-<a name="associating-appid" />
+<a name="associating-appid"></a>
 
 ### Associating the App ID and Provisioning Profile With Your Xamarin.iOS App
 
@@ -90,11 +85,11 @@ Once you’ve created and installed an appropriate **Provisioning Profile** as d
 
 Rather than walk through the process of creating a Xamarin iOS 8 project by hand, open the sample app attached to this article (which includes a prebuilt Storyboard and code). To associate the sample app with your Health Kit enabled **Provisioning Profile**, in the **Solution Pad**, right-click on your Project and bring up its **Options** dialog. Switch to the **iOS Application** panel and enter the explicit **App ID** you created previously as the app’s **Bundle Identifier**:
 
-[![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
+[![Enter the explicit App ID](healthkit-images/image06.png)](healthkit-images/image06.png#lightbox)
 
 Now switch to the **iOS Bundle Signing** panel. Your recently-installed **Provisioning Profile**, with its association to the explicit **App ID**, will now be available as the **Provisioning Profile**:
 
-[![](healthkit-images/image07.png "Select the Provisioning Profile")](healthkit-images/image07.png#lightbox)
+[![Select the Provisioning Profile](healthkit-images/image07.png)](healthkit-images/image07.png#lightbox)
 
 If the **Provisioning Profile** is not available, double-check the **Bundle Identifier** in the **iOS Application** panel versus that specified in the **iOS Dev Center** and that the **Provisioning Profile** is installed (**Xcode > Preferences > Accounts > View Details…**).
 
@@ -111,8 +106,8 @@ Ultimately, your `Entitlements.plist` must have the following key and value pair
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.apple.developer.HealthKit</key>
-	<true/>
+    <key>com.apple.developer.HealthKit</key>
+    <true/>
 </dict>
 </plist>
 
@@ -124,49 +119,48 @@ Similarly, the `Info.plist` for the app must have a value of `healthkit` associa
 <key>UIRequiredDeviceCapabilities</key>
 <array>
 <string>armv7</string>
-	<string>healthkit</string>
+    <string>healthkit</string>
 </array>
 
 ```
 
 The sample application provided with this article includes a preconfigured `Entitlements.plist` that includes all of the required keys.
 
-<a name="programming" />
+<a name="programming"></a>
 
 ## Programming Health Kit
 
 The Health Kit datastore is a private, user-specific datastore that is shared among apps. Because health information is so sensitive, the user must take positive steps to allow data access. This access may be partial (write but not read, access for some types of data but not others, etc.) and may be revoked at any time. Health Kit applications should be written defensively, with the understanding that many users will be hesitant about storing their health-related information.
 
-Health Kit data is limited to Apple specified types. These types are strictly defined: some, such as blood type, are limited to the particular values of an Apple supplied enumeration, while others combine a magnitude with a unit of measure (such as grams, calories, and liters). Even data that share a compatible unit of measure are distinguished by their `HKObjectType`; for instance, the type system will catch a mistaken attempt to store an `HKQuantityTypeIdentifier.NumberOfTimesFallen` value to a field expecting an `HKQuantityTypeIdentifier.FlightsClimbed` even though both use the` HKUnit.Count` unit of measure.
+Health Kit data is limited to Apple specified types. These types are strictly defined: some, such as blood type, are limited to the particular values of an Apple supplied enumeration, while others combine a magnitude with a unit of measure (such as grams, calories, and liters). Even data that share a compatible unit of measure are distinguished by their `HKObjectType`; for instance, the type system will catch a mistaken attempt to store an `HKQuantityTypeIdentifier.NumberOfTimesFallen` value to a field expecting an `HKQuantityTypeIdentifier.FlightsClimbed` even though both use the `HKUnit.Count` unit of measure.
 
 The types storable in the Health Kit datastore are all subclasses of `HKObjectType`. `HKCharacteristicType` objects store Biological Sex, Blood Type, and Date of Birth. More common though, are `HKSampleType` objects, which represent data that is sampled at a specific time or over a period of time. 
 
-[![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
+[![HKSampleType objects chart](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
 `HKSampleType` is abstract and has four concrete subclasses. There is currently only one type of `HKCategoryType` data, which is Sleep Analysis. The large majority of data in Health Kit are of type `HKQuantityType` and store their data in `HKQuantitySample` objects, which are created using the familiar Factory design pattern:
 
-[![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
+[![The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
 `HKQuantityType` types range from `HKQuantityTypeIdentifier.ActiveEnergyBurned` to `HKQuantityTypeIdentifier.StepCount`. 
 
-<a name="requesting-permission" />
+<a name="requesting-permission"></a>
 
 ### Requesting Permission From the User
 
 End users must take positive steps to allow an app to read or write Health Kit data. This is done via the Health app that comes pre-installed on iOS 8 devices. The first time a Health Kit app is run, the user is presented with a system-controlled **Health Access** dialog:
 
-[![](healthkit-images/image10.png "The user is presented with a system-controlled Health Access dialog")](healthkit-images/image10.png#lightbox)
+[![The user is presented with a system-controlled Health Access dialog](healthkit-images/image10.png)](healthkit-images/image10.png#lightbox)
 
 Later, the user can change permissions using Health app’s **Sources** dialog:
 
-[![](healthkit-images/image11.png "The user can change permissions using Health apps Sources dialog")](healthkit-images/image11.png#lightbox)
+[![The user can change permissions using Health apps Sources dialog](healthkit-images/image11.png)](healthkit-images/image11.png#lightbox)
 
 Since health information is extremely sensitive, app developers should write their programs defensively, with the expectation that permissions will be refused and changed while the app is running. The most common idiom is to request permissions in the `UIApplicationDelegate.OnActivated` method and then modify the user interface as appropriate.
 
 ### Permissions Walkthrough
 
 In your Health Kit-provisioned project, open the `AppDelegate.cs` file. Notice the statement using `HealthKit`; at the top of the file.
-
 
 The following code relates to Health Kit permissions:
 
@@ -405,13 +399,11 @@ Attach a properly-provisioned iOS 8 development device to your system. Select it
 
 Assuming that provisions have been properly set, your application will start. When it reaches its `OnActivated` method, it will request Health Kit authorization. The first time this is encountered by the operating system, your user will be presented with the following dialog:
 
-
-[![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
+[![The user will be presented with this dialog](healthkit-images/image12.png)](healthkit-images/image12.png#lightbox)
 
 Enable your app to update Heart Rate data and your app will reappear. The `ReactToHealthCarePermissions` callback will be activated asynchronously. This will cause the `HeartRateModel’s` `Enabled` property to change, which will raise the `EnabledChanged` event, which will cause the `HKPermissionsViewController.OnEnabledChanged()` event handler to run, which enables the `StoreData` button. The following diagram shows the sequence:
 
-
-[![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
+[![This diagram shows the sequence of events](healthkit-images/image13.png)](healthkit-images/image13.png#lightbox)
 
 Press the **Record** button. This will cause the `StoreData_TouchUpInside()` handler to run, which will attempt to parse the value of the `heartRate` text field, convert into a `HKQuantity` via the previously discussed `HeartRateModel.HeartRateInBeatsPerMinute()` function and pass that quantity to `HeartRateModel.StoreHeartRate()`. As discussed previously, this will attempt to store the data and will raise either a `HeartRateStored` or `ErrorMessageChanged` event.
 
@@ -439,5 +431,5 @@ Finally, we've taking a look at a simple implementation of Health Kit using the 
 
 ## Related Links
 
-- [HKWork (sample)](https://developer.xamarin.com/samples/monotouch/ios8/IntroToHealthKit/)
+- [HKWork (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-introtohealthkit)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)

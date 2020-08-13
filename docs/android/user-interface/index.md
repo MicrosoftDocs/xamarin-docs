@@ -4,12 +4,12 @@ description: "Creating User Interfaces for Xamarin.Android Apps"
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
-# User Interface
+# User Interfaces with Xamarin.Android
 
 The following sections explain the various tools and building blocks
 that are used to compose user interfaces in Xamarin.Android apps.
@@ -61,4 +61,3 @@ Android controls (also called *widgets*) are the UI elements that you
 use to build a user interface. This section explains how to use
 controls such as buttons, toolbars, date/time pickers, calendars,
 spinners, switches, pop-up menus, view pagers, and web views.
-

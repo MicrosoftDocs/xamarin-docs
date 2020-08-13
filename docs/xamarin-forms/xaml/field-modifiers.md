@@ -6,21 +6,24 @@ ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
+ms.date: 08/02/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Field Modifiers in Xamarin.Forms
 
-_The `x:FieldModifier` namespace attribute specifies the access level for generated fields for named XAML elements._
+The `x:FieldModifier` namespace attribute specifies the access level for generated fields for named XAML elements. Valid values of the attribute are:
 
-## Overview
+- `private` – specifies that the generated field for the XAML element is accessible only within the body of the class in which it is declared.
+- `public`  – specifies that the generated field for the XAML element has no access restrictions.
+- `protected` – specifies that the generated field for the XAML element is accessible within its class and by derived class instances.
+- `internal` – specifies that the generated field for the XAML element is accessible only within types in the same assembly.
+- `notpublic` – specifies that the generated field for the XAML element is accessible only within types in the same assembly.
 
-Valid values of the attribute are:
+By default, if the value of the attribute isn't set, the generated field for the element will be `private`.
 
-- `Public` – specifies that the generated field for the XAML element is `public`.
-- `NotPublic` – specifies that the generated field for the XAML element is `internal` to the assembly.
-
-If the value of the attribute isn't set, the generated field for the element will be `private`.
+> [!NOTE]
+> The value of the attribute can use any casing, as it will be converted to lowercase by Xamarin.Forms.
 
 The following conditions must be met for an `x:FieldModifier` attribute to be processed:
 
@@ -31,9 +34,9 @@ The following XAML shows examples of setting the attribute:
 
 ```xaml
 <Label x:Name="privateLabel" />
-<Label x:Name="internalLabel" x:FieldModifier="NotPublic" />
-<Label x:Name="publicLabel" x:FieldModifier="Public" />
+<Label x:Name="internalLabel" x:FieldModifier="internal" />
+<Label x:Name="publicLabel" x:FieldModifier="public" />
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > The `x:FieldModifier` attribute cannot be used to specify the access level of a XAML class.

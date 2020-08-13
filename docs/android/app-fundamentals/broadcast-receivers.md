@@ -4,8 +4,8 @@ description: "This section discusses how to use a Broadcast Receiver."
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
 ---
 
@@ -15,14 +15,14 @@ _This section discusses how to use a Broadcast Receiver._
 
 ## Broadcast Receiver Overview
 
-A _broadcast receiver_ is an Android component that allows an application to respond to messages (an Android [`Intent`](https://developer.xamarin.com/api/type/Android.Content.Intent/)) that are broadcast by the Android operating system or by an application. Broadcasts follow a _publish-subscribe_ model &ndash; an event causes a broadcast to be published and received by those components that are interested in the event.
+A _broadcast receiver_ is an Android component that allows an application to respond to messages (an Android [`Intent`](xref:Android.Content.Intent)) that are broadcast by the Android operating system or by an application. Broadcasts follow a _publish-subscribe_ model &ndash; an event causes a broadcast to be published and received by those components that are interested in the event.
 
 Android identifies two types of broadcasts:
 
-* **Explicit broadcast** &ndash; These types of broadcasts target a specific application. The most common use of an explicit broadcast is to start an Activity. An example of an explicit broadcast when an app needs to dial a phone number; it will dispatch an Intent that targets the Phone app on Android and pass along the phone number to be dialed. Android will then route the intent to the Phone app.
-* **Implicit broadcast** &ndash; These broadcasts are dispatched to all apps on the device. An example of an implicit broadcast is the `ACTION_POWER_CONNECTED` intent. This intent is published each time Android detects that the battery on the device is charging. Android will route this intent to all apps that have registered for this event.
+- **Explicit broadcast** &ndash; These types of broadcasts target a specific application. The most common use of an explicit broadcast is to start an Activity. An example of an explicit broadcast when an app needs to dial a phone number; it will dispatch an Intent that targets the Phone app on Android and pass along the phone number to be dialed. Android will then route the intent to the Phone app.
+- **Implicit broadcast** &ndash; These broadcasts are dispatched to all apps on the device. An example of an implicit broadcast is the `ACTION_POWER_CONNECTED` intent. This intent is published each time Android detects that the battery on the device is charging. Android will route this intent to all apps that have registered for this event.
 
-The broadcast receiver is a subclass of the `BroadcastReceiver` type and it must override the [`OnReceive`](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) method. Android will execute `OnReceive` on the main thread, so this method should be designed to execute quickly. Care should be taken when spawning threads in `OnReceive` because Android may terminate the process when the method finishes. If a broadcast receiver must perform long running work then it is recommended to schedule a _job_ using the `JobScheduler` or the _Firebase Job Dispatcher_. Scheduling work with a job will be discussed in a separate guide.
+The broadcast receiver is a subclass of the `BroadcastReceiver` type and it must override the [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) method. Android will execute `OnReceive` on the main thread, so this method should be designed to execute quickly. Care should be taken when spawning threads in `OnReceive` because Android may terminate the process when the method finishes. If a broadcast receiver must perform long running work then it is recommended to schedule a _job_ using the `JobScheduler` or the _Firebase Job Dispatcher_. Scheduling work with a job will be discussed in a separate guide.
 
 An _intent filter_ is used to register a broadcast receiver so that Android can properly route messages. The intent filter can be specified at runtime (this is sometimes referred to as a _context-registered receiver_ or as _dynamic registration_) or it can be statically defined in the Android Manifest (a _manifest-registered receiver_). Xamarin.Android provides a C# attribute, `IntentFilterAttribute`, that will statically register the intent filter (this will be discussed in more detail later in this guide). Starting in Android 8.0, it is not possible for an application to statically register for an implicit broadcast.
 
@@ -57,14 +57,14 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 When Xamarin.Android compiles the class, it will also update the AndroidManifest with the necessary meta-data to register the receiver. For a statically-registered broadcast receiver, the `Enabled` properly must be set to `true`, otherwise Android will not be able to create an instance of the receiver.
- 
+
 The `Exported` property controls whether the broadcast receiver can receive messages from outside the application. If the property is not explicitly set, the default value of the property is determined by Android based on if there are any intent-filters associated with the broadcast receiver. If there is at least one intent-filter for the broadcast receiver then Android will assume that the `Exported` property is `true`. If there are no intent-filters associated with the broadcast receiver, then Android will assume that the value is `false`. 
 
 The `OnReceive` method receives a reference to the `Intent` that was dispatched to the broadcast receiver. This makes is possible for the sender of the intent to pass values to the broadcast receiver.
 
 ### Statically registering a Broadcast Receiver with an Intent Filter
 
-When a `BroadcastReceiver` is decorated with the [`IntentFilterAttribute`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/), Xamarin.Android will add the necessary `<intent-filter>` element to the Android manifest at compile time. The following snippet is an example of a broadcast receiver that will run when a device has finished booting (if the appropriate Android permissions were granted by the user):
+When a `BroadcastReceiver` is decorated with the [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute), Xamarin.Android will add the necessary `<intent-filter>` element to the Android manifest at compile time. The following snippet is an example of a broadcast receiver that will run when a device has finished booting (if the appropriate Android permissions were granted by the user):
 
 ```csharp
 [BroadcastReceiver(Enabled = true)]
@@ -77,6 +77,9 @@ public class MyBootReceiver : BroadcastReceiver
     }
 }
 ```
+
+> [!NOTE]
+> In Android 8.0 (API 26 and above), [Google placed limitations](https://developer.android.com/about/versions/oreo/background) on what apps can do while users aren't directly interacting with them. These limitations affect background services and implicit broadcast receivers such as `Android.Content.Intent.ActionBootCompleted`. Because of these limitations, you might have difficulties registering a `Boot Completed` broadcast receiver on newer versions of Android. If this is the case, note that these restrictions do not apply to foreground services, which can be called from your broadcast receiver.
 
 It is also possible to create an intent filter that will respond to custom intents. Consider the following example: 
 
@@ -107,19 +110,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity
@@ -180,12 +183,12 @@ Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast
 
 ## Related Links
 
-- [BroadcastReceiver API](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiver/)
-- [Context.RegisterReceiver API](https://developer.xamarin.com/api/member/Android.Content.Context.RegisterReceiver/p/Android.Content.BroadcastReceiver/Android.Content.IntentFilter/System.String/Android.OS.Handler/)
-- [Context.SendBroadcast API](https://developer.xamarin.com/api/member/Android.Content.Context.SendBroadcast/p/Android.Content.Intent/)
-- [Context.UnregisterReceiver API](https://developer.xamarin.com/api/member/Android.Content.Context.UnregisterReceiver/p/Android.Content.BroadcastReceiver/)
-- [Intent API](https://developer.xamarin.com/api/type/Android.Content.Intent/)
-- [IntentFilter API](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)
+- [BroadcastReceiver API](xref:Android.Content.BroadcastReceiver)
+- [Context.RegisterReceiver API](xref:Android.Content.Context.RegisterReceiver*)
+- [Context.SendBroadcast API](xref:Android.Content.Context.SendBroadcast*)
+- [Context.UnregisterReceiver API](xref:Android.Content.Context.UnregisterReceiver*)
+- [Intent API](xref:Android.Content.Intent)
+- [IntentFilter API](xref:Android.App.IntentFilterAttribute)
 - [LocalBroadcastManager (Android docs)](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))
 - [Local Notifications in Android](~/android/app-fundamentals/notifications/local-notifications.md) guide
 - [Android Support Library v4 (NuGet)](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)

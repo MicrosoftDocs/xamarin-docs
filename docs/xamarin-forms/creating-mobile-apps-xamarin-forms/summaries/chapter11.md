@@ -7,6 +7,7 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 11. The Bindable infrastructure

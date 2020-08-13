@@ -2,8 +2,8 @@
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: "WPF vs. Xamarin.Forms App Lifecycle"
 description: "This document compares the similarities and differences between the application lifecycle for Xamarin.Forms and WPF applications. It also looks at the visual tree, graphics, resources, and styles."
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
 ---
 
@@ -82,7 +82,6 @@ Xamarin.Forms is primarily oriented around mobile scenarios. As such, applicatio
 |Suspend/Lost focus|Window.OnDeactivated|Page.OnSleep|
 |Activated/Got focus|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|n/a|
-
 
 Both support hiding/showing child controls as well, in WPF it's a tri-state property `IsVisible` (visible, hidden, and collapsed). In Xamarin.Forms, it's just visible or hidden through the `IsVisible` property.
 

@@ -6,12 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
+ms.date: 05/21/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Data Binding
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _Data binding is the technique of linking properties of two objects so that changes in one property are automatically reflected in the other property. Data binding is an integral part of the Model-View-ViewModel (MVVM) application architecture._
 
@@ -23,14 +24,14 @@ To handle this job successfully, the program must be notified of changes in thes
 
 ## The Data Binding Solution
 
-Data binding automates this job, and renders the event handlers unnecessary. (The events are still necessary, however, because the data-binding infrastructure uses them.) Data bindings can be implemented either in code or in XAML, but they are much more common in XAML where they help to reduce the size of the code-behind file. By replacing procedural code in event handlers with declarative code or markup, the application is simplified and clarified.
+Data binding automates this job, and renders the event handlers unnecessary. Data bindings can be implemented either in code or in XAML, but they are much more common in XAML where they help to reduce the size of the code-behind file. By replacing procedural code in event handlers with declarative code or markup, the application is simplified and clarified.
 
 One of the two objects involved in a data binding is almost always an element that derives from `View` and forms part of the visual interface of a page. The other object is either:
 
 - Another `View` derivative, usually on the same page.
 - An object in a code file.
 
-In demonstration programs such as those in the [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) sample, data bindings between two `View` derivatives are often shown for purposes of clarity and simplicity. However, the same principles can be applied to data bindings between a `View` and other objects. When an application is built using the Model-View-ViewModel (MVVM) architecture, the class with underlying data is often called a ViewModel.
+In demonstration programs such as those in the [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) sample, data bindings between two `View` derivatives are often shown for purposes of clarity and simplicity. However, the same principles can be applied to data bindings between a `View` and other objects. When an application is built using the Model-View-ViewModel (MVVM) architecture, the class with underlying data is often called a viewmodel.
 
 Data bindings are explored in the following series of articles:
 
@@ -54,9 +55,17 @@ Dive deeper into the `Path` property of the data binding to access sub-propertie
 
 Use binding value converters to alter values within the data binding.
 
+## [Relative Bindings](relative-bindings.md)
+
+Use relative bindings to set the binding source relative to the position of the binding target.
+
 ## [Binding Fallbacks](binding-fallbacks.md)
 
 Make data bindings more robust by defining fallback values to use if the binding process fails.
+
+## [Multi-Bindings](multibinding.md)
+
+Attach a collection of [`Binding`](xref:Xamarin.Forms.Binding) objects to a single binding target property.
 
 ## [The Command Interface](commanding.md)
 
@@ -66,8 +75,8 @@ Implement the `Command` property with data bindings.
 
 Use compiled bindings to improve data binding performance.
 
-## Related Links
+## Related links
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)

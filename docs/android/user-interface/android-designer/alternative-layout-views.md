@@ -4,8 +4,8 @@ description: "This topic explains how layouts can be versioned by using resource
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -47,7 +47,6 @@ Designer via a small right pointer as indicated in the following
 screenshot: 
 
 [![Loaded layout indicator](alternative-layout-views-images/vs/04-new-layout-sml.png "Loaded layout indicator")](alternative-layout-views-images/vs/04-new-layout.png#lightbox)
-
 
 ## Editing alternative layouts
 
@@ -94,12 +93,12 @@ string to `Portrait` will cause the same change to be made to all
 linked layouts. Here is how it looks in the **Default** layout: 
 
 [![Add TextView](alternative-layout-views-images/vs/08-add-textview-sml.png "Add TextView")](alternative-layout-views-images/vs/08-add-textview.png#lightbox)
- 
+
 The `TextView` is also added to the **large-land** layout view because 
 it is linked to the **Default** layout: 
 
 [![Landscape TextView](alternative-layout-views-images/vs/09-landscape-textview-sml.png "Landscape TextView")](alternative-layout-views-images/vs/09-landscape-textview.png#lightbox)
- 
+
 But what if you want to make a change that is local to only one layout 
 (that is, you don't want the change to be propagated to any of the 
 other layouts)? To do this, you must unlink the layout that you want to 
@@ -118,7 +117,7 @@ red frame to indicate that the change is local to the **large-land**
 layout and is *not* propagated back to the **Default** layout: 
 
 [![Local change](alternative-layout-views-images/vs/10-local-change-sml.png "Local change")](alternative-layout-views-images/vs/10-local-change.png#lightbox)
- 
+
 When you click the **Default** layout to view it, the `TextView` text 
 string is still set to `Portrait`. 
 
@@ -132,7 +131,7 @@ following message is displayed: *Recent changes have caused conflicts
 in this alternative layout*. 
 
 [![Conflicting change](alternative-layout-views-images/vs/11-conflicting-change-sml.png "Conflicting change")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
- 
+
 A *conflict box* is displayed on the right of the widget to explain the 
 conflict: 
 
@@ -155,7 +154,7 @@ and dropped above the `Button`, the Designer marks the
 moved widget to indicate the conflict:
 
 [![View group conflict](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "View group conflict")](alternative-layout-views-images/vs/12-view-group-conflict.png#lightbox)
- 
+
 However, there is no marker on the `Button`. Although the position of 
 the `Button` has changed, the `Button` shows no applied changes that 
 are specific to the **large-land** configuration. 
@@ -165,7 +164,7 @@ generated, and a warning icon is displayed over the **large-land**
 layout: 
 
 [![Checkbox conflict](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "Checkbox conflict")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
- 
+
 Clicking the **large-land** layout reveals the conflict. The 
 following message is displayed: *Recent changes have caused conflicts 
 in this alternative layout*: 
@@ -191,8 +190,6 @@ dropped into the layout where the widget is missing (in this case, the
 As seen in the previous example with the `Button`, the `CheckBox` does not
 have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
-
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -276,7 +273,7 @@ The `TextView` is also added to the **large-land** layout view because
 it is linked to the **Default** layout: 
 
 [![Landscape TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
- 
+
 But what if you want to make a change that is local to only one layout 
 (that is, you don't want the change to be propagated to any of the 
 other layouts)? To do this, you must unlink the layout that you want to 
@@ -332,7 +329,7 @@ and dropped above the `Button`, the Designer marks the
 moved widget to indicate the conflict:
 
 [![View group conflict](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
- 
+
 However, there is no marker on the `Button`. Although the position of 
 the `Button` has changed, the `Button` shows no applied changes that 
 are specific to the **large-land** configuration. 
@@ -342,13 +339,13 @@ generated, and a warning icon is displayed over the **large-land**
 layout: 
 
 [![Checkbox conflict](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
- 
+
 Clicking the **large-land** layout reveals the conflict. The 
 following message is displayed: *Recent changes have caused conflicts 
 in this alternative layout*. 
 
 [![Alt layout conflict](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
- 
+
 In addition, the conflict box displays the following message:
 
 [![Conflict message](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
@@ -364,14 +361,12 @@ dropped into the layout where the widget is missing (in this case, the
 **large-land** layout): 
 
 [![Resolved group conflict](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
- 
+
 As seen in the previous example with the `Button`, the `CheckBox` does not
 have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
 
-
 -----
-
 
 ### Conflict persistence
 
@@ -384,6 +379,3 @@ here:
 
 Therefore, when a project is closed and reopened, all the conflicts will
 still be there &ndash; even the ones that have been ignored.
-
-
-

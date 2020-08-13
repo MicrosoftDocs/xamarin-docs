@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: Device Display Information"
 description: "This document describes the DeviceDisplay class in Xamarin.Essentials, which provides screen metrics for the device on which the application is running."
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Device Display Information
@@ -86,7 +88,7 @@ No differences.
 
 # [iOS](#tab/ios)
 
-* Accessing `DeviceDisplay` must be done on the UI thread or else an exception will be thrown. You can use the [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) method to run that code on the UI thread.
+- Accessing `DeviceDisplay` must be done on the UI thread or else an exception will be thrown. You can use the [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) method to run that code on the UI thread.
 
 # [UWP](#tab/uwp)
 
@@ -94,8 +96,13 @@ No differences.
 
 --------------
 
-
 ## API
 
-- [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
+- [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/DeviceDisplay)
 - [DeviceDisplay API documentation](xref:Xamarin.Essentials.DeviceDisplay)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Display-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Battery
@@ -157,7 +158,6 @@ public class EnergySaverTest
 
 If the energy-saver status changes to `On`, the application should stop performing background processing. If the status changes to `Unknown` or `Off`, the application can resume background processing.
 
-
 ## Platform Differences
 
 # [Android](#tab/android)
@@ -166,18 +166,18 @@ No platform differences.
 
 # [iOS](#tab/ios)
 
-* Device must be used to test APIs. 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Device must be used to test APIs.
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 # [UWP](#tab/uwp)
 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 -----
 
 ## API
 
-- [Battery source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
+- [Battery source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Battery)
 - [Battery API documentation](xref:Xamarin.Essentials.Battery)
 
 ## Related Video

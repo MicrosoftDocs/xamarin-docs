@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Introduction to Xamarin.Forms Data Templates
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Xamarin.Forms data templates provide the ability to define the presentation of data on supported controls. This article provides an introduction to data templates, examining why they are necessary._
 
@@ -85,7 +86,7 @@ public WithoutDataTemplatePageCS()
 
 The [`ListView`](xref:Xamarin.Forms.ListView) calls `ToString` when displaying the objects in the collection. Because there is no `Person.ToString` override, `ToString` returns the type name of each object, as shown in the following screenshots:
 
-![](introduction-images/no-data-template.png "ListView without a Data Template")
+![ListView without a Data Template](introduction-images/no-data-template.png)
 
 The `Person` object can override the `ToString` method to display meaningful data, as shown in the following code example:
 
@@ -102,7 +103,7 @@ public class Person
 
 This results in the [`ListView`](xref:Xamarin.Forms.ListView) displaying the `Person.Name` property value for each object in the collection, as shown in the following screenshots:
 
-![](introduction-images/override-tostring.png "ListView with a Data Template")
+![ListView with a Data Template](introduction-images/override-tostring.png)
 
 The `Person.ToString` override could return a formatted string consisting of the `Name`, `Age`, and `Location` properties. However, this approach offers only a limited control over the appearance of each item of data. For more flexibility, a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) can be created that defines the appearance of the data.
 
@@ -129,9 +130,8 @@ A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that's placed as a direct ch
 
 Data templates lower in the view hierarchy take precedence over those defined higher up when they share `x:Key` attributes. For example, an application-level data template will be overridden by a page-level data template, and a page-level data template will be overridden by a control-level data template, or an inline data template.
 
-
 ## Related Links
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Data Templates (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [Data Templates (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

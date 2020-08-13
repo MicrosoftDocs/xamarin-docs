@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -15,13 +15,13 @@ With the new macOS Sierra, the developer can take advantage of new APIs that all
 
 For more information on macOS Sierra, please see Apple's [macOS + Apps](https://developer.apple.com/macos/) documentation.
 
-<a name="Whats-New-in-macOS-Sierra" />
+<a name="Whats-New-in-macOS-Sierra"></a>
 
 ## What's New in macOS Sierra
 
 Apple has added several new APIs and services in macOS Sierra along with many enhancements to existing features, including:
 
-<a name="Apple-File-System" />
+<a name="Apple-File-System"></a>
 
 ### Apple File System
 
@@ -29,7 +29,7 @@ With macOS Sierra, Apple has released the new Apple File System as a modern file
 
 For more information, please see Apple's [Apple File System Guide](https://developer.apple.com/library/prerelease/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999).
 
-<a name="Apple-Pay-Enhancements" />
+<a name="Apple-Pay-Enhancements"></a>
 
 ### Apple Pay Enhancements
 
@@ -41,7 +41,7 @@ macOS Sierra includes the new ApplePay Javascript framework that allows the deve
 
 For more information, please see Apple's [ApplePay JS Framework](https://developer.apple.com/reference/applepayjs) reference.
 
-<a name="Building-Modern-macOS-Apps" />
+<a name="Building-Modern-macOS-Apps"></a>
 
 ### Building Modern macOS Apps
 
@@ -51,7 +51,7 @@ Modern macOS apps such as Apple's Safari web browser, Pages word processor and N
 
 Our [Building Modern macOS Apps](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) guide covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac.
 
-<a name="CloudKit-Data-Sharing" />
+<a name="CloudKit-Data-Sharing"></a>
 
 ### CloudKit Data Sharing
 
@@ -66,7 +66,7 @@ For more information, please see Apple's [CloudKit Framework Reference](https://
 > to help developers properly handle the European Union's General Data 
 > Protection Regulation (GDPR).
 
-<a name="Safari-App-Extensions-Support" />
+<a name="Safari-App-Extensions-Support"></a>
 
 ### Safari App Extensions Support
 
@@ -74,7 +74,7 @@ Safari App Extensions allow the app to extend the behavior of the Safari web bro
 
 For more information, please see Apple's [Safari App Extension Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternetWeb/Conceptual/SafariAppExtension_PG/index.html#//apple_ref/doc/uid/TP40017319).
 
-<a name="Security-and-Privacy-Enhancements" />
+<a name="Security-and-Privacy-Enhancements"></a>
 
 ### Security and Privacy Enhancements
 
@@ -92,7 +92,7 @@ Additionally, apps running on macOS Sierra (or later) must statically declare th
 
 Since macOS Sierra shares these changes with iOS 10, please see our iOS 10 [Security and Privacy Enhancements](~/ios/app-fundamentals/security-privacy.md) guide for more information.
 
-<a name="Smart-Card-Driver-Extension-Support" />
+<a name="Smart-Card-Driver-Extension-Support"></a>
 
 ### Smart Card Driver Extension Support
 
@@ -100,7 +100,7 @@ With macOS Sierra, the app can create `NSExtension` based smart card drivers tha
 
 for more information, Pleas see Apple's [CryptoTokenKit Framework Reference](https://developer.apple.com/reference/cryptotokenkit).
 
-<a name="Unified-Logging" />
+<a name="Unified-Logging"></a>
 
 ### Unified Logging
 
@@ -112,9 +112,9 @@ macOS Sierra includes a new Console App (in Applications/Utilities) that is able
 
 Additionally, log messages can be viewed and maintained using command line tools.
 
-For more information, please see Apple's [Logging Reference](https://developer.apple.com/reference/os/1891852-logging).
+For more information, please see Apple's [Logging Reference](https://developer.apple.com/documentation/os/logging).
 
-<a name="Wide-Color" />
+<a name="Wide-Color"></a>
 
 ### Wide Color
 
@@ -130,7 +130,7 @@ Apple offers the following best practices when working with wide colors:
 
 To find out more, please see our [Introduction to Wide Color](~/ios/platform/wide-color.md) guide.
 
-<a name="Additional-Framework-Changes" />
+<a name="Additional-Framework-Changes"></a>
 
 ## Additional Framework Changes
 
@@ -138,7 +138,7 @@ In addition to the major framework changes and additions listed above, Apple has
 
 To find out more, please see our [Additional Framework Changes](~/mac/platform/introduction-to-macos-sierra/additional-framework-changes.md) guide.
 
-<a name="Deprecated-APIs" />
+<a name="Deprecated-APIs"></a>
 
 ## Deprecated APIs
 
@@ -146,9 +146,9 @@ The following APIs have been deprecated in macOS Sierra:
 
 - The HFS Standard File System is no longer supported.
 
-See Apple's [OS X v10.12 API Diffs](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/APIDiffsMacOS10_12/index.html) documentation for a complete list of deprecations and changes.
+See Apple's [macOS v10.12 API Diffs](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) documentation for a complete list of deprecations and changes.
 
 ## Related Links
 
-- [Mac Samples](https://developer.xamarin.com/samples/mac/)
-- [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [What's new in macOS 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

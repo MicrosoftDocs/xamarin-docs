@@ -3,8 +3,10 @@ title: "Xamarin.Essentials: Vibration"
 description: "This document describes the Vibration class in Xamarin.Essentials, which lets you start and stop the vibrate functionality for a desired amount of time."
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Vibration
@@ -102,9 +104,9 @@ No platform differences.
 
 # [iOS](#tab/ios)
 
-* Only vibrates when device is set to "Vibrate on ring".
-* Always vibrates for 500 milliseconds.
-* Not possible to cancel vibration.
+- Only vibrates when device is set to "Vibrate on ring".
+- Always vibrates for 500 milliseconds.
+- Not possible to cancel vibration.
 
 # [UWP](#tab/uwp)
 
@@ -114,5 +116,11 @@ No platform differences.
 
 ## API
 
-- [Vibration source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
+- [Vibration source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Vibration)
 - [Vibration API documentation](xref:Xamarin.Essentials.Vibration)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Vibration-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

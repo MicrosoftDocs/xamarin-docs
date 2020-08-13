@@ -4,49 +4,33 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.custom: video
-ms.date: 01/22/2019
+ms.date: 03/05/2020
 ---
 
 # Automatic Provisioning for Xamarin.iOS
 
-_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using Automatic Signing to request development certificates and profiles._
+_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using automatic provisioning to request development certificates and profiles._
 
 ## Requirements
 
-# [Visual Studio for Mac](#tab/macos)
+Automatic provisioning is available on Visual Studio for Mac, Visual Studio 2019, and Visual Studio 2017 (Version 15.7 and higher). 
 
-- Visual Studio for Mac 7.3 or greater
-- Xcode 9 or greater
+> [!NOTE]
+> You must also have a paid Apple Developer account to use this feature. More information on Apple developer accounts is available in the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
+> If you do not have a paid Apple developer account, see the [Free Provisioning for Xamarin.iOS] (~/ios/get-started/installation/device-provisioning/free-provisioning.md) guide.
 
-# [Visual Studio](#tab/windows)
+> [!NOTE]
+> Before you begin, be sure to first accept any license agreements in either the [Apple Developer portal](https://developer.apple.com/account/) or [App Store Connect](https://appstoreconnect.apple.com/).
 
-- Visual Studio 2019
-- OR Visual Studio 2017 Version 15.7 (or greater)
 
-You must also be paired to a Mac build host that has the following:
+## Enable automatic provisioning
 
-- Xcode 10 or greater
+Before starting the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. 
 
------
-
-## Enabling Automatic Signing
-
-Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
-
-> [!IMPORTANT]
-> Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest Apple account policies. If prompted, complete the steps to accept any new account agreements from Apple. If you don't accept the privacy agreement from May 2018, you'll see one of the following alerts when trying to provision your device:
-> ```
-> Unexpected authentication failure. Reason: {
-> "authType" : "sa"
-> }
-> ```
-> or
-> ```
-> Authentication Service Is Unavailable
-> ```
+Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
 
 To automatically sign your app for deployment on an iOS device, do the following:
 
@@ -62,7 +46,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 4. Select your team from the **Team** dropdown.
 
-6. After a few seconds a Signing Certificate and Provisioning profile will be created:
+5. After a few seconds a Signing Certificate and Provisioning profile will be created:
 
     ![successfully created certificate and profile](automatic-provisioning-images/image5.png)
 
@@ -70,39 +54,36 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 # [Visual Studio](#tab/windows)
 
-1. Pair Visual Studio 2019 to a Mac as described in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+> [!NOTE]
+> If you are using Visual Studio 2017 or Visual Studio 2019 (version 16.4 and older), you will need to be [Paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md) before proceeding.
 
-2. In the **Solution Explorer**, right-click the project name and select **Properties**. Then, navigate to the **iOS Bundle Signing** tab.
+1. In the **Solution Explorer**, right-click the iOS project name and select **Properties**. Then, navigate to the **iOS Bundle Signing** tab:
 
-3. Select the **Automatic Provisioning** scheme:
+    ![Screenshot of the bundle signing page in the iOS properties.](automatic-provisioning-images/bundle-signing-win.png)
 
-    ![Selection of the Automatic scheme](automatic-provisioning-images/prov4.png)
+2. Select the **Automatic Provisioning** scheme.
 
-4. Select your team from the **Team** combo box to start the automatic signing process.
+3. Select your team from the **Team** drop down menu to start the automatic signing process. Visual Studio will indicate if the process completed successfully:
 
-    ![Selection of the Team](automatic-provisioning-images/prov3.png)
-
-4. This starts the automatic signing process. Visual Studio then attempts to generate an App ID, provisioning profile, and a signing identity to use these artifacts for signing. You can see the generation process in the Build output:
-
-    ![Build output showing generation of artifacts](automatic-provisioning-images/prov5.png)
+    ![Screenshot of the bundle signing page highlighting the message "Automatic provisioning completed successfully".](automatic-provisioning-images/signing-success-win.png)
 
 -----
 
-## Triggering Automatic Provisioning
+## Run automatic provisioning
 
-When automatic signing has been enabled, Visual Studio for Mac will update these artifacts if necessary when any of the following things happen:
+When automatic provisioning is enabled, Visual Studio will re-run the process if necessary when any of the following things happen:
 
-* An iOS device is plugged into your Mac
-    - This automatically checks to see if the device is registered on the Apple Developer Portal. If it isn’t, it will add it and generate a new provisioning profile that contains it.
-* The Bundle ID of your app is changed
-    - This updates the app ID. A new provisioning profile containing this app ID is created.
-* A supported capability is enabled in the Entitlements.plist file.
-    - This capability will be added to the app ID and a new provisioning profile with the updated app ID is generated.
-    - Not all capabilities are currently supported. For more information on the ones that are supported, check out the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
+- An iOS device is plugged into your Mac
+  - This automatically checks to see if the device is registered on the Apple Developer Portal. If it isn't, it will add it and generate a new provisioning profile that contains it.
+- The Bundle ID of your app is changed
+  - This updates the app ID. A new provisioning profile containing this app ID is created.
+- A supported capability is enabled in the Entitlements.plist file.
+  - This capability will be added to the app ID and a new provisioning profile with the updated app ID is generated.
+  - Not all capabilities are currently supported. For more information on the ones that are supported, check out the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
 
 ## Wildcard App IDs
 
-Starting with Visual Studio for Mac 7.6, automatic provisioning will by
+In Visual Studio for Mac and Visual Studio 2019 (version 16.5 or greater), automatic provisioning will by
 default attempt to create and use a wildcard App ID and provisioning
 profile instead of an explicit App ID based on the **Bundle Identifier**
 specified in **Info.plist**. Wildcard App IDs reduce the number of profiles
@@ -125,12 +106,14 @@ following entitlements do not support wildcard App IDs:
 - Push Notifications
 - Wireless Accessory Configuration
 
-If your app uses one of these entitlements, Visual Studio for Mac will
+If your app uses one of these entitlements, Visual Studio will
 attempt to create an explicit (instead of a wildcard) App ID.
 
-> [!NOTE]
-> Automatic provisioning with wildcard App IDs is currently only available
-> in Visual Studio for Mac.
+## Troubleshoot 
+
+- It may take several hours for a new Apple developer account to be approved. You will not be able to enable automatic provisioning until the account has been approved.
+- If the automatic provisioning process fails with the error message `Authentication Service Is Unavailable`, sign in to either [App Store Connect](https://appstoreconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest service agreements.
+- If you get the error message `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, make sure that the team selected has an active paid membership to the Apple Developer Program. To use a paid Apple developer account, please see the [Free provisioning for Xamarin.iOS apps](~/ios/get-started/installation/device-provisioning/free-provisioning.md) guide.
 
 ## Related Links
 
@@ -138,9 +121,3 @@ attempt to create an explicit (instead of a wildcard) App ID.
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md)
 - [Troubleshooting](~/ios/deploy-test/troubleshooting.md)
 - [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-
-## Related Video
-
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
-
-[!include[](~/essentials/includes/xamarin-show-essentials.md)]

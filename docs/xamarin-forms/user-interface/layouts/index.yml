@@ -1,0 +1,63 @@
+### YamlMime:Landing
+
+title: Xamarin.Forms layouts
+summary: Learn about layout classes and layout concepts in Xamarin.Forms.
+
+metadata:
+  title: Xamarin.Forms layouts
+  description: Learn about layout classes and layout concepts in Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 01/03/2020
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+
+landingContent:
+  - title: Core layouts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Choose a layout
+            url: choose-layout.md
+          - text: AbsoluteLayout
+            url: absolutelayout.md
+          - text: FlexLayout
+            url: flex-layout.md
+          - text: Grid
+            url: grid.md
+          - text: RelativeLayout
+            url: relativelayout.md
+          - text: StackLayout
+            url: stacklayout.md
+
+  - title: Additional layouts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: ContentView
+            url: contentview.md
+          - text: Frame
+            url: frame.md
+          - text: ScrollView
+            url: scrollview.md
+
+  - title: Layout concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Bindable layouts
+            url: bindable-layouts.md
+          - text: Custom layouts
+            url: custom.md
+          - text: Device orientation
+            url: device-orientation.md
+          - text: LayoutOptions
+            url: layout-options.md
+          - text: Layout compression
+            url: layout-compression.md
+          - text: Margin and padding
+            url: margin-and-padding.md
+          - text: Tablet and desktop layouts
+            url: tablet.md

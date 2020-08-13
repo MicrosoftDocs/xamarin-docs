@@ -4,8 +4,8 @@ description: "This article describes working with toolbars in a Xamarin.Mac appl
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -353,10 +353,9 @@ Run the application and note that the **Trash** item is now disabled in the tool
 
 This article has taken a detailed look at working with toolbars and toolbar items in a Xamarin.Mac application. It described how to create and maintain toolbars in Xcode's Interface Builder, how some UI controls automatically work with toolbar items, how to work with toolbars in C# code, and how to enable and disable toolbar items.
 
-
 ## Related Links
 
-- [MacToolbar (sample)](https://developer.xamarin.com/samples/mac/MacToolbar/)
+- [MacToolbar (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines for Toolbars](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
 - [Introduction to Toolbars](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Toolbars/Toolbars.html)

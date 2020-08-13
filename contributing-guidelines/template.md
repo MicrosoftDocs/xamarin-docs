@@ -60,18 +60,18 @@ Markdown uses special characters such as \*, \`, and \# for formatting. If you w
 ## File name
 
 File names use the following rules:
-* Contain only lowercase letters, numbers, and hyphens.
-* No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
-* Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
-* No small words - don't include a, and, the, in, or, etc.
-* Must be in Markdown and use the .md file extension.
-* Keep file names reasonably short. They are part of the URL for your articles.
 
-
+- Contain only lowercase letters, numbers, and hyphens.
+- No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
+- Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
+- No small words - don't include a, and, the, in, or, etc.
+- Must be in Markdown and use the .md file extension.
+- Keep file names reasonably short. They are part of the URL for your articles.
 
 ## Headings
 
 Use sentence-style capitalization. Always capitalize:
+
 - The first word of a heading.
 - The word following a colon in a title or heading (for example, "How to: Sort an array").
 
@@ -90,7 +90,7 @@ Second-level headings will generate the on-page TOC that appears in the "In this
 
 ## Text styling
 
-*Italics*
+_Italics_
  Use for files, folders, paths (for long items, split onto their own line) - new terms - URLs (unless rendered as links, which is the default).
 
 **Bold**
@@ -130,6 +130,7 @@ The build system has some extensions that allow us to link to .NET APIs without 
 When linking to an API, you can use its unique identifier (UID) that is auto-generated from the source code.
 
 You can use one of the following syntax:
+
 1. Markdown link: `[link_text](xref:UID)`
 2. Auto link: `<xref:UID>`
 3. Shorthand form: `@UID`
@@ -142,6 +143,7 @@ For more information about using this notation, see [Using cross reference](http
 > Right now, there is no easy way to find the UIDs. The best way to find the UID for an API is to search for it in this repo: [docascode/coreapi](https://github.com/docascode/coreapi). We're working on having a better system in the future.
 
 When the UID contains the special characters \` or \#, the UID value needs to be HTML encoded as %60 and %23 respectively as in the following examples:
+
 - Example: @System.Threading.Tasks.Task\`1 becomes `@System.Threading.Tasks.Task%601`
 - Example: @System.Exception.\#ctor becomes `@System.Exception.%23ctor`
 
@@ -155,7 +157,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. Ordered
 1. List
 
-
 #### Ordered list with an embedded list
 
 1. Here
@@ -167,7 +168,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. ordered
 1. list
 
-
 ### Unordered Lists
 
 - This
@@ -176,20 +176,18 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 - bulleted
 - list
 
-
-##### Unordered list with an embedded list
+#### Unordered list with an embedded list
 
 - This
 - bulleted
 - list
-    - Mrs. Peacock
-    - Mr. Green
+  - Mrs. Peacock
+  - Mr. Green
 - contains
 - other
     1. Colonel Mustard
     1. Mrs. White
 - lists
-
 
 ## Horizontal rule
 
@@ -205,12 +203,11 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 
 You can use a [Markdown table generator tool](http://www.tablesgenerator.com/markdown_tables) to help creating them more easily.
 
-
 ### Inline code blocks with language identifier
 
 Use three backticks (\`\`\`) + a language ID to apply language-specific color coding to a code block. Here is the entire list of [GFM language IDs](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs).
 
-##### C&#9839;
+#### C&#9839;
 
 ```c#
 using System;

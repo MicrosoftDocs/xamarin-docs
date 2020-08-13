@@ -4,14 +4,14 @@ description: "This document discusses how to use labels in Xamarin.iOS. It descr
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
 ---
 
 # Labels in Xamarin.iOS
 
-The `UILabel` control is used for displaying single and multi-line, read only text. 
+The `UILabel` control is used for displaying single and multi-line, read only text.
 
 ## Implementing a Label
 
@@ -35,9 +35,9 @@ The following properties can be adjusted on the properties pad:
 - **Color, Font, Alignment** – Formatting Attributes that can be applied to the label.
 - **Lines** – Sets the number of lines that the label can span. Set this to 0 to allow the label to use as many lines as needed.
 - **Behavior** – Can be set to either Enabled or Highlighted. Enabled is set by default, disabled text will be displayed in a lighter grey color. Highlighted is disabled by default and allows the label to be redrawn with a highlighted state when it is selected by a user.
-- **Baselane and Line Break** – 
-    - Basline determines how the text will be positioned if the font sizes is different from the one specified.
-    - Line Breaks determine how a string will be wrapped or truncated if it is longer than a single line.
+- **Baselane and Line Break** –
+  - Basline determines how the text will be positioned if the font sizes is different from the one specified.
+  - Line Breaks determine how a string will be wrapped or truncated if it is longer than a single line.
 - **Autoshrink** – Determines how the font sized will be minimized within a label, if necessary.
 - **Highlighted, Shadow, Offset** – Allows you to set the Hightlighted and Shadow color, and the shadow offset.
 
@@ -45,7 +45,7 @@ The following properties can be adjusted on the properties pad:
 
 For information on using the line breaks in iOS, refer to the [Truncate and Wrap text](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) recipe.
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## Formatting Text and Label
 
@@ -96,8 +96,3 @@ Which displays the text like this:
 ![Highlight and Shadow set on text](labels-images/image4.png)
 
 For more information on changing the font of a UILabel, refer to the [Change The Font](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) recipe.
-
-
-
-
-

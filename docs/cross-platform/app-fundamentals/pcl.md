@@ -3,8 +3,8 @@ title: "Introduction to Portable Class Libraries (PCL)"
 description: "This article introduces Portable Class Library (PCL) projects and walks through creating and consuming PCL projects in Visual Studio for Mac and Visual Studio."
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
 ---
 # Portable Class Libraries (PCL)
@@ -63,7 +63,7 @@ This includes profiles that are combinations of:
 
 You can read more about the different profiles' capabilities on
 [Microsoft’s website](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
-and see another community member's [PCL profile summary](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
+and see another community member's [PCL profile summary](https://portablelibraryprofiles.stephencleary.com/)
 which includes supported framework info and other notes.
 
 **Benefits**
@@ -85,7 +85,7 @@ To some extent both disadvantages can be circumvented using the Provider pattern
 
 This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features:
 
-[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
+[![This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features](pcl-images/image1.png)](pcl-images/image1.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -213,18 +213,18 @@ The output from a PCL (ie. the resulting assembly DLL) can also be added as a re
 
 ## PCL example
 
-The [TaskyPortable](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
+The [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 sample application demonstrates how a Portable Class Library can be used with Xamarin.
 Here are some screenshots of the resulting apps running on iOS and Android:
 
-[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
+[![Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
 
 It shares a number of data and logic classes that are purely portable code, and it also demonstrates how to
   incorporate platform-specific requirements using Dependency Injection for the SQLite database implementation.
 
 The solution structure is shown below (in Visual Studio for Mac and Visual Studio respectively):
 
-[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
+[![The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively](pcl-images/image19.png)](pcl-images/image19.png#lightbox)
 
 Because the SQLite-NET code has platform-specific pieces (to work with the SQLite implementations on each different operating system) for demonstration purposes it has been refactored into an abstract class that can be compiled into a Portable Class Library, and the actual code implemented as subclasses in the iOS and Android projects.
 
@@ -291,7 +291,7 @@ This article has briefly discussed the benefits and pitfalls of Portable Class L
 
 ## Related links
 
-- [TaskyPortable (sample)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
+- [TaskyPortable (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 - [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)

@@ -3,8 +3,8 @@ title: "Migrating a Binding to the Unified API"
 description: "This article covers the steps required to update an existing Xamarin Binding Project to support the Unified APIs for Xamarin.IOS and Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -22,8 +22,8 @@ Additionally, any Xamarin Binding Project must also support the new Unified APIs
 
 The following is required to complete the steps presented in this article:
 
- -  **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
- -  **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
+- **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
+- **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
 
 Binding projects are not supported in Visual studio on a Windows machine.
 
@@ -84,6 +84,7 @@ We would update the new binding to be:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 If we are mapping to a newer version 3rd party library than what we had initially linked to, we need to review the `.h` header files for the library and see if any exiting, explicit calls to `int`, `int32_t`, `unsigned int`, `uint32_t` or `float` have been upgraded to be an `NSInteger`, `NSUInteger` or a `CGFloat`. If so, the same modifications to the `nint`, `nuint` and `nfloat` types will need to be made to their mappings as well.
 
 To learn more about these data type changes, see the [Native Types](~/cross-platform/macios/nativetypes.md) document.
@@ -128,21 +129,20 @@ With all of the code changes now in place, we need to modify our binding project
 
 As the final step to updating our binding project to use the Unified APIs, we need to either modify the `MakeFile` that we use to build the project or the Xamarin Project Type (if we are binding from within Visual Studio for Mac) and instruct _btouch_ to bind against the Unified APIs instead of the Classic ones.
 
-
 ### Updating a MakeFile
 
 If we are using a makefile to build our binding project into a Xamarin .DLL, we will need to include the `--new-style` command line option and call `btouch-native` instead of `btouch`.
 
 So given the following `MakeFile`:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 BINDDIR=/src/binding
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -167,19 +167,22 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 clean:
 	-rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 We need to switch from calling `btouch` to `btouch-native`, so we would adjust our macro definition as follows:
 
-```csharp
+```makefile
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
 We would update the call to `btouch` and add the `--new-style` option as follows:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMBindingLibrarySampleUniversal.a
 	$(BTOUCH) -unsafe --new-style -out:$@ XMBindingLibrarySample.cs -x=AssemblyInfo.cs -x=extras.cs --link-with=libXMBindingLibrarySampleUniversal.a,libXMBindingLibrarySampleUniversal.a
 ```
+<!--markdownlint-enable MD010 -->
 
 We can now execute our `MakeFile` as normal to build the new 64 bit version of our API.
 
@@ -193,7 +196,7 @@ Do the following:
 2. Select **File** > **New** > **Solution...**
 3. In the New Solution Dialog Box, select **iOS** > **Unified API** > **iOS Binding Project**: 
 
-	[![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
+    [![In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project](update-binding-images/image01new.png)](update-binding-images/image01new.png#lightbox)
 4. On 'Configure your new project' dialog enter a **Name** for the new binding project and click the **OK** button.
 5. Include the 64 bit version of Objective-C library that you are going to be creating bindings for.
 6. Copy over the source code from your existing 32 bit Classic API binding project (such as the `ApiDefinition.cs` and `StructsAndEnums.cs` files).
@@ -205,8 +208,6 @@ With all of these changes in place, you can build the new 64 bit version of the 
 
 In this article we have shown the changes that need to be made to an existing Xamarin Binding Project to support the new Unified APIs and 64 bit devices and the steps required to build the new 64 bit compatible version of an API.
 
-
-
 ## Related Links
 
 - [Mac and iOS](~/cross-platform/macios/index.md)
@@ -214,4 +215,4 @@ In this article we have shown the changes that need to be made to an existing Xa
 - [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md)
 - [Upgrading Existing iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)
+- [BindingSample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)

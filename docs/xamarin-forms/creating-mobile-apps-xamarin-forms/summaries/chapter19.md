@@ -7,6 +7,7 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 19. Collection views
@@ -128,7 +129,7 @@ Generally an application obtains user interaction with a `ListView` by attaching
 
 ### A collection of ViewModels
 
-To explore this, the [**SchoolOfFineArts**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library creates several classes based on an [XML data file](http://xamarin.github.io/xamarin-forms-book-samples/SchoolOfFineArt/students.xml) and images of fictitious students at this fictitious school.
+To explore this, the [**SchoolOfFineArts**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library creates several classes based on an [XML data file](https://xamarin.github.io/xamarin-forms-book-samples/SchoolOfFineArt/students.xml) and images of fictitious students at this fictitious school.
 
 The [`Student`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/Student.cs) class derives from [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/ViewModelBase.cs). The [`StudentBody`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/StudentBody.cs) class is a collection of `Student` objects and also derives from `ViewModelBase`. The [`SchoolViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/SchoolViewModel.cs) downloads the XML file and assembles all the objects.
 
@@ -223,8 +224,6 @@ The [**ConditionalSection**](https://github.com/xamarin/xamarin-forms-book-sampl
 ### A TableView menu
 
 Another use of a `TableView` is a menu. The [**MenuCommands**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/MenuCommands) sample demonstrates a menu that lets you move a little `BoxView` around the screen.
-
-
 
 ## Related links
 

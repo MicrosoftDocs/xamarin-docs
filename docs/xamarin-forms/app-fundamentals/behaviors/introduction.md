@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Introduction to Behaviors
@@ -28,8 +29,6 @@ Xamarin.Forms supports two different styles of behaviors:
 - **Attached behaviors** – `static` classes with one or more attached properties. For more information about attached behaviors, see [Attached Behaviors](~/xamarin-forms/app-fundamentals/behaviors/attached.md).
 
 This guide focuses on Xamarin.Forms behaviors because they are the preferred approach to behavior construction.
-
-
 
 ## Related Links
 

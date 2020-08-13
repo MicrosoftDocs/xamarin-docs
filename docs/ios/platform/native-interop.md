@@ -4,8 +4,8 @@ description: "This document discusses how to link native C libraries into a Xama
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/28/2016
 ---
 
@@ -16,7 +16,7 @@ libraries. This document discusses how to link your native C libraries with your
 Xamarin.iOS project. For information on doing the same for Objective-C libraries,
 see our [Binding Objective-C Types](~/ios/platform/binding-objective-c/index.md) document.
 
-<a name="building_native" />
+<a name="building_native"></a>
 
 ## Building Universal Native Libraries (i386, ARMv7, and ARM64)
 
@@ -69,7 +69,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 This creates `libMyLibrary.a` which will be a universal (fat) library which
 will be suitable to use for all iOS development targets.
 
-
 ### Missing Required Architecture i386
 
 If you are getting a `does not implement methodSignatureForSelector` or `does not implement doesNotRecognizeSelector` message in your Runtime Output when trying to consume an Objective-C library in the iOS Simulator, your library probably was not compiled for the i386 architecture (see the [Building Universal Native Libraries](#building_native) section above).
@@ -92,10 +91,9 @@ your application.
 If you wanted to statically link the library "libMyLibrary.a" that you got
 from the Internet or build with Xcode, you would need to do a few things:
 
--  Bring the Library into your project
--  Configure Xamarin.iOS to link the library
--  Access the methods from the library.
-
+- Bring the Library into your project
+- Configure Xamarin.iOS to link the library
+- Access the methods from the library.
 
 To **bring the library into your project**, Select the project
 from the solution explorer and press **Command+Option+a**. Navigate to the
@@ -132,24 +130,23 @@ C++ the previous options would look like:
 -cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-<a name="Accessing_C_Methods_from_C#" />
+<a name="Accessing_C_Methods_from_C#"></a>
 
 ## Accessing C Methods from C&#35;
 
 There are two kinds of native libraries available on iOS:
 
--  Shared libraries that are part of the operating system.
+- Shared libraries that are part of the operating system.
 
--  Static libraries that you ship with your application.
-
+- Static libraries that you ship with your application.
 
 To access methods defined in either one of those, you use [Mono's P/Invoke functionality](https://www.mono-project.com/docs/advanced/pinvoke/) which is the same technology that you
 would use in .NET, which is roughly:
 
--  Determine which C function you want to invoke
--  Determine its signature
--  Determine which library it lives in
--  Write the appropriate P/Invoke declaration
+- Determine which C function you want to invoke
+- Determine its signature
+- Determine which library it lives in
+- Write the appropriate P/Invoke declaration
 
 When you use P/Invoke you need to specify the path of the library that you
 are linking with. When using iOS shared libraries, you can either hardcode the
@@ -174,7 +171,7 @@ The Constants.UIKitLibrary is merely a constant defined as
 specify optionally the external name (UIRectFramUsingBlendMode) while exposing a
 different name in C#, the shorter RectFrameUsingBlendMode.
 
-<a name="Accessing_C_Dylibs" />
+<a name="Accessing_C_Dylibs"></a>
 
 ### Accessing C Dylibs
 
@@ -187,11 +184,11 @@ To do this, edit the `Main.CS` file and make it look like the following:
 ```csharp
 static void Main (string[] args)
 {
-	// Load Dylib
-	MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
+    // Load Dylib
+    MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
 
-	// Start application
-	UIApplication.Main (args, null, "AppDelegate");
+    // Start application
+    UIApplication.Main (args, null, "AppDelegate");
 }
 ```
 
@@ -202,7 +199,7 @@ Where `/full/path/to/` is the full path to the Dylib being consumed. With this c
 public static extern double AnimalLibraryVersion();
 ```
 
-<a name="Static_Libraries" />
+<a name="Static_Libraries"></a>
 
 ### Static Libraries
 
@@ -213,4 +210,3 @@ use the special name `__Internal` (note the double underscore characters at the 
 This forces DllImport to look up the symbol of the method that you are
 referencing in the current program, instead of trying to load it from a shared
 library.
-

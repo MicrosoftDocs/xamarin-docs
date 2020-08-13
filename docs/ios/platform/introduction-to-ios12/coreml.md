@@ -4,8 +4,8 @@ description: "This document describes updates to Core ML available as part of iO
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/15/2018
 ---
 # Core ML 2 in Xamarin.iOS
@@ -21,7 +21,7 @@ a model is used to make a sequence of predictions.
 ## Sample app: MarsHabitatCoreMLTimer
 
 To demonstrate batch predictions with Core ML, take a look at the
-[MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
+[MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 sample app. This sample uses a Core ML model trained to predict the cost
 of building a habitat on Mars, based on various inputs: number of solar
 panels, number of greenhouses, and number of acres.
@@ -139,7 +139,7 @@ the loop-based Core ML predictions.
 
 ## Related links
 
-- [Sample app – MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
+- [Sample app – MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 - [What's new in Core ML, Part 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [What's new in Core ML, Part 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
 - [Introduction to Core ML in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)

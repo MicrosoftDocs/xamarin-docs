@@ -4,26 +4,26 @@ description: "Selecting Calendar Dates using the DatePickerDialog and DialogFrag
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/22/2018
 ---
 
-# Date Picker
+# Android Date Picker
 
 ## Overview
 
 There are occasions when a user must input data into an Android
 application. To assist with this, the Android framework provides the
-[`DatePicker`](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/) widget and the
-[`DatePickerDialog`](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/) . The
+[`DatePicker`](xref:Android.Widget.DatePicker) widget and the
+[`DatePickerDialog`](xref:Android.App.DatePickerDialog) . The
 `DatePicker` allows users to select the year, month, and day in a
 consistent interface across devices and applications. The
 `DatePickerDialog` is a helper class that encapsulates the `DatePicker`
 in a dialog.
 
 Modern Android applications should display the `DatePickerDialog` in a
-[`DialogFragment`](https://developer.xamarin.com/api/type/Android.App.DialogFragment/). This will
+[`DialogFragment`](xref:Android.App.DialogFragment). This will
 allow an application to display the DatePicker as a popup dialog or
 embedded in an Activity. In addition, the `DialogFragment` will manage
 the lifecycle and display of the dialog, reducing the amount of code
@@ -54,7 +54,7 @@ display a `DatePickerDialog`:
 
 When the user selects a date and clicks the **OK** button, the
 `DatePickerDialog` will call the method
-[`IOnDateSetListener.OnDateSet`](https://developer.xamarin.com/api/member/Android.App.DatePickerDialog+IOnDateSetListener.OnDateSet/p/Android.Widget.DatePicker/System.Int32/System.Int32/System.Int32/).
+[`IOnDateSetListener.OnDateSet`](xref:Android.App.DatePickerDialog.IOnDateSetListener.OnDateSet*).
 This interface is implemented by the hosting `DialogFragment`. If the
 user clicks the **Cancel** button, then fragment and dialog will
 dismiss themselves.
@@ -74,8 +74,6 @@ date to the hosting activity:
    `DialogFragment`. This sample will use the third technique, and
    require that the Activity supply an `Action<DateTime>` to the
    `DialogFragment`.
-
-
 
 ### Extending DialogFragment
 
@@ -131,14 +129,11 @@ When the fragment is to be displayed, Android will call the method
 object and initialize it with the current date and the callback object
 (which is the current instance of the `DatePickerFragment`).
 
-
 > [!NOTE]
 > Be aware that the value of the month 
 > when `IOnDateSetListener.OnDateSet` is invoked is in the 
 > range of 0 to 11, and not 1 to 12. The day of the month 
 > will be in the range of 1 to 31 (depending on which month was selected).
-
-
 
 ### Showing the DatePickerFragment
 
@@ -178,7 +173,6 @@ public class MainActivity : Activity
 }
 ```
 
-
 ## Summary
 
 This sample discussed how to display a `DatePicker` widget as a popup
@@ -187,11 +181,10 @@ DialogFragment implementation and discussed the `IOnDateSetListener`
 interface. This sample also demonstrated how the DialogFragment may
 interact with the host Activity to display the selected date.
 
-
 ## Related Links
 
-- [DialogFragment](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)
-- [DatePicker](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)
-- [DatePickerDialog](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/)
-- [DatePickerDialog.IOnDateSetListener](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog+IOnDateSetListener/)
+- [DialogFragment](xref:Android.App.DialogFragment)
+- [DatePicker](xref:Android.Widget.DatePicker)
+- [DatePickerDialog](xref:Android.App.DatePickerDialog)
+- [DatePickerDialog.IOnDateSetListener](xref:Android.App.DatePickerDialog.IOnDateSetListener)
 - [Select A Date](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/datepicker/select_a_date)

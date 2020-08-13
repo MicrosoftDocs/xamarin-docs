@@ -3,8 +3,8 @@ title: "Application User Interface Localization"
 description: "This document describes the cross-platform concepts of internationalization and localization and examines how they impact application design."
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -40,16 +40,15 @@ localization, and how they apply to mobile application development in general.
 When designing and building an application, things that you might previously have
 hardcoded but which must parameterized for localization include:
 
--	Screen layouts and text,
--	Icons, graphics and colors,
--	Video and sound files,
--	Dynamic text and text-formatting (such as numbers, currency and dates),
- - Layout changes for right-to-left (RTL) languages, and
--	Data sorting.
+- Screen layouts and text,
+- Icons, graphics and colors,
+- Video and sound files,
+- Dynamic text and text-formatting (such as numbers, currency and dates),
+- Layout changes for right-to-left (RTL) languages, and
+- Data sorting.
 
 Regardless of which mobile platforms your app targets these tips will help you
 build a high-quality localized app.
-
 
 ## Design Considerations
 
@@ -65,7 +64,7 @@ German strings (for example) can be very long; sometimes a relatively short word
 
 Compare the string lengths for a few items on the iOS home screen in English, German, and Japanese:
 
-[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
+[![German vs Japanese string length](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
 
 Notice that **Settings** in English (8 characters) requires 13 characters for the German translation but only 2 characters in Japanese.
 
@@ -86,10 +85,9 @@ Write your validation rules with internationalization in mind – either choose 
 Not every image needs to change based on a user’s language choice. Many icons or photos will be suitable for all users, not matter what language they speak.
 Some resources make sense to localize though, such as:
 
- - Images depicting people or specific locations – your app may feel more relevant to users if it shows local people/locations.
- - Icons – Some iconography can be culture-specific and you can make your app easier to use by localizing the imagery to reflect local understanding.
- - Colors – Some cultures understand colors differently – red might mean warning in one region, but good luck in another. Check with native speakers when designing your app to determine whether you should be building a mechanism to localize colors.
-
+- Images depicting people or specific locations – your app may feel more relevant to users if it shows local people/locations.
+- Icons – Some iconography can be culture-specific and you can make your app easier to use by localizing the imagery to reflect local understanding.
+- Colors – Some cultures understand colors differently – red might mean warning in one region, but good luck in another. Check with native speakers when designing your app to determine whether you should be building a mechanism to localize colors.
 
 ### Videos and Sound
 
@@ -98,7 +96,6 @@ Videos and sound present special challenges when localizing an application, beca
 Multiple copies of video and sound files may also significantly increase the size of your application (especially if you are localizing into a large number of languages or have lots of media files). You might consider downloading only the required language assets after the user has installed your app, but this could also result in a poor user experience on slow networks.
 
 There are often multiple ways to solve localization issues – the most important thing is to consider them up-front and ensure your application is designed to take care of them.
-
 
 ### Dates, Times, Numbers and Currency
 
@@ -118,7 +115,7 @@ double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 
 See the [Parsing Numeric Strings](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) and [Parsing Date and Time Strings](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) MSDN articles for additional information.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### Right-to-left (RTL) Languages
 
@@ -126,10 +123,10 @@ Some languages, such as Arabic, Hebrew, and Urdu (for example), are read from ri
 Applications that support these languages should use screen designs that adapt for
 right-to-left readers, for example:
 
- - Text should be right-aligned.
- - Labels should appear to the right of input fields.
- - Default button placement is generally reversed.
- - Hierarchical navigation swiping and animation (and other navigation metaphors and animations)
+- Text should be right-aligned.
+- Labels should appear to the right of input fields.
+- Default button placement is generally reversed.
+- Hierarchical navigation swiping and animation (and other navigation metaphors and animations)
   that use direction for context should also be reversed.
 
 Both iOS and Android support right-to-left layouts and font rendering, with
@@ -148,11 +145,10 @@ It’s unlikely the built-in database capabilities on the mobile platforms will 
 
 Ensure you write and test your search algorithm with multiple languages in mind. Things to consider include:
 
- - Auto-complete – if you have built an auto-complete function ensure it sources suggestions relevant to the user’s language.
- - Matching query to data – will search queries entered in a specific language be executed against just content written in that language, or against all content in your app?
- - Stemming – if your search is built to search for similar words, word roots and other search optimizations, are those optimizations built for all the languages you support?
- - Sorting – make sure the results are sorted correctly (see above).
-
+- Auto-complete – if you have built an auto-complete function ensure it sources suggestions relevant to the user’s language.
+- Matching query to data – will search queries entered in a specific language be executed against just content written in that language, or against all content in your app?
+- Stemming – if your search is built to search for similar words, word roots and other search optimizations, are those optimizations built for all the languages you support?
+- Sorting – make sure the results are sorted correctly (see above).
 
 ### Data from external sources
 
@@ -160,38 +156,32 @@ Many applications download data from external sources, from Twitter and RSS feed
 
 There are few strategies you can use to try and ensure your app displays data relevant to the user:
 
- - Different sources – your application might download the data from a different source depending on the user’s language or locale. Locale news, weather and stock prices might make more sense than something downloaded from a North American feed.
- - Localized display – if you are displaying a Twitter or photo feed, you should display the metadata (such as the time taken) in his or her own language, even if the content itself remains in the original language.
- - Translation – you could build a translation option into your app to do a machine translation of incoming data. This could be automatic or at the user’s discretion – just be sure to notify the user if this is taking place, since machine translations are never perfect!
+- Different sources – your application might download the data from a different source depending on the user’s language or locale. Locale news, weather and stock prices might make more sense than something downloaded from a North American feed.
+- Localized display – if you are displaying a Twitter or photo feed, you should display the metadata (such as the time taken) in his or her own language, even if the content itself remains in the original language.
+- Translation – you could build a translation option into your app to do a machine translation of incoming data. This could be automatic or at the user’s discretion – just be sure to notify the user if this is taking place, since machine translations are never perfect!
 
 This could also affect external links to audio tracks or videos – when designing your application be sure to plan ahead for sourcing translated content or ensuring that users are adequately informed by the user interface when content will not be presented in their language.
-
 
 ### Don’t over-translate
 
 Some strings in your app might not need translating, or at the very least need special attention by the translator. Examples might include:
 
- - URLs – if you list a URL, it may or may not need to be adjusted by language. For example, facebook.com doesn’t require translation it auto-detects language at the main site. Other sites have locale-specific content and you might want to offer a different URL, such as yahoo.com versus yahoo.fr or yahoo.it.
- - Telephone numbers – especially those with different country-codes or numbers for callers that speak a particular language.
- - Contact details – addresses and other information might vary by language or locale.
- - Trademarks & product names – some strings don’t need translating because they’re always written in same language.
+- URLs – if you list a URL, it may or may not need to be adjusted by language. For example, facebook.com doesn’t require translation it auto-detects language at the main site. Other sites have locale-specific content and you might want to offer a different URL, such as yahoo.com versus yahoo.fr or yahoo.it.
+- Telephone numbers – especially those with different country-codes or numbers for callers that speak a particular language.
+- Contact details – addresses and other information might vary by language or locale.
+- Trademarks & product names – some strings don’t need translating because they’re always written in same language.
 
 Finally, be sure to include detailed instructions for the translator if certain strings require special treatment.
-
 
 ### Formatted text
 
 Not usually a problem with mobile apps because strings generally aren’t richly formatted. However if rich text (such as bold or italic formatting) is required in your app ensure the translator knows how to input the formatting, your strings files store it correctly and it is formatted properly before being displayed to the user (ie. don’t accidentally let the formatting codes themselves be presented to the user).
-
-
 
 ## Translation Tips
 
 Translating the strings used by an application is considered to be part of the localization process. Typically this task will be outsourced to a translation service and performed by multilingual staff that may not know your application or your business.
 
 The following tips will help you produce strings that are easier to translate accurately and therefore improve the quality of your localized apps.
-
-
 
 ### Localize complete strings, not words
 
@@ -217,7 +207,6 @@ and then attempt to create the correct phrase on-the-fly in code using string co
 
 **This is discouraged** because it will not necessarily work for all languages and will be difficult for the translator to understand the context of each short segment. It also leads to re-use of translated strings, which can cause problems later if they are used in different contexts (and then get updated).
 
-
 ### Allow for parameter re-ordering
 
 Some programming languages require extra syntax to specify the order of parameters in a string, however .NET already supports the concept of numbered placeholders, so
@@ -236,7 +225,6 @@ could be translated the following (where the position and order of the placehold
 
 and the tokens will be ordered as the translator intended. Be sure to include an explanation of what each placeholder contains when sending the string to a translator.
 
-
 ### Use multiple strings for cardinality
 
 Avoid strings like `"You have {0} message/s."`
@@ -246,13 +234,12 @@ Use specific strings for each state to provide a better user experience:
 
 ```csharp
 "You have no messages."
-"You have 1 messages."
+"You have 1 message."
 "You have 2 messages."
 "You have {0} messages."
 ```
 
 You will have to write code in your app to evaluate the number being displayed and choose the appropriate string. Some platforms (including iOS and Android) have built-in features to automatically choose the best plural string based on the preferences for the current language/locale.
-
 
 ### Allowing for gender
 
@@ -274,16 +261,16 @@ Or more accurately, don’t reuse strings just because they are similar when the
 
 For example: imagine you have an on/off switch in your app and the switch control needs the text for ‘on’ and ‘off’ to be localized. You also display the value of that setting elsewhere in the app in a text label. You should use different strings for the switch display versus the switch’s status (even if they are the same string in your default language) – for example:
 
--	"On" – displayed on the switch itself
--	"Off" – displayed on the switch itself
--	"On" – displayed in a label
--	"Off" – displayed in a label
+- "On" – displayed on the switch itself
+- "Off" – displayed on the switch itself
+- "On" – displayed in a label
+- "Off" – displayed in a label
 
 This provides maximum flexibility for the translator:
 
--	For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
--	Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
--	Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
+- For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
+- Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
+- Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
 
 ### Translation Services
 
@@ -294,7 +281,7 @@ To build translation features into your app, consider the [Azure Translator Text
 For testing purposes you could use one of the many online translation tools to include some localized text in your app during development:
 
 - [Bing Translator](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Google Translate](https://translate.google.com/)
 
 There are many others available. The quality of machine translation generally isn't considered good enough to release an application without first being reviewed and tested by professional translators or native speakers.
 
@@ -302,8 +289,7 @@ There are many others available. The quality of machine translation generally is
 
 There are also professional translation services that will take your strings and distribute them to their own translators, providing you with finished translations for a fee.
 
-One of the best-known services is [LionBridge](http://www.lionbridge.com/). Most professional services support all the common file types including strings, XML, RESX and POT/PO.
-
+One of the best-known services is [LionBridge](https://www.lionbridge.com/). Most professional services support all the common file types including strings, XML, RESX and POT/PO.
 
 ## Summary
 
@@ -316,8 +302,6 @@ Continue reading technical details for the platform you are interested in:
 - [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) cross-platform localization using RESX files.
 - [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) native platform localization.
 - [Xamarin.Android](~/android/app-fundamentals/localization.md) native platform localization.
-
-
 
 ## Related Links
 

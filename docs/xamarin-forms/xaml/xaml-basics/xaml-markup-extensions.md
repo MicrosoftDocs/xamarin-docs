@@ -7,11 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Part 3. XAML Markup Extensions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML markup extensions constitute an important feature in XAML that allow properties to be set to objects or values that are referenced indirectly from other sources. XAML markup extensions are particularly important for sharing objects, and referencing constants used throughout an application, but they find their greatest utility in data bindings._
 
@@ -296,7 +297,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
 
 The screenshots verify the consistent styling, and the platform-dependent styling:
 
-[![](xaml-markup-extensions-images/sharedresources.png "Styled Controls")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "Styled Controls")
+[![Styled Controls](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Although it is most common to define the `Resources` collection at the top of the page, keep in mind that the `Resources` property is defined by `VisualElement`, and you can have `Resources` collections on other elements on the page. For example, try adding one to the `StackLayout` in this example:
 
@@ -394,10 +395,10 @@ You’ll need additional XML namespace declarations to access other classes. Eac
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-You can also define XML namespace declarations for .NET namespaces in any assembly that the .NET Standard library references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **mscorlib** assembly, which once stood for "Microsoft Common Object Runtime Library," but now means "Multilanguage Standard Common Object Runtime Library." Because this is another assembly, you must also specify the assembly name, in this case **mscorlib**:
+You can also define XML namespace declarations for .NET namespaces in any assembly that the .NET Standard library references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **netstandard** assembly. Because this is another assembly, you must also specify the assembly name, in this case **netstandard**:
 
 ```csharp
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 Notice that the keyword `clr-namespace` is followed by a colon and then the .NET namespace name, followed by a semicolon, the keyword `assembly`, an equal sign, and the assembly name.
@@ -410,7 +411,7 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="XamlSamples.StaticConstantsPage"
              Title="Static Constants Page"
              Padding="{x:Static local:AppConstants.PagePadding}">
@@ -434,16 +435,17 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 
 The size of the resultant `BoxView` relative to the screen is platform-dependent:
 
- [![](xaml-markup-extensions-images/staticconstants.png "Controls using x:Static Markup Extension")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "Controls using x:Static Markup Extension")
+[![Controls using x:Static Markup Extension](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## Other Standard Markup Extensions
 
 Several markup extensions are intrinsic to XAML and supported in Xamarin.Forms XAML files. Some of these are not used very often but are essential when you need them:
 
--  If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
--  If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
--  You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
+- If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
+- If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
+- You can define arrays in XAML using the `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
 - The `Binding` markup extension is discussed in [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- The `RelativeSource` markup extension is discussed in [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## The ConstraintExpression Markup Extension
 
@@ -550,17 +552,15 @@ Perhaps the most important lesson you should take from this sample is the syntax
 
 Here’s the program running:
 
-[![](xaml-markup-extensions-images/relativelayout.png "Relative Layout using Constraints")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "Relative Layout using Constraints")
+[![Relative Layout using Constraints](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## Summary
 
 The XAML markup extensions shown here provide important support for XAML files. But perhaps the most valuable XAML markup extension is `Binding`, which is covered in the next part of this series, [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-
-
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

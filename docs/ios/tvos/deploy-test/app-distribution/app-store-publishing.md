@@ -4,8 +4,8 @@ description: "This document describes how to publish an app to the Apple TV App 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -20,10 +20,9 @@ The process of submitting an application to the Apple TV App Store involves:
 3. Using this profile to build your app.
 4. Submitting your app through  *iTunes Connect*.
 
-
 In this article we will cover all the steps needed to provision, build, and submit an app for Apple TV App Store distribution.
 
-<a name="Before_you_Submit" />
+<a name="Before_you_Submit"></a>
 
 ## Before You Submit an Application
 
@@ -35,10 +34,9 @@ A couple of things to watch out for when submitting an app are:
 1. Make sure the app’s description matches the functionality included in the app.
 2. Test that the app doesn’t crash under normal usage. This includes usage on every Apple TV device you support.
 
-
 Apple also maintains a list of Apple TV App Store submission tips. You can read these at [Distributing on the App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
-<a name="Configuring_your_Application_in_iTunes_Connect" />
+<a name="Configuring_your_Application_in_iTunes_Connect"></a>
 
 ## Configuring your Application in iTunes Connect
 
@@ -58,13 +56,13 @@ Do the following:
 
 For more details, please see our [Configure your tvOS App in iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) documentation.
 
-<a name="Preparing_for_App_Store_Distribution" />
+<a name="Preparing_for_App_Store_Distribution"></a>
 
 ## Preparing for App Store Distribution
 
 To publish an app to the Apple TV App Store, you first need to build it for distribution, which involves many steps. The following sections covers everything required to prepare a Xamarin.tvOS app for publication so that it can be built and submit it to the Apple TV App Store for review and release.
 
-<a name="Provisioning_for_Application_Services" />
+<a name="Provisioning_for_Application_Services"></a>
 
 ### Provisioning for Application Services
 
@@ -88,9 +86,9 @@ Do the following in Visual Studio for Mac:
 5. Select and configure the entitlements required for you Xamarin.tvOS app so that they match the setup you performed above when you defined the App ID.
 6. Save the changes to the `Entitlements.plist` file.
 
-For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
+For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
 
-<a name="Setting_the_Apps_Icons_and_Launch_Screens" />
+<a name="Setting_the_Apps_Icons_and_Launch_Screens"></a>
 
 ### Setting the Apps Icons, Launch Image and Top Shelf Image
 
@@ -98,7 +96,7 @@ For an tvOS app to be accepted by Apple for inclusion in the Apple TV App Store,
 
 For detailed instructions, please see our [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation.
 
-<a name="Creating_and_Installing_a_Distribution_Profile" />
+<a name="Creating_and_Installing_a_Distribution_Profile"></a>
 
 ### Creating and Installing a Distribution Profile
 
@@ -107,18 +105,17 @@ deploy the app. However, for Apple TV App Store distribution, only certificate a
 
 Provisioning involves the following steps using Apple's web based iOS Provisioning Portal:
 
-1.  Select **Provisioning** > **Distribution**.
-2.  Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
-3.  Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
-4.  Select certificate required to sign the application.
-5.  Enter a **Name** for the new **Distribution Profile** and generate the profile.
-6.  Refresh the list of available profiles in Xcode.
-7.  Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
+1. Select **Provisioning** > **Distribution**.
+2. Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
+3. Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
+4. Select certificate required to sign the application.
+5. Enter a **Name** for the new **Distribution Profile** and generate the profile.
+6. Refresh the list of available profiles in Xcode.
+7. Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
 
 For detailed instructions, please see the [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) and [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Again, both of these documents are specific to iOS but the same technique is used for tvOS apps.
 
-
-<a name="Setting_the_Build_Configuration_for_your_Application" />
+<a name="Setting_the_Build_Configuration_for_your_Application"></a>
 
 ### Setting the Build Configuration for your Application
 
@@ -134,8 +131,7 @@ Do the following:
 6. The **Optimize PNG image files for iOS** checkbox should be checked as this will help to further decrease your app's deliverable size.
 7. Debugging should *not* be enabled as it will make the build unnecessarily larger.
 
-
-<a name="Building_and_Submitting_the_Distributable" />
+<a name="Building_and_Submitting_the_Distributable"></a>
 
 ## Building and Submitting the Distributable
 
@@ -145,13 +141,13 @@ With your Xamarin.tvOS app properly configured, you are now ready to do the fina
 
 1. Select the **Release | Device** configuration in Visual Studio for Mac:
 
-	![](app-store-publishing-images/buildxs01new.png "Select the Release configuration")
+    ![Select the Release configuration](app-store-publishing-images/buildxs01new.png)
 2. From the **Build** menu, select **Archive for Publishing**:
 
-	[![](app-store-publishing-images/buildxs02new.png "Select Archive for Publishing")](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![Select Archive for Publishing](app-store-publishing-images/buildxs02new.png)](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Once the archive has been created, the **Archives** view will be displayed:
 
-	[![](app-store-publishing-images/buildxs03new.png "The Archives view")](app-store-publishing-images/buildxs03new.png#lightbox)
+    [![The Archives view](app-store-publishing-images/buildxs03new.png)](app-store-publishing-images/buildxs03new.png#lightbox)
 
 ### Sign and Distribute your App
 
@@ -163,65 +159,63 @@ To sign your app and prepare it for distribution:
 
 1. Select the **Sign and Distribute...**, illustrated below:
 
-	[![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
+    [![, Select theSign and Distribute...](app-store-publishing-images/buildxs04new.png)](app-store-publishing-images/buildxs04new.png#lightbox)
 2. This will open the publishing wizard. Select the **App Store** distribution channel to create a package, and open Application Loader:
 
-	[![](app-store-publishing-images/distribute01.png "Select the App Store distribution channel")](app-store-publishing-images/distribute01.png#lightbox)
+    [![Select the App Store distribution channel](app-store-publishing-images/distribute01.png)](app-store-publishing-images/distribute01.png#lightbox)
 3. On the Provisioning Profile screen, Select your signing identity and corresponding provisioning profile, or re-sign with another identity:
 
-	[![](app-store-publishing-images/distribute02.png "Select the signing identity and corresponding provisioning profile")](app-store-publishing-images/distribute02.png#lightbox)
+    [![Select the signing identity and corresponding provisioning profile](app-store-publishing-images/distribute02.png)](app-store-publishing-images/distribute02.png#lightbox)
 4. Verify the details of your package, and click **Publish** to save your `.ipa` package:
 
-	[![](app-store-publishing-images/distribute03.png "Verify the details of the package")](app-store-publishing-images/distribute03.png#lightbox)
+    [![Verify the details of the package](app-store-publishing-images/distribute03.png)](app-store-publishing-images/distribute03.png#lightbox)
 5. Once your `.ipa` has been saved, your App is ready to be uploaded to iTunes Connect via the Application Loader:
 
-	[![](app-store-publishing-images/distribute04.png "Uploaded to iTunes Connect via the Application Loader")](app-store-publishing-images/distribute04.png#lightbox)
+    [![Uploaded to iTunes Connect via the Application Loader](app-store-publishing-images/distribute04.png)](app-store-publishing-images/distribute04.png#lightbox)
 
 With your distribution build created and archived, you are now ready to submit your application to iTunes Connect.
 
-<a name="Submitting_Your_App_to_Apple" />
+<a name="Submitting_Your_App_to_Apple"></a>
 
 ## Submitting Your App to Apple
 
 With the distribution build completed, you are ready to submit your iOS application to Apple for review and release on the App Store.
 
-
 The archive workflow in Visual Studio for Mac will open Application Loader automatically, once you have saved the `.ipa`:
 
-2. Select *Deliver Your App* and click the *Choose* button:
+1. Select *Deliver Your App* and click the *Choose* button:
 
-	[![](app-store-publishing-images/publishvs01.png "Select Deliver Your App")](app-store-publishing-images/publishvs01.png#lightbox)
+    [![Select Deliver Your App](app-store-publishing-images/publishvs01.png)](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. Select the zip or IPA file you created above and click the **OK** button.
-4. The Application Loader will validate the file:
+2. Select the zip or IPA file you created above and click the **OK** button.
+3. The Application Loader will validate the file:
 
-	[![](app-store-publishing-images/publishvs02.png "The Application Loader validation screen")](app-store-publishing-images/publishvs02.png#lightbox)
-5. Click the *Next* button and the application will be validated against the App Store:
+    [![The Application Loader validation screen](app-store-publishing-images/publishvs02.png)](app-store-publishing-images/publishvs02.png#lightbox)
+4. Click the *Next* button and the application will be validated against the App Store:
 
-	[![](app-store-publishing-images/publishvs03.png "The application being validated against the App Store")](app-store-publishing-images/publishvs03.png#lightbox)
-6. Click the **Send** button to send the application to Apple for review.
-7. The Application Loader will inform you when the file has been successfully uploaded.
+    [![The application being validated against the App Store](app-store-publishing-images/publishvs03.png)](app-store-publishing-images/publishvs03.png#lightbox)
+5. Click the **Send** button to send the application to Apple for review.
+6. The Application Loader will inform you when the file has been successfully uploaded.
 
-<a name="iTunes_Connect_Status" />
+<a name="iTunes_Connect_Status"></a>
 
 ### iTunes Connect Status
 
 If you log back into iTunes Connect and select your app from the list of available apps, the status in iTunes Connect should now show that it is **Waiting for Review** (it may temporarily read **Upload Received** while it is processed):
 
-[![](app-store-publishing-images/image21.png "The status in iTunes Connect showing Waiting for Review")](app-store-publishing-images/image21.png#lightbox)
+[![The status in iTunes Connect showing Waiting for Review](app-store-publishing-images/image21.png)](app-store-publishing-images/image21.png#lightbox)
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## Troubleshooting
 
 If you are having issues submitting your Xamarin.tvOS app to the Apple TV App Store, please see our [Troubleshooting](~/ios/tvos/troubleshooting.md) guide. It contains several known issues that you might encounter and how to solve them in the Xamarin.tvOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
 This article presented a step-by-step guide to configuring, building, and submitting an app for Apple TV App Store publication. First, it covered the steps needed to create and install a distribution provisioning profile. Next, it walked through how to use Visual Studio for Mac to create a distribution build. Finally, it showed you how to use iTunes Connect and the Xcode Archive Tool to submit an application to the Apple TV App Store.
-
 
 ## Related Links
 

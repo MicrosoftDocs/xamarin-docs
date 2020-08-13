@@ -4,8 +4,8 @@ description: "This document links to guides that describe various user interface
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
 ---
 
@@ -65,7 +65,7 @@ This article covers creating custom user interface controls (by inheriting from 
 
 ## Mac samples gallery
 
-We also suggest taking a look at the [Mac Samples Gallery](https://developer.xamarin.com/samples/mac/all/). It includes a wealth of ready-to-use code that can help you get a Xamarin.Mac project off the ground quickly.
+We also suggest taking a look at the [Mac Samples Gallery](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac). It includes a wealth of ready-to-use code that can help you get a Xamarin.Mac project off the ground quickly.
 
 ## Related links
 

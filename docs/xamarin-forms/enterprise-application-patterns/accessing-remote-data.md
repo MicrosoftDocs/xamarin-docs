@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Accessing Remote Data
@@ -40,15 +41,13 @@ The eShopOnContainers mobile app uses the Model-View-ViewModel (MVVM) pattern, a
 
 The eShopOnContainers mobile app uses the `HttpClient` class to make requests over HTTP, with JSON being used as the media type. This class provides functionality for asynchronously sending HTTP requests and receiving HTTP responses from a URI identified resource. The `HttpResponseMessage` class represents an HTTP response message received from a REST API after an HTTP request has been made. It contains information about the response, including the status code, headers, and any body. The `HttpContent` class represents the HTTP body and content headers, such as `Content-Type` and `Content-Encoding`. The content can be read using any of the `ReadAs` methods, such as `ReadAsStringAsync` and `ReadAsByteArrayAsync`, depending on the format of the data.
 
-<a name="making_a_get_request" />
-
 #### Making a GET Request
 
-The `CatalogService` class is used to manage the data retrieval process from the catalog microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `CatalogService` class is registered as a type mapping against the `ICatalogService` type with the Autofac dependency injection container. Then, when an instance of the `CatalogViewModel` class is created, its constructor accepts an `ICatalogService` type, which Autofac resolves, returning an instance of the `CatalogService` class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+The `CatalogService` class is used to manage the data retrieval process from the catalog microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `CatalogService` class is registered as a type mapping against the `ICatalogService` type with the Autofac dependency injection container. Then, when an instance of the `CatalogViewModel` class is created, its constructor accepts an `ICatalogService` type, which Autofac resolves, returning an instance of the `CatalogService` class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 Figure 10-1 shows the interaction of classes that read catalog data from the catalog microservice for displaying by the `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
+[![Retrieving data from the catalog microservice](accessing-remote-data-images/catalogdata.png)](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
 
 **Figure 10-1**: Retrieving data from the catalog microservice
 
@@ -78,7 +77,7 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 }
 ```
 
-This method builds the URI that identifies the resource the request will be sent to, and uses the `RequestProvider` class to invoke the GET HTTP method on the resource, before returning the results to the `CatalogViewModel`. The `RequestProvider` class contains functionality that submits a request in the form of a URI that identifies a resource, an HTTP method that indicates the operation to be performed on that resource, and a body that contains any data required to perform the operation. For information about how the `RequestProvider` class is injected into the `CatalogService class`, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+This method builds the URI that identifies the resource the request will be sent to, and uses the `RequestProvider` class to invoke the GET HTTP method on the resource, before returning the results to the `CatalogViewModel`. The `RequestProvider` class contains functionality that submits a request in the form of a URI that identifies a resource, an HTTP method that indicates the operation to be performed on that resource, and a body that contains any data required to perform the operation. For information about how the `RequestProvider` class is injected into the `CatalogService class`, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 The following code example shows the `GetAsync` method in the `RequestProvider` class:
 
@@ -149,11 +148,11 @@ This method retrieves the catalog data from the SQL database using EntityFramewo
 
 #### Making a POST Request
 
-The `BasketService` class is used to manage the data retrieval and update process with the basket microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `BasketService` class is registered as a type mapping against the `IBasketService` type with the Autofac dependency injection container. Then, when an instance of the `BasketViewModel` class is created, its constructor accepts an `IBasketService` type, which Autofac resolves, returning an instance of the `BasketService `class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+The `BasketService` class is used to manage the data retrieval and update process with the basket microservice. In the `RegisterDependencies` method in the `ViewModelLocator` class, the `BasketService` class is registered as a type mapping against the `IBasketService` type with the Autofac dependency injection container. Then, when an instance of the `BasketViewModel` class is created, its constructor accepts an `IBasketService` type, which Autofac resolves, returning an instance of the `BasketService` class. For more information about dependency injection, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 Figure 10-2 shows the interaction of classes that send the basket data displayed by the `BasketView`, to the basket microservice.
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
+[![Sending data to the basket microservice](accessing-remote-data-images/basketdata.png)](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
 
 **Figure 10-2**: Sending data to the basket microservice
 
@@ -207,7 +206,7 @@ public async Task<TResult> PostAsync<TResult>(
 }
 ```
 
-This method calls the `CreateHttpClient` method, which returns an instance of the `HttpClient` class with the appropriate headers set. It then submits an asynchronous POST request to the resource identified by the URI, with the serialized basket data being sent in JSON format, and the response being stored in the `HttpResponseMessage` instance. The `HandleResponse` method is then invoked, which throws an exception if the response doesn't include a success HTTP status code. Then, the response is read as a string, converted from JSON to a `CustomerBasket` object, and returned to the `BasketService`. For more information about the `CreateHttpClient` method, see [Making a GET Request](#making_a_get_request).
+This method calls the `CreateHttpClient` method, which returns an instance of the `HttpClient` class with the appropriate headers set. It then submits an asynchronous POST request to the resource identified by the URI, with the serialized basket data being sent in JSON format, and the response being stored in the `HttpResponseMessage` instance. The `HandleResponse` method is then invoked, which throws an exception if the response doesn't include a success HTTP status code. Then, the response is read as a string, converted from JSON to a `CustomerBasket` object, and returned to the `BasketService`. For more information about the `CreateHttpClient` method, see [Making a GET Request](#making-a-get-request).
 
 When the `PostAsync` method in the `RequestProvider` class calls `HttpClient.PostAsync`, the `Post` method in the `BasketController` class in the Basket.API project is invoked, which is shown in the following code example:
 
@@ -226,7 +225,7 @@ This method uses an instance of the `RedisBasketRepository` class to persist the
 
 Figure 10-3 shows the interactions of classes that delete basket data from the basket microservice, for the `CheckoutView`.
 
-![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
+![Deleteing data from the basket microservice](accessing-remote-data-images/checkoutdata.png)
 
 **Figure 10-3**: Deleting data from the basket microservice
 
@@ -265,7 +264,7 @@ public async Task DeleteAsync(string uri, string token = "")
 }
 ```
 
-This method calls the `CreateHttpClient` method, which returns an instance of the `HttpClient` class with the appropriate headers set. It then submits an asynchronous DELETE request to the resource identified by the URI. For more information about the `CreateHttpClient` method, see [Making a GET Request](#making_a_get_request).
+This method calls the `CreateHttpClient` method, which returns an instance of the `HttpClient` class with the appropriate headers set. It then submits an asynchronous DELETE request to the resource identified by the URI. For more information about the `CreateHttpClient` method, see [Making a GET Request](#making-a-get-request).
 
 When the `DeleteAsync` method in the `RequestProvider` class calls `HttpClient.DeleteAsync`, the `Delete` method in the `BasketController` class in the Basket.API project is invoked, which is shown in the following code example:
 
@@ -290,8 +289,8 @@ The most common form of caching is read-through caching, where an app retrieves 
 
 Distributed applications, such as the eShopOnContainers reference application, should provide either or both of the following caches:
 
--   A shared cache, which can be accessed by multiple processes or machines.
--   A private cache, where data is held locally on the device running the app.
+- A shared cache, which can be accessed by multiple processes or machines.
+- A private cache, where data is held locally on the device running the app.
 
 The eShopOnContainers mobile app uses a private cache, where data is held locally on the device that's running an instance of the app. For information about the cache used by the eShopOnContainers reference application, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
@@ -308,8 +307,6 @@ It's impractical to expect that cached data will always be consistent with the o
 When cached data expires, it should be removed from the cache, and the app must retrieve the data from the original data store and place it back into the cache.
 
 It's also possible that a cache might fill up if data is allowed to remain for too long a period. Therefore, requests to add new items to the cache might be required to remove some items in a process known as *eviction*. Caching services typically evict data on a least-recently-used basis. However, there are other eviction policies, including most-recently-used, and first-in-first-out. For more information, see [Caching Guidance](/azure/architecture/best-practices/caching/).
-
-<a name="caching_images" />
 
 ### Caching Images
 
@@ -349,9 +346,9 @@ All apps that communicate with remote services and resources must be sensitive t
 
 Transient faults can have a huge impact on the perceived quality of an app, even if it has been thoroughly tested under all foreseeable circumstances. To ensure that an app that communicates with remote services operates reliably, it must be able to do all of the following:
 
--   Detect faults when they occur, and determine if the faults are likely to be transient.
--   Retry the operation if it determines that the fault is likely to be transient and keep track of the number of times the operation was retried.
--   Use an appropriate retry strategy, which specifies the number of retries, the delay between each attempt, and the actions to take after a failed attempt.
+- Detect faults when they occur, and determine if the faults are likely to be transient.
+- Retry the operation if it determines that the fault is likely to be transient and keep track of the number of times the operation was retried.
+- Use an appropriate retry strategy, which specifies the number of retries, the delay between each attempt, and the actions to take after a failed attempt.
 
 This transient fault handling can be achieved by wrapping all attempts to access a remote service in code that implements the retry pattern.
 
@@ -359,27 +356,25 @@ This transient fault handling can be achieved by wrapping all attempts to access
 
 If an app detects a failure when it tries to send a request to a remote service, it can handle the failure in any of the following ways:
 
--   Retrying the operation. The app could retry the failing request immediately.
--   Retrying the operation after a delay. The app should wait for a suitable amount of time before retrying the request.
--   Cancelling the operation. The application should cancel the operation and report an exception.
+- Retrying the operation. The app could retry the failing request immediately.
+- Retrying the operation after a delay. The app should wait for a suitable amount of time before retrying the request.
+- Cancelling the operation. The application should cancel the operation and report an exception.
 
 The retry strategy should be tuned to match the business requirements of the app. For example, it's important to optimize the retry count and retry interval to the operation being attempted. If the operation is part of a user interaction, the retry interval should be short and only a few retries attempted to avoid making users wait for a response. If the operation is part of a long running workflow, where cancelling or restarting the workflow is expensive or time-consuming, it's appropriate to wait longer between attempts and to retry more times.
 
 > [!NOTE]
 > An aggressive retry strategy with minimal delay between attempts, and a large number of retries, could degrade a remote service that's running close to or at capacity. In addition, such a retry strategy could also affect the responsiveness of the app if it's continually trying to perform a failing operation.
 
-If a request still fails after a number of retries, it's better for the app to prevent further requests going to the same resource and to report a failure. Then, after a set period, the app can make one or more requests to the resource to see if they're successful. For more information, see [Circuit Breaker Pattern](#circuit_breaker_pattern).
+If a request still fails after a number of retries, it's better for the app to prevent further requests going to the same resource and to report a failure. Then, after a set period, the app can make one or more requests to the resource to see if they're successful. For more information, see [Circuit Breaker Pattern](#circuit-breaker-pattern).
 
 > [!TIP]
 > Never implement an endless retry mechanism. Use a finite number of retries, or implement the [Circuit Breaker](/azure/architecture/patterns/circuit-breaker/) pattern to allow a service to recover.
 
-The eShopOnContainers mobile app does not currently implement the retry pattern when making RESTful web requests. However, the `CachedImage` control, provided by the [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) library supports transient fault handling by retrying image loading. If image loading fails, further attempts will be made. The number of attempts is specified by the `RetryCount` property, and retries will occur after a delay specified by the `RetryDelay` property. If these property values aren't explicitly set, their default values are applied – 3 for the `RetryCount` property, and 250ms for the `RetryDelay` property. For more information about the `CachedImage` control, see [Caching Images](#caching_images).
+The eShopOnContainers mobile app does not currently implement the retry pattern when making RESTful web requests. However, the `CachedImage` control, provided by the [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) library supports transient fault handling by retrying image loading. If image loading fails, further attempts will be made. The number of attempts is specified by the `RetryCount` property, and retries will occur after a delay specified by the `RetryDelay` property. If these property values aren't explicitly set, their default values are applied – 3 for the `RetryCount` property, and 250ms for the `RetryDelay` property. For more information about the `CachedImage` control, see [Caching Images](#caching-images).
 
 The eShopOnContainers reference application does implement the retry pattern. For more information, including a discussion of how to combine the retry pattern with the `HttpClient` class, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
 For more information about the retry pattern, see the [Retry](/azure/architecture/patterns/retry/) pattern.
-
-<a name="circuit_breaker_pattern" />
 
 ### Circuit Breaker Pattern
 
@@ -406,7 +401,6 @@ Many modern web-based solutions make use of web services, hosted by web servers,
 The performance of an app can be improved by caching frequently accessed data to fast storage that's located close to the app. Apps can implement read-through caching with the cache-aside pattern. This pattern determines whether the item is currently in the cache. If the item isn't in the cache, it's read from the data store and added to the cache.
 
 When communicating with web APIs, apps must be sensitive to transient faults. Transient faults include the momentary loss of network connectivity to services, the temporary unavailability of a service, or timeouts that arise when a service is busy. These faults are often self-correcting, and if the action is repeated after a suitable delay, then it's likely to succeed. Therefore, apps should wrap all attempts to access a web API in code that implements a transient fault handling mechanism.
-
 
 ## Related Links
 

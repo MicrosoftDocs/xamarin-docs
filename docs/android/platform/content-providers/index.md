@@ -4,15 +4,14 @@ description: "The Android operating system uses content providers to facilitate 
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
 # Intro to ContentProviders
 
 _The Android operating system uses content providers to facilitate access to shared data such as media files, contacts and calendar information. This article introduces the ContentProvider class, and provides two examples of how to use it._
-
 
 ## Content Providers Overview
 
@@ -60,17 +59,15 @@ special uses like custom search and copy/paste).
 The topics in this section provide some simple examples of consuming
 and writing `ContentProvider` code.
 
-
-
 ## Related Links
 
-- [ContactsAdapter Demo (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
-- [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [ContactsAdapter Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)
+- [SimpleContentProvider (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
 - [Content Providers Developers Guide](https://developer.android.com/guide/topics/providers/content-providers.html)
-- [ContentProvider Class Reference](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
-- [ContentResolver Class Reference](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
-- [ListView Class Reference](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-- [CursorAdapter Class Reference](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
-- [UriMatcher Class Reference](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)
-- [Android.Provider](https://developer.xamarin.com/api/namespace/Android.Provider/)
-- [ContactsContract Class Reference](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)
+- [ContentProvider Class Reference](xref:Android.Content.ContentProvider)
+- [ContentResolver Class Reference](xref:Android.Content.ContentResolver)
+- [ListView Class Reference](xref:Android.Widget.ListView)
+- [CursorAdapter Class Reference](xref:Android.Widget.CursorAdapter)
+- [UriMatcher Class Reference](xref:Android.Content.UriMatcher)
+- [Android.Provider](xref:Android.Provider)
+- [ContactsContract Class Reference](xref:Android.Provider.ContactsContract)

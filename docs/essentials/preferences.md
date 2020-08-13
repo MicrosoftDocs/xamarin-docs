@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Preferences
@@ -36,6 +37,12 @@ To retrieve a value from preferences or a default if not set:
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
+To check if a given _key_ exists in preferences:
+
+```csharp
+bool hasKey = Preferences.ContainsKey("my_key");
+```
+
 To remove the _key_ from preferences:
 
 ```csharp
@@ -62,6 +69,15 @@ The following data types are supported in **Preferences**:
 - **string**
 - **DateTime**
 
+## Integrate with System Settings
+
+Preferences are store natively, which allows you to integrate your settings into the native system settings. Follow the platform documetnation and samples to integrate with the platform:
+
+* Apple: [Implementing an iOS Settings Bundle](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [iOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [watchOS Settings](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Getting Started with Settings Screens](https://developer.android.com/guide/topics/ui/settings.html)
+
 ## Implementation Details
 
 Values of `DateTime` are stored in a 64-bit binary (long integer) format using two methods defined by the `DateTime` class: The [`ToBinary`](xref:System.DateTime.ToBinary) method is used to encode the `DateTime` value, and the [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) method decodes the value. See the documentation of these methods for adjustments that might be made to decoded values when a `DateTime` is stored that is not a Coordinated Universal Time (UTC) value.
@@ -80,6 +96,8 @@ All data is stored into [Shared Preferences](https://developer.android.com/train
 
 [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) is used to store the values on the device. If no `sharedName` is specified the `LocalSettings` are used, else the name is used to create a new container inside of `LocalSettings`.
 
+`LocalSettings` also has the following restriction that the name of each setting can be 255 characters in length at most. Each setting can be up to 8K bytes in size and each composite setting can be up to 64K bytes in size.
+
 --------------
 
 ## Persistence
@@ -92,7 +110,7 @@ When storing a string, this API is intended to store small amounts of text.  Per
 
 ## API
 
-- [Preferences source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [Preferences source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Preferences)
 - [Preferences API documentation](xref:Xamarin.Essentials.Preferences)
 
 ## Related Video
