@@ -634,11 +634,11 @@
     },
     {
       "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/index.md",
-      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md"
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin"
     },
     {
       "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md",
-      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md"
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin"
     },
     {
       "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/circle-map-overlay.md",
@@ -646,7 +646,7 @@
     },
     {
       "source_path": "docs/xamarin-forms/data-cloud/authentication/oauth.md",
-      "redirect_url": "/xamarin/essentials/web-authenticator/"      
+      "redirect_url": "/xamarin/essentials/web-authenticator/"
     },
     {
         "source_path": "docs/xamarin-forms/user-interface/theming/dark-mode.md",
@@ -654,15 +654,19 @@
     },
     {
         "source_path": "docs/xamarin-forms/user-interface/layouts/stack-layout.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/stacklayout.md"
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/stacklayout"
     },
     {
         "source_path": "docs/xamarin-forms/user-interface/layouts/scroll-view.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/scrollview.md"
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/scrollview"
     },
     {
         "source_path": "docs/xamarin-forms/user-interface/layouts/absolute-layout.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/absolutelayout.md"
-    }
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/absolutelayout"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/layouts/relative-layout.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/relativelayout"
+    },
   ]
 }

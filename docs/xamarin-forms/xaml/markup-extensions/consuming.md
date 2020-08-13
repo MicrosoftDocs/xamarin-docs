@@ -35,7 +35,7 @@ Additional XAML markup extensions have historically been supported by other XAML
 - `TemplateBinding` - performs data binding from a control template, as discussed in the article [**Xamarin.Forms control templates**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource` - sets the binding source relative to the position of the binding target, as discussed in the article [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
-The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md).
 
 ## x:Static markup extension
 

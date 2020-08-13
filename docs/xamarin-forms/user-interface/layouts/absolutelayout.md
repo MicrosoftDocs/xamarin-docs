@@ -48,7 +48,7 @@ To specify that a child sizes itself horizontally or vertically, or both, set th
 
 ## Absolute positioning and sizing
 
-By default, an [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) positions and sizes children using absolute values, specified in device-independent units, which explicitly define where views should be placed in the layout. This is achieved by adding children to the `Children` collection of an `AbsoluteLayout` and setting the [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) attached property on each child to absolute position and/or size values.
+By default, an [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) positions and sizes children using absolute values, specified in device-independent units, which explicitly define where children should be placed in the layout. This is achieved by adding children to the `Children` collection of an `AbsoluteLayout` and setting the [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) attached property on each child to absolute position and/or size values.
 
 > [!WARNING]
 > Using absolute values for positioning and sizing children can be problematic, because different devices have different screen sizes and resolutions. Therefore, the coordinates for the center of the screen on one device may be offset on other devices.
@@ -183,7 +183,7 @@ In this example, each child is positioned using proportional values but sized us
 
 The following screenshot shows the resulting layout:
 
-![Children placed in an AbsoluteLayout using proportional positino values](absolutelayout-images/proportional-position.png)
+![Children placed in an AbsoluteLayout using proportional position values](absolutelayout-images/proportional-position.png)
 
 The equivalent C# code is shown below:
 

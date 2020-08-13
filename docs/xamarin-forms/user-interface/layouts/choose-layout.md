@@ -187,7 +187,7 @@ In this example, layout works as follows:
 > [!WARNING]
 > Avoid using a `RelativeLayout` whenever possible. It will result in the CPU having to perform significantly more work.
 
-For more information, see [Xamarin.Forms RelativeLayout](relative-layout.md).
+For more information, see [Xamarin.Forms RelativeLayout](relativelayout.md).
 
 ## AbsoluteLayout
 
@@ -249,6 +249,6 @@ In addition, page rendering performance can also be improved by using layout com
 - [Xamarin.Forms Grid](grid.md)
 - [Xamarin.Forms FlexLayout](flex-layout.md)
 - [Xamarin.Forms AbsoluteLayout](absolutelayout.md)
-- [Xamarin.Forms RelativeLayout](relative-layout.md)
+- [Xamarin.Forms RelativeLayout](relativelayout.md)
 - [Optimize layout performance](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Layout compression](layout-compression.md)

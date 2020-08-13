@@ -175,7 +175,7 @@ landingContent:
           - text: Grid
             url: layouts/grid.md
           - text: RelativeLayout
-            url: layouts/relative-layout.md
+            url: layouts/relativelayout.md
           - text: ScrollView
             url: layouts/scrollview.md
           - text: StackLayout

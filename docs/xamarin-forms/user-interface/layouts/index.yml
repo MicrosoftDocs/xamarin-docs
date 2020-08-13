@@ -28,7 +28,7 @@ landingContent:
           - text: Grid
             url: grid.md
           - text: RelativeLayout
-            url: relative-layout.md
+            url: relativelayout.md
           - text: StackLayout
             url: stacklayout.md
 
