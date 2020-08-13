@@ -69,6 +69,10 @@ To maximize code sharing, Xamarin.Android apps (or Xamarin.Forms apps targeting 
 | `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
 | `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
 | `Personal` | **_INTERNAL\_STORAGE_** |
+| `Fonts` | **_INTERNAL\_STORAGE_/.fonts** |
+| `Templates` | **_INTERNAL\_STORAGE_/Templates** |
+| `CommonApplicationData` | **/usr/share** |
+| `CommonApplicationData` | **/usr/share** |
 
 ### Reading or Writing to files on internal storage
 
