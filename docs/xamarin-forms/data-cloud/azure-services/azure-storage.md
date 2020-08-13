@@ -74,16 +74,16 @@ Every request made against storage account resources must be authenticated. Whil
 - Shared Key. This approach uses the Azure Storage account name and account key to access storage services. A storage account is assigned two private keys on creation that can be used for shared key authentication.
 - Shared Access Signature. This is a token that can be appended to a URL that enables delegated access to a storage resource, with the permissions it specifies, for the period of time that it's valid.
 
-Connection strings can be specified that include the authentication information required to access Azure Storage resources from an application. In addition, a connection string can be configured to connect to the Azure Storage emulator from Visual Studio.
+Connection strings can be specified that include the authentication information required to access Azure Storage resources from an application. In addition, a connection string can be configured to connect to the Azure Storage Emulator from Visual Studio.
 
 > [!NOTE]
 > Azure Storage supports HTTP and HTTPS in a connection string. However, using HTTPS is recommended.
 
 ### Connecting to the Azure Storage Emulator
 
-The Azure Storage emulator provides a local environment that emulates the Azure blob, queue, and table services for development purposes.
+The Azure Storage Emulator provides a local environment that emulates the Azure blob, queue, and table services for development purposes.
 
-The following connection string should be used to connect to the Azure Storage emulator:
+The following connection string should be used to connect to the Azure Storage Emulator:
 
 ```csharp
 UseDevelopmentStorage=true
