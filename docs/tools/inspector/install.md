@@ -51,7 +51,7 @@ Live app inspection is available for enterprise customers.
 |App Platform|IDE Support|Notes|
 |--- |--- |--- |
 |Mac|Only supported in Visual Studio for Mac|
-|iOS|Supported in Visual Studio 2017 and Visual Studio for Mac| Linker behavior must be set to [**Don't Link**](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) (under **iOS Build** Project options) |
+|iOS|Supported in Visual Studio 2017 and Visual Studio for Mac| Linker behavior must be set to [**Don't Link**](~/ios/deploy-test/linker.md) (under **iOS Build** Project options) |
 |Android|Supported in Visual Studio 2017 and Visual Studio for Mac|Must target Android >= 4.0.3, with **fastdev** enabled.<br />Must use Google, Visual Studio, or Xamarin Android emulators. Android 7 emulators may not allow inspection at this time.|
 |WPF|Only supported in Visual Studio 2017|
 
