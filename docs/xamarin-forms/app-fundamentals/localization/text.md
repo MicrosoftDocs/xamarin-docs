@@ -52,7 +52,7 @@ Once the file is added, rows can be added for each text resource:
 
 The **Access Modifier** drop down setting determines how Visual Studio generates the class used to access resources. Setting the Access Modifier to **Public** or **Internal** results in a generated class with the specified accessibility level. Setting the Access Modifier to **No code generation** does not generate a class file. The default resource file should be configured to generate a class file, which results in a file with the **.designer.cs** extension being added to the project.
 
-Once the default resource file is created, additional files can be created for each culture the application supports. Each additional resource file should include the translation culture in the filename and should have the **Access Modifier** set to **No code generation**. 
+Once the default resource file is created, additional files can be created for each culture the application supports. Each additional resource file should include the translation culture in the filename and should have the **Access Modifier** set to **No code generation**.
 
 At runtime, the application attempts to resolve a resource request in order of specificity. For example, if the device culture is **en-US** the application looks for resource files in this order:
 
@@ -142,6 +142,36 @@ Once a default resource file has been created and the default culture specified 
 
 For more information about resource files, see [Create resource files for .NET apps](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
+## Specify supported languages on iOS
+
+On iOS, you must declare all supported languages in the **Info.plist** file for your project. In the **Info.plist** file, use the **Source** view to set an array for the `CFBundleLocalizations` key, and provide values that correspond to the Resx files. In addition, ensure you set an expected language via the `CFBundleDevelopmentRegion` key:
+
+![Screenshot of the Info.plist editor showing the Localizations section](text-images/info-plist.png)
+
+Alternatively, open the **Info.plist** file in an XML editor and add the following:
+
+```xml
+<key>CFBundleLocalizations</key>
+<array>
+    <string>de</string>
+    <string>es</string>
+    <string>fr</string>
+    <string>ja</string>
+    <string>pt</string> <!-- Brazil -->
+    <string>pt-PT</string> <!-- Portugal -->
+    <string>ru</string>
+    <string>zh-Hans</string>
+    <string>zh-Hant</string>
+</array>
+<key>CFBundleDevelopmentRegion</key>
+<string>en</string>
+```
+
+> [!NOTE]
+> Apple treats Portuguese slightly differently than you might expect. For more information, see [Adding Languages](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2) on developer.apple.com.
+
+For more information, see [Specifying default and supported languages in Info.plist](~/ios/app-fundamentals/localization/index.md#specifying-default-and-supported-languages-in-infoplist).
+
 ## Localize text in Xamarin.Forms
 
 Text is localized in Xamarin.Forms using the generated `AppResources` class. This class is named based on the default resource file name. Since the sample project resource file is named **AppResources.cs**, Visual Studio generates a matching class called `AppResources`. Static properties are generated in the `AppResources` class for each row in the resource file. The following static properties are generated in the sample application's `AppResources` class:
@@ -171,19 +201,19 @@ public LocalizedCodePage()
         Text = AppResources.NotesLabel,
         // ...
     };
-    
+
     Entry notesEntry = new Entry
     {
         Placeholder = AppResources.NotesPlaceholder,
         //...
     };
-    
+
     Button addButton = new Button
     {
         Text = AppResources.AddButton,
         // ...
     };
-    
+
     Content = new StackLayout
     {
         Children = {

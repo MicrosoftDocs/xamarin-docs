@@ -23,7 +23,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 `WebView` supports the following types of content:
 
 - HTML & CSS websites &ndash; WebView has full support for websites written using HTML & CSS, including JavaScript support.
-- Documents &ndash; Because WebView is implemented using native components on each platform, WebView is capable of showing documents that are viewable on each platform. That means that PDF files work on iOS and Android.
+- Documents &ndash; Because WebView is implemented using native components on each platform, WebView is capable of showing documents in the formats that are supported by the underlying platform.
 - HTML strings &ndash; WebView can show HTML strings from memory.
 - Local Files &ndash; WebView can present any of the content types above embedded in the app.
 
