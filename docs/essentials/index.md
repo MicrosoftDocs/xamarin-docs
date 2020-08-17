@@ -58,6 +58,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) – Track the applications version and build numbers.
 * [Vibrate](vibrate.md?context=xamarin/xamarin-forms) – Make the device vibrate.
 * [Web Authenticator](web-authenticator.md?context=xamarin/xamarin-forms) - Start web authentication flows and listen for a callback.
+* [Haptic Feedback](haptic-feedback.md?context=xamarin/xamarin-forms) - Perform Haptic Feedback
 
 ## [Troubleshooting](troubleshooting.md?context=xamarin/xamarin-forms)
 
