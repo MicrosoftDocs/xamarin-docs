@@ -4,8 +4,8 @@ description: "Xamarin.Forms sample apps and code demos to help you get started a
 ms.prod: xamarin
 ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C
 ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
+author: davidbritch
+ms.author: dabritch
 ms.date: 12/27/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
