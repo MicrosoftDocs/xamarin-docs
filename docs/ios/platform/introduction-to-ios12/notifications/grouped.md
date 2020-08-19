@@ -60,7 +60,7 @@ notification by calling the completion handler passed to
 [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
-[Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
+[Export("userNotificationCenter:willPresentNotification:withCompletionHandler:")]
 public void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
 {
     completionHandler(UNNotificationPresentationOptions.Alert);
