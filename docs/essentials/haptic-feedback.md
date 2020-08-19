@@ -68,7 +68,6 @@ catch (Exception ex)
 }
 ```
 
-
 ## Platform differences
 
 # [Android](#tab/android)
