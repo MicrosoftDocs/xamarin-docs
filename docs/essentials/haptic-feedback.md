@@ -1,16 +1,16 @@
 ---
 title: "Xamarin.Essentials: HapticFeedback"
-description: "TThis document describes the HapticFeedback class in Xamarin.Essentials, which lets you perform the haptic feedback."
+description: "This document describes the HapticFeedback class in Xamarin.Essentials, which lets you perform haptic feedback."
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
-author: dimonovdd
-ms.author: dimonovdd
-ms.date: 18/08/2020
+author: redth
+ms.author: jodick
+ms.date: 08/18/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: HapticFeedback
 
-The **HapticFeedback** class lets you perform the haptic feedback.
+The **HapticFeedback** class lets you perform haptic feedback.
 
 ## Get started
 
@@ -47,7 +47,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-The Haptic Feedback can be performed for "LongPress" type or the default "Click".
+Haptic feedback can be performed for the long press gesture, or the default tap gesture.
 
 ```csharp
 try
@@ -69,7 +69,7 @@ catch (Exception ex)
 ```
 
 
-## Platform Differences
+## Platform differences
 
 # [Android](#tab/android)
 - Click - FeedbackConstants.ContextClick
@@ -96,5 +96,3 @@ catch (Exception ex)
 
 - [HapticFeedback source code](https://github.com/xamarin/Essentials/tree/develop/Xamarin.Essentials/HapticFeedback)
 - [HapticFeedback API documentation](xref:Xamarin.Essentials.HapticFeedback)
-
-
