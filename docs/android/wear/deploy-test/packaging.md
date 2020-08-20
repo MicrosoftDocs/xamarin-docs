@@ -10,8 +10,21 @@ ms.date: 02/02/2018
 
 # Packaging Wear Apps
 
-Android Wear apps are packaged with a full Android app for 
-distribution on Google Play. 
+> [!WARNING]
+> The following docs and sample projects may no longer be maintained.
+> As of [Xamarin.Android 11.1][xa-11.1], automatically packaging an
+> Android Wear application within an Android handheld application is
+> no longer supported. It is recommended to distribute Android Wear
+> applications as [standalone applications][standalone] instead.
+
+Android Wear 1.0 apps are packaged with a full Android app for 
+distribution on Google Play.
+
+Android Wear 2.0 apps can be submitted to Google Play as [standalone
+applications][standalone].
+
+[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## Automatic Packaging
 
