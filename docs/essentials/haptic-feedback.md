@@ -2,7 +2,7 @@
 title: "Xamarin.Essentials: HapticFeedback"
 description: "This document describes the HapticFeedback class in Xamarin.Essentials, which lets you perform haptic feedback."
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
-author: redth
+author: dimonovdd
 ms.author: jodick
 ms.date: 08/18/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
