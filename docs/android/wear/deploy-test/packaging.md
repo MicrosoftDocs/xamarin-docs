@@ -1,5 +1,6 @@
 ---
 title: "Packaging Wear Apps"
+description: "This article explains how to package Android Wear apps."
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
