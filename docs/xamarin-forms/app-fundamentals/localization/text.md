@@ -62,7 +62,7 @@ At runtime, the application attempts to resolve a resource request in order of s
 
 The following screenshot shows a Spanish translation file named **AppResources.es.cs**:
 
-![Specify default text resources in a .resx file](text-images/pc-spanish-strings.png)
+![Specify default Spanish text resources in a .resx file](text-images/pc-spanish-strings.png)
 
 The translation file uses the same **Name** values specified in the default file but contains Spanish language strings in the **Value** column. Additionally, the **Access Modifier** is set to **No code generation**.
 
