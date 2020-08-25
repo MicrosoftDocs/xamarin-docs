@@ -62,7 +62,7 @@ At runtime, the application attempts to resolve a resource request in order of s
 
 The following screenshot shows a Spanish translation file named **AppResources.es.cs**:
 
-![Specify default text resources in a .resx file](text-images/pc-spanish-strings.png)
+![Specify default Spanish text resources in a .resx file](text-images/pc-spanish-strings.png)
 
 The translation file uses the same **Name** values specified in the default file but contains Spanish language strings in the **Value** column. Additionally, the **Access Modifier** is set to **No code generation**.
 
@@ -132,6 +132,12 @@ For resource files to work correctly, the application must have an `NeutralResou
 ```csharp
 using System.Resources;
 
+// The resources from the neutral language .resx file are stored directly
+// within the library assembly. For that reason, changing en-US to a different
+// language in this line will not by itself change the language shown in the
+// app. See the discussion of UltimateResourceFallbackLocation in the
+// documentation for additional information:
+// https://docs.microsoft.com/dotnet/api/system.resources.neutralresourceslanguageattribute
 [assembly: NeutralResourcesLanguage("en-US")]
 ```
 

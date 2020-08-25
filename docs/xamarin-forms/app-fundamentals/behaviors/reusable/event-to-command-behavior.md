@@ -44,7 +44,7 @@ The `BehaviorBase<T>` class provides an overridable [`OnAttachedTo`](xref:Xamari
 The `EventToCommandBehavior` class defines four [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances, that execute a user defined command when an event fires. These properties are shown in the following code example:
 
 ```csharp
-public class EventToCommandBehavior : BehaviorBase<View>
+public class EventToCommandBehavior : BehaviorBase<VisualElement>
 {
   public static readonly BindableProperty EventNameProperty =
     BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null, propertyChanged: OnEventNameChanged);
@@ -97,7 +97,7 @@ The [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.Bi
 The purpose of the behavior is to execute the command defined by the `Command` property in response to the event firing that's defined by the `EventName` property. The core behavior functionality is shown in the following code example:
 
 ```csharp
-public class EventToCommandBehavior : BehaviorBase<View>
+public class EventToCommandBehavior : BehaviorBase<VisualElement>
 {
   ...
   void RegisterEvent (string name)
