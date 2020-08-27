@@ -25,7 +25,7 @@ An attached property can define a `propertyChanged` delegate that will be execut
 1. The `propertyChanged` delegate casts the control reference, which is received as a [`BindableObject`](xref:Xamarin.Forms.BindableObject), to the control type that the behavior is designed to enhance.
 1. The `propertyChanged` delegate modifies properties of the control, calls methods of the control, or registers event handlers for events exposed by the control, to implement the core behavior functionality.
 
-An issue with attached behaviors is that they are defined in a `static` class, with `static` properties and methods. This makes it difficult to create attached behaviors that have state. In addition, Xamarin.Forms behaviors have replaced attached behaviors as the preferred approach to behavior construction. For more information about Xamarin.Forms behaviors, see [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md) and [Reusable Behaviors](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+An issue with attached behaviors is that they are defined in a `static` class, with `static` properties and methods. This makes it difficult to create attached behaviors that have state. In addition, Xamarin.Forms behaviors have replaced attached behaviors as the preferred approach to behavior construction. For more information about Xamarin.Forms behaviors, see [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md).
 
 ## Creating an Attached Behavior
 

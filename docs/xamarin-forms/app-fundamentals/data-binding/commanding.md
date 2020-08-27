@@ -682,10 +682,6 @@ The `canExecute` method returns `false` only if the argument is the decimal poin
 
 All the `execute` methods call `RefreshCanExecutes`, which then calls `ChangeCanExecute` for both `DigitCommand` and `ClearCommand`. This ensures that the decimal point and backspace buttons are enabled or disabled based on the current sequence of entered digits.
 
-## Adding Commands to Existing Views
-
-If you'd like to use the commanding interface with views that don't support it, it's possible to use a Xamarin.Forms behavior that converts an event into a command. This is described in the article [**Reusable EventToCommandBehavior**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
-
 ## Asynchronous Commanding for Navigation Menus
 
 Commanding is convenient for implementing navigation menus, such as that in the [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) program itself. Here's part of **MainPage.xaml**:

@@ -35,8 +35,8 @@ The sample application demonstrates a `FocusEffect` that changes the background 
 
 An [`Entry`](xref:Xamarin.Forms.Entry) control on the `HomePage` is customized by the `FocusEffect` class in each platform-specific project. Each `FocusEffect` class derives from the `PlatformEffect` class for each platform. This results in the `Entry` control being rendered with a platform-specific background color, which changes when the control gains focus, as shown in the following screenshots:
 
-![Focus Effect on each Platform](creating-images/screenshots-1.png)
-![Focus Effect on each Platform](creating-images/screenshots-2.png)
+![Focus Effect on each Platform, control focused](creating-images/screenshots-1.png)
+![Focus Effect on each Platform, control unfocused](creating-images/screenshots-2.png)
 
 ## Creating the Effect on Each Platform
 
@@ -232,7 +232,7 @@ public class FocusEffect : RoutingEffect
 
 The `FocusEffect` class subclasses the [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class, which represents a platform-independent effect that wraps an inner effect that is usually platform-specific. The `FocusEffect` class calls the base class constructor, passing in a parameter consisting of a concatenation of the resolution group name (specified using the [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attribute on the effect class), and the unique ID that was specified using the [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) attribute on the effect class. Therefore, when the [`Entry`](xref:Xamarin.Forms.Entry) is initialized at runtime, a new instance of the `MyCompany.FocusEffect` is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection.
 
-Effects can also be attached to controls by using a behavior, or by using attached properties. For more information about attaching an effect to a control by using a behavior, see [Reusable EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md). For more information about attaching an effect to a control by using attached properties, see [Passing Parameters to an Effect](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
+Effects can also be attached to controls by using a behavior, or by using attached properties. For more information about attaching an effect to a control by using a behavior, see [Reusable EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/effect-behavior.md). For more information about attaching an effect to a control by using attached properties, see [Passing Parameters to an Effect](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
 
 ## Consuming the Effect in C&num;
 

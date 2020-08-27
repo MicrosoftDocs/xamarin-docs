@@ -171,13 +171,8 @@
               href: app-fundamentals/behaviors/attached.md
             - name: Xamarin.Forms Behaviors
               href: app-fundamentals/behaviors/creating.md
-            - name: Reusable Behaviors
-              href: app-fundamentals/behaviors/reusable/index.md
-              items:
-                - name: EffectBehavior
-                  href: app-fundamentals/behaviors/reusable/effect-behavior.md
-                - name: EventToCommandBehavior
-                  href: app-fundamentals/behaviors/reusable/event-to-command-behavior.md
+            - name: Reusable EffectBehavior
+              href: app-fundamentals/behaviors/effect-behavior.md
         - name: Custom Renderers
           href: app-fundamentals/custom-renderer/index.md
           items:

@@ -668,5 +668,17 @@
         "source_path": "docs/xamarin-forms/user-interface/layouts/relative-layout.md",
         "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/relativelayout"
     },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/behaviors/reusable/index.md",
+        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/behaviors"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md",
+        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/behaviors/effect-behavior"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md",
+        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/behaviors"
+    },
   ]
 }
