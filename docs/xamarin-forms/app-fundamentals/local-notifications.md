@@ -107,6 +107,16 @@ public partial class MainPage : ContentPage
 
 The `MainPage` class constructor uses the Xamarin.Forms `DependencyService` to retrieve a platform-specific instance of the `INotificationManager`. The `OnScheduleClicked` method uses the `INotificationManager` instance to schedule a new notification. The `ShowNotification` method is called from the event handler attached to the `NotificationReceived` event, and will insert a new `Label` into the page when the event is invoked.
 
+The `NotificationReceived` event handler casts its event arguments to `NotificationEventArgs`. This type is defined in the shared Xamarin.Forms project:
+
+```csharp
+public class NotificationEventArgs : EventArgs
+{
+    public string Title { get; set; }
+    public string Message { get; set; }
+}
+```
+
 For more information about the Xamarin.Forms `DependencyService`, see [Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
 
 ## Create the Android interface implementation
