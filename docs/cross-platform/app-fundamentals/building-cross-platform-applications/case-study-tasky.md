@@ -134,7 +134,7 @@ whether to a database, flat files or other mechanism. The Tasky data layer
 consists of two parts: the SQLite-NET library and the custom code added to wire
 it up.
 
-Tasky relies on the Sqlite-net NuGet package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
+Tasky relies on the Sqlite-net NuGet package (published by Frank Krueger) to embed SQLite-NET code that provides an Object-Relational Mapping
 (ORM) database interface. The `TaskItemDatabase` class inherits from `SQLiteConnection` and
 adds the required Create, Read, Update, Delete (CRUD) methods to read and write
 data to SQLite. It is a simple boilerplate implementation of generic CRUD
