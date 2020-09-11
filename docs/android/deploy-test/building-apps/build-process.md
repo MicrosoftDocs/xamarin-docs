@@ -361,7 +361,7 @@ when packaging Release applications.
   This property is only relevant if `$(AndroidPackageFormat)` is set
   to `aab`.
 
-  Added in Xamarin.Android 10.2.
+  Added in Xamarin.Android 10.3.
 
   [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
@@ -1119,7 +1119,7 @@ The following MSBuild properties are used with
 
 - **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
-  - **XamarinAndroid**: Uses the JNI binding API present in since
+  - **XamarinAndroid**: Uses the JNI binding API present since
     Mono for Android 1.0. Binding assemblies built with
     Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
     or later (API/ABI additions), but the *source* is compatible with
@@ -1162,11 +1162,7 @@ resources.
   Added in Xamarin.Android 9.1.
 
 - **AndroidExplicitCrunch** &ndash; No longer supported in
-  Xamarin.Android 10.4.
-
-- **AndroidResgenExtraArgs** &ndash; Specifies additional
-  command-line options to pass to the **aapt** command when
-  processing Android assets and resources.
+  Xamarin.Android 11.0.
 
 - **AndroidR8IgnoreWarnings** &ndash; Automatically specifies
   the `-ignorewarnings` proguard rule for `r8`. This allows `r8`
@@ -1175,7 +1171,11 @@ resources.
   enforce more strict behavior. See the [ProGuard manual](https://www.guardsquare.com/products/proguard/manual/usage)
   for details.
 
-  Added in Xamarin.Android 10.4.
+  Added in Xamarin.Android 10.3.
+
+- **AndroidResgenExtraArgs** &ndash; Specifies additional
+  command-line options to pass to the **aapt** command when
+  processing Android assets and resources.
 
 - **AndroidResgenFile** &ndash; Specifies the name of the Resource
   file to generate. The default template sets this to
@@ -1462,19 +1462,6 @@ used to specify the ABI that the library targets. Thus, if you add
 `lib/armeabi-v7a/libfoo.so` to the build, then the ABI will be "sniffed" as
 `armeabi-v7a`.
 
-### AndroidResourceAnalysisConfig
-
-The Build action `AndroidResourceAnalysisConfig` marks a file as a
-severity level configuration file for the Xamarin Android Designer
-layout diagnostics tool. This is currently only used in the layout
-editor and not for build messages.
-
-See the [Android Resource Analysis
-documentation](https://aka.ms/androidresourceanalysis) for more
-details.
-
-Added in Xamarin.Android 10.2.
-
 #### Item Attribute Name
 
 **Abi** &ndash; Specifies the ABI of the native library.
@@ -1531,6 +1518,19 @@ distinct resource names.
   </AndroidResource>
 </ItemGroup>
 ```
+
+### AndroidResourceAnalysisConfig
+
+The Build action `AndroidResourceAnalysisConfig` marks a file as a
+severity level configuration file for the Xamarin Android Designer
+layout diagnostics tool. This is currently only used in the layout
+editor and not for build messages.
+
+See the [Android Resource Analysis
+documentation](https://aka.ms/androidresourceanalysis) for more
+details.
+
+Added in Xamarin.Android 10.2.
 
 ### Content
 
