@@ -5,7 +5,7 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 03/06/2020
+ms.date: 09/11/2020
 ---
 
 # Build Process
@@ -361,7 +361,7 @@ when packaging Release applications.
   This property is only relevant if `$(AndroidPackageFormat)` is set
   to `aab`.
 
-  Added in Xamarin.Android 10.3.
+  Added in Xamarin.Android 10.2.
 
   [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
@@ -684,6 +684,21 @@ when packaging Release applications.
   Introduced in Xamarin.Android 10.2
 
   [manifest-merger]: https://developer.android.com/studio/build/manifest-merge
+
+- **AndroidManifestPlaceholders** &ndash; A semicolon-separated list of
+  key-value replacement pairs for *AndroidManifest.xml*, where each pair
+  has the format `key=value`.
+
+  For example, a property value of `assemblyName=$(AssemblyName)`
+  defines an `${assemblyName}` placeholder that can then appear in
+  *AndroidManifest.xml*:
+
+  ```xml
+  <application android:label="${assemblyName}"
+  ```
+
+  This provides a way to insert variables from the build process into
+  the *AndroidManifest.xml* file.
 
 - **AndroidMultiDexClassListExtraArgs** &ndash; A string property
   which allows developers to pass additional arguments to the
@@ -1104,7 +1119,7 @@ The following MSBuild properties are used with
 
 - **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
-  - **XamarinAndroid**: Uses the JNI binding API present since
+  - **XamarinAndroid**: Uses the JNI binding API present in since
     Mono for Android 1.0. Binding assemblies built with
     Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
     or later (API/ABI additions), but the *source* is compatible with
@@ -1146,22 +1161,21 @@ resources.
 
   Added in Xamarin.Android 9.1.
 
-- **AndroidExplicitCrunch** &ndash; If you are building an app with a
-  very large number of local drawables, an initial build (or rebuild)
-  can take minutes to complete. To speed up the build process, try
-  including this property and setting it to `True`. When this
-  property is set, the build process pre-crunches the .png files.
-
-  Note: This option is not compatible with the `$(AndroidUseAapt2)`
-  option. If `$(AndroidUseAapt2)` is enabled, this functionality
-  will be disabled. If you wish to continue to use this feature
-  please set `$(AndroidUseAapt2)` to `False`.
-
-  **Experimental**. Added in Xamarin.Android 7.0.
+- **AndroidExplicitCrunch** &ndash; No longer supported in
+  Xamarin.Android 10.4.
 
 - **AndroidResgenExtraArgs** &ndash; Specifies additional
   command-line options to pass to the **aapt** command when
   processing Android assets and resources.
+
+- **AndroidR8IgnoreWarnings** &ndash; Automatically specifies
+  the `-ignorewarnings` proguard rule for `r8`. This allows `r8`
+  to continue with dex compilation even if certain warnings are
+  encountered. Defaults to `True`, but can be set to `False` to
+  enforce more strict behavior. See the [ProGuard manual](https://www.guardsquare.com/products/proguard/manual/usage)
+  for details.
+
+  Added in Xamarin.Android 10.4.
 
 - **AndroidResgenFile** &ndash; Specifies the name of the Resource
   file to generate. The default template sets this to
@@ -1448,6 +1462,19 @@ used to specify the ABI that the library targets. Thus, if you add
 `lib/armeabi-v7a/libfoo.so` to the build, then the ABI will be "sniffed" as
 `armeabi-v7a`.
 
+### AndroidResourceAnalysisConfig
+
+The Build action `AndroidResourceAnalysisConfig` marks a file as a
+severity level configuration file for the Xamarin Android Designer
+layout diagnostics tool. This is currently only used in the layout
+editor and not for build messages.
+
+See the [Android Resource Analysis
+documentation](https://aka.ms/androidresourceanalysis) for more
+details.
+
+Added in Xamarin.Android 10.2.
+
 #### Item Attribute Name
 
 **Abi** &ndash; Specifies the ABI of the native library.
@@ -1504,19 +1531,6 @@ distinct resource names.
   </AndroidResource>
 </ItemGroup>
 ```
-
-### AndroidResourceAnalysisConfig
-
-The Build action `AndroidResourceAnalysisConfig` marks a file as a
-severity level configuration file for the Xamarin Android Designer
-layout diagnostics tool. This is currently only used in the layout
-editor and not for build messages.
-
-See the [Android Resource Analysis
-documentation](https://aka.ms/androidresourceanalysis) for more
-details.
-
-Added in Xamarin.Android 10.2.
 
 ### Content
 
