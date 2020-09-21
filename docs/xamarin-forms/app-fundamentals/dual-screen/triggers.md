@@ -12,8 +12,6 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen triggers
 
-![Pre-release API](~/media/shared/preview.png)
-
 The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers:
 
 - [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout changes.
