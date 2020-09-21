@@ -244,6 +244,12 @@
       items:
         - name: Overview
           href: platform/index.md
+        - name: iOS 14
+          items:
+            - name: Introduction to iOS 14
+              href: platform/ios14/index.md
+            - name: Get started
+              href: platform/ios14/get-started.md
         - name: iOS 13
           items:
             - name: Introduction to iOS 13

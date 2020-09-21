@@ -52,8 +52,8 @@ productDirectory:
     links:
       - url: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
         text: Build an iOS app
-      - url: ~/ios/platform/ios13/index.md
-        text: iOS 13
+      - url: ~/ios/platform/ios14/index.md
+        text: iOS 14
       - url: ~/ios/index.yml
         text: All iOS docs
   - title: Mac
