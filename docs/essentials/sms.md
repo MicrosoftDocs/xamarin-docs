@@ -5,7 +5,7 @@ ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 09/24/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -16,6 +16,33 @@ The **Sms** class enables an application to open the default SMS application wit
 ## Get started
 
 [!include[](~/essentials/includes/get-started.md)]
+
+To access the **Sms** functionality the following platform specific setup is required.
+
+# [Android](#tab/android)
+
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="smsto"/>
+  </intent>
+</queries>
+```
+
+# [iOS](#tab/ios)
+
+No additional setup required.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
 
 ## Using Sms
 
