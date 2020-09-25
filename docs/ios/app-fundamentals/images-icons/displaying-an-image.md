@@ -209,7 +209,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 For more information about icons and images, see the Apple documentation on [Custom Icon and Image Creation Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
-## Displaying an image in a storyboards
+## Displaying an image in a storyboard
 
 Once an image has been added to a Xamarin.iOS Project using an Asset Catalogs, it can be easily displayed on a Storyboard using a `UIImageView` in the iOS Designer. For example, if the following Image Asset has been added:
 
