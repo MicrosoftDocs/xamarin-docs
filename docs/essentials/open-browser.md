@@ -4,7 +4,7 @@ description: "The Browser class in Xamarin.Essentials enables an application to 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 09/24/2020
 ms.custom: video
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
@@ -16,6 +16,37 @@ The **Browser** class enables an application to open a web link in the optimized
 ## Get started
 
 [!include[](~/essentials/includes/get-started.md)]
+
+To access the **Browser** functionality the following platform specific setup is required.
+
+# [Android](#tab/android)
+
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="http"/>
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="https"/>
+  </intent>
+</queries>
+```
+
+# [iOS](#tab/ios)
+
+No additional setup required.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
 
 ## Using Browser
 
