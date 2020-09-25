@@ -526,6 +526,12 @@
           items:
             - name: Build Process
               href: deploy-test/building-apps/build-process.md
+            - name: Build Items
+              href: deploy-test/building-apps/build-items.md
+            - name: Build Properties
+              href: deploy-test/building-apps/build-properties.md
+            - name: Build Targets
+              href: deploy-test/building-apps/build-targets.md
             - name: Building ABI-Specific APKs
               href: deploy-test/building-apps/abi-specific-apks.md
         - name: Command Line Emulator
