@@ -40,6 +40,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Geocoding](geocoding.md?context=xamarin/xamarin-forms) – Geocode and reverse geocode addresses and coordinates.
 * [Geolocation](geolocation.md?context=xamarin/xamarin-forms) – Retrieve the device's GPS location.
 * [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) – Track rotation around the device's three primary axes.
+* [Haptic Feedback](haptic-feedback.md?context=xamarin/xamarin-forms) - Perform haptic feedback.
 * [Launcher](launcher.md?context=xamarin/xamarin-forms) – Enables an application to open a URI by the system.
 * [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) – Detect device's orientation relative to Earth's magnetic field.
 * [MainThread](main-thread.md?content=xamarin/xamarin-forms) – Run code on the application's main thread.
