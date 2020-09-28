@@ -1,26 +1,44 @@
 ---
-title: "Xamarin.Essentials: HapticFeedback"
-description: "This document describes the HapticFeedback class in Xamarin.Essentials, which lets you perform haptic feedback."
-ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
+title: "Xamarin.Essentials: Haptic Feedback"
+description: "This document describes the HapticFeedback class in Xamarin.Essentials, which lets you control haptic feedback on device."
+ms.assetid: 4462936c-4018-443b-906d-d63da6d0ed7d
 author: dimonovdd
-ms.author: jodick
-ms.date: 08/18/2020
+ms.author: jamont
+ms.date: 09/22/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin.Essentials: HapticFeedback
+# Xamarin.Essentials: Haptic Feedback
 
-The **HapticFeedback** class lets you perform haptic feedback.
+The **HapticFeedback** class lets you control haptic feedback on device.
+
+![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 
 [!include[](~/essentials/includes/get-started.md)]
 
-To access the **HapticFeedback** functionality the following platform specific setup is required.
+To access the **Vibration** functionality the following platform specific setup is required.
 
 # [Android](#tab/android)
 
-No additional setup required.
+The Vibrate permission is required and must be configured in the Android project. This can be added in the following ways:
+
+Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
+
+```csharp
+[assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
+```
+
+OR Update Android Manifest:
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node.
+
+```xml
+<uses-permission android:name="android.permission.VIBRATE" />
+```
+
+Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **VIBRATE** permission. This will automatically update the **AndroidManifest.xml** file.
 
 # [iOS](#tab/ios)
 
@@ -28,18 +46,11 @@ No additional setup required.
 
 # [UWP](#tab/uwp)
 
-No additional setup required.
+No platform differences.
 
-# [MacOs](#tab/macos)
-
-No additional setup required.
-
-# [Tizen](#tab/tizen)
-
-No additional setup required.
 -----
 
-## Using HapticFeedback
+## Using Haptic Feedback
 
 Add a reference to Xamarin.Essentials in your class:
 
@@ -47,15 +58,15 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-Haptic feedback can be performed for the long press gesture, or the default tap gesture.
+The Haptic Feedback functionality can be performed with a `Click` or `LongPress` feedback type.
 
 ```csharp
 try
 {
-    // Use default vibration length
-    HapticFeedback.Perform();
+    // Perform click feedback
+    HapticFeedback.Perform(HapticFeedbackType.Click);
 
-    // Or use specified time
+    // Or use long press    
     HapticFeedback.Perform(HapticFeedbackType.LongPress);
 }
 catch (FeatureNotSupportedException ex)
@@ -68,30 +79,7 @@ catch (Exception ex)
 }
 ```
 
-## Platform differences
-
-# [Android](#tab/android)
-- Click - FeedbackConstants.ContextClick
-- LongPress - FeedbackConstants.LongPress
-
-# [iOS](#tab/ios)
-- Click - UIImpactFeedbackStyle.Light
-- LongPress - UIImpactFeedbackStyle.Medium
-
-# [UWP](#tab/uwp)
-- Click - KnownSimpleHapticsControllerWaveforms.Click
-- LongPress - KnownSimpleHapticsControllerWaveforms.Press
-
-# [MacOs](#tab/macos)
-- LongPress - NSHapticFeedbackPattern.Generic
-
-# [Tizen](#tab/tizen)
-- Click - Tap
-- LongPress - Hold
-
------
-
 ## API
 
-- [HapticFeedback source code](https://github.com/xamarin/Essentials/tree/develop/Xamarin.Essentials/HapticFeedback)
+- [HapticFeedback source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/HapticFeedback)
 - [HapticFeedback API documentation](xref:Xamarin.Essentials.HapticFeedback)

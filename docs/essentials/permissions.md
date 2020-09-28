@@ -5,7 +5,7 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 01/06/2020
+ms.date: 09/22/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -60,6 +60,13 @@ When using `CheckStatusAsync` or `RequestAsync` a `PermissionStatus` will be ret
 * Disabled - The feature is disabled on the device
 * Granted - The user granted permission or is automatically granted
 * Restricted - In a restricted state
+
+
+## Explain Why Permission Is Needed
+
+![Pre-release API](~/media/shared/preview.png)
+
+It is best practice to explain why your application needs a specific permission. On iOS you must specify a string that is displayed to the user. Android does not have this ability and and also defaults permission status to Disabled. This limits the ability to know if the user denied the permission or if it is the first time prompting the user. The `ShouldShowRationale` method can be used to determine if an educational UI should be displayed. If the method returns `true` this is because the user has denied or disabled the permission in the past. Other platforms will always return `false` when calling this method.
 
 ## Available Permissions
 
@@ -228,19 +235,19 @@ if (status != PermissionStatus.Granted)
 
 # [Android](#tab/android)
 
-Permissions must have the matching attributes set in the Android Manifest file.
+Permissions must have the matching attributes set in the Android Manifest file. Permission status defaults to Denied.
 
 Read more on the [Permissions in Xamarin.Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions) documentation.
 
 # [iOS](#tab/ios)
 
-Permissions must have a matching string in the `Info.plist` file. Once a permission is requested and denied a pop-up will no longer appear if you request the permission a second time. You must prompt your user to manually adjust the setting in the applications settings screen in iOS.
+Permissions must have a matching string in the `Info.plist` file. Once a permission is requested and denied a pop-up will no longer appear if you request the permission a second time. You must prompt your user to manually adjust the setting in the applications settings screen in iOS. Permission status defaults to Unknown.
 
 Read more on the [iOS Security and Privacy Features](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) documentation.
 
 # [UWP](#tab/uwp)
 
-Permissions must have matching capabilities declared in the package manifest.
+Permissions must have matching capabilities declared in the package manifest. Permission status defaults to Unknown in most instances.
 
 Read more on the [App Capability Declaration](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) documentation.
 
