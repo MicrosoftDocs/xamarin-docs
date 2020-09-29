@@ -24,6 +24,6 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 
 ## Related links
 
-- [WebServiceTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/)
+- [WebServiceTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/)
 - [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Newtonsoft.Json NuGet Package](https://www.nuget.org/packages/Newtonsoft.Json/)

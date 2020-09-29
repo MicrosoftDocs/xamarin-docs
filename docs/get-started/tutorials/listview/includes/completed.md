@@ -16,6 +16,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [ListViewTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
+- [ListViewTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
 - [Xamarin.Forms ListView (guide)](~/xamarin-forms/user-interface/listview/index.md)
 - [ListView API](xref:Xamarin.Forms.ListView)

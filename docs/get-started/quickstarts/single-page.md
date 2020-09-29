@@ -499,5 +499,5 @@ To turn this single page application into a multi-page application, continue to 
 
 ## Related links
 
-- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+- [Notes (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

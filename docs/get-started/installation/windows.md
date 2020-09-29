@@ -44,7 +44,7 @@ platform apps.
 
 For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide.
 
-1. [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+1. [Install Visual Studio for Mac](/visualstudio/mac/installation)
 2. [Connect Visual Studio to your Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [iOS Developer Setup](~/ios/get-started/installation/device-provisioning/index.md) - Required to run your application on device
 4. [Remoted iOS Simulator](~/tools/ios-simulator/index.md)

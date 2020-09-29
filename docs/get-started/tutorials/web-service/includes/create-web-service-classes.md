@@ -74,7 +74,7 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
     This code defines four classes that are used to model the JSON data retrieved from the web service. Each property is decorated with a `JsonProperty` attribute, containing a JSON field name. Newtonsoft.Json will use this mapping of JSON field names to CLR properties when deserializing the JSON data into model objects.
 
     > [!NOTE]
-    > The class definitions above have been simplified, and do not fully model the JSON data retrieved from the web service. For a complete data model example, see the [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/) sample.
+    > The class definitions above have been simplified, and do not fully model the JSON data retrieved from the web service. For a complete data model example, see the [Weather App](/samples/xamarin/xamarin-forms-samples/weather/) sample.
 
 1. In **Solution Explorer**, in the **WebServiceTutorial** project, add a new class named `RestService` to the project. Then, in **RestService.cs**, remove all of the template code and replace it with the following code:
 
@@ -194,7 +194,7 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
     This code defines four classes that are used to model the JSON data retrieved from the web service. Each property is decorated with a `JsonProperty` attribute, containing a JSON field name. Newtonsoft.Json will use this mapping of JSON field names to CLR properties when deserializing the JSON data into model objects.
 
     > [!NOTE]
-    > The class definitions above have been simplified, and do not fully model the JSON data retrieved from the web service. For a complete data model example, see the [Weather App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/weather/) sample.
+    > The class definitions above have been simplified, and do not fully model the JSON data retrieved from the web service. For a complete data model example, see the [Weather App](/samples/xamarin/xamarin-forms-samples/weather/) sample.
 
 1. In **Solution Pad**, in the **WebServiceTutorial** project, add a new class named `RestService` to the project. Then, in **RestService.cs**, remove all of the template code and replace it with the following code:
 
