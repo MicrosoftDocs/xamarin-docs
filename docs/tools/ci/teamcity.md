@@ -35,7 +35,7 @@ There are several steps involved with setting up TeamCity:
 
 ## Requirements
 
-Experience with [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) is required.
+Experience with [App Center Test](/appcenter/test-cloud/) is required.
 
 Familiarity with TeamCity 8.1 is required. The installation of TeamCity is beyond the scope of this document. It's assumed that TeamCity is installed on OS X Mavericks and is running under a regular user account and not the root account.
 

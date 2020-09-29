@@ -169,7 +169,7 @@ For this sample to work, all the following are set up in the final APK:
 
 If you are looking for an additional walkthrough, check out the following
 video, which demonstrates embedding Charles Petzold's
-[FingerPaint demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) in an Android Studio project:
+[FingerPaint demo](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) in an Android Studio project:
 
 [![Embeddinator-4000 for Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
