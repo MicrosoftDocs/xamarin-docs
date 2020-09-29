@@ -23,7 +23,7 @@ highlightedContent:
     url: ~/whats-new/index.yml
   - title: Improve your mobile development skills
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+    url: /learn/browse/?products=xamarin&roles=developer
 
 productDirectory:
   items:
@@ -83,7 +83,7 @@ conceptualContent:
           url: ~/get-started/quickstarts/styling.md
           itemType: get-started
       footerLink:
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started
+        url: /samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted
         text: Find a sample
     - title: Follow a tutorial
       links:
@@ -180,7 +180,7 @@ additionalContent:
             - text: Advanced concepts & internals
               url: ~/xamarin-forms/internals/index.md
             - text: Samples
-              url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+              url: /samples/browse/?products=xamarin&term=Xamarin.Forms
         - title: Android
           links:
             - text: App fundamentals
@@ -196,7 +196,7 @@ additionalContent:
             - text: Advanced concepts & internals
               url: ~/android/internals/index.md
             - text: Samples
-              url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
+              url: /samples/browse/?products=xamarin&term=Xamarin.Android
         - title: iOS
           links:
             - text: App fundamentals
@@ -212,7 +212,7 @@ additionalContent:
             - text: Advanced concepts & internals
               url: ~/ios/internals/index.md
             - text: Samples
-              url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
+              url: /samples/browse/?products=xamarin&term=Xamarin.iOS
         - title: Mac
           links:
             - text: App fundamentals
@@ -226,6 +226,6 @@ additionalContent:
             - text: Advanced concepts & internals
               url: ~/mac/internals/index.md
             - text: Samples
-              url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+              url: /samples/browse/?products=xamarin&term=Xamarin.Mac
 
   footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)"
