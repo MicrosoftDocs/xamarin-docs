@@ -31,7 +31,7 @@ These are some of our design principles for the Xamarin.iOS bindings
 (they also apply to Xamarin.Mac, the Mono bindings for Objective-C on
 macOS):
 
-- Follow the [Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines)
+- Follow the [Framework Design Guidelines](/dotnet/standard/design-guidelines)
 - Allow developers to subclass Objective-C classes:
 
   - Derive from an existing class
@@ -879,7 +879,7 @@ pointing to a 2 megabyte image) and other important and finite resources
 
 NSObject implements the IDisposable interface and also the [.NET
 Dispose
-pattern](https://msdn.microsoft.com/library/fs2xkftw.aspx). This
+pattern](/dotnet/standard/garbage-collection/implementing-dispose). This
 allows developers that subclass NSObject to override the Dispose
 behavior and release their own resources on demand. For example,
 consider this view controller that keeps around a bunch of images:

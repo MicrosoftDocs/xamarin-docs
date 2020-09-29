@@ -59,12 +59,12 @@ these steps:
     - [Download and install Xcode from the Mac App
       Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
     - [Install Visual Studio for
-      Mac](https://docs.microsoft.com/visualstudio/mac/installation), which
+      Mac](/visualstudio/mac/installation), which
       also installs Xamarin.iOS.
 
     > [!NOTE]
     > If you would prefer not to install Visual Studio for Mac, Visual Studio 2019 can
-    > [automatically configure](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
+    > [automatically configure](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
     > the Mac build host with the software necessary to build Xamarin.iOS applications.
     > For more information, see [Automatic Mac provisioning](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning).
 
@@ -113,12 +113,12 @@ these steps:
     - [Download and install Xcode from the Mac App
       Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
     - [Install Visual Studio for
-      Mac](https://docs.microsoft.com/visualstudio/mac/installation), which
+      Mac](/visualstudio/mac/installation), which
       also installs Xamarin.iOS.
 
     > [!NOTE]
     > If you would prefer not to install Visual Studio for Mac, starting with
-    > [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
+    > [Visual Studio 2017 version 15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
     > Visual Studio 2017 can automatically configure the Mac build host with
     > the software necessary to build Xamarin.iOS applications. For more
     > information, see [Automatic Mac provisioning](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning).

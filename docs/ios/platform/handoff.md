@@ -150,7 +150,7 @@ The _Activity Type Identifier_ is a short string added to the `NSUserActivityTyp
 
 The Activity Type Identifier is used when creating a `NSUserActivity` instance to identify the type of activity. When an activity is continued on another device, the Activity Type (along with the app’s Team ID) determines which app to launch to continue the activity.
 
-As an example, we are going to create a sample app called **MonkeyBrowser** ([download here](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)). This app will present four tabs, each with a different URL open in a web browser view. The user will be able to continue any tab on a different iOS device running the app.
+As an example, we are going to create a sample app called **MonkeyBrowser** ([download here](/samples/xamarin/ios-samples/ios8-monkeybrowser)). This app will present four tabs, each with a different URL open in a web browser view. The user will be able to continue any tab on a different iOS device running the app.
 
 To create the required Activity Type Identifiers to support this behavior, edit the **Info.plist** file and switch to the **Source** view. Add a `NSUserActivityTypes` key and create the following identifiers:
 
@@ -605,7 +605,7 @@ The successful implementation of the seamless continuation of a User Activity vi
 
 ## Example Handoff App
 
-As an example of using Handoff in a Xamarin.iOS app, we have included the [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) sample app with this guide. The app has four tabs that the user can use to browse the web, each with a given activity type: Weather, Favorite, Coffee Break and Work.
+As an example of using Handoff in a Xamarin.iOS app, we have included the [**MonkeyBrowser**](/samples/xamarin/ios-samples/ios8-monkeybrowser) sample app with this guide. The app has four tabs that the user can use to browse the web, each with a given activity type: Weather, Favorite, Coffee Break and Work.
 
 On any tab, when the user enters a new URL and taps the **Go** button, a new `NSUserActivity` is created for that tab that contains the URL that the user is currently browsing:
 
@@ -630,8 +630,8 @@ different types of Handoff continuations available and the Handoff best practice
 
 ## Related Links
 
-- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [MonkeyBrowser Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)
+- [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [MonkeyBrowser Sample](/samples/xamarin/ios-samples/ios8-monkeybrowser)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

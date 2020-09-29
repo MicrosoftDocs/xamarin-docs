@@ -17,7 +17,7 @@ There are times when a multi-touch application needs to track individual fingers
 
 When a finger first touches the screen, iOS creates a [`UITouch`](xref:UIKit.UITouch) object for that finger. This object remains the same as the finger moves on the screen and then lifts from the screen, at which point the object is disposed. To keep track of fingers, a program should avoid storing this `UITouch` object directly. Instead, it can use the [`Handle`](xref:Foundation.NSObject.Handle) property of type `IntPtr` to uniquely identify these `UITouch` objects.
 
-Almost always, a program that tracks individual fingers maintains a dictionary for touch tracking. For an iOS program, the dictionary key is the `Handle` value that identifies a particular finger. The dictionary value depends on the application. In the [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) program, each finger stroke (from touch to release) is associated with an object that contains all the information necessary to render the line drawn with that finger. The program defines a small `FingerPaintPolyline` class for this purpose:
+Almost always, a program that tracks individual fingers maintains a dictionary for touch tracking. For an iOS program, the dictionary key is the `Handle` value that identifies a particular finger. The dictionary value depends on the application. In the [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) program, each finger stroke (from touch to release) is associated with an object that contains all the information necessary to render the line drawn with that finger. The program defines a small `FingerPaintPolyline` class for this purpose:
 
 ```csharp
 class FingerPaintPolyline
@@ -176,7 +176,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 }
 ```
 
-Altogether, this processing allows the [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) program to track individual fingers and draw the results on the screen:
+Altogether, this processing allows the [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) program to track individual fingers and draw the results on the screen:
 
 [![Tracking individual fingers and drawing the results on the screen](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
@@ -185,4 +185,4 @@ You've now seen how you can track individual fingers on the screen and distingui
 ## Related Links
 
 - [Equivalent Xamarin Android guide](~/android/app-fundamentals/touch/touch-tracking.md)
-- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [FingerPaint (sample)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

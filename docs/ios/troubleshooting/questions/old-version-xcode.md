@@ -18,9 +18,9 @@ The release notes contain the following warning:
 > [!WARNING]
 > **Using an older Xcode version**
 >
-> Using an older Xcode version (than the one mentioned in the above [requirements](https://docs.microsoft.com/xamarin/ios/release-notes/12/12.8#requirements)) is often possible, but some features may not be available. Also some limitations might require workarounds, e.g.:
+> Using an older Xcode version (than the one mentioned in the above [requirements](/xamarin/ios/release-notes/12/12.8#requirements)) is often possible, but some features may not be available. Also some limitations might require workarounds, e.g.:
 >
-> - The static registrar requires Xcode headers files to build applications, leading to [`MT0091`](https://docs.microsoft.com/xamarin/ios/troubleshooting/mtouch-errors#MT0091) or [`MT4109`](https://docs.microsoft.com/xamarin/ios/troubleshooting/mtouch-errors#MT4109) errors if APIs are missing. In most cases enabling the managed linker will help (by removing the API).
+> - The static registrar requires Xcode headers files to build applications, leading to [`MT0091`](../mtouch-errors.md#MT0091) or [`MT4109`](../mtouch-errors.md#MT4109) errors if APIs are missing. In most cases enabling the managed linker will help (by removing the API).
 > - Bitcode builds (for tvOS and watchOS) can fail submission to the App Store unless an Xcode 9.0+ toolchain is used.
 
 ## Further information

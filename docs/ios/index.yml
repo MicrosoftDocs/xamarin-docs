@@ -109,7 +109,7 @@ landingContent:
           - text: Troubleshooting
             url: ~/essentials/troubleshooting.md?context=xamarin/ios
           - text: Release notes
-            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+            url: /xamarin/essentials/release-notes/
 
   - title: Data & cloud services
     linkLists:

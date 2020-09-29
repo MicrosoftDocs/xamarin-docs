@@ -100,9 +100,9 @@ Developers who submitted iOS applications in the last six months (or so) might h
 
 Deprecations of APIs are common. Xamarin.iOS uses custom attributes to signal those APIs (and suggest replacements when available) back to the developers. What is different this time, and much less common, is that the deprecation **will be enforced** by Apple's App Store at submission time.
 
-Unfortunately, removing the `UIWebView` type from `Xamarin.iOS.dll` is a [binary breaking change](https://docs.microsoft.com/dotnet/core/compatibility/categories#binary-compatibility). This change will break existing 3rd party libraries, including some that might not be supported or even re-compilable anymore (for example, closed source). This will only create additional problems for developers. Therefore, we are not removing the type *yet*.
+Unfortunately, removing the `UIWebView` type from `Xamarin.iOS.dll` is a [binary breaking change](/dotnet/core/compatibility/categories#binary-compatibility). This change will break existing 3rd party libraries, including some that might not be supported or even re-compilable anymore (for example, closed source). This will only create additional problems for developers. Therefore, we are not removing the type *yet*.
 
-Starting with [Xamarin.iOS 13.16](https://docs.microsoft.com/xamarin/ios/release-notes/13/13.16) new detection and tools are available to help you migrate from `UIWebView`.
+Starting with [Xamarin.iOS 13.16](/xamarin/ios/release-notes/13/13.16) new detection and tools are available to help you migrate from `UIWebView`.
 
 ### Detection
 
@@ -153,4 +153,4 @@ If your application isn't submitted to Apple, you should plan to move away from 
 
 ## Related links
 
-- [WebViews (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/webview)
+- [WebViews (sample)](/samples/xamarin/ios-samples/webview)

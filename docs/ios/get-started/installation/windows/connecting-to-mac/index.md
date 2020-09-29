@@ -48,7 +48,7 @@ Pair to Mac enables the following development workflow:
 > Before following the instructions in this guide, complete the following steps:
 >
 > - On a Windows machine, [install Visual Studio 2019](~/get-started/installation/windows.md)
-> - On a Mac, [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+> - On a Mac, [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [Visual Studio for Mac](/visualstudio/mac/installation)
 >   - _You must manually open Xcode after installing_ so that it can add any additional components.
 >
 > If you would prefer not to install Visual Studio for Mac, Visual Studio 2019
@@ -122,7 +122,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
 5. Pair to Mac automatically configures the Mac.
 
     [Starting with Visual Studio 2019 version
-    15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
+    15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
     Visual Studio 2019 installs or updates Mono and Xamarin.iOS on a
     connected Mac build host as needed (note that Xcode must still be
     installed manually). See [Automatic Mac
@@ -199,7 +199,7 @@ add it manually:
 
 ## Automatic Mac provisioning
 
-Starting with [Visual Studio 2019 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
+Starting with [Visual Studio 2019 version 15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning),
 Pair to Mac automatically provisions a Mac with software necessary for
 building Xamarin.iOS applications: Mono, Xamarin.iOS (the software
 framework, not the Visual Studio for Mac IDE), and various Xcode-related
@@ -240,7 +240,7 @@ installed on the Windows machine.
 > [!IMPORTANT]
 > Pair to Mac will not downgrade Xamarin.iOS on the Mac from alpha/beta
 > to stable. If you have Visual Studio for Mac installed, set your
-> [release channel](https://docs.microsoft.com/visualstudio/mac/update) as
+> [release channel](/visualstudio/mac/update) as
 > follows:
 >
 > - If you use Visual Studio 2019, select the **Stable** updates channel in

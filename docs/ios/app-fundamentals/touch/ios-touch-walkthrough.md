@@ -23,7 +23,7 @@ Each section contains instructions to write the code from scratch.
 
 Follow the instructions below to add code to the storyboard, and learn about
 the different types of touch events available in iOS. Alternatively, open the
-[finished sample](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) to
+[finished sample](/samples/xamarin/ios-samples/applicationfundamentals-touch-final) to
 see everything working.
 
 <a name="Touch_Samples"></a>
@@ -499,4 +499,4 @@ touch events, built-in gesture recognizers, or with a custom gesture recognizer.
 
 ## Related Links
 
-- [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [iOS Touch Final (sample)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

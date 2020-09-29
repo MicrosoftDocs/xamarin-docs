@@ -21,7 +21,7 @@ The [accompanying Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-m
 
 ## Requirements
 
-This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). Download the completed version of the Phoneword app from the [Hello, iOS sample](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
+This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). Download the completed version of the Phoneword app from the [Hello, iOS sample](/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -29,7 +29,7 @@ This guide resumes where the Hello, iOS document left off, and requires completi
 
 This walkthrough will add a Call History screen to our **Phoneword** application.
 
-1. Open the **Phoneword** application in Visual Studio for Mac. If necessary, the completed Phoneword application from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide can be downloaded from [here](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
+1. Open the **Phoneword** application in Visual Studio for Mac. If necessary, the completed Phoneword application from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide can be downloaded from [here](/samples/xamarin/ios-samples/hello-ios).
 
 2. Open the **Main.storyboard** file from the **Solution Pad**:
 
@@ -279,7 +279,7 @@ Congratulations on completing your first multi-screen Xamarin.iOS application!
 
 This walkthrough will add a Call History screen to our **Phoneword** application.
 
-1. Open the **Phoneword** application in Visual Studio. If necessary, download the [completed Phoneword application](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide. Recall that it is necessary to connect to a [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to use the iOS Designer, and iOS simulator.
+1. Open the **Phoneword** application in Visual Studio. If necessary, download the [completed Phoneword application](/samples/xamarin/ios-samples/hello-ios) from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide. Recall that it is necessary to connect to a [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to use the iOS Designer, and iOS simulator.
 
 2. Start by editing the user interface. Open the **Main.storyboard** file from the **Solution Explorer**, making sure that **View As** is set to _iPhone 6_:
 
@@ -532,6 +532,6 @@ learned in the [Hello, iOS Multiscreen Deep Dive](~/ios/get-started/hello-ios-mu
 
 ## Related Links
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (sample)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

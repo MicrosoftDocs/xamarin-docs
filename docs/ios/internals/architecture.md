@@ -25,8 +25,8 @@ The diagram below shows a basic overview of this architecture:
 ## Native and Managed code: An Explanation
 
 When developing for Xamarin the terms *native and managed* code are often used. [Managed
-code](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) is code that has its execution managed by the [.NET Framework Common
-Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), or in Xamarin’s case: the Mono Runtime. This is what we call
+code](/archive/blogs/brada/what-is-managed-code) is code that has its execution managed by the [.NET Framework Common
+Language Runtime](/dotnet/standard/clr), or in Xamarin’s case: the Mono Runtime. This is what we call
 an intermediate language.
 
 Native code is code that will run natively
@@ -42,7 +42,7 @@ When you compile any Xamarin platform application, the Mono C# (or F#)
 compiler will run and will compile your C# and F# code into Microsoft
 Intermediate Language (MSIL). If you are running a Xamarin.Android, a
 Xamarin.Mac application, or even a Xamarin.iOS application on the simulator, the
-[.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compiles the MSIL using a Just in Time (JIT)
+[.NET Common Language Runtime (CLR)](/dotnet/standard/clr) compiles the MSIL using a Just in Time (JIT)
 compiler. At runtime this is compiled into a native code, which can run on the
 correct architecture for your application.
 

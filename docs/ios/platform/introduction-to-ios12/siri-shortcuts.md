@@ -29,7 +29,7 @@ common task – in many cases without even opening the app in question.
 
 ## Sample app: Soup Chef
 
-To better understand Siri Shortcuts, take a look at the [Soup Chef](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
+To better understand Siri Shortcuts, take a look at the [Soup Chef](/samples/xamarin/ios-samples/ios12-soupchef)
 sample app. Soup Chef allows users to place orders from an imaginary soup
 restaurant, view their order history, and define phrases to use when
 ordering soup by interacting with Siri.
@@ -359,7 +359,7 @@ With these settings in place, the framework will build correctly.
 To build the static library and generate C# bindings definitions for it,
 follow these steps:
 
-- [Install Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started?context=xamarin/mac#installing-objective-sharpie),
+- [Install Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin%252fmac#installing-objective-sharpie),
 the tool used to generate bindings definitions from the .h and .m files
 created by Xcode.
 
@@ -391,7 +391,7 @@ builds as expected.
 
 For more information about creating a static library and using Objective
 Sharpie to create C# bindings definitions, take a look at the
-[Binding an iOS Objective-C library](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#creating-a-static-library)
+[Binding an iOS Objective-C library](../binding-objective-c/walkthrough.md?tabs=vsmac#creating-a-static-library)
 walkthrough.
 
 #### Creating a bindings library
@@ -423,7 +423,7 @@ library built above.
 > this project.
 
 For more information about creating a C# bindings library, take a look at the
-[Binding an iOS Objective-C Library](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#create-a-xamarinios-binding-project)
+[Binding an iOS Objective-C Library](../binding-objective-c/walkthrough.md?tabs=vsmac#create-a-xamarinios-binding-project)
 walkthrough.
 
 Notice that the **SoupChef** project contains a reference to
@@ -925,7 +925,7 @@ With these changes in place, the app will run on an iOS device.
 
 ### Automatic provisioning
 
-Note that you can use [automatic provisioning](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)
+Note that you can use [automatic provisioning](../../get-started/installation/device-provisioning/automatic-provisioning.md)
 to accomplish many of these provisioning tasks directly in the IDE.
 However, automatic provisioning does not set up app groups. You will need
 to manually configure the **Entitlements.plist** files with the name of
@@ -937,7 +937,7 @@ and download and install them.
 
 ## Related links
 
-- [Soup Chef (Xamarin)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
+- [Soup Chef (Xamarin)](/samples/xamarin/ios-samples/ios12-soupchef)
 - [Soup Chef (Swift)](https://developer.apple.com/documentation/sirikit/accelerating_app_interactions_with_shortcuts?language=objc)
 - [SiriKit (Apple)](https://developer.apple.com/sirikit/)
 - [Introduction to Siri Shortcuts – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/211/)

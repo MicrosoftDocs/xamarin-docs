@@ -192,7 +192,7 @@ inside of a Xamarin.tvOS app.
 
 ## Related links
 
-- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface
   Guides](https://developer.apple.com/tvos/human-interface-guidelines/)

@@ -179,7 +179,7 @@ screens. In addition, it showed how to use MT.D in conjunction with a `UINavigat
 
 ## Related links
 
-- [MTDWalkthrough (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [MTDWalkthrough (sample)](/samples/xamarin/ios-samples/mtdwalkthrough)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Reflection API Walkthrough](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON Element Walkthrough](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

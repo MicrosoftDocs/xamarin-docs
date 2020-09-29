@@ -21,7 +21,7 @@ a model is used to make a sequence of predictions.
 ## Sample app: MarsHabitatCoreMLTimer
 
 To demonstrate batch predictions with Core ML, take a look at the
-[MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+[MarsHabitatCoreMLTimer](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 sample app. This sample uses a Core ML model trained to predict the cost
 of building a habitat on Mars, based on various inputs: number of solar
 panels, number of greenhouses, and number of acres.
@@ -139,9 +139,9 @@ the loop-based Core ML predictions.
 
 ## Related links
 
-- [Sample app – MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [Sample app – MarsHabitatCoreMLTimer](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 - [What's new in Core ML, Part 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [What's new in Core ML, Part 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introduction to Core ML in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Introduction to Core ML in Xamarin.iOS](../introduction-to-ios11/coreml.md)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
 - [Working with Core ML Models](https://developer.apple.com/machine-learning/build-run-models/)

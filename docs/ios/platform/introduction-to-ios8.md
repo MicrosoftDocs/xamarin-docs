@@ -161,7 +161,7 @@ In this article we looked at some of the new features introduced by Apple in iOS
 
 ## Related Links
 
-- [UIKitEnhancements (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
+- [UIKitEnhancements (sample)](/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [Introduction to App Extensions](~/ios/platform/extensions.md)
 - [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
 - [Introduction to the Document Picker](~/ios/platform/document-picker.md)

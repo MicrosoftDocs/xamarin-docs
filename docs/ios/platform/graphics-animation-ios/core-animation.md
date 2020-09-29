@@ -232,7 +232,7 @@ In this article we looked at the animation capabilities provided via the *Core A
 
 ## Related Links
 
-- [Core Animation Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [Core Animation Sample](/samples/xamarin/ios-samples/graphicsandanimation)
 - [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Graphics and Animation Walkthrough](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Core Animation](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)
