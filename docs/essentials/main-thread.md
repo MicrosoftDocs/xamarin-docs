@@ -57,7 +57,7 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 
 > [!NOTE]
 > Xamarin.Forms has a method called
-> [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
+> [`Device.BeginInvokeOnMainThread(Action)`](/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
 > that does the same thing as `MainThread.BeginInvokeOnMainThread(Action)`.
 > While you can use either method in a Xamarin.Forms app, consider whether
 > or not the calling code has any other need for a dependency on

@@ -69,7 +69,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 
 Find help if you are running into issues.
 
-## [Release Notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+## [Release Notes](/xamarin/essentials/release-notes/)
 
 Find full release notes for each release of Xamarin.Essentials.
 
