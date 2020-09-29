@@ -50,7 +50,7 @@ in advance and imported into the Android Profiler.
 The following steps explain how to launch an Xamarin Android
 application in Android Studio's Android Profiler tool. In the example
 screenshots below, the Xamarin Forms
-[XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
+[XamagonXuzzle](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 app is built and profiled using Android Profiler:
 
 1. In the Android project build options, disable **Use Shared

@@ -29,9 +29,9 @@ The following modifications will build upon the work that was done in the [Fragm
 
 ## 1. Create an alternate layout
 
-When Main Activity is created on an Android device, Android will decide which layout to load based on the orientation of the device. By default, Android will provide the **Resources/layout/activity_main.axml** layout file. For devices that load in landscape mode Android will provide the **Resources/layout-land/activity_main.axml** layout file. The guide on [Android Resources](/xamarin/android/app-fundamentals/resources-in-android) contains more details on how Android decides what resource files to load for an application.
+When Main Activity is created on an Android device, Android will decide which layout to load based on the orientation of the device. By default, Android will provide the **Resources/layout/activity_main.axml** layout file. For devices that load in landscape mode Android will provide the **Resources/layout-land/activity_main.axml** layout file. The guide on [Android Resources](../../../app-fundamentals/resources-in-android/index.md) contains more details on how Android decides what resource files to load for an application.
 
-Create an alternate layout that targets **Landscape** orientation by following the steps described in the [Alternate Layouts](/xamarin/android/user-interface/android-designer/alternative-layout-views) guide. This should add a new layout resource file to the project, **Resources/layout/activity_main.axml**:
+Create an alternate layout that targets **Landscape** orientation by following the steps described in the [Alternate Layouts](../../../user-interface/android-designer/alternative-layout-views.md) guide. This should add a new layout resource file to the project, **Resources/layout/activity_main.axml**:
 
 # [Visual Studio](#tab/windows)
 

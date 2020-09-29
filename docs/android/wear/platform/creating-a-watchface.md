@@ -661,5 +661,5 @@ time when a time zone is crossed.
 ## Related Links
 
 - [Creating Watch Faces](https://developer.android.com/training/wearables/watch-faces/index.html)
-- [WatchFace sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)
+- [WatchFace sample](/samples/xamarin/monodroid-samples/wear-watchface)
 - [WatchFaceService.Engine](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html)

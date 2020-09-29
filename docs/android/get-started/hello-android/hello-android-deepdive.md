@@ -108,7 +108,7 @@ with refactoring tools, an assembly browser, source code integration,
 and more. In this guide, you'll learn to use some basic Visual Studio for Mac
 features. If you're new to Visual Studio for Mac, you may want to check
 out the more in-depth
-[Introduction to Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/).
+[Introduction to Visual Studio for Mac](/visualstudio/mac/).
 
 Visual Studio for Mac follows the Visual Studio practice of organizing code
 into _Solutions_ and _Projects_. A Solution is a container that can

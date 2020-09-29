@@ -24,7 +24,7 @@ distribution on Google Play.
 Android Wear 2.0 apps can be submitted to Google Play as [standalone
 applications][standalone].
 
-[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[xa-11.1]: /xamarin/android/release-notes/11/11.1
 [standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## Automatic Packaging

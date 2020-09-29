@@ -134,4 +134,4 @@ To learn more about packaging Wear apps, see
 
 ## Related Links
 
-- [SkeletonWear (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)
+- [SkeletonWear (sample)](/samples/xamarin/monodroid-samples/wear-skeletonwear)

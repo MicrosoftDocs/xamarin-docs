@@ -39,7 +39,7 @@ Create a new Android project called **TreePager** (see
 for more information about creating new Android projects). 
 Next, launch the NuGet Package Manager. (For more information about 
 installing NuGet packages, see 
-[Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
+[Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough)). 
 Find and install **Android Support Library v4**: 
 
 [![Screenshot of Support v4 NuGet selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
@@ -458,4 +458,4 @@ caption at the top of each page.
 
 ## Related Links
 
-- [TreePager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
+- [TreePager (sample)](/samples/xamarin/monodroid-samples/userinterface-treepager)

@@ -32,7 +32,7 @@ Almost always, a program that tracks individual fingers maintains a
 dictionary for touch tracking. The dictionary key is the ID code that
 identifies a particular finger. The dictionary value depends on the
 application. In the
-[FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+[FingerPaint](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
 program, each finger stroke (from touch to release) is associated with
 an object that contains all the information necessary to render the
 line drawn with that finger. The program defines a small
@@ -149,7 +149,7 @@ returns a value that you can use for a dictionary key to associate
 particular events to fingers.
 
 The `OnTouchEvent` override in the
-[FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+[FingerPaint](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
 program processes the `MotionEventActions.Down` and `PointerDown`
 events identically by creating a new `FingerPaintPolyline` object and
 adding it to the dictionary:
@@ -261,7 +261,7 @@ public override bool OnTouchEvent(MotionEvent args)
 ```
 
 This type of processing allows the
-[FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+[FingerPaint](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
 program to track individual fingers and draw the results on the screen:
 
 [![Example screenshot from FingerPaint example](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
@@ -272,4 +272,4 @@ distinguish among them.
 ## Related Links
 
 - [Equivalent Xamarin iOS guide](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+- [FingerPaint (sample)](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

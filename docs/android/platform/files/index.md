@@ -76,7 +76,7 @@ To maximize code sharing, Xamarin.Android apps (or Xamarin.Forms apps targeting 
 
 ### Reading or Writing to files on internal storage
 
-Any of the [C# APIs for writing](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) to a file are sufficient; all that is necessary is to get the path to the file that is in the directory allocated to the application. It is strongly recommended that the async versions of the .NET APIs are used to minimize any issues that may be associate with file access blocking the main thread.
+Any of the [C# APIs for writing](/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) to a file are sufficient; all that is necessary is to get the path to the file that is in the directory allocated to the application. It is strongly recommended that the async versions of the .NET APIs are used to minimize any issues that may be associate with file access blocking the main thread.
 
 This code snippet is one example of writing an integer to a UTF-8 text file to the internal storage directory of an application:
 

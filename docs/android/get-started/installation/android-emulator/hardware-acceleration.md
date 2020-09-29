@@ -40,7 +40,7 @@ The following virtualization technologies are available for
 accelerating the Android emulator:
 
 1. **Microsoft's Hyper-V and the Windows Hypervisor Platform (WHPX)**.
-   [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/)
+   [Hyper-V](/virtualization/hyper-v-on-windows/)
    is a virtualization feature of Windows that makes it possible to run
    virtualized computer systems on a physical host computer.
 

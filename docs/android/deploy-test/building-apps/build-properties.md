@@ -14,7 +14,7 @@ ms.date: 09/21/2020
 MSBuild properties control the behavior of the
 [targets](~/android/deploy-test/building-apps/build-targets.md).
 They are specified within the project file, for example **MyApp.csproj**, within
-an [MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
+an [MSBuild PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild).
 
 ## AdbTarget
 
@@ -500,7 +500,7 @@ Controls the default
 the `System.Net.Http.HttpClient` default constructor. The value is an
 assembly-qualified type name of an `HttpMessageHandler` subclass, suitable
 for use with
-[`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype#System_Type_GetType_System_String_).
+[`System.Type.GetType(string)`](/dotnet/api/system.type.gettype#System_Type_GetType_System_String_).
 The most common values for this property are:
 
 - `Xamarin.Android.Net.AndroidClientHandler`: Use the Android Java APIs
@@ -1135,7 +1135,7 @@ string or `Full`.
 ## DebugType
 
 Specifies the
-[type of debug symbols](https://docs.microsoft.com/visualstudio/msbuild/csc-task)
+[type of debug symbols](/visualstudio/msbuild/csc-task)
 to generate as part of the build, which also impacts whether the
 Application is debuggable. Possible values include:
 
@@ -1360,7 +1360,7 @@ debugging symbols enabled:
 [`$(EmbedAssembliesIntoApk)`](#embedassembliesintoapk) is True,
 [`$(DebugSymbols)`](~/android/deploy-test/building-apps/build-properties.md#debugsymbols)
  is True, and
-[`$(Optimize)`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)
+[`$(Optimize)`](/visualstudio/msbuild/common-msbuild-project-properties)
 is True.
 
 Added in Xamarin.Android 7.1.

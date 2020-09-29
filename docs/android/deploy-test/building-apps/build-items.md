@@ -166,7 +166,7 @@ layout diagnostics tool. This is currently only used in the layout
 editor and not for build messages.
 
 See the [Android Resource Analysis
-documentation](https://aka.ms/androidresourceanalysis) for more
+documentation](../../user-interface/android-designer/diagnostics.md) for more
 details.
 
 Added in Xamarin.Android 10.2.

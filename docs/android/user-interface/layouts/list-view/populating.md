@@ -269,6 +269,6 @@ mapping to 26, it may map to 25 or 24, or whatever section index
 
 ## Related links
 
-- [BasicTableAndroid (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
-- [BasicTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)
-- [FastScroll (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fastscroll)
+- [BasicTableAndroid (sample)](/samples/xamarin/monodroid-samples/basictableandroid)
+- [BasicTableAdapter (sample)](/samples/xamarin/monodroid-samples/basictableadapter)
+- [FastScroll (sample)](/samples/xamarin/monodroid-samples/fastscroll)

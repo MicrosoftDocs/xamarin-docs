@@ -349,4 +349,4 @@ calendar capabilities.
 
 ## Related Links
 
-- [Calendar Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
+- [Calendar Demo (sample)](/samples/xamarin/monodroid-samples/calendardemo)

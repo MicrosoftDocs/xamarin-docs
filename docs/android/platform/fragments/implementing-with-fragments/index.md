@@ -28,7 +28,7 @@ Finally, if the app is running on a tablet:
 
 [![App running on an Android tablet](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
-This sample application can easily adapt to the different form factors and orientations with minimal code changes by using fragments and [Alternate Layouts](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources).
+This sample application can easily adapt to the different form factors and orientations with minimal code changes by using fragments and [Alternate Layouts](../../../app-fundamentals/resources-in-android/alternate-resources.md).
 
 The data for the application will exist in two string arrays that are hardcoded in the app as C# string arrays. Each of the arrays will serve as the data source for one fragment.  One array will hold the name of some plays by Shakespeare, and the other array will hold a quote from that play. When the app starts up, it will display the play names in a `ListFragment`. When the user clicks on a play in the `ListFragment`, the app will start up another activity which will display the quote.
 
@@ -45,7 +45,7 @@ The [second part of this walkthrough](./walkthrough-landscape.md) will discuss a
 
 ## Related Links
 
-- [FragmentsWalkthrough (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough)
+- [FragmentsWalkthrough (sample)](/samples/xamarin/monodroid-samples/fragmentswalkthrough)
 - [Designer Overview](~/android/user-interface/android-designer/index.md)
 - [Implementing Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)

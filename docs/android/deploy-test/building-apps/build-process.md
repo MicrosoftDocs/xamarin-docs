@@ -187,7 +187,7 @@ Extension points include:
 A word of caution about extending the build process: If not
 written correctly, build extensions can affect your build
 performance, especially if they run on every build. It is
-highly recommended that you read the MSBuild [documentation](https://docs.microsoft.com/visualstudio/msbuild/msbuild)
+highly recommended that you read the MSBuild [documentation](/visualstudio/msbuild/msbuild)
 before implementing such extensions.
 
 ## Target Definitions

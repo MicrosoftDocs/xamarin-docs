@@ -480,6 +480,6 @@ through a list with custom row background colors.
 
 ## Related Links
 
-- [BuiltInViews (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/builtinviews)
-- [AccessoryViews (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/accessoryviews)
-- [CustomRowView (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/customrowview)
+- [BuiltInViews (sample)](/samples/xamarin/monodroid-samples/builtinviews)
+- [AccessoryViews (sample)](/samples/xamarin/monodroid-samples/accessoryviews)
+- [CustomRowView (sample)](/samples/xamarin/monodroid-samples/customrowview)

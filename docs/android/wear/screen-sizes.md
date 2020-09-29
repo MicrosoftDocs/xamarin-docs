@@ -28,7 +28,7 @@ shouldn't be added as children of the controls described below.
 ### WatchViewStub
 
 See the
-[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) sample to see how to detect
+[WatchViewStub](/samples/xamarin/monodroid-samples/wear-watchviewstub) sample to see how to detect
 screen type and display a different layout for each type.
 
 The main layout file contains a
