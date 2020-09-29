@@ -47,9 +47,9 @@ The following workflow describes the steps needed to start using TestFlight for 
 3. Manage Beta Testing:
     - Add Metadata.
     - Add Internal Users:
-      - Max 25 users.
+      - Max 100 users, each user can test on up to 30 devices.
     - Add External Users:
-      - Max 1000 users.
+      - Max 10000 users.
       - Requires a beta test review, which requires compliance with Apple's guidelines.
 4. Receive Feedback from users, act upon it, and return to step 2.
 
