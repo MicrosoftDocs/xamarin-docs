@@ -44,7 +44,7 @@ By default it's enabled for release builds.
 
 The default behavior can be overridden by passing `--optimize=[+|-]remove-uithread-checks` to mtouch/mmp.
 
-[1]: https://docs.microsoft.com/dotnet/api/UIKit.UIApplication.EnsureUIThread
+[1]: /dotnet/api/UIKit.UIApplication.EnsureUIThread
 
 ## Inline IntPtr.Size
 

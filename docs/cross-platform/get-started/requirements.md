@@ -83,8 +83,8 @@ the Mac computer, not the computer running Visual Studio).
 
 ## Installation instructions
 
-The latest Xamarin release for macOS can be downloaded with [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation). For Windows,
-follow the [Visual Studio installation instructions](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+The latest Xamarin release for macOS can be downloaded with [Visual Studio for Mac](/visualstudio/mac/installation). For Windows,
+follow the [Visual Studio installation instructions](/visualstudio/install/install-visual-studio).
 
 A complete list of our current product releases is available on the
 [what's new page](~/whats-new/index.yml). This

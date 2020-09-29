@@ -62,9 +62,9 @@ usage information.
 
 ### Test Automation
 
-Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) can be used to create automated
+Xamarin [UITest](/appcenter/test-cloud/preparing-for-upload/uitest) can be used to create automated
 user interface test scripts that can be run locally or uploaded to
-[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
+[App Center Test](/appcenter/test-cloud/).
 
 ## Unit Testing
 

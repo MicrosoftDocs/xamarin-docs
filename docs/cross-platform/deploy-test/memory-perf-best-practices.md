@@ -204,7 +204,7 @@ double Compute(double x)
 
 Lazy initialization occurs the first time the `Lazy<T>.Value` property is accessed. The wrapped type is created and returned on first access, and stored for any future access.
 
-For more information about lazy initialization, see [Lazy Initialization](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
+For more information about lazy initialization, see [Lazy Initialization](/dotnet/framework/performance/lazy-initialization).
 
 <a name="async"></a>
 

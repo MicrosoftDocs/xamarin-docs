@@ -79,7 +79,7 @@ For each log location, be sure to zip up and attach the entire log folder.
 
 #### <a id="vs-2017" name="vs-2017" /> Visual Studio 2017
 
-[How to get the Visual Studio installation logs](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues#how-to-get-the-visual-studio-installation-logs)
+[How to get the Visual Studio installation logs](/visualstudio/install/troubleshooting-installation-issues#how-to-get-the-visual-studio-installation-logs)
 
 #### <a id="vs-2015" name="vs-2015" /> Visual Studio 2015
 
@@ -95,7 +95,7 @@ These are the logs from the `XamarinInstaller.exe` installer.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Reference: [Command-Line Options](https://msdn.microsoft.com/library/aa367988.aspx)
+Reference: [Command-Line Options](/windows/win32/msi/command-line-options)
 
 #### <a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Visual Studio startup, verbose logs
 
@@ -103,7 +103,7 @@ Reference: [Command-Line Options](https://msdn.microsoft.com/library/aa367988.as
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Reference: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
+Reference: [/Log (devenv.exe)](/visualstudio/ide/reference/log-devenv-exe)
 
 ### <a id="mac-logs" name="mac-logs" />Mac logs
 

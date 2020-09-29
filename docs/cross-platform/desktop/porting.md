@@ -23,7 +23,7 @@ code can be shared across platforms.
 
 ## .NET Portability Analyzer
 
-Visual Studio 2017 and later support the [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([download for Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) which can examine your existing applications and tell you how much code can be ported "as is" to other platforms. You can learn more about it from this [Channel 9 video](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 and later support the [.NET Portability Analyzer](/dotnet/articles/standard/portability-analyzer) ([download for Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) which can examine your existing applications and tell you how much code can be ported "as is" to other platforms. You can learn more about it from this [Channel 9 video](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 There is also a command-line tool can be downloaded from [Portability Analyzer on GitHub](https://github.com/Microsoft/dotnet-apiport) and used to provide the same reports.
 

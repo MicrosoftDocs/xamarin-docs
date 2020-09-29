@@ -21,7 +21,7 @@ interoperability, tools, and object model of .NET.
 F# is available as a programming language to Xamarin users on all of the
 Xamarin-supported platforms: Android, macOS, and iOS.
 
-- [F# Guide](https://docs.microsoft.com/dotnet/fsharp/)
+- [F# Guide](/dotnet/fsharp/)
 - [Getting Started with F# and Xamarin](overview.md)
 - [F# Mobile Samples](samples.md)
 
