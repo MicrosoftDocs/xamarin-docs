@@ -18,7 +18,7 @@ The **HapticFeedback** class lets you control haptic feedback on device.
 
 [!include[](~/essentials/includes/get-started.md)]
 
-To access the **Vibration** functionality the following platform specific setup is required.
+To access the **HapticFeedback** functionality the following platform specific setup is required.
 
 # [Android](#tab/android)
 
