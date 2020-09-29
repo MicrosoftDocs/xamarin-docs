@@ -812,7 +812,7 @@ This article has taken a detailed look at working with Collection Views in a Xam
 
 ## Related Links
 
-- [MacCollectionNew (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccollectionnew)
+- [MacCollectionNew (sample)](/samples/xamarin/mac-samples/maccollectionnew)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)

@@ -34,7 +34,7 @@ Xamarin.Mac application development requires:
 
 - A Mac computer running macOS High Sierra (10.13) or higher.
 - [Xcode 10 or higher](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-- The latest version of [Xamarin.Mac and Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
+- The latest version of [Xamarin.Mac and Visual Studio for Mac](/visualstudio/mac/installation/).
 
 To run an application built with Xamarin.Mac, you will need:
 
@@ -578,9 +578,9 @@ With the basics of working with a Xamarin.Mac application down, take a look at t
 - [Collection Views](~/mac/user-interface/collection-view.md) - This article covers working with Collection Views in a Xamarin.Mac application. It covers creating and maintaining Collection Views in Xcode and Interface builder, how to expose the Collection View elements to code using Outlets and Actions, populating Collection Views and finally responding to Collection Views in C# code.
 - [Working with Images](~/mac/app-fundamentals/image.md) - This article covers working with Images and Icons in a Xamarin.Mac application. It covers creating and maintaining the images needed to create an app's Icon and using Images in both C# code and Xcode's Interface Builder.
 
-The [Mac Samples Gallery](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) contains ready-to-use code examples to help learn Xamarin.Mac.
+The [Mac Samples Gallery](/samples/browse/?products=xamarin&term=Xamarin.Mac) contains ready-to-use code examples to help learn Xamarin.Mac.
 
-One complete Xamarin.Mac app that includes many of the features a user would expect to find in a typical Mac application is the [SourceWriter Sample App](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
+One complete Xamarin.Mac app that includes many of the features a user would expect to find in a typical Mac application is the [SourceWriter Sample App](/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have been provided from key technologies or methods to relevant information in the Xamarin.Mac documentation.
 
@@ -590,5 +590,5 @@ This article covered the basics of a standard Xamarin.Mac app. It covered creati
 
 ## Related Links
 
-- [Hello, Mac (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac (sample)](/samples/xamarin/mac-samples/hello-mac)
 - [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

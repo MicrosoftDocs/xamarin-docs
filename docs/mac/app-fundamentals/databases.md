@@ -2219,7 +2219,7 @@ This article has taken a detailed look at working with data binding and key-valu
 
 ## Related Links
 
-- [MacDatabase (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabase)
+- [MacDatabase (sample)](/samples/xamarin/mac-samples/macdatabase)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Data binding and key-value coding](~/mac/app-fundamentals/databinding.md)
 - [Standard controls](~/mac/user-interface/standard-controls.md)

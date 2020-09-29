@@ -266,7 +266,7 @@ This article has taken a detailed look at working with Alerts in a Xamarin.Mac a
 
 ## Related Links
 
-- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (sample)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

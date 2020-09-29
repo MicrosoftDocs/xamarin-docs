@@ -1094,7 +1094,7 @@ This article has taken a detailed look at working with Modal Windows, Sheets and
 
 ## Related Links
 
-- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (sample)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)

@@ -13,27 +13,27 @@ ms.date: 12/31/2019
 
 Xamarin.Mac sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
 
-[All Xamarin.Mac samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+[All Xamarin.Mac samples](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 
 :::row:::
     :::column:::
-[!["Hello, Mac"](images/hellomac.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/)
+[!["Hello, Mac"](images/hellomac.png)](/samples/xamarin/mac-samples/hello-mac/)
 
-### [Hello, Mac](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/)
+### [Hello, Mac](/samples/xamarin/mac-samples/hello-mac/)
 
 Hello World app to get started with Mac development.
     :::column-end:::
     :::column:::
-[!["MacControls"](images/controls.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/)
+[!["MacControls"](images/controls.png)](/samples/xamarin/mac-samples/maccontrols/)
 
-### [MacControls](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/)
+### [MacControls](/samples/xamarin/mac-samples/maccontrols/)
 
 UI control examples for Mac apps.
     :::column-end:::
     :::column:::
-[!["MacImages"](images/images.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/)
+[!["MacImages"](images/images.png)](/samples/xamarin/mac-samples/macimages/)
 
-### [MacImages](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/)
+### [MacImages](/samples/xamarin/mac-samples/macimages/)
 
 UI control examples for Mac apps.
     :::column-end:::
@@ -41,9 +41,9 @@ UI control examples for Mac apps.
 
 :::row:::
     :::column:::
-[!["SourceWriter"](images/sourcewriter.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/)
+[!["SourceWriter"](images/sourcewriter.png)](/samples/xamarin/mac-samples/sourcewriter/)
 
-### [SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/)
+### [SourceWriter](/samples/xamarin/mac-samples/sourcewriter/)
 
 Simple editor that provides support for code completion and syntax highlighting.
     :::column-end:::
@@ -55,4 +55,4 @@ Simple editor that provides support for code completion and syntax highlighting.
 
 ## All samples
 
-For the complete set of Xamarin.Mac sample apps and code demos, see [All Xamarin.Mac samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac).
+For the complete set of Xamarin.Mac sample apps and code demos, see [All Xamarin.Mac samples](/samples/browse/?products=xamarin&term=Xamarin.Mac).
