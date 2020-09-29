@@ -18,7 +18,7 @@ The **Contacts** class lets a user pick a contact and retrieve information about
 
 [!include[](~/essentials/includes/get-started.md)]
 
-To access the **FilePicker** functionality the following platform specific setup is required.
+To access the **Contacts** functionality the following platform specific setup is required.
 
 # [Android](#tab/android)
 
