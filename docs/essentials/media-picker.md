@@ -18,7 +18,7 @@ The **MediaPicker** class lets a user pick or take a photo or video on the devic
 
 [!include[](~/essentials/includes/get-started.md)]
 
-To access the **FilePicker** functionality the following platform specific setup is required.
+To access the **MediaPicker** functionality the following platform specific setup is required.
 
 # [Android](#tab/android)
 
