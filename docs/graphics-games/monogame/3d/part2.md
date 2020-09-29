@@ -36,7 +36,7 @@ The finished project will contain a checkered floor which will be drawn using a 
 
 ## Creating a Project
 
-First, we’ll download a project which will serve as our starting point. We’ll use the Model project [which can be found here](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
+First, we’ll download a project which will serve as our starting point. We’ll use the Model project [which can be found here](/samples/xamarin/mobile-samples/modelrenderingmg/).
 
 Once downloaded and unzipped, open and run the project. We expect to see six robot models being drawn on-screen:
 
@@ -462,4 +462,4 @@ This walkthrough showed how to use a vertex array to perform custom rendering. I
 ## Related Links
 
 - [Checkerboard file (sample)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [Completed project (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)
+- [Completed project (sample)](/samples/xamarin/mobile-samples/modelsandvertsmg/)
