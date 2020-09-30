@@ -47,9 +47,9 @@ The following workflow describes the steps needed to start using TestFlight for 
 3. Manage Beta Testing:
     - Add Metadata.
     - Add Internal Users:
-      - Max 25 users.
+      - Max 100 users, each user can test on up to 30 devices.
     - Add External Users:
-      - Max 1000 users.
+      - Max 10000 users.
       - Requires a beta test review, which requires compliance with Apple's guidelines.
 4. Receive Feedback from users, act upon it, and return to step 2.
 
@@ -182,7 +182,7 @@ Internal Testers are members of your development team who have been assigned one
 - **Legal** – The Team Agent is the only admin user that will be assigned the Legal role. It allows them to sign legal contracts.
 - **Technical** – A technical user can change most properties regarding an app. For example, edit app information, upload a binary and send an app for review.
 
-Each build can be shared with a maximum of 25 members.
+Each build can be shared with a maximum of 100 members, who can each test on up to 30 devices.
 
 To add testers, browse to **Users and Roles** on the main iTunes Connect screen:
 
@@ -216,7 +216,7 @@ To submit your app for review, click the **Submit For Beta App Review** text nex
 
 For your app to pass the review, you must enter all of the required metadata on the TestFlight Beta Information page.
 
-You can now start to prepare invitations and add up to 2000 external testers through the External Testers tab, by entering their email, First Name, and Last Name, as illustrated in the screenshot below. The email you enter does not have to be their Apple ID; this is just the email they will receive the invitation on.
+You can now start to prepare invitations and add up to 10000 external testers through the External Testers tab, by entering their email, First Name, and Last Name, as illustrated in the screenshot below. The email you enter does not have to be their Apple ID; this is just the email they will receive the invitation on.
 
 [![Invite testers](testflight-images/add-external.png)](testflight-images/add-external.png#lightbox)
 
