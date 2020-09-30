@@ -200,7 +200,7 @@ This section introduce the key concepts surrounding push notifications in iOS. I
 
 ## Related Links
 
-- [Notifications - Demonstrating Local and remote notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
+- [Notifications - Demonstrating Local and remote notifications (sample)](/samples/xamarin/ios-samples/notifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](/dotnet/api/uikit.UIRemoteNotificationType)

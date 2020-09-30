@@ -12,7 +12,7 @@ ms.date: 03/19/2017
 # Installing and Configuring Xamarin.iOS on a Mac
 
 > [!NOTE]
-> This content has moved to the Visual Studio for Mac install guides on [docs.microsoft.com](https://docs.microsoft.com/visualstudio/mac/installation).
+> This content has moved to the Visual Studio for Mac install guides on [docs.microsoft.com](/visualstudio/mac/installation).
 
 ## Related Links
 

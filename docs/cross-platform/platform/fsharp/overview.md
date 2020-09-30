@@ -48,6 +48,6 @@ language, covering all proficiencies. Listed below are a few of our recommendati
 
 - [F# Software Foundation](https://fsharp.org)
 - [Visual F# Development Portal](https://go.microsoft.com/fwlink/?LinkID=234174)
-- [Visual F# Code Gallery](https://go.microsoft.com/fwlink/?LinkID=124614)
-- [Visual F# Math/Stats Programming](https://go.microsoft.com/fwlink/?LinkId=235173)
-- [Visual F# Charting](https://go.microsoft.com/fwlink/?LinkId=235176)
+- [Visual F# Code Gallery](/samples/browse/)
+- [Visual F# Math/Stats Programming](/previous-versions/visualstudio/visual-studio-2010/hh273075(v=vs.100))
+- [Visual F# Charting](/previous-versions/visualstudio/visual-studio-2010/hh273079(v=vs.100))

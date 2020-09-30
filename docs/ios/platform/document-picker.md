@@ -1123,6 +1123,6 @@ In addition, this article briefly covered Document Provider Extensions and why t
 
 ## Related Links
 
-- [DocPicker (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-docpicker)
+- [DocPicker (sample)](/samples/xamarin/ios-samples/ios8-docpicker)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Introduction to App Extensions](~/ios/platform/extensions.md)

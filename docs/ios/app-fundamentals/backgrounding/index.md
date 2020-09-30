@@ -34,7 +34,7 @@ In this guide, we introduced the different ways of doing background processing i
 ## Related Links
 
 - [Backgrounding on Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
-- [Location (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
-- [Simple Background Transfer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
+- [LifecycleDemo (sample)](/samples/xamarin/ios-samples/lifecycledemo)
+- [Location (sample)](/samples/xamarin/ios-samples/location)
+- [Simple Background Transfer (sample)](/samples/xamarin/ios-samples/simplebackgroundtransfer)
 - [iOS Background Execution](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

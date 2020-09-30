@@ -63,7 +63,7 @@ Calling `RequestedTheme` must be called on the UI thread or an exception will be
 
 UWP applications will respect your setting in the UWP App.xaml under **RequestedTheme**. If it is set to a specific theme, Xamarin.Essentials will always return this setting. To use dynamic theme of the OS remove this node from your application and then when your app is run it will return the theme set by the user in Windows settings (**Settings > Personalization > Colors > Choose your default app mode**).
 
-You can read more on the [UWP Requested Theme Documentation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme).
+You can read more on the [UWP Requested Theme Documentation](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 --------------
 

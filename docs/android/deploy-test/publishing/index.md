@@ -83,11 +83,11 @@ and the Amazon App Store for Android.
 
 ## Related Links
 
-- [HelloWorldPublishing (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
+- [HelloWorldPublishing (sample)](/samples/xamarin/monodroid-samples/helloworldpublishing)
 - [Build Process](~/android/deploy-test/building-apps/build-process.md)
 - [Linking](~/android/deploy-test/linker.md)
 - [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Deploy via Visual Studio App Center](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
+- [Deploy via Visual Studio App Center](/appcenter/distribution/stores/googleplay)
 - [Application Signing](https://source.android.com/security/apksigning/)
 - [Publishing on Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Google Application Licensing](https://developer.android.com/guide/google/play/licensing/index.html)

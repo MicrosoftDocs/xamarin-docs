@@ -12,7 +12,7 @@ ms.date: 11/07/2019
 
 Xamarin enables developers to create cross-platform native mobile apps with Visual Studio. Generally, C# bindings are used to expose existing platform components to developers. However, there are times when Xamarin apps need to work with existing codebases. Sometimes teams simply don't have the time, budget, or resources to port a large, well-tested, and highly optimized codebase to C#.
 
-[Visual C++ for cross-platform mobile development](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) enables the C/C++ and C# code to be built as part of the same solution, offering many advantages including a unified debugging experience. Microsoft has used C/C++ and Xamarin in this way to deliver apps such as [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) and [Pix Camera](https://www.microsoft.com/microsoftpix).
+[Visual C++ for cross-platform mobile development](/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) enables the C/C++ and C# code to be built as part of the same solution, offering many advantages including a unified debugging experience. Microsoft has used C/C++ and Xamarin in this way to deliver apps such as [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) and [Pix Camera](https://www.microsoft.com/microsoftpix).
 
 However, in some cases there is a desire (or requirement) to keep existing C/C++ tools and processes in place and to keep the library code decoupled from the application, treating the library as if it were similar to a third-party component. In these situations, the challenge is not only exposing the relevant members to C# but managing the library as a dependency. And, of course, automating as much of this process as possible.  
 
@@ -75,7 +75,7 @@ The steps provided are specific to **Visual Studio for Mac**, but the structure 
 
 In order to follow along, the developer will need:
 
-- [NuGet Command Line (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [NuGet Command Line (CLI)](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
 - [*Visual Studio* *for Mac*](https://visualstudio.microsoft.com/downloads)
 
@@ -84,7 +84,7 @@ In order to follow along, the developer will need:
 
 ## Creating the native libraries (Stage 1)
 
-The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
 This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) or can be [downloaded](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) directly.
 
@@ -248,7 +248,7 @@ Now the **libs** folder should appear as follows:
     - Smart Link
 
     > [!NOTE]
-    > Using a binding library project type along with a [native reference](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) embeds the static library and enables it to be automatically linked with the Xamarin.iOS app that references it (even when it is included via a NuGet package).
+    > Using a binding library project type along with a [native reference](../macios/native-references.md) embeds the static library and enables it to be automatically linked with the Xamarin.iOS app that references it (even when it is included via a NuGet package).
 
 5. Open **ApiDefinition.cs**, deleting the templated commented code (leaving only the `MathFuncs` namespace), then perform the same step for **Structs.cs** 
 
@@ -287,7 +287,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
     ```
 
     > [!NOTE]
-    > A [SafeHandle](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) is the preferred way to work with unmanaged resources in managed code. This abstracts away a lot of boilerplate code related to critical finalization and object lifecycle. The owner of this handle can subsequently treat it like any other managed resource and will not have to implement the full [Disposable pattern](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose). 
+    > A [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) is the preferred way to work with unmanaged resources in managed code. This abstracts away a lot of boilerplate code related to critical finalization and object lifecycle. The owner of this handle can subsequently treat it like any other managed resource and will not have to implement the full [Disposable pattern](/dotnet/standard/garbage-collection/implementing-dispose). 
 
 #### Creating the internal wrapper class
 
@@ -495,7 +495,7 @@ In order to have the library packaged and distributed via NuGet, the solution ne
     ```
 
     > [!NOTE]
-    > See the [nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec) document for further detail on the schema used for this manifest.
+    > See the [nuspec reference](/nuget/reference/nuspec) document for further detail on the schema used for this manifest.
 
 5. Add a `<files>` element as a child of the `<package>` element (just below `<metadata>`), identifying each file with a separate `<file>` element:
 
@@ -586,7 +586,7 @@ The simplest form of NuGet feed is a local directory:
 
 1. Set the **Build Configuration** to **Release**, and execute a build using **COMMAND + B**.
 2. Open **Terminal** and change directory to the folder containing the **nuspec** file.
-3. In **Terminal**, execute the **nuget pack** command specifying the **nuspec** file, the **Version** (for example, 1.0.0), and the **OutputDirectory** using the folder created in the [previous step](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), that is, **local-nuget-feed**. For example:
+3. In **Terminal**, execute the **nuget pack** command specifying the **nuspec** file, the **Version** (for example, 1.0.0), and the **OutputDirectory** using the folder created in the [previous step](#preparing-a-local-packages-directory), that is, **local-nuget-feed**. For example:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
@@ -596,9 +596,9 @@ The simplest form of NuGet feed is a local directory:
 
 ### [OPTIONAL] Using a private NuGet feed with Azure DevOps
 
-A more robust technique is described in [Get started with NuGet packages in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
+A more robust technique is described in [Get started with NuGet packages in Azure DevOps](/azure/devops/artifacts/get-started-nuget?tabs=new-nav&view=vsts#publish-a-package), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
 
-It is ideal to have this workflow fully automated, for example using [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). For more information, see [Get started with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
+It is ideal to have this workflow fully automated, for example using [Azure Pipelines](/azure/devops/pipelines/index?view=vsts). For more information, see [Get started with Azure Pipelines](/azure/devops/pipelines/get-started/index?view=vsts).
 
 ## Consuming the .NET wrapper from a Xamarin.Forms app
 
@@ -761,14 +761,14 @@ This article explained how to create a Xamarin.Forms app that uses native librar
 
 ### Downloads
 
-- [NuGet Command Line (CLI) tools](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [NuGet Command Line (CLI) tools](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 - [Visual Studio](https://visualstudio.microsoft.com/vs)
 
 ### Examples
 
 - [Hyperlapse cross-platform mobile development with C++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
 - [Microsoft Pix (C++ and Xamarin)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
-- [Mono San Angeles Sample Port](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk/)
+- [Mono San Angeles Sample Port](/samples/xamarin/monodroid-samples/sanangeles-ndk/)
 
 ### Further Reading
 

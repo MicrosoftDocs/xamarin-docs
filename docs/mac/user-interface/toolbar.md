@@ -355,7 +355,7 @@ This article has taken a detailed look at working with toolbars and toolbar item
 
 ## Related Links
 
-- [MacToolbar (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)
+- [MacToolbar (sample)](/samples/xamarin/mac-samples/mactoolbar)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines for Toolbars](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
 - [Introduction to Toolbars](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Toolbars/Toolbars.html)

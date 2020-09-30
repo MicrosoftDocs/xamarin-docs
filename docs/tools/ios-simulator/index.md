@@ -89,4 +89,4 @@ If you experience issues with the Remoted iOS Simulator, you can view the logs i
 - **Mac** – `~/Library/Logs/Xamarin/Simulator.Server`
 - **Windows** – `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
 
-If you [report a problem in Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), attaching these logs might be helpful (there are options to keep uploads private).
+If you [report a problem in Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio), attaching these logs might be helpful (there are options to keep uploads private).

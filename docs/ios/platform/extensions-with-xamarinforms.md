@@ -10,7 +10,7 @@ ms.date: 05/13/2020
 ---
 # Reuse Xamarin.Forms pages in an iOS extension
 
-iOS extensions enable you to customize existing system behavior by adding extra functionality to [predefined by iOS and macOS Extension Points](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2), such as custom context actions, password autofill, incoming calls filters, notification content modifiers, and more. Xamarin.iOS supports extensions and [this guide](https://docs.microsoft.com/xamarin/ios/platform/extensions) will walk you through creating an iOS extension using Xamarin tools.
+iOS extensions enable you to customize existing system behavior by adding extra functionality to [predefined by iOS and macOS Extension Points](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2), such as custom context actions, password autofill, incoming calls filters, notification content modifiers, and more. Xamarin.iOS supports extensions and [this guide](./extensions.md) will walk you through creating an iOS extension using Xamarin tools.
 
 Extensions are distributed as part of a Container app and activated from a specific Extension Point in a Host app. The Container app is usually a simple iOS application, which provides a user with information about the Extension, how to activate, and use it. There are three main approaches to sharing code between an Extension and a Container app:
 
@@ -31,7 +31,7 @@ Extensions are distributed as part of a Container app and activated from a speci
 The ability to use Xamarin.Forms in a native project is provided via [Native Forms](~/xamarin-forms/platform/native-forms.md). It allows `ContentPage`-derived pages to be added directly to native Xamarin.iOS projects. The `CreateViewController` extension method converts an instance of a Xamarin.Forms page to a native `UIViewController`, which could be used or modified as a regular controller. Because an iOS Extension is a special kind of a native iOS project, you can use **Native Forms** here as well.
 
 > [!IMPORTANT]
-> There are many [known limitations](https://docs.microsoft.com/xamarin/ios/platform/extensions#limitations) for iOS Extensions. Although you can use Xamarin.Forms in an iOS Extension, you should do so very carefully, monitoring memory usage and startup time. Otherwise, the Extension could be terminated by iOS without any way to handle this gracefully.
+> There are many [known limitations](./extensions.md#limitations) for iOS Extensions. Although you can use Xamarin.Forms in an iOS Extension, you should do so very carefully, monitoring memory usage and startup time. Otherwise, the Extension could be terminated by iOS without any way to handle this gracefully.
 
 ## Walkthrough
 

@@ -496,7 +496,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-For more information on using JSON with MT.D, see the [JSON Element Walkthrough](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) tutorial.
+For more information on using JSON with MT.D, see the [JSON Element Walkthrough](./json-element-walkthrough.md) tutorial.
 
 ## Other Features
 

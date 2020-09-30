@@ -1858,4 +1858,4 @@ automatically.
 
 ## Related links
 
-- [Binding Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+- [Binding Sample](/samples/xamarin/ios-samples/bindingsample/)

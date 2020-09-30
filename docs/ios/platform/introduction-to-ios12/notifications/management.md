@@ -18,7 +18,7 @@ notifications the app sends.
 ## Sample app: RedGreenNotifications
 
 To see an example of how notification management works, take a look at the
-[RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+[RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 sample app.
 
 This sample app sends two types of notifications – red and green – and
@@ -135,7 +135,7 @@ public void OpenSettings(UNUserNotificationCenter center, UNNotification notific
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Sample app – RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

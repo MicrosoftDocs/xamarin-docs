@@ -368,5 +368,5 @@ The example demonstrates:
 
 ## Related Links
 
-- [StoryboardTable (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable)
+- [StoryboardTable (sample)](/samples/xamarin/ios-samples/storyboardtable)
 - [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md)

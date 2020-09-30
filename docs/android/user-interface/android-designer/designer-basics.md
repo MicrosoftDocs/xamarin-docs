@@ -266,7 +266,7 @@ For greater navigational ease when working with long XML files, the
 **Source** pane supports the Visual Studio scrollbar (as seen on the
 right in the previous screenshot). For more information about the
 scrollbar, see 
-[How to Track Your Code by Customizing the Scrollbar](https://msdn.microsoft.com/library/dn237345.aspx).
+[How to Track Your Code by Customizing the Scrollbar](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ### Autocompletion
 

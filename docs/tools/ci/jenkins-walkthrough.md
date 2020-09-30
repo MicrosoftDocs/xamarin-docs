@@ -39,7 +39,7 @@ The following diagram illustrates all of these elements on a typical Jenkins bui
 
 iOS applications can only be built and signed on a computer running macOS. A Mac Mini is a reasonable lower-cost option, but any computer capable of running OS X 10.10 (Yosemite) or higher is sufficient.
 
-If TFS is being used for source code control, you will want to install [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere provides cross-platform access to TFS at the Terminal in macOS.
+If TFS is being used for source code control, you will want to install [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere provides cross-platform access to TFS at the Terminal in macOS.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -134,7 +134,7 @@ Click on this button, and fill out the **Name** and **Path** to **MSBuild** fiel
 
 This section is mandatory if you intend to use TFS for your source code control.
 
-In order for an macOS workstation to interact with a TFS server, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) must be installed on the workstation. Team Explorer Everywhere is a set of tools from Microsoft that includes a cross-platform command line client for accessing TFS. Team Explorer Everywhere can be downloaded from Microsoft and installed in three steps:
+In order for an macOS workstation to interact with a TFS server, [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) must be installed on the workstation. Team Explorer Everywhere is a set of tools from Microsoft that includes a cross-platform command line client for accessing TFS. Team Explorer Everywhere can be downloaded from Microsoft and installed in three steps:
 
 1. Unzip the archive file to a directory that is accessible to the user account. For example, you might unzip the file to **~/tee**.
 2. Configure the shell or system path to include the folder that holds the files that were unzipped in step one above. For example,
@@ -392,4 +392,4 @@ In this guide we introduced Jenkins as a build server on macOS, and configured i
 ## Related Links
 
 - [Continuous Integration](~/tools/ci/index.md)
-- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/)
+- [App Center Test](/appcenter/test-cloud/)

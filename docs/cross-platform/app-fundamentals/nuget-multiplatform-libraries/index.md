@@ -51,9 +51,9 @@ that must be added to any NuGet package.
 ## Further NuGet information
 
 Read more about [manually creating NuGets for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
-and how to [include a NuGet package in an app](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+and how to [include a NuGet package in an app](/visualstudio/mac/nuget-walkthrough).
 
-Microsoft's [NuGet Documentation](https://docs.microsoft.com/nuget/) contains more
+Microsoft's [NuGet Documentation](/nuget/) contains more
 detailed information on the **.nupkg** format and using NuGet packages in Visual Studio.
 
 The  design discussion for NuGet Package Projects (a.k.a. NuGetizer 3000) is available
@@ -63,4 +63,4 @@ on the [NuGet GitHub repository](https://github.com/NuGet/Home/wiki/NuGetizer-30
 
 - [NuGetizer-3000 Use Cases](https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios)
 - [Manually Create NuGet Packages for Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
-- [NuGet Documentation](https://docs.microsoft.com/nuget/)
+- [NuGet Documentation](/nuget/)

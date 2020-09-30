@@ -1069,7 +1069,7 @@ This article has taken a detailed look at working with menus and menu items in a
 
 ## Related Links
 
-- [MacMenus (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
+- [MacMenus (sample)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines - Menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introduction to Application Menus and Pop-up Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

@@ -189,6 +189,6 @@ The sample project contains mock data and a view to display the data if authenti
 
 ## Related links
 
-- [Local Authentication using Touch ID or Face ID sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+- [Local Authentication using Touch ID or Face ID sample](/samples/xamarin/ios-samples/ios11-faceidsample/)
 - [About Touch ID](https://support.apple.com/en-us/HT204587) on support.apple.com
 - [About Face ID](https://support.apple.com/en-us/HT208108) on support.apple.com

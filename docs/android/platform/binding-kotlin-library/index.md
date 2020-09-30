@@ -14,7 +14,7 @@ ms.date: 02/11/2020
 > [!IMPORTANT]
 > We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
-The Android platform, along with its native languages and tooling, is constantly evolving and there are plenty of third-party libraries that have been developed using the latest offerings. Maximizing code and component reuse is one of the key goals of cross-platform development. The ability to reuse components built with Kotlin has become increasingly important to Xamarin developers as their popularity amongst developers continues to grow. You may already be familiar with the process of binding regular [Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) libraries. Additional documentation is now available describing the process of [Binding a Kotlin Library](walkthrough.md), so they are consumable by a Xamarin application in the same manner. The purpose of this document is to describe a high-level approach to create a Kotlin Binding for Xamarin.
+The Android platform, along with its native languages and tooling, is constantly evolving and there are plenty of third-party libraries that have been developed using the latest offerings. Maximizing code and component reuse is one of the key goals of cross-platform development. The ability to reuse components built with Kotlin has become increasingly important to Xamarin developers as their popularity amongst developers continues to grow. You may already be familiar with the process of binding regular [Java](../binding-java-library/index.md) libraries. Additional documentation is now available describing the process of [Binding a Kotlin Library](walkthrough.md), so they are consumable by a Xamarin application in the same manner. The purpose of this document is to describe a high-level approach to create a Kotlin Binding for Xamarin.
 
 ## High-level approach
 
@@ -54,8 +54,8 @@ The approach above outlines the high-level steps required to create a Kotlin Bin
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
 - [Java Decompiler](http://java-decompiler.github.io/)
 - [BubblePicker Kotlin Library](https://github.com/igalata/Bubble-Picker)
-- [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Binding Java Library](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Java Binding Metadata](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Sample project repository](https://github.com/xamcat/xamarin-binding-kotlin-framework)

@@ -74,7 +74,7 @@ installed if not already present (such as
 **Xamarin.Android.Support.v4**, and 
 **Xamarin.Android.Support.Vector.Drawable**). For more information 
 about installing NuGet packages, see 
-[Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+[Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough). 
 
 ## Use an AppCompat Theme and Toolbar
 
@@ -275,5 +275,5 @@ Android versions.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
-- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)
+- [Lollipop Toolbar (sample)](/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

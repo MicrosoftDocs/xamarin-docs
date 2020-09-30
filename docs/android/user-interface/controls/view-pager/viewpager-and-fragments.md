@@ -39,7 +39,7 @@ get started with fragments.
 Create a new Android project called **FlashCardPager**. Next, launch 
 the NuGet Package Manager (for more information about installing NuGet 
 packages, see 
-[Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
+[Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough)). 
 Find and install the **Xamarin.Android.Support.v4** package as 
 explained in [Viewpager and Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
@@ -551,7 +551,7 @@ The **FlashCardPager** presented in this walkthrough uses a
 `MainActivity` derived from `FragmentActivity`, but you can also derive 
 `MainActivity` from `AppCompatActivity` (which also provides support 
 for managing fragments). To view an `AppCompatActivity` example, see 
-[FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
+[FlashCardPager](/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
 in the Sample Gallery.
 
 ## Summary
@@ -568,4 +568,4 @@ the answer when the user taps on a flash card problem.
 
 ## Related Links
 
-- [FlashCardPager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
+- [FlashCardPager (sample)](/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

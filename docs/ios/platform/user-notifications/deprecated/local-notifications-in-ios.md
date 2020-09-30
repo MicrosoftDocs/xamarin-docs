@@ -30,7 +30,7 @@ iOS makes it fairly simple to create and handle local notifications.
 First, iOS 8 requires applications to ask for the user's permission
 to display notifications. Add the following code to your app before
 attempting to send a local notification - the 
-[attached sample](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) 
+[attached sample](/samples/xamarin/ios-samples/localnotifications) 
 places it in the **AppDelegate**'s **FinishedLaunching** method.
 
 ```csharp
@@ -155,8 +155,8 @@ to notifications by overriding the `ReceivedLocalNotification` method or the `Re
 
 ## Related links
 
-- [Local notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [Local notifications (sample)](/samples/xamarin/ios-samples/localnotifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [UILocalNotification](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [UILocalNotification](/dotnet/api/uikit.UILocalNotification)

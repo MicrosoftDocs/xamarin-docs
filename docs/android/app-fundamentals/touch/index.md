@@ -37,6 +37,6 @@ In this guide we examined touch in Android. For both operating systems, we learn
 
 ## Related Links
 
-- [Android Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
-- [Android Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
-- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+- [Android Touch Start (sample)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch Final (sample)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [FingerPaint (sample)](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

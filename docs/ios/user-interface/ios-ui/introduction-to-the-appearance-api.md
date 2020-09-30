@@ -128,6 +128,6 @@ Refer to the [Introduction to the Appearance API](~/ios/user-interface/ios-ui/in
 
 ## Related Links
 
-- [Appearance (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
+- [Appearance (sample)](/samples/xamarin/ios-samples/appearance)
 - [UIAppearance Protocol Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
 - [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)

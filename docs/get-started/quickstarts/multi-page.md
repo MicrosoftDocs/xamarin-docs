@@ -29,7 +29,7 @@ The quickstart walks through how to turn a single page cross-platform Xamarin.Fo
 
 ### Prerequisites
 
-You should successfully complete the [previous quickstart](single-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](single-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -613,5 +613,5 @@ To modify the application so that it stores its data in a local SQLite.NET datab
 
 ## Related links
 
-- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
+- [Notes (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

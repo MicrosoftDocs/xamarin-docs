@@ -31,7 +31,7 @@ Xamarin.Forms also provides the following classes for creating more complex tran
 - `CompositeTransform`, which applies multiple transform operations to a `Path` object.
 - `MatrixTransform`, which creates custom transforms that are not provided by the other transform classes.
 
-All of these classes derive from the `Transform` class, which defines a `Value` property of type `Matrix`. This property represents the current transformation as a `Matrix` object. For more information about the `Matrix` struct, see [Transform matrix](#transform-matrix).
+All of these classes derive from the `Transform` class, which defines a `Value` property of type `Matrix`, which represents the current transformation as a `Matrix` object. This property is backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means that it can be the target of data bindings, and styled. For more information about the `Matrix` struct, see [Transform matrix](#transform-matrix).
 
 To apply a transform to a `Path`, you create a transform class and set it as the value of the `Path.RenderTransform` property.
 

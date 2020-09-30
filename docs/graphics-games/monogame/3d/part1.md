@@ -259,4 +259,4 @@ This walkthrough introduced MonoGame’s `Model` class. It covers converting an 
 
 - [MonoGame Model Reference](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Graphics_Model)
 - [Content.zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
-- [Completed project (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/)
+- [Completed project (sample)](/samples/xamarin/mobile-samples/modelrenderingmg/)

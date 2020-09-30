@@ -30,7 +30,7 @@ Once finished, we’ll have a project with a robot moving in a circle and a came
 
 ## Creating a Project
 
-This walkthrough focuses on moving objects in 3D space. We’ll begin with the project for rendering models and vertex arrays [which can be found here](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Once downloaded, unzip and open the project to make sure it runs and we should see the following:
+This walkthrough focuses on moving objects in 3D space. We’ll begin with the project for rendering models and vertex arrays [which can be found here](/samples/xamarin/mobile-samples/modelsandvertsmg/). Once downloaded, unzip and open the project to make sure it runs and we should see the following:
 
 ![Once downloaded, unzip and open the project to make sure it runs and this view should be displayed](part3-images/image2.png)
 
@@ -722,4 +722,4 @@ This walkthrough covers how to move and rotate `Models` in 3D space using `Matri
 ## Related Links
 
 - [MonoGame API Link](http://www.monogame.net/documentation/?page=api)
-- [Finished Project (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
+- [Finished Project (sample)](/samples/xamarin/monodroid-samples/monogame3dcamera)

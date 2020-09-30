@@ -134,7 +134,7 @@ whether to a database, flat files or other mechanism. The Tasky data layer
 consists of two parts: the SQLite-NET library and the custom code added to wire
 it up.
 
-Tasky relies on the Sqlite-net NuGet package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
+Tasky relies on the Sqlite-net NuGet package (published by Frank Krueger) to embed SQLite-NET code that provides an Object-Relational Mapping
 (ORM) database interface. The `TaskItemDatabase` class inherits from `SQLiteConnection` and
 adds the required Create, Read, Update, Delete (CRUD) methods to read and write
 data to SQLite. It is a simple boilerplate implementation of generic CRUD
@@ -198,7 +198,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### Locking to prevent Concurrent Access
 
-A [lock](https://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx) is implemented within the `TaskItemDatabase`
+A [lock](/previous-versions/visualstudio/visual-studio-2010/c5kehkcz(v=vs.100)) is implemented within the `TaskItemDatabase`
 class to prevent concurrent access to the database. This is to ensure concurrent
 access from different threads is serialized (otherwise a UI component might
 attempt to read the database at the same time a background thread is updating

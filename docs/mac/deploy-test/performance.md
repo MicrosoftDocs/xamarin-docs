@@ -54,7 +54,7 @@ Desktop applications often process large quantities of data and it is very easy 
 
 Whenever possible, use [async](~/cross-platform/platform/async.md) and threads to prevent blocking the UI.
 
-For long running operations consider using [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) or other options noted in Apple’s [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) to notify users.
+For long running operations consider using [NSProgressIndicator](/samples/xamarin/mac-samples/progressbarexample) or other options noted in Apple’s [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) to notify users.
 
 ## Related Links
 

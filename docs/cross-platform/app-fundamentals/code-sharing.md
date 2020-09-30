@@ -46,7 +46,7 @@ like Xamarin.Android and Xamarin.iOS. .NET Standard 2.0 is recommended for maxim
 
 ### Remarks
 
-.NET Standard is [similar to PCL](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries), but with a simpler model for platform support and a greater number of classes from the BCL.
+.NET Standard is [similar to PCL](/dotnet/standard/net-standard#comparison-to-portable-class-libraries), but with a simpler model for platform support and a greater number of classes from the BCL.
 
 <a name="Shared_Projects"></a>
 
@@ -120,7 +120,7 @@ Portable Class Libraries are [discussed in detail here](~/cross-platform/app-fun
 
 ### Disadvantages
 
-- Deprecated in the latest versions of Visual Studio, .NET Standard libraries are recommended instead. Refer to this [explanation of the differences](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries) between PCL and .NET Standard.
+- Deprecated in the latest versions of Visual Studio, .NET Standard libraries are recommended instead. Refer to this [explanation of the differences](/dotnet/standard/net-standard#comparison-to-portable-class-libraries) between PCL and .NET Standard.
 - Cannot use compiler directives.
 - Only a subset of the .NET framework is available to use, determined by the profile selected (see the  [Introduction to PCL](~/cross-platform/app-fundamentals/pcl.md) for more info).
 

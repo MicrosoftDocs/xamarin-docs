@@ -315,4 +315,4 @@ object, using the `GetViewForHeader` and `GetViewForFooter` method overrides on 
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (sample)](/samples/xamarin/ios-samples/workingwithtables)

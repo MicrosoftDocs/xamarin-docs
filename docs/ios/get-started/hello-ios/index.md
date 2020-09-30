@@ -21,4 +21,4 @@ The second part of this document reviews what application built and provides the
 
 ## Related Links
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (sample)](/samples/xamarin/ios-samples/hello-ios)

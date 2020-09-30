@@ -15,7 +15,7 @@ Use the following resources to resolve issues while using Xamarin with iOS 11:
 
 ## Known Issues and Troubleshooting
 
-If you encounter any problems building iOS 11 apps with Xamarin, check the [release notes](https://docs.microsoft.com/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
+If you encounter any problems building iOS 11 apps with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
 
 If you think you have found a bug in Xamarin.iOS, report the issue [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
 

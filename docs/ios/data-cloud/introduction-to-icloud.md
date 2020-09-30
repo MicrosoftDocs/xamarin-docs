@@ -534,7 +534,7 @@ Finally it included a brief discussion on how the addition of iCloud Backup shou
 
 ## Related Links
 
-- [Introduction To iCloud (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
+- [Introduction To iCloud (sample)](/samples/xamarin/ios-samples/introductiontoicloud)
 - [iCloud Seminar Sample Code](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud Seminar Slides](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)

@@ -47,7 +47,7 @@ that is discussed later in the document (see the section *Receipt Verification a
 
 ## Consumable Products example
 
-The [InAppPurchaseSample code](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contains a project called *Consumables* that implements a basic
+The [InAppPurchaseSample code](/samples/xamarin/ios-samples/storekit) contains a project called *Consumables* that implements a basic
 ‘in-game currency’ (called “monkey credits”). The sample shows how to
 implement two in-app purchase products to allow the user to buy as many
 “monkey credits” as they wish – in a real application there would also be

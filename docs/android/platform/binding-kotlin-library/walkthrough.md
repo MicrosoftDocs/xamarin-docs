@@ -22,7 +22,7 @@ The goal of this document is to outline a high-level approach for addressing thi
 
 ## Background
 
-Kotlin was released in February 2016 and was positioned as an alternative to the standard Java compiler into Android Studio by 2017. Later in 2019, Google announced that the Kotlin programming language would became its preferred language for Android app developers. The high-level binding approach is similar to [the binding process of regular Java libraries](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) with a few important Kotlin specific steps.
+Kotlin was released in February 2016 and was positioned as an alternative to the standard Java compiler into Android Studio by 2017. Later in 2019, Google announced that the Kotlin programming language would became its preferred language for Android app developers. The high-level binding approach is similar to [the binding process of regular Java libraries](../binding-java-library/index.md) with a few important Kotlin specific steps.
 
 ## Prerequisites
 
@@ -98,7 +98,7 @@ The AAR file is an Android archive, which contains the compiled Kotlin source co
 
 The second step is to prepare the metadata transformation file, which is used by Xamarin.Android to generate respective C# classes. A Xamarin.Android Binding Project will discover all native classes and members from a given Android archive subsequently generating an XML file with the appropriate metadata. The manually created metadata transformation file is then applied to the previously generated baseline to create the final XML definition file used to generate the C# code.
 
-The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by the Bindings Generator to influence the creation of the binding assembly. The [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) article provides more information on transformations, which could be applied:
+The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by the Bindings Generator to influence the creation of the binding assembly. The [Java Binding Metadata](../binding-java-library/customizing-bindings/java-bindings-metadata.md) article provides more information on transformations, which could be applied:
 
 1. Create an empty **Metadata.xml** file:
 
@@ -193,7 +193,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
     Java and Kotlin generics are not supported by Xamarin.Android bindings, thus a generalized C# method to access the generic API is created. As a work-around you can create a wrapper Kotlin library and expose required APIs in a strong-typed manner without generics. Alternatively, you can create helpers on C# side to address the issue in the same way via strong-typed APIs.
 
     > [!TIP]
-    > By transforming the metadata, any changes could be applied to the generated binding. The [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) article explains in details how the metadata is generated and processed.
+    > By transforming the metadata, any changes could be applied to the generated binding. The [Binding Java Library](../binding-java-library/index.md) article explains in details how the metadata is generated and processed.
 
 ## Build a binding library
 
@@ -337,8 +337,8 @@ You should now have a basic Xamarin.Android application that uses a native Kotli
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
 - [Java Decompiler](http://java-decompiler.github.io/)
 - [BubblePicker Kotlin Library](https://github.com/igalata/Bubble-Picker)
-- [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Binding Java Library](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Java Binding Metadata](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Sample project repository](https://github.com/alexeystrakh/xamarin-binding-kotlin-framework)

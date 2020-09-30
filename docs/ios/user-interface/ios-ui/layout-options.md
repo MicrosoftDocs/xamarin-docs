@@ -72,4 +72,4 @@ the image in view when the screen is rotated. Complex layouts typically require 
 
 ## Related Links
 
-- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controls (sample)](/samples/xamarin/ios-samples/controls)

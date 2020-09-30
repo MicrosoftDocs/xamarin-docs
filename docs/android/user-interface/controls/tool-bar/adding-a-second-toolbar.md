@@ -195,7 +195,7 @@ ActionBar.SetDisplayHomeAsUpEnabled (true);
 ActionBar.SetHomeButtonEnabled (true);
 ```
 
-The [Support v7 Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar) 
+The [Support v7 Toolbar](/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar) 
 code sample demonstrates the **Up** button in action. This sample 
 (which uses the AppCompat library described next) implements a second 
 activity that uses the Toolbar **Up** button for hierarchical 
@@ -223,5 +223,5 @@ rather than to the previous screen.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
-- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)
+- [Lollipop Toolbar (sample)](/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

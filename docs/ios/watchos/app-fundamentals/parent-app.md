@@ -25,8 +25,8 @@ The Parent App is also sometimes referred to as the Container App.
 
 These two samples demonstrate how to use `WCSession` to run code and send messages between a watch app and the paired iPhone:
 
-- [Watch Connectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
-- [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
+- [Watch Connectivity](/samples/xamarin/ios-samples/watchos-watchconnectivity/)
+- [SimpleWatchConnectivity](/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
 
 ## Shared Storage
 

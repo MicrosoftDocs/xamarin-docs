@@ -273,5 +273,5 @@ In this walkthrough, we built a well-behaved, background-aware iOS application t
 
 ## Related Links
 
-- [Location (Part 4) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Location (Part 4) (sample)](/samples/xamarin/ios-samples/location)
 - [Core Location Framework Reference](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

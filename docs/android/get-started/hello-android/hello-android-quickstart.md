@@ -640,4 +640,4 @@ Now it's time to dissect the tools and skills you have just learned. Next up is 
 ## Related links
 
 - [Xamarin Android App Icons (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+- [Phoneword (sample)](/samples/xamarin/monodroid-samples/phoneword)

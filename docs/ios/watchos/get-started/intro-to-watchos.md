@@ -90,7 +90,7 @@ The majority of watch app/extension interaction will be with  sub-classes of
 `WKInterfaceController` that you write to correspond to scenes in your watch app’s
 **Interface.storyboard**. This is covered in detail in the [Installation](~/ios/watchos/get-started/installation.md)
 and [Getting Started](~/ios/watchos/get-started/index.md) articles.
-The following image shows a portion of the [Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+The following image shows a portion of the [Watch Kit Catalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 sample’s Storyboard. For each scene showed here, there is a corresponding custom
 `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.)
 in the extension project.
@@ -171,8 +171,8 @@ Check out the documentation from Apple:
 
 ## Related Links
 
-- [watchOS 3 Catalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [watchOS 1 Catalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 3 Catalog (sample)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 Catalog (sample)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Setup and Install](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's Developing for Watch Kit guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

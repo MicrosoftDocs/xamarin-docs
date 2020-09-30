@@ -15,6 +15,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [ImageTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
+- [ImageTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
 - [Xamarin.Forms Images (guide)](~/xamarin-forms/user-interface/images.md)
 - [Image API](xref:Xamarin.Forms.Image)

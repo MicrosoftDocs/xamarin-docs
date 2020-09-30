@@ -137,4 +137,4 @@ This walkthrough covered the basic steps to implement the Background Transfer Se
 
 ## Related links
 
-- [Simple Background Transfer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
+- [Simple Background Transfer (sample)](/samples/xamarin/ios-samples/simplebackgroundtransfer)

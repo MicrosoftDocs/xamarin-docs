@@ -92,4 +92,4 @@ press the **Enter** key, the toast will be displayed as shown on the right:
 
 ## Related Links
 
-- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)
+- [EditTextSample](/samples/xamarin/monodroid-samples/userinterface-edittextsample)

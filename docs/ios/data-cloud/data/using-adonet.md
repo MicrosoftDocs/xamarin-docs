@@ -214,7 +214,7 @@ The `ExecuteScalar` method’s return type is `object` – you should cast the r
 
 There is another library `Microsoft.Data.Sqlite`, which can be [installed from NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), that is functionally equivalent to `Mono.Data.Sqlite` and allows the same types of queries.
 
-There is a [comparison between the two libraries](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) and some [Xamarin-specific details](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Most important for Xamarin.iOS apps, you must include an initialization call:
+There is a [comparison between the two libraries](/dotnet/standard/data/sqlite/compare) and some [Xamarin-specific details](/dotnet/standard/data/sqlite/xamarin). Most important for Xamarin.iOS apps, you must include an initialization call:
 
 ```csharp
 // required for Xamarin.iOS

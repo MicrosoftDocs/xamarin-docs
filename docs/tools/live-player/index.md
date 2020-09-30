@@ -10,7 +10,7 @@ ms.date: 06/13/2019
 
 # Xamarin Live Player for Xamarin.Forms
 
-Since the source code is interpreted you may reach the [limitations](limitations.md) after some time and need to fully compile your app for device or emulator.
+Since the source code is interpreted you may reach the [limitations](./troubleshooting.md) after some time and need to fully compile your app for device or emulator.
 
 ![Preview feature](~/media/shared/preview.png)
 

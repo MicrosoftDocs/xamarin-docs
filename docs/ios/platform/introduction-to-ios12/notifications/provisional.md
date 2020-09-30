@@ -21,7 +21,7 @@ provisionally, or start delivering them more prominently.
 
 ## Sample app: RedGreenNotifications
 
-Take a look at the [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+Take a look at the [RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
  sample app, which sends provisional notifications.
 
 ## Sending provisional notifications
@@ -50,7 +50,7 @@ will determine the new notification delivery settings (in the above code,
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Sample app – RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

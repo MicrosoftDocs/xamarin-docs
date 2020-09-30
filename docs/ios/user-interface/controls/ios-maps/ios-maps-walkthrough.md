@@ -15,7 +15,7 @@ The application we’re going to build in this walkthrough is shown below:
 
  [![An example MapKit app](ios-maps-walkthrough-images/00-map-overlay.png)](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
-You can find the completed code in the [Maps Walkthrough sample](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough).
+You can find the completed code in the [Maps Walkthrough sample](/samples/xamarin/ios-samples/mapswalkthrough).
 
 Let's begin by creating a new **iOS Empty Project**, and giving it a relevant name. We'll start by adding code to our View Controller to display the MapView, and will then create new classes for our MapDelegate, and the custom annotations. Follow the steps below to achieve this:
 
@@ -281,6 +281,6 @@ In this article we looked at how to add an annotation to a map as well as how to
 
 ## Related Links
 
-- [Maps Walkthrough sample](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough)
-- [Map Demo sample](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)
+- [Maps Walkthrough sample](/samples/xamarin/ios-samples/mapswalkthrough)
+- [Map Demo sample](/samples/xamarin/ios-samples/mapdemo)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)

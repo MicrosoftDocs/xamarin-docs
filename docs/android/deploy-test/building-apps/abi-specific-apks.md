@@ -239,7 +239,7 @@ of these folders with their contents:
 > The build process outlined in this guide may be
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
-[Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
+[Powershell](/powershell/) / [psake](https://github.com/psake/psake) or
 [Fake](https://fsharp.github.io/FAKE/).
 
 ## Summary
@@ -252,6 +252,6 @@ that has it's build scripted using Rake.
 
 ## Related Links
 
-- [OneABIPerAPK (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/oneabiperapk)
+- [OneABIPerAPK (sample)](/samples/xamarin/monodroid-samples/oneabiperapk)
 - [Publishing an Application](~/android/deploy-test/publishing/index.md)
 - [Multiple APK Support for Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html)

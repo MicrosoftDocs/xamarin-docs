@@ -1081,7 +1081,7 @@ Android allows notifications with a category setting of
 not disturb* mode. Note that `Notification.CategoryAlarm` notifications
 are never blocked in *Do not disturb* mode.
 
-The [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) sample
+The [LocalNotifications](/samples/xamarin/monodroid-samples/localnotifications) sample
 demonstrates how to use `NotificationCompat.Builder` to launch a second
 activity from a notification. This sample code is explained in the
 [Using Local Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
@@ -1164,8 +1164,8 @@ For guidelines about designing notifications for Android, see
 
 ## Related Links
 
-- [NotificationsLab (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-notificationslab)
-- [LocalNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
+- [NotificationsLab (sample)](/samples/xamarin/monodroid-samples/android50-notificationslab)
+- [LocalNotifications (sample)](/samples/xamarin/monodroid-samples/localnotifications)
 - [Local Notifications In Android Walkthrough](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
 - [Notifying the User](https://developer.android.com/training/notify-user/index.html)
 - [Notification](xref:Android.App.Notification)

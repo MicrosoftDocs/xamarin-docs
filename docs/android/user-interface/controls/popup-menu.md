@@ -99,4 +99,4 @@ showPopupMenu.Click += (s, arg) => {
 
 ## Related Links
 
-- [PopupMenuDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo)
+- [PopupMenuDemo (sample)](/samples/xamarin/monodroid-samples/popupmenudemo)

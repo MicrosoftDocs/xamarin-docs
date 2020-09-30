@@ -77,7 +77,7 @@ Studio:
 To learn how to configure an Android 5.0 app project,
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 For more information about installing NuGet packages, see
-[Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+[Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough).
 
 ## Introducing CardView
 
@@ -208,7 +208,7 @@ in the following screenshot:
 [![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 This screenshot is taken from the
-[RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+[RecyclerViewer](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 sample app, which uses a `RecyclerView` widget to present a scrolling
 list of `CardView` images for viewing photos. For more information
 about `RecyclerView`, see the
@@ -362,6 +362,6 @@ Lollipop. For more information about `CardView`, see the
 
 ## Related Links
 
-- [RecyclerView (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+- [RecyclerView (sample)](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduction to Lollipop](~/android/platform/lollipop.md)
 - [CardView class reference](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

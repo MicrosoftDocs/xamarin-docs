@@ -38,7 +38,7 @@ overlays.
 
 ## Related Links
 
-- [MapsAndLocationDemo_v3 (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
+- [MapsAndLocationDemo_v3 (sample)](/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtaining a Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Intents List: Invoking Google Applications on Android Devices](https://developer.android.com/guide/appendix/g-app-intents.html)

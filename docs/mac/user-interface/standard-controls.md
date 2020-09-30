@@ -572,7 +572,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 An `NSTextView` provides a full featured text edit and display area with built-in formatting. Like a `NSTextField`, use the `StringValue` property to read or set the area's value.
 
-For an example of a complex example of working with Text Views in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
+For an example of a complex example of working with Text Views in a Xamarin.Mac app, please see the [SourceWriter Sample App](/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
@@ -639,7 +639,7 @@ This article has taken a detailed look at working with the standard AppKit contr
 
 ## Related Links
 
-- [MacControls (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
+- [MacControls (sample)](/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md)

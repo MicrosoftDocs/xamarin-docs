@@ -227,7 +227,7 @@ implemented in Xamarin.iOS and Xamarin.Android to allow common file-access code
 to be written. The `System.IO.IsolatedStorage` class can be
 referenced across all three platforms in a [Shared Project](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Refer to the [Isolated Storage Overview for Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) for more information.
+Refer to the [Isolated Storage Overview for Windows Phone](/previous-versions/windows/apps/ff402541(v=vs.105)) for more information.
 
 The Isolated Storage APIs are not available in [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md). One alternative for PCL is the [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 

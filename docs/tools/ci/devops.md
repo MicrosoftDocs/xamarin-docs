@@ -89,10 +89,10 @@ Reference link: **[Improve Code Quality](/visualstudio/test/improve-code-quality
 |Feature|Supported with Xamarin|Additional Comments|
 |-------------|----------------------------|-------------------------|
 |[Analyze managed code quality](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Yes||
-|[Find duplicate code by using code clone detection](https://msdn.microsoft.com/library/hh205279.aspx)|Yes||
+|[Find duplicate code by using code clone detection](/previous-versions/hh205279(v=vs.140))|Yes||
 |[Measure complexity and maintainability of managed code](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|Yes||
-|[Performance Explorer](/visualstudio/profiling/performance-explorer)|No|Use the [Xamarin Profiler](/xamarin/tools/profiler/) through Visual Studio for Mac instead. Note that the Xamarin Profiler is currently in preview and does not yet work for Windows targets.|
-|[Analyze .NET Framework memory issues](https://msdn.microsoft.com/library/dn342825.aspx)|No|Visual Studio tools do not have hooks into the Mono framework for profiling.|
+|[Performance Explorer](/visualstudio/profiling/performance-explorer)|No|Use the [Xamarin Profiler](../profiler/index.md) through Visual Studio for Mac instead. Note that the Xamarin Profiler is currently in preview and does not yet work for Windows targets.|
+|[Analyze .NET Framework memory issues](/visualstudio/misc/analyze-dotnet-framework-memory-issues)|No|Visual Studio tools do not have hooks into the Mono framework for profiling.|
 
 ## Release management
 

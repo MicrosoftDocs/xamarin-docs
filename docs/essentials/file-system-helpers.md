@@ -70,8 +70,8 @@ Add any file into the **Resources** folder in the iOS project and mark the Build
 
 # [UWP](#tab/uwp)
 
-- **CacheDirectory** – Returns the [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) directory..
-- **AppDataDirectory** – Returns the [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) directory that is backed up to the cloud.
+- **CacheDirectory** – Returns the [LocalCacheFolder](/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) directory..
+- **AppDataDirectory** – Returns the [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) directory that is backed up to the cloud.
 
 Add any file into the root in the UWP project and mark the Build Action as **Content** to use it with `OpenAppPackageFileAsync`.
 

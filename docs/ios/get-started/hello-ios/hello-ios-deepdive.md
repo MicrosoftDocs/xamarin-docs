@@ -20,7 +20,7 @@ This guide helps you develop the skills and knowledge required to build a single
 
 ## Introduction to Visual Studio for Mac
 
-Visual Studio for Mac is a free, open-source IDE that combines features from Visual Studio and XCode. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio for Mac features, but if you're new to Visual Studio for Mac, check out the [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/) documentation.
+Visual Studio for Mac is a free, open-source IDE that combines features from Visual Studio and XCode. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio for Mac features, but if you're new to Visual Studio for Mac, check out the [Visual Studio for Mac](/visualstudio/mac/) documentation.
 
 Visual Studio for Mac follows the Visual Studio practice of organizing code into *solutions* and *projects*. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
@@ -58,7 +58,7 @@ On the right is the **solution Pane**, which contains the directory structure an
 
 In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthrough, you created a solution called **Phoneword** and placed an iOS project - **Phoneword_iOS** - inside it. The items inside the project include:
 
-- **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](https://docs.microsoft.com/dotnet/api/system), System.Core, and [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), as well as a reference to the Xamarin.iOS assembly.
+- **References** - Contains the assemblies required to build and run the application. Expand the directory to see references to .NET assemblies such as  [System](/dotnet/api/system), System.Core, and [System.Xml](/dotnet/api/system.xml), as well as a reference to the Xamarin.iOS assembly.
 - **Packages** - The packages directory contains ready-made NuGet packages.
 - **Resources** - The resources folder stores other media.
 - **Main.cs** – This contains the main entry point of the application. To start the application, the name of the main application class, the  `AppDelegate`, is passed in .
@@ -453,6 +453,6 @@ In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios
 
 ## Related links
 
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (sample)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [iOS Provisioning Portal](https://developer.apple.com/account/#/overview)

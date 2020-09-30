@@ -54,13 +54,13 @@ landingContent:
       - linkListType: concept
         links:
           - text: Xamarin.Forms performance
-            url: /xamarin/xamarin-forms/deploy-test/performance?context=xamarin/cross-platform
+            url: ../xamarin-forms/deploy-test/performance.md?context=xamarin%252fcross-platform
           - text: Android performance
-            url: /xamarin/android/deploy-test/performance?context=xamarin/cross-platform
+            url: ../android/deploy-test/performance.md?context=xamarin%252fcross-platform
           - text: iOS performance
-            url: /xamarin/ios/deploy-test/performance?context=xamarin/cross-platform
+            url: ../ios/deploy-test/performance.md?context=xamarin%252fcross-platform
           - text: Mac performance
-            url: /xamarin/mac/deploy-test/performance?context=xamarin/cross-platform
+            url: ../mac/deploy-test/performance.md?context=xamarin%252fcross-platform
           - text: Transport Layer Security (TLS) 1.2
             url: ~/cross-platform/app-fundamentals/transport-layer-security.md
 

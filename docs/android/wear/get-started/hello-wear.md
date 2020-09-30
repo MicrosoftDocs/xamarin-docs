@@ -189,7 +189,7 @@ see the count increment with each tap:
 
 ## Next Steps
 
-Check out the [Wear samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) including
+Check out the [Wear samples](/samples/browse/?products=xamarin&term=Xamarin.Android%2bwear) including
 Android Wear apps with companion Phone apps.
 
 When you are ready to distribute your app, see
@@ -197,4 +197,4 @@ When you are ready to distribute your app, see
 
 ## Related Links
 
-- [Click Me App (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-weartest)
+- [Click Me App (sample)](/samples/xamarin/monodroid-samples/wear-weartest)

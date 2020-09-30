@@ -18,7 +18,7 @@ Xamarin's Async support is built on the Mono 3.0 foundation and upgrades the API
 
 This document introduces the new async and await keywords then walks through some simple examples implementing asynchronous methods in Xamarin.iOS and Xamarin.Android.
 
-For a more complete discussion of the new asynchronous features of C# 5 (including lots of samples and different usage scenarios) refer to the article [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async).
+For a more complete discussion of the new asynchronous features of C# 5 (including lots of samples and different usage scenarios) refer to the article [Asynchronous programming](/dotnet/csharp/async).
 
 The sample application makes a simple asynchronous web request (without blocking the main thread) then updates the UI with the downloaded html and character count.
 
@@ -64,7 +64,7 @@ Using await does not block the caller’s thread – rather control is returned 
 
 When the task completes, the method resumes executing at the same point in the code. This includes returning to the try scope of a try-catch-finally block (if one is present). await cannot be used in a catch or finally block.
 
-Read more about [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) on Microsoft Docs.
+Read more about [await](/dotnet/csharp/language-reference/keywords/await) on Microsoft Docs.
 
 ## Exception Handling
 
@@ -80,11 +80,11 @@ Asynchronous methods that take a long time to complete should support cancellati
 
 The task then cancels itself and acknowledges the cancellation.
 
-For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application).
+For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application).
 
 ## Example
 
-Download the [example Xamarin solution](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
+Download the [example Xamarin solution](/samples/xamarin/mobile-samples/asyncawait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
 
 ### Writing an async method
 
@@ -186,14 +186,14 @@ This document has given an overview of the new language keywords and examples fo
 
 ## Related Links
 
-- [AsyncAwait (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
+- [AsyncAwait (sample)](/samples/xamarin/mobile-samples/asyncawait/)
 - [Callbacks as our Generations' Go To Statement](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
-- [HttpClient (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
+- [Data (iOS) (sample)](/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (sample)](/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async)
-- [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
+- [Asynchronous programming](/dotnet/csharp/async)
+- [Fine-Tuning Your Async Application (C#)](/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
 - [Await, and UI, and deadlocks! Oh my!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
 - [Processing tasks as they complete)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
-- [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)
-- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](https://blogs.msdn.microsoft.com/ericlippert/2010/11/11/asynchrony-in-c-5-part-six-whither-async/)
+- [Task-based Asynchronous Pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](/archive/blogs/ericlippert/asynchrony-in-c-5-part-six-whither-async)

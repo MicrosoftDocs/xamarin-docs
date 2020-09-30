@@ -95,7 +95,7 @@ start trying to solve the User Experience or UX.
 
 #### UX design
 
-UX is usually done via wireframes or mockups using one of the many [design toolkits](https://docs.microsoft.com/windows/uwp/design/downloads/). UX mockups allow the UX to be designed without having to worry
+UX is usually done via wireframes or mockups using one of the many [design toolkits](/windows/uwp/design/downloads/). UX mockups allow the UX to be designed without having to worry
 about the actual UI design:
 
  [![UX is usually done via wireframes or mockups using tools such as Balsamiq](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
@@ -105,7 +105,7 @@ guidelines for the various platforms that the app will target. The app should "f
 
 1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1. **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
-1. **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **UWP** –  [UWP Design basics](/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
 application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](/windows/uwp/design/controls-and-patterns/pivot) view.
@@ -228,7 +228,7 @@ many others. A few popular ones are:
 
 #### UWP
 
-UWP applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the Store. For more information on publishing Windows apps, see UWP's [Publish](https://docs.microsoft.com/windows/uwp/publish/) documentation.
+UWP applications are distributed to users via the Microsoft Store. Developers submit their apps for approval, after which they appear in the Store. For more information on publishing Windows apps, see UWP's [Publish](/windows/uwp/publish/) documentation.
 
 ## Mobile development considerations
 
@@ -385,7 +385,7 @@ can opt-out of low-memory support.
 
 #### Security considerations
 
-For information on important security considerations in UWP, refer to the [Security](https://docs.microsoft.com/windows/uwp/security/) documentation.
+For information on important security considerations in UWP, refer to the [Security](/windows/uwp/security/) documentation.
 
 ## Summary
 
