@@ -334,7 +334,7 @@ In this example, children are added to the [`RelativeLayout`](xref:Xamarin.Forms
 
 ## Related links
 
-- [RelativeLayout demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+- [RelativeLayout demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 - [Xamarin.Forms Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Choose a Xamarin.Forms Layout](choose-layout.md)

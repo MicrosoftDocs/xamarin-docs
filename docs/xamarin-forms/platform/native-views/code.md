@@ -318,5 +318,5 @@ This article explained how to add native views to a Xamarin.Forms layout created
 
 ## Related Links
 
-- [NativeEmbedding (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+- [NativeEmbedding (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [Native Forms](~/xamarin-forms/platform/native-forms.md)

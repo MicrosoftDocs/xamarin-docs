@@ -27,7 +27,7 @@ This article explains how speech-to-text is implemented in the sample Xamarin.Fo
 
 ## Create an Azure Speech Service resource
 
-Azure Speech Service is part of Azure Cognitive Services, which provides cloud-based APIs for tasks such as image recognition, speech recognition and translation, and Bing search. For more information, see [What are Azure Cognitive Services?](https://docs.microsoft.com/azure/cognitive-services/welcome).
+Azure Speech Service is part of Azure Cognitive Services, which provides cloud-based APIs for tasks such as image recognition, speech recognition and translation, and Bing search. For more information, see [What are Azure Cognitive Services?](/azure/cognitive-services/welcome).
 
 The sample project requires an Azure Cognitive Services resource to be created in your Azure portal. A Cognitive Services resource can be created for a single service, such as Speech Service, or as a multi-service resource. The steps to create a Speech Service resource are as follows:
 
@@ -36,7 +36,7 @@ The sample project requires an Azure Cognitive Services resource to be created i
 1. Obtain the API key and region information for your resource.
 1. Update the sample **Constants.cs** file.
 
-For a step-by-step guide to creating a resource, see [Create a Cognitive Services resource](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account).
+For a step-by-step guide to creating a resource, see [Create a Cognitive Services resource](/azure/cognitive-services/cognitive-services-apis-create-account).
 
 > [!NOTE]
 > If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin. Once you have an account, a single-service resource can be created at the free tier to try out the service.
@@ -464,7 +464,7 @@ Run the app and click the **Transcribe** button. The app should request micropho
 
 ## Related links
 
-- [Azure Speech Service sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
-- [Azure Speech Service overview](https://docs.microsoft.com/azure/cognitive-services/speech-service/overview)
-- [Create a Cognitive Services resource](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)
-- [Quickstart: Recognize speech from a microphone](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)
+- [Azure Speech Service sample](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+- [Azure Speech Service overview](/azure/cognitive-services/speech-service/overview)
+- [Create a Cognitive Services resource](/azure/cognitive-services/cognitive-services-apis-create-account)
+- [Quickstart: Recognize speech from a microphone](/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)

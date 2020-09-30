@@ -232,8 +232,8 @@ Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPag
 
 ## Related links
 
-- [TabbedPageWithNavigationPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
-- [TabbedPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPageWithNavigationPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
 - [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPage API](xref:Xamarin.Forms.TabbedPage)

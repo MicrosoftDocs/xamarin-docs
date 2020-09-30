@@ -249,5 +249,5 @@ This article demonstrated how to navigate to modal pages. A modal page encourage
 ## Related Links
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
-- [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [Modal (sample)](/samples/xamarin/xamarin-forms-samples/navigation-modal)
+- [PassingData (sample)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata)

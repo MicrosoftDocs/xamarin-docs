@@ -246,7 +246,7 @@ The `ToggleEmptyView` method sets the `EmptyView` property of the `stackLayout` 
 
 ## Related links
 
-- [Bindable Layout Demo (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [Bindable Layout Demo (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Creating a Custom Layout](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

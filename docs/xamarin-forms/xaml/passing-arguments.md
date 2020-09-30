@@ -129,7 +129,7 @@ The [`Color`](xref:Xamarin.Forms.Color) structure defines a number of factory me
 </BoxView>
 ```
 
-The number of elements within the `x:Arguments` tag, and the types of these elements, must match the arguments of the factory method being called. The [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) factory method requires four [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) parameters, which represent the red, green, blue, and alpha values, ranging from 0 to 255 respectively. The [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) factory method requires four [`Double`](https://docs.microsoft.com/dotnet/api/system.double) parameters, which represent the hue, saturation, luminosity, and alpha values, ranging from 0 to 1 respectively. The [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) factory method requires a [`String`](https://docs.microsoft.com/dotnet/api/system.string) that represents the hexadecimal (A)RGB color.
+The number of elements within the `x:Arguments` tag, and the types of these elements, must match the arguments of the factory method being called. The [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) factory method requires four [`Int32`](/dotnet/api/system.int32) parameters, which represent the red, green, blue, and alpha values, ranging from 0 to 255 respectively. The [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) factory method requires four [`Double`](/dotnet/api/system.double) parameters, which represent the hue, saturation, luminosity, and alpha values, ranging from 0 to 1 respectively. The [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) factory method requires a [`String`](/dotnet/api/system.string) that represents the hexadecimal (A)RGB color.
 
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) factory method with the specified argument values:
 
@@ -159,7 +159,7 @@ For more information about generic type arguments, see [Generics in Xamarin.Form
 
 ## Related Links
 
-- [Passing Constructor Arguments (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
-- [Calling Factory Methods (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
+- [Passing Constructor Arguments (sample)](/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Calling Factory Methods (sample)](/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
 - [Generics in Xamarin.Forms XAML](generics.md)

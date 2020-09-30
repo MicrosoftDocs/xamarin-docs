@@ -167,4 +167,4 @@ On Android, the `AutomationProperties.Name` and/or `AutomationProperties.HelpTex
 ## Related Links
 
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
-- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Accessibility (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

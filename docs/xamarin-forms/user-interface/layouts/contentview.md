@@ -204,7 +204,7 @@ For more information about control templates, see [Xamarin.Forms Control Templat
 
 ## Related links
 
-* [ContentView sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+* [ContentView sample application](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md).
 * [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md)

@@ -150,7 +150,7 @@ For more information about custom renderers, see [Custom Renderers](~/xamarin-fo
 
 ## Related links
 
-- [Material Visual (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Material Visual (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Create a Xamarin.Forms Visual Renderer](create.md)
 - [Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

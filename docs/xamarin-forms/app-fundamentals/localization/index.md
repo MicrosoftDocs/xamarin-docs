@@ -16,7 +16,7 @@ _The built-in .NET localization framework can be used to build cross-platform mu
 
 ## [Xamarin.Forms String and Image Localization](text.md)
 
-The built-in mechanism for localizing .NET applications uses [RESX files](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translated text can then be retrieved in code.
+The built-in mechanism for localizing .NET applications uses [RESX files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) and the classes in the `System.Resources` and `System.Globalization` namespaces. The RESX files containing translated strings are embedded in the Xamarin.Forms assembly, along with a compiler-generated class that provides strongly-typed access to the translations. The translated text can then be retrieved in code.
 
 ## [Right-to-Left Localization](right-to-left.md)
 

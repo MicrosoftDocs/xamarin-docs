@@ -127,5 +127,5 @@ In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is pa
 
 ## Related links
 
-- [BrushesDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 - [Xamarin.Forms Brushes: Gradients](gradient.md)

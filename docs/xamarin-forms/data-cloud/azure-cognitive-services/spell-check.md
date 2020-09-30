@@ -167,5 +167,5 @@ This article explained how to use the Bing Spell Check REST API to correct spell
 
 - [Bing Spell Check Documentation](/azure/cognitive-services/bing-spell-check/)
 - [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Bing Spell Check API v7 reference](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

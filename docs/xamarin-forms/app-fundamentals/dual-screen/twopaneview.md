@@ -74,4 +74,4 @@ The following properties apply when the `TwoPaneView` is occupying a single scre
 
 ## Related links
 
-- [DualScreen (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)

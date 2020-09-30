@@ -567,4 +567,4 @@ This article has demonstrated how to create a custom renderer for a [`ViewCell`]
 ## Related Links
 
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+- [CustomRendererViewCell (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

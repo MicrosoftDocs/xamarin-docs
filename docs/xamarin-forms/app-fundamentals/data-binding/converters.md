@@ -47,7 +47,7 @@ The `ConvertBack` method is called when data moves from the target to the source
 
 If the data binding also includes a `StringFormat` setting, the value converter is invoked before the result is formatted as a string.
 
-The **Enable Buttons** page in the [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) sample demonstrates how to use this value converter in a data binding. The `IntToBoolConverter` is instantiated in the page's resource dictionary. It is then referenced with a `StaticResource` markup extension to set the `Converter` property in two data bindings. It is very common to share data converters among multiple data bindings on the page:
+The **Enable Buttons** page in the [**Data Binding Demos**](/samples/xamarin/xamarin-forms-samples/databindingdemos) sample demonstrates how to use this value converter in a data binding. The `IntToBoolConverter` is instantiated in the page's resource dictionary. It is then referenced with a `StaticResource` markup extension to set the `Converter` property in two data bindings. It is very common to share data converters among multiple data bindings on the page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -462,5 +462,5 @@ Here's the result:
 
 ## Related Links
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

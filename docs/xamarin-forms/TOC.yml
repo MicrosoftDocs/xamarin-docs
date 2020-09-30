@@ -919,7 +919,7 @@
         - name: Web Authenticator
           href: ~/essentials/web-authenticator.md?context=xamarin/xamarin-forms
         - name: Xamarin.Essentials release notes
-          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
+          href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
     - name: Data & Azure Cloud Services
@@ -1033,7 +1033,7 @@
             - name: "Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?"
               href: troubleshooting/questions/maps-compiletodalvik-error.md
     - name: Release notes
-      href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+      href: /xamarin/xamarin-forms/release-notes/
     - name: Samples
       href: samples/index.md
     - name: Creating Mobile Apps with Xamarin.Forms Book

@@ -184,7 +184,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-The additions to the `MainActivity` object are the only code in the [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution where normal application code needs to be altered to support the `FormsVideoLibrary` classes.
+The additions to the `MainActivity` object are the only code in the [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution where normal application code needs to be altered to support the `FormsVideoLibrary` classes.
 
 ### The UWP video picker
 
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.UWP
 
 ## Invoking the dependency service
 
-The **Play Library Video** page of the [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) program demonstrates how to use the video picker dependency service. The XAML file contains a `VideoPlayer` instance and a `Button` labeled **Show Video Library**:
+The **Play Library Video** page of the [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) program demonstrates how to use the video picker dependency service. The XAML file contains a `VideoPlayer` instance and a `Button` labeled **Show Video Library**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -384,5 +384,5 @@ For each platform, the video begins playing almost immediately after the video s
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 - [Picking a Photo from the Picture Library](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

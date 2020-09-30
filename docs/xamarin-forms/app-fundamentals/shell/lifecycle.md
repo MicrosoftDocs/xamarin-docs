@@ -35,6 +35,6 @@ For more information about modal navigation, see [Xamarin.Forms Modal Pages](~/x
 
 ## Related links
 
-- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms App Lifecycle](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Xamarin.Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md)

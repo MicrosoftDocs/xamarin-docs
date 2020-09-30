@@ -267,5 +267,5 @@ This article demonstrated how to create an effect that changes the background co
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
-- [Background Color Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
-- [Focus Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+- [Background Color Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
+- [Focus Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

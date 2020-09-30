@@ -103,6 +103,6 @@ This article demonstrated how to consume the pre-defined easing functions, and h
 ## Related Links
 
 - [Async Support Overview](~/cross-platform/platform/async.md)
-- [Easing Functions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
+- [Easing Functions (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 - [Easing](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

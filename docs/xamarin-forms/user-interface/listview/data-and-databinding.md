@@ -158,4 +158,4 @@ Assuming `listView`'s `ItemsSource` is a list of strings, `SomeLabel` will have 
 
 ## Related Links
 
-- [Two Way Binding (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [Two Way Binding (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

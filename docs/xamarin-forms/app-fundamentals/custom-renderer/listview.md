@@ -556,4 +556,4 @@ This article has demonstrated how to create a custom renderer that encapsulates 
 
 ## Related Links
 
-- [CustomRendererListView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
+- [CustomRendererListView (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

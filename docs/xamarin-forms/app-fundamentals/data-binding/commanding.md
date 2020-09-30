@@ -82,7 +82,7 @@ If sharing ViewModels between Windows and Xamarin.Forms is not a concern, then y
 
 ## Basic Commanding
 
-The **Person Entry** page in the [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) program demonstrates some simple commands implemented in a ViewModel.
+The **Person Entry** page in the [**Data Binding Demos**](/samples/xamarin/xamarin-forms-samples/databindingdemos) program demonstrates some simple commands implemented in a ViewModel.
 
 The `PersonViewModel` defines three properties named `Name`, `Age`, and `Skills` that define a person. This class does *not* contain any `ICommand` properties:
 
@@ -684,7 +684,7 @@ All the `execute` methods call `RefreshCanExecutes`, which then calls `ChangeCan
 
 ## Asynchronous Commanding for Navigation Menus
 
-Commanding is convenient for implementing navigation menus, such as that in the [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) program itself. Here's part of **MainPage.xaml**:
+Commanding is convenient for implementing navigation menus, such as that in the [**Data Binding Demos**](/samples/xamarin/xamarin-forms-samples/databindingdemos) program itself. Here's part of **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -758,5 +758,5 @@ Data bindings can sometimes be tricky, but as you've seen in this series of arti
 
 ## Related Links
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

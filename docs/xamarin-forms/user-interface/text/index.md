@@ -62,4 +62,4 @@ Refer to [working with styles](~/xamarin-forms/user-interface/styles/index.md) t
 
 ## Related Links
 
-- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)

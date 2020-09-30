@@ -533,7 +533,7 @@ For more information about using a [`Slider`](xref:Xamarin.Forms.Slider) see, [X
 
 ## Related links
 
-- [MediaElementDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+- [MediaElementDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [URI schemes](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)

@@ -216,4 +216,4 @@ The `OnListViewScrolled` event handler outputs the values of the `ScrolledEventA
 
 ## Related links
 
-- [ListView Interactivity (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+- [ListView Interactivity (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

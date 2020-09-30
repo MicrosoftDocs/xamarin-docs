@@ -168,6 +168,6 @@ The `IVisual` type can then be consumed through its registered name:
 
 ## Related links
 
-- [Material Visual (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Material Visual (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Xamarin.Forms Material Visual](material-visual.md)
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

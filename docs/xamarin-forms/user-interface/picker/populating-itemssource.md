@@ -178,7 +178,7 @@ The [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property data binds
 
 ## Related links
 
-- [Picker Demo (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
-- [Monkey App (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
-- [Bindable Picker (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [Picker Demo (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Monkey App (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [Bindable Picker (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
 - [Picker API](xref:Xamarin.Forms.Picker)

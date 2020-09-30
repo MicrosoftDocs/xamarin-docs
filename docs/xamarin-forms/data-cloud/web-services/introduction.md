@@ -91,6 +91,6 @@ Rather than invoke the web service operations directly, the `TodoItemManager` me
 
 ## Related links
 
-- [ASMX (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [WCF (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [REST (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [ASMX (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)

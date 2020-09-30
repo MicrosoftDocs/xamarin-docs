@@ -204,11 +204,11 @@ It is generally not the case that you'll want to use one of the non-separable bl
 
 ## A matte for a separable mode
 
-Here's one of the bitmaps included as a resource in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **Banana.jpg**:
+Here's one of the bitmaps included as a resource in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **Banana.jpg**:
 
 ![Banana Monkey](non-separable-images/Banana.jpg "Banana Monkey")
 
-It's possible to create a matte that encompasses just the banana. This is also a resource in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **BananaMatte.png**:
+It's possible to create a matte that encompasses just the banana. This is also a resource in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **BananaMatte.png**:
 
 ![Banana Matte](non-separable-images/BananaMatte.png "Banana Matte")
 
@@ -287,5 +287,5 @@ Try changing the blend mode to `SKBlendMode.Saturation`. The banana remains yell
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

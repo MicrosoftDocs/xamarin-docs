@@ -138,6 +138,6 @@ When creating an attached property, there are a number of optional parameters th
 
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+- [Shadow Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [BindableProperty API](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject API](xref:Xamarin.Forms.BindableObject)

@@ -288,6 +288,6 @@ When scrolling an element into view, the exact position of the element after the
 
 ## Related links
 
-- [ScrollView demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+- [ScrollView demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
 - [Xamarin.Forms StackLayout](stacklayout.md)
 - [Bindable Layouts in Xamarin.Forms](bindable-layouts.md)

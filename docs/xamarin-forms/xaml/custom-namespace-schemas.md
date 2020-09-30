@@ -139,6 +139,6 @@ The result is that two `CircleButton` instances are displayed:
 
 ## Related links
 
-- [Custom Namespace Schemas (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+- [Custom Namespace Schemas (sample)](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [XAML Namespace Recommended Prefixes](custom-prefix.md)
 - [XAML Namespaces in Xamarin.Forms](namespaces.md)

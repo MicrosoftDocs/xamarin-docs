@@ -354,5 +354,5 @@ In addition, when defining the `Command` property of a `SwipeItem` or `SwipeItem
 
 ## Related links
 
-- [SwipeView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+- [SwipeView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 - [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

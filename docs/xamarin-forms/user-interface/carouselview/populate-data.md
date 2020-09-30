@@ -472,7 +472,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 ## Related links
 
-- [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
 - [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

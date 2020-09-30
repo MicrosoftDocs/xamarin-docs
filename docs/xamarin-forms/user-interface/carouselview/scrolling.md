@@ -330,4 +330,4 @@ When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselVi
 
 ## Related links
 
-- [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)

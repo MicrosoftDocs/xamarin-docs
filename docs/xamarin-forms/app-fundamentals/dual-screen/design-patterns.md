@@ -264,5 +264,5 @@ The companion pattern demonstrates how you might use the second screen to provid
 
 ## Related links
 
-- [DualScreen (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 - [Create apps for dual screen devices](index.md)

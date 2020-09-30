@@ -82,7 +82,7 @@ These summaries also indicate when material in the chapter might be [somewhat ou
 
 ## Ways in which the book is outdated
 
-Since the publication of *Creating Mobile Apps with Xamarin.Forms*, several new features have been added to Xamarin.Forms. These new features are described in individual articles in the [Xamarin.Forms](/xamarin/) documentation.
+Since the publication of *Creating Mobile Apps with Xamarin.Forms*, several new features have been added to Xamarin.Forms. These new features are described in individual articles in the [Xamarin.Forms](../../index.yml) documentation.
 
 Other changes have caused some of the content of the book to be outdated:
 
@@ -125,5 +125,5 @@ In the [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms
 
 ## Related Links
 
-- [MS Press blog](https://blogs.msdn.microsoft.com/microsoft_press/2016/03/31/free-ebook-creating-mobile-apps-with-xamarin-forms/)
+- [MS Press blog](/archive/blogs/microsoft_press/free-ebook-creating-mobile-apps-with-xamarin-forms)
 - [Sample code from book](https://github.com/xamarin/xamarin-forms-book-samples)

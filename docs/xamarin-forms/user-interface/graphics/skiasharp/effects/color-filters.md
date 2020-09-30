@@ -116,7 +116,7 @@ The static [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.Crea
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-where `matrix` is an array of the 20 `float` values. When creating the array in C#, it is easy to format the numbers so they resemble the 4×5 matrix. This is demonstrated in the **Gray-Scale Matrix** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
+where `matrix` is an array of the 20 `float` values. When creating the array in C#, it is easy to format the numbers so they resemble the 4×5 matrix. This is demonstrated in the **Gray-Scale Matrix** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -159,7 +159,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. 
+The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. 
 
 Here's the result running on iOS, Android, and Universal Windows Platform:
 
@@ -169,7 +169,7 @@ Watch out for the value in the fourth row and fourth column. That's the crucial 
 
 When experimenting with color matrices, you can treat the transform either from the perspective of the source or the perspective of the destination. How should the red pixel of the source contribute to the red, green, and blue pixels of the destination? That's determined by the values in the first _column_ of the matrix. Alternatively, how should the destination red pixel be affected by the red, green, and blue pixels of the source? That's determined by the first _row_ of the matrix.
 
-For some ideas on how to use color transforms, see the [**Recoloring Images**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) pages. The discussion concerns Windows Forms, and the matrix is a different format, but the concepts are the same.
+For some ideas on how to use color transforms, see the [**Recoloring Images**](/dotnet/framework/winforms/advanced/recoloring-images) pages. The discussion concerns Windows Forms, and the matrix is a different format, but the concepts are the same.
 
 The **Pastel Matrix** calculates the destination red pixel by attenuating the source red pixel and slightly emphasizing the red and green pixels. This process occurs similarly for the green and blue pixels:
 
@@ -295,5 +295,5 @@ You can use various color tables for the different color channels for various ef
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -18,13 +18,13 @@ highlightedContent:
     url: ~/get-started/what-is-xamarin-forms.md
   - title: Find a sample
     itemType: download
-    url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+    url: /samples/browse/?products=xamarin&term=Xamarin.Forms
   - title: What's new?
     itemType: whats-new
     url: ~/whats-new/index.yml
   - title: Improve your mobile development skills
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+    url: /learn/browse/?products=xamarin&roles=developer
 
 productDirectory:
   title: Get started
@@ -158,7 +158,7 @@ conceptualContent:
           url: ~/essentials/troubleshooting.md
           itemType: overview
         - text: Xamarin.Essentials Namespace
-          url: https://docs.microsoft.com/dotnet/api/xamarin.essentials?view=xamarin-essentials
+          url: /dotnet/api/xamarin.essentials?view=xamarin-essentials
           itemType: reference
       footerLink:
         url: ~/essentials/index.md?context=xamarin/xamarin-forms
@@ -229,4 +229,4 @@ additionalContent:
         summary: This ebook is a guide for drawing 2D vector graphics, bitmaps, and text in Xamarin.Forms applications.
         url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
 
-  footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Release notes](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)"
+  footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Release notes](/xamarin/xamarin-forms/release-notes/)"

@@ -52,11 +52,11 @@ The `Slider` also defines several properties that affect its appearance:
 
 ## Basic Slider code and markup
 
-The [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample begins with three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and the third is able to avoid the event handler by using data binding in the XAML file.
+The [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample begins with three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and the third is able to avoid the event handler by using data binding in the XAML file.
 
 ### Creating a Slider in code
 
-The **Basic Slider Code** page in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample shows show to create a `Slider` and two `Label` objects in code:
+The **Basic Slider Code** page in the [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample shows show to create a `Slider` and two `Label` objects in code:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -285,9 +285,9 @@ The Android implementation of `Slider` is based on the Android [`SeekBar`](xref:
 
 ### The UWP implementation
 
-The UWP implementation of `Slider` is based on the UWP [`Slider`](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) control. The `StepFrequency` property of the UWP `Slider` is set to the difference of the `Maximum` and `Minimum` properties divided by 10, but not greater than 1.
+The UWP implementation of `Slider` is based on the UWP [`Slider`](/uwp/api/windows.ui.xaml.controls.slider) control. The `StepFrequency` property of the UWP `Slider` is set to the difference of the `Maximum` and `Minimum` properties divided by 10, but not greater than 1.
 
-For example, for the default range of 0 to 1, the `StepFrequency` property is set to 0.1. As the `Slider` is manipulated, the `Value` property is restricted to 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, and 1.0. (This is evident in the last page in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample.) When the difference between the `Maximum` and `Minimum` properties is 10 or greater, then `StepFrequency` is set to 1, and the `Value` property has integral values.
+For example, for the default range of 0 to 1, the `StepFrequency` property is set to 0.1. As the `Slider` is manipulated, the `Value` property is restricted to 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, and 1.0. (This is evident in the last page in the [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample.) When the difference between the `Maximum` and `Minimum` properties is 10 or greater, then `StepFrequency` is set to 1, and the `Value` property has integral values.
 
 ### The StepSlider solution
 
@@ -295,7 +295,7 @@ A more versatile `StepSlider` is discussed in [Chapter 27. Custom renderers](htt
 
 ## Sliders for color selection
 
-The final two pages in the [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample both use three `Slider` instances for color selection. The first page handles all the interactions in the code-behind file, while the second page shows how to use data binding with a ViewModel.
+The final two pages in the [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) sample both use three `Slider` instances for color selection. The first page handles all the interactions in the code-behind file, while the second page shows how to use data binding with a ViewModel.
 
 ### Handling Sliders in the code-behind file
 
@@ -501,5 +501,5 @@ The `StringFormat` component of the `Binding` markup extension is set for a form
 
 ## Related Links
 
-- [Slider Demos sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+- [Slider Demos sample](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [Slider API](xref:Xamarin.Forms.Slider)

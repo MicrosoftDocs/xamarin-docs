@@ -231,6 +231,6 @@ Each [`ContentPage`](xref:Xamarin.Forms.ContentPage) simply displays a [`Label`]
 ## Related links
 
 - [Page Varieties](~/xamarin-forms/user-interface/controls/pages.md)
-- [CarouselPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
-- [CarouselPageTemplate (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate)
+- [CarouselPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
+- [CarouselPageTemplate (sample)](/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate)
 - [CarouselPage](xref:Xamarin.Forms.CarouselPage)

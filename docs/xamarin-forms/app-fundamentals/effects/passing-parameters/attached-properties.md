@@ -435,4 +435,4 @@ This article has demonstrated using attached properties to pass parameters to an
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+- [Shadow Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

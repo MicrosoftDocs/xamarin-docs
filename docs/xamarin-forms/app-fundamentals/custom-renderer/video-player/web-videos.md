@@ -445,7 +445,7 @@ namespace FormsVideoLibrary.UWP
 
 ## Setting a URL source
 
-With the implementation of these properties in the three renderers, it's possible to play a video from a URL source. The **Play Web Video** page in the [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) program is defined by the following XAML file:
+With the implementation of these properties in the three renderers, it's possible to play a video from a URL source. The **Play Web Video** page in the [**VideoPlayDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) program is defined by the following XAML file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -517,4 +517,4 @@ Alternatively, you can set the `Source` property from a video file in a `ListVie
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

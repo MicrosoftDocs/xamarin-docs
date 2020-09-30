@@ -97,4 +97,4 @@ In this example, the XAML for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) 
 
 ## Related links
 
-- [LoadRuntimeXAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+- [LoadRuntimeXAML (sample)](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

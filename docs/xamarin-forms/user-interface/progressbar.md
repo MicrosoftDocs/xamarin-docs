@@ -79,4 +79,4 @@ For more information about the `Easing` enumeration, see [Easing functions in Xa
 
 ## Related links
 
-* [ProgressBar Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
+* [ProgressBar Demos](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)

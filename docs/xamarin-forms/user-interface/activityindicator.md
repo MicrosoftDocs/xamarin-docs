@@ -60,5 +60,5 @@ The following screenshots show the `ActivityIndicator` with the `Color` property
 
 ## Related links
 
-* [ActivityIndicator Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
+* [ActivityIndicator Demos](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 * [ProgressBar](~/xamarin-forms/user-interface/progressbar.md)

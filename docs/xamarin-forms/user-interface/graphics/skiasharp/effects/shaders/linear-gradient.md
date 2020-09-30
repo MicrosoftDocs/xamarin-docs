@@ -33,7 +33,7 @@ Often a linear gradient extends from one corner of a rectangle to another. If th
 - horizontally to the upper-right corner
 - diagonally to the lower-right corner
 
-The diagonal linear gradient is demonstrated in the first page in the **SkiaSharp Shaders and Other Effects** section of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The **Corner-to-Corner Gradient** page creates an `SKCanvasView` in its constructor. The `PaintSurface` handler creates an `SKPaint` object in a `using` statement and then defines a 300-pixel square rectangle centered in the canvas:
+The diagonal linear gradient is demonstrated in the first page in the **SkiaSharp Shaders and Other Effects** section of the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The **Corner-to-Corner Gradient** page creates an `SKCanvasView` in its constructor. The `PaintSurface` handler creates an `SKPaint` object in a `using` statement and then defines a 300-pixel square rectangle centered in the canvas:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -507,7 +507,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-A somewhat different approach requires less code. This approach makes use of the [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) overload method with a matrix transform as the last argument. This approach is the version in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
+A somewhat different approach requires less code. This approach makes use of the [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) overload method with a matrix transform as the last argument. This approach is the version in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -619,7 +619,7 @@ The two gradient points in the `CreateLinearGradient` method are based on two of
 
 This is an interesting image, but it's not quite the intent. The problem is that when creating a linear gradient, the lines of constant color are perpendicular to the gradient line. The gradient line is based on the points where the figure touches the top and left sides, and that line is generally not perpendicular to the edges of the figure that extend to the bottom-right corner. This approach would work only if the canvas were square.
 
-To create a proper rainbow gradient, the gradient line must be perpendicular to the edge of the rainbow. That's a more involved calculation. A vector must be defined that is parallel to the long side of the figure. The vector is rotated 90 degrees so that it's perpendicular to that side. It is then lengthened to be the width of the figure by multiplying by `rainbowWidth`. The two gradient points are calculated based on a point on the side of the figure, and that point plus the vector. Here is the code that appears in the **Rainbow Gradient** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
+To create a proper rainbow gradient, the gradient line must be perpendicular to the edge of the rainbow. That's a more involved calculation. A vector must be defined that is parallel to the long side of the figure. The vector is rotated 90 degrees so that it's perpendicular to that side. It is then lengthened to be the width of the figure by multiplying by `rainbowWidth`. The two gradient points are calculated based on a point on the side of the figure, and that point plus the vector. Here is the code that appears in the **Rainbow Gradient** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -912,5 +912,5 @@ The `CreateLinearGradient` call defines a gradient from the top of that rectangl
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

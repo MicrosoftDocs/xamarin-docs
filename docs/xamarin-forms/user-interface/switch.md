@@ -156,6 +156,6 @@ An application may enter a state where the `Switch` being toggled is not a valid
 
 ## Related links
 
-- [Switch Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+- [Switch Demos](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

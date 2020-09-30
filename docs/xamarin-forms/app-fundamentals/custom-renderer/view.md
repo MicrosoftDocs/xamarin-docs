@@ -323,4 +323,4 @@ This article has demonstrated how to create a custom renderer for a Xamarin.Form
 
 ## Related Links
 
-- [CustomRendererView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+- [CustomRendererView (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-view)

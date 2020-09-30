@@ -205,7 +205,7 @@ In this example, `GenericsDemo.Models` is defined as the `models` XAML namespace
 
 ## Related links
 
-- [Generics in XAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+- [Generics in XAML (sample)](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [XAML 2009 Language Primitives](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
 - [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
 - [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

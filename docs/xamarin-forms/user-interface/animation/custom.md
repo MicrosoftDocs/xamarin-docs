@@ -174,6 +174,6 @@ In this code example, the `ColorTo` method animates the [`TextColor`](xref:Xamar
 
 ## Related links
 
-- [Custom Animations (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
+- [Custom Animations (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 - [Animation API](xref:Xamarin.Forms.Animation)
 - [AnimationExtensions API](xref:Xamarin.Forms.AnimationExtensions)

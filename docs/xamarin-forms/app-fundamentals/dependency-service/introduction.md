@@ -152,5 +152,5 @@ For more information about resolving platform implementations with the [`Depende
 
 ## Related links
 
-- [DependencyService Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [DependencyService Demos (sample)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Xamarin.Forms DependencyService Registration and Resolution](registration-and-resolution.md)

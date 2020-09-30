@@ -171,6 +171,6 @@ In addition, you may also use case-insensitive scientific notation. Therefore, `
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes: Geometries](geometries.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)

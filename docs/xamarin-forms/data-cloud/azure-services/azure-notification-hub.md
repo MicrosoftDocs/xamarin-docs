@@ -271,7 +271,7 @@ Incoming messages are converted to a local notification with the `SendLocalNotif
 The local notification and `Intent` example requires the user to take the action of tapping on the notification. This is desirable when the user should take action before the application state changes. However, you may want to access the message data without requiring a user action in some cases. The previous example also sends the message directly to the current `MainPage` instance with the `SendMessageToMainPage` method. In production, if you implement both methods for a single message type, the `MainPage` object will get duplicate messages if the user taps the notification.
 
 > [!NOTE]
-> The Android application will only receive push notifications if it is running in either the background or foreground. To receive push notifications when the main `Activity` is not running, you must implement a service, which is beyond the scope of this sample. For more information, see [Creating Android Services](/xamarin/android/app-fundamentals/services/)
+> The Android application will only receive push notifications if it is running in either the background or foreground. To receive push notifications when the main `Activity` is not running, you must implement a service, which is beyond the scope of this sample. For more information, see [Creating Android Services](../../../android/app-fundamentals/services/index.md)
 
 ### Add incoming notifications to the Xamarin.Forms UI
 

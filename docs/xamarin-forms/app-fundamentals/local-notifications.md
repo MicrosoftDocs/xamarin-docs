@@ -403,7 +403,7 @@ On iOS, incoming notifications are automatically received by the application wit
 
 ## Related links
 
-- [Sample project](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+- [Sample project](/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/index.md)
 - [Notifications in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [Xamarin.Forms Dependency.Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)

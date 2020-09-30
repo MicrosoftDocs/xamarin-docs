@@ -229,7 +229,7 @@ In this example, the position and size of each child is set with the [`AbsoluteL
 
 ## Related links
 
-- [AbsoluteLayout demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+- [AbsoluteLayout demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 - [Xamarin.Forms Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
 - [Choose a Xamarin.Forms Layout](choose-layout.md)
 - [Improve Xamarin.Forms App Performance](~/xamarin-forms/deploy-test/performance.md)
