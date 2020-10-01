@@ -73,7 +73,7 @@ This walkthrough describes how to create an application called Phoneword that tr
 
 5. Click **Create** to make the **Solution**.
 
-6. Open the **Main.storyboard** file by double-clicking on it in the **Solution Pad**. This provides a way to visually to create a UI:
+6. Open the **Main.storyboard** file by double-clicking on it in the **Solution Pad**. Make sure you are using the Visual Studio designer (right click: Open With / iOS Designer) and not XCode. This provides a way to visually to create a UI:
 
     ![The iOS Designer](hello-ios-quickstart-images/image7new.png)
 
