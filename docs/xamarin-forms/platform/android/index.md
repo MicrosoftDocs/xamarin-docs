@@ -28,7 +28,7 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Using the default padding and shadow values of Android buttons. For more information, see [Button Padding and Shadows on Android](button-padding-shadow.md).
 - Setting the input method editor options for the soft keyboard for an [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Entry Input Method Editor Options on Android](entry-ime-options.md).
 - Enabling a drop shadow on a `ImageButton`. For more information, see [ImageButton Drop Shadows on Android](imagebutton-drop-shadow.md).
-- Enabling fast scrolling in a [`ListView`](xref:Xamarin.Forms.ListView) For more information, see [ListView Fast Scrolling on Android](listview-fast-scrolling.md).
+- Enabling fast scrolling in a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView Fast Scrolling on Android](listview-fast-scrolling.md).
 - Controlling the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode](swipeview-swipetransitionmode.md).
 - Controlling whether a [`WebView`](xref:Xamarin.Forms.WebView) can display mixed content. For more information, see [WebView Mixed Content on Android](webview-mixed-content.md).
 - Enabling zoom on a [`WebView`](xref:Xamarin.Forms.WebView). For more information, see [WebView Zoom on Android](webview-zoom-controls.md).
