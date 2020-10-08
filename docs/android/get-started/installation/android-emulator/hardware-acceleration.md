@@ -153,10 +153,12 @@ When you create a virtual device (see
 be sure to select an **x86**-based system image. If you use an ARM-based system image,
 the virtual device will not be accelerated and will run slowly.
 
+Hyper-V should now be enabled and you can run your accelerated Android emulator.
+
 ## Accelerating with HAXM
 
-Use HAXM to accelerate the Android emulator if your computer
-does not support Hyper-V. You must
+If your computer
+does not support Hyper-V, you may use HAXM to accelerate the Android emulator. You must
 [disable Device Guard](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#disable-devguard)
 if you want to use HAXM.
 
