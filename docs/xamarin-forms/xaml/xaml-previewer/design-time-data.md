@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _Some layouts are hard to visualize without data. Use these tips to make the most out of previewing your data-heavy pages in the XAML Previewer._
 
+> [!NOTE]
+> if you are using Windows Presentation Foundation (WPF) or UWP, see [Use Design Time Data with the XAML Designer for desktop applications](/visualstudio/xaml-tools/xaml-designtime-data)
+
 ## Design time data basics
 
 Design time data is fake data you set to make your controls easier to visualize in the XAML Previewer. To get started, add the following lines of code to the header of your XAML page:
