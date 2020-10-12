@@ -53,7 +53,7 @@ Adding a reference to a Shared Project is done the same way as referencing a reg
 
 ![Project reference to Shared Project](shared-projects-images/xs-reference.png)
 
-Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor that shows choose which projects reference this file.
+Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor that shows which projects reference this file.
 
 ## Shared Project Options
 
