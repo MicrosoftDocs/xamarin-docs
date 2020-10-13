@@ -179,4 +179,4 @@ You've now seen how to [load videos from a Web URI](web-videos.md) and how to pl
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

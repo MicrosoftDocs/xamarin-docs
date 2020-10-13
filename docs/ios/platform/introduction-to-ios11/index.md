@@ -57,27 +57,27 @@ Brings a variety of image processing and analysis features to iOS, including fac
 
 ## Samples
 
-We have a number of C# [samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11) to get you started:
+We have a number of C# [samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS11) to get you started:
 
-- [ARKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-- [ARKit Placing Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [ARKit Sample](/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit Placing Objects](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [ARKit and UrhoSharp](arkit/urhosharp.md)
-- [CoreML Image Recognition Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-- [CoreML with Azure Custom Model](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
-- [CoreNFC Tag Reader Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
-- [Drag & Drop Table View](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
-- [Drag & Drop Collection View](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
-- [Drag & Drop Custom View](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
-- [DragBoard Drag & Drop Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
-- [MapKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
-- [SiriKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
-- [Updated Photos framework sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
-- [Vision & CoreML Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-- [Vision Rectangles Detection Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
-- [Vision Faces Detection Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
-- [PDKFit Widgets Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
-- [PDFKit Watermark Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
+- [CoreML Image Recognition Sample](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML with Azure Custom Model](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [CoreNFC Tag Reader Sample](/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [Drag & Drop Table View](/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Drag & Drop Collection View](/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [Drag & Drop Custom View](/samples/xamarin/ios-samples/ios11-draganddropcustomview)
+- [DragBoard Drag & Drop Sample](/samples/xamarin/ios-samples/ios11-draganddropdragboard)
+- [MapKit Sample](/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [SiriKit Sample](/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [Updated Photos framework sample](/samples/xamarin/ios-samples/ios11-samplephotoapp)
+- [Vision & CoreML Sample](/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Vision Rectangles Detection Sample](/samples/xamarin/ios-samples/ios11-visionrectangles/)
+- [Vision Faces Detection Sample](/samples/xamarin/ios-samples/ios11-visionfaces)
+- [PDKFit Widgets Sample](/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
+- [PDFKit Watermark Sample](/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
 
 ## Related Links
 
-- [Xamarin iOS 11 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11)
+- [Xamarin iOS 11 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS11)

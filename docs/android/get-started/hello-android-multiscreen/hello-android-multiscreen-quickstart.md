@@ -16,9 +16,9 @@ ms.date: 10/05/2018
 _This two-part guide expands the Phoneword application to handle a second screen. Along the way, basic Android Application Building Blocks are introduced with a deeper dive into Android architecture._
 
 In the walkthrough portion of this guide, you'll add a second screen to the
-[Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) application to keep track of
+[Phoneword](/samples/xamarin/monodroid-samples/phoneword) application to keep track of
 the history of numbers translated using the app. The
-[final application](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) will have
+[final application](/samples/xamarin/monodroid-samples/phonewordmultiscreen) will have
 a second screen that displays the numbers that were "translated", as illustrated by the
 screenshot on the right:
 
@@ -35,7 +35,7 @@ Because this guide picks up where [Hello, Android](~/android/get-started/hello-a
 leaves off, it requires completion of the
 [Hello, Android Quickstart](~/android/get-started/hello-android/hello-android-quickstart.md).
 If you would like to jump directly into the walkthrough below, you can download the completed version of
-[Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+[Phoneword](/samples/xamarin/monodroid-samples/phoneword)
 (from the Hello, Android Quickstart) and use it to start the walkthrough.
 
 ## Walkthrough
@@ -384,5 +384,5 @@ learned &ndash; next up is the
 ## Related links
 
 - [Xamarin App Icons & Launch Screens (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
-- [PhonewordMultiscreen (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)
+- [Phoneword (sample)](/samples/xamarin/monodroid-samples/phoneword)
+- [PhonewordMultiscreen (sample)](/samples/xamarin/monodroid-samples/phonewordmultiscreen)

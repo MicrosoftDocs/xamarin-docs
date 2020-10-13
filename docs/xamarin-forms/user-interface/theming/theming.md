@@ -218,7 +218,7 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 
 ## Related links
 
-- [Theming (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+- [Theming (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Respond to system theme changes](system-theme-changes.md)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles in Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)

@@ -643,11 +643,11 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 This method opens a web browser and navigates to the address stored in the `Url` property of the `CustomPin` instance. Note that the address was defined when creating the `CustomPin` collection in the .NET Standard library project.
 
-For more information about customizing a `MapControl` instance, see [Maps and Location Overview](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) on MSDN.
+For more information about customizing a `MapControl` instance, see [Maps and Location Overview](/windows/uwp/maps-and-location/) on MSDN.
 
 ## Related Links
 
 - [Maps Control](~/xamarin-forms/user-interface/map/index.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [Maps API](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Customized Pin (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+- [Customized Pin (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

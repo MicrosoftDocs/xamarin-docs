@@ -25,7 +25,7 @@ landingContent:
       - linkListType: download
         links: 
           - text: Xamarin.Mac samples
-            url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+            url: /samples/browse/?products=xamarin&term=Xamarin.Mac
           - text: Visual Studio for Mac
             url: /visualstudio/mac/installation/
 
@@ -53,10 +53,10 @@ landingContent:
       - linkListType: reference
         links: 
           - text: Xamarin.Mac API docs
-            url: https://docs.microsoft.com/dotnet/api/?view=xamarin-mac-sdk-14
+            url: /dotnet/api/?view=xamarin-mac-sdk-14
           - text: Base Class Library available in Xamarin.Mac
-            url: https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0
+            url: /dotnet/api/?view=xamarinmac-3.0
           - text: Xamarin.Mac release notes
-            url: https://docs.microsoft.com/xamarin/mac/release-notes/  
+            url: /xamarin/mac/release-notes/
           - text: Apple's developer documentation    
             url: https://developer.apple.com/documentation/

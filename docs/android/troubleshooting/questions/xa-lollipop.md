@@ -20,7 +20,7 @@ ms.date: 02/16/2018
 Xamarin only actively supports the current stable release of the
 Xamarin tools. The information below is provided "as-is" for older
 versions of the tools. For the latest information on Xamarin releases,
-please check the [release notes](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
+please check the [release notes](/xamarin/android/release-notes/).
 
 ## "Missing android.jar for API Level 21" in Android L Preview
 

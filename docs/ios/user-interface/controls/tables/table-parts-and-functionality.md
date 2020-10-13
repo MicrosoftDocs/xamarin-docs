@@ -98,4 +98,4 @@ they do (and that you can use Xamarin.iOS’s UITableViewSource instead).
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (sample)](/samples/xamarin/ios-samples/workingwithtables)

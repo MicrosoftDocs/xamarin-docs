@@ -148,7 +148,7 @@ In some cases KeyChain data is synchronized with iCloud, and uninstalling the ap
 
 # [UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encrypt values securely on UWP devices.
+[DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) is used to encrypt values securely on UWP devices.
 
 Encrypted values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
 

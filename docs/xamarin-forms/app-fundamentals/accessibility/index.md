@@ -17,7 +17,7 @@ _Building an accessible application ensures that the application is usable by pe
 
 Making a Xamarin.Forms application accessible means thinking about the layout and design of many user interface elements. For guidelines on issues to consider, see the [Accessibility Checklist](~/cross-platform/app-fundamentals/accessibility.md). Many accessibility concerns such as large fonts, and suitable color and contrast settings can already be addressed by Xamarin.Forms APIs.
 
-The [Android accessibility](~/android/app-fundamentals/accessibility.md) and [iOS accessibility](~/ios/app-fundamentals/accessibility.md) guides contain details of the native APIs exposed by Xamarin, and the [UWP accessibility guide on MSDN](https://msdn.microsoft.com/windows/uwp/accessibility/basic-accessibility-information) explains the native approach on that platform. These APIs are used to fully implement accessible applications on each platform.
+The [Android accessibility](~/android/app-fundamentals/accessibility.md) and [iOS accessibility](~/ios/app-fundamentals/accessibility.md) guides contain details of the native APIs exposed by Xamarin, and the [UWP accessibility guide on MSDN](/windows/uwp/design/accessibility/basic-accessibility-information) explains the native approach on that platform. These APIs are used to fully implement accessible applications on each platform.
 
 Xamarin.Forms does not currently have *built-in* support for all of the accessibility APIs available on each of the underlying platforms. However, it does support setting automation properties on user interface elements to support screen reader and navigation assistance tools, which is one of the most important parts of building accessible applications. For more information, see [Automation Properties](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
@@ -31,7 +31,7 @@ Xamarin.Forms applications typically target multiple platforms, which means test
 
 - [**iOS Testing**](~/ios/app-fundamentals/accessibility.md)
 - [**Android Testing**](~/android/app-fundamentals/accessibility.md)
-- [**Windows AccScope (MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Windows AccScope (MSDN)**](/windows/win32/winauto/accscope)
 
 ## Related Links
 

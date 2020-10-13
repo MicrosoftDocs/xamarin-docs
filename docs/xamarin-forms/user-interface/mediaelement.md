@@ -527,13 +527,13 @@ A custom volume bar can be implemented using a [`Slider`](xref:Xamarin.Forms.Sli
 In this example, the [`Slider`](xref:Xamarin.Forms.Slider) data binds its `Value` property to the [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property of the [`MediaElement`](xref:Xamarin.Forms.MediaElement). This is possible because the `Volume` property uses a `TwoWay` binding. Therefore, changing the `Value` property will result in the `Volume` property changing.
 
 > [!NOTE]
-> The [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property has a vlidation callback that ensures that its value is greater than or equal to 0.0, and less than or equal to 1.0.
+> The [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property has a validation callback that ensures that its value is greater than or equal to 0.0, and less than or equal to 1.0.
 
 For more information about using a [`Slider`](xref:Xamarin.Forms.Slider) see, [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
 ## Related links
 
-- [MediaElementDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+- [MediaElementDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [URI schemes](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)

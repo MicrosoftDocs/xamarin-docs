@@ -171,4 +171,4 @@ These performance differences can be magnified on mobile devices, dependent upon
 
 ## Related links
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

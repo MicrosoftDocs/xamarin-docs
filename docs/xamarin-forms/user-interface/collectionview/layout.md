@@ -610,6 +610,6 @@ For more information about flow direction, see [Right-to-left localization](~/xa
 
 ## Related links
 
-- [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.Forms CollectionView Scrolling](scrolling.md)

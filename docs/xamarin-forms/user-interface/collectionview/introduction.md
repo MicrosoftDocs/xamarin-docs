@@ -56,4 +56,4 @@ While the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and [`ListView`]
 
 ## Related links
 
-- [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

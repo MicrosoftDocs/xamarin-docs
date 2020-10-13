@@ -131,5 +131,5 @@ For more information about the `FontImage` markup extension, see [FontImage mark
 
 ## Related links
 
-- [IndicatorView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+- [IndicatorView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 - [FontImage markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)

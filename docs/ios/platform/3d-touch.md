@@ -201,7 +201,7 @@ public override void ViewDidLoad ()
 
 Here we are calling the `RegisterForPreviewingWithDelegate` method with an instance of the `PreviewingDelegate` we created above. On iOS devices that support 3D Touch, the user can press hard on an item to Peek at it. If they press even harder, the item will Pop into it standard display view.
 
-For more information, please see our [iOS 9 ApplicationShortcuts Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) and Apple's [ViewControllerPreviews: Using the UIViewController previewing APIs](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html)
+For more information, please see our [iOS 9 ApplicationShortcuts Sample](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) and Apple's [ViewControllerPreviews: Using the UIViewController previewing APIs](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html)
 sample app, [UIPreviewAction Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [UIPreviewActionGroup Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) and [UIPreviewActionItem Protocol Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
 
 <a name="Quick-Actions"></a>
@@ -431,7 +431,7 @@ The code we already added in the [Handling a Quick Action](#Handling-a-Quick-Act
 
 It should be noted that you can create a mixture of both static and dynamic Quick Action items (as we are doing here), you are not limited to one or the other.
 
-For more information, please our [iOS 9 ViewControllerPreview Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) and see Apple's [ApplicationShortcuts: Using UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) sample app, [UIApplicationShortcutItem Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), [UIMutableApplicationShortcutItem Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) and [UIApplicationShortcutIcon Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
+For more information, please our [iOS 9 ViewControllerPreview Sample](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) and see Apple's [ApplicationShortcuts: Using UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) sample app, [UIApplicationShortcutItem Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), [UIMutableApplicationShortcutItem Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) and [UIApplicationShortcutIcon Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
 
 <a name="Testing-3D-Touch-in-the-Simulator"></a>
 
@@ -455,8 +455,8 @@ shortcuts to your app's most commonly used features.
 
 ## Related Links
 
-- [iOS 9 ViewControllerPreview Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
-- [iOS 9 ApplicationShortcuts Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-applicationshortcuts)
+- [iOS 9 ViewControllerPreview Sample](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
+- [iOS 9 ApplicationShortcuts Sample](/samples/xamarin/ios-samples/ios9-applicationshortcuts)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Get your iPhone apps ready for 3D Touch](https://developer.apple.com/ios/3d-touch/)

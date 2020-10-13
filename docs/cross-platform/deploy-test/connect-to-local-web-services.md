@@ -121,7 +121,7 @@ In this code example, the server certificate validation result is returned when 
 
 ## Related links
 
-- [TodoREST (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+- [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Enable local HTTPS](/aspnet/core/getting-started#enable-local-https)
 - [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md)

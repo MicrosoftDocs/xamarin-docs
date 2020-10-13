@@ -417,7 +417,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 ## Related links
 
-- [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
 - [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

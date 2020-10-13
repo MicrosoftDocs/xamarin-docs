@@ -623,6 +623,6 @@ The `GeometryHelper` class provides the following helper methods:
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)

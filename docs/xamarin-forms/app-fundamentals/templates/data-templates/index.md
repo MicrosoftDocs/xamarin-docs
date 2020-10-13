@@ -30,4 +30,4 @@ A [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) can be used 
 
 ## Related Links
 
-- [Data Templates (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+- [Data Templates (sample)](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

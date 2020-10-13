@@ -101,6 +101,6 @@ Alternatively, when defining the `Command` property, the `CanExecute` delegate o
 
 ## Related links
 
-- [RefreshView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+- [RefreshView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 - [Bindable Layouts in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [RefreshView Pull Direction platform-specific](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

@@ -458,7 +458,7 @@ This article has covered the key concepts required to use SiriKit and shown it c
 
 ## Related Links
 
-- [ElizaChat Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [ElizaChat Sample](/samples/xamarin/ios-samples/ios10-elizachat)
 - [SiriKit Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Intents Framework Reference](https://developer.apple.com/reference/intents)
 - [Intents UI Framework Reference](https://developer.apple.com/reference/intentsui)

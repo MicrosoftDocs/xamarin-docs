@@ -204,7 +204,7 @@ Follow these steps along with the video above:
 
 ::: zone-end
 
-You can download the completed code from the [samples gallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) or view it on [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
+You can download the completed code from the [samples gallery](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) or view it on [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
 ## Next Steps
 

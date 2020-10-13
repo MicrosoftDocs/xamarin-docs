@@ -16,7 +16,7 @@ _We have covered the theory behind saving state in the Activity Lifecycle guide;
 ## Activity State Walkthrough
 
 Let's open the **ActivityLifecycle_Start** project (in the
-[ActivityLifecycle](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle)
+[ActivityLifecycle](/samples/xamarin/monodroid-samples/activitylifecycle)
 sample), build it, and run it. This is a very simple project that has
 two activities to demonstrate the activity lifecycle and how the
 various lifecycle methods are called. When you start the application,
@@ -214,6 +214,6 @@ Lifecycle to preserve state data.
 
 ## Related Links
 
-- [ActivityLifecycle (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle)
+- [ActivityLifecycle (sample)](/samples/xamarin/monodroid-samples/activitylifecycle)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Android Activity](xref:Android.App.Activity)

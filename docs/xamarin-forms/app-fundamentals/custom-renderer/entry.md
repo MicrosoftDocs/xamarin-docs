@@ -205,4 +205,4 @@ This article has demonstrated how to create a custom control renderer for the Xa
 
 ## Related Links
 
-- [CustomRendererEntry (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+- [CustomRendererEntry (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

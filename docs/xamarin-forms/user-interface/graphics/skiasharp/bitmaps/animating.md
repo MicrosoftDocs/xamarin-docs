@@ -32,7 +32,7 @@ The second example shows how to use SkiaSharp to render an animated GIF file.
 
 The Mandelbrot Set is visually fascinating but computionally lengthy. (For a discussion of the Mandelbrot Set and the mathematics used here, see [Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) starting on page 666. The following description assumes that background knowledge.)
 
-The [**Mandelbrot Animation**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) sample uses bitmap animation to simulate a continuous zoom of a fixed point in the Mandelbrot Set. Zooming in is followed by zooming out, and then the cycle repeats forever or until you end the program.
+The [**Mandelbrot Animation**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) sample uses bitmap animation to simulate a continuous zoom of a fixed point in the Mandelbrot Set. Zooming in is followed by zooming out, and then the cycle repeats forever or until you end the program.
 
 The program prepares for this animation by creating up to 50 bitmaps that it stores in application local storage. Each bitmap encompasses half the width and height of the complex plane as the previous bitmap. (In the program, these bitmaps are said to represent integral _zoom levels_.) The bitmaps are then displayed in sequence. The scaling of each bitmap is animated to provide a smooth progression from one bitmap to another.
 
@@ -465,7 +465,7 @@ Here's the program running:
 
 The Graphics Interchange Format (GIF) specification includes a feature that allows a single GIF file to contain multiple sequential frames of a scene that can be displayed in succession, often in a loop. These files are known as _animated GIFs_. Web browsers can play animated GIFs, and SkiaSharp allows an application to extract the frames from an animated GIF file and to display them sequentially.
 
-The [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample includes an animated GIF resource named **Newtons_cradle_animation_book_2.gif** created by DemonDeLuxe and downloaded from the [Newton's Cradle](https://en.wikipedia.org/wiki/Newton%27s_cradle) page in Wikipedia. The **Animated GIF** page includes a XAML file that provides that information and instantiates an `SKCanvasView`:
+The [SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample includes an animated GIF resource named **Newtons_cradle_animation_book_2.gif** created by DemonDeLuxe and downloaded from the [Newton's Cradle](https://en.wikipedia.org/wiki/Newton%27s_cradle) page in Wikipedia. The **Animated GIF** page includes a XAML file that provides that information and instantiates an `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -655,6 +655,6 @@ Of course, you'll want to run the program yourself to see the animation.
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [Mandelbrot Animation (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Mandelbrot Animation (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)

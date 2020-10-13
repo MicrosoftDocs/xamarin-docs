@@ -188,5 +188,5 @@ The **outdoors.jpg** image must be added to each platform project, and how this 
 
 ## Related links
 
-* [Frame Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Frame Demos](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

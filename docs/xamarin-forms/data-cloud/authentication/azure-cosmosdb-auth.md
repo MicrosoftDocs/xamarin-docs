@@ -257,10 +257,10 @@ This article explained how to combine access control with partitioned collection
 
 ## Related Links
 
-- [Todo Azure Cosmos DB Auth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+- [Todo Azure Cosmos DB Auth (sample)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consuming an Azure Cosmos DB Document Database](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/)
 - [Access control in the SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/)
 - [Azure Cosmos DB Client Library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client)

@@ -55,4 +55,4 @@ the notification drawer it starts up a second Activity.
 
 ## Related links
 
-- [Local Notifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
+- [Local Notifications (sample)](/samples/xamarin/monodroid-samples/localnotifications)

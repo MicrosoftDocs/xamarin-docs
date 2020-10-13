@@ -321,7 +321,7 @@ map.MapClicked += OnMapClicked;
 
 ## Related links
 
-- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps Sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Map Position and Distance](position-distance.md)
 - [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

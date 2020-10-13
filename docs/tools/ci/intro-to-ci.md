@@ -31,7 +31,7 @@ The following diagram illustrates this process:
 
 Mobile apps introduce unique challenges for continuous integration. Apps may require sensors such as the GPS or camera that are only available on physical devices. In addition, simulators or emulators are only an approximation of hardware and may conceal or obscure problems. In the end, it's necessary to test a mobile app on real hardware to be confident that it's truly customer-ready.
 
-The [App Center Test](https://docs.microsoft.com/appcenter/test-cloud) addresses this particular problem by testing apps directly on hundreds of physical devices. Developers write automated acceptance tests, which allow for powerful UI testing. Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in the following diagram:
+The [App Center Test](/appcenter/test-cloud) addresses this particular problem by testing apps directly on hundreds of physical devices. Developers write automated acceptance tests, which allow for powerful UI testing. Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in the following diagram:
 
 [![Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram](intro-to-ci-images/intro02-small.png)](intro-to-ci-images/intro02.png#lightbox)
 
@@ -50,13 +50,13 @@ There is an extensive ecosystem of commercial and open-source tools designed to 
 
 Both TFS and Azure DevOps are tightly integrated with Visual Studio and allow developers to perform many version control and CI tasks from within the comfort of a single IDE. The Team Explorer Everywhere plugin for Eclipse (see below) is also available. Visual Studio for Mac has [a preview of TFVC available](/visualstudio/mac/tf-version-control/).
 
-[Azure DevOps Pipelines](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Azure DevOps for this purpose. With this setup, builds that are queued to Azure DevOps will be delegated to the local server. For details, refer to [Build and release agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). Alternately, you can use another build tool such as Jenkins or Team City.
+[Azure DevOps Pipelines](/azure/devops/pipelines/languages/xamarin/) has direct support for Xamarin projects, within which you create a build definition for each platform you wish to target (Android, iOS, and Windows). The appropriate Xamarin license is needed for each build definition. It's also possible to connect a local, Xamarin-capable TFS build server to Azure DevOps for this purpose. With this setup, builds that are queued to Azure DevOps will be delegated to the local server. For details, refer to [Build and release agents](/azure/devops/pipelines/agents/agents). Alternately, you can use another build tool such as Jenkins or Team City.
 
-A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Azure DevOps, and Team Foundation Server, see [DevOps with Xamarin Apps](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
+A complete summary of all Application Lifecycle Management (ALM) features of Visual Studio, Azure DevOps, and Team Foundation Server, see [DevOps with Xamarin Apps](/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
 #### Team Explorer Everywhere
 
-[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) brings the power of Team Foundation Server and Azure DevOps to teams developing outside of Visual Studio. It allows developers to connect to team projects on premises or in the cloud from Eclipse or the cross-platform command line client for OS X and Linux. Team Explorer Everywhere provides full access to version control (including Git), work items, and build capabilities for non-Windows platforms.
+[Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) brings the power of Team Foundation Server and Azure DevOps to teams developing outside of Visual Studio. It allows developers to connect to team projects on premises or in the cloud from Eclipse or the cross-platform command line client for OS X and Linux. Team Explorer Everywhere provides full access to version control (including Git), work items, and build capabilities for non-Windows platforms.
 
 #### Git
 
@@ -74,7 +74,7 @@ Current versions of Visual Studio for Windows and Mac provide native support for
 
 Setting up a continuous integration environment means combining a version control system with a build service.  For the latter, the two most common ones are:
 
-- [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) is the build system of Azure DevOps and TFS. It is tightly integrated with Visual Studio, which makes it convenient for developers to trigger builds, automatically run tests, and see the results.
+- [Azure Pipelines](/azure/devops/pipelines/) is the build system of Azure DevOps and TFS. It is tightly integrated with Visual Studio, which makes it convenient for developers to trigger builds, automatically run tests, and see the results.
 - Jenkins is an open-source CI server with a rich ecosystem of plugins to support all kinds of software development. It runs on Windows and Mac OS X. Jenkins is not integrated with any specific IDE. Instead, it is configured and managed via a web interface. Jenkins CI is also easy to install and configure which makes it appealing to small teams.
 
 You can use TFS/Azure DevOps by itself, or you can use Jenkins in combination with TFS/Azure DevOps or Git as described in the following sections.
@@ -83,22 +83,22 @@ You can use TFS/Azure DevOps by itself, or you can use Jenkins in combination wi
 
 As discussed, Azure DevOps and Team Foundation Server provides both version control and build services. Build services always require a Xamarin Business or Enterprise license for each target platform.
 
-With Azure DevOps, you create a separate build definition for each target platform and enter the appropriate license there. Once configured, Azure DevOps will run builds and tests in the cloud. See [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) for more details.
+With Azure DevOps, you create a separate build definition for each target platform and enter the appropriate license there. Once configured, Azure DevOps will run builds and tests in the cloud. See [Azure Pipelines](/azure/devops/pipelines/) for more details.
 
 With Team Foundation Server, you configure a build machine as follows for specific target platforms:
 
-- **Android and Windows:** Install Visual Studio and the Xamarin tools (for Android and Windows both) and configure with your Xamarin licenses. It is also necessary to move the Android SDK to a shared location on the server where the TFS build agent can find it. For details, see [Configuring TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
+- **Android and Windows:** Install Visual Studio and the Xamarin tools (for Android and Windows both) and configure with your Xamarin licenses. It is also necessary to move the Android SDK to a shared location on the server where the TFS build agent can find it. For details, see [Configuring TFVC](/azure/devops/repos/tfvc/overview).
 - **iOS and Xamarin:** Install Visual Studio and the Xamarin tools on the Windows server with the appropriate license. Then install Visual Studio for Mac on a network-accessible Mac OS X machine, which will serve as a build host and create the final app package (IPA for iOS, APP for OS X).
 
 The following diagram illustrates this topography:
 
 [![This diagram illustrates this topography](intro-to-ci-images/intro03-small.png)](intro-to-ci-images/intro03.png#lightbox)
 
-It is also possible to link a local TFS server to an Azure DevOps project so that Azure DevOps builds are delegated to the local server. For details, see [Build and release agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
+It is also possible to link a local TFS server to an Azure DevOps project so that Azure DevOps builds are delegated to the local server. For details, see [Build and release agents](/azure/devops/pipelines/agents/agents/).
 
 #### Azure DevOps and Jenkins
 
-If you use Jenkins to build your apps, you can store your code in Azure DevOps or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
+If you use Jenkins to build your apps, you can store your code in Azure DevOps or Team Foundation Server and continue to use Jenkins for your CI builds. You can trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to TFVC. For details, see [Jenkins with Azure DevOps](/azure/devops/service-hooks/services/jenkins).
 
 [![If you use Jenkins to build your apps, you can store your code in Azure DevOps or Team Foundation Server and continue to use Jenkins for your CI builds](intro-to-ci-images/intro04-small.png)](intro-to-ci-images/intro04.png#lightbox)
 

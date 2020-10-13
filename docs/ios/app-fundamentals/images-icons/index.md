@@ -55,6 +55,6 @@ This article covers including and managing an image asset in a Xamarin.iOS app t
 
 ## Related Links
 
-- [Working with Images (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
+- [Working with Images (sample)](/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Custom Icon and Image Creation Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

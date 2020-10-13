@@ -50,7 +50,7 @@ tasks and notes via Siri voice requests.
 
 Both tasks and notes can be organized into groups. The rest of this section
 describes how to implement this new domain with SiriKit, using the
-[TasksNotes SiriKit Example](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample).
+[TasksNotes SiriKit Example](/samples/xamarin/ios-samples/ios11-sirikitsample).
 
 ### How to Process a SiriKit Request
 
@@ -113,7 +113,7 @@ Learn more about these methods and responses in Apple's [SiriKit lists and notes
 
 ### Implementing Lists and Notes
 
-The [TasksNotes SiriKit Example](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample) was
+The [TasksNotes SiriKit Example](/samples/xamarin/ios-samples/ios11-sirikitsample) was
 created using the following steps to add SiriKit support to a blank iOS app.
 
 First, to add SiriKit support, follow these steps for your iOS app:
@@ -265,5 +265,5 @@ _Objective-C exception thrown.  Name: NSInternalInconsistencyException Reason: U
 ## Related Links
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
-- [TasksNotes SiriKit Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [TasksNotes SiriKit Sample](/samples/xamarin/ios-samples/ios11-sirikitsample)
 - [What's New in SiriKit (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/214/)

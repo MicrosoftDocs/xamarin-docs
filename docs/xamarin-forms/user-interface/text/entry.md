@@ -442,5 +442,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## Related Links
 
-- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Entry API](xref:Xamarin.Forms.Entry)

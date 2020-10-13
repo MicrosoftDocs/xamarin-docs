@@ -5,7 +5,7 @@ ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 02/06/2018
+ms.date: 10/08/2020
 ---
 
 # Xamarin.Android TableLayout
@@ -19,7 +19,7 @@ elements in rows and columns.
 
 Start a new project named **HelloTableLayout**.
 
-Open the **Resources/Layout/Main.axml** file and insert the following:
+Open the **Resources/Layout/content_main.xml** file and insert the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -28,71 +28,109 @@ Open the **Resources/Layout/Main.axml** file and insert the following:
     android:layout_height="fill_parent"
     android:stretchColumns="1">
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Open..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-O"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Save..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-S"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Save As..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-Shift-S"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
     <View
+        android:layout_width="wrap_content"
         android:layout_height="2dip"
         android:background="#FF909090"/>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="X"
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Import..."
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="X"
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Export..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-E"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
     <View
+        android:layout_width="wrap_content"
         android:layout_height="2dip"
         android:background="#FF909090"/>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Quit"
             android:padding="3dip"/>

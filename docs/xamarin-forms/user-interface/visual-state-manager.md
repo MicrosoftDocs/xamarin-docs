@@ -177,7 +177,7 @@ You can now insert one or more `Setter` objects between each pair of `Setters` t
 
 Each `Setter` tag indicates the value of a particular property when that state is current. Any property referenced by a `Setter` object must be backed by a bindable property.
 
-Markup similar to this is the basis of the **VSM on View** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample program. The page includes three `Entry` views, but only the second one has the VSM markup attached to it:
+Markup similar to this is the basis of the **VSM on View** page in the **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample program. The page includes three `Entry` views, but only the second one has the VSM markup attached to it:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -432,7 +432,7 @@ In this example, a `Label` named `label` will have its `TextColor` property set 
 > [!NOTE]
 > Any property referenced by a `Setter` object must be backed by a bindable property.
 
-The **VSM with Setter TargetName** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to set state on multiple elements, from a single visual state group. The XAML file consists of a `StackLayout` containing a `Label` element, an `Entry`, and a `Button`:
+The **VSM with Setter TargetName** page in the **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to set state on multiple elements, from a single visual state group. The XAML file consists of a `StackLayout` containing a `Label` element, an `Entry`, and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -492,7 +492,7 @@ Interestingly, the name of the visual state group "CommonStates" is not explicit
 
 If you want to implement your own visual states, you'll need to call `VisualStateManager.GoToState` from code. Most often you'll make this call from the code-behind file of your page class.
 
-The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of a `StackLayout` containing two `Label` elements, an `Entry`, and a `Button`:
+The **VSM Validation** page in the **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of a `StackLayout` containing two `Label` elements, an `Entry`, and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -618,7 +618,7 @@ In landscape mode, the array of buttons might be moved to one side, and displaye
 
 From top to bottom, the program is running on the Universal Windows Platform, Android, and iOS.
 
-The **VSM Adaptive Layout** page in the [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) sample defines a group named "OrientationStates" with two visual states named "Portrait" and "Landscape". (A more complex approach might be based on several different page or window widths.)
+The **VSM Adaptive Layout** page in the [VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) sample defines a group named "OrientationStates" with two visual states named "Portrait" and "Landscape". (A more complex approach might be based on several different page or window widths.)
 
 VSM markup occurs in four places in the XAML file. The `StackLayout` named `mainStack` contains both the menu and the content, which is an `Image` element. This `StackLayout` should have a vertical orientation in portrait mode and a horizontal orientation in landscape mode:
 
@@ -772,5 +772,5 @@ It may seem as if the code-behind file can handle orientation changes more direc
 
 ## Related links
 
-- [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+- [VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 - [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)

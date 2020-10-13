@@ -93,6 +93,6 @@ In this example, the fill behavior of the polyline is determined using the `Nonz
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)

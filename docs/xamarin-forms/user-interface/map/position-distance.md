@@ -59,4 +59,4 @@ Distance distance4 = Distance.BetweenPositions(position1, position2);
 
 ## Related links
 
-- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps Sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)

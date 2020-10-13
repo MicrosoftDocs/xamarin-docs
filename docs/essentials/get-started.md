@@ -15,7 +15,7 @@ Xamarin.Essentials provides a single cross-platform API that works with any iOS,
 
 ## Installation
 
-Xamarin.Essentials is available as a NuGet package and is included in every new project in Visual Studio. It can also be added to any existing using Visual Studio with the follow steps.
+Xamarin.Essentials is available as a NuGet package and is included in every new project in Visual Studio. It can also be added to any existing projects using Visual Studio with the following steps.
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
 
@@ -51,7 +51,7 @@ Xamarin.Essentials is available as a NuGet package and is included in every new 
 
     When compiling against Android 9.0, Xamarin.Essentials installs version 28.0.0.3 of the Xamarin.Android.Support libraries that it requires. Any other Xamarin.Android.Support libraries that your application requires should also be updated to version 28.0.0.3 using the NuGet package manager. All Xamarin.Android.Support libraries used by your application should be the same, and should be at least version 28.0.0.3. Refer to the [troubleshooting page](troubleshooting.md) if you have issues adding the Xamarin.Essentials NuGet or updating NuGets in your solution.
 
-    Starting with version 1.5.0 when compiling against Android 10.0, Xamarin.Essentials install AndroidX support libraries that it requires. Read through the [AndroidX documentation](https://docs.microsoft.com/xamarin/android/platform/androidx) if you have not made the transition yet.
+    Starting with version 1.5.0 when compiling against Android 10.0, Xamarin.Essentials install AndroidX support libraries that it requires. Read through the [AndroidX documentation](../android/platform/androidx.md) if you have not made the transition yet.
 
     In the Android project's `MainLauncher` or any `Activity` that is launched, Xamarin.Essentials must be initialized in the `OnCreate` method:
 

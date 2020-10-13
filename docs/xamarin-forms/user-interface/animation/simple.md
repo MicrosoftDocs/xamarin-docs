@@ -230,5 +230,5 @@ This article demonstrated creating and canceling animations using the [`ViewExte
 ## Related Links
 
 - [Async Support Overview](~/cross-platform/platform/async.md)
-- [Basic Animation (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+- [Basic Animation (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

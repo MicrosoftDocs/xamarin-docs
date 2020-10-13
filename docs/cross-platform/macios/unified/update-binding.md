@@ -215,4 +215,4 @@ In this article we have shown the changes that need to be made to an existing Xa
 - [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md)
 - [Upgrading Existing iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+- [BindingSample](/samples/xamarin/ios-samples/bindingsample/)

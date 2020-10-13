@@ -257,7 +257,7 @@ Use the new `UITextInputAssistantItem` class to layout Bar Button Groups in a _S
 
 ## Related Links
 
-- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [Introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

@@ -14,7 +14,7 @@ ms.date: 03/29/2018
 > [!NOTE]
 > This guide explains how to automate an Android
 NUnit test project, not a Xamarin.UITest project. Xamarin.UITest guides
-can be found [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
+can be found [here](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
 
 When you create a **Unit Test App (Android)** project in Visual Studio
 (or **Android Unit Test** project in Visual Studio for Mac), this

@@ -263,5 +263,5 @@ Testing physical or emulated devices with a locally-hosted service requires cust
 
 ## Related links
 
-- [TodoASMX (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [IAsyncResult](https://docs.microsoft.com/dotnet/api/system.iasyncresult)
+- [TodoASMX (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [IAsyncResult](/dotnet/api/system.iasyncresult)

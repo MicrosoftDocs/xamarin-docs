@@ -305,4 +305,4 @@ In this example, the `Square` object is retrieved from the property bag of the d
 
 ## Related links
 
-- [Drag and drop gesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+- [Drag and drop gesture (sample)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)

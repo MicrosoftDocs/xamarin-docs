@@ -29,7 +29,7 @@ common task – in many cases without even opening the app in question.
 
 ## Sample app: Soup Chef
 
-To better understand Siri Shortcuts, take a look at the [Soup Chef](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
+To better understand Siri Shortcuts, take a look at the [Soup Chef](/samples/xamarin/ios-samples/ios12-soupchef)
 sample app. Soup Chef allows users to place orders from an imaginary soup
 restaurant, view their order history, and define phrases to use when
 ordering soup by interacting with Siri.
@@ -48,15 +48,15 @@ To use the sample app:
 
 - Install and run the Soup Chef sample app on an iOS 12 simulator or
 [device](#testing-on-device).
-- Click the **+** button in the upper-right to create a new order.
+- Click the **+** button in the upper right corner to create a new order.
 - Select a type of soup, specify a quantity and options, and tap **Place Order**.
-- On the **Order History** screen, tap the newly-created order to view its
+- On the **Order History** screen, tap the newly created order to view its
 details.
 - At the bottom of order details screen, tap **Add to Siri**.
 - Record a voice phrase to associate with the order and tap **Done**.
 - Minimize Soup Chef, invoke Siri, and place the order again by using the
-voice phrase you just recorded.
-- After Siri completes the order, re-open Soup Chef and notice that the new
+voice phrase you recorded.
+- After Siri completes the order, reopen Soup Chef and notice that the new
 order is listed on the **Order History** screen.
 
 The sample app demonstrates how to:
@@ -78,7 +78,7 @@ Identifier** as `com.xamarin.SoupChef`. This bundle identifier will be
 used as a prefix for the bundle identifiers of the Intents and Intents UI
 extensions discussed later in this document.
 
-The **Info.plist** file also contains the following:
+The **Info.plist** file also contains the following entry:
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -102,7 +102,7 @@ method.
 ### Entitlements.plist
 
 The **Entitlements.plist** file in the **SoupChef** project contains the
-following:
+following entries:
 
 ```xml
 <key>com.apple.security.application-groups</key>
@@ -183,7 +183,7 @@ public static NSUserActivity ViewMenuActivity {
 }
 ```
 
-Note the following in particular:
+Note the following features in particular:
 
 - Setting `EligibleForPrediction` to `true` indicates that Siri can
 predict this activity and surface it as a shortcut.
@@ -259,17 +259,17 @@ Objective-C project. Open this project and select
 the **Intents.intentdefinition** file in the **Project Navigator** to view
 the **OrderSoup** intent.
 
-Notice the following:
+Notice the following features:
 
 - The intent has a **Category** of **Order**. There are various pre-defined
 categories that can be used for custom intents; select the one that most
-closely matches the task your custom intent will enable. Since this is a
-soup ordering app, **OrderSoupIntent** uses **Order**.
+closely matches the task your custom intent will enable. Since this solution 
+is a soup ordering app, **OrderSoupIntent** uses **Order**.
 - The **Confirmation** checkbox indicates whether or not Siri must request
 confirmation before executing the task. For the **Order Soup**
 intent in Soup Chef, this option is enabled since the user is making
 a purchase.
-- The **Parameters** section of the .intentdefinition file defines
+- The **Parameters** section of the **.intentdefinition** file defines
 the parameters relevant to a shortcut. To place a soup order, Soup Chef
 must know the type of soup, its quantity, and any associated options.
 Each parameter has a type; parameter that cannot be represented by a
@@ -287,7 +287,7 @@ interaction.
 The **Response** item nested below the **OrderSoup** intent represents the
 potential responses that result from a soup order.
 
-In the **OrderSoup** intent's response definition, note the following:
+In the **OrderSoup** intent's response definition, note the following features:
 
 - A response's **Properties** can be used to customize the message
 communicated back to the user. The **OrderSoup** intent response has
@@ -314,9 +314,9 @@ To view this generated code:
 `#import "OrderSoupIntent.h"`
 - In any method in the class, add a reference to `OrderSoupIntent`.
 - Right-click on `OrderSoupIntent` and choose **Jump to Definition**.
-- Right-click in the newly-opened file, **OrderSoupIntent.h**, and select
+- Right-click in the newly opened file, **OrderSoupIntent.h**, and select
 **Show in Finder**.
-- This will open a **Finder** window that contains a .h and .m file
+- This action will open a **Finder** window that contains a **.h** and **.m** file
 containing the generated code.
 
 This generated code includes:
@@ -359,14 +359,14 @@ With these settings in place, the framework will build correctly.
 To build the static library and generate C# bindings definitions for it,
 follow these steps:
 
-- [Install Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started?context=xamarin/mac#installing-objective-sharpie),
-the tool used to generate bindings definitions from the .h and .m files
+- [Install Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin%252fmac#installing-objective-sharpie),
+the tool used to generate bindings definitions from the **.h** and **.m** files
 created by Xcode.
 
-- Configure your system to use Xcode 10 Command Line Tools:
+- Configure your system to use Xcode 10 **Command Line Tools**:
 
   > [!WARNING]
-  > Updating the selected Command Line Tools impacts all installed
+  > Updating the selected **Command Line Tools** impacts all installed
   > versions of Xcode on your system. When you are done using the Soup
   > Chef sample app, be sure to revert this setting to its original
   > configuration.
@@ -391,7 +391,7 @@ builds as expected.
 
 For more information about creating a static library and using Objective
 Sharpie to create C# bindings definitions, take a look at the
-[Binding an iOS Objective-C library](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#creating-a-static-library)
+[Binding an iOS Objective-C library](../binding-objective-c/walkthrough.md?tabs=vsmac#creating-a-static-library)
 walkthrough.
 
 #### Creating a bindings library
@@ -401,20 +401,25 @@ remaining piece necessary to consume the Xcode-generated intent-related code
 in a Xamarin.iOS project is a bindings library.
 
 In the [Soup Chef repository](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef),
-open up the **SoupChef.sln** file. Among other things, this solution
+open the **SoupChef.sln** file. Among other things, this solution
 contains **OrderSoupIntentBinding**, a bindings library for the static
-library generated above.
+library generated earlier.
 
 Notice in particular that this project includes:
 
-- **ApiDefinitions.cs** – A file generated above by Objective Sharpie and
+- **ApiDefinitions.cs** – A file generated earlier by Objective Sharpie and
 added to this project. This file's **Build Action** is set to
 **ObjcBindingApiDefinition**.
-- **StructsAndEnums.cs** – Another file generated above by Objective
+- **StructsAndEnums.cs** – Another file generated earlier by Objective
 Sharpie and added to this project. This file's **Build Action** is set to
 **ObjcBindingCoreSource**.
 - A **Native Reference** to **libOrderSoupIntentStaticLib.a**, the static
-library built above.
+library built earlier. Update the native reference properties and specify the following values:
+
+    1. Frameworks = `Foundation Intents`
+    1. Smart Link = `On`
+    1. Force Load = `On`
+    1. Kind = `Static`
 
 > [!NOTE]
 > Both **ApiDefinitions.cs** and **StructsAndEnums.cs** contain attributes
@@ -423,7 +428,7 @@ library built above.
 > this project.
 
 For more information about creating a C# bindings library, take a look at the
-[Binding an iOS Objective-C Library](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#create-a-xamarinios-binding-project)
+[Binding an iOS Objective-C Library](../binding-objective-c/walkthrough.md?tabs=vsmac#create-a-xamarinios-binding-project)
 walkthrough.
 
 Notice that the **SoupChef** project contains a reference to
@@ -435,7 +440,22 @@ classes, interfaces, and enums it contains:
 - `OrderSoupIntentResponse`
 - `OrderSoupIntenseResponseCode`
 
-### Adding the .intentdefinition file to your solution
+### Creating a Swift framework
+
+The intent definition native code is generated by Xcode by default using the language of your native project. If you define the **Intents.intentdefinition** file in a Swift project, Xcode will generate you a single Swift file with all the required classes, which you can use to create a Swift framework.
+
+> [!TIP]
+> You can select a desired language for the generated intent code in the Xcode build settings. Go to **Intent target > Build Settings > Intent Definition Compiler - Code Generation** and select either Swift or Objective-C. You can also keep it automatic to match your target language.
+
+The process of creating a Swift framework is similar to the one described earlier:
+
+1. Create a new Swift framework project.
+1. Copy the automatically generated Swift file with intent code to this project, you can find this file as described [here](#generating-code-for-the-custom-intent).
+1. Enable the [Objective-C bridging header](../binding-swift/walkthrough.md#build-a-native-library), so the framework is automatically generated with the required by Objective-C sharpie header file.
+
+Once the framework is built, follow the [same steps](#creating-a-bindings-library) described earlier to create a Xamarin binding. You can read more about creating a binding for a Swift framework [here](../binding-swift/walkthrough.md).
+
+### Adding the intent definition file to your solution
 
 In the C# **SoupChef** solution, the **SoupKit** project contains code
 shared between the app and its extensions. The **Intents.intentdefinition**
@@ -474,7 +494,7 @@ After fetching an intent, it is wrapped in an
 [`INInteraction`](xref:Intents.INInteraction).
 The `INInteraction` is given an
 [`Identifier`](xref:Intents.INInteraction.Identifier*)
-that matches the unique ID of the order (this will be helpful later when
+that matches the unique ID of the order (it will be helpful later when
 deleting intent donations that are no longer valid). Then, the interaction
 is donated to Siri.
 
@@ -519,14 +539,14 @@ It's important to remove donations that are no longer valid so that
 Siri does not make unhelpful or confusing shortcut suggestions.
 
 In Soup Chef, the **Configure Menu** screen can be used to mark a menu item
-as unavailable. Siri should no longer suggest a shortcut to order an
+as unavailable. Siri should no longer suggest a shortcut to order the
 unavailable menu item, so the `RemoveDonation` method of `SoupMenuManager`
-deletes donations for menu items that are no longer available. It does this
-by:
+deletes donations for menu items that are no longer available. The app implements 
+this functionality by:
 
 - Finding orders associated with the now-unavailable menu item.
 - Grabbing their identifiers.
-- Deleting interactions that have that same identifier.
+- Deleting interactions that have the same identifiers.
 
 ```csharp
 void RemoveDonation(MenuItem menuItem)
@@ -559,6 +579,51 @@ void RemoveDonation(MenuItem menuItem)
 }
 ```
 
+#### Validating successful donations
+
+The solution includes multiple projects and specific configuration. In some cases, the application can crash because of incomplete configuration, in other cases, it can silently fail to donate an interaction. It's important to validate successful donations and iOS Developer settings helps with it. Navigate to **Settings > Developer** and enable the following developer options to see recent donations and shortcuts:
+
+- Display Recent Shortcuts
+- Display Donations on Lock Screen
+
+Once enabled, every successful donation will appear on the lock screen and below the Siri suggestions options. If after running your application you don't see the donations there, review the following troubleshooting cases:
+
+1. An app fails to create the `OrderSoupIntent` with the following error:
+
+    > Could not create an native instance of the type 'NativeLibrary.OrderSoupIntent': the native class hasn't been loaded.
+
+    This error means that Xamarin is unable to load the native class via the Xamarin binding. To fix that, verify that the native library includes the required code, referenced by the binding project, and proper flags are set, as described [here](#creating-a-bindings-library), set the `Force Load` flag to `On`.
+
+1. An app fails to initialize the loaded native instance of the intent class with the following error:
+
+    > Could not initialize an instance of the type 'NativeLibrary.OrderSoupIntent': the native 'init' method returned nil.
+
+    The issue is related to the missing intent definition file. The Xamarin app should include the original intent definition file with the `Content` type, as described [here](#adding-the-intent-definition-file-to-your-solution).
+
+1. An app creates the intent and calls the donate method without a crash but console output shows a warning about unknown intent type and no donation is made:
+
+    > Cannot donate interaction with OrderSoupIntent that has no valid shortcut types
+
+    To fix the issue the intent has to be properly [defined in the plist](#infoplist), [Siri entitlement has to be enabled](#entitlementsplist) and selected for current build configuration via project settings.
+
+    The **info.plist** of the app:
+
+    ```plist
+    <key>NSUserActivityTypes</key>
+    <array>
+        <string>ScheduleMeetingIntent</string>
+    </array>
+    ```
+
+    The **Entitlements.plist** of the app with the Siri capability:
+
+    ```plist
+    <key>com.apple.developer.siri</key>
+    <true/>
+    ```
+
+    Custom entitlements should be selected for the targeted build configuration. Go to **Project settings > Build > iOS Bundle Signing** and set **Custom Entitlements** to the **Entitlements.plist** file containing the required entitlements.
+
 ### Creating an Intents extension
 
 The code that runs when Siri invokes an intent is placed in an Intents
@@ -573,7 +638,7 @@ the extension is called **SoupChefIntents**.
 The **Info.plist** in the **SoupChefIntents** project defines the
 **Bundle Identifier** as `com.xamarin.SoupChef.SoupChefIntents`.
 
-The **Info.plist** file also contains the following:
+The **Info.plist** file also contains the following entry:
 
 ```xml
 <key>NSExtension</key>
@@ -598,11 +663,11 @@ The **Info.plist** file also contains the following:
 
 In the above **Info.plist**:
 
-- `IntentsRestrictedWhileLocked` lists intents that should only be handled
+- `IntentsRestrictedWhileLocked` lists intents to be handled
 when the device is unlocked.
 - `IntentsSupported` lists the intents handled by this extension.
-- `NSExtensionPointIdentifier` specifies the type of app extension (see
-[Apple's documentation](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) for more information).
+- `NSExtensionPointIdentifier` specifies the type of app extension. For more information, see
+[Apple's documentation](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15).
 - `NSExtensionPrincipalClass` specifies the class that should be used
 to handle intents supported by this extension.
 
@@ -665,7 +730,7 @@ calling the passed-in completion handler
 #### Handling an OrderSoupIntent that opens the app
 
 An app must properly handle intents that do not run in the background.
-These are handled in the same way as `NSUserActivity` shortcuts, in the
+These intents are handled in the same way as `NSUserActivity` shortcuts, in the
 `ContinueUserActivity` method of `AppDelegate`:
 
 ```csharp
@@ -694,7 +759,7 @@ Intents UI extension that provides an interface for **SoupChefIntents**.
 The **Info.plist** in the **SoupChefIntentsUI** project defines the
 **Bundle Identifier** as `com.xamarin.SoupChef.SoupChefIntentsui`.
 
-The **Info.plist** file also contains the following:
+The **Info.plist** file also contains the following entry:
 
 ```xml
 <key>NSExtension</key>
@@ -718,9 +783,8 @@ In the above **Info.plist**:
 
 - `IntentsSupported` indicates that the `OrderSoupIntent` is handled by
 this Intents UI extension.
-- `NSExtensionPointIdentifier` specifies the type of app extension (see
-[Apple's documentation](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15)
-for more information).
+- `NSExtensionPointIdentifier` specifies the type of app extension. For more information, see
+[Apple's documentation](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15).
 - `NSExtensionMainStoryboard` specifies the storyboard that defines the
 primary interface of this extension
 
@@ -831,7 +895,7 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 ```
 
 Based on whether or not an existing voice shortcut exists for the
-currently-displayed order, `RowSelected` presents a view controller of
+currently displayed order, `RowSelected` presents a view controller of
 type [`INUIEditVoiceShortcutViewController`](xref:IntentsUI.INUIEditVoiceShortcutViewController)
 or [`INUIAddVoiceShortcutViewController`](xref:IntentsUI.INUIAddVoiceShortcutViewController).
 In each case, `OrderDetailViewController` sets itself as the view
@@ -841,13 +905,13 @@ and [`IINUIEditVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIEditVoi
 
 ## Testing on device
 
-To run Soup Chef on a device, follow the instructions below. Also read the
+To run Soup Chef on a device, follow the instructions in this section. Also read the
 [note about automatic provisioning](#automatic-provisioning).
 
 ### App Group, App IDs, Provisioning Profiles
 
 In the **Certificates, IDs & Profiles** section of the
-[Apple Developer Portal](https://developer.apple.com/), do the following:
+[Apple Developer Portal](https://developer.apple.com/), do the following steps:
 
 - Create an app group to share data between the Soup Chef app and its
 extensions. For example: **group.com.yourcompanyname.SoupChef**
@@ -867,7 +931,7 @@ extension, and one for the Intents UI extension. For example:
 
 - After creating the above App IDs, edit the **App Groups** capability
 assigned to the app and the Intents extension, specifying the specific
-app group created above.
+app group created earlier.
 
 - Create three new development provisioning profiles, one for each of the
 new App IDs.
@@ -878,11 +942,11 @@ restart it to make sure it registers the new provisioning profiles.
 
 ### Editing Info.plist, Entitlements.plist, and source code
 
-In Visual Studio for Mac or Visual Studio 2017, do the following:
+In Visual Studio for Mac or Visual Studio 2017, do the following steps:
 
 - Update the various **Info.plist** files in the solution. Set the app,
 Intents extension, and Intents UI extension **Bundle Identifier** to the App
-IDs defined above:
+IDs defined earlier:
 
   - App: **com.yourcompanyname.SoupChef**
   - Intents Extension: **com.yourcompanyname.SoupChef.Intents**
@@ -890,13 +954,13 @@ IDs defined above:
 
 - Update the **Entitlements.plist** file for the **SoupChef** project:
   - For the **App Groups** capability, set the group to the new app group
-  created above (in the example above, it was
+  created earlier (in the above example, it was
   **group.com.yourcompanyname.SoupChef**).
   - Make sure that **SiriKit** is enabled.
 
 - Update the **Entitlements.plist** file for the **SoupChefIntents** project:
   - For the **App Groups** capability, set the group to the new app group
-    created above (in the example above, it was **group.com.yourcompanyname.SoupChef**).
+    created earlier (in the above example, it was **group.com.yourcompanyname.SoupChef**).
 
 - Finally, open **NSUserDefaultsHelper.cs**. Set the `AppGroup` variable
 to the value of your new app group (for example, set it to
@@ -909,23 +973,23 @@ In Visual Studio for Mac or Visual Studio 2017:
 - Open the options/properties for the **SoupChef** project. On the
 **iOS Bundle Signing** tab, set **Signing Identity** to automatic and
 **Provisioning Profile** to the new app-specific provisioning profile you
-created above.
+created earlier.
 
 - Open the options/properties for the **SoupChefIntents** project. On the
 **iOS Bundle Signing** tab, set **Signing Identity** to automatic and
 **Provisioning Profile** to the new Intents extension-specific provisioning
-profile you created above.
+profile you created earlier.
 
 - Open the options/properties for the **SoupChefIntentsUI** project. On the
 **iOS Bundle Signing** tab, set **Signing Identity** to automatic and
 **Provisioning Profile** to the new Intents UI extension-specific provisioning
-profile you created above.
+profile you created earlier.
 
 With these changes in place, the app will run on an iOS device.
 
 ### Automatic provisioning
 
-Note that you can use [automatic provisioning](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)
+You can use [automatic provisioning](../../get-started/installation/device-provisioning/automatic-provisioning.md)
 to accomplish many of these provisioning tasks directly in the IDE.
 However, automatic provisioning does not set up app groups. You will need
 to manually configure the **Entitlements.plist** files with the name of
@@ -937,7 +1001,7 @@ and download and install them.
 
 ## Related links
 
-- [Soup Chef (Xamarin)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
+- [Soup Chef (Xamarin)](/samples/xamarin/ios-samples/ios12-soupchef)
 - [Soup Chef (Swift)](https://developer.apple.com/documentation/sirikit/accelerating_app_interactions_with_shortcuts?language=objc)
 - [SiriKit (Apple)](https://developer.apple.com/sirikit/)
 - [Introduction to Siri Shortcuts – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/211/)
@@ -945,3 +1009,4 @@ and download and install them.
 - [Siri Shortcuts on the Siri Watch Face – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/217/)
 - [What's New in SiriKit – WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/214/)
 - [Create an Intents App Extension (Apple)](https://developer.apple.com/documentation/sirikit/creating_an_intents_app_extension?language=objc)
+- [Bind an iOS Swift library](../binding-swift/walkthrough.md)

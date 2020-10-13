@@ -26,6 +26,6 @@ Attached behaviors are `static` classes with one or more attached properties. Th
 
 Xamarin.Forms behaviors are created by deriving from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class. This article demonstrates how to create and consume Xamarin.Forms behaviors.
 
-## [Reusable Behaviors](reusable/index.md)
+## [Reusable EffectBehavior](effect-behavior.md)
 
-Behaviors are reusable across more than one application. These articles explain how to create useful behaviors to perform commonly used functionality.
+Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control.

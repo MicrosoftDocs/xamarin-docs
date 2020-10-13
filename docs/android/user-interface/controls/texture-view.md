@@ -90,4 +90,4 @@ the camera, both the `android.permission.CAMERA` permission and the
 
 ## Related Links
 
-- [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)/)
+- [TextureViewDemo (sample)](/samples/xamarin/monodroid-samples/textureviewdemo)/)

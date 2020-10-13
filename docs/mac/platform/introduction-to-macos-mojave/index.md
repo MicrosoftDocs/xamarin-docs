@@ -54,6 +54,6 @@ to adopt Metal and Metal Performance Shaders.
 
 ## Related links
 
-- [Xamarin.Mac samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Xamarin.Mac samples](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – Apple Developer](https://developer.apple.com/macos/)
-- [Xamarin.Mac 5.0 release notes](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Xamarin.Mac 5.0 release notes](/xamarin/mac/release-notes/5/5.0/)

@@ -121,7 +121,7 @@ assign the `DataSource` property to `this`.
 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute)
 introduced the `[Weak]` attribute. Like `WeakReference <T>`,
 `[Weak]` can be used to break [strong circular
-references](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references),
+references](#avoid-strong-circular-references),
 but with even less code.
 
 Consider the following code, which uses `WeakReference <T>`:

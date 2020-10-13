@@ -546,7 +546,7 @@ Consistently applying this convention enables you to quickly scan your C# markup
 
 ## Related links
 
-- [CSharpForMarkupDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+- [CSharpForMarkupDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 - [Android platform features](~/xamarin-forms/platform/android/index.md)
 - [iOS platform features](~/xamarin-forms/platform/ios/index.md)
 - [Windows platform features](~/xamarin-forms/platform/windows/index.md)

@@ -231,7 +231,7 @@ To save on memory usage, it is a good idea to dispose of large image
 resources that are no longer needed. However, it is important to ensure
 that images are disposed of correctly. Instead of using an explicit
 `.Dispose()` invocation, you can take advantage of
-[using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement)
+[using](/dotnet/csharp/language-reference/keywords/using-statement)
 statements to ensure correct use of `IDisposable` objects. 
 
 For example, the

@@ -73,7 +73,7 @@ This example code results in the native map app being launched on each platform,
 
 ## Related links
 
-- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps Sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 - [Map Links](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Maps Developer Guide](https://developer.android.com/guide/components/intents-common.html#Maps)

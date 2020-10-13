@@ -196,7 +196,7 @@ runtime.
 
 ## Related links
 
-- [MTDJsonDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdjsondemo)
+- [MTDJsonDemo (sample)](/samples/xamarin/ios-samples/mtdjsondemo)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Reflection API Walkthrough](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)

@@ -223,5 +223,5 @@ described previously.
 
 ## Related Links
 
-- [SimpleCursorTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/simplecursortableadapter)
-- [CursorTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/cursortableadapter)
+- [SimpleCursorTableAdapter (sample)](/samples/xamarin/monodroid-samples/simplecursortableadapter)
+- [CursorTableAdapter (sample)](/samples/xamarin/monodroid-samples/cursortableadapter)

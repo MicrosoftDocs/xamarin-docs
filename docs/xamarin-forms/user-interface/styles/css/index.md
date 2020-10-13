@@ -71,7 +71,7 @@ In Xamarin.Forms, CSS style sheets are parsed and evaluated at runtime, rather t
 > [!NOTE]
 > Currently, all of the styling that's possible with XAML styling cannot be performed with CSS. However, XAML styles can be used to supplement CSS for properties that are currently unsupported by Xamarin.Forms. For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-The [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) sample demonstrates using CSS to style a simple app, and is shown in the following screenshots:
+The [MonkeyAppCSS](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) sample demonstrates using CSS to style a simple app, and is shown in the following screenshots:
 
 [![MonkeyApp Main Page with CSS styling](css-images/MonkeyAppMainPage.png "MonkeyApp Main Page with CSS styling")](css-images/MonkeyAppMainPage-Large.png#lightbox "MonkeyApp Main Page with CSS styling")
 
@@ -507,6 +507,6 @@ Linear and radial gradients can be specified using the `linear-gradient()` and `
 
 ## Related Links
 
-- [MonkeyAppCSS (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+- [MonkeyAppCSS (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)

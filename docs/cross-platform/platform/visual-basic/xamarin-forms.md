@@ -134,5 +134,5 @@ on where you can use Visual Basic:
 
 ## Related Links
 
-- [XamarinFormsVB (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
-- [Cross-Platform Development with the .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)
+- [XamarinFormsVB (sample)](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [Cross-Platform Development with the .NET Framework](/dotnet/standard/cross-platform/)

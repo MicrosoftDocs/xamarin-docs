@@ -45,17 +45,17 @@ The following documents will help you get started building tvOS apps with Xamari
 
 Sample tvOS apps built with Xamarin:
 
-- [Hello, tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-hello-tvos) – This sample implements a simple "Hello World" app in Xamarin.tvOS and presents the basics of working with tvOS.
-- [tvAlerts](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvalerts) – This sample shows how to work with alerts in a Xamarin.tvOS app.
-- [tvButtons](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvbuttons) – This sample shows how to work with buttons is a Xamarin.tvOS app.
-- [tvRemote](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvremote) – This sample presents several ways that your Xamarin.tvOS app can interact with the Siri Remote to navigate your User Interface.
-- [tvCollection](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvcollection) – This sample shows how to work with Collection View Controllers in a Xamarin.tvOS app.
-- [tvNavBars](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvnavbars) – This sample shows how to work with Navigation Bars in a Xamarin.tvOS app.
-- [tvPages](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvpages) – This sample shows how to work with Page Controls in a Xamarin.tvOS app.
-- [tvProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvprogress) – This sample shows how to work with Progress Indicators in a Xamarin.tvOS app.
-- [tvSplit](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvsplit) – This sample shows how to work with Split View Controllers in a Xamarin.tvOS app.
-- [tvStackView](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvstackview) - This sample shows how to work with Stack Views in a Xamarin.tvOS app.
-- [UICatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog) – Demonstrates how to use many views and controls in the UIKit framework on tvOS. Refer to this sample if you are looking for specific controls or views that are provided by the system.
+- [Hello, tvOS](/samples/xamarin/ios-samples/tvos-hello-tvos) – This sample implements a simple "Hello World" app in Xamarin.tvOS and presents the basics of working with tvOS.
+- [tvAlerts](/samples/xamarin/ios-samples/tvos-tvalerts) – This sample shows how to work with alerts in a Xamarin.tvOS app.
+- [tvButtons](/samples/xamarin/ios-samples/tvos-tvbuttons) – This sample shows how to work with buttons is a Xamarin.tvOS app.
+- [tvRemote](/samples/xamarin/ios-samples/tvos-tvremote) – This sample presents several ways that your Xamarin.tvOS app can interact with the Siri Remote to navigate your User Interface.
+- [tvCollection](/samples/xamarin/ios-samples/tvos-tvcollection) – This sample shows how to work with Collection View Controllers in a Xamarin.tvOS app.
+- [tvNavBars](/samples/xamarin/ios-samples/tvos-tvnavbars) – This sample shows how to work with Navigation Bars in a Xamarin.tvOS app.
+- [tvPages](/samples/xamarin/ios-samples/tvos-tvpages) – This sample shows how to work with Page Controls in a Xamarin.tvOS app.
+- [tvProgress](/samples/xamarin/ios-samples/tvos-tvprogress) – This sample shows how to work with Progress Indicators in a Xamarin.tvOS app.
+- [tvSplit](/samples/xamarin/ios-samples/tvos-tvsplit) – This sample shows how to work with Split View Controllers in a Xamarin.tvOS app.
+- [tvStackView](/samples/xamarin/ios-samples/tvos-tvstackview) - This sample shows how to work with Stack Views in a Xamarin.tvOS app.
+- [UICatalog](/samples/xamarin/ios-samples/tvos-uicatalog) – Demonstrates how to use many views and controls in the UIKit framework on tvOS. Refer to this sample if you are looking for specific controls or views that are provided by the system.
 
 Additionally, Apple provides the following sample apps that can be transcoded to C# to work with Xamarin's support for tvOS apps:
 
@@ -63,13 +63,13 @@ Additionally, Apple provides the following sample apps that can be transcoded to
 
 ## Known Issues and Troubleshooting
 
-If you encounter any problems building tvOS with Xamarin, check the [release notes](https://docs.microsoft.com/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
+If you encounter any problems building tvOS with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
 
 Report new issues and suggestions [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
 ## Related Links
 
-- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

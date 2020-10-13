@@ -125,4 +125,4 @@ The sample application invokes the following Microsoft Cognitive Services:
 
 - [Speech recognition with the Speech Service API](~/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition.md)
 - [Microsoft Cognitive Services Documentation](https://www.microsoft.com/cognitive-services/documentation)
-- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

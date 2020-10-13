@@ -936,7 +936,7 @@ First, we create shortcuts to the **Details** side of the Split View (`Attractio
 
 Next, when the Split View is loaded into memory, we attach the Split View Controller to both sides of the Split View and respond to the user highlighting an attraction in the Table View (`AttractionHighlighted`) by displaying the new attraction in the **Details** side of the Split View.
 
-Please see the [tvTables](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvtable) sample app for a full implementation of Table Views inside of a Split View.
+Please see the [tvTables](/samples/xamarin/ios-samples/tvos-tvtable) sample app for a full implementation of Table Views inside of a Split View.
 
 ## Table Views in Detail
 
@@ -950,7 +950,7 @@ This article has covered designing and working with Table Views inside of a Xama
 
 ## Related Links
 
-- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)

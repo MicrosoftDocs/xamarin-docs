@@ -41,7 +41,7 @@ The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of th
 
 The `x:Static` markup extension is supported by the [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) class. The class has a single property named [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) of type `string` that you set to the name of a public constant, static property, static field, or enumeration member.
 
-One common way to use `x:Static` is to first define a class with some constants or static variables, such as this tiny `AppConstants` class in the [**MarkupExtensions**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) program:
+One common way to use `x:Static` is to first define a class with some constants or static variables, such as this tiny `AppConstants` class in the [**MarkupExtensions**](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) program:
 
 ```csharp
 static class AppConstants
@@ -629,7 +629,7 @@ If you've encountered a need for a XAML markup extension that isn't available in
 
 ## Related links
 
-- [Markup Extensions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [Markup Extensions (sample)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML markup extensions chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles](~/xamarin-forms/user-interface/styles/dynamic.md)

@@ -55,7 +55,7 @@ To remove all preferences:
 Preferences.Clear();
 ```
 
-In addition to these methods each take in an optional `sharedName` that can be used to create additional containers for preference. Read the platform implementation specifics below.
+The above methods also take in an optional `sharedName` that can be used to create additional containers for preferences. Read the platform implementation specifics below.
 
 ## Supported Data Types
 
@@ -71,10 +71,10 @@ The following data types are supported in **Preferences**:
 
 ## Integrate with System Settings
 
-Preferences are store natively, which allows you to integrate your settings into the native system settings. Follow the platform documetnation and samples to integrate with the platform:
+Preferences are stored natively, which allows you to integrate your settings into the native system settings. Follow the platform documentation and samples to integrate with the platform:
 
 * Apple: [Implementing an iOS Settings Bundle](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [iOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [iOS Applicaton Preferences Sample](/samples/xamarin/ios-samples/appprefs/)
 * [watchOS Settings](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
 * Android: [Getting Started with Settings Screens](https://developer.android.com/guide/topics/ui/settings.html)
 
@@ -86,15 +86,15 @@ Values of `DateTime` are stored in a 64-bit binary (long integer) format using t
 
 # [Android](#tab/android)
 
-All data is stored into [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html). If no `sharedName` is specified the default shared preferences are used, else the name is used to get a **private** shared preferences with the specified name.
+All data is stored into [Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences.html). If no `sharedName` is specified the default shared preferences are used, otherwise the name is used to get a **private** shared preferences with the specified name.
 
 # [iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) is used to store values on iOS devices. If no `sharedName` is specified the `StandardUserDefaults` are used, else the name is used to create a new `NSUserDefaults` with the specified name used for the `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](../ios/app-fundamentals/user-defaults.md) is used to store values on iOS devices. If no `sharedName` is specified the `StandardUserDefaults` are used, else the name is used to create a new `NSUserDefaults` with the specified name used for the `NSUserDefaultsType.SuiteName`.
 
 # [UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) is used to store the values on the device. If no `sharedName` is specified the `LocalSettings` are used, else the name is used to create a new container inside of `LocalSettings`.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) is used to store the values on the device. If no `sharedName` is specified the `LocalSettings` are used, otherwise the name is used to create a new container inside of `LocalSettings`.
 
 `LocalSettings` also has the following restriction that the name of each setting can be 255 characters in length at most. Each setting can be up to 8K bytes in size and each composite setting can be up to 64K bytes in size.
 
@@ -102,11 +102,11 @@ All data is stored into [Shared Preferences](https://developer.android.com/train
 
 ## Persistence
 
-Uninstalling the application will cause all _Preferences_ to be removed. There is one exception to this, which for apps that target and run on Android 6.0 (API level 23) or later that are using [__Auto Backup__](https://developer.android.com/guide/topics/data/autobackup). This feature is on by default and preserves app data including __Shared Preferences__, which is what the **Preferences** API utilizes. You can disable this by following Google's [documentation](https://developer.android.com/guide/topics/data/autobackup).
+Uninstalling the application will cause all _Preferences_ to be removed, with the exception being apps that target and run on Android 6.0 (API level 23) or later that use [__Auto Backup__](https://developer.android.com/guide/topics/data/autobackup). This feature is on by default and preserves app data including __Shared Preferences__, which is what the **Preferences** API utilizes. You can disable this by following Google's [documentation](https://developer.android.com/guide/topics/data/autobackup).
 
 ## Limitations
 
-When storing a string, this API is intended to store small amounts of text.  Performance may be subpar if you try to use it to store large amounts of text.
+When storing a string, this API is intended to store small amounts of text. Performance may be subpar if you try to use it to store large amounts of text.
 
 ## API
 

@@ -176,5 +176,5 @@ The following screenshot shows the result of the emotion recognition process in 
 ## Related links
 
 - [Face API](/azure/cognitive-services/face/overview/).
-- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

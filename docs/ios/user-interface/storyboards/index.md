@@ -104,7 +104,7 @@ user will see first. It is represented by the segue shown below:
 
  iOS 8 introduced [Size Classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) to allow an iOS storyboard file to work with all available screen sizes, enabling developers to create one UI for all iOS devices. By default, all new Xamarin.iOS applications will use size classes. To use size classes from an older project, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide.
 
-Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying weather we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below:
+Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying whether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below:
 
 [![The Adaptive Segues dropdown](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
@@ -117,7 +117,7 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 
 ### Transferring Data with Segues
 
-The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this:
+The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this:
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue,
@@ -296,7 +296,7 @@ public partial class MainViewController : UIViewController
 }
 ```
 
-For more information on registering classes and methods, refer to the [Type Registrar](https://docs.microsoft.com/xamarin/ios/internals/registrar) documentation.
+For more information on registering classes and methods, refer to the [Type Registrar](../../internals/registrar.md) documentation.
 
 The last step in this class is to wire up the button and the transition to the pink view controller. We'll instantiate the `PinkViewController` from the Storyboard; then, we will program a push segue with `PushViewController`, as illustrated by the example code below:
 
@@ -390,7 +390,7 @@ In this code we have matched the segueIdentifier to our `SegueToPink` segue, so 
 
 We can apply this approach to any Segue on this view controller by checking the segueIdentifier argument to the ShouldPerformSegue method. In this case we only have one Segue identifier – `SegueToPink`.
 
-Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) for a working example.
+Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](/samples/xamarin/ios-samples/manualstoryboard) for a working example.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -516,7 +516,7 @@ This article introduces the concept of Storyboards and how they can be beneficia
 
 ## Related Links
 
-- [Manual Storyboard (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [Manual Storyboard (sample)](/samples/xamarin/ios-samples/manualstoryboard/)
 - [Introduction to iOS Designer](~/ios/user-interface/designer/introduction.md)
 - [Converting to Storyboards](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [UIStoryboard Class Reference](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

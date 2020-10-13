@@ -40,7 +40,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 The center rectangle is relative to the bitmap. It is an `SKRectI` value (the integer version of `SKRect`) and all the coordinates and sizes are in units of pixels. The destination rectangle is relative to the display surface. The `paint` argument is optional.
 
-The **Nine Patch Display** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample first uses a static constructor to create a public static property of type `SKBitmap`:
+The **Nine Patch Display** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample first uses a static constructor to create a public static property of type `SKBitmap`:
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -223,5 +223,5 @@ The **Lattice Display** page generalizes the creation of the `Flags` array, allo
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -146,5 +146,5 @@ This article explained how to use the Microsoft Translator Text API to translate
 
 - [Translator Text API Documentation](/azure/cognitive-services/translator/)
 - [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)

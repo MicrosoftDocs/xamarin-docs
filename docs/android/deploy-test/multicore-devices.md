@@ -319,7 +319,7 @@ Xamarin.Android supports these 32-bit architectures:
 - `x86`
 
 > [!NOTE]
-> **^** As of [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
+> **^** As of [Xamarin.Android 9.2](/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
 
 Xamarin.Android does not currently provide support for `mips`.
 

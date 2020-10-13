@@ -19,7 +19,7 @@ Xamarin.Forms now has preview support for GTK# apps. GTK# is a graphical user in
 > [!IMPORTANT]
 > Xamarin.Forms support for GTK# is provided by the community. For more information, see [Xamarin.Forms Platform Support](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-Before you start, create a new Xamarin.Forms solution, or use an existing Xamarin.Forms solution, for example, [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
+Before you start, create a new Xamarin.Forms solution, or use an existing Xamarin.Forms solution, for example, [**GameOfLife**](/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
 > [!NOTE]
 > While this article focuses on adding a GTK# app to a Xamarin.Forms solution in VS2017 and Visual Studio for Mac, it can also be performed in [MonoDevelop](https://www.monodevelop.com/) for Linux.

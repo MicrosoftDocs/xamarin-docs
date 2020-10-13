@@ -62,7 +62,7 @@ This includes profiles that are combinations of:
 - UWP apps
 
 You can read more about the different profiles' capabilities on
-[Microsoft’s website](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+[Microsoft’s website](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
 and see another community member's [PCL profile summary](https://portablelibraryprofiles.stephencleary.com/)
 which includes supported framework info and other notes.
 
@@ -213,7 +213,7 @@ The output from a PCL (ie. the resulting assembly DLL) can also be added as a re
 
 ## PCL example
 
-The [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+The [TaskyPortable](/samples/xamarin/mobile-samples/taskyportable/)
 sample application demonstrates how a Portable Class Library can be used with Xamarin.
 Here are some screenshots of the resulting apps running on iOS and Android:
 
@@ -291,9 +291,9 @@ This article has briefly discussed the benefits and pitfalls of Portable Class L
 
 ## Related links
 
-- [TaskyPortable (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+- [TaskyPortable (sample)](/samples/xamarin/mobile-samples/taskyportable/)
 - [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Sharing Code Options](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Cross-Platform Development with the .NET Framework (Microsoft)](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
+- [Cross-Platform Development with the .NET Framework (Microsoft)](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)

@@ -26,7 +26,7 @@ Objective Sharpie is a command line tool to help bootstrap the first pass of a b
 It works by parsing the header files of a native library to map the public API
 into the [binding definition](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (a process that previously was manually done).
 
-Objective Sharpie uses Clang parse header files, so the binding is as exact and thorough as possible. This can greatly reduce the time and effort it takes to produce a quality binding.
+Objective Sharpie uses Clang to parse header files, so the binding is as exact and thorough as possible. This can greatly reduce the time and effort it takes to produce a quality binding.
 
 > [!IMPORTANT]
 > Objective Sharpie is a tool for experienced Xamarin developers with

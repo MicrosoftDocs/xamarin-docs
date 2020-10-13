@@ -337,7 +337,7 @@ Run the application on a virtual or physical device. Tapping the **Login** butto
 
 ## Related Links
 
-- [AzureADB2CAuth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+- [AzureADB2CAuth (sample)](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Microsoft Authentication Library Documentation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

@@ -142,4 +142,4 @@ The `TabIndex` and `IsTabStop` properties are supported on the following control
 
 ## Related Links
 
-- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Accessibility (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -253,6 +253,6 @@ On iOS and Android, if the [`ListView`](xref:Xamarin.Forms.ListView) is recyclin
 
 ## Related Links
 
-- [Built in Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
-- [Custom Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
-- [Binding Context Changed (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)
+- [Built in Cells (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Custom Cells (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [Binding Context Changed (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

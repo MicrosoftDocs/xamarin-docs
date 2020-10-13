@@ -21,7 +21,7 @@ to find and interact with the specific information they're interested in.
 ## Sample app: GroupedNotifications
 
 To learn how to use grouped notifications with Xamarin.iOS, take
-a look at the [GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
+a look at the [GroupedNotifications](/samples/xamarin/ios-samples/ios12-groupednotifications)
 sample app.
 
 This sample app simulates conversations with various friends, sending a
@@ -60,7 +60,7 @@ notification by calling the completion handler passed to
 [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
-[Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
+[Export("userNotificationCenter:willPresentNotification:withCompletionHandler:")]
 public void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
 {
     completionHandler(UNNotificationPresentationOptions.Alert);
@@ -173,7 +173,7 @@ However, it does not set the `ThreadIdentifier` on the
 
 ## Related links
 
-- [Sample app – GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
+- [Sample app – GroupedNotifications](/samples/xamarin/ios-samples/ios12-groupednotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [Using Grouped Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/711/)

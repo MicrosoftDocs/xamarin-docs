@@ -266,6 +266,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## Related links
 
-- [Device Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
-- [Styles Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Device Sample](/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [Styles Sample](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device API](xref:Xamarin.Forms.Device)

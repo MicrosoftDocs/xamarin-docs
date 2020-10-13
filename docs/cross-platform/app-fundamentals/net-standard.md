@@ -10,7 +10,7 @@ ms.date: 07/18/2018
 ---
 # .NET Standard Library code sharing
 
-.NET Standard libraries have a uniform API for all .NET Platforms including Xamarin and .NET Core. Create a single .NET Standard Library and use it from any runtime that supports the .NET Standard Platform. Refer to [this chart](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) for details of supported platforms.
+.NET Standard libraries have a uniform API for all .NET Platforms including Xamarin and .NET Core. Create a single .NET Standard Library and use it from any runtime that supports the .NET Standard Platform. Refer to [this chart](/dotnet/standard/net-standard#net-implementation-support) for details of supported platforms.
 
 While .NET Standard versions 1.0 through 1.6 provide incrementally larger subsets of the .NET Framework, .NET Standard 2.0 provides
 the best level of support for Xamarin applications and for porting existing Portable Class Libraries.
@@ -89,4 +89,4 @@ Once a .NET Standard Library has been created, you can add a reference to it fro
 
 ## Related Links
 
-* [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) - detailed information and comparison to PCL.
+* [.NET Standard](/dotnet/standard/net-standard) - detailed information and comparison to PCL.

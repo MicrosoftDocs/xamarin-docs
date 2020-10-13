@@ -166,7 +166,7 @@ public static class TaskExtensions
 
 The `SafeFireAndForget` method awaits the asynchronous execution of the provided `Task` object, and allows you to attach an `Action` that is called if an exception is thrown.
 
-For more information, see [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+For more information, see [Task-based asynchronous pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### Data manipulation methods
 
@@ -282,10 +282,10 @@ For more information, see [File Handling in Xamarin.Forms](~/xamarin-forms/data-
 
 ## Related Links
 
-- [Todo sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Todo sample application](/samples/xamarin/xamarin-forms-samples/todo)
 - [SQLite.NET NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [SQLite documentation](https://www.sqlite.org/docs.html)
 - [Using SQLite with Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Using SQLite with iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Task-based asynchronous pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 - [Lazy&lt;T&gt; Class](xref:System.Lazy`1)

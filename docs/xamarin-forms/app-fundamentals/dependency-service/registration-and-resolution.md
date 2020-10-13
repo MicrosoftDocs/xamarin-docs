@@ -185,5 +185,5 @@ For more information about calling an object's `Dispose` method, see [Using obje
 
 ## Related links
 
-- [DependencyService Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [DependencyService Demos (sample)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Dependency resolution in Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)

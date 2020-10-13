@@ -38,11 +38,11 @@ The [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) object t
 
 ## Basic Stepper code and markup
 
-The [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample contains three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and third is able to avoid the event handler by using data binding in the XAML file.
+The [**StepperDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample contains three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and third is able to avoid the event handler by using data binding in the XAML file.
 
 ### Creating a Stepper in code
 
-The **Basic Stepper Code** page in the [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample shows how to create a [`Stepper`](xref:Xamarin.Forms.Stepper) and two [`Label`](xref:Xamarin.Forms.Label) objects in code:
+The **Basic Stepper Code** page in the [**StepperDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample shows how to create a [`Stepper`](xref:Xamarin.Forms.Stepper) and two [`Label`](xref:Xamarin.Forms.Label) objects in code:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -254,5 +254,5 @@ When [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) is set to 180, [`Value`](xr
 
 ## Related Links
 
-- [Stepper Demos sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+- [Stepper Demos sample](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [Stepper API](xref:Xamarin.Forms.Stepper)

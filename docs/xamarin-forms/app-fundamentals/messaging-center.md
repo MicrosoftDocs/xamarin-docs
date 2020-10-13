@@ -102,4 +102,4 @@ In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscr
 
 ## Related links
 
-- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+- [MessagingCenterSample](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

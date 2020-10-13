@@ -306,7 +306,7 @@ To use the new Storyboard as a launch screen, do the following:
 
 ## Related Links
 
-- [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [Dynamic Launch Screens (sample)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS Designer Basics](~/ios/user-interface/designer/index.md)
 - [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)

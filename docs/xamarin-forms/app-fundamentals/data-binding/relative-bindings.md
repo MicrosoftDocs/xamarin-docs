@@ -179,6 +179,6 @@ For more information about control templates, see [Xamarin.Forms Control Templat
 
 ## Related links
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md)

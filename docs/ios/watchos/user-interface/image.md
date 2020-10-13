@@ -43,7 +43,7 @@ The most efficient way to display images is to
   display them using the `SetImage(string imageName)`
   method.
 
-For example, the [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) sample
+For example, the [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog/) sample
   has a number of images added to an asset catalog in the watch app project:
 
 ![The WatchKitCatalog sample has a number of images added to an asset catalog in the watch app project](image-images/asset-whale-sml.png)
@@ -74,7 +74,7 @@ To load images from the watch extension, create
   `UIImage` instances and then call `SetImage` with
   the `UIImage` object.
 
-For example, the [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample
+For example, the [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample
   has an image named **Bumblebee** in the watch extension project:
 
 ![The WatchKitCatalog sample has an image named Bumblebee in the watch extension project](image-images/asset-bumblebee-sml.png)
@@ -95,7 +95,7 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 To animate a set of images, they should all begin
   with the same prefix and have a numeric suffix.
 
-The [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample
+The [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample
   has a series of numbered images in the watch app project
   with the **Bus** prefix:
 
@@ -160,5 +160,5 @@ The cache about 20 MB in size. It is kept across app restarts,
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (sample)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple's Image doc](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)

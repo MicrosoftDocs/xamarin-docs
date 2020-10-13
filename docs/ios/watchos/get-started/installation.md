@@ -33,7 +33,7 @@ A watch app consists of three projects:
 - **Watch App project** - This contains the User Interface
   storyboard file with all the UI resources for the Watch App.
 
-The [Watch Kit Catalog sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+The [Watch Kit Catalog sample](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
   solution looks like this in Xamarin.Studio:
 
 # [Visual Studio for Mac](#tab/macos)
@@ -46,7 +46,7 @@ The [Watch Kit Catalog sample](https://docs.microsoft.com/samples/xamarin/ios-sa
 
 -----
 
-Download and run the [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample to get started.
+Download and run the [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample to get started.
   Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
   page.
 
@@ -287,6 +287,6 @@ The watchOS template files (such as `InterfaceController`,
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (sample)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's WatchKit Tips](https://developer.apple.com/watchkit/tips/)

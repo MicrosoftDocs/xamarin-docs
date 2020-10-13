@@ -154,7 +154,7 @@ The `AppThemeChangedEventArgs` object, which accompanies the `RequestedThemeChan
 
 ## Related links
 
-- [SystemThemes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+- [SystemThemes (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 - [AppThemeBinding markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#appthemebinding-markup-extension)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)

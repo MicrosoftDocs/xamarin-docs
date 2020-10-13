@@ -296,7 +296,7 @@ iOS 11 introduced the **Files** app - a file browser for iOS that allows the use
 
 ![Set LSSupportsOpeningDocumentsInPlace in Info.plist](file-system-images/51-supports-opening.png)
 
-The app's **Documents** directory will now be available for browsing in the **Files** app. In the **Files** app, navigate to **On My iPhone** and each app with shared files will be visible. The screenshots below show what the [FileSystem sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode) looks like:
+The app's **Documents** directory will now be available for browsing in the **Files** app. In the **Files** app, navigate to **On My iPhone** and each app with shared files will be visible. The screenshots below show what the [FileSystem sample app](/samples/xamarin/ios-samples/filesystemsamplecode) looks like:
 
 ![iOS 11 Files app](file-system-images/50-files-app-1-sml.png) ![Browse my iPhone files](file-system-images/50-files-app-2-sml.png) ![Sample app files](file-system-images/50-files-app-3-sml.png)
 
@@ -448,6 +448,6 @@ application upgrades and backups.
 
 ## Related links
 
-- [FileSystem sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+- [FileSystem sample code](/samples/xamarin/ios-samples/filesystemsamplecode)
 - [File System Programming Guide](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [Registering the File Types your App Supports](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

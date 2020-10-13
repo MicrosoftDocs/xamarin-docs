@@ -28,7 +28,7 @@ The quickstart walks through how to store data in a local SQLite.NET database. T
 
 ## Prerequisites
 
-You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -479,5 +479,5 @@ To style the application with XAML styles, continue to the next quickstart.
 
 ## Related links
 
-- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+- [Notes (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

@@ -132,5 +132,5 @@ This article has demonstrated how to create and consume a [`DataTemplateSelector
 
 ## Related Links
 
-- [Data Template Selector (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+- [Data Template Selector (sample)](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

@@ -126,4 +126,4 @@ in Android, and it offers an additional level of device personalization.
 
 ## Related Links
 
-- [ContactsProviderDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
+- [ContactsProviderDemo (sample)](/samples/xamarin/monodroid-samples/contactsproviderdemo)

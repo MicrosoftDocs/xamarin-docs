@@ -480,4 +480,4 @@ This functionality is achieved as follows:
 
 ## Related links
 
-- [HybridWebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
+- [HybridWebView (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)

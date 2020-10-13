@@ -357,4 +357,4 @@ Various `NSDateFormatterStyle` values display dates as follows:
 
 ## Related links
 
-- [PickerControl (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/pickercontrol)
+- [PickerControl (sample)](/samples/xamarin/ios-samples/pickercontrol)

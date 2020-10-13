@@ -16,14 +16,14 @@ ms.date: 06/19/2018
 
 1. Download and install [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/)
    and select the **Mobile development with .NET** workload.
-1. [Sign in](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio)
+1. [Sign in](/visualstudio/ide/signing-in-to-visual-studio)
    to enable your Enterprise subscription.
 1. [Inspect](~/tools/inspector/inspect.md) your own app!
 
 # [macOS](#tab/macos)
 
 1. Download and install [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Sign in](https://docs.microsoft.com/visualstudio/mac/activation)
+1. [Sign in](/visualstudio/mac/activation)
    to enable your Enterprise subscription.
 1. [Inspect](~/tools/inspector/inspect.md) your own app!
 

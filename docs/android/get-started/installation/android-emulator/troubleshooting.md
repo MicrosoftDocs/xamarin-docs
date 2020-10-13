@@ -249,7 +249,7 @@ After these commands complete, reboot.
 For more information about enabling Hyper-V (including techniques for
 enabling Hyper-V using the Deployment Image Servicing and Management
 tool), see
-[Install Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+[Install Hyper-V](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 ### HAXM issues
 

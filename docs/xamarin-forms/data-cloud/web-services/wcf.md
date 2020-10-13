@@ -64,7 +64,7 @@ For each call to *BeginOperationName*, the application should also call *EndOper
 
 The Task Parallel Library (TPL) can simplify the process of consuming an APM begin/end method pair by encapsulating the asynchronous operations in the same `Task` object. This encapsulation is provided by multiple overloads of the `TaskFactory.FromAsync` method.
 
-For more information about APM see [Asynchronous Programming Model](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) and [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) on MSDN.
+For more information about APM see [Asynchronous Programming Model](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) and [TPL and Traditional .NET Framework Asynchronous Programming](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming) on MSDN.
 
 ### Create the TodoServiceClient object
 
@@ -308,6 +308,6 @@ By default, IIS Express will only respond to requests to `localhost`. Remote dev
 
 ## Related links
 
-- [TodoWCF (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [How to: Create a Windows Communication Foundation Client](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [TodoWCF (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [How to: Create a Windows Communication Foundation Client](/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [ServiceModel Metadata Utility Tool (svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

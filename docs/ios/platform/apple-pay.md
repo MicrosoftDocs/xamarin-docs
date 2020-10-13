@@ -131,4 +131,4 @@ looked at how to create a Merchant ID, and how it is used within the **Entitleme
 - [Intro to PassKit](~/ios/platform/passkit.md)
 - [PassKit](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/)
 - [Apple Pay](https://developer.apple.com/apple-pay/)
-- [Emporium (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-emporium)
+- [Emporium (sample)](/samples/xamarin/ios-samples/ios9-emporium)

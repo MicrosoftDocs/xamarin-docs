@@ -217,6 +217,6 @@ The `RoundEffect` class can be applied to any control that derives from `VisualE
 
 ## Related links
 
-- [RoundEffect sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [RoundEffect sample application](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 - [Introduction to Effects](~/xamarin-forms/app-fundamentals/effects/introduction.md)
 - [Creating an Effect](~/xamarin-forms/app-fundamentals/effects/creating.md)

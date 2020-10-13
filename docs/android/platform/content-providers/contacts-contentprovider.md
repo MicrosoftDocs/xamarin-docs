@@ -245,4 +245,4 @@ for further information on implementing `SimpleCursorAdapter`.
 
 ## Related Links
 
-- [ContactsAdapter Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)
+- [ContactsAdapter Demo (sample)](/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)

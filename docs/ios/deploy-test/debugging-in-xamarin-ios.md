@@ -129,7 +129,7 @@ Select **Conditions...** to display the _Breakpoint Settings_ menu:
 
 Here, you can enter the conditions under which you want the breakpoint to occur
 
-For more information on using breakpoint conditions in earlier versions of Visual Studio, refer to [Visual Studio's documentation](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints) on this topic.
+For more information on using breakpoint conditions in earlier versions of Visual Studio, refer to [Visual Studio's documentation](/visualstudio/debugger/using-breakpoints) on this topic.
 
 -----
 
@@ -163,7 +163,7 @@ These are:
 - **Step Into (F10)** – This will also execute the next line of code. If the next line is a function call, Step Into will stop at the first line of the function, allowing you to continue line-by-line debugging of the function. If the next line is not a function, it will behave the same as Step Over.
 - **Step Out (Shift + F11)** – This will return to the line where the current function was called.
 
-For more in depth documentation on Debugging, see the [Navigate Code with the Visual Studio Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
+For more in depth documentation on Debugging, see the [Navigate Code with the Visual Studio Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 -----
 

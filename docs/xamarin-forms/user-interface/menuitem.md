@@ -256,5 +256,5 @@ On UWP, the context menu is activated by right-clicking on a list item. The cont
 
 ## Related links
 
-* [MenuItem Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+* [MenuItem Demos](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

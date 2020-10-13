@@ -28,7 +28,7 @@ The following behavior properties must be set to use the behavior:
 For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> The `EffectBehavior` is a custom class that can be located in the [Effect Behavior sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior), and is not part of Xamarin.Forms.
+> The `EffectBehavior` is a custom class that can be located in the [Effect Behavior sample](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior), and is not part of Xamarin.Forms.
 
 ## Creating the Behavior
 
@@ -164,6 +164,6 @@ This article demonstrated using a behavior to add an effect to a control. The `E
 ## Related Links
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Effect Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+- [Effect Behavior (sample)](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

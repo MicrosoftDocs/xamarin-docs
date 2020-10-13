@@ -86,4 +86,4 @@ textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorTyp
 
 ## Related Links
 
-- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controls (sample)](/samples/xamarin/ios-samples/controls)

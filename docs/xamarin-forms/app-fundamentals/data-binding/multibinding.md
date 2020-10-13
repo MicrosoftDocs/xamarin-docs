@@ -268,7 +268,7 @@ For more information about relative bindings, see [Xamarin.Forms Relative Bindin
 
 ## Related links
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms String Formatting](string-formatting.md)
 - [Xamarin.Forms Binding Fallbacks](binding-fallbacks.md)
 - [Xamarin.Forms Relative Bindings](relative-bindings.md)

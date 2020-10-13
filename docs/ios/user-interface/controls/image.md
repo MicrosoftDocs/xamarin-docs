@@ -77,4 +77,4 @@ Resource file references never need to include the **Resources** folder.
 
 ## Related links
 
-- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controls (sample)](/samples/xamarin/ios-samples/controls)

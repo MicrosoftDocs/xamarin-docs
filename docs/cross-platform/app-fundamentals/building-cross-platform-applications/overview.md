@@ -18,7 +18,7 @@ Phone.
 The approach used in this document is generally applicable to both
 productivity apps and game apps, however the focus is on productivity and
 utility (non-game applications). See the
-[Introduction to MonoGame document](~/graphics-games/monogame/introduction/index.md) or check out [Visual Studio Tools for Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) for
+[Introduction to MonoGame document](~/graphics-games/monogame/introduction/index.md) or check out [Visual Studio Tools for Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) for
 cross-platform game development guidance.
 
 The phrase “write-once, run everywhere” is often used to extol the

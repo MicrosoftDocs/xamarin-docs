@@ -264,7 +264,7 @@ For more information about data template selectors, see [Creating a Xamarin.Form
 
 ## Related links
 
-- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps Sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)
 - [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

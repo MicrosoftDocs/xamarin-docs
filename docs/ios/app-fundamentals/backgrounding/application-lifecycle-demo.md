@@ -10,7 +10,7 @@ ms.date: 07/17/2018
 ---
 # Application lifecycle demo for Xamarin.iOS
 
-This article and [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) demonstrates the four application states in iOS, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
+This article and [sample code](/samples/xamarin/ios-samples/lifecycledemo) demonstrates the four application states in iOS, and the role of the `AppDelegate` methods in notifying the application of when states get changed. The application will print updates to the console whenever the app changes state:
 
 [![The sample app](application-lifecycle-demo-images/image3-sml.png)](application-lifecycle-demo-images/image3.png#lightbox)
 
@@ -71,4 +71,4 @@ iOS will terminate the application. Note that `WillTerminate` is not called beca
 
 ## Related links
 
-- [LifecycleDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
+- [LifecycleDemo (sample)](/samples/xamarin/ios-samples/lifecycledemo)

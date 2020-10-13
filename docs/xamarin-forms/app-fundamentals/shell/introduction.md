@@ -59,4 +59,4 @@ Within each tab, additional [`ContentPage`](xref:Xamarin.Forms.ContentPage) obje
 
 ## Related links
 
-- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

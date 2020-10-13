@@ -394,5 +394,5 @@ Title="Editor Demo">
 
 ## Related links
 
-- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Editor API](xref:Xamarin.Forms.Editor)

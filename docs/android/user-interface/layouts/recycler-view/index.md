@@ -57,7 +57,7 @@ applications:
 
 - Your app project must include the **Xamarin.Android.Support.v7.RecyclerView**
    package. For more information about installing NuGet packages, see
-   [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+   [Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough).
 
 ### Overview
 
@@ -136,6 +136,6 @@ For more information about `RecyclerView`, see the
 
 ## Related Links
 
-- [RecyclerViewer (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+- [RecyclerViewer (sample)](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduction to Lollipop](~/android/platform/lollipop.md)
 - [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html)

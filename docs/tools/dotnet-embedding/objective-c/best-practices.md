@@ -134,6 +134,6 @@ The generator follow the same `return nil` pattern for generated `init*` methods
 
 Objective-C does not allow operators to be overloaded as C# does, so these are converted to class selectors.
 
-["Friendly"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) named methods are generated in preference to the operator overloads when found, and can produce an easier to consume API.
+["Friendly"](/dotnet/standard/design-guidelines/operator-overloads) named methods are generated in preference to the operator overloads when found, and can produce an easier to consume API.
 
 Classes that override the operators `==` and\or `!=` should override the standard Equals (Object) method as well.

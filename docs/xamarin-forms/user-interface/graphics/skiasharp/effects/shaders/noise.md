@@ -40,7 +40,7 @@ The `numOctaves` value is an integer of 1 or higher. It relates to an iteration 
 
 The `seed` parameter is the starting point for the random-number generator. Although specified as a floating-point value, the fraction is truncated before it's used, and 0 is the same as 1.
 
-The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
+The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -394,5 +394,5 @@ The final parameter is a member of the `SKBlendMode` enumeration, an enumeration
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

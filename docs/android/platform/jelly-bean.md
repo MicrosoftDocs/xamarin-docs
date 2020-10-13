@@ -328,7 +328,7 @@ discussed some of the new permissions that have been introduced with Android
 
 ## Related Links
 
-- [Time Animation Example (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-timeanimatorexample)
+- [Time Animation Example (sample)](/samples/xamarin/monodroid-samples/platformfeatures-timeanimatorexample)
 - [Android 4.1 APIs](https://developer.android.com/about/versions/android-4.1.html)
 - [Tasks and Back Stacks](https://developer.android.com/guide/components/tasks-and-back-stack.html)
 - [Navigation with Back and Up](https://developer.android.com/design/patterns/navigation.html)

@@ -355,5 +355,5 @@ By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) allows users to mo
 
 ## Related links
 
-- [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

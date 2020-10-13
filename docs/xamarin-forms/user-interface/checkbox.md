@@ -158,6 +158,6 @@ For more information about visual states, see [Xamarin.Forms Visual State Manage
 
 ## Related links
 
-- [CheckBox Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [CheckBox Demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

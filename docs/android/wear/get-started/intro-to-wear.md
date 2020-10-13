@@ -58,7 +58,7 @@ device. By using the support v4 notification API and the
 [Xamarin Android Support Library](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), 
 you can tap into the native features of the platform, like inbox 
 style cards or voice input. The 
-[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) 
+[RecipeAssistant](/samples/xamarin/monodroid-samples/wear-recipeassistant) 
 sample provides example code that demonstrates how to send a list 
 of notifications to an Android Wear device. 
 
@@ -67,7 +67,7 @@ of notifications to an Android Wear device.
 Another strategy is to create a complete application that runs natively 
 on the wearable device and pairs with a companion handheld app. A good 
 example of this approach is the 
-[Quiz](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) sample app, which demonstrates 
+[Quiz](/samples/xamarin/monodroid-samples/wear-quiz) sample app, which demonstrates 
 how to create a quiz that runs on a handheld device and asks quiz
 questions on the wearable device. 
 
@@ -85,7 +85,7 @@ represent each row and column cells as a `Fragment`:
 
 Wear also makes use of action buttons that consist of a big colored circle
 with small description text underneath it (as illustrated above).  The
-[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) sample demonstrates
+[GridViewPager](/samples/xamarin/monodroid-samples/wear-gridviewpager) sample demonstrates
 how to use `GridViewPager` and `GridPagerAdapter` in a Wear app.
 
 Android Wear 2.0 adds a navigation drawer, an action drawer, and inline 
@@ -121,7 +121,7 @@ You can choose to register callbacks for receiving those messages
 via each of the API listener interfaces or, alternatively,
 implement a service in your app that derives from `WearableListenerService`.
 This service will be automatically instantiated by Android Wear.
-The [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) sample
+The [FindMyPhone](/samples/xamarin/monodroid-samples/wear-findmyphonesample) sample
 illustrates how to implement a `WearableListenerService`.
 
 ### Deployment

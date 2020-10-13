@@ -725,4 +725,4 @@ This walkthrough showed how to work with MonoGame to create a cross-platform gam
 ## Related Links
 
 - [CharacterSheet Image Resource (sample)](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true)
-- [Walking Game Complete (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
+- [Walking Game Complete (sample)](/samples/xamarin/mobile-samples/walkinggamemg/)

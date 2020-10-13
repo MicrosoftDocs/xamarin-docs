@@ -534,7 +534,7 @@ methods.
 
 ## Related Links
 
-- [Protocols, Delegates, and Events (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/protocols-delegates-events)
+- [Protocols, Delegates, and Events (sample)](/samples/xamarin/ios-samples/protocols-delegates-events)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Binding Objective-C Types](~/ios/platform/binding-objective-c/index.md)
 - [The Objective-C Programming Language](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)

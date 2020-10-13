@@ -279,7 +279,7 @@ The **Brick-Wall Compositing** page shows an example of a classic compositing ta
 
 ![Seated Monkey](porter-duff-images/SeatedMonkey.jpg "Seated Monkey")
 
-In preparation for compositing, a corresponding _matte_ was created, which is another bitmap that is black where you want the image to appear and transparent otherwise. This file is named **SeatedMonkeyMatte.png** and is among the resources in the **Media** folder in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
+In preparation for compositing, a corresponding _matte_ was created, which is another bitmap that is black where you want the image to appear and transparent otherwise. This file is named **SeatedMonkeyMatte.png** and is among the resources in the **Media** folder in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
 ![Seated Monkey Matte](porter-duff-images/SeatedMonkeyMatte.png "Seated Monkey Matte")
 
@@ -898,5 +898,5 @@ The following screenshots show the three different transitions types, each at th
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

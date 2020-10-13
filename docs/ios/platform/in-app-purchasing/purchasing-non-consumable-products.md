@@ -21,7 +21,7 @@ been purchased.
 
 ## Non-Consumable Products Sample
 
-The [InAppPurchaseSample code](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contains a project called *NonConsumables*. The code sample
+The [InAppPurchaseSample code](/samples/xamarin/ios-samples/storekit) contains a project called *NonConsumables*. The code sample
 demonstrates how to implement non-consumable products using photo-filters as an
 example. Once you’ve purchased a filter you can apply it to the photo over and
 over again. You never need to re-purchase it.   
@@ -67,4 +67,4 @@ purchase, the only differences are:
 
 - The user does not get charged again for the product.
 - The  `SKPaymentTransaction` object passed to the application will have an  `OriginalTransaction` property that refers to the transaction that was generated when the product was initially purchased. 
-- Applications that sell Non-Consumable products must also implement StoreKit’s  **Restore** feature to help users retrieve existing purchases. 
+- Applications that sell Non-Consumable products must also implement StoreKit’s  **Restore** feature to help users retrieve existing purchases.

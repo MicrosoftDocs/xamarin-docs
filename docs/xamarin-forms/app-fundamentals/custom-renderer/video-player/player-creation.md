@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-The [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
+The [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
 
 ## The video player
 
@@ -460,4 +460,4 @@ One more property is necessary to begin playing a video: This is the crucial `So
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

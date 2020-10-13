@@ -89,5 +89,5 @@ WebGeolocation requires a secure (`https://`) URL to work on both iOS 10 and mac
 
 ## Related Links
 
-- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Mac Samples](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [What's new in macOS 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

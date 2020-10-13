@@ -140,4 +140,4 @@ using (var paint = new SKPaint()) {
 
 ## More information
 
-More information about using SkiaSharp can be found in the [API documentation](https://docs.microsoft.com/dotnet/api/skiasharp)
+More information about using SkiaSharp can be found in the [API documentation](/dotnet/api/skiasharp)

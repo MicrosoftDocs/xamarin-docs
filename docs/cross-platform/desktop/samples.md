@@ -42,4 +42,4 @@ Sample app referenced by the following:
 
 ## Mobile App Samples
 
-* Other [Xamarin Samples](https://docs.microsoft.com/samples/browse/?products=xamarin)
+* Other [Xamarin Samples](/samples/browse/?products=xamarin)

@@ -673,6 +673,6 @@ In this example, the explicit [`Style`](xref:Xamarin.Forms.Style) targets [`Cont
 
 ## Related links
 
-- [Triggers Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+- [Triggers Sample](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
 - [Xamarin.Forms Trigger API](xref:Xamarin.Forms.TriggerAction`1)
