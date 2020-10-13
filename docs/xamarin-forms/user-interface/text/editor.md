@@ -126,7 +126,7 @@ The result is that characters in the text displayed by the [`Editor`](xref:Xamar
 
 ## Auto-size an Editor
 
-An [`Editor`](xref:Xamarin.Forms.Editor) can be made to auto-size to its content by setting the [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) property to [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), which is a value of the [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeration. This enumeration has two values:
+An [`Editor`](xref:Xamarin.Forms.Editor) can be made to auto-size to its content by setting the [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) property to [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), which is a value of the [`EditorAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeration. This enumeration has two values:
 
 - [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indicates that automatic resizing is disabled, and is the default value.
 - [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indicates that automatic resizing is enabled.
