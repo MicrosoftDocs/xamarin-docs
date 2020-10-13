@@ -28,6 +28,7 @@ Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
+[assembly: UsesPermission(Android.Manifest.Permission.ManageDocuments)]
 ```
 
 OR Update Android Manifest:
@@ -36,6 +37,7 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 
 ```xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
 ```
 
 Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check this permission. This will automatically update the **AndroidManifest.xml** file.
