@@ -73,6 +73,21 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
+You can also sharing multiple files:
+
+```csharp
+var file1 = Path.Combine(FileSystem.CacheDirectory, "Attachment1.txt");
+File.WriteAllText(file, "Content 1");
+var file2 = Path.Combine(FileSystem.CacheDirectory, "Attachment2.txt");
+File.WriteAllText(file, "Content 2");
+
+await Share.RequestAsync(new ShareMultipleFilesRequest
+{
+    Title = ShareFilesTitle,
+    Files = new ShareFile[] { new ShareFile(file1), new ShareFile(file2) },
+});
+```
+
 ## Presentation Location
 
 When requesting a share on iPadOS you have the ability to present in a pop over control. You can specify the location using the `PresentationSourceBounds` property:
