@@ -14,7 +14,7 @@ ms.date: 07/11/2018
 In iOS, the `UIButton` class represents a button control.
 
 A button's properties can be modified either programmatically or with the
-**Properties Pad** of the iOS Designer:
+**Properties Window or Pad** of the iOS Designer:
 
 ![The Properties Pad of the iOS Designer](buttons-images/properties.png "The Properties Pad of the iOS Designer")
 
@@ -28,7 +28,7 @@ A `UIButton` can be created with only a few lines of code.
   UIButton myButton = new UIButton(UIButtonType.System);
   ```
 
-  The button's type is specified by a `UIButtonType`:
+  The button's type is specified by a `UIButtonType` property:
 
   - `UIButtonType.System` - A general-purpose button
   - `UIButtonType.DetailDisclosure` - Indicates the availability of detailed information, usually about a specific item in a table
@@ -51,12 +51,20 @@ A `UIButton` can be created with only a few lines of code.
   ```
 
 - Set the button's text. Use the `SetTitle` method, which requires the text
-  and a `UIControlState` value:
+  and a `UIControlState` value for button state:
 
   ```csharp
   myButton.SetTitle("Hello, World!", UIControlState.Normal);
   ```
-
+  The button's state types are listed below:
+  - UIControlState.Normal - Normal or default state
+  - UIControlState.Highlighted - The hightlighed state of button
+  - UIControlState.Disabled - Disable state of button
+  - UIControlState.Selected - Selected state of button
+  - UIControlState.Focused - Focused state of button
+  - UIControlState.Application - Additional control flag for application use.
+  - UIControlState.Reserved - Internal framwork use
+  
   For more information about styling a button and setting its text, refer
   to:
 
