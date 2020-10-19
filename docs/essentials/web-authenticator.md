@@ -88,7 +88,7 @@ On iOS you'll need to add your app's callback URI pattern to your Info.plist suc
 > [!NOTE]
 > You should consider using [Universal App Links](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) to register your app's callback URI as a best practice.
 
-You will also need to override your `AppDelegate`'s `OpenUrl` method to call into Essentials:
+You will also need to override your `AppDelegate`'s `OpenUrl` and `ContinueUserActivity` methods to call into Essentials:
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
@@ -97,6 +97,13 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         return true;
 
     return base.OpenUrl(app, url, options);
+}
+
+public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+{
+    if (Xamarin.Essentials.Platform.ContinueUserActivity(application, userActivity, completionHandler))
+        return true;
+    return base.ContinueUserActivity(application, userActivity, completionHandler);
 }
 ```
 
