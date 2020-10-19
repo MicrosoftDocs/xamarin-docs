@@ -67,7 +67,23 @@ protected override void OnResume()
 
 # [iOS](#tab/ios)
 
-On iOS you'll need to add your app's callback URI pattern to your Info.plist.
+On iOS you'll need to add your app's callback URI pattern to your Info.plist such as:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>xamarinessentials</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>xamarinessentials</string>
+        </array>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+    </dict>
+</array>
+```
 
 > [!NOTE]
 > You should consider using [Universal App Links](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) to register your app's callback URI as a best practice.
@@ -187,6 +203,21 @@ It's possible to use the `WebAuthenticator` API with any web back end service.  
 2. Set the Default Authentication Scheme to `CookieAuthenticationDefaults.AuthenticationScheme` in your `.AddAuthentication()` call.
 3. Use `.AddCookie()` in your Startup.cs `.AddAuthentication()` call.
 4. All providers must be configured with `.SaveTokens = true;`.
+
+
+``csharp
+services.AddAuthentication(o =>
+    {
+        o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddFacebook(fb =>
+    {
+        fb.AppId = Configuration["FacebookAppId"];
+        fb.AppSecret = Configuration["FacebookAppSecret"];
+        fb.SaveTokens = true;
+    });
+```
 
 > [!TIP]
 > If you'd like to include Apple Sign In, you can use the `AspNet.Security.OAuth.Apple` NuGet package.  You can view the full [Startup.cs sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60) in the Essentials GitHub repository.
