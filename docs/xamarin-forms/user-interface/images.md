@@ -196,7 +196,7 @@ public class ImageResourceExtension : IMarkupExtension
 > [!NOTE]
 > To support displaying embedded images in release mode on the Universal Windows Platform, it's necessary to use the overload of `ImageSource.FromResource` that specifies the source assembly in which to search for the image.
 
-To use this extension add a custom `xmlns` to the XAML, using the correct namespace and assembly values for the project. The image source can then be set using this syntax: `{local:ImageResource WorkingWithImages.beach.jpg}`. A complete XAML example is shown below:
+To use this extension add a custom `xmlns` to the XAML, using the correct namespace and assembly values for the project. The image source can then be set using this syntax: `{local:ImageResourceExtension WorkingWithImages.beach.jpg}`. A complete XAML example is shown below:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -207,7 +207,7 @@ To use this extension add a custom `xmlns` to the XAML, using the correct namesp
    x:Class="WorkingWithImages.EmbeddedImagesXaml">
  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
    <!-- use a custom Markup Extension -->
-   <Image Source="{local:ImageResource WorkingWithImages.beach.jpg}" />
+   <Image Source="{local:ImageResourceExtension WorkingWithImages.beach.jpg}" />
  </StackLayout>
 </ContentPage>
 ```
