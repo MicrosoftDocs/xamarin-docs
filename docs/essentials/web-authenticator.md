@@ -261,7 +261,7 @@ Sometimes you may want to return data such as the provider's `access_token` back
 Check out the [full controller sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Controllers/MobileAuthController.cs) in the Essentials repository.
 
 > [!NOTE]
-> The above sample demonstrates how to return the Access Token from the 3rd party authentication (ie: OAuth) provider.  To obtain a token you can use to authorize web requests to the web backend itself, you should create your own token in your web app, and return that instead.  The [Overview of ASP.NET Core authentication](https://docs.microsoft.com/aspnet/core/security/authentication) has more information about advanced authentication scenarios in ASP.NET Core.
+> The above sample demonstrates how to return the Access Token from the 3rd party authentication (ie: OAuth) provider. To obtain a token you can use to authorize web requests to the web backend itself, you should create your own token in your web app, and return that instead.  The [Overview of ASP.NET Core authentication](/aspnet/core/security/authentication) has more information about advanced authentication scenarios in ASP.NET Core.
 
 -----
 ## API
