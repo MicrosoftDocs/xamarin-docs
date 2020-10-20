@@ -206,7 +206,7 @@ var accessToken = r?.AccessToken;
 
 It's possible to use the `WebAuthenticator` API with any web back end service.  To use it with an ASP.NET core app, first you need to configure the web app with the following steps:
 
-1. Setup your desired [external social authentication providers](/aspnet/core/security/authentication/social/?tabs=visual-studio&view=aspnetcore-3.1) in an ASP.NET Core web app.
+1. Setup your desired [external social authentication providers](/aspnet/core/security/authentication/social/?tabs=visual-studio) in an ASP.NET Core web app.
 2. Set the Default Authentication Scheme to `CookieAuthenticationDefaults.AuthenticationScheme` in your `.AddAuthentication()` call.
 3. Use `.AddCookie()` in your Startup.cs `.AddAuthentication()` call.
 4. All providers must be configured with `.SaveTokens = true;`.
@@ -259,6 +259,9 @@ The purpose of this controller is to infer the scheme (provider) that the app is
 Sometimes you may want to return data such as the provider's `access_token` back to the app which you can do via the callback URI's query parameters. Or, you may want to instead create your own identity on your server and pass back your own token to the app. What and how you do this part is up to you!
 
 Check out the [full controller sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Controllers/MobileAuthController.cs) in the Essentials repository.
+
+> [!NOTE]
+> The above sample demonstrates how to return the Access Token from the 3rd party authentication (ie: OAuth) provider. To obtain a token you can use to authorize web requests to the web backend itself, you should create your own token in your web app, and return that instead.  The [Overview of ASP.NET Core authentication](/aspnet/core/security/authentication) has more information about advanced authentication scenarios in ASP.NET Core.
 
 -----
 ## API
