@@ -212,7 +212,7 @@ It's possible to use the `WebAuthenticator` API with any web back end service.  
 4. All providers must be configured with `.SaveTokens = true;`.
 
 
-``csharp
+```csharp
 services.AddAuthentication(o =>
     {
         o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
