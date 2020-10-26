@@ -56,14 +56,16 @@ A `UIButton` can be created with only a few lines of code.
   ```csharp
   myButton.SetTitle("Hello, World!", UIControlState.Normal);
   ```
+  
   The button's state types are listed below:
-  - UIControlState.Normal - Normal or default state
-  - UIControlState.Highlighted - The hightlighed state of button
-  - UIControlState.Disabled - Disable state of button
-  - UIControlState.Selected - Selected state of button
-  - UIControlState.Focused - Focused state of button
-  - UIControlState.Application - Additional control flag for application use.
-  - UIControlState.Reserved - Internal framwork use
+  
+  - `UIControlState.Normal`
+  - `UIControlState.Highlighted`
+  - `UIControlState.Disabled`
+  - `UIControlState.Selected`
+  - `UIControlState.Focused`
+  - `UIControlState.Application`
+  - `UIControlState.Reserved`
   
   For more information about styling a button and setting its text, refer
   to:
