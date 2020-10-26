@@ -85,6 +85,9 @@ The `MediaPicker` class has the following methods that all return a `FileResult`
 
 Each method optionally takes in a `MediaPickerOptions` parameter that allows the `Title` to be set on some operating systems that is displayed to the users.
 
+> [!TIP]
+> All methods must be called on the UI thread because permission checks and requests are automatically handled by Xamarin.Essentials.
+
 ## General Usage
 
 ```csharp
