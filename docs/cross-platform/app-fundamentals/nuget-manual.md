@@ -96,4 +96,4 @@ Some open-source examples that you can refer to:
 ## Related Links
 
 - [Nugetizer-3000 Automated NuGet Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
-- [Including a NuGet in your Project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [Including a NuGet in your Project](/visualstudio/mac/nuget-walkthrough)

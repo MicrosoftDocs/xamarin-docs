@@ -533,8 +533,8 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
+- [Xamarin.Forms Samples](/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Getting Started Samples](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted)
 - [Xamarin.Forms API reference](xref:Xamarin.Forms)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided/)
 

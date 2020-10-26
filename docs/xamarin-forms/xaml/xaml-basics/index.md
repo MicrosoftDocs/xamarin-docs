@@ -53,9 +53,9 @@ When you're familiar with Xamarin.Forms and XML, start reading [Part 1. Getting 
 
 ## Related links
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Creating Mobile Apps book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms Samples](/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## Related video
 

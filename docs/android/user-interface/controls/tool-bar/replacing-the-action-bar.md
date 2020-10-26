@@ -363,5 +363,5 @@ is not configured properly.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
-- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)
+- [Lollipop Toolbar (sample)](/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

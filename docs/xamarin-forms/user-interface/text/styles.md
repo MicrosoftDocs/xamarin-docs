@@ -139,5 +139,5 @@ To ensure accessibility, make sure that built-in styles are used as the basis fo
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Style](xref:Xamarin.Forms.Style)

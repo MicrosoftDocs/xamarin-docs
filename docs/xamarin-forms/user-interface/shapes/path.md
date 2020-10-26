@@ -96,7 +96,7 @@ For more information about geometries, see [Xamarin.Forms Geometries](geometries
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Geometries](geometries.md)
 - [Xamarin.Forms Path markup syntax](path-markup-syntax.md)

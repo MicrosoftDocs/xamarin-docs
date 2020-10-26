@@ -110,6 +110,6 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## Related Links
 
-- [TapGesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
+- [TapGesture (sample)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

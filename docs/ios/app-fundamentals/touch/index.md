@@ -34,5 +34,5 @@ This guide serves as introduction to Touch in iOS. For more information on using
 
 ## Related Links
 
-- [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
-- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [iOS Touch Final (sample)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (sample)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

@@ -19,7 +19,7 @@ the same way as earlier versions. Instead, there are just two options:
 
 > [!TIP]
 > To try out pre-release features, you should [download the Visual Studio Preview installer](https://visualstudio.microsoft.com/vs/preview/), which will offer the option to install **Preview**
-> versions of Visual Studio side-by-Side with the stable (Release) version. More information on What's new in Visual Studio 2019 can be found in the [release notes](https://docs.microsoft.com/visualstudio/releases/2019/release-notes).
+> versions of Visual Studio side-by-Side with the stable (Release) version. More information on What's new in Visual Studio 2019 can be found in the [release notes](/visualstudio/releases/2019/release-notes).
 
 The Preview version of Visual Studio may include corresponding Preview
 versions of Xamarin functionality, including:

@@ -14,7 +14,7 @@ ms.date: 03/19/2017
 _This article walks through how to use Apple’s Instruments tool to diagnose memory issues in an iOS application built with Xamarin. It demonstrates how to launch Instruments, take heap snapshots and analyze memory growth. It also shows how to use Instruments to display and pinpoint the exact lines of code that cause the memory issue._
 
 This page demonstrates how to use **Xcode's Instruments tool** to diagnose a memory issue in an iOS application.
-First, download the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) and open the
+First, download the [MemoryDemo Sample](/samples/xamarin/ios-samples/profiling-memorydemo) and open the
 **before** solution in Visual Studio for Mac.
 
 ## Diagnosing the Memory Issues
@@ -83,7 +83,7 @@ fixing the code:
 
 ![Showing the app memory usage](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
-The improved code is available in the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) in the
+The improved code is available in the [MemoryDemo Sample](/samples/xamarin/ios-samples/profiling-memorydemo) in the
 **after** solution in Visual Studio for Mac.
 
 This community blog about [Xamarin.iOS Garbage Collection](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
@@ -98,5 +98,5 @@ Finally, the application was re-examined to verify the problem was corrected.
 
 ## Related Links
 
-- [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
+- [MemoryDemo Sample](/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

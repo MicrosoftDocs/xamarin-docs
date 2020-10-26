@@ -63,16 +63,16 @@ landingContent:
       - linkListType: whats-new
         links:
           - text: .NET docs updates
-            url: https://docs.microsoft.com/dotnet/whats-new/
+            url: /dotnet/whats-new/
           - text: Xamarin.Forms release notes
-            url: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+            url: /xamarin/xamarin-forms/release-notes/
           - text: Xamarin.Essentials release notes
-            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+            url: /xamarin/essentials/release-notes/
           - text: Xamarin.iOS release notes
-            url: https://docs.microsoft.com/xamarin/ios/release-notes/
+            url: /xamarin/ios/release-notes/
           - text: Xamarin.Android release notes
-            url: https://docs.microsoft.com/xamarin/android/release-notes/
+            url: /xamarin/android/release-notes/
           - text: Xamarin.Mac release notes
-            url: https://docs.microsoft.com/xamarin/mac/release-notes/
+            url: /xamarin/mac/release-notes/
           - text: Xamarin tools release notes
-            url: https://docs.microsoft.com/xamarin/tools/
+            url: ../tools.yml

@@ -28,10 +28,10 @@ Fingerprint authentication is a great way to allow a Xamarin.Android application
 
 First we discussed the fingerprint API's themselves, `FingerprintManager` (and `FingerprintManagerCompat`). We examined how the `FingerprintManager.AuthenticationCallbacks` abstract class must be extended by an application and used as an intermediary between the fingerprint hardware and the application itself. Then we examined how to verify the integrity of the fingerprint scanner results using a Java `Cipher` object. Finally, we touched a bit on testing by describing how to enroll a fingerprint on a device and using **adb** to simulate a fingerprint swipe on an emulator. 
 
-If you haven't already done so, you should look at the [sample application](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) that accompanies this guide. The [Fingerprint Dialog Sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) has been ported from Java to Xamarin.Android and provides another example on how to add fingerprint authentication to an Android application.
+If you haven't already done so, you should look at the [sample application](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) that accompanies this guide. The [Fingerprint Dialog Sample](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) has been ported from Java to Xamarin.Android and provides another example on how to add fingerprint authentication to an Android application.
 
 ## Related Links
 
 - [Fingerprint Guide Sample App](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
-- [Fingerprint Dialog Sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [Fingerprint Dialog Sample](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [Fingerprint Icon](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)

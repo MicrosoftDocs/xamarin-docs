@@ -457,7 +457,7 @@ Note the following:
 
 ## Related Links
 
-- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [BusinessTumble Example (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
-- [Responsive Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+- [Layout (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble Example (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Responsive Layout (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

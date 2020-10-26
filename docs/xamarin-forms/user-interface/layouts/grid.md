@@ -745,7 +745,7 @@ public class ColorSlidersGridPageCS : ContentPage
 
 ## Related links
 
-- [Grid demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [Grid demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 - [Layout Options in Xamarin.Forms](layout-options.md)
 - [Choose a Xamarin.Forms Layout](choose-layout.md)
 - [Improve Xamarin.Forms App Performance](~/xamarin-forms/deploy-test/performance.md)

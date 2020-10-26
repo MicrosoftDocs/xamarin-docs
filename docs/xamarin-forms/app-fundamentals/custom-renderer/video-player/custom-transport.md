@@ -655,4 +655,4 @@ In a production application, you'll probably want to use your own bitmap images 
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -76,4 +76,4 @@ tv.SystemUiVisibilityChange +=
 
 ## Related Links
 
-- [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
+- [SystemUIVisibilityDemo (sample)](/samples/xamarin/monodroid-samples/systemuivisibilitydemo)

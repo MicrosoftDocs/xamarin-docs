@@ -404,7 +404,7 @@ Data bindings provide a powerful mechanism for linking properties between two ob
 
 ## Related Links
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML (sample)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax (sample)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 3. XAML Markup Extensions (sample)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

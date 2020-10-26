@@ -127,4 +127,4 @@ This article demonstrated how to create and consume attached behaviors. Attached
 
 ## Related Links
 
-- [Attached Behaviors (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
+- [Attached Behaviors (sample)](/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)

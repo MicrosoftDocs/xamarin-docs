@@ -242,4 +242,4 @@ to match the insertions/deletions on the table view an error will occur.
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (sample)](/samples/xamarin/ios-samples/workingwithtables)

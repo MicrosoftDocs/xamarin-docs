@@ -918,8 +918,8 @@ This article has taken a detailed look at working with Table Views in a Xamarin.
 
 ## Related Links
 
-- [MacTables (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
-- [MacImages (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacTables (sample)](/samples/xamarin/mac-samples/mactables)
+- [MacImages (sample)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Outline Views](~/mac/user-interface/outline-view.md)
 - [Source Lists](~/mac/user-interface/source-list.md)

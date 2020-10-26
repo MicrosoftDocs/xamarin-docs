@@ -105,4 +105,4 @@ This code displays a predefined response of 10, limits the number of characters 
 
 ## Related links
 
-- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

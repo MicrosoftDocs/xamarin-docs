@@ -464,7 +464,7 @@ public class CombinedStackLayoutPageCS : ContentPage
 
 ## Related links
 
-- [StackLayout demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+- [StackLayout demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 - [Layout Options in Xamarin.Forms](layout-options.md)
 - [Choose a Xamarin.Forms Layout](choose-layout.md)
 - [Improve Xamarin.Forms App Performance](~/xamarin-forms/deploy-test/performance.md)

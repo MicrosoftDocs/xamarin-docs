@@ -15,6 +15,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [LabelTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
+- [LabelTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Xamarin.Forms Label (guide)](~/xamarin-forms/user-interface/text/label.md)
 - [Label API](xref:Xamarin.Forms.Label)

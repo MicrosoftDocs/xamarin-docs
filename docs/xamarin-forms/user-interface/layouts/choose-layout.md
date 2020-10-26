@@ -243,7 +243,7 @@ In addition, page rendering performance can also be improved by using layout com
 
 ## Related links
 
-- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Layout (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 - [Xamarin.Forms Layouts (video)](https://youtu.be/4HlLjTZQzjM)
 - [Xamarin.Forms StackLayout](stacklayout.md)
 - [Xamarin.Forms Grid](grid.md)

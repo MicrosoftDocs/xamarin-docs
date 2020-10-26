@@ -26,7 +26,7 @@ preferred mechanism to use for Natural Language processing.
 ## Sample app: XamarinNL
 
 To learn how to use the Natural Language framework with Xamarin.iOS, take
-a look at the [XamarinNL sample app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl).
+a look at the [XamarinNL sample app](/samples/xamarin/ios-samples/ios12-xamarinnl).
 This sample app demonstrates how to use the Natural Language framework to:
 
 - [Recognize languages](#recognizing-languages).
@@ -301,6 +301,6 @@ enum API documentation.
 
 ## Related links
 
-- [Sample app – XamarinNL](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl)
+- [Sample app – XamarinNL](/samples/xamarin/ios-samples/ios12-xamarinnl)
 - [Introducing Natural Language Framework](https://developer.apple.com/videos/play/wwdc2018/713/)
 - [Natural Language (Apple)](https://developer.apple.com/documentation/naturallanguage?language=objc)

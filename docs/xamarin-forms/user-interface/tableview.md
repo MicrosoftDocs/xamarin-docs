@@ -246,4 +246,4 @@ The following screenshots show the cell after being tapped upon:
 
 ## Related links
 
-- [TableView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+- [TableView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-tableview)

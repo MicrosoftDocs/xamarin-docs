@@ -441,7 +441,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## Hosting the photo cropper canvas view
 
-With those two classes handling the cropping logic, the **Photo Cropping** page in the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application has very little work to do. The XAML file instantiates a `Grid` to host the `PhotoCropperCanvasView` and a **Done** button:
+With those two classes handling the cropping logic, the **Photo Cropping** page in the **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application has very little work to do. The XAML file instantiates a `Grid` to host the `PhotoCropperCanvasView` and a **Done** button:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -530,7 +530,7 @@ You'll see the cropping rectangle restricted to a 16-to-9 aspect ratio character
 
 A Xamarin.Forms version of the famous 14-15 puzzle appeared in Chapter 22 of the book [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) and can be downloaded as [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). However, the puzzle becomes more fun (and often more challenging) when it is based on an image from your own photo library.
 
-This version of the 14-15 puzzle is part of the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application, and consists of a series of pages titled **Photo Puzzle**.
+This version of the 14-15 puzzle is part of the **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application, and consists of a series of pages titled **Photo Puzzle**.
 
 The **PhotoPuzzlePage1.xaml** file consists of a `Button`:
 
@@ -758,5 +758,5 @@ Now you can put them back in the correct order. Any tiles in the same row or col
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

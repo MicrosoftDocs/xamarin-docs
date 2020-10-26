@@ -179,7 +179,7 @@ Probably the easiest way is to install the [mosquitto](https://mosquitto.org) se
 
 1. Create a new Ubuntu Server VM in Azure Portal
 2. Add a new inbound port rule for 1883 (default MQTT port) in the Networking tab
-3. Open the [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (bash mode)
+3. Open the [Cloud Shell](/azure/cloud-shell/overview) (bash mode)
 4. Type `ssh [USERNAME]@[PUBLIC_IP]` using the username you chose in 1) and the public IP shown in your VM overview page
 5. Run `sudo apt-get install mosquitto`, entering the password you chose in 1)
 

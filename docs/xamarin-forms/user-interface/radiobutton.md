@@ -204,6 +204,6 @@ Sometimes an application enters a state where a `RadioButton` being checked is n
 
 ## Related links
 
-- [RadioButton Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+- [RadioButton Demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 - [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

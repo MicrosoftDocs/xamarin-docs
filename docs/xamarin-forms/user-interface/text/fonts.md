@@ -233,13 +233,13 @@ image.Source = new FontImageSource
 };
 ```
 
-The following screenshots, from the [Bindable Layouts](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) sample, show several font icons being displayed by a bindable layout:
+The following screenshots, from the [Bindable Layouts](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) sample, show several font icons being displayed by a bindable layout:
 
 ![Screenshot of font icons being displayed, on iOS and Android](fonts-images/font-image-source.png "Font icons being displayed in an Image view")
 
 ## Related links
 
-- [FontsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
-- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Bindable Layouts (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [FontsSample](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+- [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Bindable Layouts (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Bindable Layouts](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

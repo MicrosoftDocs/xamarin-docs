@@ -289,5 +289,5 @@ This article demonstrated how to use a [`MasterDetailPage`](xref:Xamarin.Forms.M
 ## Related Links
 
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [MasterDetailPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+- [MasterDetailPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 - [MasterDetailPage](xref:Xamarin.Forms.MasterDetailPage)

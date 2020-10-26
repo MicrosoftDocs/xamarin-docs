@@ -12,8 +12,6 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen
 
-![Pre-release API](~/media/shared/preview.png)
-
 Dual-screen devices like the Microsoft Surface Duo facilitate new user-experience possibilities for your applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for dual-screen devices.
 
 ## Get started
@@ -44,7 +42,7 @@ Follow these steps to add dual-screen capabilities to a Xamarin.Forms app:
 
 If the `DualScreenInfo` class or `TwoPaneView` layout aren't working as expected, double-check the set-up instructions on this page. Omitting or misconfiguring the `Init` method or the `ConfigurationChanges` attribute values are common causes of errors.
 
-Review the [Xamarin.Forms dual-screen samples](https://docs.microsoft.com/dual-screen/xamarin/samples) for additional guidance and reference implementation.
+Review the [Xamarin.Forms dual-screen samples](/dual-screen/xamarin/samples) for additional guidance and reference implementation.
 
 ## Next steps
 
@@ -55,4 +53,4 @@ Once you've added the NuGet, add dual-screen features to your app with the follo
 - [DualScreenInfo helper class](dual-screen-info.md) - The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
 - [Dual-screen triggers](triggers.md) - The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers that trigger a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout, or window, changes.
 
-Visit the [dual-screen developer docs](https://docs.microsoft.com/dual-screen/) for more information.
+Visit the [dual-screen developer docs](/dual-screen/) for more information.

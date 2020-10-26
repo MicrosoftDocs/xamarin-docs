@@ -83,4 +83,4 @@ In the basic authentication module used by IIS, users are authenticated against 
 ## Related Links
 
 - [Consume a RESTful web service](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)
+- [HttpClient](/dotnet/api/system.net.http.httpclient)

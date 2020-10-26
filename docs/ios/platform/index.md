@@ -16,6 +16,7 @@ This page lists recent iOS releases as well as highlighting some of the Apple fr
 
 | Release | Description |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Introduction to iOS 14](~/ios/platform/ios14/index.md) | This document describes Xamarin.iOS 14.|
 | [Introduction to iOS 13](~/ios/platform/ios13/index.md) | This document describes Xamarin.iOS 13.|
 | [Introduction to iOS 12](~/ios/platform/introduction-to-ios12/index.md) | This document describes iOS 12 features available for use when building Xamarin.iOS applications.|
 | [Introduction to iOS 11](~/ios/platform/introduction-to-ios11/index.md) | This document describes the new and updated features in iOS 11 and Xcode 9,such as ARKit, Core ML, Core NFC, Drag and Drop, MapKit, PDFKit, SiriKit,and Vision. It links to guides that describe how to use these features with Xamarin.iOS. |

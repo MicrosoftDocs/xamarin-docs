@@ -199,5 +199,5 @@ XAML markup extensions play a vital role in XAML by extending the ability to set
 
 ## Related Links
 
-- [Markup Extensions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [Markup Extensions (sample)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML markup extensions chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

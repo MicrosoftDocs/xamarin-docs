@@ -31,7 +31,7 @@ The following list is required to use AndroidX features in Xamarin-based apps:
 
 ## Get started
 
-You can get started with AndroidX by including any [AndroidX NuGet package](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22) inside of your Android project. Learn more about installing and using a package in [Visual Studio](https://docs.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio) or [Visual Studio for Mac](https://docs.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+You can get started with AndroidX by including any [AndroidX NuGet package](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22) inside of your Android project. Learn more about installing and using a package in [Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio) or [Visual Studio for Mac](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## Behavior changes
 

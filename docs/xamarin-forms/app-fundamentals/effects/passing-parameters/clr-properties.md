@@ -240,4 +240,4 @@ This article has demonstrated using CLR properties to pass parameters to an effe
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+- [Shadow Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

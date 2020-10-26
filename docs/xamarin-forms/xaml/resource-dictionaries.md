@@ -229,7 +229,7 @@ When merged [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) resour
 
 ## Related links
 
-- [Resource Dictionaries (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+- [Resource Dictionaries (sample)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

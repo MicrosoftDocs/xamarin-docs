@@ -73,7 +73,7 @@ This walkthrough describes how to create an application called Phoneword that tr
 
 5. Click **Create** to make the **Solution**.
 
-6. Open the **Main.storyboard** file by double-clicking on it in the **Solution Pad**. This provides a way to visually to create a UI:
+6. Open the **Main.storyboard** file by double-clicking on it in the **Solution Pad**. Ensure you open the file using the Visual Studio iOS Designer (right click the storyboard and select **Open With > iOS Designer**). This provides a way to visually to create a UI:
 
     ![The iOS Designer](hello-ios-quickstart-images/image7new.png)
 
@@ -496,6 +496,6 @@ Now it’s time to dissect the tools and skills shown in this guide in the [Hell
 ## Related Links
 
 - [Xamarin App Icons and Launch Images (sample)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (sample)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

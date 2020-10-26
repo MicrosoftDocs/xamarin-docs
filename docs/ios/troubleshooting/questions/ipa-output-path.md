@@ -41,7 +41,7 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 
 ## Notes
 
-- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described in the [Overriding Predefined Targets](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described in the [Overriding Predefined Targets](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - You could use a **Move** Task rather than a **Copy** Task if you preferred. If you choose that option and you are building on Windows, you will need to use the fully-qualified task name `<Microsoft.Build.Tasks.Move>` to avoid an ambiguity with the XamarinVS build tasks.
 
@@ -76,6 +76,6 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 
 ## Notes
 
-- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. t behaves as described in the [Overriding Predefined Targets](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. t behaves as described in the [Overriding Predefined Targets](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
 - You could use a **Move** Task rather than a **Copy** Task if you preferred. If you choose that option and you are building on Windows, you will need to use the fully-qualified task name `<Microsoft.Build.Tasks.Move>` to avoid an ambiguity with the XamarinVS build tasks.

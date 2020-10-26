@@ -124,5 +124,5 @@ For convenience, the `Brush` class provides a set of commonly used `SolidColorBr
 
 ## Related links
 
-- [BrushesDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 - [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

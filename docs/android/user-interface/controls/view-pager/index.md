@@ -46,14 +46,14 @@ details of connecting `Fragment`s to data.
 This guide demonstrates both approaches: 
 
 - In [Viewpager with Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md), a
-    [TreePager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) app is 
+    [TreePager](/samples/xamarin/monodroid-samples/userinterface-treepager) app is 
     developed to demonstrate how to use `ViewPager` to display views
     of a tree catalog (an image gallery of deciduous and evergreen trees). 
     `PagerTabStrip`  and `PagerTitleStrip` are used to display titles 
     that help with page navigation.
 
 - In [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), a
-    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 
+    slightly more complex [FlashCardPager](/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 
     app is developed to demonstrate how to use `ViewPager` 
     with `Fragment`s to build an app that presents math 
     problems as flash cards and responds to user input. 
@@ -63,7 +63,7 @@ This guide demonstrates both approaches:
 To use `ViewPager` in your app project, you must install the 
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 package. For more information about installing NuGet packages, see
-[Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+[Walkthrough: Including a NuGet in your project](/visualstudio/mac/nuget-walkthrough). 
 
 ## Architecture
 
@@ -125,5 +125,5 @@ navigation.
 
 ## Related Links
 
-- [TreePager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
-- [FlashCardPager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
+- [TreePager (sample)](/samples/xamarin/monodroid-samples/userinterface-treepager)
+- [FlashCardPager (sample)](/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

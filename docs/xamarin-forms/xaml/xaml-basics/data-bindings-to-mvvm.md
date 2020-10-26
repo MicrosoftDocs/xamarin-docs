@@ -578,7 +578,7 @@ void Download ()
 
 ## Implementing a Navigation Menu
 
-The [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
+The [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
 
 ```csharp
 public class PageDataViewModel
@@ -707,7 +707,7 @@ XAML is a powerful tool for defining user interfaces in Xamarin.Forms applicatio
 
 ## Related Links
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

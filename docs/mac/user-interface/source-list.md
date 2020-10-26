@@ -619,7 +619,7 @@ This article has taken a detailed look at working with Source Lists in a Xamarin
 
 ## Related Links
 
-- [MacOutlines (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
+- [MacOutlines (sample)](/samples/xamarin/mac-samples/macoutlines)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Table Views](~/mac/user-interface/table-view.md)
 - [Outline Views](~/mac/user-interface/outline-view.md)

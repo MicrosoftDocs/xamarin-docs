@@ -188,7 +188,7 @@ For more information about the `ICommand` Interface and bindings, see [Xamarin.F
 
 ## Related links
 
-* [SearchBar Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+* [SearchBar Demos](/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 * [Xamarin.Forms Text controls](~/xamarin-forms/user-interface/text/index.md)
 * [Fonts in Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
 * [Xamarin.Forms data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

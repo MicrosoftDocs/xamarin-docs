@@ -27,7 +27,7 @@ The quickstart walks through how to style a cross-platform Xamarin.Forms applica
 
 ### Prerequisites
 
-You should successfully complete the [previous quickstart](database.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](database.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -319,5 +319,5 @@ To learn more about the fundamentals of application development using Xamarin.Fo
 
 ## Related links
 
-- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [Notes (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

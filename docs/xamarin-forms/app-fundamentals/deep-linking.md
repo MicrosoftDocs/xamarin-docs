@@ -244,7 +244,7 @@ This article explained how to use application indexing and deep linking to make 
 
 ## Related Links
 
-- [Deep Linking (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+- [Deep Linking (sample)](/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [iOS Search APIs](~/ios/platform/search/index.md)
 - [App-Linking in Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

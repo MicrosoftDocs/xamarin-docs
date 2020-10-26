@@ -76,7 +76,7 @@ landingContent:
           - text: REST
             url: authentication/rest.md
           - text: Identity provider
-            url: authentication/oauth.md
+            url: ../../essentials/web-authenticator.md
           - text: Azure Active Directory B2C
             url: authentication/azure-ad-b2c.md
           - text: Azure Cosmos DB document database authentication

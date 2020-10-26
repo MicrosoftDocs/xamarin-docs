@@ -180,4 +180,4 @@ When user interface objects are added programmatically to a `View` or `ViewContr
 
 ## Related Links
 
-- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controls (sample)](/samples/xamarin/ios-samples/controls)

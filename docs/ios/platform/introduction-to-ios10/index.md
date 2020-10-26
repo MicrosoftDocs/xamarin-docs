@@ -227,4 +227,4 @@ See Apple's [iOS 9.3 to iOS 10.0 API Differences](https://developer.apple.com/li
 
 ## Related Links
 
-- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

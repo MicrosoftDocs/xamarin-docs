@@ -377,6 +377,6 @@ how to load a `UITabBarController` at runtime when it is not the `RootViewContro
 
 ## Related links
 
-- [Creating Tabbed Applications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/creatingtabbedapplications)
+- [Creating Tabbed Applications (sample)](/samples/xamarin/ios-samples/creatingtabbedapplications)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [UITabBarController Class Reference](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

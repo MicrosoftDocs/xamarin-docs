@@ -118,4 +118,4 @@ Layout compression removes specified layouts from the visual tree in an attempt 
 
 - [Creating a Custom Layout](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+- [LayoutCompression (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

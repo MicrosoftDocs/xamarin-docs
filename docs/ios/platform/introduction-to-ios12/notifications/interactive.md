@@ -17,7 +17,7 @@ contain interactive elements such as buttons and sliders.
 
 ## Sample App: RedGreenNotifications
 
-The [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+The [RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 sample app contains a notification content extension with an interactive
 user interface.
 
@@ -135,7 +135,7 @@ the image displayed in the notification's interface:
 
 ## Related links
 
-- [Sample app – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Sample app – RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [User Notifications framework in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [What's New in User Notifications (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

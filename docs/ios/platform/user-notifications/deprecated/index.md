@@ -48,4 +48,4 @@ This section will cover push notifications in iOS. It introduces the Apple Push
 
 ## Related Links
 
-- [Notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
+- [Notifications (sample)](/samples/xamarin/ios-samples/notifications)

@@ -38,7 +38,7 @@ This article contains several examples of using this matrix transform with tiled
 
 ## Exploring the tile modes
 
-The first program in the **Bitmap Tiling** section of the **Shaders and other Effects** page of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample demonstrates the effects of the two `SKShaderTileMode` arguments. The **Bitmap Tile Flip Modes** XAML file instantiates an `SKCanvasView` and two `Picker` views that allow you to select an `SKShaderTilerMode` value for horizontal and vertical tiling. Notice that an array of the `SKShaderTileMode` members is defined in the `Resources` section:
+The first program in the **Bitmap Tiling** section of the **Shaders and other Effects** page of the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample demonstrates the effects of the two `SKShaderTileMode` arguments. The **Bitmap Tile Flip Modes** XAML file instantiates an `SKCanvasView` and two `Picker` views that allow you to select an `SKShaderTilerMode` value for horizontal and vertical tiling. Notice that an array of the `SKShaderTileMode` members is defined in the `Resources` section:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -296,7 +296,7 @@ Notice that the `SKShaderTileMode` arguments to `CreateBitmap` are both `Mirror`
 
 Some work is required to get a suitable bitmap for the tile. This one doesn't work very well because the darker brick stands out too much. It appears regularly within the repeated images, revealing the fact that this brick wall was constructed from a smaller bitmap.
 
-The **Media** folder of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample also includes this image of a stone wall:
+The **Media** folder of the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample also includes this image of a stone wall:
 
 ![Stone Wall Tile](bitmap-tiling-images/StoneWallTile.jpg "Stone Wall Tile")
 
@@ -362,7 +362,7 @@ If the transform is applied to the individual tile, then each repeated image of 
 
 In the section [**Tile alignment**](#tile-alignment), you'll see an example a translate transform applied to the shader.
 
-The standalone [**Cat Clock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) sample (not part of **SkiaSharpFormsDemos**) simulates a wood-grain background using bitmap tiling based on this 240-pixel square bitmap:
+The standalone [**Cat Clock**](/samples/xamarin/xamarin-forms-samples/catclock) sample (not part of **SkiaSharpFormsDemos**) simulates a wood-grain background using bitmap tiling based on this 240-pixel square bitmap:
 
 ![Wood Grain](bitmap-tiling-images/WoodGrain.png "Wood Grain")
 
@@ -775,6 +775,6 @@ The `SKShaderTileMode.Mirror` options ensure that the arms of the X in each bitm
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [CatClock (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (sample)](/samples/xamarin/xamarin-forms-samples/catclock)

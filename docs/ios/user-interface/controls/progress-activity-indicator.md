@@ -86,7 +86,7 @@ The progress can be adjusted by using the `SetProgress` method and passing a boo
 ProgressBar.SetProgress(1.0f, true);
 ```
 
-For more information on using the progress bar, refer to the [Reporting Progress](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) recipe, and the [UICatalog tvOS sample](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog).
+For more information on using the progress bar, refer to the [Reporting Progress](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) recipe, and the [UICatalog tvOS sample](/samples/xamarin/ios-samples/tvos-uicatalog).
 
 ### Managing Progress Bar Appearance
 

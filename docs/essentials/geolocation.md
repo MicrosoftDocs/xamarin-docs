@@ -113,31 +113,44 @@ The altitude isn't always available. If it is not available, the `Altitude` prop
 To query the current device's [location](xref:Xamarin.Essentials.Location) coordinates, the `GetLocationAsync` can be used. It is best to pass in a full `GeolocationRequest` and `CancellationToken` since it may take some time to get the device's location.
 
 ```csharp
-try
-{
-    var request = new GeolocationRequest(GeolocationAccuracy.Medium);
-    var location = await Geolocation.GetLocationAsync(request);
+CancellationTokenSource cts;
 
-    if (location != null)
+async Task GetCurrentLocation()
+{
+    try
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+        var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+        cts = new CancellationTokenSource();
+        var location = await Geolocation.GetLocationAsync(request, cts.Token);
+
+        if (location != null)
+        {
+            Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+        }
+    }
+    catch (FeatureNotSupportedException fnsEx)
+    {
+        // Handle not supported on device exception
+    }
+    catch (FeatureNotEnabledException fneEx)
+    {
+        // Handle not enabled on device exception
+    }
+    catch (PermissionException pEx)
+    {
+        // Handle permission exception
+    }
+    catch (Exception ex)
+    {
+        // Unable to get location
     }
 }
-catch (FeatureNotSupportedException fnsEx)
+
+protected override void OnDisappearing()
 {
-    // Handle not supported on device exception
-}
-catch (FeatureNotEnabledException fneEx)
-{
-    // Handle not enabled on device exception
-}
-catch (PermissionException pEx)
-{
-    // Handle permission exception
-}
-catch (Exception ex)
-{
-    // Unable to get location
+    if (cts != null && !cts.IsCancellationRequested)
+        cts.Cancel();
+    base.OnDisappearing();
 }
 ```
 
@@ -231,7 +244,7 @@ On iOS, [altitude](https://developer.apple.com/documentation/corelocation/clloca
 
 # [UWP](#tab/uwp)
 
-On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
+On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
 
 -----
 

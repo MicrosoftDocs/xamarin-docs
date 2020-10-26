@@ -50,7 +50,7 @@ The first two arguments specify the center of a circle and a radius. The gradien
 
 If you use `CreateRadialGradient` to fill a circle, you can set the center of the gradient to the center of the circle, and the radius of the gradient to the radius of the circle. In that case, the `SKShaderTileMode` argument has no effect on the rendering of the gradient. But if the area filled by the gradient is larger than the circle defined by the gradient, then the `SKShaderTileMode` argument has a profound effect on what happens outside the circle.
 
-The effect of `SKShaderMode` is demonstrated in the **Radial Gradient** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The XAML file for this page instantiates a `Picker` that allows you to select one of the three members of the `SKShaderTileMode` enumeration:
+The effect of `SKShaderMode` is demonstrated in the **Radial Gradient** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The XAML file for this page instantiates a `Picker` that allows you to select one of the three members of the `SKShaderTileMode` enumeration:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -615,5 +615,5 @@ The two circles have centers of `offCenter` and `center`. The circle centered at
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

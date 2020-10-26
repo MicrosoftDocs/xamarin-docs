@@ -19,7 +19,7 @@ Localization is the process of adapting an application to meet the specific lang
 
 ![Screenshots of the localization application on iOS and Android](text-images/localizationdemo-screenshots.png)
 
-The .NET framework includes a built-in mechanism for localizing applications using [Resx resource files](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps). A resource file stores text and other content as name/value pairs that allow the application to retrieve content for a provided key. Resource files allow localized content to be separated from application code.
+The .NET framework includes a built-in mechanism for localizing applications using [Resx resource files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). A resource file stores text and other content as name/value pairs that allow the application to retrieve content for a provided key. Resource files allow localized content to be separated from application code.
 
 Using resource files to localize Xamarin.Forms applications requires you to perform the following steps:
 
@@ -146,7 +146,7 @@ using System.Resources;
 
 Once a default resource file has been created and the default culture specified in the **AssemblyInfo.cs** file, the application can retrieve localized strings at runtime.
 
-For more information about resource files, see [Create resource files for .NET apps](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+For more information about resource files, see [Create resource files for .NET apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 ## Specify supported languages on iOS
 
@@ -299,7 +299,7 @@ Image flag = new Image
 
 ## Localize the application name
 
-The application name is specified per-platform and does not use Resx resource files. To localize the application name on Android, see [Localize app name on Android](~/android/app-fundamentals/localization.md#stringsxml-file-format). To localize the application name on iOS, see [Localize app name on iOS](~/ios/app-fundamentals/localization/index.md#app-name). To localize the application name on UWP, see [Localize strings in the UWP package manifest](https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest).
+The application name is specified per-platform and does not use Resx resource files. To localize the application name on Android, see [Localize app name on Android](~/android/app-fundamentals/localization.md#stringsxml-file-format). To localize the application name on iOS, see [Localize app name on iOS](~/ios/app-fundamentals/localization/index.md#app-name). To localize the application name on UWP, see [Localize strings in the UWP package manifest](/windows/uwp/app-resources/localize-strings-ui-manifest).
 
 ## Test localization
 
@@ -311,11 +311,11 @@ On Android, the language settings are detected and cached when the application s
 
 ## Related links
 
-- [Localization Sample Project](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
-- [Create resource files for .NET apps](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
+- [Localization Sample Project](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [Create resource files for .NET apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
 - [Cross-Platform Localization](~/cross-platform/app-fundamentals/localization.md)
-- [Using the CultureInfo class (MSDN)](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo)
+- [Using the CultureInfo class (MSDN)](/dotnet/api/system.globalization.cultureinfo)
 - [Android Localization](~/android/app-fundamentals/localization.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)
 - [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/)
-- [Locating and Using Resources for a Specific Culture (MSDN)](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [Locating and Using Resources for a Specific Culture (MSDN)](/previous-versions/visualstudio/visual-studio-2008/s9ckwb4b(v=vs.90))

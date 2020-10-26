@@ -393,4 +393,4 @@ This article has presented the new Speech API and showed how to implement it in 
 
 ## Related Links
 
-- [SpeakToMe (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-speaktome)
+- [SpeakToMe (sample)](/samples/xamarin/ios-samples/ios10-speaktome)

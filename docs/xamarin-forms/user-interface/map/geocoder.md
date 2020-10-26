@@ -53,6 +53,6 @@ The [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddress
 
 ## Related links
 
-- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps Sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Forms Map Position and Distance](position-distance.md)
 - [Geocoder API](xref:Xamarin.Forms.Maps.Geocoder)

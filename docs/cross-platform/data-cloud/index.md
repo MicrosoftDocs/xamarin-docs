@@ -16,7 +16,7 @@ ms.date: 10/09/2017
 
 ## Connected Services in Visual Studio for Mac
 
-The new [Connected Services](connected-services.md) feature of Visual Studio for Mac
+The new [Connected Services](/visualstudio/mac/connected-services) feature of Visual Studio for Mac
   helps developers to quickly and easily add Azure functionality to
   mobile applications from within the IDE. Currently available for testing in the Alpha channel.
 

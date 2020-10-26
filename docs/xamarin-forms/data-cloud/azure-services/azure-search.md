@@ -275,6 +275,6 @@ This article demonstrated how to use the Microsoft Azure Search Library to integ
 
 ## Related Links
 
-- [Azure Search (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+- [Azure Search (sample)](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Azure Search Documentation](/azure/search/)
 - [Microsoft Azure Search Library](https://www.nuget.org/packages/Microsoft.Azure.Search/)

@@ -97,7 +97,7 @@ This section covers the in-depth details of [Working with Storyboards](~/mac/pla
 
 ## Complex Storyboard Example
 
-For an example of a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
+For an example of a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
@@ -109,7 +109,7 @@ This article has taken a quick look at working with Storyboards in a Xamarin.Mac
 
 ## Related Links
 
-- [Hello, Mac (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac (sample)](/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

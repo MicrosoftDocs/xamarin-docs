@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-When the `Source` property of the `VideoPlayer` view is set to a new video file, the existing video stops playing and the new video begins. This is demonstrated by the **Select Web Video** page of the [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) sample. The page includes a `ListView` with the titles of the three videos referenced from the **App.xaml** file:
+When the `Source` property of the `VideoPlayer` view is set to a new video file, the existing video stops playing and the new video begins. This is demonstrated by the **Select Web Video** page of the [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) sample. The page includes a `ListView` with the titles of the three videos referenced from the **App.xaml** file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -137,4 +137,4 @@ As with the first **Select Web Video** page, no item is initially selected from 
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Video Player Demos (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

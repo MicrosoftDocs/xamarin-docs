@@ -70,7 +70,6 @@ You can also use the `HOTRESTART` preprocessor symbol to prevent certain code fr
 
 ## Troubleshoot
 
-- The setup wizard will not detect iTunes if it was installed via the Microsoft Store. You will need to uninstall that version first then download the [installer from Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - There is a known issue where having device-specific builds enabled prevents the app from entering debug mode. Workaround is to disable this under **Properties > iOS Build** and retry debugging. This will be fixed in a future release.
 - If the app is already present on the device, trying to deploy with Hot Restart may fail with a `AMDeviceStartHouseArrestService` error. The workaround is to uninstall the app on the device then deploy again.
 - Entering an Apple ID that is not part of the Apple Developer Program might result in the following error: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`. You must have a valid Apple Developer account to use Xamarin Hot Restart on iOS devices. 

@@ -412,5 +412,5 @@ For more information about back navigation support on UWP, see [Navigation histo
 
 ## Related links
 
-- [NativeForms (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+- [NativeForms (sample)](/samples/xamarin/xamarin-forms-samples/native2forms)
 - [Native Views](~/xamarin-forms/platform/native-views/index.md)

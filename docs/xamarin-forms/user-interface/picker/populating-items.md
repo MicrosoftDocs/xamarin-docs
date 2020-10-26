@@ -79,5 +79,5 @@ This method obtains the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
 
 ## Related links
 
-- [Picker Demo (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Picker Demo (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [Picker](xref:Xamarin.Forms.Picker)

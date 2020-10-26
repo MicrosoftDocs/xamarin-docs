@@ -83,4 +83,4 @@ In this article, we will explore the web views provided by Apple–`WKWebview` a
 
 ## Related Links
 
-- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controls (sample)](/samples/xamarin/ios-samples/controls)

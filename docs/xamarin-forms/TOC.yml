@@ -836,6 +836,8 @@
           href: ~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms
         - name: Accelerometer
           href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
+        - name: App Actions
+          href: ~/essentials/app-actions.md?context=xamarin/xamarin-forms
         - name: App Information
           href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
         - name: App Theme
@@ -852,6 +854,8 @@
           href: ~/essentials/compass.md?context=xamarin/xamarin-forms
         - name: Connectivity
           href: ~/essentials/connectivity.md?context=xamarin/xamarin-forms
+        - name: Contacts
+          href: ~/essentials/contacts.md?context=xamarin/xamarin-forms
         - name: Detect Shake
           href: ~/essentials/detect-shake.md?context=xamarin/xamarin-forms
         - name: Device Display Information
@@ -860,6 +864,8 @@
           href: ~/essentials/device-information.md?context=xamarin/xamarin-forms
         - name: Email
           href: ~/essentials/email.md?context=xamarin/xamarin-forms
+        - name: File Picker
+          href: ~/essentials/file-picker.md?context=xamarin/xamarin-forms
         - name: File System Helpers
           href: ~/essentials/file-system-helpers.md?context=xamarin/xamarin-forms
         - name: Flashlight
@@ -870,6 +876,8 @@
           href: ~/essentials/geolocation.md?context=xamarin/xamarin-forms
         - name: Gyroscope
           href: ~/essentials/gyroscope.md?context=xamarin/xamarin-forms
+        - name: Haptic Feedback
+          href: ~/essentials/haptic-feedback.md?context=xamarin/xamarin-forms
         - name: Launcher
           href: ~/essentials/launcher.md?context=xamarin/xamarin-forms
         - name: Magnetometer
@@ -878,6 +886,8 @@
           href: ~/essentials/main-thread.md?context=xamarin/xamarin-forms
         - name: Maps
           href: ~/essentials/maps.md?context=xamarin/xamarin-forms
+        - name: Media Picker
+          href: ~/essentials/media-picker.md?context=xamarin/xamarin-forms
         - name: Open Browser
           href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
         - name: Orientation Sensor
@@ -890,6 +900,8 @@
           href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
+        - name: Screenshot
+          href: ~/essentials/screenshot.md?context=xamarin/xamarin-forms
         - name: Secure Storage
           href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
         - name: Share
@@ -907,7 +919,7 @@
         - name: Web Authenticator
           href: ~/essentials/web-authenticator.md?context=xamarin/xamarin-forms
         - name: Xamarin.Essentials release notes
-          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
+          href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
     - name: Data & Azure Cloud Services
@@ -1021,7 +1033,7 @@
             - name: "Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?"
               href: troubleshooting/questions/maps-compiletodalvik-error.md
     - name: Release notes
-      href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+      href: /xamarin/xamarin-forms/release-notes/
     - name: Samples
       href: samples/index.md
     - name: Creating Mobile Apps with Xamarin.Forms Book

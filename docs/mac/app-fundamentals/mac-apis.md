@@ -28,8 +28,8 @@ The declaration can be read left to right:
 - The `-` prefix means it is an instance (non-static) method. + means it is a class (static) method
 - `(BOOL)` is the return type (bool in C#)
 - `canDragRowsWithIndexes` is the first part of the name.
-- `(NSIndexSet *)rowIndexes` is the first param and with it’s type. The first parameter is in the format: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` is the second param and its type. Every parameter after the first is the format: `selectorPart:(Type) pararmName`
+- `(NSIndexSet *)rowIndexes` is the first param and with it’s type. The first parameter is in the format: `(Type) paramName`
+- `atPoint:(NSPoint)mouseDownPoint` is the second param and its type. Every parameter after the first is the format: `selectorPart:(Type) paramName`
 - The full name of this message selector is: `canDragRowsWithIndexes:atPoint:`. Note the `:` at the end - it is important.
 - The actual Xamarin.Mac C# binding is: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
@@ -40,7 +40,7 @@ This selector invocation can be read the same way:
 ```
 
 - The instance `v` is having its `canDragRowsWithIndexes:atPoint` selector called with two parameters, `set` and `point`, passed in.
-- In C#, The method invocation looks like this: `x.CanDragRows (set, point);`
+- In C#, The method invocation looks like this: `v.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 
@@ -61,7 +61,7 @@ Now that you’ve found the Objective-C selector you need to invoke, the next st
     - Right-click `NSTableView`, go to declaration to Assembly Browser
     - Search for the selector in question
 
-3. You can use the [Xamarin.Mac API online documentation](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+3. You can use the [Xamarin.Mac API online documentation](/dotnet/api/?view=xamarinmac-3.0) .
 
 4. Miguel provides a "Rosetta Stone" view of the Xamarin.Mac APIs [here](https://tirania.org/tmp/rosetta.html) that you can search through for a given API. If your API is not AppKit or macOS specific, you may find it there.
 

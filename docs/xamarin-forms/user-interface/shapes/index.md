@@ -173,6 +173,6 @@ In this example, the dark blue polyline has rounded joins at its vertices:
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)
 - [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

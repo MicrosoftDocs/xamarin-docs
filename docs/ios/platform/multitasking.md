@@ -95,7 +95,7 @@ As with Slide Over and Split View, the user has full control over watching a vid
 
 For your app to display PIP video at the user's request, you will need to be using either _AVKit_ or the _AV Foundation APIs_. The Media Player framework has been depreciated in iOS 9 and does not support PIP.
 
-Picture in Picture is available only on an iPad Pro, iPad Air, iPad Air 2, iPad Mini 2, iPad Mini 3, or iPad Mini 4. For more information, please see our [PictureInPicture Sample App](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) and  Apple's [Picture in Picture Quick Start](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentation.
+Picture in Picture is available only on an iPad Pro, iPad Air, iPad Air 2, iPad Mini 2, iPad Mini 3, or iPad Mini 4. For more information, please see our [PictureInPicture Sample App](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) and  Apple's [Picture in Picture Quick Start](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentation.
 
 <a name="Supporting-Multitasking-in-your-App"></a>
 
@@ -125,7 +125,7 @@ On iPads that support Slide Over and Split View, you can end up with the followi
 | **Landscape** |75% of Screen<br />Regular Horizontal<br />Regular Vertical|25% of Screen<br />Compact Horizontal<br />Regular Vertical|
 | **Landscape** |50% of Screen<br />Compact Horizontal<br />Regular Vertical|50% of Screen<br />Compact Horizontal<br />Regular Vertical|
 
-In the example [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) app, if it is run full screen on an iPad in the landscape mode, it will present both the list and the detail view at the same time:
+In the example [MuliTask](/samples/xamarin/ios-samples/ios9-multitask) app, if it is run full screen on an iPad in the landscape mode, it will present both the list and the detail view at the same time:
 
 [![The list and the detail view presented at the same time](multitasking-images/sizeclasses03.png)](multitasking-images/sizeclasses03.png#lightbox)
 
@@ -191,7 +191,7 @@ If we run this app on an iPad with an hardware keyboard attached and the user ty
 
 [![The keyboard shortcuts popup](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
-Please see the sample [MultiTask app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) for an example implementation.
+Please see the sample [MultiTask app](/samples/xamarin/ios-samples/ios9-multitask) for an example implementation.
 
 <a name="Resource-Management-Considerations"></a>
 
@@ -250,8 +250,8 @@ This article has covered the steps required to ensure that a Xamarin.iOS app wil
 
 ## Related Links
 
-- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [MultiTask (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
+- [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [MultiTask (sample)](/samples/xamarin/ios-samples/ios9-multitask)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

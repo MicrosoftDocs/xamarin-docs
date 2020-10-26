@@ -66,4 +66,4 @@ This article has covered the RequestReview method that Apple added to iOS 10 and
 
 ## Related Links
 
-- [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [iOSTenThree Sample](/samples/xamarin/ios-samples/ios10-iostenthree/)

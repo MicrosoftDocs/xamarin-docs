@@ -167,4 +167,4 @@ This article has covered adding alternate app icons to a Xamarin.iOS project and
 
 ## Related Links
 
-- [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [iOSTenThree Sample](/samples/xamarin/ios-samples/ios10-iostenthree/)

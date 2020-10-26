@@ -333,7 +333,7 @@ An application may enter a state where expanding an `Expander` is not a valid op
 
 ## Related links
 
-- [Expander Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+- [Expander Demos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 - [Xamarin.Forms Easing Functions](~/xamarin-forms/user-interface/animation/easing.md)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Bindable Layouts](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

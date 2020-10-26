@@ -30,8 +30,8 @@ In order to complete this walk-through, you need:
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started#installing-objective-sharpie)
-- [AppCenter CLI](https://docs.microsoft.com/appcenter/test-cloud/) (optional)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md#installing-objective-sharpie)
+- [AppCenter CLI](/appcenter/test-cloud/) (optional)
 
 ## Build a native library
 
@@ -198,9 +198,9 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 ## Prepare metadata
 
-At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool and the generated header file. Use Sharpie to generate the metadata:
+At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) tool and the generated header file. Use Sharpie to generate the metadata:
 
-1. Download the latest [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
+1. Download the latest [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
 
     ```bash
     sharpie -v
@@ -294,7 +294,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
         The first two options (the `-L ...` ones) tell the native compiler where to find the swift libraries. The native compiler will ignore libraries that don't have the correct architecture, which means that it's possible to pass the location for both simulator libraries and device libraries at the same time, so that it works for both simulator and device builds (these paths are only correct for iOS; for tvOS and watchOS they have to be updated). One downside is that this approach requires that the correct Xcode is in /Application/Xcode.app, if the consumer of the binding library has Xcode in a different location, it won't work. The alternative solution is to add these options in the additional mtouch arguments in the executable project's iOS Build options (`--gcc_flags -L... -L...`). The third option makes the native linker store the location of the swift libraries in the executable, so that the OS can find them.
 
-1. The final action is to build the library and make sure you don't have any compilation errors. You will often find that bindings metadata produced by Objective Sharpie will be annotated with the `[Verify]` attribute. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original Objective-C declaration (which will be provided in a comment above the bound declaration). You can learn more about members marked with the attribute by [the following link](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Once the project is built, it can be consumed by a Xamarin.iOS application.
+1. The final action is to build the library and make sure you don't have any compilation errors. You will often find that bindings metadata produced by Objective Sharpie will be annotated with the `[Verify]` attribute. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original Objective-C declaration (which will be provided in a comment above the bound declaration). You can learn more about members marked with the attribute by [the following link](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md). Once the project is built, it can be consumed by a Xamarin.iOS application.
 
 ## Consume the binding library
 
@@ -361,7 +361,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         ![visual studio uitest new](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
-        > You can find more information on how to create a UITest project and configure it for your app by [the following link](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+        > You can find more information on how to create a UITest project and configure it for your app by [the following link](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
     - Create a basic test to run the app and use some of the Swift SDK features. This test activates the app, tries to log in and then presses the cancel button:
 
@@ -385,14 +385,14 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         ```
 
         > [!TIP]
-        > Read more about UITests framework and UI Automation by [the following link](https://docs.microsoft.com/appcenter/test-cloud/uitest/).
+        > Read more about UITests framework and UI Automation by [the following link](/appcenter/test-cloud/uitest/).
 
     - Create an iOS app in app center, create a new test run with a new device set to run the test:
 
         ![visual studio app center new](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
-        > Learn more about AppCenter Test Cloud by [the following link](https://docs.microsoft.com/appcenter/test-cloud/).
+        > Learn more about AppCenter Test Cloud by [the following link](/appcenter/test-cloud/).
 
     - Install the appcenter CLI
 
@@ -423,13 +423,13 @@ You have developed a basic Xamarin.iOS application that uses a native Swift fram
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/)
-- [Sharpie Metadata Verification](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)
-- [Binding Objective-C Framework](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md)
+- [Sharpie Metadata Verification](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)
+- [Binding Objective-C Framework](../binding-objective-c/walkthrough.md)
 - [Gigya iOS SDK (Swift framework)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Swift 5.1 ABI Stability](https://swift.org/blog/swift-5-1-released/)
 - [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Xamarin UITest automation](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
-- [Xamarin.iOS UITest configuration](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [AppCenter Test Cloud](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Xamarin UITest automation](/appcenter/test-cloud/uitest/)
+- [Xamarin.iOS UITest configuration](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [AppCenter Test Cloud](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Sample project repository](https://github.com/alexeystrakh/xamarin-binding-swift-framework)

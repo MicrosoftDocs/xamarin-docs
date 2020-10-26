@@ -13,15 +13,15 @@ ms.date: 12/26/2019
 
 Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
 
-[All Xamarin samples](https://docs.microsoft.com/samples/browse/?products=xamarin)
+[All Xamarin samples](/samples/browse/?products=xamarin)
 
 ## Get started
 
 :::row:::
     :::column:::
-[![Todo sample](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+[![Todo sample](images/todo.png)](/samples/xamarin/xamarin-forms-samples/todo/)
 
-### [Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+### [Todo](/samples/xamarin/xamarin-forms-samples/todo/)
 
 This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database, built with Xamarin.Forms.
     :::column-end:::
@@ -82,4 +82,4 @@ Enterprise architecture guidance for building apps using containers on Azure.
 
 ## All samples
 
-For the complete set of Xamarin cross-platform sample apps and code demos, see [All Xamarin samples](https://docs.microsoft.com/samples/browse/?products=xamarin).
+For the complete set of Xamarin cross-platform sample apps and code demos, see [All Xamarin samples](/samples/browse/?products=xamarin).

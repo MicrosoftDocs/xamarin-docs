@@ -50,8 +50,8 @@ If you make a change that XAML Hot Reload can't reload, it will show you an erro
 ## Reload on multiple platforms at once
 
 XAML Hot Reload supports simultaneous debugging in Visual Studio and Visual Studio for Mac. You can deploy an Android and an iOS target at the same time to see your changes reflected on both platforms at once. To debug on multiple platforms, see:
-* **Windows** [How To: Set multiple startup projects](https://docs.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
-* **Mac** [Set multiple startup projects](https://docs.microsoft.com/visualstudio/mac/set-startup-projects?view=vsmac-2019)
+* **Windows** [How To: Set multiple startup projects](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
+* **Mac** [Set multiple startup projects](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
 ## Known limitations
 

@@ -150,5 +150,5 @@ This article explained the effect that each [`LayoutOptions`](xref:Xamarin.Forms
 
 ## Related Links
 
-- [LayoutOptions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+- [LayoutOptions (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

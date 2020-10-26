@@ -121,6 +121,6 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 
 ## Related links
 
-* [ToolbarItem Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+* [ToolbarItem Demos](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
 * [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

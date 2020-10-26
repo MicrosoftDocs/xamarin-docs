@@ -47,7 +47,7 @@ customer demand for mobile access, and reduce cross-platform
 complexity. This document outlines key guidelines to realizing these
 advantages for utility and productivity applications.
 
-### [Introducing Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/)
+### [Introducing Visual Studio for Mac](/visualstudio/mac/)
 
 Learn more about Visual Studio for Mac, the Integrated Development Environment (IDE) for macOS.
 

@@ -16,8 +16,8 @@ ms.date: 08/01/2018
 > diagnostic information along with your bug report to help resolve the issue.
 >
 > There are detailed instructions for
-> [Visual Studio 2019 or Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
-> and [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+> [Visual Studio 2019 or Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
+> and [Visual Studio for Mac](/visualstudio/mac/report-a-problem).
 >
 > You can search for existing reports on the [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) website.
 

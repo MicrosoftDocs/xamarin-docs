@@ -21,7 +21,7 @@ the Java APIs from C# or other .NET languages.
 
 These are some of our design principles for the Xamarin.Android binding
 
-- Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Conform to the  [.NET Framework Design Guidelines](/dotnet/standard/design-guidelines/).
 
 - Allow developers to subclass Java classes.
 

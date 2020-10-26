@@ -35,7 +35,7 @@ For a complete list of changes Apple introduced in tvOS 11, see the [What's New 
 
 ## Related Links
 
-- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Introduction to tvOS](~/ios/tvos/index.md)
 - [What's New in tvOS 11 (Apple Developer Guide)](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)
 - [What's New in tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/209/)

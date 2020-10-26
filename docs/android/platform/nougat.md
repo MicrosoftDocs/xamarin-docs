@@ -229,7 +229,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-The [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
+The [MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
 sample app includes C# code that demonstrates how to take advantage of
 multiple window user interfaces with your app.
 
@@ -295,7 +295,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-The [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
+The [Messaging Service](/samples/xamarin/monodroid-samples/android-n-messagingservice)
 sample app includes C# code that demonstrates how to extend
 notifications with a `RemoteInput` object. For more information about
 adding inline reply actions to your app for Android 7.0 or later, see
@@ -365,27 +365,27 @@ topic.
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Nougat features:
 
-- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
+- [MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
     demonstrates the use of the multi-window API available in Android
     Nougat. You can switch the sample app into multi-windows mode to see how
     it affects the app's lifecycle and behavior.
 
-- [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
+- [Messaging Service](/samples/xamarin/monodroid-samples/android-n-messagingservice)
     is a simple service that sends notifications using the `NotificationCompatManager`. It also
     extends the notification with a `RemoteInput` object to allow Android Nougat devices to reply via
     text directly from the notification without having to open an app.
 
-- [Active Notifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications)
+- [Active Notifications](/samples/xamarin/monodroid-samples/android-n-activenotifications)
     demonstrates how to use the `NotificationManager` API to tell you
     how many notifications your application is currently displaying.
 
-- [Scoped Directory Access](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)
+- [Scoped Directory Access](/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)
     Demonstrates how to use the scoped directory access API to easily
     access specific directories. This serves as an alternative to
     having to define `READ_EXTERNAL_STORAGE` or `WRITE_EXTERNAL_STORAGE`
     permissions in your manifest.
 
-- [Direct Boot](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot)
+- [Direct Boot](/samples/xamarin/monodroid-samples/android-n-directboot)
     Illustrates how to store data in a device-encrypted storage which is always available
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.

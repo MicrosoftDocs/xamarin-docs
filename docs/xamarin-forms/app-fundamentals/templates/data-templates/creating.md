@@ -282,5 +282,5 @@ This article has explained how to create data templates, inline, from a custom t
 ## Related Links
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Data Templates (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+- [Data Templates (sample)](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

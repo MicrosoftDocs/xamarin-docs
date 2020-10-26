@@ -16,7 +16,7 @@ ms.date: 03/21/2017
 ### [Can I use a Mac VM with Xamarin?](mac-vm.md)
 Yes, but only on Mac hardware.
 
-### [How can I downgrade Xcode?](downgrade-xcode.md)
+### [How can I downgrade Xcode?](./previous-xcode.md)
 This guide provides links to access previous versions of Xcode as well as the latest version.
 
 ### [Where can I set my iOS SDK Locations?](ios-sdk.md)

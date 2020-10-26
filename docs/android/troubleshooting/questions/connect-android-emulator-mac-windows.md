@@ -14,6 +14,9 @@ ms.date: 06/21/2018
 To connect to the Android Emulator running on a Mac from a Windows
 virtual machine, use the following steps:
 
+> [!NOTE]
+> We recommend using an Android Emulator that does not include the Google Play Store.
+
 1. Start the emulator on the Mac.
 
 2. Kill the `adb` server on the Mac:

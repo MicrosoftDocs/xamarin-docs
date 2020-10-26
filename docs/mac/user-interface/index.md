@@ -65,7 +65,7 @@ This article covers creating custom user interface controls (by inheriting from 
 
 ## Mac samples gallery
 
-We also suggest taking a look at the [Mac Samples Gallery](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac). It includes a wealth of ready-to-use code that can help you get a Xamarin.Mac project off the ground quickly.
+We also suggest taking a look at the [Mac Samples Gallery](/samples/browse/?products=xamarin&term=Xamarin.Mac). It includes a wealth of ready-to-use code that can help you get a Xamarin.Mac project off the ground quickly.
 
 ## Related links
 

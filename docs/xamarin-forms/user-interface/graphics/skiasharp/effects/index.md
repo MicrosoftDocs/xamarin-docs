@@ -40,9 +40,9 @@ Set the [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) property of `SKPaint
 
 Set the [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) property of `SKPaint` to an object of type [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) to alter colors using tables or matrix transforms.
 
-All the sample code for these articles are in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). From the home page, select **SkiaSharp Effects**.
+All the sample code for these articles are in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). From the home page, select **SkiaSharp Effects**.
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

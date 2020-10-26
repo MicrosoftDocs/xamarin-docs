@@ -164,7 +164,7 @@ The [`UIFont.FromName`](xref:UIKit.UIFont.FromName*) factory method is used to s
 
 The [`Typeface.Create`](xref:Android.Graphics.Typeface.Create*) factory method is used to set the [`TextView.Typeface`](xref:Android.Widget.TextView.Typeface) property to a new [`Typeface`](xref:Android.Graphics.Typeface) on Android. The `Typeface` family name and style are specified by the method arguments that are children of the `x:Arguments` attribute.
 
-The [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor is used to set the [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
+The [`FontFamily`](/uwp/api/Windows.UI.Xaml.Media.FontFamily) constructor is used to set the [`TextBlock.FontFamily`](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
 
 > [!NOTE]
 > Arguments must match the types required by the constructor or factory method.
@@ -459,9 +459,9 @@ The `MySpinner` class exposes `ItemsSource` and `SelectedObject` properties, and
 
 ## Related links
 
-- [NativeSwitch (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
-- [Forms2Native (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
-- [NativeViewInsideContentView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
-- [SubclassedNativeControls (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
+- [NativeSwitch (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (sample)](/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [Native Forms](~/xamarin-forms/platform/native-forms.md)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

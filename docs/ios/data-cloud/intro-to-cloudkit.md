@@ -60,7 +60,7 @@ To access CloudKit the **Entitlements.plist** file must include **Enable iCloud*
 
 ### Sample app
 
-The [CloudKitAtlas sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstrates
+The [CloudKitAtlas sample](/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstrates
 how to use CloudKit with Xamarin. The steps below show how to configure the sample – it requires additional settings beyond what's require for CloudKit alone:
 
 1. Open the project in Visual Studio for Mac or Visual Studio.
@@ -860,5 +860,5 @@ This article has covered a quick introduction to the CloudKit API. It has shown 
 ## Related links
 
 - [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
-- [CloudKitAtlas (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
+- [CloudKitAtlas (sample)](/samples/xamarin/ios-samples/ios8-cloudkitatlas)
 - [Creating a provisioning profile](~/ios/get-started/installation/device-provisioning/index.md)

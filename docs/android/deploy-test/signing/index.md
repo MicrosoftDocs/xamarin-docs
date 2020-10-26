@@ -215,3 +215,8 @@ for more information about publishing an *ad-hoc* APK.
 After the application package has been signed for release, it must be
 published. The following sections describe several ways to publish
 an application.
+
+
+## Related Links
+
+- [Android Generate Keystore](https://developer.android.com/studio/publish/app-signing#generate-key)

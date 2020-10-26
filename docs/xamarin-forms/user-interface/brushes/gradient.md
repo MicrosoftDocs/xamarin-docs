@@ -64,6 +64,6 @@ In this diagram, the circles mark the position of gradient stops, and the dashed
 
 ## Related links
 
-- [BrushesDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 - [Xamarin.Forms Brushes: Linear gradients](lineargradient.md)
 - [Xamarin.Forms Brushes: Radial gradients](radialgradient.md)

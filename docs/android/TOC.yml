@@ -397,6 +397,8 @@
           href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: Accelerometer
           href: ~/essentials/accelerometer.md?context=xamarin/android
+        - name: App Actions
+          href: ~/essentials/app-actions.md?context=xamarin/android
         - name: App Information
           href: ~/essentials/app-information.md?context=xamarin/android
         - name: App Theme
@@ -413,6 +415,8 @@
           href: ~/essentials/compass.md?context=xamarin/android
         - name: Connectivity
           href: ~/essentials/connectivity.md?context=xamarin/android
+        - name: Contacts
+          href: ~/essentials/contacts.md?context=xamarin/android
         - name: Detect Shake
           href: ~/essentials/detect-shake.md?context=xamarin/android
         - name: Device Display Information
@@ -420,7 +424,9 @@
         - name: Device Information
           href: ~/essentials/device-information.md?context=xamarin/android
         - name: Email
-          href: ~/essentials/email.md?context=xamarin/android
+          href: ~/essentials/email.md?context=xamarin/android          
+        - name: File Picker
+          href: ~/essentials/file-picker.md?context=xamarin/android
         - name: File System Helpers
           href: ~/essentials/file-system-helpers.md?context=xamarin/android
         - name: Flashlight
@@ -431,6 +437,8 @@
           href: ~/essentials/geolocation.md?context=xamarin/android
         - name: Gyroscope
           href: ~/essentials/gyroscope.md?context=xamarin/android
+        - name: Haptic Feedback
+          href: ~/essentials/haptic-feedback.md?context=xamarin/android
         - name: Launcher
           href: ~/essentials/launcher.md?context=xamarin/android
         - name: Magnetometer
@@ -439,6 +447,8 @@
           href: ~/essentials/main-thread.md?context=xamarin/android
         - name: Maps
           href: ~/essentials/maps.md?context=xamarin/android
+        - name: Media Picker
+          href: ~/essentials/media-picker.md?context=xamarin/android
         - name: Open Browser
           href: ~/essentials/open-browser.md?context=xamarin/android
         - name: Orientation Sensor
@@ -451,6 +461,8 @@
           href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/android
+        - name: Screenshot
+          href: ~/essentials/screenshot.md?context=xamarin/android
         - name: Secure Storage
           href: ~/essentials/secure-storage.md?context=xamarin/android
         - name: Share
@@ -468,7 +480,7 @@
         - name: Web Authenticator
           href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Xamarin.Essentials release notes
-          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
+          href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/android
     - name: Data and Cloud Services
@@ -526,6 +538,12 @@
           items:
             - name: Build Process
               href: deploy-test/building-apps/build-process.md
+            - name: Build Items
+              href: deploy-test/building-apps/build-items.md
+            - name: Build Properties
+              href: deploy-test/building-apps/build-properties.md
+            - name: Build Targets
+              href: deploy-test/building-apps/build-targets.md
             - name: Building ABI-Specific APKs
               href: deploy-test/building-apps/abi-specific-apks.md
         - name: Command Line Emulator
@@ -677,6 +695,6 @@
             - name: Packaging
               href: wear/deploy-test/packaging.md
     - name: Release Notes
-      href: https://docs.microsoft.com/xamarin/android/release-notes/
+      href: /xamarin/android/release-notes/
     - name: Samples
       href: samples/index.md

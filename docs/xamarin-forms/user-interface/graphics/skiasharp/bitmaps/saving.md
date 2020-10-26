@@ -64,7 +64,7 @@ Saving to a file in application local storage is quite easy because you can use 
 
 If you want the file to be shared by other applications, it must be saved to the user's photo library. This task requires platform-specific code and the use of the Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService).
 
-The **SkiaSharpFormsDemo** project in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application defines an `IPhotoLibrary` interface used with the `DependencyService` class. This defines the syntax of a `SavePhotoAsync` method:
+The **SkiaSharpFormsDemo** project in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application defines an `IPhotoLibrary` interface used with the `DependencyService` class. This defines the syntax of a `SavePhotoAsync` method:
 
 ```csharp
 public interface IPhotoLibrary
@@ -276,7 +276,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 
 The `SKManagedWStream` class derives from `SKWStream` (which stands for "writable stream"). The `Encode` method writes the encoded bitmap file into that stream. The comments in that code refer to some error checking you might need to perform.
 
-The **Save File Formats** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application uses similar code to allow you to experiment with saving a bitmap in the various formats.
+The **Save File Formats** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application uses similar code to allow you to experiment with saving a bitmap in the various formats.
 
 The XAML file contains an `SKCanvasView` that displays a bitmap, while the rest of the page contains everything the application needs to call the `Encode` method of `SKBitmap`. It has a `Picker` for a member of the `SKEncodedImageFormat` enumeration, a `Slider` for the quality argument for lossy bitmap formats, two `Entry` views for a filename and folder name, and a `Button` for saving the file.
 
@@ -467,7 +467,7 @@ One common use of a bitmap is in drawing programs, where it functions as somethi
 
 The [**Finger Painting in SkiaSharp**](../paths/finger-paint.md) article demonstrated how to use touch tracking to implement a primitive finger-painting program. The program supported only one color and only one stroke width, but it retained the entire drawing in a collection of `SKPath` objects.
 
-The **Finger Paint with Save** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample also retains the entire drawing in a collection of `SKPath` objects, but it also renders the drawing on a bitmap, which it can save to your photo library.
+The **Finger Paint with Save** page in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample also retains the entire drawing in a collection of `SKPath` objects, but it also renders the drawing on a bitmap, which it can save to your photo library.
 
 Much of this program is similar to the original **Finger Paint** program. One enhancement is that the XAML file now instantiates buttons labeled **Clear** and **Save**:
 
@@ -694,7 +694,7 @@ Here's the program in action:
 
 [![Finger Paint Save](saving-images/FingerPaintSave.png "Finger Paint Save")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-A very similar technique is used in the [**SpinPaint**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) sample. This is also a finger-painting program except that the user paints on a spinning disk that then reproduces the designs on its other four quadrants. The color of the finger paint changes as the disk is spinning:
+A very similar technique is used in the [**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) sample. This is also a finger-painting program except that the user paints on a spinning disk that then reproduces the designs on its other four quadrants. The color of the finger paint changes as the disk is spinning:
 
 [![Spin Paint](saving-images/SpinPaint.png "Spin Paint")](saving-images/SpinPaint-Large.png#lightbox)
 
@@ -702,6 +702,6 @@ The **Save** button of `SpinPaint` class is similar to **Finger Paint** in that 
 
 ## Related links
 
-- [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [SpinPaint (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)
+- [SkiaSharp APIs](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SpinPaint (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

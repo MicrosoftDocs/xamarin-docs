@@ -82,7 +82,7 @@ Activity states are the following:
 * Started
 * Stopped
 
-Read the [Activity Lifecycle](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) documentation to learn more.
+Read the [Activity Lifecycle](../android/app-fundamentals/activity-lifecycle/index.md) documentation to learn more.
 
 ## iOS Extensions
 

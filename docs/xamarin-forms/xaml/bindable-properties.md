@@ -214,8 +214,8 @@ The `defaultValueCreator` parameter is set to a `Func` that invokes the [`Device
 ## Related links
 
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Event To Command Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-- [Validation Callback (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
-- [Coerce Value Callback (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
+- [Event To Command Behavior (sample)](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [Validation Callback (sample)](/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [Coerce Value Callback (sample)](/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [BindableProperty API](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject API](xref:Xamarin.Forms.BindableObject)

@@ -217,7 +217,7 @@ See [Requesting Runtime Permissions in Android Marshmallow](https://blog.xamarin
 for more details (including code examples) about implementing Runtime Permissions in Xamarin.Android apps.
 Xamarin also provides a sample app that illustrates how runtime permissions
 work in Android Marshmallow (and later):
-[RuntimePermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
+[RuntimePermissions](/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
 
 This sample app demonstrates the following:
 
@@ -256,7 +256,7 @@ Authentication](https://developer.android.com/preview/api-overview.html#fingerpr
 
 Xamarin provides a sample app that illustrates how to use registered
 fingerprints to authenticate a user in your app:
-[FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
+[FingerprintDialog](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
 
 To use this sample app:
 
@@ -293,7 +293,7 @@ Credential](https://developer.android.com/preview/api-overview.html#confirm-cred
 
 Xamarin provides a sample app that illustrates how to use device credentials
 (such as PIN, pattern, or password) in your app:
-[ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+[ConfirmCredential](/samples/xamarin/monodroid-samples/android-m-confirmcredential)
 
 To use this sample app:
 
@@ -379,7 +379,7 @@ NuGet package.
 
 See [Beautiful Material Design with the Android Support Design Library](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) for more details (including code examples) about using the Material Design Support Library in Xamarin.Android apps.
 Xamarin provides a sample app that demos the new Android Design library 
-on Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
+on Xamarin.Android &ndash; [Cheesesquare](/samples/xamarin/monodroid-samples/android50-cheesesquare).
 This sample demonstrates the following features of the Design library:
 
 - Collapsing toolbar
@@ -431,6 +431,6 @@ Xamarin.Android development.
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Feature Overview](https://developer.android.com/preview/api-overview.html)
 - [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
-- [RuntimePermissions (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
-- [ConfirmCredential (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
-- [FingerprintDialog (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [RuntimePermissions (sample)](/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
+- [ConfirmCredential (sample)](/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+- [FingerprintDialog (sample)](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)

@@ -35,7 +35,7 @@ the [necessary](~/get-started/installation/windows.md#installation) tools instal
 
 In either case, you should follow these steps:
 
-- [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+- [Install Visual Studio for Mac](/visualstudio/mac/installation)
 - [Install Xamarin tools on Windows](~/get-started/installation/windows.md)
 
 ## Connecting to the Mac

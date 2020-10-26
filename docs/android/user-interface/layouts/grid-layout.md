@@ -254,4 +254,4 @@ to the layout we had earlier, with the button added to the bottom of the `GridLa
 
 ## Related Links
 
-- [GridLayoutDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
+- [GridLayoutDemo (sample)](/samples/xamarin/monodroid-samples/gridlayoutdemo)

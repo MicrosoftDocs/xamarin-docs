@@ -413,7 +413,7 @@ An application can return to using the iOS `UIWebView` class to implement the Xa
 
 `WebView` on Android by default is about as fast as the built-in browser.
 
-The [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
+The [UWP WebView](/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
 
 ## Permissions
 
@@ -483,7 +483,7 @@ Grid *without* WidthRequest & HeightRequest. Grid is one of the few layouts that
 
 ## Invoking JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) sample:
+[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](/samples/xamarin/xamarin-forms-samples/userinterface-webview) sample:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -590,6 +590,6 @@ Now when you create a new (release) build and submit it to the App Store, there 
 
 ## Related Links
 
-- [Working with WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
-- [WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Working with WebView (sample)](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-webview)
 - [UIWebView deprecation](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

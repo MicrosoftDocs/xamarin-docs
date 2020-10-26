@@ -99,7 +99,7 @@ Most modern macOS applications present auxiliary controls and options that affec
 
 [![An example inspector](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
-For more information, see the [Panels](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section of Apple's [macOS design themes](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) and our [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) sample app for a full implementation of an **Inspector Interface** in a Xamarin.Mac app.
+For more information, see the [Panels](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section of Apple's [macOS design themes](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) and our [MacInspector](/samples/xamarin/mac-samples/macinspector) sample app for a full implementation of an **Inspector Interface** in a Xamarin.Mac app.
 
 ## Creating and maintaining windows in Xcode
 
@@ -745,7 +745,7 @@ If we run our application, the panel will be displayed:
 [![The panel in a running app](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) sample app.
+> Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](/samples/xamarin/mac-samples/macinspector) sample app.
 
 ## Summary
 
@@ -753,8 +753,8 @@ This article has taken a detailed look at working with Windows and Panels in a X
 
 ## Related links
 
-- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
-- [MacInspector (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector)
+- [MacWindows (sample)](/samples/xamarin/mac-samples/macwindows)
+- [MacInspector (sample)](/samples/xamarin/mac-samples/macinspector)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Menus](~/mac/user-interface/menu.md)
 - [macOS design themes (Apple)](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
