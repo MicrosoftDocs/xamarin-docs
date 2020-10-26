@@ -124,6 +124,9 @@ To remove all keys, call:
 SecureStorage.RemoveAll();
 ```
 
+> [!TIP]
+> It is possible that an exception is thrown when calling `GetAsync` or `SetAsync`. This can be caused by a device not supporting secure storage, encryption keys changing, or corruption of data. It is best to handle this by removing and adding the setting back if possible.
+
 ## Platform Implementation Specifics
 
 # [Android](#tab/android)
