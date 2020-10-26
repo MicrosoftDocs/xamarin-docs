@@ -29,7 +29,7 @@ Registration can be performed with the [`DependencyAttribute`](xref:Xamarin.Form
 
 The [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) can be used to register a platform implementation with the [`DependencyService`](xref:Xamarin.Forms.DependencyService). The attribute indicates that the specified type provides a concrete implementation of the interface.
 
-The following example shows using the [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) to register the iOS implementation of the `IDeviceOrientationService` interface:
+The following example uses the [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) to register the iOS implementation of the `IDeviceOrientationService` interface:
 
 ```csharp
 using Xamarin.Forms;
@@ -58,7 +58,7 @@ Similarly, the implementations of the `IDeviceOrientationService` interface on o
 
 The [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) methods, and the `RegisterSingleton` method, can be used to register a platform implementation with the [`DependencyService`](xref:Xamarin.Forms.DependencyService).
 
-The following example shows using the [`Register`](xref:Xamarin.Forms.DependencyService.Register*) method to register the iOS implementation of the `IDeviceOrientationService` interface:
+The following example uses the [`Register`](xref:Xamarin.Forms.DependencyService.Register*) method to register the iOS implementation of the `IDeviceOrientationService` interface:
 
 ```csharp
 [Register("AppDelegate")]
