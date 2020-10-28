@@ -16,12 +16,12 @@ ms.date: 06/13/2019
 > The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017.
 
 > [!TIP]
-> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or
 > Visual Studio for Mac to view your screen designs as you edit them.
 
 # [Visual Studio 2017](#tab/windows)
 
-## Using Xamarin Live Player
+## Using Xamarin Live Player in Visual Studio 2017
 
 You must already have the Xamarin Live Player app on your device. It is no longer available to download.
 
@@ -57,7 +57,7 @@ You must already have the Xamarin Live Player app on your device. It is no longe
 
 # [Visual Studio for Mac](#tab/macos)
 
-## Using Xamarin Live Player
+## Using Xamarin Live Player in Visual Studio for Mac
 
 You must already have the Xamarin Live Player app on your device. It is no longer available to download.
 

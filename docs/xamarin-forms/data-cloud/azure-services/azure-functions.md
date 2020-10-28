@@ -19,7 +19,7 @@ _Get started building your first Azure Function that interacts with Xamarin.Form
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
-## Step-by-step instructions
+## Step-by-step instructions for Visual Studio 2019
 
 In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
@@ -30,7 +30,7 @@ In addition to the video, you can follow these instructions to [build your first
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
-## Step-by-step instructions
+## Step-by-step instructions for Visual Studio 2017
 
 In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
@@ -41,7 +41,7 @@ In addition to the video, you can follow these instructions to [build your first
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-for-Mac/player]
 
-## Step-by-step instructions
+## Step-by-step instructions for Visual Studio for Mac
 
 In addition to this video, there is a [step-by-step tutorial](/visualstudio/mac/azure-functions-lab)
 that shows how to create and debug Azure Functions within Visual Studio for Mac.
@@ -51,7 +51,7 @@ that shows how to create and debug Azure Functions within Visual Studio for Mac.
 
 -----
 
-## Related Links
+## Related links
 
 - [Azure Functions docs](/azure/azure-functions/)
 - [Implementing a simple Azure Function with a Xamarin.Forms client (sample)](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
