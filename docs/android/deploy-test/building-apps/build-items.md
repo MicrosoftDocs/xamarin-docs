@@ -139,7 +139,7 @@ example:
   <AndroidResource Include="Resources-Debug\values\strings.xml"/>
 </ItemGroup>
 <PropertyGroup>
-  <MonoAndroidResourcePrefix>Resources;Resources-Debug<MonoAndroidResourcePrefix>
+  <MonoAndroidResourcePrefix>Resources;Resources-Debug</MonoAndroidResourcePrefix>
 </PropertyGroup>
 ```
 

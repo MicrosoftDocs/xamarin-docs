@@ -6,7 +6,7 @@ ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -43,7 +43,7 @@ In Xamarin.Forms, drag gesture recognition is provided by the `DragGestureRecogn
 - `CanDrag`, of type `bool`, which indicates whether the element the gesture recognizer is attached to can be a drag source. The default value of this property is `false`.
 - `DragStartingCommand`, of type `ICommand`, which is executed when a drag gesture is first recognized.
 - `DragStartingCommandParameter`, of type `object`, which is the parameter that's passed to the `DragStartingCommand`.
-- `DropCompletedCommmand`, of type `ICommand`, which is executed when the drag source is dropped.
+- `DropCompletedCommand`, of type `ICommand`, which is executed when the drag source is dropped.
 - `DropCompletedCommandParameter`, of type `object`, which is the parameter that's passed to the `DropCompletedCommand`.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
@@ -72,6 +72,8 @@ In this example, a drag gesture can be initiated on the [`Image`](xref:Xamarin.F
 
 > [!TIP]
 > On iOS, Android, and UWP, a drag gesture is initiated with a long-press followed by a drag.
+
+For an example of using `DragGestureRecognizer` commands, see the [sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## Build a data package
 
@@ -204,6 +206,8 @@ The following XAML example shows a `DropGestureRecognizer` attached to an [`Imag
 ```
 
 In this example, when a drag source is dropped on the [`Image`](xref:Xamarin.Forms.Image) drop target, the drag source will be copied to the drop target, provided that the drag source is an [`ImageSource`](xref:Xamarin.Forms.ImageSource). This occurs because Xamarin.Forms automatically copies dragged images, and text, to compatible drop targets.
+
+For an example of using `DropGestureRecognizer` commands, see the [sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## Handle the DragOver event
 

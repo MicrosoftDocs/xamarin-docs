@@ -19,11 +19,9 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
-    > - **ID:** sqlite-net-pcl
-    > - **Author(s):** SQLite-net
-    > - **Owner(s):** praeclarum
-    > - **Project URL:** https://github.com/praeclarum/sqlite-net
-    > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+    > - **Owners:** praeclarum
+    > - **Authors:** SQLite-net
+    > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Despite the package name, this NuGet package can be used in .NET Standard projects.
 
@@ -52,8 +50,8 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
-    > - **Author:** Frank A. Krueger
-    > - **Id:** sqlite-net-pcl
+    > - **Owners:** praeclarum
+    > - **Authors:** SQLite-net
     > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Despite the package name, this NuGet package can be used in .NET Standard projects.

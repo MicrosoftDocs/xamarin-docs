@@ -6,7 +6,7 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -28,56 +28,10 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 ## Populate a CollectionView with data
 
-A [`CollectionView`](xref:Xamarin.Forms.CollectionView) is populated with data by setting its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to any collection that implements `IEnumerable`. Items can be added in XAML by initializing the `ItemsSource` property from an array of strings:
-
-```xaml
-<CollectionView>
-  <CollectionView.ItemsSource>
-    <x:Array Type="{x:Type x:String}">
-      <x:String>Baboon</x:String>
-      <x:String>Capuchin Monkey</x:String>
-      <x:String>Blue Monkey</x:String>
-      <x:String>Squirrel Monkey</x:String>
-      <x:String>Golden Lion Tamarin</x:String>
-      <x:String>Howler Monkey</x:String>
-      <x:String>Japanese Macaque</x:String>
-    </x:Array>
-  </CollectionView.ItemsSource>
-</CollectionView>
-```
-
-> [!NOTE]
-> Note that the `x:Array` element requires a `Type` attribute indicating the type of the items in the array.
-
-The equivalent C# code is:
-
-```csharp
-CollectionView collectionView = new CollectionView();
-collectionView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
-
-> [!WARNING]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
-
-By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays items in a vertical list, as shown in the following screenshots:
-
-[![Screenshot of CollectionView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CollectionView")](populate-data-images/text-large.png#lightbox "Text items in a CollectionView")
+A [`CollectionView`](xref:Xamarin.Forms.CollectionView) is populated with data by setting its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to any collection that implements `IEnumerable`. By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays items in a vertical list.
 
 > [!IMPORTANT]
 > If the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is required to refresh as items are added, removed, or changed in the underlying collection, the underlying collection should be an `IEnumerable` collection that sends property change notifications, such as `ObservableCollection`.
-
-For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Xamarin.Forms CollectionView Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
-
-### Data binding
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) can be populated with data by using data binding to bind its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to an `IEnumerable` collection. In XAML, this is achieved with the `Binding` markup extension:
 
@@ -97,7 +51,10 @@ In this example, the [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) p
 > [!NOTE]
 > Compiled bindings can be enabled to improve data binding performance in Xamarin.Forms applications. For more information, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Xamarin.Forms CollectionView Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance). For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
 
 ## Define item appearance
 

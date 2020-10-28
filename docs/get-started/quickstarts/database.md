@@ -46,8 +46,8 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
-    > - **Author(s):** Frank A. Krueger
-    > - **Id:** sqlite-net-pcl
+    > - **Owners:** praeclarum
+    > - **Authors:** SQLite-net
     > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Despite the package name, this NuGet package can be used in .NET Standard projects.
@@ -263,8 +263,8 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
-    > - **Author:** Frank A. Krueger
-    > - **Id:** sqlite-net-pcl
+    > - **Owners:** praeclarum
+    > - **Authors:** SQLite-net
     > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > Despite the package name, this NuGet package can be used in .NET Standard projects.

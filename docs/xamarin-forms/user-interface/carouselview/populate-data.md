@@ -6,7 +6,7 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -30,53 +30,10 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 ## Populate a CarouselView with data
 
-A [`CarouselView`](xref:Xamarin.Forms.CarouselView) is populated with data by setting its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to any collection that implements `IEnumerable`. Items can be added in XAML by initializing the `ItemsSource` property from an array of strings:
-
-```xaml
-<CarouselView>
-    <CarouselView.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>Baboon</x:String>
-            <x:String>Capuchin Monkey</x:String>
-            <x:String>Blue Monkey</x:String>
-            <x:String>Squirrel Monkey</x:String>
-            <x:String>Golden Lion Tamarin</x:String>
-            <x:String>Howler Monkey</x:String>
-            <x:String>Japanese Macaque</x:String>
-        </x:Array>
-    </CarouselView.ItemsSource>
-</CarouselView>
-```
-
-> [!NOTE]
-> Note that the `x:Array` element requires a `Type` attribute indicating the type of the items in the array.
-
-The equivalent C# code is:
-
-```csharp
-CarouselView carouselView = new CarouselView();
-carouselView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
+A [`CarouselView`](xref:Xamarin.Forms.CarouselView) is populated with data by setting its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to any collection that implements `IEnumerable`. By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) displays items horizontally.
 
 > [!IMPORTANT]
 > If the [`CarouselView`](xref:Xamarin.Forms.CarouselView) is required to refresh as items are added, removed, or changed in the underlying collection, the underlying collection should be an `IEnumerable` collection that sends property change notifications, such as `ObservableCollection`.
-
-By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) displays items horizontally. The following screenshots show a `CarouselView` displaying different string items on iOS and Android:
-
-[![Screenshot of CarouselView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CarouselView")](populate-data-images/text-large.png#lightbox "Text items in a CarouselView")
-
-For information on how to change the [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientation, see [Xamarin.Forms CarouselView Layout](layout.md). For information on how to define the appearance of each item in the `CarouselView`, see [Define item appearance](#define-item-appearance).
-
-### Data binding
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) can be populated with data by using data binding to bind its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) property to an `IEnumerable` collection. In XAML, this is achieved with the `Binding` markup extension:
 
@@ -96,7 +53,7 @@ In this example, the [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) p
 > [!NOTE]
 > Compiled bindings can be enabled to improve data binding performance in Xamarin.Forms applications. For more information, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+For information on how to change the [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientation, see [Xamarin.Forms CarouselView Layout](layout.md). For information on how to define the appearance of each item in the `CarouselView`, see [Define item appearance](#define-item-appearance). For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## Define item appearance
 

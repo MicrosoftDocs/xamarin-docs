@@ -6,7 +6,7 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2020
+ms.date: 10/26/2020
 ---
 
 # Xamarin.Forms Multi-Bindings
@@ -150,6 +150,33 @@ In this example, the `MultiBinding` object uses the `AllTrueMultiConverter` inst
 
 By default, the [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) property uses a [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) binding. Therefore, the `ConvertBack` method of the `AllTrueMultiConverter` instance is executed when the [`CheckBox`](xref:Xamarin.Forms.CheckBox) is unchecked by the user, which sets the source binding values to the value of the `CheckBox.IsChecked` property.
 
+The equivalent C# code is shown below:
+
+```csharp
+public class MultiBindingConverterCodePage : ContentPage
+{
+    public MultiBindingConverterCodePage()
+    {
+        BindingContext = new GroupViewModel();
+
+        CheckBox checkBox = new CheckBox();
+        checkBox.SetBinding(CheckBox.IsCheckedProperty, new MultiBinding
+        {
+            Bindings = new Collection<BindingBase>
+            {
+                new Binding("Employee1.IsOver16"),
+                new Binding("Employee1.HasPassedTest"),
+                new Binding("Employee1.IsSuspended", converter: new InverterConverter())
+            },
+            Converter = new AllTrueMultiConverter()
+        });
+
+        Title = "MultiBinding converter demo";
+        Content = checkBox;
+    }
+}
+```
+
 ## Format strings
 
 A `MultiBinding` can format any multi-binding result that's displayed as a string, with the `StringFormat` property. This property can be set to a standard .NET formatting string, with placeholders, that specifies how to format the multi-binding result:
@@ -167,6 +194,22 @@ A `MultiBinding` can format any multi-binding result that's displayed as a strin
 ```
 
 In this example, the `StringFormat` property combines the three bound values into a single string that's displayed by the [`Label`](xref:Xamarin.Forms.Label).
+
+The equivalent C# code is shown below:
+
+```csharp
+Label label = new Label();
+label.SetBinding(Label.TextProperty, new MultiBinding
+{
+    Bindings = new Collection<BindingBase>
+    {
+        new Binding("Employee1.Forename"),
+        new Binding("Employee1.MiddleName"),
+        new Binding("Employee1.Surname")
+    },
+    StringFormat = "{0} {1} {2}"
+});
+```
 
 > [!IMPORTANT]
 > The number of parameters in a composite string format can't exceed the number of child `Binding` objects in the `MultiBinding`.
