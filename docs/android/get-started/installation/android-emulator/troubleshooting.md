@@ -36,8 +36,8 @@ connectivity, use the following steps:
 
 2. Open a command prompt and go to the folder where **adb** is
    installed. If the Android SDK is installed at its default location,
-   **adb** is located at 
-   **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**; 
+   **adb** is located at
+   **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**;
    if not, modify this path for the location of the Android SDK on your
    computer.
 
@@ -83,7 +83,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 [![Example AVD with Google Play Services and Google Play Store enabled](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
-> Google Play Store images are available only for some base device types such 
+> Google Play Store images are available only for some base device types such
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
 <a name="perf-win"></a>
@@ -111,7 +111,7 @@ If this error message is displayed, see
 [Hardware acceleration issues](#accel-issues-win) below for steps you
 can take to verify and enable hardware acceleration.
 
-### Acceleration is enabled but the emulator runs too slowly 
+### Acceleration is enabled but the emulator runs too slowly
 
 A common cause for this problem is not using an x86-based image in your
 virtual device (AVD). When you create a virtual device (see
@@ -170,7 +170,7 @@ to learn how to enable hardware acceleration on your computer.
 ### Incorrect BIOS settings
 
 If the BIOS has not been configured properly to support hardware
-acceleration, a message similar to the following example will be 
+acceleration, a message similar to the following example will be
 displayed when you run the **emulator-check.exe accel** command:
 
 ```cmd
@@ -206,7 +206,7 @@ following steps:
     Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online
     ```
 
-    If Hyper-V is not enabled, a message similar to the following example will be 
+    If Hyper-V is not enabled, a message similar to the following example will be
     displayed to indicate that the state of Hyper-V is **Disabled**:
 
     ```
@@ -215,7 +215,7 @@ following steps:
     Description      : Provides services and management tools for creating and running virtual machines and their resources.
     RestartRequired  : Possible
     State            : Disabled
-    CustomProperties : 
+    CustomProperties :
     ```
 
 4. In the PowerShell console, enter the following command:
@@ -224,7 +224,7 @@ following steps:
     Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
     ```
 
-    If the Hypervisor is not enabled, a message similar to the following example will be 
+    If the Hypervisor is not enabled, a message similar to the following example will be
     displayed to indicate that the state of HypervisorPlatform is **Disabled**:
 
     ```
@@ -233,7 +233,7 @@ following steps:
     Description      : Enables virtualization software to run on the Windows hypervisor
     RestartRequired  : Possible
     State            : Disabled
-    CustomProperties : 
+    CustomProperties :
     ```
 
 If Hyper-V and/or HypervisorPlatform are not enabled, use the following
@@ -244,7 +244,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
 ```
 
-After these commands complete, reboot. 
+After these commands complete, reboot.
 
 For more information about enabling Hyper-V (including techniques for
 enabling Hyper-V using the Deployment Image Servicing and Management
@@ -290,7 +290,7 @@ HAXM can conflict with other technologies that use virtualization,
 such as Hyper-V, Windows Device Guard, and some antivirus software:
 
 - **Hyper-V** &ndash; If you are using a version of Windows before the
-  **Windows 10 April 2018 update (build 1803)** and Hyper-V is enabled, 
+  **Windows 10 April 2018 update (build 1803)** and Hyper-V is enabled,
   follow the steps in [Disabling Hyper-V](#disable-hyperv) so that
   HAXM can be enabled.
 
@@ -322,9 +322,9 @@ computer back into Windows.
 
 #### Disabling Hyper-V
 
-If you are using a version of Windows before the **Windows 10 
+If you are using a version of Windows before the **Windows 10
 April 2018 Update (build 1803)** and Hyper-V is enabled, you must disable
-Hyper-V and reboot your computer to install and use HAXM. If you 
+Hyper-V and reboot your computer to install and use HAXM. If you
 are using **Windows 10 April 2018 Update (build 1803)** or later, Android
 Emulator version 27.2.7 or later can use Hyper-V (instead of HAXM) for
 hardware acceleration, so it is not necessary to disable Hyper-V.
@@ -349,7 +349,7 @@ the Hyper-V Hypervisor:
 
 Intel HAXM and Microsoft Hyper-V cannot both be active at the same
 time. Unfortunately, there is no way to switch between Hyper-V
-and HAXM without restarting your computer. 
+and HAXM without restarting your computer.
 
 In some cases, using the above steps will not succeed in disabling
 Hyper-V if Device Guard and Credential Guard are enabled. If you are
@@ -412,7 +412,7 @@ If Device Guard is enabled, use the following steps to disable it:
     mountvol Z: /d
     ```
 
-7. Restart your computer. On the boot screen, you should see a prompt similar to 
+7. Restart your computer. On the boot screen, you should see a prompt similar to
    the following message:
 
    **Do you want to disable Credential Guard?**
@@ -470,7 +470,7 @@ emulator: CPU Acceleration status: HAXM version 6.2.1 (4) is installed and usabl
 Often you can diagnose emulator problems by viewing the Device Manager
 logs. These logs are written to the following location:
 
-**C:\\Users\\*username*\\AppData\\Roaming\\XamarinDeviceManager**
+**C:\\Users\\*username*\\AppData\\Local\\Xamarin\\Logs\\16.0**
 
 You can view each **DeviceManager.log** file by using a text
 editor such as Notepad. The following example log entry indicates that
@@ -500,8 +500,8 @@ the following steps:
 
 2. Open a command prompt and go to the folder where **adb** is
    installed. If the Android SDK is installed at its default location,
-   **adb** is located at 
-   **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**; 
+   **adb** is located at
+   **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**;
    if not, modify this path for the location of the Android SDK on your
    computer.
 
@@ -547,7 +547,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 [![Example AVD with Google Play Services and Google Play Store enabled](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
-> Google Play Store images are available only for some base device types such 
+> Google Play Store images are available only for some base device types such
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
 <a name="perf-mac"></a>
@@ -572,7 +572,7 @@ which technology is providing the acceleration), see
 [Hardware acceleration issues](#accel-issues-mac) below for steps you can
 take to verify and enable hardware acceleration.
 
-### Acceleration is enabled but the emulator runs too slowly 
+### Acceleration is enabled but the emulator runs too slowly
 
 A common cause for this problem is not using an x86-based image in your
 virtual device. When you create virtual device (see

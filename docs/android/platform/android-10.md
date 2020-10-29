@@ -94,7 +94,7 @@ These features are recommend for every app:
 
 ![Gesture Navigation](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Optimize for foldables:** Deliver seamless, edge-to-edge experiences on today’s innovative devices by [optimizing for foldables](https://developer.android.com/preview/features/foldables).
+- **Optimize for foldables:** Deliver seamless, edge-to-edge experiences on today’s innovative devices by [optimizing for foldables](https://developer.android.com/guide/topics/ui/foldables).
 
 ![Foldable](~/android/platform/android-10-images/foldable.png)
 

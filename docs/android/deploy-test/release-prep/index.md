@@ -11,8 +11,8 @@ ms.date: 03/21/2018
 # Preparing an Application for Release
 
 After an application has been coded and tested, it is necessary to
-prepare a package for distribution. The first task in preparing 
-this package is to build the application for release, which mainly 
+prepare a package for distribution. The first task in preparing
+this package is to build the application for release, which mainly
 entails setting some application attributes.
 
 Use the following steps to build the app for release:
@@ -57,7 +57,7 @@ Each of these steps is described below in more detail.
 ## Specify the Application Icon
 
 It is strongly recommended that each Xamarin.Android application
-specify an application icon. Some application marketplaces will not
+specifies an application icon. Some application marketplaces will not
 allow an Android application to be published without one. The `Icon`
 property of the `Application` attribute is used to specify the
 application icon for a Xamarin.Android project.
@@ -101,28 +101,28 @@ it is not already present.
 
 ## Version the Application
 
-Versioning is important for Android application maintenance and 
-distribution. Without some sort of versioning in place, it is difficult 
-to determine if or how an application should be updated. To assist with 
-versioning, Android recognizes two different types of information: 
+Versioning is important for Android application maintenance and
+distribution. Without some sort of versioning in place, it is difficult
+to determine if or how an application should be updated. To assist with
+versioning, Android recognizes two different types of information:
 
-- **Version Number** &ndash; An integer value (used internally by 
-    Android and the application) that represents the version of the 
-    application. Most applications start out with this value set to 1, 
-    and then it is incremented with each build. This value has no 
-    relationship or affinity with the version name attribute 
-    (see below). Applications and publishing services should not 
-    display this value to users. This value is stored in the 
-    **AndroidManifest.xml** file as `android:versionCode`. 
+- **Version Number** &ndash; An integer value (used internally by
+    Android and the application) that represents the version of the
+    application. Most applications start out with this value set to 1,
+    and then it is incremented with each build. This value has no
+    relationship or affinity with the version name attribute
+    (see below). Applications and publishing services should not
+    display this value to users. This value is stored in the
+    **AndroidManifest.xml** file as `android:versionCode`.
 
-- **Version Name** &ndash; A string that is used only for 
-    communicating information to the user about the version of the 
-    application (as installed on a specific device). The version name 
-    is intended to be displayed to users or in Google Play. This string 
-    is not used internally by Android. The version name can be any 
-    string value that would help a user identify the build that is 
-    installed on their device. This value is stored in the 
-    **AndroidManifest.xml** file as `android:versionName`. 
+- **Version Name** &ndash; A string that is used only for
+    communicating information to the user about the version of the
+    application (as installed on a specific device). The version name
+    is intended to be displayed to users or in Google Play. This string
+    is not used internally by Android. The version name can be any
+    string value that would help a user identify the build that is
+    installed on their device. This value is stored in the
+    **AndroidManifest.xml** file as `android:versionName`.
 
 # [Visual Studio](#tab/windows)
 
@@ -154,16 +154,16 @@ ProGuard (if enabled) to optimize the APK at the Java bytecode level.
 
 ### Configure the Linker
 
-Release mode turns off the shared runtime and turns on linking so that 
-the application only ships the pieces of Xamarin.Android required at 
-runtime. The *linker* in Xamarin.Android uses static analysis to 
-determine which assemblies, types, and type members are used or 
-referenced by a Xamarin.Android application. The linker then discards 
-all the unused assemblies, types, and members that are not used (or 
-referenced). This can result in a significant reduction in the package 
-size. For example, consider the 
-[HelloWorld](~/android/deploy-test/linker.md) sample, which 
-experiences an 83% reduction in the final size of its APK: 
+Release mode turns off the shared runtime and turns on linking so that
+the application only ships the pieces of Xamarin.Android required at
+runtime. The *linker* in Xamarin.Android uses static analysis to
+determine which assemblies, types, and type members are used or
+referenced by a Xamarin.Android application. The linker then discards
+all the unused assemblies, types, and members that are not used (or
+referenced). This can result in a significant reduction in the package
+size. For example, consider the
+[HelloWorld](~/android/deploy-test/linker.md) sample, which
+experiences an 83% reduction in the final size of its APK:
 
 - Configuration: None &ndash; Xamarin.Android 4.2.5 Size = 17.4 MB.
 
@@ -183,7 +183,7 @@ controlling the linker:
     performed.
 
 - **SDK Assemblies Only** &ndash; This will only link the assemblies
-    that are [required by Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
+    that are [required by Xamarin.Android](~/cross-platform/internals/available-assemblies.md).
     Other assemblies will not be linked.
 
 - **Sdk and User Assemblies** &ndash; This will link all assemblies
@@ -219,27 +219,27 @@ that an application be re-tested in Release mode on a physical device.
 
 ### ProGuard
 
-*ProGuard* is an Android SDK tool that links and obfuscates Java code. 
-ProGuard is normally used to create smaller applications by reducing 
-the footprint of large included libraries (such as Google Play 
-Services) in your APK. ProGuard removes unused Java bytecode, which 
-makes the resulting app smaller. For example, using ProGuard on small 
-Xamarin.Android apps usually achieves about a 24% reduction in size 
-&ndash; using ProGuard on larger apps with multiple library 
-dependencies typically achieves an even greater size reduction. 
+*ProGuard* is an Android SDK tool that links and obfuscates Java code.
+ProGuard is normally used to create smaller applications by reducing
+the footprint of large included libraries (such as Google Play
+Services) in your APK. ProGuard removes unused Java bytecode, which
+makes the resulting app smaller. For example, using ProGuard on small
+Xamarin.Android apps usually achieves about a 24% reduction in size
+&ndash; using ProGuard on larger apps with multiple library
+dependencies typically achieves an even greater size reduction.
 
-ProGuard is not an alternative to the Xamarin.Android linker. The 
-Xamarin.Android linker links *managed* code, while ProGuard links Java 
-bytecode. The build process first uses the Xamarin.Android linker to 
-optimize the managed (C#) code in the app, and then it later uses 
-ProGuard (if enabled) to optimize the APK at the Java bytecode level. 
+ProGuard is not an alternative to the Xamarin.Android linker. The
+Xamarin.Android linker links *managed* code, while ProGuard links Java
+bytecode. The build process first uses the Xamarin.Android linker to
+optimize the managed (C#) code in the app, and then it later uses
+ProGuard (if enabled) to optimize the APK at the Java bytecode level.
 
-When **Enable ProGuard** is checked, Xamarin.Android runs the ProGuard 
-tool on the resulting APK. A ProGuard configuration file is generated 
-and used by ProGuard at build time. Xamarin.Android also supports 
-custom *ProguardConfiguration* build actions. You can add a custom 
-ProGuard configuration file to your project, right-click it, and select 
-it as a build action as shown in this example: 
+When **Enable ProGuard** is checked, Xamarin.Android runs the ProGuard
+tool on the resulting APK. A ProGuard configuration file is generated
+and used by ProGuard at build time. Xamarin.Android also supports
+custom *ProguardConfiguration* build actions. You can add a custom
+ProGuard configuration file to your project, right-click it, and select
+it as a build action as shown in this example:
 
 # [Visual Studio](#tab/windows)
 
@@ -251,13 +251,13 @@ it as a build action as shown in this example:
 
 -----
 
-ProGuard is disabled by default. The **Enable ProGuard** option is 
-available only when the project is set to **Release** mode. All 
-ProGuard build actions are ignored unless **Enable ProGuard** is 
-checked. The Xamarin.Android ProGuard configuration does not obfuscate 
-the APK, and it is not possible to enable obfuscation, even with custom 
+ProGuard is disabled by default. The **Enable ProGuard** option is
+available only when the project is set to **Release** mode. All
+ProGuard build actions are ignored unless **Enable ProGuard** is
+checked. The Xamarin.Android ProGuard configuration does not obfuscate
+the APK, and it is not possible to enable obfuscation, even with custom
 configuration files. If you wish to use obfuscation, please see
-[Application Protection with Dotfuscator](~/android/deploy-test/release-prep/index.md#dotfuscator). 
+[Application Protection with Dotfuscator](~/android/deploy-test/release-prep/index.md#dotfuscator).
 
 For more detailed information about using the ProGuard tool, see
 [ProGuard](~/android/deploy-test/release-prep/proguard.md).
@@ -270,12 +270,12 @@ For more detailed information about using the ProGuard tool, see
 
 ### Disable Debugging
 
-During development of an Android application, debugging is performed 
-with the use of the *Java Debug Wire Protocol* (JDWP). This is a 
-technology that allows tools such as **adb** to communicate with a JVM for 
+During development of an Android application, debugging is performed
+with the use of the *Java Debug Wire Protocol* (JDWP). This is a
+technology that allows tools such as **adb** to communicate with a JVM for
 the purposes of debugging. JDWP is turned on by default for Debug
-builds of a Xamarin.Android application. While JDWP is important during 
-development, it can pose a security issue for released applications. 
+builds of a Xamarin.Android application. While JDWP is important during
+development, it can pose a security issue for released applications.
 
 > [!IMPORTANT]
 > Always disable the debug state in a released application as it
@@ -283,11 +283,11 @@ is possible (via JDWP) to gain full access to the Java process and
 execute arbitrary code in the context of the application if this debug
 state is not disabled.
 
-The Android Manifest contains the `android:debuggable` attribute, which 
-controls whether or not the application may be debugged. It is 
-considered a good practice to set the `android:debuggable` attribute to 
-`false`. The simplest way to do this is by adding a conditional compile 
-statement in **AssemblyInfo.cs**: 
+The Android Manifest contains the `android:debuggable` attribute, which
+controls whether or not the application may be debugged. It is
+considered a good practice to set the `android:debuggable` attribute to
+`false`. The simplest way to do this is by adding a conditional compile
+statement in **AssemblyInfo.cs**:
 
 ```csharp
 #if DEBUG
@@ -297,15 +297,15 @@ statement in **AssemblyInfo.cs**:
 #endif
 ```
 
-Note that Debug builds automatically set some permissions to make debug 
-easier (such as **Internet** and 
-**ReadExternalStorage**). Release builds, however, use only 
-the permissions that you explicitly configure. If you find that 
-switching to the Release build causes your app to lose a permission 
-that was available in the Debug build, verify that you have explicitly 
-enabled this permission in the **Required permissions** 
-list as described in 
-[Permissions](~/android/app-fundamentals/permissions.md). 
+Note that Debug builds automatically set some permissions to make debug
+easier (such as **Internet** and
+**ReadExternalStorage**). Release builds, however, use only
+the permissions that you explicitly configure. If you find that
+switching to the Release build causes your app to lose a permission
+that was available in the Debug build, verify that you have explicitly
+enabled this permission in the **Required permissions**
+list as described in
+[Permissions](~/android/app-fundamentals/permissions.md).
 
 <a name="dotfuscator" id="dotfuscator"></a>
 
@@ -320,7 +320,7 @@ reverse-engineer, debug, or tamper with the application.
 [Dotfuscator Community
 Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) can
 be used to obfuscate managed code and inject runtime security state
-detection code into a Xamarin.Android app at build time to detect 
+detection code into a Xamarin.Android app at build time to detect
 and respond if the app is running on a rooted device.
 
 Dotfuscator CE is included with Visual Studio 2017.
@@ -340,7 +340,7 @@ reverse-engineer, debug, or tamper with the application.
 Although it does not support Visual Studio for Mac, you can use
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview)
 with Visual Studio to obfuscate managed code and inject runtime security state
-detection code into a Xamarin.Android app at build time to detect 
+detection code into a Xamarin.Android app at build time to detect
 and respond if the app is running on a rooted device.
 
 To configure Dotfuscator CE, please see

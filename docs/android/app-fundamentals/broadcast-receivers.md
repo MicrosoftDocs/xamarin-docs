@@ -35,7 +35,7 @@ There are two sets of APIs for managing a broadcast receiver and sending broadca
 
 A broadcast receiver may not display dialogs, and it is strongly discouraged to start an activity from within a broadcast receiver. If a broadcast receiver must notify the user, then it should publish a notification.
 
-It is not possible to bind to or start a service from within a broadcast receiver. 
+It is not possible to bind to or start a service from within a broadcast receiver.
 
 This guide will cover how to create a broadcast receiver and how to register it so that it may receive broadcasts.
 
@@ -58,9 +58,9 @@ public class SampleReceiver : BroadcastReceiver
 
 When Xamarin.Android compiles the class, it will also update the AndroidManifest with the necessary meta-data to register the receiver. For a statically-registered broadcast receiver, the `Enabled` properly must be set to `true`, otherwise Android will not be able to create an instance of the receiver.
 
-The `Exported` property controls whether the broadcast receiver can receive messages from outside the application. If the property is not explicitly set, the default value of the property is determined by Android based on if there are any intent-filters associated with the broadcast receiver. If there is at least one intent-filter for the broadcast receiver then Android will assume that the `Exported` property is `true`. If there are no intent-filters associated with the broadcast receiver, then Android will assume that the value is `false`. 
+The `Exported` property controls whether the broadcast receiver can receive messages from outside the application. If the property is not explicitly set, the default value of the property is determined by Android based on if there are any intent-filters associated with the broadcast receiver. If there is at least one intent-filter for the broadcast receiver then Android will assume that the `Exported` property is `true`. If there are no intent-filters associated with the broadcast receiver, then Android will assume that the value is `false`.
 
-The `OnReceive` method receives a reference to the `Intent` that was dispatched to the broadcast receiver. This makes is possible for the sender of the intent to pass values to the broadcast receiver.
+The `OnReceive` method receives a reference to the `Intent` that was dispatched to the broadcast receiver. This makes it possible for the sender of the intent to pass values to the broadcast receiver.
 
 ### Statically registering a Broadcast Receiver with an Intent Filter
 
@@ -81,7 +81,7 @@ public class MyBootReceiver : BroadcastReceiver
 > [!NOTE]
 > In Android 8.0 (API 26 and above), [Google placed limitations](https://developer.android.com/about/versions/oreo/background) on what apps can do while users aren't directly interacting with them. These limitations affect background services and implicit broadcast receivers such as `Android.Content.Intent.ActionBootCompleted`. Because of these limitations, you might have difficulties registering a `Boot Completed` broadcast receiver on newer versions of Android. If this is the case, note that these restrictions do not apply to foreground services, which can be called from your broadcast receiver.
 
-It is also possible to create an intent filter that will respond to custom intents. Consider the following example: 
+It is also possible to create an intent filter that will respond to custom intents. Consider the following example:
 
 ```csharp
 [BroadcastReceiver(Enabled = true)]
@@ -103,7 +103,7 @@ Context-registration  (also referred to as dynamic registration) of a receiver i
 
 ```csharp
 [Activity(Label = "MainActivity", MainLauncher = true, Icon = "@mipmap/icon")]
-public class MainActivity: Activity 
+public class MainActivity: Activity
 {
     MySampleBroadcastReceiver receiver;
 
@@ -115,14 +115,14 @@ public class MainActivity: Activity
         // Code omitted for clarity
     }
 
-    protected override void OnResume() 
+    protected override void OnResume()
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override void OnPause() 
+    protected override void OnPause()
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity

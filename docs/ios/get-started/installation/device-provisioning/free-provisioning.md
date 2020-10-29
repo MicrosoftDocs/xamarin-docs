@@ -40,7 +40,7 @@ To deploy your Xamarin.iOS applications to a device with free provisioning:
 - Your Xamarin.iOS app must use an explicit App ID, not a wildcard App ID.
 - The bundle identifier used in your Xamarin.iOS app must be unique and cannot have been used in another app previously. Any bundle identifier used with free provisioning **cannot** be re-used.
 - If you have already distributed an app, you cannot deploy that app with free provisioning.
-- If your app uses App Services, you will need to create a provisioning profile as detailed in the [device provisioning](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) guide. 
+- If your app uses App Services, you will need to create a provisioning profile as detailed in the [device provisioning](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) guide.
 
 Take a look at the [Limitations](#limitations) section of this document
 for more information about limitations associated with free provisioning,
@@ -72,7 +72,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
     ![Select an Xcode build scheme](free-provisioning-images/xcodescheme.png "Select an Xcode build scheme")
 
 9. Open your app's project settings by selecting its top-level node in Xcode's **Project Navigator**.
-10. Under **General > Identity**, make sure that the **Bundle Identifier** _exactly matches_ your Xamarin.iOS app's bundle identifier.
+10. Under **General > Identity**, make sure that the **Bundle Identifier** _exactly matches_ your Xamarin.iOS app's bundle identifier found in Info.plist.
 
     ![Set a bundle identifier](free-provisioning-images/launchapp5.png "Set a bundle identifier")
 
@@ -114,7 +114,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
     ![Set the signing identity and provisioning profile](free-provisioning-images/launchapp8.png "Set the signing identity and provisioning profile")
 
     > [!TIP]
-    > If you cannot see your signing identity or the correct provisioning 
+    > If you cannot see your signing identity or the correct provisioning
     > profile, you may need to restart Visual Studio for Mac.
 
 9. Click **OK** to save and close the **Project Options**.
@@ -131,7 +131,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 7. Select **Manual Provisioning**.
 8. Select the **Signing Identity** created by Xcode.
 9. Select the **Provisioning Profile** created by Xcode.
-    
+
     ![Set the signing identity and provisioning profile](free-provisioning-images/setprofile-w157.png "Set the signing identity and provisioning profile")
 
     > [!TIP]
@@ -151,7 +151,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 Apple has imposed a number of limitations on when and how you can use free provisioning to run your application on an iOS device, ensuring that you can only deploy to *your* device:
 
 - Access to iTunes Connect is limited and therefore services such as publishing to the App Store and TestFlight are unavailable to developers provisioning their applications freely. An Apple Developer Account (Enterprise or Personal) is required to distribute via Ad Hoc and In-House means.
-- Provisioning profiles created with free provisioning will expire after one week, and signing identities will expire after one year. 
+- Provisioning profiles created with free provisioning will expire after one week, and signing identities will expire after one year.
 - Since Xcode will only create provisioning profiles for explicit App IDs, you will need to follow the [instructions above](#testing-on-device-with-free-provisioning) for every app that you wish to install.
 - Provisioning for most application services is not possible with free provisioning. This includes Apple Pay, Game Center, iCloud, In-App Purchasing, Push Notifications, and Wallet. Apple provides a full list of capabilities in the [Supported capabilities (iOS)](https://help.apple.com/developer-account/#/dev21218dfd6) guide. To provision your app for use with application services, visit the [Working with capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guides.
 
