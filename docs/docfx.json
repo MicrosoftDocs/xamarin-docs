@@ -77,7 +77,6 @@
       "feedback_system": {
         "android/**/*":"None",
         "cross-platform/**/*":"None",
-        "graphics-games/**/*":"None",
         "ios/**/*":"None",
         "mac/**/*":"None",
         "tools/**/*":"None"

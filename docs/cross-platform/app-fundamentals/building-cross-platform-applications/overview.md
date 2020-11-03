@@ -17,8 +17,7 @@ Phone.
 
 The approach used in this document is generally applicable to both
 productivity apps and game apps, however the focus is on productivity and
-utility (non-game applications). See the
-[Introduction to MonoGame document](~/graphics-games/monogame/introduction/index.md) or check out [Visual Studio Tools for Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) for
+utility (non-game applications). See [Visual Studio Tools for Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) for
 cross-platform game development guidance.
 
 The phrase “write-once, run everywhere” is often used to extol the
@@ -47,7 +46,7 @@ apps:
 1. On Windows you will be using XAML for presentation layer, created in Visual Studio or Blend’s UI designer.
 1. On Mac, you will use Storyboards for the presentation layer, created in Xcode.
 
-Xamarin.Forms projects are supported on all platforms, and allow you create user interfaces that can be shared across platforms using Xamarin.Forms XAML. 
+Xamarin.Forms projects are supported on all platforms, and allow you create user interfaces that can be shared across platforms using Xamarin.Forms XAML.
 
 The amount of code re-use will depend largely on how much code is kept in the
 shared core and how much code is user-interface specific. The core code is

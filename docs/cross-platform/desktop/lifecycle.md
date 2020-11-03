@@ -141,7 +141,7 @@ There is no exposed API to walk the logical tree in Xamarin.Forms - but you can 
 
 ## Graphics
 
-Xamarin.Forms does not include a graphics system for primitives beyond a simple rectangle (`BoxView`). You can include 3rd party libraries such as [SkiaSharp](~/graphics-games/skiasharp/index.md) to get cross-platform 2D drawing, or [UrhoSharp](~/graphics-games/urhosharp/index.md) for 3D.
+Xamarin.Forms includes a graphics system for drawing primitives, that's called Shapes. For more information about Shapes, see [Xamarin.Forms Shapes](~/xamarin-forms/user-interface/shapes/index.md). In addition, you can include 3rd party libraries such as [SkiaSharp](~/xamarin-forms/user-interface/graphics/index.md) to get cross-platform 2D drawing.
 
 ## Resources
 
