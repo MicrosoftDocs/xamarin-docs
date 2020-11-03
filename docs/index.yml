@@ -127,8 +127,8 @@ additionalContent:
         summary: Understand how apps start and go to the background.
         url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
       - title: Show a list of data
-        summary: Use the ListView to scroll and select data.
-        url: ~/xamarin-forms/user-interface/listview/index.md
+        summary: Use the CollectionView to scroll and select data.
+        url: ~/xamarin-forms/user-interface/collectionview/index.md
       - title: Use XAML & data-binding
         summary: Use the MVVM pattern to show data in your UI.
         url: ~/xamarin-forms/xaml/xaml-basics/index.md
