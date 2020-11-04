@@ -24,7 +24,7 @@ The `AnchorX` property is a `double` value that defines the center point on the 
 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-The `AnchorY` property is a `double` value that defines the center point on the X axis for transforms such as scale and rotation. The default value is 0.5.
+The `AnchorY` property is a `double` value that defines the center point on the Y axis for transforms such as scale and rotation. The default value is 0.5.
 
 ### `Background`
 
@@ -48,7 +48,7 @@ The `Clip` property is a `Geometry` object that defines the outline of the conte
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-The `Effects` property is a `List` of `Effect` objects, inherited from the `Element`(xref:Xamarin.Forms.Element) class. Effects allow native controls to be customized, and are typically used for small styling changes. For more information about the `Effect` class, see [Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
+The `Effects` property is a `List` of `Effect` objects, inherited from the [`Element`](xref:Xamarin.Forms.Element) class. Effects allow native controls to be customized, and are typically used for small styling changes. For more information about the `Effect` class, see [Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
