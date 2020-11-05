@@ -11,7 +11,7 @@ ms.date: 12/16/2019
 
 # Use Touch ID and Face ID with Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/ios-samples/ios11-faceidsample/)
 
 iOS supports two biometric authentication systems:
 

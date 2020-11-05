@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Pins
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) control allows locations to be marked with [`Pin`](xref:Xamarin.Forms.Maps.Pin) objects. A `Pin` is a map marker that opens an information window when tapped:
 

@@ -21,7 +21,7 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
@@ -106,7 +106,7 @@ This video covers the process of building and testing an iOS app using Visual St
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
@@ -155,7 +155,7 @@ Follow these steps along with the video above:
 
 ## Step-by-step instructions for Mac
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 

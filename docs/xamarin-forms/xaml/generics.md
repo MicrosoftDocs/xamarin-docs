@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Generics in Xamarin.Forms XAML
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
 Xamarin.Forms XAML provides support for consuming generic CLR types by specifying the generic constraints as type arguments. This support is provided by the `x:TypeArguments` directive, which passes the constraining type arguments of a generic to the constructor of the generic type.
 

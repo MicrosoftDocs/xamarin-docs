@@ -10,7 +10,7 @@ ms.date: 04/29/2020
 
 # Connect to local web services from iOS simulators and Android emulators
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Many mobile applications consume web services. During the development phase, it's common to deploy a web service locally and consume it from a mobile application running in the iOS simulator or Android emulator. This avoids having to deploy the web service to a hosted endpoint, and enables a straightforward debugging experience because both the mobile application and web service are running locally.
 

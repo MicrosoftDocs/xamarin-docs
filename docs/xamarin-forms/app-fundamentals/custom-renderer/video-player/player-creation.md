@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Creating the platform video players
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 The [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
 

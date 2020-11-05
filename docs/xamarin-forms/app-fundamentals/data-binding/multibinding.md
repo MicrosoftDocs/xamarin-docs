@@ -11,7 +11,7 @@ ms.date: 10/26/2020
 
 # Xamarin.Forms Multi-Bindings
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Multi-bindings provide the ability to attach a collection of [`Binding`](xref:Xamarin.Forms.Binding) objects to a single binding target property. They are created with the `MultiBinding` class, which evaluates all of its `Binding` objects, and returns a single value through a `IMultiValueConverter` instance provided by your application. In addition, `MultiBinding` reevaluates all of its `Binding` objects when any of the bound data changes.
 

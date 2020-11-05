@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Pre-release API](~/media/shared/preview.png)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 A drag and drop gesture enables items, and their associated data packages, to be dragged from one onscreen location to another location using a continuous gesture. Drag and drop can take place in a single application, or it can start in one application and end in another.
 
@@ -73,7 +73,7 @@ In this example, a drag gesture can be initiated on the [`Image`](xref:Xamarin.F
 > [!TIP]
 > On iOS, Android, and UWP, a drag gesture is initiated with a long-press followed by a drag.
 
-For an example of using `DragGestureRecognizer` commands, see the [sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+For an example of using `DragGestureRecognizer` commands, see the [sample](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## Build a data package
 
@@ -207,7 +207,7 @@ The following XAML example shows a `DropGestureRecognizer` attached to an [`Imag
 
 In this example, when a drag source is dropped on the [`Image`](xref:Xamarin.Forms.Image) drop target, the drag source will be copied to the drop target, provided that the drag source is an [`ImageSource`](xref:Xamarin.Forms.ImageSource). This occurs because Xamarin.Forms automatically copies dragged images, and text, to compatible drop targets.
 
-For an example of using `DropGestureRecognizer` commands, see the [sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+For an example of using `DropGestureRecognizer` commands, see the [sample](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## Handle the DragOver event
 

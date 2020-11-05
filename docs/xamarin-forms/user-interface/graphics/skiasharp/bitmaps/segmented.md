@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Segmented display of SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The SkiaSharp `SKCanvas` object defines a method named `DrawBitmapNinePatch` and two methods named `DrawBitmapLattice` that are very similar. Both these methods render a bitmap to the size of a destination rectangle, but instead of stretching the bitmap uniformly, they display portions of the bitmap in its pixel dimensions and stretch other parts of the bitmap so that it fits the rectangle:
 

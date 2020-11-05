@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Binding Mode
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In the [previous article](basic-bindings.md), the **Alternative Code Binding** and **Alternative XAML Binding** pages featured a `Label` with its `Scale` property bound to the `Value` property of a `Slider`. Because the `Slider` initial value is 0, this caused the `Scale` property of the `Label` to be set to 0 rather than 1, and the `Label` disappeared.
 

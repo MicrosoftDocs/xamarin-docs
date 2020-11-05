@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials, Firebase]
 
 # Send and receive push notifications with Azure Notification Hubs and Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png)Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![Download Sample](~/media/shared/download.png)Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 Push notifications deliver information from a backend system to a mobile application. Apple, Google, and other platforms each have their own Push Notification Service (PNS). Azure Notification Hubs enable you to centralize notifications across platforms so your backend application can communicate with a single hub, which takes care of distributing the notifications to each platform-specific PNS.
 

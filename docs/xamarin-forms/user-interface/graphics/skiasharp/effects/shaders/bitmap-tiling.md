@@ -12,9 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp bitmap tiling
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/catclock)
 
 As you've seen in the two previous articles, the [`SKShader`](xref:SkiaSharp.SKShader) class can create linear or circular gradients. This article focuses on the `SKShader` object that uses a bitmap to tile an area. The bitmap can be repeated horizontally and vertically, either in its original orientation or alternately flipped horizontally and vertically. The flipping avoids discontinuities between the tiles:
 

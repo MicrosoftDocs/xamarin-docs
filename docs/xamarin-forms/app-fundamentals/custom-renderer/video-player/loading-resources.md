@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Loading application resource videos
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 The custom renderers for the `VideoPlayer` view are capable of playing video files that have been embedded in the individual platform projects as application resources. However, the current version of `VideoPlayer` cannot access resources embedded in a .NET Standard library.
 

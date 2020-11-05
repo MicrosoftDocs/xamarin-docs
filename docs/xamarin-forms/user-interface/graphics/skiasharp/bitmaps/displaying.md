@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Displaying SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The subject of SkiaSharp bitmaps was introduced in the article **[Bitmap Basics in SkiaSharp](../basics/bitmaps.md)**. That article showed three ways to load bitmaps and three ways to display bitmaps. This article reviews the techniques to load bitmaps and goes deeper into the use of the `DrawBitmap` methods of `SKCanvas`.
 

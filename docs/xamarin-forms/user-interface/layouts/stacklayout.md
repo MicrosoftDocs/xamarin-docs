@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms StackLayout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
 [![Xamarin.Forms StackLayout](stacklayout-images/layouts.png "Xamarin.Forms StackLayout")](stacklayout-images/layouts-large.png#lightbox "Xamarin.Forms StackLayout")
 

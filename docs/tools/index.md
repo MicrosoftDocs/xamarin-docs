@@ -35,7 +35,7 @@ Identify and fix performance issues.
 :::row-end:::
 :::row:::
     :::column:::
-[![Xamarin Workbooks](https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg)](~/tools/workbooks/index.md)
+[![Xamarin Workbooks](/media/illustrations/dynamics-resource-library.svg)](~/tools/workbooks/index.md)
 
 ### [Xamarin Workbooks](~/tools/workbooks/index.md)
 

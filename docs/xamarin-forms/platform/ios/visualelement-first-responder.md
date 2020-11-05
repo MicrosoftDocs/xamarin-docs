@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # VisualElement first responder on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific enables a [`VisualElement`](xref:Xamarin.Forms.VisualElement) object to become the first responder to touch events, rather than the page containing the element. It's consumed in XAML by setting the `VisualElement.CanBecomeFirstResponder` bindable property to `true`:
 
