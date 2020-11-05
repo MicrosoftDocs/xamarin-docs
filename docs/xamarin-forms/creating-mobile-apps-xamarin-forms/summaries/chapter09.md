@@ -14,8 +14,8 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
-> [!NOTE] 
-> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
 
 It is sometimes necessary to run some code that varies by platform. This chapter explores the techniques.
 
@@ -33,7 +33,7 @@ A more structured approach to executing platform-specific code in the SAP is dem
 
 ## DependencyService and the Portable Class Library
 
-> [!NOTE] 
+> [!NOTE]
 > Portable Class Libraries have been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries.
 
 A library cannot normally access classes in application projects. This restriction seems to prevent the technique shown in **PlatInfoSap2** from being used in a library. However, Xamarin.Forms contains a class named [`DependencyService`](xref:Xamarin.Forms.DependencyService) that uses .NET reflection to access public classes in the application project from the library.

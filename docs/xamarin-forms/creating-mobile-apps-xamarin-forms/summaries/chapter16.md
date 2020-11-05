@@ -14,8 +14,8 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 
-> [!NOTE] 
-> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
 
 Programmers often find themselves writing event handlers that detect when a property of one object has changed, and use that to change the value of a property in another object. This process can be automated with the technique of *data binding*. Data bindings are usually defined in XAML and become part of the definition of the user interface.
 

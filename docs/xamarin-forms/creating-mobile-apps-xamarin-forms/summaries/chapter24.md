@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 Many applications consist of multiple pages among which the user navigates. The application always has a *main* page or *home* page, and from there the user navigates to other pages, which are maintained in a stack for navigating back. Additional navigation options are covered in [**Chapter 25. Page Varieties**](chapter25.md).
 
 ## Modal pages and modeless pages

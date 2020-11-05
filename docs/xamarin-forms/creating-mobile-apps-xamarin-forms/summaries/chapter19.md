@@ -14,8 +14,8 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 
-> [!NOTE] 
-> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
 
 Xamarin.Forms defines three views that maintain collections and display their elements:
 
@@ -41,7 +41,7 @@ You can also use `SelectedIndex` to initialize the selected item, but it must be
 
 The `SelectedIndex` property is backed by a bindable property but `Items` is not, so using data binding with a `Picker` is difficult. One solution is to use the `Picker` in combination with an [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs) such as the one in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library. The [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding) demonstrates how this works.
 
-> [!NOTE] 
+> [!NOTE]
 > The Xamarin.Forms `Picker` now includes `ItemsSource` and `SelectedItem` properties that support data binding. See [Picker](~/xamarin-forms/user-interface/picker/index.md).
 
 ## Rendering data with ListView

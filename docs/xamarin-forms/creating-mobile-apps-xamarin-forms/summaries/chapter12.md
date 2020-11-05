@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 In Xamarin.Forms, styles allow multiple views to share a collection of property settings. This reduces markup and enables maintaining consistent visual themes.
 
 Styles are almost always defined and consumed in markup. An object of type [`Style`](xref:Xamarin.Forms.Style) is instantiated in a resource dictionary and then set to the [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of a visual element using a `StaticResource` or `DynamicResource` markup extension.
