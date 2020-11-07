@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Invoking Events from Effects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _An effect can define and invoke an event, signaling changes in the underlying native view. This article shows how to implement low-level multi-touch finger tracking, and how to generate events that signal touch activity._
 

@@ -37,7 +37,7 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 A `PermissionException` is thrown if the required permission is not declared.
 
-It's best to check the status of the permission before requesting it. Each operating system returns a different default state if the user has never been prompted. iOS returns `Unknown`, while others return `Denied`.
+It's best to check the status of the permission before requesting it. Each operating system returns a different default state if the user has never been prompted. iOS returns `Unknown`, while others return `Denied`. If the status is `Granted` then there is no need to make other calls. On iOS if the status is `Denied` you should prompt the user to change the permission in the settings and on Android you can call `ShouldShowRationale` to detect if the user has already denied the permission in the past.
 
 ## Requesting Permissions
 
@@ -49,7 +49,7 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
 A `PermissionException` is thrown if the required permission is not declared.
 
-Note, that on some platforms a permission request can only be activated a single time. Further prompts must be handled by the developer to check if a permission is in the `Denied` state and ask the user to manually turn it on.
+Note, that on some platforms a permission request can only be activated a single time. Further prompts must be handled by the developer to check if a permission is in the `Denied` state and ask the user to manually turn it on. 
 
 ## Permission Status
 
@@ -107,12 +107,24 @@ Here is a general usage pattern for handling permissions.
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-    if (status != PermissionStatus.Granted)
+    
+    if (status == PermissionStatus.Granted)
+        return status;
+        
+    
+    if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
-        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        // Prompt the user to turn on in settings
+        // On iOS once a permission has been denied it may not be requested again from the application
+        return status;
     }
+    
+    if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+    {
+        // Prompt the user with additional information as to why the permission is needed
+    }   
 
-    // Additionally could prompt the user to turn on in settings
+    status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
     return status;
 }

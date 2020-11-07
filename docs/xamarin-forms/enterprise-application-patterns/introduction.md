@@ -12,6 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Introduction to Enterprise App Development
 
+> [!NOTE]
+> This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.
+
 Regardless of platform, developers of enterprise apps face several challenges:
 
 - App requirements that can change over time.

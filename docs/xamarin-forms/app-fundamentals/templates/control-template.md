@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms control templates
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
 Xamarin.Forms control templates enable you to define the visual structure of [`ContentView`](xref:Xamarin.Forms.ContentView) derived custom controls, and [`ContentPage`](xref:Xamarin.Forms.ContentPage) derived pages. Control templates separate the user interface (UI) for a custom control, or page, from the logic that implements the control or page. Additional content can also be inserted into the templated custom control, or templated page, at a pre-defined location.
 
@@ -165,7 +165,7 @@ The following screenshots show the `CardViewControlTemplate` applied to the thre
 The `TemplateBinding` markup extension binds a property of an element that is in a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) to a public property that is defined by the templated custom control or templated page. When you use a `TemplateBinding`, you enable properties on the control to act as parameters to the template. Therefore, when a property on a templated custom control or templated page is set, that value is passed onto the element that has the `TemplateBinding` on it.
 
 > [!IMPORTANT]
-> The `TemplateBinding` markup extension is an alternative to creating a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) that uses the `RelativeSource` markup extension to set the `BindingContext` of the root element in the template to its templated parent. The `TemplateBinding` markup extension eliminates the `RelativeSource` binding, and replaces the `Binding` expressions with `TemplateBinding` expressions.
+> The `TemplateBinding` markup expression enables the `RelativeSource` binding from the previous control template to be removed, and replaces the `Binding` expressions.
 
 The `TemplateBinding` markup extension defines the following properties:
 
@@ -246,7 +246,7 @@ The following XAML example shows a [`ControlTemplate`](xref:Xamarin.Forms.Contro
 
 In this example, the `TemplateBinding` markup extension resolves binding expressions against the properties of each `CardView` object. The following screenshots show the `CardViewControlTemplate` applied to the three `CardView` objects:
 
-[![Screenshots of templated CardView objects, on iOS and Android](control-template-images/templatebinding-controltemplate.png "Templated CardView objects")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Templated CardView objects")
+[![Screenshots of templated CardView objects](control-template-images/templatebinding-controltemplate.png "Templated CardView objects")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Templated CardView objects")
 
 > [!IMPORTANT]
 > Using the `TemplateBinding` markup extension is equivalent to setting the `BindingContext` of the root element in the template to its templated parent with the `RelativeSource` markup extension, and then resolving bindings of child objects with the `Binding` markup extension. In fact, the `TemplateBinding` markup extension creates a `Binding` whose `Source` is `RelativeBindingSource.TemplatedParent`.
@@ -542,7 +542,7 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 
 In this example, the [`Label`](xref:Xamarin.Forms.Label) object named `changeThemeLabel` is retrieved once the `ControlTemplate` has been instantiated. `changeThemeLabel` can then be accessed and manipulated by the `AccessTemplateElementPage` class. The following screenshots show that the text displayed by the `Label` has been changed:
 
-[![Screenshots of templated page object, on iOS and Android](control-template-images/get-named-element.png "Templated ContentPage")](control-template-images/get-named-element-large.png#lightbox "Templated ContentPage")
+[![Screenshots of templated page object](control-template-images/get-named-element.png "Templated ContentPage")](control-template-images/get-named-element-large.png#lightbox "Templated ContentPage")
 
 ## Bind to a viewmodel
 
@@ -618,13 +618,13 @@ In this example, the `BindingContext` of the page is set to a `PeopleViewModel` 
 
 In this example, the root element of the [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) is a [`Frame`](xref:Xamarin.Forms.Frame) object. The `Frame` object uses the `RelativeSource` markup extension to set its `BindingContext` to the templated parent. The binding expressions of the `Frame` object and its children resolve against `CardView` properties, due to inheriting the `BindingContext` from the root `Frame` element. The following screenshots show the page displaying the `People` collection, which consists of three items:
 
-[![Screenshots of templated CardView objects, on iOS and Android](control-template-images/viewmodel-controltemplate.png "Templated CardView objects")](control-template-images/viewmodel-controltemplate-large.png#lightbox "Templated CardView objects")
+[![Screenshots of three templated CardView objects](control-template-images/viewmodel-controltemplate.png "Templated CardView objects")](control-template-images/viewmodel-controltemplate-large.png#lightbox "Templated CardView objects")
 
 While the objects in the [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) bind to properties on its templated parent, the [`Button`](xref:Xamarin.Forms.Button) within the control template binds to both its templated parent, and to the `DeletePersonCommand` in the viewmodel. This is because the `Button.Command` property redefines its binding source to be the binding context of the ancestor whose binding context type is `PeopleViewModel`, which is the [`StackLayout`](xref:Xamarin.Forms.StackLayout). The `Path` part of the binding expressions can then resolve the `DeletePersonCommand` property. However, the `Button.CommandParameter` property doesn't alter its binding source, instead inheriting it from its parent in the [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Therefore, the `CommandParameter` property binds to the `CardTitle` property of the `CardView`.
 
 The overall effect of the [`Button`](xref:Xamarin.Forms.Button) bindings is that when the `Button` is tapped, the `DeletePersonCommand` in the `PeopleViewModel` class is executed, with the value of the `CardName` property being passed to the `DeletePersonCommand`. This results in the specified `CardView` being removed from the bindable layout:
 
-[![Screenshots of templated CardView objects, on iOS and Android](control-template-images/viewmodel-itemdeleted.png "Templated CardView objects")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "Templated CardView objects")
+[![Screenshots of two templated CardView objects](control-template-images/viewmodel-itemdeleted.png "Templated CardView objects")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "Templated CardView objects")
 
 For more information about relative bindings, see [Xamarin.Forms Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 

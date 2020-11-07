@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 The [`Button`](xref:Xamarin.Forms.Button) is the view that allows the user to initiate a command. A `Button` is identified by text (and optionally an image as demonstrated in [Chapter 13, Bitmaps](chapter13.md)). Consequently, `Button` defines many of the same properties as `Label`:
 
 - [`Text`](xref:Xamarin.Forms.Button.Text)

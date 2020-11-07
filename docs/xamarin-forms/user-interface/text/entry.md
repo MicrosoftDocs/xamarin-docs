@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line text input. The `Entry`, like the [`Editor`](xref:Xamarin.Forms.Editor) view, supports multiple keyboard types. Additionally, the `Entry` can be used as a password field.
 

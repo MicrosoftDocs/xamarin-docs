@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # ListView appearance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
 The Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) allows you to customize the presentation of the list, in addition to the [`ViewCell`](xref:Xamarin.Forms.ViewCell) instances for each row in the list.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Authenticate Users with Azure Active Directory B2C
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C provides cloud identity management for consumer-facing web and mobile applications. This article shows how to use Azure Active Directory B2C to integrate identity management into a mobile application with the Microsoft Authentication Library._
 

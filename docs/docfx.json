@@ -74,6 +74,13 @@
       "feedback_product_url": {
         "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
       },
+      "feedback_system": {
+        "android/**/*":"None",
+        "cross-platform/**/*":"None",
+        "ios/**/*":"None",
+        "mac/**/*":"None",
+        "tools/**/*":"None"
+      },
       "breadcrumb_path": {
         "get-started/tutorials/**/*.yml": "/xamarin/breadcrumb/tutorials/toc.json",
         "get-started/tutorials/index.yml": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
@@ -81,7 +88,7 @@
         "xamarin-forms/enterprise-application-patterns/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json",
         "xamarin-forms/user-interface/graphics/skiasharp/**/*.md": "/xamarin/breadcrumb/subtoc_breadcrumb/toc.json"
       },
-      "searchScope": { 
+      "searchScope": {
         "android/**/**.md": ["Xamarin","Xamarin.Android"],
         "android/**/**.yml": ["Xamarin","Xamarin.Android"],
         "ios/**/**.md": ["Xamarin","Xamarin.iOS"],

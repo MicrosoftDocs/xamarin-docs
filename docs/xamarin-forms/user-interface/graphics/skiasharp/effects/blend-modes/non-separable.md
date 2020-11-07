@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The non-separable blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**SkiaSharp separable blend modes**](separable.md), the separable blend modes perform operations on the red, green, and blue channels separately. The non-separable blend modes do not. By operating upon the Hue, Saturation, and Luminosity levels of color, the non-separable blend modes can alter colors in interesting ways:
 

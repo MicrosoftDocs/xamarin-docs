@@ -50,6 +50,9 @@ No additional setup required.
 
 -----
 
+> [!TIP]
+> All methods must be called on the UI thread because permission checks and requests are automatically handled by Xamarin.Essentials.
+
 ## Pick File
 
 `FilePicker.PickAsync()` method enables your user to pick a file from the device. You are able to specific different `PickOptions` when calling the method enabling you to specify the title to display and the file types the user is allowed to pick. By default 

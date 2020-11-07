@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing a ContentPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 

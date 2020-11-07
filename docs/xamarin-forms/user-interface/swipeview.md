@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Pre-release API](~/media/shared/preview.png)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
 The `SwipeView` is a container control that wraps around an item of content, and provides context menu items that are revealed by a swipe gesture:
 

@@ -11,7 +11,7 @@ ms.date: 09/19/2017
 
 # Introduction to iOS 11
 
-![ARKit Example](images/arkit.png) ![AR Placing Objects](images/arkit2.png) ![CoreML Example](images/coreml.png) ![MapKit Example](images/mapkit.png) ![Vision Rectangles Example](images/vision1.png) ![Vision Faces Example](images/vision2.png) ![Drag and Drop Example](images/drag-drop.png) ![Drag and Drop Example](images/drag-drop2.png) ![SiriKit Example](images/sirikit.png)
+![ARKit Example](images/arkit.png) ![AR Placing Objects](images/arkit2.png) ![CoreML Example](images/coreml.png) ![MapKit Example](images/mapkit.png) ![Vision Rectangles Example](images/vision1.png) ![Vision Faces Example](images/vision2.png) ![Drag and Drop Example 1](images/drag-drop.png) ![Drag and Drop Example 2](images/drag-drop2.png) ![SiriKit Example](images/sirikit.png)
 
 iOS 11 includes many brand-new features and enhancements across a variety of frameworks:
 
@@ -22,7 +22,6 @@ Apple has introduced architecture updates, new visual changes, and an updated iT
 ## [ARKit](arkit/index.md)
 
 ARKit brings Augmented Reality to iOS, allowing users to interact with the world through the device's camera.
-With Xamarin, you can also use [ARKit with UrhoSharp](arkit/urhosharp.md).
 
 ## [CoreML](coreml.md)
 
@@ -61,7 +60,6 @@ We have a number of C# [samples](/samples/browse/?products=xamarin&term=Xamarin.
 
 - [ARKit Sample](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [ARKit Placing Objects](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-- [ARKit and UrhoSharp](arkit/urhosharp.md)
 - [CoreML Image Recognition Sample](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
 - [CoreML with Azure Custom Model](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [CoreNFC Tag Reader Sample](/samples/xamarin/ios-samples/ios11-nfctagreader)

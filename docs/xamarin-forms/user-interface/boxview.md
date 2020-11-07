@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms BoxView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
 [`BoxView`](xref:Xamarin.Forms.BoxView) renders a simple rectangle of a specified width, height, and color. You can use `BoxView` for decoration, rudimentary graphics, and for interaction with the user through touch.
 

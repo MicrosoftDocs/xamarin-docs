@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)._
 

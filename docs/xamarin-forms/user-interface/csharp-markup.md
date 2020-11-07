@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Pre-release API](~/media/shared/preview.png)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 C# markup is an opt-in set of fluent helper methods and classes to simplify the process of building declarative Xamarin.Forms user interfaces in C#. The fluent API provided by C# markup is available in the `Xamarin.Forms.Markup` namespace.
 

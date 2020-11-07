@@ -15,6 +15,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _See your Xamarin.Forms layouts rendered as you type_
 
+> [!WARNING]
+> The recommended way to preview your XAML is now with **[XAML Hot Reload](~/xamarin-forms/xaml/hot-reload.md)**.
+
 ## Overview
 
 The XAML Previewer shows you how your Xamarin.Forms XAML page will look on iOS and Android. When you make changes to your XAML, you'll see them previewed immediately alongside your code. The XAML Previewer is available in Visual Studio and Visual Studio for Mac.

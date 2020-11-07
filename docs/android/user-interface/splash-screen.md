@@ -11,7 +11,7 @@ ms.date: 10/02/2019
 
 # Splash Screen
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/monodroid-samples/splashscreen)
 
 _An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 

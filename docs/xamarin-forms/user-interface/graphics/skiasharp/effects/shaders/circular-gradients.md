@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The SkiaSharp circular gradients
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [`SKShader`](xref:SkiaSharp.SKShader) class defines static methods to create four different types of gradients. The [**SkiaSharp linear gradient**](linear-gradient.md) article discusses the [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) method. This article covers the other three types of gradients, all of which are based on circles.
 

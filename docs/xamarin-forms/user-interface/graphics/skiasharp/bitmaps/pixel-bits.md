@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Accessing SkiaSharp bitmap pixel bits
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**Saving SkiaSharp bitmaps to files**](saving.md), bitmaps are generally stored in files in a compressed format, such as JPEG or PNG. In constrast, a SkiaSharp bitmap stored in memory is not compressed. It is stored as a sequential series of pixels. This uncompressed format facilitates the transfer of bitmaps to a display surface.
 

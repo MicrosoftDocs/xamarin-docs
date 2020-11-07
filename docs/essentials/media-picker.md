@@ -34,7 +34,7 @@ Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 
-// Add these properties if you would like to filter out cameras that do not have cameras or set to false to make them optional
+// Add these properties if you would like to filter out devices that do not have cameras, or set to false to make them optional
 [assembly: UsesFeature("android.hardware.camera", Required = true)]
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = true)]
 ```
@@ -84,6 +84,9 @@ The `MediaPicker` class has the following methods that all return a `FileResult`
 * `CaptureVideoAsync`: Opens the camera to take a video.
 
 Each method optionally takes in a `MediaPickerOptions` parameter that allows the `Title` to be set on some operating systems that is displayed to the users.
+
+> [!TIP]
+> All methods must be called on the UI thread because permission checks and requests are automatically handled by Xamarin.Essentials.
 
 ## General Usage
 

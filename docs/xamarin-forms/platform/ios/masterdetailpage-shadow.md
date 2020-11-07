@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # MasterDetailPage Shadow on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This platform-specific controls whether the detail page of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) has shadow applied to it, when revealing the master page. It's consumed in XAML by setting the `MasterDetailPage.ApplyShadow` bindable property to `true`:
 

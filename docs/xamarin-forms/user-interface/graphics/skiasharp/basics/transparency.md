@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp transparency
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you've seen, the [`SKPaint`](xref:SkiaSharp.SKPaint) class includes a [`Color`](xref:SkiaSharp.SKPaint.Color) property of type [`SKColor`](xref:SkiaSharp.SKColor). `SKColor` includes an alpha channel, so anything that you color with an `SKColor` value can be partially transparent. 
 

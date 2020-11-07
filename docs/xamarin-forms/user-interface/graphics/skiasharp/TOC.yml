@@ -1,11 +1,11 @@
 - name: SkiaSharp Graphics in Xamarin.Forms
   href: index.md
   expanded: true
-  items: 
+  items:
     - name: Drawing Basics
       href: basics/index.md
       expanded: true
-      items: 
+      items:
         - name: Drawing a Simple Circle
           href: basics/circle.md
         - name: Integrating with Xamarin.Forms
@@ -22,7 +22,7 @@
           href: basics/transparency.md
     - name: Lines and Paths
       href: paths/index.md
-      items: 
+      items:
         - name: Lines and Stroke Caps
           href: paths/lines.md
         - name: Path Basics
@@ -37,7 +37,7 @@
           href: paths/finger-paint.md
     - name: Transforms
       href: transforms/index.md
-      items: 
+      items:
         - name: The Translate Transform
           href: transforms/translate.md
         - name: The Scale Transform
@@ -57,7 +57,7 @@
           href: transforms/3d-rotation.md
     - name: Curves and Paths
       href: curves/index.md
-      items: 
+      items:
         - name: Three Ways to Draw an Arc
           href: curves/arcs.md
         - name: Three Types of Bézier Curves
@@ -74,7 +74,7 @@
           href: curves/information.md
     - name: Bitmaps
       href: bitmaps/index.md
-      items: 
+      items:
         - name: Displaying Bitmaps
           href: bitmaps/displaying.md
         - name: Creating and Drawing on Bitmaps
@@ -91,10 +91,10 @@
           href: bitmaps/animating.md
     - name: Effects
       href: effects/index.md
-      items: 
+      items:
         - name: Shaders
           href: effects/shaders/index.md
-          items: 
+          items:
             - name: Linear Gradient
               href: effects/shaders/linear-gradient.md
             - name: Circular Gradients
@@ -105,7 +105,7 @@
               href: effects/shaders/noise.md
         - name: Blend Modes
           href: effects/blend-modes/index.md
-          items: 
+          items:
             - name: Porter-Duff Blend Modes
               href: effects/blend-modes/porter-duff.md
             - name: Separable Blend Modes
@@ -118,10 +118,5 @@
           href: effects/image-filters.md
         - name: Color Filters
           href: effects/color-filters.md
-    - name: Platform-independent examples
-      href: ~/graphics-games/skiasharp/introduction.md
-      items: 
-        - name: Platform-specific notes
-          href: ~/graphics-games/skiasharp/platform.md
     - name: API reference
       href: /dotnet/api/skiasharp/

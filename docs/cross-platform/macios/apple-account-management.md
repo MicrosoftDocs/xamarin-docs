@@ -69,7 +69,7 @@ Apple account management is available on Visual Studio for Mac, Visual Studio 20
 
 Select a team and click on **View Details…** to open a dialog that displays a list of signing identities and provisioning profiles that are installed on your machine.
 
-The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 
+The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is:
 
 - **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
 
@@ -101,6 +101,8 @@ The team details dialog also displays a list of all provisioning profiles connec
 - If attempting to create a new signing certificate fails with the error `You have reached the limit for certificates of this type`, then the maximum number of certificates allowed have been generated. To fix this, browse to the [Apple Developer Center](https://developer.apple.com/account/ios/certificate/distribution) and revoke one of the Production Certificates.
 
 - If you are experiencing issues logging in your account on Visual Studio for Mac, a possible fix is to open the Keychain application and under **Category** select **Passwords**. Search for `deliver.` and delete all entries that are found.
+
+- If your signing certificate is revoked, it can be removed from the following path on Windows: `C:\Users\<user>\AppData\Local\Xamarin\iOS\Provisioning\Certificates`.
 
 ## Known Issues
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Dependency resolution in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
 _This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations. The code examples in this article are taken from the [Dependency Resolution using Containers](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) sample._
 

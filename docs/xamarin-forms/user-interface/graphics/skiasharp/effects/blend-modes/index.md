@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 These articles focus on the [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) property of [`SKPaint`](xref:SkiaSharp.SKPaint). The `BlendMode` property is of type [`SKBlendMode`](xref:SkiaSharp.SKBlendMode), an enumeration with 29 members.
 

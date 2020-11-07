@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Launch the Native Map App from Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The native map app on each platform can be launched from a Xamarin.Forms application by the Xamarin.Essentials `Launcher` class. This class enables an application to open another app through its custom URI scheme. The launcher functionality can be invoked with the `OpenAsync` method, passing in a `string` or `Uri` argument that represents the custom URL scheme to open. For more information about Xamarin.Essentials, see [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms).
 

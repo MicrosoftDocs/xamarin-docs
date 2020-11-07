@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Automation Properties in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms allows accessibility values to be set on user interface elements by using attached properties from the AutomationProperties class, which in turn set native accessibility values. This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page._
 
@@ -123,6 +123,9 @@ var entry = new Entry();
 AutomationProperties.SetIsInAccessibleTree(entry, true);
 AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
+
+> [!IMPORTANT]
+> The `AutomationProperties.LabeledByProperty` is not yet supported on iOS.
 
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.IsInAccessibleTree` attached property  – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`

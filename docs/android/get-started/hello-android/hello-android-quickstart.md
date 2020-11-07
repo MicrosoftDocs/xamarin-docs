@@ -15,7 +15,7 @@ ms.date: 10/05/2018
 
 _In this two-part guide, you will build your first Xamarin.Android application with Visual Studio and develop an understanding of the fundamentals of Android application development with Xamarin._
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/monodroid-samples/phoneword)
 
 You will create an application that translates an
 alphanumeric phone number (entered by the user) into a numeric phone

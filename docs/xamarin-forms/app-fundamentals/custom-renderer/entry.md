@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing an Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
