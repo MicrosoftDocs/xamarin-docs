@@ -71,7 +71,6 @@ try
         return;
 
     var name = contact.Name;
-    var contactType = contact.ContactType; // Unknown, Personal, Work
     var numbers = contact.Numbers; // List of phone numbers
     var emails = contact.Emails; // List of email addresses 
     
@@ -82,6 +81,26 @@ catch (Exception ex)
 }
 ```
 
+## Getting All Contacts
+
+```csharp
+ObservableCollection<Contact> contactsCollect = new ObservableCollection<Contact>();
+
+try
+{
+    var contacts = Contacts.GetAllAsync();
+
+    if(contacts == null)
+        return;
+
+    await foreach (var contact in contacts)
+        contactsCollect.Add(contact);
+}
+catch (Exception ex)
+{
+    // Handle exception here.
+}
+```
 
 ## API
 
