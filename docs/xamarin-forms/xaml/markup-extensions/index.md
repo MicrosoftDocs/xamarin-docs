@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # XAML Markup Extensions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 XAML markup extensions help extend the power and flexibility of XAML by allowing element attributes to be set from sources other than literal text strings.
 

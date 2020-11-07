@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 Normally, the XAML parser converts any string set as an attribute value to the type of the property based on standard conversions for the basic .NET data types, or a [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) derivative attached to the property or its type with a [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 
 But it's sometimes convenient to set an attribute from a different source, for example, an item in a dictionary, or the value of a static property or field, or from a calculation of some sort.

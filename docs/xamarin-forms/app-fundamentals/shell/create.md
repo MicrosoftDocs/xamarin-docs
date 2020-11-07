@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Create a Xamarin.Forms Shell Application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The process for creating a Xamarin.Forms Shell application is as follows:
 

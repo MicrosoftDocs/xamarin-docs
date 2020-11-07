@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The Xamarin.Forms FlexLayout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Use FlexLayout for stacking or wrapping a collection of child views._
 

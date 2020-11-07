@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # ImageButton Drop Shadows on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific is used to enable a drop shadow on a `ImageButton`. It's consumed in XAML by setting the `ImageButton.IsShadowEnabled` bindable property to `true`, along with a number of additional optional bindable properties that control the drop shadow:
 

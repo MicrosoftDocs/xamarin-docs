@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Cell Background Color on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific sets the default background color of [`Cell`](xref:Xamarin.Forms.Cell) instances. It's consumed in XAML by setting the `Cell.DefaultBackgroundColor` bindable property to a [`Color`](xref:Xamarin.Forms.Color):
 

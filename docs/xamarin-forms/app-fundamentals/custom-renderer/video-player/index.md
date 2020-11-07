@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Implementing a video player
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 It is sometimes desirable to play video files in a Xamarin.Forms application. This series of articles discusses how to write custom renderers for iOS, Android, and the Universal Windows Platform (UWP) for a Xamarin.Forms class named `VideoPlayer`.
 

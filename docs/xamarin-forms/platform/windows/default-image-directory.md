@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Default image directory on Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Universal Windows Platform platform-specific defines the directory in the project that image assets will be loaded from. It's consumed in XAML by setting the `Application.ImageDirectory` to a `string` that represents the project directory that contains image assets:
 

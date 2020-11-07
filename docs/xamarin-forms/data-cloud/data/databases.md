@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Local Databases
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/todo)
 
 The SQLite database engine allows Xamarin.Forms applications to load and save data objects in shared code. The sample application uses a SQLite database table to store todo items. This article describes how to use SQLite.Net in shared code to store and retrieve information in a local database.
 
@@ -33,9 +33,8 @@ Use the NuGet package manager to search for **sqlite-net-pcl** and add the lates
 There are a number of NuGet packages with similar names. The correct package has these attributes:
 
 - **ID:** sqlite-net-pcl
-- **Author(s):** SQLite-net
-- **Owner(s):** praeclarum
-- **Project URL:** https://github.com/praeclarum/sqlite-net
+- **Authors:** SQLite-net
+- **Owners:** praeclarum
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]

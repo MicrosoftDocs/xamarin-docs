@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp effects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) class defines six properties that can be classified under the general term of _effects_. These are properties that alter the normal display of graphics in some way. The SkiaSharp effects fall into six categories:
 

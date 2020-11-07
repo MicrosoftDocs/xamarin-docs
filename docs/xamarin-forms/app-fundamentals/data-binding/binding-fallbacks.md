@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Binding Fallbacks
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Sometimes data bindings fail, because the binding source can't be resolved, or because the binding succeeds but returns a `null` value. While these scenarios can be handled with value converters, or other additional code, data bindings can be made more robust by defining fallback values to use if the binding process fails. This can be accomplished by defining the [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) and [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) properties in a binding expression. Because these properties reside in the [`BindingBase`](xref:Xamarin.Forms.BindingBase) class, they can be used with bindings, multi-bindings, compiled bindings, and with the `Binding` markup extension.
 

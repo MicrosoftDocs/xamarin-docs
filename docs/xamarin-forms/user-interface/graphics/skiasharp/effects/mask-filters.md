@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp mask filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Mask filters are effects that manipulate the geometry and alpha channel of graphical objects. To use a mask filter, set the [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) property of `SKPaint` to an object of type [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) that you've created by calling one of the `SKMaskFilter` static methods.
 

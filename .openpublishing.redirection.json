@@ -679,6 +679,122 @@
     {
         "source_path": "docs/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md",
         "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/behaviors"
+    },
+    {
+        "source_path": "docs/ios/platform/introduction-to-ios11/arkit/urhosharp.md",
+        "redirect_url": "/xamarin/ios/platform/introduction-to-ios11/arkit"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/graphics/index.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/graphics/cocossharp.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/graphics/urhosharp.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp"
+    },
+    {
+        "source_path": "docs/graphics-games/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/game-development/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/3d/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/3d/part1.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/3d/part2.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/3d/part3.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/input.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/introduction/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/introduction/part1.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/introduction/part2.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/platforms/index.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/monogame/platforms/uwp.md",
+        "redirect_url": "https://www.monogame.net"
+    },
+    {
+        "source_path": "docs/graphics-games/skiasharp/introduction.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp"
+    },
+    {
+        "source_path": "docs/graphics-games/skiasharp/platform.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/fsharp.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/index.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/introduction.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/android.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/index.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/ios.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/mac.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/windows.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/platform/xamarin-forms.md",
+        "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/graphics-games/urhosharp/using.md",
+        "redirect_url": "/xamarin/"
     }
   ]
 }

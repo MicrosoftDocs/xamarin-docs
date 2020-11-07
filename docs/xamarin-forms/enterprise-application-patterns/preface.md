@@ -12,6 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Preface to Enterprise App Development
 
+> [!NOTE]
+> This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.
+
 This eBook provides guidance on building cross-platform enterprise apps using Xamarin.Forms. Xamarin.Forms is a cross-platform UI toolkit that allows developers to easily create native user interface layouts that can be shared across platforms, including iOS, Android, and the Universal Windows Platform (UWP). It provides a comprehensive solution for Business to Employee (B2E), Business to Business (B2B), and Business to Consumer (B2C) apps, providing the ability to share code across all target platforms and helping to lower the total cost of ownership (TCO).
 
 The guide provides architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise apps. Guidance is provided on how to implement MVVM, dependency injection, navigation, validation, and configuration management, while maintaining loose coupling. In addition, there's also guidance on performing authentication and authorization with IdentityServer, accessing data from containerized microservices, and unit testing.

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # TabbedPage Toolbar Placement and Color on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 > [!IMPORTANT]
 > The platform-specifics that set the color of the toolbar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) are now obsolete and have been replaced by the [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) and [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) properties. For more information, see [Create a TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#create-a-tabbedpage).

@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Pre-release API](~/media/shared/preview.png)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) is a view for playing video and audio. Media that's supported by the underlying platform can be played from the following sources:
 

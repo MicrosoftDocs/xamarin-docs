@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 One of the best ways to architect an application is by separating the user interface from the underlying code, which is sometimes called the *business logic*. Several techniques exist, but the one that is tailored for XAML-based environments is known as Model-View-ViewModel or MVVM.
 
 ## MVVM interrelationships

@@ -141,7 +141,7 @@ After you have retrieved the SHA-1 fingerprint of the signing keystore, it is ne
 
    [![Clicking the ENABLE button in the Dashboard section](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-At this point the API project has been created and Google Maps Android API v2 has been added to it. However, you cannot use this API in your project until you create credentials for it. The next section explains how to create an API key and white-list a Xamarin.Android application so that it is authorized to use this key.
+At this point the API project has been created and Google Maps Android API v2 has been added to it. However, you cannot use this API in your project until you create credentials for it. The next section explains how to create an API key and authorize a Xamarin.Android application to use this key.
 
 ## Obtaining the API Key
 

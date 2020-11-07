@@ -321,8 +321,6 @@
               href: platform/introduction-to-ios11/arkit/index.md
             - name: ARKit 2
               href: platform/introduction-to-ios12/arkit2.md
-            - name: "ARKit & UrhoSharp"
-              href: platform/introduction-to-ios11/arkit/urhosharp.md
         - name: Binding Objective-C
           href: platform/binding-objective-c/index.md
           items:

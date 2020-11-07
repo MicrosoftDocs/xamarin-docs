@@ -12,6 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Enterprise App Navigation
 
+> [!NOTE]
+> This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.
+
 Xamarin.Forms includes support for page navigation, which typically results from the user's interaction with the UI or from the app itself as a result of internal logic-driven state changes. However, navigation can be complex to implement in apps that use the Model-View-ViewModel (MVVM) pattern, as the following challenges must be met:
 
 - How to identify the view to be navigated to, using an approach that does not introduce tight coupling and dependencies between views.

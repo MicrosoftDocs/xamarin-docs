@@ -127,8 +127,8 @@ additionalContent:
         summary: Understand how apps start and go to the background.
         url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
       - title: Show a list of data
-        summary: Use the ListView to scroll and select data.
-        url: ~/xamarin-forms/user-interface/listview/index.md
+        summary: Use the CollectionView to scroll and select data.
+        url: ~/xamarin-forms/user-interface/collectionview/index.md
       - title: Use XAML & data-binding
         summary: Use the MVVM pattern to show data in your UI.
         url: ~/xamarin-forms/xaml/xaml-basics/index.md
@@ -147,20 +147,6 @@ additionalContent:
       - title: Render SkiaSharp graphics
         summary: Render cross-platform 2D vector graphics.
         url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-  - title: Mobile developer tools
-    items:
-      - title: iOS Simulator for Windows
-        summary: Interact with the iOS Simulator using Visual Studio on Windows.
-        url: ~/tools/ios-simulator/index.md
-      - title: Profiler
-        summary: Identify and fix performance issues.
-        url: ~/tools/profiler/index.md
-      - title: .NET embedding
-        summary: Allows your existing .NET code to be consumed from other programming languages.
-        url: ~/tools/dotnet-embedding/index.md
-      - title: MonoGame
-        summary: Build desktop, mobile, and console games with C#.
-        url: ~/graphics-games/monogame/introduction/index.md
   - title: Xamarin platforms overview
     items:
         - title: Xamarin.Forms cross-platform

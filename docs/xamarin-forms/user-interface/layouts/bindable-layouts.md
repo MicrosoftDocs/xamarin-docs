@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Bindable Layouts in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 Bindable layouts enable any layout class that derives from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class to generate its content by binding to a collection of items, with the option to set the appearance of each item with a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Bindable layouts are provided by the `BindableLayout` class, which exposes the following attached properties:
 

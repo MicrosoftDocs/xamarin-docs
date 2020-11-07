@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Adding Data to a Picker's Items Collection
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _The Picker view is a control for selecting a text item from a list of data. This article explains how to populate a Picker with data by adding it to the Items collection, and how to respond to item selection by the user._
 

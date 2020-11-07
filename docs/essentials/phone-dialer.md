@@ -17,6 +17,31 @@ The **PhoneDialer** class enables an application to open a phone number in the d
 
 [!include[](~/essentials/includes/get-started.md)]
 
+# [Android](#tab/android)
+
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.DIAL" />
+    <data android:scheme="tel"/>
+  </intent>
+</queries>
+```
+
+# [iOS](#tab/ios)
+
+No additional setup required.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
+
 ## Using Phone Dialer
 
 Add a reference to Xamarin.Essentials in your class:

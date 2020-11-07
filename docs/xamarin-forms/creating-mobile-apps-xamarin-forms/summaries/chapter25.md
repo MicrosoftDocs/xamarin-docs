@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
 
+> [!NOTE]
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
+
 So far you've seen two classes that derive from `Page`: `ContentPage` and `NavigationPage`. This chapter presents two others:
 
 - [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) manages two pages, a master and a detail

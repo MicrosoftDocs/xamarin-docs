@@ -30,7 +30,7 @@ Objective Sharpie can be downloaded as a standard OS X package installer.
 Run the installer and follow all of the on-screen prompts from the installation wizard:
 
 - **Current Version: 3.4**
-  - [Download Latest Release](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+  - [Download Latest Release](https://aka.ms/objective-sharpie)
   - [Forum Announcement](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]

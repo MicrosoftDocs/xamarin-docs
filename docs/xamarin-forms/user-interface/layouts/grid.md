@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Grid
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
 [![Xamarin.Forms Grid](grid-images/layouts.png "Xamarin.Forms Grid")](grid-images/layouts-large.png#lightbox "Xamarin.Forms Grid")
 

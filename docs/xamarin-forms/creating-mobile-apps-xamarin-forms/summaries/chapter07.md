@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
+> This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
 
 Xamarin.Forms supports an XML-based markup language called the Extensible Application Markup Language or XAML (pronounced "zammel"). XAML provides an alternative to C# in defining the layout of the user interface of a Xamarin.Forms application, and in defining bindings between user-interface elements and underlying data.
 

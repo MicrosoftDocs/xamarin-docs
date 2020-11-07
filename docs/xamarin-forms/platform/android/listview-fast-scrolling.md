@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # ListView Fast Scrolling on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific is used to enable fast scrolling through data in a [`ListView`](xref:Xamarin.Forms.ListView). It's consumed in XAML by setting the `ListView.IsFastScrollEnabled` attached property to a `boolean` value:
 

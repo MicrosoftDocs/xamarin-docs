@@ -16,6 +16,9 @@ _Architectural guidance for developing adaptable, maintainable, and testable Xam
 
 ![Enterprise Application Patterns using Xamarin.Forms eBook](images/cover-sml.png)
 
+> [!NOTE]
+> This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.
+
 This eBook provides guidance on how to implement the Model-View-ViewModel (MVVM) pattern, dependency injection, navigation, validation, and configuration management, while maintaining loose coupling. In addition, there's also guidance on performing authentication and authorization with IdentityServer, accessing data from containerized microservices, and unit testing.
 
 ## [Preface](preface.md)

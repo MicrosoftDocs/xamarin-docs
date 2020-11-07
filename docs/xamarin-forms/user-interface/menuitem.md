@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms MenuItem
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
 The Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) class defines menu items for menus such as `ListView` item context menus and Shell application flyout menus.
 

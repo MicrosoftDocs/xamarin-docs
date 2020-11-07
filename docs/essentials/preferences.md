@@ -55,7 +55,8 @@ To remove all preferences:
 Preferences.Clear();
 ```
 
-The above methods also take in an optional `sharedName` that can be used to create additional containers for preferences. Read the platform implementation specifics below.
+> [!TIP]
+> The above methods take in an optional `string` parameter called `sharedName`. This parameter is used to create additional containers for preferences which are helpful in some use cases. One use case is when your application needs to share preferences across extensions or to a watch application. Please read the platform implementation specifics below.
 
 ## Supported Data Types
 

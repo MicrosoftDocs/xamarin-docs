@@ -64,7 +64,14 @@ public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        try
+        {
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        }
+        catch(Exception ex)
+        {
+            // An unexpected error occured. No browser may be installed on the device.
+        }
     }
 }
 ```

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Binding Path
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In all the previous data-binding examples, the [`Path`](xref:Xamarin.Forms.Binding.Path) property of the `Binding` class (or the [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) property of the `Binding` markup extension) has been set to a single property. It's actually possible to set `Path` to a *sub-property* (a property of a property), or to a member of a collection.
 

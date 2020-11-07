@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Use Sign In with Apple in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Sign In with Apple is for all new applications on iOS 13 that use third-party authentication services. The implementation details between iOS and Android are quite different. This guide walks through how you can do this today in Xamarin.Forms.
 

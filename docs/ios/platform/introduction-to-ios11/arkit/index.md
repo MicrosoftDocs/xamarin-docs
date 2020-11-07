@@ -13,10 +13,7 @@ ms.date: 08/30/2017
 
 _Augmented Reality for iOS 11_
 
-ARKit enables a wide variety of augmented reality applications and games. This section covers the following topics:
-
-- [Getting Started with ARKit](#gettingstarted)
-- [Using ARKit with UrhoSharp](urhosharp.md)
+ARKit enables a wide variety of augmented reality applications and games
 
 <a name="gettingstarted"></a>
 
@@ -105,12 +102,11 @@ The above code results in a simple ARKit application. More complex examples
 would expect the view controller hosting the augmented reality session to
 implement `IARSCNViewDelegate`, and additional methods be implemented.
 
-ARKit provides lots of more sophisticated features, such as surface tracking, and user interaction. See the [UrhoSharp demo](urhosharp.md) for an example combining ARKit tracking with UrhoSharp.
+ARKit provides lots of more sophisticated features, such as surface tracking, and user interaction.
 
 ## Related Links
 
 - [Augmented Reality (Apple)](https://developer.apple.com/arkit/)
-- [Using ARKit with UrhoSharp](urhosharp.md)
 - [Simple ARKit (Jet) Sample](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [ARKit Placing Objects (sample)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introducing ARKit - Augmented Reality for iOS (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/602/)

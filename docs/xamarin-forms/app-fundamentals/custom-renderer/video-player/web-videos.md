@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Playing a Web video
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 The `VideoPlayer` class defines a `Source` property used to specify the source of the video file, as well as an `AutoPlay` property. `AutoPlay` has a default setting of `true`, which means that the video should begin playing automatically after `Source` has been set:
 

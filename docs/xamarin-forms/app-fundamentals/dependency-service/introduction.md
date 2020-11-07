@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms DependencyService Introduction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 The [`DependencyService`](xref:Xamarin.Forms.DependencyService) class is a service locator that enables Xamarin.Forms applications to invoke native platform functionality from shared code.
 

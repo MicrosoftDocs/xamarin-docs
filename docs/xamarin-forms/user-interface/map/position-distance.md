@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Position and Distance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace contains a [`Position`](xref:Xamarin.Forms.Maps.Position) struct that's typically used when positioning a map and its pins, and a [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct that can optionally be used when positioning a map.
 

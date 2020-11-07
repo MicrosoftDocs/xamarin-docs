@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Create a Custom Layout in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms defines five layout classes – StackLayout, AbsoluteLayout, RelativeLayout, Grid, and FlexLayout, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
 

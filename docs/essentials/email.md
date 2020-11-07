@@ -32,7 +32,14 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 
 # [iOS](#tab/ios)
 
-No additional setup required.
+In iOS 9 and greater, Apple enforces what schemes an application can query for. To query if email is a valid target the `mailto` scheme must be specified in the  LSApplicationQueriesSchemes in your Info.plist file.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>mailto</string>
+</array>
+```
 
 # [UWP](#tab/uwp)
 

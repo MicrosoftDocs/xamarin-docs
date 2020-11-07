@@ -18,7 +18,7 @@ After you have created a solution following the steps in
 - The Watch Extension which contains the program code for the watch app; and
 - The Watch App, which holds the storyboard and image resources that are rendered on the watch.
 
-Check that your [references are correct](~/ios/watchos/get-started/project-references.md): that the Parent app has a reference to the Extension, and that the Extension has a reference to the Watch App.
+Check that your [references are correct](~/ios/watchos/get-started/project-references.md): that the Parent app has a reference to the Watch App, and that the Watch App has a reference to the Extension.
 
 Confirm that your Bundle Identifiers follow the \*.watchkitextension \*.watchkitapp convention and that your Extension’s Info.plist file has it's **WKApp Bundle ID** value set to the Bundle Identifier of your Watch App.
 

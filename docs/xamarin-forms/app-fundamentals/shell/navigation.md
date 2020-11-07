@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell Navigation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell includes a URI-based navigation experience that uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
 
@@ -247,9 +247,6 @@ The `Shell` class defines a `Navigating` event, which is fired when navigation i
 
 In addition, the `ShellNavigatingEventArgs` class provides a `Cancel` method that can be used to cancel navigation.
 
-> [!NOTE]
-> The `Navigated` event is fired by the overridable `OnNavigating` method in the `Shell` class.
-
 The `Shell` class also defines a `Navigated` event, which is fired when navigation has completed. The `ShellNavigatedEventArgs` object that accompanies the `Navigating` event provides the following properties:
 
 | Property | Type | Description |
@@ -257,9 +254,6 @@ The `Shell` class also defines a `Navigated` event, which is fired when navigati
 | `Current` | `ShellNavigationState` | The URI of the current page. |
 | `Previous`| `ShellNavigationState` | The URI of the previous page. |
 | `Source`  | `ShellNavigationSource` | The type of navigation that occurred. |
-
-> [!NOTE]
-> The `Navigating` event is fired by the overridable `OnNavigated` method in the `Shell` class.
 
 The `ShellNavigatedEventArgs` and `ShellNavigatingEventArgs` classes both have `Source` properties, of type `ShellNavigationSource`. This enumeration provides the following values:
 

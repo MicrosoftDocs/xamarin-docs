@@ -12,6 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Configuration Management
 
+> [!NOTE]
+> This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.
+
 Settings allow the separation of data that configures the behavior of an app from the code, allowing the behavior to be changed without rebuilding the app. There are two types of settings: app settings, and user settings.
 
 App settings are data that an app creates and manages. It can include data such as fixed web service endpoints, API keys, and runtime state. App settings are tied to the existence of the app and are only meaningful to that app.

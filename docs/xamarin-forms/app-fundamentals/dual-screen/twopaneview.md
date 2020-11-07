@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms TwoPaneView layout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 The `TwoPaneView` class represents a container with two views that size and position content in the available space, either side-by-side or top-to-bottom. `TwoPaneView` inherits from `Grid` so the easiest way to think about these properties is as if they are being applied to a grid.
 
