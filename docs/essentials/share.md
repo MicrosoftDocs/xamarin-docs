@@ -73,7 +73,7 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
-## Multiple Files:
+## Multiple Files
 
 ![Pre-release API](~/media/shared/preview.png)
 
