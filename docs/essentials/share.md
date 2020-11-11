@@ -77,7 +77,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ![Pre-release API](~/media/shared/preview.png)
 
-The usage of share multiple files differs from the single file only in the ability of sending several files at once
+The usage of share multiple files differs from the single file only in the ability of sending several files at once:
 
 ```csharp
 var file1 = Path.Combine(FileSystem.CacheDirectory, "Attachment1.txt");
