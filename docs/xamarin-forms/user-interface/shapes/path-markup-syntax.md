@@ -6,7 +6,7 @@ ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2020
+ms.date: 11/13/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -36,7 +36,13 @@ In the example above, the path markup syntax specifies a start point using the m
 In path markup syntax, spaces are not required before or after commands. In addition, two numbers don't have to be separated by a comma or white space, but this can only be achieved when the string is unambiguous.
 
 > [!TIP]
-> Path markup language uses a syntax that's compatible with Scalable Vector Graphics (SVG) image path definitions, and so it can be useful for porting graphics from SVG format.
+> Path markup syntax is compatible with Scalable Vector Graphics (SVG) image path definitions, and so it can be useful for porting graphics from SVG format.
+
+While path markup syntax is intended for consumption in XAML, it can be converted to a `Geometry` object in code by invoking the `ConvertFromInvariantString` method in the `PathGeometryConverter` class:
+
+```csharp
+Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
+```
 
 ## Move command
 
