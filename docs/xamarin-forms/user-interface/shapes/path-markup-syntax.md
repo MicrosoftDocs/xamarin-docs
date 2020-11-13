@@ -38,7 +38,7 @@ In path markup syntax, spaces are not required before or after commands. In addi
 > [!TIP]
 > Path markup syntax is compatible with Scalable Vector Graphics (SVG) image path definitions, and so it can be useful for porting graphics from SVG format.
 
-While path markup syntax is intended for consumption in XAML, path markup syntax can be converted to a `Geometry` object in code by invoking the `ConvertFromInvariantString` method in the `PathGeometryConverter` class:
+While path markup syntax is intended for consumption in XAML, it can be converted to a `Geometry` object in code by invoking the `ConvertFromInvariantString` method in the `PathGeometryConverter` class:
 
 ```csharp
 Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
