@@ -795,6 +795,10 @@
     {
         "source_path": "docs/graphics-games/urhosharp/using.md",
         "redirect_url": "/xamarin/"
+    },
+    {
+        "source_path": "docs/xamarin-forms/data-cloud/azure-services/azure-signalr.md",
+        "redirect_url": "/azure/azure-signalr/signalr-quickstart-azure-functions-csharp"
     }
   ]
 }

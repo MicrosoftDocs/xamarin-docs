@@ -6,7 +6,7 @@ ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 11/05/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -68,23 +68,28 @@ The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property can be set to
             </DataTemplate>
         </CollectionView.ItemTemplate>
         <CollectionView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CollectionView.EmptyView>
     </CollectionView>
 </StackLayout>
 ```
+
+In this example, what looks like a redundant [`ContentView`](xref:Xamarin.Forms) has been added as the root element of the [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView). This is because internally, the `EmptyView` is added to a native container that doesn't provide any context for Xamarin.Forms layout. Therefore, to position the views that comprise your `EmptyView`, you must add a root layout, whose child is a layout that can position itself within the root layout.
 
 The equivalent C# code is:
 
@@ -92,12 +97,15 @@ The equivalent C# code is:
 SearchBar searchBar = new SearchBar { ... };
 CollectionView collectionView = new CollectionView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };

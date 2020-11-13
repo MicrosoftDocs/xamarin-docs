@@ -162,11 +162,11 @@ This example code results in the item being scrolled to the end of the view.
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines a `ItemsUpdatingScrollMode` property, which is backed by a bindable property. This property gets or sets a `ItemsUpdatingScrollMode` enumeration value that represents the scrolling behavior of the `CarouselView` when new items are added to it. The `ItemsUpdatingScrollMode` enumeration defines the following members:
 
-- `KeepItemsInView` adjusts the scroll offset to keep the first visible item displayed when new items are added.
-- `KeepScrollOffset` maintains the scroll offset relative to the beginning of the list when new items are added.
-- `KeepLastItemInView` adjusts the scroll offset to keep the last item visible when new items are added.
+- `KeepItemsInView` keeps the first item in the list displayed when new items are added.
+- `KeepScrollOffset` ensures that the current scroll position is maintained when new items are added.
+- `KeepLastItemInView` adjusts the scroll offset to keep the last item in the list displayed when new items are added.
 
-The default value of the `ItemsUpdatingScrollMode` property is `KeepItemsInView`. Therefore, when new items are added to a [`CarouselView`](xref:Xamarin.Forms.CarouselView) the first visible item in the list will remain displayed. To ensure that newly added items are always visible at the bottom of the list, the `ItemsUpdatingScrollMode` property should be set to `KeepLastItemInView`:
+The default value of the `ItemsUpdatingScrollMode` property is `KeepItemsInView`. Therefore, when new items are added to a [`CarouselView`](xref:Xamarin.Forms.CarouselView) the first item in the list will remain displayed. To ensure that the last item in the list is displayed when new items are added, set the `ItemsUpdatingScrollMode` property to `KeepLastItemInView`:
 
 ```xaml
 <CarouselView ItemsUpdatingScrollMode="KeepLastItemInView">
