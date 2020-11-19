@@ -24,7 +24,7 @@ It is not possible to have two Mono runtimes co-existing inside the same applica
 
 .NET Embedding eases the integration of the Mono runtime inside applications by exposing a set of ready-to-use APIs for the target language and platform.
 
-However this is not a two-way integration, e.g. you cannot subclass a managed type and expect managed code to call back inside your native code, since your managed code is unaware of this co-existance.
+However this is not a two-way integration, e.g. you cannot subclass a managed type and expect managed code to call back inside your native code, since your managed code is unaware of this co-existence.
 
 Depending on your needs, it might be possible to workaround parts of this limitation, e.g.
 
