@@ -451,10 +451,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
         {
             if (errorCallback != null)
             {
-                if (errorCallback != null)
-                {
-                    Debug.WriteLine($"RegisterTemplateAsync error: {errorCallback}");
-                }
+                Debug.WriteLine($"RegisterTemplateAsync error: {errorCallback}");
             }
         });
     });
