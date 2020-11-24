@@ -6,7 +6,7 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/01/2020
+ms.date: 11/10/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ms.custom: video
 ---
@@ -126,7 +126,7 @@ When resources share keys, resources defined lower in the visual tree will take 
 
 ## Stand-alone resource dictionaries
 
-A class derived from [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be in a separate stand-alone file. The resultant file can then be shared among applications.
+A class derived from [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be in a stand-alone XAML file. The XAML file can then be shared among applications.
 
 To create such a file, add a new **Content View** or **Content Page** item to the project (but not a **Content View** or **Content Page** with only a C# file). Delete the code-behind file, and in the XAML file change the name of the base class from [`ContentView`](xref:Xamarin.Forms.ContentView) or [`ContentPage`](xref:Xamarin.Forms.ContentPage) to [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). In addition, remove the `x:Class` attribute from the root tag of the file.
 
@@ -160,6 +160,17 @@ The following XAML example shows a [`ResourceDictionary`](xref:Xamarin.Forms.Res
 ```
 
 In this example, the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contains a single resource, which is an object of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). **MyResourceDictionary.xaml** can be consumed by merging it into another resource dictionary.
+
+By default, the linker will remove stand-alone XAML files from release builds when the linker behavior is set to link all assemblies. To ensure that stand-alone XAML files remain in a release build:
+
+1. Add a custom `Preserve` attribute to the assembly containing the stand-alone XAML files. For more information, see [Preserving code](~/ios/deploy-test/linker.md).
+1. Set the `Preserve` attribute at the assembly level:
+
+    ```csharp
+    [assembly:Preserve(AllMembers = true)]
+    ```
+
+For more information about linking, see [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md) and [Linking on Android](~/android/deploy-test/linker.md).
 
 ## Merged resource dictionaries
 
@@ -232,7 +243,9 @@ When merged [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) resour
 - [Resource Dictionaries (sample)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md)
+- [Linking on Android](~/android/deploy-test/linker.md)
+- [ResourceDictionary API](xref:Xamarin.Forms.ResourceDictionary)
 
 ## Related video
 

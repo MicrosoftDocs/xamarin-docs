@@ -34,7 +34,7 @@ Xamarin.Forms Shell is fully available on iOS and Android, but only partially av
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
-For information on how to add a UWP project to a Xamarin.Forms solution, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md).
+For more information about the status of Shell on UWP, see [Xamarin.Forms Shell Project Board](https://github.com/xamarin/Xamarin.Forms/projects/54) on github.com.
 
 ## Shell navigation experience
 

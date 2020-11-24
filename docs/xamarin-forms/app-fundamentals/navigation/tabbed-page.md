@@ -6,7 +6,7 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/07/2019
+ms.date: 11/06/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -20,15 +20,17 @@ The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a li
 
 On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. In portrait orientation, tab bar icons appear above tab titles. In landscape orientation, icons and titles appear side by side. In addition, a regular or compact tab bar may be displayed, depending on the device and orientation. If there are more than five tabs, a **More** tab will appear, which can be used to access the additional tabs. For information about icon requirements, see [Tab Bar Icon Size](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) on developer.apple.com.
 
-> [!TIP]
-> The `TabbedRenderer` for iOS has an overridable `GetIcon` method that can be used to load tab icons from a specified source. This override makes it possible to use SVG images as icons on a `TabbedPage`. In addition, selected and unselected versions of an icon can be provided.
-
 On Android, the list of tabs appears at the top of the screen, and the detail area is below. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. However, the tabs can be moved to the bottom of the screen with a platform-specific. If there are more than five tabs, and the tab list is at the bottom of the screen, a *More* tab will appear that can be used to access the additional tabs. For information about icon requirements, see [Tabs](https://material.io/components/tabs/#) on material.io and [Support different pixel densities](https://developer.android.com/training/multiscreen/screendensities) on developer.android.com. For information about moving the tabs to the bottom of the screen, see [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
-> [!TIP]
-> The `TabbedPageRenderer` for Android AppCompat has an overridable `SetTabIconImageSource` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`, and works with both top and bottom tab bars.
-
 On the Universal Windows Platform (UWP), the list of tabs appears at the top of the screen, and the details area is below. Each tab consists of a title. However, icons can be added to each tab with a platform-specific. For more information, see [TabbedPage Icons on Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
+
+> [!TIP]
+> Scalable Vector Graphic (SVG) files can be displayed as tab icons on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
+>
+> - The iOS `TabbedRenderer` class has an overridable `GetIcon` method that can be used to load tab icons from a specified source. In addition, selected and unselected versions of an icon can be provided if required.
+> - The Android AppCompat `TabbedPageRenderer` class has an overridable `SetTabIconImageSource` method that can be used to load tab icons from a custom `Drawable`. Alternatively, SVG files can be converted to vector drawable resources, which can automatically be displayed by Xamarin.Forms. For more information about converting SVG files to vector drawable resources, see [Add multi-density vector graphics](https://developer.android.com/studio/write/vector-asset-studio) on developer.android.com.
+>
+> For more information, see [Xamarin.Forms TabbedPage with SVG tab icons](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons).
 
 ## Create a TabbedPage
 
@@ -234,6 +236,7 @@ Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPag
 
 - [TabbedPageWithNavigationPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 - [TabbedPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPage with SVG tab icons](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons)
 - [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPage API](xref:Xamarin.Forms.TabbedPage)

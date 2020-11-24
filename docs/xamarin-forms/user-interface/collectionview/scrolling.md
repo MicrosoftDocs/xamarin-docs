@@ -125,7 +125,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 This example code results in the minimal scrolling required to scroll the item into view:
 
-[![Screenshot of a CollectionView vertical list with an item scrolled into view, on iOS and Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.MakeVisible, on iOS and Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 > [!NOTE]
 > The [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) member is used by default, if the `position` argument is not specified when calling the `ScrollTo` method.
@@ -140,7 +140,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 This example code results in the item being scrolled to the start of the view:
 
-[![Screenshot of a CollectionView vertical list with an item scrolled into view, on iOS and Android](scrolling-images/scrolltoposition-start.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-start-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.Start, on iOS and Android](scrolling-images/scrolltoposition-start.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-start-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ### Center
 
@@ -152,7 +152,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 This example code results in the item being scrolled to the center of the view:
 
-[![Screenshot of a CollectionView vertical list with an item scrolled into view, on iOS and Android](scrolling-images/scrolltoposition-center.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-center-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.Center, on iOS and Android](scrolling-images/scrolltoposition-center.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-center-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ### End
 
@@ -164,17 +164,17 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 This example code results in the item being scrolled to the end of the view:
 
-[![Screenshot of a CollectionView vertical list with an item scrolled into view, on iOS and Android](scrolling-images/scrolltoposition-end.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-end-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.End, on iOS and Android](scrolling-images/scrolltoposition-end.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-end-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ## Control scroll position when new items are added
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `ItemsUpdatingScrollMode` property, which is backed by a bindable property. This property gets or sets a `ItemsUpdatingScrollMode` enumeration value that represents the scrolling behavior of the `CollectionView` when new items are added to it. The `ItemsUpdatingScrollMode` enumeration defines the following members:
 
-- `KeepItemsInView` adjusts the scroll offset to keep the first visible item displayed when new items are added.
-- `KeepScrollOffset` maintains the scroll offset relative to the beginning of the list when new items are added.
-- `KeepLastItemInView` adjusts the scroll offset to keep the last item visible when new items are added.
+- `KeepItemsInView` keeps the first item in the list displayed when new items are added.
+- `KeepScrollOffset` ensures that the current scroll position is maintained when new items are added.
+- `KeepLastItemInView` adjusts the scroll offset to keep the last item in the list displayed when new items are added.
 
-The default value of the `ItemsUpdatingScrollMode` property is `KeepItemsInView`. Therefore, when new items are added to a [`CollectionView`](xref:Xamarin.Forms.CollectionView) the first visible item in the list will remain displayed. To ensure that newly added items are always visible at the bottom of the list, the `ItemsUpdatingScrollMode` property should be set to `KeepLastItemInView`:
+The default value of the `ItemsUpdatingScrollMode` property is `KeepItemsInView`. Therefore, when new items are added to a [`CollectionView`](xref:Xamarin.Forms.CollectionView) the first item in the list will remain displayed. To ensure that the last item in the list is displayed when new items are added, set the `ItemsUpdatingScrollMode` property to `KeepLastItemInView`:
 
 ```xaml
 <CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
