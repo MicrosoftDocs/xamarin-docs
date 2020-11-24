@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms and Azure Services"
-description: "This article explains how to use Azure Notification Hubs to send cross-platform push notifications to Xamarin.Forms applications."
+description: "This article briefly discusses how to communicate with different Azure services from Xamarin.Forms applications."
 ms.prod: xamarin
 ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
 ms.technology: xamarin-forms
@@ -31,7 +31,3 @@ Azure Search is a cloud service that provides indexing and querying capabilities
 ## [Azure Functions with Xamarin.Forms](azure-functions.md)
 
 This article demonstrates how to build your first Azure Function that interacts with Xamarin.Forms.
-
-## [Azure SignalR Service with Xamarin.Forms](azure-signalr.md)
-
-ASP.NET Core SignalR is an application model that simplifies the process of adding real-time communication to applications. Azure SignalR Service allows rapid development and deployment of scalable SignalR applications. This article and sample show how to combine Azure SignalR Service and Azure Functions with Xamarin.Forms, to deliver real-time messages to connected clients.
