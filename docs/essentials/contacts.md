@@ -70,10 +70,15 @@ try
     if(contact == null)
         return;
 
-    var name = contact.Name;
-    var numbers = contact.Numbers; // List of phone numbers
-    var emails = contact.Emails; // List of email addresses 
-    
+    var id = contact.Id;
+    var namePrefix = contact.NamePrefix;
+    var givenName = contact.GivenName;
+    var middleName = contact.MiddleName;
+    var familyName = contact.FamilyName;
+    var nameSuffix = contact.NameSuffix;
+    var displayName = contact.DisplayName;
+    var phones = contact.Phones; // List of phone numbers
+    var emails = contact.Emails; // List of email addresses
 }
 catch (Exception ex)
 {
@@ -88,12 +93,14 @@ ObservableCollection<Contact> contactsCollect = new ObservableCollection<Contact
 
 try
 {
-    var contacts = Contacts.GetAllAsync();
+    // cancellationToken parameter is optional
+    var cancellationToken = default(CancellationToken);
+    var contacts = await Contacts.GetAllAsync(cancellationToken);
 
-    if(contacts == null)
+    if (contacts == null)
         return;
 
-    await foreach (var contact in contacts)
+    foreach (var contact in contacts)
         contactsCollect.Add(contact);
 }
 catch (Exception ex)
@@ -101,6 +108,24 @@ catch (Exception ex)
     // Handle exception here.
 }
 ```
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP
+
+# [iOS](#tab/ios)
+
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP
+- The ios platform does not have the DiasplayName implementation, so the `Contact.DiasplayName` is always `GivenName + FamilyName`
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
+
 
 ## API
 
