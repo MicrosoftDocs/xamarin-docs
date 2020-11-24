@@ -134,8 +134,10 @@ Complete the following steps to configure the Android application to receive and
 1. [Override](#override-firebasemessagingservice-to-handle-messages) `FirebaseMessagingService` to handle messages.
 1. [Add](#add-incoming-notifications-to-the-xamarinforms-ui) incoming notifications to Xamarin.Forms UI.
 
-> [!NOTE]
-> The `GoogleServicesJson` build action is part of the `Xamarin.GooglePlayServices.Base` NuGet package. Visual Studio 2019 sets the available Build Actions during startup. If you do not see `GoogleServicesJson` as a Build Action, restart Visual Studio 2019 after installing the NuGet packages.
+The `GoogleServicesJson` build action is part of the `Xamarin.GooglePlayServices.Base` NuGet package. Visual Studio 2019 sets the available Build Actions during startup. If you do not see `GoogleServicesJson` as a Build Action, restart Visual Studio 2019 after installing the NuGet packages.
+
+> [!IMPORTANT]
+> Delivery of push notifications while the app is asleep now requires the use of AndroidX. For information about migrating to AndroidX, see [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md).
 
 ### Configure Android manifest
 

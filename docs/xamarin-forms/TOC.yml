@@ -948,8 +948,6 @@
               href: data-cloud/azure-services/azure-search.md
             - name: Azure Functions
               href: data-cloud/azure-services/azure-functions.md
-            - name: Azure SignalR Service
-              href: data-cloud/azure-services/azure-signalr.md
         - name: Azure Cognitive Services
           items:
             - name: Cognitive services overview

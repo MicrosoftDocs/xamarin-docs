@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/07/2018
+ms.date: 11/05/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -180,7 +180,10 @@ Xamarin.Android applications can be forced to always use a right-to-left layout 
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 ```
 
-This approach is useful for applications that always require a right-to-left layout, and removes the requirement to set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+> [!NOTE]
+> This approach requires that the application is setup to support right-to-left layout. For more information, see [Android platform setup](#android).
+
+This approach is useful for applications that always require a right-to-left layout, and removes the requirement to set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property for most controls. However, some controls, such as [`CollectionView`](xref:Xamarin.Forms.CollectionView), don't respect the `LayoutDirection` property and still require the `FlowDirection` property to be set.
 
 ## Right to left language support with Xamarin.University
 

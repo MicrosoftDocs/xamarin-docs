@@ -13,7 +13,7 @@ metadata:
   ms.author: dabritch
   ms.date: 12/27/2019
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-  
+
 landingContent:
   - title: Local data storage
     linkLists:
@@ -38,8 +38,6 @@ landingContent:
             url: azure-services/azure-search.md
           - text: Azure functions
             url: azure-services/azure-functions.md
-          - text: Azure SignalR service
-            url: azure-services/azure-signalr.md
 
   - title: Azure cognitive services
     linkLists:

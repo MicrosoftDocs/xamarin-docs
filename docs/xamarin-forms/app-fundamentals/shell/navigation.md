@@ -142,20 +142,24 @@ This example navigates to the page for the `monkeys` route, with the route being
 
 ### Relative routes
 
-Navigation can also be performed by specifying a valid relative URI as an argument to the `GoToAsync` method. The routing system will attempt to match the URI to a `ShellContent` object. Therefore, if all the routes in an application are unique, navigation can be performed by only specifying the unique route name as a relative URI:
+Navigation can also be performed by specifying a valid relative URI as an argument to the `GoToAsync` method. The routing system will attempt to match the URI to a `ShellContent` object. Therefore, if all the routes in an application are unique, navigation can be performed by only specifying the unique route name as a relative URI.
+
+The following relative route formats are supported:
+
+| Format | Description |
+| --- | --- |
+| *route* | The route hierarchy will be searched for the specified route, upwards from from the current position. The matching page will be pushed to the navigation stack. |
+| /*route* | The route hierarchy will be searched from the specified route, downwards from the current position. The matching page will be pushed to the navigation stack. |
+| //*route* | The route hierarchy will be searched for the specified route, upwards from the current position. The matching page will replace the navigation stack. |
+| ///*route* | The route hierarchy will be searched for the specified route, downwards from the current position. The matching page will replace the navigation stack. |
+
+The following example navigates to the page for the `monkeydetails` route:
 
 ```csharp
 await Shell.Current.GoToAsync("monkeydetails");
 ```
 
-This example navigates to the page for the `monkeydetails` route.
-
-In addition, the following relative route formats are supported:
-
-| Format | Description |
-| --- | --- |
-| //*route* | The route hierarchy will be searched for the specified route, upwards from the currently displayed route. |
-| ///*route* | The route hierarchy will be searched for the specified route, downwards from the currently displayed route. |
+In this example, the `monkeyDetails` route is searched for up the hierarchy until the matching page is found. When the page is found, it's pushed to the navigation stack.
 
 #### Contextual navigation
 
@@ -178,13 +182,13 @@ Backwards navigation can be performed by specifying ".." as the argument to the 
 await Shell.Current.GoToAsync("..");
 ```
 
-Backwards navigation with ".." can also be combined with a route, as follows:
+Backwards navigation with ".." can also be combined with a route:
 
 ```csharp
 await Shell.Current.GoToAsync("../route");
 ```
 
-In this example, the overall effect is to navigate backwards, and then navigate to the specified route.
+In this example, backwards navigation is performed, and then navigation to the specified route.
 
 > [!IMPORTANT]
 > Navigating backwards and into a specified route is only possible if the backwards navigation places you at the current location in the route hierarchy to navigate to the specified route.
@@ -195,10 +199,20 @@ Similarly, it's possible to navigate backwards multiple times, and then navigate
 await Shell.Current.GoToAsync("../../route");
 ```
 
-In this example, the overall effect is to navigate backwards twice, and then navigate to the specified route.
+In this example, backwards navigation is performed twice, and then navigation to the specified route.
+
+In addition, data can be passed through query properties when navigating backwards:
+
+```csharp
+await Shell.Current.GoToAsync($"..?parameterToPassBack={parameterValueToPassBack}");
+```
+
+In this example, backwards navigation is performed, and the query parameter value is passed to the query parameter on the previous page.
 
 > [!NOTE]
-> Data can also be passed when navigating with "..". For more information, see [Pass data](#pass-data).
+> Query parameters can be appended to any backwards navigation request.
+
+For more information about passing data when navigating, see [Pass data](#pass-data).
 
 ### Invalid routes
 
@@ -232,6 +246,22 @@ The `Tab` class defines a `Stack` property, of type `IReadOnlyList<Page>`, which
 - `OnPopToRootAsync`, returns `Task`, and is called when `INavigation.OnPopToRootAsync` is called.
 - `OnPushAsync`, returns `Task`, and is called when `INavigation.PushAsync` is called.
 - `OnRemovePage`, that's called when `INavigation.RemovePage` is called.
+
+For example, the following code example shows how to override the `OnRemovePage` method:
+
+```csharp
+public class MyTab : Tab
+{
+    protected override void OnRemovePage(Page page)
+    {
+        base.OnRemovePage(page);
+
+        // Custom logic
+    }
+}
+```
+
+`MyTab` objects can then be consumed in your Shell visual hierarchy instead of `Tab` objects.
 
 ## Navigation events
 

@@ -50,9 +50,6 @@ The `Data` string begins with the move command, indicated by `M`, which establis
 
 ![Path triangle](path-images/triangle.png "Path triangle")
 
-> [!NOTE]
-> Path markup syntax is only available in XAML.
-
 For more information about path markup syntax, see [Xamarin.Forms Path markup syntax](path-markup-syntax.md).
 
 ### Create a Path with Geometry objects
