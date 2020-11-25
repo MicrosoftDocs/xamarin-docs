@@ -118,7 +118,7 @@ catch (Exception ex)
 # [iOS](#tab/ios)
 
 - The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP
-- The ios platform does not have the DiasplayName implementation, so the `Contact.DiasplayName` is always `GivenName + FamilyName`
+- The iOS platform does not support the `DisplayName` property natively, thus the `DisplayName` value is constructed as "GivenName FamilyName".
 
 # [UWP](#tab/uwp)
 
