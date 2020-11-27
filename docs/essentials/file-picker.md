@@ -104,6 +104,21 @@ var options = new PickOptions
 
 If you desire your user to pick multiple files you can call the `FilePicker.PickMultipleAsync()` method. It also takes in `PickOptions` as a parameter to specify additional information. The results are the same as `PickAsync`, but instead of a single `FileResult` an `IEnumerable<FileResult>` is returned that can be iterated over.
 
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+- The URI of the resulting file may not be persisted between reboots.
+
+# [iOS](#tab/ios)
+
+No platform differences.
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
 ## API
 
 - [FilePicker source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FilePicker)
