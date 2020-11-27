@@ -299,7 +299,7 @@ Android may kill the application process that is hosting the Activity,
 which will result in `OnDestroy` not being invoked. Most Activities
 will not implement this method because most clean up and shut down has
 been done in the `OnPause` and `OnStop` methods. The `OnDestroy` method
-is typically overridden to clean up long running resources that might
+is typically overridden to clean up long running tasks that might
 leak resources. An example of this might be background threads that
 were started in `OnCreate`.
 
