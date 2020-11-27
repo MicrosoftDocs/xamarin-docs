@@ -109,7 +109,7 @@ If you desire your user to pick multiple files you can call the `FilePicker.Pick
 
 # [Android](#tab/android)
 
-- The URI of the resulting file may not be persisted between reboots
+- The URI of the resulting file may not be persisted between reboots.
 
 # [iOS](#tab/ios)
 
