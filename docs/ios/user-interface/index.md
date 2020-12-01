@@ -11,11 +11,15 @@ ms.date: 06/21/2017
 
 # Building User Interfaces with Xamarin.iOS
 
-## [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md)
+## [Storyboards](~/ios/user-interface/storyboards/index.md)
 
-A Storyboard is a visual representation of the appearance and flow of your application. Xamarin has introduced a Designer to allow Xamarin.iOS applications to take advantage of storyboards, so you can design your application screen visually and access the views, controllers and segues with C# for more control. You can also refer to [this guide](~/ios/user-interface/designer/introduction.md) for an explanation and walkthrough of the Xamarin Designer for iOS
+A Storyboard is a visual representation of the appearance and flow of your application. Visual Studio for Mac allows you to interact with the Xcode Interface Builder to design your application screen visually as well as access the views, controllers, and segues with C# for more control. 
 
 ## [iOS Designer](~/ios/user-interface/designer/index.md)
+
+> [!WARNING]
+> The iOS Designer will start to be phased out in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 We have built a designer for the iOS storyboard format which is fully integrated
 into Visual Studio for Mac. The iOS designer maintains full compatibility with the storyboard format, so that files can be edited in either Xcode or Visual Studio for Mac. Additionally, the editor supports advanced features, such as custom controls that render at design-time in the editor.
