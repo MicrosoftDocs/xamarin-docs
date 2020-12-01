@@ -85,6 +85,29 @@ Run the application and you should see the following:
 
 ![Example screenshot](android-assets-images/screenshot.png)
 
+## Reading Binary Assets
+
+The use of StreamReader in the above example is ideal for textual assets. For binary assets, use the following:
+
+```csharp
+protected override void OnCreate (Bundle bundle)
+{
+    base.OnCreate (bundle);
+
+    // Read the contents of our asset
+    const int maxReadSize = 256 * 1024;
+    byte[] content;
+    AssetManager assets = this.Assets;
+    using (BinaryReader br = new BinaryReader (assets.Open ("mydatabase.db")))
+    {
+        content = br.ReadBytes (maxReadSize);
+    }
+
+    // Do something with it...
+
+}
+```
+
 ## Related Links
 
 - [AssetManager](xref:Android.Content.Res.AssetManager)
