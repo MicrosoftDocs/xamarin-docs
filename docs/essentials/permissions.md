@@ -102,7 +102,7 @@ If a permission is marked as ![not supported](~/media/shared/no.png "not support
 
 ## General Usage
 
-The following presents the general usage pattern for determining whether a permission has been granted and requesting it if it has not. This code snippet uses features that are available with Xamarin.Essentials version 1.6.0 or later.
+The following code presents the general usage pattern for determining whether a permission has been granted and requesting it if it has not. This code uses features that are available with Xamarin.Essentials version 1.6.0 or later.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
@@ -110,8 +110,7 @@ public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     
     if (status == PermissionStatus.Granted)
-        return status;
-        
+        return status;        
     
     if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
