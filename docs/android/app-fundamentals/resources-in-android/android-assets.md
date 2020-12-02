@@ -79,15 +79,9 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-## Running the Application
+### Reading Binary Assets
 
-Run the application and you should see the following:
-
-![Example screenshot](android-assets-images/screenshot.png)
-
-## Reading Binary Assets
-
-The use of StreamReader in the above example is ideal for textual assets. For binary assets, use the following:
+The use of `StreamReader` in the above example is ideal for text assets. For binary assets, use the following code:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -107,6 +101,12 @@ protected override void OnCreate (Bundle bundle)
 
 }
 ```
+
+## Running the Application
+
+Run the application and you should see the following:
+
+![Example screenshot](android-assets-images/screenshot.png)
 
 ## Related Links
 
