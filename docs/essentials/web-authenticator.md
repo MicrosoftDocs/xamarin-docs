@@ -193,7 +193,14 @@ else
     r = await WebAuthenticator.AuthenticateAsync(authUrl, callbackUrl);
 }
 
-var accessToken = r?.AccessToken;
+var authToken = string.Empty;
+if (r.Properties.TryGetValue("name", out var name) && !string.IsNullOrEmpty(name))
+    authToken += $"Name: {name}{Environment.NewLine}";
+if (r.Properties.TryGetValue("email", out var email) && !string.IsNullOrEmpty(email))
+    authToken += $"Email: {email}{Environment.NewLine}";
+
+// Note that Apple Sign In has an IdToken and not an AccessToken
+authToken += r?.AccessToken ?? r?.IdToken;
 ```
 
 > [!TIP]
