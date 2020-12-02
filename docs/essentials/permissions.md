@@ -101,7 +101,8 @@ Icon Guide:
 If a permission is marked as ![not supported](~/media/shared/no.png "not supported") it will always return `Granted` when checked or requested.
 
 ## General Usage
-Here is a general usage pattern for handling permissions.
+
+The following code presents the general usage pattern for determining whether a permission has been granted and requesting it if it has not. This code uses features that are available with Xamarin.Essentials version 1.6.0 or later.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
@@ -109,8 +110,7 @@ public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     
     if (status == PermissionStatus.Granted)
-        return status;
-        
+        return status;        
     
     if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
