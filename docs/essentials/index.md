@@ -69,6 +69,10 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 
 Find help if you are running into issues.
 
+## [Xamarin.Essentials on Q&A](/answers/topics/dotnet-xamarinessentials.html)
+
+Ask questions about accessing native features with Xamarin.Essentials.
+
 ## [Release Notes](/xamarin/essentials/release-notes/)
 
 Find full release notes for each release of Xamarin.Essentials.

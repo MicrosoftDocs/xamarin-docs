@@ -12,7 +12,7 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/23/2019
-  no-loc: [Xamarin.Forms, Xamarin.Essentials]  
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 landingContent:
   - title: Get started
@@ -29,6 +29,10 @@ landingContent:
             url: installation/index.md
           - text: Build your first app
             url: first-app/index.md
+      - linkListType: get-started
+        links:
+          - text: Xamarin.Forms on Q&A
+            url: /answers/topics/dotnet-xamarinforms.html
 
   - title: Quickstarts
     linkLists:

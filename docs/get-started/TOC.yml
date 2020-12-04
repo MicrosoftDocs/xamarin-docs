@@ -82,3 +82,5 @@
           href: ~/xamarin-forms/data-cloud/index.yml
     - name: Development guidance
       href: ~/cross-platform/index.yml
+    - name: Xamarin.Forms on Q&A
+      href: /answers/topics/dotnet-xamarinforms.html

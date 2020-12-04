@@ -53,6 +53,10 @@ Checklist and instructions to deploy Apple Watch apps test devices, and to the A
 
 Known issues and workarounds.
 
+## [Xamarin watchOS on Q&A](/answers/topics/dotnet-watchos.html)
+
+Ask questions about building and deploying watchOS applications with Xamarin.
+
 ## [API Documentation](xref:WatchKit)
 
 Class and method coverage of the Watch Kit API.

@@ -145,6 +145,8 @@
               href: xaml/field-modifiers.md
             - name: Loading XAML at Runtime
               href: xaml/runtime-load.md
+        - name: Xamarin.Forms XAML on Q&A
+          href: /answers/topics/dotnet-xamarinforms-xaml.html
     - name: Application Fundamentals
       items:
         - name: Overview
@@ -922,6 +924,8 @@
           href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+        - name: Xamarin.Essentials on Q&A
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: Data & Azure Cloud Services
       items:
         - name: Overview
@@ -1030,6 +1034,8 @@
               href: troubleshooting/questions/android-linkassemblies-error.md
             - name: "Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?"
               href: troubleshooting/questions/maps-compiletodalvik-error.md
+    - name: Xamarin.Forms on Q&A
+      href: /answers/topics/dotnet-xamarinforms.html
     - name: Release notes
       href: /xamarin/xamarin-forms/release-notes/
     - name: Samples

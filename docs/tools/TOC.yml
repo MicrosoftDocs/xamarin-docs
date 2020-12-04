@@ -1,17 +1,17 @@
 - name: Tools
   href: index.md
   expanded: true
-  items: 
+  items:
     - name: iOS Simulator
       href: ios-simulator/index.md
-      items: 
+      items:
         - name: Deploy to the iOS Simulator
           href: ios-simulator/deploy.md
         - name: Release notes
           href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
     - name: Inspector
       href: inspector/index.md
-      items: 
+      items:
         - name: Installation and Requirements
           href: inspector/install.md
         - name: Inspecting Live Applications
@@ -19,7 +19,7 @@
         - name: Release notes
           href: /xamarin/tools/inspector/release-notes/
     - name: Live Player
-      items: 
+      items:
         - name: About Xamarin Live Player preview
           href: live-player/index.md
         - name: Visual Studio configuration
@@ -30,14 +30,14 @@
           href: live-player/troubleshooting.md
     - name: Profiler
       href: profiler/index.md
-      items: 
+      items:
         - name: Troubleshooting
           href: profiler/troubleshooting.md
         - name: Release notes
           href: /xamarin/tools/profiler/release-notes/
     - name: Workbooks
       href: workbooks/index.md
-      items: 
+      items:
         - name: Installation and Requirements
           href: workbooks/install.md
         - name: Interactive Workbooks
@@ -46,14 +46,14 @@
           href: workbooks/keybindings.md
         - name: Troubleshooting
           href: workbooks/troubleshooting/index.md
-          items: 
+          items:
             - name: General Known Issues & Workarounds
               href: workbooks/troubleshooting/general.md
             - name: Issues with Android Workbooks
               href: workbooks/troubleshooting/android.md
         - name: Integration SDK
           href: workbooks/sdk/index.md
-          items: 
+          items:
             - name: Architecture Overview
               href: workbooks/sdk/architecture.md
             - name: Advanced Integration Topics
@@ -68,34 +68,34 @@
           href: /xamarin/tools/inspector/release-notes/
     - name: .NET Embedding
       href: dotnet-embedding/index.md
-      items: 
+      items:
         - name: Getting Started
           href: dotnet-embedding/get-started/index.md
-          items: 
+          items:
             - name: Installation
               href: dotnet-embedding/get-started/install/install.md
             - name: C
               href: dotnet-embedding/get-started/c.md
             - name: Java
               href: dotnet-embedding/get-started/java/index.md
-              items: 
+              items:
                 - name: Android
                   href: dotnet-embedding/get-started/java/android.md
             - name: Objective-C
               href: dotnet-embedding/get-started/objective-c/index.md
-              items: 
+              items:
                 - name: iOS
                   href: dotnet-embedding/get-started/objective-c/ios.md
                 - name: macOS
                   href: dotnet-embedding/get-started/objective-c/macos.md
         - name: Android
           href: dotnet-embedding/android/index.md
-          items: 
+          items:
             - name: Android Callbacks
               href: dotnet-embedding/android/callbacks.md
         - name: Objective-C
           href: dotnet-embedding/objective-c/index.md
-          items: 
+          items:
             - name: Best Practices
               href: dotnet-embedding/objective-c/best-practices.md
             - name: Platforms
@@ -106,7 +106,7 @@
           href: /xamarin/tools/dotnet-embedding/release-notes/
     - name: Continuous Integration
       href: ci/index.md
-      items: 
+      items:
         - name: Introduction to Continuous Integration
           href: ci/intro-to-ci.md
         - name: DevOps with Xamarin

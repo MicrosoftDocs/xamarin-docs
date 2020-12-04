@@ -17,23 +17,27 @@ metadata:
 landingContent:
   # Card
   - title: Get started
-    linkLists: 
+    linkLists:
       - linkListType: quickstart
-        links: 
+        links:
           - text: Hello, Mac
             url: ~/mac/get-started/hello-mac.md
       - linkListType: download
-        links: 
+        links:
           - text: Xamarin.Mac samples
             url: /samples/browse/?products=xamarin&term=Xamarin.Mac
           - text: Visual Studio for Mac
             url: /visualstudio/mac/installation/
+      - linkListType: get-started
+        links:
+          - text: Xamarin.Mac on Q&A
+            url: /answers/topics/dotnet-macos.html
 
   # Card
   - title: Build Mac apps
-    linkLists: 
+    linkLists:
       - linkListType: concept
-        links: 
+        links:
           - text: Application fundamentals
             url: ~/mac/app-fundamentals/index.md
           - text: User interface controls
@@ -43,20 +47,20 @@ landingContent:
           - text: Advanced concepts and internals
             url: ~/mac/internals/index.md
       - linkListType: deploy
-        links: 
+        links:
           - text: Publish to the Mac App Store
             url: ~/mac/deploy-test/publishing-to-the-app-store/index.md
 
   # Card
   - title: Search APIs and releases
-    linkLists: 
+    linkLists:
       - linkListType: reference
-        links: 
+        links:
           - text: Xamarin.Mac API docs
             url: /dotnet/api/?view=xamarin-mac-sdk-14
           - text: Base Class Library available in Xamarin.Mac
             url: /dotnet/api/?view=xamarinmac-3.0
           - text: Xamarin.Mac release notes
             url: /xamarin/mac/release-notes/
-          - text: Apple's developer documentation    
+          - text: Apple's developer documentation
             url: https://developer.apple.com/documentation/

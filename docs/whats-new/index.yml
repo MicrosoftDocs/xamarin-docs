@@ -74,5 +74,7 @@ landingContent:
             url: /xamarin/android/release-notes/
           - text: Xamarin.Mac release notes
             url: /xamarin/mac/release-notes/
-          - text: Xamarin tools release notes
-            url: ../tools.yml
+      - linkListType: get-started
+        links:
+          - text: .NET on Q&A
+            url: /answers/topics/dotnet
