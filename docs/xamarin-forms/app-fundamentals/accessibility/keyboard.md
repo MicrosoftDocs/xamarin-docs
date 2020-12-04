@@ -69,6 +69,9 @@ The following rules apply when using the default tab order, or setting the `TabI
 
 After defining a tab order, pressing the Tab key will cycle the focus through controls in ascending `TabIndex` order, wrapping around to the beginning once the final control is reached.
 
+> [!WARNING]
+> On the Universal Windows Platform, the `TabIndex` property of each control must be set to `int.MaxValue` for the tab order to be identical to the control declaration order.
+
 The following XAML example shows the `TabIndex` property set on input controls to enable column-first tab navigation:
 
 ```xaml

@@ -40,6 +40,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [![DisplayAlert](pop-ups-images/alert2-sml.png "Alert Dialog with Two Buttons")](pop-ups-images/alert2.png#lightbox "Alert Dialog with Two Buttons")
 
+> [!WARNING]
+> By default, UWP access keys can be activated when an alert is displayed. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
+
 ## Guide users through tasks
 
 The [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) is a common UI element in iOS. The Xamarin.Forms [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) method lets you include this control in cross-platforms apps, rendering native alternatives in Android and UWP.
@@ -102,6 +105,9 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 This code displays a predefined response of 10, limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
 
 [![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
+
+> [!WARNING]
+> By default, UWP access keys can be activated when a prompt is displayed. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Related links
 
