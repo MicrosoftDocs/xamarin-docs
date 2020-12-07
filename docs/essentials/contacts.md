@@ -57,7 +57,7 @@ In the `Package.appxmanifest` under **Capabilities** ensure that `Contact` capab
 
 -----
 
-## Picking a Contact
+## Pick a contact
 
 By calling `Contacts.PickContactAsync()` the contact dialog will appear and allow the user to receive information about the user.
 
@@ -86,7 +86,7 @@ catch (Exception ex)
 }
 ```
 
-## Getting All Contacts
+## Get all contacts
 
 ```csharp
 ObservableCollection<Contact> contactsCollect = new ObservableCollection<Contact>();
@@ -109,15 +109,15 @@ catch (Exception ex)
 }
 ```
 
-## Platform Differences
+## Platform differences
 
 # [Android](#tab/android)
 
-- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP.
 
 # [iOS](#tab/ios)
 
-- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP.
 - The iOS platform does not support the `DisplayName` property natively, thus the `DisplayName` value is constructed as "GivenName FamilyName".
 
 # [UWP](#tab/uwp)
