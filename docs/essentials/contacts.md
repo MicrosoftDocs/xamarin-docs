@@ -57,7 +57,7 @@ In the `Package.appxmanifest` under **Capabilities** ensure that `Contact` capab
 
 -----
 
-## Picking a Contact
+## Pick a contact
 
 By calling `Contacts.PickContactAsync()` the contact dialog will appear and allow the user to receive information about the user.
 
@@ -70,17 +70,61 @@ try
     if(contact == null)
         return;
 
-    var name = contact.Name;
-    var contactType = contact.ContactType; // Unknown, Personal, Work
-    var numbers = contact.Numbers; // List of phone numbers
-    var emails = contact.Emails; // List of email addresses 
-    
+    var id = contact.Id;
+    var namePrefix = contact.NamePrefix;
+    var givenName = contact.GivenName;
+    var middleName = contact.MiddleName;
+    var familyName = contact.FamilyName;
+    var nameSuffix = contact.NameSuffix;
+    var displayName = contact.DisplayName;
+    var phones = contact.Phones; // List of phone numbers
+    var emails = contact.Emails; // List of email addresses
 }
 catch (Exception ex)
 {
     // Handle exception here.
 }
 ```
+
+## Get all contacts
+
+```csharp
+ObservableCollection<Contact> contactsCollect = new ObservableCollection<Contact>();
+
+try
+{
+    // cancellationToken parameter is optional
+    var cancellationToken = default(CancellationToken);
+    var contacts = await Contacts.GetAllAsync(cancellationToken);
+
+    if (contacts == null)
+        return;
+
+    foreach (var contact in contacts)
+        contactsCollect.Add(contact);
+}
+catch (Exception ex)
+{
+    // Handle exception here.
+}
+```
+
+## Platform differences
+
+# [Android](#tab/android)
+
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP.
+
+# [iOS](#tab/ios)
+
+- The `cancellationToken` parameter in the `GetAllAsync` method is only used on UWP.
+- The iOS platform does not support the `DisplayName` property natively, thus the `DisplayName` value is constructed as "GivenName FamilyName".
+
+# [UWP](#tab/uwp)
+
+No platform differences.
+
+-----
 
 
 ## API
