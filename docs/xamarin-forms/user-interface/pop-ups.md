@@ -41,7 +41,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 [![Alert Dialog with Two Buttons](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
 
 > [!WARNING]
-> By default on UWP, when an alert is displayed any access keys that are defined on controls on the page behind the alert can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
+> By default on UWP, when an alert is displayed any access keys that are defined on the page behind the alert can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Guide users through tasks
 
@@ -107,7 +107,7 @@ This code displays a predefined response of 10, limits the number of characters 
 [![Screenshot of an optional modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
 
 > [!WARNING]
-> By default on UWP, when a prompt is displayed any access keys that are defined on controls on the page behind the prompt can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
+> By default on UWP, when a prompt is displayed any access keys that are defined on the page behind the prompt can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Related links
 
