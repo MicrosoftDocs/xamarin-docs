@@ -48,7 +48,7 @@ Consider the following code example:
 
 ``` csharp
 var dict = new NSMutableDictionary ();
-dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
+dict.LowlevelSetObject (IntPtr.Zero, IntPtr.Zero); 
 ```
 
 This will throw an Objective-C NSInvalidArgumentException in native code:
