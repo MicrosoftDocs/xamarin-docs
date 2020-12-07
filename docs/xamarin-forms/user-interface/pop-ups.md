@@ -38,10 +38,10 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "Alert Dialog with Two Buttons")](pop-ups-images/alert2.png#lightbox "Alert Dialog with Two Buttons")
+[![Alert Dialog with Two Buttons](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
 
 > [!WARNING]
-> By default, UWP access keys can be activated when an alert is displayed. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
+> By default on UWP, when an alert is displayed any access keys that are defined on controls on the page behind the alert can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Guide users through tasks
 
@@ -104,10 +104,10 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 
 This code displays a predefined response of 10, limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
 
-[![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
+[![Screenshot of an optional modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
 
 > [!WARNING]
-> By default, UWP access keys can be activated when a prompt is displayed. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
+> By default on UWP, when a prompt is displayed any access keys that are defined on controls on the page behind the prompt can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## Related links
 
