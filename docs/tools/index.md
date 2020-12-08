@@ -33,23 +33,3 @@ Understand and debug your user interface.
 Identify and fix performance issues.
     :::column-end:::
 :::row-end:::
-:::row:::
-    :::column:::
-[![Xamarin Workbooks](/media/illustrations/dynamics-resource-library.svg)](~/tools/workbooks/index.md)
-
-### [Xamarin Workbooks](~/tools/workbooks/index.md)
-
-Learn C# and the Xamarin platform interactively.
-    :::column-end:::
-    :::column:::
-[![.NET Embedding](~/media/index/xamarin-cross-platform-dotnet-embedding.svg)](~/tools/dotnet-embedding/index.md)
-
-### [.NET Embedding](~/tools/dotnet-embedding/index.md)
-
-Allows your existing .NET code to be consumed from other programming languages.
-    :::column-end:::
-
-    :::column:::
-    :::column-end:::
-    
-:::row-end:::

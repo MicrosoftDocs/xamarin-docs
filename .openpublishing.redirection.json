@@ -803,6 +803,119 @@
     {
         "source_path": "docs/xamarin-forms/data-cloud/azure-services/azure-signalr.md",
         "redirect_url": "/azure/azure-signalr/signalr-quickstart-azure-functions-csharp"
+    },
+    {
+        "source_path": "docs/tools/workbooks/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/install.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/workbook.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/keybindings.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/troubleshooting/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/troubleshooting/general.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/troubleshooting/android.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/architecture.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/integrations.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/representations.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/debugging.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/workbooks/sdk/samples.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    
+    {
+        "source_path": "docs/tools/dotnet-embedding/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/install/install.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/c.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/java/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/java/android.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/objective-c/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/objective-c/ios.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/get-started/objective-c/macos.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/android/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/android/callbacks.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/objective-c/index.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/objective-c/best-practices.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/objective-c/platforms.md",
+        "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/tools/dotnet-embedding/limitations.md",
+        "redirect_url": "/xamarin/tools/"
     }
   ]
 }
