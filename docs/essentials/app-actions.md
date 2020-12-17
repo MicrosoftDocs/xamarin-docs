@@ -22,7 +22,18 @@ To access the **AppActions** functionality the following platform specific setup
 
 # [Android](#tab/android)
 
-In the `MainActivity` add the following logic to handle actions:
+Add the intent filter to your `MainActivity` class:
+
+```csharp
+[IntentFilter(
+        new[] { Xamarin.Essentials.Platform.Intent.ActionAppAction },
+        Categories = new[] { Intent.CategoryDefault })]
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    ...
+```
+
+Then add the following logic to handle actions:
 
 ```csharp
 protected override void OnResume()
