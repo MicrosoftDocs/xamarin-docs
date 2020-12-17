@@ -22,7 +22,7 @@ To access the **AppActions** functionality the following platform specific setup
 
 # [Android](#tab/android)
 
-In the `MainActivity`, add the intent filter to your MainActivity class:
+Add the intent filter to your `MainActivity` class:
 
 ```csharp
 [IntentFilter(
