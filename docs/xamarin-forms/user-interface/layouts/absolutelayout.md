@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
