@@ -54,17 +54,6 @@ public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthentic
 }
 ```
 
-You will also need to call back into Essentials from the `OnResume` override in your `MainActivity`:
-
-```csharp
-protected override void OnResume()
-{
-    base.OnResume();
-
-    Xamarin.Essentials.Platform.OnResume();
-}
-```
-
 # [iOS](#tab/ios)
 
 On iOS you'll need to add your app's callback URI pattern to your Info.plist such as:
