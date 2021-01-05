@@ -39,9 +39,6 @@ To access the **WebAuthenticator** functionality the following platform specific
 
 Android requires an Intent Filter setup to handle your callback URI. This is easily accomplished by subclassing the `WebAuthenticatorCallbackActivity` class:
 
-> [!NOTE]
-> You should consider implementing [Android App Links](https://developer.android.com/training/app-links/) to handle the callback URI and ensure your application is the only one which can register to handle the callback URI.
-
 ```csharp
 const string CALLBACK_SCHEME = "myapp";
 
@@ -73,9 +70,6 @@ On iOS you'll need to add your app's callback URI pattern to your Info.plist suc
     </dict>
 </array>
 ```
-
-> [!NOTE]
-> You should consider using [Universal App Links](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) to register your app's callback URI as a best practice.
 
 You will also need to override your `AppDelegate`'s `OpenUrl` and `ContinueUserActivity` methods to call into Essentials:
 
