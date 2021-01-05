@@ -234,7 +234,7 @@ the app when the AppCompat NuGet is installed.
 ## Subclass AppCompatActivity
 
 The final step in the conversion is to modify `MainActivity` so that it 
-is a subclass of `AppCompactActivity`. Edit **MainActivity.cs** and add 
+is a subclass of `AppCompatActivity`. Edit **MainActivity.cs** and add 
 the following `using` statements: 
 
 ```csharp
