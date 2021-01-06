@@ -308,8 +308,8 @@
               href: app-fundamentals/navigation/tabbed-page.md
             - name: CarouselPage
               href: app-fundamentals/navigation/carousel-page.md
-            - name: MasterDetailPage
-              href: app-fundamentals/navigation/master-detail-page.md
+            - name: FlyoutPage
+              href: app-fundamentals/navigation/flyoutpage.md
             - name: Modal Pages
               href: app-fundamentals/navigation/modal.md
         - name: Shell
@@ -354,8 +354,6 @@
       items:
         - name: Overview
           href: user-interface/index.yml
-        - name: C# markup
-          href: user-interface/csharp-markup.md
         - name: Controls reference
           items:
             - name: Overview
@@ -376,8 +374,6 @@
           items:
             - name: BoxView
               href: user-interface/boxview.md
-            - name: Expander
-              href: user-interface/expander.md
             - name: Image
               href: user-interface/images.md
             - name: Label
@@ -400,8 +396,6 @@
                   href: user-interface/map/geocoder.md
                 - name: Launch the Native Map App
                   href: user-interface/map/native-map-app.md
-            - name: MediaElement
-              href: user-interface/mediaelement.md
             - name: Shapes
               items:
                 - name: Overview
@@ -561,13 +555,6 @@
                     href: user-interface/brushes/radialgradient.md
             - name: Colors
               href: user-interface/colors.md
-            - name: DataPages
-              href: user-interface/datapages/index.md
-              items:
-                - name: Get Started
-                  href: user-interface/datapages/get-started.md
-                - name: Controls Reference
-                  href: user-interface/datapages/controls.md
             - name: Display pop-ups
               href: user-interface/pop-ups.md
             - name: Fonts
@@ -668,8 +655,6 @@
               href: platform/android/index.md
             - name: AndroidX Migration
               href: platform/android/androidx-migration.md
-            - name: AppCompat & Material Design
-              href: platform/android/appcompat-material-design.md
             - name: Button Padding and Shadows
               href: platform/android/button-padding-shadow.md
             - name: Entry Input Method Editor Options
@@ -716,6 +701,8 @@
               href: platform/ios/entry-cursor-color.md
             - name: Entry Font Size
               href: platform/ios/entry-font-size.md
+            - name: FlyoutPage Shadow
+              href: platform/ios/flyoutpage-shadow.md
             - name: Formatting
               href: platform/ios/formatting.md
             - name: Modal Page Presentation Style
@@ -730,8 +717,6 @@
               href: platform/ios/listview-separator-style.md
             - name: Main Thread Control Updates
               href: platform/ios/main-thread-updates-ui.md
-            - name: MasterDetailPage Shadow
-              href: platform/ios/masterdetailpage-shadow.md
             - name: NavigationPage Bar Separator
               href: platform/ios/navigation-bar-separator.md
             - name: NavigationPage Bar Text Color Mode
@@ -774,12 +759,12 @@
               href: platform/windows/index.md
             - name: Default Image Directory
               href: platform/windows/default-image-directory.md
+            - name: FlyoutPage Navigation Bar
+              href: platform/windows/flyoutpage-navigation-bar.md
             - name: InputView Reading Order
               href: platform/windows/inputview-reading-order.md
             - name: ListView SelectionMode
               href: platform/windows/listview-selectionmode.md
-            - name: MasterDetailPage Navigation Bar
-              href: platform/windows/masterdetailpage-navigation-bar.md
             - name: Page Toolbar Placement
               href: platform/windows/page-toolbar-placement.md
             - name: Platform Setup
@@ -794,6 +779,8 @@
               href: platform/windows/visualelement-access-keys.md
             - name: VisualElement Legacy Color Mode
               href: platform/windows/legacy-color-mode.md
+            - name: WebView Execution Mode
+              href: platform/windows/webview-executionmode.md
             - name: WebView JavaScript Alerts
               href: platform/windows/webview-javascript-alert.md
         - name: Create Platform-Specifics
@@ -1026,6 +1013,8 @@
         - name: Frequently Asked Questions
           href: troubleshooting/questions/index.md
           items:
+            - name: How do I migrate my app to Xamarin.Forms 5.0?
+              href: troubleshooting/questions/forms5-migration.md
             - name: Can I update the Xamarin.Forms default template to a newer NuGet package?
               href: troubleshooting/questions/update-forms-template.md
             - name: Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?

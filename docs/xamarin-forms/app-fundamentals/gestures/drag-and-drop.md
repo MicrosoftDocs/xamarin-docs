@@ -12,15 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Add drag and drop gesture recognizers
 
-![Pre-release API](~/media/shared/preview.png)
-
 [![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 A drag and drop gesture enables items, and their associated data packages, to be dragged from one onscreen location to another location using a continuous gesture. Drag and drop can take place in a single application, or it can start in one application and end in another.
 
 > [!IMPORTANT]
-> The Xamarin.Forms drag and drop gesture recognizer is currently experimental and can only be used by setting the `DragAndDrop_Experimental` flag. For more information, see [Experimental Flags](~/xamarin-forms/internals/experimental-flags.md).
->
 > Recognition of drag and drop gestures is supported on iOS, Android, and the Universal Windows Platform (UWP). However, on iOS a minimum platform of iOS 11 is required.
 
 The *drag source*, which is the element on which the drag gesture is initiated, can provide data to be transferred by populating a data package object. When the drag source is released, drop occurs. The *drop target*, which is the element under the drag source, then processes the data package.

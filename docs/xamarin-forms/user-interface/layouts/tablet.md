@@ -100,16 +100,16 @@ if (Device.Idiom == TargetIdiom.Phone)
 This approach can be expanded to make significant changes to individual
 page layouts, or even to render entirely different pages on larger screens.
 
-### Leverage MasterDetailPage
+### Leverage FlyoutPage
 
-The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
+The [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage)
 is ideal for larger screens, especially on the iPad
 where it uses the [`UISplitViewController`](xref:UIKit.UISplitViewController)
 to provide a native iOS experience.
 
 Review [this Xamarin blog post](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 to see how you can adapt your user interface so that phones use one
-layout and larger screens can use another (with the `MasterDetailPage`).
+layout and larger screens can use another (with the `FlyoutPage`).
 
 ## Related Links
 

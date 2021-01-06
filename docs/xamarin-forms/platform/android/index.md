@@ -57,8 +57,6 @@ Originally, the default Xamarin.Forms Android project used an older style of con
 
 Xamarin.Forms Android projects now use `FormsAppCompatActivity` as the base class of their main activity. This class uses **AppCompat** features provided by Android to implement Material Design themes.
 
-To add Material Design themes to your Xamarin.Forms Android project, follow the [installation instructions for AppCompat support](appcompat-material-design.md)
-
 Here is the **Todo** sample with the default `FormsApplicationActivity`:
 
 [![Todo Sample Application Without AppCompat](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
@@ -73,7 +71,3 @@ And this is the same code after upgrading the project to use `FormsAppCompatActi
 ## AndroidX Migration
 
 AndroidX replaces the Android Support Library. To learn about AndroidX and how to migrate a Xamarin.Forms app to use AndroidX libraries, see [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md).
-
-## Related links
-
-- [Add Material Design Support](appcompat-material-design.md)

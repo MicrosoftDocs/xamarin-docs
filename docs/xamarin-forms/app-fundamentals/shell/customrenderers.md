@@ -102,7 +102,7 @@ namespace Xaminals.Droid
 The `MyShellRenderer` class overrides the `CreateToolbarAppearanceTracker` method, and returns an instance of the `MyShellToolbarAppearanceTracker` class. The `MyShellToolbarAppearanceTracker` class, which derives from the `ShellToolbarAppearanceTracker` class, is shown in the following example:
 
 ```csharp
-using Android.Support.V7.Widget;
+using AndroidX.AppCompat.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 

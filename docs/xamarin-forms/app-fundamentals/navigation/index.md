@@ -30,9 +30,9 @@ The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a li
 
 The Xamarin.Forms [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is a page that users can swipe from side to side to navigate through pages of content, like a gallery.
 
-## [MasterDetailPage](master-detail-page.md)
+## [FlyoutPage](flyoutpage.md)
 
-The Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) is a page that manages two pages of related information – a master page that presents items, and a detail page that presents details about items on the master page.
+The Xamarin.Forms [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) is a page that manages two pages of related information – a flyout page that presents items, and a detail page that presents details about items on the flyout page.
 
 ## [Modal Pages](modal.md)
 

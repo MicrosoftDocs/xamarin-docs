@@ -6,13 +6,11 @@ ms.assetid: 5b673347-cdba-4532-820f-fb5f070c86bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/08/2019
+ms.date: 09/24/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms CarouselView
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## [Introduction](introduction.md)
 

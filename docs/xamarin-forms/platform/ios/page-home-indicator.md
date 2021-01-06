@@ -41,7 +41,7 @@ The result is that the visibility of the home indicator on a [`Page`](xref:Xamar
 ![Screenshot of home indicator visibility on an iOS page](page-home-indicator-images/home-indicator-visibility.png "Page home indicator visibility")
 
 > [!NOTE]
-> This platform-specific can be applied to [`ContentPage`](xref:Xamarin.Forms.ContentPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), and [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) objects.
+> This platform-specific can be applied to [`ContentPage`](xref:Xamarin.Forms.ContentPage), [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), and [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) objects.
 
 ## Related links
 

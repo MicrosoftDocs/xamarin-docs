@@ -108,8 +108,7 @@ The `Color.Accent` value results in a platform-specific (and sometimes user-sele
 
 The various platforms have a default color scheme as shown in the list above.
 
-When targeting Android, it's possible to switch to a dark-on-light scheme by specifying a light theme in the Android.Manifest.xml file, or by
-[Adding AppCompat and Material Design](~/xamarin-forms/platform/android/appcompat-material-design.md).
+When targeting Android, it's possible to switch to a dark-on-light scheme by specifying a light theme in the Android.Manifest.xml file.
 
 For the Windows platforms, the color theme is normally selected by the user, but you can add a `RequestedTheme` attribute set to either `Light` or `Dark` in the platform's App.xaml file. By default, the App.xaml file in the UWP project contains a `RequestedTheme` attribute set to `Light`.
 

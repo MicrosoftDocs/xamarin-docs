@@ -685,6 +685,22 @@
         "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/behaviors"
     },
     {
+        "source_path": "docs/xamarin-forms/app-fundamentals/navigation/master-detail-page.md",
+        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/navigation/flyoutpage"
+    },
+    {
+        "source_path": "docs/xamarin-forms/platform/windows/masterdetailpage-navigation-bar.md",
+        "redirect_url": "/xamarin-forms/platform/windows/flyoutpage-navigation-bar"
+    },
+    {
+        "source_path": "docs/xamarin-forms/platform/ios/masterdetailpage-shadow.md",
+        "redirect_url": "/xamarin-forms/platform/ios/flyoutpage-shadow"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/csharp-markup.md",
+        "redirect_url": "/xamarin-forms/user-interface/"
+    },
+    {
         "source_path": "docs/ios/platform/introduction-to-ios11/arkit/urhosharp.md",
         "redirect_url": "/xamarin/ios/platform/introduction-to-ios11/arkit"
     },

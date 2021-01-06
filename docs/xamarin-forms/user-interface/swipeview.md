@@ -6,13 +6,11 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/26/2020
+ms.date: 10/05/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms SwipeView
-
-![Pre-release API](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
@@ -20,18 +18,13 @@ The `SwipeView` is a container control that wraps around an item of content, and
 
 [![Screenshot of SwipeView swipe items in a CollectionView, on iOS and Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe items")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe items")
 
-`SwipeView` is available in Xamarin.Forms 4.4. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, to your `MainActivity` class on Android, or to your `App` class on UWP, before calling `Forms.Init`:
-
-```csharp
-Forms.SetFlags("SwipeView_Experimental");
-```
-
 `SwipeView` defines the following properties:
 
 - `LeftItems`, of type `SwipeItems`, which represents the swipe items that can be invoked when the control is swiped from the left side.
 - `RightItems`, of type `SwipeItems`, which represents the swipe items that can be invoked when the control is swiped from the right side.
 - `TopItems`, of type `SwipeItems`, which represents the swipe items that can be invoked when the control is swiped from the top down.
 - `BottomItems`, of type `SwipeItems`, which represents the swipe items that can be invoked when the control is swiped from the bottom up.
+- `Threshold`, of type `double`, which represents the number of device-independent units that trigger a swipe gesture to fully reveal swipe items.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
@@ -179,7 +172,7 @@ The appearance of each `SwipeItem` is defined by a combination of the `Text`, `I
 
 [![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
 
-When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
+When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. In addition, the `MenuItem.Clicked` event fires. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
 
 > [!NOTE]
 > When the appearance of a `SwipeItem` is defined only using the `Text` or `IconImageSource` properties, the content is always centered.
@@ -227,6 +220,30 @@ The `SwipeStarted`, `SwipeChanging`, and `SwipeEnded` events report the swipe di
 - `Left` indicates that a left swipe occurred.
 - `Up` indicates that an upwards swipe occurred.
 - `Down` indicates that a downwards swipe occurred.
+
+## Swipe threshold
+
+`SwipeView` includes a `Threshold` property, of type `double`, which represents the number of device-independent units that trigger a swipe gesture to fully reveal swipe items.
+
+The following example shows a `SwipeView` that sets the `Threshold` property:
+
+```xaml
+<SwipeView Threshold="200">
+    <SwipeView.LeftItems>
+        <SwipeItems>
+            <SwipeItem Text="Favorite"
+                       IconImageSource="favorite.png"
+                       BackgroundColor="LightGreen" />
+        </SwipeItems>
+    </SwipeView.LeftItems>
+    <!-- Content -->
+</SwipeView>
+```
+
+In this example, the `SwipeView` must be swiped for 200 device-independent units before the `SwipeItem` is fully revealed.
+
+> [!NOTE]
+> Currently, the `Threshold` property is only implemented on iOS and Android.
 
 ## Swipe mode
 

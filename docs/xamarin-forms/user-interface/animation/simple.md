@@ -6,7 +6,7 @@ ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/05/2019
+ms.date: 09/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -18,20 +18,19 @@ _The ViewExtensions class provides extension methods that can be used to constru
 
 The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class provides the following extension methods that can be used to create simple animations:
 
-- [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
-- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) animates the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
-- `ScaleXTo` animates the [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
-- `ScaleYTo` animates the [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- [`CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement)) cancels any animations.
+- [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) applies an animated incremental increase or decrease to the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) applies an animated incremental increase or decrease to the [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
-- [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) animates the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- `ScaleXTo` animates the [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- `ScaleYTo` animates the [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 
 By default, each animation will take 250 milliseconds. However, a duration for each animation can be specified when creating the animation.
-
-The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class also includes a [`CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement)) method that can be used to cancel any animations.
 
 > [!NOTE]
 > The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class provides a [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)) extension method. However, this method is intended to be used by layouts to animate transitions between layout states that contain size and position changes. Therefore, it should only be used by [`Layout`](xref:Xamarin.Forms.Layout) subclasses.
@@ -215,10 +214,10 @@ The following screenshots show the multiple rotations in progress on each platfo
 
 ## Canceling Animations
 
-An application can cancel one or more animations with a call to the `static` [`ViewExtensions.CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement)) method, as demonstrated in the following code example:
+An application can cancel one or more animations with a call to the [CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement)) extension method, as demonstrated in the following code example:
 
 ```csharp
-ViewExtensions.CancelAnimations (image);
+image.CancelAnimations();
 ```
 
 This will immediately cancel all animations that are currently running on the [`Image`](xref:Xamarin.Forms.Image) instance.

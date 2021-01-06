@@ -161,7 +161,7 @@ public class MainActivity : AppCompatActivity
         SupportActionBar.Title = "Notes";
 
         FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-        Android.Support.V4.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
+        AndroidX.Fragment.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
         SupportFragmentManager
             .BeginTransaction()
             .Replace(Resource.Id.fragment_frame_layout, mainPage)
@@ -202,7 +202,7 @@ The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToNo
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    Android.Support.V4.App.Fragment noteEntryPage = new NoteEntryPage
+    AndroidX.Fragment.App.Fragment noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateSupportFragment(this);
@@ -280,7 +280,7 @@ public sealed partial class MainPage : Page
 {
     NotesPage notesPage;
     NoteEntryPage noteEntryPage;
-    
+
     public static MainPage Instance;
     public static string FolderPath { get; private set; }
 
@@ -293,7 +293,7 @@ public sealed partial class MainPage : Page
         notesPage = new Notes.UWP.Views.NotesPage();
         this.Content = notesPage.CreateFrameworkElement();
         // ...        
-    } 
+    }
     // ...
 }
 ```

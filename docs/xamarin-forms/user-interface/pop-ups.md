@@ -6,7 +6,7 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/10/2020
+ms.date: 12/10/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -40,6 +40,8 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [![Alert Dialog with Two Buttons](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
 
+The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method also has overloads that accept a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the alert. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
+
 > [!WARNING]
 > By default on UWP, when an alert is displayed any access keys that are defined on the page behind the alert can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
@@ -70,6 +72,8 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 ```
 
 [![DisplayActionSheet](pop-ups-images/action2-sml.png "Action Sheet Dialog with Destroy Button")](pop-ups-images/action2.png#lightbox "Action Sheet Dialog with Destroy Button")
+
+The [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) method also has an overload that accepts a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the action sheet. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
 ## Display a prompt
 
@@ -112,3 +116,4 @@ This code displays a predefined response of 10, limits the number of characters 
 ## Related links
 
 - [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)

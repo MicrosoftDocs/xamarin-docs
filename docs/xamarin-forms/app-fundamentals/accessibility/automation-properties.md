@@ -138,11 +138,11 @@ The following sections describe the intricacies of setting accessibility values 
 
 On Android, to set the text that screen readers will read for the back arrow in the action bar in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), set the `AutomationProperties.Name` and `AutomationProperties.HelpText` properties on a [`Page`](xref:Xamarin.Forms.Page). However, note that this will not have an effect on OS back buttons.
 
-### MasterDetailPage
+### FlyoutPage
 
-On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `IconImageSource` property of the `Master` page.
+On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `FlyoutPage`, or on the `IconImageSource` property of the `Flyout` page.
 
-On Android, to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), add string resources to the Android project:
+On Android, to set the text that screen readers will read for the toggle button on a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), add string resources to the Android project:
 
 ```xml
 <resources>
@@ -152,11 +152,11 @@ On Android, to set the text that screen readers will read for the toggle button 
 </resources>
 ```
 
-Then set the `AutomationId` property of the `IconImageSource` property of the `Master` page to the appropriate string:
+Then set the `AutomationId` property of the `IconImageSource` property of the `Flyout` page to the appropriate string:
 
 ```csharp
-var master = new ContentPage { ... };
-master.IconImageSource.AutomationId = "btnMDPAutomationID";
+var flyout = new ContentPage { ... };
+flyout.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### ToolbarItem

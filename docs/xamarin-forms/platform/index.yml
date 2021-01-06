@@ -13,7 +13,7 @@ metadata:
   ms.author: dabritch
   ms.date: 12/30/2019
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-  
+
 landingContent:
   - title: Android
     linkLists:
@@ -23,8 +23,6 @@ landingContent:
             url: android/listview-fast-scrolling.md
           - text: TabbedPage page swiping
             url: android/tabbedpage-page-swiping.md
-          - text: Material design
-            url: android/appcompat-material-design.md
           - text: VisualElement elevation
             url: android/visualelement-elevation.md
           - text: See more >

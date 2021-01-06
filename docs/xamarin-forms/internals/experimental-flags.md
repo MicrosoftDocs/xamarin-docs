@@ -6,7 +6,7 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/13/2020
+ms.date: 12/01/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -16,21 +16,12 @@ When a new Xamarin.Forms feature is implemented, it's sometimes put behind an ex
 
 Xamarin.Forms includes the following experimental flags:
 
-- `Brush_Experimental`
-- `CarouselView_Experimental`
-- `DragAndDrop_Experimental`
-- `Expander_Experimental`
-- `Markup_Experimental`
-- `MediaElement_Experimental`
-- `RadioButton_Experimental`
-- `Shapes_Experimental`
 - `Shell_UWP_Experimental`
-- `SwipeView_Experimental`
 
 Using functionality that's behind an experimental flag requires you to enable the flag, or flags, in your application. There are two approaches for enabling experimental flags:
 
-- Enable the experimental flag, or flags, in your platform projects.
-- Enable the experimental flag, or flags, in your `App` class.
+- Enable the experimental flag in your platform projects.
+- Enable the experimental flag in your `App` class.
 
 > [!WARNING]
 > Consuming functionality that's behind an experimental flag, without enabling the flag, will result in your application throwing an exception that indicates which flag must be enabled.
@@ -40,7 +31,7 @@ Using functionality that's behind an experimental flag requires you to enable th
 The `Xamarin.Forms.Forms.SetFlags` method can be used to enable an experimental flag in your platform projects:
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
+Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
 The `SetFlags` method should be invoked in your `AppDelegate` class on iOS, in your `MainActivity` class on Android, and in your `App` class on UWP.
@@ -51,7 +42,7 @@ The `SetFlags` method should be invoked in your `AppDelegate` class on iOS, in y
 The `Xamarin.Forms.Forms.SetFlags` method accepts a `string` array argument, which makes it possible to enable multiple experimental flags in a single method call:
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
+Xamarin.Forms.Forms.SetFlags(new string[] { "Shell_UWP_Experimental", "AnotherFeature_Experimental" });
 ```
 
 > [!WARNING]
@@ -62,13 +53,13 @@ Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaE
 The `Device.SetFlags` method can be used to enable an experimental flag in the `App` class in your shared code project:
 
 ```csharp
-Device.SetFlags(new string[]{ "MediaElement_Experimental" });
+Device.SetFlags(new string[]{ "Shell_UWP_Experimental" });
 ```
 
 The `Device.SetFlags` method accepts an `IReadOnlyList<string>` argument, which makes it possible to enable multiple experimental flags in a single method call:
 
 ```csharp
-Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
+Device.SetFlags(new string[]{ "Shell_UWP_Experimental", "AnotherFeature_Experimental" });
 ```
 
 > [!WARNING]
@@ -81,9 +72,16 @@ The following table lists experimental flags for features that are now in genera
 | Flag | Xamarin.Forms Release |
 | ---- | --------------------- |
 | `AppTheme_Experimental` | 4.8 |
+| `Brush_Experimental` | 5.0 |
+| `CarouselView_Experimental` | 5.0 |
 | `CollectionView_Experimental` | 4.3 |
+| `DragAndDrop_Experimental` | 5.0 |
 | `FastRenderers_Experimental` | 4.0 |
 | `IndicatorView_Experimental` | 4.7 |
+| `Markup_Experimental` | 5.0 |
+| `RadioButton_Experimental` | 5.0 |
+| `Shapes_Experimental` | 5.0 |
 | `Shell_Experimental` | 4.0  |
 | `StateTriggers_Experimental` | 4.7 |
+| `SwipeView_Experimental` | 5.0 |
 | `Visual_Experimental` | 3.6 |

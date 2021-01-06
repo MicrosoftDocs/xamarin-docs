@@ -42,7 +42,7 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on iOS:
 
-- Controlling whether the detail page of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) has shadow applied to it, when revealing the master page. For more information, see [MasterDetailPage Shadow](masterdetailpage-shadow.md).
+- Controlling whether the detail page of a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) has shadow applied to it, when revealing the flyout page. For more information, see [FlyoutPage Shadow](flyoutpage-shadow.md).
 - Hiding the navigation bar separator on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). For more information, see [NavigationPage Bar Separator on iOS](navigation-bar-separator.md).
 - Controlling whether the navigation bar is translucent. For more information, see [Navigation Bar Translucency on iOS](navigation-bar-translucent.md).
 - Controlling whether the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar. For more information, see [NavigationPage Bar Text Color Mode on iOS](status-bar-text-color.md).

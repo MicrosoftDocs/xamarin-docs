@@ -6,7 +6,7 @@ ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/14/2016
+ms.date: 09/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -47,6 +47,9 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 ```
 
 By specifying an easing function for an animation, the animation velocity becomes non-linear and produces the effect provided by the easing function. Omitting an easing function when creating an animation causes the animation to use the default [`Linear`](xref:Xamarin.Forms.Easing.Linear) easing function, which produces a linear velocity.
+
+> [!NOTE]
+> Xamarin.Forms 5.0 includes a type converter that converts a string representation of an easing function to the appropriate [`Easing`](xref:Xamarin.Forms.Easing) enumeration member. This type converter is automatically invoked on any properties of type `Easing` that are set in XAML.
 
 For more information about using the animation extension methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class, see [Simple Animations](~/xamarin-forms/user-interface/animation/simple.md). Easing functions can also be consumed by the [`Animation`](xref:Xamarin.Forms.Animation) class. For more information, see [Custom Animations](~/xamarin-forms/user-interface/animation/custom.md).
 
