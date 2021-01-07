@@ -4,15 +4,13 @@ description: "The MediaPicker class in Xamarin.Essentials lets a user pick or ta
 ms.assetid: 23460875-6cf9-4440-a97b-46c55b0bca69
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Media Picker
 
 The **MediaPicker** class lets a user pick or take a photo or video on the device.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 

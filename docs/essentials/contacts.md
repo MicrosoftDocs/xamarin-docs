@@ -4,15 +4,13 @@ description: "The Contacts class in Xamarin.Essentials lets a user pick a contac
 ms.assetid: 02280c42-720a-44c3-979e-4818a20c9821
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Contacts
 
 The **Contacts** class lets a user pick a contact and retrieve information about it.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 

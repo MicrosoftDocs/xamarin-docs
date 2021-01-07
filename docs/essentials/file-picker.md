@@ -4,15 +4,13 @@ description: "The FilePicker class in Xamarin.Essentials lets a user pick a sing
 ms.assetid: 00bdbd57-56b1-47ca-8abe-cebe1b01f61a
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: File Picker
 
 The **FilePicker** class lets a user pick a single or multiple files from the device.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 

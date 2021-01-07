@@ -4,15 +4,13 @@ description: "The Accelerometer class in Xamarin.Essentials lets you create and 
 ms.assetid: 5edf9bc5-b721-448c-a8a2-0a9d4d0c792c
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: App Actions
 
 The **AppActions** class lets you create and respond to app shortcuts from the app icon.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 
