@@ -53,7 +53,7 @@ public class ShareTest
 
 User interface to share to external application that appears when request is made:
 
-![Share](images/share.png)
+![Share to external application UI](images/share.png)
 
 ## File
 

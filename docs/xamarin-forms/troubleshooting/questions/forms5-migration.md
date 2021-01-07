@@ -1,5 +1,6 @@
 ---
 title: "How do I migrate my app to Xamarin.Forms 5.0?"
+description: "How to migrate your app to Xamarin.Forms 5.0, with focus on Android on UWP."
 ms.assetid: AD04FEE9-B8F5-4CA5-AB31-EF1225867E4B
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -104,10 +105,10 @@ ToolbarResource = Resource.Layout.Toolbar;
 
 ## UWP
 
-Xamarin.Forms 5.0 recommends a target platform version of >= 10.0.17763.0 for UWP projects. The target platform version can be set in Visual Studio, or in the UWP .csproj file:
+Xamarin.Forms 5.0 recommends a target platform version of >= 10.0.18362.0 for UWP projects. The target platform version can be set in Visual Studio, or in the UWP .csproj file:
 
 ```xml
-<TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+<TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
 ```
 
 A build warning will be produced if your UWP project uses a lower target platform version.
