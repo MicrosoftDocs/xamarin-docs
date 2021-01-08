@@ -50,10 +50,9 @@ public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthentic
 {
 }
 ```
-When the Target Android version is Android 11 (API Level 30 - R) and above, additional changes need to be made to the Android Manifest file.
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
 
-Open the AndroidManifest.xml file under the Properties folder and add the following inside of the manifest node.
-
+Open the **AndroidManifest.xml** file under the Properties folder and add the following inside of the manifest node:
 ```XML
 <queries>
     <intent>
@@ -61,9 +60,6 @@ Open the AndroidManifest.xml file under the Properties folder and add the follow
     </intent>
 </queries>
 ```
-The following links provide more information regarding the update to the Android Manifest file:
-- https://developers.google.com/web/android/custom-tabs/implementation-guide#how_can_i_check_whether_the_android_device_has_a_browser_that_supports_custom_tab
-- https://developer.android.com/about/versions/11/privacy/package-visibility
 
 # [iOS](#tab/ios)
 
