@@ -107,6 +107,7 @@ The new User Notification framework provides a unified notification API across t
 - **iOS** - Full support to manage and schedule notifications.
 - **tvOS** - Adds the ability to badge app icons for local and remote notifications.
 - **watchOS** - Adds the ability to forward notifications from the user's paired iOS device to their Apple Watch and gives watch apps the ability to do local notifications directly on the watch itself.
+- **macOS** - Full support to manage and schedule notifications.
 
 For more information, please see Apple's [UserNotifications Framework Reference](https://developer.apple.com/reference/usernotifications) and [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) documentation.
 
@@ -123,6 +124,7 @@ There are three different levels of notification requests that the user can appr
 Additionally, these approval levels must be requested and set for both local and remote notifications.
 
 Notification permission should be requested as soon as the app launches by adding the following code to the `FinishedLaunching` method of the `AppDelegate` and setting the desired notification type (`UNAuthorizationOptions`):
+NOTE: As UNUserNotificationCenter is only available from iOS 10+ it is good practise to check we are on at lease that version, before sending the request. 
 
 ```csharp
 using UserNotifications;
@@ -130,14 +132,35 @@ using UserNotifications;
 
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-    // Request notification permissions from the user
-    UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
-        // Handle approval
-    });
+    // Check we're at least v10.0
+    if (UIDevice.CurrentDevice.CheckSystemVersion (10, 0)) {
+        // Request notification permissions from the user
+        UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
+            // Handle approval
+        });
+    }
 
     return true;
 }
 ```
+
+As this API is unified and works on Mac 10.14+ too, if targetting MacOS you must also check for Notification permission as soon as possible.
+NOTE: With MacOS apps, for the permission dialog to appear, you MUST sign your MacOS app, even if building locally in DEBUG mode. So `Project->Options->Mac Signing->Sign the application bundle` must be ticked.
+
+```csharp
+using UserNotifications;
+...
+
+public override void DidFinishLaunching (NSNotification notification)
+{
+    // Check we're at least v10.14
+    if (NSProcessInfo.ProcessInfo.IsOperatingSystemAtLeastVersion (new NSOperatingSystemVersion (10, 14, 0))) {
+        // Request notification permissions from the user
+        UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge | UNAuthorizationOptions.Sound, (approved, err) => {
+            // Handle approval
+        });
+    }
+}
 
 Additionally, a user can always change the notification privileges for an app at any time using the **Settings** app on the device. The app should check for the user's requested notification privileges before presenting a notification using the following code:
 
