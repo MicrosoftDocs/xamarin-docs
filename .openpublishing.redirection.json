@@ -690,15 +690,15 @@
     },
     {
         "source_path": "docs/xamarin-forms/platform/windows/masterdetailpage-navigation-bar.md",
-        "redirect_url": "/xamarin-forms/platform/windows/flyoutpage-navigation-bar"
+        "redirect_url": "/xamarin/xamarin-forms/platform/windows/flyoutpage-navigation-bar"
     },
     {
         "source_path": "docs/xamarin-forms/platform/ios/masterdetailpage-shadow.md",
-        "redirect_url": "/xamarin-forms/platform/ios/flyoutpage-shadow"
+        "redirect_url": "/xamarin/xamarin-forms/platform/ios/flyoutpage-shadow"
     },
     {
         "source_path": "docs/xamarin-forms/user-interface/csharp-markup.md",
-        "redirect_url": "/xamarin-forms/user-interface/"
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/"
     },
     {
         "source_path": "docs/ios/platform/introduction-to-ios11/arkit/urhosharp.md",
@@ -872,7 +872,6 @@
         "source_path": "docs/tools/workbooks/sdk/samples.md",
         "redirect_url": "/xamarin/tools/"
     },
-    
     {
         "source_path": "docs/tools/dotnet-embedding/index.md",
         "redirect_url": "/xamarin/tools/"
