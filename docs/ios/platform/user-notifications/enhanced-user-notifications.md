@@ -124,7 +124,9 @@ There are three different levels of notification requests that the user can appr
 Additionally, these approval levels must be requested and set for both local and remote notifications.
 
 Notification permission should be requested as soon as the app launches by adding the following code to the `FinishedLaunching` method of the `AppDelegate` and setting the desired notification type (`UNAuthorizationOptions`):
-NOTE: As UNUserNotificationCenter is only available from iOS 10+ it is good practise to check we are on at lease that version, before sending the request. 
+
+> [!NOTE]
+> `UNUserNotificationCenter` is only available from iOS 10+. Therefore, it's best practice to check the macOS version before sending the request. 
 
 ```csharp
 using UserNotifications;
@@ -132,7 +134,7 @@ using UserNotifications;
 
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-    // Check we're at least v10.0
+    // Version check
     if (UIDevice.CurrentDevice.CheckSystemVersion (10, 0)) {
         // Request notification permissions from the user
         UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
@@ -144,8 +146,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-As this API is unified and works on Mac 10.14+ too, if targetting MacOS you must also check for Notification permission as soon as possible.
-NOTE: With MacOS apps, for the permission dialog to appear, you MUST sign your MacOS app, even if building locally in DEBUG mode. So `Project->Options->Mac Signing->Sign the application bundle` must be ticked.
+As this API is unified and also works on Mac 10.14+, if you are targetting macOS you must also check for the Notification permission as soon as possible:
 
 ```csharp
 using UserNotifications;
@@ -161,6 +162,9 @@ public override void DidFinishLaunching (NSNotification notification)
         });
     }
 }
+
+> [!NOTE]
+> With MacOS apps, for the permission dialog to appear, you must sign your macOS app, even if building locally in DEBUG mode. Therefore, **Project->Options->Mac Signing->Sign the application bundle** must be checked.
 
 Additionally, a user can always change the notification privileges for an app at any time using the **Settings** app on the device. The app should check for the user's requested notification privileges before presenting a notification using the following code:
 
