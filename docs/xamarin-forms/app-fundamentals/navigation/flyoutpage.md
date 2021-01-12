@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms FlyoutPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 
 A flyout page typically displays a list of items, as shown in the following screenshots:
 
@@ -287,5 +287,5 @@ public class MainPageCS : FlyoutPage
 ## Related links
 
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [FlyoutPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+- [FlyoutPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 - [FlyoutPage API](xref:Xamarin.Forms.FlyoutPage)
