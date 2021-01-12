@@ -6,7 +6,7 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/05/2020
+ms.date: 01/11/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -30,12 +30,11 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 In addition, the `SwipeView` inherits the [`Content`](xref:Xamarin.Forms.ContentView.Content) property from the [`ContentView`](xref:Xamarin.Forms.ContentView) class. The `Content` property is the content property of the `SwipeView` class, and therefore does not need to be explicitly set.
 
-The `SwipeView` class also defines four events:
+The `SwipeView` class also defines three events:
 
 - `SwipeStarted` is fired when a swipe starts. The `SwipeStartedEventArgs` object that accompanies this event has a `SwipeDirection` property, of type `SwipeDirection`.
 - `SwipeChanging` is fired as the swipe moves. The `SwipeChangingEventArgs` object that accompanies this event has a `SwipeDirection` property, of type `SwipeDirection`, and an `Offset` property of type `double`.
-- `SwipeEnded` is fired when a swipe ends. The `SwipeEndedEventArgs` object that accompanies this event has a `SwipeDirection` property, of type `SwipeDirection`.
-- `CloseRequested` is fired when the swipe items are closed.
+- `SwipeEnded` is fired when a swipe ends. The `SwipeEndedEventArgs` object that accompanies this event has a `SwipeDirection` property, of type `SwipeDirection`, and an `IsOpen` property of type `bool`.
 
 In addition, `SwipeView` includes `Open` and `Close` methods, which programmatically open and close the swipe items, respectively.
 
@@ -339,7 +338,7 @@ In this example, the `SwipeItemView` comprises a [`StackLayout`](xref:Xamarin.Fo
 
 ## Open and close a SwipeView programmatically
 
-`SwipeView` includes `Open` and `Close` methods, which programmatically open and close the swipe items, respectively.
+`SwipeView` includes `Open` and `Close` methods, which programmatically open and close the swipe items, respectively. By default, these methods will animate the `SwipeView` when its opened or closed.
 
 The `Open` method requires an `OpenSwipeItem` argument, to specify the direction the `SwipeView` will be opened from. The `OpenSwipeItem` enumeration has four members:
 
@@ -347,6 +346,8 @@ The `Open` method requires an `OpenSwipeItem` argument, to specify the direction
 - `TopItems`, which indicates that the `SwipeView` will be opened from the top, to reveal the swipe items in the `TopItems` collection.
 - `RightItems`, which indicates that the `SwipeView` will be opened from the right, to reveal the swipe items in the `RightItems` collection.
 - `BottomItems`, which indicates that the `SwipeView` will be opened from the bottom, to reveal the swipe items in the `BottomItems` collection.
+
+In addition, the `Open` method also accepts an optional `bool` argument that defines whether the `SwipeView` will be animated when it opens.
 
 Given a `SwipeView` named `swipeView`, the following example shows how to open a `SwipeView` to reveal the swipe items in the `LeftItems` collection:
 
@@ -361,7 +362,7 @@ swipeView.Close();
 ```
 
 > [!NOTE]
-> When the `Close` method is invoked, the `CloseRequested` event is fired.
+> The `Close` method also accepts an optional `bool` argument that defines whether the `SwipeView` will be animated when it closes.
 
 ## Disable a SwipeView
 

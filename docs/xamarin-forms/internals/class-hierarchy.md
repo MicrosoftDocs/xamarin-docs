@@ -6,7 +6,7 @@ ms.assetid: C89E6B98-464D-4BBE-BF11-13A5FCBBF420
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2020
+ms.date: 01/12/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -20,8 +20,10 @@ The following class diagram shows the hierarchy of types that are typically used
 
 [![Xamarin.Forms Controls Class Diagram](class-hierarchy-images/class-diagram.png "Xamarin.Forms controls class diagram")](class-hierarchy-images/class-diagram-large.png#lightbox "Xamarin.Forms controls class diagram")
 
+However, note that the diagram only shows a single Shell type.
+
 > [!NOTE]
-> A high resolution version of the class diagram can be downloaded from [here](class-hierarchy-images/class-diagram-high-resolution.png). However, note that the diagram only shows a single Shell type.
+> A high resolution version of the class diagram can be downloaded from [here](class-hierarchy-images/class-diagram-high-resolution.png).
 
 ## Related links
 

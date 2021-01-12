@@ -27,7 +27,7 @@ These page types provide more sophisticated navigation options than the
 
 ## Master and Detail
 
-The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) defines two properties of type `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) and [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail). Generally you set each of these properties to a `ContentPage`. The `MasterDetailPage` displays and switches between these two pages.
+The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) defines two properties of type `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) and `Detail`. Generally you set each of these properties to a `ContentPage`. The `MasterDetailPage` displays and switches between these two pages.
 
 There are two fundamental ways to switch between these two pages:
 
@@ -57,7 +57,7 @@ The
 
 The `Master` and `Detail` properties are defined with visual trees in the [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml) file, which derives from `MasterDetailPage`. This arrangement allows data bindings to be set between the master and detail pages.
 
-That XAML file also sets the [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) property of `MasterDetailPage` to `True`. This causes the master page to be displayed at startup; by default the detail page is displayed. The [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file sets `IsPresented` to `false` when an item is selected from the `ListView` in the master page. The detail page is then displayed:
+That XAML file also sets the `IsPresented` property of `MasterDetailPage` to `True`. This causes the master page to be displayed at startup; by default the detail page is displayed. The [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) file sets `IsPresented` to `false` when an item is selected from the `ListView` in the master page. The detail page is then displayed:
 
 [![Triple screenshot of School And Detail](images/ch25fg09-small.png "Detail Page from a MasterDetailPage")](images/ch25fg09-large.png#lightbox "Detail Page from a MasterDetailPage")
 
@@ -65,8 +65,8 @@ That XAML file also sets the [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage
 
 Although Xamarin.Forms provides a user interface for switching between the master and detail views, you can supply your own. To do so:
 
-- Set the [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) property to `false` to disable swiping
-- Override the [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) method and return `false` to hide the toolbar buttons on Windows 8.1 and Windows Phone 8.1.
+- Set the `IsGestureEnabled` property to `false` to disable swiping
+- Override the `ShouldShowToolbarButton` method and return `false` to hide the toolbar buttons on Windows 8.1 and Windows Phone 8.1.
 
 You must then provide a means to switch between the master and detail pages, such as demonstrated by the
 [**ColorsDetail**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails) sample.

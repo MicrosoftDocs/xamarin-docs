@@ -14,6 +14,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 AndroidX replaces the Android Support Library. This article explains why AndroidX exists, how it impacts Xamarin.Forms, and how to migrate your application to use the AndroidX libraries.
 
+> [!IMPORTANT]
+> If you are migrating an app to Xamarin.Forms 5.0, see [How do I migrate my app to Xamarin.Forms 5.0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md).
+
 ## History of AndroidX
 
 The Android Support Library was created to provide newer features on older versions of Android. It is a compatibility layer that allows developers to use functionality that may not exist on all versions of the Android operating system and have graceful fallbacks for older versions. The Support Library also includes convenience and helper classes, debugging and utility tools, and sophisticated classes that depend on other Support Library classes to function.
@@ -69,5 +72,6 @@ Once the missing packages are resolved, rebuilding the project loads the missing
 
 ## Related links
 
+- [How do I migrate my app to Xamarin.Forms 5.0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md)
 - [Android Support Library overview](https://developer.android.com/topic/libraries/support-library/index) on developer.android.com
 - [AndroidX overview](https://developer.android.com/jetpack/androidx) on developer.android.com
