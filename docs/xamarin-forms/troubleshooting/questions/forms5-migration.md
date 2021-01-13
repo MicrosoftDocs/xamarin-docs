@@ -89,7 +89,7 @@ This can be accomplished by updating your `using` statements to use `AndroidX` n
 | `Android.Support.V7.App` | `AndroidX.AppCompat.App` |
 | `Android.Support.V7.Widget` | `AndroidX.AppCompat.Widget` |
 
-For a complete list of class mappings from support libraries to AndroidX, see [Support library class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) on developer.android.com.
+For a complete list of class mappings from support libraries to AndroidX, see [AndroidX class mappings](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv) on github.com. For a complete list of assembly mappings from support libraries to AndroidX, see [AndroidX assemblies](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv) on github.com
 
 #### Remove AXML files
 
@@ -117,3 +117,5 @@ A build warning will be produced if your UWP project uses a lower target platfor
 
 - [Features moved from Xamarin.Forms](https://github.com/xamarin/XamarinCommunityToolkit/wiki/Features-moved-from-Xamarin.Forms)
 - [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md)
+- [AndroidX class mappings](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv)
+- [AndroidX assemblies](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv)
