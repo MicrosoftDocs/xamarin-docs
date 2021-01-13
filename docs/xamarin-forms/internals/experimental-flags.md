@@ -78,7 +78,8 @@ The following table lists experimental flags for features that are now in genera
 | `DragAndDrop_Experimental` | 5.0 |
 | `FastRenderers_Experimental` | 4.0 |
 | `IndicatorView_Experimental` | 4.7 |
-| `Markup_Experimental` | 5.0 |
+| `Markup_Experimental` | 5.0 (moved to Xamarin Community Toolkit) |
+| `MediaElement_Experimental` | 5.0 (moved to Xamarin Community Toolkit) |
 | `RadioButton_Experimental` | 5.0 |
 | `Shapes_Experimental` | 5.0 |
 | `Shell_Experimental` | 4.0  |

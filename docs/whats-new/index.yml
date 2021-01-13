@@ -18,6 +18,8 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
+          - text: January 2021
+            url: 2021-01.md
           - text: August 2020
             url: 2020-08.md
           - text: June 2020
@@ -26,18 +28,6 @@ landingContent:
             url: 2020-04.md
           - text: February 2020
             url: 2020-02.md
-          - text: December 2019
-            url: 2019-12.md
-          - text: October 2019
-            url: 2019-10.md
-          - text: August 2019
-            url: 2019-08.md
-          - text: July 2019
-            url: 2019-07.md
-          - text: June 2019
-            url: 2019-06.md
-          - text: March 2019
-            url: 2019-03.md
 
   - title: "Open source contributions"
     linkLists:
