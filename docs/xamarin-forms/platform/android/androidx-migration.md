@@ -47,7 +47,7 @@ To automatically migrate to AndroidX, a Xamarin.Forms Android platform project m
 Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the Intermediate Language (IL) is inspected and Support Library dependencies and bindings are swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
 
 > [!NOTE]
-> Manual migration to AndroidX will result in the fastest build process for your app, and is the recommended approach for AndroidX migration. For more information, see [Manual migration to AndroidX](~/xamarin-forms/troubleshooting/questions/forms5-migration.md).
+> Manual migration to AndroidX will result in the fastest build process for your app, and is the recommended approach for AndroidX migration. This involves replacing support library dependencies with AndroidX dependencies, and updating your code to consume AndroidX types. For more information, see [Use AndroidX types](~/xamarin-forms/troubleshooting/questions/forms5-migration.md#use-androidx-types).
 
 If AndroidX dependencies are detected that are not part of the project, a build error is reported that indicates which AndroidX packages are missing. An example build error is shown below:
 
