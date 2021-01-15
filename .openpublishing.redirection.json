@@ -697,8 +697,16 @@
         "redirect_url": "/xamarin/xamarin-forms/platform/ios/flyoutpage-shadow"
     },
     {
+        "source_path": "docs/xamarin-forms/user-interface/mediaelement.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/expander.md",
+        "redirect_url": "/xamarin/community-toolkit/views/expander"
+    },
+    {
         "source_path": "docs/xamarin-forms/user-interface/csharp-markup.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/"
+        "redirect_url": "/xamarin/community-toolkit/markup"
     },
     {
         "source_path": "docs/ios/platform/introduction-to-ios11/arkit/urhosharp.md",
