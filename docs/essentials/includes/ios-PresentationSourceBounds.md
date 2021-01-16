@@ -31,7 +31,7 @@ Everything described in this section works equally for `Share` and `Launcher`
 
 If you are using Xamarin.Forms you are able to pass in a `View` and calculate the bounds:
 
-```
+```csharp
 public static class ViewHelpers
 {
     public static Rectangle GetAbsoluteBounds(this Xamarin.Forms.View element)
