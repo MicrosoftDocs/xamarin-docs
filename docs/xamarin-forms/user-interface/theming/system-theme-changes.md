@@ -26,6 +26,7 @@ The following requirements must be met for Xamarin.Forms to respond to a system 
 - iOS 13 or greater.
 - Android 10 (API 29) or greater.
 - UWP build 14393 or greater.
+- macOS 10.14 or greater.
 
 The following screenshots show themed pages, for light and dark system themes on iOS and Android:
 

@@ -4,7 +4,7 @@ description: "The Share class in Xamarin.Essentials enables an application to sh
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 01/06/2020
+ms.date: 01/04/2021
 ms.custom: video
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
@@ -53,7 +53,7 @@ public class ShareTest
 
 User interface to share to external application that appears when request is made:
 
-![Share](images/share.png)
+![Share to external application UI](images/share.png)
 
 ## File
 
@@ -74,8 +74,6 @@ await Share.RequestAsync(new ShareFileRequest
 ```
 
 ## Multiple Files
-
-![Pre-release API](~/media/shared/preview.png)
 
 The usage of share multiple files differs from the single file only in the ability of sending several files at once:
 

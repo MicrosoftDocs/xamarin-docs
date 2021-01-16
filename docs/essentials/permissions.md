@@ -5,7 +5,7 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -64,8 +64,6 @@ When using `CheckStatusAsync` or `RequestAsync` a `PermissionStatus` will be ret
 
 ## Explain Why Permission Is Needed
 
-![Pre-release API](~/media/shared/preview.png)
-
 It is best practice to explain why your application needs a specific permission. On iOS you must specify a string that is displayed to the user. Android does not have this ability and and also defaults permission status to Disabled. This limits the ability to know if the user denied the permission or if it is the first time prompting the user. The `ShouldShowRationale` method can be used to determine if an educational UI should be displayed. If the method returns `true` this is because the user has denied or disabled the permission in the past. Other platforms will always return `false` when calling this method.
 
 ## Available Permissions
@@ -101,7 +99,8 @@ Icon Guide:
 If a permission is marked as ![not supported](~/media/shared/no.png "not supported") it will always return `Granted` when checked or requested.
 
 ## General Usage
-Here is a general usage pattern for handling permissions.
+
+The following code presents the general usage pattern for determining whether a permission has been granted and requesting it if it has not. This code uses features that are available with Xamarin.Essentials version 1.6.0 or later.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
@@ -109,8 +108,7 @@ public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     
     if (status == PermissionStatus.Granted)
-        return status;
-        
+        return status;        
     
     if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {

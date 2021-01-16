@@ -424,7 +424,7 @@
         - name: Device Information
           href: ~/essentials/device-information.md?context=xamarin/android
         - name: Email
-          href: ~/essentials/email.md?context=xamarin/android          
+          href: ~/essentials/email.md?context=xamarin/android
         - name: File Picker
           href: ~/essentials/file-picker.md?context=xamarin/android
         - name: File System Helpers
@@ -483,6 +483,8 @@
           href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/android
+        - name: Xamarin.Essentials on Q&A
+          href: /answers/topics/dotnet-xamarinessentials.html          
     - name: Data and Cloud Services
       href: data-cloud/index.md
       items:
@@ -694,6 +696,8 @@
               href: wear/deploy-test/debug-on-device.md
             - name: Packaging
               href: wear/deploy-test/packaging.md
+    - name: Xamarin.Android on Q&A
+      href: /answers/topics/dotnet-android.html
     - name: Release Notes
       href: /xamarin/android/release-notes/
     - name: Samples

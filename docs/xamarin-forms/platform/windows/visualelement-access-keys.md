@@ -96,7 +96,10 @@ The result is that access key tips can be displayed next to any [`VisualElement`
 
 When a user activates an access key, by pressing the Alt key followed by the access key, the default action for the `VisualElement` will be executed. For example, when a user activates the access key on a [`Switch`](xref:Xamarin.Forms.Switch), the `Switch` is toggled. When a user activates the access key on an [`Entry`](xref:Xamarin.Forms.Entry), the `Entry` gains focus. When a user activates the access key on a [`Button`](xref:Xamarin.Forms.Button), the event handler for the [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event is executed.
 
-For more information about access keys, see [Access keys](/windows/uwp/design/input/access-keys#key-tip-positioning).
+> [!WARNING]
+> By default, when a modal dialog is displayed any access keys that are defined on the page behind the dialog can still be activated. However, custom logic can be written to disable access keys in this scenario. This can be achieved by handling the `Dispatcher.AcceleratorKeyActivated` event in the `MainPage` class of your UWP project, and in the event handler setting the `Handled` property of the event arguments to `true` when a modal dialog is displayed.
+
+For more information about access keys, see [Access keys](/windows/uwp/design/input/access-keys).
 
 ## Related links
 

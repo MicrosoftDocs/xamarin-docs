@@ -6,20 +6,15 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2020
+ms.date: 09/24/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Shapes
 
-![Pre-release API](~/media/shared/preview.png)
-
 A `Shape` is a type of [`View`](xref:Xamarin.Forms.View) that enables you to draw a shape to the screen. `Shape` objects can be used inside layout classes and most controls, because the `Shape` class derives from the `View` class.
 
 Xamarin.Forms Shapes is available in the `Xamarin.Forms.Shapes` namespace on iOS, Android, macOS, the Universal Windows Platform (UWP), and the Windows Presentation Foundation (WPF).
-
-> [!IMPORTANT]
-> Xamarin.Forms Shapes is currently experimental and can only be used by setting the `Shapes_Experimental` flag. For more information, see [Experimental Flags](~/xamarin-forms/internals/experimental-flags.md).
 
 `Shape` defines the following properties:
 
@@ -31,7 +26,7 @@ Xamarin.Forms Shapes is available in the `Xamarin.Forms.Shapes` namespace on iOS
 - `StrokeLineCap`, of type `PenLineCap`, describes the shape at the start and end of a line or segment. The default value of this property is `PenLineCap.Flat`.
 - `StrokeLineJoin`, of type `PenLineJoin`, specifies the type of join that is used at the vertices of a shape. The default value of this property is `PenLineJoin.Miter`.
 - `StrokeMiterLimit`, of type `double`, specifies the limit on the ratio of the miter length to half the `StrokeThickness` of a shape. The default value of this property is 10.0.
-- `StrokeThickness`, of type `double`, indicates the width of the shape outline. The default value of this property is 0.0.
+- `StrokeThickness`, of type `double`, indicates the width of the shape outline. The default value of this property is 1.0.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
@@ -77,7 +72,6 @@ The following XAML shows how to set the `Aspect` property:
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
-      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"

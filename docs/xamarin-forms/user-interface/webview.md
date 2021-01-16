@@ -411,6 +411,9 @@ An application can return to using the iOS `UIWebView` class to implement the Xa
 [assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
 ```
 
+> [!NOTE]
+> In Xamarin.Forms 5.0, the `WebViewRenderer` class has been removed. Therefore, Xamarin.Forms 5.0 doesn't contain a reference to the `UIWebView` control.
+
 `WebView` on Android by default is about as fast as the built-in browser.
 
 The [UWP WebView](/windows/uwp/design/controls-and-patterns/web-view) uses the Microsoft Edge rendering engine. Desktop and tablet devices should see the same performance as using the Edge browser itself.
@@ -545,6 +548,9 @@ In this example, a single `Cookie` is added to the `CookieContainer` object, whi
 ## UIWebView Deprecation and App Store Rejection (ITMS-90809)
 
 Starting in April 2020, [Apple will reject apps](https://developer.apple.com/news/?id=12232019b) that still use the deprecated `UIWebView` API. While Xamarin.Forms has switched to `WKWebView` as the default, there is still a reference to the older SDK in the Xamarin.Forms binaries. Current [iOS linker](~/ios/deploy-test/linker.md) behavior does not remove this, and as a result the deprecated `UIWebView` API will still appear to be referenced from your app when you submit to the App Store.
+
+> [!IMPORTANT]
+> In Xamarin.Forms 5.0, the `WebViewRenderer` class has been removed. Therefore, Xamarin.Forms 5.0 doesn't contain a reference to the `UIWebView` control.
 
 A preview version of the linker is available to fix this issue. To enable the preview, you will need to supply an additional argument `--optimize=experimental-xforms-product-type` to the linker.
 

@@ -6,13 +6,11 @@ ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/21/2020
+ms.date: 09/24/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Shapes: Path
-
-![Pre-release API](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -41,7 +39,6 @@ The following XAML example shows how to draw a triangle using path markup syntax
 ```xaml
 <Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start" />
 ```
@@ -62,7 +59,6 @@ The following XAML example shows how to draw a triangle using a `PathGeometry` o
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>

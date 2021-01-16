@@ -30,7 +30,7 @@ The following documents will help you get started building tvOS apps with Xamari
 
 - [Introduction to tvOS 11](~/ios/tvos/platform/introduction-to-tvos11.md) - This article describes new features available in tvOS 11 for Xamarin.tvOS developers.
 - [Introduction to tvOS 10](~/ios/tvos/platform/introduction-to-tvos10/index.md) - This article introduces all of the new and modified APIs and features available in tvOS 10 for Xamarin.tvOS developers.
-- [Introduction to tvOS 9](~/ios/tvos/platform/tvos9.md) – This article introduces all of the new and modified APIs and features available in tvOS 9 for Xamarin.tvOS developers. 
+- [Introduction to tvOS 9](~/ios/tvos/platform/tvos9.md) – This article introduces all of the new and modified APIs and features available in tvOS 9 for Xamarin.tvOS developers.
 - [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) – This guide walks through creating your first Xamarin.tvOS app, and in the process introduces the development toolchain, including Visual Studio for Mac, Xcode and Interface Builder. It also introduces Outlets and Actions, which expose UI controls to code, and finally, it illustrates how to build, run and test a Xamarin.tvOS application.
 - [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) – This article covers designing and working with icons and images inside of a Xamarin.tvOS app.
 - [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) – This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app.
@@ -66,6 +66,10 @@ Additionally, Apple provides the following sample apps that can be transcoded to
 If you encounter any problems building tvOS with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
 
 Report new issues and suggestions [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
+
+## Xamarin.tvOS on Q&A 
+
+Ask questions about building and deploying tvOS applications with Xamarin on [Q&A](/answers/topics/dotnet-tvos.html).
 
 ## Related Links
 

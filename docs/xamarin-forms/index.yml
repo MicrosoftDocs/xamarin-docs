@@ -10,7 +10,7 @@ metadata:
   ms.author: dabritch
   ms.date: 11/06/2019
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-  
+
 highlightedContent:
   items:
   - title: What is Xamarin.Forms?
@@ -229,4 +229,4 @@ additionalContent:
         summary: This ebook is a guide for drawing 2D vector graphics, bitmaps, and text in Xamarin.Forms applications.
         url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
 
-  footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Release notes](/xamarin/xamarin-forms/release-notes/)"
+  footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Microsoft Q&A](/answers/products/dotnet) - [Developer Community](https://dotnet.microsoft.com/platform/community) - [Release notes](/xamarin/xamarin-forms/release-notes/)"

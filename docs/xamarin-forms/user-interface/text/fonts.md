@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2020
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -17,7 +17,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 By default, Xamarin.Forms uses a system font defined by each platform. However, controls that display text define properties that you can use to change this font:
 
-- `FontAttributes`, of type `FontAttributes`, which is an enumeration with three members: `None`, `Build`, and `Italic`. The default value of this property is `None`.
+- `FontAttributes`, of type `FontAttributes`, which is an enumeration with three members: `None`, `Bold`, and `Italic`. The default value of this property is `None`.
 - `FontSize`, of type `double`.
 - `FontFamily`, of type `string`.
 

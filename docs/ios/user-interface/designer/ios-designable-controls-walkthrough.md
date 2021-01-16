@@ -11,6 +11,10 @@ ms.date: 03/22/2017
 
 # Using Custom Controls with the iOS Designer
 
+> [!WARNING]
+> The iOS Designer will start to be phased out in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](../storyboards/index.md). 
+
 ## Requirements
 
 The Xamarin Designer for iOS is available in Visual Studio for Mac and Visual Studio 2017 and later on Windows.
@@ -262,4 +266,4 @@ In this article we walked through how to create a custom control, as well as con
 ## Related Links
 
 - [ScratchTicket (sample)](/samples/xamarin/ios-samples/scratchticket)
-- [required images (sample)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)
+- [Required images (sample)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

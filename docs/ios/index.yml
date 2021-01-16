@@ -28,6 +28,10 @@ landingContent:
             url: ~/ios/get-started/hello-ios-multiscreen/index.md
           - text: Objective-C developers
             url: ~/ios/get-started/objective-c-developers/index.md
+      - linkListType: get-started
+        links:            
+          - text: Xamarin.iOS on Q&A
+            url: /answers/topics/dotnet-ios.html
 
   - title: Application fundamentals
     linkLists:
@@ -70,8 +74,6 @@ landingContent:
             url: ~/ios/user-interface/programmatic-layout-constraints.md
           - text: MonoTouch.Dialog
             url: ~/ios/user-interface/monotouch.dialog/index.md
-          - text: Design with Xcode
-            url: ~/ios/user-interface/ios-use-xcode.md
 
   - title: Platform features
     linkLists:

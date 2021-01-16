@@ -28,6 +28,10 @@ landingContent:
             url: ~/android/get-started/hello-android-multiscreen/index.md
           - text: Xamarin for Java developers
             url: ~/android/get-started/java-developers.md
+      - linkListType: get-started
+        links:
+          - text: Xamarin.Android on Q&A
+            url: /answers/topics/dotnet-android.html
 
   - title: Application fundamentals
     linkLists:

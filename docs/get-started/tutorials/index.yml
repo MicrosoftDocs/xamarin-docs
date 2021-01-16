@@ -12,7 +12,7 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/23/2019
-  no-loc: [Xamarin.Forms, Xamarin.Essentials]  
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 landingContent:
   - title: Layouts

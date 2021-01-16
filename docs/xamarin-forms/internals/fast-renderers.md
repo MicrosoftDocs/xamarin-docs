@@ -27,7 +27,6 @@ Fast renderers are available for the following controls in Xamarin.Forms on Andr
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Functionally, these fast renderers are no different to the legacy renderers. From Xamarin.Forms 4.0 onwards, all applications targeting `FormsAppCompatActivity` will use these fast renderers by default. Renderers for all new controls, including [`ImageButton`](xref:Xamarin.Forms.ImageButton) and [`CollectionView`](xref:Xamarin.Forms.CollectionView), use the fast renderer approach.
 

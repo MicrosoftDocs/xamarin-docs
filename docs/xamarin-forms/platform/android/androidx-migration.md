@@ -6,13 +6,16 @@ ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 01/22/2020
+ms.date: 01/13/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # AndroidX migration in Xamarin.Forms
 
 AndroidX replaces the Android Support Library. This article explains why AndroidX exists, how it impacts Xamarin.Forms, and how to migrate your application to use the AndroidX libraries.
+
+> [!IMPORTANT]
+> If you are migrating an app to Xamarin.Forms 5.0, see [How do I migrate my app to Xamarin.Forms 5.0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md).
 
 ## History of AndroidX
 
@@ -35,15 +38,16 @@ For more information about AndroidX, see [AndroidX overview](https://developer.a
 
 ## Automatic migration in Xamarin.Forms
 
-To automatically migrate to AndroidX, a Xamarin.Forms project must:
+To automatically migrate to AndroidX, a Xamarin.Forms Android platform project must:
 
 - Target Android API version 29 or greater.
 - Use Xamarin.Forms version 4.5 or greater.
+- Have direct or transitive dependencies on Android support libraries.
 
 Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the Intermediate Language (IL) is inspected and Support Library dependencies and bindings are swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
 
-> [!NOTE]
-> You must keep the references to the Support Library in your project. These are used to compile the application before the migration process inspects the resulting IL and transforms the dependencies.
+> [!IMPORTANT]
+> Manual migration to AndroidX will result in the fastest build process for your app, and is the recommended approach for AndroidX migration. This involves replacing support library dependencies with AndroidX dependencies, and updating your code to consume AndroidX types. For more information, see [Use AndroidX types](~/xamarin-forms/troubleshooting/questions/forms5-migration.md#use-androidx-types).
 
 If AndroidX dependencies are detected that are not part of the project, a build error is reported that indicates which AndroidX packages are missing. An example build error is shown below:
 
@@ -69,5 +73,8 @@ Once the missing packages are resolved, rebuilding the project loads the missing
 
 ## Related links
 
+- [How do I migrate my app to Xamarin.Forms 5.0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md)
 - [Android Support Library overview](https://developer.android.com/topic/libraries/support-library/index) on developer.android.com
 - [AndroidX overview](https://developer.android.com/jetpack/androidx) on developer.android.com
+- [AndroidX class mappings](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv)
+- [AndroidX assemblies](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv)

@@ -6,7 +6,7 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/02/2020
+ms.date: 10/06/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -20,6 +20,7 @@ Xamarin.Forms Shell includes a URI-based navigation experience that uses routes 
 
 - `BackButtonBehavior`, of type `BackButtonBehavior`, an attached property that defines the behavior of the back button.
 - `CurrentItem`, of type `FlyoutItem`, the currently selected `FlyoutItem`.
+- `CurrentPage`, of type `Page`, the currently presented page.
 - `CurrentState`, of type `ShellNavigationState`, the current navigation state of the `Shell`.
 - `Current`, of type `Shell`, a type-casted alias for `Application.Current.MainPage`.
 
@@ -275,7 +276,7 @@ The `Shell` class defines a `Navigating` event, which is fired when navigation i
 | `CanCancel`  | `bool` | A value indicating if it's possible to cancel the navigation. |
 | `Cancelled`  | `bool` | A value indicating if the navigation was cancelled. |
 
-In addition, the `ShellNavigatingEventArgs` class provides a `Cancel` method that can be used to cancel navigation.
+In addition, the `ShellNavigatingEventArgs` class provides a `Cancel` method that can be used to cancel navigation, and a `GetDeferral` method that returns a `ShellNavigatingDeferral` token that can be used to complete navigation. For more information about navigation deferral, see [Navigation deferral](#navigation-deferral).
 
 The `Shell` class also defines a `Navigated` event, which is fired when navigation has completed. The `ShellNavigatedEventArgs` object that accompanies the `Navigating` event provides the following properties:
 
@@ -309,6 +310,35 @@ void OnNavigating(object sender, ShellNavigatingEventArgs e)
     }
 }
 ```
+
+## Navigation deferral
+
+Shell navigation can be intercepted and completed or cancelled based on user choice. This can be achieved by overriding the `OnNavigating` method in your `Shell` subclass, and by calling the `GetDeferral` method on the `ShellNavigatingEventArgs` object. This method returns a `ShellNavigatingDeferral` token that has a `Complete` method, which can be used to complete the navigation request:
+
+```csharp
+public MyShell : Shell
+{
+    // ...
+    protected override async void OnNavigating(ShellNavigatingEventArgs args)
+    {
+        base.OnNavigating(args);
+
+        ShellNavigatingDeferral token = args.GetDeferral();
+        var result = await DisplayActionSheet("Navigate?", "Cancel", "Yes", "No");
+
+        if (result != "Yes")
+        {
+            args.Cancel();
+        }
+        token.Complete();
+    }    
+}
+```
+
+In this example, an action sheet is displayed that invites the user to complete the navigation request, or cancel it. Navigation is cancelled by invoking the `Cancel` method on the `ShellNavigatingEventArgs` object. Navigation is completed by invoking the `Complete` method on the `ShellNavigatingDeferral` token that was retrieved by the `GetDeferral` method on the `ShellNavigatingEventArgs` object.
+
+> [!IMPORTANT]
+> The `GoToAsync` method will throw a `InvalidOperationException` if a user tries to navigate while there is a pending navigation deferral.
 
 ## Pass data
 

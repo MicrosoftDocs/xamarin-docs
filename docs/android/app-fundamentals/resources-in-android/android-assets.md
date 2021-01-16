@@ -79,6 +79,29 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
+### Reading Binary Assets
+
+The use of `StreamReader` in the above example is ideal for text assets. For binary assets, use the following code:
+
+```csharp
+protected override void OnCreate (Bundle bundle)
+{
+    base.OnCreate (bundle);
+
+    // Read the contents of our asset
+    const int maxReadSize = 256 * 1024;
+    byte[] content;
+    AssetManager assets = this.Assets;
+    using (BinaryReader br = new BinaryReader (assets.Open ("mydatabase.db")))
+    {
+        content = br.ReadBytes (maxReadSize);
+    }
+
+    // Do something with it...
+
+}
+```
+
 ## Running the Application
 
 Run the application and you should see the following:

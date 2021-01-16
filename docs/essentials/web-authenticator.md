@@ -39,9 +39,6 @@ To access the **WebAuthenticator** functionality the following platform specific
 
 Android requires an Intent Filter setup to handle your callback URI. This is easily accomplished by subclassing the `WebAuthenticatorCallbackActivity` class:
 
-> [!NOTE]
-> You should consider implementing [Android App Links](https://developer.android.com/training/app-links/) to handle the callback URI and ensure your application is the only one which can register to handle the callback URI.
-
 ```csharp
 const string CALLBACK_SCHEME = "myapp";
 
@@ -53,16 +50,15 @@ public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthentic
 {
 }
 ```
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
 
-You will also need to call back into Essentials from the `OnResume` override in your `MainActivity`:
-
-```csharp
-protected override void OnResume()
-{
-    base.OnResume();
-
-    Xamarin.Essentials.Platform.OnResume();
-}
+Open the **AndroidManifest.xml** file under the Properties folder and add the following inside of the manifest node:
+```XML
+<queries>
+    <intent>
+        <action android:name="android.support.customtabs.action.CustomTabsService" />
+    </intent>
+</queries>
 ```
 
 # [iOS](#tab/ios)
@@ -84,9 +80,6 @@ On iOS you'll need to add your app's callback URI pattern to your Info.plist suc
     </dict>
 </array>
 ```
-
-> [!NOTE]
-> You should consider using [Universal App Links](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) to register your app's callback URI as a best practice.
 
 You will also need to override your `AppDelegate`'s `OpenUrl` and `ContinueUserActivity` methods to call into Essentials:
 
@@ -193,7 +186,14 @@ else
     r = await WebAuthenticator.AuthenticateAsync(authUrl, callbackUrl);
 }
 
-var accessToken = r?.AccessToken;
+var authToken = string.Empty;
+if (r.Properties.TryGetValue("name", out var name) && !string.IsNullOrEmpty(name))
+    authToken += $"Name: {name}{Environment.NewLine}";
+if (r.Properties.TryGetValue("email", out var email) && !string.IsNullOrEmpty(email))
+    authToken += $"Email: {email}{Environment.NewLine}";
+
+// Note that Apple Sign In has an IdToken and not an AccessToken
+authToken += r?.AccessToken ?? r?.IdToken;
 ```
 
 > [!TIP]

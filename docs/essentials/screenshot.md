@@ -4,16 +4,13 @@ description: "This document describes the Screenshot class in Xamarin.Essentials
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Screenshot
 
 The **Screenshot** class lets you take a capture of the current displayed screen of the app.
-
-![Pre-release API](~/media/shared/preview.png)
-
 
 ## Get started
 

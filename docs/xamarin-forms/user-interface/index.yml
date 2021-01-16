@@ -40,16 +40,12 @@ landingContent:
         links:
           - text: BoxView
             url: boxview.md
-          - text: Expander
-            url: expander.md
           - text: Image
             url: images.md
           - text: Label
             url: text/label.md
           - text: Map
             url: map/index.md
-          - text: MediaElement
-            url: mediaelement.md
           - text: Shapes
             url: shapes/index.md
           - text: WebView

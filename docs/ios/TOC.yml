@@ -140,9 +140,11 @@
       items:
         - name: Overview
           href: user-interface/index.md
-        - name: Storyboards
+        - name: Designing with Xcode
           href: user-interface/storyboards/index.md
           items:
+            - name: Storyboards
+              href: user-interface/storyboards/indepth-storyboard.md
             - name: Unified Storyboards
               href: user-interface/storyboards/unified-storyboards.md
         - name: iOS Designer
@@ -600,6 +602,8 @@
           href: /xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
+        - name: Xamarin.Essentials on Q&A
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: Data and Cloud Services
       items:
         - name: Overview
@@ -1003,6 +1007,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/watchos
             - name: Troubleshooting
               href: ~/essentials/troubleshooting.md?context=xamarin/watchos
+            - name: Xamarin.Essentials on Q&A
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: Deployment & Testing
           href: watchos/deploy-test/index.md
           items:
@@ -1012,6 +1018,8 @@
               href: watchos/deploy-test/appstore.md
         - name: Troubleshooting
           href: watchos/troubleshooting.md
+        - name: Xamarin watchOS on Q&A
+          href: /answers/topics/dotnet-watchos.html
     - name: tvOS
       items:
         - name: Overview
@@ -1094,6 +1102,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/tvos
             - name: Troubleshooting
               href: ~/essentials/troubleshooting.md?context=xamarin/tvos
+            - name: Xamarin.Essentials on Q&A
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: User Interface
           href: tvos/user-interface/index.md
           items:
@@ -1140,6 +1150,10 @@
               href: tvos/internals/assemblies.md
             - name: Frameworks
               href: tvos/internals/frameworks.md
+        - name: Xamarin.tvOS on Q&A
+          href: /answers/topics/dotnet-tvos.html
+    - name: Xamarin.iOS on Q&A
+      href: /answers/topics/dotnet-ios.html
     - name: Release Notes
       href: /xamarin/ios/release-notes/
     - name: Samples

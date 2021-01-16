@@ -172,5 +172,7 @@
               href: troubleshooting/questions/vs-config-manager.md
         - name: Updating Component References to NuGet
           href: troubleshooting/component-nuget.md
+    - name: Cross-platform development on Q&A
+      href: /answers/topics/dotnet-crossplatform-general.html
     - name: Samples
       href: samples/index.md

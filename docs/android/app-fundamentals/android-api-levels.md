@@ -35,11 +35,9 @@ information about downloading and installing Android SDK components,
 see [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
 > [!NOTE]
-> Beginning in August 2018, the Google Play Console
-will require that new apps target API level 26 (Android 8.0) or higher.
-Existing apps will be required to target API level 26 or higher
-beginning in November 2018. For more information, see
-[Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+> Beginning in August 2020, the Google Play Console requires that new apps target API level 29 (Android 10.0) or higher.
+Existing apps are required to target API level 29 or higher beginning in November 2020. For more information, see 
+[Target API level requirements for the Play Console](https://support.google.com/googleplay/android-developer/answer/9859152#targetsdk) in "Create and set up your app" in the Play Console documentation.
 
 <!-- markdownlint-disable MD001 -->
 

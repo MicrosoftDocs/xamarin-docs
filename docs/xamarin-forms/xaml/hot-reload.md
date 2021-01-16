@@ -6,7 +6,7 @@ ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 03/14/2020
+ms.date: 01/14/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -33,9 +33,10 @@ If you are starting from a template, XAML Hot Reload is on by default and the pr
 
 If you're working from an existing Xamarin.Forms solution, no additional installation is required to use XAML Hot Reload, but you might have to double check your configuration to ensure the best experience. First, enable it in your IDE settings:
 
-* On Windows, check the **Enable Xamarin Hot Reload** checkbox at **Tools** > **Options** > **Xamarin** > **Hot Reload**.
+* On Windows, check the **Enable XAML Hot Reload** checkbox (and the required platforms) at **Tools** > **Options** > **Debugging** > **Hot Reload**.
+  * In earlier versions of Visual Studio 2019, the checkbox is at  **Tools** > **Options** > **Xamarin** > **Hot Reload**.
 * On Mac, check the **Enable Xamarin Hot Reload** checkbox at **Visual Studio** > **Preferences** > **Tools for Xamarin** > **XAML Hot Reload**.
-  * In earlier versions of Visual Studio for Mac, the menu is at **Visual Studio** > **Preferences** > **Projects** > **Xamarin Hot Reload**.
+  * In earlier versions of Visual Studio for Mac, the checkbox is at **Visual Studio** > **Preferences** > **Projects** > **Xamarin Hot Reload**.
 
 Then, in your Android and iOS build settings, check that the Linker is set to "Don't Link" or "Link None". To use XAML Hot Reload with a physical iOS device, you also have to check **Enable the Mono interpreter** (Visual Studio 16.4 and above) or add **--interpreter** to your **Additional mtouch args** (Visual Studio 16.3 and below).
 

@@ -25,6 +25,8 @@ landingContent:
             url: ~/get-started/quickstarts/index.md
           - text: .NET Standard
             url: ~/cross-platform/app-fundamentals/net-standard.md
+          - text: Cross-platform development on Q&A
+            url: /answers/topics/dotnet-crossplatform-general.html
       - linkListType: how-to-guide
         links:
           - text: App development lifecycle

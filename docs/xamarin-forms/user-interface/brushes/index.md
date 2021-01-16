@@ -6,18 +6,13 @@ ms.assetid: 44420FC2-304C-4175-8654-76769F79A813
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/28/2020
+ms.date: 09/24/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms Brushes
 
-![Preview API](~/media/shared/preview.png "This API is currently pre-release")
-
 A brush enables you to paint an area, such as the background of a control, using different approaches. Brush support in Xamarin.Forms is available in the `Xamarin.Forms` namespace on iOS, Android, macOS, the Universal Windows Platform (UWP), and the Windows Presentation Foundation (WPF).
-
-> [!IMPORTANT]
-> Brush support in Xamarin.Forms is currently experimental and can only be used by setting the `Brush_Experimental` flag. For more information, see [Experimental Flags](~/xamarin-forms/internals/experimental-flags.md).
 
 The `Brush` class is an abstract class that paints an area with its output. Classes that derive from `Brush` describe different ways of painting an area. The following list describes the different brush types available in Xamarin.Forms:
 

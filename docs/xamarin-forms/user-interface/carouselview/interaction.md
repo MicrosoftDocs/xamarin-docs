@@ -6,7 +6,7 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
+ms.date: 09/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -21,6 +21,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 - `CurrentItemChangedCommandParameter`, of type `object`, which is the parameter that's passed to the `CurrentItemChangedCommand`.
 - `IsBounceEnabled`, of type `bool`, which specifies whether the `CarouselView` will bounce at a content boundary. The default value is `true`.
 - `IsSwipeEnabled`, of type `bool`, which determines whether a swipe gesture will change the displayed item. The default value is `true`.
+- `Loop`, of type `bool`, which determines whether the `CarouselView` provides looped access to its collection of items. The default value is `true`.
 - `Position`, of type `int`, the index of the current item in the underlying collection. This property has a default binding mode of `TwoWay`, and has a 0 value when there isn't any data to display.
 - `PositionChangedCommand`, of type `ICommand`, which is executed when the position changes.
 - `PositionChangedCommandParameter`, of type `object`, which is the parameter that's passed to the `PositionChangedCommand`.
@@ -348,6 +349,10 @@ The `CurrentItem` property can be cleared by setting it, or the object it binds 
 ## Disable bounce
 
 By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) bounces items at content boundaries. This can be disabled by setting the `IsBounceEnabled` property to `false`.
+
+## Disable loop
+
+By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) provides looped access to its collection of items. Therefore, swiping backwards from the first item in the collection will display the last item in the collection. Similarly, swiping forwards from the last item in the collection will return to the first item in the collection. This behavior can be disabled by setting the `Loop` property to `false`.
 
 ## Disable swipe interaction
 

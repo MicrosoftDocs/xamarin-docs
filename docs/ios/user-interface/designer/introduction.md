@@ -13,6 +13,10 @@ ms.date: 01/31/2018
 
 _This guide introduces the Xamarin Designer for iOS. It demonstrates how to use the iOS Designer to visually lay out controls, how to access those controls in code, and how to edit properties._
 
+> [!WARNING]
+> The iOS Designer will start to be phased out in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](../storyboards/index.md). 
+
 The Xamarin Designer for iOS is a visual interface designer similar to Xcode's Interface Builder and the Android Designer. Some of its many features include seamless integration with Visual Studio for Windows and Mac, drag-and-drop editing, an interface for setting up event handlers, and the ability to render custom controls.
 
 ## Requirements

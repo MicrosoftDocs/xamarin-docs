@@ -4,15 +4,13 @@ description: "This document describes the HapticFeedback class in Xamarin.Essent
 ms.assetid: 4462936c-4018-443b-906d-d63da6d0ed7d
 author: dimonovdd
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Haptic Feedback
 
 The **HapticFeedback** class lets you control haptic feedback on device.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 

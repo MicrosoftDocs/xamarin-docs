@@ -111,17 +111,6 @@ The `Person.ToString` override could return a formatted string consisting of the
 
 A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is used to specify the appearance of data, and typically uses data binding to display data. Its common usage scenario is when displaying data from a collection of objects in a [`ListView`](xref:Xamarin.Forms.ListView). For example, when a `ListView` is bound to a collection of `Person` objects, the `ListView.ItemTemplate` property will be set to a `DataTemplate` that defines the appearance of each `Person` object in the `ListView`. The `DataTemplate` will contain elements that bind to property values of each `Person` object. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) can be used as a value for the following properties:
-
-- [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
-- [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
-- [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
-- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), which is inherited by [`ListView`](xref:Xamarin.Forms.ListView).
-- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), which is inherited by [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), and [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
-
-> [!NOTE]
-> Note that although the [`TableView`](xref:Xamarin.Forms.TableView) makes uses of [`Cell`](xref:Xamarin.Forms.Cell) objects, it does not use a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). This is because data bindings are always set directly on `Cell` objects.
-
 A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that's placed as a direct child of the properties listed above is known as an *inline template*. Alternatively, a `DataTemplate` can be defined as a control-level, page-level, or application-level resource. Choosing where to define a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impacts where it can be used:
 
 - A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) defined at the control level can only be applied to the control.

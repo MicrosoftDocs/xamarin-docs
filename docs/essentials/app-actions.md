@@ -4,15 +4,13 @@ description: "The Accelerometer class in Xamarin.Essentials lets you create and 
 ms.assetid: 5edf9bc5-b721-448c-a8a2-0a9d4d0c792c
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: App Actions
 
 The **AppActions** class lets you create and respond to app shortcuts from the app icon.
-
-![Pre-release API](~/media/shared/preview.png)
 
 ## Get started
 
@@ -22,7 +20,18 @@ To access the **AppActions** functionality the following platform specific setup
 
 # [Android](#tab/android)
 
-In the `MainActivity` add the following logic to handle actions:
+Add the intent filter to your `MainActivity` class:
+
+```csharp
+[IntentFilter(
+        new[] { Xamarin.Essentials.Platform.Intent.ActionAppAction },
+        Categories = new[] { Android.Content.Intent.CategoryDefault })]
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    ...
+```
+
+Then add the following logic to handle actions:
 
 ```csharp
 protected override void OnResume()
@@ -32,7 +41,7 @@ protected override void OnResume()
     Xamarin.Essentials.Platform.OnResume(this);
 }
 
-protected override void OnNewIntent(Intent intent)
+protected override void OnNewIntent(Android.Content.Intent intent)
 {
     base.OnNewIntent(intent);
 
@@ -113,19 +122,9 @@ void AppActions_OnAppAction(object sender, AppActionEventArgs e)
         AppActions.OnAppAction -= app.AppActions_OnAppAction;
         return;
     }
-    Device.BeginInvokeOnMainThread(async () =>
+    MainThread.BeginInvokeOnMainThread(async () =>
     {
-        var page = e.AppAction.Id switch
-        {
-            "battery_info" => new BatteryPage(),
-            "app_info" => new AppInfoPage(),
-            _ => default(Page)
-        };
-        if (page != null)
-        {
-            await Application.Current.MainPage.Navigation.PopToRootAsync();
-            await Application.Current.MainPage.Navigation.PushAsync(page);
-        }
+        await Shell.Current.GoToAsync($"//{e.AppAction.Id}");
     });
 }
 ```

@@ -16,6 +16,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 _See your Xamarin.Forms layouts rendered as you type_
 
 > [!WARNING]
+> The XAML Previewer will start being phased out in Visual Studio 2019 version 16.8 and Visual Studio for Mac version 8.8.
 > The recommended way to preview your XAML is now with **[XAML Hot Reload](~/xamarin-forms/xaml/hot-reload.md)**.
 
 ## Overview
