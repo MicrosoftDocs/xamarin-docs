@@ -92,6 +92,12 @@ await Launcher.OpenAsync(new OpenFileRequest
 });
 ```
 
+## Presentation Location When Opening Files
+
+![Pre-release API](~/media/shared/preview.png)
+
+[!include[](~/essentials/includes/ios-PresentationSourceBounds.md)]
+
 ## Platform Differences
 
 # [Android](#tab/android)
