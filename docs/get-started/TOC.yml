@@ -60,7 +60,7 @@
         - name: Grid Layout
           href: tutorials/grid/index.yml
         - name: Lists
-          href: tutorials/listview/index.yml
+          href: tutorials/collectionview/index.yml
         - name: Pop-ups
           href: tutorials/pop-ups/index.yml
         - name: App lifecycle

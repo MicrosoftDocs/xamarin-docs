@@ -1,12 +1,12 @@
 ### YamlMime:Tutorial
-title: Xamarin.Forms ListView Tutorial
+title: Xamarin.Forms CollectionView Tutorial
 metadata:
-  title: Xamarin.Forms ListView Tutorial
-  description: Learn how to present lists of data, using the Xamarin.Forms ListView.
+  title: Xamarin.Forms CollectionView Tutorial
+  description: Learn how to present lists of data, using the Xamarin.Forms CollectionView.
   audience: Developer
   level: Beginner
   ms.topic: interactive-tutorial
-  ms.date: 02/06/2019
+  ms.date: 01/15/2021
   author: davidbritch
   ms.author: dabritch
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
@@ -14,7 +14,7 @@ items:
 - durationInMinutes: 1
   content: |
     [!INCLUDE [](includes/intro.md)]
-- title: Create a listview
+- title: Create a collectionview
   durationInMinutes: 2
   content: |
     [!INCLUDE [](includes/create.md)]
@@ -26,9 +26,9 @@ items:
   durationInMinutes: 3
   content: |
     [!INCLUDE [](includes/item-selection.md)]
-- title: Customize cell appearance
+- title: Customize item appearance
   durationInMinutes: 3
   content: |
-    [!INCLUDE [](includes/customize-cell-appearance.md)]
+    [!INCLUDE [](includes/customize-item-appearance.md)]
 - content: |
     [!INCLUDE [](includes/completed.md)]

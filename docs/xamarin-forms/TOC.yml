@@ -59,7 +59,7 @@
             - name: Grid Layout
               href: ~/get-started/tutorials/grid/index.yml
             - name: Lists
-              href: ~/get-started/tutorials/listview/index.yml
+              href: ~/get-started/tutorials/collectionview/index.yml
             - name: Pop-ups
               href: ~/get-started/tutorials/pop-ups/index.yml
             - name: App lifecycle

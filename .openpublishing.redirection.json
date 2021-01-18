@@ -939,6 +939,10 @@
     {
         "source_path": "docs/tools/dotnet-embedding/limitations.md",
         "redirect_url": "/xamarin/tools/"
+    },
+    {
+        "source_path": "docs/get-started/tutorials/listview/index.yml",
+        "redirect_url": "/xamarin/get-started/tutorial/collectionview/"
     }
   ]
 }

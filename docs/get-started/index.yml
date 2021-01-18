@@ -69,8 +69,8 @@ landingContent:
             url: tutorials/image/index.yml
           - text: Grid
             url: tutorials/grid/index.yml
-          - text: ListView
-            url: tutorials/listview/index.yml
+          - text: CollectionView
+            url: tutorials/collectionview/index.yml
           - text: Pop-ups
             url: tutorials/pop-ups/index.yml
 

@@ -8,10 +8,10 @@ Congratulations on completing this tutorial, where you learned how to:
 
 ## Next steps
 
-To learn more about the basics of creating mobile applications with Xamarin.Forms, continue to the ListView tutorial.
+To learn more about the basics of creating mobile applications with Xamarin.Forms, continue to the CollectionView tutorial.
 
 > [!div class="nextstepaction"]
-> [ListView Tutorial](~/get-started/tutorials/listview/index.yml)
+> [ListView Tutorial](~/get-started/tutorials/collectionview/index.yml)
 
 ## Related links
 
