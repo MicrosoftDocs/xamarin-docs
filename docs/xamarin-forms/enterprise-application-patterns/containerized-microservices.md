@@ -29,7 +29,7 @@ Microservices offer a different approach to application development and deployme
 
 Microservices can scale-out independently, as compared to giant monolithic applications that scale together. This means that a specific functional area, that requires more processing power or network bandwidth to support demand, can be scaled rather than unnecessarily scaling-out other areas of the application. Figure 8-2 illustrates this approach, where microservices are deployed and scaled independently, creating instances of services across machines.
 
-![Microservices application scaling approach](containerized-microservices-images/microservicesapp.png)
+![Diagram shows two apps with tiles representing different functional areas and six rectangles hosting various functional areas from both apps.](containerized-microservices-images/microservicesapp.png)
 
 **Figure 8-2**: Microservices application scaling approach
 
@@ -63,7 +63,7 @@ A container is an isolated, resource controlled, and portable operating environm
 
 There are many similarities between containers and virtual machines, as illustrated in Figure 8-3.
 
-![Microservices application scaling approach](containerized-microservices-images/containersvsvirtualmachines.png)
+![Diagram shows a comparison between Virtual Machines and Containers, where virtual machines have three apps each siloed on a guest O S, with a hypervisor and a host O S, and the containers have three apps hosted in a container engine on a single OS.](containerized-microservices-images/containersvsvirtualmachines.png)
 
 **Figure 8-3**: Comparison of virtual machines and containers
 
@@ -97,7 +97,7 @@ For more information about the reference application, see [.NET Microservices: A
 
 The eShopOnContainers mobile app communicates with the containerized back-end microservices using *direct client-to-microservice* communication, which is shown in Figure 8-5.
 
-![Microservices application scaling approach](containerized-microservices-images/directclienttomicroservicecommunication.png)
+![Diagram shows an app hosted on a mobile device connected to three Backend Microservices, each with its own Web A P I Container.](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
 **Figure 8-5**: Direct client-to-microservice communication
 

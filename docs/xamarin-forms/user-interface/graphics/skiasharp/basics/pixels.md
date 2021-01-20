@@ -98,7 +98,7 @@ The method begins the first line of text with an X coordinate of 20 (for a littl
 
 Here's the program running:
 
-[![Triple screenshot of the Surface Size  page](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Screenshots show the Surface Size app running on two mobile devices.](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
 
 As you can see, the `CanvasSize` property of the `SKCanvasView` and the `Size` property of the `SKImageInfo` value are consistent in reporting the pixel dimensions. The `Height` and `Width` properties of the `SKCanvasView` are Xamarin.Forms properties, and report the size of the view in the device-independent units defined by the platform.
 
@@ -141,7 +141,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![Triple screenshot of the Surface Size  page](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Screenshots show the Ellipse Fill app running on two mobile devices.](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
 
 The other [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) method has an [`SKRect`](xref:SkiaSharp.SKRect) argument, which is a rectangle defined in terms of the X and Y coordinates of its upper-left corner and lower-right corner. The oval fills that rectangle, which suggests that it might be possible to use it in the **Ellipse Fill** page like this:
 

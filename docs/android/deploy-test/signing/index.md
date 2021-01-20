@@ -33,7 +33,7 @@ In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive)
 the **Sign and Distribute...** dialog presented us with two choices for
 distribution. Select **Ad-Hoc** and click **Next**:
 
-[![Sign and Distribute dialog](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
+[![Sign and Distribute dialog box, Select Android Distribution Channel.](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -176,7 +176,7 @@ an app on Google Play, click **Cancel** and go to
 Otherwise click **Next** to publish the app *ad-hoc* (for independent
 distribution) as shown in this example:
 
-[![Sign and Distribute dialog](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
+[![Sign and Distribute dialog box, Android Signing Identity.](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 The **Publish as Ad Hoc** dialog provides a summary of the signed app
 before it is published. If this information is correct, click

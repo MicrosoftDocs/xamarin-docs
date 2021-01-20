@@ -571,8 +571,8 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the implicit [`Style`](xref:Xamarin.Forms.Style) targets [`Grid`](xref:Xamarin.Forms.Grid) objects. When the [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) property of the [`CheckBox`](xref:Xamarin.Forms.CheckBox) is `false`, the background color of the `Grid` is set to white. When the `CheckBox.IsChecked` property becomes `true`, a [`VisualState`](xref:Xamarin.Forms.VisualState) change is triggered, and the background color of the `Grid` becomes black:
 
-[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/comparestatetrigger-unchecked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
-[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/comparestatetrigger-checked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android, with trigger unchecked.](triggers-images/comparestatetrigger-unchecked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android, with trigger checked.](triggers-images/comparestatetrigger-checked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-checked-large.png#lightbox "CompareStateTrigger example")
 
 ### Device state trigger
 

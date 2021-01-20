@@ -314,7 +314,7 @@ If the following error dialog is presented on launch, see the
 [Troubleshooting](#troubleshooting) section for workaround
 instructions:
 
-![Android SDK instance error dialog](device-manager-images/mac/04-sdk-instance-error.png)
+![Screenshot shows the Android SDK instance error dialog box for troubleshooting information.](device-manager-images/mac/04-sdk-instance-error.png)
 
 ## Main Screen
 
@@ -560,7 +560,7 @@ launch the Android Device Manager.
 If Android SDK tools 26.1.1 or later is not installed, you may see this
 error dialog on launch:
 
-![Android SDK instance error dialog](device-manager-images/win/32-sdk-instance-error.png)
+![Screenshot shows the Android SDK instance error dialog box.](device-manager-images/win/32-sdk-instance-error.png)
 
 If you see this error dialog, click **Open SDK Manager** to open the
 Android SDK Manager. In the Android SDK Manager, click the **Tools**

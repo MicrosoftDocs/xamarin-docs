@@ -132,7 +132,7 @@ Next, add a `Text (Small)` widget below the `Text (Large)` widget:
 At this point, the Designer surface should resemble the following
 screenshot:
 
-[![Designer layout](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
+[![Screenshot shows the Designer surface with Toolbox, Document Outline, and layout area with small text selected.](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
 If the two `textView` widgets are not inside `linearLayout1`, you can
 drag them to `linearLayout1` in the **Document Outline** and position
@@ -175,7 +175,7 @@ pane, enter *orientation* into the search box and locate the
 At this point, the Designer surface should resemble the following screenshot.
 Notice that the `TextView` widgets have been moved to the right of the `ImageView`:
 
-[![Designer layout](designer-walkthrough-images/vs/18-designer-layout-w158-sml.png)](designer-walkthrough-images/vs/18-designer-layout-w158.png#lightbox)
+[![Screenshot shows the Designer surface with Toolbox, Document Outline, and layout area.](designer-walkthrough-images/vs/18-designer-layout-w158-sml.png)](designer-walkthrough-images/vs/18-designer-layout-w158.png#lightbox)
 
 ### Modifying the spacing
 

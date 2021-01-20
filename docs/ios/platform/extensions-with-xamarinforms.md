@@ -127,7 +127,7 @@ In this walkthrough, you are going to create a Xamarin.Forms application, a Xama
 
 1. In solution pad, right click on the solution, select **Add > New Project > iOS > Extension > Action Extension**, name it **MyAction** and press **Create**:
 
-    ![Create Extension](extensions-xf-images/2.walkthrough-createextension.png)
+    ![Screenshot shows the Choose a template with Action Extension selected.](extensions-xf-images/2.walkthrough-createextension.png)
 
 1. To use Xamarin.Forms in the iOS Extension and the shared code, you need to add required references:
 
@@ -161,11 +161,11 @@ In this walkthrough, you are going to create a Xamarin.Forms application, a Xama
     
     Build and run the application:
 
-    ![Create Extension](extensions-xf-images/3.walkthrough-runapp.png)
+    ![Screenshot shows a Hello from Xamarin dot Forms message on a mobile device.](extensions-xf-images/3.walkthrough-runapp.png)
 
     To activate the Extension, navigate to the Safari browser, type in any web address, e.g. [microsoft.com](https://microsoft.com), press navigate and then press the **Share** icon at the bottom of the page to see the available action extensions. From the list of available extensions select the **MyAction** Extension by tapping on it:
 
-    ![Create Extension](extensions-xf-images/4.walkthrough-run1.png) ![Create Extension](extensions-xf-images/5.walkthrough-run2.png) ![Create Extension](extensions-xf-images/6.walkthrough-run3.png)
+    ![Screenshot shows a Microsoft Teams Learn more page with the Share icon highlighted on a mobile device.](extensions-xf-images/4.walkthrough-run1.png) ![Screenshot shows an Official Home Page with MyAction highlighted on a mobile device.](extensions-xf-images/5.walkthrough-run2.png) ![Screenshot shows a Welcome to X F Page created from an i O S extension message on a mobile device.](extensions-xf-images/6.walkthrough-run3.png)
 
     The Extension is activated and the Xamarin.Forms page is displayed to the user. All the bindings and commands work as in the Container app.
 

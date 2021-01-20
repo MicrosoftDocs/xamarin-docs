@@ -250,7 +250,7 @@ If the two lines meet at any angle, that circle can be inserted between those li
 
 The curve that is added to the contour does not touch either of the points specified in the `ArcTo` method. It consists of a straight line from the current point to the first tangent point, and an arc that ends at the second tangent point, shown here in red:
 
-![The highlighted tangent arc between the two lines](arcs-images/tangentarchighlight.png)
+![Diagram shows the previous diagram annotated with a red line that shows the highlighted tangent arc between the two lines.](arcs-images/tangentarchighlight.png)
 
 Here's the final straight line and arc that is added to the contour:
 

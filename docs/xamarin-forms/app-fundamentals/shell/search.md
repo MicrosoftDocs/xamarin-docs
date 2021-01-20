@@ -95,11 +95,11 @@ The `MonkeySearchHandler.OnQueryChanged` method returns a `List` of `Animal` obj
 
 The `ShowsResults` property is set to `true`, so that search suggestions are displayed as the user enters a search query:
 
-[![Screenshot of search results in a Shell SearchHandler, on iOS and Android](search-images/search-results.png "Shell SearchHandler search results")](search-images/search-results-large.png#lightbox "Shell SearchHandler search results")
+[![Screenshot of search results in a Shell SearchHandler, on iOS and Android, with results for the partial string M.](search-images/search-results.png "Shell SearchHandler search results")](search-images/search-results-large.png#lightbox "Shell SearchHandler search results")
 
 As the search query changes, the search suggestions area is updated:
 
-[![Screenshot of search results in a Shell SearchHandler, on iOS and Android](search-images/search-results-change.png "Shell SearchHandler search results")](search-images/search-results-change-large.png#lightbox "Shell SearchHandler search results")
+[![Screenshot of search results in a Shell SearchHandler, on iOS and Android, with results for the partial string M o n.](search-images/search-results-change.png "Shell SearchHandler search results")](search-images/search-results-change-large.png#lightbox "Shell SearchHandler search results")
 
 When a search result is selected, the `MonkeyDetailPage` is navigated to, and data about the selected monkey is displayed:
 

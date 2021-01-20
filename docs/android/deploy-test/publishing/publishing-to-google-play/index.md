@@ -192,7 +192,7 @@ In the **Register Google API Access** dialog, you must provide the
 _Client ID_ and _Client secret_ that provides API access to your Google
 Play Developer account:
 
-[![Register Google API Access dialog](images/vs/04-register-google-api-access-sml.png)](images/vs/04-register-google-api-access.png#lightbox)
+[![Register Google API Access dialog in Google Play Accounts.](images/vs/04-register-google-api-access-sml.png)](images/vs/04-register-google-api-access.png#lightbox)
 
 The next section explains how to create a new Google API project and generate the
 needed _Client ID_ and _Client secret_.
@@ -322,7 +322,7 @@ five possible tracks for uploading your app:
 
 Choose which Google Play track will be used for uploading the app and click **Upload**.
 
-[![Account added to Google Play Accounts](images/vs/08-google-play-track-sml.png)](images/vs/07-account-added.png#lightbox)
+[![Account added to Google Play Track](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
 For more information about Google Play testing, see
 [Set up open/closed/internal tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).

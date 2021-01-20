@@ -22,7 +22,7 @@ alphanumeric phone number (entered by the user) into a numeric phone
 number and display the numeric phone number to the user. The final application looks like
 this:
 
-[![Screenshot of app when it is complete](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+[![Screenshot of phone number translation app when it is complete.](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
 ::: zone pivot="windows"
 

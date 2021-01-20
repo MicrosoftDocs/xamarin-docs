@@ -84,7 +84,7 @@ The `FinishedLaunching` method performs the following tasks:
 
 Once the `FinishedLaunching` method has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a Xamarin.iOS application that uses a UI defined in XAML](native-forms-images/ios-notespage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-notespage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
+[![Screenshot shows a Notes screen on a mobile device.](native-forms-images/ios-notespage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-notespage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
 
 Interacting with the UI, for example by tapping on the **+** [`Button`](xref:Xamarin.Forms.Button), will result in the following event handler in the `NotesPage` code-behind executing:
 
@@ -111,7 +111,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `UIViewController` with the `CreateViewController` extension method, and sets the `Title` property of the `UIViewController`. The `UIViewController` is then pushed onto `AppNavigationController` by the `PushViewController` method. Therefore, the UI defined in the Xamarin.Forms `NoteEntryPage` class will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a Xamarin.iOS application that uses a UI defined in XAML](native-forms-images/ios-noteentrypage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-noteentrypage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
+[![Screenshot shows a Note Entry on a mobile device.](native-forms-images/ios-noteentrypage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-noteentrypage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
 
 When the `NoteEntryPage` is displayed, back navigation will pop the `UIViewController` for the `NoteEntryPage` class from the `AppNavigationController`, returning the user to the `UIViewController` for the `NotesPage` class. However, popping a `UIViewController` from the iOS native navigation stack does not automatically dispose of the `UIViewController` and attached `Page` object. Therefore, the `AppNavigationController` class overrides the `PopViewController` method, to dispose of view controllers on backwards navigation:
 
@@ -186,7 +186,7 @@ For more information about Fragments, see [Fragments](~/android/platform/fragmen
 
 Once the `OnCreate` method has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a Xamarin.Android application that uses a UI defined in XAML](native-forms-images/android-notespage.png "Xamarin.Android app with a XAML UI")](native-forms-images/android-notespage-large.png#lightbox "Xamarin.Android app with a XAML UI")
+[![Screenshot shows a Notes screen on a mobile device with a blue banner and colored note text.](native-forms-images/android-notespage.png "Xamarin.Android app with a XAML UI")](native-forms-images/android-notespage-large.png#lightbox "Xamarin.Android app with a XAML UI")
 
 Interacting with the UI, for example by tapping on the **+** [`Button`](xref:Xamarin.Forms.Button), will result in the following event handler in the `NotesPage` code-behind executing:
 
@@ -216,7 +216,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `Fragment` with the `CreateSupportFragment` extension method, and adds the `Fragment` to the fragment back stack. Therefore, the UI defined in the Xamarin.Forms `NoteEntryPage` will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a Xamarin.Android application that uses a UI defined in XAML](native-forms-images/android-noteentrypage.png "Xamarin.Android app with a XAML UI")](native-forms-images/android-noteentrypage-large.png#lightbox "Xamarin.Android app with a XAML UI")
+[![Screenshot shows a Note Entry on a mobile device with a blue banner.](native-forms-images/android-noteentrypage.png "Xamarin.Android app with a XAML UI")](native-forms-images/android-noteentrypage-large.png#lightbox "Xamarin.Android app with a XAML UI")
 
 When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `Fragment` for the `NoteEntryPage` from the fragment back stack, returning the user to the `Fragment` for the `NotesPage` class.
 
@@ -307,7 +307,7 @@ The `MainPage` constructor performs the following tasks:
 
 Once the `MainPage` constructor has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a UWP application that uses a UI defined with Xamarin.Forms XAML](native-forms-images/uwp-notespage.png "UWP app with a Xamarin.Forms XAML UI")](native-forms-images/uwp-notespage-large.png#lightbox "UWP app with a Xamarin.Forms XAML UI")
+[![Screenshot shows a Notes page with notes and date/times.](native-forms-images/uwp-notespage.png "UWP app with a Xamarin.Forms XAML UI")](native-forms-images/uwp-notespage-large.png#lightbox "UWP app with a Xamarin.Forms XAML UI")
 
 Interacting with the UI, for example by tapping on the **+** [`Button`](xref:Xamarin.Forms.Button), will result in the following event handler in the `NotesPage` code-behind executing:
 
@@ -333,7 +333,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 Navigation in UWP is typically performed with the `Frame.Navigate` method, which takes a `Page` argument. Xamarin.Forms defines a `Frame.Navigate` extension method that takes a [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page instance. Therefore, when the `NavigateToNoteEntryPage` method executes, the UI defined in the Xamarin.Forms `NoteEntryPage` will be displayed, as shown in the following screenshot:
 
-[![Screenshot of a UWP application that uses a UI defined with Xamarin.Forms XAML](native-forms-images/uwp-noteentrypage.png "UWP app with a Xamarin.Forms XAML UI")](native-forms-images/uwp-noteentrypage-large.png#lightbox "UWP app with a Xamarin.Forms XAML UI")
+[![Screenshot shows a Notes page with a text box with a note entered.](native-forms-images/uwp-noteentrypage.png "UWP app with a Xamarin.Forms XAML UI")](native-forms-images/uwp-noteentrypage-large.png#lightbox "UWP app with a Xamarin.Forms XAML UI")
 
 When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `FrameworkElement` for the `NoteEntryPage` from the in-app back stack, returning the user to the `FrameworkElement` for the `NotesPage` class.
 

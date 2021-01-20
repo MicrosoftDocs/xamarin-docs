@@ -167,7 +167,7 @@ The following sections discuss the implementation of each platform-specific cust
 
 The following screenshots show the map, before and after customization:
 
-![Map Control Before and After Customization](map-pin-images/map-layout-ios.png)
+![Screenshots show a mobile device with an ordinary pin and an annotated pin.](map-pin-images/map-layout-ios.png)
 
 On iOS the pin is called an *annotation*, and can be either a custom image or a system-defined pin of various colors. Annotations can optionally show a *callout*, which is displayed in response to the user selecting the annotation. The callout displays the `Label` and `Address` properties of the `Pin` instance, with optional left and right accessory views. In the screenshot above, the left accessory view is the image of a monkey, with the right accessory view being the *Information* button.
 
@@ -340,7 +340,7 @@ For more information about customizing a `MKMapView` instance, see [iOS Maps](~/
 
 The following screenshots show the map, before and after customization:
 
-![Map Control Before and After Customization](map-pin-images/map-layout-android.png)
+![Screenshots show a mobile device with an ordinary marker and a customized marker.](map-pin-images/map-layout-android.png)
 
 On Android the pin is called a *marker*, and can either be a custom image or a system-defined marker of various colors. Markers can show an *info window*, which is displayed in response to the user tapping on the marker. The info window displays the `Label` and `Address` properties of the `Pin` instance, and can be customized to include other content. However, only one info window can be shown at once.
 
@@ -503,7 +503,7 @@ For more information about customizing a `MapView` instance, see [Maps API](~/an
 
 The following screenshots show the map, before and after customization:
 
-![Map Control Before and After Customization](map-pin-images/map-layout-uwp.png)
+![Screenshots show a mobile device with an ordinary map icon and a customized map icon.](map-pin-images/map-layout-uwp.png)
 
 On UWP the pin is called a *map icon*, and can either be a custom image or the system-defined default image. A map icon can show a `UserControl`, which is displayed in response to the user tapping on the map icon. The `UserControl` can display any content, including the `Label` and `Address` properties of the `Pin` instance.
 

@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # WPF platform setup
 
-![Preview](~/media/shared/preview.png)
+![Preview label](~/media/shared/preview.png)
 
 Xamarin.Forms has preview support for the Windows Presentation Foundation (WPF), on .NET Framework and on .NET Core 3. This article demonstrates how to add a WPF project that targets .NET Framework, to a Xamarin.Forms solution.
 
@@ -30,7 +30,7 @@ Follow these instructions to add a WPF application that will run on the Windows 
 
 2. In the **Add a new project** window, select **C#** in the **Languages** drop down, select **Windows** in the **Platforms** drop down, and select **Desktop** in the **Project type** drop down. In the list of project types, choose **WPF App (.NET Framework)**:
 
-    ![Add a new WPF project](wpf-images/add-project.png "Add a new WPF project")
+    ![Screenshot shows the Add a new project dialog box with W P F App selected.](wpf-images/add-project.png "Add a new WPF project")
 
     Press the **Next** button.
 
@@ -39,7 +39,7 @@ Follow these instructions to add a WPF application that will run on the Windows 
 
 3. In the **Configure your new project** window, type a name for the project with a **WPF** extension, for example, **BoxViewClock.WPF**. Click the **Browse** button, select the **BoxViewClock** folder, and press **Select Folder** to put the WPF project in the same directory as the other projects in the solution:
 
-    ![Add a new WPF project](wpf-images/configure-project.png "Add a new WPF project")
+    ![Screenshot shows the Configure you new project dialog box with values for Project name, Location, and Framework.](wpf-images/configure-project.png "Add a new WPF project")
 
     Press the **Create** button to create the project.
 

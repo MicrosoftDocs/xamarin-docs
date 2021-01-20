@@ -379,11 +379,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 This results in the following output (loading):
 
-![WebView Navigating Event Example](webview-images/loading-start.png)
+![Screenshot shows WebView Navigating Event while loading.](webview-images/loading-start.png)
 
 Finished Loading:
 
-![WebView Navigating Event Example](webview-images/loading-end.png)
+![Screenshot shows WebView Navigating Event after loading.](webview-images/loading-end.png)
 
 ## Reloading content
 

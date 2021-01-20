@@ -69,7 +69,7 @@ Navigate to **Settings > Developer Options** and enable **USB Debugging**.
 Once the **Developer Options** tab is available under **Settings >
 System**, open it to reveal developer settings:
 
-[![Developer options screen on Android 9.0](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
+[![Developer options screen on Android](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
 
 This is the place to enable developer options such as USB debugging and
 stay awake mode.
