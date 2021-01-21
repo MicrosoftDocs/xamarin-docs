@@ -349,7 +349,7 @@ built in code (rather than XIBs or storyboards).
 
 ### Project Structure
 
-![Resources tree](images/solution-code.png)
+![Screenshot shows the resources tree for a sample including the location of localizable strings.](images/solution-code.png)
 
 ### Localizable.strings file
 
@@ -399,7 +399,7 @@ The other language directories contain a **Localizable.strings** file for any
 string resources referenced in code, as well as a **MainStoryboard.strings** file
 that contains translations for text in the storyboard.
 
-![Resources tree](images/solution-storyboard.png)
+![Screenshot shows the resources tree for a sample including the location of MainStoryboard strings.](images/solution-storyboard.png)
 
 The language directories should contain a copy of any images that
 have been localized, to override the one present in **Base.lproj**.

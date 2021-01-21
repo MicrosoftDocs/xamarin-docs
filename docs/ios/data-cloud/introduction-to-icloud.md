@@ -497,9 +497,9 @@ Users will also receive different warnings when they attempt to remove an
 iCloud-enabled application from their device, to inform them of the status of
 iCloud documents related to that application.
 
- [![Sample dialog when the user attempts to remove an iCloud-enabled application from their device](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
+ [![Screenshot shows a warning for Document Updates Pending.](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [![Sample dialog when the user attempts to remove an iCloud-enabled application from their device](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
+ [![Screenshot shows a warning for Delete i Cloud.](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## iCloud Backup
 

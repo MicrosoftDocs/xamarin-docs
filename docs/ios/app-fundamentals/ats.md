@@ -213,7 +213,7 @@ If your Xamarin.iOS app must make a request to an insecure domain, the following
 
 Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Solution Explorer**, switch to the **Source** view and add the above keys:
 
-[![The Source view of the Info.plist file](ats-images/ats01.png)](ats-images/ats01.png#lightbox)
+[![The Source view of the Info.plist file after adding specified keys.](ats-images/ats01.png)](ats-images/ats01.png#lightbox)
 
 If your app needs to load and display web content from non-secure sites, add the following to your app's **Info.plist** file to allow web pages to load correctly while Apple Transport Security (ATS) protection is still enabled for the rest of the app:
 
@@ -237,7 +237,7 @@ Optionally, you can make the following changes to your app's **Info.plist** file
 
 Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Solution Explorer**, switch to the **Source** view and add the above keys:
 
-[![The Source view of the Info.plist file](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
+[![The Source view of the Info.plist file after specifying NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoads.](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > If your application requires a connection to an insecure website, you should **always** enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.

@@ -20,9 +20,9 @@ the support for the encoding you need.
 This is done by selecting the extra encodings from the iOS Build/Advanced
 pane in Visual Studio for Mac or Visual Studio:
 
- [![Selecting the extra encodings](encodings-images/00.png)](encodings-images/00.png#lightbox)
+ [![Screenshot shows selecting the extra encodings in Visual Studio for Mac.](encodings-images/00.png)](encodings-images/00.png#lightbox)
 
- [![Selecting the extra encodings](encodings-images/00a.png)](encodings-images/00a.png#lightbox)
+ [![Screenshot shows selecting the extra encodings in Visual Studio.](encodings-images/00a.png)](encodings-images/00a.png#lightbox)
 
 You can select one of these:
 

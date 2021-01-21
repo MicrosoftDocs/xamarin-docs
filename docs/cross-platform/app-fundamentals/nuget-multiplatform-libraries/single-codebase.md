@@ -28,11 +28,11 @@ If you later need platform-specific functionality, [platform-specific projects c
 
 2. Choose **Multiplatform Library** from the **Multiplatform > Library** section:
 
-   [![Configure multi-platform library for a single code base](single-codebase-images/mulitplatform-library-sml.png)](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![Screenshot shows Choose a template with Multiplatform Library selected.](single-codebase-images/mulitplatform-library-sml.png)](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Enter a **Name** and **Description**, and choose **Single for all platforms**:
 
-   [![Configure multi-platform library for a single code base](single-codebase-images/single-configure-sml.png)](single-codebase-images/single-configure.png#lightbox)
+   [![Screenshot shows values entered for Name, Description, and Implementation.](single-codebase-images/single-configure-sml.png)](single-codebase-images/single-configure.png#lightbox)
 
 4. Complete the wizard. A single library project is created in the solution.
 

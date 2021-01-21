@@ -20,13 +20,13 @@ illustrate the essentials of creating a custom Android Wear 1.0  watch face.
 The initial watch face service displays a simple digital watch that
 displays the current time in hours and minutes:
 
-[![Digital watch face](creating-a-watchface-images/01-initial-face.png "Example screenshot of the initial digital watch face")](creating-a-watchface-images/01-initial-face.png#lightbox)
+[![Screenshot shows the initial digital watch face.](creating-a-watchface-images/01-initial-face.png "Example screenshot of the initial digital watch face")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 After this digital watch face is developed and tested, more code is
 added to upgrade it to a more sophisticated analog watch face with
 three hands:
 
-[![Analog watch face](creating-a-watchface-images/02-example-watchface.png "Example screenshot of the final analog watch face")](creating-a-watchface-images/02-example-watchface.png#lightbox)
+[![Screenshot shows the final analog watch face.](creating-a-watchface-images/02-example-watchface.png "Example screenshot of the final analog watch face")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Watch face services are bundled and installed as part of a Wear 1.0 app. In
 the following examples, `MainActivity` contains nothing more than the
@@ -459,7 +459,7 @@ face:
 This changes the watch face of the Wear device to use the custom
 watch face service implemented so far:
 
-[![Digital watch face](creating-a-watchface-images/12-digital-watchface.png "Custom digital watch running on Wear device")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
+[![Screenshot shows a custom digital watch running on Wear device.](creating-a-watchface-images/12-digital-watchface.png "Custom digital watch running on Wear device")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 This is a relatively crude watch face because the app implementation is
 so minimal (for example, it doesn't include a watch face background and
@@ -639,7 +639,7 @@ face from the watch face picker as before. The preview in the
 watch picker is shown on the left, and the new watch face
 is shown on the right:
 
-[![Analog watch face](creating-a-watchface-images/13-analog-watchface.png "Improved analog face in picker and on device")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
+[![Screenshot shows an improved analog face in picker and on device.](creating-a-watchface-images/13-analog-watchface.png "Improved analog face in picker and on device")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 In this screenshot, the second hand is moving once per second. When you
 run this code on a Wear device, the second hand disappears when the

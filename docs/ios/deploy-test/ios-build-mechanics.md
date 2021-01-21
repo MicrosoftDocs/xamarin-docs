@@ -95,7 +95,7 @@ While taking into account the information above, the list below gives some infor
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
-[![Setting the options](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
+[![Screenshot shows Project Options, including Linker behavior, Additional mtouch arguments, and Optimize P N G images.](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
 
 ## Device Tricks
 
@@ -146,7 +146,7 @@ Additional tips
 
 The screenshot below illustrates how to set these options for the simulator in your iOS options:
 
-[![Setting the options](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
+[![Screenshot shows Project Options, including Linker behavior, Supported architectures, and other settings.](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
 
 ## Using the Linker
 

@@ -77,7 +77,7 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
 
 2. Open the **Entitlements.plist** file and select the capability that you wish to add:
 
-    ![Add capabilities to entitlements.plist file](images/image17.png)
+    ![Screenshot shows contents of the Entitlements.plist file.](images/image17.png)
 
     Selecting a capability does two things:
     - Adds that feature to your App ID
@@ -85,7 +85,7 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
 
     Visual Studio for Mac will advise you when these tasks have been carried out by displaying the following success message:
 
-    ![Add capabilities to entitlements.plist file](images/image18.png)
+    ![Screenshot shows the notification when Automatic Provisioning finishes.](images/image18.png)
 
 # [Visual Studio](#tab/windows)
 

@@ -218,7 +218,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
     Your project's bundle signing options should now look similar to this:
 
-    ![iOS Bundle Signing settings](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
+    ![Screenshot shows i O S Bundle Signing settings.](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
 
 14. Navigate to the **iOS IPA Options** tab.
 15. Make sure that **Configuration** is set to **Release** and **Platform** is set to **iPhone**.
@@ -232,7 +232,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 17. To specify an .ipa filename that differs from the Xamarin.iOS project name, enter it in the **Package Name** field.
 
-    ![iOS Bundle Signing settings](publishing-to-the-app-store-images/ipaOptions-w157.png "iOS Bundle Signing settings")
+    ![Screenshot shows i O S I P A Options.](publishing-to-the-app-store-images/ipaOptions-w157.png "iOS Bundle Signing settings")
 
 18. Save the build configuration and close it.
 
