@@ -32,11 +32,11 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
     For more information about the .NET Standard library that gets created, see [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) in the [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md).
 
-1. In **Solution Pad**, select the **WebServiceTutorial** project, right-click and select **Add > Add NuGet Packages...**:
+1. In **Solution Pad**, select the **WebServiceTutorial** project, right-click and select **Manage NuGet Packages...**:
 
     ![Screenshot of the Add NuGet Packages menu item being selected](../images/vsmac/add-nuget-packages.png "Add NuGet Packages menu item")
 
-1. In the **Add Packages** window, search for the **Newtonsoft.Json** NuGet package, select it, and click the **Add Package** button to add it to the project:
+1. In the **Manage NuGet Packages** window, search for the **Newtonsoft.Json** NuGet package, select it, and click the **Add Package** button to add it to the project:
 
     ![Screenshot of the Newtonsoft.Json NuGet Package in the NuGet Package Manager](../images/vsmac/add-package.png "Newtonsoft.Json NuGet Package")
 

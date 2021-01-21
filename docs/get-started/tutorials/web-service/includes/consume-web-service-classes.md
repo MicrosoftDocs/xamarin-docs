@@ -72,6 +72,8 @@ In this exercise you will create a user interface to consume the `RestService` c
 
     [![Screenshot of GitHub .NET repositories, on iOS and Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
+    In Visual Studio, stop the application.
+
     For more information about consuming REST-based web services in Xamarin.Forms, see [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -145,5 +147,7 @@ In this exercise you will create a user interface to consume the `RestService` c
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Tap the [`Button`](xref:Xamarin.Forms.Button) to retrieve .NET repository data from GitHub:
 
     [![Screenshot of GitHub .NET repositories, on iOS and Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about consuming REST-based web services in Xamarin.Forms, see [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md).

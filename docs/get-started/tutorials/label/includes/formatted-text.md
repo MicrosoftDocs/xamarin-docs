@@ -22,9 +22,11 @@
     > [!NOTE]
     > The [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances.
 
-1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
 
     [![Screenshot of a Label displaying formatted text, on iOS and Android](../images/label-formatted-text.png "Label with formatted text")](../images/label-formatted-text-large.png#lightbox "Label with formatted text")
+
+    In Visual Studio, stop the application.
 
     For more information about setting [`Span`](xref:Xamarin.Forms.Span) appearance, see [Formatted text](~/xamarin-forms/user-interface/text/label.md#formatted-text) in the [Xamarin.Forms Label](~/xamarin-forms/user-interface/text/label.md) guide.
 
@@ -52,8 +54,10 @@
     > [!NOTE]
     > The [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances.
 
-1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
 
     [![Screenshot of a Label displaying formatted text, on iOS and Android](../images/label-formatted-text.png "Label with formatted text")](../images/label-formatted-text-large.png#lightbox "Label with formatted text")
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about setting [`Span`](xref:Xamarin.Forms.Span) appearance, see [Formatted text](~/xamarin-forms/user-interface/text/label.md#formatted-text) in the [Xamarin.Forms Label](~/xamarin-forms/user-interface/text/label.md) guide.

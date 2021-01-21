@@ -40,6 +40,8 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
     [![Screenshot of a CollectionView on iOS and Android](../images/create-collectionview.png "CollectionView displaying data")](../images/create-collectionview-large.png#lightbox "CollectionView displaying data")
 
+    In Visual Studio, stop the application.
+
 # [Visual Studio for Mac](#tab/vsmac)
 
 To complete this tutorial you should have Visual Studio for Mac (latest release), with iOS and Android platform support installed. In addition, you will also require Xcode (latest release). For more information about installing the Xamarin platform, see [Installing Xamarin](~/get-started/installation/index.md).
@@ -81,3 +83,5 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of a CollectionView on iOS and Android](../images/create-collectionview.png "CollectionView displaying data")](../images/create-collectionview-large.png#lightbox "CollectionView displaying data")
+
+    In Visual Studio for Mac, stop the application.

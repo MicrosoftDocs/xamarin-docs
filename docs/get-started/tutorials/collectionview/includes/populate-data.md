@@ -183,6 +183,8 @@ In this exercise, you will modify the **CollectionViewTutorial** project to popu
 
     The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is displaying the `Name` property for each `Monkey` in the `Monkeys` collection. This is because, by default, the `CollectionView` calls the `ToString` method when displaying the objects from a collection (which has been overridden in the `Monkey` class to return the `Name` property value).
 
+    In Visual Studio, stop the application.
+
 # [Visual Studio for Mac](#tab/vsmac)
 
 1. In **Solution Pad**, in the **CollectionViewTutorial** project, add a class named `Monkey` that contains the following code:
@@ -363,3 +365,5 @@ In this exercise, you will modify the **CollectionViewTutorial** project to popu
     [![Screenshot of a CollectionView populated with data from a collection, on iOS and Android](../images/populate-data.png "CollectionView displaying data from a collection")](../images/populate-data-large.png#lightbox "CollectionView displaying data from a collection")
 
     The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is displaying the `Name` property for each `Monkey` in the `Monkeys` collection. This is because, by default, the `CollectionView` calls the `ToString` method when displaying the objects from a collection (which has been overridden in the `Monkey` class to return the `Name` property value).
+
+    In Visual Studio for Mac, stop the application.

@@ -41,6 +41,8 @@ In this exercise, you will modify the **CollectionViewTutorial** project so that
 
     [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data")](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
 
+    In Visual Studio, stop the application.
+
 # [Visual Studio for Mac](#tab/vsmac)
 
 1. In **MainPage.xaml**, modify the [`CollectionView`](xref:Xamarin.Forms.CollectionView) declaration to customize the appearance of each item of data:
@@ -79,3 +81,5 @@ In this exercise, you will modify the **CollectionViewTutorial** project so that
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data")](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
+
+    In Visual Studio for Mac, stop the application.

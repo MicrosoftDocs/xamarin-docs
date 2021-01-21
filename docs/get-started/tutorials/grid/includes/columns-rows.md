@@ -36,7 +36,7 @@
     > [!NOTE]
     > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
 
-1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
     [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows")](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")
 
@@ -78,6 +78,6 @@
     > [!NOTE]
     > The spacing between columns and rows in a [`Grid`](xref:Xamarin.Forms.Grid) can be set with the [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) and [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) properties. For more information, see [Spacing](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
 
-1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows")](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")

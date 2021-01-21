@@ -27,6 +27,8 @@
 
     Set a breakpoint in the `OnSelectionChanged` event handler and select an item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine the value of the `selectedItem` variable, to ensure it contains the data for your selected item.
 
+    In Visual Studio, stop the application.
+
     For more information about item selection, see [Xamarin.Forms CollectionView selection](~/xamarin-forms/user-interface/collectionview/selection.md).
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -57,5 +59,7 @@
     [![Screenshot of a CollectionView that responds to item selection, on iOS and Android](../images/item-selection.png "CollectionView item selection")](../images/item-selection-large.png#lightbox "CollectionView item selection")
 
     Set a breakpoint in the `OnSelectionChanged` event handler and select an item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine the value of the `selectedItem` variable, to ensure it contains the data for your selected item.
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about item selection, see [Xamarin.Forms CollectionView selection](~/xamarin-forms/user-interface/collectionview/selection.md).

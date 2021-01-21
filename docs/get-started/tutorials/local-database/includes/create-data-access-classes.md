@@ -110,6 +110,8 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
     > [!IMPORTANT]
     > The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
 
+    For more information about the singleton design pattern, see [Design Patterns: Singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton).    
+
 1. Build the solution to ensure there are no errors.
 
 # [Visual Studio for Mac](#tab/vsmac)
@@ -221,5 +223,7 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
 
     > [!IMPORTANT]
     > The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
+
+    For more information about the singleton design pattern, see [Design Patterns: Singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton).
 
 1. Build the solution to ensure there are no errors.
