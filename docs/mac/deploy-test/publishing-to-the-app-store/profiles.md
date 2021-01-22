@@ -38,13 +38,13 @@ Do the following:
     [![Selecting the allowed computers](profiles-images/certif17.png)](profiles-images/certif17.png#lightbox)
 5. Now, enter a **Profile Name** and click the **Generate** button:
 
-    [![Generating the profile](profiles-images/certif18.png)](profiles-images/certif18.png#lightbox)
+    [![Screenshot shows entering the Profile Name into the provisioning window.](profiles-images/certif18.png)](profiles-images/certif18.png#lightbox)
 6. Click the **Download** button to download the new profile:
 
-    [![Downloading the profile](profiles-images/certif19.png)](profiles-images/certif19.png#lightbox)
+    [![Screenshot shows Download button for the profile.](profiles-images/certif19.png)](profiles-images/certif19.png#lightbox)
 7. Development provisioning profiles are installed to the Profiles Preferences pane of the Mac's **System Preferences** application:
 
-    [![Installing the profile](profiles-images/certif20.png)](profiles-images/certif20.png#lightbox)
+    [![Screenshot shows the Install verification dialog box.](profiles-images/certif20.png)](profiles-images/certif20.png#lightbox)
 8. The Profile Preferences pane will show all installed profiles:
 
     [![Showing all installed profiles](profiles-images/image47.png)](profiles-images/image47.png#lightbox)

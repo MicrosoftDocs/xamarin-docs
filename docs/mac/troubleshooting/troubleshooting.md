@@ -65,7 +65,7 @@ The following sections cover known issues and their solutions.
 
 The debugger connects to Xamarin.Mac apps through TCP, which means that by default when you enable sandboxing, it is unable to connect to the app, so if you try to run the app without the proper permissions enabled, you get an error *“Unable to connect to the debugger”*.
 
-[![Editing the entitlements](troubleshooting-images/debug01.png "Editing the entitlements")](troubleshooting-images/debug01-large.png#lightbox)
+[![Editing the entitlements in the App sandbox.](troubleshooting-images/debug01.png "Editing the entitlements")](troubleshooting-images/debug01-large.png#lightbox)
 
 The **Allow Outgoing Network Connections (Client)** permission is the one required for the debugger, enabling this one will allow debugging normally. Since you can’t debug without it, we have updated the `CompileEntitlements` target for `msbuild` to automatically add that permission to the entitlements for any app that is sandboxed for debug builds only. Release builds should use the entitlements specified in the entitlements file, unmodified.
 

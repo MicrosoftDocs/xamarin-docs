@@ -576,10 +576,10 @@ Do the following:
     ![Adding a Collection View to the layout](collection-view-images/collection01.png)
 3. With the Collection View selected, use the Constraint Editor to pin it to the View when it is resized:
 
-    ![Adding constraints](collection-view-images/collection02.png)
+    ![Screenshot shows Add New Constraints.](collection-view-images/collection02.png)
 4. Ensure that the Collection View is selected in the **Design Surface** (and not the **Bordered Scroll View** or **Clip View** that contains it), switch to the **Assistant Editor** and create an **Outlet** for the collection view:
 
-    ![Adding constraints](collection-view-images/collection03.png)
+    ![Screenshot shows the Assistant Editor where you can create an Outlet.](collection-view-images/collection03.png)
 5. Save the changes and return to Visual Studio to sync.
 
 <a name="Bringing-it-all-Together"></a>

@@ -25,11 +25,11 @@ View the references by double-clicking on the References
 
 - **iPhone app** references **Watch App**
 
-  ![iPhone app references Watch App](project-references-images/catalog-reference1.png)
+  ![Screenshot shows the Projects tab.](project-references-images/catalog-reference1.png)
 
 - **Watch App** references **Watch App Extension**
 
-  ![iPhone app references Watch App](project-references-images/catalog-reference2.png)
+  ![Screenshot shows the Projects tab with MyWatchApp dot OnWatchExtension selected.](project-references-images/catalog-reference2.png)
 
 - The **Watch App Extension** does not reference either of the other projects
 

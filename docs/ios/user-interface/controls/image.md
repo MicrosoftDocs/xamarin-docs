@@ -53,7 +53,7 @@ The **Resources** directory must be so named, and all files should have the buil
 
 In the iOS Designer, use an **Image View** to display an image or animated series of images. The **Image View** icon from the Toolbox is shown below:
 
- [![ImageView in Toolbox](image-images/image35a.png)](image-images/image35.png#lightbox)
+ [![ImageView icon in Toolbox.](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Drag the **Image View** from the **Toolbox** onto the view controller. Then, under **Image View > Image** the drop-down list will provide a list of all available image files in your project. Select any of these to add it to your image view.
 

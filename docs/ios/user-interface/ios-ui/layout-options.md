@@ -26,13 +26,13 @@ When a user resizes a window, such as when the device is rotated and the orienta
 `AutoresizingMask` property of the `UIView` or in the **Properties Pad** of the iOS Designer, 
 as illustrated below:
 
- [![Visual Studio for Mac Designer](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
+ [![Screenshot shows the Properties Pad of the I O S designer.](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
 
 When a control is selected, this allows you to manually specify the location and dimensions of the control, as well as 
 choosing **Autosizing** behavior. As illustrated in the screenshot below, we can use the springs 
 and struts in the autosizing control to define the selected View's relationship to it's parent:
 
- [![Visual Studio for Mac Designer](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
+ [![Screenshot shows the Autosizing control in the Properties Pad of the I O S designer.](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
 
 Adjusting a *spring* will cause the view to resize based on the width or height of its parent view. Adjusting a *strut* 
 will make the view maintain a constant distance between itself and its parent view, on that particular edge.
@@ -60,11 +60,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 We can also adjust the controls using the Designer. Selecting the struts as exhibited below will cause the image to stay 
 right-aligned without being clipped off the bottom of the view:
 
- [![Autorotation](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
+ [![Screenshot shows the Autosizing control with left and bottom selected. ](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
 
 These screenshots show how the controls resize or reposition themselves when the screen is rotated:
 
- [![Autorotation](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
+ [![Screenshot show a mobile device display in portrait and landscape with text and graphic adjusted.](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
 
 Notice that the text view and text field both stretch to keep the same left and right margins, due to the `FlexibleWidth` 
 setting. The image has the top and left margin flexible, which means it preserves the bottom and right margins – keeping 

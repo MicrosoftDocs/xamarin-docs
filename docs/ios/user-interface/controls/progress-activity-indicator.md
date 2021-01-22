@@ -33,7 +33,7 @@ An Activity Indicator is implemented through the [`UIActivityIndictorView`](xref
 
 If you are using the iOS Designer to create your UI, the Activity Indicator can be added to your layout from the Toolbox. The following properties can be adjusted from the Properties Pad:
 
-![Properties Pad](progress-activity-indicator-images/progress-indicator1.png)
+![Screenshot shows the Properties Pad where you can modify Style, Color, and Behavior properties.](progress-activity-indicator-images/progress-indicator1.png)
 
 ### Managing Activity Indicator Behavior
 
@@ -70,7 +70,7 @@ You can also add a Progress Bar to your UI when using the iOS Designer. Search f
 
 The following properties can be adjusted on the properties pad:
 
-![Properties Pad](progress-activity-indicator-images/progress-indicator3.png)
+![Screenshot shows the Properties Pad where you can modify Style, Progress, Progress Tint, Track Tint, Progress Image, and Track Image properties.](progress-activity-indicator-images/progress-indicator3.png)
 
 ### Managing Progress Bar Behavior
 

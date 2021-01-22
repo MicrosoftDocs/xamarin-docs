@@ -46,12 +46,12 @@ You need to register an App ID for every application. Follow the steps below to 
 1. Press the "+" (plus sign) or **Register an App ID**:
 
     > [!div class="mx-imgBorder"]
-    > [![Getting started with App IDs](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
+    > [![Screenshot shows Getting Started with App I Ds in Certificates, Identifiers and Profiles.](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
 
 1. Choose **App IDs**
 
     > [!div class="mx-imgBorder"]
-    > [![Getting started with App IDs](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
+    > [![Screenshot shows Register a New Identifier option.](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
 
 1. Enter a **Description**,  and select any **App Services** that the application will require:
     a. Platform should be **macOS**
@@ -97,12 +97,12 @@ computers registered. A maximum of 100 computers can be registered for testing.
 1. Enter a **Name** and the **UUID** of the computer to add and click the **Continue** button. Review the information and the click **Register** button:
 
     > [!div class="mx-imgBorder"]
-    > [![Entering the new computer information](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
+    > [![Screenshot shows the Register a New Device page where you can enter the name and U U I D.](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
 
 1. Review and confirm the data entered:
 
     > [!div class="mx-imgBorder"]
-    > [![Entering the new computer information](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
+    > [![Screenshot shows the Register a New Device page where you can confirm the name and U U I D.](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
 
 ## Create certificates
 

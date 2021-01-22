@@ -113,7 +113,7 @@ To add a new window, do the following:
     [![Selecting a View Controller from the Library](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
 3. In the **Identity Inspector**, enter `CustomDialogController` for the **Class Name**: 
 
-    [![Setting the class name](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
+    [![Setting the class name to CustomDialogController.](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
 4. Switch back to Visual Studio for Mac, allow it to sync with Xcode and create the `CustomDialogController.h` file.
 5. Return to Xcode and design your interface: 
 
@@ -267,7 +267,7 @@ To create a Custom Sheet in Xamarin.Mac, let's do the following:
     [![Selecting the Sheet segue type](dialog-images/sheet02.png)](dialog-images/sheet02.png#lightbox)
 5. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`: 
 
-    [![Setting the class name](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
+    [![Setting the class name to SheetViewController.](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
 6. Define any needed **Outlets** and **Actions**: 
 
     [![Defining the required Outlets and Actions](dialog-images/sheet04.png)](dialog-images/sheet04.png#lightbox)
@@ -493,18 +493,18 @@ To add a new window, do the following:
     [![Layout the toolbar](dialog-images/pref06.png)](dialog-images/pref06.png#lightbox)
 8. Control-Click and drag from each **Toolbar Button** to the Views you created above. Select a **Custom** segue type:
 
-    [![Setting the segue type](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
+    [![Setting a Custom segue type.](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
 9. Select the new Segue and set the **Class** to `ReplaceViewSegue`:
 
     [![Setting the segue class](dialog-images/pref08.png)](dialog-images/pref08.png#lightbox)
 10. In the **Menubar Designer** on the Design Surface, from the Application Menu select **Preferences...**, control-click and drag to the Preferences Window to create a **Show** segue:
 
-    [![Setting the segue type](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
+    [![Setting the segue type by dragging Preferences to the Preferences Window.](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
 11. Save your changes and return to Visual Studio for Mac to sync.
 
 If we run the code and select the **Preferences...** from the **Application Menu**, the window will be displayed:
 
-[![An example preferences window](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
+[![An example preferences window displaying the word Profile.](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
 
 For more information on working with Windows and Toolbars, please see our [Windows](~/mac/user-interface/window.md) and [Toolbars](~/mac/user-interface/toolbar.md) documentation.
 
@@ -897,7 +897,7 @@ namespace SourceWriter
 
 With all these changes in place, if the user edits the App's Preferences and closes the Preference Window, the changes will be applied to all open Windows:
 
-[![An example preferences window](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
+[![An example Preferences Window, displayed with several other open windows.](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog"></a>
 

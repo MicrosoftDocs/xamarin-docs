@@ -127,13 +127,13 @@ To get started, do the following:
     [![Layout the UI](table-views-images/table08-vs.png)](table-views-images/table08-vs.png#lightbox)
 1. You will need to select every part of the Table View and assign it a custom **Class Name** in the **Widget** tab of the **Properties Explorer** so that you can access it later in C# code. For example, the **Table View Controller**: 
 
-    [![The Widget Tab](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
+    [![The Widget Tab of the Properties Explorer, where you assign a Class Name.](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
 1. Ensure that you create a custom class for the **Table View Controller**, the **Table View** and any **Prototype Cells**. Visual Studio for Mac will add the custom classes to the Project Tree as they are created: 
 
     [![The custom classes in the Project Tree](table-views-images/table10-vs.png)](table-views-images/table10-vs.png#lightbox)
 1. Next, select the Table View in the Design Surface and adjust it's properties as needed. Such as the number of **Prototype Cells** and the **Style** (Plain or Grouped): 
 
-    [![The Widget Tab](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
+    [![The Widget Tab, where you can change properties as needed.](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
 1. For each **Prototype Cell**, select it and assign a unique **Identifier** in the **Widget** tab of the **Properties Explorer**. This step is _very important_ as you will need this Identifier later when you populate the table. For example `AttrCell`: 
 
     [![Assign an Identifier](table-views-images/table12-vs.png)](table-views-images/table12-vs.png#lightbox)
@@ -142,7 +142,7 @@ To get started, do the following:
     [![The Style dropdown](table-views-images/table13-vs.png)](table-views-images/table13-vs.png#lightbox)
 1. Assign a unique **Name** to each UI element in the Prototype Cell design in the **Widget** tab of the **Properties Explorer** so you can access them later in C# code: 
 
-    [![The Widget Tab](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
+    [![The Widget Tab, where you can assign a Name for each U I element.](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
 1. Repeat the above step for all of the Prototype Cells in the Table View.
 1. Next, assign custom classes to the rest of your UI design, layout the Details view and assign unique **Names** to each UI element in the Details view so that you can access them in C# as well. For Example: 
 

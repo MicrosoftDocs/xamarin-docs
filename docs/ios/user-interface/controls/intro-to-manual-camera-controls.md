@@ -343,7 +343,7 @@ As seen in the code above, the Capture Device must be locked for configuration b
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[![A UIViewController can be added to the applications Storyboard and configured as shown here](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
+[![A UIViewController can be added to the applications Storyboard and configured as shown here for the manual focus example.](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 The view contains the following main elements:
 
@@ -567,7 +567,7 @@ As seen in the code above, the Capture Device must be locked for configuration b
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[![A UIViewController can be added to the applications Storyboard and configured as shown here](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
+[![A UIViewController can be added to the applications Storyboard and configured as shown here for the manual exposure example.](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 The view contains the following main elements:
 
@@ -867,7 +867,7 @@ The Capture Device must be locked for configuration before a change in White Bal
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[![A UIViewController can be added to the applications Storyboard and configured as shown here](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
+[![A UIViewController can be added to the applications Storyboard and configured as shown here for the manual white balance example.](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 The view contains the following main elements:
 
@@ -1147,7 +1147,7 @@ With this information in mind, let's take a look at an example of using Brackete
 
 With the General AV Capture Setup code in place, a `UIViewController` can be added to the application's Storyboard and configured as follows:
 
-[![A UIViewController can be added to the applications Storyboard and configured as shown here](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
+[![A UIViewController can be added to the applications Storyboard and configured as shown here bracket capture example.](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 The view contains the following main elements:
 
