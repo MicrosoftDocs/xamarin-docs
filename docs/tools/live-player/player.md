@@ -73,7 +73,7 @@ You can also access this window from the device list.
 
 In Visual Studio for Mac, choose **Tools > (Xamarin Live Player) Manage Devices...**
 
-![Manage devices window](player-images/manage-tools-menu.png)
+![Screenshot shows Manage Devices selected from the Tools window.](player-images/manage-tools-menu.png)
 
 This window lets you do the following:
 
@@ -81,7 +81,7 @@ This window lets you do the following:
 - Alternatively pair a device by typing the code displayed on its screen
 - Remove existing devices from the list
 
-![Manage devices window](player-images/manage.png)
+![Screenshot shows the Xamarin Live Player window with the option to preview your app.](player-images/manage.png)
 
 You can also access this window from the device list:
 

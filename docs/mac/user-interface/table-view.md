@@ -62,7 +62,7 @@ Drag a Table View onto the View Controller in the **Interface Editor**, make it 
 
 Select the Table View in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
+[![Screenshot shows the properties available in the Attribute Inspector.](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
 
 - **Content Mode** - Allows you to use either Views (`NSView`) or Cells (`NSCell`) to display the data in the rows and columns. Starting with macOS 10.7, you should use Views.
 - **Floats Group Rows** - If `true`, the Table View will draw grouped cells as if they are floating.
@@ -92,7 +92,7 @@ Select the Table View in the **Interface Hierarchy** and the following propertie
 
 Select a Table Column in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
+[![Screenshot shows the properties available for a Table Column in the Attribute Inspector.](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
 
 - **Title** - Sets the title of the column.
 - **Alignment** - Set the alignment of the text within the cells.
@@ -110,19 +110,19 @@ Let's select the each Column in our Table View and give the first column a **Tit
 
 Select a Table Cell View (`NSTableViewCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
+[![Screenshot shows the properties available for a Table Cell View in the Attribute Inspector.](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
 
 These are all of the properties of a standard View. You also have the option of resizing the rows for this column here.
 
 Select a Table View Cell (by default, this is a `NSTextField`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
+[![Screenshot shows the properties available for a Table View Cell in the Attribute Inspector.](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
 
 You'll have all the properties of a standard text field to set here. By default, a standard Text Field is used to display data for a cell in a column.
 
 Select a Table Cell View (`NSTableFieldCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
+[![Screenshot shows the properties available for a different Table View Cell in the Attribute Inspector.](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
 
 The most important settings here are:
 
@@ -154,10 +154,10 @@ The process is the same for any Table View element that we want to expose:
 2. Select the Table View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
 3. Create an **Outlet** for the Table View called `ProductTable`: 
 
-    [![Configuring an Outlet](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
+    [![Screenshot shows an Outlet connection created for the Table View named ProductTable.](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
 4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`: 
 
-    [![Configuring an Outlet](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
+    [![Screenshot shows an Outlet connections created for other Table Views.](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
 5. Save you changes and return to Visual Studio for Mac to sync with Xcode.
 
 Next, we'll write the code display some data for the table when the application is run.
@@ -328,7 +328,7 @@ public override void AwakeFromNib ()
 
 If we run the application, the following is displayed:
 
-[![A sample app run](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
+[![Screenshot shows a window named Product Table with three entries.](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column"></a>
 
@@ -336,11 +336,11 @@ If we run the application, the following is displayed:
 
 Let's allow the user to sort the data in the table by clicking on a Column Header. First, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the `Product` column, enter `Title` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
-[![Setting the sort key](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
+[![Screenshot shows the Interface Builder where you can set the sort key for the Product column.](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
 
 Select the `Details` column, enter `Description` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
-[![Setting the sort key](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
+[![Screenshot shows the Interface Builder where you can set the sort key for the Details column.](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -398,7 +398,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 If you want to allow the user to select a single row, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and uncheck the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
+[![Screenshot shows the Interface Builder where you can select Multiple in the Attribute Inspector.](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -426,7 +426,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 
 If you want to allow the user to select a multiple rows, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
+[![Screenshot shows the Interface Builder where you can select Multiple to allow multiple row selection.](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -485,7 +485,7 @@ The `GetNextTypeSelectMatch` method takes the given `searchString` and returns t
 
 If we run the application and type a character, a row is selected:
 
-[![A sample app run](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
+[![Screenshot shows the result of running the application.](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns"></a>
 
@@ -493,7 +493,7 @@ If we run the application and type a character, a row is selected:
 
 If you want to allow the user to drag reorder columns in the Table View, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Reordering** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
+[![Screenshot shows the Interface Builder where you can select Reodering in the Attribute Inspector.](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
 
 If we give a value for the **Autosave** property and check the **Column Information** field, any changes we make to the table's layout will automatically be saved for us and restored the next time the application is run.
 

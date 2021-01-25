@@ -61,7 +61,7 @@ Drag a Outline View onto the View Controller in the **Interface Editor**, make i
 
 Select the Outline View in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
+[![Screenshot shows the properties available in the Attribute Inspector.](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
 
 - **Outline Column** - The Table Column in which the Hierarchical data is displayed.
 - **Autosave Outline Column** - If `true`, the Outline Column will be automatically saved and restored between application runs.
@@ -96,7 +96,7 @@ Select the Outline View in the **Interface Hierarchy** and the following propert
 
 Select a Table Column in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
+[![Screenshot shows the properties available for the selected table column in the Attribute Inspector.](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
 
 - **Title** - Sets the title of the column.
 - **Alignment** - Set the alignment of the text within the cells.
@@ -114,19 +114,19 @@ Let's select the each Column in our Table View and give the first column a **Tit
 
 Select a Table Cell View (`NSTableViewCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
+[![Screenshot shows the properties available for the selected table cell in the Attribute Inspector.](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
 
 These are all of the properties of a standard View. You also have the option of resizing the rows for this column here.
 
 Select a Table View Cell (by default, this is a `NSTextField`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
+[![Screenshot shows the properties available for the selected table view cell in the Attribute Inspector.](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
 
 You'll have all the properties of a standard Text Field to set here. By default, a standard Text Field is used to display data for a cell in a column.
 
 Select a Table Cell View (`NSTableFieldCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
+[![Screenshot shows the properties available for the selected table view cell.](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
 
 The most important settings here are:
 
@@ -158,10 +158,10 @@ The process is the same for any Outline View element that we want to expose:
 2. Select the Outline View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
 3. Create an **Outlet** for the Outline View called `ProductOutline`:
 
-    [![Configuring an Outlet](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
+    [![Screenshot shows an Outlet called ProductOutline in the Attribute Inspector.](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
 4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`:
 
-    [![Configuring an Outlet](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
+    [![Screenshot shows an Outlet named DetailsColumn in the Attribute Inspector.](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
 5. Save you changes and return to Visual Studio for Mac to sync with Xcode.
 
 Next, we'll write the code display some data for the outline when the application is run.
@@ -438,7 +438,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 If you want to allow the user to select a single row, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and uncheck the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
+[![Screenshot shows the Attribute Inspector where you can change the Multiple setting.](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -460,7 +460,7 @@ This will allow the user to select any single row in the Outline View. Return `f
 
 If you want to allow the user to select a multiple rows, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and check the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
+[![Screenshot shows the Attribute Inspector where you can select Multiple.](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -510,7 +510,7 @@ The `GetNextTypeSelectMatch` method takes the given `searchString` and returns t
 
 If you want to allow the user to drag reorder columns in the Outline View, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and check the **Reordering** checkbox in the **Attribute Inspector**:
 
-[![The Attribute Inspector](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
+[![Screenshot shows the Attribute Inspector where you can select Reordering.](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
 
 If we give a value for the **Autosave** property and check the **Column Information** field, any changes we make to the table's layout will automatically be saved for us and restored the next time the application is run.
 
