@@ -53,7 +53,7 @@ No additional setup required.
 
 ## Pick File
 
-`FilePicker.PickAsync()` method enables your user to pick a file from the device. You are able to specific different `PickOptions` when calling the method enabling you to specify the title to display and the file types the user is allowed to pick. By default 
+`FilePicker.PickAsync()` method enables your user to pick a file from the device. You are able to specific different `PickOptions` when calling the method enabling you to specify the title to display and the file types the user is allowed to pick. By default
 
 ```csharp
 async Task<FileResult> PickAndShow(PickOptions options)
@@ -116,6 +116,8 @@ No platform differences.
 # [UWP](#tab/uwp)
 
 No platform differences.
+
+-----
 
 ## API
 
