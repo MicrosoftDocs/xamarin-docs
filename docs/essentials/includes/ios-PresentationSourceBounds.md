@@ -27,7 +27,8 @@ await Launcher.OpenAsync(new OpenFileRequest
                             : System.Drawing.Rectangle.Empty
 });
 ```
-Everything described in this section works equally for `Share` and `Launcher`
+
+Everything described here works equally for `Share` and `Launcher`.
 
 If you are using Xamarin.Forms you are able to pass in a `View` and calculate the bounds:
 
