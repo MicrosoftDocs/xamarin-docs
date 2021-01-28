@@ -92,6 +92,10 @@ await Launcher.OpenAsync(new OpenFileRequest
 });
 ```
 
+## Presentation Location When Opening Files
+
+[!include[](~/essentials/includes/ios-PresentationSourceBounds.md)]
+
 ## Platform Differences
 
 # [Android](#tab/android)
