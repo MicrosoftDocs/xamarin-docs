@@ -20,7 +20,7 @@ A flyout page typically displays a list of items, as shown in the following scre
 
 The location of the list of items is identical on each platform, and selecting one of the items will navigate to the corresponding detail page. In addition, the flyout page also features a navigation bar that contains a button that can be used to navigate to the active detail page:
 
-- On iOS, the navigation bar is present at the top of the page and has a button that navigates to the detail page. In addition, the active detail page can be navigated to by swiping the master page to the left.
+- On iOS, the navigation bar is present at the top of the page and has a button that navigates to the detail page. In addition, the active detail page can be navigated to by swiping the flyout to the left.
 - On Android, the navigation bar is present at the top of the page and displays a title, an icon, and a button that navigates to the detail page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project. In addition, the active detail page can be navigated to by swiping the flyout page to the left, by tapping the detail page at the far right of the screen, and by tapping the *Back* button at the bottom of the screen.
 - On the Universal Windows Platform (UWP), the navigation bar is present at the top of the page and has a button that navigates to the detail page.
 
@@ -207,7 +207,7 @@ public class FlyoutMenuPageCS : ContentPage
 
 The following screenshots show the flyout page on each platform:
 
-![Master Page Example](flyoutpage-images/flyoutpage.png)
+![Flyout Page Example](flyoutpage-images/flyoutpage.png)
 
 ### Create and display the detail page
 

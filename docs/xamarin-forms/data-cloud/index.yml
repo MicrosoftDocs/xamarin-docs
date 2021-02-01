@@ -31,7 +31,7 @@ landingContent:
           - text: Azure Cosmos DB document database
             url: azure-services/azure-cosmosdb.md
           - text: Azure notification hubs
-            url: azure-services/azure-notification-hub.md
+            url: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
           - text: Azure storage
             url: azure-services/azure-storage.md
           - text: Azure search

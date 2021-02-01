@@ -943,6 +943,42 @@
     {
         "source_path": "docs/get-started/tutorials/listview/index.yml",
         "redirect_url": "/xamarin/get-started/tutorial/collectionview/"
-    }
+    },
+    {
+        "source_path": "docs/xamarin-forms/data-cloud/azure-services/azure-notification-hub.md",
+        "redirect_url": "/azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/player-creation.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/web-videos.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/source-bindings.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/loading-resources.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/accessing-library.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/custom-transport.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/custom-positioning.md",
+        "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
+    }    
   ]
 }
