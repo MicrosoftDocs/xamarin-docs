@@ -168,13 +168,13 @@ The following XAML example shows explicitly grouping [`RadioButton`](xref:Xamari
 
 ```xaml
 <Label Text="What's your favorite color?" />
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors" />
-<RadioButton Text="Green"
+<RadioButton Content="Green"
              GroupName="colors" />
-<RadioButton Text="Blue"
+<RadioButton Content="Blue"
              GroupName="colors" />
-<RadioButton Text="Other"
+<RadioButton Content="Other"
              GroupName="colors" />
 ```
 
@@ -208,7 +208,7 @@ A radio button has two states: checked or unchecked. When a radio button is chec
 When the `IsChecked` property changes, either through user or programmatic manipulation, the `CheckedChanged` event fires. An event handler for this event can be registered to respond to the change:
 
 ```xaml
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors"
              CheckedChanged="OnColorsRadioButtonCheckedChanged" />
 ```
@@ -291,10 +291,10 @@ The following XAML example shows how to define a visual state for the `Checked` 
     </ContentPage.Resources>
     <StackLayout>
         <Label Text="What's your favorite mode of transport?" />
-        <RadioButton Text="Car" />
-        <RadioButton Text="Bike" />
-        <RadioButton Text="Train" />
-        <RadioButton Text="Walking" />
+        <RadioButton Content="Car" />
+        <RadioButton Content="Bike" />
+        <RadioButton Content="Train" />
+        <RadioButton Content="Walking" />
     </StackLayout>
 </ContentPage>
 ```
