@@ -20,7 +20,7 @@ XAML compilation offers a number of a benefits:
 - It removes some of the load and instantiation time for XAML elements.
 - It helps to reduce the file size of the final assembly by no longer including .xaml files.
 
-XAML compilation is disabled by default to ensure backwards compatibility. It can be enabled at both the assembly and class level by adding the [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute.
+XAML compilation is enabled by default. It can be explicitly enabled or disabled (XamlCompilationOptions.Skip) at both the assembly and class level by adding the [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute.
 
 The following code example demonstrates enabling XAML compilation at the assembly level:
 
@@ -33,6 +33,8 @@ namespace PhotoApp
   ...
 }
 ```
+
+While the attribute can be put anywhere, a good place to put it is Properties/AssemblyInfo.cs
 
 In this example, compile-time checking of all the XAML contained within the assembly will be performed, with XAML errors being reported at compile-time rather than run-time. Therefore, the `assembly` prefix to the [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribute specifies that the attribute applies to the entire assembly.
 
