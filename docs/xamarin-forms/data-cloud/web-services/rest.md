@@ -6,7 +6,7 @@ ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2020
+ms.date: 02/03/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -206,6 +206,8 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 
 ## Related Links
 
+- [Microsoft Learn: Consume REST web services in Xamarin Apps](https://docs.microsoft.com/learn/modules/consume-rest-services/)
+- [Microsoft Learn: Create a web API with ASP.NET Core](https://docs.microsoft.com/learn/modules/build-web-api-aspnet-core/)
 - [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](/dotnet/api/system.net.http.httpclient)
