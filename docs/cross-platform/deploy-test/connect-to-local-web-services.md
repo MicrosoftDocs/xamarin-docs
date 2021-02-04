@@ -78,13 +78,13 @@ Each instance of the Android emulator is isolated from your development machine 
 
 However, the virtual router for each emulator manages a special network space that includes pre-allocated addresses, with the `10.0.2.2` address being an alias to your host loopback interface (127.0.0.1 on your development machine). Therefore, given a local secure web service that exposes a GET operation via the `/api/todoitems/` relative URI, an application running on the Android emulator can consume the operation by sending a GET request to `https://10.0.2.2:<port>/api/todoitems/`.
 
-### Xamarin.Forms example
+### Detecting operating system
 
-In a Xamarin.Forms application, the [`Device`](xref:Xamarin.Forms.Device) class can be used to detect the platform the application is running on. The appropriate hostname, that enables access to local secure web services, can then be set as follows:
+The [Xamarin.Essentials DeviceInfo](/xamarin/essentials/device-information/) class can be used to detect the platform the application is running on. The appropriate hostname, that enables access to local secure web services, can then be set as follows:
 
 ```csharp
 public static string BaseAddress =
-    Device.RuntimePlatform == Device.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
+    DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
 public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 ```
 
@@ -119,9 +119,55 @@ In this code example, the server certificate validation result is returned when 
 #endif
 ```
 
+## Enable HTTP clear-text traffic
+Optionally, you can configure your iOS and Android projects to allow clear-text HTTP traffic. If the backend service is configured to allow standard http traffic you can specify http in the base URLs and then configure your projects to allow clear-text traffic.
+
+```csharp
+public static string BaseAddress =
+    DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5001" : "http://localhost:5001";
+public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
+```
+
+### iOS ATS Opt-out
+To enable clear-text local traffic on iOS [opt-out of ATS](/xamarin/ios/app-fundamentals/ats#optout) by adding the following into your `info.plist`:
+
+```xml
+<key>NSAppTransportSecurity</key>    
+<dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+</dict>
+```
+
+### Android network security configuration
+
+To enable clear-text local traffic on Android configure network security configuration by creating a new xml file under `Resources/xml` folder named **network_security_config.xml**. Inside of this xml file add the follow configuration:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">10.0.2.2</domain>
+  </domain-config>
+</network-security-config>
+```
+
+Finally, configure the **networkSecurityConfig** property on the **application** node in the Android Manifest:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        ...
+    </application>
+</manifest>
+```
+
 ## Related links
 
 - [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Enable local HTTPS](/aspnet/core/getting-started#enable-local-https)
 - [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md)
+- [Android Network Security Configuration](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
+- [iOS App Transport Security](/xamarin/ios/app-fundamentals/ats/)
