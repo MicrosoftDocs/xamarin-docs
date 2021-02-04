@@ -206,45 +206,7 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 
 ### Local Development
 
-If you are developing your REST web service locally with a framework such as ASP.NET Core Web API you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text http traffic for the iOS simualtor and Android emulator. 
-
-To enable clear-text local traffic on iOS [opt-out of ATS](/xamarin/ios/app-fundamentals/ats#optout) by adding the following into your `info.plist`:
-
-```xml
-<key>NSAppTransportSecurity</key>    
-<dict>
-    <key>NSAllowsLocalNetworking</key>
-    <true/>
-</dict>
-```
-
-To enable clear-text local traffic on Android configure network security options by creating a new xml file under `Resources/xml` folder named **network_security_config.xml**. Inside of this xml file add the follow configuration:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-  <domain-config cleartextTrafficPermitted="true">
-    <domain includeSubdomains="true">10.0.2.2</domain>
-  </domain-config>
-</network-security-config>
-```
-
-Finally, configure the **networkSecurityConfig** property on the **application** node in the Android Manifest:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest>
-    <application android:networkSecurityConfig="@xml/network_security_config">
-        ...
-    </application>
-</manifest>
-```
-
-Android emulators do not run on the local machine and use a loopback IP (10.0.2.2) to communicate with the local machine. Leverage [Xamarin.Essentials DeviceInfo](/xamarin/essentials/device-information/) to detect what operating the system is running to use the correct URL
-
-```csharp
-public static string RestUrl = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000/api/todoitems/{0}" : "http://localhost:5000/api/todoitems/{0}";
-```
+If you are developing your REST web service locally with a framework such as ASP.NET Core Web API you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text http traffic for the iOS simualtor and Android emulator. Follow the [connect to local web service guide](xamarin/cross-platform/deploy-test/connect-to-local-web-services) to configure your project to allow communication.
 
 ## Related Links
 
@@ -255,3 +217,4 @@ public static string RestUrl = DeviceInfo.Platform == DevicePlatform.Android ? "
 - [HttpClient](/dotnet/api/system.net.http.httpclient)
 - [Android Network Security Configuration](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
 - [iOS App Transport Security](/xamarin/ios/app-fundamentals/ats/)
+- [Connect to local web service](xamarin/cross-platform/deploy-test/connect-to-local-web-services)
