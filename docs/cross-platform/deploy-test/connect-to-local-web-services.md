@@ -78,7 +78,7 @@ Each instance of the Android emulator is isolated from your development machine 
 
 However, the virtual router for each emulator manages a special network space that includes pre-allocated addresses, with the `10.0.2.2` address being an alias to your host loopback interface (127.0.0.1 on your development machine). Therefore, given a local secure web service that exposes a GET operation via the `/api/todoitems/` relative URI, an application running on the Android emulator can consume the operation by sending a GET request to `https://10.0.2.2:<port>/api/todoitems/`.
 
-### Detecting the operating system
+### Detect the operating system
 
 The [`DeviceInfo`](xref:Xamarin.Essentials.DeviceInfo) class can be used to detect the platform the application is running on. The appropriate hostname, that enables access to local secure web services, can then be set as follows:
 
