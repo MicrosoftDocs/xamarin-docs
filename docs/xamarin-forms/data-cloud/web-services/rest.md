@@ -206,15 +206,15 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 
 ### Local Development
 
-If you are developing your REST web service locally with a framework such as ASP.NET Core Web API you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text http traffic for the iOS simualtor and Android emulator. Follow the [connect to local web service guide](xamarin/cross-platform/deploy-test/connect-to-local-web-services) to configure your project to allow communication.
+If you are developing your REST web service locally with a framework such as ASP.NET Core Web API, you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text HTTP traffic for the iOS simualtor and Android emulator. For information about configuration your project to allow communication, see [Connect to local web services](~/cross-platform/deploy-test/connect-to-local-web-services.md).
 
 ## Related Links
 
-- [Microsoft Learn: Consume REST web services in Xamarin Apps](https://docs.microsoft.com/learn/modules/consume-rest-services/)
-- [Microsoft Learn: Create a web API with ASP.NET Core](https://docs.microsoft.com/learn/modules/build-web-api-aspnet-core/)
+- [Microsoft Learn: Consume REST web services in Xamarin Apps](/learn/modules/consume-rest-services/)
+- [Microsoft Learn: Create a web API with ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
 - [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
-- [HttpClient](/dotnet/api/system.net.http.httpclient)
+- [HttpClient API](xref:System.Net.Http.HttpClient)
 - [Android Network Security Configuration](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
-- [iOS App Transport Security](/xamarin/ios/app-fundamentals/ats/)
-- [Connect to local web service](xamarin/cross-platform/deploy-test/connect-to-local-web-services)
+- [iOS App Transport Security](~/ios/app-fundamentals/ats.md)
+- [Connect to local web services](~/cross-platform/deploy-test/connect-to-local-web-services.md)
