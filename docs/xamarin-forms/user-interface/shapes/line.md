@@ -46,7 +46,7 @@ The following XAML example shows how to draw a line:
 
 In this example, a red diagonal line is drawn from (40,0) to (0,120):
 
-![Line](line-images/line.png "Line")
+![Diagonal line](line-images/line.png "Line")
 
 Because the `X1`, `Y1`, `X2`, and `Y2` properties have default values of 0, it's possible to draw some lines with minimal syntax:
 
