@@ -6,7 +6,7 @@ ms.assetid: 5BF81E25-12E5-49F0-A40C-0CF4C5D63B9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -20,7 +20,7 @@ The `Ellipse` class sets the `Aspect` property, inherited from the `Shape` class
 
 ## Create an Ellipse
 
-To draw an ellipse, create an `Ellipse` object and set its `WidthRequest` and `HeightRequest` properties. To paint the inside of the ellipse, set its `Fill` property to a [`Color`](xref:Xamarin.Forms.Color). To give the ellipse an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the ellipse outline.
+To draw an ellipse, create an `Ellipse` object and set its `WidthRequest` and `HeightRequest` properties. To paint the inside of the ellipse, set its `Fill` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. To give the ellipse an outline, set its `Stroke` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. The `StrokeThickness` property specifies the thickness of the ellipse outline. For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 To draw a circle, make the `WidthRequest` and `HeightRequest` properties of the `Ellipse` object equal.
 
@@ -49,7 +49,7 @@ The following XAML example shows how to draw a circle:
 
 In this example, a red circle with dimensions 150x150 (device-independent units) is drawn:
 
-![Circle](ellipse-images/circle.png "Circle")
+![Unfilled circle](ellipse-images/circle.png "Circle")
 
 For information about drawing a dashed ellipse, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
@@ -57,3 +57,4 @@ For information about drawing a dashed ellipse, see [Draw dashed shapes](index.m
 
 - [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)

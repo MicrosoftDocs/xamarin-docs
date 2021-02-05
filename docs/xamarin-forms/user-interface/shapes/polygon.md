@@ -6,7 +6,7 @@ ms.assetid: D6539F60-A5AC-46EF-86EB-E9F508EB1FA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -29,7 +29,7 @@ For more information about the `FillRule` enumeration, see [Xamarin.Forms Shapes
 
 ## Create a Polygon
 
-To draw a polygon, create a `Polygon` object and set its `Points` property to the vertices of a shape. A line is automatically drawn that connects the first and last points. To paint the inside of the polygon, set its `Fill` property to a [`Color`](xref:Xamarin.Forms.Color). To give the polygon an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the polygon outline.
+To draw a polygon, create a `Polygon` object and set its `Points` property to the vertices of a shape. A line is automatically drawn that connects the first and last points. To paint the inside of the polygon, set its `Fill` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. To give the polygon an outline, set its `Stroke` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. The `StrokeThickness` property specifies the thickness of the polygon outline. For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 The following XAML example shows how to draw a filled polygon:
 
@@ -93,3 +93,4 @@ In this example, the fill behavior of each polygon is determined using the `Nonz
 - [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)
