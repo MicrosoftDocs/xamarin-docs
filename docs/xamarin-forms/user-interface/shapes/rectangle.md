@@ -6,7 +6,7 @@ ms.assetid: 2DD663D3-DAEC-495C-AB6D-8A143FC97637
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -27,7 +27,7 @@ The `Rectangle` class sets the `Aspect` property, inherited from the `Shape` cla
 
 ## Create a Rectangle
 
-To draw a rectangle, create a `Rectangle` object and sets its `WidthRequest` and `HeightRequest` properties. To paint the inside of the rectangle, set its `Fill` property to a [`Color`](xref:Xamarin.Forms.Color). To give the rectangle an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the rectangle outline.
+To draw a rectangle, create a `Rectangle` object and sets its `WidthRequest` and `HeightRequest` properties. To paint the inside of the rectangle, set its `Fill` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. To give the rectangle an outline, set its `Stroke` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. The `StrokeThickness` property specifies the thickness of the rectangle outline. For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 To give the rectangle rounded corners, set its `RadiusX` and `RadiusY` properties. These properties set the x-axis and y-axis radii that's used to round the corners of the rectangle.
 
@@ -69,3 +69,4 @@ For information about drawing a dashed rectangle, see [Draw dashed shapes](index
 
 - [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)

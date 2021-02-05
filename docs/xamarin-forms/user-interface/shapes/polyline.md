@@ -6,7 +6,7 @@ ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -29,10 +29,10 @@ For more information about the `FillRule` enumeration, see [Xamarin.Forms Shapes
 
 ## Create a Polyline
 
-To draw a polyline, create a `Polyline` object and set its `Points` property to the vertices of a shape. To give the polyline an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the polyline outline.
+To draw a polyline, create a `Polyline` object and set its `Points` property to the vertices of a shape. To give the polyline an outline, set its `Stroke` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object. The `StrokeThickness` property specifies the thickness of the polyline outline. For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!IMPORTANT]
-> If you set the `Fill` property of a `Polyline` to a [`Color`](xref:Xamarin.Forms.Color), the interior space of the polyline is painted, even if the start point and end point do not intersect.
+> If you set the `Fill` property of a `Polyline` to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object, the interior space of the polyline is painted, even if the start point and end point do not intersect.
 
 The following XAML example shows how to draw a polyline:
 
@@ -93,3 +93,4 @@ In this example, the fill behavior of the polyline is determined using the `Nonz
 - [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)
