@@ -127,7 +127,7 @@ Optionally, you can configure your iOS and Android projects to allow clear-text 
 
 ```csharp
 public static string BaseAddress =
-    DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5001" : "http://localhost:5001";
+    DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
 public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 ```
 
