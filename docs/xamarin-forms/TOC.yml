@@ -32,9 +32,9 @@
           href: ~/get-started/quickstarts/index.md
           items:
             - name: File > New
-              href: ~/get-started/quickstarts/single-page.md
+              href: ~/get-started/quickstarts/app.md
             - name: Multipage
-              href: ~/get-started/quickstarts/multi-page.md
+              href: ~/get-started/quickstarts/navigation.md
             - name: Database
               href: ~/get-started/quickstarts/database.md
             - name: Styling

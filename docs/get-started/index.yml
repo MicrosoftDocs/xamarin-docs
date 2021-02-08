@@ -39,9 +39,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create a single page Xamarin.Forms application
-            url: quickstarts/single-page.md
+            url: quickstarts/app.md
           - text: Perform navigation in a multi-page Xamarin.Forms application
-            url: quickstarts/multi-page.md
+            url: quickstarts/navigation.md
           - text: Store data in a local SQLite.NET database
             url: quickstarts/database.md
           - text: Style a cross-platform Xamarin.Forms application

@@ -208,6 +208,6 @@ You can download the completed code from the [samples gallery](/samples/xamarin/
 
 ## Next Steps
 
-- [Single Page Quickstart](~/get-started/quickstarts/single-page.md) &ndash; Build a more functional app.
+- [Single Page Quickstart](~/get-started/quickstarts/app.md) &ndash; Build a more functional app.
 - [Xamarin.Forms Samples](~/xamarin-forms/samples/index.md) &ndash; Download and run code examples and sample apps.
 - [Creating Mobile Apps ebook](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; In-depth chapters that teach Xamarin.Forms development, available as a PDF and including hundreds of additional samples.

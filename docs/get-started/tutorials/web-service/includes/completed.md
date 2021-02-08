@@ -12,7 +12,7 @@ This series of tutorials has covered the basics of creating mobile applications 
 
 - There are four main control groups used to create the user interface of a Xamarin.Forms application. For more information, see [Controls Reference](~/xamarin-forms/user-interface/controls/index.md).
 - Data binding is a technique for linking properties of two objects so that changes in one property are automatically reflected in the other property. For more information, see [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- Xamarin.Forms provides a number of different page navigation experiences, depending upon the page type being used. For more information, see [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md).
+- Xamarin.Forms provides multiple page navigation experiences, depending upon the page type being used. For more information, see [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md).
 - Styles help to reduce repetitive markup, and allow an applications appearance to be more easily changed. For more information, see [Styling Xamarin.Forms Apps](~/xamarin-forms/user-interface/styles/index.md).
 - XAML markup extensions extend the power and flexibility of XAML by allowing element attributes to be set from sources other than literal text strings. For more information, see [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md).
 - Data templates provide the ability to define the presentation of data on supported views. For more information, see [Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).

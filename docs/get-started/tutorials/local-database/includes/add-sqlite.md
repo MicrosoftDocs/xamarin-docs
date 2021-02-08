@@ -18,7 +18,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     ![Screenshot of the SQLite.NET NuGet Package in the NuGet Package Manager](../images/vs/add-package.png "SQLite.NET NuGet Package")
 
     > [!NOTE]
-    > There are a number of NuGet packages with similar names. The correct package has these attributes:
+    > There are many NuGet packages with similar names. The correct package has these attributes:
     > - **Authors:** SQLite-net
     > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -48,7 +48,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
     ![Screenshot of the SQLite.NET NuGet Package in the NuGet Package Manager](../images/vsmac/add-package.png "SQLite.NET NuGet Package")
 
     > [!NOTE]
-    > There are a number of NuGet packages with similar names. The correct package has these attributes:
+    > There are many NuGet packages with similar names. The correct package has these attributes:
     > - **ID:** sqlite-net-pcl
     > - **Author:** SQLite-net
     > - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  

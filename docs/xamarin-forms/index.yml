@@ -55,9 +55,9 @@ productDirectory:
     - title: Build a complete app
       imageSrc: https://docs.microsoft.com//media/common/i_mobile-app-developement.svg
       links:
-        - url: ~/get-started/quickstarts/single-page.md
+        - url: ~/get-started/quickstarts/app.md
           text: File > New
-        - url: ~/get-started/quickstarts/multi-page.md
+        - url: ~/get-started/quickstarts/navigation.md
           text: Add navigation
         - url: ~/get-started/quickstarts/database.md
           text: Add a database

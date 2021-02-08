@@ -6,7 +6,7 @@ ms.technology: xamarin-forms
 ms.assetid: 3318B8F8-3B24-489E-8E7B-28FA948796F8
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/06/2020
+ms.date: 01/28/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -14,13 +14,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _Learn how to create mobile applications with Xamarin.Forms._
 
-## [Create a single page Xamarin.Forms application](single-page.md)
+## [Create a Xamarin.Forms application](app.md)
 
-Learn how to create a single page cross-platform Xamarin.Forms application, which enables you to enter a note and persist it to device storage.
+Learn how to create a cross-platform Xamarin.Forms application, which enables you to enter a note and persist it to device storage.
 
-## [Perform navigation in a multi-page Xamarin.Forms application](multi-page.md)
+## [Perform navigation in a Xamarin.Forms application](navigation.md)
 
-Learn how to turn the single page application, capable of storing a single note, into a multi-page application, capable of storing multiple notes.
+Learn how to turn the application, capable of storing a single note, into an application capable of storing multiple notes.
 
 ## [Store data in a local SQLite.NET database](database.md)
 

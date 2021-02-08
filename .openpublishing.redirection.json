@@ -979,6 +979,14 @@
     {
         "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/video-player/custom-positioning.md",
         "redirect_url": "/xamarin/community-toolkit/views/mediaelement"
-    }    
+    },
+    {
+        "source_path": "docs/xamarin/get-started/quickstarts/single-page.md",
+        "redirect_url": "/xamarin/get-started/quickstarts/app"
+    },
+    {
+        "source_path": "docs/xamarin/get-started/quickstarts/multi-page.md",
+        "redirect_url": "/xamarin/get-started/quickstarts/navigation"
+    }
   ]
 }

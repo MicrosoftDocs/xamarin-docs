@@ -32,9 +32,9 @@
       expanded: true
       items:
         - name: File > New
-          href: quickstarts/single-page.md
-        - name: Multipage
-          href: quickstarts/multi-page.md
+          href: quickstarts/app.md
+        - name: Navigation
+          href: quickstarts/navigation.md
         - name: Database
           href: quickstarts/database.md
         - name: Styling

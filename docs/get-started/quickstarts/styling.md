@@ -1,29 +1,34 @@
 ---
 title: "Style a cross-platform Xamarin.Forms application"
-description: "This article explains how to style a cross-platform Xamarin.Forms application with XAML styles."
+description: "This article explains how to style a cross-platform Xamarin.Forms Shell application with XAML styles, and use XAML Hot Reload to see these changes."
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
-ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A
+ms.assetid: 1C6ED8AF-41B4-4D6C-9BD8-C72D3F05E541
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/07/2020
+ms.custom: contperf-fy21q3
+ms.date: 01/26/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Style a Cross-Platform Xamarin.Forms Application
+# Style a cross-platform Xamarin.Forms application
 
 [![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 In this quickstart, you will learn how to:
 
-- Style a Xamarin.Forms application using XAML styles.
+- Style a Xamarin.Forms Shell application using XAML styles.
+- Use XAML Hot Reload to see UI changes without rebuilding your application.
 
-The quickstart walks through how to style a cross-platform Xamarin.Forms application with XAML styles. The final application is shown below:
+The quickstart walks through how to style a cross-platform Xamarin.Forms application with XAML styles. In addition, the quickstart uses XAML Hot Reload to update the UI of your running application, without having to rebuild the application. For more information about XAML Hot Reload, see [XAML Hot Reload for Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md).
 
-[![Notes Page](styling-images/screenshots1-sml.png)](styling-images/screenshots1.png#lightbox "Notes Page")
-[![Note Entry Page](styling-images/screenshots2-sml.png)](styling-images/screenshots2.png#lightbox "Note Entry Page")
+The final application is shown below:
+
+[![Notes Page](styling-images/screenshots1-sml.png)](styling-images/screenshots1.png#lightbox)
+[![Note Entry Page](styling-images/screenshots2-sml.png)](styling-images/screenshots2.png#lightbox)
+[![About Page](styling-images/screenshots3-sml.png)](styling-images/screenshots3.png#lightbox)
 
 ### Prerequisites
 
@@ -35,136 +40,248 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 1. Launch Visual Studio and open the Notes solution.
 
-2. In **Solution Explorer**, in the **Notes** project, double-click **App.xaml** to open it. Then replace the existing code with the following code:
+2. Build and run the project on your chosen platform. For more information, see [Building the quickstart](app.md#building-the-quickstart).
+
+    Leave the application running and return to Visual Studio.
+
+3. In **Solution Explorer**, in the **Notes** project, open **App.xaml**. Then replace the existing code with the following code:
 
     ```xaml
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8" ?>
     <Application xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="Notes.App">
+
+        <!-- Resources used by multiple pages in the application -->         
         <Application.Resources>
 
             <Thickness x:Key="PageMargin">20</Thickness>
 
             <!-- Colors -->
+            <Color x:Key="AppPrimaryColor">#1976D2</Color>
             <Color x:Key="AppBackgroundColor">AliceBlue</Color>
-            <Color x:Key="NavigationBarColor">#1976D2</Color>
-            <Color x:Key="NavigationBarTextColor">White</Color>
+            <Color x:Key="PrimaryColor">Black</Color>
+            <Color x:Key="SecondaryColor">White</Color>
+            <Color x:Key="TertiaryColor">Silver</Color>
 
             <!-- Implicit styles -->
-            <Style TargetType="{x:Type NavigationPage}">
-                <Setter Property="BarBackgroundColor"
-                        Value="{StaticResource NavigationBarColor}" />
-                 <Setter Property="BarTextColor"
-                        Value="{StaticResource NavigationBarTextColor}" />           
-            </Style>
-
-            <Style TargetType="{x:Type ContentPage}"
+            <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor"
                         Value="{StaticResource AppBackgroundColor}" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontSize"
+                        Value="Medium" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="CornerRadius"
+                        Value="5" />
             </Style>
 
         </Application.Resources>
     </Application>
     ```
 
-    This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) and [`ContentPage`](xref:Xamarin.Forms.ContentPage). Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    Save the changes to **App.xaml** by pressing **CTRL+S**, and close the file.
+    Save the changes to **App.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of each page will change.
 
-3. In **Solution Explorer**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
+4. In **Solution Explorer**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
+
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Shell xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:views="clr-namespace:Notes.Views"
+           x:Class="Notes.AppShell">
+
+        <Shell.Resources>
+            <!-- Style Shell elements -->
+            <Style x:Key="BaseStyle"
+                   TargetType="Element">
+                <Setter Property="Shell.BackgroundColor"
+                        Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="Shell.ForegroundColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Shell.TitleColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+                        Value="#95FFFFFF"/>
+            </Style>
+            <Style TargetType="TabBar"
+                   BasedOn="{StaticResource BaseStyle}" />
+        </Shell.Resources>
+
+        <!-- Display a bottom tab bar containing two tabs -->   
+        <TabBar>
+            <ShellContent Title="Notes"
+                          Icon="icon_feed.png"
+                          ContentTemplate="{DataTemplate views:NotesPage}" />
+            <ShellContent Title="About"
+                          Icon="icon_about.png"
+                          ContentTemplate="{DataTemplate views:AboutPage}" />
+        </TabBar>
+    </Shell>
+    ```
+
+    This code adds two styles to the `Shell` resource dictionary, which define a series of [`Color`](xref:Xamarin.Forms.Color) values used by the application.
+
+    Save the changes to **AppShell.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
+
+5. In **Solution Explorer**, in the **Notes** project, open **NotesPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="Notes.NotesPage"
+                 x:Class="Notes.Views.NotesPage"
                  Title="Notes">
+
         <ContentPage.Resources>
-            <!-- Implicit styles -->
-            <Style TargetType="{x:Type ListView}">
-                <Setter Property="BackgroundColor"
-                        Value="{StaticResource AppBackgroundColor}" />
+            <!-- Define a visual state for the Selected state of the CollectionView -->
+            <Style TargetType="StackLayout">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="{StaticResource AppPrimaryColor}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
             </Style>
         </ContentPage.Resources>
 
+        <!-- Add an item to the toolbar -->
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="+"
-                         Clicked="OnNoteAddedClicked" />
+            <ToolbarItem Text="Add"
+                         Clicked="OnAddClicked" />
         </ContentPage.ToolbarItems>
 
-        <ListView x:Name="listView"
-                  Margin="{StaticResource PageMargin}"
-                  ItemSelected="OnListViewItemSelected">
-            <ListView.ItemTemplate>
+        <!-- Display notes in a list -->
+        <CollectionView x:Name="collectionView"
+                        Margin="{StaticResource PageMargin}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+            <!-- Define the appearance of each item in the list -->
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Text}"
-                              TextColor="Black"
-                              Detail="{Binding Date}" />
+                    <StackLayout>
+                        <Label Text="{Binding Text}"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Date}"
+                               TextColor="{StaticResource TertiaryColor}"
+                               FontSize="Small" />
+                    </StackLayout>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage>
     ```
 
-    This code adds an implicit style for the [`ListView`](xref:Xamarin.Forms.ListView) to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `ListView.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `ListView` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code adds an implicit style for the [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each selected item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `CollectionView.Margin`  and `Label.TextColor` property to values defined in the application-level `ResourceDictionary`. Note that the `StackLayout` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`.
 
-    Save the changes to **NotesPage.xaml** by pressing **CTRL+S**, and close the file.
+    Save the changes to **NotesPage.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
 
-4. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+6. In **Solution Explorer**, in the **Notes** project, open **NoteEntryPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="Notes.NoteEntryPage"
+                 x:Class="Notes.Views.NoteEntryPage"
                  Title="Note Entry">
         <ContentPage.Resources>
             <!-- Implicit styles -->
             <Style TargetType="{x:Type Editor}">
                 <Setter Property="BackgroundColor"
                         Value="{StaticResource AppBackgroundColor}" />
-            </Style>
-
-            <Style TargetType="Button"
-                   ApplyToDerivedTypes="True"
-                   CanCascade="True">
-                <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="BackgroundColor" Value="#1976D2" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="CornerRadius" Value="5" />
-            </Style>
+            </Style>         
         </ContentPage.Resources>
 
+        <!-- Layout children vertically -->
         <StackLayout Margin="{StaticResource PageMargin}">
             <Editor Placeholder="Enter your note"
                     Text="{Binding Text}"
                     HeightRequest="100" />
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            <Grid ColumnDefinitions="*,*">
+                <!-- Layout children in two columns -->
                 <Button Text="Save"
                         Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1"
                         Text="Delete"
-                        Clicked="OnDeleteButtonClicked" />
+                        Clicked="OnDeleteButtonClicked"/>
             </Grid>
         </StackLayout>
-
     </ContentPage>
     ```
 
-    This code adds implicit styles for the [`Editor`](xref:Xamarin.Forms.Editor) and [`Button`](xref:Xamarin.Forms.Button) views to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `StackLayout.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `Editor` and `Button` implicit styles were added to the page-level `ResourceDictionary`, because they are only consumed by the `NoteEntryPage`. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code adds an implicit style for the [`Editor`](xref:Xamarin.Forms.Editor) to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `StackLayout.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `Editor` implicit styles was added to the page-level `ResourceDictionary` because it's only consumed by the `NoteEntryPage`.
 
-    Save the changes to **NoteEntryPage.xaml** by pressing **CTRL+S**, and close the file.
+7. In the running application, navigate to the `NoteEntryPage`.
 
-5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+8. In Visual Studio, save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
 
-    On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
+    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) will change in the running application, as will the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
+
+9. In **Solution Explorer**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
+
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="Notes.Views.AboutPage"
+                 Title="About">
+        <!-- Layout children in two rows -->
+        <Grid RowDefinitions="Auto,*">
+            <Image Source="xamarin_logo.png"
+                   BackgroundColor="{StaticResource AppPrimaryColor}"
+                   Opacity="0.85"
+                   VerticalOptions="Center"
+                   HeightRequest="64" />
+            <!-- Layout children vertically -->       
+            <StackLayout Grid.Row="1"
+                         Margin="{StaticResource PageMargin}"
+                         Spacing="20">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Notes"
+                                      FontAttributes="Bold"
+                                      FontSize="22" />
+                                <Span Text=" v1.0" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+                <Button Text="Learn more"
+                        Clicked="OnButtonClicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+    ```
+
+    This code sets the `Image.BackgroundColor` and `StackLayout.Margin` properties to values defined in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
+
+10. In the running application, navigate to the `AboutPage`.
+
+11. In Visual Studio, save the changes to **AboutPage.xaml**  by pressing **CTRL+S**.
+
+    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) will change in the running application.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -173,136 +290,247 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 1. Launch Visual Studio for Mac and open the Notes project.
 
-2. In the **Solution Pad**, in the **Notes** project, double-click **App.xaml** to open it. Then replace the existing code with the following code:
+2. Build and run the project on your chosen platform. For more information, see [Building the quickstart](app.md#building-the-quickstart).
+
+    Leave the application running and return to Visual Studio for Mac.
+
+3. In the **Solution Pad**, in the **Notes** project, open **App.xaml**. Then replace the existing code with the following code:
 
     ```xaml
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8" ?>
     <Application xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="Notes.App">
+
+        <!-- Resources used by multiple pages in the application -->                 
         <Application.Resources>
 
             <Thickness x:Key="PageMargin">20</Thickness>
 
             <!-- Colors -->
+            <Color x:Key="AppPrimaryColor">#1976D2</Color>
             <Color x:Key="AppBackgroundColor">AliceBlue</Color>
-            <Color x:Key="NavigationBarColor">#1976D2</Color>
-            <Color x:Key="NavigationBarTextColor">White</Color>
+            <Color x:Key="PrimaryColor">Black</Color>
+            <Color x:Key="SecondaryColor">White</Color>
+            <Color x:Key="TertiaryColor">Silver</Color>
 
             <!-- Implicit styles -->
-            <Style TargetType="{x:Type NavigationPage}">
-                <Setter Property="BarBackgroundColor"
-                        Value="{StaticResource NavigationBarColor}" />
-                 <Setter Property="BarTextColor"
-                        Value="{StaticResource NavigationBarTextColor}" />           
-            </Style>
-
-            <Style TargetType="{x:Type ContentPage}"
+            <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor"
                         Value="{StaticResource AppBackgroundColor}" />
             </Style>
 
+            <Style TargetType="Button">
+                <Setter Property="FontSize"
+                        Value="Medium" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="TextColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="CornerRadius"
+                        Value="5" />
+            </Style>  
         </Application.Resources>
     </Application>
     ```
 
-    This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) and [`ContentPage`](xref:Xamarin.Forms.ContentPage). Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    Save the changes to **App.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+    Save the changes to **App.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of each page will change.
 
-3. In the **Solution Pad**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
+4. In the **Solution Pad**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
+
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Shell xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:views="clr-namespace:Notes.Views"
+           x:Class="Notes.AppShell">
+
+        <Shell.Resources>
+            <!-- Style Shell elements -->
+            <Style x:Key="BaseStyle"
+                   TargetType="Element">
+                <Setter Property="Shell.BackgroundColor"
+                        Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="Shell.ForegroundColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Shell.TitleColor"
+                        Value="{StaticResource SecondaryColor}" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+                        Value="#95FFFFFF"/>
+            </Style>
+            <Style TargetType="TabBar"
+                   BasedOn="{StaticResource BaseStyle}" />
+        </Shell.Resources>
+
+        <!-- Display a bottom tab bar containing two tabs -->
+        <TabBar>
+            <ShellContent Title="Notes"
+                          Icon="icon_feed.png"
+                          ContentTemplate="{DataTemplate views:NotesPage}" />
+            <ShellContent Title="About"
+                          Icon="icon_about.png"
+                          ContentTemplate="{DataTemplate views:AboutPage}" />
+        </TabBar>
+    </Shell>
+    ```
+
+    This code adds two styles to the `Shell` resource dictionary, which define a series of [`Color`](xref:Xamarin.Forms.Color) values used by the application.
+
+    Save the changes to **AppShell.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
+
+5. In the **Solution Pad**, in the **Notes** project, open **NotesPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="Notes.NotesPage"
+                 x:Class="Notes.Views.NotesPage"
                  Title="Notes">
+
         <ContentPage.Resources>
-            <!-- Implicit styles -->
-            <Style TargetType="{x:Type ListView}">
-                <Setter Property="BackgroundColor"
-                        Value="{StaticResource AppBackgroundColor}" />
+            <!-- Define a visual state for the Selected state of the CollectionView -->
+            <Style TargetType="StackLayout">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="{StaticResource AppPrimaryColor}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
             </Style>
         </ContentPage.Resources>
 
+        <!-- Add an item to the toolbar -->
         <ContentPage.ToolbarItems>
-            <ToolbarItem Text="+"
-                         Clicked="OnNoteAddedClicked" />
+            <ToolbarItem Text="Add"
+                         Clicked="OnAddClicked" />
         </ContentPage.ToolbarItems>
 
-        <ListView x:Name="listView"
-                  Margin="{StaticResource PageMargin}"
-                  ItemSelected="OnListViewItemSelected">
-            <ListView.ItemTemplate>
+        <!-- Display notes in a list -->
+        <CollectionView x:Name="collectionView"
+                        Margin="{StaticResource PageMargin}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+            <!-- Define the appearance of each item in the list -->
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Text}"
-                              TextColor="Black"
-                              Detail="{Binding Date}" />
+                    <StackLayout>
+                        <Label Text="{Binding Text}"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Date}"
+                               TextColor="{StaticResource TertiaryColor}"
+                               FontSize="Small" />
+                    </StackLayout>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage>
     ```
 
-    This code adds an implicit style for the [`ListView`](xref:Xamarin.Forms.ListView) to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `ListView.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `ListView` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code adds an implicit style for the [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each selected item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `CollectionView.Margin`  and `Label.TextColor` property to values defined in the application-level `ResourceDictionary`. Note that the `StackLayout` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`.
 
-    Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+    Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
 
-4. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+6. In the **Solution Pad**, in the **Notes** project, open **NoteEntryPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="Notes.NoteEntryPage"
+                 x:Class="Notes.Views.NoteEntryPage"
                  Title="Note Entry">
         <ContentPage.Resources>
             <!-- Implicit styles -->
             <Style TargetType="{x:Type Editor}">
                 <Setter Property="BackgroundColor"
                         Value="{StaticResource AppBackgroundColor}" />
-            </Style>
-
-            <Style TargetType="Button"
-                   ApplyToDerivedTypes="True"
-                   CanCascade="True">
-                <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="BackgroundColor" Value="#1976D2" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="CornerRadius" Value="5" />
-            </Style>
+            </Style>       
         </ContentPage.Resources>
 
+        <!-- Layout children vertically -->
         <StackLayout Margin="{StaticResource PageMargin}">
             <Editor Placeholder="Enter your note"
                     Text="{Binding Text}"
                     HeightRequest="100" />
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            <!-- Layout children in two columns -->
+            <Grid ColumnDefinitions="*,*">
                 <Button Text="Save"
                         Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1"
                         Text="Delete"
-                        Clicked="OnDeleteButtonClicked" />
+                        Clicked="OnDeleteButtonClicked"/>
             </Grid>
         </StackLayout>
-
     </ContentPage>
     ```
 
-    This code adds implicit styles for the [`Editor`](xref:Xamarin.Forms.Editor) and [`Button`](xref:Xamarin.Forms.Button) views to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `StackLayout.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `Editor` and `Button` implicit styles were added to the page-level `ResourceDictionary`, because they are only consumed by the `NoteEntryPage`. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
+    This code adds implicit styles for the [`Editor`](xref:Xamarin.Forms.Editor) to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `StackLayout.Margin` property to a value defined in the application-level `ResourceDictionary`. Note that the `Editor` implicit style was added to the page-level `ResourceDictionary` because it's only consumed by the `NoteEntryPage`.
 
-    Save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
+7. In the running application, navigate to the `NoteEntryPage`.
 
-5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+8. In Visual Studio for Mac, save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
 
-    On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
+    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) will change in the running application, as will the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
+
+9. In the **Solution Pad**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
+
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="Notes.Views.AboutPage"
+                 Title="About">
+        <!-- Layout children in two rows -->
+        <Grid RowDefinitions="Auto,*">
+            <Image Source="xamarin_logo.png"
+                   BackgroundColor="{StaticResource AppPrimaryColor}"
+                   Opacity="0.85"
+                   VerticalOptions="Center"
+                   HeightRequest="64" />
+            <!-- Layout children vertically -->
+            <StackLayout Grid.Row="1"
+                         Margin="{StaticResource PageMargin}"
+                         Spacing="20">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Notes"
+                                      FontAttributes="Bold"
+                                      FontSize="22" />
+                                <Span Text=" v1.0" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+                <Button Text="Learn more"
+                        Clicked="OnButtonClicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+    ```
+
+    This code sets the `Image.BackgroundColor` and `StackLayout.Margin` properties to values defined in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
+
+10. In the running application, navigate to the `AboutPage`.
+
+11. In Visual Studio for Mac, save the changes to **AboutPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
+
+    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) will change in the running application.
 
 ::: zone-end
 
@@ -310,9 +538,10 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 In this quickstart, you learned how to:
 
-- Style a Xamarin.Forms application using XAML styles.
+- Style a Xamarin.Forms Shell application using XAML styles.
+- Use XAML Hot Reload to see UI changes without rebuilding your application.
 
-To learn more about the fundamentals of application development using Xamarin.Forms, continue to the quickstart deep dive.
+To learn more about the fundamentals of application development using Xamarin.Forms Shell, continue to the quickstart deep dive.
 
 > [!div class="nextstepaction"]
 > [Next](deepdive.md)
@@ -320,4 +549,5 @@ To learn more about the fundamentals of application development using Xamarin.Fo
 ## Related links
 
 - [Notes (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [XAML Hot Reload for Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)
