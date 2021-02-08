@@ -9,15 +9,6 @@
           href: ios-simulator/deploy.md
         - name: Release notes
           href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
-    - name: Inspector
-      href: inspector/index.md
-      items:
-        - name: Installation and Requirements
-          href: inspector/install.md
-        - name: Inspecting Live Applications
-          href: inspector/inspect.md
-        - name: Release notes
-          href: /xamarin/tools/inspector/release-notes/
     - name: Live Player
       items:
         - name: About Xamarin Live Player preview
