@@ -492,7 +492,7 @@ The following code demonstrates how state can be restored in
 ```csharp
 protected override void OnRestoreInstanceState(Bundle savedState)
 {
-    base.OnRestoreSaveInstanceState(savedState);
+    base.OnRestoreInstanceState(savedState);
     var myString = savedState.GetString("myString");
     var myBool = savedState.GetBoolean("myBool");
 }
