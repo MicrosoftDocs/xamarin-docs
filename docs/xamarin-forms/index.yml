@@ -1,232 +1,193 @@
-### YamlMime:Hub
-title: Xamarin.Forms documentation
+### YamlMime:Landing
+
+title: Xamarin.Forms
 summary: Xamarin.Forms lets you build native apps using a .NET cross-platform UI toolkit that targets the mobile, tablet, and desktop form factors on Android, iOS, and more.
-brand: xamarin
+
 metadata:
-  title: Xamarin.Forms documentation
+  title: Xamarin.Forms
   description: Xamarin.Forms lets you build native apps using a .NET cross-platform UI toolkit that targets the mobile, tablet, and desktop form factors on Android, iOS, and more.
-  ms.topic: hub-page
+  ms.topic: landing-page
   author: davidbritch
   ms.author: dabritch
-  ms.date: 11/06/2019
+  ms.date: 02/09/2021
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
-highlightedContent:
-  items:
-  - title: What is Xamarin.Forms?
-    itemType: overview
-    url: ~/get-started/what-is-xamarin-forms.md
-  - title: Find a sample
-    itemType: download
-    url: /samples/browse/?products=xamarin&term=Xamarin.Forms
-  - title: What's new?
-    itemType: whats-new
-    url: ~/whats-new/index.yml
-  - title: Improve your mobile development skills
-    itemType: learn
-    url: /learn/browse/?products=xamarin&roles=developer
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Xamarin?
+            url: ~/get-started/what-is-xamarin.md
+          - text: Supported platforms
+            url: ~/get-started/supported-platforms.md
+      - linkListType: how-to-guide
+        links:
+          - text: Installation
+            url: ~/get-started/installation/index.md
+          - text: Create a Xamarin.Forms application
+            url: ~/get-started/quickstarts/app.md
+          - text: Perform navigation in a Xamarin.Forms application
+            url: ~/get-started/quickstarts/navigation.md
+          - text: Store data in a local SQLite.NET database
+            url: ~/get-started/quickstarts/database.md
+          - text: Style a cross-platform Xamarin.Forms application
+            url: ~/get-started/quickstarts/styling.md
 
-productDirectory:
-  title: Get started
-  summary: Learn how to build cross-platform Android & iOS applications using C# and .NET in Visual Studio on Windows and macOS.
-  items:
-    - title: Get started
-      imageSrc: https://docs.microsoft.com//media/common/i_get-started.svg
-      links:
-        - url: ~/get-started/installation/index.md
-          text: Installation
-        - url: ~/get-started/supported-platforms.md
-          text: Supported platforms
-        - url: ~/get-started/first-app/index.md
-          text: Build your first app
-    - title: Follow tutorials
-      imageSrc: https://docs.microsoft.com//media/common/i_overview.svg
-      links:
-        - url: ~/get-started/tutorials/stacklayout/index.yml
-          text: Stack layout
-        - url: ~/get-started/tutorials/label/index.yml
-          text: Labels
-        - url: ~/get-started/tutorials/button/index.yml
-          text: Buttons
-        - url: ~/get-started/tutorials/image/index.yml
-          text: Images
-        - url: ~/get-started/tutorials/index.yml
-          text: All Xamarin.Forms tutorials
-    - title: Build a complete app
-      imageSrc: https://docs.microsoft.com//media/common/i_mobile-app-developement.svg
-      links:
-        - url: ~/get-started/quickstarts/app.md
-          text: File > New
-        - url: ~/get-started/quickstarts/navigation.md
-          text: Add navigation
-        - url: ~/get-started/quickstarts/database.md
-          text: Add a database
-        - url: ~/get-started/quickstarts/styling.md
-          text: Style the app
-    - title: Leverage existing knowledge
-      imageSrc: https://docs.microsoft.com//media/common/i_library.svg
-      links:
-        - url: ~/cross-platform/desktop/index.md
-          text: .NET desktop (UWP, WPF, WinForms)
-        - url: ~/android/get-started/java-developers.md
-          text: Android & Java
-        - url: ~/ios/get-started/objective-c-developers/index.md
-          text: iOS & Objective-C
-        - url: ~/cross-platform/index.yml
-          text: Further development guidance
+  - title: XAML
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Attached properties
+            url: ~/xamarin-forms/xaml/attached-properties.md
+          - text: Basics
+            url: ~/xamarin-forms/xaml/xaml-basics/index.md
+          - text: Bindable properties
+            url: ~/xamarin-forms/xaml/bindable-properties.md
+          - text: Compilation
+            url: ~/xamarin-forms/xaml/xamlc.md
+          - text: Generics
+            url: ~/xamarin-forms/xaml/generics.md
+          - text: Hot reload
+            url: ~/xamarin-forms/xaml/hot-reload.md
+          - text: Markup extensions
+            url: ~/xamarin-forms/xaml/markup-extensions/index.md
+          - text: Namespaces
+            url: ~/xamarin-forms/xaml/namespaces.md
+          - text: Passing arguments
+            url: ~/xamarin-forms/xaml/passing-arguments.md
+          - text: Resource dictionaries
+            url: ~/xamarin-forms/xaml/resource-dictionaries.md
 
-conceptualContent:
-  title: Xamarin.Forms guides
-  items:
-    - title: Application Fundamentals
-      links:
-        - text: Data Binding
-          url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
-          itemType: concept
-        - text: Dual-Screen
-          url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
-          itemType: concept
-        - text: Navigation
-          url: ~/xamarin-forms/app-fundamentals/navigation/index.md
-          itemType: concept
-        - text: Shell
-          url: ~/xamarin-forms/app-fundamentals/shell/index.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/app-fundamentals/index.yml
-        text: See more
-    - title: User Interface
-      links:
-        - text: CollectionView
-          url: ~/xamarin-forms/user-interface/collectionview/introduction.md
-          itemType: concept
-        - text: Choose a Layout
-          url: ~/xamarin-forms/user-interface/layouts/choose-layout.md
-          itemType: concept
-        - text: Controls Reference
-          url: ~/xamarin-forms/user-interface/controls/index.md
-          itemType: concept
-        - text: Material Visual
-          url: ~/xamarin-forms/user-interface/visual/material-visual.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/user-interface/index.yml
-        text: See more
-    - title: Xamarin.Forms XAML
-      links:
-        - text: XAML Basics
-          url: ~/xamarin-forms/xaml/xaml-basics/index.md
-          itemType: concept
-        - text: XAML Hot Reload
-          url: ~/xamarin-forms/xaml/hot-reload.md
-          itemType: concept
-        - text: XAML Markup Extensions
-          url: ~/xamarin-forms/xaml/markup-extensions/index.md
-          itemType: concept
-        - text: XAML Previewer
-          url: ~/xamarin-forms/xaml/xaml-previewer/index.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/xaml/index.yml
-        text: See more
-    - title: Platform Features
-      links:
-        - text: Android Platform-Specifics
-          url: ~/xamarin-forms/platform/android/index.md
-          itemType: concept
-        - text: Device Class
-          url: ~/xamarin-forms/platform/device.md
-          itemType: concept
-        - text: iOS Platform-Specifics
-          url: ~/xamarin-forms/platform/ios/index.md
-          itemType: concept
-        - text: Native Views
-          url: ~/xamarin-forms/platform/native-views/xaml.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/platform/index.yml
-        text: See more
-    - title: Xamarin.Essentials
-      links:
-        - text: Get Started
-          url: ~/essentials/get-started.md
-          itemType: get-started
-        - text: Platform Support
-          url: ~/essentials/platform-feature-support.md
-          itemType: get-started
-        - text: Troubleshooting
-          url: ~/essentials/troubleshooting.md
-          itemType: overview
-        - text: Xamarin.Essentials Namespace
-          url: /dotnet/api/xamarin.essentials?view=xamarin-essentials
-          itemType: reference
-      footerLink:
-        url: ~/essentials/index.md?context=xamarin/xamarin-forms
-        text: See more
-    - title: Data & Azure Cloud Services
-      links:
+  - title: Application fundamentals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Accessibility
+            url: ~/xamarin-forms/app-fundamentals/accessibility/index.md
+          - text: App lifecycle
+            url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
+          - text: Data binding
+            url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
+          - text: DependencyService
+            url: ~/xamarin-forms/app-fundamentals/dependency-service/index.md
+          - text: Dual-screen
+            url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
+          - text: Gestures
+            url: ~/xamarin-forms/app-fundamentals/gestures/index.md
+          - text: Localization
+            url: ~/xamarin-forms/app-fundamentals/localization/index.md
+          - text: Navigation
+            url: ~/xamarin-forms/app-fundamentals/navigation/index.md
+          - text: Shell
+            url: ~/xamarin-forms/app-fundamentals/shell/index.md
+          - text: Templates
+            url: ~/xamarin-forms/app-fundamentals/templates/index.md
+
+  - title: User interface
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Choose a Layout
+            url: ~/xamarin-forms/user-interface/layouts/choose-layout.md
+          - text: Controls Reference
+            url: ~/xamarin-forms/user-interface/controls/index.md
+          - text: Display pop-ups
+            url: ~/xamarin-forms/user-interface/pop-ups.md
+          - text: Fonts
+            url: ~/xamarin-forms/user-interface/text/fonts.md
+          - text: Grid
+            url: ~/xamarin-forms/user-interface/layouts/grid.md
+          - text: Material Visual
+            url: ~/xamarin-forms/user-interface/visual/material-visual.md
+          - text: StackLayout
+            url: ~/xamarin-forms/user-interface/layouts/stacklayout.md
+          - text: Styling
+            url: ~/xamarin-forms/user-interface/styles/xaml/index.md
+          - text: Theming
+            url: ~/xamarin-forms/user-interface/theming/index.md
+
+  - title: Platform features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Android platform-specifics
+            url: ~/xamarin-forms/platform/android/index.md
+          - text: Create platform-specifics
+            url: ~/xamarin-forms/platform/platform-specifics/index.md
+          - text: Device class
+            url: ~/xamarin-forms/platform/device.md
+          - text: iOS platform-specifics
+            url: ~/xamarin-forms/platform/ios/index.md
+          - text: Native forms
+            url: ~/xamarin-forms/platform/native-forms.md
+          - text: Native views
+            url: ~/xamarin-forms/platform/native-views/xaml.md
+          - text: Windows platform-specifics
+            url: ~/xamarin-forms/platform/windows/index.md
+
+  - title: Xamarin.Essentials
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: About
+            url: ~/essentials/index.md?context=xamarin/forms
+          - text: Get started
+            url: ~/essentials/get-started.md?context=xamarin/forms
+          - text: Platform & feature support
+            url: ~/essentials/platform-feature-support.md?context=xamarin/forms
+          - text: Troubleshooting
+            url: ~/essentials/troubleshooting.md?context=xamarin/forms
+          - text: Release notes
+            url: /xamarin/essentials/release-notes/
+
+  - title: Data & Azure cloud services
+    linkLists:
+      - linkListType: concept
+        links:
         - text: File Handling
           url: ~/xamarin-forms/data-cloud/data/files.md
-          itemType: concept
         - text: Local Databases
           url: ~/xamarin-forms/data-cloud/data/databases.md
-          itemType: concept
         - text: Consume a REST-based Web Service
           url: ~/xamarin-forms/data-cloud/web-services/rest.md
-          itemType: concept
         - text: Authentication with Azure Active Directory B2C
           url: ~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/data-cloud/index.yml
-        text: See more
-    - title: Deployment and Testing
-      links:
-        - text: Automate Testing with Visual Studio App Center
-          url: /appcenter/test-cloud/
-          itemType: concept
-        - text: Improve App Performance
-          url: ~/xamarin-forms/deploy-test/performance.md
-          itemType: concept
-        - text: Publish iOS Applications
-          url: ~/ios/deploy-test/app-distribution/index.md
-          itemType: concept
-        - text: Publish Android Applications
-          url: ~/android/deploy-test/publishing/index.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/deploy-test/index.yml
-        text: See more
-    - title: Advanced Concepts & Internals
-      links:
-        - text: Controls Class Hierarchy
-          url: ~/xamarin-forms/internals/class-hierarchy.md
-          itemType: concept
-        - text: Dependency Resolution
-          url: ~/xamarin-forms/internals/dependency-resolution.md
-          itemType: concept
-        - text: Fast Renderers
-          url: ~/xamarin-forms/internals/fast-renderers.md
-          itemType: concept
-        - text: Source Link
-          url: ~/xamarin-forms/internals/sourcelink.md
-          itemType: concept
-      footerLink:
-        url: ~/xamarin-forms/internals/index.md
-        text: See more
+        - text: Azure notification hubs
+          url: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
+        - text: Azure storage
+          url: ~/xamarin-forms/data-cloud/azure-services/azure-storage.md
+        - text: Azure Cosmos DB document database
+          url: ~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md
+        - text: Azure cognitive services
+          url: ~/xamarin-forms/data-cloud/azure-cognitive-services/index.md
 
-additionalContent:
-  sections:
-  - title: Books
-    items:
-      - title: Creating Mobile Apps
-        summary: This ebook is a guide for learning how to write Xamarin.Forms applications.
-        url: ~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md
-      - title: Enterprise Application Patterns
-        summary: This ebook is architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise applications.
-        url: ~/xamarin-forms/enterprise-application-patterns/index.md
-      - title: SkiaSharp Graphics in Xamarin.Forms
-        summary: This ebook is a guide for drawing 2D vector graphics, bitmaps, and text in Xamarin.Forms applications.
-        url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+  - title: Deployment & testing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Improve app performance
+            url: ~/xamarin-forms/deploy-test/performance.md
+          - text: Hot restart
+            url: ~/xamarin-forms/deploy-test/hot-restart.md
+          - text: Automate Testing with Visual Studio App Center
+            url: /appcenter/test-cloud/
+          - text: Publish iOS Applications
+            url: ~/ios/deploy-test/app-distribution/index.md
+          - text: Publish Android Applications
+            url: ~/android/deploy-test/publishing/index.md
 
-  footer: "[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Microsoft Q&A](/answers/products/dotnet) - [Developer Community](https://dotnet.microsoft.com/platform/community) - [Release notes](/xamarin/xamarin-forms/release-notes/)"
+  - title: Advanced concepts & internals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Controls class hierarchy
+            url: ~/xamarin-forms/internals/class-hierarchy.md
+          - text: Dependency resolution
+            url: ~/xamarin-forms/internals/dependency-resolution.md
+          - text: Experimental flags
+            url: ~/xamarin-forms/internals/experimental-flags.md
+          - text: Fast renderers
+            url: ~/xamarin-forms/internals/fast-renderers.md
+          - text: Source link
+            url: ~/xamarin-forms/internals/sourcelink.md

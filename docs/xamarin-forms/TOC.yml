@@ -1,4 +1,6 @@
+- name: Xamarin.Forms
   href: index.yml
+  expanded: true
   items:
     - name: Get Started
       href: ~/get-started/index.yml
@@ -33,7 +35,7 @@
           items:
             - name: File > New
               href: ~/get-started/quickstarts/app.md
-            - name: Multipage
+            - name: Navigation
               href: ~/get-started/quickstarts/navigation.md
             - name: Database
               href: ~/get-started/quickstarts/database.md
