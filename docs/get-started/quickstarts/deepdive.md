@@ -398,9 +398,6 @@ async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 
 This example retrieves the currently selected item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and navigates to the `NoteEntryPage`, with the value of `ID` property of the `Note` object being passed as a query parameter to the `NoteEntryPage.ItemId` property.
 
-> [!NOTE]
-> Query parameters are URL encoded prior to navigation.
-
 To receive the passed data, the `NoteEntryPage` class is decorated with the `QueryPropertyAttribute`
 
 ```csharp
@@ -425,6 +422,8 @@ Backwards navigation is performed by specifying ".." as the argument to the `GoT
 ```csharp
 await Shell.Current.GoToAsync("..");
 ```
+
+For more information about backwards navigation, see [Backwards navigation](~/xamarin-forms/app-fundamentals/shell/navigation.md#backwards-navigation).
 
 ## Data binding
 
