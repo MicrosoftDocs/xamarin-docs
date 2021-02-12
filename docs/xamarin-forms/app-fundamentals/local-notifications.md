@@ -6,7 +6,7 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 12/02/2021
+ms.date: 02/12/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -462,7 +462,7 @@ public class iOSNotificationReceiver : UNUserNotificationCenterDelegate
         ProcessNotification(notification);
         completionHandler(UNNotificationPresentationOptions.Alert);
     }
-    
+
     void ProcessNotification(UNNotification notification)
     {
         string title = notification.Request.Content.Title;
