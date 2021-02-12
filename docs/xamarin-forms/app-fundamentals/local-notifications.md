@@ -6,7 +6,7 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 12/03/2020
+ms.date: 12/02/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -172,10 +172,15 @@ namespace LocalNotifications.Droid
 
         public static AndroidNotificationManager Instance { get; private set; }
 
+        public AndroidNotificationManager() => Initialize();
+
         public void Initialize()
         {
-            CreateNotificationChannel();
-            Instance = this;
+            if (Instance == null)
+            {
+                CreateNotificationChannel();
+                Instance = this;
+            }
         }
 
         public void SendNotification(string title, string message, DateTime? notifyTime = null)
@@ -277,14 +282,15 @@ public class AlarmHandler : BroadcastReceiver
             string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
             string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
 
-            AndroidNotificationManager.Instance.Show(title, message);
+            AndroidNotificationManager manager = AndroidNotificationManager.Instance ?? new AndroidNotificationManager();
+            manager.Show(title, message);
         }
     }
 }
 ```
 
 > [!IMPORTANT]
-> By default, notifications scheduled using the `AlarmManager` class will not survive device restart. However, you can design your application to automatically reschedule notifications if the device is restarted. For more information, see [Start an alarm when the device restarts](https://developer.android.com/training/scheduling/alarms#boot) in [Schedule repeating alarms](https://developer.android.com/training/scheduling/alarms) on developer.android.com. For information about background processing on Android, see [Guide to background processing](https://developer.android.com/guide/background) on developer.android.com.
+> By default, notifications scheduled using the `AlarmManager` class will not survive device restart. However, you can design your application to automatically reschedule notifications if the device is restarted. For more information, [Start an alarm when the device restarts](https://developer.android.com/training/scheduling/alarms#boot) in [Schedule repeating alarms](https://developer.android.com/training/scheduling/alarms) on developer.android.com, and the [sample](/samples/xamarin/xamarin-forms-samples/local-notifications). For information about background processing on Android, see [Guide to background processing](https://developer.android.com/guide/background) on developer.android.com.
 
 For more information about broadcast receivers, see [Broadcast Receivers in Xamarin.Android](~/android/app-fundamentals/broadcast-receivers.md).
 
@@ -453,18 +459,23 @@ public class iOSNotificationReceiver : UNUserNotificationCenterDelegate
 {
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
     {
-        DependencyService.Get<INotificationManager>().ReceiveNotification(notification.Request.Content.Title, notification.Request.Content.Body);
-
-        // alerts are always shown for demonstration but this can be set to "None"
-        // to avoid showing alerts if the app is in the foreground
+        ProcessNotification(notification);
         completionHandler(UNNotificationPresentationOptions.Alert);
     }
+    
+    void ProcessNotification(UNNotification notification)
+    {
+        string title = notification.Request.Content.Title;
+        string message = notification.Request.Content.Body;
+
+        DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
+    }    
 }
 ```
 
 This class uses the `DependencyService` to get an instance of the `iOSNotificationManager` class and provides incoming notification data to the `ReceiveNotification` method.
 
-The `AppDelegate` class must specify the custom delegate during application startup. The `AppDelegate` class must specify an `iOSNotificationReceiver` object as the `UNUserNotificationCenter` delegate during application startup. This occurs in the `FinishedLaunching` method:
+The `AppDelegate` class must specify an `iOSNotificationReceiver` object as the `UNUserNotificationCenter` delegate during application startup. This occurs in the `FinishedLaunching` method:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
