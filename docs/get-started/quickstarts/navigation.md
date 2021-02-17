@@ -82,7 +82,7 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
     ![Add Xamarin.Forms ContentPage](navigation-images/vs/add-note-entry-page.png)
 
-    This will add a new page named **NoteEntryPage** to the root folder of the project. This page will be used for note entry.
+    This will add a new page named **NoteEntryPage** to the **Views** folder of the project. This page will be used for note entry.
 
 8. In **NoteEntryPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -261,7 +261,6 @@ You should successfully complete the [previous quickstart](app.md) before attemp
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Newtonsoft.Json;
     using Notes.Models;
     using Xamarin.Forms;
 
@@ -445,7 +444,7 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
     ![Add Xamarin.Forms ContentPage](navigation-images/vsmac/add-note-entry-page.png)
 
-    This will add a new page named **NoteEntryPage** to the root folder of the project. This page will be used for note entry.
+    This will add a new page named **NoteEntryPage** to the **Views** folder of the project. This page will be used for note entry.
 
 8. In **NoteEntryPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -624,7 +623,6 @@ You should successfully complete the [previous quickstart](app.md) before attemp
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Newtonsoft.Json;
     using Notes.Models;
     using Xamarin.Forms;
 
