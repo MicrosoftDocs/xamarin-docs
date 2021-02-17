@@ -45,21 +45,21 @@ Demo app that empowers salespeople to track their sales performance, manage lead
 
 :::row:::
     :::column:::
-[![Acquaint](images/acquaint.jpg)](https://github.com/xamarinhq/app-acquaint/)
+[![Acquaint screen](images/acquaint.jpg)](https://github.com/xamarinhq/app-acquaint/)
 
 ### [Acquaint](https://github.com/xamarinhq/app-acquaint/)
 
 Contact list app with a detail & edit screen. Source code is available in both Xamarin.Forms and Xamarin native implementations.
     :::column-end:::
     :::column:::
-[![SmartHotel360](images/smarthotel360.png)](https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps)
+[![SmartHotel360 demo](images/smarthotel360.png)](https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps)
 
 ### [SmartHotel360](https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps)
 
 Connect 2017 demo building an app suite including Xamarin & Azure.
     :::column-end:::
     :::column:::
-[![BikeSharing360](images/bikesharing360.png)](https://github.com/Microsoft/BikeSharing360_MobileApps)
+[![BikeSharing360 demo](images/bikesharing360.png)](https://github.com/Microsoft/BikeSharing360_MobileApps)
 
 ### [BikeSharing360](https://github.com/Microsoft/BikeSharing360_MobileApps)
 
@@ -68,7 +68,7 @@ Connect 2016 demo building an app suite including Xamarin & Azure.
 :::row-end:::
 :::row:::
     :::column:::
-[![eShop](images/eshop.png)](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile)
+[![eShop demo](images/eshop.png)](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile)
 
 ### [eShop](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile)
 

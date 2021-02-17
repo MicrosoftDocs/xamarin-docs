@@ -41,7 +41,7 @@ iOS 11 Vision framework and CoreML, using a model trained with Azure's Custom Vi
 
 :::row:::
     :::column:::
-[![Contacts](images/contacts.png)](/samples/xamarin/ios-samples/contacts)
+[![Contacts U I](images/contacts.png)](/samples/xamarin/ios-samples/contacts)
 
 ### [Contacts](/samples/xamarin/ios-samples/contacts)
 

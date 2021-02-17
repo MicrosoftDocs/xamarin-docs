@@ -785,7 +785,7 @@ public class PosterizePage : ContentPage
 
 The code in the constructor accesses each pixel, performs a bitwise AND operation with the value 0xE0E0E0FF, and then stores the result back in the bitmap. The values 0xE0E0E0FF keeps the high 3 bits of each color component and sets the lower 5 bits to 0. Rather than 2<sup>24</sup> or 16,777,216 colors, the bitmap is reduced to 2<sup>9</sup> or 512 colors:
 
-[![Posterize](pixel-bits-images/Posterize.png "Posterize")](pixel-bits-images/Posterize-Large.png#lightbox)
+[![Screenshot shows a posterize image of a toy monkey on two mobile devices and a desktop window.](pixel-bits-images/Posterize.png "Posterize")](pixel-bits-images/Posterize-Large.png#lightbox)
 
 ## Related links
 

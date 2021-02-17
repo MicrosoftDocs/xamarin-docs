@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Mac Platform Setup
 
-![Preview](~/media/shared/preview.png)
+:::image type="icon" source="~/media/shared/preview.png" border="false":::
 
 Before you start, create (or use an existing) Xamarin.Forms project. You can only add Mac apps using Visual Studio for Mac.
 

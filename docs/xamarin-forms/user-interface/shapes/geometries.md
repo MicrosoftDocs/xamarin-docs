@@ -264,7 +264,7 @@ The following example shows how to create and render a `BezierSegment` in a `Pat
 
 In this example, a cubic Bezier curve is drawn from (10,10) to (300,10). The curve has two control points at (100,0) and (200,200):
 
-![BezierSegment](geometry-images/beziersegment.png "BezierSegment")
+![Line graphic shows a Bezier curve.](geometry-images/beziersegment.png "BezierSegment")
 
 ### Create a LineSegment
 
@@ -303,7 +303,7 @@ The following example shows how to create and render `LineSegment` objects in a 
 
 In this example, a line segment is drawn from (10,100) to (100,100), and from (100,100) to (100,50). In addition, the `PathFigure` is closed because its `IsClosed` property is set to `true`. This results in a triangle being drawn:
 
-![LineSegments](geometry-images/linesegments.png "LineSegments")
+![Line graphic shows a triangle.](geometry-images/linesegments.png "LineSegments")
 
 ### Create a PolyBezierSegment
 
@@ -338,7 +338,7 @@ The following example shows how to create and render a `PolyBezierSegment` in a 
 
 In this example, the `PolyBezierSegment` specifies two cubic Bezier curves. The first curve is from (10,10) to (150,100) with a control point of (0,0), and another control point of (100,0). The second curve is from (150,100) to (300,10) with a control point of (150,0) and another control point of (200,0):
 
-![PolyBezierSegment](geometry-images/polybeziersegment.png "PolyBezierSegment")
+![Line graphic shows two connected Bezier curves.](geometry-images/polybeziersegment.png "PolyBezierSegment")
 
 ### Create a PolyLineSegment
 
@@ -369,7 +369,7 @@ The following example shows how to create and render a `PolyLineSegment` in a `P
 
 In this example, the `PolyLineSegment` specifies two lines. The first line is from (10,10) to (50,10), and the second line is from (50,10) to (50,50):
 
-![PolyLineSegment](geometry-images/polylinesegment.png "PolyLineSegment")
+![Line graphic shows two lines at a right angle.](geometry-images/polylinesegment.png "PolyLineSegment")
 
 ### Create a PolyQuadraticBezierSegment
 
@@ -404,7 +404,7 @@ The following example shows to create and render a `PolyQuadraticBezierSegment` 
 
 In this example, the `PolyQuadraticBezierSegment` specifies two Bezier curves. The first curve is from (10,10) to (150,50) with a control point at (100,100). The second curve is from (100,100) to (15,200) with a control point at (0,100):
 
-![PolyQuadraticBezierSegment](geometry-images/polyquadraticbeziersegment.png "PolyQuadraticBezierSegment")
+![Line graphic shows two connected overlapping Bezier curves.](geometry-images/polyquadraticbeziersegment.png "PolyQuadraticBezierSegment")
 
 ### Create a QuadraticBezierSegment
 
@@ -445,7 +445,7 @@ The following example shows how to create and render a `QuadraticBezierSegment` 
 
 In this example, a quadratic Bezier curve is drawn from (10,10) to (300,10). The curve has a control point at (200,200):
 
-![QuadraticBezierSegment](geometry-images/quadraticbeziersegment.png "QuadraticBezierSegment")
+![Line graphic shows a quadratic Bezier curve.](geometry-images/quadraticbeziersegment.png "QuadraticBezierSegment")
 
 ### Create complex geometries
 
@@ -576,7 +576,7 @@ To draw a composite geometry, set the required `Geometry` objects as the childre
 
 In this example, four `EllipseGeometry` objects with identical x-radius and y-radius coordinates, but with different center coordinates, are combined. This creates four overlapping circles, whose interiors are filled orange due to the default `EvenOdd` fill rule:
 
-![GeometryGroup](geometry-images/geometrygroup.png "GeometryGroup")
+![Line graphic  shows four overlapping circles with regions filled.](geometry-images/geometrygroup.png "GeometryGroup")
 
 ### RoundRectangleGeometry
 

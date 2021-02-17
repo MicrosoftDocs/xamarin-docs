@@ -96,7 +96,7 @@ These features are recommend for every app:
 
 - **Optimize for foldables:** Deliver seamless, edge-to-edge experiences on today’s innovative devices by [optimizing for foldables](https://developer.android.com/guide/topics/ui/foldables).
 
-![Foldable](~/android/platform/android-10-images/foldable.png)
+![Figure shows a foldable mobile device.](~/android/platform/android-10-images/foldable.png)
 
 These features are recommended if relevant for your app:
 
