@@ -33,12 +33,6 @@ Using the new APIs provided by iOS 8, the application can take control of the fo
 
 iOS 8 provides extensions and enhancements to existing iOS APIs to provide this fine-grained control over the image capture process.
 
-## Bracketed Capture
-
-The Bracketed Capture is based on the settings from the Manual Camera Controls presented above and allows the application to capture a moment in time, in a variety of different ways.
-
-Simply stated, Bracketed Capture is a burst of still images taken with a variety of settings from picture to picture.
-
 ## Requirements
 
 The following are required to complete the steps presented in this article:

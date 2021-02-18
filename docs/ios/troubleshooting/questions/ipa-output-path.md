@@ -39,7 +39,7 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 
 2. Set the DestinationFolder to the desired output folder. As usual you may use MSBuild properties (like $(OutputPath)) within this argument if you wish.
 
-## Notes
+### Notes
 
 - The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. It behaves as described in the [Overriding Predefined Targets](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
@@ -74,7 +74,7 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 
 2. Set the `DestinationFolder` to the desired output folder. As usual you may use MSBuild properties (like `$(OutputPath)`) within this argument if you wish.
 
-## Notes
+### Notes
 
 - The `CreateIpaDependsOn` property is defined in the `Xamarin.iOS.Common.targets` file that is part of Xamarin.iOS. t behaves as described in the [Overriding Predefined Targets](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) section of the article [How to: Extend the Visual Studio Build Process](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
