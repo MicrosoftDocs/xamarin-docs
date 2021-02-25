@@ -103,7 +103,6 @@ await Share.RequestAsync(new ShareMultipleFilesRequest
 # [iOS](#tab/ios)
 
 - `Subject` not used.
-- `Title` not used.
 
 # [UWP](#tab/uwp)
 
