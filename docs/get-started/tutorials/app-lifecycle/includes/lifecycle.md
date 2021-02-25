@@ -2,7 +2,7 @@
 
 To complete this tutorial you should have Visual Studio 2019 (latest release), with the **Mobile development with .NET** workload installed. In addition, you will require a paired Mac to build the tutorial application on iOS. For information about installing the Xamarin platform, see [Installing Xamarin](~/get-started/installation/index.md). For information about connecting Visual Studio 2019 to a Mac build host, see [Pair to Mac for Xamarin.iOS development](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Launch Visual Studio, and create a new blank Xamarin.Forms app named **AppLifecycleTutorial**. Ensure that the app uses .NET Standard as the shared code mechanism.
+1. Launch Visual Studio, and create a new blank Xamarin.Forms app named **AppLifecycleTutorial**.
 
     > [!IMPORTANT]
     > The C# and XAML snippets in this tutorial requires that the solution is named **AppLifecycleTutorial**. Using a different name will result in build errors when you copy code from this tutorial into the solution.
@@ -64,13 +64,15 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     > [!NOTE]
     > These code blocks show example output when running the application on Android.
 
+    In Visual Studio, stop the application.
+
     For more information about the Xamarin.Forms app lifecycle, see [Xamarin.Forms App Lifecycle](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
 
 # [Visual Studio for Mac](#tab/vsmac)
 
 To complete this tutorial you should have Visual Studio for Mac (latest release), with iOS and Android platform support installed. In addition, you will also require Xcode (latest release). For more information about installing the Xamarin platform, see [Installing Xamarin](~/get-started/installation/index.md).
 
-1. Launch Visual Studio for Mac, and create a new blank Xamarin.Forms app named **AppLifecycleTutorial**. Ensure that the app uses .NET Standard as the shared code mechanism.
+1. Launch Visual Studio for Mac, and create a new blank Xamarin.Forms app named **AppLifecycleTutorial**.
 
     > [!IMPORTANT]
     > The C# and XAML snippets in this tutorial requires that the solution is named **AppLifecycleTutorial**. Using a different name will result in build errors when you copy code from this tutorial into the solution.
@@ -135,5 +137,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
     > [!NOTE]
     > These code blocks show example output when running the application on iOS.
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about the Xamarin.Forms app lifecycle, see [Xamarin.Forms App Lifecycle](~/xamarin-forms/app-fundamentals/app-lifecycle.md).

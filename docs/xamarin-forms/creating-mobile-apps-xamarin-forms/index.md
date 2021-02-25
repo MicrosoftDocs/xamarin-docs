@@ -121,7 +121,7 @@ The chapter summaries include information concerning changes in Xamarin.Forms si
 
 ### Samples
 
-In the [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms-book-samples) GitHub repository, the **original-code-from-book** branch contains program samples consistent with the book. The **master** branch contains projects that have been upgraded to remove deprecated APIs and reflect enhanced APIs. In addition, the Android projects in the **master** branch have been upgraded for Android [Material Design via AppCompat](~/xamarin-forms/platform/android/index.md) and will generally display black text on a white background.
+In the [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms-book-samples) GitHub repository, the **original-code-from-book** branch contains program samples consistent with the book. The main branch contains projects that have been upgraded to remove deprecated APIs and reflect enhanced APIs. In addition, the Android projects in the main branch have been upgraded for Android [Material Design via AppCompat](~/xamarin-forms/platform/android/index.md) and will generally display black text on a white background.
 
 ## Related Links
 

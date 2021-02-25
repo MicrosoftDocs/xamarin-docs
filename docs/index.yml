@@ -71,10 +71,10 @@ conceptualContent:
     - title: Build your first app
       links:
         - text: File > New
-          url: ~/get-started/quickstarts/single-page.md
+          url: ~/get-started/quickstarts/app.md
           itemType: get-started
         - text: Add navigation
-          url: ~/get-started/quickstarts/multi-page.md
+          url: ~/get-started/quickstarts/navigation.md
           itemType: get-started
         - text: Add a database
           url: ~/get-started/quickstarts/database.md

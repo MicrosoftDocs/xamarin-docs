@@ -54,11 +54,11 @@ Do the following:
 7. Click the **Done** button to return to the list of registered App IDs.
 8. Select the newly created App ID from the list and click the **Edit** button:
 
-    ![Select App ID from list](app-groups-capabilities-images/image54.png)
+    ![Select App ID from list and Edit.](app-groups-capabilities-images/image54.png)
 
 9. Under Service **App Group**, click the **Edit** button:
 
-    ![Select App ID from list](app-groups-capabilities-images/image55.png)
+    ![Select App ID and Edit.](app-groups-capabilities-images/image55.png)
 
 10. Select the App Group that was created above and click the **Continue** button:
 

@@ -51,7 +51,7 @@ This button is specified as a custom control with the following XAML view hierar
 </ContentView>
 ```
 
-The resulting nested view hierarchy can be examined with [Xamarin Inspector](~/tools/inspector/index.md). On Android, the nested view hierarchy contains 17 views:
+The resulting nested view hierarchy can be examined with the Live Visual Tree. On Android, the nested view hierarchy contains 17 views:
 
 ![View Hierarchy for Facebook Button](layout-compression-images/no-compression.png)
 

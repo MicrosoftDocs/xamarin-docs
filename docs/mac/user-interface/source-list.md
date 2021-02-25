@@ -527,11 +527,11 @@ This creates a custom, reusable subclass of `NSOutlineView` (`SourceListView`) t
 
 Now, let's design our Source List in Interface Builder. Double-click the `Main.storyboard` file to open it for editing in Interface Builder and drag a Split View from the **Library Inspector**, add it to the View Controller and set it to resize with the View in the **Constraints Editor**:
 
-[![Editing constraints](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
+[![Editing constraints in the Interface Builder.](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
 
 Next, drag a Source List from the **Library Inspector**, add it to the left side of the Split View and set it to resize with the View in the **Constraints Editor**:
 
-[![Editing constraints](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
+[![Editing constraints by dragging a Source List to the Split View.](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
 
 Next, switch to the **Identity View**, select the Source List, and change it's **Class** to `SourceListView`:
 

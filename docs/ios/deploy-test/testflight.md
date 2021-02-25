@@ -32,9 +32,14 @@ All testers must test the app on, at least, an iOS 8 device. However, best pract
 
 ## Provisioning
 
-To test your builds with TestFlight, you will need to create an *App Store distribution profile* with the new beta entitlement. This entitlement allows beta testing through TestFlight, and any **new** App Store distribution profile automatically contains this entitlement. You can follow the step-by-step instructions in the [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) guide to generate a new profile.
+To test your builds with TestFlight, you will need to create an **App Store distribution profile** with the new beta entitlement. This entitlement allows beta testing through TestFlight, and any **new** App Store distribution profile automatically contains this entitlement. You can follow the step-by-step instructions in the [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) guide to generate a new profile.
 
 You can confirm that your distribution profile contains the beta entitlement when [validating your build in Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), as illustrated below:
+
+1. Open XCode on the Mac build host after archiving the app
+2. Select the **Window > Organizer** menu
+3. Select **Archives** on the left
+4. Select the Archive you want to validate and click the **Validate** button
 
 [![Submitting the App to Apple](testflight-images/validate-build.png)](testflight-images/validate-build.png#lightbox)
 

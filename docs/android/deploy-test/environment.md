@@ -106,7 +106,7 @@ Contains a `|`-separated list of environment variables.
 
 ### `debug.mono.gc`
 
-The value of the `debug.mono.debug` system property is an integer.
+The value of the `debug.mono.gc` system property is an integer.
 If `1`, then GC information should be logged.
 
 This is equivalent to having the `debug.mono.log` system property contain `gc`.

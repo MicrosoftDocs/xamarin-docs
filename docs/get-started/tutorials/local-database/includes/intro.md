@@ -4,7 +4,7 @@ Before attempting this tutorial, you should have successfully completed the:
 - [StackLayout](~/get-started/tutorials/stacklayout/index.yml) tutorial.
 - [Button](~/get-started/tutorials/button/index.yml) tutorial.
 - [Entry](~/get-started/tutorials/entry/index.yml) tutorial.
-- [ListView](~/get-started/tutorials/listview/index.yml) tutorial.
+- [CollectionView](~/get-started/tutorials/collectionview/index.yml) tutorial.
 
 In this tutorial, you learn how to:
 

@@ -31,7 +31,9 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
     [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task")](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
 
-    Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio **Output** window.
+    Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio **Output** window. If this window is not visible, it can be made visible by selecting the **View > Output** menu option.
+
+    In Visual Studio, stop the application.
 
     For more information about displaying action sheets, see [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.
 
@@ -65,6 +67,8 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
     [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task")](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
 
-    Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio for Mac **Application Output** window.
+    Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio for Mac **Application Output** window. If this window is not visible, it can be made visible by selecting the **View > Other Windows > Application Output** menu option.
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about displaying action sheets, see [Guide users through tasks](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) in the [Display Pop-ups](~/xamarin-forms/user-interface/pop-ups.md) guide.

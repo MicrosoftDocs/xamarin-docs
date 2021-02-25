@@ -49,7 +49,3 @@ A Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView) is a view that displays 
 ## [Implementing a View](view.md)
 
 Xamarin.Forms custom user interfaces controls should derive from the [`View`](xref:Xamarin.Forms.View) class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera.
-
-## [Implementing a video player](video-player/index.md)
-
-This article shows how to write renderers to implement a custom `VideoPlayer` control that can play videos from the web, videos embedded as application resources, or videos stored in the video library on the user's device. Several techniques are demonstrated, including implementing methods and read-only bindable properties.

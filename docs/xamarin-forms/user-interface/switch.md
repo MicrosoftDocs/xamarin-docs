@@ -61,7 +61,7 @@ Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 
 The following screenshot shows the `Switch` in its **on** and **off** toggle states, with the `OnColor` and `ThumbColor` properties set:
 
-![Screenshot of Switches in on and off states, on iOS and Android](switch-images/switch-states-colors.png "Switches on iOS and Android")
+![Screenshot of Switches in on and off states, on iOS and Android with the colors changed.](switch-images/switch-states-colors.png "Switches on iOS and Android")
 
 ## Respond to a Switch state change
 

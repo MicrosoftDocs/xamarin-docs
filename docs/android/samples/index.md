@@ -41,7 +41,7 @@ This sample demonstrates how to use ViewPager and PagerTabStrip together to impl
 
 :::row:::
     :::column:::
-[![Fragments](images/fragments.png)](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
+[![Fragments Walkthrough](images/fragments.png)](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
 ### [Fragments](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
@@ -65,14 +65,14 @@ Use this sample to learn how to use the new CardView and RecyclerView widgets in
 
 :::row:::
     :::column:::
-[![Toolbar](images/toolbar.png)](/samples/xamarin/monodroid-samples/android50-toolbar/)
+[![Toolbar sample](images/toolbar.png)](/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 ### [Toolbar](/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 Android sample replacing the ActionBar with the new ToolBar in Android 5.0 Lollipop.
     :::column-end:::
     :::column:::
-[![WatchFace](images/watchface.png)](/samples/xamarin/monodroid-samples/wear-watchface/)
+[![Android Wear WatchFace](images/watchface.png)](/samples/xamarin/monodroid-samples/wear-watchface/)
 
 ### [WatchFace](/samples/xamarin/monodroid-samples/wear-watchface/)
 

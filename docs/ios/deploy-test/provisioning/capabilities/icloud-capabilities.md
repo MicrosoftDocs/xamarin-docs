@@ -44,11 +44,11 @@ The steps below will guide you through these steps:
 
 3. Enter a **Description** and a unique **Identifier** for the iCloud container: 
     
-    ![iCloud container registration screen](icloud-capabilities-images/image24.png)
+    ![Screenshot shows Registering an i Cloud container.](icloud-capabilities-images/image24.png)
 
 4. Press **Continue**, ensure that the information is correct, and press **Register** to create the iCloud Container:  
     
-    ![iCloud container registration screen](icloud-capabilities-images/image25.png)
+    ![Screenshot shows Confirm your i Cloud container.](icloud-capabilities-images/image25.png)
 
 To create a new App ID and add a container to it, do the following:
 

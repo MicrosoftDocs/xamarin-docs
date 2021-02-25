@@ -196,11 +196,11 @@ Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) 
 
 | Member | iOS | Android | UWP |
 | --- | --- | --- | --- |
-| `Default` | 16 | 14 | 14 |
-| `Micro` | 11 | 10 | 15.667 |
-| `Small` | 13 | 14 | 18.667 |
-| `Medium` | 16 | 17 | 22.667 |
-| `Large` | 20 | 22 | 32 |
+| `Default` | 17 | 14 | 14 |
+| `Micro` | 12 | 10 | 15.667 |
+| `Small` | 14 | 14 | 18.667 |
+| `Medium` | 17 | 17 | 22.667 |
+| `Large` | 22 | 22 | 32 |
 | `Body` | 17 | 16 | 14 |
 | `Header` | 17 | 96 | 46 |
 | `Title` | 28 | 24 | 24 |

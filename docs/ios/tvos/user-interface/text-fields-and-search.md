@@ -118,7 +118,7 @@ Do the following:
     [![A Text Field](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
 1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-    [![The Widget tab](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
+    [![The Widget tab where you can enter a Name for each text field.](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
 1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**:
 
     [![The Text Field section](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
@@ -153,11 +153,11 @@ Do the following:
     [![A Collection View Controller](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
 1. In the **Widget** tab of the **Properties Pad**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
-    [![The Widget tab](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
+    [![The Widget tab in Visual Studio for Mac where you can specify Class and Storyboard I D.](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
 1. Select the **Cell Prototype** on the design surface.
 1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**:
 
-    [![The Widget tab](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
+    [![The Widget tab in Visual Studio for Mac where you can specify Class and Identifier.](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
 1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
     [![Layout the design of the Cell Prototype](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
@@ -171,11 +171,11 @@ Do the following:
     [![A Collection View Controller](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
-    [![The Widget tab](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
+    [![The Widget tab where you can specify Class and Storyboard I D.](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Select the **Cell Prototype** on the design surface.
 1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**:
 
-    [![The Widget tab](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
+    [![The Widget tab where you can specify Class and Identifier.](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
 1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
     [![Layout the design of the Cell Prototype](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)

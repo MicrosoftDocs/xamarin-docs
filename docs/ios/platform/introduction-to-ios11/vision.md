@@ -23,7 +23,7 @@ including:
 - Horizon Detection
 - Object Detection & Tracking
 
-![Photograph with three rectangles detected](vision-images/found-rectangles-tiny.png) ![Photograph with two faces detected](vision-images/xamarin-home-faces-tiny.png)
+![Photograph with three rectangles detected.](vision-images/found-rectangles-tiny.png) ![Photograph with two faces detected.](vision-images/xamarin-home-faces-tiny.png)
 
 Rectangle Detection and Face Detection are discussed in more detail below.
 
@@ -96,7 +96,7 @@ The `OverlayRectangles` method in the **VisionRectangles** sample has three func
 View the [sample's source](/samples/xamarin/ios-samples/ios11-visionrectangles)
 for the exact CoreGraphics method.
 
-![Photograph with three rectangles detected](vision-images/found-rectangles-phone-sml.png)
+![Photograph with three rectangles detected on a mobile device.](vision-images/found-rectangles-phone-sml.png)
 
 ### 5. Further processing
 
@@ -175,7 +175,7 @@ The `OverlayRectangles` method in the **VisionFaces** sample has three functions
 
 View the [sample's source](/samples/xamarin/ios-samples/ios11-visionfaces) for the exact CoreGraphics method.
 
-![Photograph with two faces detected](vision-images/found-faces-phone-sml.png)
+![Photograph with two faces detected on a mobile device.](vision-images/found-faces-phone-sml.png)
 
 ### 5. Further processing
 

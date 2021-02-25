@@ -59,7 +59,7 @@ Whenever you create a new Xamarin.Mac project, you automatically get a standard,
 
 Double-click the **Main.storyboard** file to open it for editing in Xcode's Interface Builder and you'll be presented with the menu editor interface:
 
-[![Editing the UI in Xcode](menu-images/defaultbar01.png "Editing the UI in Xcode")](menu-images/defaultbar01-large.png#lightbox)
+[![Editing the UI in Xcode, showing the Main dot storyboard.](menu-images/defaultbar01.png "Editing the UI in Xcode")](menu-images/defaultbar01-large.png#lightbox)
 
 From here we can click on items such as the **Open** menu item in the **File** menu and edit or adjust its properties in the **Attributes Inspector**:
 
@@ -460,7 +460,7 @@ In this section we will look at removing menu items that we don't need, reorgani
 
 Double-click the **Main.storyboard** file in the **Solution Pad** to open it for editing:
 
-[![Editing the UI in Xcode](menu-images/maint01.png "Editing the UI in Xcode")](menu-images/maint01-large.png#lightbox)
+[![Double-clicking the storyboard file to edit the UI in Xcode.](menu-images/maint01.png "Editing the UI in Xcode")](menu-images/maint01-large.png#lightbox)
 
 For our specific Xamarin.Mac application we are not going to be using the default **View** menu so we are going to remove it. In the **Interface Hierarchy** select the **View** menu item that is a part of the main menu bar:
 
@@ -524,7 +524,7 @@ Let's do the following:
     [![Selecting the action type](menu-images/maint17.png "Selecting the action type")](menu-images/maint17-large.png#lightbox)
 3. Enter a **Name** of "phraseAddress" and press the **Connect** button to create the new action: 
 
-    [![Configuring the action](menu-images/maint18.png "Configuring the action")](menu-images/maint18-large.png#lightbox)
+    [![Configuring the action by entering a name.](menu-images/maint18.png "Configuring the action")](menu-images/maint18-large.png#lightbox)
 4. Repeat the above steps for the **Date**, **Greeting**, and **Signature** menu items: 
 
     [![The completed actions](menu-images/maint19.png "The completed actions")](menu-images/maint19-large.png#lightbox)
@@ -890,7 +890,7 @@ Contextual menus appear when the user right-clicks or control-clicks an item in 
 
 Let's edit our **Main.storyboard** file in Xcode and add a **Window** window to our design, set its **Class** to "NSPanel" in the **Identity Inspector**, add a new **Assistant** item to the **Window** menu, and attach it to the new window using a **Show Segue**:
 
-[![Setting the segue type](menu-images/context01.png "Setting the segue type")](menu-images/context01-large.png#lightbox)
+[![Setting the segue type in the Main dot storyboard file.](menu-images/context01.png "Setting the segue type")](menu-images/context01-large.png#lightbox)
 
 Let's do the following:
 
@@ -905,7 +905,7 @@ Let's do the following:
     [![Dragging to create a segue](menu-images/context04.png "Dragging to create a segue")](menu-images/context04-large.png#lightbox)
 4. From the popup dialog, select **Menu**: 
 
-    ![Setting the segue type](menu-images/context05.png "Setting the segue type")
+    ![Setting the segue type by selecting menu from Outlets in the Label context menu.](menu-images/context05.png "Setting the segue type")
 5. From the **Identity Inspector**, set the View Controller's class to "PanelViewController": 
 
     [![Setting the segue class](menu-images/context10.png "Setting the segue class")](menu-images/context10-large.png#lightbox)
@@ -913,10 +913,10 @@ Let's do the following:
 7. Switch to the **Assistant Editor** and select the **PanelViewController.h** file.
 8. Create an action for the **Document** menu item called `propertyDocument`: 
 
-    [![Configuring the action](menu-images/context06.png "Configuring the action")](menu-images/context06-large.png#lightbox)
+    [![Configuring the action named propertyDocument.](menu-images/context06.png "Configuring the action")](menu-images/context06-large.png#lightbox)
 9. Repeat creating actions for the remaining menu items: 
 
-    [![The required actions](menu-images/context07.png "The required actions")](menu-images/context07-large.png#lightbox)
+    [![Repeating actions for the remaining menu items.](menu-images/context07.png "The required actions")](menu-images/context07-large.png#lightbox)
 10. Finally create an outlet for the **Property Label** called `propertyLabel`: 
 
     [![Configuring the outlet](menu-images/context08.png "Configuring the outlet")](menu-images/context08-large.png#lightbox)
@@ -1011,10 +1011,10 @@ Let's create a custom dock menu for our application by doing the following:
     [![Laying out the UI](menu-images/dock03.png "Laying out the UI")](menu-images/dock03-large.png#lightbox)
 3. Next, let's connect our new menu items to our existing actions that we created for our custom menu in the [Adding, Editing and Deleting Menus](#Adding,_Editing_and_Deleting_Menus) section above. Switch to the **Connection Inspector** and select the **First Responder** in the **Interface Hierarchy**. Scroll down and find the `phraseAddress:` action. Drag a line from the circle on that action to the **Address** menu item:
 
-    [![Dragging to wire up an action](menu-images/dock04.png "Dragging to wire up an action")](menu-images/dock04-large.png#lightbox)
+    [![Dragging a line to the Address menu item.](menu-images/dock04.png "Dragging to wire up an action")](menu-images/dock04-large.png#lightbox)
 4. Repeat for all of the other menu items attaching them to their corresponding actions: 
 
-    [![The required actions](menu-images/dock05.png "The required actions")](menu-images/dock05-large.png#lightbox)
+    [![Repeating for other menu items attaching them to their corresponding actions.](menu-images/dock05.png "The required actions")](menu-images/dock05-large.png#lightbox)
 5. Next, select the **Application** in the **Interface Hierarchy**. In the **Connection Inspector**, drag a line from the circle on the `dockMenu` outlet to the menu we just created:
 
     [![Dragging the wire up the outlet](menu-images/dock06.png "Dragging the wire up the outlet")](menu-images/dock06-large.png#lightbox)

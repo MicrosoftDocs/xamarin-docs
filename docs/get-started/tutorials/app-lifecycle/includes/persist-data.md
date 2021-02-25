@@ -103,9 +103,11 @@ In this exercise, you'll modify the application to persist the text from an [`En
 
     Enter some text into the [`Entry`](xref:Xamarin.Forms.Entry) and hit the return key. Then, background the application by tapping the Home button to invoke the `OnSleep` method.
 
-    Finally, launch the application again from Visual Studio, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
+    In Visual Studio, stop the application and relaunch it again, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
 
     [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes")](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
+
+    In Visual Studio, stop the application.
 
     For more information about persisting data to the properties dictionary, see [Properties Dictionary](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) in the [Xamarin.Forms App Class](~/xamarin-forms/app-fundamentals/application-class.md) guide.
 
@@ -207,8 +209,10 @@ In this exercise, you'll modify the application to persist the text from an [`En
 
     Enter some text into the [`Entry`](xref:Xamarin.Forms.Entry) and hit the return key. Then, background the application by tapping the Home button to invoke the `OnSleep` method.
 
-    Finally, launch the application again from Visual Studio for Mac, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
+    In Visual Studio for Mac, stop the application and relaunch it again, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
 
     [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes")](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about persisting data to the properties dictionary, see [Properties Dictionary](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) in the [Xamarin.Forms App Class](~/xamarin-forms/app-fundamentals/application-class.md) guide.

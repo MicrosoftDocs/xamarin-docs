@@ -141,7 +141,7 @@ Follow these steps along with the video above:
 
 7. Debug the app on Android:
 
-    ![Android app](images/win/07-sml.png)
+    ![Screenshot shows the Android Emulator.](images/win/07-sml.png)
 
     > [!TIP]
     > It is possible to build and debug the iOS app from Visual Studio with a
@@ -169,7 +169,7 @@ Follow these steps along with the video above:
 
 3. Restore NuGet packages, by right-clicking on the solution:
 
-    ![Android app](images/03-sml.png)
+    ![Screenshot shows Restore NuGet Packages selected from the context menu for the solution.](images/03-sml.png)
 
 4. Launch Android emulator by pressing the debug button (or **Run > Start Debugging**).
 
@@ -192,7 +192,7 @@ Follow these steps along with the video above:
 
 7. Debug the app on Android:
 
-    ![Android app](images/07-sml.png)
+    ![Screenshot shows the Android Emulator.](images/07-sml.png)
 
 8. Right-click to set iOS to the **Startup Project**:
 
@@ -208,6 +208,6 @@ You can download the completed code from the [samples gallery](/samples/xamarin/
 
 ## Next Steps
 
-- [Single Page Quickstart](~/get-started/quickstarts/single-page.md) &ndash; Build a more functional app.
+- [Single Page Quickstart](~/get-started/quickstarts/app.md) &ndash; Build a more functional app.
 - [Xamarin.Forms Samples](~/xamarin-forms/samples/index.md) &ndash; Download and run code examples and sample apps.
 - [Creating Mobile Apps ebook](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; In-depth chapters that teach Xamarin.Forms development, available as a PDF and including hundreds of additional samples.

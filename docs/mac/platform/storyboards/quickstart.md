@@ -25,7 +25,7 @@ Use the default **Project Name** and **Solution Name** and click the **Create** 
 
 In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing in Xcode's Interface Builder:
 
-[![Editing the storyboard in Xcode](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
+[![Editing the storyboard in Xcode Interface Builder.](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
 
 As you can see above, the default Storyboard defines both the app's Menu Bar and its main Window with it View Controller and View. For our sample app, we are going to be creating a UI that has a main _Content View_ on one side and an _Inspector View_ in the second.
 
@@ -53,7 +53,7 @@ From here we will click all four of the **I-Beam** icons around the bounding box
 
 If we return to Visual Studio for Mac and run the project, notice that the Text View automatically resizes to fill the left side of the Split View as the Window or the split are resized:
 
-[![An example of the app running](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
+[![An example of the app running, displaying text in the left pane of the Window.](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
 
 Since we are going to be using the right hand side of the split view as an Inspector area, we want it to have a smaller size and allow it to be collapsed. Return to Xcode and edit the View for the right side by selecting it in the Design Surface and clicking on the **Size Inspector**. From here enter a **Width** of `250`:
 
@@ -65,7 +65,7 @@ Next select the Split Item that represents the right side, set a higher **Holdin
 
 If we return to Visual Studio for Mac and run the project now, notice that the right side keeps it's smaller size and the window is resized:
 
-[![An example of the app running](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
+[![An example of the app running, displaying text in the larger left pane of the Window.](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
 
 <a name="Defining-a-Presentation-Segue"></a>
 
@@ -75,19 +75,19 @@ We are going to layout the right hand side of the Split View to act as an Inspec
 
 We'll add a Button to the Inspector and a View Controller to the Design Surface. We'll resize the View Controller to be the size that we want our Popover to be and add four Buttons to it. Next we'll **Control** key-click on the button in the Inspector View and drag to the View Controller that will represent our popover:
 
-[![Dragging to create a new segue](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
+[![Dragging to create a new segue in View Controller.](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
 
 From the popup menu, we'll select **Popover**: 
 
-[![Selecting the segue type](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
+[![Selecting the popover segue type from the View Controller.](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
 
 Finally, we'll select the Segue in the Design Surface and set the **Preferred Edge** to **Left**. Then, we'll drag a line from the **Anchor View** to the Button that we want the popover to be attached to:
 
-[![Dragging to create a new segue](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
+[![Dragging to create a new segue by attaching the Anchor View to the Button.](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
 
 If we return to Visual Studio for Mac, run the app and click on the **None** button in the Inspector, the popover will be displayed:
 
-[![An example of the segue running](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
+[![An example of the segue running, displaying the popover.](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
 
 <a name="Creating-App-Preferences"></a>
 
@@ -97,7 +97,7 @@ Most standard macOS apps provide a _Preference Dialog_ that allows the user to d
 
 To define a standard Preference Dialog Window, first drag a Tab View Controller onto the Design Surface:
 
-[![Editing the storyboard in Xcode](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
+[![Editing the storyboard in Xcode by first dragging the Tab View Controller onto the Design Surface.](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
 
 Again, this will automatically come with two child View Controllers attached. For example sake, we'll add a label to each view that will center inside of it:
 
@@ -109,11 +109,11 @@ Next, we want to display the Preferences window when the user selects the **Pref
 
 From the popup, we'll select **Modal** to show this window as a Modal Dialog:
 
-[![Selecting the segue type](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
+[![Selecting the modal segue type from the Action Segue menu.](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
 
 If we save our changes, return to Visual Studio for Mac, run the app and select the **Preferences...** menu item, our new Preferences dialog will be displayed:
 
-[![An example of the segue running](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
+[![An example of the segue running, showing the new Preferences dialog box.](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
 
 You might notice that this doesn't look like a standard macOS app Preference Dialog Window. To fix this, include two image files in the Xamarin.Mac app's `Resources` folder in the **Solution Explorer** and return to Xcode's Interface Builder.
 

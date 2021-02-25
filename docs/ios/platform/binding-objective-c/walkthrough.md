@@ -125,7 +125,7 @@ The first step is for us to add the InfoColorPicker source code into the Static 
 1. Start Xcode.
 2. From the **File** menu select **New** > **Project...**:
 
-    [![Starting a new project](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
+    [![Screenshot shows Project selected from the New menu of the File menu.](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
 3. Select **Framework & Library**, the **Cocoa Touch Static Library** template and click the **Next** button:
 
     [![Select the Cocoa Touch Static Library template](walkthrough-images/image05.png)](walkthrough-images/image05.png#lightbox)
@@ -278,7 +278,7 @@ The solution will be created and two default files will be included:
 
 1. From the **File** menu, select **New** > **Project...**:
 
-    ![Starting a new project](walkthrough-images/bind01vs.png "Starting a new project")
+    ![Screenshot shows Project selected from the New menu of the File menu in Visual Studio.](walkthrough-images/bind01vs.png "Starting a new project")
 
 1. From the New Project dialog box, select **Visual C# > iPhone & iPad > iOS Bindings Library (Xamarin)**:
 

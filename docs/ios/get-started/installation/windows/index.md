@@ -53,7 +53,7 @@ these steps:
 2. Set up Mac (Install Xcode and Visual Studio for Mac)
 
     To build, debug, and sign iOS applications for distribution, Visual
-    Studio 2017 must have network access to a Mac build host configured
+    Studio 2019 must have network access to a Mac build host configured
     with both Apple's developer tools (Xcode) and Xamarin.iOS.
 
     - [Download and install Xcode from the Mac App

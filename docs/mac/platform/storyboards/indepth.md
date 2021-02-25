@@ -36,7 +36,7 @@ controller.ShowWindow(this);
 
 The `FromName` loads the Storyboard file with the given name that has been included in the app's bundle. The `InstantiateControllerWithIdentifier` creates an instance of the View Controller with the given Identity. You set the Identity in Xcode's Interface Builder when designing the UI:
 
-[![Setting the Storyboard ID](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
+[![Setting the Storyboard ID in Interface Builder.](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
 Optionally, you can use the `InstantiateInitialController` method to load the View Controller that has been assigned the Initial Controller in Interface Builder:
 
@@ -298,14 +298,14 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
     [![Designing the layout in Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
-    [![Setting the Storyboard ID](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
+    [![Setting the Storyboard I D to AltScene under Identity.](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Open the Storyboard that you are going to be adding the reference to in Interface Builder.
 5. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
 
     [![Selecting a Storyboard Reference from the Library](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. In the **Identity Inspector**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-    [![Setting the Reference ID](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
+    [![Setting the Reference I D to AltScene under Storyboard Reference.](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
     [![Setting the Segue Type](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
@@ -326,13 +326,13 @@ To add a reference to a specific Scene the same Storyboard, do the following:
     [![Editing the storyboard in Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
-    [![Setting the Storyboard ID](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
+    [![Setting the Storyboard I D to IntScene under Identity.](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
     [![Selecting a Storyboard Reference from the Library](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. In **Attribute Inspector**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-    [![Setting the Reference ID](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
+    [![Setting the Reference I D to IntScene under Storyboard Reference.](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
     [![Selecting the Segue Type](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 

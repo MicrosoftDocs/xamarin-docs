@@ -15,11 +15,11 @@ The build properties of your executable can be configured from the Project's **i
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The Projects iOS Build properties page](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
+[![The Projects iOS Build properties page for Visual Studio for Mac.](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-[![The Projects iOS Build properties page](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
+[![The Projects iOS Build properties page for Visual Studio.](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
@@ -70,9 +70,9 @@ the Mono engine does, at the cost of long compile times.
 
 You can enable these from iOS Build options in Visual Studio for Mac or Visual Studio.
 
-[![Enabling LLVM](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
+[![Enabling L L V M in Visual Studio for Mac.](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![Enabling LLVM](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
+[![Enabling L L V M in Visual Studio.](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
 
 ## Architecture support
 

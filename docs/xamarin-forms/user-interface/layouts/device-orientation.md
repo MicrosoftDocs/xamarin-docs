@@ -140,11 +140,11 @@ The above rules also apply when implementing interfaces for multiple screen size
 
 Consider the following application, displayed in portrait:
 
-![Photo Application in Portrait](device-orientation-images/photo-stack-portrait.png)
+![Screenshot shows Photo Application StackLayout in Portrait.](device-orientation-images/photo-stack-portrait.png)
 
 and landscape:
 
-![Photo Application in Landscape](device-orientation-images/photo-stack-landscape.png)
+![Screenshot shows Photo Application StackLayout in Landscape.](device-orientation-images/photo-stack-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -214,11 +214,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![Photo Application in Portrait](device-orientation-images/photo-abs-portrait.png)
+![Screenshot shows Photo Application AbsoluteLayout in Portrait.](device-orientation-images/photo-abs-portrait.png)
 
 and landscape:
 
-![Photo Application in Landscape](device-orientation-images/photo-abs-landscape.png)
+![Screenshot shows Photo Application AbsoluteLayout in Landscape.](device-orientation-images/photo-abs-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -266,11 +266,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![Photo Application in Portrait](device-orientation-images/photo-rel-portrait.png)
+![Screenshot shows Photo Application RelativeLayout in Portrait.](device-orientation-images/photo-rel-portrait.png)
 
 and landscape:
 
-![Photo Application in Landscape](device-orientation-images/photo-rel-landscape.png)
+![Screenshot shows Photo Application RelativeLayout in Landscape.](device-orientation-images/photo-rel-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -357,11 +357,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![Photo Application in Portrait](device-orientation-images/photo-grid-portrait.png)
+![Screenshot shows Photo Application Grid in Portrait.](device-orientation-images/photo-grid-portrait.png)
 
 and landscape:
 
-![Photo Application in Landscape](device-orientation-images/photo-grid-landscape.png)
+![Screenshot shows Photo Application Grid in Landscape.](device-orientation-images/photo-grid-landscape.png)
 
 That is accomplished with the following XAML:
 

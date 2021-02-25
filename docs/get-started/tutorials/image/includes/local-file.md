@@ -48,9 +48,11 @@ In this exercise, you will modify the **ImageTutorial** solution to display a lo
     > [!NOTE]
     > For PNG images on iOS, the **.png** extension can be omitted from the filename specified in the [`Source`](xref:Xamarin.Forms.Image.Source) property. For other image formats, the extension is required.
 
-1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
+1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of an Image view displaying a local image, on iOS and Android](../images/local-file.png "Image view displaying a local image")](../images/local-file-large.png#lightbox "Image view displaying a local image")
+
+    In Visual Studio, stop the application.
 
     For more information about local images, see [Local images](~/xamarin-forms/user-interface/images.md#local-images) in the [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md) guide.
 
@@ -97,5 +99,7 @@ In this exercise, you will modify the **ImageTutorial** solution to display a lo
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of an Image view displaying a local image, on iOS and Android](../images/local-file.png "Image view displaying a local image")](../images/local-file-large.png#lightbox "Image view displaying a local image")
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about local images, see [Local images](~/xamarin-forms/user-interface/images.md#local-images) in the [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md) guide.

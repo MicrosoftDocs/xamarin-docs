@@ -35,7 +35,7 @@ Open your **Assets.xcassets** file in your iOS project and add a new image set. 
 
 **Assets.xcassets** also contains entries for **BackgroundColor** and **TitleColor**, which are color definitions. Those colors are now available by name to be used throughout the application. The **BackgroundColor** has been assigned to the background of the view, and the **TitleColor** to the label, as shown in this screenshot:
 
-![Assets for Light and Dark Modes](dark-mode-images/LightAndDark_01.png)
+![Screenshot shows mobile devices in light and dark mode with different background and title colors.](dark-mode-images/LightAndDark_01.png)
 
 ## Dynamic system colors
 

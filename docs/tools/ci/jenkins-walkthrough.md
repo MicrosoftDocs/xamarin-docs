@@ -76,9 +76,9 @@ Customizing Jenkins is optional and does not have to be performed each time the 
 
 If it is necessary to customize Jenkins, click on the **Change defaults** button. This will present you with two consecutive dialogs: one that asks for Java command line parameters, and another that asks for Jenkins command line parameters. The following two screenshots show these two dialogs:
 
-[![This screenshot shows the dialogs](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
+[![This screenshot shows the dialog that asks for Java command line parameters.](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
 
-[![This screenshot shows the dialogs](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
+[![This screenshot shows the dialog that asks for Jenkins command line parameters.](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
 
 Once Jenkins is running, you may want to set it as a login item so that it will start up each time the user logins in to the computer. You can do this by right-clicking on the Jenkins icon in the Dock and choosing **Options... > Open at Login**, as shown in the following screenshot:
 

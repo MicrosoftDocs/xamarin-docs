@@ -446,7 +446,7 @@ The `var preferences = new PreferencesWindowController ();` line creates a new i
 
 If you run the code and select the **Preferences...** from the **Application Menu**, the window will be displayed:
 
-![Running the sample app](xib-images/new04.png "Running the sample app")
+![Screenshot shows the Preferences window displayed from the Application Menu.](xib-images/new04.png "Running the sample app")
 
 For more information on working with Windows in a Xamarin.Mac application, please see our [Windows](~/mac/user-interface/window.md) documentation.
 
@@ -554,7 +554,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 This creates a new instance of the View Controller for the new view to be displayed, sets its type (as specified by the enum added to the project) and uses the `DisplaySubview` method added to the Window's class to actually display the view. For example:
 
-[![Running the sample app](xib-images/view04.png "Running the sample app")](xib-images/view04-large.png#lightbox)
+[![Screenshot shows Table View selected in the Working with Images window.](xib-images/view04.png "Running the sample app")](xib-images/view04-large.png#lightbox)
 
 For more information on working with Windows in a Xamarin.Mac application, please see our [Windows](~/mac/user-interface/window.md) and [Dialogs](~/mac/user-interface/dialog.md) documentation.
 

@@ -891,8 +891,6 @@ As a last-straw solution, use an older version of Xamarin.iOS that does not requ
 
 ### MT1004: Could not get the list of installed applications.
 
-## MT1xxx: Project related error messages
-
 <a name="MT1005"></a>
 
 ### MT1005: Could not kill the application '\*' on the device '\*': *- You may have to kill the application manually.

@@ -32,9 +32,9 @@ Before building, ensure to selected the correct configuration and select to crea
 
 When building the app, the developer will be prompted to use both certificates:
 
- [![Allowing keychain access](signing-images/image57.png)](signing-images/image57.png#lightbox)
+ [![Screenshot shows Allow access dialog box for codesign.](signing-images/image57.png)](signing-images/image57.png#lightbox)
 
- [![Allowing keychain access](signing-images/image58.png)](signing-images/image58.png#lightbox)
+ [![Screenshot shows Allow access dialog box for product build.](signing-images/image58.png)](signing-images/image58.png#lightbox)
 
 After the application has been built, the developer can right-click on the project and choose **Open Containing Folder** to find the package file (in the `bin/Release` directory). This package file includes an
 installer for the application, so it can be distributed to any macOS user

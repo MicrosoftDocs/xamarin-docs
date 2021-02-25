@@ -43,7 +43,7 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
     > [!NOTE]
     > The default value of a view's [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties is [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
     [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set")](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
 
@@ -58,6 +58,8 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
 
     > [!IMPORTANT]
     > When all the space in a [`StackLayout`](xref:Xamarin.Forms.StackLayout) is used, expansion preferences have no effect.
+
+    In Visual Studio, stop the application.
 
     For more information about alignment and expansion, see [Layout Options in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
 
@@ -99,7 +101,7 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
     > [!NOTE]
     > The default value of a view's [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties is [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
+1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set")](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
 
@@ -114,5 +116,7 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
 
     > [!IMPORTANT]
     > When all the space in a [`StackLayout`](xref:Xamarin.Forms.StackLayout) is used, expansion preferences have no effect.
+
+    In Visual Studio for Mac, stop the application.
 
     For more information about alignment and expansion, see [Layout Options in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).

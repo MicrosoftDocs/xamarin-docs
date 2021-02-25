@@ -84,16 +84,16 @@ A Segmented Control is an organized way to allow users to interact with a small 
 horizontally and each segment functions as a separate button. When using the Designer, the Segmented Control 
 can be found under **ToolBox > Controls**, and should look like the following image:
 
- [![Segmented Control](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
+ [![Segmented Control icon.](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 A unique feature of the Designer allows for each segment to be selected individually on the design surface, as illustrated below:
 
- [![Segmented Control](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
+ [![Segmented Control segments selected individually.](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 This allows the Properties Pad to be used to more precisely control the properties of each segment. You can see the 
 editable properties in the screenshot below:
 
- [![Segmented Control](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
+ [![Segmented Control properties.](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 It should be noted that the Segmented Control Style has been deprecated in iOS7, and therefore, adjusting options for this in an iOS7 application will have no effect.
 

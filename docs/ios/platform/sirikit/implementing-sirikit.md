@@ -470,7 +470,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the ParameterVocabulary key to the ParameterVocabularies key with the Type of Array](implementing-sirikit-images/plist06.png)](implementing-sirikit-images/plist06.png#lightbox)
 8. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist07.png)](implementing-sirikit-images/plist07.png#lightbox)
+    [![Add a new key with the Type of Dictionary in Visual Studio for Mac.](implementing-sirikit-images/plist07.png)](implementing-sirikit-images/plist07.png#lightbox)
 9. Add the `VocabularyItemIdentifier` key with the **Type** of `String` and specify a unique ID for the term:
 
     [![Add the VocabularyItemIdentifier key with the Type of String and specify a unique ID](implementing-sirikit-images/plist08.png)](implementing-sirikit-images/plist08.png#lightbox)
@@ -479,7 +479,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the VocabularyItemSynonyms key with the Type of Array](implementing-sirikit-images/plist09.png)](implementing-sirikit-images/plist09.png#lightbox)
 11. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist10.png)](implementing-sirikit-images/plist10.png#lightbox)
+    [![Add another new key with the Type of Dictionary in Visual Studio for Mac.](implementing-sirikit-images/plist10.png)](implementing-sirikit-images/plist10.png#lightbox)
 12. Add the `VocabularyItemPhrase` key with the **Type** of `String` and the term the app are defining:
 
     [![Add the VocabularyItemPhrase key with the Type of String and the term the app are defining](implementing-sirikit-images/plist11.png)](implementing-sirikit-images/plist11.png#lightbox)
@@ -491,7 +491,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the VocabularyItemExamples key with the Type of Array](implementing-sirikit-images/plist13.png)](implementing-sirikit-images/plist13.png#lightbox)
 15. Add a few `String` keys with example uses of the term:
 
-    [![Add a few String keys with example uses of the term](implementing-sirikit-images/plist14.png)](implementing-sirikit-images/plist14.png#lightbox)
+    [![Add a few String keys with example uses of the term in Visual Studio for Mac.](implementing-sirikit-images/plist14.png)](implementing-sirikit-images/plist14.png#lightbox)
 16. Repeat the above steps for any other custom terms the app need to define.
 17. Collapse the `ParameterVocabularies` key.
 18. Add the `IntentPhrases` key with the **Type** of `Array`:
@@ -499,7 +499,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the IntentPhrases key with the Type of Array](implementing-sirikit-images/plist15.png)](implementing-sirikit-images/plist15.png#lightbox)
 19. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist16.png)](implementing-sirikit-images/plist16.png#lightbox)
+    [![Add an additional new key with the Type of Dictionary in Visual Studio for Mac.](implementing-sirikit-images/plist16.png)](implementing-sirikit-images/plist16.png#lightbox)
 20. Add the `IntentName` key with the **Type** of `String` and Intent for the example:
 
     [![Add the IntentName key with the Type of String and Intent for the example](implementing-sirikit-images/plist17.png)](implementing-sirikit-images/plist17.png#lightbox)
@@ -508,7 +508,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the IntentExamples key with the Type of Array](implementing-sirikit-images/plist18.png)](implementing-sirikit-images/plist18.png#lightbox)
 22. Add a few `String` keys with example uses of the term:
 
-    [![Add a few String keys with example uses of the term](implementing-sirikit-images/plist19.png)](implementing-sirikit-images/plist19.png#lightbox)
+    [![Add a few additional String keys with example uses of the term in Visual Studio for Mac.](implementing-sirikit-images/plist19.png)](implementing-sirikit-images/plist19.png#lightbox)
 23. Repeat the above steps for any Intents the app need to provide example usage of.
 
 # [Visual Studio](#tab/windows)
@@ -535,7 +535,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the ParameterVocabulary key to the ParameterVocabularies key with the Type of Array](implementing-sirikit-images/plist06w.png)](implementing-sirikit-images/plist06w.png#lightbox)
 8. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist07w.png)](implementing-sirikit-images/plist07w.png#lightbox)
+    [![Add a new key with the Type of Dictionary.](implementing-sirikit-images/plist07w.png)](implementing-sirikit-images/plist07w.png#lightbox)
 9. Add the `VocabularyItemIdentifier` key with the **Type** of `String` and specify a unique ID for the term:
 
     [![Add the VocabularyItemIdentifier key with the Type of String and specify a unique ID for the term](implementing-sirikit-images/plist08w.png)](implementing-sirikit-images/plist08w.png#lightbox)
@@ -544,7 +544,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the VocabularyItemSynonyms key with the Type of Array](implementing-sirikit-images/plist09w.png)](implementing-sirikit-images/plist09w.png#lightbox)
 11. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist10w.png)](implementing-sirikit-images/plist10w.png#lightbox)
+    [![Add another new key with the Type of Dictionary.](implementing-sirikit-images/plist10w.png)](implementing-sirikit-images/plist10w.png#lightbox)
 12. Add the `VocabularyItemPhrase` key with the **Type** of `String` and the term the app are defining:
 
     [![Add the VocabularyItemPhrase key with the Type of String and the term the app are defining](implementing-sirikit-images/plist11w.png)](implementing-sirikit-images/plist11w.png#lightbox)
@@ -556,7 +556,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the VocabularyItemExamples key with the Type of Array](implementing-sirikit-images/plist13w.png)](implementing-sirikit-images/plist13w.png#lightbox)
 15. Add a few `String` keys with example uses of the term:
 
-    [![Add a few String keys with example uses of the term](implementing-sirikit-images/plist14w.png)](implementing-sirikit-images/plist14w.png#lightbox)
+    [![Add a few String keys with example uses of the term.](implementing-sirikit-images/plist14w.png)](implementing-sirikit-images/plist14w.png#lightbox)
 16. Repeat the above steps for any other custom terms the app need to define.
 17. Collapse the `ParameterVocabularies` key.
 18. Add the `IntentPhrases` key with the **Type** of `Array`:
@@ -564,7 +564,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the IntentPhrases key with the Type of Array](implementing-sirikit-images/plist15w.png)](implementing-sirikit-images/plist15w.png#lightbox)
 19. Add a new key with the **Type** of `Dictionary`:
 
-    [![Add a new key with the Type of Dictionary](implementing-sirikit-images/plist16w.png)](implementing-sirikit-images/plist16w.png#lightbox)
+    [![Add an additional new key with the Type of Dictionary.](implementing-sirikit-images/plist16w.png)](implementing-sirikit-images/plist16w.png#lightbox)
 20. Add the `IntentName` key with the **Type** of `String` and Intent for the example:
 
     [![Add the IntentName key with the Type of String and Intent for the example](implementing-sirikit-images/plist17w.png)](implementing-sirikit-images/plist17w.png#lightbox)
@@ -573,7 +573,7 @@ To add a `AppIntentVocabulary.plist` file to the app project, do the following:
     [![Add the IntentExamples key with the Type of Array](implementing-sirikit-images/plist18w.png)](implementing-sirikit-images/plist18w.png#lightbox)
 22. Add a few `String` keys with example uses of the term:
 
-    [![Add a few String keys with example uses of the term](implementing-sirikit-images/plist19w.png)](implementing-sirikit-images/plist19w.png#lightbox)
+    [![Add a few additional String keys with example uses of the term.](implementing-sirikit-images/plist19w.png)](implementing-sirikit-images/plist19w.png#lightbox)
 23. Repeat the above steps for any Intents the app need to provide example usage of.
 
 -----
@@ -607,13 +607,13 @@ To add an Intents Extension to the solution, do the following:
     [![Select Intent Extension](implementing-sirikit-images/intents05.png)](implementing-sirikit-images/intents05.png#lightbox)
 3. Next enter a **Name** for the Intent Extension and click the **Next** button: 
 
-    [![Enter a Name for the Intent Extension](implementing-sirikit-images/intents06.png)](implementing-sirikit-images/intents06.png#lightbox)
+    [![Enter a Name for the Intent Extension.](implementing-sirikit-images/intents06.png)](implementing-sirikit-images/intents06.png#lightbox)
 4. Finally, click the **Create** button to add the Intent Extension to the apps solution: 
 
-    [![Add the Intent Extension to the apps solution](implementing-sirikit-images/intents07.png)](implementing-sirikit-images/intents07.png#lightbox)
+    [![Add the Intent Extension to the apps solution.](implementing-sirikit-images/intents07.png)](implementing-sirikit-images/intents07.png#lightbox)
 5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button: 
 
-    [![Select the name of the common shared code library project](implementing-sirikit-images/intents08.png)](implementing-sirikit-images/intents08.png#lightbox)
+    [![Select the name of the common shared code library project.](implementing-sirikit-images/intents08.png)](implementing-sirikit-images/intents08.png#lightbox)
     
 # [Visual Studio](#tab/windows)
 
@@ -645,7 +645,7 @@ To configure the Intent Extension's `Info.plist` file, double-click it in the **
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The NSExtension and NSExtensionAttributes keys in the editor](implementing-sirikit-images/intents02.png)](implementing-sirikit-images/intents02.png#lightbox)
+[![The NSExtension and NSExtensionAttributes keys in the editor in Visual Studio for Mac.](implementing-sirikit-images/intents02.png)](implementing-sirikit-images/intents02.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -657,11 +657,11 @@ Expand the `IntentsSupported` key and add the name of any Intent Class this exte
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The INSendMessageIntent key](implementing-sirikit-images/intents09.png)](implementing-sirikit-images/intents09.png#lightbox)
+[![The INSendMessageIntent key in the editor in Visual Studio for Mac.](implementing-sirikit-images/intents09.png)](implementing-sirikit-images/intents09.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![The INSendMessageIntent key](implementing-sirikit-images/intents09w.png)](implementing-sirikit-images/intents09w.png#lightbox)
+[![The INSendMessageIntent key.](implementing-sirikit-images/intents09w.png)](implementing-sirikit-images/intents09w.png#lightbox)
 
 -----
 
@@ -868,13 +868,13 @@ To add an Intents UI Extension to the solution, do the following:
     [![Select Intent UI Extension](implementing-sirikit-images/intents11.png)](implementing-sirikit-images/intents11.png#lightbox)
 3. Next enter a **Name** for the Intent Extension and click the **Next** button: 
 
-    [![Enter a Name for the Intent Extension](implementing-sirikit-images/intents12.png)](implementing-sirikit-images/intents12.png#lightbox)
+    [![Enter a Name for the Intent Extension in Visual Studio for Mac.](implementing-sirikit-images/intents12.png)](implementing-sirikit-images/intents12.png#lightbox)
 4. Finally, click the **Create** button to add the Intent Extension to the apps solution: 
 
-    [![Add the Intent Extension to the apps solution](implementing-sirikit-images/intents13.png)](implementing-sirikit-images/intents13.png#lightbox)
+    [![Add the Intent Extension to the apps solution in Visual Studio for Mac.](implementing-sirikit-images/intents13.png)](implementing-sirikit-images/intents13.png#lightbox)
 5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button: 
 
-    [![Select the name of the common shared code library project](implementing-sirikit-images/intents14.png)](implementing-sirikit-images/intents14.png#lightbox)
+    [![Select the name of the common shared code library project in Visual Studio for Mac.](implementing-sirikit-images/intents14.png)](implementing-sirikit-images/intents14.png#lightbox)
     
 # [Visual Studio](#tab/windows)
 
@@ -899,7 +899,7 @@ Just like any typical App Extension, the app will have the existing keys of `NSE
 
 To configure the Intent UI Extension's `Info.plist` file, double-click it in the **Solution Explorer** to open it for editing. Next, switch to the **Source** view then expand the `NSExtension` and `NSExtensionAttributes` keys in the editor:
 
-[![The NSExtension and NSExtensionAttributes keys in the editor](implementing-sirikit-images/intents04.png)](implementing-sirikit-images/intents04.png#lightbox)
+[![The NSExtension and NSExtensionAttributes keys in the editor.](implementing-sirikit-images/intents04.png)](implementing-sirikit-images/intents04.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -913,11 +913,11 @@ Expand the `IntentsSupported` key and add the name of any Intent Class this exte
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The INSendMessageIntent key](implementing-sirikit-images/intents15.png)](implementing-sirikit-images/intents15.png#lightbox)
+[![The INSendMessageIntent key for an Intents U I Extension in Visual Studio for Mac.](implementing-sirikit-images/intents15.png)](implementing-sirikit-images/intents15.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![The INSendMessageIntent key](implementing-sirikit-images/intents15w.png)](implementing-sirikit-images/intents15w.png#lightbox)
+[![The INSendMessageIntent key for an Intents U I Extension in Visual Studio.](implementing-sirikit-images/intents15w.png)](implementing-sirikit-images/intents15w.png#lightbox)
 
 -----
 

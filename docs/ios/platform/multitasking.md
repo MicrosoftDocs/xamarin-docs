@@ -153,7 +153,7 @@ Now, with iOS 9, apps can create their own custom keyboard shortcuts. Additional
 
 If an iOS 9 app includes keyboard shortcuts, the user can hold down on the **Command**, **Option** or **Control** keys to display them in a popup:
 
-[![The keyboard shortcuts popup](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
+[![Screenshot shows the keyboard shortcuts for an app.](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
 
 #### Defining Custom Keyboard Shortcuts
 
@@ -189,7 +189,7 @@ Next, we override the `KeyCommands` property and create a new `UIKeyCommand` for
 
 If we run this app on an iPad with an hardware keyboard attached and the user types **Command-N**, a new entry will be added to the list. If the user holds down on the **Command** key, the list of shortcuts will be displayed:
 
-[![The keyboard shortcuts popup](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
+[![Screenshot shows the New Entry shortcut for an app.](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
 Please see the sample [MultiTask app](/samples/xamarin/ios-samples/ios9-multitask) for an example implementation.
 

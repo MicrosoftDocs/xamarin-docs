@@ -38,10 +38,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Create a single page Xamarin.Forms application
-            url: quickstarts/single-page.md
-          - text: Perform navigation in a multi-page Xamarin.Forms application
-            url: quickstarts/multi-page.md
+          - text: Create a Xamarin.Forms application
+            url: quickstarts/app.md
+          - text: Perform navigation in a Xamarin.Forms application
+            url: quickstarts/navigation.md
           - text: Store data in a local SQLite.NET database
             url: quickstarts/database.md
           - text: Style a cross-platform Xamarin.Forms application
@@ -69,8 +69,8 @@ landingContent:
             url: tutorials/image/index.yml
           - text: Grid
             url: tutorials/grid/index.yml
-          - text: ListView
-            url: tutorials/listview/index.yml
+          - text: CollectionView
+            url: tutorials/collectionview/index.yml
           - text: Pop-ups
             url: tutorials/pop-ups/index.yml
 

@@ -240,11 +240,11 @@ through how that transition can be set up in code.
 
 6. This app will navigate to another view, so add one more view to the Storyboard, just as before. Call it `PinkViewController`, and set those values in the same manner as with the `MainViewController`.
 
-    [![Adding an additional View Controller](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
+    [![Screenshot shows the storyboard with three views.](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
 
 7. Since the view controller will have a pink background, set that property in the attributes panel using the dropdown next to `Background`.
 
-    [![Adding an additional View Controller](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
+    [![Screenshot shows the storyboard from the previous step with the rightmost screen changed to a pink background.](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
 
 8. Because we want the `MainViewController` to navigate to the `PinkViewController`, the former will need a button to interact with. Use the Library to add a button to the `MainViewController`.
 

@@ -18,14 +18,14 @@ Xamarin.Forms sample apps and code demos to help you get started and understand 
 
 :::row:::
     :::column:::
-[![Todo](images/todo.png)](/samples/xamarin/xamarin-forms-samples/todo/)
+[![Todo list app](images/todo.png)](/samples/xamarin/xamarin-forms-samples/todo/)
 
 ### [Todo](/samples/xamarin/xamarin-forms-samples/todo/)
 
 This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database.
     :::column-end:::
     :::column:::
-[![BugSweeper](images/bugsweeper.png)](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
+[![BugSweeper game](images/bugsweeper.png)](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
 ### [BugSweeper](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
@@ -42,7 +42,7 @@ An RPN (Reverse Polish Notation) calculator allows numbers and operations to be 
 
 :::row:::
     :::column:::
-[![SpinPaint](images/spinpaint.png)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
+[![SpinPaint app](images/spinpaint.png)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
 ### [SpinPaint](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
@@ -56,7 +56,7 @@ The program simulates a revolving disk that you can paint on by touching and mov
 XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup rather than code.
     :::column-end:::
         :::column:::
-[![Xuzzle](images/xuzzle.png)](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
+[![Xuzzle game](images/xuzzle.png)](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
 ### [Xuzzle](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 

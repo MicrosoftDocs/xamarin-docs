@@ -71,7 +71,7 @@ There are a number of potential areas where things can go wrong including:
 
 Apple reserves the right to updates to the AppStore submissions rules at any time. These rule changes are only sometimes announced in advance. Some of these changes require tooling changes to support, which would require an updated Xamarin.iOS component.
 
-In addition to the rule changes, Apple often adds additional validations to submitted apps or tightens existing ones. Some of these require changes in our tools (e.g. a new blacklisted symbols). Many of these are first encountered by customers submitting, as there is no announcement (or list) of the rules.
+In addition to the rule changes, Apple often adds additional validations to submitted apps or tightens existing ones. Some of these require changes in our tools (e.g. a new blocklisted symbols). Many of these are first encountered by customers submitting, as there is no announcement (or list) of the rules.
 
 ## Summary
 

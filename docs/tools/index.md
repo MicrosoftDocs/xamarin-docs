@@ -19,13 +19,6 @@ Tools to help make your Xamarin development experience better.
 Interact with the iOS Simulator using Visual Studio on Windows.
     :::column-end:::
     :::column:::
-[![Xamarin Inspector](~/media/index/xamarin-tools-inspector.svg?branch=master)](~/tools/inspector/index.md)
-
-### [Xamarin Inspector](~/tools/inspector/index.md)
-
-Understand and debug your user interface.
-    :::column-end:::
-    :::column:::
 [![Xamarin Profiler](~/media/index/xamarin-tools-profiler.svg?branch=master)](~/tools/profiler/index.md)
 
 ### [Xamarin Profiler](~/tools/profiler/index.md)

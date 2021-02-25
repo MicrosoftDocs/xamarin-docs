@@ -94,11 +94,11 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 In this example, a composite shape made up of a series of concentric rings is displayed:
 
-![Composite shape with Nonzero fill rule](fillrule-images/nonzero.png "Composite shape with Nonzero fill rule")
+![Diagram shows four concentric circles, all filled in.](fillrule-images/nonzero.png "Composite shape with Nonzero fill rule")
 
 In the composite shape, notice that all rings are filled. This is because all the segments are running in the same direction, and so a ray drawn from any point will cross one or more segments and the sum of the crossings will not equal zero:
 
-![Annotated composite shape with Nonzero fill rule](fillrule-images/nonzero-annotated.png "Annotated composite shape with Nonzero fill rule")
+![Diagram shows the circles from the previous diagram with directional arrows and a ray annotated with + 1 for each circle it crosses.](fillrule-images/nonzero-annotated.png "Annotated composite shape with Nonzero fill rule")
 
 In the image above the red arrows represent the direction the segments are drawn, and black arrow represents an arbitrary ray running from a point in the innermost ring. Starting with a value of zero, for each segment that the ray crosses, a value of one is added because the segment crosses the ray from left to right.
 
@@ -165,11 +165,11 @@ A more complex shape with segments running in different directions is required t
 
 In this example, a series of arc segments are drawn, that aren't closed:
 
-![Composite shape with Nonzero fill rule](fillrule-images/nonzero-gaps.png "Composite shape with Nonzero fill rule")
+![Diagram shows four concentric circles, with the outmost and third from outermost filled in.](fillrule-images/nonzero-gaps.png "Composite shape with Nonzero fill rule")
 
 In the image above, the third arc from the center is not filled. This is because the sum of the values from a given ray crossing the segments in its path is zero:
 
-![Annotated composite shape with Nonzero fill rule](fillrule-images/nonzero-gaps-annotated.png "Annotated composite shape with Nonzero fill rule")
+![Diagram shows the circles from the previous diagram with directional arrows and two rays annotated with + 1 or – 1 for each circle they cross.](fillrule-images/nonzero-gaps-annotated.png "Annotated composite shape with Nonzero fill rule")
 
 In the image above, the red circle represents a point, the black lines represent arbitrary rays that move out from the point in the non-filled region, and the red arrows represent the direction the segments are drawn. As can be seen, the sum of the values from the rays crossing the segments is zero:
 

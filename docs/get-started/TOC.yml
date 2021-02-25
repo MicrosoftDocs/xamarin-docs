@@ -32,9 +32,9 @@
       expanded: true
       items:
         - name: File > New
-          href: quickstarts/single-page.md
-        - name: Multipage
-          href: quickstarts/multi-page.md
+          href: quickstarts/app.md
+        - name: Navigation
+          href: quickstarts/navigation.md
         - name: Database
           href: quickstarts/database.md
         - name: Styling
@@ -60,7 +60,7 @@
         - name: Grid Layout
           href: tutorials/grid/index.yml
         - name: Lists
-          href: tutorials/listview/index.yml
+          href: tutorials/collectionview/index.yml
         - name: Pop-ups
           href: tutorials/pop-ups/index.yml
         - name: App lifecycle

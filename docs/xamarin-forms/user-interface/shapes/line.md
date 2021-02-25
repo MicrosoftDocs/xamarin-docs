@@ -6,7 +6,7 @@ ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -29,7 +29,7 @@ For information about controlling how line ends are drawn, see [Control line end
 
 ## Create a Line
 
-To draw a line, create a `Line` object and set its `X1` and `Y1` properties to its start point, and its `X2` and `Y` properties to its end point. In addition, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color) because a line without a stroke is invisible.
+To draw a line, create a `Line` object and set its `X1` and `Y1` properties to its start point, and its `X2` and `Y` properties to its end point. In addition, set its `Stroke` property to a [`Brush`](xref:Xamarin.Forms.Brush)-derived object because a line without a stroke is invisible. For more information about `Brush` objects, see [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!NOTE]
 > Setting the `Fill` property of a `Line` has no effect, because a line has no interior.
@@ -46,7 +46,7 @@ The following XAML example shows how to draw a line:
 
 In this example, a red diagonal line is drawn from (40,0) to (0,120):
 
-![Line](line-images/line.png "Line")
+![Diagonal line](line-images/line.png "Line")
 
 Because the `X1`, `Y1`, `X2`, and `Y2` properties have default values of 0, it's possible to draw some lines with minimal syntax:
 
@@ -79,3 +79,4 @@ For more information about drawing a dashed line, see [Draw dashed shapes](index
 
 - [ShapeDemos (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
+- [Xamarin.Forms Brushes](~/xamarin-forms/user-interface/brushes/index.md)

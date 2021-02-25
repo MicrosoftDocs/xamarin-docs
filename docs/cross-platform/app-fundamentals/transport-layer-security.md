@@ -30,7 +30,7 @@ Update the **HttpClient implementation** and **SSL/TLS implementation** options 
 
 These settings can be found in **Project Properties > Android Options** and then clicking on the **Advanced** button:
 
-[![Configure HttpClient and TLS in Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
+[![Configure HttpClient and TLS in Visual Studio for Android devices.](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -48,13 +48,13 @@ Update the **HttpClient Implementation** option to enable TSL 1.2 security.
 
 This setting can be found in **Project Properties > iOS Build**:
 
-[![Configure HttpClient and TLS in Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
+[![Configure HttpClient and TLS in Visual Studio for i O S devices.](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
 This setting can be found in **Project Options > Build > iOS Build** tab:
 
-[![Configure HttpClient in Visual Studio for Mac](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
+[![Configure HttpClient in Visual Studio for Mac for i O S devices.](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
 
 -----
 

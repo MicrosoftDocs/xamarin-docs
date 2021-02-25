@@ -99,7 +99,7 @@ Finally, two static read-only properties define special color value:
 `Color.Default` is intended to enforce the platform's color scheme, and consequently has a different meaning in different contexts on different platforms. By default the platform color schemes are:
 
 - iOS: Dark text on a light background
-- Android: Light text on a dark background (in the book) or dark text on a light background (for Material Design via AppCompat in the **master** branch of the sample code repository)
+- Android: Light text on a dark background (in the book) or dark text on a light background (for Material Design via AppCompat in the main branch of the sample code repository)
 - UWP: Dark text on a light background
 
 The `Color.Accent` value results in a platform-specific (and sometimes user-selectable) color that is visible on either a dark or light background.

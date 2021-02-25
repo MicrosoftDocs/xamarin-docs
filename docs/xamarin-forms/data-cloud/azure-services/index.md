@@ -16,7 +16,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication. This article explains how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application.
 
-## [Send and receive Push Notifications with Azure Notification Hubs and Xamarin.Forms](azure-notification-hub.md)
+## [Send and receive Push Notifications with Azure Notification Hubs and Xamarin.Forms](/azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms)
 
 Azure Notification Hubs enable you to centralize notifications across platforms so your backend application can communicate with a single hub. Azure Notification Hubs take care of distributing push notifications to multiple platform providers. This article explains how to integrate Azure Notification Hubs into a Xamarin.Forms application.
 

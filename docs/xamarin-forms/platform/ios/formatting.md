@@ -42,7 +42,7 @@ The result is shown in the screen snippet below. Notice that the status bar
 items are black (this cannot be set within Xamarin.Forms because it is
 a platform-specific feature).
 
-![iOS Theming](theme-images/status-default-sml.png)
+![Screenshot show iOS Theming with status bar items in black text.](theme-images/status-default-sml.png)
 
 Ideally the status bar would also be white - something we can accomplish
 directly in the iOS project. Add the following entries to the **Info.plist** to
@@ -63,7 +63,7 @@ Now when the app is run, the navigation bar is green and its text is white
 (due to Xamarin.Forms formatting) *and* the status bar text is also white
 thanks to iOS-specific configuration:
 
-![iOS Theming](theme-images/status-white-sml.png)
+![Screenshot show iOS Theming with status bar items in white text.](theme-images/status-white-sml.png)
 
 ## UIAppearance API
 
