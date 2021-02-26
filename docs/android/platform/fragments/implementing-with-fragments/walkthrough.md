@@ -147,8 +147,10 @@ Fragments must be hosted inside an Activity, so this app requires an Activity th
 Edit the code in `PlayQuoteActivity`:
 
 ```csharp
+using AndroidX.Fragment.App;
+
 [Activity(Label = "PlayQuoteActivity")]
-public class PlayQuoteActivity : Activity
+public class PlayQuoteActivity : FragmentActivity
 {
     protected override void OnCreate(Bundle savedInstanceState)
     {
@@ -157,7 +159,7 @@ public class PlayQuoteActivity : Activity
         var playId = Intent.Extras.GetInt("current_play_id", 0);
 
         var detailsFrag = PlayQuoteFragment.NewInstance(playId);
-        FragmentManager.BeginTransaction()
+        SupportFragmentManager.BeginTransaction()
                         .Add(Android.Resource.Id.Content, detailsFrag)
                         .Commit();
     }
@@ -185,6 +187,8 @@ To get started, add a new fragment to the project and name it **TitlesFragment**
 Edit the code inside the fragment:
 
 ```csharp
+using AndroidX.Fragment.App;
+
 public class TitlesFragment : ListFragment
 {
     int selectedPlayId;
@@ -194,9 +198,9 @@ public class TitlesFragment : ListFragment
         // Being explicit about the requirement for a default constructor.
     }
 
-    public override void OnActivityCreated(Bundle savedInstanceState)
+    public override void OnCreate(Bundle savedInstanceState)
     {
-        base.OnActivityCreated(savedInstanceState);
+        base.OnCreate(savedInstanceState);
         ListAdapter = new ArrayAdapter<String>(Activity, Android.Resource.Layout.SimpleListItemActivated1, Shakespeare.Titles);
 
         if (savedInstanceState != null)
@@ -225,7 +229,7 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-When the Activity is created Android will invoke the `OnActivityCreated` method of the fragment; this is where the list adapter for the `ListView` is created.  The `ShowQuoteFromPlay` method will start an instance of the `PlayQuoteActivity` to display the quote for the selected play.
+When the Activity is created Android will invoke the `OnCreate` method of the fragment; this is where the list adapter for the `ListView` is created.  The `ShowQuoteFromPlay` method will start an instance of the `PlayQuoteActivity` to display the quote for the selected play.
 
 ## Display TitlesFragment in MainActivity
 
@@ -255,8 +259,10 @@ Edit the layout file **activity_main.axml**, replacing the existing XML with the
 There are no code changes required for MainActivity. The code in that class should be very similar to this snippet:
 
 ```csharp
+using AndroidX.Fragment.App;
+
 [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-public class MainActivity : Activity
+public class MainActivity : FragmentActivity
 {
     protected override void OnCreate(Bundle savedInstanceState)
     {
