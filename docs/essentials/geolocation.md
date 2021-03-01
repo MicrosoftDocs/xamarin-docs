@@ -47,7 +47,7 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 
 Or right-click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **ACCESS_COARSE_LOCATION** and **ACCESS_FINE_LOCATION** permissions. This will automatically update the **AndroidManifest.xml** file.
 
-If your application is targeting Android 10 - Q (API Level 29 or higher) and are requesting **LocationAlways** you must also add the following permission into your **AssemblyInfo.cs**:
+If your application is targeting Android 10 - Q (API Level 29 or higher) and is requesting **LocationAlways**, you must also add the following permission into **AssemblyInfo.cs**:
 
 ```csharp
 [assembly: UsesPermission(Manifest.Permission.AccessBackgroundLocation)]
@@ -59,7 +59,7 @@ Or directly into your **AndroidManifest.xml**:
 <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 ```
 
-If it recommended to read the [Android documentation on background location updates](https://developer.android.com/training/location/permissions) as there are many restrictions that need to be considered.
+If it recommended to read [Android documentation on background location updates](https://developer.android.com/training/location/permissions) as there are many restrictions that need to be considered.
 
 [!include[](~/essentials/includes/android-permissions.md)]
 
