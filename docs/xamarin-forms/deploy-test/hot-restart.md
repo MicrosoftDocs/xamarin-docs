@@ -10,9 +10,7 @@ ms.date: 03/16/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin Hot Restart (Preview)
-
-![Preview feature](~/media/shared/preview.png)
+# Xamarin Hot Restart
 
 Xamarin Hot Restart enables you to quickly test changes to your app during development, including multi-file code edits, resources, and references. It pushes the new changes to the existing app bundle on the debug target which results in a much faster build and deploy cycle.
 
@@ -21,15 +19,16 @@ Xamarin Hot Restart enables you to quickly test changes to your app during devel
 
 ## Requirements
 
-- Visual Studio 2019 version 16.5
-- iTunes (64-bit)
+- Visual Studio 2019 version 16.5 or higher
+- iTunes (Microsoft Store or 64-bit versions)
 - Apple Developer account and paid [Apple Developer Program](https://developer.apple.com/programs) enrollment
 
 
 ## Initial setup
 
 > [!NOTE]
-> Xamarin Hot Restart is disabled by default while it is in preview. You can enable it under **Tools > Options > Environment > Preview Features > Enable Xamarin Hot Restart**.
+> Xamarin Hot Restart is disabled by default on Visual Studio 16.8 and previous versions. You can enable it under **Tools > Options > Environment > Preview Features > Enable Xamarin Hot Restart**.
+> Starting in Visual Studio 16.9, Xamarin Hot Restart is on by default and can be turned off from **Tools > Options > Xamarin > iOS Settings > Enable Hot Restart**.
 
 1. Ensure the iOS project is set as the startup project and the build configuration is set to **Debug|iPhone**.
 
