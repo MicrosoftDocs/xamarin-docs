@@ -38,6 +38,8 @@ landingContent:
         links:
           - text: Hot reload
             url: hot-reload.md
+          - text: Live visual tree
+            url: live-visual-tree.md
           - text: Toolbox
             url: toolbox.md
           - text: Previewer
