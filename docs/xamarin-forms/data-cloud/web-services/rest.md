@@ -1,16 +1,16 @@
 ---
-title: "Consume a RESTful Web Service"
+title: "Consume a RESTful web service"
 description: "Integrating a web service into an application is a common scenario. This article demonstrates how to consume a RESTful web service from a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/03/2021
+ms.date: 02/26/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Consume a RESTful Web Service
+# Consume a RESTful web service
 
 [![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
@@ -43,7 +43,7 @@ When the sample application is run, it will connect to a locally hosted REST ser
 >
 >ATS can be opted out of if it is not possible to use the **HTTPS** protocol and secure communication for internet resources. This can be achieved by updating the app's **Info.plist** file. For more information see [App Transport Security](~/ios/app-fundamentals/ats.md).
 
-## Consuming the Web Service
+## Consume the web service
 
 The REST service is written using ASP.NET Core and provides the following operations:
 
@@ -56,29 +56,13 @@ The REST service is written using ASP.NET Core and provides the following operat
 
 The majority of the URIs include the `TodoItem` ID in the path. For example, to delete the `TodoItem` whose ID is `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, the client sends a DELETE request to `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. For more information about the data model used in the sample application, see [Modeling the data](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-When the Web API framework receives a request it routes the request to an action. These actions are simply public methods in the `TodoItemsController` class. The framework uses a routing table to determine which action to invoke in response to a request, which is shown in the following code example:
-
-```csharp
-config.Routes.MapHttpRoute(
-    name: "TodoItemsApi",
-    routeTemplate: "api/{controller}/{id}",
-    defaults: new { controller="todoitems", id = RouteParameter.Optional }
-);
-```
-
-The routing table contains a route template, and when the Web API framework receives an HTTP request, it tries to match the URI against the route template in the routing table. If a matching route cannot be found the client receives a 404 (not found) error. If a matching route is found, Web API selects the controller and the action as follows:
-
-- To find the controller, Web API adds "controller" to the value of the *{controller}* variable.
-- To find the action, Web API looks at the HTTP method and looks at controller actions that are decorated with the same HTTP method as an attribute.
-- The *{id}* placeholder variable is mapped to an action parameter.
-
-The REST service uses basic authentication. For more information see [Authenticating a RESTful web service](~/xamarin-forms/data-cloud/authentication/rest.md). For more information about ASP.NET Web API routing, see [Routing in ASP.NET Web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) on the ASP.NET website. For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/).
+When the Web API framework receives a request it routes the request to an action. These actions are simply public methods in the `TodoItemsController` class. The framework use routing middleware to match the URLs of incoming requests and map them to actions. REST APIs should use attribute routing the model the app's functionality as a set of resources whose operations are represented by HTTP verbs. Attribute routing uses a set of attributes to map actions directly to route templates. For more information about attribute routing, see [Attribute routing for REST APIs](/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#ar). For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/).
 
 The `HttpClient` class is used to send and receive requests over HTTP. It provides functionality for sending HTTP requests and receiving HTTP responses from a URI identified resource. Each request is sent as an asynchronous operation. For more information about asynchronous operations, see [Async Support Overview](~/cross-platform/platform/async.md).
 
 The `HttpResponseMessage` class represents an HTTP response message received from the web service after an HTTP request has been made. It contains information about the response, including the status code, headers, and any body. The `HttpContent` class represents the HTTP body and content headers, such as `Content-Type` and `Content-Encoding`. The content can be read using any of the `ReadAs` methods, such as `ReadAsStringAsync` and `ReadAsByteArrayAsync`, depending upon the format of the data.
 
-### Creating the HTTPClient Object
+### Create the HTTPClient object
 
 The `HttpClient` instance is declared at the class-level so that the object lives for as long as the application needs to make HTTP requests, as shown in the following code example:
 
@@ -91,12 +75,13 @@ public class RestService : IRestService
   public RestService ()
   {
     client = new HttpClient ();
+    ...
   }
   ...
 }
 ```
 
-### Retrieving Data
+### Retrieve data
 
 The `HttpClient.GetAsync` method is used to send the GET request to the web service specified by the URI, and then receive the response from the web service, as shown in the following code example:
 
@@ -110,7 +95,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
   if (response.IsSuccessStatusCode)
   {
       string content = await response.Content.ReadAsStringAsync ();
-      Items = JsonConvert.DeserializeObject <List<TodoItem>> (content);
+      Items = JsonSerializer.Deserialize<List<TodoItem>>(content, serializerOptions);
   }
   ...
 }
@@ -118,12 +103,12 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccessStatusCode` property, to indicate whether the HTTP request succeeded or failed. For this operation the REST service sends HTTP status code 200 (OK) in the response, which indicates that the request succeeded and that the requested information is in the response.
 
-If the HTTP operation was successful, the content of the response is read, for display. The `HttpResponseMessage.Content` property represents the content of the HTTP response, and the `HttpContent.ReadAsStringAsync` method asynchronously writes the HTTP content to a string. This content is then converted from JSON to a `List` of `TodoItem` instances.
+If the HTTP operation was successful, the content of the response is read, for display. The `HttpResponseMessage.Content` property represents the content of the HTTP response, and the `HttpContent.ReadAsStringAsync` method asynchronously writes the HTTP content to a string. This content is then deserialized from JSON to a `List` of `TodoItem` instances.
 
 > [!WARNING]
 > Using the `ReadAsStringAsync` method to retrieve a large response can have a negative performance impact. In such circumstances the response should be directly deserialized to avoid having to fully buffer it.
 
-### Creating Data
+### Create data
 
 The `HttpClient.PostAsync` method is used to send the POST request to the web service specified by the URI, and then to receive the response from the web service, as shown in the following code example:
 
@@ -133,7 +118,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   Uri uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
 
   ...
-  string json = JsonConvert.SerializeObject (item);
+  string json = JsonSerializer.Serialize<TodoItem>(item, serializerOptions);
   StringContent content = new StringContent (json, Encoding.UTF8, "application/json");
 
   HttpResponseMessage response = null;
@@ -151,7 +136,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-The `TodoItem` instance is converted to a JSON payload for sending to the web service. This payload is then embedded in the body of the HTTP content that will be sent to the web service before the request is made with the `PostAsync` method.
+The `TodoItem` instance is serialized to a JSON payload for sending to the web service. This payload is then embedded in the body of the HTTP content that will be sent to the web service before the request is made with the `PostAsync` method.
 
 The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccessStatusCode` property, to indicate whether the HTTP request succeeded or failed. The common responses for this operation are:
 
@@ -159,7 +144,7 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 - **400 (BAD REQUEST)** – the request is not understood by the server.
 - **409 (CONFLICT)** – the request could not be carried out because of a conflict on the server.
 
-### Updating Data
+### Update data
 
 The `HttpClient.PutAsync` method is used to send the PUT request to the web service specified by the URI, and then receive the response from the web service, as shown in the following code example:
 
@@ -180,7 +165,7 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 - **400 (BAD REQUEST)** – the request is not understood by the server.
 - **404 (NOT FOUND)** – the requested resource does not exist on the server.
 
-### Deleting Data
+### Delete data
 
 The `HttpClient.DeleteAsync` method is used to send the DELETE request to the web service specified by the URI, and then receive the response from the web service, as shown in the following code example:
 
@@ -204,15 +189,16 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 - **400 (BAD REQUEST)** – the request is not understood by the server.
 - **404 (NOT FOUND)** – the requested resource does not exist on the server.
 
-### Local Development
+### Local development
 
 If you are developing your REST web service locally with a framework such as ASP.NET Core Web API, you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text HTTP traffic for the iOS simualtor and Android emulator. For information about configuration your project to allow communication, see [Connect to local web services](~/cross-platform/deploy-test/connect-to-local-web-services.md).
 
-## Related Links
+## Related links
 
 - [Microsoft Learn: Consume REST web services in Xamarin Apps](/learn/modules/consume-rest-services/)
 - [Microsoft Learn: Create a web API with ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
 - [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
+- [Attribute routing for REST APIs](/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#ar)
 - [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient API](xref:System.Net.Http.HttpClient)
 - [Android Network Security Configuration](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
