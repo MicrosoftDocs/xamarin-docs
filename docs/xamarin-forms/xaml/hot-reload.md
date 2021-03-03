@@ -14,8 +14,8 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 XAML Hot Reload plugs into your existing workflow to increase your productivity and save you time. Without XAML Hot Reload, you have to build and deploy your app every time you want to see a XAML change. With Hot Reload, when you save your XAML file the changes are reflected live in your running app. In addition, your navigation state and data will be maintained, enabling you to quickly iterate on your UI without losing your place in the app. Therefore, with XAML Hot Reload, you'll spend less time rebuilding and deploying your apps to validate UI changes.
 
-[!NOTE]
-If you're writing a native UWP or WPF app, not using Xamarin.Forms, see [XAML Hot Reload for UWP and WPF](/visualstudio/debugger/xaml-hot-reload).
+> [!NOTE]
+> If you're writing a native UWP or WPF app, not using Xamarin.Forms, see [XAML Hot Reload for UWP and WPF](/visualstudio/debugger/xaml-hot-reload).
 
 ## System requirements
 
@@ -53,11 +53,11 @@ apps in the Hot Reload IDE settings (**Tools** > **Options** > **Debugging** > *
 *Changes only mode* parses the XAML to see exactly what changed when you make an edit, and sends just those changes to the running app. This is the same technology used for WPF and UWP Hot Reload. It preserves UI state, since it doesn't recreate the UI for the full page, just updating changed properties on controls affected by edits. Changes only mode also enables use of the [Live Visual Tree](live-visual-tree.md).
 
 By default, with changes only mode you don't need to save your file to see the changes - updates are applied immediately, as you type.
-However, you can change this behavior to update only on file save. This can be accomplished by checking the **Apply XAML Hot Reload on document save** checkbox (currently only available on Windows) in the Hot Reload IDE settings. Only updating on document save can sometimes be useful if you make bigger XAML updates and don't wish them to be displayed until they are complete. 
+However, you can change this behavior to update only on file save. This can be accomplished by checking the **Apply XAML Hot Reload on document save** checkbox (currently only available on Windows) in the Hot Reload IDE settings. Only updating on document save can sometimes be useful if you make bigger XAML updates and don't wish them to be displayed until they are complete.
 
 *Full page mode* sends the full XAML file to the running app after you makes edits and save. The running app then reloads the page, recreating its controls - you'll see the UI refresh.
 
-Changes only mode is the future of Hot Reload and we recommend using it whenever possible. It's fast, preserves UI state, and supports [Live Visual Tree](live-visual-tree.md). Full page mode is still provided for apps that haven't yet been updated to Xamarin.Forms 5.0. 
+Changes only mode is the future of Hot Reload and we recommend using it whenever possible. It's fast, preserves UI state, and supports [Live Visual Tree](live-visual-tree.md). Full page mode is still provided for apps that haven't yet been updated to Xamarin.Forms 5.0.
 
 > [!NOTE]
 > You'll need to restart the debug session when switching modes.
