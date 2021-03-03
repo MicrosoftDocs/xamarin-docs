@@ -308,8 +308,8 @@
               href: app-fundamentals/shell/flyout.md
             - name: Tabs
               href: app-fundamentals/shell/tabs.md
-            - name: Page configuration
-              href: app-fundamentals/shell/configuration.md
+            - name: Pages
+              href: app-fundamentals/shell/pages.md
             - name: Navigation
               href: app-fundamentals/shell/navigation.md
             - name: Search

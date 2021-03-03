@@ -987,6 +987,10 @@
     {
         "source_path": "docs/get-started/quickstarts/multi-page.md",
         "redirect_url": "/xamarin/get-started/quickstarts/navigation"
+    },
+    {
+        "source_path": "docs/xamarin-forms/app-fundamentals/shell/configuration.md",
+        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/shell/pages"
     }
   ]
 }
