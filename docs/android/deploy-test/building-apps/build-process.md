@@ -68,7 +68,7 @@ This process speeds up the build/deploy/debug cycle because the package
 is not reinstalled when *only* assemblies are changed.
 Only the updated assemblies are resynchronized to the target device.
 
-> [!WARNING>
+> [!WARNING]
 > Fast deployment is known to fail on devices which block `run-as`, which often includes devices older than Android 5.0.
 
 Fast deployment is enabled by default, and may be disabled in Debug builds
