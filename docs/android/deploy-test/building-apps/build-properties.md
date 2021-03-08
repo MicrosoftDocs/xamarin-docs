@@ -6,7 +6,7 @@ ms.assetid: FC0DBC08-EBCB-4D2D-AB3F-76B54E635C22
 ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
-ms.date: 09/21/2020
+ms.date: 03/01/2021
 ---
 
 # Build Properties
@@ -49,6 +49,16 @@ command-line options to pass to the **aapt2 link** command when
 processing Android assets and resources.
 
 Added in Xamarin.Android 9.1.
+
+## AndroidAddKeepAlives
+
+A boolean property that controls whether the linker will insert
+`GC.KeepAlive()` invocations within binding projects to prevent premature
+object collection.
+
+Defaults to `True` for Release configuration builds.
+
+This property was added in Xamarin.Android 11.2.
 
 ## AndroidAotCustomProfilePath
 
@@ -274,6 +284,30 @@ to `pkcs12`.
 
 Added in Xamarin.Android 10.2.
 
+
+## AndroidDeviceUserId
+
+Allows deploying and debugging the application under guest
+or work accounts. The value is the `uid` value you get
+from the following adb command:
+
+```
+adb shell pm list users
+```
+
+This will return the following data:
+
+```
+Users:
+	UserInfo{0:Owner:c13} running
+	UserInfo{10:Guest:404}
+```
+
+The `uid` is the first integer value. In the example they
+are `0` and `10`.
+
+This property was added in Xamarin.Android 11.2.
+
 ## AndroidDexTool
 
 An enum-style property with valid
@@ -418,6 +452,8 @@ compiler.
 
 Added in Xamarin.Android 10.2.
 
+<a name="AndroidFastDeploymentType"></a>
+
 ## AndroidFastDeploymentType
 
 A `:` (colon)-separated list
@@ -432,14 +468,17 @@ the `.apk` needs to be rebuilt, and the install process can be
 faster.) Valid values include:
 
 - `Assemblies`: Deploy application assemblies.
-
-- `Dexes`: Deploy `.dex` files, Android Resources, and Android
-  Assets. **This value can *only* be used on devices running
+- `Dexes`: Deploy `.dex` files, native libraries and typemaps.
+  **This value can *only* be used on devices running
   Android 4.4 or later (API-19).**
 
 The default value is `Assemblies`.
 
-**Experimental**. Added in Xamarin.Android 6.1.
+Support for Fast Deploying resources and assets via that system was
+removed in commit [f0d565fe](https://github.com/xamarin/xamarin-android/commit/f0d565fe4833f16df31378c77bbb492ffd2904b9). This was becuase it required the use of
+deprecated API's to work.
+
+**Experimental**. This property was added in Xamarin.Android 6.1.
 
 ## AndroidGenerateJniMarshalMethods
 
@@ -548,6 +587,51 @@ The most common values for this property are:
 > will take precedence.
 
 Added in Xamarin.Android 6.1.
+
+## AndroidIncludeWrapSh
+
+A boolean value which indicates whether the Android wrapper script
+([`wrap.sh`](https://developer.android.com/ndk/guides/wrap-script))
+should be packaged into the APK. The property defaults to `false`
+since the wrapper script may significantly influence the way the
+application starts up and works and the script should be included only
+when necessary e.g. for debugging or otherwise changing the
+application startup/runtime behavior.
+
+The script is added to the project using the
+[`@(AndroidNativeLibrary)`](~/android/deploy-test/building-apps/build-items.md#androidnativelibrary)
+build action, because it is placed in the same directory as
+architecture-specific native libraries, and must be named `wrap.sh`.
+
+The easiest way to specify path to the `wrap.sh` script is to put it
+in a directory named after the target architecture. This approach will
+work if you have just one `wrap.sh` per architecture:
+
+```xml
+<AndroidNativeLibrary Include="path/to/arm64-v8a/wrap.sh" />
+```
+
+However, if your project needs more than one `wrap.sh` per
+architecture, for different purposes, this approach won't work.
+Instead, in such cases the name can be specified using the `Link`
+metadata of the `AndroidNativeLibrary`:
+
+```xml
+<AndroidNativeLibrary Include="/path/to/my/arm64-wrap.sh">
+  <Link>lib\arm64-v8a\wrap.sh</Link>
+</AndroidNativeLibrary>
+```
+
+If the `Link` metadata is used, the path specified in its value must
+be a valid native architecture-specific library path, relative to the
+APK root directory. The format of the path is `lib\ARCH\wrap.sh` where
+`ARCH` can be one of:
+
++ `arm64-v8a`
++ `armeabi-v7a`
++ `x86_64`
++ `x86`
+
 
 ## AndroidKeyStore
 
@@ -755,6 +839,17 @@ option was removed in Xamarin.Android 10.2 to improve compatibility
 with build environments that have FIPS compliance enforced.
 
 Added in Xamarin.Android 10.1.
+
+## AndroidProguardMappingFile
+
+Specifies the `-printmapping` proguard rule for `r8`. This will
+mean the `mapping.txt` file will be produced in the `$(OutputPath)`
+folder. This file can then be used when uploading packages to the
+Google Play Store.
+
+The default value is `$(OutputPath)mapping.txt`.
+
+This property was added in Xamarin.Android 11.2.
 
 ## AndroidR8IgnoreWarnings
 
@@ -965,7 +1060,8 @@ in their `.csproj`. Alternatively provide the property on the command line:
 /p:AndroidUseAapt2=True
 ```
 
-Added in Xamarin.Android 8.3.
+This property was added in Xamarin.Android 8.3. Setting `AndroidUseAapt2` to `false` is
+deprecated in Xamarin.Android 11.2.
 
 ## AndroidUseApkSigner
 
@@ -1011,8 +1107,10 @@ shared runtime packages allows the Application package to be
 smaller, speeding up the package creation and deployment process,
 resulting in a faster build/deploy/debug turnaround cycle.
 
-This property should be `True` for Debug builds, and `False` for
-Release projects.
+Prior to Xamarin.Android 11.2, this property should be `True` for
+Debug builds, and `False` for Release projects.
+
+This property was *removed* in Xamarin.Android 11.2.
 
 ## AndroidVersionCodePattern
 
@@ -1254,6 +1352,10 @@ generating of linker dependencies file. This file can be used as
 input for
 [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md)
 tool.
+
+The dependencies file named `linker-dependencies.xml.gz` is written
+to the project directory. On .NET5/6 it is written next to the linked
+assemblies in `obj/<Configuration>/android<ABI>/linked` directory.
 
 The default value is False.
 

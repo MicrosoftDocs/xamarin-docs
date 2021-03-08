@@ -205,7 +205,7 @@ This XAML consists of two main objects:
 - `TabBar`. The `TabBar` represents the bottom tab bar, and should be used when the navigation pattern for the application uses bottom tabs. The `TabBar` object is a child of the `Shell` object.
 - `ShellContent`, which represents the `ContentPage` objects for each tab in the `TabBar`. Each `ShellContent` object is a child of the `TabBar` object.
 
-These objects don't represent any user interface, but rather the organization of the application's visual hierarchy. Shell will take these objects and produce the navigation user interface for the content. Therefore, the `AppShell` class defines defines two pages that are navigable from bottom tabs. The pages are created on demand, in response to user navigation.
+These objects don't represent any user interface, but rather the organization of the application's visual hierarchy. Shell will take these objects and produce the navigation user interface for the content. Therefore, the `AppShell` class defines defines two pages that are navigable from bottom tabs. The pages are created on demand, in response to navigation.
 
 For more information about Shell applications, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 

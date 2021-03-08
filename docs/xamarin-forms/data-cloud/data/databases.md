@@ -6,7 +6,7 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 12/05/2019
+ms.date: 03/01/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -89,93 +89,70 @@ A database wrapper class abstracts the data access layer from the rest of the ap
 
 ### Lazy initialization
 
-The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information, see [Lazy&lt;T&gt; Class](xref:System.Lazy`1).
+The `TodoItemDatabase` uses asynchronous lazy initialization, represented by the custom `AsyncLazy<T>` class, to delay initialization of the database until it's first accessed:
 
 ```csharp
 public class TodoItemDatabase
 {
-    static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
-    {
-        return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-    });
+    static SQLiteAsyncConnection Database;
 
-    static SQLiteAsyncConnection Database => lazyInitializer.Value;
-    static bool initialized = false;
+    public static readonly AsyncLazy<TodoItemDatabase> Instance = new AsyncLazy<TodoItemDatabase>(async () =>
+    {
+        var instance = new TodoItemDatabase();
+        CreateTableResult result = await Database.CreateTableAsync<TodoItem>();
+        return instance;
+    });
 
     public TodoItemDatabase()
     {
-        InitializeAsync().SafeFireAndForget(false);
-    }
-
-    async Task InitializeAsync()
-    {
-        if (!initialized)
-        {
-            if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
-            {
-                await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
-            }
-            initialized = true;
-        }
+        Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
     }
 
     //...
 }
 ```
 
-The database connection is a static field which ensures that a single database connection is used for the life of the app. Using a persistent, static connection offers better performance than opening and closing connections multiple times during a single app session.
+The `Instance` field is used to create the database table for the `TodoItem` object, if it doesn't already exist, and returns a `TodoItemDatabase` as a singleton. The `Instance` field, of type `AsyncLazy<TodoItemDatabase>` is constructed the first time it's awaited. If multiple threads attempt to access the field simultaneously, they will all use the single construction. Then, when the construction completes, all `await` operations complete. In addition, any `await` operations after the construction is complete continue immediately since the value is available.
 
-The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method automatically creates the table if it doesn't exist.
+> [!NOTE]
+> The database connection is a static field which ensures that a single database connection is used for the life of the app. Using a persistent, static connection offers better performance than opening and closing connections multiple times during a single app session.
 
-### The SafeFireAndForget extension method
+### Asynchronous lazy initialization
 
-When the `TodoItemDatabase` class is instantiated, it must initialize the database connection, which is an asynchronous process. However:
-
-- Class constructors cannot be asynchronous.
-- An async method that isn't awaited will not throw exceptions.
-- Using the `Wait` method blocks the thread _and_ swallows exceptions.
-
-In order to start the asynchronous initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses an extension method called `SafeFireAndForget`. The `SafeFireAndForget` extension method provides additional functionality to the `Task` class:
+In order to start the database initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses asynchronous lazy initalization, represented by the `AsyncLazy<T>` class:
 
 ```csharp
-public static class TaskExtensions
+public class AsyncLazy<T> : Lazy<Task<T>>
 {
-    // NOTE: Async void is intentional here. This provides a way
-    // to call an async method from the constructor while
-    // communicating intent to fire and forget, and allow
-    // handling of exceptions
-    public static async void SafeFireAndForget(this Task task,
-        bool returnToCallingContext,
-        Action<Exception> onException = null)
-    {
-        try
-        {
-            await task.ConfigureAwait(returnToCallingContext);
-        }
+    readonly Lazy<Task<T>> instance;
 
-        // if the provided action is not null, catch and
-        // pass the thrown exception
-        catch (Exception ex) when (onException != null)
-        {
-            onException(ex);
-        }
+    public AsyncLazy(Func<T> factory)
+    {
+        instance = new Lazy<Task<T>>(() => Task.Run(factory));
+    }
+
+    public AsyncLazy(Func<Task<T>> factory)
+    {
+        instance = new Lazy<Task<T>>(() => Task.Run(factory));
+    }
+
+    public TaskAwaiter<T> GetAwaiter()
+    {
+        return instance.Value.GetAwaiter();
     }
 }
 ```
 
-The `SafeFireAndForget` method awaits the asynchronous execution of the provided `Task` object, and allows you to attach an `Action` that is called if an exception is thrown.
-
-For more information, see [Task-based asynchronous pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+The `AsyncLazy` class combines the `Lazy<T>` and `Task<T>` types to create a lazy-initialized task that represents the initialization of a resource. The factory delegate that's passed to the constructor can either be synchronous or asynchronous. Factory delegates will run on a thread pool thread, and will not be executed more than once (even when multiple threads attempt to start them simultaneously). When a factory delegate completes, the lazy-initialized value is available, and any methods awaiting the `AsyncLazy<T>` instance receive the value. For more information, see [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
 
 ### Data manipulation methods
 
 The `TodoItemDatabase` class includes methods for the four types of data manipulation: create, read, edit, and delete. The SQLite.NET library provides a simple Object Relational Map (ORM) that allows you to store and retrieve objects without writing SQL statements.
 
 ```csharp
-public class TodoItemDatabase {
-
+public class TodoItemDatabase
+{
     // ...
-
     public Task<List<TodoItem>> GetItemsAsync()
     {
         return Database.Table<TodoItem>().ToListAsync();
@@ -213,33 +190,18 @@ public class TodoItemDatabase {
 
 ## Access data in Xamarin.Forms
 
-The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
+The `TodoItemDatabase` class exposes the `Instance` field, through which the data access operations in the `TodoItemDatabase` class can be invoked:
 
 ```csharp
-static TodoItemDatabase database;
-public static TodoItemDatabase Database
-{
-    get
-    {
-        if (database == null)
-        {
-            database = new TodoItemDatabase();
-        }
-        return database;
-    }
-}
-```
-
-This property allows Xamarin.Forms components to call data retrieval and manipulation methods on the `Database` instance in response to user interaction. For example:
-
-```csharp
-var saveButton = new Button { Text = "Save" };
-saveButton.Clicked += async (sender, e) =>
+async void OnSaveClicked(object sender, EventArgs e)
 {
     var todoItem = (TodoItem)BindingContext;
-    await App.Database.SaveItemAsync(todoItem);
+    TodoItemDatabase database = await TodoItemDatabase.Instance;
+    await database.SaveItemAsync(todoItem);
+
+    // Navigate backwards
     await Navigation.PopAsync();
-};
+}
 ```
 
 ## Advanced configuration
@@ -248,7 +210,7 @@ SQLite provides a robust API with more features than are covered in this article
 
 For more information, see [SQLite Documentation](https://www.sqlite.org/docs.html) on sqlite.org.
 
-### Write-Ahead Logging
+### Write-ahead logging
 
 By default, SQLite uses a traditional rollback journal. A copy of the unchanged database content is written into a separate rollback file, then the changes are written directly to the database file. The COMMIT occurs when the rollback journal is deleted.
 
@@ -264,7 +226,7 @@ await Database.EnableWriteAheadLoggingAsync();
 
 For more information, see [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) on sqlite.org.
 
-### Copying a database
+### Copy a database
 
 There are several cases where it may be necessary to copy a SQLite database:
 
@@ -279,12 +241,11 @@ In general, moving, renaming, or copying a database file is the same process as 
 
 For more information, see [File Handling in Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md).
 
-## Related Links
+## Related links
 
 - [Todo sample application](/samples/xamarin/xamarin-forms-samples/todo)
 - [SQLite.NET NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [SQLite documentation](https://www.sqlite.org/docs.html)
 - [Using SQLite with Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Using SQLite with iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Task-based asynchronous pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy&lt;T&gt; Class](xref:System.Lazy`1)
+- [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/)

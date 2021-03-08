@@ -6,7 +6,7 @@ ms.assetid: 5EBEE1A5-3879-45DD-B1DE-5CD4327C2656
 ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
-ms.date: 09/23/2020
+ms.date: 03/01/2021
 ---
 
 # Build Items
@@ -34,6 +34,9 @@ and `.jar` files will be included in the appropriate item groups.
 ## AndroidAotProfile
 
 Used to provide an AOT profile, for use with profile-guided AOT.
+
+It can be also used from Visual Studio by setting the `AndroidAotProfile`
+build action to a file containing an AOT profile.
 
 ## AndroidBoundLayout
 
@@ -72,6 +75,36 @@ package.
 Files with a Build action of `AndroidJavaSource` are Java source code which
 will be included in the final Android package.
 
+## AndroidLibrary
+
+**AndroidLibrary** is a new build action for simplifying how
+`.jar` and `.aar` files are included in projects.
+
+Any project can specify:
+
+```xml
+<ItemGroup>
+  <AndroidLibrary Include="foo.jar" />
+  <AndroidLibrary Include="bar.aar" />
+</ItemGroup>
+```
+
+The result of the above code snippet has a different effect for each
+Xamarin.Android project type:
+
+* Application and class library projects:
+  * `foo.jar` maps to [**AndroidJavaLibrary**](#androidjavalibrary).
+  * `bar.aar` maps to [**AndroidAarLibrary**](#androidaarlibrary).
+* Java binding projects:
+  * `foo.jar` maps to [**EmbeddedJar**](#embeddedjar).
+  * `foo.jar` maps to [**EmbeddedReferenceJar**](#embeddedreferencejar)
+    if `Bind="false"` metadata is added.
+  * `bar.aar` maps to [**LibraryProjectZip**](#libraryprojectzip).
+
+This simplification means you can use **AndroidLibrary** everywhere.
+
+This build action was added in Xamarin.Android 11.2.
+
 ## AndroidLintConfig
 
 The Build action 'AndroidLintConfig' should be used in conjunction with the
@@ -82,6 +115,36 @@ which tests to enable and disable.
 
 See the [lint documentation](https://developer.android.com/studio/write/lint)
 for more details.
+
+## AndroidManifestOverlay
+
+The `AndroidManifestOverlay` build action can be used to provide additional
+`AndroidManifest.xml` files to the [Manifest Merger](https://developer.android.com/studio/build/manifest-merge) tool.
+Files with this build action will be passed to the Manifest Merger along with
+the main `AndroidManifest.xml` file and any additional manifest files from
+references. These will then be merged into the final manifest.
+
+You can use this build action to provide additional changes and settings to
+your app depending on your build configuration. For example, if you need to
+have a specific permission only while debugging, you can use the overlay to
+inject that permission when debugging. For example, given the following
+overlay file contents:
+
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.CAMERA" />
+</manifest>
+```
+
+You can use the following to add this for a debug build:
+
+```
+<ItemGroup>
+  <AndroidManifestOverlay Include="DebugPermissions.xml" Condition=" '$(Configuration)' == 'Debug' " />
+</ItemGroup>
+```
+
+This build action was introduced in Xamarin.Android 11.2.
 
 ## AndroidNativeLibrary
 
@@ -179,6 +242,121 @@ step).
 
 Starting in Xamarin.Android 5.1, attempting to use the `@(Content)`
 Build action will result in a `XA0101` warning.
+
+## EmbeddedJar
+
+In a Xamarin.Android binding project, the **EmbeddedJar** build action
+binds the Java/Kotlin library and embeds the `.jar` file into the
+library. When a Xamarin.Android application project consumes the
+library, it will have access to the Java/Kotlin APIs from C# as well
+as include the Java/Kotlin code in the final Android application.
+
+Since Xamarin.Android 11.2, you can use the
+[**AndroidLibrary**](#androidlibrary) build action as an alternative
+such as:
+
+```xml
+<Project>
+  <ItemGroup>
+    <AndroidLibrary Include="Library.jar" />
+  </ItemGroup>
+</Project>
+```
+
+## EmbeddedNativeLibrary
+
+In a Xamarin.Android class library or Java binding project, the
+**EmbeddedNativeLibrary** build action bundles a native library such
+as `lib/armeabi-v7a/libfoo.so` into the library. When a
+Xamarin.Android application consumes the library, the `libfoo.so` file
+will be included in the final Android application.
+
+Since Xamarin.Android 11.2, you can use the
+[**AndroidNativeLibrary**](#androidnativelibrary) build action as an
+alternative.
+
+## EmbeddedReferenceJar
+
+In a Xamarin.Android binding project, the **EmbeddedReferenceJar**
+build action embeds the `.jar` file into the library but does not
+create a C# binding as [**EmbeddedJar**](#embeddedjar) does. When a
+Xamarin.Android application project consumes the library, it will
+include the Java/Kotlin code in the final Android application.
+
+Since Xamarin.Android 11.2, you can use the
+[**AndroidLibrary**](#androidlibrary) build action as an alternative
+such as `<AndroidLibrary Include="..." Bind="false" />`:
+
+```xml
+<Project>
+  <ItemGroup>
+    <!-- A .jar file to bind & embed -->
+    <AndroidLibrary Include="Library.jar" />
+    <!-- A .jar file to only embed -->
+    <AndroidLibrary Include="Dependency.jar" Bind="false" />
+  </ItemGroup>
+</Project>
+```
+
+## JavaDocJar
+
+In a Xamarin.Android binding project, the **JavaDocJar** build action
+is used on `.jar` files which contain *Javadoc HTML*.  The Javadoc HTML
+is parsed in order to extract parameter names.
+
+Only certain "Javadoc HTML dialects" are supported, including:
+
+  * JDK 1.7 `javadoc` output.
+  * JDK 1.8 `javadoc` output.
+  * Droiddoc output.
+
+This build action is deprecated in Xamarin.Android 11.3, and will not be
+supported in .NET 6.
+The `@(JavaSourceJar)` build action is preferred.
+
+## JavaSourceJar
+
+In a Xamarin.Android binding project, the **JavaSourceJar** build action
+is used on `.jar` files that contain *Java source code*, which contain
+[Javadoc documentation comments](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html).
+
+Prior to Xamarin.Android 11.3, the Javadoc would be converted into HTML
+via the `javadoc` utility during build time, and later turned into
+XML documentation.
+
+Starting with Xamarin.Android 11.3, Javadoc will instead be converted into
+[C# XML Documentation Comments](/dotnet/csharp/codedoc)
+within the generated binding source code.
+
+`$(AndroidJavadocVerbosity)` controls how "verbose" or "complete" the imported Javadoc is.
+
+Starting in Xamarin.Android 11.3, the following MSBuild metadata is supported:
+
+* `%(CopyrightFile)`: A path to a file that contains copyright
+    information for the Javadoc contents, which will be appended to
+    all imported documentation.
+
+* `%(UrlPrefix)`: A URL prefix to support linking to online
+    documentation within imported documentation.
+
+* `%(UrlStyle)`: The "style" of URLs to generate when linking to
+    online documentation.  Only one style is currently supported:
+    `developer.android.com/reference@2020-Nov`.
+
+
+## LibraryProjectZip
+
+In a Xamarin.Android binding project, the **LibraryProjectZip** build
+action binds the Java/Kotlin library and embeds the `.zip` or `.aar`
+file into the library. When a Xamarin.Android application project
+consumes the library, it will have access to the Java/Kotlin APIs from
+C# as well as include the Java/Kotlin code in the final Android
+application.
+
+> [!NOTE]
+> Only a single **LibraryProjectZip** can be included in a
+> Xamarin.Android binding project. This limitation will be removed
+> in .NET 6.
 
 ## LinkDescription
 
