@@ -16,7 +16,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 Xamarin.Forms Shell includes a URI-based navigation experience that uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
 
-The [`Shell`](xref:Xamarin.Forms.Shell) class defines the following navigation related properties:
+The [`Shell`](xref:Xamarin.Forms.Shell) class defines the following navigation-related properties:
 
 - [`BackButtonBehavior`](xref:Xamarin.Forms.Shell.BackButtonBehaviorProperty), of type [`BackButtonBehavior`](xref:Xamarin.Forms.BackButtonBehavior), an attached property that defines the behavior of the back button.
 - [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem), of type [`ShellItem`](xref:Xamarin.Forms.ShellItem), the currently selected item.
@@ -149,7 +149,7 @@ The following relative route formats are supported:
 
 | Format | Description |
 | --- | --- |
-| *route* | The route hierarchy will be searched for the specified route, upwards from from the current position. The matching page will be pushed to the navigation stack. |
+| *route* | The route hierarchy will be searched for the specified route, upwards from the current position. The matching page will be pushed to the navigation stack. |
 | /*route* | The route hierarchy will be searched from the specified route, downwards from the current position. The matching page will be pushed to the navigation stack. |
 | //*route* | The route hierarchy will be searched for the specified route, upwards from the current position. The matching page will replace the navigation stack. |
 | ///*route* | The route hierarchy will be searched for the specified route, downwards from the current position. The matching page will replace the navigation stack. |
@@ -223,7 +223,7 @@ The following route formats are invalid:
 | --- | --- |
 | //*page* or ///*page* | Global routes currently can't be the only page on the navigation stack. Therefore, absolute routing to global routes is unsupported. |
 
-Use of these route formats result in an `Exception` being thrown.
+Use of these route formats results in an `Exception` being thrown.
 
 > [!WARNING]
 > Attempting to navigate to a non-existent route results in an `ArgumentException` exception being thrown.
@@ -273,7 +273,7 @@ The [`Shell`](xref:Xamarin.Forms.Shell) class defines the [`Navigating`](xref:Xa
 | [`Source`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Source) | [`ShellNavigationSource`](xref:Xamarin.Forms.ShellNavigationSource) | The type of navigation that occurred. |
 | [`Target`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Target) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | The URI representing where the navigation is destined. |
 | [`CanCancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.CanCancel)  | `bool` | A value indicating if it's possible to cancel the navigation. |
-| [`Cancelled`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancelled)  | `bool` | A value indicating if the navigation was cancelled. |
+| [`Cancelled`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancelled)  | `bool` | A value indicating if the navigation was canceled. |
 
 In addition, the [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) class provides a [`Cancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancel*) method that can be used to cancel navigation, and a [`GetDeferral`](xref:Xamarin.Forms.ShellNavigatingEventArgs.GetDeferral*) method that returns a [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) token that can be used to complete navigation. For more information about navigation deferral, see [Navigation deferral](#navigation-deferral).
 
@@ -317,7 +317,7 @@ protected override void OnNavigating(ShellNavigatingEventArgs args)
 
 ## Navigation deferral
 
-Shell navigation can be intercepted and completed or cancelled based on user choice. This can be achieved by overriding the `OnNavigating` method in your [`Shell`](xref:Xamarin.Forms.Shell) subclass, and by calling the [`GetDeferral`](xref:Xamarin.Forms.ShellNavigatingEventArgs.GetDeferral*) method on the [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) object. This method returns a [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) token that has a [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*) method, which can be used to complete the navigation request:
+Shell navigation can be intercepted and completed or canceled based on user choice. This can be achieved by overriding the `OnNavigating` method in your [`Shell`](xref:Xamarin.Forms.Shell) subclass, and by calling the [`GetDeferral`](xref:Xamarin.Forms.ShellNavigatingEventArgs.GetDeferral*) method on the [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) object. This method returns a [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) token that has a [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*) method, which can be used to complete the navigation request:
 
 ```csharp
 public MyShell : Shell
@@ -339,7 +339,7 @@ public MyShell : Shell
 }
 ```
 
-In this example, an action sheet is displayed that invites the user to complete the navigation request, or cancel it. Navigation is cancelled by invoking the [`Cancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancel*) method on the [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) object. Navigation is completed by invoking the [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*) method on the [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) token that was retrieved by the `GetDeferral` method on the `ShellNavigatingEventArgs` object.
+In this example, an action sheet is displayed that invites the user to complete the navigation request, or cancel it. Navigation is canceled by invoking the [`Cancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancel*) method on the [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) object. Navigation is completed by invoking the [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*) method on the [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) token that was retrieved by the `GetDeferral` method on the `ShellNavigatingEventArgs` object.
 
 > [!WARNING]
 > The [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method will throw a `InvalidOperationException` if a user tries to navigate while there is a pending navigation deferral.
@@ -360,10 +360,10 @@ This code example retrieves the currently selected elephant in the [`CollectionV
 
 There are two approaches to receiving navigation data:
 
-1. The class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter. For more information, see [Query property attributes](#query-property-attributes).
+1. The class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter. For more information, see [Process navigation data using query property attributes](#process-navigation-data-using-query-property-attributes).
 1. The class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can implement the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface. For more information, see [Process navigation data using a single method](#process-navigation-data-using-a-single-method).
 
-### Query property attributes
+### Process navigation data using query property attributes
 
 Navigation data can be received by decorating the receiving class with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
 
@@ -397,7 +397,7 @@ public partial class ElephantDetailPage : ContentPage
 
 The first argument for the [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) specifies the name of the property that will receive the data, with the second argument specifying the query parameter id. Therefore, the `QueryPropertyAttribute` in the above example specifies that the `Name` property will receive the data passed in the `name` query parameter from the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call. The `Name` property setter calls the `LoadAnimal` method to retrieve the `Animal` object for the `name`, and sets it as the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the page.
 
-> [!IMPORTANT]
+> [!NOTE]
 > Query parameter values that are received via the [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) are automatically URL decoded.
 
 ### Process navigation data using a single method
@@ -413,7 +413,7 @@ public class MonkeyDetailViewModel : IQueryAttributable, INotifyPropertyChanged
 
     public void ApplyQueryAttributes(IDictionary<string, string> query)
     {
-        // Only a single query parameter is passed, which needs URL decoding.
+        // The query parameter requires URL decoding.
         string name = HttpUtility.UrlDecode(query["name"]);
         LoadAnimal(name);
     }
@@ -437,7 +437,7 @@ public class MonkeyDetailViewModel : IQueryAttributable, INotifyPropertyChanged
 In this example, the [`ApplyQueryAttributes`](xref:Xamarin.Forms.IQueryAttributable.ApplyQueryAttributes*) method retrieves the value of the `name` query parameter from the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call. Then, the `LoadAnimal` method is called to retrieve the `Animal` object, where its set as the value of the `Monkey` property that is data bound to.
 
 > [!IMPORTANT]
-> Query parameter values that are received via the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface) aren't automatically URL decoded.
+> Query parameter values that are received via the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface aren't automatically URL decoded.
 
 #### Pass multiple query parameters
 
@@ -454,7 +454,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 
 This code example retrieves the currently selected elephant in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), and navigates to the `elephantdetails` route, passing `elephantName` and `elephantLocation` as query parameters.
 
-To receive data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
+To receive multiple items of data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
 
 ```csharp
 [QueryProperty(nameof(Name), "name")]
