@@ -6,7 +6,7 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/23/2021
+ms.date: 03/09/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -358,7 +358,14 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 
 This code example retrieves the currently selected elephant in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), and navigates to the `elephantdetails` route, passing `elephantName` as a query parameter.
 
-To receive data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), must be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
+There are two approaches to receiving navigation data:
+
+1. The class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter. For more information, see [Query property attributes](#query-property-attributes).
+1. The class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can implement the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface. For more information, see [Process navigation data using a single method](#process-navigation-data-using-a-single-method).
+
+### Query property attributes
+
+Navigation data can be received by decorating the receiving class with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
 
 ```csharp
 [QueryProperty(nameof(Name), "name")]
@@ -391,9 +398,48 @@ public partial class ElephantDetailPage : ContentPage
 The first argument for the [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) specifies the name of the property that will receive the data, with the second argument specifying the query parameter id. Therefore, the `QueryPropertyAttribute` in the above example specifies that the `Name` property will receive the data passed in the `name` query parameter from the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call. The `Name` property setter calls the `LoadAnimal` method to retrieve the `Animal` object for the `name`, and sets it as the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the page.
 
 > [!IMPORTANT]
-> Query parameter values are automatically URL decoded.
+> Query parameter values that are received via the [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) are automatically URL decoded.
 
-### Pass multiple query parameters
+### Process navigation data using a single method
+
+Navigation data can be received by implementing the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface on the receiving class. The [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface specifies that the implementing class must implement the [`ApplyQueryAttributes`](xref:Xamarin.Forms.IQueryAttributable.ApplyQueryAttributes*) method. This method has a `query` argument, of type `IDictionary<string, string>`, that contains any data passed during navigation. Each key in the dictionary is a query parameter id, with its value being the query parameter value. The advantage of using this approach is that navigation data can be processed using a single method, which is useful when you have multiple items of navigation data that require processing as a whole.
+
+The following example shows a view model class that implements the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface:
+
+```csharp
+public class MonkeyDetailViewModel : IQueryAttributable, INotifyPropertyChanged
+{
+    public Animal Monkey { get; private set; }
+
+    public void ApplyQueryAttributes(IDictionary<string, string> query)
+    {
+        // Only a single query parameter is passed, which needs URL decoding.
+        string name = HttpUtility.UrlDecode(query["name"]);
+        LoadAnimal(name);
+    }
+
+    void LoadAnimal(string name)
+    {
+        try
+        {
+            Monkey = MonkeyData.Monkeys.FirstOrDefault(a => a.Name == name);
+            OnPropertyChanged("Monkey");
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Failed to load animal.");
+        }
+    }
+    ...
+}
+```
+
+In this example, the [`ApplyQueryAttributes`](xref:Xamarin.Forms.IQueryAttributable.ApplyQueryAttributes*) method retrieves the value of the `name` query parameter from the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call. Then, the `LoadAnimal` method is called to retrieve the `Animal` object, where its set as the value of the `Monkey` property that is data bound to.
+
+> [!IMPORTANT]
+> Query parameter values that are received via the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface) aren't automatically URL decoded.
+
+#### Pass multiple query parameters
 
 Multiple query parameters can be passed by connecting them with `&`. For example, the following code passes two data items:
 
@@ -408,7 +454,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 
 This code example retrieves the currently selected elephant in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), and navigates to the `elephantdetails` route, passing `elephantName` and `elephantLocation` as query parameters.
 
-To receive data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), must be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
+To receive data, the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), can be decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter:
 
 ```csharp
 [QueryProperty(nameof(Name), "name")]
@@ -435,6 +481,25 @@ public partial class ElephantDetailPage : ContentPage
 ```
 
 In this example, the class is decorated with a [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) for each query parameter. The first `QueryPropertyAttribute` specifies that the `Name` property will receive the data passed in the `name` query parameter, while the second `QueryPropertyAttribute` specifies that the `Location` property will receive the data passed in the `location` query parameter. In both cases, the query parameter values are specified in the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call.
+
+Alternatively, navigation data can be processed by a single method by implementing the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface on the class that represents the page being navigated to, or the class for the page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext):
+
+```csharp
+public class ElephantDetailViewModel : IQueryAttributable, INotifyPropertyChanged
+{
+    public Animal Elephant { get; private set; }
+
+    public void ApplyQueryAttributes(IDictionary<string, string> query)
+    {
+        string name = HttpUtility.UrlDecode(query["name"]);
+        string location = HttpUtility.UrlDecode(query["location"]);
+        ...        
+    }
+    ...
+}
+```
+
+In this example, the [`ApplyQueryAttributes`](xref:Xamarin.Forms.IQueryAttributable.ApplyQueryAttributes*) method retrieves the value of the `name` and `location` query parameters from the URI in the [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) method call.
 
 ## Back button behavior
 
