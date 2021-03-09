@@ -439,7 +439,7 @@ In this example, the [`ApplyQueryAttributes`](xref:Xamarin.Forms.IQueryAttributa
 > [!IMPORTANT]
 > Query parameter values that are received via the [`IQueryAttributable`](xref:Xamarin.Forms.IQueryAttributable) interface aren't automatically URL decoded.
 
-#### Pass multiple query parameters
+#### Pass and process multiple query parameters
 
 Multiple query parameters can be passed by connecting them with `&`. For example, the following code passes two data items:
 
