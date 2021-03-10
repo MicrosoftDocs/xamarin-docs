@@ -68,6 +68,8 @@ public class DisplayInfoTest
 }
 ```
 
+## Keep Screen On
+
 The **DeviceDisplay** class exposes a `bool` property called `KeepScreenOn` that can be set to attempt to keep the device's display from turning off or locking.
 
 ```csharp
