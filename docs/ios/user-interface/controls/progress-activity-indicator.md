@@ -29,12 +29,6 @@ Apple has the following suggestions for working with Activity Indicators:
 
 An Activity Indicator is implemented through the [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) class to indicate that a `UIActivity` is taking place.
 
-### Activity Indicators and Storyboards
-
-If you are using the iOS Designer to create your UI, the Activity Indicator can be added to your layout from the Toolbox. The following properties can be adjusted from the Properties Pad:
-
-![Screenshot shows the Properties Pad where you can modify Style, Color, and Behavior properties.](progress-activity-indicator-images/progress-indicator1.png)
-
 ### Managing Activity Indicator Behavior
 
 Use the `StartAnimating()` and `StopAnimating()` methods to start and stop the activity indicator animation.

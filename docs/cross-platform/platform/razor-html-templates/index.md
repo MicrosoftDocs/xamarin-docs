@@ -476,7 +476,7 @@ These templates do not make use of native controls on each platform – the enti
 
 HTML can be great for prototyping, and displaying the kinds of things the web is best at such as rich text and responsive layout. However not all tasks are suited to HTML and JavaScript – scrolling through long lists of data, for example, performs better using native UI controls (such as UITableView on iOS or ListView on Android).
 
-The web views in the template can easily be augmented with platform-specific controls – simply edit the **MainStoryboard.storyboard** in the iOS designer or the **Resources/layout/Main.axml** on Android.
+The web views in the template can easily be augmented with platform-specific controls – simply edit the **MainStoryboard.storyboard** using Xcode on a Mac or the **Resources/layout/Main.axml** on Android.
 
 ### RazorTodo Sample
 

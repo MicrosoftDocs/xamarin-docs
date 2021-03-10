@@ -808,9 +808,9 @@ In this storyboard, there is a single view controller, of type
 
 > [!NOTE]
 > The interfaces for **invoiceView** and **confirmationView** are defined
-> in **Main.storyboard** as secondary views. The iOS Designer in Visual
-> Studio for Mac and Visual Studio 2017 does not provide support for
-> viewing or editing secondary views; to do so, open **Main.storyboard**
+> in **Main.storyboard** as secondary views. Visual Studio for Mac and 
+> Visual Studio 2017 does not provide support for viewing or editing 
+> secondary views; to do so, open **Main.storyboard**
 > in Xcode's Interface Builder.
 
 `IntentViewController` implements the

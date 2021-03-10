@@ -10,6 +10,10 @@ ms.author: daortin
 ms.date: 10/05/2018
 ---
 # Hello, iOS Multiscreen – deep dive
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 In the Quickstart walkthrough, we built and ran our first multi-screen Xamarin.iOS application. Now it’s time to develop a
 deeper understanding of iOS navigation and architecture.

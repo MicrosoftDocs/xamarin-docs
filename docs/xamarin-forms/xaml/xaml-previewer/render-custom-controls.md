@@ -14,6 +14,10 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _Custom controls sometimes don't work as expected in the XAML Previewer. Use the guidance in this article to understand the limitations of previewing your custom controls._
 
+> [!WARNING]
+> The XAML Previewer has been deprecated in Visual Studio 2019 version 16.8 and Visual Studio for Mac version 8.8, and 
+> replaced by the XAML Hot Reload feature in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> Learn more about XAML Hot Reload in [the documentation](~/xamarin-forms/xaml/hot-reload.md).
 ## Basic Preview mode
 
 Even if you haven't built your project, the XAML Previewer will render your pages. Until you build, any control that relies on code-behind will show its base Xamarin.Forms type. When your project is built, the XAML Previewer will try to show custom controls with design time rendering enabled. If the render fails, it will show the base Xamarin.Forms type.

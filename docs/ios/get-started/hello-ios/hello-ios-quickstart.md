@@ -12,6 +12,10 @@ ms.date: 10/05/2018
 ---
 
 # Hello, iOS – Quickstart
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 This guide describes how to create an application that translates an alphanumeric phone number entered by the user into a numeric phone number, and then calls that number. The final application looks like this:
 
@@ -276,7 +280,7 @@ This walkthrough describes how to create an application called Phoneword that tr
 > This walkthrough uses Visual Studio Enterprise 2017 on a Windows 10 Virtual Machine. Your set up can differ from this, as long as it meets the requirements above, but be aware that some screenshots may look different to your set up.
 
 > [!NOTE]
-> Before proceeding with this walkthrough, you must have already connected to your Mac from Visual Studio. This is because Xamarin.iOS relies on Apple's tooling to build and launch the iOS Designer and applications. To get set up, follow the steps in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
+> Before proceeding with this walkthrough, you must have already connected to your Mac from Visual Studio. This is because Xamarin.iOS relies on Apple's tooling to build and launch applications. To get set up, follow the steps in the [Pair to Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) guide.
 
 1. Launch Visual Studio from the **Start** menu:
 

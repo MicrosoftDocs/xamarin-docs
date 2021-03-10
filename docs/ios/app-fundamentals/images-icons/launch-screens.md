@@ -13,6 +13,11 @@ ms.date: 05/02/2018
 
 _This article explains how to create an app Launch Screen for all iOS devices, at any resolution and orientation, using a single Unified Storyboard._
 
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9. 
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
+
 Before iOS 8, creating a Launch Screen for an iOS app required the
 developer to provide an image asset for each of the various device form
 factors and resolutions in which the app could run. Since the release of iOS

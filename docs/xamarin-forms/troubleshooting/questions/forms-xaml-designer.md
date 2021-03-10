@@ -18,6 +18,6 @@ Xamarin.Forms doesn't currently support visual designers for XAML files. Because
 
 This limitation is described in the [Xamarin.Forms XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md) guide:
 
-> "There is not yet a visual designer for generating XAML in Xamarin.Forms applications, so all XAML must be hand-written."
+> "There is no visual designer for generating XAML in Xamarin.Forms applications, so all XAML must be hand-written."
 
-However, the Xamarin.Forms XAML Previewer can be displayed by selecting the **View > Other Windows > Xamarin.Forms Previewer** menu option.
+However, the Xamarin.Forms XAML Editor can be displayed by selecting the **View > Other Windows > Xamarin.Forms Editor** menu option.

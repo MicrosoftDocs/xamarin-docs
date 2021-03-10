@@ -10,6 +10,10 @@ ms.date: 03/16/2017
 ---
 
 # Working with tvOS Stacked Views in Xamarin
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 The Stack View control (`UIStackView`) leverages the power of Auto Layout and Size Classes to manage a stack of subviews, either horizontally or vertically, which dynamically responds to content changes and screen size of the Apple TV device.
 

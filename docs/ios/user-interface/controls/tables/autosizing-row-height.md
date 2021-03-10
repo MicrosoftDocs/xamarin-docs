@@ -10,6 +10,10 @@ ms.date: 03/22/2017
 ---
 
 # Auto-Sizing Row Height in Xamarin.iOS
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Starting with iOS 8, Apple added the ability to create a Table View (`UITableView`) that can automatically grow and shrink the height of a given Row based on the size of its content using Auto Layout, Size Classes and Constraints.
 

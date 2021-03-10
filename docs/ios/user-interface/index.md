@@ -18,7 +18,8 @@ A Storyboard is a visual representation of the appearance and flow of your appli
 ## [iOS Designer](~/ios/user-interface/designer/index.md)
 
 > [!WARNING]
-> The iOS Designer will start to be phased out in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8.
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
 > The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 We have built a designer for the iOS storyboard format which is fully integrated

@@ -66,13 +66,6 @@ This page contains additional information and workarounds for issues you may enc
     The fix is to select **Build > Rebuild All** and then
     re-launch the app.
 
-### Visual Studio
-
-The iOS Designer support for Watch Kit *requires* the solution
-    to be configured correctly. If the project references are not
-    set (see [how to set references](~/ios/watchos/get-started/project-references.md))
-    then the design surface will not work correctly.
-
 <a name="noalpha"></a>
 
 ## Removing the Alpha Channel from Icon Images

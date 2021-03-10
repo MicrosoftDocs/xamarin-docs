@@ -17,7 +17,6 @@ There are several ways that image assets are used inside an iOS app. From simply
 
 - **Resolution Independent Images** – Use iOS's built-in support for working with images across different device resolutions and types (iPhone, iPad, etc.).
 - **Asset Catalog Image Sets** - Use **Asset Catalog Image Sets** to manage and group all version of a given image asset required by an app.
-- **Images in the iOS Designer** - Use the iOS Designer to set images for controls.
 - **Images in Code** – Use the `UIImage` class's methods to load and work with image assets and assign them to UI controls in C# code.
 - **Application Icon** - Define the app icon required by every iOS app. This is the icon that the user will tap from the iOS home screen to launch the app. Additionally, this icon is used by Game Center, if applicable.
 - **Spotlight Icon** - Define the app's Spotlight icon. Whenever the user enters the name of an app in a Spotlight Search, this icon is displayed.

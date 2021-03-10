@@ -15,9 +15,9 @@ _This guide presents working with iOS Auto Layout constraints in C# code instead
 
 Auto Layout (also called “adaptive layout”) is a responsive design approach. Unlike the transitional layout system, where each element’s location is hard-coded to a point on the screen, Auto Layout is about *relationships* - the positions of elements relative to other elements on the design surface. At the heart of Auto Layout is the idea of constraints or rules that define the placement of an element or set of elements in the context of other elements on the screen. Because the elements are not tied to a particular position on the screen, constraints help create an adaptive layout that looks good on different screen sizes and device orientations.
 
-Typically when working with Auto Layout in iOS, you'll use the iOS Designer to graphically place Layout Constraints on your UI items. However, there might be times when you need to create and apply constraints in C# code. For example, when using dynamically created UI elements added to a `UIView`.
+Typically when working with Auto Layout in iOS, you'll use Xcode's Interface Builder to graphically place Layout Constraints on your UI items. However, there might be times when you need to create and apply constraints in C# code. For example, when using dynamically created UI elements added to a `UIView`.
 
-This guide will show you how to create and work with constraints using C# code instead of creating them graphically in the iOS Designer.
+This guide will show you how to create and work with constraints using C# code instead of creating them graphically in Xcode's Interface Builder.
 
 <a name="Creating-Constraints-Programmatically"></a>
 

@@ -13,10 +13,7 @@ ms.date: 07/11/2018
 
 In iOS, the `UIButton` class represents a button control.
 
-A button's properties can be modified either programmatically or with the
-**Properties Window or Pad** of the iOS Designer:
-
-![The Properties Pad of the iOS Designer](buttons-images/properties.png "The Properties Pad of the iOS Designer")
+A button's properties can be modified either programmatically or with Xcode's Interface Builder.
 
 ## Creating a button programmatically
 
@@ -89,17 +86,6 @@ myButton.TouchUpInside += (sender, e) => {
 > `TouchUpInside` is not the only available button event. `UIButton` is a
 > child class of `UIControl`, which defines
 > [many different events](xref:UIKit.UIControlEvent).
-
-### Using the iOS Designer to specify button event handlers
-
-Use the **Events** tab of the **Properties Pad** to specify event handlers
-for a button's various events.
-
-For the appropriate event, either type the name of a new event handler or
-select one from the list. Doing this will create an event handler in
-the code for the button's view controller.
-
-![Events tab of the Properties Pad](buttons-images/image1.png "Events tab of the Properties Pad")
 
 ## Styling a button
 

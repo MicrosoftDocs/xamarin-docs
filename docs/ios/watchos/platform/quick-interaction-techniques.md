@@ -64,7 +64,7 @@ watchOS 3 will support the four following Gesture Recognizers:
   - The Pan Gesture (`WKPanGestureRecognizer`).
   - The Long-Press Gesture (`WKLongPressGestureRecognizer`).
 
-To implement one of the new Gesture Recognizers, simply drag it onto a design surface in the iOS Designer in Visual Studio for Mac and configure its properties.
+To implement one of the new Gesture Recognizers, simply drag it onto a view in Xcode's Interface Builder and configure its properties.
 
 In code, respond to the Action of the recognizer to handle the gesture being triggered by the user. Again, this is done in the same way as it would be handled in iOS.
 

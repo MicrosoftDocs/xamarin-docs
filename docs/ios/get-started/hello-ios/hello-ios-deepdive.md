@@ -65,7 +65,7 @@ In the [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) walkthr
 - **AppDelegate.cs** – This file contains the main application class and is responsible for creating the Window, building the user interface, and listening to events from the operating system.
 - **Main.storyboard** - The Storyboard contains the visual design of the application’s user interface. Storyboard files open in a graphical editor called the iOS Designer.
 - **ViewController.cs** – The view controller powers the screen (View) that a user sees and touches. The view controller is responsible for handling interactions between the user and the View.
-- **ViewController.designer.cs** – The `designer.cs` is an auto-generated file that serves as the glue between controls in the View and their code representations in the view controller. Because this is an internal plumbing file, the IDE will overwrite any manual changes and most of the time this file can be ignored. For more information on the relationship between the visual Designer and the backing code, refer to the  [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
+- **ViewController.designer.cs** – The `designer.cs` is an auto-generated file that serves as the glue between controls in the View and their code representations in the view controller. Because this is an internal plumbing file, the IDE will overwrite any manual changes and most of the time this file can be ignored. 
 - **Info.plist** – The **Info.plist** is where application properties such as the application name, icons, launch images, and more are set. This is a powerful file and a thorough introduction to it is available in the [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide.
 - **Entitlements.plist** - The entitlements property list lets us specify application *capabilities* (also called App Store Technologies) such as iCloud, PassKit, and more. More information on the  **Entitlements.plist** can be found in the  [Working with Property Lists](~/ios/app-fundamentals/property-lists.md) guide. For a general introduction to entitlements, refer to the  [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
@@ -132,106 +132,9 @@ Once the application has defined its Window, it can begin loading the user inter
 
 The user interface of an iOS app is like a storefront - the application typically gets one Window, but it can fill the Window up with as many objects at it needs, and the objects and arrangements can be changed depending on what the app wants to display. The objects in this scenario - the things that the user sees - are called Views. To build a single screen in an application, Views are stacked on top of each other in a *Content View Hierarchy*, and the hierarchy is managed by a single view controller. Applications with multiple screens have multiple Content View Hierarchies, each with its own view controller, and the application places Views in the Window to create a different Content View Hierarchy based on the screen that the user is on.
 
-This section dives into the user interface by describing Views, Content View Hierarchies, and the iOS Designer.
-
-### iOS Designer and storyboards
-
-The iOS Designer is a visual tool for building user interfaces in Xamarin. The Designer can be launched by double-clicking on any Storyboard (.storyboard) file, which will open to a view that resembles the following screenshot:
-
-::: zone pivot="macos"
-
-![iOS Designer Interface](hello-ios-deepdive-images/image33.png)
-
-A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio for Mac automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
-
-![Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene](hello-ios-deepdive-images/image34.png)
-
-The black bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pad**, as illustrated by the screenshot below:
-
-![The Properties Pane](hello-ios-deepdive-images/image35.png)
-
-::: zone-end
-::: zone pivot="windows"
-
-![iOS Designer Interface](hello-ios-deepdive-images/vs-image33.png)
-
-A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
-
-![Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene](hello-ios-deepdive-images/vs-image34.png)
-
-The bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pane**, as illustrated by the screenshot below:
-
-![The Properties Pane](hello-ios-deepdive-images/vs-image35.png)
-
-::: zone-end
-
-The _View_ can be selected by clicking inside the white part of the Scene. The View is an instance of the `UIView` class that defines an area of the screen and provides interfaces for working with the content in that area. The default View is a single *Root View* that fills the whole device screen.
-
-To the left of the Scene is a gray arrow with a flag icon, as illustrated by the screenshot below:
-
- [![A gray arrow with a flag icon](hello-ios-deepdive-images/image37.png)](hello-ios-deepdive-images/image37.png#lightbox)
-
-The gray arrow represents a storyboard transition called a *Segue* (pronounced “seg-way”). Since this segue has no origin, it is called a *Sourceless Segue*. A sourceless segue points to the first scene whose views get loaded into the application's window at application startup. The scene and the views inside it will be the first thing that the user sees when the app loads.
-
-When building a user interface, additional Views can be dragged from the **Toolbox** onto the main view on the design surface, as illustrated by the screenshot below:
-
-::: zone pivot="macos"
-
-![Additional Views can be dragged from the Toolbox onto the main View on the design surface](hello-ios-deepdive-images/image38.png)
-
-::: zone-end
-::: zone pivot="windows"
-
-![Additional Views can be dragged from the Toolbox onto the main View on the design surface](hello-ios-deepdive-images/vs-image38.png)
-
-::: zone-end
-
-These additional Views are called *Subviews*. Together, the root view and subviews are part of a *Content View Hierarchy* that is managed by the `ViewController`. The outline of all the elements in the scene can be viewed by examining it in the **Document Outline** pad:
-
-::: zone pivot="macos"
-
-![The Document Outline pad](hello-ios-deepdive-images/image39.png)
-
-::: zone-end
-::: zone pivot="windows"
-
-![The Document Outline pad](hello-ios-deepdive-images/vs-image39.png)
-
-::: zone-end
-
-The Subviews are highlighted in the diagram below:
-
-::: zone pivot="macos"
-
-![The Subviews are highlighted in the diagram](hello-ios-deepdive-images/image40.png)
-
-::: zone-end
-::: zone pivot="windows"
-
-![The Subviews are highlighted in the diagram](hello-ios-deepdive-images/vs-image40.png)
-
-::: zone-end
-
-The next section breaks down the Content View Hierarchy represented by this Scene.
-
-## Content view hierarchy
-
-A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single view controller, as illustrated by the diagram below:
-
- [![The Content View Hierarchy](hello-ios-deepdive-images/image41.png)](hello-ios-deepdive-images/image41.png#lightbox)
-
-We can make the Content View Hierarchy of our `ViewController` easier to see by temporarily changing the background color of the root View to yellow in the View section of the **Properties Pad**, as illustrated by the screenshot below:
-
-::: zone pivot="macos"
-
-![Changing the background color of the root View to yellow in the View section of the Properties Pad](hello-ios-deepdive-images/image42.png)
-
-::: zone-end
-::: zone pivot="windows"
-
-![Changing the background color of the root View to yellow in the View section of the Properties Pad](hello-ios-deepdive-images/vs-image42.png)
-
-::: zone-end
+For more details about building a user interface using Storyboards, see the Designing with Storyboards 
+section of [Xcode Overview](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DesigningwithStoryboards.html) in Apple’s iOS
+Developer Library.
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and view controller that bring the user interface to the device screen:
 
@@ -309,7 +212,7 @@ In the `Phoneword_iOS` project, a button was added called `TranslateButton` to t
 
 [![A button was added called TranslateButton to the Content View Hierarchy](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
-When a **Name** is assigned to the **Button** control in the **Properties Pad**, the iOS designer automatically mapped it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class. Controls first become available in the `ViewDidLoad` stage of the View lifecycle, so this lifecycle method is used to respond to the user's touch:
+When a referencing outlet is created using Xcode Interface Builder, Xcode Sync automatically maps it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class.  Controls first become available in the `ViewDidLoad` stage of the View lifecycle, so this lifecycle method is used to respond to the user's touch:
 
 ```csharp
 public override void ViewDidLoad ()
