@@ -70,6 +70,9 @@ Only the updated assemblies are resynchronized to the target device.
 
 > [!WARNING]
 > Fast deployment is known to fail on devices which block `run-as`, which often includes devices older than Android 5.0.
+> Fast deployment also fails for system applications (android:sharedUserId="android.uid.system") since `run-as` is also 
+> blocked for system applications.
+ 
 
 Fast deployment is enabled by default, and may be disabled in Debug builds
 by setting the `$(EmbedAssembliesIntoApk)` property to `True`.
