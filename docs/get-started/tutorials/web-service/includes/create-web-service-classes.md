@@ -75,6 +75,9 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
                 List<Repository> repositories = null;
                 try
                 {
+                    _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                    _client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");//Set the User Agent to "request"
+
                     HttpResponseMessage response = await _client.GetAsync(uri);
                     if (response.IsSuccessStatusCode)
                     {
