@@ -37,7 +37,7 @@ To display a website from the internet, set the `WebView`'s [`Source`](xref:Xama
 ```csharp
 var browser = new WebView
 {
-  Source = "http://xamarin.com"
+  Source = "https://dotnet.microsoft.com/apps/xamarin"
 };
 ```
 
@@ -358,7 +358,7 @@ If you anticipate using webpages that take a long time to load, consider using t
     <StackLayout>
         <!--Loading label should not render by default.-->
         <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="https://dotnet.microsoft.com/apps/xamarin" Navigated="webviewNavigated" Navigating="webviewNavigating" />
     </StackLayout>
 </ContentPage>
 ```
@@ -437,7 +437,7 @@ StackLayout with WidthRequest & HeightRequest:
 ```xaml
 <StackLayout>
     <Label Text="test" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
         HeightRequest="1000"
         WidthRequest="1000" />
 </StackLayout>
@@ -452,7 +452,7 @@ RelativeLayout with WidthRequest & HeightRequest:
                                       Type=Constant, Constant=10}"
         RelativeLayout.YConstraint= "{ConstraintExpression
                                       Type=Constant, Constant=20}" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
         RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,
                                      Constant=10}"
         RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,
@@ -466,7 +466,7 @@ AbsoluteLayout *without* WidthRequest & HeightRequest:
 ```xaml
 <AbsoluteLayout>
     <Label Text="test" AbsoluteLayout.LayoutBounds="0,0,100,100" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
       AbsoluteLayout.LayoutBounds="0,150,500,500" />
 </AbsoluteLayout>
 ```
@@ -480,7 +480,7 @@ Grid *without* WidthRequest & HeightRequest. Grid is one of the few layouts that
         <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <Label Text="test" Grid.Row="0" />
-    <WebView Source="http://www.xamarin.com/" Grid.Row="1" />
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin" Grid.Row="1" />
 </Grid>
 ```
 
