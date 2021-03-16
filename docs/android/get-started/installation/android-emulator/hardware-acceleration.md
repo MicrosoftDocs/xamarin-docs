@@ -30,7 +30,7 @@ of your computer.
 | You have an AMD Processor   |   | X |   |
 | You want to support Hyper-V |   | X |   |
 | You want to support nested Virtualization |   | Limited |   |
-| You want to use technologies like Docker  |   | X | X |
+| You want to use technologies like Docker  | (with WSL2)  | X | X |
 
 ::: zone pivot="windows"
 
@@ -61,7 +61,7 @@ criteria are met:
 
 > [!IMPORTANT]
 > You can't run a VM-accelerated emulator inside another VM, such as
-> a VM hosted by VirtualBox, VMware, or Docker. You must run the Android
+> a VM hosted by VirtualBox, VMware, or Docker (unless using WSL2). You must run the Android
 > emulator [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 For information about launching and debugging with the Android
