@@ -52,12 +52,14 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
 1. In **Solution Explorer**, in the **WebServiceTutorial** project, add a new class named `RestService` to the project. Then, in **RestService.cs**, remove all of the template code and replace it with the following code:
 
     ```csharp
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Net.Http;
+    using System.Net.Http.Headers;
     using System.Threading.Tasks;
-    using Newtonsoft.Json;
+    using Xamarin.Forms;
 
     namespace WebServiceTutorial
     {
@@ -68,6 +70,12 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
             public RestService()
             {
                 _client = new HttpClient();
+                
+                if (Device.RuntimePlatform == Device.UWP)
+                {
+                    _client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+                    _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+                }
             }
 
             public async Task<List<Repository>> GetRepositoriesAsync(string uri)
@@ -75,9 +83,6 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
                 List<Repository> repositories = null;
                 try
                 {
-                    _client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                    _client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");//Set the User Agent to "request"
-
                     HttpResponseMessage response = await _client.GetAsync(uri);
                     if (response.IsSuccessStatusCode)
                     {
@@ -97,6 +102,9 @@ REST requests are made over HTTP using the same HTTP verbs that web browsers use
     ```
 
     This code defines a single method, `GetRepositoriesAsync`, that retrieves .NET repository data from the GitHub web API. This method uses the `HttpClient.GetAsync` method to send a GET request to the web API specified by the `uri` argument. The web API sends a response that is stored in a `HttpResponseMessage` object. The response includes a HTTP status code, which indicates whether the HTTP request succeeded or failed. Provided that the request succeeds, the web API responds with HTTP status code 200 (OK), and a JSON response, which is in the `HttpResponseMessage.Content` property. This JSON data is read to a `string` using the `HttpContent.ReadAsStringAsync` method, before being deserialized into a `List<Repository>` object using the `JsonConvert.DeserializeObject` method. This method uses the mappings between JSON field names and CLR properties, that are defined in the `Repository` class, to perform the deserialization.
+    
+    > [!NOTE]
+    > On UWP, it's necessary to configure the `HttpClient` object in the constructor to add a User Agent header to all requests, and to accept GitHub JSON responses.
 
 1. Build the solution to ensure there are no errors.
 
