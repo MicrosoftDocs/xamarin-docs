@@ -60,7 +60,7 @@ async Task<FileResult> PickAndShow(PickOptions options)
 {
     try
     {
-        var result = await FilePicker.PickAsync();
+        var result = await FilePicker.PickAsync(options);
         if (result != null)
         {
             Text = $"File Name: {result.FileName}";
@@ -71,11 +71,15 @@ async Task<FileResult> PickAndShow(PickOptions options)
                 Image = ImageSource.FromStream(() => stream);
             }
         }
+        
+        return result;
     }
     catch (Exception ex)
     {
         // The user canceled or something went wrong
     }
+    
+    return null;
 }
 ```
 
