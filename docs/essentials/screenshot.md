@@ -4,7 +4,7 @@ description: "This document describes the Screenshot class in Xamarin.Essentials
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 01/04/2021
+ms.date: 04/14/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -37,6 +37,9 @@ async Task CaptureScreenshot()
 }
 ```
 
+## Limitations
+
+Not all views support being captured at a screen level such as an OpenGL view.
 
 ## API
 
