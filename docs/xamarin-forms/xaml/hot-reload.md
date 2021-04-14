@@ -23,7 +23,7 @@ XAML Hot Reload plugs into your existing workflow to increase your productivity 
 |------|------------------|
 |Visual Studio 2019 | 16.9 for changes only mode, 16.4 for full page mode
 Visual Studio 2019 for Mac | 8.9 for changes only mode, 8.4 for full page mode
-Xamarin.Forms | 5.0 for changes only mode; 4.1 for full page mode
+Xamarin.Forms | 5.0.0.2012 for changes only mode; 4.1 for full page mode
 
 ## Enable XAML Hot Reload for Xamarin.Forms
 

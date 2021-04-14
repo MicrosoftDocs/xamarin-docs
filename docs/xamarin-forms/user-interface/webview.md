@@ -46,10 +46,10 @@ var browser = new WebView
 
 #### iOS and ATS
 
-Since version 9, iOS will only allow your application to communicate with servers that implement best-practice security by default. Values must be set in `Info.plist` to enable communication with insecure servers.
+Since version 9, iOS will only allow your application to communicate with servers that implement best-practice security by default. Values must be set in `Info.plist` to enable communication with unsecure servers.
 
 > [!NOTE]
-> If your application requires a connection to an insecure website, you should always enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
+> If your application requires a connection to an unsecure website, you should always enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
 
 The following demonstrates how to enable a specific domain (in this case xamarin.com) to bypass ATS requirements:
 
