@@ -6,7 +6,7 @@ ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/27/2020
+ms.date: 04/14/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -23,9 +23,9 @@ The *drag source*, which is the element on which the drag gesture is initiated, 
 
 The process for enabling drag and drop in an application is as follows:
 
-1. Enable drag on an element by adding a `DragGestureRecognizer` object to its `GestureRecognizers` collection, and setting the `DragGestureRecognizer.CanDrag` property to `true`. For more information, see [Enable drag](#enable-drag).
+1. Enable drag on an element by adding a `DragGestureRecognizer` object to its `GestureRecognizers` collection. For more information, see [Enable drag](#enable-drag).
 1. [optional] Build a data package. Xamarin.Forms automatically populates the data package for image and text controls, but for other content you'll need to construct your own data package. For more information, see [Build a data package](#build-a-data-package).
-1. Enable drop on an element by adding a `DropGestureRecognizer` object its `GestureRecognizers` collection, and setting the `DropGestureRecognizer.AllowDrop` property to `true`. For more information, see [Enable drop](#enable-drop).
+1. Enable drop on an element by adding a `DropGestureRecognizer` object its `GestureRecognizers` collection. For more information, see [Enable drop](#enable-drop).
 1. [optional] Handle the `DropGestureRecognizer.DragOver` event to indicate the type of operation allowed by the drop target. For more information, see [Handle the DragOver event](#handle-the-dragover-event).
 1. [optional] Process the data package to receive the dropped content. Xamarin.Forms will automatically retrieve image and text data from the data package, but for other content you'll need to process the data package. For more information, see [Process the data package](#process-the-data-package).
 
@@ -36,7 +36,7 @@ The process for enabling drag and drop in an application is as follows:
 
 In Xamarin.Forms, drag gesture recognition is provided by the `DragGestureRecognizer` class. This class defines the following properties:
 
-- `CanDrag`, of type `bool`, which indicates whether the element the gesture recognizer is attached to can be a drag source. The default value of this property is `false`.
+- `CanDrag`, of type `bool`, which indicates whether the element the gesture recognizer is attached to can be a drag source. The default value of this property is `true`.
 - `DragStartingCommand`, of type `ICommand`, which is executed when a drag gesture is first recognized.
 - `DragStartingCommandParameter`, of type `object`, which is the parameter that's passed to the `DragStartingCommand`.
 - `DropCompletedCommand`, of type `ICommand`, which is executed when the drag source is dropped.
@@ -44,7 +44,7 @@ In Xamarin.Forms, drag gesture recognition is provided by the `DragGestureRecogn
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
-The `DragGestureRecognizer` class also defines `DragStarting` and `DropCompleted` events. When a `DragGestureRecognizer` object detects a drag gesture, it executes the `DragStartingCommand` and invokes the `DragStarting` event. Then, when the `DragGestureRecognizer` object detects the completion of a drop gesture, it executes the `DropCompletedCommand` and invokes the `DropCompleted` event.
+The `DragGestureRecognizer` class also defines `DragStarting` and `DropCompleted` events that fire provided that the `CanDrag` property is `true`. When a `DragGestureRecognizer` object detects a drag gesture, it executes the `DragStartingCommand` and invokes the `DragStarting` event. Then, when the `DragGestureRecognizer` object detects the completion of a drop gesture, it executes the `DropCompletedCommand` and invokes the `DropCompleted` event.
 
 The `DragStartingEventArgs` object that accompanies the `DragStarting` event defines the following properties:
 
@@ -59,7 +59,7 @@ The following XAML example shows a `DragGestureRecognizer` attached to an [`Imag
 ```xaml
 <Image Source="monkeyface.png">
     <Image.GestureRecognizers>
-        <DragGestureRecognizer CanDrag="True" />
+        <DragGestureRecognizer />
     </Image.GestureRecognizers>
 </Image>
 ```
@@ -112,8 +112,7 @@ The following XAML example shows a `DragGestureRecognizer` that registers a hand
 <Path Stroke="Black"
       StrokeThickness="4">
     <Path.GestureRecognizers>
-        <DragGestureRecognizer CanDrag="True"
-                               DragStarting="OnDragStarting" />
+        <DragGestureRecognizer DragStarting="OnDragStarting" />
     </Path.GestureRecognizers>
     <Path.Data>
         <!-- PathGeometry goes here -->
@@ -145,8 +144,7 @@ The following XAML example shows a `DragGestureRecognizer` that registers a hand
            HeightRequest="200"
            WidthRequest="200">
     <Rectangle.GestureRecognizers>
-        <DragGestureRecognizer CanDrag="True"
-                               DragStarting="OnDragStarting" />
+        <DragGestureRecognizer DragStarting="OnDragStarting" />
     </Rectangle.GestureRecognizers>
 </Rectangle>
 ```
@@ -167,17 +165,19 @@ The `DragStartingEventArgs` object that accompanies the `DragStarting` event has
 
 In Xamarin.Forms, drop gesture recognition is provided by the `DropGestureRecognizer` class. This class defines the following properties:
 
-- `AllowDrop`, of type `bool`, which indicates whether the element the gesture recognizer is attached to can be a drop target. The default value of this property is `false`.
+- `AllowDrop`, of type `bool`, which indicates whether the element the gesture recognizer is attached to can be a drop target. The default value of this property is `true`.
 - `DragOverCommand`, of type `ICommand`, which is executed when the drag source is dragged over the drop target.
 - `DragOverCommandParameter`, of type `object`, which is the parameter that's passed to the `DragOverCommand`.
+- `DragLeaveCommand`, of type `ICommand`, which is executed when the drag source is dragged off the drop target.
+- `DragLeaveCommandParameter`, of type `object`, which is the parameter that's passed to the `DragLeaveCommand`.
 - `DropCommand`, of type `ICommand`, which is executed when the drag source is dropped over the drop target.
 - `DropCommandParameter`, of type `object`, which is the parameter that's passed to the `DropCommand`.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
-The `DropGestureRecognizer` class also defines `DragOver` and `Drop` events. When a `DropGestureRecognizer` recognizes a drag source over the drop target, it executes the `DragOverCommand` and invokes the `DragOver` event. Then, when the `DropGestureRecognizer` recognizes a drop gesture over the drop target, it executes the `DropCommand` and invokes the `Drop` event.
+The `DropGestureRecognizer` class also defines `DragOver`, `DragLeave`, and `Drop` events that fire provided that the `AllowDrop` property is `true`. When a `DropGestureRecognizer` recognizes a drag source over the drop target, it executes the `DragOverCommand` and invokes the `DragOver` event. Then, if the drag source is dragged off the drop target, the `DropGestureRecognizer` executes the `DragLeaveCommand` and invokes the `DragLeave` event. Finally, when the `DropGestureRecognizer` recognizes a drop gesture over the drop target, it executes the `DropCommand` and invokes the `Drop` event.
 
-The `DragEventArgs` class that accompanies the `DragOver` event defines the following properties:
+The `DragEventArgs` class, that accompanies the `DragOver` and `DragLeave` events, defines the following properties:
 
 - `Data`, of type `DataPackage`, which contains the data associated with the drag source. This property is read-only.
 - `AcceptedOperation`, of type `DataPackageOperation`, which specifies which operations are allowed by the drop target.
@@ -196,7 +196,7 @@ The following XAML example shows a `DropGestureRecognizer` attached to an [`Imag
        HeightRequest="300"
        WidthRequest="250">
     <Image.GestureRecognizers>
-        <DropGestureRecognizer AllowDrop="True" />
+        <DropGestureRecognizer />
     </Image.GestureRecognizers>
 </Image>
 ```
@@ -224,8 +224,7 @@ The following XAML example shows a `DropGestureRecognizer` that registers a hand
        HeightRequest="300"
        WidthRequest="250">
     <Image.GestureRecognizers>
-        <DropGestureRecognizer AllowDrop="True"
-                               DragOver="OnDragOver" />
+        <DropGestureRecognizer DragOver="OnDragOver" />
     </Image.GestureRecognizers>
 </Image>
 ```
