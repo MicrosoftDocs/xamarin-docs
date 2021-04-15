@@ -19,7 +19,7 @@ The diagram below illustrates the relationships between the Window, Views, Subvi
 
 [![This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
-These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
+These view hierarchies can be constructed using Xcode's Interface Builder, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -27,7 +27,7 @@ The diagram below illustrates the relationships between the Window, Views, Subvi
 
 [![This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
-These view hierarchies can be constructed using the [Xamarin Designer for iOS](~/ios/user-interface/designer/index.md) in Visual Studio for Mac, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
+These view hierarchies can be constructed using Xcode's Interface Builder, however it is good to have a fundamental understanding of how to work entirely in code. This article walks through some basic points to get up and running with code-only user interface development.
 
 -----
 
@@ -590,9 +590,9 @@ When you create an iOS Project in Visual Studio for Mac, a Launch Screen is prov
 
 -----
 
-This can be edited by double clicking on it and opening it in the iOS Designer.
+This can be edited by double clicking on it and opening it in the Xcode Interface Builder.
 
-Apple recommends that a .xib or Storyboard file is used for applications targeting iOS 8 or later, When you launch either file in the iOS Designer, you'll use Size Classes and Auto Layout to adapt your layout so that it looks good, and displays correctly, for all device sizes. A static launch image can be used in addition to a .xib or Storyboard to allow support for applications targeting earlier versions.
+Apple recommends that a .xib or Storyboard file is used for applications targeting iOS 8 or later, When you launch either file in the Xcode Interface Builder, you can use Size Classes and Auto Layout to adapt your layout so that it looks good, and displays correctly, for all device sizes. A static launch image can be used in addition to a .xib or Storyboard to allow support for applications targeting earlier versions.
 
 For more information on creating a Launch Screen, refer to the documents below:
 

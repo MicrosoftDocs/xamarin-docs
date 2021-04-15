@@ -128,13 +128,11 @@ public class LocationUpdatedEventArgs : EventArgs
 
 ## User Interface
 
-1. Use the iOS designer to build the screen that will display location information. Double-click on the **Main.storyboard** file to begin.
+1. Use the Xcode Interface Builder to build the screen that will display location information. Double-click on the **Main.storyboard** file to begin.
 
     On the storyboard, drag several labels onto the screen to act as placeholders for the location information. In this example, there are labels for latitude, longitude, altitude, course, and speed.
 
-    The layout should resemble the following:
-
-    ![An example UI layout in the iOS Designer](location-walkthrough-images/image8.png)
+    For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md).
 
 1. In the Solution Pad, double-click the `ViewController.cs` file and edit it to create a new instance of the LocationManager and call `StartLocationUpdates`on it.
   Change the code to look like the following:

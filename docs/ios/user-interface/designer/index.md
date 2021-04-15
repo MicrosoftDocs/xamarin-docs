@@ -14,7 +14,8 @@ ms.date: 05/31/2018
 _The Xamarin Designer for iOS is a visual designer for the iOS Storyboard and Interface Builder formats that is fully integrated with Visual Studio for Mac and Visual Studio. The iOS Designer maintains full compatibility with the Storyboard and .xib formats, so that files can be edited in either Visual Studio for Mac or Visual Studio in addition to Xcode's Interface Builder. Additionally, the Xamarin Designer for iOS supports advanced features such as custom controls that render at design-time in the editor._
 
 > [!WARNING]
-> The iOS Designer will start to be phased out in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8.
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
 > The recommended way to build iOS user interfaces is directly on a Mac running Xcode. For more information, see [Designing user interfaces with Xcode](../storyboards/index.md). 
 
 # [Visual Studio for Mac](#tab/macos)
@@ -43,7 +44,7 @@ This guide looks in depth at custom controls, how they are created and what requ
 
 ## [Walkthrough - Using Custom Controls with iOS Designer](ios-designable-controls-walkthrough.md)
 
-This article provides a step-by-step walkthrough showing how to create a custom control and use it in the iOS designer. It shows how to make a control available in the designer’s Toolbox so it can be drag/dropped onto a view. Additionally, it shows how to implement a control so it renders properly at design time and runtime, as well as how to create properties that can be set at design time.
+This article provides a step-by-step walkthrough showing how to create a custom control and use it in the iOS designer. It shows how to make a control available in the designer’s Toolbox so it can be drag/dropped onto a view. Additionally, it shows how to implement a control so it renders properly at design time and runtime, and how to create properties that can be set at design time.
 
 ## [Auto Layout with the Xamarin iOS Designer](designer-auto-layout.md)
 

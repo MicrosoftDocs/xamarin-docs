@@ -154,7 +154,7 @@ Once the provisioning profile has been created and selected, the optional **iTun
     ![Select Ad Hoc from the Build Configuration dropdown](ipa-support-images/imagevs05.png)
 
 7. Build the project to create the IPA package.
-8. The IPA will be build in the **Bin > iOS Device > Ad Hoc (or Release)** folder:
+8. The IPA will be available in the **Bin > iOS Device > Ad Hoc (or Release)** folder:
 
     ![The IPA in the file explorer](ipa-support-images/imagevs06.png)
 

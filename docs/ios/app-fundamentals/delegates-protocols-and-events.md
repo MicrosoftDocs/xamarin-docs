@@ -66,30 +66,16 @@ aButton.TouchUpInside += delegate {
 
 The preceding code is wired up in the `ViewDidLoad` method of the
 UIViewController. The `aButton` variable references a button, which you could add
-either in the iOS Designer or with code. The following figure shows a button
-that has been added in the iOS Designer:
-
-[![A button added in iOS Designer](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png)](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+in either the Xcode Interface Builder or with code. 
 
 Xamarin.iOS also supports the target-action style of connecting your code to an
-interaction that occurs with a control. To create a target-action for the **Hello** button,
-double click it in the iOS Designer. The UIViewController's code-behind file will be displayed
-and the developer will be asked to select a location to insert the connecting method:
-
-[![The UIViewControllers code-behind file](delegates-protocols-and-events-images/03-interface-builder-action-sml.png)](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
-
-After a location is selected, a new method is created and wired-up to the control. In the following
-example, a message will be written to the console when the button is clicked:
-
-[![A message will be written to the console when the button is clicked](delegates-protocols-and-events-images/05-interface-builder-action-sml.png)](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
+interaction that occurs with a control. 
 
 For more details about the iOS target-action pattern, see the Target-Action
-section of [Core Application Competencies for iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) in Apple’s iOS
+section of [Core Application Competencies for iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Target-Action/Target-Action.html#//apple_ref/doc/uid/TP40010810-CH12) in Apple’s iOS
 Developer Library.
 
-For more information about how to use the iOS Designer with Xamarin.iOS, see
-the [iOS Designer Overview](~/ios/user-interface/designer/index.md)
-documentation.
+For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md).
 
 ## Events
 

@@ -24,7 +24,7 @@ All Xamarin.Forms-supported platforms have a modal pop-up to alert the user or a
 await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![Alert Dialog with One Button](pop-ups-images/alert.png)
+[![Alert dialog with one button, on iOS and Android](pop-ups-images/simple-alert.png)](pop-ups-images/simple-alert-large.png#lightbox)
 
 This example does not collect information from the user. The alert displays modally and once dismissed the user continues interacting with the application.
 
@@ -38,7 +38,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![Alert Dialog with Two Buttons](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
+[![Alert dialog with two buttons](pop-ups-images/two-button-alert.png)](pop-ups-images/two-button-alert.png#lightbox)
 
 The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method also has overloads that accept a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the alert. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
@@ -59,9 +59,9 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![ActionSheet Dialog](pop-ups-images/action.png)
+[![ActionSheet dialog, on iOS and Android](pop-ups-images/simple-actionsheet.png)](pop-ups-images/simple-actionsheet-large.png#lightbox)
 
-The `destroy` button is rendered differently than the others, and can be left `null` or specified as the third string parameter. The following example uses the `destroy` button:
+The `destroy` button is rendered differently to the other buttons on iOS, and can be left `null` or specified as the third string parameter. The following example uses the `destroy` button:
 
 ```csharp
 async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
@@ -71,7 +71,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayActionSheet](pop-ups-images/action2-sml.png "Action Sheet Dialog with Destroy Button")](pop-ups-images/action2.png#lightbox "Action Sheet Dialog with Destroy Button")
+[![ActionSheet dialog with destroy button, on iOS and Android](pop-ups-images/actionsheet-destroy-button.png)](pop-ups-images/actionsheet-destroy-button-large.png#lightbox)
 
 The [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) method also has an overload that accepts a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the action sheet. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 

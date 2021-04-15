@@ -89,7 +89,7 @@ The UITableView has had a number of small, but significant, changes in iOS 11.
 
 By default, headers, footers, and cells are now automatically sized based on their content. To opt out of this auto-sizing behavior set the `EstimatedRowHeight`, `EstimatedSectionHeaderHeight`, or `EstimatedSectionFooterHeight` to zero.
 
-However, in some circumstances (such as when adding UITableViewController in the iOS Designer or when using existing Storboards in Interface Builder) you may need to manually enable self-sizing cells. To do this, ensure that you have set the following properties on the table view for Cells, Headers, and Footers, respectively:
+However, in some circumstances (such as when adding UITableViewController when using existing Storyboards in Interface Builder) you may need to manually enable self-sizing cells. To do this, ensure that you have set the following properties on the table view for Cells, Headers, and Footers, respectively:
 
 ```csharp
 // Cells

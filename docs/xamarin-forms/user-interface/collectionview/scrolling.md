@@ -6,7 +6,7 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/17/2019
+ms.date: 03/15/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -28,7 +28,17 @@ When a user swipes to initiate a scroll, the end position of the scroll can be c
 
 ## Detect scrolling
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `Scrolled` event which is fired to indicate that scrolling occurred. The following XAML example shows a `CollectionView` that sets an event handler for the `Scrolled` event:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `Scrolled` event which is fired to indicate that scrolling occurred. The `ItemsViewScrolledEventArgs` class, which represents the object that accompanies the `Scrolled` event, defines the following properties:
+
+- `HorizontalDelta`, of type `double`, represents the change in the amount of horizontal scrolling. This is a negative value when scrolling left, and a positive value when scrolling right.
+- `VerticalDelta`, of type `double`, represents the change in the amount of vertical scrolling. This is a negative value when scrolling upwards, and a positive value when scrolling downwards.
+- `HorizontalOffset`, of type `double`, defines the amount by which the list is horizontally offset from its origin.
+- `VerticalOffset`, of type `double`, defines the amount by which the list is vertically offset from its origin.
+- `FirstVisibleItemIndex`, of type `int`, is the index of the first item that's visible in the list.
+- `CenterItemIndex`, of type `int`, is the index of the the center item that's visible in the list.
+- `LastVisibleItemIndex`, of type `int`, is the index of the last item that's visible in the list.
+
+The following XAML example shows a `CollectionView` that sets an event handler for the `Scrolled` event:
 
 ```xaml
 <CollectionView Scrolled="OnCollectionViewScrolled">
@@ -48,17 +58,9 @@ In this code example, the `OnCollectionViewScrolled` event handler is executed w
 ```csharp
 void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 {
-    Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
-    Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
-    Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
-    Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
-    Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
-    Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
-    Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
+    // Custom logic
 }
 ```
-
-In this example, the `OnCollectionViewScrolled` event handler outputs the values of the `ItemsViewScrolledEventArgs` object that accompanies the event.
 
 > [!IMPORTANT]
 > The `Scrolled` event is fired for user initiated scrolls, and for programmatic scrolls.

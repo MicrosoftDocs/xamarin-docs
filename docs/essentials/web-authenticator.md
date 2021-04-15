@@ -105,13 +105,17 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 For UWP, you'll need to declare your callback URI in your `Package.appxmanifest` file:
 
 ```xml
-    <Extensions>
-        <uap:Extension Category="windows.protocol">
+<Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MyApp.App">
+        <Extensions>
+            <uap:Extension Category="windows.protocol">
             <uap:Protocol Name="myapp">
                 <uap:DisplayName>My App</uap:DisplayName>
             </uap:Protocol>
-        </uap:Extension>
-    </Extensions>
+            </uap:Extension>
+        </Extensions>
+    </Application>
+</Applications>
 ```
 
 -----

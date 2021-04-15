@@ -127,7 +127,7 @@ Language translation files should have the same **Name** values specified as the
 
 ## Specify the default culture
 
-For resource files to work correctly, the application must have an `NeutralResourcesLanguage` specified. In the shared project, the **AssemblyInfo.cs** file should be customized to specify the default culture. The following code shows how to set the `NeutralResourcesLanguage` to **en-US** in the **AssemblyInfo.cs** file:
+For resource files to work correctly, the application must have an `NeutralResourcesLanguage` attribute specified. In the project containing the resource files, the **AssemblyInfo.cs** file should be customized to specify the default culture. The following code shows how to set the `NeutralResourcesLanguage` to **en-US** in the **AssemblyInfo.cs** file:
 
 ```csharp
 using System.Resources;

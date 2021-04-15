@@ -11,6 +11,11 @@ ms.date: 03/07/2017
 
 # Working with tvOS Buttons in Xamarin
 
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
+
 Use an instance of the `UIButton` class to create a focusable, selectable button in a tvOS window. When the user selects a button, it sends an Action message to the target object allow your Xamarin.tvOS app respond to the user's input.
 
 [![Example buttons](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
@@ -117,7 +122,7 @@ namespace tvRemote
 As long as a button's `Enabled` property is `true` and it is not covered by another control or view, it can be made the in-focus item using the Siri Remote. If the user selects the button and clicks the Touch Surface, the `ButtonPressed` action defined above would be executed.
 
 > [!IMPORTANT]
-> While it is possible to assign actions such as `TouchUpInside` to a `UIButton` in the iOS Designer when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
+> While it is possible to assign actions such as `TouchUpInside` to a `UIButton` when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 

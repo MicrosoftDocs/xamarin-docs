@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 
 # Part 1 – Understanding the Xamarin Mobile Platform
 
-The Xamarin platform consists of a number of elements that allow you to
+The Xamarin platform consists of many elements that allow you to
 develop applications for iOS and Android:
 
-- **C# language** – Allows you to use a familiar syntax and sophisticated features like Generics, LINQ and the Parallel Task Library.
+- **C# language** – Allows you to use a familiar syntax and sophisticated features like Generics, LINQ, and the Parallel Task Library.
 - **Mono .NET framework** – Provides a cross-platform implementation of the extensive features in Microsoft’s .NET framework.
-- **Compiler** – Depending on the platform, produces a native app (eg. iOS) or an integrated .NET application and runtime (eg. Android). The compiler also performs many optimizations for mobile deployment such as linking away un-used code.
+- **Compiler** – Depending on the platform, produces a native app (for example, iOS) or an integrated .NET application and runtime (for example, Android). The compiler also performs many optimizations for mobile deployment such as linking away unused code.
 - **IDE tools** – The Visual Studio on Mac and Windows allows you to create, build, and deploy Xamarin projects.
 
 In addition, because the underlying language is C# with the .NET framework,
@@ -25,18 +25,18 @@ Phone.
 ## Under the Hood
 
 Although Xamarin allows you to write apps in C#, and share the same code
-across multiple platforms, the actual implementation on each system is very
+across multiple platforms, the actual implementation on each system is 
 different.
 
 ## Compilation
 
-The C# source makes its way into a native app in very different ways on each
+The C# source makes its way into a native app in different ways on each
 platform:
 
 - **iOS** – C# is ahead-of-time (AOT) compiled to ARM assembly language. The .NET framework is included, with unused classes being stripped out during linking to reduce the application size. Apple does not allow runtime code generation on iOS, so some language features are not available (see  [Xamarin.iOS Limitations](~/ios/internals/limitations.md) ).
-- **Android** – C# is compiled to IL and packaged with MonoVM + JIT’ing. Unused classes in the framework are stripped out during linking. The application runs side-by-side with Java/ART (Android runtime) and interacts with the native types via JNI (see  [Xamarin.Android Limitations](~/android/internals/limitations.md) ).
-- **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to re-use the code on iOS and Android.
-  Note that the Universal Windows Platform also has a **.NET Native** option which behaves similarly to Xamarin.iOS' AOT compilation.
+- **Android** – C# is compiled to IL and packaged with MonoVM + JIT’ing. Unused classes in the framework are stripped out during linking. The application runs side by side with Java/ART (Android runtime) and interacts with the native types via JNI (see  [Xamarin.Android Limitations](~/android/internals/limitations.md) ).
+- **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to reuse the code on iOS and Android.
+  The Universal Windows Platform also has a **.NET Native** option, which behaves similarly to Xamarin.iOS' AOT compilation.
 
 The linker documentation for [Xamarin.iOS](~/ios/deploy-test/linker.md) and [Xamarin.Android](~/android/deploy-test/linker.md) provides more
 information about this part of the compilation process.
@@ -45,7 +45,7 @@ Runtime 'compilation' – generating code dynamically with `System.Reflection.Em
 
 Apple’s kernel prevents dynamic code generation on iOS devices, therefore emitting code on-the-fly will not work in Xamarin.iOS. Likewise, the Dynamic Language Runtime features cannot be used with Xamarin tools.
 
-Some reflection features do work (eg. MonoTouch.Dialog uses it for the Reflection API), just not code generation.
+Some reflection features do work (for example, MonoTouch.Dialog uses it for the Reflection API), but not code generation.
 
 ## Platform SDK Access
 
@@ -58,12 +58,12 @@ Xamarin makes the features provided by the platform-specific SDK easily accessib
 ## Seamless Integration for Developers
 
 The beauty of Xamarin is that despite the differences under the hood,
-Xamarin.iOS and Xamarin.Android (coupled with Microsoft’s Windows SDKs)
-offer a seamless experience for writing C# code that can be re-used across all
+Xamarin.iOS, and Xamarin.Android (coupled with Microsoft’s Windows SDKs)
+offer a seamless experience for writing C# code that can be reused across all
 three platforms.
 
 Business logic, database usage, network access, and other common functions can
-be written once and re-used on each platform, providing a foundation for
+be written once and reused on each platform, providing a foundation for
 platform-specific user interfaces that look and perform as  native applications.
 
 ## Integrated Development Environment (IDE) Availability
@@ -86,14 +86,13 @@ Developing iOS applications requires a Mac computer, running macOS. You can also
 
 Apple’s Xcode IDE must be installed to provide the compiler and simulator
 for testing. You can test on your own devices [for free](~/ios/get-started/installation/device-provisioning/free-provisioning.md),
-but to build applications for distribution (eg. the App Store)
+but to build applications for distribution (for example, the App Store)
 you must join Apple’s Developer Program ($99 USD per year). Each time you
 submit or update an application, it must be reviewed and approved by Apple before
 it is made available for customers to download.
 
-Code is written with the Visual Studio IDE
-and screen layouts can be built
-programmatically or edited with Xamarin's iOS Designer in either IDE.
+Code is written with the Visual Studio IDE and screen layouts can be built
+programmatically or edited with Xcode on a Mac.
 
 Refer to the [Xamarin.iOS Installation Guide](~/ios/get-started/installation/index.md) for
 detailed instructions on getting set up.
@@ -101,8 +100,8 @@ detailed instructions on getting set up.
 ### Android
 
 Android application development requires the Java and Android SDKs to be
-installed. These provide the compiler, emulator and other tools required for
-building, deployment and testing. Java, Google’s Android SDK and Xamarin’s
+installed. The SDKs provide the compiler, emulator, and other tools required for
+building, deployment, and testing. Java, Google’s Android SDK and Xamarin’s
 tools can all be installed and run on Windows and macOS. The following configurations
 are recommended:
 
@@ -110,19 +109,19 @@ are recommended:
 - macOS Mojave (10.11+) with Visual Studio 2019 for Mac
 
 Xamarin provides a unified installer that will configure your system with the
-pre-requisite Java, Android and Xamarin tools (including a visual designer for
+pre-requisite Java, Android, and Xamarin tools (including a visual designer for
 screen layouts). Refer to the [Xamarin.Android Installation Guide](~/android/get-started/installation/index.md) for detailed instructions.
 
 You can build and test applications on a real device without any license from
 Google, however to distribute your application through a store (such as Google
-Play, Amazon or Barnes &amp; Noble) a registration fee may be payable to the
+Play, Amazon, or Barnes &amp; Noble) a registration fee may be payable to the
 operator. Google Play will publish your app instantly, while the other stores
 have an approval process similar to Apple’s.
 
 ### Windows
 
 Windows apps (WinForms, WPF, or UWP) are built with Visual Studio. They do not use Xamarin directly. However, C# code can
-be shared across Windows, iOS and Android.
+be shared across Windows, iOS, and Android.
 Visit Microsoft’s [Dev Center](https://developer.microsoft.com/) to learn about the tools required for Windows development.
 
 ## Creating the User Interface (UI)
@@ -139,7 +138,7 @@ platform.
 ### Create Controls Programmatically
 
 Each platform allows user interface controls to be added to a screen using
-code. This can be very time-consuming as it can be difficult to visualize the
+code. This can be time-consuming as it can be difficult to visualize the
 finished design when hard-coding pixel coordinates for control positions and
 sizes.
 
@@ -151,8 +150,8 @@ iPad screen sizes.
 
 Each platform has a different method for visually laying out screens:
 
-- **iOS** – Xamarin's iOS Designer facilitates building Views using drag-and-drop functionality and property fields. Collectively these Views make up a Storyboard, and can be accessed in the **.Storyboard** file that is included in your project.
-- **Android** – Xamarin provides an Android drag-and-drop UI designer for Visual Studio. Android screen layouts are saved as **.AXML** files when using Xamarin tools.
+- **iOS** – Storyboards contain multiple Views and Controls, and can be accessed in the **.Storyboard** file that is included in your project.
+- **Android** – Xamarin provides an Android drag-and-drop UI designer for Visual Studio.
 - **Windows** – Microsoft provides a drag-and-drop UI designer in Visual Studio and Blend. The screen layouts are stored as .XAML files.
 
 These screenshots show the visual screen designers available on each
@@ -177,7 +176,7 @@ platform-specific UI metaphors include:
 
 - **iOS** – hierarchical navigation with soft back button, tabs on the bottom of the screen.
 - **Android** – hardware/system-software back button, action menu, tabs on the top of the screen.
-- **Windows** – Windows apps can run on desktops, tablets (such as Microsoft Surface) and phones. Windows 10 devices may have hardware back button and live tiles, for example.
+- **Windows** – Windows apps can run on desktops, tablets (such as Microsoft Surface), and phones. Windows 10 devices may have hardware back button and live tiles, for example.
 
 It is recommended that you read the design guidelines relevant to the
 platforms you are targeting:
@@ -186,21 +185,21 @@ platforms you are targeting:
 - **Android** –  [Google's User Interface Guidelines](https://developer.android.com/guide/practices/ui_guidelines/index.html)
 - **Windows** –  [User Experience Design Guidelines for Windows](https://developer.microsoft.com/windows/design)
 
-## Library and Code Re-Use
+## Library and Code Reuse
 
-The Xamarin platform allows re-use of existing C# code across all platforms
-as well as the integration of libraries written natively for each platform.
+The Xamarin platform allows reuse of existing C# code across all platforms
+and the integration of libraries written natively for each platform.
 
 ### C# Source and Libraries
 
 Because Xamarin products use C# and the .NET framework, lots of existing
-source code (both open source and in-house projects) can be re-used in Xamarin.iOS
+source code (both open source and in-house projects) can be reused in Xamarin.iOS
 or Xamarin.Android projects. Often the source can simply be added to a Xamarin
 solution and it will work immediately. If an unsupported .NET framework feature
 has been used, some tweaks may be required.
 
 Examples of C# source that can be used in Xamarin.iOS or Xamarin.Android
-include: SQLite-NET, NewtonSoft.JSON and SharpZipLib.
+include: SQLite-NET, NewtonSoft.JSON, and SharpZipLib.
 
 ### Objective-C Bindings + Binding Projects
 
@@ -208,8 +207,8 @@ Xamarin provides a tool called *btouch* that helps create bindings
 that allow Objective-C libraries to be used in Xamarin.iOS projects. Refer to the [Binding Objective-C Types documentation](~/cross-platform/macios/binding/binding-types-reference.md) for details on how this is done.
 
 Examples of Objective-C libraries that can be used in Xamarin.iOS include: RedLaser
-barcode scanning, Google Analytics and PayPal integration. Open-source Xamarin.iOS
-bindings are available on [github](https://github.com/mono/monotouch-bindings).
+barcode scanning, Google Analytics, and PayPal integration. Open-source Xamarin.iOS
+bindings are available on [GitHub](https://github.com/mono/monotouch-bindings).
 
 ### .jar Bindings + Binding Projects
 
@@ -217,7 +216,7 @@ Xamarin supports using existing Java libraries in Xamarin.Android. Refer to
 the [Binding a Java Library documentation](~/android/platform/binding-java-library/index.md) for details on how to use a .JAR file
 from Xamarin.Android.
 
-Open-source Xamarin.Android bindings are available on [github](https://github.com/mono/monodroid-bindings).
+Open-source Xamarin.Android bindings are available on [GitHub](https://github.com/mono/monodroid-bindings).
 
 ### C via PInvoke
 

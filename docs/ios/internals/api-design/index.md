@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.iOS API Design"
-description: "Guiding principles that were used to architect the Xamarin.iOS APIs and how these relate to Objective-C."
+description: "Guiding principles that were used to architect the Xamarin.iOS APIs and how they relate to Objective-C."
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
@@ -17,17 +17,16 @@ various iOS APIs to allow developers to create native iOS
 applications with Mono.
 
 At the core of Xamarin.iOS, there is an interop engine that bridges
-the C# world with the Objective-C world, as well as bindings for the
+the C# world with the Objective-C world, and bindings for the
 iOS C-based APIs like CoreGraphics and [OpenGL ES](#opengles).
 
 The low-level runtime to communicate with Objective-C code is in
-[MonoTouch.ObjCRuntime](#objcruntime). On top of this,
-bindings for [Foundation](#foundation), CoreFoundation, and
+[MonoTouch.ObjCRuntime](#objcruntime). Additionally, bindings for [Foundation](#foundation), CoreFoundation, and
 [UIKit](#uikit) are provided.
 
 ## Design Principles
 
-These are some of our design principles for the Xamarin.iOS bindings
+This section details some of our design principles for the Xamarin.iOS bindings
 (they also apply to Xamarin.Mac, the Mono bindings for Objective-C on
 macOS):
 
@@ -43,7 +42,7 @@ macOS):
 - Provide a mechanism to call arbitrary Objective-C libraries
 - Make common Objective-C tasks easy and hard Objective-C tasks possible
 - Expose Objective-C properties as C# properties
-- Expose a strongly-typed API:
+- Expose a strongly typed API:
 
   - Increase type safety
   - Minimize runtime errors
@@ -52,7 +51,7 @@ macOS):
 
 - Encourage in-IDE exploration of the APIs:
 
-  - For example, instead of exposing a weakly-typed array like this:
+  - For example, instead of exposing a weakly typed array, like this:
 
     ```objc
     NSArray *getViews
@@ -64,7 +63,7 @@ macOS):
     NSView [] Views { get; set; }
     ```
 
-    This gives Visual Studio for Mac the ability to do auto-completion while
+    Using strong types gives Visual Studio for Mac the ability to do autocompletion while
     browsing the API, makes all of the `System.Array` operations available
     on the returned value, and allows the return value to participate in
     LINQ.
@@ -75,11 +74,11 @@ macOS):
   - Turn `int` and `uint` parameters that should have been enums into C#
     enumerations and C# enumerations with `[Flags]` attributes
   - Instead of type-neutral `NSArray` objects, expose arrays as
-    strongly-typed arrays.
+    strongly typed arrays.
   - For events and notifications, give users a choice between:
 
-    - A strongly-typed version by default
-    - A weakly-typed version for advanced use cases
+    - A strongly typed version by default
+    - A weakly typed version for advanced use cases
 
 - Support the Objective-C delegate pattern:
 
@@ -89,7 +88,7 @@ macOS):
 
 ### Assemblies
 
-Xamarin.iOS includes a number of assemblies that constitute the
+Xamarin.iOS includes many assemblies that constitute the
 *Xamarin.iOS Profile*. The
 [Assemblies](~/cross-platform/internals/available-assemblies.md) page has more
 information.
@@ -107,21 +106,21 @@ This is a new binding, designed specifically for the iOS, based on the experienc
 The [Foundation](xref:Foundation)
 namespace provides the basic data types designed to interoperate with the
 Objective-C Foundation framework that is part of the iOS and it is the base
-for object oriented programming in Objective-C.
+for object-oriented programming in Objective-C.
 
 Xamarin.iOS mirrors in C# the hierarchy of classes from
 Objective-C. For example, the Objective-C base class
 NSObject is usable from C# via [Foundation.NSObject](xref:Foundation.NSObject).
 
-Although this namespace provides bindings for the underlying
+Although Foundation namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
 underlying types to .NET types. For example:
 
-- Instead of dealing with NSString and [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
+- Instead of dealing with NSString and [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes them as C# [string](xref:System.String)s and strongly typed [array](xref:System.Array)s throughout the API.
 
-- Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
+- Various helper APIs are exposed here to allow developers to bind third-party Objective-C APIs, other iOS APIs, or APIs that are not currently bound by Xamarin.iOS.
 
-For more details on binding APIs, see the [Xamarin.iOS Binding
+For more information on binding APIs, see the [Xamarin.iOS Binding
 Generator](~/cross-platform/macios/binding/binding-types-reference.md)
 section.
 
@@ -130,7 +129,7 @@ section.
 The [NSObject](xref:Foundation.NSObject)
 type is the foundation for all the Objective-C bindings. Xamarin.iOS types mirror
 two classes of types from the iOS CocoaTouch APIs: the C types (typically
-referred to as CoreFoundation types) and the Objective-C types (these all derive
+referred to as CoreFoundation types) and the Objective-C types (which all derive
 from the NSObject class).
 
 For each type that mirrors an unmanaged type, it is possible to obtain
@@ -141,9 +140,9 @@ property.
 While Mono will provide garbage collection for all of your objects,
 the `Foundation.NSObject` implements the
 [System.IDisposable](xref:System.IDisposable)
-interface. This means that you can explicitly release the resources of
+interface. You can explicitly release the resources of
 any given NSObject without having to wait for the Garbage Collector to
-kick-in. This is important when you are using heavy NSObjects, for
+kick in. Explicitly releasing resources is important when you are using heavy NSObjects, for
 example, UIImages that might hold pointers to large blocks of data.
 
 If your type needs to perform deterministic finalization, override the
@@ -151,8 +150,8 @@ If your type needs to perform deterministic finalization, override the
 method](xref:Foundation.NSObject.Dispose(System.Boolean))
 The parameter to Dispose is "bool disposing", and if set to true it
 means that your Dispose method is being called because the user
-explicitly called Dispose () on the object. If the value is false,
-this means that your Dispose(bool disposing) method is being called
+explicitly called Dispose () on the object. A false value means that 
+your Dispose(bool disposing) method is being called
 from the finalizer on the finalizer thread.
 
 ##### Categories
@@ -259,14 +258,14 @@ namespace contains a one-to-one mapping to all of the UI components that make up
 CocoaTouch in the form of C# classes. The API has been modified to follow the
 conventions used in the C# language.
 
-C# delegates are provided for common operations. See the [delegates](#delegates) section for more information.
+C# delegates are provided for common operations. For more information, see the [delegates](#delegates) section.
 
 #### OpenGLES
 
 For OpenGLES, we distribute a [modified version](xref:OpenTK)
 of the [OpenTK](https://opentk.net/) API, an object-oriented
 binding to OpenGL that has been modified to use CoreGraphics data types and
-structures, as well as only exposing the functionality that is available on iOS.
+structures, and only exposing the functionality that is available on iOS.
 
 OpenGLES 1.1 functionality is available through the [ES11.GL type](xref:OpenTK.Graphics.ES11.GL).
 
@@ -276,8 +275,7 @@ OpenGLES 3.0 functionality is available through the [ES30.GL type](xref:OpenTK.G
 
 ### Binding Design
 
-Xamarin.iOS is not merely a binding to the underlying Objective-C platform. It
-extends the .NET type system and dispatch system to better blend C# and
+Xamarin.iOS is not merely a binding to the underlying Objective-C platform. It extends the .NET type system and dispatches system to better blend C# and
 Objective-C.
 
 Just as P/Invoke is a useful tool to invoke native libraries on Windows and Linux, or as IJW support can be used for COM interop on Windows, Xamarin.iOS extends the runtime to support binding C# objects to Objective-C objects.
@@ -293,7 +291,7 @@ exposing NSArray.
 
 In general, in the Xamarin.iOS and Xamarin.Mac design, the underlying `NSArray`
 object is not exposed. Instead, the runtime automatically converts `NSArray`s to
-strongly typed arrays of some `NSObject` class. So, Xamarin.iOS does not expose a weakly-typed method like GetViews to return an NSArray:
+strongly typed arrays of some `NSObject` class. So, Xamarin.iOS does not expose a weakly typed method like GetViews to return an NSArray:
 
 ```csharp
 NSArray GetViews ();
@@ -309,13 +307,13 @@ There are a few of methods exposed in `NSArray`, for the corner cases where
 you might want to use an `NSArray` directly, but their use is discouraged in the
 API binding.
 
-Additionally, in the **Classic API** instead of exposing `CGRect`, `CGPoint` and `CGSize` from the
-CoreGraphics API, we replaced those with the `System.Drawing` implementations
-`RectangleF`, `PointF` and `SizeF` as they would help developers preserve existing OpenGL code that uses OpenTK. When using the new 64-bit **Unified API**, the CoreGraphics API should be used.
+Additionally, in the **Classic API** instead of exposing `CGRect`, `CGPoint`, and `CGSize` from the
+CoreGraphics API, we replaced them with the `System.Drawing` implementations
+`RectangleF`, `PointF`, and `SizeF` as they would help developers preserve existing OpenGL code that uses OpenTK. When using the new 64-bit **Unified API**, the CoreGraphics API should be used.
 
 #### Inheritance
 
-The Xamarin.iOS API design allows developers to extend native Objective-C types in the same way that they would extend a C# type, using the "override" keyword on a derived class, as well as chaining up to the base implementation using the "base" C# keyword.
+The Xamarin.iOS API design allows developers to extend native Objective-C types in the same way that they would extend a C# type, using the "override" keyword on a derived class, and chaining up to the base implementation using the "base" C# keyword.
 
 This design allows developers to avoid dealing with Objective-C selectors as part of their development process, because the entire Objective-C system is already wrapped inside the Xamarin.iOS libraries.
 
@@ -340,7 +338,7 @@ language.
 
 In the Objective-C world, and in the documentation that you will find online
 about CocoaTouch, a delegate is typically an instance of a class that will
-respond to a set of methods. This is very similar to a C# interface, with the
+respond to a set of methods. This is similar to a C# interface, with the
 difference being that the methods are not always mandatory.
 
 These delegates play an important role in UIKit and other CocoaTouch APIs. They are used to accomplish various tasks:
@@ -357,7 +355,7 @@ interfaces (one for each action) or requiring developers to implement too many
 methods they do not need, Objective-C supports optional method definitions. This
 is different than C# interfaces that require all methods to be implemented.
 
-In Objective-C classes, you will see that classes that use this programming pattern expose a property, usually called `delegate`, which is required to implement the mandatory parts of the interface and zero, or more, of the optional parts.
+In Objective-C classes, you will see that classes that use this programming pattern expose a property, called `delegate`, which is required to implement the mandatory parts of the interface and zero, or more, of the optional parts.
 
 In Xamarin.iOS three mutually exclusive mechanisms to bind to these
 delegates are offered:
@@ -370,7 +368,7 @@ For example, consider the UIWebView class. This dispatches to a UIWebViewDelegat
 
 ##### Via Events
 
-For many types, Xamarin.iOS will automatically create an appropriate delegate
+For many types, Xamarin.iOS will automatically create an appropriate delegate,
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
@@ -493,7 +491,7 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.WeakDelegate = new Notifier ();
 ```
 
-Note that once the `WeakDelegate` property has been assigned, the `Delegate` property will not be used. Additionally, if you implement
+Once the `WeakDelegate` property has been assigned, the `Delegate` property will not be used. Additionally, if you implement
 the method in an inherited base class that you wish to [Export], you must make it
 a public method.
 
@@ -513,7 +511,7 @@ variable. This mechanism is supported by Xamarin.iOS and C# the syntax is:
 foo.Delegate = new SomethingDelegate ();
 ```
 
-In Xamarin.iOS we have provided strongly-typed classes that map to the
+In Xamarin.iOS, we have provided strongly typed classes that map to the
 Objective-C delegate classes. To use them, you will be subclassing and
 overriding the methods defined by Xamarin.iOS's implementation. For more
 information on how they work, see the section "Models" below.
@@ -619,7 +617,7 @@ match the actual types that the runtime engine will pass.
 #### Models
 
 In UIKit storage facilities, or in responders that are implemented
-using helper classes, these are usually referred in the Objective-C
+using helper classes, these are referenced in the Objective-C
 code as delegates, and they are implemented as protocols.
 
 Objective-C protocols are like interfaces, but they support optional
@@ -630,7 +628,7 @@ There are two ways of implementing a model. You can either implement
 it manually or use the existing strongly typed definitions.
 
 The manual mechanism is necessary when you try to implement a class
-that has not been bound by Xamarin.iOS. It is very easy to do:
+that has not been bound by Xamarin.iOS. It is easy to do:
 
 - Flag your class for registration with the runtime
 - Apply the [Export] attribute with the actual selector name on each method you want to override
@@ -657,7 +655,7 @@ Xamarin.iOS provides strongly typed declarations, ready to use, that do
 not require manual binding. To support this programming model, the Xamarin.iOS
 runtime supports the [Model] attribute on a class declaration. This informs the
 runtime that it should not wire up all the methods in the class, unless the
-methods are is explicitly implemented.
+methods are explicitly implemented.
 
 This means that in UIKit, the classes that represent a protocol with
 optional methods are written like this:
@@ -694,15 +692,8 @@ files to find the selector, the types of the arguments, or the mapping to C#, an
 
 #### XIB Outlets and C\#
 
-> [!IMPORTANT]
-> This section explains the IDE integration with outlets when using XIB files. When using the Xamarin Designer for iOS, this is all replaced by entering a name under **Identity > Name** in the Properties section of your IDE, as shown below:
->
-> [![Entering an item Name in the iOS Designer](images/designeroutlet.png)](images/designeroutlet.png#lightbox)
->
->For more information on the iOS Designer, please review the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md#how-it-works) document.
-
 This is a low-level description of how Outlets integrate with C# and is
-provided for advanced users of Xamarin.iOS. When using Visual Studio for Mac the mapping is
+provided for advanced users of Xamarin.iOS. When using Visual Studio for Mac, the mapping is
 done automatically behind the scenes using generated code on the flight for
 you.
 
@@ -772,7 +763,7 @@ A core concept of Objective-C programming is selectors. You will often come
 across APIs that require you to pass a selector, or expects your code to respond
 to a selector.
 
-Creating new selectors in C# is very easy – you just create a new instance of
+Creating new selectors in C# is easy – you just create a new instance of
 the `ObjCRuntime.Selector` class and use the result in any
 place in the API that requires it. For example:
 
@@ -794,7 +785,7 @@ public class MyMath : NSObject {
 }
 ```
 
-Note that selector names **must** match exactly, including all
+Selector names **must** match exactly, including all
 intermediate and trailing colons (":"), if present.
 
 #### NSObject Constructors
@@ -923,7 +914,7 @@ its own use. For example, if you set a UIImageView's Image property to an image,
 
 #### When to call Dispose
 
-You should call Dispose when you need Mono in getting rid of your object. A
+Call Dispose when you need Mono to get rid of your object. A
 possible use case is when Mono has no knowledge that your NSObject is actually
 holding a reference to an important resource like memory, or an information
 pool. In those cases, you should call Dispose to immediately release the
@@ -938,9 +929,9 @@ fewer objects around to deal with, the faster the GC will run.
 #### When to Keep References to Objects
 
 One side-effect that automatic memory management has is that the GC will get
-rid of unused objects as long as there are no references to them. This sometimes
+rid of unused objects as long as there are no references to them. Which sometimes
 can have surprising side effects, for example, if you create a local variable to
-hold your top level view controller, or your top level window, and then having
+hold your top-level view controller, or your top-level window, and then having
 those vanish behind your back.
 
 If you do not keep a reference in your static or instance variables to your

@@ -1,6 +1,6 @@
 ---
 title: "Storyboards in Xamarin.iOS"
-description: "This document provides an introduction to storyboards in Xamarin.iOS. It describes how a storyboard is used to define a user interface, segues, and how to use the iOS Designer to edit storyboard files."
+description: "This document provides an introduction to storyboards in Xamarin.iOS. It describes how a storyboard is used to define a user interface, and segues."
 ms.prod: xamarin
 ms.technology: xamarin-ios
 author: davidortinau
@@ -219,12 +219,7 @@ through how that transition can be set up in code.
 
     [![Adding storyboard](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
 
-2. Right-click the Storyboard file and select **Open With > Xcode Interface Builder** to open it in Xcode.
-
-   > [TIP]
-   > If you prefer to use the Xcode Interface builder by default, you can choose it in the Visual Studio for Mac preferences under **Projects > iOS**.  As of Visual Studio version 16.9 and Visual Studio for Mac 8.9, Xcode Interface Builder will be the only option.*
-
-   ![Selecting the preferred designer tool.](images/set-preferred-designer-tool.png)
+2. Double-click the Storyboard file or right-click and select **Open With > Xcode Interface Builder** to open it in Xcode's Interface Builder.
 
 3. In Xcode, open the Library (via **View > Show Library** or **Shift + Command + L**) to show a list of objects that can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens. The screen on the right is a `TableViewController` which you'll replace with a simpler view so it can be removed by clicking the view and pressing the Delete key.
 

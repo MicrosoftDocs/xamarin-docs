@@ -6,7 +6,7 @@ ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 08/27/2018
+ms.date: 03/31/2021
 ---
 
 # Android Emulator Setup
@@ -52,6 +52,9 @@ virtual device.
 In this article, the most common warning messages and issues that occur
 while running the Android Emulator are described, along with
 workarounds and tips.
+
+> [!NOTE]
+> If you are using a Mac with an Apple chip, such as the M1, you will need to install the [Android Emulator for M1 preview from GitHub](https://github.com/google/android-emulator-m1-preview/releases).
 
 After you have configured the Android Emulator, see
 [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)

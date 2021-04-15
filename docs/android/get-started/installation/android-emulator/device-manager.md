@@ -8,7 +8,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.custom: video
-ms.date: 01/22/2019
+ms.date: 03/31/2021
 ---
 
 # Managing Virtual Devices with the Android Device Manager
@@ -266,16 +266,15 @@ The additional options menu contains the following items:
 ::: zone-end
 ::: zone pivot="macos"
 
+> [!NOTE]
+> If you are using a Mac with an Apple chip, such as the M1, you will need to install the [Android Emulator for M1 preview from GitHub](https://github.com/google/android-emulator-m1-preview/releases).
+
 ## Android Device Manager on macOS
 
 This article explains how to use the Android Device Manager to create,
 duplicate, customize, and launch Android virtual devices.
 
 [![Screenshot of the Android Device Manager in the Devices tab](device-manager-images/mac/01-devices-dialog-sml.png)](device-manager-images/mac/01-devices-dialog.png#lightbox)
-
-> [!NOTE]
-> This guide applies only to Visual Studio for Mac.
-Xamarin Studio is incompatible with the Android Device Manager.
 
 You use the Android Device Manager to create and configure *Android
 Virtual Devices* (AVDs) that run in the

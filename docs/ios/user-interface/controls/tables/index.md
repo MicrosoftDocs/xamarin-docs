@@ -11,6 +11,11 @@ ms.date: 01/06/2016
 
 # Working with Tables and Cells in Xamarin.iOS
 
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
+
 This section introduces the classes used to create and display tables then provides examples of how to use them in Xamarin.iOS. It will cover using the default appearance for tables, customizing the layout, implementing editing and using the Xamarin iOS Designer to design a table visually. Sometimes the display is obviously a list of rows (such as the Music app) and other times it is difficult to recognize the table control (such as editing in the Contacts app, or a conversation in Messages app).
 
 For those working on cross-platform applications with Xamarin.Android, the UITableView control is similar to the ListView class in Android (and the UITableViewSource class is similar to Android’s Adapter classes).

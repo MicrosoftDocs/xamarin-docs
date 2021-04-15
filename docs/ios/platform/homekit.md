@@ -224,7 +224,7 @@ When the Home Manager makes a connection to HomeKit, the `DidUpdateHomes` event 
 
 If the `PrimaryHome` property of the `HMHomeManager` is `null` after a `DidUpdateHomes` event, you need to provide a way for the user to create and assign a Primary Home before continuing.
 
-Typically the app will present a form for the user to name a new home which then gets passed to the Home Manager to setup as the Primary Home. For the **HomeKitIntro** sample app, a modal view was created in the IOS Designer and called by the `AddHomeSegue` segue from the main interface of the app.
+Typically the app will present a form for the user to name a new home which then gets passed to the Home Manager to setup as the Primary Home. For the **HomeKitIntro** sample app, a modal view was created in Xcode Interface Builder and called by the `AddHomeSegue` segue from the main interface of the app.
 
 It provides a text field for the user to enter a name for the new home and a button to add the home. When the user taps the **Add Home** button, the following code calls the Home Manager to add the home:
 

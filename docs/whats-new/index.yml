@@ -18,6 +18,8 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
+          - text: February 2021
+            url: 2021-02.md
           - text: January 2021
             url: 2021-01.md
           - text: August 2020

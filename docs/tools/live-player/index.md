@@ -18,7 +18,7 @@ Since the source code is interpreted you may reach the [limitations](./troublesh
 > The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017.
 
 > [!TIP]
-> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> You can use [XAML Hot Reload(~/xamarin-forms/xaml/hot-reload/index.md) in Visual Studio 2019 or 
 > Visual Studio for Mac to view your screen designs as you edit them.
 
 ## How Xamarin Live Player worked

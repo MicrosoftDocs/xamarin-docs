@@ -65,8 +65,6 @@ The image loading behavior in iOS also recognizes an `@3x` suffix on image files
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
 
-Or if they assign the image to a UI element using the iOS Designer as `MonkeyIcon.png`, the `MonkeyIcon@3x.png` will be used, again automatically, on the iPhone 6 Plus.
-
 <a name="dynamic-launch-screens"></a>
 
 ### Dynamic Launch Screens
@@ -279,7 +277,7 @@ With a custom presentation style, developers have the option to use a custom Pre
 
 The Adaptive Photos Xamarin Project that is included with this article gives a working example of using Size Classes and Adaptive View Controllers in an iOS 8 Unified Interface application.
 
-While the application creates its UI completely from code, as opposed to using the IOS Designer and creating a Unified Storyboard, the same techniques apply. Later in this article, we’ll show how to use Size Classes with a Unified Storyboard and the iOS Designer in a Xamarin Application.
+While the application creates its UI completely from code, as opposed to creating a Unified Storyboard using Xcode's Interface Builder, the same techniques apply. 
 
 Now let’s take a closer look at how the Adaptive Photos project is implementing several of the Size Class features in iOS 8 to create a Adaptive Application.
 
@@ -549,127 +547,13 @@ The key benefits of Unified Storyboards are:
 
 - Use the same storyboard file for iPhone and iPad.
 - Deploy backwards to iOS 6 and iOS 7.
-- Preview the layout for different devices, orientations and OS versions all from within the Xamarin iOS Designer.
-
-This feature is fully supported in Visual Studio for Mac
+- Preview the layout for different devices, orientations and OS versions .
 
 <a name="enabling-size-classes"></a>
 
 ### Enabling Size Classes
 
-By default, any new Xamarin.iOS project will us size classes. To use Size Classes and Adaptive Segues inside a storyboard from an older project, it must first be converted to the Xcode 6 Unified Storyboard format from inside the iOS Designer.
-
-To do this open the Storyboard to be converted in the iOS Designer and check the **Use Size Classes** check box:
-
- [![The Use Size Classes check box](unified-storyboards-images/sizeclass01.png)](unified-storyboards-images/sizeclass01.png#lightbox)
-
-The iOS Designer will confirm that the developer wants to convert the format of the storyboard to use Size Classes:
-
- [![The use Size Classes alert](unified-storyboards-images/sizeclass02.png)](unified-storyboards-images/sizeclass02.png#lightbox)
-
-> [!IMPORTANT]
-> Auto Layout must also be checked for Size Classes to work correctly.
-
-### Generic Device Types
-
-Once the storyboard has been converted to use Size Classes, it will be redisplayed in the Design Surface and the **View As** device will be Generic:
-
- [![View as a Generic device type](unified-storyboards-images/sizeclass03.png)](unified-storyboards-images/sizeclass03.png#lightbox)
-
-When the Generic device type is selected, all View Controllers will be resized to a 600 x 600 Square. This square represents sizes of any width and any height. When the iOS Designer is in this mode, any edits will apply to all of the Size Classes.
-
-The developer also has the option of viewing the design surface as an iPhone:
-
- [![Viewing the design surface as an iPhone](unified-storyboards-images/sizeclass04.png)](unified-storyboards-images/sizeclass04.png#lightbox)
-
-Or viewing it as an iPad:
-
- [![Viewing the design surface as an iPad](unified-storyboards-images/sizeclass05.png)](unified-storyboards-images/sizeclass05.png#lightbox)
-
-### Select a Size Class
-
-The Size Class Selector button is at the upper left hand corner of the Design Surface (near the View As dropdown). It allows the developer to select which Size Classes are currently being edited:
-
- [![Select a Size Class](unified-storyboards-images/sizeclass06.png)](unified-storyboards-images/sizeclass06.png#lightbox)
-
-The selector presents the Size Class selection as a 3 x 3 grid. Each of the squares in the grid represents a combination of a Width Class and a Height Class. The center square selects the Any Width/Any Height Size class (which is the default view for a Unified Storyboard). When this square is selected, the developer is editing the default layout, which is inherited by all the other configurations.
-
-The square in the upper left hand corner of the grid represents the Compact Width/Compact Height Size Class:
-
- [![The Compact Width/Compact Height Size Class](unified-storyboards-images/sizeclass07.png)](unified-storyboards-images/sizeclass07.png#lightbox)
-
-This mode corresponds to an iPhone in the landscape orientation. The square in the lower right hand corner of the grid represents the Regular Width/Regular Height Size Class, which represents an iPad:
-
- [![The Regular Width/Regular Height Size Class](unified-storyboards-images/sizeclass08.png)](unified-storyboards-images/sizeclass08.png#lightbox)
-
-To edit the layout for an iPhone in the portrait orientation, select the square in the lower left hand corner. This represents the Compact Width/Regular Height Size Class:
-
- [![The Compact Width/Regular Height Size Class](unified-storyboards-images/sizeclass09.png)](unified-storyboards-images/sizeclass09.png#lightbox)
-
-Click in the square to select it and the Design Surface will change the size of the View Controllers to match the new selection:
-
- [![The Design Surface will change the size of the View Controllers to match the new selection as shown](unified-storyboards-images/sizeclass10.png)](unified-storyboards-images/sizeclass10.png#lightbox)
-
-See the Size Class section of this article for more information on Size Classes and how they affect layout for iPhones and iPads.
-
-### Adaptive Segue Types
-
-If the developer has used storyboards before, then they will be familiar with the existing segue types of **Push**, **Modal** and **Popover**. When Size Classes are enabled on a Unified Storyboard file, the following Adaptive Segue Types (that correspond to the new View Controller API discussed above) are made available: **Show** and **Show Detail**.
-
-> [!IMPORTANT]
-> When Size Classes are enabled, any existing segues will be converted to the new types.
-
-Take the example of an iOS 8 Application that uses a Unified Storyboard with a Split View Controller that has a simple game navigation menu in the Master View. If the user clicks on a menu button, the selected item’s View Controller should be shown in the Details section of the Split View Controller when running on an iPad. On an iPhone the item’s View Controller should be pushed onto the Navigation stack.
-
-To achieve this effect, in the iOS Designer control-click on the button and drag a line to the View Controller to be displayed. When the mouse button is released, select `Show Detail` from the Segue Type Popup menu:
-
- [![Select Show Detail from the Segue Type Popup menu](unified-storyboards-images/segue01.png)](unified-storyboards-images/segue01.png#lightbox)
-
-The new segue will be created between the button and the View Controller. Now run the application in the iPhone Simulator and the Main Menu will be displayed:
-
- [![The Main Menu](unified-storyboards-images/segue02.png)](unified-storyboards-images/segue02.png#lightbox)
-
-Click on the **Select Game** button and the item’s View Controller will be pushed onto the Navigation Stack:
-
- [![The items View Controller will be pushed onto the Navigation Stack as shown](unified-storyboards-images/segue03.png)](unified-storyboards-images/segue03.png#lightbox)
-
-Stop the iPhone Simulator and run the Application in the iPad Simulator. Switch to the landscape orientation and the main menu is again displayed:
-
- [![The main menu displayed](unified-storyboards-images/segue04.png)](unified-storyboards-images/segue04.png#lightbox)
-
-Again, click on the **Select Game** button and the item’s View Controller is shown in the Details section of the Split View Controller:
-
- [![The items View Controller shown in the Details section of the Split View Controller](unified-storyboards-images/segue05.png)](unified-storyboards-images/segue05.png#lightbox)
-
-### Excluding an Element from a Size Class
-
-There are times when a given element (such as a View, Control or a Constraint) is not required inside of a specific Size Class. To exclude an element from a Size Class, select the desired item to exclude in the **Design Surface**. Scroll to the bottom of the **Property Explorer** and click the **Gear** Dropdown menu. Select the combination of **Width** and **Height** to exclude the item from:
-
-[![Select the combination of Width and Height](unified-storyboards-images/exclude-a.png)](unified-storyboards-images/exclude-a.png#lightbox)
-
-A new *Exclusion Case* will be added to the element in the bottom of the **Property Explorer**. Next, uncheck the **Installed** checkbox for the given Size Class:
-
-[![Uncheck the Installed checkbox](unified-storyboards-images/exclude-b.png)](unified-storyboards-images/exclude-b.png#lightbox)
-
-Switch the Design Surface to the Width and Height that the item was excluded from, it has been removed from the given Size Class, but not the entire UI design:
-
- [![Switch the Design Surface to the Width and Height that the item was excluded from](unified-storyboards-images/exclude02.png)](unified-storyboards-images/exclude02.png#lightbox)
-
-Switching back to the Any Width/Any Height size class and the element is still in place:
-
- [![Switching back to the Any Width/Any Height size class](unified-storyboards-images/exclude03.png)](unified-storyboards-images/exclude03.png#lightbox)
-
-When the application is run in the iPad Simulator, the element appears:
-
- [![The element shown when the running app in the iPad Simulator](unified-storyboards-images/exclude04.png)](unified-storyboards-images/exclude04.png#lightbox)
-
-And when the application is run on the iPhone Simulator, the element is missing:
-
- [![The element missing when the running app in the iPhone Simulator](unified-storyboards-images/exclude05.png)](unified-storyboards-images/exclude05.png#lightbox)
-
-To remove an Exclusion Case from an element, simply select the element in the **Design Surface**, scroll to the bottom of the **Property Explorer** and click the **-** button beside the case to remove.
-
-To see an implementation of Unified Storyboards, look at the `UnifiedStoryboard` sample Xamarin iOS 8 application attached to this document.
+By default, any new Xamarin.iOS project will use size classes. To use Size Classes and Adaptive Segues inside a storyboard from an older project, it must first be converted to the Xcode 6 Unified Storyboard format and the Use Size Classes checkbox is selected within the Xcode File Inspector for your storyboards.
 
 ## Dynamic Launch Screens
 
@@ -750,7 +634,7 @@ To see an implementation of a Dynamic Launch Screen in Xamarin, look at the [Dyn
 
 This article took a quick look at Size Classes and how they affect layout in iPhone and iPad devices. It discussed how Traits, Trait Environments and Trait Collections work with Size Classes to create Unified Interfaces. It took brief look at Adaptive View Controllers and how they work with Size Classes inside of Unified Interfaces. It looked at implementing Size Classes and Unified Interfaces completely from C# code inside a Xamarin iOS 8 application.
 
-Finally, this article covered the basics of creating Unified Storyboards with the Xamarin iOS Designer that will work across iOS devices and creating a single, Dynamic Launch Screen that will be displayed as the startup screen on every iOS 8 device.
+Finally, this article covered the basics creating a single, Dynamic Launch Screen that will be displayed as the startup screen on every iOS 8 device.
 
 ## Related Links
 

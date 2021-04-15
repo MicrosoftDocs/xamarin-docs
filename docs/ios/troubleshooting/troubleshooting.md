@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Tips for Xamarin.iOS"
-description: "This document provides various tips useful for troubleshooting during the development of Xamarin.iOS applications. It describes specific error messages as well as other potential problems."
+description: "This document provides various tips useful for troubleshooting during the development of Xamarin.iOS applications. It describes specific error messages and other potential problems."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
@@ -12,56 +12,53 @@ ms.date: 06/10/2020
 
 # Troubleshooting Tips for Xamarin.iOS
 
-## Xamarin.iOS cannot resolve System.ValueTuple
+## Xamarin.iOS can't resolve System.ValueTuple
 
-This error occurs due to an incompatibility with Visual Studio.
+This error occurs because of an incompatibility with Visual Studio.
 
 - **Visual Studio 2017 Update 1** (version 15.1 or older) is only compatible with **System.ValueTuple NuGet 4.3.0** (or older).
 
-- **Visual Studio 2017 Update 2** (version 15.2 or newer) is only compatible with the **System.ValueTuple NuGet 4.3.1** or newer .
+- **Visual Studio 2017 Update 2** (version 15.2 or newer) is only compatible with the **System.ValueTuple NuGet 4.3.1** or newer.
 
-Please choose the correct System.ValueTuple NuGet that corresponds with your Visual Studio 2017 installation.
+Choose the correct System.ValueTuple NuGet that corresponds with your Visual Studio 2017 installation.
 
 ## Receiving 'Error Retrieving Update Information' Error Message
 
-When attempting to update the software and this error message appears, please try restarting your IDE and logging out and then back in to your account in the IDE.
+When attempting to update the software and this error message appears, try restarting your IDE. If that is unsuccessful, try logging out and then back in to your account within the IDE.
 
 ## How do I create outlets or actions with Interface Builder?
 
-With the Introduction of the Xamarin Designer for iOS in Visual Studio for Mac and Visual studio, Xamarin.iOS developers can now take advantage of creating a UI through Storyboards and .xibs. Refer to the [Hello, iOS](~/ios/get-started/hello-ios/index.md) guides for more information on using the designer.
-
-You can also refer to Apple's [Outlet](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingOutlet.html) and [Actions](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingAction.html) guides for more information on using Outlets and Actions in IB.
+For more information on using Outlets and Actions in IB, see Apple's [Outlet](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingOutlet.html) and [Actions](https://developer.apple.com/library/ios/recipes/xcode_help-IB_connections/chapters/CreatingAction.html) guides.
 
 ## System.Text.Encoding.GetEncoding throws NotSupportedException
 
-You may be using an encoding that is not added by default. Check
+You may be using an encoding that isn't added by default. Check
 the  [Internationalization](~/ios/app-fundamentals/localization/index.md) page
 to learn how to add support for more encoding.
 
 ## System.MissingMethodException (anything else)
 
-The member was likely removed by the linker, and thus doesn't exist in the
-assembly at runtime.  There are several solutions to this:
+The member was likely removed by the linker, and doesn't exist in the
+assembly at runtime.  There are several solutions to this error:
 
-- Add the [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) attribute to the member.  This will prevent the linker from removing it.
+- Add the [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) attribute to the member.  This attribute will prevent the linker from removing it.
 - When invoking [**mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), use the **-nolink** or **-linksdkonly** options:
   - **-nolink** disables all linking.
-  - **-linksdkonly** will only link Xamarin.iOS-provided assemblies, such as **xamarin.ios.dll**, while preserving all types in user-created assemblies (ie. your app projects).
+  - **-linksdkonly** will only link Xamarin.iOS-provided assemblies, such as **xamarin.ios.dll**, while preserving all types in user-created assemblies (that is, your app projects).
 
-Note that assemblies are linked so that the resulting executable is smaller;
-thus, disabling linking may result in a larger executable than is desirable.
+Assemblies are linked so that the resulting executable is smaller.
+Disabling linking may result in a larger executable than is desirable.
 
-## You are getting a ModelNotImplementedException
+## You're getting a ModelNotImplementedException
 
-If you are getting this exception this means that you are calling base.Method
-() on a class that overrides a Model. You do not need to call the base method in
-a class for models (these are classes that are flagged with the [Model]
-attribute).
+This exception means that you're calling base.Method
+() on a class that overrides a Model. You don't need to call the base method in
+a class for models (classes that are flagged with the [Model] attribute).
 
-## This class is not key value coding-compliant for the key XXXX
+## This class isn't key value coding-compliant for the key XXXX
 
-If you get this error when loading a NIB file it means that the value XXXX
-was not found on your managed class. This means that you are missing a
+If you get this error when loading a NIB file, it means that the value XXXX
+wasn't found on your managed class. You're missing a
 declaration like this:
 
 ```csharp
@@ -80,7 +77,7 @@ The above definition is automatically generated by Visual Studio for Mac for any
 files that you add to Visual Studio for Mac in the `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` file.
 
 Additionally, the types containing the above code must be a subclass of [NSObject](xref:Foundation.NSObject).  If the containing type is within a
-namespace, it should also have a [[Register]](xref:Foundation.RegisterAttribute) attribute which provides a type name without a
+namespace, it should also have a [[Register]](xref:Foundation.RegisterAttribute) attribute, which provides a type name without a
 namespace (as Interface Builder doesn't support namespaces in types):
 
 ```csharp
@@ -95,10 +92,10 @@ namespace Samples.GLPaint {
 
 ## Unknown class XXXX in Interface Builder file
 
-This error is generated if you define a class in your interface builder files
-but you do not provide the actual implementation for it in your C# code.
+This error occurs when defining a class in an interface builder file, 
+but not including the actual implementation in the C# code.
 
-You need to add some code like this:
+Add code like this:
 
 ```csharp
 public partial class MyImageView : UIView {
@@ -108,15 +105,13 @@ public partial class MyImageView : UIView {
 
 ## System.MissingMethodException: No constructor found for Foo.Bar::ctor(System.IntPtr)
 
-This error is produced at runtime when the code tries to instantiate an
-instance of the classes that you referenced from your Interface Builder
-file. This means that you forgot to add a constructor that takes a
-single IntPtr as a parameter.
+This error occurs at runtime when instantiating an instance of the classes that are referenced from your Interface Builder
+file. The error means you are missing a constructor that takes a single IntPtr as a parameter.
 
 The constructor with an IntPtr handle is used to bind managed objects with
 their unmanaged representations.
 
-To fix this, add the following line of code to the class Foo.Bar:
+To fix this error, add the following line of code to the class Foo.Bar:
 
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
@@ -137,15 +132,14 @@ type that is giving the error.
  **2) Default namespaces changed**
 
 The designer files are generated using your project's default namespace
-settings. If you have changed these settings, or renamed the project, the
-generated partial classes may no longer be in the same namespace as their
-user-code counterparts.
+settings. The namespace generated in the partial class can change if you've
+changed these settings, or renamed the project. The generated partial classes 
+may no longer be in the same namespace as their user-code counterparts.
 
-Namespace settings can be found in the Project Options dialog. The default
-namespace is found in the **General->Main Settings** section. If it is
-blank, the name of your project is used as the default. More advanced namespace
-settings can be found in the **Source Code->.NET Naming Policies**
-section.
+Namespace settings are found in the Project Options dialog. The default
+namespace is in the **General->Main Settings** section. The name of your 
+project is used as the default if it's blank. More advanced namespace
+settings are in the **Source Code->.NET Naming Policies** section.
 
 ## Warning for actions: The private method 'Foo' is never used. (CS0169)
 
@@ -153,44 +147,43 @@ Actions for interface builder files are connected to the widgets by
 reflection at runtime, so this warning is expected.
 
 You can use "#pragma warning disable 0169" "#pragma warning enable 0169"
-around your actions if you want to suppress this warning just for these methods,
-or add 0169 to the "Ignore warnings" field in compiler options if you want to
-disable it for your whole project (not recommended).
+around your actions if you want to suppress this warning just for these methods.
+If you want to disable it for your whole project (not recommended), add 0169 
+to the "Ignore warnings" field in compiler options.
 
 ## mtouch failed with the following message: Cannot open assembly '/path/to/yourproject.exe'
 
 If you see this error message, generally the problem is the absolute path to
-your project contains a space. This will be fixed in a future version of
-Xamarin.iOS, but you can work around the issue by moving the project to a folder
+your project contains a space. This issue will be fixed in a future version of
+Xamarin.iOS. You can work around the issue by moving the project to a folder
 without spaces.
 
 ## Your sqlite3 version is old - please upgrade to at least v3.5.0!
 
-This happens when you do all of the following:
+This message happens when all of the following are true:
 
-1. Use Mono.Data.Sqlite
-1. Use Mac OS X Leopard (10.5)
+1. You reference Mono.Data.Sqlite in your project
+1. Your Mac is running macOS X Leopard (10.5)
 1. Run your app within the simulator.
 
 The problem is that Mono is picking up the OS X `libsqlite3.dylib`, not the iPhoneSimulator's `libsqlite3.dylib` file. Your app *will* work on the
-device, but just not your simulator.
+device, but not your simulator.
 
 ## Deploy to device fails with System.Exception: AMDeviceInstallApplication returned 3892346901
 
 This error means that the code-signing configuration for your
-certificate/bundle id does not match the provisioning profile installed on your
-device.  Confirm you have the appropriate certificate selected in Project
+certificate or bundle id does not match the provisioning profile installed on your
+device. Confirm you have the appropriate certificate selected in Project
 Options->iPhone Bundle Signing, and the correct bundle id specified in
-Project Options->iPhone Application
+Project Options->iPhone Application.
 
-## Code Completion is not working in Visual Studio for Mac
+## Code Completion isn't working in Visual Studio for Mac
 
-Ensure that you are using the latest version of Visual Studio for Mac and Xamarin.iOS
+Ensure that you're using the latest version of Visual Studio for Mac and Xamarin.iOS
 
-If the issue is still present, please [file a bug](https://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
+If the issue is still present, [file a bug](https://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
 
-If all else fails, you can try removing the code completion cache so that it
-is regenerated:
+If all else fails, you can try removing the code completion cache so that it's regenerated:
 
  `[rm -r ~/.config/XamarinStudio-{VERSION}/CodeCompletionData]`
 
@@ -199,14 +192,14 @@ remove important files.
 
 ## Visual Studio for Mac crashes when you copy text
 
-The popular Mac utilities QuickSilver, Google Toolbar and LaunchBar have
+The popular Mac utilities QuickSilver, Google Toolbar, and LaunchBar have
 clipboard features that corrupt Visual Studio for Mac's memory. In their options, you can
-list Visual Studio for Mac as a process they should not interfere with.
+list Visual Studio for Mac as a process they shouldn't interfere with.
 
 ## Visual Studio for Mac complains about Mono 2.4 required
 
-If you updated Visual Studio for Mac due to a recent update, and when you try to start
-it again it complains about Mono 2.4 not being present, all you have to do is [upgrade your Mono 2.4 installation](http://www.go-mono.com/mono-downloads/download.html).
+[Upgrade your Mono 2.4 installation](http://www.go-mono.com/mono-downloads/download.html) if you updated Visual Studio for Mac, and when you try to start
+Visual Studio for Mac again, you get an message about Mono 2.4 not being present.
 
 Mono 2.4.2.3_6 fixes some important problems that prevented Visual Studio for Mac from
 running reliably, sometimes hung Visual Studio for Mac at startup or prevented the code
@@ -216,7 +209,7 @@ Once you install the new Mono, Visual Studio for Mac will start as expected.
 
 ## Assertion at ../../../../mono/metadata/generic-sharing.c:704, condition `oti' not met
 
-If you are receiving the following stack trace:
+If you're receiving the following stack trace:
 
 ```csharp
  - Assertion at ../../../../mono/metadata/generic-sharing.c:704, condition `oti' not met
@@ -226,19 +219,19 @@ Stacktrace:
     at (wrapper runtime-invoke) object.runtime_invoke_dynamic (intptr,intptr,intptr,intptr) <0xffffffff>`
 ```
 
-It means that you are linking a static library compiled with thumb code into
-your project. As of iPhone SDK release 3.1 (or higher at the time of this
-writing) Apple introduced a bug in their linker when linking non-Thumb code
-(Xamarin.iOS) with Thumb code (your static library).You will need to link
+It means that you're linking a static library compiled with thumb code into
+your project. In iPhone SDK release 3.1 (or higher at the time of this
+writing), Apple introduced a bug in their linker when linking non-Thumb code
+(Xamarin.iOS) with Thumb code (your static library). you'll need to link
 with a non-Thumb version of your static library to mitigate this issue.
 
 ## System.ExecutionEngineException: Attempting to JIT compile method (wrapper managed-to-managed) Foo[]:System.Collections.Generic.ICollection`1.get_Count ()
 
-The [] suffix indicates that you or the class library are calling a method on
+The [] suffix indicates you or the class library are calling a method on
 an array through a generic collection, such as IEnumerable<>,
 ICollection<> or IList<>. As a workaround, you can explicitly force
-the AOT compiler to include such method by calling the method yourself, and by
-making sure that this code is executed before the call that triggered the
+the AOT compiler to include the method by calling the method yourself. 
+Make sure this code is executed before the call that triggered the
 exception. In this case, you could write:
 
 ```csharp
@@ -253,17 +246,17 @@ Which will force the AOT compiler to include the get_Count method.
 Sometimes the Visual Studio for Mac source editor becomes extremely slow, appearing to
 hang for several seconds between typing characters.
 
-This issue is very rare and extremely hard to reproduce - it usually cannot
-be reproduced on the same machine after restarting Visual Studio for Mac. For this reason
+This issue is very rare and extremely hard to reproduce. It usually cannot
+be reproduced on the same machine after restarting Visual Studio for Mac. For this reason,
 we would appreciate it if you could perform several debugging steps before
 restarting Visual Studio for Mac, and send the results to us.
 
-1. Try closing the editor tab, and re-opening it. Does it take a little bit of editing or moving the caret around until the slowdown happens again?
+1. Try closing the editor tab, and reopening it. Does it take some editing or moving the caret around until the slowdown happens again?
 1. Disable "Beam Sync" using the "Quartz Debug" developer tool (which you can find using Spotlight), and check whether the source editor performance is restored to normal.
 1. Try repeating step (1) with Beam Sync still disabled.
-1. If the editor hangs for more than a few seconds, try to run "killall -QUIT [Visual Studio for Mac]" in a terminal while it is hung. It may be difficult to time the kill command to happen while the editor is hung, but it's essential to do so, because the command forces Mono to write stack traces of all threads to the MD log, which we can use to discover what state the threads are in while the XS is hung.
+1. If the editor hangs for more than a few seconds, try to run "killall -QUIT [Visual Studio for Mac]" in a terminal while it's hung. It may be difficult to time the kill command to happen while the editor is hung, but it's essential to do so. The command forces Mono to write stack traces of all threads to the MD log. We can use the log to discover what state the threads are in while the Visual Studio for Mac is hung.
 
-Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log**
+Attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log**
 (in older versions of XS/MonoDevelop, just send **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
 > [!NOTE]
@@ -271,31 +264,30 @@ Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTA
 
 ## Compiled application is very large
 
-To support debugging, debug builds contain additional code. Projects
+To support debugging, debug builds contain extra code. Projects
 built in release mode are a fraction of the size.
 
-As of Xamarin.iOS 1.3 the debug builds included debugging support for every
+Starting in Xamarin.iOS 1.3 the debug builds include debugging support for every
 single component of Mono (every method in every class of the
 frameworks).
 
-With Xamarin.iOS 1.4 we will introduce a finer grained method for debugging,
-the default will be to only provide debugging instrumentation for your code and
-your libraries, and not do this for all of the [Mono assemblies](~/cross-platform/internals/available-assemblies.md) (this will still be
-possible, but you will have to opt-in to debugging those assemblies).
+With Xamarin.iOS 1.4, we'll introduce a finer grained method for debugging.
+The default will provide debugging instrumentation for your code and
+libraries, and not for all of the [Mono assemblies](~/cross-platform/internals/available-assemblies.md).
+You'll have to opt in to provide debugging instrumentation for all of the [Mono assemblies](~/cross-platform/internals/available-assemblies.md).
 
 ## Installation Hangs
 
 Both Mono and Xamarin.iOS installers hang if you have the iPhone Simulator
-running. This problem is not limited to Mono or Xamarin.iOS, this is a
-consistent problem across any software that tries to install software on MacOS
-Snow Leopard if the iPhone Simulator is running at installation time.
+running. This problem isn't limited to Mono or Xamarin.iOS. This problem is consistent across any software that tries to install software on macOS
+Snow Leopard if the iPhone Simulator is running during installation.
 
 Make sure you quit the iPhone simulator and retry the installation.
 
 ## Debugger is unable to connect with the device
 
-When you start debugging a device configuration, you will see the debugger
-show a dialog indicating that it is trying to connect to the application. There
+When you start debugging a device configuration, you'll see the debugger
+show a dialog indicating that it's trying to connect to the application. There
 are several reasons the debugger may not be able to connect to the application,
 depending on the mode you're using to connect (USB or WiFi).
 
@@ -303,23 +295,23 @@ depending on the mode you're using to connect (USB or WiFi).
 application from connecting to the debugger host in WiFi mode.
 
  **Visual Studio for Mac may not be able to query the correct IP of the host**. In WiFi mode Visual Studio for Mac gives the application all the IPs
-it can find of the host, and the application tries them all to see if it can use
+it can find of the host. The application tries them all to see if it can use
 any of them to connect to Visual Studio for Mac.
 
  **Another device is connected to a USB port on the host.** In a
-few cases other devices connected to the USB ports on the host have been known
+few cases, other devices connected to the USB ports on the host have been known
 to somehow interfere with debugging in USB mode.
 
-If either WiFi or USB mode does not work, you can easily try the other: in
+When either WiFi or USB mode does not work, you can easily try the other. In
 Visual Studio for Mac, open the Preferences, go to the Preferences/Debugger/iPhone
 Debugger page, and toggle the "Debug iOS devices over WiFi instead of over USB"
-checkbox.   If neither works, you can see more information about the
+checkbox. If neither works, you can see more information about the
 failure in the device console in verbose mode (which is enabled by adding "-v
 -v -v" to the additional mtouch arguments in the project's options).
 
 ## Error 134: mtouch failed with the following message:
 
-This error could be raised if you are trying to build with -nolink on the
+This error could be raised if you're trying to build with -nolink on the
 Xamarin.iOS 1.4 style of releases. You can work around this error by
 specifying Extra Arguments in your monodevelop project configuration.
 
@@ -329,30 +321,30 @@ Add the argument
 
 and the problem should be resolved.
 
-## Distribution identity is not shown in Visual Studio for Mac project signing options
+## Distribution identity isn't shown in Visual Studio for Mac project signing options
 
 Visual Studio for Mac 2.2 has a bug that causes it not to detect distribution
-certificates that contain a comma. Please update to Visual Studio for Mac 2.2.1.
+certificates that contain a comma. Update to Visual Studio for Mac 2.2.1.
 
 ## Error "AFCFileRefWrite returned: 1" during upload
 
-While uploading an app to your device you may receive an Error
-"AFCFileRefWrite returned: 1". This can happen if you have a zero-length
+While uploading an app to your device, you may receive an Error
+"AFCFileRefWrite returned: 1". This error can happen if you have a zero-length
 file.
 
 ## Error "mtouch failed with no output"
 
 The current release of Xamarin.iOS and Visual Studio for Mac fail when the project name
-or the directory where the solution or project are stored contain spaces.
+or the directory where the solution or project is stored contains spaces.
 To fix this:
 
-- Make sure that neither your project or the directory where it is stored contains a space.
-- In your project "Main Settings" make sure that the Project Name does not contain any spaces.
+- Make sure that your project and the directory where it's stored doesn't contain any spaces.
+- In your project "Main Settings" make sure that the Project Name doesn't contain any spaces.
 
 ## Error "The binary you uploaded was invalid. A pre-release beta version of the SDK was used to build the application"
 
 This error is usually caused with a project that was started in iPad
-development before Xamarin.iOS 2.0.0 was released, you likely have some keys in
+development before Xamarin.iOS 2.0.0 was released. You likely have some keys in
 your Info.plist like:
 
 ```xml
@@ -371,30 +363,28 @@ automatically.
 
 Follow these steps:
 
-- Change the SDK version in iPhone Build to 3.2 or iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
-- Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it.   This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS.   If you do not do this, the app will not be able to run on an iPhone.
-- Rebuild, zip and upload to iTunes connect.
+- Change the SDK version in the iPhone Build options to 3.2. iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
+- Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it. This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS. If you don't do this, the app won't run on an iPhone.
+- Rebuild, zip, and upload to iTunes connect.
 
 ## Unhandled Exception: System.Exception: Failed to find selector someSelector: on {type}
 
 This exception is caused by one of three things:
 
-1. You have provided a Selector to the Objective-C runtime without applying the corresponding [Export] attribute to a method
-1. You have enabled full linking and not applied the [Preserve] attribute to the [Export]ed method.
-1. You have applied the [Export] attribute to a private method in an inherited type.
+1. You've provided a Selector to the Objective-C runtime without applying the corresponding [Export] attribute to a method
+1. You've enabled full linking and not applied the [Preserve] attribute to the [Export]ed method.
+1. You've applied the [Export] attribute to a private method in an inherited type.
 
-## MainWindow.xib.designer.cs file is not updated
+## MainWindow.xib.designer.cs file isn't updated
 
 There was a bug in Xamarin Studio 2.4 that caused it not to group the
 MainWindow.xib file with the MainWindow.xib.designer file in new projects. This
-meant it would not update the designer code for that particular file.
+meant it wouldn't update the designer code for that particular file.
 
-This issue is fixed in the version of Visual Studio for Mac that's available in its
-built-in updater, so please ensure you use the newer version.
+This issue is fixed in the version of Visual Studio for Mac, use the built-in updater to upgrade to the latest version that's available.
 
 You can fix existing projects by removing (not deleting) the xib and its
-designer file, then adding it back. This should re-group the files
-correctly.
+designer file, then adding it back. The files will be grouped together correctly.
 
 ## UIAlertView or UIActionSheet vanish after being created
 
@@ -410,64 +400,62 @@ actionSheet.Clicked += delegate (sender, args){
 };
 ```
 
-the "actionSheet" object lives as a temporary variable in the function and as
-soon as the function terminates, the object is eligible for garbage collection,
-so it ends up being garbage collected.
+The "actionSheet" object lives as a temporary variable in the function. As
+soon as the function terminates, the object is eligible for garbage collection.
+It ends up being garbage collected in the the pass.
 
 To fix this problem, you need to keep a reference to "actionSheet" outside
 your method, somewhere that will live beyond your method.
 
 ## Project Always Runs in the iPad Simulator
 
-The iPhone SDK 4.0 installer installs 2 SDKs - the 3.2 SDK, for building
-iPad-only apps, and the 4.0 SDK, used for building iPhone and Universal apps. It
+The iPhone SDK 4.0 installer installs 2 SDKs. The 3.2 SDK, for building
+iPad-only apps. And the 4.0 SDK, used for building iPhone and Universal apps. It
 also installs a 3.2 simulator, which simulates only an iPad, and a 4.0 simulator
 that simulates iPhone or iPhone 4. All older SDKs and simulators are
 removed.
 
-Visual Studio for Mac iPhone project build options include a setting for the SDK
+Visual Studio for Mac iPhone project build options includes a setting for the SDK
 version that will be used in building your app. This setting can be found in **Project Options->Build->iPhone Build**.
 
 New projects in Visual Studio for Mac use the oldest installed SDK as their default SDK
-setting, and if the SDK specified does not exist, Visual Studio for Mac will use the
-closest it can find to build your app. This was done so that  projects
-would not always require the newest SDK. However, this currently results in the
+setting. If the SDK specified doesn't exist, Visual Studio for Mac will use the
+closest it can find to build your app. This was done so that projects
+wouldn't always require the newest SDK. However, this currently results in the
 3.2 SDK being used - which results in the iPad simulator being used.
 
 To fix this by using the 4.0 SDK, go to **Project
 Options->Build->iPhone Build**> and change the SDK value to "4.0" using
-the dropdown box. You must do this for each configuration and platform
+the dropdown box. This changes must be made for each configuration and platform
 combination, accessed using the dropdowns at the top of the panel.
 
-The SDK version should not be confused with the "Minimum OS version" setting.
-This value does not have to match the SDK version value - it affects the minimum
+The SDK version shouldn't be confused with the "Minimum OS version" setting.
+This value doesn't have to match the SDK version value - it affects the minimum
 version of the OS your app will install on, which can be older than the SDK, as
 long as you use only APIs that exist in the older OS, or guard use of newer
-features using runtime OS version checks. You should set it to the oldest OS
+features using runtime OS version checks. Set it to the oldest OS
 version on which you test your app.
 
-Note also that the **Project->iPhone Simulator Target**> menu can be
-used to pick the simulator that is used by default when running/debugging a
-project. Additionally, the **Run->Run With**> menu can be used to pick a
-specific simulator with which to run
+The **Project->iPhone Simulator Target**> menu can be used to pick the simulator 
+that is used by default when running or debugging a project. Additionally, the **Run->Run With**> menu can be used to pick a
+specific simulator with which to run.
 
 ## ibtool returns error 133
 
-This means that you have XCode 4 installed.   In XCode 4, the tool
-ibtool was removed, it is no longer possible to edit your XIB files with a
+This error means you have XCode 4 installed. In XCode 4, ibtool was removed. It's no longer possible to edit your XIB files with a
 standalone tool.
 
-If you want to use Interface Builder, install XCode series 3, available from Apple's web site.
+If you want to use ibtool, install XCode series 3, available from Apple's web site.
 
 ## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 
 This error happens if you try to create an iPhone UI from a non-iPhone
-project. Make sure that you start with an iPhone/iPad solution, it is not
+project. Make sure that you start with an iPhone/iPad solution, it isn't
 possible to just add iPhone UI elements to a non-iPhone/iPad project.
 
 ## Startup crash when executing inside the iOS simulator
 
-If you get a runtime crash (SIGSEGV) inside the simulator along with a stack
+If you get a runtime crash (SIGSEGV) inside the simulator, along with a stack
 trace that looks like this:
 
 ```csharp
@@ -477,8 +465,8 @@ trace that looks like this:
 ```
 
 ...then you probably have one (or more) stale assembly in your simulator
-application directory. Such assemblies may exists since Apple iOS simulator
-adds and updates files but never deletes them. If this happens then the easiest
+application directory. Such assemblies may exist since Apple iOS simulator
+adds and updates files but never deletes them. The easiest
 solution is to select "Reset and Content and Settings..." from the simulator
 menu.
 
@@ -490,47 +478,46 @@ menu.
 
 ## Simulator hangs during application installation
 
-This can happen when application names include a '.' (dot) in their name.
-This is forbidden as the executable name in CFBundleExecutable - even if it can
-works in many other cases (like devices).
+This error can happen when application names include a '.' (dot) in their name.
+Using a '.' (dot) in the executable name is not allowed in CFBundleExecutable - even if it works in many other cases (like devices).
 
 "The value should not include any extension on the name."
 
-## Error: "Custom attribute type 0x43 is not supported" when double clicking .xib files
+## Error: "Custom attribute type 0x43 is not supported" when double-clicking.xib files
 
-This is caused by attempting to open .xib files when environment variables
-are set incorrectly. This should not happen with normal usage of
-Visual Studio for Mac/Xamarin.iOS, and re-opening Visual Studio for Mac from /Applications should fix
+This message is caused by attempting to open .xib files when environment variables
+are set incorrectly. This error shouldn't happen with normal usage of
+Visual Studio for Mac and Xamarin.iOS. Reopening Visual Studio for Mac from /Applications should fix
 the problem.
 
-When attempting to update the software and this error message appears, please e-mail *support@xamarin.com*
+When attempting to update the software and this error message appears, e-mail *support@xamarin.com*
 
 ## Application runs on simulator but fails on device
 
 This issue can manifest in several forms, and doesn't always produce a consistent error. If the application contains a .xib, check to make sure the **Build Action** on the .xib is set to **InterfaceDefinition**. This is the default build action for .xibs.
 
-To check the build action, right click on the .xib file and choose **Build Action**.
+To check the build action, right-click on the .xib file and choose **Build Action**.
 
 ## System.NotSupportedException: No data is available for encoding 437
 
-When including 3rd party libraries in your Xamarin.iOS app, you might get an error in the form "System.NotSupportedException: No data is available for encoding 437" when trying to compile and run the app. For example, libraries, such as `Ionic.Zip.ZipFile`, may throw this exception during operation.
+When including third-party libraries in your Xamarin.iOS app, you might get an error in the form "System.NotSupportedException: No data is available for encoding 437" when trying to compile and run the app. For example, libraries, such as `Ionic.Zip.ZipFile`, may throw this exception during operation.
 
-This can be solved by opening the options for the Xamarin.iOS project, going to **iOS Build** > **Internationalization** and checking the **West** internationalization.
+This exception can be solved by opening the options for the Xamarin.iOS project, going to **iOS Build** > **Internationalization** and checking the **West** internationalization.
 
 ## Could not launch Xamarin.Launcher Could not find the executable 'mlaunch.exe'
 
-In some cases anti-virus software can incorrectly flag the Xamarin.iOS SDK as malware and remove required files, corrupting the SDK. This will result in errors such as "Could not launch Xamarin.Launcher Could not find the executable 'mlaunch.exe'".
+In some cases, anti-virus software can incorrectly flag the Xamarin.iOS SDK as malware and remove required files, corrupting the SDK. This will result in errors such as "Could not launch Xamarin.Launcher Could not find the executable 'mlaunch.exe'".
 
-If you have been affected, exclude mlaunch.exe from your antivirus scanner to prevent re-occurrence. For more information, see [How to create an application exception in the Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) for Symantec, and [Exclude files and folders from Norton Auto-Protect, SONAR, and Download Intelligence scans](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) for Norton. In addition, consider reporting a false positive to [Symantec](https://symsubmit.symantec.com) or [Norton](https://submit.norton.com/?type=FP).
+If you have been affected, exclude mlaunch.exe from your antivirus scanner to prevent recurrence. For more information, see [How to create an application exception in the Symantec Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) for Symantec, and [Exclude files and folders from Norton Auto-Protect, SONAR, and Download Intelligence scans](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) for Norton. In addition, consider reporting a false positive to [Symantec](https://symsubmit.symantec.com) or [Norton](https://submit.norton.com/?type=FP).
 
 > [!IMPORTANT]
 > For Norton users, community members have also reported that you may need to disable idle scan as discussed here: [Windows](https://community.norton.com/en/comment/5179683#comment-5179683), [Mac](https://github.com/xamarin/xamarin-macios/issues/8736#issuecomment-642874505).
 
-Once you have added an exclusion for mlaunch.exe, a re-installation will be required to restore the missing files. The simplest approach to do this is to switch channels in the updater:
+Once you've added an exclusion for mlaunch.exe, a reinstallation will be required to restore the missing files. Simply switch channels in the updater to reinstall:
 
 - **Visual Studio** menu > **Check for updates**.
 - Select a different update channel in the dropdown and press the **Switch channel** button.
 - Wait for updates to download.
 - Switch back to original channel and install updates.
 
-If these instructions don't resolve your issue, please add a comment to the following GitHub issue: [8736](https://github.com/xamarin/xamarin-macios/issues/8736).
+If these instructions don't resolve your issue, add a comment to the following GitHub issue: [8736](https://github.com/xamarin/xamarin-macios/issues/8736).

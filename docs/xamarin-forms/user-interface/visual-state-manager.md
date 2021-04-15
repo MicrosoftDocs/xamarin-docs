@@ -407,7 +407,7 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | `CheckBox` | `IsChecked` | [CheckBox visual states](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView visual states](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `RadioButton` | `IsChecked` | [RadioButton visual states](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `RadioButton` | `Checked`, `Unchecked` | [RadioButton visual states](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
 | `Switch` | `On`, `Off` | [Switch visual states](~/xamarin-forms/user-interface/switch.md#switch-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Common states](#common-states) |
 

@@ -10,6 +10,10 @@ ms.date: 03/16/2017
 ---
 
 # Working with tvOS Split View Controllers in Xamarin
+> [!WARNING]
+> The iOS Designer was deprecated in Visual Studio 2019 version 16.8 and Visual Studio 2019 for Mac version 8.8, and 
+> removed in Visual Studio 2019 version 16.9 and Visual Studio for Mac version 8.9.
+> The recommended way to build iOS user interfaces is directly on a Mac running Xcode's Interface Builder. For more information, see [Designing user interfaces with Xcode](~/ios/user-interface/storyboards/index.md). 
 
 A Split View Controller presents and manages a Master and Detail View Controller side-by-side, on screen at the same time. Split View Controllers are used to present persistent, focusable content in the Master View (the smaller section on the left) and related details in the Detail View (the larger section on the right).
 

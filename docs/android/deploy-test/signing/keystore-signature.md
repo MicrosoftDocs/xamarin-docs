@@ -76,6 +76,10 @@ Information about a keystore is obtained by running the **keytool**
 command from the JDK. This tool is typically found in the following
 location:
 
+**~/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_*VERSION*/bin/keytool**
+
+or
+
 **/System/Library/Java/JavaVirtualMachines/*VERSION*.jdk/Contents/Home/bin/keytool**
 
 Add the directory containing **keytool** to the **PATH** environment variable.
