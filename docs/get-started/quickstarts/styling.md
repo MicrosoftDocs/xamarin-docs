@@ -88,7 +88,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing, though there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) to wait until file save to apply changes if you prefer.
+    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing. However, there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) that can be changed, if you prefer, to wait until file save to apply changes.
 
 4. In **Solution Explorer**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
 
@@ -333,7 +333,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing, though there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) to wait until file save to apply changes if you prefer.
+    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing. However, there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) that can be changed, if you prefer, to wait until file save to apply changes. 
 
 4. In the **Solution Pad**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
 
