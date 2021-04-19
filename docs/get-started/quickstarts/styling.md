@@ -88,7 +88,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    Save the changes to **App.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of each page will change.
+    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing, though there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) to wait until file save to apply changes if you prefer.
 
 4. In **Solution Explorer**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
 
@@ -130,7 +130,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code adds two styles to the `Shell` resource dictionary, which define a series of [`Color`](xref:Xamarin.Forms.Color) values used by the application.
 
-    Save the changes to **AppShell.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
+    After making the **AppShell.xaml** changes, XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
 
 5. In **Solution Explorer**, in the **Notes** project, open **NotesPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
@@ -193,7 +193,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code adds an implicit style for the [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each selected item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `CollectionView.Margin`  and `Label.TextColor` property to values defined in the application-level `ResourceDictionary`. Note that the `StackLayout` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`.
 
-    Save the changes to **NotesPage.xaml** by pressing **CTRL+S**. XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
+    After making the **NotesPage.xaml** changes, XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
 
 6. In **Solution Explorer**, in the **Notes** project, open **NoteEntryPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
@@ -232,11 +232,9 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 7. In the running application, navigate to the `NoteEntryPage`.
 
-8. In Visual Studio, save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
+    XAML Hot Reload updated the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) changed in the running application, as well as the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
 
-    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) will change in the running application, as will the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
-
-9. In **Solution Explorer**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
+8. In **Solution Explorer**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -277,11 +275,9 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code sets the `Image.BackgroundColor` and `StackLayout.Margin` properties to values defined in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
 
-10. In the running application, navigate to the `AboutPage`.
+9. In the running application, navigate to the `AboutPage`.
 
-11. In Visual Studio, save the changes to **AboutPage.xaml**  by pressing **CTRL+S**.
-
-    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) will change in the running application.
+    XAML Hot Reload updated the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) changed in the running application.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -337,7 +333,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code defines a [`Thickness`](xref:Xamarin.Forms.Thickness) value, a series of [`Color`](xref:Xamarin.Forms.Color) values, and implicit styles for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and [`Button`](xref:Xamarin.Forms.Button) types. Note that these styles, which are in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), can be consumed throughout the application. For more information about XAML styling, see [Styling](deepdive.md#styling) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
-    Save the changes to **App.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of each page will change.
+    After making the changes to **App.xaml**, XAML Hot Reload will update the UI of the running app, with no need to rebuild the application. Specifically, the background color each page will change. By default Hot Reload applies changes immediately after stopping typing, though there's a [preference setting](~/xamarin-forms/xaml/hot-reload.md) to wait until file save to apply changes if you prefer.
 
 4. In the **Solution Pad**, in the **Notes** project, open **AppShell.xaml**. Then replace the existing code with the following code:
 
@@ -379,7 +375,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code adds two styles to the `Shell` resource dictionary, which define a series of [`Color`](xref:Xamarin.Forms.Color) values used by the application.
 
-    Save the changes to **AppShell.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
+    After making the **AppShell.xaml** changes, XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the background color of the Shell chrome will change.
 
 5. In the **Solution Pad**, in the **Notes** project, open **NotesPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
@@ -442,7 +438,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code adds an implicit style for the [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each selected item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView), to the page-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), and sets the `CollectionView.Margin`  and `Label.TextColor` property to values defined in the application-level `ResourceDictionary`. Note that the `StackLayout` implicit style was added to the page-level `ResourceDictionary`, because it is only consumed by the `NotesPage`.
 
-    Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**). XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
+    After making the **NotesPage.xaml** changes, XAML Hot Reload will update the UI of the running app, without rebuilding the application. Specifically, the color of selected items in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will change.
 
 6. In the **Solution Pad**, in the **Notes** project, open **NoteEntryPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
@@ -481,11 +477,9 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 7. In the running application, navigate to the `NoteEntryPage`.
 
-8. In Visual Studio for Mac, save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
+    XAML Hot Reload updated the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) changed in the running application, as well as the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
 
-    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Editor`](xref:Xamarin.Forms.Editor) will change in the running application, as will the appearance of the [`Button`](xref:Xamarin.Forms.Button) objects.
-
-9. In the **Solution Pad**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
+8. In the **Solution Pad**, in the **Notes** project, open **AboutPage.xaml** in the **Views** folder. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -526,11 +520,9 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     This code sets the `Image.BackgroundColor` and `StackLayout.Margin` properties to values defined in the application-level [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
 
-10. In the running application, navigate to the `AboutPage`.
+9. In the running application, navigate to the `AboutPage`.
 
-11. In Visual Studio for Mac, save the changes to **AboutPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**).
-
-    XAML Hot Reload will update the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) will change in the running application.
+    XAML Hot Reload updated the UI of the application, without rebuilding it. Specifically, the background color of the [`Image`](xref:Xamarin.Forms.Editor) changed in the running application.
 
 ::: zone-end
 
