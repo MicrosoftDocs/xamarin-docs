@@ -870,7 +870,7 @@
           href: ~/essentials/permissions.md?context=xamarin/xamarin-forms
         - name: Phone Dialer
           href: ~/essentials/phone-dialer.md?context=xamarin/xamarin-forms
-        - name: Platform Extensions(Size, Rect, Point)
+        - name: Platform Extensions
           href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
