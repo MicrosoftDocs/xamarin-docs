@@ -457,7 +457,7 @@
           href: ~/essentials/permissions.md?context=xamarin/android
         - name: Phone Dialer
           href: ~/essentials/phone-dialer.md?context=xamarin/android
-        - name: Platform Extensions(Size, Rect, Point)
+        - name: Platform Extensions
           href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/android

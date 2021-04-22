@@ -576,7 +576,7 @@
           href: ~/essentials/permissions.md?context=xamarin/ios
         - name: Phone Dialer
           href: ~/essentials/phone-dialer.md?context=xamarin/ios
-        - name: Platform Extensions(Size, Rect, Point)
+        - name: Platform Extensions
           href: ~/essentials/platform-extensions.md?context=xamarin/ios
         - name: Preferences
           href: ~/essentials/preferences.md?context=xamarin/ios
@@ -993,7 +993,7 @@
               href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
             - name: Permissions
               href: ~/essentials/permissions.md?context=xamarin/watchos
-            - name: Platform Extensions(Size, Rect, Point)
+            - name: Platform Extensions
               href: ~/essentials/platform-extensions.md?context=xamarin/watchos
             - name: Preferences
               href: ~/essentials/preferences.md?context=xamarin/watchos
@@ -1088,7 +1088,7 @@
               href: ~/essentials/main-thread.md?context=xamarin/tvos
             - name: Permissions
               href: ~/essentials/permissions.md?context=xamarin/tvos
-            - name: Platform Extensions(Size, Rect, Point)
+            - name: Platform Extensions
               href: ~/essentials/platform-extensions.md?context=xamarin/tvos
             - name: Preferences
               href: ~/essentials/preferences.md?context=xamarin/tvos
