@@ -120,7 +120,7 @@ async Task LoadPhotoAsync(FileResult photo)
     PhotoPath = newFile;
 }
 ```
-
+[!include[](~/essentials/includes/tip-file-result.md)]
 
 ## API
 
