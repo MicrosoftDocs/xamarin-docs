@@ -97,6 +97,14 @@ async Task TakePhotoAsync()
         await LoadPhotoAsync(photo);
         Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
     }
+    catch (FeatureNotSupportedException fnsEx)
+    {
+        // Feature is now supported on the device
+    }
+    catch (PermissionException pEx)
+    {
+        // Permissions not granted
+    }
     catch (Exception ex)
     {
         Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
