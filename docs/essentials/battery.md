@@ -78,6 +78,7 @@ switch (state)
         break;
     case BatteryState.NotPresent:
         // Battery doesn't exist in device (desktop computer)
+        break;
     case BatteryState.Unknown:
         // Unable to detect battery state
         break;
