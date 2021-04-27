@@ -4,7 +4,7 @@ description: "The FilePicker class in Xamarin.Essentials lets a user pick a sing
 ms.assetid: 00bdbd57-56b1-47ca-8abe-cebe1b01f61a
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 01/04/2021
+ms.date: 04/27/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -40,7 +40,7 @@ Or right click on the Android project and open the project's properties. Under *
 
 # [iOS](#tab/ios)
 
-No additional setup required.
+To enable iCloud capabilities in the file picker on iOS please follow these [directions](https://docs.microsoft.com/xamarin/ios/platform/document-picker#enabling-icloud-in-xamarin).
 
 # [UWP](#tab/uwp)
 
