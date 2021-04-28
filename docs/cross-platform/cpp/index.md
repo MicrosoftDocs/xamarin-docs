@@ -181,9 +181,9 @@ The process of adding the native libraries to the wrapper solution varies slight
 
 #### Native references for MathFuncs.Android
 
-1. **CONTROL + CLICK** on the **MathFuncs.Android** project, then choose **New Folder** from the **Add** menu naming it **libs**.
+1. **CONTROL + CLICK** on the **MathFuncs.Android** project, then choose **New Folder** from the **Add** menu naming it **lib**.
 
-2. For each **ABI** (Application Binary Interface), **CONTROL + CLICK** on the **libs** folder, then choose **New Folder** from the **Add** menu, naming it after that respective **ABI**. In this case:
+2. For each **ABI** (Application Binary Interface), **CONTROL + CLICK** on the **lib** folder, then choose **New Folder** from the **Add** menu, naming it after that respective **ABI**. In this case:
 
     - arm64-v8a
     - armeabi-v7a
@@ -206,23 +206,23 @@ The process of adding the native libraries to the wrapper solution varies slight
 4. Add the corresponding **.so** libraries to each of the **ABI** folders based on the following mapping:
 
     **arm64-v8a:**
-    libs/Android/arm64
+    lib/Android/arm64
 
     **armeabi-v7a:**
-    libs/Android/arm  
+    lib/Android/arm  
 
     **x86:**
-    libs/Android/x86
+    lib/Android/x86
 
     **x86_64:**
-    libs/Android/x86_64
+    lib/Android/x86_64
 
     > [!NOTE]
     > To add files, **CONTROL + CLICK** on the folder representing the respective **ABI**, then choose **Add Files...** from the **Add** menu. Choose the appropriate library (from the **PrecompiledLibs** directory) then click **Open** and then click **OK** leaving the default option to *Copy the file to the directory*.
 
 5. For each of the **.so** files, **CONTROL + CLICK** then choose the **EmbeddedNativeLibrary** option from the **Build Action** menu.
 
-Now the **libs** folder should appear as follows:
+Now the **lib** folder should appear as follows:
 
 ```folders
 - lib
@@ -400,7 +400,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
 1. Replace the **TODO** line:
 
     ```csharp
-    MyMathFuncsWrapper.DisposeMyMathFuncs(handle);
+    MyMathFuncsWrapper.DisposeMyMathFuncs(this);
     ```
 
 #### Writing the MyMathFuncs class
