@@ -60,7 +60,7 @@ At runtime, the application attempts to resolve a resource request in order of s
 1. AppResources.en.resx
 1. AppResources.resx (default)
 
-The following screenshot shows a Spanish translation file named **AppResources.es.cs**:
+The following screenshot shows a Spanish translation file named **AppResources.es.resx**:
 
 ![Specify default Spanish text resources in a .resx file](text-images/pc-spanish-strings.png)
 
