@@ -294,7 +294,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 > Publishing to the App Store is supported in Visual Studio 2019 version 16.3 and higher.
 
 1. Make sure that Visual Studio 2019 is [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-2. Select **Release** from the **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown.
+2. Select **Release** from the **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown, and **Remote Device** for the target device. (If you have a physical iOS device connected to the Mac, you can select that device. Do not select Local Device or an iOS device connected directly to your Windows PC.)
 
     ![Screenshot of the Visual Studio toolbar showing solution configuration set to release, solution platform set to iPhone, and target set to device.](publishing-to-the-app-store-images/chooseConfig-w157.png "Screenshot of the Visual Studio toolbar showing solution configuration set to release, solution platform set to iPhone, and target set to device.")
 
