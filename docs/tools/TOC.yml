@@ -9,16 +9,6 @@
           href: ios-simulator/deploy.md
         - name: Release notes
           href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
-    - name: Live Player
-      items:
-        - name: About Xamarin Live Player preview
-          href: live-player/index.md
-        - name: Visual Studio configuration
-          href: live-player/install.md
-        - name: Xamarin Live Player app
-          href: live-player/player.md
-        - name: Troubleshooting
-          href: live-player/troubleshooting.md
     - name: Profiler
       href: profiler/index.md
       items:
