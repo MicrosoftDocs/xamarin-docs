@@ -128,3 +128,7 @@ No platform differences.
 
 - [FilePicker source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FilePicker)
 - [FilePicker API documentation](xref:Xamarin.Essentials.FilePicker)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/File-Picker-XamarinEssentials-API-of-the-Week/player]
