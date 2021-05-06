@@ -15,7 +15,7 @@ ms.date: 04/03/2018
 
 This error message occurs when the project in question is looking for valid code-signing credentials but are unable to find them. Code signing is required for testing and deployments on physical iOS devices; as well as Ad-hoc & App store builds.
 
-This may happen if you are building from Visual Studio on Windows and are trying to build with a Distribution profile and certificate but do not have **Remote Device**, or a physical device connected to the Mac build host, selected as the target device. If you have **Local Device** or a device that is connected to the Windos PC selected, the build will not be able to find the distribution certificate even if it is installed on the Mac. 
+This may happen if you are building from Visual Studio on Windows and are trying to build with a Distribution profile and certificate but do not have **Remote Device**, or a physical device connected to the Mac build host, selected as the target device. If you have **Local Device** or a device that is connected to the Windows PC selected, the build will not be able to find the distribution certificate even if it is installed on the Mac. 
 
 ### Provisioning Devices
 
