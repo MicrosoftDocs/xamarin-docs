@@ -40,7 +40,7 @@ Or right click on the Android project and open the project's properties. Under *
 
 # [iOS](#tab/ios)
 
-To enable iCloud capabilities in the file picker on iOS please follow these [directions](https://docs.microsoft.com/xamarin/ios/platform/document-picker#enabling-icloud-in-xamarin).
+To enable iCloud capabilities in the file picker on iOS please follow these [directions](../ios/platform/document-picker.md#enabling-icloud-in-xamarin).
 
 # [UWP](#tab/uwp)
 
