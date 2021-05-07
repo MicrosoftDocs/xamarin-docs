@@ -52,7 +52,9 @@ The `DragStartingEventArgs` object that accompanies the `DragStarting` event def
 - `Cancel`, of type `bool`, indicates whether the event should be canceled.
 - `Data`, of type `DataPackage`, indicates the data package that accompanies the drag source. This is a read-only property.
 
+<!--
 The `DropCompletedEventArgs` object that accompanies the `DropCompleted` event has a read-only `DropResult` property, of type `DataPackageOperation`. For more information about the `DataPackageOperation` enumeration, see [Handle the DragOver event](#handle-the-dragover-event).
+-->
 
 The following XAML example shows a `DragGestureRecognizer` attached to an [`Image`](xref:Xamarin.Forms.Image):
 
