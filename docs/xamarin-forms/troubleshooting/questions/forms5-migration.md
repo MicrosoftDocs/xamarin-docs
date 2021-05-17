@@ -25,6 +25,9 @@ Xamarin.Forms 5.0 includes the following breaking changes:
 
 In addition, Android and UWP projects built with Xamarin.Forms 5.0 will require updating.
 
+> [!IMPORTANT]
+> When updating an application to Xamarin.Forms 5.0, ensure you update to identical Xamarin.Forms versions in each project in your solution that references the Xamarin.Forms NuGet package.
+
 ## Android
 
 Android projects built with Xamarin.Forms 5.0 require that you've installed the AndroidX (Android 10.0) platform to your development environment. This can be accomplished with the Android SDK manager. For more information about AndroidX, see [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md).
