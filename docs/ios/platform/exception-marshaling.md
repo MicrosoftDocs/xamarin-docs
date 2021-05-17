@@ -125,7 +125,7 @@ is like this:
 ```
  0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
  1 CoreFoundation           __handleUncaughtException + 809
- 2 /.A.dylib          _objc_terminate() + 100
+ 2 libobjc.A.dylib          _objc_terminate() + 100
  3 libc++abi.dylib          std::__terminate(void (*)()) + 14
  4 libc++abi.dylib          __cxa_throw + 122
  5 libobjc.A.dylib          objc_exception_throw + 337
