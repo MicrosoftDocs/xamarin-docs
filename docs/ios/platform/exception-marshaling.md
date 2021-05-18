@@ -279,7 +279,7 @@ that exception to the other type.
 In pseudo-code, it looks something like this:
 
 ``` csharp
-[DllImport ("libobjc.dylib")]
+[DllImport (Constants.ObjectiveCLibrary)]
 static extern void objc_msgSend (IntPtr handle, IntPtr selector);
 
 static void DoSomething (NSObject obj)
