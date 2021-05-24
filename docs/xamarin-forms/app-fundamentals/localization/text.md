@@ -178,6 +178,10 @@ Alternatively, open the **Info.plist** file in an XML editor and add the followi
 
 For more information, see [Specifying default and supported languages in Info.plist](~/ios/app-fundamentals/localization/index.md#specifying-default-and-supported-languages-in-infoplist).
 
+## Specify supported languages on UWP
+
+This is only necessary if you generate an App Bundle when you package the app for sideloading or the store. When you generate a UWP App Bundle, when the bundle is installed, it will only load the resources related to the install device's language settings. Therefore, if the device only has English, then only English resources will be installed with the app. For more information and instructions, see [Windows 8.1 Store apps: Ensure that resources are installed on a device regardless of whether a device requires them](/previous-versions/dn482043(v=vs.140)#option-1-add-a-configuration-file-to-your-solution).
+
 ## Localize text in Xamarin.Forms
 
 Text is localized in Xamarin.Forms using the generated `AppResources` class. This class is named based on the default resource file name. Since the sample project resource file is named **AppResources.cs**, Visual Studio generates a matching class called `AppResources`. Static properties are generated in the `AppResources` class for each row in the resource file. The following static properties are generated in the sample application's `AppResources` class:
