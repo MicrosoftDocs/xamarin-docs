@@ -180,7 +180,7 @@ For more information, see [Specifying default and supported languages in Info.pl
 
 ## Specify supported languages on UWP
 
-This is only necessary if you generate an App Bundle when you package the app for sideloading or the store. When you generate a UWP App Bundle, when the bundle is installed, it will only load the resources related to the install device's language settings, so if the PC only has English, then only english resources will be installed with the app. For more information and instructions, see: [Windows 8.1 Store apps: Ensure that resources are installed on a device regardless of whether a device requires them](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)?redirectedfrom=MSDN#option-1-add-a-configuration-file-to-your-solution).
+This is only necessary if you generate an App Bundle when you package the app for sideloading or the store. When you generate a UWP App Bundle, when the bundle is installed, it will only load the resources related to the install device's language settings. Therefore, if the device only has English, then only English resources will be installed with the app. For more information and instructions, see [Windows 8.1 Store apps: Ensure that resources are installed on a device regardless of whether a device requires them](/previous-versions/dn482043(v=vs.140)#option-1-add-a-configuration-file-to-your-solution).
 
 ## Localize text in Xamarin.Forms
 
