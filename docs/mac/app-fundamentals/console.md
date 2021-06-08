@@ -57,7 +57,7 @@ This will give you access to the Cocoa APIs at compile time.   At this point, yo
 
 Before your application will run, you need to bring the `Xamarin.Mac` support library into your project.   To do this, add a new file to your project (in project options, select **Add**, and then **Add Existing File**) and navigate to this directory:
 
-`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib`
+`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/SDKs/Xamarin.macOS.sdk/lib`
 
 Here, select the file **libxammac.dylib**.   You will be offered a choice of copying, linking or moving.   I personally like linking, but copying works as well.    Then you need to select the file, and in the property pad (select **View>Pads>Properties** if the property pad is not visible), go to the **Build** section and set the **Copy to Output Directory** setting to **Copy if newer**.
 
