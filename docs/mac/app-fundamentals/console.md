@@ -36,7 +36,6 @@ You need to do a few things:
 
 - Create an empty project.
 - Reference the Xamarin.Mac.dll library.
-- Bring the unmanaged dependency to your project.
 
 These steps are explained in more detail below:
 
@@ -52,28 +51,6 @@ To compile your code, you will want to reference the `Xamarin.Mac.dll` assembly 
 To do this, go to the project references, select the **.NET Assembly** tab, and click the **Browse** button to locate the file on the file system.  Navigate to the path above, and then select the **Xamarin.Mac.dll** from that directory.
 
 This will give you access to the Cocoa APIs at compile time.   At this point, you can add `using AppKit` to the top of your file, and call the `NSApplication.Init()` method.   There is only one more step before you can run your application.
-
-### Bring the unmanaged support library into your project
-
-Before your application will run, you need to bring the `Xamarin.Mac` support library into your project.   To do this, add a new file to your project (in project options, select **Add**, and then **Add Existing File**) and navigate to this directory:
-
-`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib`
-
-Here, select the file **libxammac.dylib**.   You will be offered a choice of copying, linking or moving.   I personally like linking, but copying works as well.    Then you need to select the file, and in the property pad (select **View>Pads>Properties** if the property pad is not visible), go to the **Build** section and set the **Copy to Output Directory** setting to **Copy if newer**.
-
-You can now run your Xamarin.Mac application.
-
-The result in your bin directory will look like this:
-
-```
-Xamarin.Mac.dll
-Xamarin.Mac.pdb
-consoleapp.exe
-consoleapp.pdb
-libxammac.dylib
-```
-
-To run this app, you will need all those files in the same directory.
 
 ## Building a standalone application for distribution
 
