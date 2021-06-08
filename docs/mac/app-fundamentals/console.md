@@ -47,7 +47,7 @@ Create a new .NET Console Project, make sure that it is .NET and not .NET Core, 
 ### Reference the Xamarin.Mac library
 
 To compile your code, you will want to reference the `Xamarin.Mac.dll` assembly from this directory:
-`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current//lib/x86_64/full`
+`/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/64bits/full`
 
 To do this, go to the project references, select the **.NET Assembly** tab, and click the **Browse** button to locate the file on the file system.  Navigate to the path above, and then select the **Xamarin.Mac.dll** from that directory.
 
