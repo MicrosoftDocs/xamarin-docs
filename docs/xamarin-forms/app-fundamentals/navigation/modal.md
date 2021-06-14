@@ -65,7 +65,7 @@ When [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) is invok
 - The page being navigated to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PushAsync` task completes.
 
-However, the precise order that these events occur is platform dependent. For more information, see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+However, the precise order that these events occur is platform dependent. For more information, see [Chapter 24](https://aka.ms/xamformsebook) of Charles Petzold's Xamarin.Forms book.
 
 > [!NOTE]
 > Calls to the [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) and [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
@@ -248,6 +248,6 @@ This article demonstrated how to navigate to modal pages. A modal page encourage
 
 ## Related Links
 
-- [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
+- [Page Navigation](https://aka.ms/xamformsebook)
 - [Modal (sample)](/samples/xamarin/xamarin-forms-samples/navigation-modal)
 - [PassingData (sample)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
