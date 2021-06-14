@@ -122,7 +122,7 @@ The `Instance` field is used to create the database table for the `TodoItem` obj
 In order to start the database initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses asynchronous lazy initalization, represented by the `AsyncLazy<T>` class:
 
 ```csharp
-public class AsyncLazy<T> : Lazy<Task<T>>
+public class AsyncLazy<T>
 {
     readonly Lazy<Task<T>> instance;
 
