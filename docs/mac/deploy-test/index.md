@@ -17,7 +17,7 @@ This article covers creating the images required for a Xamarin.Mac application's
 
 ## [Performance](performance.md)
 
-Tip to improve your Xamarin.Mac application's performance.
+Tips to improve your Xamarin.Mac application's performance.
 
 ## [Publishing to the App Store](publishing-to-the-app-store/index.md)
 
