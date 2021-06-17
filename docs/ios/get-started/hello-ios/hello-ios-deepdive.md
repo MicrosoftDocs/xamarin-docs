@@ -20,7 +20,7 @@ This guide helps you develop the skills and knowledge required to build a single
 
 ## Introduction to Visual Studio for Mac
 
-Visual Studio for Mac is a free, open-source IDE that combines features from Visual Studio and XCode. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio for Mac features, but if you're new to Visual Studio for Mac, check out the [Visual Studio for Mac](/visualstudio/mac/) documentation.
+Visual Studio for Mac is a free, open-source IDE that combines features from Visual Studio and Xcode. It features a fully integrated visual designer, a text editor complete with refactoring tools, an assembly browser, source code integration, and more. This guide introduces some basic Visual Studio for Mac features, but if you're new to Visual Studio for Mac, check out the [Visual Studio for Mac](/visualstudio/mac/) documentation.
 
 Visual Studio for Mac follows the Visual Studio practice of organizing code into *solutions* and *projects*. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
