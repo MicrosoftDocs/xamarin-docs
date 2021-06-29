@@ -159,8 +159,8 @@ In Visual Studio they will look like the following:
 These are:
 
 - **Play/Stop** – This will begin/stop executing the code, until the next breakpoint.
-- **Step Over (F11)** – This will execute the next line of code. If the next line is a function call, step over will execute the function, and will stop at the next line of code _after_ the function.
-- **Step Into (F10)** – This will also execute the next line of code. If the next line is a function call, Step Into will stop at the first line of the function, allowing you to continue line-by-line debugging of the function. If the next line is not a function, it will behave the same as Step Over.
+- **Step Over (F10)** – This will execute the next line of code. If the next line is a function call, step over will execute the function, and will stop at the next line of code _after_ the function.
+- **Step Into (F11)** – This will also execute the next line of code. If the next line is a function call, Step Into will stop at the first line of the function, allowing you to continue line-by-line debugging of the function. If the next line is not a function, it will behave the same as Step Over.
 - **Step Out (Shift + F11)** – This will return to the line where the current function was called.
 
 For more in depth documentation on Debugging, see the [Navigate Code with the Visual Studio Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger).
