@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Essentials: Share"
-description: "The Share class in Xamarin.Essentials enables an application to share data such as text and web links to other applications on the device."
+description: "The Share class in Xamarin.Essentials enables an application to share data such as text, files and web links to other applications on the device."
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
@@ -16,6 +16,27 @@ The **Share** class enables an application to share data such as text and web li
 ## Get started
 
 [!include[](~/essentials/includes/get-started.md)]
+
+# [iOS](#tab/ios)
+
+If your application assumes a share video and photo files, you must add the following keys in your `Info.plist`:
+
+```xml
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>This app needs access to the photo gallery for saving photos and videos.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app needs access to photos gallery for saving photos and videos.</string>
+```
+
+Ensure that you update the `<string>` in each to a description specific for your app as it will be shown to your users.
+
+# [Android](#tab/android)
+
+No additional setup required.
+
+# [UWP](#tab/uwp)
+
+No additional setup required.
 
 ## Using Share
 
