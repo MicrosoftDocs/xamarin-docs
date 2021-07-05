@@ -11,7 +11,7 @@ ms.date: 03/30/2018
 # Linking on Android
 
 Xamarin.Android applications use a *linker* to reduce the
-size of the application. The linker employes static analysis of your application
+size of the application. The linker employs static analysis of your application
 to determine which assemblies are actually used, which types are actually used,
 and which members are actually used. The linker then behaves like a *garbage collector*, continually looking for the assemblies, types, and members that
 are referenced until the entire closure of referenced assemblies, types, and
