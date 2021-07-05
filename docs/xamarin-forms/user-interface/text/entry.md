@@ -21,19 +21,19 @@ The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line te
 The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.InputView.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
-<Entry x:Name="MyEntry" Text="I am an Entry" />
+<Entry x:Name="entry" Text="I am an Entry" />
 ```
 
 In C#:
 
 ```csharp
-var MyEntry = new Entry { Text = "I am an Entry" };
+var entry = new Entry { Text = "I am an Entry" };
 ```
 
 To read text, access the `Text` property in C#:
 
 ```csharp
-var text = MyEntry.Text;
+var text = entry.Text;
 ```
 
 ## Set placeholder text
