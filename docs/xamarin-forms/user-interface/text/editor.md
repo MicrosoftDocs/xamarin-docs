@@ -21,19 +21,19 @@ The [`Editor`](xref:Xamarin.Forms.Editor) control is used to accept multi-line i
 The [`Editor`](xref:Xamarin.Forms.Editor), like other text-presenting views, exposes the `Text` property. This property can be used to set and read the text presented by the `Editor`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
-<Editor Text="I am an Editor" />
+<Editor x:Name="editor" Text="I am an Editor" />
 ```
 
 In C#:
 
 ```csharp
-var MyEditor = new Editor { Text = "I am an Editor" };
+var editor = new Editor { Text = "I am an Editor" };
 ```
 
 To read text, access the `Text` property in C#:
 
 ```csharp
-var text = MyEditor.Text;
+var text = editor.Text;
 ```
 
 ## Set placeholder text
