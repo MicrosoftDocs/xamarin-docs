@@ -99,7 +99,7 @@ async Task TakePhotoAsync()
     }
     catch (FeatureNotSupportedException fnsEx)
     {
-        // Feature is now supported on the device
+        // Feature is not supported on the device
     }
     catch (PermissionException pEx)
     {
