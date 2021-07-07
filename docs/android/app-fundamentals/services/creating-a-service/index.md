@@ -104,7 +104,7 @@ If Android has more than one possible match for an implicit intent,
 then it may ask the user to select the component to handle the
 action:
 
-![Screenshot of a disambiguation dialog](images/creating-a-service-01.png "Screenshot of a disambiguation dialog")
+![Screenshot of a disambiguation dialog.](images/creating-a-service-01.png "Screenshot of a disambiguation dialog")
 
 > [!IMPORTANT]
 > Starting in Android 5.0 (AP level 21) an implicit intent cannot be used to start a service.

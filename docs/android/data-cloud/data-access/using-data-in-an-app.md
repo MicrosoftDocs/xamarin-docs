@@ -18,14 +18,14 @@ Android without modification.
 
 After adding some data the application screens look like this on Android:
 
-![Android sample list](using-data-in-an-app-images/image11.png "Android sample list")
+![Android sample list.](using-data-in-an-app-images/image11.png "Android sample list")
 
-![Android sample detail](using-data-in-an-app-images/image12.png "Android sample detail")
+![Android sample detail.](using-data-in-an-app-images/image12.png "Android sample detail")
 
 The Android Project is shown below &ndash; the code shown in this section
 is contained within the **Orm** directory:
 
-![Android project tree](using-data-in-an-app-images/image14.png "Android project tree")
+![Android project tree.](using-data-in-an-app-images/image14.png "Android project tree")
 
 The native UI code for the Activities in Android is out of scope for
 this document. Refer to the

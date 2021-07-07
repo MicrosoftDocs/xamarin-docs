@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Fill rules
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Several Xamarin.Forms Shapes classes have `FillRule` properties, of type `FillRule`. These include `Polygon`, `Polyline`, and `GeometryGroup`.
 
@@ -54,11 +54,11 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 In this example, a composite shape made up of a series of concentric rings is displayed:
 
-![Composite shape with EvenOdd fill rule](fillrule-images/evenodd.png "Composite shape with EvenOdd fill rule")
+![Composite shape with EvenOdd fill rule.](fillrule-images/evenodd.png "Composite shape with EvenOdd fill rule")
 
 In the composite shape, notice that the center and third rings are not filled. This is because a ray drawn from any point within either of those two rings passes through an even number of segments:
 
-![Annotated composite shape with EvenOdd fill rule](fillrule-images/evenodd-annotated.png "Annotated composite shape with EvenOdd fill rule")
+![Annotated composite shape with EvenOdd fill rule.](fillrule-images/evenodd-annotated.png "Annotated composite shape with EvenOdd fill rule")
 
 In the image above, the red circles represent points, and the lines represent arbitrary rays. For the upper point, the two arbitrary rays each pass through an even number of line segments. Therefore, the ring the point is in isn't filled. For the lower point, the two arbitrary rays each pass through an odd number of line segments. Therefore, the ring the point is in is filled.
 

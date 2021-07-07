@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 23. Triggers and behaviors
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -105,7 +105,7 @@ The [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) is similar to the `Trigger` 
 
 The [**GenderColors**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) sample requires the [**SchoolOfFineArt**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library and sets the colors of the names of the students to blue or pink based on the `Sex` property:
 
-[![Triple screenshot of Gender Colors](images/ch23fg04-small.png "Gender Colors")](images/ch23fg04-large.png#lightbox "Gender Colors")
+[![Triple screenshot of Gender Colors](images/ch23fg04-small.png "Gender Colors."](images/ch23fg04-large.png#lightbox "Gender Colors")
 
 The [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler) sample sets the `IsEnabled` property of an `Entry` to `False` if the `Length` property of the `Text` property of the `Entry` equals 0. Notice that the `Text` property is initialized to an empty string; by default it is `null`, and the `DataTrigger` wouldn't work correctly.
 
@@ -179,7 +179,7 @@ The [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-boo
 The [**RadioLabels**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) program uses text strings for its radio button. The [**RadioStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) sample uses a `Style` for the difference in appearance between checked and unchecked buttons. The
 [**RadioImages**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) sample uses boxed images for its radio buttons:
 
-[![Triple screenshot of Radio Images](images/ch23fg17-small.png "Radio Button Images")](images/ch23fg17-large.png#lightbox "Radio Button Images")
+[![Triple screenshot of Radio Images](images/ch23fg17-small.png "Radio Button Images."](images/ch23fg17-large.png#lightbox "Radio Button Images")
 
 The
 [**TraditionalRadios**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios) sample draws traditional appearing radio buttons with a dot inside a circle.

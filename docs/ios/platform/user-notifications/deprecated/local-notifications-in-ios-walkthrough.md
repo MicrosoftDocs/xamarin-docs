@@ -24,7 +24,7 @@ Let create a simple application that will show local notifications in action. Th
 
 1. In Visual Studio for Mac, create a new Single View iOS solution and call it `Notifications`.
 1. Open the `Main.storyboard` file, and drag a button onto the View. Name the button **button**, and give it the title **Add Notification**. You may also want to set some [constraints](~/ios/user-interface/designer/designer-auto-layout.md) to the button at this point:  
-    ![Setting some constraints on the button](local-notifications-in-ios-walkthrough-images/image3.png)
+    ![Setting some constraints on the button.](local-notifications-in-ios-walkthrough-images/image3.png)
 1. Edit the `ViewController` class, and add the following event handler to the ViewDidLoad method:
 
     ```csharp
@@ -112,9 +112,9 @@ Let create a simple application that will show local notifications in action. Th
 
 1. Finally, run the application. On iOS 8 you will be prompted to allow notifications. Click **OK** and then click the **Add notification** button. After a short pause you should see the alert dialog, as shown in the following screenshots:
 
-    ![Confirming the ability to send notifications](local-notifications-in-ios-walkthrough-images/image0.png)
-    ![The Add Notification button](local-notifications-in-ios-walkthrough-images/image1.png)
-    ![The notification alert dialog](local-notifications-in-ios-walkthrough-images/image2.png)
+    ![Confirming the ability to send notifications.](local-notifications-in-ios-walkthrough-images/image0.png)
+    ![The Add Notification button.](local-notifications-in-ios-walkthrough-images/image1.png)
+    ![The notification alert dialog.](local-notifications-in-ios-walkthrough-images/image2.png)
 
 ## Summary
 

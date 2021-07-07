@@ -55,7 +55,7 @@ The following pairing process should only need to happen once per device. Xcode 
 1. Open Xcode and go to **Window > Devices and Simulators**.
 2. Plug your iOS device into your Mac using a lightning cable. You may need to select to **Trust This Computer** on your device.
 3. Select your device and then select the **Connect via network** checkbox to pair your device:
-    ![Device and Simulator window showing Connect via network option](wireless-deployment-images/image2.png)
+    ![Device and Simulator window showing Connect via network option.](wireless-deployment-images/image2.png)
 
 ### Pairing an Apple TV with Xcode
 

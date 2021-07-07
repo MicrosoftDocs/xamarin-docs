@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 10. XAML markup extensions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -60,7 +60,7 @@ The `VisualElement` class defines a property named [`Resources`](xref:Xamarin.Fo
 
 In most cases you'll use the [`StaticResource`](xref:Xamarin.Forms.Xaml.StaticResourceExtension) markup extension to reference an item from the resource dictionary, as demonstrated by the [**ResourceSharing**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing) sample. You can use a `StaticResourceExtension` element or `StaticResource` within curly braces:
 
-[![Triple screenshot of resource sharing](images/ch10fg03-small.png "Resource Sharing")](images/ch10fg03-large.png#lightbox "Resource Sharing")
+[![Triple screenshot of resource sharing](images/ch10fg03-small.png "Resource Sharing."](images/ch10fg03-large.png#lightbox "Resource Sharing")
 
 Do not confuse the `x:Static` markup extension and the `StaticResource` markup extension.
 

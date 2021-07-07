@@ -54,13 +54,13 @@ If you have a wildcard App ID, *only one Provisioning Profile
   project then you'll need a provisioning profile for each
   App ID:
 
-![The App Store Distribution profile](appstore-images/provisioningprofile-distribution-sml.png)
+![The App Store Distribution profile.](appstore-images/provisioningprofile-distribution-sml.png)
 
 Once you've created all three profiles, they'll appear
   in the list. Remember to download and install each one
   (by double-clicking on it):
 
-![The list of available profiles](appstore-images/provisioningprofiles-sml.png)
+![The list of available profiles.](appstore-images/provisioningprofiles-sml.png)
 
 You can verify the provisioning profile in the **Project Options**
   by selecting the **Build > iOS Bundle Signing** screen
@@ -70,7 +70,7 @@ The **Provisioning Profile** list will show all matching
   profiles - you should see the matching profiles that
   you've created in this drop-down list.
 
-![The iOS Bundle Signing dialog](appstore-images/options-selectprofile-sml.png)
+![The iOS Bundle Signing dialog.](appstore-images/options-selectprofile-sml.png)
 
 <a name="iTunes_Connect"></a>
 
@@ -84,7 +84,7 @@ Follow the [app distribution overview](~/ios/deploy-test/app-distribution/index.
 When configuring the app in iTunes Connect, don't forget to
   add the Watch icon and screenshots:
 
-![The Watch icon and screenshots in iTunes Connect](appstore-images/itunesconnect-watch-sml.png)
+![The Watch icon and screenshots in iTunes Connect.](appstore-images/itunesconnect-watch-sml.png)
 
 The icon file should be 1024x1024 pixels, and will have a circular
   mask applied to it when it is displayed. The icon should not have
@@ -101,20 +101,20 @@ At least one screenshot is required, up to five may be submitted.
 1. Ensure that the iOS app is the startup project. If not,
    right-click to set it:
 
-   ![Setting the startup project](appstore-images/xs-startup.png)
+   ![Setting the startup project.](appstore-images/xs-startup.png)
 
 2. Choose the **AppStore** build configuration:
 
-   ![The AppStore build configuration](appstore-images/xs-appstore.png)
+   ![The AppStore build configuration.](appstore-images/xs-appstore.png)
 
 3. Choose the **Build > Archive** menu item to start the archive process:
 
-   ![The Build menu](appstore-images/xs-archive.png)
+   ![The Build menu.](appstore-images/xs-archive.png)
 
 You can also choose the **View > Archives...** menu item to
   see archives that have been created previously.
 
-  ![The Archives view](appstore-images/xs-archives-sml.png)
+  ![The Archives view.](appstore-images/xs-archives-sml.png)
 
 <a name="xcode"></a>
 
@@ -124,12 +124,12 @@ Xcode will automatically show archives created in Visual Studio for Mac.
 
 1. Start Xcode and choose **Window > Organizer**:
 
-   ![The Window menu](appstore-images/xc-organizer.png)
+   ![The Window menu.](appstore-images/xc-organizer.png)
 
 2. Switch to the **Archives** tab and select the archive that
   was created with Visual Studio for Mac:
 
-   ![The Archives tab](appstore-images/xc-archives.png)
+   ![The Archives tab.](appstore-images/xc-archives.png)
 
 3. Optionally **Validate...** the archive, then choose **Submit...**
    to upload the app to iTunes Connect.
@@ -137,13 +137,13 @@ Xcode will automatically show archives created in Visual Studio for Mac.
 4. Choose the development team (if you belong to more than one)
    and then confirm the submission:
 
-   ![The development team section](appstore-images/xc-submit1.png)
+   ![The development team section.](appstore-images/xc-submit1.png)
 
 5. Visit iTunes Connect again to see the uploaded binary. Go to
    your app's configuration page and choose **Prerelease** from the top
    menu to see the **Builds** list:
 
-   [![The apps configuration page in iTunes Connect](appstore-images/itc-prerelease-sml.png)](appstore-images/itc-prerelease.png#lightbox)
+   [![The apps configuration page in iTunes Connect.](appstore-images/itc-prerelease-sml.png)](appstore-images/itc-prerelease.png#lightbox)
 
 You can then submit the app for approval on the **Versions** page. Refer to the
  [iOS app distribution overview](~/ios/deploy-test/app-distribution/index.md)

@@ -27,7 +27,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of an Editor on iOS and Android](../images/create-editor.png "Editor containing placeholder text")](../images/create-editor-large.png#lightbox "Editor containing placeholder text")
+    [![Screenshot of an Editor on iOS and Android](../images/create-editor.png "Editor containing placeholder text."](../images/create-editor-large.png#lightbox "Editor containing placeholder text")
 
     > [!NOTE]
     > While Android indicates the height of the [`Editor`](xref:Xamarin.Forms.Editor), iOS does not.
@@ -63,7 +63,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of an Editor on iOS and Android](../images/create-editor.png "Editor containing placeholder text")](../images/create-editor-large.png#lightbox "Editor containing placeholder text")
+    [![Screenshot of an Editor on iOS and Android](../images/create-editor.png "Editor containing placeholder text."](../images/create-editor-large.png#lightbox "Editor containing placeholder text")
 
     > [!NOTE]
     > While Android indicates the height of the [`Editor`](xref:Xamarin.Forms.Editor), iOS does not.

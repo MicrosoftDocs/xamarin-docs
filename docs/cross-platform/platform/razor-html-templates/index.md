@@ -77,11 +77,11 @@ webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 
 The base directory is specified as `NSBundle.MainBundle.BundleUrl` which refers to the directory that the application is installed in. All the files in the **Resources** folder are copied to this location, such as the **style.css** file shown here:
 
- ![iPhoneHybrid solution](images/image1_240x163.png)
+ ![iPhoneHybrid solution.](images/image1_240x163.png)
 
 The Build Action for all static content files should be **BundleResource**:
 
- ![iOS project build action: BundleResource](images/image2_250x131.png)
+ ![iOS project build action: BundleResource.](images/image2_250x131.png)
 
 #### Android
 
@@ -93,11 +93,11 @@ webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8"
 
 The special string **file:///android_asset/** refers to the Android Assets folder in your app, shown here containing the **style.css** file.
 
- ![AndroidHybrid solution](images/image3_240x167.png)
+ ![AndroidHybrid solution.](images/image3_240x167.png)
 
 The Build Action for all static content files should be **AndroidAsset**.
 
- ![Android project build action: AndroidAsset](images/image4_250x71.png)
+ ![Android project build action: AndroidAsset.](images/image4_250x71.png)
 
 ### Calling C# from HTML and JavaScript
 
@@ -207,7 +207,7 @@ Razor templates are not limited to server-side use, they can also be included in
 
 Razor template files have a **.cshtml** file extension. They can be added to a Xamarin project from the Text Templating section in the **New File** dialog:
 
- ![New File - Razor Template](images/image5_400x201.png)
+ ![New File - Razor Template.](images/image5_400x201.png)
 
 A simple Razor template ( **RazorView.cshtml**) is shown below.
 
@@ -227,7 +227,7 @@ Notice the following differences from a regular HTML file:
 - The `@model` directive should be followed by a Type. In this example a simple string is being passed to the template, but this could be any custom class.
 - When `@Model` is referenced throughout the template, it provides a reference to the object passed to the template when it is generated (in this example it will be a string).
 - The IDE will automatically generate partial class for templates (files with the **.cshtml** extension). You can view this code but it should not be edited.
- ![RazorView.cshtml](images/image6_125x34.png)
+ ![RazorView.cshtml.](images/image6_125x34.png)
  The partial class is named RazorView to match the .cshtml template file name. It is this name that is used to refer to the template in C# code.
 - `@using` statements can also be included at the top of a Razor template to include additional namespaces.
 
@@ -240,7 +240,7 @@ var page = template.GenerateString ();
 
 Here is the output shown in a web view on the iOS Simulator and Android Emulator:
 
- ![Hello World](images/image7_523x135.png)
+ ![Hello World.](images/image7_523x135.png)
 
 ### More Razor Syntax
 
@@ -288,7 +288,7 @@ var page = template.GenerateString ();
 
 The final output is shown here in a web view on the iOS Simulator and Android Emulator:
 
- ![Rupert](images/image8_516x160.png)
+ ![Rupert.](images/image8_516x160.png)
 
 #### C# statements
 
@@ -361,7 +361,7 @@ Looping constructs like `foreach` can also be added. The `@` prefix can be used 
 
 The output of the above template is shown running on the iOS Simulator and Android Emulator:
 
- ![Rupert X Monkey](images/image9_520x277.png)
+ ![Rupert X Monkey.](images/image9_520x277.png)
 
 This section has covered the basics of using Razor templates to render simple read-only views. The next section explains how to build more complete apps using Razor that can accept user-input and interoperate between JavaScript in the HTML view and C#.
 
@@ -375,13 +375,13 @@ This section explains how to use build your own hybrid application using the sol
 
 The **New Solution** window looks like this for iPhone and Android projects - the solution description on the right highlights support for the Razor templating engine.
 
- ![Creating iPhone and Android solutions](images/image13_1139x959.png)
+ ![Creating iPhone and Android solutions.](images/image13_1139x959.png)
 
 Note that you can easily add a **.cshtml** Razor template to *any* existing Xamarin project, it is not necessary to use these solution templates. iOS projects do not require a Storyboard to use Razor either; simply add a UIWebView control to any view programmatically and you can render Razor templates entire in C# code.
 
 The default template solution contents for iPhone and Android projects are shown below:
 
- ![iPhone and Android templates](images/image10_428x310.png)
+ ![iPhone and Android templates.](images/image10_428x310.png)
 
 The templates give you ready-to-go application infrastructure to load a Razor template with a data model object, process user input and communicate back to the user via JavaScript.
 
@@ -414,7 +414,7 @@ The template includes a Razor **.cshtml** file that has pre-written code to help
 
 Calling the `GenerateString` on a template renders HTML ready for display in a web view. If the template uses a model then it should be supplied prior to rendering. This diagram illustrates how rendering works – not that the static resources are resolved by the web view at runtime, using the supplied base directory to find the specified files.
 
- ![Razor flowchart](images/image12_700x421.png)
+ ![Razor flowchart.](images/image12_700x421.png)
 
 #### Calling C# code from the template
 
@@ -491,7 +491,7 @@ Both sample apps incorporate Twitter sharing and text-to-speech APIs from the na
 
 The **RazorTodo** app uses HTML Razor templates for the list and edit views. This means we can build the app almost completely in a shared Portable Class Library (including the database and **.cshtml** Razor templates). The screenshots below show the iOS and Android apps.
 
- ![RazorTodo](images/Both_700x290.png)
+ ![RazorTodo.](images/Both_700x290.png)
 
 The **RazorNativeTodo** app uses an HTML Razor template for the edit view, but implements a native scrolling list on each platform. This provides a number of benefits including:
 
@@ -500,7 +500,7 @@ The **RazorNativeTodo** app uses an HTML Razor template for the edit view, but i
 
 A key benefit of building hybrid apps with Xamarin is that you can start with a completely HTML-driven user interface (like the first sample) and then add platform-specific functionality when required (as the second sample shows). The native list screens and HTML Razor edit screens on both iOS and Android are shown below.
 
- ![RazorNativeTodo](images/BothNative_700x290.png)
+ ![RazorNativeTodo.](images/BothNative_700x290.png)
 
 ## Summary
 

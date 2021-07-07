@@ -11,13 +11,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms ProgressBar
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
 The Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) control visually represents progress as a horizontal bar that is filled to a percentage represented by a `float` value. The `ProgressBar` class inherits from [`View`](xref:Xamarin.Forms.View).
 
 The following screenshots show a `ProgressBar` on iOS and Android:
 
-![Screenshot of ProgressBar on iOS and Android](progressbar-images/progressbars-default.png "ProgressBar on iOS and Android")
+![Screenshot of ProgressBar on iOS and Android.](progressbar-images/progressbars-default.png "ProgressBar on iOS and Android")
 
 The `ProgressBar` control defines two properties:
 
@@ -64,7 +64,7 @@ ProgressBar progressBar = new ProgressBar { ProgressColor = Color.Orange };
 
 The following screenshots show the `ProgressBar` with the `ProgressColor` property set to `Color.Orange` on iOS and Android:
 
-![Screenshot of styled ProgressBar on iOS and Android](progressbar-images/progressbars-styled.png "Styled ProgressBar on iOS and Android")
+![Screenshot of styled ProgressBar on iOS and Android.](progressbar-images/progressbars-styled.png "Styled ProgressBar on iOS and Android")
 
 ## Animate a ProgressBar
 

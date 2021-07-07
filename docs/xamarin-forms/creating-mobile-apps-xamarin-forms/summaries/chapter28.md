@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 28. Location and maps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -221,7 +221,7 @@ The [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples
 
 This is used in the [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) file and [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) code-behind file to also display the distance to the museum from the user's location:
 
-[![Triple screenshot of Local Museums Page](images/ch28fg28-small.png "Distance to a Location")](images/ch28fg28-large.png#lightbox "Distance to a Location")
+[![Triple screenshot of Local Museums Page](images/ch28fg28-small.png "Distance to a Location."](images/ch28fg28-large.png#lightbox "Distance to a Location")
 
 The program also demonstrates how to dynamically restrict the number of pins based on the location of the map.
 

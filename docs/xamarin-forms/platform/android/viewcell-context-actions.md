@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # ViewCell Context Actions on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 By default from Xamarin.Forms 4.3, when a [`ViewCell`](xref:Xamarin.Forms.ViewCell) in an Android application defines context actions for each item in a [`ListView`](xref:Xamarin.Forms.ListView), the context actions menu is updated when the selected item in the `ListView` changes. However, in previous versions of Xamarin.Forms the context actions menu was not updated, and this behavior is referred to as the `ViewCell` legacy mode. This legacy mode can result in incorrect behavior if a `ListView` uses a [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) to set its `ItemTemplate` from [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects that define different context actions.
 
@@ -53,13 +53,13 @@ The `ViewCell.On<Android>` method specifies that this platform-specific will onl
 
 The following screenshots show [`ViewCell`](xref:Xamarin.Forms.ViewCell) context actions legacy mode enabled:
 
-![Screenshot of ViewCell legacy mode enabled, on Android](viewcell-context-actions-images/legacy-mode-enabled.png "ViewCell legacy mode enabled")
+![Screenshot of ViewCell legacy mode enabled, on Android.](viewcell-context-actions-images/legacy-mode-enabled.png "ViewCell legacy mode enabled")
 
 In this mode, the displayed context action menu items are identical for cell 1 and cell 2, despite different context menu items being defined for cell 2.
 
 The following screenshots show [`ViewCell`](xref:Xamarin.Forms.ViewCell) context actions legacy mode disabled, which is the default Xamarin.Forms behavior:
 
-![Screenshot of ViewCell legacy mode disabled, on Android](viewcell-context-actions-images/legacy-mode-disabled.png "ViewCell legacy mode disabled")
+![Screenshot of ViewCell legacy mode disabled, on Android.](viewcell-context-actions-images/legacy-mode-disabled.png "ViewCell legacy mode disabled")
 
 In this mode, the correct context action menu items are displayed for cell 1 and cell 2.
 

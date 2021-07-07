@@ -58,23 +58,23 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 2. Open Xcode and navigate to **Xcode > Preferences**.
 3. Under **Accounts**, use the **+** button to add your existing Apple ID. It should look similar to the screenshot below:
 
-    ![Xcode Preferences – Accounts](free-provisioning-images/launchapp1.png "Xcode Preferences – Accounts")
+    ![Xcode Preferences – Accounts.](free-provisioning-images/launchapp1.png "Xcode Preferences – Accounts")
 
 4. Close Xcode preferences.
 5. Plug in the iOS device to which you'd like to deploy your app.
 6. In Xcode, create a new project. Choose **File > New > Project** and select **Single View App**.
 7. In the new project dialog, set **Team** to the Apple ID that you just added. In the drop-down list, it should look similar to **Your Name (Personal Team)**:
 
-    ![Create a new app](free-provisioning-images/launchapp2.png "Create a new app")
+    ![Create a new app.](free-provisioning-images/launchapp2.png "Create a new app")
 
 8. Once the new project has been created, choose an Xcode build scheme that targets your iOS device (rather than a simulator).
 
-    ![Select an Xcode build scheme](free-provisioning-images/xcodescheme.png "Select an Xcode build scheme")
+    ![Select an Xcode build scheme.](free-provisioning-images/xcodescheme.png "Select an Xcode build scheme")
 
 9. Open your app's project settings by selecting its top-level node in Xcode's **Project Navigator**.
 10. Under **General > Identity**, make sure that the **Bundle Identifier** _exactly matches_ your Xamarin.iOS app's bundle identifier found in Info.plist.
 
-    ![Set a bundle identifier](free-provisioning-images/launchapp5.png "Set a bundle identifier")
+    ![Set a bundle identifier.](free-provisioning-images/launchapp5.png "Set a bundle identifier")
 
     > [!IMPORTANT]
     > Xcode will only create a provisioning profile for an explicit App
@@ -85,11 +85,11 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 11. Under **Deployment Info**, ensure that the deployment target matches or is lower than the version of iOS installed on your connected iOS device.
 12. Under **Signing**, select **Automatically manage signing** and select your team from the drop-down list:
 
-    ![Automatically manage signing](free-provisioning-images/launchapp6.png "Automatically manage signing")
+    ![Automatically manage signing.](free-provisioning-images/launchapp6.png "Automatically manage signing")
 
     Xcode will automatically generate a provisioning profile and signing identity for you. You can view this by clicking on the information icon next to provisioning profile:
 
-    ![View the provisioning profile](free-provisioning-images/launchapp7.png "View the provisioning profile")
+    ![View the provisioning profile.](free-provisioning-images/launchapp7.png "View the provisioning profile")
 
     > [!TIP]
     > If there is a failure when Xcode attempts to generate a provisioning
@@ -111,7 +111,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 7. Select the **Signing Identity** created by Xcode.
 8. Select the **Provisioning Profile** created by Xcode.
 
-    ![Set the signing identity and provisioning profile](free-provisioning-images/launchapp8.png "Set the signing identity and provisioning profile")
+    ![Set the signing identity and provisioning profile.](free-provisioning-images/launchapp8.png "Set the signing identity and provisioning profile")
 
     > [!TIP]
     > If you cannot see your signing identity or the correct provisioning
@@ -132,7 +132,7 @@ Follow these steps below to test your Xamarin.iOS app with free provisioning.
 8. Select the **Signing Identity** created by Xcode.
 9. Select the **Provisioning Profile** created by Xcode.
 
-    ![Set the signing identity and provisioning profile](free-provisioning-images/setprofile-w157.png "Set the signing identity and provisioning profile")
+    ![Set the signing identity and provisioning profile.](free-provisioning-images/setprofile-w157.png "Set the signing identity and provisioning profile")
 
     > [!TIP]
     > Xcode created this signing identity and provisioning profile and

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Device Orientation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accommodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
 
@@ -28,17 +28,17 @@ On iOS, device orientation is configured for applications using the **Info.plist
 
 In Visual Studio, open the iOS project and open **Info.plist**. The file will open into a configuration panel, starting with the iPhone Deployment Info tab:
 
-![iPhone Deployment Info in Visual Studio](device-orientation-images/orientation-vs.png)
+![iPhone Deployment Info in Visual Studio.](device-orientation-images/orientation-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
 In Visual Studio for Mac, open the iOS project and open **Info.plist**. Under the **Application** tab, sections will be available to set orientation:
 
-![iPhone Deployment Info in Visual Studio for Mac](device-orientation-images/orientation-vsmac.png)
+![iPhone Deployment Info in Visual Studio for Mac.](device-orientation-images/orientation-vsmac.png)
 
 If you'd prefer to edit the values using a key-value editor interface, select the **Source**> tab at the bottom of the screen:
 
-![Supported Device Orientations in Visual Studio for Mac](device-orientation-images/orientation-source-vsmac.png)
+![Supported Device Orientations in Visual Studio for Mac.](device-orientation-images/orientation-source-vsmac.png)
 
 -----
 
@@ -116,11 +116,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 Once a change in device orientation has been detected, you may want to add or remove additional views to/from your user interface to react to the change in available space. For example, consider the built-in calculator on each platform in portrait:
 
-![Calculator Application in Portrait](device-orientation-images/calculator-portrait.png)
+![Calculator Application in Portrait.](device-orientation-images/calculator-portrait.png)
 
 and landscape:
 
-![Calculator Application in Landscape](device-orientation-images/calculator-landscape.png)
+![Calculator Application in Landscape.](device-orientation-images/calculator-landscape.png)
 
 Notice that the apps take advantage of the available space by adding more functionality in landscape.
 

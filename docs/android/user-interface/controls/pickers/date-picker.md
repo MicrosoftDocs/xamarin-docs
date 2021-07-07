@@ -35,7 +35,7 @@ in a `DialogFragment`. The sample application will display the
 an Activity. When the date is set by the user, a `TextView` will update
 with the date that was selected.
 
-[![Screenshot of Pick Date button followed by Date Picker dialog](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
+[![Screenshot of Pick Date button followed by Date Picker dialog.](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## Requirements
 
@@ -50,7 +50,7 @@ changes.
 This sample will extend `DialogFragment`. The subclass will host and
 display a `DatePickerDialog`:
 
-![Closeup of Date Picker dialog](date-picker-images/image-02.png)
+![Closeup of Date Picker dialog.](date-picker-images/image-02.png)
 
 When the user selects a date and clicks the **OK** button, the
 `DatePickerDialog` will call the method

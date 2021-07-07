@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CollectionView Layout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control layout:
 
@@ -122,7 +122,7 @@ CollectionView collectionView = new CollectionView
 
 This results in a single column list, which grows vertically as new items are added:
 
-[![Screenshot of a CollectionView vertical list layout, on iOS and Android](layout-images/vertical-list.png "CollectionView vertical list layout")](layout-images/vertical-list-large.png#lightbox "CollectionView vertical list layout")
+[![Screenshot of a CollectionView vertical list layout, on iOS and Android](layout-images/vertical-list.png "CollectionView vertical list layout."](layout-images/vertical-list-large.png#lightbox "CollectionView vertical list layout")
 
 ## Horizontal list
 
@@ -186,7 +186,7 @@ CollectionView collectionView = new CollectionView
 
 This results in a single row list, which grows horizontally as new items are added:
 
-[![Screenshot of a CollectionView horizontal list layout, on iOS and Android](layout-images/horizontal-list.png "CollectionView horizontal list layout")](layout-images/horizontal-list-large.png#lightbox "CollectionView horizontal list layout")
+[![Screenshot of a CollectionView horizontal list layout, on iOS and Android](layout-images/horizontal-list.png "CollectionView horizontal list layout."](layout-images/horizontal-list-large.png#lightbox "CollectionView horizontal list layout")
 
 ## Vertical grid
 
@@ -251,7 +251,7 @@ CollectionView collectionView = new CollectionView
 
 By default, a vertical [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) will display items in a single column. However, this example sets the `GridItemsLayout.Span` property to 2. This results in a two-column grid, which grows vertically as new items are added:
 
-[![Screenshot of a CollectionView vertical grid layout, on iOS and Android](layout-images/vertical-grid.png "CollectionView vertical grid layout")](layout-images/vertical-grid-large.png#lightbox "CollectionView vertical grid layout")
+[![Screenshot of a CollectionView vertical grid layout, on iOS and Android](layout-images/vertical-grid.png "CollectionView vertical grid layout."](layout-images/vertical-grid-large.png#lightbox "CollectionView vertical grid layout")
 
 ## Horizontal grid
 
@@ -316,7 +316,7 @@ CollectionView collectionView = new CollectionView
 
 By default, a horizontal [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) will display items in a single row. However, this example sets the `GridItemsLayout.Span` property to 4. This results in a four-row grid, which grows horizontally as new items are added:
 
-[![Screenshot of a CollectionView horizontal grid layout, on iOS and Android](layout-images/horizontal-grid.png "CollectionView horizontal grid layout")](layout-images/horizontal-grid-large.png#lightbox "CollectionView horizontal grid layout")
+[![Screenshot of a CollectionView horizontal grid layout, on iOS and Android](layout-images/horizontal-grid.png "CollectionView horizontal grid layout."](layout-images/horizontal-grid-large.png#lightbox "CollectionView horizontal grid layout")
 
 ## Headers and footers
 
@@ -358,7 +358,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
-[![Screenshot of a CollectionView string header and footer, on iOS and Android](layout-images/header-footer-string.png "CollectionView string header and footer")](layout-images/header-footer-string-large.png#lightbox "CollectionView string header and footer")
+[![Screenshot of a CollectionView string header and footer, on iOS and Android](layout-images/header-footer-string.png "CollectionView string header and footer."](layout-images/header-footer-string-large.png#lightbox "CollectionView string header and footer")
 
 ### Display views in the header and footer
 
@@ -411,7 +411,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
-[![Screenshot of a CollectionView header and footer using views, on iOS and Android](layout-images/header-footer-view.png "CollectionView view header and footer")](layout-images/header-footer-view-large.png#lightbox "CollectionView view header and footer")
+[![Screenshot of a CollectionView header and footer using views, on iOS and Android](layout-images/header-footer-view.png "CollectionView view header and footer."](layout-images/header-footer-view-large.png#lightbox "CollectionView view header and footer")
 
 ### Display a templated header and footer
 
@@ -466,7 +466,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
-[![Screenshot of a CollectionView header and footer using templates, on iOS and Android](layout-images/header-footer-template.png "CollectionView template header and footer")](layout-images/header-footer-template-large.png#lightbox "CollectionView template header and footer")
+[![Screenshot of a CollectionView header and footer using templates, on iOS and Android](layout-images/header-footer-template.png "CollectionView template header and footer."](layout-images/header-footer-template-large.png#lightbox "CollectionView template header and footer")
 
 ## Item spacing
 
@@ -502,7 +502,7 @@ CollectionView collectionView = new CollectionView
 
 This code results in a vertical single column list, that has a spacing of 20 between items:
 
-[![Screenshot of a CollectionView with item spacing, on iOS and Android](layout-images/vertical-list-spacing.png "CollectionView item spacing")](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView item spacing")
+[![Screenshot of a CollectionView with item spacing, on iOS and Android](layout-images/vertical-list-spacing.png "CollectionView item spacing."](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView item spacing")
 
 When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object, the `GridItemsLayout.VerticalItemSpacing` and `GridItemsLayout.HorizontalItemSpacing` properties can be set to `double` values that represent the empty space vertically and horizontally between items:
 
@@ -537,7 +537,7 @@ CollectionView collectionView = new CollectionView
 
 This code results in a vertical two-column grid, that has a vertical spacing of 20 between items, and a horizontal spacing of 30 between items:
 
-[![Screenshot of a CollectionView with item spacing, on Android](layout-images/vertical-grid-spacing.png "CollectionView item spacing")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView item spacing")
+[![Screenshot of a CollectionView with item spacing, on Android](layout-images/vertical-grid-spacing.png "CollectionView item spacing."](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView item spacing")
 
 ## Item sizing
 
@@ -582,7 +582,7 @@ void OnImageTapped(object sender, EventArgs e)
 
 The `OnImageTapped` event handler is executed in response to an [`Image`](xref:Xamarin.Forms.Image) object being tapped, and changes the dimensions of the image so that it's more easily viewed:
 
-[![Screenshot of a CollectionView with dynamic item sizing, on iOS and Android](layout-images/runtime-resizing.png "CollectionView dynamic item sizing")](layout-images/runtime-resizing-large.png#lightbox "CollectionView dynamic item sizing")
+[![Screenshot of a CollectionView with dynamic item sizing, on iOS and Android](layout-images/runtime-resizing.png "CollectionView dynamic item sizing."](layout-images/runtime-resizing-large.png#lightbox "CollectionView dynamic item sizing")
 
 ## Right-to-left layout
 
@@ -604,7 +604,7 @@ The `OnImageTapped` event handler is executed in response to an [`Image`](xref:X
 
 The default [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) for an element with a parent is [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Therefore, the [`CollectionView`](xref:Xamarin.Forms.CollectionView) inherits the `FlowDirection` property value from the [`StackLayout`](xref:Xamarin.Forms.StackLayout), which in turn inherits the `FlowDirection` property value from the [`ContentPage`](xref:Xamarin.Forms.ContentPage). This results in the right-to-left layout shown in the following screenshots:
 
-[![Screenshot of a CollectionView right-to-left vertical list layout, on iOS and Android](layout-images/vertical-list-rtl.png "CollectionView right-to-left vertical list layout")](layout-images/vertical-list-rtl-large.png#lightbox "CollectionView right-to-left vertical list layout")
+[![Screenshot of a CollectionView right-to-left vertical list layout, on iOS and Android](layout-images/vertical-list-rtl.png "CollectionView right-to-left vertical list layout."](layout-images/vertical-list-rtl-large.png#lightbox "CollectionView right-to-left vertical list layout")
 
 For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 

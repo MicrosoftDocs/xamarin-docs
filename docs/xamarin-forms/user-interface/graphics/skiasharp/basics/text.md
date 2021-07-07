@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Integrating Text and Graphics
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _See how to determine the size of rendered text string to integrate text with SkiaSharp graphics_
 
 This article demonstrates how to measure text, scale the text to a particular size, and integrate text with other graphics:
 
-![Text surrounded by rectangles](text-images/textandgraphicsexample.png)
+![Text surrounded by rectangles.](text-images/textandgraphicsexample.png)
 
 That image also includes a rounded rectangle. The SkiaSharp `Canvas` class includes [`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect*) methods to draw a rectangle and [`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect*) methods to draw a rectangle with rounded corners. These methods allow the rectangle to be defined as an `SKRect` value or in other ways.
 
@@ -119,7 +119,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Following that, the remainder of the method is straight-forward. It creates another `SKPaint` object for the borders and calls `DrawRoundRect` twice. The second call uses a rectangle inflated by another 10 pixels. The first call specifies a corner radius of 20 pixels. The second has a corner radius of 30 pixels, so they seem to be parallel:
 
- [![Triple screenshot of the Framed Text page](text-images/framedtext-small.png)](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
+ [![Triple screenshot of the Framed Text page.](text-images/framedtext-small.png)](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
 
 You can turn your phone or simulator sideways to see the text and frame increase in size.
 
@@ -127,7 +127,7 @@ If you only need to center some text on the screen, you can do it approximately 
 
 Text can be treated much like any other graphical object. One simple option is to display the outline of the text characters:
 
-[![Triple screen shot of the Outlined Text page](text-images/outlinedtext-small.png)](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
+[![Triple screen shot of the Outlined Text page.](text-images/outlinedtext-small.png)](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
 
 This is accomplished simply by changing the normal `Style` property of the `SKPaint` object from its default setting of `SKPaintStyle.Fill` to `SKPaintStyle.Stroke`, and by specifying a stroke width. The `PaintSurface` handler of the **Outlined Text** page shows how it's done:
 

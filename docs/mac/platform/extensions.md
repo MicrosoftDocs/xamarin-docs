@@ -37,7 +37,7 @@ The following tips can be helpful when working with extensions in Xamarin.Mac:
 - Any uncaught exceptions will crash the extension process, providing only a small amount of useful information in the **System Log**. Wrapping troublesome code in a `try/catch` (Exception) block that `NSLog`’s before re-throwing may be useful.
 - The **System Log** can be accessed from the **Console** app under **Applications** > **Utilities**:
 
-    [![The system log](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
+    [![The system log.](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - As noted above, running the extension host application will register it with the system. Deleting the application bundle with unregister it. 
 - If “stray” versions of an app's extensions are registered, use the following command to locate them (so they can be deleted): `plugin kit -mv`
 

@@ -15,7 +15,7 @@ _This article covers the concept of Focus and how it is used to present and hand
 
 This article covers the concept of [Focus](#Focus-and-Selection) and how it is used to handle [Navigation](#Navigation) in a Xamarin.tvOS app's User Interface. We'll examine how the built-in tvOS Navigation controls use Focus, Highlighting and Selection to provide your Xamarin.tvOS app's User Interface Navigation.
 
-[![tvOS apps User Interface Navigation](navigation-focus-images/intro01.png)](navigation-focus-images/intro01.png#lightbox)
+[![tvOS apps User Interface Navigation.](navigation-focus-images/intro01.png)](navigation-focus-images/intro01.png#lightbox)
 
 Next, we'll take a look at how Focus can be used with [Parallax](#Focus-and-Parallax) and *Layered Images* to provide visual clues for the current Navigation State to the end user.
 
@@ -29,7 +29,7 @@ Users of your Xamarin.tvOS app will not be interacting with it's interface direc
 
 A successful tvOS app implements navigation in a way that smoothly supports the purpose of the app and the structure of the data it presents without calling attention to the navigation itself. Design your navigation so that it feels natural and familiar without dominating the User Interface or drawing focus away from the content and the apps user experience.
 
-[![The tvOS settings app](navigation-focus-images/nav01.png)](navigation-focus-images/nav01.png#lightbox)
+[![The tvOS settings app.](navigation-focus-images/nav01.png)](navigation-focus-images/nav01.png#lightbox)
 
 While using an Apple TV, the user typically navigates through a stacked set of screens, each presenting a given set of content. In turn, every new screen may lead to one or more sub-screens of content using standard UI controls such as [Buttons](~/ios/tvos/user-interface/buttons.md), [Tab Bars](~/ios/tvos/user-interface/tab-bars.md), Tables, [Collection Views](~/ios/tvos/user-interface/collection-views.md) or [Split Views](~/ios/tvos/user-interface/split-views.md).
 
@@ -52,7 +52,7 @@ Apple suggests keeping the following in mind when designing the navigation for y
 
 On the Apple TV, an image, button or other UI element is considered to be _in focus_ when it is the target of the current navigation.
 
-[![Focus and Selection example](navigation-focus-images/focus01.png)](navigation-focus-images/focus01.png#lightbox)
+[![Focus and Selection example.](navigation-focus-images/focus01.png)](navigation-focus-images/focus01.png#lightbox)
 
 Unlike, iOS devices where the user is directly interacting with elements on the device's touchscreen, users interact with tvOS elements from across the room using the Siri Remote. To present and handle this user interaction, the Apple TV uses a _Focus_ based model.
 
@@ -129,7 +129,7 @@ However, there might be times, because of the necessities of your UI design, whe
 
 Take the following UI layout for an example:
 
- [![Working with Focus Guides example](navigation-focus-images/guide01.png)](navigation-focus-images/guide01.png#lightbox)
+ [![Working with Focus Guides example.](navigation-focus-images/guide01.png)](navigation-focus-images/guide01.png#lightbox)
 
 Because the **More Info** button does not fall on a horizontal and vertical grid with the **Buy** button it would be inaccessible to the user. However, this can be easily corrected using a _Focus Guide_ to provide movement hints to the Focus Engine. 
 
@@ -161,7 +161,7 @@ First, a new `UIFocusGuide` is created and added to the View's Layout Guide coll
 
 Next, the Focus Guide's Top, Left, Width and Height Anchors are adjusted relative to the **More Info** and **Buy** buttons to position it between them. See:
 
-[![Example Focus Guide](navigation-focus-images/guide02.png)](navigation-focus-images/guide02.png#lightbox)
+[![Example Focus Guide.](navigation-focus-images/guide02.png)](navigation-focus-images/guide02.png#lightbox)
 
 It's also important to note that the new constraints are being activated as they are created by setting their `Active` property to `true`:
 

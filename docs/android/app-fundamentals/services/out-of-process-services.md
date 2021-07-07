@@ -36,17 +36,17 @@ The need to cross process boundaries does introduce extra complexity: the commun
 
 When a client requests to bind with the remote service, Android will invoke the `Service.OnBind` lifecycle method, which will return the internal `IBinder` object that is encapsulated by the `Messenger`. The `Messenger` is a thin wrapper over a special `IBinder` implementation that is provided by the Android SDK. The `Messenger` takes care of the communication between the two different processes. The developer is unconcerned with the details of serializing a message, marshalling the message across the process boundary, and then deserializing it on the client. This work is handled by the `Messenger` object. This diagram shows the client-side Android components that are involved when a client initiates binding to an out-of-process service:
 
-![Diagram that shows the steps and components for a client binding to a service](out-of-process-services-images/ipc-01.png "Diagram that shows the steps and components for a client binding to a service.")
+![Diagram that shows the steps and components for a client binding to a service.](out-of-process-services-images/ipc-01.png "Diagram that shows the steps and components for a client binding to a service.")
 
 The `Service` class in the remote process will go through the same lifecycle callbacks that a bound service in a local process will go through, and many of the APIs involved are the same. `Service.OnCreate` is used to initialize a `Handler` and inject that into `Messenger` object. Likewise, `OnBind` is overridden, but instead of returning an `IBinder` object, the service will return the `Messenger`.  This diagram illustrates what happens in the service when a client is binding to it:
 
-![Diagram that shows the steps and components a service goes through when being bound to by a remote client](out-of-process-services-images/ipc-02.png "Diagram that shows the steps and components a service goes through when being bound to by a remote client.")
+![Diagram that shows the steps and components a service goes through when being bound to by a remote client.](out-of-process-services-images/ipc-02.png "Diagram that shows the steps and components a service goes through when being bound to by a remote client.")
 
 When a `Message` is received by a service, it is processed by in instance of `Android.OS.Handler`. The service will implement its own `Handler` subclass that must override the `HandleMessage` method. This method is invoked by the `Messenger` and receives the `Message` as a parameter. The `Handler` will inspect the `Message` meta-data and use that information to invoke methods on the service.
 
 One-way communication occurs when a client creates a `Message` object and dispatches it to the service using the `Messenger.Send` method. `Messenger.Send` will serialize the `Message` and hand that serialized data off to Android, which will route the message across the process boundary and to the service.  The `Messenger` that is hosted by the service will create a `Message` object from the incoming data. This `Message` is placed into a queue, where messages are submitted one at a time to the `Handler`. The `Handler` will inspect the meta-data contained in the `Message` and invoke the appropriate methods on the `Service`. The following diagram illustrates these various concepts in action:
 
-![Diagram showing how messages are passed between processes](out-of-process-services-images/ipc-03.png "Diagram showing how messages are passed between processes.")
+![Diagram showing how messages are passed between processes.](out-of-process-services-images/ipc-03.png "Diagram showing how messages are passed between processes.")
 
 This guide will discuss the details of implementing an out-of-process service. It will discuss how to implement a service that is meant to run in its own process and how a client may communicate with that service using the `Messenger` framework. It will also briefly discuss two-way communication: the client sending a message to a service and the service sending a message back to the client. Because services can be shared between different applications, this guide will also discuss one technique for limiting client access to the service by using Android permissions.
 
@@ -133,12 +133,12 @@ against untrusted code compromising the Android device.
 To see the effect that the `Process` property has, the following
 screenshot shows a service running in its own private process:
 
-![Screenshot that shows a service running in a private process](out-of-process-services-images/ipc-04.png "Screenshot that shows a service running in a private process.")
+![Screenshot that shows a service running in a private process.](out-of-process-services-images/ipc-04.png "Screenshot that shows a service running in a private process.")
 
 This next screenshot shows `Process="com.xamarin.xample.messengerservice.timestampservice_process"`
 and the service running in a global process:
 
-![Screenshot of a service running in a global process](out-of-process-services-images/ipc-05.png "Screenshot of a service running in a global process.")
+![Screenshot of a service running in a global process.](out-of-process-services-images/ipc-05.png "Screenshot of a service running in a global process.")
 
 Once the `ServiceAttribute` has been set, the service needs to implement a `Handler`.
 
@@ -494,7 +494,7 @@ Then, the **AndroidManifest.xml** of the client APK must explicitly request this
 
 To view the permissions that an application has been granted, open the Android Settings app, and select **Apps**. Find and select the application in the list. From the **App Info** screen, tap **Permissions** which will bring up a view that shows all the permissions granted to the app:
 
-[![Screenshots from an Android device showing how to find the permissions granted to an application](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
+[![Screenshots from an Android device showing how to find the permissions granted to an application.](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## Summary
 

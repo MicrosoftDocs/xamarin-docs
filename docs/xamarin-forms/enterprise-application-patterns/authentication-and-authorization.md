@@ -38,7 +38,7 @@ The combination of OpenID Connect and OAuth 2.0 combine the two fundamental secu
 
 In applications that use direct client-to-microservice communication, such as the eShopOnContainers reference application, a dedicated authentication microservice acting as a Security Token Service (STS) can be used to authenticate users, as shown in Figure 9-1. For more information about direct client-to-microservice communication, see [Communication Between Client and Microservices](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices).
 
-![Authentication by a dedicated authentication microservice](authentication-and-authorization-images/authentication.png)
+![Authentication by a dedicated authentication microservice.](authentication-and-authorization-images/authentication.png)
 
 **Figure 9-1:** Authentication by a dedicated authentication microservice
 
@@ -220,7 +220,7 @@ For IdentityServer to issue tokens on behalf of a user, the user must sign-in to
 
 The eShopOnContainers mobile app authenticates with IdentityServer with the hybrid authentication flow, which is illustrated in Figure 9-2.
 
-![High-level overview of the sign-in process](authentication-and-authorization-images/sign-in.png)
+![High-level overview of the sign-in process.](authentication-and-authorization-images/sign-in.png)
 
 **Figure 9-2:** High-level overview of the sign-in process
 
@@ -228,7 +228,7 @@ A sign-in request is made to `<base endpoint>:5105/connect/authorize`. Following
 
 The eShopOnContainers mobile app signs-out of IdentityServer by sending a request to `<base endpoint>:5105/connect/endsession`, with additional parameters. After sign-out occurs, IdentityServer responds by sending a post logout redirect URI back to the mobile app. Figure 9-3 illustrates this process.
 
-![High-level overview of the sign-out process](authentication-and-authorization-images/sign-out.png)
+![High-level overview of the sign-out process.](authentication-and-authorization-images/sign-out.png)
 
 **Figure 9-3:** High-level overview of the sign-out process
 
@@ -284,7 +284,7 @@ This method creates the URI for IdentityServer's [authorization endpoint](https:
 
 The returned URI is stored in the `LoginUrl` property of the `LoginViewModel` class. When the `IsLogin` property becomes `true`, the [`WebView`](xref:Xamarin.Forms.WebView) in the `LoginView` becomes visible. The `WebView` data binds its [`Source`](xref:Xamarin.Forms.WebView.Source) property to the `LoginUrl` property of the `LoginViewModel` class, and so makes a sign-in request to IdentityServer when the `LoginUrl` property is set to IdentityServer's authorization endpoint. When IdentityServer receives this request and the user isn't authenticated, the `WebView` will be redirected to the configured login page, which is shown in Figure 9-4.
 
-![Login page displayed by the WebView](authentication-and-authorization-images/login.png)
+![Login page displayed by the WebView.](authentication-and-authorization-images/login.png)
 
 **Figure 9-4:** Login page displayed by the WebView
 
@@ -405,7 +405,7 @@ If an unauthorized user attempts to access a controller or action that's marked 
 
 IdentityServer can be integrated into the authorization workflow so that the access tokens it provides control authorization. This approach is shown in Figure 9-5.
 
-![Authorization by access token](authentication-and-authorization-images/authorization.png)
+![Authorization by access token.](authentication-and-authorization-images/authorization.png)
 
 **Figure 9-5:** Authorization by access token
 

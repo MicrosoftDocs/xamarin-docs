@@ -36,7 +36,7 @@ NavigationController.NavigationBar.PrefersLargeTitles = true;
 
 Setting larger titles in your app makes _all_ navigation bars titles across your app appear larger, as illustrated in following screenshot:
 
-![Large navigation title](visual-design-images/image7.png)
+![Large navigation title.](visual-design-images/image7.png)
 
 To control when a large title is displayed on a navigation bar, set the `LargeTitleDisplayMode` on the navigation item to `Always`, `Never`, or `Automatic`.
 
@@ -48,7 +48,7 @@ iOS 11 has made it easier to add a search controller directly to the navigation 
 NavigationItem.SearchController = searchController;
 ```
 
-[![Large navigation title with search bar](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
+[![Large navigation title with search bar.](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 Depending on the functionality of your app, you may or may not want the search bar to hide when a user scrolls through a list. You can adjust this using the `HidesSearchBarWhenScrolling` property.
 
@@ -63,7 +63,7 @@ ViewRespectsSystemMinimumLayoutMargins = false;
 View.LayoutMargins = UIEdgeInsets.Zero;
 ```
 
-![Image showing margin with zero inset in ios 11](visual-design-images/image9.png)
+![Image showing margin with zero inset in ios 11.](visual-design-images/image9.png)
 
 <a name="fullscreen"></a>
 
@@ -73,7 +73,7 @@ iOS 7 [introduced](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `t
 
 The safe area is a new way of thinking about the visible space of your application and how constraints are added between a view and a super view. For example, consider the following image:
 
-[![Safe area vs Top and bottom layout guide](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
+[![Safe area vs Top and bottom layout guide.](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 Previously, if you had added a view and wanted it to be visible in the green area above, you would constrain it to the _bottom_ of the `TopLayoutGuide` and the _top_ of the `BottomLayoutGuide`. In iOS 11, you would instead constrain it to the _top_ and the _bottom_ of the Safe Area. An example follows:
 

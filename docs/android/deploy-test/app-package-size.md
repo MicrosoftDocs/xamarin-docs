@@ -29,7 +29,7 @@ required Base Class Library (BCL) assemblies. For example, if we take the
 default “Hello World” template, the contents of a complete package build
 would look like this:
 
-[![Package size before linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
+[![Package size before linker.](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15.8 MB is a larger download size than we’d like. The problem is the BCL
 libraries, as they include mscorlib, System, and Mono.Android, which provide a
@@ -46,7 +46,7 @@ System.dll for sending and receiving email, but if your application does not
 make use of this functionality, that code is just wasting space. After running
 the linker on the Hello World application, our package now looks like this:
 
-[![Package size after linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
+[![Package size after linker.](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 As we can see, this removes a significant amount of the BCL that was not
 being used. Note that the final BCL size is dependent on what the application
@@ -54,7 +54,7 @@ actually uses. For example, if we take a look at a more substantial sample
 application called ApiDemo, we can see that the BCL component has increased in
 size because ApiDemo uses more of the BCL than Hello, World does:
 
-![ApiDemo package size after linking](app-package-size-images/api-demo-package-size-after-linker.png)
+![ApiDemo package size after linking.](app-package-size-images/api-demo-package-size-after-linker.png)
 
 As illustrated here, your application package size will generally be about
 2.9 MB larger than your application and its dependencies.
@@ -77,13 +77,13 @@ The first time we debug on device, we copy two large packages called
 Mono Runtime and BCL, while Shared Platform contains Android API level
 specific assemblies:
 
-[![Shared runtime package size](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
+[![Shared runtime package size.](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 Copying these core components is only done once as it takes quite a bit of
 time, but allows any subsequent applications running in debug mode to utilize
 them. Finally, we copy the actual application, which is small and quick:
 
-![The actual application is small](app-package-size-images/hello-world-debug-application-no-link.png)
+![The actual application is small.](app-package-size-images/hello-world-debug-application-no-link.png)
 
 ### Fast Assembly Deployment
 
@@ -98,11 +98,11 @@ To enable *Fast Assembly Deployment*, do the following:
 
 2. From the Project Options dialog select **Android Build** :  
 
-    ![Project Options Android Build](app-package-size-images/fastdev0.png)
+    ![Project Options Android Build.](app-package-size-images/fastdev0.png)
 
 3. Check the  **Use shared Mono runtime checkbox** and the  **Fast assembly deployment** checkboxes:  
 
-    ![Checkboxes selected under Packaging tab](app-package-size-images/fastdev.png)
+    ![Checkboxes selected under Packaging tab.](app-package-size-images/fastdev.png)
 
 4. Click the  **OK** button to save the changes and close the Project Options dialog.
 

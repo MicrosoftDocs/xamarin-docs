@@ -19,7 +19,7 @@ There are three methods for sharing code between cross-platform applications:
 
 The goal of a code-sharing strategy is to support the architecture shown in this diagram, where a single codebase can be utilized by multiple platforms.
 
- ![Shared code application architecture](code-sharing-images/conceptualarchitecture.png "Shared code application architecture")
+ ![Shared code application architecture.](code-sharing-images/conceptualarchitecture.png "Shared code application architecture")
 
 This article compares the methods available to help you choose the right project type for your applications.
 
@@ -32,7 +32,7 @@ the base class libraries that can be referenced in different project types, incl
 like Xamarin.Android and Xamarin.iOS. .NET Standard 2.0 is recommended for maximum compatibility with existing
 .NET Framework code.
 
-![.NET Standard diagram](code-sharing-images/netstandard.png ".NET Standard diagram")
+![.NET Standard diagram.](code-sharing-images/netstandard.png ".NET Standard diagram")
 
 ### Benefits
 
@@ -59,12 +59,12 @@ This screenshot shows a solution file containing three application projects
 (for Android, iOS, and Windows), with a **Shared** project that
 contains common C# source code files:
 
-![Shared project solution](code-sharing-images/sharedsolution.png "Shared project solution")
+![Shared project solution.](code-sharing-images/sharedsolution.png "Shared project solution")
 
 The conceptual architecture is shown in the following diagram, where each
 project includes all the shared source files:
 
-![Shared project diagram](code-sharing-images/sharedassetproject.png "Shared project diagram")
+![Shared project diagram.](code-sharing-images/sharedassetproject.png "Shared project diagram")
 
 ### Example
 
@@ -111,7 +111,7 @@ A good solution for application developers writing code that is only intended fo
 
 Portable Class Libraries are [discussed in detail here](~/cross-platform/app-fundamentals/pcl.md).
 
-![Portable class library diagram](code-sharing-images/portableclasslibrary.png "Portable class library diagram")
+![Portable class library diagram.](code-sharing-images/portableclasslibrary.png "Portable class library diagram")
 
 ### Benefits
 

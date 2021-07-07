@@ -31,7 +31,7 @@ The `ListFragment` is very similar in concept and functionality to the
 Fragment. The image below shows a `ListFragment` running on a tablet
 and a phone:
 
-[![Screenshots of ListFragment on a tablet and on a phone](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
+[![Screenshots of ListFragment on a tablet and on a phone.](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
 
 ### Binding Data With The ListAdapter
 
@@ -99,7 +99,7 @@ window. It is meant to replace the managed dialog APIs (starting in
 Android 3.0). The following screenshot shows an example of a
 `DialogFragment`:
 
-[![Screenshot of DialogFragment displaying Add New Vehicle EditBox](specialized-fragment-classes-images/dialog-fragment-example.png)](specialized-fragment-classes-images/dialog-fragment-example.png#lightbox)
+[![Screenshot of DialogFragment displaying Add New Vehicle EditBox.](specialized-fragment-classes-images/dialog-fragment-example.png)](specialized-fragment-classes-images/dialog-fragment-example.png#lightbox)
 
 A `DialogFragment` ensures that the state between the Fragment and the
 dialog remain consistent. All interactions and control of the dialog
@@ -127,7 +127,7 @@ two methods:
 The following screenshot shows a simple `DialogFragment` that has a
 `TextView` and two `Button`s:
 
-[![Example DialogFragment with a TextView and two buttons](specialized-fragment-classes-images/dialog-fragment-example-2.png)](specialized-fragment-classes-images/dialog-fragment-example-2.png#lightbox)
+[![Example DialogFragment with a TextView and two buttons.](specialized-fragment-classes-images/dialog-fragment-example-2.png)](specialized-fragment-classes-images/dialog-fragment-example-2.png#lightbox)
 
 The `TextView` will display the number of times that the user has
 clicked one button in the `DialogFragment`, while clicking the other
@@ -229,7 +229,7 @@ In Android 3.0 or higher applications, use the `PreferenceFragment` to
 deal with preferences in applications. The following picture shows an
 example of a `PreferenceFragment`:
 
-[![Example PreferencesFragment with inline, dialog, and launch preferences](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
+[![Example PreferencesFragment with inline, dialog, and launch preferences.](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
 
 ### Create A Preference Fragment from a Resource
 
@@ -356,4 +356,4 @@ the `MetatDataAttribute` is not provided, then an exception will be
 thrown at run time. When this code runs, the `PreferenceFragment`
 appears as in the following screenshot:
 
-[![Screenshot of example app with PreferenceFragment displayed](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png)](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png#lightbox)
+[![Screenshot of example app with PreferenceFragment displayed.](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png)](specialized-fragment-classes-images/preference-fragment-getpreferencesfromintent.png#lightbox)

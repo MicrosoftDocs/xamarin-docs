@@ -142,7 +142,7 @@ var accessToken = authResult?.AccessToken;
 
 The `WebAuthenticator` API takes care of launching the url in the browser and waiting until the callback is received:
 
-![Typical Web Authentication Flow](images/web-authenticator.png)
+![Typical Web Authentication Flow.](images/web-authenticator.png)
 
 If the user cancels the flow at any point, a `TaskCanceledException` is thrown.
 

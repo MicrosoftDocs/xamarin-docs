@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Page Toolbar Placement on Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Universal Windows Platform platform-specific is used to change the placement of a toolbar on a [`Page`](xref:Xamarin.Forms.Page), and is consumed in XAML by setting the [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) attached property to a value of the [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumeration:
 
@@ -38,7 +38,7 @@ The `Page.On<Windows>` method specifies that this platform-specific will only ru
 
 The result is that the specified toolbar placement is applied to the [`Page`](xref:Xamarin.Forms.Page) instance:
 
-[![Toolbar Placement Platform-Specific](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Toolbar Placement Platform-Specific")
+[![Toolbar Placement Platform-Specific.](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Toolbar Placement Platform-Specific")
 
 ## Related links
 

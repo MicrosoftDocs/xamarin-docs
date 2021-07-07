@@ -22,7 +22,7 @@ which we'll discuss next.
 The Action Bar includes support for adding tabbed interfaces in Android 4.0.
 The following screenshot shows an example of such an interface.
 
-[![Screenshot of app running in an emulator; two tabs are shown](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
+[![Screenshot of app running in an emulator; two tabs are shown.](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 To create tabs in the Action Bar, we first need to set its
 `NavigationMode` property to support tabs. In Android 4, an `ActionBar`
@@ -112,12 +112,12 @@ associated with the `ShareActionProvider`. In this example, the
 messaging application has been previously used, so it is presented on
 the Action Bar.
 
-[![Screenshot of messaging application icon in the Action Bar](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
+[![Screenshot of messaging application icon in the Action Bar.](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 When the user clicks on the item in the Action Bar, the messaging app that
 contains the shared image is launched, as shown below:
 
-[![Screenshot of messaging app displaying monkey image](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[![Screenshot of messaging app displaying monkey image.](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
 ### Specifying the action Provider Class
 

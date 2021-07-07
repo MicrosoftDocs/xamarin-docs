@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Implicit Styles in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _An implicit style is one that's used by all controls of the same TargetType, without requiring each control to reference the style._
 
@@ -49,7 +49,7 @@ The following code example shows an *implicit* style declared in XAML in a page'
 
 The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) defines a single *implicit* style that's applied to the page's [`Entry`](xref:Xamarin.Forms.Entry) instances. The `Style` is used to display blue text on a yellow background, while also setting other appearance options. The `Style` is added to the page's [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) without specifying an `x:Key` attribute. Therefore, the `Style` is applied to all the `Entry` instances implicitly as they match the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property of the `Style` exactly. However, the `Style` is not applied to the `CustomEntry` instance, which is a subclassed `Entry`. This results in the appearance shown in the following screenshots:
 
-[![Implicit Styles Example](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
+[![Implicit Styles Example.](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
 In addition, the fourth [`Entry`](xref:Xamarin.Forms.Entry) overrides the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) and [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) properties of the implicit style to different `Color` values.
 

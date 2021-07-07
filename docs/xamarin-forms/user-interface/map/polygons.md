@@ -12,12 +12,12 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Polygons and Polylines
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 `Polygon`, `Polyline`, and `Circle` elements allow you to highlight specific areas on a map. A `Polygon` is a fully enclosed shape that can have a stroke and fill color. A `Polyline` is a line that does not fully enclose an area. A `Circle` highlights a circular area of the map:
 
-[!["Screenshot of a map polygon and polyline, on iOS and Android"](polygons-images/polygon-polyline.png "Polygon and polyline on a map")](polygons-images/polygon-polyline-large.png#lightbox "Polygon and polyline on a map")
-[!["Screenshot of a map circle, on iOS and Android"](polygons-images/circle.png "Circle on a map")](polygons-images/circle-large.png#lightbox "Circle on a map")
+[!["Screenshot of a map polygon and polyline, on iOS and Android."](polygons-images/polygon-polyline.png "Polygon and polyline on a map."](polygons-images/polygon-polyline-large.png#lightbox "Polygon and polyline on a map")
+[!["Screenshot of a map circle, on iOS and Android."](polygons-images/circle.png "Circle on a map."](polygons-images/circle-large.png#lightbox "Circle on a map")
 
 The `Polygon`, `Polyline`, and `Circle` classes derive from the `MapElement` class, which exposes the following bindable properties:
 

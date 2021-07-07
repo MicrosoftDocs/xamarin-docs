@@ -17,7 +17,7 @@ iTunes servers to get product information and perform transactions. The
 provisioning profile must be configured for in-app purchasing and product
 information must be entered in iTunes Connect.
 
- [![StoreKit manages all communication with Apple’s as shown in this chart](in-app-purchase-basics-and-configuration-images/image1.png)](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
+ [![StoreKit manages all communication with Apple’s as shown in this chart.](in-app-purchase-basics-and-configuration-images/image1.png)](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
 
 Using the App Store to provide in-app purchasing requires the
 following setup and configuration:
@@ -77,11 +77,11 @@ should be complete before writing any code:
 Building and distributing free apps requires very little configuration in [iTunes Connect](https://itunesconnect.apple.com), however to sell paid apps or in-app purchases requires you to
 provide Apple with banking and taxation information. Click on **Agreements, Tax and Banking** from the main menu shown here:
 
- [![Click on Agreements, Tax and Banking from the main menu](in-app-purchase-basics-and-configuration-images/image2.png)](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
+ [![Click on Agreements, Tax and Banking from the main menu.](in-app-purchase-basics-and-configuration-images/image2.png)](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
 
 Your Developer Account should have an **iOS Paid Applications** contract in effect, as shown in this screenshot:
 
- [![Your Developer Account should have an iOS Paid Applications contract in effect](in-app-purchase-basics-and-configuration-images/image3.png)](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
+ [![Your Developer Account should have an iOS Paid Applications contract in effect.](in-app-purchase-basics-and-configuration-images/image3.png)](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
 You will not be able to test any StoreKit functionality until you
 have an **iOS Paid Applications** contract – StoreKit calls in
@@ -95,7 +95,7 @@ The form for creating new **App IDs**
 
  looks like this:
 
- [![The form for creating new App IDs](in-app-purchase-basics-and-configuration-images/image4.png)](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
+ [![The form for creating new App IDs.](in-app-purchase-basics-and-configuration-images/image4.png)](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
 
 Enter something appropriate for the *Description*, so you can easily identify this App ID in a list. For the *App ID Prefix*, select the Team ID.
 
@@ -116,7 +116,7 @@ multiple applications, however _wild-card App IDs cannot be used for In-AppPurch
 
 Note that **In-App Purchase** will be automatically enabled in the Services list:
 
- [![In-App Purchase will be automatically enabled in the Services list](in-app-purchase-basics-and-configuration-images/image5.png)](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
+ [![In-App Purchase will be automatically enabled in the Services list.](in-app-purchase-basics-and-configuration-images/image5.png)](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
 
 #### Provisioning Profiles
 
@@ -131,20 +131,20 @@ Click **My Apps** in iTunes Connect to create
 or edit an iOS application entry. The application overview page is shown
 here:
 
- [![The application overview page](in-app-purchase-basics-and-configuration-images/image6.png)](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
+ [![The application overview page.](in-app-purchase-basics-and-configuration-images/image6.png)](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
 
 Click **In-App Purchases** to create or edit
 your products for sale. This screenshot shows the sample app with several products
 already added:
 
- [![The sample app with several products already added](in-app-purchase-basics-and-configuration-images/image7.png)](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
+ [![The sample app with several products already added.](in-app-purchase-basics-and-configuration-images/image7.png)](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
 
 The process to add new products has two steps:
 
 1. Choose the product type: 
-    [![Choose the product type](in-app-purchase-basics-and-configuration-images/image8.png)](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+    [![Choose the product type.](in-app-purchase-basics-and-configuration-images/image8.png)](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
 2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
-    [![Entering the products attributes](in-app-purchase-basics-and-configuration-images/image9.png)](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+    [![Entering the products attributes.](in-app-purchase-basics-and-configuration-images/image9.png)](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
 below:
@@ -210,7 +210,7 @@ provides a price matrix to help you select the correct tier for the
 currency/price that you want. An excerpt of the price matrix (August 2012) is
 shown here:
 
- [![An excerpt of the price matrix August 2012](in-app-purchase-basics-and-configuration-images/image10.png)](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
+ [![An excerpt of the price matrix August 2012.](in-app-purchase-basics-and-configuration-images/image10.png)](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
 At the time of writing (June 2013) there are 87 tiers from USD
 0.99 to USD 999.99. The Pricing Matrix shows the price that your customers will
@@ -226,7 +226,7 @@ date. This screenshot shows how a future-dated price change is added – the
 price is being temporarily changed from tier 1 to tier 3 for the month of
 September only:
 
- [![A future-dated price change where the price is being temporarily changed from tier 1 to tier 3 for the month of September only](in-app-purchase-basics-and-configuration-images/image11.png)](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
+ [![A future-dated price change where the price is being temporarily changed from tier 1 to tier 3 for the month of September only.](in-app-purchase-basics-and-configuration-images/image11.png)](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
 
 ### Free Products Not Supported
 
@@ -241,7 +241,7 @@ In iTunes Connect you can enter different Name and Description text for any
 number of supported languages. Each language can be added/edited in via a
 popup:
 
- [![Each language can be added/edited in via a popup](in-app-purchase-basics-and-configuration-images/image12.png)](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
+ [![Each language can be added/edited in via a popup.](in-app-purchase-basics-and-configuration-images/image12.png)](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
 
 When you display product information in your app, the localized
 text is available for you to display via StoreKit. The currency display must
@@ -262,7 +262,7 @@ new app, or the functionality has been added to an existing one) you must also
 choose some products to submit with it. The iTunes Connect portal will prompt
 you to do this, as shown in this screenshot:
 
- [![The iTunes Connect portal will prompt you to submit some products as well](in-app-purchase-basics-and-configuration-images/image13.png)](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
+ [![The iTunes Connect portal will prompt you to submit some products as well.](in-app-purchase-basics-and-configuration-images/image13.png)](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
 
 The application and the in-app purchases will be reviewed
 together, so that they all get approved at once (so that app doesn’t go into

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Local notifications in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/local-notifications)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/local-notifications)
 
 Local notifications are alerts sent by applications installed on a mobile device. Local notifications are often used for features such as:
 
@@ -22,7 +22,7 @@ Local notifications are alerts sent by applications installed on a mobile device
 
 Each platform handles the creation, display, and consumption of local notifications differently. This article explains how to create a cross-platform abstraction to send, schedule, and receive local notifications with Xamarin.Forms.
 
-[![Local notifications application on iOS and Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
+[![Local notifications application on iOS and Android.](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
 ## Create a cross-platform interface
 
@@ -497,11 +497,11 @@ Once the platform projects contain a registered implementation of the `INotifica
 
 On Android, notifications will appear in the notification area. When the notification is tapped, the application receives the notification and displays a message:
 
-![Local notifications on Android](local-notifications-images/local-notifications-android.png)
+![Local notifications on Android.](local-notifications-images/local-notifications-android.png)
 
 On iOS, incoming notifications are automatically received by the application without requiring user input. The application receives the notification and displays a message:
 
-![Local notifications on iOS](local-notifications-images/local-notifications-ios.png)
+![Local notifications on iOS.](local-notifications-images/local-notifications-ios.png)
 
 ## Related links
 

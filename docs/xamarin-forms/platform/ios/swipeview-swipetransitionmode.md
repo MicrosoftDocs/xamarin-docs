@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SwipeView Swipe Transition Mode on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific controls the transition that's used when opening a `SwipeView`. It's consumed in XAML by setting the `SwipeView.SwipeTransitionMode` bindable property to a value of the `SwipeTransitionMode` enumeration:
 
@@ -56,7 +56,7 @@ In addition, the `SwipeView.GetSwipeTransitionMode` method can be used to return
 
 The result is that a specified `SwipeTransitionMode` value is applied to the `SwipeView`, which controls the transition that's used when opening the `SwipeView`:
 
-[![Screenshot of SwipeView SwipeTransitionModes, on iOS](swipeview-swipetransitionmode-images/swipetransitionmode.png "SwipeTransitionModes on iOS")](swipeview-swipetransitionmode-images/swipetransitionmode-large.png#lightbox "SwipeTransitionModes on iOS")
+[![Screenshot of SwipeView SwipeTransitionModes, on iOS](swipeview-swipetransitionmode-images/swipetransitionmode.png "SwipeTransitionModes on iOS."](swipeview-swipetransitionmode-images/swipetransitionmode-large.png#lightbox "SwipeTransitionModes on iOS")
 
 ## Related links
 

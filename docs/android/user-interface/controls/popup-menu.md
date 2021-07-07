@@ -17,7 +17,7 @@ particular view. In the following example, a single Activity contains a
 button. When the user taps the button, a three-item popup menu is
 displayed:
 
-[![Example of an app with a button and three-item pop-up menu](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![Example of an app with a button and three-item pop-up menu.](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 ## Creating a Popup Menu
 

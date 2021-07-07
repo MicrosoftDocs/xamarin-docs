@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Creating XAML Markup Extensions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 On the programmatic level, a XAML markup extension is a class that implements the [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) or [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface. You can explore the source code of the standard markup extensions described below in the [**MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) of the Xamarin.Forms GitHub repository.
 
@@ -115,7 +115,7 @@ The **HSL Color Demo** page shows a variety of ways that `HslColorExtension` can
 
 Notice that when `HslColorExtension` is an XML tag, the four properties are set as attributes, but when it appears between curly braces, the four properties are separated by commas without quotation marks. The default values for `H`, `S`, and `L` are 0, and the default value of `A` is 1, so those properties can be omitted if you want them set to default values. The last example shows an example where the luminosity is 0, which normally results in black, but the alpha channel is 0.5, so it is half transparent and appears gray against the white background of the page:
 
-[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
+[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo."](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
 
 ## A Markup Extension for Accessing Bitmaps
 
@@ -177,7 +177,7 @@ Although `ImageResourceExtension` requires the `Source` property to be set, the 
 
 Here's the program running:
 
-[![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo")](creating-images/imageresourcedemo-large.png#lightbox "Image Resource Demo")
+[![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo."](creating-images/imageresourcedemo-large.png#lightbox "Image Resource Demo")
 
 ## Service Providers
 

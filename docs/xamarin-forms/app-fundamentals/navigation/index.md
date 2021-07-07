@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _Xamarin.Forms provides a number of different page navigation experiences, depending upon the Page type being used._
 
-![Xamarin.Forms Page Types](images/page-types.png)
+![Xamarin.Forms Page Types.](images/page-types.png)
 
 Alternatively, Xamarin.Forms Shell applications use a URI-based navigation experience that doesn't enforce a set navigation hierarchy. For more information, see [Xamarin.Forms Shell Navigation](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 

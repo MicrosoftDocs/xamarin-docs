@@ -66,7 +66,7 @@ to the project. In Visual Studio, right-click
 Select **Xamarin.Android.Support.v7.AppCompat** and 
 click **Install**: 
 
-[![Screenshot of V7 Appcompat package selected in Manage NuGet packages](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
+[![Screenshot of V7 Appcompat package selected in Manage NuGet packages.](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
 When this NuGet is installed, several other NuGet packages are also 
 installed if not already present (such as 
@@ -266,7 +266,7 @@ Build the app and run it on a pre-Lollipop device or Android emulator.
 The following screenshot shows the AppCompat version of **ToolbarFun** 
 on a Nexus 4 running KitKat (API 19): 
 
-[![Full screenshot of app running on a KitKat device, both Toolbars are shown](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
+[![Full screenshot of app running on a KitKat device, both Toolbars are shown.](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
 When the AppCompat library is used, themes do not have to be switched 
 based on the Android version &ndash; the AppCompat library makes it 

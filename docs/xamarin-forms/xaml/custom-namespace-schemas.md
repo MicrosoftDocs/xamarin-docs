@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # XAML Custom Namespace Schemas in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
 Types in a library can be referenced in XAML by declaring a XAML namespace for the library, with the namespace declaration specifying the Common Language Runtime (CLR) namespace name and an assembly name:
 
@@ -135,7 +135,7 @@ To find the custom namespace schema types, Xamarin.Forms will search referenced 
 
 The result is that two `CircleButton` instances are displayed:
 
-![Circle buttons](custom-namespace-schemas-images/circle-buttons.png "Circle buttons")
+![Circle buttons.](custom-namespace-schemas-images/circle-buttons.png "Circle buttons")
 
 ## Related links
 

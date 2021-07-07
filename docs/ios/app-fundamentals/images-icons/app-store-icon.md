@@ -37,11 +37,11 @@ To add an App Store icon do the following:
     - To add a new asset catalog, right-click on your project and select **Add > New File > Asset Catalog**.
     - To add a new an app icon image set, right-click in the icon set area and select **App Icons & Launch Images > New App Icon**:
 
-    ![Add new image set option](app-store-icon-images/image1.png)
+    ![Add new image set option.](app-store-icon-images/image1.png)
 
 2. Scroll to the **App Store** icon in the list:
 
-    ![App Store Icon](app-store-icon-images/image2.png)
+    ![App Store Icon.](app-store-icon-images/image2.png)
 
 3. Click on the icon and browse for your 1024 x 1024 pixel image. Save the Asset Catalog.
 

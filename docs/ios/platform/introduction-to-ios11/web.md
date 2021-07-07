@@ -26,7 +26,7 @@ sfViewController.PreferredBarTintColor = UIColor.Purple;
 
 The following code snippet renders the bars in purple and white, as displayed in the following image:
 
-![SFSafariViewController bars rendered in purple and white](web-images/image1.png)
+![SFSafariViewController bars rendered in purple and white.](web-images/image1.png)
 
 The Dismiss button presented in the Safari View Controller can also be changed by setting the `DismissButtonStyle` property to either `Done`, `Close`, or `Cancel`:
 
@@ -34,7 +34,7 @@ The Dismiss button presented in the Safari View Controller can also be changed b
 sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.Close;
 ```
 
-![Dismiss button text changed](web-images/image2.png)
+![Dismiss button text changed.](web-images/image2.png)
 
 This value can be changed while `SFSafariViewController` is presented.
 
@@ -47,7 +47,7 @@ config.BarCollapsingEnabled = false;
 var sfViewController = new SFSafariViewController(url, config);
 ```
 
-![Bar collapsing disabled](web-images/image3.png)
+![Bar collapsing disabled.](web-images/image3.png)
 
 Apple has also made updates to privacy in the Safari View Controller in iOS 11. Now, browsing data such as cookies and local storage only exist on a per-app basis, rather than across all instances of Safari view controller. This keeps user browsing activity private within your app.
 

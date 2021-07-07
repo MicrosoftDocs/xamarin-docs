@@ -45,11 +45,11 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 2. Select **iOS Build**.
 3. For the iPhone Simulator, in the **Supported architectures** dropdown, select either **x86\_64** or **i386 + x86\_64**:
 
-   [![Setting Supported architectures to x86\_64 or i386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Setting Supported architectures to x86\_64 or i386 + x86\_64.](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. For physical devices, select one of the available **ARM64** combinations:
 
-   [![Setting Supported architectures to one of the ARM64 combinations](Images/Image02.png "Setting Supported architectures to one of the ARM64 combinations")](Images/Image02-large.png#lightbox)
+   [![Setting Supported architectures to one of the ARM64 combinations](Images/Image02.png "Setting Supported architectures to one of the ARM64 combinations."](Images/Image02-large.png#lightbox)
 
 5. Click **OK**.
 6. Perform a clean build.
@@ -60,11 +60,11 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 2. Select **iOS Build**.
 3. For the iPhone Simulator, set **Supported architectures** to either **x86\_64** or **i386 + x86\_64**: 
 
-   [![Setting Supported architectures to x86_64 or i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Setting Supported architectures to x86_64 or i386 + x86\_64.](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. For physical devices, select one of the available **ARM64** combinations:
     
-   [![Setting Supported architectures to one of the ARM64 combinations](Images/VS01.png "Setting Supported architectures to one of the ARM64 combinations")](Images/VS01-large.png#lightbox)
+   [![Setting Supported architectures to one of the ARM64 combinations](Images/VS01.png "Setting Supported architectures to one of the ARM64 combinations."](Images/VS01-large.png#lightbox)
 
 5. Save your changes.
 6. Perform a clean build.

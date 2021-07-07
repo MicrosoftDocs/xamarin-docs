@@ -38,7 +38,7 @@ delegates tasks to the following helper classes:
 The relationship between the `RecyclerView`, `LayoutManager`, and
 `Adapter` classes is depicted in the following diagram:
 
-![Diagram of RecyclerView containing LayoutManager, using Adapter to access Data Set](parts-and-functionality-images/01-recyclerview-diagram.png)
+![Diagram of RecyclerView containing LayoutManager, using Adapter to access Data Set.](parts-and-functionality-images/01-recyclerview-diagram.png)
 
 As this figure illustrates, the `LayoutManager` can be thought of as
 the intermediary between the `Adapter` and the `RecyclerView`. The
@@ -101,7 +101,7 @@ that fit on the screen and it reuses those item layouts as the user
 scrolls. When the view first scrolls out of sight, it goes through the
 recycling process illustrated in the following figure:
 
-[![Diagram illustrating the six steps of view recycling](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
+[![Diagram illustrating the six steps of view recycling.](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1. When a view scrolls out of sight and is no longer displayed, it
     becomes a *scrap view*.
@@ -204,7 +204,7 @@ The following drawing illustrates how the adapter maps content in a
 data source through view holders to individual views within each row
 item in the `RecyclerView`:
 
-[![Diagram illustrating Adapter connecting Data Source to ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
+[![Diagram illustrating Adapter connecting Data Source to ViewHolders.](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 The adapter loads each `RecyclerView` row with data for a particular
 row item. For row position *P*, for example, the adapter locates the

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Path
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Path` class derives from the `Shape` class, and can be used to draw curves and complex shapes. These curves and shapes are often described using `Geometry` objects. For information on the properties that the `Path` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -45,7 +45,7 @@ The following XAML example shows how to draw a triangle using path markup syntax
 
 The `Data` string begins with the move command, indicated by `M`, which establishes an absolute start point for the path. `L` is the line command, which creates a straight line from the start point to the specified end point. `Z` is the close command, which creates a line that connects the current point to the starting point. The result is a triangle:
 
-![Path triangle](path-images/triangle.png "Path triangle")
+![Path triangle.](path-images/triangle.png "Path triangle")
 
 For more information about path markup syntax, see [Xamarin.Forms Path markup syntax](path-markup-syntax.md).
 
@@ -83,7 +83,7 @@ The following XAML example shows how to draw a triangle using a `PathGeometry` o
 
 In this example, the start point of the triangle is (10,100). A line segment is drawn from (10,100) to (100,100), and from (100,100) to (100,50). Then the figures first and last segments are connected, because the `PathFigure.IsClosed` property is set to `true`. The result is a triangle:
 
-![Path triangle](path-images/triangle.png "Path triangle")
+![Path triangle.](path-images/triangle.png "Path triangle")
 
 For more information about geometries, see [Xamarin.Forms Geometries](geometries.md).
 

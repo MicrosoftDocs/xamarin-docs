@@ -20,7 +20,7 @@ Apple has added several enhancements to iOS 10.3 that allow an app to manage its
 - `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
 - `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
 
-![A sample alert when an app changes its icon](alternate-app-icons-images/icons04.png)
+![A sample alert when an app changes its icon.](alternate-app-icons-images/icons04.png)
 
 <a name="Adding-Alternate-Icons"></a>
 
@@ -32,15 +32,15 @@ Do the following:
 
 1. Select the required icon images in a folder, select all and drag them to the **Resources** folder in the **Solution Explorer**:
 
-    ![Select the icons images from a folder](alternate-app-icons-images/icons00.png)
+    ![Select the icons images from a folder.](alternate-app-icons-images/icons00.png)
 
 2. When prompted, select **Copy**, **Use the same action for all selected files** and click the **OK** button:
 
-    ![The Add File to Folder dialog box](alternate-app-icons-images/icons02.png)
+    ![The Add File to Folder dialog box.](alternate-app-icons-images/icons02.png)
 
 3. The **Resources** folder should look like the following when completed:
 
-    ![The Resources folder should look like this](alternate-app-icons-images/icons01.png)
+    ![The Resources folder should look like this.](alternate-app-icons-images/icons01.png)
 
 <a name="Modifying-the-Info.plist-File"></a>
 
@@ -62,7 +62,7 @@ Do the following:
 
 The resulting **Info.plist** file should look like the following when completed:
 
-![The completed Info.plist file](alternate-app-icons-images/icons03.png)
+![The completed Info.plist file.](alternate-app-icons-images/icons03.png)
 
 Or like this if opened in a text editor:
 
@@ -153,11 +153,11 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 When the app is run and the user select an alternate icon, an alert like the following will be displayed:
 
-![A sample alert when an app changes its icon](alternate-app-icons-images/icons04.png)
+![A sample alert when an app changes its icon.](alternate-app-icons-images/icons04.png)
 
 If the user switches back to the primary icon, an alert like the following will be displayed:
 
-![A sample alert when an app changes to the primary icon](alternate-app-icons-images/icons05.png)
+![A sample alert when an app changes to the primary icon.](alternate-app-icons-images/icons05.png)
 
 <a name="Summary"></a>
 

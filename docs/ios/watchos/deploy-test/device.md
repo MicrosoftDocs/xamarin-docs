@@ -27,25 +27,25 @@ Testing iOS apps on a real iPhone or iPad has always required
   the device to be registered on the Dev Center. The device list
   looks like this (click the plus sign **+** to add a new device):
 
-![The device list looks like this](device-images/devices-sml.png)
+![The device list looks like this.](device-images/devices-sml.png)
 
 Watches are no different - you now need to add your Apple Watch
   device before deploying apps to it. Find the watch's UDID using
   **Xcode** (**Windows > Devices** list). When the paired phone
   is connected the watch's information will also be displayed:
 
-[![Paired Watch Information](device-images/xcode-devices-sml.png)](device-images/xcode-devices.png#lightbox)
+[![Paired Watch Information.](device-images/xcode-devices-sml.png)](device-images/xcode-devices.png#lightbox)
 
 When you know the Watch's UDID, add it to the device list
   in the Dev Center:
 
-![The Watch's UDID in the device list](device-images/devices-watch-sml.png)
+![The Watch's UDID in the device list.](device-images/devices-watch-sml.png)
 
 Once the Watch device has been added, ensure it is selected
   in any new or existing development or ad-hoc provisioning
   profiles you create:
 
-![Available device list](device-images/devices-provisioning.png)
+![Available device list.](device-images/devices-provisioning.png)
 
 Don't forget if you edit an existing provisioning profile
   to download and re-install it!
@@ -63,12 +63,12 @@ If you have a wildcard App ID, *only one Provisioning Profile
   project then you'll need a provisioning profile for each
   App ID:
 
-![The Development Provisioning Profile](device-images/provisioningprofile-development.png)
+![The Development Provisioning Profile.](device-images/provisioningprofile-development.png)
 
 Once you've created all three profiles, they'll appear
   in the list. Remember to download and install each one:
 
-![The available Development Provisioning Profiles](device-images/provisioningprofiles.png)
+![The available Development Provisioning Profiles.](device-images/provisioningprofiles.png)
 
 You can verify the provisioning profile in the **Project Options**
   by selecting the **Build > iOS Bundle Signing** screen
@@ -78,7 +78,7 @@ The **Provisioning Profile** list will show all matching
   profiles - you should see the matching profiles that
   you've created in this drop-down list:
 
-![The Provisioning Profile list](device-images/options-selectprofile.png)
+![The Provisioning Profile list.](device-images/options-selectprofile.png)
 
 <a name="testing"></a>
 
@@ -123,7 +123,7 @@ This may occur when building in DEBUG mode to deploy to an Apple Watch device.
 To *temporarily* work around this issue, disable **Incremental Builds** in the Watch Extension
 **Project Options > Build > watchOS Build** window:
 
-[![The Incremental Builds checkbox](device-images/disable-incremental-sml.png)](device-images/disable-incremental.png#lightbox)
+[![The Incremental Builds checkbox.](device-images/disable-incremental-sml.png)](device-images/disable-incremental.png#lightbox)
 
 This will be fixed in a future release, after which incremental builds can be
 re-enabled to take advantage of faster build times.
@@ -141,7 +141,7 @@ Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![Invalid Application Executable alert](device-images/invalid-application-executable.png)
+![Invalid Application Executable alert.](device-images/invalid-application-executable.png)
 
 If these messages appear *on the watch screen* after the
   app has attempted to install, there could be a couple of

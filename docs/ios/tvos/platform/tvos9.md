@@ -85,7 +85,7 @@ The Siri Remote is currently available in the following countries:
 
 All other countries will receive the Apple TV Remote that replaces the Siri button with a Search button that brings up the default Search screen with text input for searching:
 
-[![Siri Remote](tvos9-images/remote02.png)](tvos9-images/remote02.png#lightbox)
+[![Siri Remote.](tvos9-images/remote02.png)](tvos9-images/remote02.png#lightbox)
 
 For more information, please see our [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
@@ -149,7 +149,7 @@ For more information, please see our [Working with Navigation and Focus](~/ios/t
 
 The Apple TV Home screen shows all the apps that are installed and provides a way to access the User Preferences:
 
-[![The Home Screen](tvos9-images/home01.png)](tvos9-images/home01.png#lightbox)
+[![The Home Screen.](tvos9-images/home01.png)](tvos9-images/home01.png#lightbox)
 
 The user navigates a grid of app icons using touch gestures on the Siri Remote using focus to select an app and launch it. The App Icon is the your first chance to make a great impression on your potential user and should communicate your app's purpose at a glance.
 
@@ -163,7 +163,7 @@ For more information, please see our [Working with Icons and Images](~/ios/tvos/
 
 If the user has placed your Xamarin.tvOS app on the Top Row on the Apple TV Home screen, a large Top Shelf Image will be displayed when your app is selected by the user. This image should highlight the features of your app or provide direct links to its content.
 
-[![The Top Shelf](tvos9-images/topshelf01.png)](tvos9-images/topshelf01.png#lightbox)
+[![The Top Shelf.](tvos9-images/topshelf01.png)](tvos9-images/topshelf01.png#lightbox)
 
 The Top Shelf Image can either be provided as a single static `.png` or `.lsr` file or it can be dynamically created at runtime as a single row of Focusable Items.
 

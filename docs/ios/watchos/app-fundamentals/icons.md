@@ -23,10 +23,10 @@ Apple Watch solutions require two sets of icons:
 
 |Icon|Description|Appearance|
 |-|-|-|
-|iOS App Icon|Appears on the iPhone and starts the Parent app|![iOS app icon](icons-images/icon-ios.png)|
-|Watch App Icon|Appears on the Apple Watch home screen|![watchOS app icon](icons-images/icon-home.png)|
-||Appears on Watch notifications|![watchOS notification icon](icons-images/notification-icon.png)|
-||Appears in the [iOS Apple Watch App](~/ios/watchos/app-fundamentals/settings.md)|![iOS Watch App icon](icons-images/watch-app-sml.png)|
+|iOS App Icon|Appears on the iPhone and starts the Parent app|![iOS app icon.](icons-images/icon-ios.png)|
+|Watch App Icon|Appears on the Apple Watch home screen|![watchOS app icon.](icons-images/icon-home.png)|
+||Appears on Watch notifications|![watchOS notification icon.](icons-images/notification-icon.png)|
+||Appears in the [iOS Apple Watch App](~/ios/watchos/app-fundamentals/settings.md)|![iOS Watch App icon.](icons-images/watch-app-sml.png)|
 
 ## Configuring Your Solution
 
@@ -61,15 +61,15 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
     **File > Add > New File... > iOS > Asset Catalog** to add an
     asset catalog to the project.
 
-    ![Add an asset catalog to the project](icons-images/newasset.png)
+    ![Add an asset catalog to the project.](icons-images/newasset.png)
 
 2. Double-click on the **AppIcon.appiconset/Contents.json** file
 
-    ![The AppIcon contents](icons-images/xcassets-iconset-sml.png)
+    ![The AppIcon contents.](icons-images/xcassets-iconset-sml.png)
 
 3. Add all the watchOS images, as shown in this screenshot:
 
-    [![Add all the watchOS images, as shown in this screenshot](icons-images/appicons-sml.png)](icons-images/appicons.png#lightbox)
+    [![Add all the watchOS images, as shown in this screenshot.](icons-images/appicons-sml.png)](icons-images/appicons.png#lightbox)
 
     Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
     (the dimensions are also shown on the screen). Remember
@@ -78,7 +78,7 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
 
     Your icon list should look something like this:
 
-    ![The icon list in the Solution Explorer](icons-images/xcassets-complete-sml.png)
+    ![The icon list in the Solution Explorer.](icons-images/xcassets-complete-sml.png)
 
 4. To ensure the asset catalog is included in the app, add
   the following key and value to the **Watch App's Info.plist**:

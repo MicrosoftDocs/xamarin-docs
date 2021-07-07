@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Right-to-left localization
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _Right-to-left localization adds support for right-to-left flow direction to Xamarin.Forms applications._
 
@@ -28,7 +28,7 @@ Flow direction is the direction in which the UI elements on the page are scanned
 
 Setting the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property to [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) on an element generally sets the alignment to the right, the reading order to right-to-left, and the layout of the control to flow from right-to-left:
 
-[![TodoItemPage in Arabic with a right-to-left flow direction](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in Arabic with a right-to-left flow direction")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in Arabic with a right-to-left flow direction")
+[![TodoItemPage in Arabic with a right-to-left flow direction](rtl-images/TodoItemPage-Arabic.png "TodoItemPage in Arabic with a right-to-left flow direction."](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage in Arabic with a right-to-left flow direction")
 
 > [!TIP]
 > You should only set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property on initial layout. Changing this value at runtime causes an expensive layout process that will affect performance.
@@ -68,7 +68,7 @@ The required right-to-left locale should be added as a supported language to the
 </array>
 ```
 
-![Info.plist supported languages](rtl-images/ios-locales.png "Info.plist supported languages")
+![Info.plist supported languages.](rtl-images/ios-locales.png "Info.plist supported languages")
 
 For more information, see [Localization Basics in iOS](../../../ios/app-fundamentals/localization/index.md#localization-basics-in-ios).
 

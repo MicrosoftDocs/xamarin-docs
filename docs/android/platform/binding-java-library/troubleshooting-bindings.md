@@ -72,7 +72,7 @@ extract the file **classes.jar** from the archive file. The following
 is a sample screenshot of using JD-GUI to analyze the
 [Picasso](https://square.github.io/picasso/) JAR:
 
-![Using the Java Decompiler to analyze picasso-2.5.2.jar](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
+![Using the Java Decompiler to analyze picasso-2.5.2.jar.](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
 
 Once you have decompiled the Android library, examine the source code. Generally speaking, look for :
 
@@ -99,7 +99,7 @@ Once you have decompiled the Android library, examine the source code. Generally
 As a part of building a binding project, Xamarin.Android will generate
 an XML file name **obj/Debug/api.xml**:
 
-![Generated api.xml under obj/Debug](troubleshooting-bindings-images/troubleshoot-bindings-02.png)
+![Generated api.xml under obj/Debug.](troubleshooting-bindings-images/troubleshoot-bindings-02.png)
 
 This file provides a list of all the Java APIs that Xamarin.Android is
 trying bind. The contents of this file can help identify any missing

@@ -21,47 +21,47 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
 1. Choose **File > New > Project...** or press the **Create new project...** button:
 
-    [![Create a new project](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![Create a new project.](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. Search for "Xamarin" or choose **Mobile** from the **Project type** menu. Select the **Mobile App (Xamarin.Forms)** project type:
 
-    [![Filter for Xamarin projects](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [![Filter for Xamarin projects.](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
 3. Choose a project name &ndash; the example uses "AwesomeApp":
 
-    [![Choose a project name](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![Choose a project name.](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
 4. Click on the **Blank** project type and ensure **Android** and **iOS** are selected:
 
-    [![Android and iOS, with .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
+    [![Android and iOS, with .NET Standard.](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
 5. Wait until the NuGet packages are restored (a "Restore completed" message will appear in the status bar).
 
 6. New Visual Studio 2019 installations won't have an Android emulator configured. Click the dropdown arrow on the **Debug** button and choose **Create Android Emulator** to launch the emulator creation screen:
 
-    ![Create Android Emulator dropdown](images/win-2019/debug-dropdown.png)
+    ![Create Android Emulator dropdown.](images/win-2019/debug-dropdown.png)
 
 7. In the emulator creation screen, use the default settings and click the **Create** button:
 
-    [![Android emulator creation screen](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+    [![Android emulator creation screen.](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
 8. Creating an emulator will return you to the Device Manager window. Click the **Start** button to launch the new emulator:
 
-    ![Android emulator in the Device Manager](images/win-2019/start-emulator.png)
+    ![Android emulator in the Device Manager.](images/win-2019/start-emulator.png)
 
 9. Visual Studio 2019 should now show the name of the new emulator on the **Debug** button:
 
-    ![Android emulator name on the Debug button](images/win-2019/debug-emulator-name.png)
+    ![Android emulator name on the Debug button.](images/win-2019/debug-emulator-name.png)
 
 10. Click the **Debug** button to build and deploy the application to the Android emulator:
 
-    ![Android emulator displaying the application](images/win-2019/android-emulator.png)
+    ![Android emulator displaying the application.](images/win-2019/android-emulator.png)
 
 ## Customize the application
 
@@ -86,7 +86,7 @@ The application can be customized to add interactive functionality. Perform the 
 
 3. Debug the app on Android:
 
-    ![Android app](images/win/07-sml.png)
+    ![Android app.](images/win/07-sml.png)
 
 > [!NOTE]
 > The sample application includes the additional interactive functionality that is not covered in the video.
@@ -106,17 +106,17 @@ This video covers the process of building and testing an iOS app using Visual St
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
 1. Choose **File > New > Project...** or press the **Create new project...** button, then select **Visual C# > Cross-Platform > Mobile App (Xamarin.Forms)**:
 
-    [![Mobile App (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
+    [![Mobile App (Xamarin.Forms).](images/win/01-sml.png)](images/win/01.png#lightbox)
 
 2. Ensure **Android** and **iOS** are selected, with **.NET Standard** code sharing:
 
-    [![Android and iOS, with .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
+    [![Android and iOS, with .NET Standard.](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. Wait until the NuGet packages are restored (a "Restore completed" message will appear in the status bar).
 
@@ -155,17 +155,17 @@ Follow these steps along with the video above:
 
 ## Step-by-step instructions for Mac
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
 1. Choose **File > New Solution...** or press the **New Project...** button, then select **Multiplatform > App > Blank Forms App**:
 
-    [![Blank Forms App](images/01-sml.png)](images/01.png#lightbox)
+    [![Blank Forms App.](images/01-sml.png)](images/01.png#lightbox)
 
 2. Ensure **Android** and **iOS** are selected, with **.NET Standard** code sharing:
 
-    [![Android and iOS, with .NET Standard](images/02-sml.png)](images/02.png#lightbox)
+    [![Android and iOS, with .NET Standard.](images/02-sml.png)](images/02.png#lightbox)
 
 3. Restore NuGet packages, by right-clicking on the solution:
 
@@ -196,11 +196,11 @@ Follow these steps along with the video above:
 
 8. Right-click to set iOS to the **Startup Project**:
 
-    [![Set the startup project to iOS](images/08-sml.png)](images/08.png#lightbox)
+    [![Set the startup project to iOS.](images/08-sml.png)](images/08.png#lightbox)
 
 9. Debug the app on iOS:
 
-    ![iOS app](images/09-sml.png)
+    ![iOS app.](images/09-sml.png)
 
 ::: zone-end
 

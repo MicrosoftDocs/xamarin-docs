@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Authenticate Users with an Azure Cosmos DB Document Database and Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB document databases support partitioned collections, which can span multiple servers and partitions, while supporting unlimited storage and throughput. This article explains how to combine access control with partitioned collections, so that a user can only access their own documents in a Xamarin.Forms application._
 
@@ -29,7 +29,7 @@ Exposing a master key opens a Cosmos DB account to the possibility of malicious 
 
 A typical approach to requesting, generating, and delivering resource tokens to a mobile application is to use a resource token broker. The following diagram shows a high-level overview of how the sample application uses a resource token broker to manage access to the document database data:
 
-![Document Database Authentication Process](azure-cosmosdb-auth-images/documentdb-authentication.png)
+![Document Database Authentication Process.](azure-cosmosdb-auth-images/documentdb-authentication.png)
 
 The resource token broker is a mid-tier Web API service, hosted in Azure App Service, which possesses the master key of the Cosmos DB account. The sample application uses the resource token broker to manage access to the document database data as follows:
 
@@ -78,7 +78,7 @@ The process for hosting the resource token broker in Azure App Service is as fol
 
     The following screenshot demonstrates this configuration:
 
-    [![App Service Web App Settings](azure-cosmosdb-auth-images/azure-web-app-settings.png)](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
+    [![App Service Web App Settings.](azure-cosmosdb-auth-images/azure-web-app-settings.png)](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
 
 1. Publish the resource token broker solution to the Azure App Service web app.
 
@@ -95,7 +95,7 @@ The process for creating a Facebook app to perform authentication is as follows:
 
   The following screenshot demonstrates this configuration:
 
-  ![Facebook Login OAuth Settings](azure-cosmosdb-auth-images/facebook-oauth-settings.png)
+  ![Facebook Login OAuth Settings.](azure-cosmosdb-auth-images/facebook-oauth-settings.png)
 
 For more information, see [Register your application with Facebook](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook).
 
@@ -110,7 +110,7 @@ The process for configuring App Service easy authentication is as follows:
 
     The following screenshot demonstrates this configuration:
 
-    [![App Service Web App Authentication Settings](azure-cosmosdb-auth-images/app-service-authentication-settings.png)](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
+    [![App Service Web App Authentication Settings.](azure-cosmosdb-auth-images/app-service-authentication-settings.png)](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 The App Service web app should also be configured to communicate with the Facebook app to enable the authentication flow. This can be accomplished by selecting the Facebook identity provider, and entering the **App ID** and **App Secret** values from the Facebook app settings on the Facebook Developer Center. For more information, see [Add Facebook information to your application](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -137,7 +137,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 This causes an OAuth authentication flow to be initiated between Azure App Service and Facebook, which displays the Facebook login page:
 
-![Facebook Login](azure-cosmosdb-auth-images/login.png)
+![Facebook Login.](azure-cosmosdb-auth-images/login.png)
 
 The login can be cancelled by pressing the **Cancel** button on iOS or by pressing the **Back** button on Android, in which case the user remains unauthenticated and the identity provider user interface is removed from the screen.
 

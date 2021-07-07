@@ -34,7 +34,7 @@
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of Entry containing text, on iOS and Android](../images/text-changes.png "Entry with text")](../images/text-changes-large.png#lightbox "Entry with text")
+    [![Screenshot of Entry containing text, on iOS and Android](../images/text-changes.png "Entry with text."](../images/text-changes-large.png#lightbox "Entry with text")
 
     Set breakpoints in the two event handlers and enter text into the [`Entry`](xref:Xamarin.Forms.Entry) and observe the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) and [`Completed`](xref:Xamarin.Forms.Entry.Completed) events firing.
 
@@ -76,7 +76,7 @@
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of Entry containing text, on iOS and Android](../images/text-changes.png "Entry with text")](../images/text-changes-large.png#lightbox "Entry with text")
+    [![Screenshot of Entry containing text, on iOS and Android](../images/text-changes.png "Entry with text."](../images/text-changes-large.png#lightbox "Entry with text")
 
     Set breakpoints in the two event handlers and enter text into the [`Entry`](xref:Xamarin.Forms.Entry) and observe the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) and [`Completed`](xref:Xamarin.Forms.Entry.Completed) events firing.
 

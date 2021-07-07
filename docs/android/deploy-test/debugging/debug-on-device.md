@@ -30,11 +30,11 @@ can connect to the running application:
 
 # [Visual Studio](#tab/windows)
 
-![Debug configuration selected](debug-on-device-images/image1-vs.png)
+![Debug configuration selected.](debug-on-device-images/image1-vs.png)
 
 Next, a breakpoint is set in the code:
 
-![Breakpoint set at line of code](debug-on-device-images/image2-vs.png)
+![Breakpoint set at line of code.](debug-on-device-images/image2-vs.png)
 
 Once the device has been selected, Xamarin.Android will connect to the 
 device, deploy the application, and then run it. When the breakpoint is 
@@ -42,15 +42,15 @@ reached, the debugger will stop the application, allowing the
 application to be debugged in a fashion similar to any other C# 
 application: 
 
-![Breakpoint reached](debug-on-device-images/image3-vs.png)
+![Breakpoint reached.](debug-on-device-images/image3-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Debug configuration selected](debug-on-device-images/image1-xs.png)
+![Debug configuration selected.](debug-on-device-images/image1-xs.png)
 
 Next, a breakpoint is set in the code:
 
-![Breakpoint set at line of code](debug-on-device-images/image2-xs.png)
+![Breakpoint set at line of code.](debug-on-device-images/image2-xs.png)
 
 Once the device has been selected, Xamarin.Android will connect to the 
 device, deploy the application, and then run it. When the breakpoint is 
@@ -58,7 +58,7 @@ reached, the debugger will stop the application, allowing the
 application to be debugged in a fashion similar to any other C# 
 application: 
 
-![Breakpoint reached](debug-on-device-images/image3-xs.png)
+![Breakpoint reached.](debug-on-device-images/image3-xs.png)
 
 -----
 

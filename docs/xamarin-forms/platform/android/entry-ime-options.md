@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Entry Input Method Editor Options on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific sets the input method editor (IME) options for the soft keyboard for an [`Entry`](xref:Xamarin.Forms.Entry). This includes setting the user action button in the bottom corner of the soft keyboard, and the interactions with the `Entry`. It's consumed in XAML by setting the [`Entry.ImeOptions`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) attached property to a value of the [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumeration:
 
@@ -54,7 +54,7 @@ The `Entry.On<Android>` method specifies that this platform-specific will only r
 
 The result is that a specified [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) value is applied to the soft keyboard for the [`Entry`](xref:Xamarin.Forms.Entry), which sets the input method editor options:
 
-[![Entry input method editor platform-specific](entry-ime-options-images/entry-imeoptions.png "Entry input method editor platform-specific")](entry-ime-options-images/entry-imeoptions-large.png#lightbox "Entry input method editor platform-specific")
+[![Entry input method editor platform-specific](entry-ime-options-images/entry-imeoptions.png "Entry input method editor platform-specific."](entry-ime-options-images/entry-imeoptions-large.png#lightbox "Entry input method editor platform-specific")
 
 ## Related links
 

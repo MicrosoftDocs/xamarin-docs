@@ -38,11 +38,11 @@ The **.mlpd** for a current session can also be saved by choosing **File > Save 
 
 **Visual Studio for Mac**:
 
-![Saving .mlpd file in Visual Studio for Mac](troubleshooting-images/image17.png)
+![Saving .mlpd file in Visual Studio for Mac.](troubleshooting-images/image17.png)
 
 **Visual Studio**:
 
-![Saving .mlpd file in Visual Studio](troubleshooting-images/image17-vs.png)
+![Saving .mlpd file in Visual Studio.](troubleshooting-images/image17-vs.png)
 
 It is important to note that **.mlpd** contain a lot of information, and the file size will be large.
 
@@ -68,7 +68,7 @@ Check the following settings to resolve this:
 
 If you run into this error box when using the profiler in Visual Studio :
 
-![Error box when using the profiler in Visual Studio](troubleshooting-images/error.png)
+![Error box when using the profiler in Visual Studio.](troubleshooting-images/error.png)
 
 It is normally due to being unable to launch to the Simulator / Emulator. Try and run the app normally, fix the issues that it gives, and then try to use the Profiler again.
 

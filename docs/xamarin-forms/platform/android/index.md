@@ -59,11 +59,11 @@ Xamarin.Forms Android projects now use `FormsAppCompatActivity` as the base clas
 
 Here is the **Todo** sample with the default `FormsApplicationActivity`:
 
-[![Todo Sample Application Without AppCompat](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
+[![Todo Sample Application Without AppCompat.](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
 
 And this is the same code after upgrading the project to use `FormsAppCompatActivity` (and adding the additional theme information):
 
-[![Todo Sample Application With AppCompat and Theming](images/post-appcompat-sml.png)](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
+[![Todo Sample Application With AppCompat and Theming.](images/post-appcompat-sml.png)](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
 
 > [!NOTE]
 > When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.

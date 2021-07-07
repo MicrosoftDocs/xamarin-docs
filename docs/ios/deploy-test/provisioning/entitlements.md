@@ -38,12 +38,12 @@ To configure the entitlements in Visual Studio for Mac, do the following:
 1. In the **Solution pad**, double-click the **Info.plist** file to open it.
 2. In the **Identity** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-    ![Enter a Bundle Identifier](entitlements-images/servicexs01-sml.png)
+    ![Enter a Bundle Identifier.](entitlements-images/servicexs01-sml.png)
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution pad**, double-click the **Entitlements.plist** file to open it for editing:
 
-    ![Editing the Entitlements](entitlements-images/servicexs02-sml.png)
+    ![Editing the Entitlements.](entitlements-images/servicexs02-sml.png)
 
 5. Select and configure any entitlements required for the Xamarin.iOS application so that they match the setup that was defined when the App ID was created.
 6. Save the changes to the **Entitlements.plist** file.
@@ -55,12 +55,12 @@ To configure the entitlements in Visual Studio, do the following:
 1. In the **Solution Explorer**, double-click the **Info.plist** to open it for editing.
 2. In the **iOS Application Target** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-    ![Setting the Bundle Identifier](entitlements-images/servicevs01-sml.png)
+    ![Setting the Bundle Identifier.](entitlements-images/servicevs01-sml.png)
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution Explorer**, double-click on the **Entitlements.plist** file to open it:
 
-    ![Editing the Entitlements](entitlements-images/servicevs02-sml.png)
+    ![Editing the Entitlements.](entitlements-images/servicevs02-sml.png)
 
     You can also right-click the **Entitlements.plist** file and choose **Open with...** the XML Source editor which will allow you to set the Entitlement property and key value as detailed in the [Entitlement key Reference](#entitlement-key-reference) section below.
 
@@ -77,10 +77,10 @@ To add an Entitlements.plist file to your Xamarin.iOS do the following:
 
 1. Right-click on the project file and browse to **Add > New File…**:
 
-    ![Add Files context menu](entitlements-images/image1-sml.png)
+    ![Add Files context menu.](entitlements-images/image1-sml.png)
 2. In the New File dialog select **iOS > Property List** and name it Entitlements:
 
-    ![New File dialog](entitlements-images/image2-sml.png)
+    ![New File dialog.](entitlements-images/image2-sml.png)
 
 ## Entitlement key reference
 

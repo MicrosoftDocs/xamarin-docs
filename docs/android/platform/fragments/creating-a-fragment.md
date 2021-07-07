@@ -135,7 +135,7 @@ For example, when an Activity pauses, all of its associated Fragments
 are paused. The following diagram outlines the lifecycle of the
 Fragment.
 
-[![Flow diagram illustrating the Fragment lifecycle](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
+[![Flow diagram illustrating the Fragment lifecycle.](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 ### Fragment Creation Lifecycle Methods
 
@@ -353,4 +353,4 @@ public override void OnCreate(Bundle savedState)
 
 The following screen shows how this menu would look:
 
-[![Example screenshot of My Trips app displaying menu items](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)
+[![Example screenshot of My Trips app displaying menu items.](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

@@ -107,7 +107,7 @@ resource ID &mdash; `Resource.Layout.Main` refers to the
 
 Run the application. You should see the following layout:
 
-[![Screenshot of a relative layout with a TextView, EditText, and two buttons](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
+[![Screenshot of a relative layout with a TextView, EditText, and two buttons.](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
 ## Resources
 

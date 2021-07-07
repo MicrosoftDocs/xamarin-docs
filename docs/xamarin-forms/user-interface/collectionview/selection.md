@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CollectionView Selection
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control item selection:
 
@@ -78,7 +78,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 The following screenshots show single item selection in a [`CollectionView`](xref:Xamarin.Forms.CollectionView):
 
-[![Screenshot of a CollectionView vertical list with single selection, on iOS and Android](selection-images/single-selection.png "CollectionView vertical list with single selection")](selection-images/single-selection-large.png#lightbox "CollectionView vertical list with single selection")
+[![Screenshot of a CollectionView vertical list with single selection, on iOS and Android](selection-images/single-selection.png "CollectionView vertical list with single selection."](selection-images/single-selection-large.png#lightbox "CollectionView vertical list with single selection")
 
 ## Multiple selection
 
@@ -121,7 +121,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 The following screenshots show multiple item selection in a [`CollectionView`](xref:Xamarin.Forms.CollectionView):
 
-[![Screenshot of a CollectionView vertical list with multiple selection, on iOS and Android](selection-images/multiple-selection.png "CollectionView vertical list with multiple selection")](selection-images/multiple-selection-large.png#lightbox "CollectionView vertical list with multiple selection")
+[![Screenshot of a CollectionView vertical list with multiple selection, on iOS and Android](selection-images/multiple-selection.png "CollectionView vertical list with multiple selection."](selection-images/multiple-selection-large.png#lightbox "CollectionView vertical list with multiple selection")
 
 ## Single pre-selection
 
@@ -184,7 +184,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 Therefore, when the [`CollectionView`](xref:Xamarin.Forms.CollectionView) appears, the fourth item in the list is pre-selected:
 
-[![Screenshot of a CollectionView vertical list with single pre-selection, on iOS and Android](selection-images/single-pre-selection.png "CollectionView vertical list with single pre-selection")](selection-images/single-pre-selection-large.png#lightbox "CollectionView vertical list with single pre-selection")
+[![Screenshot of a CollectionView vertical list with single pre-selection, on iOS and Android](selection-images/single-pre-selection.png "CollectionView vertical list with single pre-selection."](selection-images/single-pre-selection-large.png#lightbox "CollectionView vertical list with single pre-selection")
 
 ## Multiple pre-selection
 
@@ -252,7 +252,7 @@ namespace CollectionViewDemos.ViewModels
 
 Therefore, when the [`CollectionView`](xref:Xamarin.Forms.CollectionView) appears, the second, fourth, and fifth items in the list are pre-selected:
 
-[![Screenshot of a CollectionView vertical list with multiple pre-selection, on iOS and Android](selection-images/multiple-pre-selection.png "CollectionView vertical list with multiple pre-selection")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView vertical list with multiple pre-selection")
+[![Screenshot of a CollectionView vertical list with multiple pre-selection, on iOS and Android](selection-images/multiple-pre-selection.png "CollectionView vertical list with multiple pre-selection."](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView vertical list with multiple pre-selection")
 
 ## Clear selections
 
@@ -301,7 +301,7 @@ The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) and [`
 
 In this example, the [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) property value is set to `Grid` because the root element of the [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) is a [`Grid`](xref:Xamarin.Forms.Grid). The `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) specifies that when an item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is selected, the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) of the item will be set to `LightSkyBlue`:
 
-[![Screenshot of a CollectionView vertical list with a custom single selection color, on iOS and Android](selection-images/single-selection-color.png "CollectionView vertical list with a custom single selection color")](selection-images/single-selection-color-large.png#lightbox "CollectionView vertical list with a custom single selection color")
+[![Screenshot of a CollectionView vertical list with a custom single selection color, on iOS and Android](selection-images/single-selection-color.png "CollectionView vertical list with a custom single selection color."](selection-images/single-selection-color-large.png#lightbox "CollectionView vertical list with a custom single selection color")
 
 For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 

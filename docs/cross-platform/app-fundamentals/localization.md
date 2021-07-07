@@ -64,7 +64,7 @@ German strings (for example) can be very long; sometimes a relatively short word
 
 Compare the string lengths for a few items on the iOS home screen in English, German, and Japanese:
 
-[![German vs Japanese string length](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
+[![German vs Japanese string length.](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
 
 Notice that **Settings** in English (8 characters) requires 13 characters for the German translation but only 2 characters in Japanese.
 

@@ -88,11 +88,11 @@ Supported screen sixes are declared in the **Properites/AndroidManifest.xml** fi
 
 # [Visual Studio](#tab/windows)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest.](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest.](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
@@ -132,11 +132,11 @@ alternate layout would go in a folder **layout-sw700dp**:
 
 # [Visual Studio](#tab/windows)
 
-![Layout folder for 700 dp screen width](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
+![Layout folder for 700 dp screen width.](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Layout folder for 700 dp screen width](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
+![Layout folder for 700 dp screen width.](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
 
@@ -159,11 +159,11 @@ different screen sizes:
 
 # [Visual Studio](#tab/windows)
 
-![Alternate resources for four screen sizes](resources-for-varying-screens-images/04-layout-large-vs.png)
+![Alternate resources for four screen sizes.](resources-for-varying-screens-images/04-layout-large-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Alternate resources for four screen sizes](resources-for-varying-screens-images/04-layout-large-xs.png)
+![Alternate resources for four screen sizes.](resources-for-varying-screens-images/04-layout-large-xs.png)
 
 -----
 
@@ -186,11 +186,11 @@ qualifiers as shown in the following screenshot:
 
 # [Visual Studio](#tab/windows)
 
-![Alternate resources with both qualifiers](resources-for-varying-screens-images/05-both-qualifiers-vs.png)
+![Alternate resources with both qualifiers.](resources-for-varying-screens-images/05-both-qualifiers-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Alternate resources with both qualifiers](resources-for-varying-screens-images/05-both-qualifiers-xs.png)
+![Alternate resources with both qualifiers.](resources-for-varying-screens-images/05-both-qualifiers-xs.png)
 
 -----
 
@@ -205,12 +205,12 @@ For example, the image below is an example of layout and appearance
 problems that may occur when density-specify resources are not
 provided.
 
-![Screenshots without density resources](resources-for-varying-screens-images/06-density-not-provided.png)
+![Screenshots without density resources.](resources-for-varying-screens-images/06-density-not-provided.png)
 
 Compare this to a layout that is designed with density-specific
 resources:
 
-![Screenshots with density-specific resources](resources-for-varying-screens-images/07-density-specific-resources.png)
+![Screenshots with density-specific resources.](resources-for-varying-screens-images/07-density-specific-resources.png)
 
 ### Create varying density resources with Android Asset Studio
 
@@ -219,7 +219,7 @@ tedious. As such, Google has created an online utility that can reduce
 some of the tedium involved with the creation of these bitmaps called the
 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
 
-[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
+[![Android Asset Studio.](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 This website will help with creation of bitmaps that target the four
 common screen densities by providing one image. Android Asset Studio

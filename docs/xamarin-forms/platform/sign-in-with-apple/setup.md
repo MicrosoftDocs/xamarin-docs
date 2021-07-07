@@ -22,11 +22,11 @@ Before you can use Sign In with Apple in your applications, you'll need to addre
 
 Register your domain name and verify it with Apple in the [More](https://developer.apple.com/account/resources/services/list) section of the *Certificates, Identifiers & Profiles* section.
 
-![More section](sign-in-images/readme-signin-domain-configure.png)
+![More section.](sign-in-images/readme-signin-domain-configure.png)
 
 Add your domain and click **Register**.
 
-![register domain form](sign-in-images/readme-signin-domain-more.png)
+![register domain form.](sign-in-images/readme-signin-domain-more.png)
 
 > [!NOTE]
 > If you see an error about your domain not being SPF Compliant, you will need to add a SPF DNS TXT Record to your domain and wait for it to propagate before continuing:
@@ -46,11 +46,11 @@ Successfully complete this process before continuing.
 
 In the [Identifiers](https://developer.apple.com/account/resources/identifiers/list) section, create a new identifier, and choose **App IDs**. If you already have an App ID, choose to edit it instead.
 
-![Create a new App ID](sign-in-images/readme-appid-create.png)
+![Create a new App ID.](sign-in-images/readme-appid-create.png)
 
 Enable **Sign In with Apple**. You will most likely want to use the **Enable as primary App ID** option.
 
-![Enable Sign In with Apple](sign-in-images/readme-appid-signin.png)
+![Enable Sign In with Apple.](sign-in-images/readme-appid-signin.png)
 
 Save your App ID changes.
 
@@ -58,7 +58,7 @@ Save your App ID changes.
 
 In the [Identifiers](https://developer.apple.com/account/resources/identifiers/list/serviceId) section, create a new identifier, and choose **Service IDs**.
 
-![Create a new Service ID](sign-in-images/readme-serviceid-create.png)
+![Create a new Service ID.](sign-in-images/readme-serviceid-create.png)
 
 Give your Services ID a description, and an identifier.  This identifier will be your `ServerId`.  Make sure to enable **Sign In with Apple**.
 
@@ -73,7 +73,7 @@ Finally, add one or more **Return URLs**.  Any `redirect_uri` you use later must
 > [!NOTE]
 > For testing purposes, you cannot use `127.0.0.1` or `localhost`, but you can use other domains such as `local.test`.  If you choose to do this, you can edit your machine's `hosts` file to resolve this fictitious domain to your local IP address.
 
-![Configure your Apple Sign In](sign-in-images/readme-serviceid-configure.png)
+![Configure your Apple Sign In.](sign-in-images/readme-serviceid-configure.png)
 
 Save your changes when finished.
 
@@ -83,7 +83,7 @@ In the [Keys](https://developer.apple.com/account/resources/authkeys/list) secti
 
 Give your key a name, and enable **Sign In with Apple**.
 
-![Create a new Key](sign-in-images/readme-key-create.png)
+![Create a new Key.](sign-in-images/readme-key-create.png)
 
 Click **Configure** beside _Sign In with Apple_.
 
@@ -93,7 +93,7 @@ Click **Continue** and then **Register** to create your new key.
 
 Next, you will only have one chance to download the key you just generated.  Click **Download**.
 
-![Download Key](sign-in-images/readme-key-download.png)
+![Download Key.](sign-in-images/readme-key-download.png)
 
 Also, take note of your **Key ID** at this step. This will be used for your `KeyId` later on.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms TimePicker
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
 _A Xamarin.Forms view that allows the user to select a time._
 
@@ -159,18 +159,18 @@ The timer ticks every second, executing the `OnTimerTick` method that checks whe
 
 When the sample is first run, the [`TimePicker`](xref:Xamarin.Forms.TimePicker) view is initialized to 11am. Tapping the `TimePicker` invokes the platform time picker. The platforms implement the time picker in very different ways, but each approach is familiar to users of that platform:
 
-[![Select Time](timepicker-images/timepicker-open.png "Select Time")](timepicker-images/timepicker-open-large.png#lightbox "Select Time")
+[![Select Time](timepicker-images/timepicker-open.png "Select Time."](timepicker-images/timepicker-open-large.png#lightbox "Select Time")
 
 > [!TIP]
 > On Android, the [`TimePicker`](xref:Xamarin.Forms.TimePicker) dialog can be customized by overriding the `CreateTimePickerDialog` method in a custom renderer. This allows, for example, additional buttons to be added to the dialog.
 
 After selecting a time, the selected time is displayed in the [`TimePicker`](xref:Xamarin.Forms.TimePicker):
 
-[![Time Selected](timepicker-images/timepicker-selected.png "Time Selected")](timepicker-images/timepicker-selected-large.png#lightbox "Time Selected")
+[![Time Selected](timepicker-images/timepicker-selected.png "Time Selected."](timepicker-images/timepicker-selected-large.png#lightbox "Time Selected")
 
 Provided that the [`Switch`](xref:Xamarin.Forms.Switch) is toggled to the on position, the application displays an alert dialog reminding the user of the text in the [`Entry`](xref:Xamarin.Forms.Entry) when the selected time occurs:
 
-[![Timer Popup](timepicker-images/timer-test.png "Timer Popup")](timepicker-images/timer-test-large.png#lightbox "Timer Popup")
+[![Timer Popup](timepicker-images/timer-test.png "Timer Popup."](timepicker-images/timer-test-large.png#lightbox "Timer Popup")
 
 As soon as the alert dialog is displayed, the [`Switch`](xref:Xamarin.Forms.Switch) is toggled to the off position.
 

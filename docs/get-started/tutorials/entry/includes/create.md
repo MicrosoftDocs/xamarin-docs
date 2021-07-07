@@ -26,7 +26,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of an Entry on iOS and Android](../images/create-entry.png "Entry containing placeholder text")](../images/create-entry-large.png#lightbox "Entry containing placeholder text")
+    [![Screenshot of an Entry on iOS and Android](../images/create-entry.png "Entry containing placeholder text."](../images/create-entry-large.png#lightbox "Entry containing placeholder text")
 
     In Visual Studio, stop the application.
 
@@ -58,6 +58,6 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of an Entry on iOS and Android](../images/create-entry.png "Entry containing placeholder text")](../images/create-entry-large.png#lightbox "Entry containing placeholder text")
+    [![Screenshot of an Entry on iOS and Android](../images/create-entry.png "Entry containing placeholder text."](../images/create-entry-large.png#lightbox "Entry containing placeholder text")
 
     In Visual Studio for Mac, stop the application.

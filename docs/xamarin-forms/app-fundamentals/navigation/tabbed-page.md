@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms TabbedPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. The following screenshots show a `TabbedPage` on iOS and Android:
 
-[![Screenshot of a TabbedPage containing three tabs, on iOS and Android](tabbed-page-images/tabbedpage-today.png "TabbedPage with three tabs")](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage with three tabs")
+[![Screenshot of a TabbedPage containing three tabs, on iOS and Android](tabbed-page-images/tabbedpage-today.png "TabbedPage with three tabs."](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage with three tabs")
 
 On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. In portrait orientation, tab bar icons appear above tab titles. In landscape orientation, icons and titles appear side by side. In addition, a regular or compact tab bar may be displayed, depending on the device and orientation. If there are more than five tabs, a **More** tab will appear, which can be used to access the additional tabs. For information about icon requirements, see [Tab Bar Icon Size](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) on developer.apple.com.
 
@@ -99,11 +99,11 @@ In this example, the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is populated 
 
 The following screenshots show a [`ContentPage`](xref:Xamarin.Forms.ContentPage) object in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
-[![Screenshot of a TabbedPage containing three tabs, on iOS and Android](tabbed-page-images/tabbedpage-today.png "TabbedPage with three tabs")](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage with three tabs")
+[![Screenshot of a TabbedPage containing three tabs, on iOS and Android](tabbed-page-images/tabbedpage-today.png "TabbedPage with three tabs."](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage with three tabs")
 
 Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that represents the tab:
 
-[![Screenshot of a TabbedPage containing tabs, on iOS and Android](tabbed-page-images/tabbedpage-week.png "TabbedPage with tabs")](tabbed-page-images/tabbedpage-week-large.png#lightbox "TabbedPage with tabs")
+[![Screenshot of a TabbedPage containing tabs, on iOS and Android](tabbed-page-images/tabbedpage-week.png "TabbedPage with tabs."](tabbed-page-images/tabbedpage-week-large.png#lightbox "TabbedPage with tabs")
 
 On the **Schedule** tab, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object.
 
@@ -120,7 +120,7 @@ await Navigation.PushAsync (new UpcomingAppointmentsPage ());
 
 The page being navigated to is specified as the argument to the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method. In this example, the `UpcomingAppointmentsPage` page is pushed onto the navigation stack, where it becomes the active page:
 
-[![Screenshot of navigation within a tab, on iOS and Android](tabbed-page-images/tabbedpage-upcoming.png "TabbedPage navigation in a tab")](tabbed-page-images/tabbedpage-upcoming-large.png#lightbox "TabbedPage navigation in a tab")
+[![Screenshot of navigation within a tab, on iOS and Android](tabbed-page-images/tabbedpage-upcoming.png "TabbedPage navigation in a tab."](tabbed-page-images/tabbedpage-upcoming-large.png#lightbox "TabbedPage navigation in a tab")
 
 For more information about performing navigation using the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
@@ -228,7 +228,7 @@ public class TabbedPageDemoPageCS : TabbedPage
 
 In this example, each tab consists of a [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that uses [`Image`](xref:Xamarin.Forms.Image) and [`Label`](xref:Xamarin.Forms.Label) objects to display data for the tab:
 
-[![Screenshot of a templated TabbedPage, on iOS and Android](tabbed-page-images/tabbedpage-template.png "Templated TabbedPage")](tabbed-page-images/tabbedpage-template-large.png#lightbox "Templated TabbedPage")
+[![Screenshot of a templated TabbedPage, on iOS and Android](tabbed-page-images/tabbedpage-template.png "Templated TabbedPage."](tabbed-page-images/tabbedpage-template-large.png#lightbox "Templated TabbedPage")
 
 Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that represents the tab.
 

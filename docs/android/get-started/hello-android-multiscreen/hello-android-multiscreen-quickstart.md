@@ -22,7 +22,7 @@ the history of numbers translated using the app. The
 a second screen that displays the numbers that were "translated", as illustrated by the
 screenshot on the right:
 
-[![Example app screenshots](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Example app screenshots.](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 The accompanying
 [Deep Dive](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
@@ -57,20 +57,20 @@ file from the **Solution Explorer**.
 From the **Toolbox**, drag a **Button** onto the design surface and
 place it below the **TranslatedPhoneWord** TextView. In the **Properties** pane, change the button **Id** to `@+id/TranslationHistoryButton`
 
-[![Drag a new button](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
+[![Drag a new button.](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
 Set the **Text** property of the button to
 `@string/translationHistory`. The Android Designer will interpret this
 literally, but you're going to make a few changes so that the
 button's text shows up correctly:
 
-[![Set the translation history button text](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
+[![Set the translation history button text.](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
 Expand the **values** node under the **Resources** folder in the
 **Solution Explorer** and double-click the string resources file,
 **Strings.xml**:
 
-[![Open Strings.xml](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png#lightbox)
+[![Open Strings.xml.](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png#lightbox)
 
 Add the `translationHistory` string name and value to the **Strings.xml**
 file and save it:
@@ -86,14 +86,14 @@ file and save it:
 The **Translation History** button text should update to reflect the new
 string value:
 
-[![Button reflects new string value](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
+[![Button reflects new string value.](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
 
 With the **Translation History** button selected on the design surface,
 find the `enabled` setting in the **Properties** pane and set its
 value to `false` to disable the button. This will cause the button
 to become darker on the design surface:
 
-[![Disable translation history button](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
+[![Disable translation history button.](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
 ### Creating the second activity
 
@@ -101,7 +101,7 @@ Create a second Activity to power the second screen. In the
 **Solution Explorer**, right-click the **Phoneword** project and
 choose **Add > New Item...**:
 
-[![Add a new file](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
+[![Add a new file.](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
 In the **Add New Item** dialog, choose **Visual C# > Activity** and name the Activity file **TranslationHistoryActivity.cs**.
 
@@ -210,7 +210,7 @@ Save and build the application to make sure there are no errors.
 Deploy the application to an emulator or device. The following
 screenshots illustrate the running **Phoneword** application:
 
-[![Example screenshots](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Example screenshots.](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -227,20 +227,20 @@ Start by opening the **Phoneword** project  in Visual Studio for Mac and editing
 From the **Toolbox**, drag a **Button** onto the design surface and
 place it below the **TranslatedPhoneWord** TextView. In the **Properties** pad, change the button **Id** to `@+id/TranslationHistoryButton`:
 
-[![Drag a new button](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
+[![Drag a new button.](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
 Set the **Text** property of the button to
 `@string/translationHistory`. The Android Designer will interpret this
 literally, but you're going to make a few changes so that the
 button's text shows up correctly:
 
-[![Set the translation history button text](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
+[![Set the translation history button text.](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
 Expand the **values** node under the **Resources** folder in the
 **Solution Pad** and double-click the string resources file,
 **Strings.xml**:
 
-[![Open Strings](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
+[![Open Strings.](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
 
 Add the `translationHistory` string name and value to the **Strings.xml**
 file and save it:
@@ -256,14 +256,14 @@ file and save it:
 The **Translation History** button text should update to reflect the new
 string value:
 
-[![Button reflects new string value](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
+[![Button reflects new string value.](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
 With the **Translation History** button selected on the design surface,
 open the **Behavior** tab in the **Properties Pad** and
 double-click the **Enabled** checkbox to disable the button. This
 will cause the button to become darker on the design surface:
 
-[![Disable translation history button](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
+[![Disable translation history button.](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### Creating the second activity
 
@@ -372,7 +372,7 @@ translateButton.Click += (sender, e) =>
 Deploy the application to an emulator or device. The following
 screenshots illustrate the running **Phoneword** application:
 
-[![Example screenshots](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
+[![Example screenshots.](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 

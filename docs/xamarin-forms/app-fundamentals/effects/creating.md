@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Creating an Effect
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
 _Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the Entry control when the control gains focus._
 
@@ -31,12 +31,12 @@ The effect can then be consumed by attaching it to the appropriate control.
 
 The sample application demonstrates a `FocusEffect` that changes the background color of a control when it gains focus. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![Focus Effect Project Responsibilities](creating-images/focus-effect.png)
+![Focus Effect Project Responsibilities.](creating-images/focus-effect.png)
 
 An [`Entry`](xref:Xamarin.Forms.Entry) control on the `HomePage` is customized by the `FocusEffect` class in each platform-specific project. Each `FocusEffect` class derives from the `PlatformEffect` class for each platform. This results in the `Entry` control being rendered with a platform-specific background color, which changes when the control gains focus, as shown in the following screenshots:
 
-![Focus Effect on each Platform, control focused](creating-images/screenshots-1.png)
-![Focus Effect on each Platform, control unfocused](creating-images/screenshots-2.png)
+![Focus Effect on each Platform, control focused.](creating-images/screenshots-1.png)
+![Focus Effect on each Platform, control unfocused.](creating-images/screenshots-2.png)
 
 ## Creating the Effect on Each Platform
 

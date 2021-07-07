@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp noise and composing
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Simple vector graphics tend to look unnatural. The straight lines, smooth curves, and solid colors don't resemble the imperfections of real-world objects. While working on the computer-generated graphics for the 1982 movie _Tron_, computer scientist Ken Perlin began developing algorithms that used random processes to give these images more realistic textures. In 1997, Ken Perlin won an Academy Award for Technical Achievement. His work has come to be known as Perlin noise, and it is supported in SkiaSharp. Here's an example:
 
-![Perlin Noise sample](noise-images/NoiseSample.png "Perlin Noise Sample")
+![Perlin Noise sample.](noise-images/NoiseSample.png "Perlin Noise Sample")
 
 As you can see, each pixel is not a random color value. The continuity from pixel to pixel results in random shapes.
 
@@ -163,7 +163,7 @@ public partial class PerlinNoisePage : ContentPage
 
 Here's the program running on iOS, Android, and Universal Windows Platform (UWP) devices. The fractal noise is shown in the upper half of the canvas. The turbulence noise is in the bottom half:
 
-[![Perlin Noise](noise-images/PerlinNoise.png "Perlin Noise")](noise-images/PerlinNoise-Large.png#lightbox)
+[![Perlin Noise](noise-images/PerlinNoise.png "Perlin Noise."](noise-images/PerlinNoise-Large.png#lightbox)
 
 The same arguments always produce the same pattern that begins at the upper-left corner. This consistency is obvious when you adjust the width and height of the UWP window. As Windows 10 redraws the screen, the pattern in the upper half of the canvas remains the same.
 
@@ -297,7 +297,7 @@ This shader is used to cover the canvas. Finally, another `SKPaint` object is us
 
 Only the `seed` parameter is selectable from the user interface. If the same `seed` pattern is used on each platform, they would show the same pattern. Different `seed` values result in different patterns:
 
-[![Tiled Perlin Noise](noise-images/TiledPerlinNoise.png "Tiled Perlin Noise")](noise-images/TiledPerlinNoise-Large.png#lightbox)
+[![Tiled Perlin Noise](noise-images/TiledPerlinNoise.png "Tiled Perlin Noise."](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
 The 200-pixel square pattern in the upper-left corner flows seamlessly into the other tiles.
 
@@ -380,7 +380,7 @@ public partial class ComposedPerlinNoisePage : ContentPage
 
 The fractal noise shader is on the top; the turbulence shader is on the bottom:
 
-[![Composed Perlin Noise](noise-images/ComposedPerlinNoise.png "Composed Perlin Noise")](noise-images/ComposedPerlinNoise-Large.png#lightbox)
+[![Composed Perlin Noise](noise-images/ComposedPerlinNoise.png "Composed Perlin Noise."](noise-images/ComposedPerlinNoise-Large.png#lightbox)
 
 Notice how much bluer these shaders are than the ones displayed by the **Perlin Noise** page. The difference illustrates the amount of transparency in the noise shaders.
 

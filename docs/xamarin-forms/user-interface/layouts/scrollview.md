@@ -12,9 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms ScrollView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
 
-[![Xamarin.Forms ScrollView](scrollview-images/layouts.png "Xamarin.Forms ScrollView")](scrollview-images/layouts-large.png#lightbox "Xamarin.Forms ScrollView")
+[![Xamarin.Forms ScrollView](scrollview-images/layouts.png "Xamarin.Forms ScrollView."](scrollview-images/layouts-large.png#lightbox "Xamarin.Forms ScrollView")
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) is a layout that's capable of scrolling its content. The `ScrollView` class derives from the [`Layout`](xref:Xamarin.Forms.Layout) class, and by default scrolls its content vertically. A `ScrollView` can only have a single child, although this can be other layouts.
 
@@ -77,7 +77,7 @@ The following XAML example has a [`ScrollView`](xref:Xamarin.Forms.ScrollView) a
 
 In this example, the [`ScrollView`](xref:Xamarin.Forms.ScrollView) has its content set to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that uses a bindable layout to display the [`Color`](xref:Xamarin.Forms.Color) fields defined by Xamarin.Forms. By default, a `ScrollView` scrolls vertically, which reveals more content:
 
-[![Screenshot of a root ScrollView layout](scrollview-images/root-layout.png "Root ScrollView layout")](scrollview-images/root-layout-large.png#lightbox "Root ScrollView layout")
+[![Screenshot of a root ScrollView layout](scrollview-images/root-layout.png "Root ScrollView layout."](scrollview-images/root-layout-large.png#lightbox "Root ScrollView layout")
 
 The equivalent C# code is:
 
@@ -155,7 +155,7 @@ The following XAML example has a [`ScrollView`](xref:Xamarin.Forms.ScrollView) a
 
 In this example, there are two [`StackLayout`](xref:Xamarin.Forms.StackLayout) objects. The first `StackLayout` is the root layout object, which has a [`Label`](xref:Xamarin.Forms.Label) object and a [`ScrollView`](xref:Xamarin.Forms.ScrollView) as its children. The `ScrollView` has a `StackLayout` as its content, with the `StackLayout` containing multiple `Label` objects. This arrangement ensures that the first `Label` is always on-screen, while text displayed by the other `Label` objects can be scrolled:
 
-[![Screenshot of a child ScrollView layout](scrollview-images/child-layout.png "Child ScrollView layout")](scrollview-images/child-layout-large.png#lightbox "Child ScrollView layout")
+[![Screenshot of a child ScrollView layout](scrollview-images/child-layout.png "Child ScrollView layout."](scrollview-images/child-layout-large.png#lightbox "Child ScrollView layout")
 
 The equivalent C# code is:
 

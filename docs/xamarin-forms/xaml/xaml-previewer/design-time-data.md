@@ -40,7 +40,7 @@ For example, you can add text to a label that usually has data bound to it.
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Design time data with text in a Label](xaml-previewer-images/designtimedata-label-sm.png "Design time data with text a Label")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Design time data with text in a Label](xaml-previewer-images/designtimedata-label-sm.png "Design time data with text a Label."](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
 In this example, without `d:Text`, the XAML Previewer would show nothing for the label. Instead, it shows "Name!" where the label will have real data at runtime.
 
@@ -50,7 +50,7 @@ You can use `d:` with any attribute for a Xamarin.Forms control, like colors, fo
 <d:Button Text="Design Time Button" />
 ```
 
-[![Design time data with a Button control](xaml-previewer-images/designtimedata-controls-sm.png "Design time data with a Button control")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Design time data with a Button control](xaml-previewer-images/designtimedata-controls-sm.png "Design time data with a Button control."](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 In this example, the button only appears at design time. Use this method to put a placeholder in for a [custom control not supported by the XAML Previewer](render-custom-controls.md).
 
@@ -62,7 +62,7 @@ You can set a design time Source for images that are bound to the page or loaded
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 
-[![Design time data with images](xaml-previewer-images/designtimedata-image-sm.png "Design time data with iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Design time data with images](xaml-previewer-images/designtimedata-image-sm.png "Design time data with iamges."](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## Design time data for ListViews
 
@@ -88,7 +88,7 @@ ListViews are a popular way to display data in a mobile app. However, they're di
 </StackLayout>
 ```
 
-[![Design time data with a ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Design time data with a ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Design time data with a ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Design time data with a ListView."](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 This example will show a ListView of three TextCells in the XAML Previewer. You can change `x:String` to an existing data model in your project.
 

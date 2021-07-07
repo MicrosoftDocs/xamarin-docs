@@ -70,7 +70,7 @@ In this exercise you will create a user interface to consume the `RestService` c
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Tap the [`Button`](xref:Xamarin.Forms.Button) to retrieve .NET repository data from GitHub:
 
-    [![Screenshot of GitHub .NET repositories, on iOS and Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
+    [![Screenshot of GitHub .NET repositories, on iOS and Android.](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
     In Visual Studio, stop the application.
 
@@ -146,7 +146,7 @@ In this exercise you will create a user interface to consume the `RestService` c
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Tap the [`Button`](xref:Xamarin.Forms.Button) to retrieve .NET repository data from GitHub:
 
-    [![Screenshot of GitHub .NET repositories, on iOS and Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
+    [![Screenshot of GitHub .NET repositories, on iOS and Android.](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
     In Visual Studio for Mac, stop the application.
 

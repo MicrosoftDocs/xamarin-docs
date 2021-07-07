@@ -24,12 +24,12 @@ can be launched by double-clicking an existing layout file. For example,
 double-clicking **activity_main.axml** in the **Resources > Layout** folder will
 load the Designer as seen in this screenshot:
 
-[![Designer screen in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
+[![Designer screen in Visual Studio.](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 Likewise, you can add a new layout by right-clicking the **layout**
 folder in the **Solution Explorer** and selecting **Add > New Item... > Android Layout**:
 
-[![Add New Item dialog](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[![Add New Item dialog.](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 This creates a new **.axml** layout file and loads it into the Designer.
 
@@ -43,7 +43,7 @@ This creates a new **.axml** layout file and loads it into the Designer.
 The Designer is composed of several sections that support its various
 features, as shown in the following screenshot:
 
-[![Diagram of Designer panes](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
+[![Diagram of Designer panes.](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 When you edit a layout in the Designer, you use the following features
 to create and shape your design:
@@ -84,7 +84,7 @@ ones), vertical and horizontal lines are displayed to mark the
 available insertion points. In the following example, a new `Button`
 widget is being dragged to the **Design Surface**:
 
-[![Example insertion lines on Design Surface](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
+[![Example insertion lines on Design Surface.](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 Additionally, widgets can be copied: you can use copy and paste to copy
 a widget, or you can drag and drop an existing widget while pressing the
@@ -95,7 +95,7 @@ a widget, or you can drag and drop an existing widget while pressing the
 The **Designer Toolbar** (positioned above the **Design Surface**) presents
 configuration selectors and tool menus:
 
-[![Diagram of Designer Toolbar](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
+[![Diagram of Designer Toolbar.](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 The **Designer Toolbar** provides access to the following features:
 
@@ -154,7 +154,7 @@ the selected widget and its container, making it easier for you to
 perform operations on containers (which are not always easy to select
 on the **Design Surface**). Here is an example of a context menu:
 
-[![Example context menu when right-clicking the Design Surface](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
+[![Example context menu when right-clicking the Design Surface.](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 In this example, right-clicking a `TextView` opens a context menu that
 provides several options:
@@ -169,7 +169,7 @@ provides several options:
 
 The **Design Surface** supports zooming via several controls as shown:
 
-[![Diagram of the Design Surface zoom controls](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
+[![Diagram of the Design Surface zoom controls.](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 These controls make it easier to see certain areas of the user
 interface in the Designer:
@@ -200,7 +200,7 @@ In the center strip between the **Design** and **Source** panes,
 there are several buttons that are used to modify how the **Design** and
 **Source** panes are displayed:
 
-[![Pane display button locations](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
+[![Pane display button locations.](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
 
 These buttons do the following:
 
@@ -253,7 +253,7 @@ time, it is possible to create a UI design by going back and forth
 between a visual representation of the design and the underlying XML
 source for the design:
 
-[![Example XML source in Source Pane](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
+[![Example XML source in Source Pane.](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
 
 Changes made to the XML source are immediately rendered on the **Design
 Surface**; changes made on the **Design Surface** cause the XML source
@@ -275,7 +275,7 @@ press <kbd>CTRL+SPACE</kbd> to see a list of possible completions. For
 example, after entering `android:lay` in the following example (followed
 by typing <kbd>CTRL+SPACE</kbd>), the following list is presented:
 
-[![Autocompletion of layout attribute](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
+[![Autocompletion of layout attribute.](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
 
 Press <kbd>ENTER</kbd> to accept the first listed completion, or use
 the arrow keys to scroll to the desired completion and press
@@ -291,7 +291,7 @@ after the first double-quote is entered for `android:layout_width` in
 the following example, an autocompletion selector pops up to provide
 the list of valid choices for this width:
 
-[![IntelliSense example for layout width](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
+[![IntelliSense example for layout width.](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
 
 At the bottom of this popup are two buttons (as outlined in red in the
 above screenshot). Clicking the **Project Resources** button on the
@@ -306,7 +306,7 @@ filtering action that each provides.
 The Designer supports the editing of widget properties through the
 **Properties** pane: 
 
-![Screenshot of the Properties window](designer-basics-images/vs/08-property-pad.png)
+![Screenshot of the Properties window.](designer-basics-images/vs/08-property-pad.png)
 
 The properties listed in the **Properties** pane
 change depending on which widget is selected on the **Design Surface**.
@@ -333,18 +333,18 @@ For example, the following screenshot shows the options available
 when clicking the darkened square to the right of the text field for a
 `Text` widget in the **Properties** window:
 
-[![Example list of text options](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
+[![Example list of text options.](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
 
 When **Resource...** is clicked, the **Select Resource** dialog is presented:
 
-[![Example Resources screenshot with several resources listed](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
+[![Example Resources screenshot with several resources listed.](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
 
 From this list, you can select a text resource to use for that widget
 instead of hard-coding the text in the **Properties** pane. The next
 example illustrates the resource selector for the `Src` property of an
 `ImageView`:
 
-[![Resource selector listing icon resource for an ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
+[![Resource selector listing icon resource for an ImageView.](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 Clicking the blank square to the right of the `Src` property opens the
 **Select Resource** dialog with a list of resources ranging from colors
@@ -360,7 +360,7 @@ right of the property. In the following example, text is changed to all
 caps by clicking the **Text All Caps** boolean property reference
 associated with the selected `TextView`:
 
-![Example of setting boolean properties](designer-basics-images/vs/11-boolean.png)
+![Example of setting boolean properties.](designer-basics-images/vs/11-boolean.png)
 
 ## Editing properties inline
 
@@ -375,13 +375,13 @@ The text properties of some widgets (such as `Button` and `TextView`),
 can be edited directly on the **Design Surface**. Double-clicking a
 widget will put it into edit mode, as shown below:
 
-![Text resource for the hello string](designer-basics-images/vs/12-text-resource.png "Text Resource")
+![Text resource for the hello string.](designer-basics-images/vs/12-text-resource.png "Text Resource")
 
 You can enter a new text value or you can enter a new resource
 string. In the following example, the `@string/hello` resource is being
 replaced with the text, `CLICK THIS BUTTON`:
 
-![Shift + Enter to automatically link text to a new resource](designer-basics-images/vs/13-shift-enter-resource.png)
+![Shift + Enter to automatically link text to a new resource.](designer-basics-images/vs/13-shift-enter-resource.png)
 
 This change is stored in the widget's `text` property; it does not
 modify the value assigned to the `@string/hello` resource.
@@ -401,12 +401,12 @@ displayed. If you move the mouse to one of the handles, the Designer
 displays the property that the handle will change (as shown
 below for the `layout_marginLeft` property):
 
-![Screenshot showing margin handles in the Designer](designer-basics-images/vs/15-margin-handles.png)
+![Screenshot showing margin handles in the Designer.](designer-basics-images/vs/15-margin-handles.png)
 
 If a margin has already been set, dotted lines are displayed,
 indicating the space that the margin occupies:
 
-![Example of dotted lines marking space around a button](designer-basics-images/vs/16-margins-set.png)
+![Example of dotted lines marking space around a button.](designer-basics-images/vs/16-margins-set.png)
 
 ### Size
 
@@ -414,7 +414,7 @@ As mentioned earlier, you can switch to size-editing mode by clicking a
 widget while it is already selected. Click the triangular handle to
 set the size for the indicated dimension to `wrap_content`:
 
-![Wrap Content and Resize handles](designer-basics-images/vs/17-wrap-content.png)
+![Wrap Content and Resize handles.](designer-basics-images/vs/17-wrap-content.png)
 
 Clicking the **Wrap Content** handle shrinks the widget in that dimension
 so that it is no larger than necessary to wrap the enclosed content. In
@@ -425,7 +425,7 @@ When the size value is set to **Wrap Content**, the Designer displays a
 triangular handle pointing in the opposite direction for changing the
 size to `match_parent`:
 
-![Match parent handle](designer-basics-images/vs/18-match-parent.png)
+![Match parent handle.](designer-basics-images/vs/18-match-parent.png)
 
 Clicking the **Match Parent** handle restores the size in that
 dimension so that it is the same as the parent widget.
@@ -435,13 +435,13 @@ screenshots) to resize the widget to an arbitrary `dp` value. When you
 do so, both **Wrap Content** and **Match Parent** handles are presented
 for that dimension:
 
-![Circular resize handles](designer-basics-images/vs/19-resize-dp.png)
+![Circular resize handles.](designer-basics-images/vs/19-resize-dp.png)
 
 Not all containers allow editing the `Size` of a widget. For example,
 notice that in the screenshot below with the `LinearLayout` selected,
 the resize handles do not appear:
 
-![No resize handles](designer-basics-images/vs/20-no-resize-handles.png)
+![No resize handles.](designer-basics-images/vs/20-no-resize-handles.png)
 
 ## Document Outline
 
@@ -449,7 +449,7 @@ The **Document Outline** displays the widget hierarchy of the layout.
 In the following example, the containing `LinearLayout` widget is
 selected:
 
-![Document Outline example](designer-basics-images/vs/21-document-outline.png)
+![Document Outline example.](designer-basics-images/vs/21-document-outline.png)
 
 The outline of the selected widget (in this case, a `LinearLayout`) is
 also highlighted on the **Design Surface**. The selected widget in the
@@ -474,12 +474,12 @@ can be launched by double-clicking an existing .axml file. For example,
 double-clicking **Main.axml** in the **Resources > Layout** folder will
 load the Designer as shown below:
 
-[![Designer screen in Visual Studio for Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
+[![Designer screen in Visual Studio for Mac.](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 Likewise, you can add a new layout by right-clicking the **layout**
 folder in the **Solution Pad** and selecting **Add > New File > Android > Layout**:
 
-[![Add New File dialog](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
+[![Add New File dialog.](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 This creates a new .axml file and loads it onto the Design Surface.
 
@@ -493,7 +493,7 @@ This creates a new .axml file and loads it onto the Design Surface.
 The Designer is composed of several sections that support its various
 features, as shown in the following screenshot:
 
-[![Diagram of Designer panes](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
+[![Diagram of Designer panes.](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 When you edit a layout in the Designer, you use the following features
 to create and shape your design:
@@ -523,7 +523,7 @@ to create and shape your design:
 The Toolbar (positioned above the Design Surface) presents
 configuration selectors and tool menus:
 
-[![Diagram of Designer Toolbar](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
+[![Diagram of Designer Toolbar.](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 The Toolbar provides access to the following features:
 
@@ -580,7 +580,7 @@ ones), vertical and horizontal lines are displayed to mark the
 available insertion points. In the following example, a new `Button`
 widget is being dragged to the Design Surface:
 
-[![Example insertion lines on Design Surface](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
+[![Example insertion lines on Design Surface.](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 Additionally, widgets can be copied: you can use copy and paste to copy
 a widget, or you can drag and drop an existing widget while pressing the
@@ -594,7 +594,7 @@ the selected widget and its container, making it easier for you
 to perform operations on containers (which are not always easy to
 select on the Design Surface). Here is an example of a context menu:
 
-[![Example context menu when right-clicking the Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
+[![Example context menu when right-clicking the Design Surface.](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 In this example, right-clicking a `Button` opens a context menu that
 provides several options:
@@ -609,7 +609,7 @@ provides several options:
 
 The Design Surface supports zooming via several controls as shown:
 
-[![Diagram of the Design Surface zoom controls](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
+[![Diagram of the Design Surface zoom controls.](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 These controls make it easier to see certain areas of the user
 interface in the Designer:
@@ -642,7 +642,7 @@ depending on which widget is selected in the Designer surface. When the
 `Button` in the previous example is selected, the properties for that
 `Button` widget are shown:
 
-[![Screenshot of the Property pad](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
+[![Screenshot of the Property pad.](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 ## Property Pad sections
 
@@ -686,12 +686,12 @@ For example, the following screenshot shows the resources available
 when clicking the ellipsis to the right of the text field for a
 `Button` widget in the **Property Pad**:
 
-[![Example Resources screenshot with two resources listed](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
+[![Example Resources screenshot with two resources listed.](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 The next example illustrates the resource selector for the `Src`
 property of an `ImageView`:
 
-[![Resource selector listing icon resource for an ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
+[![Resource selector listing icon resource for an ImageView.](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 ### Boolean property references
 
@@ -703,7 +703,7 @@ such as `true` or `false`. Hovering your mouse over the input brings up
 a small text field icon. You can click on it if you wish to enter the
 value manually.
 
-[![Example of setting boolean properties](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
+[![Example of setting boolean properties.](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
 ## Grouped properties
 
@@ -713,7 +713,7 @@ the **Property Pad** in a single, expandable row. Some of these
 properties can be edited directly in the grouped row, such as the
 `Padding` property shown below:
 
-[![Example settings for the Padding property](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
+[![Example settings for the Padding property.](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 ## Editing properties inline
 
@@ -728,13 +728,13 @@ The text properties of some widgets (such as `Button` and `TextView`),
 can be edited directly on the Design Surface. Double-clicking a
 widget will put it into edit mode, as shown below:
 
-[![Text resource for the hello string](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
+[![Text resource for the hello string.](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 You can enter a new text value or you can enter a new resource
 string. In the following example, the `@string/hello` resource is being
 replaced with the text, `CLICK THIS BUTTON`:
 
-[![Shift + Enter to automatically link text to a new resource](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
+[![Shift + Enter to automatically link text to a new resource.](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 This change is stored in the widget's `text` property; it does not
 modify the value assigned to the `@string/hello` resource.
@@ -754,12 +754,12 @@ displayed. If you move the mouse to one of the handles, the Designer
 displays the property that the handle will change (as shown
 below for the `layout_marginLeft` property):
 
-[![Screenshot showing margin handles in the Designer](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
+[![Screenshot showing margin handles in the Designer.](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 If a margin has already been set, dotted lines are displayed,
 indicating the space that the margin occupies:
 
-[![Example of dotted lines marking space around a button](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
+[![Example of dotted lines marking space around a button.](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 ### Size
 
@@ -767,7 +767,7 @@ As mentioned earlier, you can switch to size-editing mode by clicking a
 widget while it is already selected. Click the triangular handle to
 set the size for the indicated dimension to `wrap_content`:
 
-[![Wrap Content and Resize handles](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
+[![Wrap Content and Resize handles.](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 Clicking the **Wrap Content** handle shrinks the widget in that dimension
 so that is no larger than necessary to wrap the enclosed content. In
@@ -778,7 +778,7 @@ When the size value is set to **Wrap Content**, the Designer displays a
 triangular handle pointing in the opposite direction for changing the
 size to `match_parent`:
 
-[![Match parent handle](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
+[![Match parent handle.](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 Clicking the **Match Parent** handle restores the size in that
 dimension so that it is the same as the parent widget.
@@ -788,13 +788,13 @@ screenshots) to resize the widget to an arbitrary `dp` value. When you
 do so, both **Wrap Content** and **Match Parent** handles are presented
 for that dimension:
 
-[![Circular resize handles](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
+[![Circular resize handles.](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 Not all containers allow editing the `Size` of a widget. For example,
 notice that in the screenshot below with the `LinearLayout` selected,
 the resize handles do not appear:
 
-[![No resize handles](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
+[![No resize handles.](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 ## Document Outline
 
@@ -802,7 +802,7 @@ The **Document Outline** displays the widget hierarchy of the layout.
 In the following example, the containing `LinearLayout` widget is
 selected:
 
-[![Document outline](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
+[![Document outline.](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 The outline of the selected widget (in this case, a `LinearLayout`) is
 also highlighted on the Design Surface. The selected widget in the

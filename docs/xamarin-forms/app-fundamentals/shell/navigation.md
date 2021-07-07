@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell navigation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell includes a URI-based navigation experience that uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
 
@@ -232,7 +232,7 @@ Use of these route formats results in an `Exception` being thrown.
 
 Some of the Shell classes are decorated with the `DebuggerDisplayAttribute`, which specifies how a class or field is displayed by the debugger. This can help to debug navigation requests by displaying data related to the navigation request. For example, the following screenshot shows the [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem) and [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState) properties of the [`Shell.Current`](xref:Xamarin.Forms.Shell.Current) object:
 
-![Screenshot of debugger](navigation-images/debugger.png "Debugger")
+![Screenshot of debugger.](navigation-images/debugger.png "Debugger")
 
 In this example, the [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem) property, of type [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem), displays the title and route of the `FlyoutItem` object. Similarly, the [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState) property, of type [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState), displays the URI of the displayed route within the Shell application.
 
@@ -540,7 +540,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 The [`Command`](xref:Xamarin.Forms.BackButtonBehavior.Command) property is set to an `ICommand` to be executed when the back button is pressed, and the `IconOverride` property is set to the icon that's used for the back button:
 
-[![Screenshot of a Shell back button icon override, on iOS and Android](navigation-images/back-button.png)](navigation-images/back-button-large.png#lightbox)
+[![Screenshot of a Shell back button icon override, on iOS and Android.](navigation-images/back-button.png)](navigation-images/back-button-large.png#lightbox)
 
 ## Related links
 

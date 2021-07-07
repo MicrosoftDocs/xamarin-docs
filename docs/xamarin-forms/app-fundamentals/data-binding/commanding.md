@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The Xamarin.Forms Command Interface
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In the Model-View-ViewModel (MVVM) architecture, data bindings are defined between properties in the ViewModel, which is generally a class that derives from `INotifyPropertyChanged`, and properties in the View, which is generally the XAML file. Sometimes an application has needs that go beyond these property bindings by requiring the user to initiate commands that affect something in the ViewModel. These commands are generally signaled by button clicks or finger taps, and traditionally they are processed in the code-behind file in a handler for the `Clicked` event of the `Button` or the `Tapped` event of a `TapGestureRecognizer`.
 
@@ -277,7 +277,7 @@ Here's how it works: The user first presses the **New** button. This enables the
 
 The iOS screen at the left shows the layout before a valid age is entered. The Android screen shows the **Submit** button enabled after an age has been set:
 
-[![Person Entry](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png#lightbox "Person Entry")
+[![Person Entry](commanding-images/personentry-small.png "Person Entry."](commanding-images/personentry-large.png#lightbox "Person Entry")
 
 The program does not have any facility for editing existing entries, and does not save the entries when you navigate away from the page.
 
@@ -528,7 +528,7 @@ The 11 buttons for the 10 digits and the decimal point share a binding to `Digit
 
 Here's the program in action:
 
-[![Decimal Keyboard](commanding-images/decimalkeyboard-small.png "Decimal Keyboard")](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard")
+[![Decimal Keyboard](commanding-images/decimalkeyboard-small.png "Decimal Keyboard."](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard")
 
 Notice that the button for the decimal point in all three screenshots is disabled because the entered number already contains a decimal point.
 

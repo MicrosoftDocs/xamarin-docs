@@ -12,7 +12,7 @@ _How to get started developing apps for Android 10 using Xamarin.Android._
 
 Android 10 is now available from Google. A number of new features and APIs are being made available in this release, and many of them are necessary to take advantage of new hardware capabilities in the latest Android devices.
 
-![Android 10 Logo](~/android/platform/android-10-images/android10_black.png)
+![Android 10 Logo.](~/android/platform/android-10-images/android10_black.png)
 
 This article is structured to help you get started in developing Xamarin.Android apps for Android 10. It explains how to install the necessary updates, configure the SDK, and prepare an emulator or device for testing. It also provides an outline of the new features in Android 10 and provides example source code that illustrates how to use some of the key Android 10 features.
 
@@ -56,11 +56,11 @@ To create a project with Xamarin.Android 10.0, you must first use the Android SD
 1. Start the SDK Manager. In Visual Studio, click **Tools > Android > Android SDK Manager.** In Visual Studio for Mac, click **Tools > SDK Manager.**
 2. In the lower right-hand corner, click the gear icon and select **Repository > Google (Unsupported):**
 
-    ![Android SDK Manager Repository Selection](~/android/platform/android-10-images/sdkrepository.png)
+    ![Android SDK Manager Repository Selection.](~/android/platform/android-10-images/sdkrepository.png)
 
 3. Install the **Android 10 SDK Platform** packages, which are listed as **Android SDK Platform 29** in the **Platforms** tab (for more information about using the SDK Manager, see [Android SDK setup](../get-started/installation/android-sdk.md)):
 
-    ![Android SDK Manager Platform Tab](~/android/platform/android-10-images/sdkplatforms.png)
+    ![Android SDK Manager Platform Tab.](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### Create a Xamarin.Android project
 
@@ -68,7 +68,7 @@ Create a new Xamarin.Android project. If you are new to Android development with
 
 When you create an Android project, you must configure the version settings to target Android 10.0 or later. For example, to target your project for Android 10, you must configure the target Android API level of your project to **Android 10.0 (API 29)**. This includes both your **Target Framework Version** and **Target Android SDK Version** to API 29 or later. For more information about configuring Android API levels, see [Understanding Android API Levels.](../app-fundamentals/android-api-levels.md)
 
-![Xamarin.Android Target Framework](~/android/platform/android-10-images/targetframework.png)
+![Xamarin.Android Target Framework.](~/android/platform/android-10-images/targetframework.png)
 
 ### Configure a device or emulator
 
@@ -88,11 +88,11 @@ These features are recommend for every app:
 
 - **Dark Theme:** Ensure a consistent experience for users who enable system-wide dark theme by adding a [Dark Theme](https://developer.android.com/preview/features/darktheme) or enabling [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark).
 
-![Dark Theme](~/android/platform/android-10-images/darktheme.png)
+![Dark Theme.](~/android/platform/android-10-images/darktheme.png)
 
 - **Support [gestural navigation](https://developer.android.com/preview/features/gesturalnav)** in your app by going edge-to-edge and making sure your custom gestures are complementary to the system navigation gestures.
 
-![Gesture Navigation](~/android/platform/android-10-images/gesturenavigation.png)
+![Gesture Navigation.](~/android/platform/android-10-images/gesturenavigation.png)
 
 - **Optimize for foldables:** Deliver seamless, edge-to-edge experiences on today’s innovative devices by [optimizing for foldables](https://developer.android.com/guide/topics/ui/foldables).
 

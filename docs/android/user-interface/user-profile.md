@@ -119,7 +119,7 @@ StartActivity (intent);
 When running the above code, the user profile is displayed as
 illustrated in the following screenshot:
 
-[![Screenshot of profile displaying the John Doe user profile](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[![Screenshot of profile displaying the John Doe user profile.](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
 Working with the user profile is similar to interacting with other data
 in Android, and it offers an additional level of device personalization.

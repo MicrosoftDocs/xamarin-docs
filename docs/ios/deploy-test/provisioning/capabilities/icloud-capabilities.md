@@ -36,11 +36,11 @@ The steps below will guide you through these steps:
 
 1. Browse to the [Apple Developer Center](https://developer.apple.com/account/) and go to the Certificates, Identifier, and Profiles section: 
     
-     ![Apple Developer Center main page](icloud-capabilities-images/image22.png)
+     ![Apple Developer Center main page.](icloud-capabilities-images/image22.png)
 
 2. Under **Identifiers** select **iCloud Containers**, and then select the **+** to create a new container:  
     
-    ![iCloud Container screen](icloud-capabilities-images/image23.png)
+    ![iCloud Container screen.](icloud-capabilities-images/image23.png)
 
 3. Enter a **Description** and a unique **Identifier** for the iCloud container: 
     
@@ -54,39 +54,39 @@ To create a new App ID and add a container to it, do the following:
 
 1. In the [Developer Center](https://developer.apple.com/account/), click on **App IDs** under **Identifiers**: 
     
-    ![Identifier Section in Developer Center](icloud-capabilities-images/image26.png)
+    ![Identifier Section in Developer Center.](icloud-capabilities-images/image26.png)
 
 2. Select the **+** button to add a new App ID: 
     
-    ![Add new App ID button](icloud-capabilities-images/image27.png)
+    ![Add new App ID button.](icloud-capabilities-images/image27.png)
 
 3. Enter a **Name** for the App ID and give it an **Explicit App ID**:
     
-    ![Enter new App ID details](icloud-capabilities-images/image28.png)
+    ![Enter new App ID details.](icloud-capabilities-images/image28.png)
 
 4. Under **App Services** select **iCloud** and choose **Include CloudKit support**:
     
-    ![Select iCloud app services](icloud-capabilities-images/image29.png)
+    ![Select iCloud app services.](icloud-capabilities-images/image29.png)
 
 5. Select **Continue** and then **Register**. Note that on the confirmation screen, iCloud will display with Configurable selected, with a yellow symbol:   
     
-    ![Confirmation screen](icloud-capabilities-images/image30.png)
+    ![Confirmation screen.](icloud-capabilities-images/image30.png)
 
 6. Return to the list of App IDs and select the one that you have just created: 
     
-    ![Select App ID screen](icloud-capabilities-images/image31.png)
+    ![Select App ID screen.](icloud-capabilities-images/image31.png)
 
 7. Scroll down to the bottom of this expanded section and click **Edit**:
     
-    ![Edit App ID](icloud-capabilities-images/image32.png)
+    ![Edit App ID.](icloud-capabilities-images/image32.png)
 
 8. Scroll down the list to iCloud and click the **Edit** button:  
     
-    ![Edit iCloud App ID](icloud-capabilities-images/image33.png)
+    ![Edit iCloud App ID.](icloud-capabilities-images/image33.png)
 
 9. Select the Container to use with this App ID:  
     
-    ![Select container screen](icloud-capabilities-images/image34.png)
+    ![Select container screen.](icloud-capabilities-images/image34.png)
 
 10. Confirm the Container assignments, and press **Assign**.
 

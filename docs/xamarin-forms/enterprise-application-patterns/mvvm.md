@@ -23,7 +23,7 @@ The Model-View-ViewModel (MVVM) pattern helps to cleanly separate the business a
 
 There are three core components in the MVVM pattern: the model, the view, and the view model. Each serves a distinct purpose. Figure 2-1 shows the relationships between the three components.
 
-![The MVVM pattern](mvvm-images/mvvm.png)
+![The MVVM pattern.](mvvm-images/mvvm.png)
 
 **Figure 2-1**: The MVVM pattern
 

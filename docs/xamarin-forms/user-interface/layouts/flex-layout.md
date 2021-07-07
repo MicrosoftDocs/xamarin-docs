@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The Xamarin.Forms FlexLayout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Use FlexLayout for stacking or wrapping a collection of child views._
 
@@ -58,7 +58,7 @@ The **Simple Stack** page shows how `FlexLayout` can substitute for a `StackLayo
 
 Here's that page running on iOS, Android, and the Universal Windows Platform:
 
-[![The Simple Stack Page](flex-layout-images/SimpleStack.png "The Simple Stack Page")](flex-layout-images/SimpleStack-Large.png#lightbox)
+[![The Simple Stack Page](flex-layout-images/SimpleStack.png "The Simple Stack Page."](flex-layout-images/SimpleStack-Large.png#lightbox)
 
 Three properties of `FlexLayout` are shown in the **SimpleStackPage.xaml** file:
 
@@ -180,7 +180,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 Here's the program running, progressively scrolled from top to bottom:
 
-[![The Photo Wrapping Page](flex-layout-images/PhotoWrapping.png "The Photo Wrapping Page")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
+[![The Photo Wrapping Page](flex-layout-images/PhotoWrapping.png "The Photo Wrapping Page."](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
 ### Page layout with FlexLayout
 
@@ -235,7 +235,7 @@ The **Holy Grail Layout** page of the **[FlexLayoutDemos](/samples/xamarin/xamar
 
 Here it is running:
 
-[![The Holy Grail Layout Page](flex-layout-images/HolyGrailLayout.png "The Holy Grail Layout Page")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
+[![The Holy Grail Layout Page](flex-layout-images/HolyGrailLayout.png "The Holy Grail Layout Page."](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
 The navigation and aside areas are rendered with a `BoxView` on the left and right.
 
@@ -257,7 +257,7 @@ Three attached bindable properties are demonstrated in this program:
 
 The **Catalog Items** page in the **[FlexLayoutDemos](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample is similar to [Example 1 in Section 1.1 of the CSS Flex Layout Box specification](https://www.w3.org//TR/css-flexbox-1/#overview) except that it displays a horizontally scrollable series of pictures and descriptions of three monkeys:
 
-[![The Catalog Items Page](flex-layout-images/CatalogItems.png "The Catalog Items Page")](flex-layout-images/CatalogItems-Large.png#lightbox)
+[![The Catalog Items Page](flex-layout-images/CatalogItems.png "The Catalog Items Page."](flex-layout-images/CatalogItems-Large.png#lightbox)
 
 Each of the three monkeys is a `FlexLayout` contained in a `Frame` that is given an explicit height and width, and which is also a child of a larger `FlexLayout`. In this XAML file, most of the properties of the `FlexLayout` children are specified in styles, all but one of which is an implicit style:
 
@@ -380,7 +380,7 @@ You can experiment with the five remaining bindable properties using the **Exper
 
 When the program starts up, five `Picker` views display the default values of these five `FlexLayout` properties. The `FlexLayout` towards the bottom of the screen contains three children:
 
-[![The Experiment Page: Default](flex-layout-images/ExperimentDefault.png "The Experiment Page - Default")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![The Experiment Page: Default](flex-layout-images/ExperimentDefault.png "The Experiment Page - Default."](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 Each of the `Label` views has a gray background that shows the space allocated to that `Label` within the `FlexLayout`. The background of the `FlexLayout` itself is Alice Blue. It occupies the entire bottom area of the page except for a little margin at the left and right.
 
@@ -397,7 +397,7 @@ In XAML, you can specify the value of this property using the enumeration member
 
 Here's the **Experiment** page showing (from left to right), the `Row` direction, `Column` direction, and `ColumnReverse` direction:
 
-[![The Experiment Page: Direction](flex-layout-images/ExperimentDirection.png "The Experiment Page - Direction")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
+[![The Experiment Page: Direction](flex-layout-images/ExperimentDirection.png "The Experiment Page - Direction."](flex-layout-images/ExperimentDirection-Large.png#lightbox)
 
 Notice that for the `Reverse` options, the items start at the right or bottom.
 
@@ -411,7 +411,7 @@ The [`Wrap`](xref:Xamarin.Forms.FlexLayout.Wrap) property is of type [`FlexWrap`
 
 From left to right, these screens show the `NoWrap`, `Wrap` and `Reverse` options for 12 children:
 
-[![The Experiment Page: Wrap](flex-layout-images/ExperimentWrap.png "The Experiment Page - Wrap")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![The Experiment Page: Wrap](flex-layout-images/ExperimentWrap.png "The Experiment Page - Wrap."](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 When the `Wrap` property is set to `NoWrap` and the main axis is constrained (as in this program), and the main axis is not wide or tall enough to fit all the children, the `FlexLayout` attempts to make the items smaller, as the iOS screenshot demonstrates. You can control the shrinkness of the items with the [`Shrink`](#the-shrink-property) attached bindable property.
 
@@ -428,7 +428,7 @@ The [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) property is
 
 This property specifies how the items are spaced on the main axis, which is the horizontal axis in this example:
 
-[![The Experiment Page: Justify Content](flex-layout-images/ExperimentJustifyContent.png "The Experiment Page - Justify Content")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
+[![The Experiment Page: Justify Content](flex-layout-images/ExperimentJustifyContent.png "The Experiment Page - Justify Content."](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
 
 In all three screenshots, the `Wrap` property is set to `Wrap`. The `Start` default is shown in the previous Android screenshot. The iOS screenshot here shows the `Center` option: all the items are moved to the center. The three other options beginning with the word `Space` allocate the extra space not occupied by the items. `SpaceBetween` allocates the space equally between the items; `SpaceAround` puts equal space around each item, while `SpaceEvenly` puts equal space between each item, and before the first item and after the last item on the row.
 
@@ -443,7 +443,7 @@ The [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) property is of type
 
 This is one of two properties (the other being [`AlignContent`](#the-aligncontent-property)) that indicates how children are aligned on the cross axis. Within each row, the children are stretched (as shown in the previous screenshot), or aligned on the start, center, or end of each item, as shown in the following three screenshots:
 
-[![The Experiment Page: Align Items](flex-layout-images/ExperimentAlignItems.png "The Experiment Page - Align Items")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
+[![The Experiment Page: Align Items](flex-layout-images/ExperimentAlignItems.png "The Experiment Page - Align Items."](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 In the iOS screenshot, the tops of all the children are aligned. In the Android screenshots, the items are vertically centered based on the tallest child. In the UWP screenshot, the bottoms of all the items are aligned.
 
@@ -463,11 +463,11 @@ The [`AlignContent`](xref:Xamarin.Forms.FlexLayout.AlignContent) property is of 
 
 Like `AlignItems`, the `AlignContent` property also aligns children on the cross axis, but affects entire rows or columns:
 
-[![The Experiment Page: Align Content](flex-layout-images/ExperimentAlignContent.png "The Experiment Page - Align Content")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
+[![The Experiment Page: Align Content](flex-layout-images/ExperimentAlignContent.png "The Experiment Page - Align Content."](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
 In the iOS screenshot, both rows are at the top; in the Android screenshot they're in the center; and in the UWP screenshot they're at the bottom. The rows can also be spaced in various ways:
 
-[![The Experiment Page:  Align Content 2](flex-layout-images/ExperimentAlignContent2.png "The Experiment Page - Align Content 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![The Experiment Page:  Align Content 2.](flex-layout-images/ExperimentAlignContent2.png "The Experiment Page - Align Content 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 The `AlignContent` has no effect when there is only one row or column.
 
@@ -551,7 +551,7 @@ Or you can specify a percentage in the range of 0% to 100%:
 
 The **Basis Experiment** page of the **[FlexLayoutDemos](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample allows you to experiment with the `Basis` property. The page displays a wrapped column of five `Label` elements with alternating background and foreground colors. Two `Slider` elements let you specify `Basis` values for the second and fourth `Label`:
 
-[![The Basis Experiment Page](flex-layout-images/BasisExperiment.png "The Basis Experiment Page")](flex-layout-images/BasisExperiment-Large.png#lightbox)
+[![The Basis Experiment Page](flex-layout-images/BasisExperiment.png "The Basis Experiment Page."](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
 The iOS screenshot at the left shows the two `Label` elements being given heights in device-independent units. The Android screen shows them being given heights that are a fraction of the total height of the `FlexLayout`. If the `Basis` is set at 100%, then the child is the height of the `FlexLayout`, and will wrap to the next column and occupy the entire height of that column, as the UWP screenshot demonstrates: It appears as if the five children are arranged in a row, but they're actually arranged in five columns.
 
@@ -563,7 +563,7 @@ The `Grow` property plays a role when the `Wrap` property is set to `NoWrap` and
 
 In the **Grow Experiment** page, five `Label` elements of alternating colors are arranged in a column, and two `Slider` elements allow you to adjust the `Grow` property of the second and fourth `Label`. The iOS screenshot at the far left shows the default `Grow` properties of 0:
 
-[![The Grow Experiment Page](flex-layout-images/GrowExperiment.png "The Grow Experiment Page")](flex-layout-images/GrowExperiment-Large.png#lightbox)
+[![The Grow Experiment Page](flex-layout-images/GrowExperiment.png "The Grow Experiment Page."](flex-layout-images/GrowExperiment-Large.png#lightbox)
 
 If any one child is given a positive `Grow` value, then that child takes up all the remaining space, as the Android screenshot demonstrates. This space can also be allocated among two or more children. In the UWP screenshot, the `Grow` property of the second `Label` is set to 0.5, while the `Grow` property of the fourth `Label` is 1.5, which gives the fourth `Label` three times as much of the leftover space as the second `Label`.
 
@@ -577,7 +577,7 @@ The `Shrink` property plays a role when the `Wrap` property is set to `NoWrap` a
 
 The **Shrink Experiment** page creates a `FlexLayout` with a single row of five `Label` children that require more space than the `FlexLayout` width. The iOS screenshot at the left shows all the `Label` elements with default values of 1:
 
-[![The Shrink Experiment Page](flex-layout-images/ShrinkExperiment.png "The Shrink Experiment Page")](flex-layout-images/ShrinkExperiment-Large.png#lightbox)
+[![The Shrink Experiment Page](flex-layout-images/ShrinkExperiment.png "The Shrink Experiment Page."](flex-layout-images/ShrinkExperiment-Large.png#lightbox)
 
 In the Android screenshot, the `Shrink` value for the second `Label` is set to 0, and that `Label` is displayed in its full width. Also, the fourth `Label` is given a `Shrink` value greater than one, and it has shrunk. The UWP screenshot shows both `Label` elements being given a `Shrink` value of 0 to allow them to be displayed in their full size, if that is possible.
 
@@ -587,7 +587,7 @@ You can set both the `Grow` and `Shrink` values to accommodate situations where 
 
 You can use the [CSS styling](~/xamarin-forms/user-interface/styles/css/index.md) feature introduced with Xamarin.Forms 3.0 in connection with `FlexLayout`. The **CSS Catalog Items** page of the **[FlexLayoutDemos](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample duplicates the layout of the **Catalog Items** page, but with a CSS style sheet for many of the styles:
 
-[![The CSS Catalog Items Page](flex-layout-images/CssCatalogItems.png "The CSS Catalog Items Page")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
+[![The CSS Catalog Items Page](flex-layout-images/CssCatalogItems.png "The CSS Catalog Items Page."](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
 The original **CatalogItemsPage.xaml** file has five `Style` definitions in its `Resources` section with 15 `Setter` objects. In the **CssCatalogItemsPage.xaml** file, that has been reduced to two `Style` definitions with just four `Setter` objects. These styles supplement the CSS style sheet for properties that the Xamarin.Forms CSS styling feature currently doesn't support:
 

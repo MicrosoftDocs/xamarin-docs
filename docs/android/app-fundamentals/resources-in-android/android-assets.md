@@ -33,14 +33,14 @@ came from an asset!".
 Visual Studio should have set the **Build Action** for this file to
 **AndroidAsset**:
 
-![Setting the build action to AndroidAsset](android-assets-images/asset-properties-vs.png) 
+![Setting the build action to AndroidAsset.](android-assets-images/asset-properties-vs.png) 
 
 # [Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac should have set the **Build Action** for this file to
 **AndroidAsset**:
 
-[![Setting the build action to AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
+[![Setting the build action to AndroidAsset.](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
@@ -106,7 +106,7 @@ protected override void OnCreate (Bundle bundle)
 
 Run the application and you should see the following:
 
-![Example screenshot](android-assets-images/screenshot.png)
+![Example screenshot.](android-assets-images/screenshot.png)
 
 ## Related Links
 

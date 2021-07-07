@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Create a Custom Layout in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms defines five layout classes – StackLayout, AbsoluteLayout, RelativeLayout, Grid, and FlexLayout, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
 
@@ -33,7 +33,7 @@ The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class defines a [`Measur
 
 This cycle ensures that every visual element on the page receives calls to the `Measure` and `Layout` methods. The process is shown in the following diagram:
 
-![Xamarin.Forms Layout Cycle](custom-images/layout-cycle.png)
+![Xamarin.Forms Layout Cycle.](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > Note that layout cycles can also occur on a subset of the visual tree if something changes to affect the layout. This includes items being added or removed from a collection such as in a [`StackLayout`](xref:Xamarin.Forms.StackLayout), a change in the [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property of an element, or a change in the size of an element.
@@ -53,7 +53,7 @@ Elements invalidate themselves by invoking the [`InvalidateMeasure`](xref:Xamari
 
 The [`Layout`](xref:Xamarin.Forms.Layout) class sets a handler for the [`MeasureInvalidated`](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) event on every child added to its `Content` property or `Children` collection, and detaches the handler when the child is removed. Therefore, every element in the visual tree that has children is alerted whenever one of its children changes size. The following diagram illustrates how a change in the size of an element in the visual tree can cause changes that ripple up the tree:
 
-![Invalidation in the Visual Tree](custom-images/invalidation.png)
+![Invalidation in the Visual Tree.](custom-images/invalidation.png)
 
 However, the `Layout` class attempts to restrict the impact of a change in a child's size on the layout of a page. If the layout is size constrained, then a child size change does not affect anything higher than the parent layout in the visual tree. However, usually a change in the size of a layout affects how the layout arranges its children. Therefore, any change in a layout's size will start a layout cycle for the layout, and the layout will receive calls to its [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) and [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) methods.
 
@@ -393,13 +393,13 @@ async Task<ImageList> GetImageListAsync()
 
 When the page containing the `WrapLayout` appears, the sample application asynchronously accesses a remote JSON file containing a list of photos, creates an [`Image`](xref:Xamarin.Forms.Image) element for each photo, and adds it to the `WrapLayout`. This results in the appearance shown in the following screenshots:
 
-![Sample Application Portrait Screenshots](custom-images/portait-screenshots.png)
+![Sample Application Portrait Screenshots.](custom-images/portait-screenshots.png)
 
 The following screenshots show the `WrapLayout` after it's been rotated to landscape orientation:
 
-![Sample iOS Application Landscape Screenshot](custom-images/landscape-ios.png)
-![Sample Android Application Landscape Screenshot](custom-images/landscape-android.png)
-![Sample UWP Application Landscape Screenshot](custom-images/landscape-uwp.png)
+![Sample iOS Application Landscape Screenshot.](custom-images/landscape-ios.png)
+![Sample Android Application Landscape Screenshot.](custom-images/landscape-android.png)
+![Sample UWP Application Landscape Screenshot.](custom-images/landscape-uwp.png)
 
 The number of columns in each row depends on the photo size, the screen width, and the number of pixels per device-independent unit. The [`Image`](xref:Xamarin.Forms.Image) elements asynchronously load the photos, and therefore the `WrapLayout` class will receive frequent calls to its [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) method as each `Image` element receives a new size based on the loaded photo.
 

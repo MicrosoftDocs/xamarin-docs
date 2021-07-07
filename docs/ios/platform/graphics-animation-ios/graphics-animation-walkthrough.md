@@ -15,7 +15,7 @@ For this walkthrough we are going to draw a path using Core Graphics in response
 
 The following screenshot shows the completed application:
 
-![The completed application](graphics-animation-walkthrough-images/00-final-app.png)
+![The completed application.](graphics-animation-walkthrough-images/00-final-app.png)
 
 Before we begin download the *GraphicsDemo* sample that accompanies this guide. It can be downloaded [here](/samples/xamarin/ios-samples/graphicsandanimation) and is located inside the **GraphicsWalkthrough** directory Launch the project named **GraphicsDemo_starter** by double-clicking on it, and open the `DemoView` class.
 
@@ -112,7 +112,7 @@ Before we begin download the *GraphicsDemo* sample that accompanies this guide. 
 
 If we run the application now, we can touch to draw on the screen, as shown in the following screenshot:
 
-![Drawing on the screen](graphics-animation-walkthrough-images/01-path.png)
+![Drawing on the screen.](graphics-animation-walkthrough-images/01-path.png)
 
 ## Animating Along a Path
 
@@ -168,7 +168,7 @@ Now that we have implemented the code to allow users to draw the path, let’s a
 
 3. Run the application now and after drawing, a layer with an image is added and travels along the drawn path:
 
-![A layer with an image is added and travels along the drawn path](graphics-animation-walkthrough-images/00-final-app.png)
+![A layer with an image is added and travels along the drawn path.](graphics-animation-walkthrough-images/00-final-app.png)
 
 ## Summary
 

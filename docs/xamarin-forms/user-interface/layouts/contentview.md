@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms ContentView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 The Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) class is a type of `Layout` that contains a single child element and is typically used to create custom, reusable controls. The `ContentView` class inherits from [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). This article, and associated sample, explain how to create a custom `CardView` control based on the `ContentView` class.
 
 The following screenshot shows a `CardView` control that derives from the `ContentView` class:
 
-[![CardView sample application screenshot](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[![CardView sample application screenshot.](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
 The `ContentView` class defines a single property:
 
@@ -198,7 +198,7 @@ Data binding in a `ControlTemplate` uses the `TemplateBinding` markup extension 
 
 The following screenshots show a standard `CardView` instance and `CardView` whose `ControlTemplate` has been overridden:
 
-[![CardView ControlTemplate screenshot](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[![CardView ControlTemplate screenshot.](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
 For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

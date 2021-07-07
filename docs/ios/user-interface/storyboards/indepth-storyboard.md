@@ -34,7 +34,7 @@ of views and controls (or *subviews*) is known as a *Content View Hierarchy*. Sc
 represent a transition between view controllers. This is normally achieved by creating a segue between an object on the
 initial view and the connecting view. The relationships on the design surface are illustrated in the following image:
 
- [![The relationships on the design surface are illustrated in this image](images/storyboardsview.png)](images/storyboardsview.png#lightbox)
+ [![The relationships on the design surface are illustrated in this image.](images/storyboardsview.png)](images/storyboardsview.png#lightbox)
 
 As shown, the storyboard lays out each of your scenes with content already rendered and illustrates the connections
 between them. When we talk about scenes on an iPhone, it is safe to assume that
@@ -57,22 +57,22 @@ known as nibs. At run time, these nibs are initialized and instantiated to creat
 A *Segue*, or *Segue Object*, is used in iOS development to represent a transition between scenes. To create a segue, hold
 down the **Ctrl** key and click-drag from one scene to another. As you drag the mouse, a blue connector appears that indicates where the segue will lead. This is shown in the following image:
 
- [![A blue connector appears, indicating where the segue will lead as demonstrated in this image](images/createsegue.png)](images/createsegue.png#lightbox)
+ [![A blue connector appears, indicating where the segue will lead as demonstrated in this image.](images/createsegue.png)](images/createsegue.png#lightbox)
 
 On mouse-up, a menu appears that lets you choose the action for the segue. It may look similar to the following images:
 
 **Pre-iOS 8 and Size Classes**:
 
-[![The Action Segue dropdown without Size Classes](images/segue1.png)](images/segue1.png#lightbox)
+[![The Action Segue dropdown without Size Classes.](images/segue1.png)](images/segue1.png#lightbox)
 
 **When using Size Classes and Adaptive Segues**:
 
-[![The Action Segue dropdown with Size Classes](images/16new.png)](images/16new.png#lightbox)
+[![The Action Segue dropdown with Size Classes.](images/16new.png)](images/16new.png#lightbox)
 
 > [!IMPORTANT]
 > If you are using VMWare for your Windows Virtual Machine,  Ctrl-click is mapped as the _right-click_ mouse button by default. To create a Segue, edit your Keyboard preferences through **Preferences** > **Keyboard & Mouse** > **Mouse Shortcuts** and remap your **Secondary button** as illustrated below:
 >
-> [![Keyboard and Mouse preference settings](images/image22.png)](images/image22.png#lightbox)
+> [![Keyboard and Mouse preference settings.](images/image22.png)](images/image22.png#lightbox)
 >
 > You should now be able to add a segue between your view controllers as normal.
 
@@ -97,7 +97,7 @@ segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/
 - **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the
 user will see first. It is represented by the segue shown here:
 
-    [![A sourceless segue](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
+    [![A sourceless segue.](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
 
 ### Adaptive Segue Types
 
@@ -105,7 +105,7 @@ user will see first. It is represented by the segue shown here:
 
 Any application using size classes will also use the new [*Adaptive Segues*](unified-storyboards.md). When using size classes, remember that you aren't directly specifying whether you're using an iPhone or iPad. In other words, you're creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment and determining how best to present content. The Adaptive Segues are shown below:
 
-[![The Adaptive Segues dropdown](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
+[![The Adaptive Segues dropdown.](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
 |Segue|Description|
 |--- |--- |
@@ -160,11 +160,11 @@ On occasion, you may need to add a Storyboard to a previously non-storyboard fil
 
 1. Create a new Storyboard file by browsing to **File > New File > iOS > Storyboard**.
 
-    [![The new file dialog](images/new-storyboard-xs.png)](images/new-storyboard-xs.png#lightbox)
+    [![The new file dialog.](images/new-storyboard-xs.png)](images/new-storyboard-xs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the **Info.plist**.
 
-    [![The Info.plist editor](images/infoplist.png)](images/infoplist.png#lightbox)
+    [![The Info.plist editor.](images/infoplist.png)](images/infoplist.png#lightbox)
 
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (see the next step), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window. It then makes the window visible on the screen.
 
@@ -181,11 +181,11 @@ On occasion, you may need to add a Storyboard to a previously non-storyboard fil
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**.
 
-    [![The new item dialog](images/new-storyboard-vs.png)](images/new-storyboard-vs.png#lightbox)
+    [![The new item dialog.](images/new-storyboard-vs.png)](images/new-storyboard-vs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the iOS Application.
 
-    [![The Info.plist editor](images/ios-app.png)](images/ios-app.png#lightbox)
+    [![The Info.plist editor.](images/ios-app.png)](images/ios-app.png#lightbox)
 
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (see the next step), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window. It then makes the window visible on the screen.
 
@@ -217,21 +217,21 @@ through how that transition can be set up in code.
 
 1. Add an _Empty iPhone Storyboard_ to an existing project project:
 
-    [![Adding storyboard](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
+    [![Adding storyboard.](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
 
 2. Double-click the Storyboard file or right-click and select **Open With > Xcode Interface Builder** to open it in Xcode's Interface Builder.
 
 3. In Xcode, open the Library (via **View > Show Library** or **Shift + Command + L**) to show a list of objects that can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens. The screen on the right is a `TableViewController` which you'll replace with a simpler view so it can be removed by clicking the view and pressing the Delete key.
 
-    [![Adding a NavigationController from the Library](images/add-navigation-controller.png)](images/add-navigation-controller.png#lightbox)
+    [![Adding a NavigationController from the Library.](images/add-navigation-controller.png)](images/add-navigation-controller.png#lightbox)
 
 4. This view controller will have its own custom class, and it also needs its own Storyboard ID. When you click on the box above this newly added view, there are three icons, the leftmost of which represents the view controller for the view. By selecting this icon, you can then set the class and ID values on the right pane's identity tab. Set these values to `MainViewController` and make certain to check `Use Storyboard ID`.
 
-    [![Setting the MainViewController in the identity panel](images/identity-panel.png)](images/identity-panel.png#lightbox)
+    [![Setting the MainViewController in the identity panel.](images/identity-panel.png)](images/identity-panel.png#lightbox)
 
 5. Using the Library again, drag a View Controller control onto the screen. This will be set as the root view controller. Holding the **Control** key, click and drag from the Navigation Controller on the left to the newly added View Controller on the right, and select **root view controller** in the menu.
 
-    [![Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller](images/add-view-controller.png)](images/add-view-controller.png#lightbox)
+    [![Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller.](images/add-view-controller.png)](images/add-view-controller.png#lightbox)
 
 6. This app will navigate to another view, so add one more view to the Storyboard, just as before. Call it `PinkViewController`, and set those values in the same manner as with the `MainViewController`.
 
@@ -243,7 +243,7 @@ through how that transition can be set up in code.
 
 8. Because we want the `MainViewController` to navigate to the `PinkViewController`, the former will need a button to interact with. Use the Library to add a button to the `MainViewController`.
 
-    [![Adding a Button to the MainViewController](images/add-button.png)](images/add-button.png#lightbox)
+    [![Adding a Button to the MainViewController.](images/add-button.png)](images/add-button.png#lightbox)
 
 The storyboard is complete, but if you deploy the project now, you'll get a blank screen. That's because you still need to tell the IDE to use the storyboard, and to set up a root view controller to serve as the first view. Normally this can be done through Project Options, as shown previously. However, in this example, we'll add the following code to the **AppDelegate** to achieve the same result:
 
@@ -331,7 +331,7 @@ public partial class MainViewController : UIViewController
 
 Running the application produces a 2-screen application:
 
-![Sample app run screens](images/finishedstoryboard.png)
+![Sample app run screens.](images/finishedstoryboard.png)
 
 ## Conditional Segues
 
@@ -353,13 +353,13 @@ Before we begin, follow the previous steps 1 – 8. In these steps we create our
         - Lines: 2
         - 'Hidden' checkbox checked    
 
-    [![Center Lines](images/passwordvc.png)](images/passwordvc.png#lightbox)
+    [![Center Lines.](images/passwordvc.png)](images/passwordvc.png#lightbox)
 
 2. Create a Segue between the Go To Pink button and the view controller by control-dragging from the *PinkButton* to the *PinkViewController*, and then selecting **Push** on mouse-up.
 
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
-    [![Click on the Segue and give it the Identifier SegueToPink](images/namesegue.png)](images/namesegue.png#lightbox)  
+    [![Click on the Segue and give it the Identifier SegueToPink.](images/namesegue.png)](images/namesegue.png#lightbox)  
 
 4. Finally, add the following `ShouldPerformSegue` method to the `MainViewController` class:
 

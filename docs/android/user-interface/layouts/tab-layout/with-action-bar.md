@@ -50,14 +50,14 @@ The action bar tries to display all of its tabs concurrently and make
 all the tabs equal in size based on the width of the widest tab label. 
 This is illustrated by the following screenshot: 
 
-![Example screenshot of ActionBar with all equal-sized tabs shown](with-action-bar-images/image1.png)
+![Example screenshot of ActionBar with all equal-sized tabs shown.](with-action-bar-images/image1.png)
 
 When the ActionBar can't display all of the tabs, it will set up the 
 tabs in a horizontally scrollable view. The user may swipe left or 
 right to see the remaining tabs. This screenshot from Google Play shows 
 an example of this: 
 
-![Example screenshot of tabs in a horizontally scrollable view](with-action-bar-images/image2.png)
+![Example screenshot of tabs in a horizontally scrollable view.](with-action-bar-images/image2.png)
 
 Each tab in the action bar should be associated with a 
 [*fragment*](~/android/platform/fragments/index.md). When the 

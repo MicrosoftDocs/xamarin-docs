@@ -34,7 +34,7 @@ Additionally, since Xamarin.tvOS apps are written in C# and .NET, common, backen
 
 This article will introduce you to the key concepts needed to create an Apple TV App using Xamarin.tvOS and Visual Studio by walking you through the process of building a basic **Hello, tvOS** app that counts the number of times a button has been clicked:
 
-[![Example app run](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
+[![Example app run.](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
 We’ll cover the following concepts:
 
@@ -51,21 +51,21 @@ To get started, let's do the following:
 
 1. Start Visual Studio for Mac:
 
-    [![Visual Studio for Mac](hello-tvos-images/setup01.png)](hello-tvos-images/setup01.png#lightbox)
+    [![Visual Studio for Mac.](hello-tvos-images/setup01.png)](hello-tvos-images/setup01.png#lightbox)
 2. Click on the **New Solution...** link in the upper left hand corner of the screen to open the **New Project** dialog box.
 3. Select **tvOS** > **App** > **Single View App** and click the **Next** button:
 
-    [![Select Single View App](hello-tvos-images/setup02.png)](hello-tvos-images/setup02.png#lightbox)
+    [![Select Single View App.](hello-tvos-images/setup02.png)](hello-tvos-images/setup02.png#lightbox)
 4. Enter `Hello, tvOS` for the **App Name**, enter your **Organization Identifier** and click the **Next** button:
 
-    [![Enter Hello, tvOS](hello-tvos-images/setup04.png)](hello-tvos-images/setup04.png#lightbox)
+    [![Enter Hello, tvOS.](hello-tvos-images/setup04.png)](hello-tvos-images/setup04.png#lightbox)
 5. Enter `Hello_tvOS` for the **Project Name** and click the **Create** button:
 
-    [![Enter HellotvOS](hello-tvos-images/setup03.png)](hello-tvos-images/setup03.png#lightbox)
+    [![Enter HellotvOS.](hello-tvos-images/setup03.png)](hello-tvos-images/setup03.png#lightbox)
 
 Visual Studio for Mac will create the new Xamarin.tvOS app and display the default files that get added to your application's solution:
 
- [![The default files view](hello-tvos-images/project01.png)](hello-tvos-images/project01.png#lightbox)
+ [![The default files view.](hello-tvos-images/project01.png)](hello-tvos-images/project01.png#lightbox)
 
 Visual Studio for Mac uses **Solutions** and **Projects**, in the exact same way that Visual Studio does. A solution is a container that can hold one or more projects; projects can include applications, supporting libraries, test applications, etc. In this case, Visual Studio for Mac has created both a solution and an application project for you.
 
@@ -253,11 +253,11 @@ You don't have to use Xamarin Designer for iOS to create the User Interface for 
 
 To start creating your UI, let's double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in the iOS Designer:
 
-[![The Main.storyboard file in the Solution Explorer](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
+[![The Main.storyboard file in the Solution Explorer.](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
 
 This should launch the Designer and look like the following:
 
-[![The Designer](hello-tvos-images/designer02.png)](hello-tvos-images/designer02.png#lightbox)
+[![The Designer.](hello-tvos-images/designer02.png)](hello-tvos-images/designer02.png#lightbox)
 
 For more information on the iOS Designer and how it works, refer to the [Introduction to the Xamarin Designer for iOS](~/ios/user-interface/designer/introduction.md) guide.
 
@@ -267,57 +267,57 @@ Do the following:
 
 1. Locate the **Toolbox**, which should be to the right of the design surface:
 
-    [![The Toolbox](hello-tvos-images/designer03.png)](hello-tvos-images/designer03.png#lightbox)
+    [![The Toolbox.](hello-tvos-images/designer03.png)](hello-tvos-images/designer03.png#lightbox)
 
     If you can't locate it here, browse to **View > Pads > Toolbox** to view it.
 2. Drag a **Label** from the **Toolbox** to the design surface:
 
-    [![Drag a Label from the Toolbox](hello-tvos-images/designer04.png)](hello-tvos-images/designer04.png#lightbox)
+    [![Drag a Label from the Toolbox.](hello-tvos-images/designer04.png)](hello-tvos-images/designer04.png#lightbox)
 3. Click on the **Title** property in the **Property pad** and change the button's title to `Hello, tvOS` and set the **Font Size** to 128:
 
-    [![Set the title to Hello, tvOS and set the Font Size to 128](hello-tvos-images/designer05.png)](hello-tvos-images/designer05.png#lightbox)
+    [![Set the title to Hello, tvOS and set the Font Size to 128.](hello-tvos-images/designer05.png)](hello-tvos-images/designer05.png#lightbox)
 4. Resize the label so that all of the words are visible and place it centered near the top of the window:
 
-    [![Resize and center the label](hello-tvos-images/designer06.png)](hello-tvos-images/designer06.png#lightbox)
+    [![Resize and center the label.](hello-tvos-images/designer06.png)](hello-tvos-images/designer06.png#lightbox)
 5. The label will now need to be constrained to it's position, so that it appears as intended. regardless of screen size. To do this, click on the label until the *T-shaped handle* appears:
 
-    [![The T-shaped handle](hello-tvos-images/designer07.png)](hello-tvos-images/designer07.png#lightbox)
+    [![The T-shaped handle.](hello-tvos-images/designer07.png)](hello-tvos-images/designer07.png#lightbox)
 6. To constrain the label horizontally, select the center square and drag it to the vertically dashed line:
 
-    [![Select the center square](hello-tvos-images/designer08.png)](hello-tvos-images/designer08zoom.png#lightbox)
+    [![Select the center square.](hello-tvos-images/designer08.png)](hello-tvos-images/designer08zoom.png#lightbox)
 
      The label should turn orange.
 7. Select the T handle at the top of the label, and drag it to the top edge of the window:
 
-    [![Drag the handle to the top edge of the window](hello-tvos-images/designer09.png)](hello-tvos-images/designer09.png#lightbox)
+    [![Drag the handle to the top edge of the window.](hello-tvos-images/designer09.png)](hello-tvos-images/designer09.png#lightbox)
 8. Next, click the width and then the height *bone handle* as illustrated below:
 
-    [![The width and the height bone handles](hello-tvos-images/designer10.png)](hello-tvos-images/designer10.png#lightbox)
+    [![The width and the height bone handles.](hello-tvos-images/designer10.png)](hello-tvos-images/designer10.png#lightbox)
 
      When each *bone handle* is clicked, select both Width and Height respectively to set fixed dimensions.
 9. When completed, your Constraints should look similar to those in the Layout tab of the Properties pad:
 
-    [![Example Constraints](hello-tvos-images/designer11.png)](hello-tvos-images/designer11.png#lightbox)
+    [![Example Constraints.](hello-tvos-images/designer11.png)](hello-tvos-images/designer11.png#lightbox)
 10. Drag a **Button** from the **Toolbox** and place it under the Label.
 11. Click on the **Title** property in the **Property pad** and change the button's title to `Click Me`:
 
-    [![Change the buttons title to Click Me](hello-tvos-images/designer12.png)](hello-tvos-images/designer12.png#lightbox)
+    [![Change the buttons title to Click Me.](hello-tvos-images/designer12.png)](hello-tvos-images/designer12.png#lightbox)
 12. Repeat steps 5 to 8 above to constrain the button in the tvOS window. However, instead of dragging  the T-handle to the top of the window (as in step #7), drag it to the bottom of the label:
 
-    [![Constrain the button](hello-tvos-images/designer14.png)](hello-tvos-images/designer14.png#lightbox)
+    [![Constrain the button.](hello-tvos-images/designer14.png)](hello-tvos-images/designer14.png#lightbox)
 13. Drag another label under the button, size it to be the same width as the first label and set its **Alignment** to **Center**:
 
-    [![Drag another label under the button, size it to be the same width as the first label and set its Alignment to Center](hello-tvos-images/designer15.png)](hello-tvos-images/designer15.png#lightbox)
+    [![Drag another label under the button, size it to be the same width as the first label and set its Alignment to Center.](hello-tvos-images/designer15.png)](hello-tvos-images/designer15.png#lightbox)
 14. Like the first label and button, set this label to center and pin it into location and size:
 
-    [![Pin the label into location and size](hello-tvos-images/designer16.png)](hello-tvos-images/designer16.png#lightbox)
+    [![Pin the label into location and size.](hello-tvos-images/designer16.png)](hello-tvos-images/designer16.png#lightbox)
 15. Save your changes to the User Interface.
 
 As you were resizing and moving controls around, you should have noticed that the designer gives you helpful snap hints that are based on [Apple TV Human Interface Guidelines](https://developer.apple.com/tvos/human-interface-guidelines/). These guidelines will help you create high quality applications that will have a familiar look and feel for Apple TV users.
 
 If you look in the **Document Outline** section, notice how the layout and hierarchy of the elements that make up our user Interface are shown:
 
-[![The Document Outline section](hello-tvos-images/designer17.png)](hello-tvos-images/designer17.png#lightbox)
+[![The Document Outline section.](hello-tvos-images/designer17.png)](hello-tvos-images/designer17.png#lightbox)
 
 From here you can select items to edit or drag to reorder UI elements if needed. For example, if a UI element was being covered by another element, you could drag it to the bottom of the list to make it the top-most item on the window.
 
@@ -339,16 +339,16 @@ In this sample application, when the button is clicked we want _something_ to ha
 1. In the Xamarin iOS Designer, select the button on the View Controller.
 2. In the Properties pad, select the **Events** tab:
 
-    [![The Events tab](hello-tvos-images/event1.png)](hello-tvos-images/event1.png#lightbox)
+    [![The Events tab.](hello-tvos-images/event1.png)](hello-tvos-images/event1.png#lightbox)
 3. Locate the TouchUpInside event, and give it an event handler named `Clicked`:
 
-    [![The TouchUpInside event](hello-tvos-images/event2.png)](hello-tvos-images/event2.png#lightbox)
+    [![The TouchUpInside event.](hello-tvos-images/event2.png)](hello-tvos-images/event2.png#lightbox)
 4. When you press **Enter**, the **ViewController**.cs file will open, suggesting locations for your event handler in code. Use the arrow keys on your keyboard to set the location:
 
-    [![Setting the location](hello-tvos-images/event3.png)](hello-tvos-images/event3.png#lightbox)
+    [![Setting the location.](hello-tvos-images/event3.png)](hello-tvos-images/event3.png#lightbox)
 5. This will create a partial method as shown below:
 
-    [![The partial method](hello-tvos-images/event4.png)](hello-tvos-images/event4.png#lightbox)
+    [![The partial method.](hello-tvos-images/event4.png)](hello-tvos-images/event4.png#lightbox)
 
 We are now ready to start adding some code to allow the button to function.
 
@@ -359,10 +359,10 @@ When the button is clicked, the label should update based on the number of click
 1. Open the Storyboard, and select the Label at the bottom of the View Controller.
 2. In the Properties pad, select the **Widget** tab:
 
-    [![Select the Widget tab](hello-tvos-images/name1.png)](hello-tvos-images/name1.png#lightbox)
+    [![Select the Widget tab.](hello-tvos-images/name1.png)](hello-tvos-images/name1.png#lightbox)
 3. Under **Identity > Name**, add `ClickedLabel`:
 
-    [![Set ClickedLabel](hello-tvos-images/name2.png)](hello-tvos-images/name2.png#lightbox)
+    [![Set ClickedLabel.](hello-tvos-images/name2.png)](hello-tvos-images/name2.png#lightbox)
 
 We are now ready to start updating the label!
 
@@ -370,7 +370,7 @@ We are now ready to start updating the label!
 
 If you select the `ViewController.designer.cs` in the **Solution Explorer** you'll be able to see how the `ClickedLabel` label and the `Clicked` event handler have been mapped to an **Outlet** and **Action** in C#:
 
-[![Outlets and Actions](hello-tvos-images/accesscontrol.png)](hello-tvos-images/accesscontrol.png#lightbox)
+[![Outlets and Actions.](hello-tvos-images/accesscontrol.png)](hello-tvos-images/accesscontrol.png#lightbox)
 
 You may also notice that `ViewController.designer.cs` is a partial class, so that Visual Studio for Mac doesn't have to modify `ViewController.cs` which would overwrite any changes that we have made to the class.
 
@@ -386,7 +386,7 @@ With our User Interface created and its UI elements exposed to code via **Outlet
 
 In our application, every time the first button is clicked, we’re going to update our label to show how many times the button has been clicked. To accomplish this, we need to open the `ViewController.cs` file for editing by double-clicking it in the **Solution Pad**:
 
-[![The Solution Pad](hello-tvos-images/code01.png)](hello-tvos-images/code01.png#lightbox)
+[![The Solution Pad.](hello-tvos-images/code01.png)](hello-tvos-images/code01.png#lightbox)
 
 First, we need to create a class-level variable in our `ViewController` class to track the number of clicks that have happened. Edit the class definition and make it look like the following:
 
@@ -441,7 +441,7 @@ Whenever we build an application, we can choose what kind of build we want:
 
 You can select the type of build from the **Configuration Selector** at the upper left hand corner of the Visual Studio for Mac screen:
 
-[![Select the type of build](hello-tvos-images/run01.png)](hello-tvos-images/run01.png#lightbox)
+[![Select the type of build.](hello-tvos-images/run01.png)](hello-tvos-images/run01.png#lightbox)
 
 ### Building the Application
 
@@ -459,15 +459,15 @@ To run the application, we have three options:
 
 The application will build (if it hasn’t been built already), start in debug mode, the tvOS Simulator will start and the app will launch and display it's main interface window:
 
-[![The sample app home screen](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
+[![The sample app home screen.](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
 
 From the **Hardware** menu select **Show Apple TV Remote** so you can control the simulator.
 
-[![Select Show Apple TV Remote](hello-tvos-images/run04.png)](hello-tvos-images/run04.png#lightbox)
+[![Select Show Apple TV Remote.](hello-tvos-images/run04.png)](hello-tvos-images/run04.png#lightbox)
 
 Using the Simulator's remote, if you click the button a few times the label should be updated with the count:
 
-[![The label with updated count](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
+[![The label with updated count.](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
 Congratulations! We covered a lot of ground here, but if you followed this tutorial from start to finish, you should now have a solid understanding of the components of a Xamarin.tvOS app as well as the tools used to create them.
 

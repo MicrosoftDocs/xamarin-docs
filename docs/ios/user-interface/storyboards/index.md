@@ -24,11 +24,11 @@ For a more in-depth walkthrough of storyboards, see [Storyboards in Xamarin.iOS]
 
 Open an iOS user interface file in Visual Studio for Mac by right-clicking on a storyboard file and selecting **Xcode Interface Builder**:
 
-[![Select Interface Builder](images/select-interface-builder.png)](images/select-interface-builder.png#lightbox)
+[![Select Interface Builder.](images/select-interface-builder.png)](images/select-interface-builder.png#lightbox)
 
 You should then see the Xcode window open. Any edits saved here will be reflected in your Visual Studio project.
 
-[![Xcode Window](images/xcode.png)](images/xcode.png#lightbox)
+[![Xcode Window.](images/xcode.png)](images/xcode.png#lightbox)
 
 For more information on the Xcode Interface Builder, see [Interface Builder Built-In](https://developer.apple.com/xcode/interface-builder/).
 
@@ -36,13 +36,13 @@ For more information on the Xcode Interface Builder, see [Interface Builder Buil
 
 To create a new control with the Xcode Interface Builder, first select the storyboard you'd like to edit. Then, open the Xcode Library dialog (**View** > **Show Library**) and drag the control to your storyboard.
 
-[![Library Picker](images/library-picker.png)](images/library-picker.png#lightbox)
+[![Library Picker.](images/library-picker.png)](images/library-picker.png#lightbox)
 
 Next, open up the corresponding view controller header file.  For a blank "Single View" Xamarin.iOS app, the default storyboard is called **Main.storyboard**. The corresponding view controller file is called **ViewController.cs** in Visual Studio with a corresponding **ViewController.h** header file when viewed from Xcode.
 
 From the Xcode Interface Builder, open both the storyboard and the corresponding view controller header file.  Holding the **Control** key (**^**), drag the control from the storyboard to the view controller file until Xcode prompts you with a dialog box.
 
-[![Demo Link Control](images/demo-link-control.gif)](images/demo-link-control.gif#lightbox)
+[![Demo Link Control.](images/demo-link-control.gif)](images/demo-link-control.gif#lightbox)
 
 As illustrated above, the corresponding C# code will be automatically generated in the view controller's code-behind file.  You can now access this control within your Xamarin.iOS project.
 
@@ -50,7 +50,7 @@ As illustrated above, the corresponding C# code will be automatically generated 
 
 To edit an existing control's name from the Xcode Interface Builder and reflect that change back into your C# project, navigate to the appropriate view controller header file, right-cick, and select **Refactor**.   
 
-[![Refactor Control](images/refactor-control.png)](images/refactor-control.png#lightbox)
+[![Refactor Control.](images/refactor-control.png)](images/refactor-control.png#lightbox)
 
 Your code-behind file will regenerate with the new name, allowing you to access the control via code in Visual Studio for Mac.
 
@@ -62,11 +62,11 @@ This section covers known issues.
 
 In macOS Catalina or higher, you may encounter the error below:
 
-[![cant communicate err](images/could-not-communicate.png)](images/could-not-communicate.png#lightbox)
+[![cant communicate err.](images/could-not-communicate.png)](images/could-not-communicate.png#lightbox)
 
 First, in your Mac's system preferences under **Security & Privacy > Automation**, ensure that Visual Studio is listed and **Xcode** is checked.
 
-[![macOS security](images/macos-security.png)](images/macos-security.png#lightbox)
+[![macOS security.](images/macos-security.png)](images/macos-security.png#lightbox)
 
 If **Xcode** is checked and the error message still appears, you may need to reset the Visual Studio for Mac privacy permissions.
 

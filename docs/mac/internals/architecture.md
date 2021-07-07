@@ -19,7 +19,7 @@ Xamarin.Mac applications run within the Mono execution environment,  and use Xam
 
 The diagram below shows a basic overview of this architecture:
 
-[![Diagram showing a basic overview of the architecture](architecture-images/mac-arch.png "Diagram showing a basic overview of the architecture")](architecture-images/mac-arch-large.png#lightbox)
+[![Diagram showing a basic overview of the architecture](architecture-images/mac-arch.png "Diagram showing a basic overview of the architecture."](architecture-images/mac-arch-large.png#lightbox)
 
 ### Native and managed code
 

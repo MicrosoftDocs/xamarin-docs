@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Invoking Events from Effects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _An effect can define and invoke an event, signaling changes in the underlying native view. This article shows how to implement low-level multi-touch finger tracking, and how to generate events that signal touch activity._
 
@@ -449,7 +449,7 @@ The `Moved` logic moves the `BoxView` by altering the `LayoutBounds` attached pr
 
 You can move multiple `BoxView` elements simultaneously using different fingers.
 
-[![Triple screenshot of the BoxView Dragging page](touch-tracking-images/boxviewdragging-small.png)](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
+[![Triple screenshot of the BoxView Dragging page.](touch-tracking-images/boxviewdragging-small.png)](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
 
 ### Subclassing the View
 
@@ -512,7 +512,7 @@ The next two demonstrations require graphics, and they use SkiaSharp for this pu
 
 The **Ellipse Drawing** page allows you to draw an ellipse by swiping your finger on the screen. Depending how you move your finger, you can draw the ellipse from the upper-left to the lower-right, or from any other corner to the opposite corner. The ellipse is drawn with a random color and opacity.
 
-[![Triple screenshot of the Ellipse Drawing page](touch-tracking-images/ellipsedrawing-small.png)](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
+[![Triple screenshot of the Ellipse Drawing page.](touch-tracking-images/ellipsedrawing-small.png)](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
 
 If you then touch one of the ellipses, you can drag it to another location. This requires a technique known as "hit-testing," which involves searching for the graphical object at a particular point. The SkiaSharp ellipses are not Xamarin.Forms elements, so they cannot perform their own `TouchEffect` processing. The `TouchEffect` must apply to the entire `SKCanvasView` object.
 
@@ -684,7 +684,7 @@ case TouchActionType.Pressed:
 
 The other SkiaSharp example is the **Finger Paint** page. You can select a stroke color and stroke width from two `Picker` views and then draw with one or more fingers:
 
-[![Triple screenshot of the Finger Paint page](touch-tracking-images/fingerpaint-small.png)](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![Triple screenshot of the Finger Paint page.](touch-tracking-images/fingerpaint-small.png)](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 This example also requires a separate class to represent each line painted on the screen:
 
@@ -792,7 +792,7 @@ The `AddToList` and `RemoveFromList` methods both check if the `List` has change
 
 The various `WhiteKey` and `BlackKey` elements are arranged in the page's [XAML file](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/SilentKeyboardPage.xaml), which looks best when the phone is held in a landscape mode:
 
-[![Triple screenshot of the Silent Keyboard page](touch-tracking-images/silentkeyboard-small.png)](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
+[![Triple screenshot of the Silent Keyboard page.](touch-tracking-images/silentkeyboard-small.png)](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
 
 If you sweep your finger across the keys, you'll see by the slight changes in color that the touch events are transferred from one key to another.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Initialization and Configuration
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The [`Map`](xref:Xamarin.Forms.Maps.Map) control uses the native map control on each platform. This provides a fast, familiar maps experience for users, but means that some configuration steps are needed to adhere to each platforms API requirements.
 
@@ -74,11 +74,11 @@ The XML representation for these keys in **Info.plist** is shown below. You shou
 
 The **Info.plist** entries can also be added in **Source** view while editing the **Info.plist** file:
 
-![Info.plist for iOS 8](setup-images/ios8-map-permissions.png "iOS 8 Required Info.plist Entries")
+![Info.plist for iOS 8.](setup-images/ios8-map-permissions.png "iOS 8 Required Info.plist Entries")
 
 A prompt is then displayed when the application attempts to access the user's location, requesting access:
 
-[![Screenshot of location permission request on iOS](setup-images/permission-ios.png "iOS permission request")](setup-images/permission-ios-large.png#lightbox "iOS permission request")
+[![Screenshot of location permission request on iOS](setup-images/permission-ios.png "iOS permission request."](setup-images/permission-ios-large.png#lightbox "iOS permission request")
 
 ### Android
 
@@ -163,7 +163,7 @@ Alternatively, these permissions can be enabled by using the manifest editor to 
 
 These are shown in the screenshot below:
 
-![Required permissions for Android](setup-images/android-map-permissions.png "Required Permissions for Android")
+![Required permissions for Android.](setup-images/android-map-permissions.png "Required Permissions for Android")
 
 #### Request runtime location permissions
 
@@ -227,7 +227,7 @@ If your application targets API 23 or later and needs to access the user's locat
 
 The overall effect of this code is that when the application requests the user's location, the following dialog is displayed which requests permission:
 
-[![Screenshot of location permission request on Android](setup-images/permission-android.png "Android permission request")](setup-images/permission-android-large.png#lightbox "Android permission request")
+[![Screenshot of location permission request on Android](setup-images/permission-android.png "Android permission request."](setup-images/permission-android-large.png#lightbox "Android permission request")
 
 ### Universal Windows Platform
 

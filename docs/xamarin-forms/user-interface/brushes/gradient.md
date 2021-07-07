@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Brushes: Gradients
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 The `GradientBrush` class derives from the `Brush` class, and is an abstract class that describes a gradient, which is composed of gradient stops. A gradient brush paints an area with multiple colors that blend into each other along an axis. Classes that derive from `GradientBrush` describe different ways of interpreting gradient stops, and Xamarin.Forms provides the following gradient brushes:
 
@@ -56,7 +56,7 @@ The following XAML example creates a diagonal `LinearGradientBrush` with four co
 
 The color of each point between gradient stops is interpolated as a combination of the color specified by the two bounding gradient stops. The following diagram shows the gradient stops from the previous example:
 
-![Frame painted with a diagonal LinearGradientBrush](gradient-images/gradient-stops.png)
+![Frame painted with a diagonal LinearGradientBrush.](gradient-images/gradient-stops.png)
 
 In this diagram, the circles mark the position of gradient stops, and the dashed line shows the gradient axis. The first gradient stop specifies the color yellow at an offset of 0.0. The second gradient stop specifies the color red at an offset of 0.25. The points between these two gradient stops gradually change from yellow to red as you move from left to right along the gradient axis. The third gradient stop specifies the color blue at an offset of 0.75. The points between the second and third gradient stops gradually change from red to blue. The fourth gradient stop specifies the color lime green at at offset of 1.0. The points between the third and fourth gradient stops gradually change from blue to lime green.
 

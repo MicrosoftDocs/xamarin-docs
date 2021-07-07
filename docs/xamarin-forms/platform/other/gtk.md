@@ -38,19 +38,19 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
 3. Type a name for the project with a **GTK** extension, for example **GameOfLife.GTK**. Click the **Browse** button, select the folder containing the other platform projects, and press **Select Folder**. This will put the GTK project in the same directory as the other projects in the solution.
 
-    ![Add a new GTK project](gtk-images/win/add-new-project.png "Add a new GTK project")
+    ![Add a new GTK project.](gtk-images/win/add-new-project.png "Add a new GTK project")
 
     Press the **OK** button to create the project.
 
 4. In the **Solution Explorer**, right click the new GTK project and select **Manage NuGet Packages**. Select the **Browse** tab, and search for **Xamarin.Forms** 3.0 or greater.
 
-    ![Select the Xamarin.Forms NuGet package](gtk-images/win/select-forms-nuget-package.png "Select the Xamarin.Forms NuGet package")
+    ![Select the Xamarin.Forms NuGet package.](gtk-images/win/select-forms-nuget-package.png "Select the Xamarin.Forms NuGet package")
 
     Select the package and click the **Install** button.
 
 5. Now search for the **Xamarin.Forms.Platform.GTK** 3.0 package or greater.
 
-    ![Select the Xamarin.Forms.Platform.GTK NuGet package](gtk-images/win/select-forms-platform-nuget-package.png "Select the Xamarin.Forms.Platform.GTK NuGet package")
+    ![Select the Xamarin.Forms.Platform.GTK NuGet package.](gtk-images/win/select-forms-platform-nuget-package.png "Select the Xamarin.Forms.Platform.GTK NuGet package")
 
     Select the package and click the **Install** button.
 
@@ -58,11 +58,11 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
 7. In the **Solution Explorer**, right-click on **References** in the GTK project. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the .NET Standard or Shared project:
 
-    ![Reference the shared project](gtk-images/win/reference-shared-project.png "Reference the shared project")
+    ![Reference the shared project.](gtk-images/win/reference-shared-project.png "Reference the shared project")
 
 8. In the **Reference Manager** dialog, press the **Browse** button and browse to the **C:\Program Files (x86)\GtkSharp\2.12\lib** folder and select the **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll**, **gtk-sharp.dll** files.
 
-    ![Reference the GTK# libraries](gtk-images/win/reference-gtk-libraries.png "Reference the GTK# libraries")
+    ![Reference the GTK# libraries.](gtk-images/win/reference-gtk-libraries.png "Reference the GTK# libraries")
 
     Press the **OK** button to add the references.
 
@@ -103,11 +103,11 @@ Follow these instructions to add a GTK# app that will run on the Windows desktop
 
 12. In the **Properties** window, select the **Application** tab and change the **Output type** drop-down to **Windows Application**.
 
-    ![Change the project output type](gtk-images/win/change-project-output-type.png "Change the project output type")
+    ![Change the project output type.](gtk-images/win/change-project-output-type.png "Change the project output type")
 
 13. In the **Solution Explorer**, right-click the GTK project and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
 
-    ![GTK# Game of Life](gtk-images/win/gtk-gameoflife.png "GTK# Game of Life")
+    ![GTK# Game of Life.](gtk-images/win/gtk-gameoflife.png "GTK# Game of Life")
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -121,17 +121,17 @@ Follow these instructions to add a GTK# app that will run on the Mac desktop:
 
 4. In the **Solution Pad**, right-click on **Packages > Add Packages...** for the GTK project, and add the Xamarin.Forms 3.0 pre-release NuGet package or greater.
 
-    ![Select the Xamarin.Forms NuGet package](gtk-images/mac/select-forms-nuget-package.png "Select the Xamarin.Forms NuGet package")
+    ![Select the Xamarin.Forms NuGet package.](gtk-images/mac/select-forms-nuget-package.png "Select the Xamarin.Forms NuGet package")
 
 5. In the **Solution Pad**, right-click on **Packages > Add Packages...** for the GTK project, and add the Xamarin.Forms.Platform.GTK 3.0 pre-release NuGet package or greater.
 
-    ![Select the Xamarin.Forms.Platform.GTK NuGet package](gtk-images/mac/select-forms-platform-nuget-package.png "Select the Xamarin.Forms.Platform.GTK NuGet package")
+    ![Select the Xamarin.Forms.Platform.GTK NuGet package.](gtk-images/mac/select-forms-platform-nuget-package.png "Select the Xamarin.Forms.Platform.GTK NuGet package")
 
 6. Update the other platform projects to use the same Xamarin.Forms version as used by the GTK project.
 
 7. In the **Solution Pad**, right-click on **References > Edit References...** for the GTK project, and add a reference to the Xamarin.Forms project (either .NET Standard or Shared Project).
 
-    ![Reference the shared project](gtk-images/mac/reference-shared-project.png "Reference the shared project")
+    ![Reference the shared project.](gtk-images/mac/reference-shared-project.png "Reference the shared project")
 
 8. Edit the **Program.cs** file of the GTK project so that it resembles the following code:
 
@@ -168,7 +168,7 @@ Follow these instructions to add a GTK# app that will run on the Mac desktop:
 
 10. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the app.
 
-    ![GTK# Game of Life](gtk-images/mac/gtk-gameoflife.png "GTK# Game of Life")
+    ![GTK# Game of Life.](gtk-images/mac/gtk-gameoflife.png "GTK# Game of Life")
 
 -----
 

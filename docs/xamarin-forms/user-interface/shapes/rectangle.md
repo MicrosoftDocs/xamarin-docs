@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Rectangle
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Rectangle` class derives from the `Shape` class, and can be used to draw rectangles and squares. For information on the properties that the `Rectangle` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -44,7 +44,7 @@ The following XAML example shows how to draw a filled rectangle:
 
 In this example, a red filled rectangle with dimensions 150x50 (device-independent units) is drawn:
 
-![Filled rectangle](rectangle-images/filled.png "Filled rectangle")
+![Filled rectangle.](rectangle-images/filled.png "Filled rectangle")
 
 The following XAML example shows how to draw a filled rectangle, with rounded corners:
 
@@ -61,7 +61,7 @@ The following XAML example shows how to draw a filled rectangle, with rounded co
 
 In this example, a blue filled rectangle with rounded corners is drawn:
 
-![Rectangle with rounded corners](rectangle-images/rounded.png "Rectangle with rounded corners")
+![Rectangle with rounded corners.](rectangle-images/rounded.png "Rectangle with rounded corners")
 
 For information about drawing a dashed rectangle, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 

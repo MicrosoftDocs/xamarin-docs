@@ -14,7 +14,7 @@ ms.date: 06/25/2018
 The simplest way to work with maps in Xamarin.Android is to leverage
 the built-in maps application shown below:
 
-[![Example screenshot of built-in Google Maps app](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
+[![Example screenshot of built-in Google Maps app.](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 When you use the maps application, the map will not be part of your
 application. Instead, your application will launch the maps application
@@ -62,7 +62,7 @@ search terms) use Google's geocoder service to retrieve the location
 that is then displayed on the map. For example, the URI
 `geo:0,0?q=coop+Cambridge` results in the map shown below:
 
-[![Example screenshot showing Google Maps with a search term](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
+[![Example screenshot showing Google Maps with a search term.](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 For more information about geo URI schemes, see
 [Show a location on a map](https://developer.android.com/guide/components/intents-common.html#Maps).
@@ -73,7 +73,7 @@ In addition to the geo scheme, Android also supports loading street
 views from an Intent. An example of the street view application
 launched from Xamarin.Android is shown below:
 
-[![Example screenshot of a street view](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
+[![Example screenshot of a street view.](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 To launch a street view, simply use the `google.streetview` URI scheme,
 as demonstrated in the following code:

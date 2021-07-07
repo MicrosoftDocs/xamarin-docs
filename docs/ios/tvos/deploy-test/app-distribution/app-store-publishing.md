@@ -141,13 +141,13 @@ With your Xamarin.tvOS app properly configured, you are now ready to do the fina
 
 1. Select the **Release | Device** configuration in Visual Studio for Mac:
 
-    ![Select the Release configuration](app-store-publishing-images/buildxs01new.png)
+    ![Select the Release configuration.](app-store-publishing-images/buildxs01new.png)
 2. From the **Build** menu, select **Archive for Publishing**:
 
-    [![Select Archive for Publishing](app-store-publishing-images/buildxs02new.png)](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![Select Archive for Publishing.](app-store-publishing-images/buildxs02new.png)](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Once the archive has been created, the **Archives** view will be displayed:
 
-    [![The Archives view](app-store-publishing-images/buildxs03new.png)](app-store-publishing-images/buildxs03new.png#lightbox)
+    [![The Archives view.](app-store-publishing-images/buildxs03new.png)](app-store-publishing-images/buildxs03new.png#lightbox)
 
 ### Sign and Distribute your App
 
@@ -162,16 +162,16 @@ To sign your app and prepare it for distribution:
     [![, Select theSign and Distribute...](app-store-publishing-images/buildxs04new.png)](app-store-publishing-images/buildxs04new.png#lightbox)
 2. This will open the publishing wizard. Select the **App Store** distribution channel to create a package, and open Application Loader:
 
-    [![Select the App Store distribution channel](app-store-publishing-images/distribute01.png)](app-store-publishing-images/distribute01.png#lightbox)
+    [![Select the App Store distribution channel.](app-store-publishing-images/distribute01.png)](app-store-publishing-images/distribute01.png#lightbox)
 3. On the Provisioning Profile screen, Select your signing identity and corresponding provisioning profile, or re-sign with another identity:
 
-    [![Select the signing identity and corresponding provisioning profile](app-store-publishing-images/distribute02.png)](app-store-publishing-images/distribute02.png#lightbox)
+    [![Select the signing identity and corresponding provisioning profile.](app-store-publishing-images/distribute02.png)](app-store-publishing-images/distribute02.png#lightbox)
 4. Verify the details of your package, and click **Publish** to save your `.ipa` package:
 
-    [![Verify the details of the package](app-store-publishing-images/distribute03.png)](app-store-publishing-images/distribute03.png#lightbox)
+    [![Verify the details of the package.](app-store-publishing-images/distribute03.png)](app-store-publishing-images/distribute03.png#lightbox)
 5. Once your `.ipa` has been saved, your App is ready to be uploaded to iTunes Connect via the Application Loader:
 
-    [![Uploaded to iTunes Connect via the Application Loader](app-store-publishing-images/distribute04.png)](app-store-publishing-images/distribute04.png#lightbox)
+    [![Uploaded to iTunes Connect via the Application Loader.](app-store-publishing-images/distribute04.png)](app-store-publishing-images/distribute04.png#lightbox)
 
 With your distribution build created and archived, you are now ready to submit your application to iTunes Connect.
 
@@ -185,15 +185,15 @@ The archive workflow in Visual Studio for Mac will open Application Loader autom
 
 1. Select *Deliver Your App* and click the *Choose* button:
 
-    [![Select Deliver Your App](app-store-publishing-images/publishvs01.png)](app-store-publishing-images/publishvs01.png#lightbox)
+    [![Select Deliver Your App.](app-store-publishing-images/publishvs01.png)](app-store-publishing-images/publishvs01.png#lightbox)
 
 2. Select the zip or IPA file you created above and click the **OK** button.
 3. The Application Loader will validate the file:
 
-    [![The Application Loader validation screen](app-store-publishing-images/publishvs02.png)](app-store-publishing-images/publishvs02.png#lightbox)
+    [![The Application Loader validation screen.](app-store-publishing-images/publishvs02.png)](app-store-publishing-images/publishvs02.png#lightbox)
 4. Click the *Next* button and the application will be validated against the App Store:
 
-    [![The application being validated against the App Store](app-store-publishing-images/publishvs03.png)](app-store-publishing-images/publishvs03.png#lightbox)
+    [![The application being validated against the App Store.](app-store-publishing-images/publishvs03.png)](app-store-publishing-images/publishvs03.png#lightbox)
 5. Click the **Send** button to send the application to Apple for review.
 6. The Application Loader will inform you when the file has been successfully uploaded.
 
@@ -203,7 +203,7 @@ The archive workflow in Visual Studio for Mac will open Application Loader autom
 
 If you log back into iTunes Connect and select your app from the list of available apps, the status in iTunes Connect should now show that it is **Waiting for Review** (it may temporarily read **Upload Received** while it is processed):
 
-[![The status in iTunes Connect showing Waiting for Review](app-store-publishing-images/image21.png)](app-store-publishing-images/image21.png#lightbox)
+[![The status in iTunes Connect showing Waiting for Review.](app-store-publishing-images/image21.png)](app-store-publishing-images/image21.png#lightbox)
 
 <a name="Troubleshooting"></a>
 

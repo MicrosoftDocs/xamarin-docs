@@ -13,7 +13,7 @@ ms.date: 09/25/2017
 
 _This guide demonstrates how to create custom swipe actions for table rows with UISwipeActionsConfiguration or UITableViewRowAction_
 
-![Demonstrating swipe actions on rows](row-action-images/action02.png)
+![Demonstrating swipe actions on rows.](row-action-images/action02.png)
 
 iOS provides two ways to perform actions on a table: `UISwipeActionsConfiguration`
 and `UITableViewRowAction`.
@@ -73,11 +73,11 @@ leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 
 It's important to note that the order in which your actions display is dependent on how they are passed into your array. For example, the code above for leading swipes displays the actions as so:
 
-![leading swipe Actions displayed on a table row](row-action-images/action03.png)
+![leading swipe Actions displayed on a table row.](row-action-images/action03.png)
 
 For trailing swipes, the actions will be displayed as illustrated in the following image:
 
-![trailing swipe Actions displayed on a table row](row-action-images/action04.png)
+![trailing swipe Actions displayed on a table row.](row-action-images/action04.png)
 
 This code snippet also makes use of the new `PerformsFirstActionWithFullSwipe` property. By default, this property is set to true, meaning that the first action in the array will happen when a user swipes fully on a row. If you have an action that is not destructive (for example "Delete", this might not be ideal behavior and you should therefore set it to `false`.
 
@@ -181,7 +181,7 @@ table.Delegate = tableDelegate;
 When the above code is run and the user swipes left on a table row,
 the **Hi** button will be displayed instead of the **Delete** button that is displayed by default:
 
-[![The Hi button being displayed instead of the Delete button](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
+[![The Hi button being displayed instead of the Delete button.](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
 
 If the user taps the **Hi** button, `Hello World!` will be written out to the
 console in Visual Studio for Mac or Visual Studio when the application is run in the debug mode.

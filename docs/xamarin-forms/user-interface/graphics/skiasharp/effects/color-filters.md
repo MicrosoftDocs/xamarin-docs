@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp color filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Color filters can translate colors in a bitmap (or other image) to other colors for effects such as posterization:
 
-![Color Filters Example](color-filters-images/ColorFiltersExample.png "Color Filters Example")
+![Color Filters Example.](color-filters-images/ColorFiltersExample.png "Color Filters Example")
 
 To use a color filter, set the [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) property of `SKPaint` to an object of type [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) created by one of the static methods in that class. This article demonstrates: 
 
@@ -163,7 +163,7 @@ The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** fil
 
 Here's the result running on iOS, Android, and Universal Windows Platform:
 
-[![Gray-Scale Matrix](color-filters-images/GrayScaleMatrix.png "Gray-Scale Matrix")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
+[![Gray-Scale Matrix](color-filters-images/GrayScaleMatrix.png "Gray-Scale Matrix."](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
 
 Watch out for the value in the fourth row and fourth column. That's the crucial factor that is multiplied by the A value of the original color for the A' value of the transformed color. If that cell is zero, nothing will be displayed and the problem might be difficult to locate.
 
@@ -216,7 +216,7 @@ public class PastelMatrixPage : ContentPage
 
 The result is to mute the intensity of the colors as you can see here:
 
-[![Pastel Matrix](color-filters-images/PastelMatrix.png "Pastel Matrix")](color-filters-images/PastelMatrix-Large.png#lightbox)
+[![Pastel Matrix](color-filters-images/PastelMatrix.png "Pastel Matrix."](color-filters-images/PastelMatrix-Large.png#lightbox)
 
 ## Color tables
 
@@ -289,7 +289,7 @@ public class PosterizeTablePage : ContentPage
 
 The program chooses to use this color table only for the green and blue channels. The red channel continues to have full resolution:
 
-[![Posterize Table](color-filters-images/PosterizeTable.png "Posterize Table")](color-filters-images/PosterizeTable-Large.png#lightbox)
+[![Posterize Table](color-filters-images/PosterizeTable.png "Posterize Table."](color-filters-images/PosterizeTable-Large.png#lightbox)
 
 You can use various color tables for the different color channels for various effects. 
 

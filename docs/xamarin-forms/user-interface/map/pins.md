@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Pins
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) control allows locations to be marked with [`Pin`](xref:Xamarin.Forms.Maps.Pin) objects. A `Pin` is a map marker that opens an information window when tapped:
 
-[![Screenshot of a map pin and its information window, on iOS and Android](pins-images/pin-and-information-window.png "Map pin with information window")](pins-images/pin-and-information-window-large.png#lightbox "Map pin with information window")
+[![Screenshot of a map pin and its information window, on iOS and Android](pins-images/pin-and-information-window.png "Map pin with information window."](pins-images/pin-and-information-window-large.png#lightbox "Map pin with information window")
 
 When a [`Pin`](xref:Xamarin.Forms.Maps.Pin) object is added to the [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) collection, the pin is rendered on the map.
 
@@ -99,13 +99,13 @@ map.Pins.Add(pin);
 
 This example code results in a single pin being rendered on a map:
 
-[![Screenshot of a map pin, on iOS and Android](pins-images/pin-only.png "Map pin")](pins-images/pin-only-large.png#lightbox "Map pin")
+[![Screenshot of a map pin, on iOS and Android](pins-images/pin-only.png "Map pin."](pins-images/pin-only-large.png#lightbox "Map pin")
 
 ## Interact with a pin
 
 By default, when a [`Pin`](xref:Xamarin.Forms.Maps.Pin) is tapped its information window is displayed:
 
-[![Screenshot of a map pin and its information window, on iOS and Android](pins-images/pin-and-information-window.png "Map pin with information window")](pins-images/pin-and-information-window-large.png#lightbox "Map pin with information window")
+[![Screenshot of a map pin and its information window, on iOS and Android](pins-images/pin-and-information-window.png "Map pin with information window."](pins-images/pin-and-information-window-large.png#lightbox "Map pin with information window")
 
 Tapping elsewhere on the map closes the information window.
 
@@ -200,7 +200,7 @@ The appearance of each item in the `IEnumerable` collection is defined by settin
 
 The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) displaying a [`Pin`](xref:Xamarin.Forms.Maps.Pin) collection using data binding:
 
-[![Screenshot of map with data bound pins, on iOS and Android](pins-images/pins-itemsource.png "Map with data bound pins")](pins-images/pins-itemsource-large.png#lightbox "Map with data bound pins")
+[![Screenshot of map with data bound pins, on iOS and Android](pins-images/pins-itemsource.png "Map with data bound pins."](pins-images/pins-itemsource-large.png#lightbox "Map with data bound pins")
 
 ### Choose item appearance at runtime
 

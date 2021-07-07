@@ -75,11 +75,11 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 
 The previous notification will display a status bar notification that is similar to the following:
 
-![Image showing the notification in the status bar](foreground-services-images/foreground-services-01.png "Image showing the notification in the status bar")
+![Image showing the notification in the status bar.](foreground-services-images/foreground-services-01.png "Image showing the notification in the status bar")
 
 This screenshot shows the expanded notification in the notification tray with two actions that allow the user to control the service:
 
-![Image showing the expanded notification](foreground-services-images/foreground-services-02.png "Image showing the expanded notification.")
+![Image showing the expanded notification.](foreground-services-images/foreground-services-02.png "Image showing the expanded notification.")
 
 More information about notifications is available in the [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md) section of the [Android Notifications](~/android/app-fundamentals/notifications/index.md) guide.
 

@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell flyout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The navigation experience provided by Xamarin.Forms Shell is based on flyouts and tabs. A flyout is the optional root menu for a Shell application, and is fully customizable. It's accessible through an icon or by swiping from the side of the screen. The flyout consists of an optional header, flyout items, optional menu items, and an optional footer:
 
-![Screenshot of a Shell annotated flyout](flyout-images/flyout-annotated.png)
+![Screenshot of a Shell annotated flyout.](flyout-images/flyout-annotated.png)
 
 ## Flyout items
 
@@ -47,7 +47,7 @@ The following example creates a flyout containing two flyout items:
 
 The [`FlyoutItem.Title`](xref:Xamarin.Forms.BaseShellItem.Title) property, of type `string`, defines the title of the flyout item. The [`FlyoutItem.Icon`](xref:Xamarin.Forms.BaseShellItem.Icon) property, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), defines the icon of the flyout item:
 
-[![Screenshot of a Shell two page app with flyout items, on iOS and Android](flyout-images/two-page-app-flyout.png)](flyout-images/two-page-app-flyout-large.png#lightbox)
+[![Screenshot of a Shell two page app with flyout items, on iOS and Android.](flyout-images/two-page-app-flyout.png)](flyout-images/two-page-app-flyout-large.png#lightbox)
 
 In this example, each [`ShellContent`](xref:Xamarin.Forms.ShellContent) object can only be accessed through flyout items, and not through tabs. This is because by default, tabs will only be displayed if the flyout item contains more than one tab.
 
@@ -127,7 +127,7 @@ In this example, flyout items are created for the [`Tab`](xref:Xamarin.Forms.Tab
 
 This results in the following flyout items:
 
-[![Screenshot of flyout containing FlyoutItem objects, on iOS and Android](flyout-images/flyout-reduced.png "Shell flyout containing FlyoutItem objects")](flyout-images/flyout-reduced-large.png#lightbox "Shell flyout containing FlyoutItem objects")
+[![Screenshot of flyout containing FlyoutItem objects, on iOS and Android](flyout-images/flyout-reduced.png "Shell flyout containing FlyoutItem objects."](flyout-images/flyout-reduced-large.png#lightbox "Shell flyout containing FlyoutItem objects")
 
 ### Define FlyoutItem appearance
 
@@ -154,7 +154,7 @@ The appearance of each [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) can be cust
 
 This example displays the title of each [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) object in italics:
 
-[![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png)](flyout-images/flyoutitem-templated-large.png#lightbox)
+[![Screenshot of templated FlyoutItem objects, on iOS and Android.](flyout-images/flyoutitem-templated.png)](flyout-images/flyoutitem-templated-large.png#lightbox)
 
 Because [`Shell.ItemTemplate`](xref:Xamarin.Forms.Shell.ItemTemplate) is an attached property, different templates can be attached to specific [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) objects.
 
@@ -325,7 +325,7 @@ The [`MenuItem`](xref:Xamarin.Forms.MenuItem) class has a [`Clicked`](xref:Xamar
 
 This example adds a [`MenuItem`](xref:Xamarin.Forms.MenuItem) object to the flyout, beneath all the flyout items:
 
-[![Screenshot of flyout containing a MenuItem object, on iOS and Android](flyout-images/flyout.png)](flyout-images/flyout-large.png#lightbox)
+[![Screenshot of flyout containing a MenuItem object, on iOS and Android.](flyout-images/flyout.png)](flyout-images/flyout-large.png#lightbox)
 
 The [`MenuItem`](xref:Xamarin.Forms.MenuItem) object executes an `ICommand` named `HelpCommand`, which opens the URL specified by the `CommandParameter` property in the system web browser.
 
@@ -361,7 +361,7 @@ The appearance of each [`MenuItem`](xref:Xamarin.Forms.MenuItem) can be customiz
 
 This example attaches the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) to each [`MenuItem`](xref:Xamarin.Forms.MenuItem) object, displaying the title of the `MenuItem` object in italics:
 
-[![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png)](flyout-images/menuitem-templated-large.png#lightbox)
+[![Screenshot of templated MenuItem objects, on iOS and Android.](flyout-images/menuitem-templated.png)](flyout-images/menuitem-templated-large.png#lightbox)
 
 Because [`Shell.MenuItemTemplate`](xref:Xamarin.Forms.Shell.ItemTemplate) is an attached property, different templates can be attached to specific [`MenuItem`](xref:Xamarin.Forms.MenuItem) objects.
 
@@ -437,7 +437,7 @@ The `FlyoutHeader` type is shown in the following example:
 
 This results in the following flyout header:
 
-![Screenshot of the flyout header](flyout-images/flyout-header.png)
+![Screenshot of the flyout header.](flyout-images/flyout-header.png)
 
 Alternatively, the flyout header appearance can be defined by setting the [`Shell.FlyoutHeaderTemplate`](xref:Xamarin.Forms.Shell.FlyoutHeaderTemplate) bindable property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
@@ -510,7 +510,7 @@ The `FlyoutFooter` type is shown in the following example:
 
 This results in the following flyout footer:
 
-![Screenshot of the flyout footer](flyout-images/flyout-footer.png "Flyout footer")
+![Screenshot of the flyout footer.](flyout-images/flyout-footer.png "Flyout footer")
 
 Alternatively, the flyout footer appearance can be defined by setting the `Shell.FlyoutFooterTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
@@ -627,7 +627,7 @@ The following example shows setting these properties:
 
 This results in a background image appearing in the flyout, below the flyout header:
 
-![Screenshot of a flyout background image](flyout-images/flyout-backgroundimage.png)
+![Screenshot of a flyout background image.](flyout-images/flyout-backgroundimage.png)
 
 ## Flyout backdrop
 

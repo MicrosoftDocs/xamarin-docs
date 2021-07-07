@@ -42,11 +42,11 @@ Apple account management is available on Visual Studio for Mac, Visual Studio 20
 
 3. Select **Always Allow** on the alert dialog to allow Visual Studio to use your credentials:
 
-    ![Always allow alert dialog](apple-account-management-images/image4.png)
+    ![Always allow alert dialog.](apple-account-management-images/image4.png)
 
 4. Once your account has been added successfully, you will see your Apple ID and any teams that your Apple ID is part of:
 
-    ![Apple developer account dialog with accounts added](apple-account-management-images/image5.png)
+    ![Apple developer account dialog with accounts added.](apple-account-management-images/image5.png)
 
 # [Visual Studio](#tab/windows)
 
@@ -79,7 +79,7 @@ The team details dialog displays a list of Signing Identities, organized by type
 
 - **Expired** – The Certificate is expired. You should remove this from your keychain.
 
-  ![team details dialog information](apple-account-management-images/image7.png)
+  ![team details dialog information.](apple-account-management-images/image7.png)
 
 ## Create a signing certificate
 

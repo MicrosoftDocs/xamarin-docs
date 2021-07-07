@@ -135,9 +135,9 @@ render as one of the following images (`UIControlState.Normal`,
 `UIControlState.Highlighted` and `UIControlState.Selected` states,
 respectively):
 
-![UIControlState.Normal](buttons-images/image22.png "UIControlState.Normal")
-![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted")
-![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
+![UIControlState.Normal.](buttons-images/image22.png "UIControlState.Normal")
+![UIControlState.Highlighted.](buttons-images/image23.png "UIControlState.Highlighted")
+![UIControlState.Selected.](buttons-images/image24.png "UIControlState.Selected")
 
 For more information about working with custom buttons, refer to the
 [Use an image for a button](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button)

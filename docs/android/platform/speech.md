@@ -264,12 +264,12 @@ The `TextToSpeech.Engine.ActionInstallTtsData` action causes the
 **Google TTS voice data** activity to be presented to the user for
 choosing languages to download:
 
-![Google TTS Voice Data Activity](speech-images/01-google-tts-voice-data.png)
+![Google TTS Voice Data Activity.](speech-images/01-google-tts-voice-data.png)
 
 As an example, the user might pick French and click the download icon
 to download French voice data:
 
-![Example of downloading French language](speech-images/02-selecting-french.png)
+![Example of downloading French language.](speech-images/02-selecting-french.png)
 
 Installation of this data happens automatically after the download completes.
 

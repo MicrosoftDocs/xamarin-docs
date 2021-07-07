@@ -27,12 +27,12 @@ In watchOS 1 apps, the code in the extension runs on the iPhone – the
 Apple Watch is effectively an external display. watchOS 2 and 3 apps run
 entirely on the Apple Watch. This difference is shown in the diagram below:
 
-[![The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram](intro-to-watchos-images/arch-sml.png)](intro-to-watchos-images/arch.png#lightbox)
+[![The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram.](intro-to-watchos-images/arch-sml.png)](intro-to-watchos-images/arch.png#lightbox)
 
 Regardless of which version of watchOS is targeted, in Visual Studio for Mac’s Solution Pad
 a complete solution will look something like this:
 
-[![The Solution Pad](intro-to-watchos-images/projectstructure-sml.png)](intro-to-watchos-images/projectstructure.png#lightbox)
+[![The Solution Pad.](intro-to-watchos-images/projectstructure-sml.png)](intro-to-watchos-images/projectstructure.png#lightbox)
 
 The *Parent App* in a watchOS solution is a regular iOS app. This is the only project
 in the solution that is visible **on the phone**. Use-cases for this app would
@@ -74,7 +74,7 @@ The lifecycle of a `WKInterfaceController` object involves the following calls:
 - [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) After the Watch App has been dismissed by the user, this method is called. After this method returns, user interface controls cannot be modified until the next time `WillActivate` is called. This method will also be called if the connection to the iPhone is broken.
 - After the extension has been deactivated, it is inaccessible to your program. Pending asynchronous functions **will not** be called. Watch Kit Extensions may not use background processing modes. If the program is reactivated by the user but the app has not been terminated by the operating system, the first method called will be `WillActivate`.
 
-![Application Lifecycle overview](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png)
+![Application Lifecycle overview.](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png)
 
 ## Types of User Interface
 
@@ -95,7 +95,7 @@ sample’s Storyboard. For each scene showed here, there is a corresponding cust
 `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.)
 in the extension project.
 
-![Normal Interaction examples](intro-to-watchos-images/scenes.png)
+![Normal Interaction examples.](intro-to-watchos-images/scenes.png)
 
 ### Notifications
 
@@ -117,7 +117,7 @@ Override these methods to react to notification events.
 For more information on Notification UI design, refer to the
 [Apple Watch Human Interface Guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
 
-![Sample notifications](intro-to-watchos-images/notifications.png)
+![Sample notifications.](intro-to-watchos-images/notifications.png)
 
 ## Screen Sizes
 

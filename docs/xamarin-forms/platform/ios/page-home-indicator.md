@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Home Indicator Visibility on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific sets the visibility of the home indicator on a [`Page`](xref:Xamarin.Forms.Page). It's consumed in XAML by setting the [`Page.PrefersHomeIndicatorAutoHidden`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHiddenProperty) bindable property to a `boolean`:
 
@@ -38,7 +38,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 The result is that the visibility of the home indicator on a [`Page`](xref:Xamarin.Forms.Page) can be controlled:
 
-![Screenshot of home indicator visibility on an iOS page](page-home-indicator-images/home-indicator-visibility.png "Page home indicator visibility")
+![Screenshot of home indicator visibility on an iOS page.](page-home-indicator-images/home-indicator-visibility.png "Page home indicator visibility")
 
 > [!NOTE]
 > This platform-specific can be applied to [`ContentPage`](xref:Xamarin.Forms.ContentPage), [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), and [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) objects.

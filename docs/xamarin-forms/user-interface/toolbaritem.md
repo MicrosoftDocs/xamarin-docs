@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms ToolbarItem
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 The Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) class is a special type of button that can be added to a `Page` object's `ToolbarItems` collection. Each `ToolbarItem` object will appear as a button in the application's navigation bar. A `ToolbarItem` instance can have an icon and appear as a primary or secondary menu item. The `ToolbarItem` class inherits from [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
 The following screenshots show `ToolbarItem` objects in the navigation bar on iOS and Android:
 
-!["ToolbarItem demo screenshot on Android and iOS"](toolbaritem-images/toolbaritem-device-screenshot.png "ToolbarItem demo screenshot on Android and iOS")
+!["ToolbarItem demo screenshot on Android and iOS."](toolbaritem-images/toolbaritem-device-screenshot.png "ToolbarItem demo screenshot on Android and iOS")
 
 The `ToolbarItem` class defines the following properties:
 
@@ -110,11 +110,11 @@ The `ToolbarItemOrder` enum has `Default`, `Primary`, and `Secondary` values.
 
 When the `Order` property is set to `Primary`, the `ToolbarItem` object will appear in the main navigation bar on all platforms. `ToolbarItem` objects are prioritized over the page title, which will be truncated to make room for the items. The following screenshots show `ToolbarItem` objects in the primary menu on iOS and Android:
 
-!["ToolbarItem primary menu screenshot Android and iOS"](toolbaritem-images/toolbaritem-primary-menu.png "ToolbarItem primary menu screenshot on Android and iOS")
+!["ToolbarItem primary menu screenshot Android and iOS."](toolbaritem-images/toolbaritem-primary-menu.png "ToolbarItem primary menu screenshot on Android and iOS")
 
 When the `Order` property is set to `Secondary`, behavior varies across platforms. On UWP and Android, the `Secondary` items menu appears as three dots that can be tapped or clicked to reveal items in a vertical list. On iOS, the `Secondary` items menu appears below the navigation bar as a horizontal list. The following screenshots show a secondary menu on iOS and Android:
 
-!["ToolbarItem secondary menu screenshot Android and iOS"](toolbaritem-images/toolbaritem-secondary-menu.png "ToolbarItem secondary menu screenshot on Android and iOS")
+!["ToolbarItem secondary menu screenshot Android and iOS."](toolbaritem-images/toolbaritem-secondary-menu.png "ToolbarItem secondary menu screenshot on Android and iOS")
 
 > [!WARNING]
 > Icon behavior in `ToolbarItem` objects that have their `Order` property set to `Secondary` is inconsistent across platforms. Avoid setting the `IconImageSource` property on items that appear in the secondary menu.

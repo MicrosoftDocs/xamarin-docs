@@ -71,7 +71,7 @@ In this exercise you will create a user interface to consume the previously crea
 
     Enter several items of data, tapping the [`Button`](xref:Xamarin.Forms.Button) for each item of data. This will save the data to the database, and repopulate the [`CollectionView`](xref:Xamarin.Forms.CollectionView) with all of the database data:
 
-    [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
+    [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence."](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
     In Visual Studio, stop the application.
 
@@ -148,7 +148,7 @@ In this exercise you will create a user interface to consume the previously crea
 
     Enter several items of data, tapping the [`Button`](xref:Xamarin.Forms.Button) for each item of data. This will save the data to the database, and repopulate the [`CollectionView`](xref:Xamarin.Forms.CollectionView) with all of the database data:
 
-    [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence")](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
+    [![Screenshot of local SQLite.NET database data persistence, on iOS and Android](../images/consume-data-access-classes.png "Local database data persistence."](../images/consume-data-access-classes-large.png#lightbox "Local database data persistence")
 
     In Visual Studio for Mac, stop the application.
 

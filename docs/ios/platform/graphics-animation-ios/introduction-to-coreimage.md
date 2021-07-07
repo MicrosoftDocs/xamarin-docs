@@ -236,7 +236,7 @@ default values for parameters and the maximum and minimum allowable values
 The List Categories output looks like this on the simulator – you can
 scroll through the list to see all the filters and their parameters.
 
- [![The List Categories output looks like this on the simulator](introduction-to-coreimage-images/coreimage05.png)](introduction-to-coreimage-images/coreimage05.png#lightbox)
+ [![The List Categories output looks like this on the simulator.](introduction-to-coreimage-images/coreimage05.png)](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 Each filter listed has been exposed as a class in Xamarin.iOS, so you can also
 explore the Xamarin.iOS.CoreImage API in the Assembly Browser or using

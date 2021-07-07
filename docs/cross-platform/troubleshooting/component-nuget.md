@@ -33,7 +33,7 @@ The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no lo
 
 If you load a project into Visual Studio, the following dialog is displayed, explaining that you must remove any components from your project manually:
 
-![Alert dialog explaining that a component has been found in your project and must be removed](component-nuget-images/component-alert-vs.png)
+![Alert dialog explaining that a component has been found in your project and must be removed.](component-nuget-images/component-alert-vs.png)
 
 To remove a component from your project:
 
@@ -70,7 +70,7 @@ To remove a component from your project:
 
 If you load a project into Visual Studio for Mac, the following dialog is displayed, explaining that you must remove any components from your project manually:
 
-![Alert dialog explaining that a component has been found in your project and must be removed](component-nuget-images/component-alert.png)
+![Alert dialog explaining that a component has been found in your project and must be removed.](component-nuget-images/component-alert.png)
 
 To remove a component from your project:
 
@@ -127,27 +127,27 @@ is simply to delete the component reference.
 You can determine whether the component already includes a NuGet package
 by double-clicking on the component in the solution:
 
-![Components node expanded](component-nuget-images/solution-sml.png)
+![Components node expanded.](component-nuget-images/solution-sml.png)
 
 The **Packages** tab will list any NuGet packages included in the component:
 
-![Packages tab contains NuGet](component-nuget-images/packages-tab-sml.png)
+![Packages tab contains NuGet.](component-nuget-images/packages-tab-sml.png)
 
 Note that the **Assemblies** tab will be empty:
 
-![Assemblies tab is empty](component-nuget-images/assemblies-tab-empty-sml.png)
+![Assemblies tab is empty.](component-nuget-images/assemblies-tab-empty-sml.png)
 
 ### Updating the Solution
 
 To update your solution, delete the **Component** entry from the solution:
 
-![Delete component](component-nuget-images/delete-component-sml.png)
+![Delete component.](component-nuget-images/delete-component-sml.png)
 
 The NuGet package will remain listed in the **Packages** node and your
 app will compile and run as usual. In future, updates to this package
 will be performed via the **NuGet** update feature:
 
-![Update NuGet package](component-nuget-images/nuget-update-sml.png)
+![Update NuGet package.](component-nuget-images/nuget-update-sml.png)
 
 <a name="replace"></a>
 
@@ -156,11 +156,11 @@ will be performed via the **NuGet** update feature:
 If the component info page **Assemblies** tab contains entries as shown below,
 you will need to find the equivalent NuGet package manually.
 
-![Contains assemblies](component-nuget-images/assemblies-tab-sml.png)
+![Contains assemblies.](component-nuget-images/assemblies-tab-sml.png)
 
 Note that the **Packages** tab will probably be empty:
 
-![Packages tab](component-nuget-images/packages-tab-empty-sml.png)
+![Packages tab.](component-nuget-images/packages-tab-empty-sml.png)
 
 _It may contain NuGet dependencies, but these can be ignored._
 
@@ -181,7 +181,7 @@ Once you have confirmed the component is available in NuGet, follow these steps:
 
 Right click on the component in the solution and choose **Remove**:
 
-![Remove component](component-nuget-images/remove-component-sml.png)
+![Remove component.](component-nuget-images/remove-component-sml.png)
 
 This will delete the component and any references. This will break your build,
 until you add the equivalent NuGet package to replace it.
@@ -191,7 +191,7 @@ until you add the equivalent NuGet package to replace it.
 1. Right-click on the **Packages** node and choose **Add Packages...**.
 2. Search for the NuGet replacement by name or author:
 
-    ![NuGet search](component-nuget-images/nuget-search-sml.png)
+    ![NuGet search.](component-nuget-images/nuget-search-sml.png)
 
 3. Press **Add Package**.
 

@@ -18,7 +18,7 @@ The [FSSceneKit City](/samples/xamarin/ios-samples/ios8-fsscenekit/) sample show
 create a randomly generated city using [SceneKit](xref:SceneKit)
 and F#. There's also an ["Oculus Thrift" (Google Cardboard) Edition](/samples/xamarin/ios-samples/ios8-scenekitfsharp/).
 
-[![Theres also an Oculus Thrift Google Cardboard Edition](samples-images/fxscenekit-sml.png)](samples-images/fxscenekit.png#lightbox)
+[![Theres also an Oculus Thrift Google Cardboard Edition.](samples-images/fxscenekit-sml.png)](samples-images/fxscenekit.png#lightbox)
 
 [Shallow](https://github.com/dvdsgl/shallow) demonstrates a fun
 swipe-user-interface built with F# for iOS.

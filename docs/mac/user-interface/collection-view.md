@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac app, the developer has access to 
 
 A `NSCollectionView` displays a grid of subviews organized using a `NSCollectionViewLayout`. Each subview in the grid is represented by a `NSCollectionViewItem` which manages the loading of the view’s content from a `.xib` file.
 
-[![An example app run](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
+[![An example app run.](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 This article covers the basics of working with Collection Views in a Xamarin.Mac app. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that are used throughout this article.
 
@@ -197,26 +197,26 @@ Do the following:
 1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New File...**
 2. Select **Mac** > **View Controller**, give it a name (such as `EmployeeItem` in this example) and click the **New** button to create: 
 
-    ![Adding a new view controller](collection-view-images/proto01.png)
+    ![Adding a new view controller.](collection-view-images/proto01.png)
 
     This will add an `EmployeeItem.cs`, `EmployeeItemController.cs` and `EmployeeItemController.xib` file to the project's solution.
 3. Double-click the `EmployeeItemController.xib` file to open it for editing in Xcode's Interface Builder.
 4. Add an `NSBox`, `NSImageView` and two `NSLabel` controls to the View and lay them out as follows:
 
-    ![Designing the layout of the cell prototype](collection-view-images/proto02.png)
+    ![Designing the layout of the cell prototype.](collection-view-images/proto02.png)
 5. Open the **Assistant Editor** and create an **Outlet** for the `NSBox` so that it can be used to indicate the selection state of a cell:
 
-    ![Exposing the NSBox in an Outlet](collection-view-images/proto03.png)
+    ![Exposing the NSBox in an Outlet.](collection-view-images/proto03.png)
 6. Return to the **Standard Editor** and select the Image View.
 7. In the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Icon`:
 
-    ![Binding the Icon](collection-view-images/proto04.png)
+    ![Binding the Icon.](collection-view-images/proto04.png)
 8. Select the first Label and in the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Name`:
 
-    ![Binding the name](collection-view-images/proto05.png)
+    ![Binding the name.](collection-view-images/proto05.png)
 9. Select the second Label and in the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Occupation`:
 
-    ![Binding the occupation](collection-view-images/proto06.png)
+    ![Binding the occupation.](collection-view-images/proto06.png)
 10. Save the changes to the `.xib` file and return to Visual Studio to sync the changes.
 
 Edit the `EmployeeItemController.cs` file and make it look like the following:
@@ -573,7 +573,7 @@ Do the following:
 1. Double-click the `Main.Storyboard` file in the **Solution Explorer** to open it for editing in Xcode's Interface Builder.
 2. Drag a Collection View into the Main View and resize it to fill the View:
 
-    ![Adding a Collection View to the layout](collection-view-images/collection01.png)
+    ![Adding a Collection View to the layout.](collection-view-images/collection01.png)
 3. With the Collection View selected, use the Constraint Editor to pin it to the View when it is resized:
 
     ![Screenshot shows Add New Constraints.](collection-view-images/collection02.png)

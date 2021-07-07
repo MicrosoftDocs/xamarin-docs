@@ -81,7 +81,7 @@ for other image scaling options.
 
 Start a new project named *HelloGallery*.
 
-[![Screenshot of new Android project in the New Solution dialog](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
+[![Screenshot of new Android project in the New Solution dialog.](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
 Find some photos you'd like to use, or
 [download these sample
@@ -176,7 +176,7 @@ public class ImageAdapter : BaseAdapter
 
 Run the application. It should look like the screenshot below:
 
-![Screenshot of HelloGallery displaying sample images](gallery-images/hellogallery3.png)
+![Screenshot of HelloGallery displaying sample images.](gallery-images/hellogallery3.png)
 
 ## References
 

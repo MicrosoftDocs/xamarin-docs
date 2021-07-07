@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # ListView Group Header Style on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific controls whether [`ListView`](xref:Xamarin.Forms.ListView) header cells float during scrolling. It's consumed in XAML by setting the `ListView.GroupHeaderStyle` bindable property to a value of the `GroupHeaderStyle` enumeration:
 
@@ -46,7 +46,7 @@ In addition, the `ListView.GetGroupHeaderStyle` method can be used to return the
 
 The result is that a specified `GroupHeaderStyle` value is applied to the [`ListView`](xref:Xamarin.Forms.ListView), which controls whether header cells float during scrolling:
 
-[![Screenshot of floating and non-floating ListView header cells, on iOS](listview-group-header-style-images/group-header-styles.png "ListView with floating and non-floating header cells")](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView with floating and non-floating header cells")
+[![Screenshot of floating and non-floating ListView header cells, on iOS](listview-group-header-style-images/group-header-styles.png "ListView with floating and non-floating header cells."](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView with floating and non-floating header cells")
 
 ## Related links
 

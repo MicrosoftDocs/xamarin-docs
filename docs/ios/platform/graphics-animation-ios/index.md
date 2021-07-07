@@ -11,7 +11,7 @@ ms.date: 03/18/2017
 
 # Graphics and Animation in iOS
 
-![Images/00_final_app.png](images/00-final-app.png "An example app run")
+![Images/00_final_app.png.](images/00-final-app.png "An example app run")
 
 ## [Core Image](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 

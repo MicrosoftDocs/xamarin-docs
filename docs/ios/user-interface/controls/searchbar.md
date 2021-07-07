@@ -19,7 +19,7 @@ It contains three main components:
 - A clear button, to remove any text from the search field.
 - A Cancel button, to exit the search function.
 
-![Search bar](searchbar-images/image1.png)
+![Search bar.](searchbar-images/image1.png)
 
 ## Implementing the Search Bar
 
@@ -50,7 +50,7 @@ Setting properties on the Search bar:
             };
 ```
 
-![Search Bar properties](searchbar-images/image6.png)
+![Search Bar properties.](searchbar-images/image6.png)
 
 Raise the `SearchButtonClicked` event when the search button is pressed. This will call your search logic:
 
@@ -69,11 +69,11 @@ The Designer offers two options for implementing a Search Bar in the designer
 - Search Bar
 - Search Bar with Search Display Controller (Deprecated)
 
-![Search bar controls in designer](searchbar-images/image2.png)
+![Search bar controls in designer.](searchbar-images/image2.png)
 
 Use the Property Panel to set properties on the search bar
 
-![Search bar properties designer](searchbar-images/image3.png)
+![Search bar properties designer.](searchbar-images/image3.png)
 
 These properties are explained below:
 
@@ -83,7 +83,7 @@ These properties are explained below:
   - Shows Search Results / Bookmarks button – Shows a Search Results or Bookmarks icon on the search bar
   - Shows Cancel button – Allows users to exit out of the search function. It is recommended that this is selected.
   - Shows Scope Bar – This allows users to limit the scope of their search. For example, when searching in the music app the user can select whether they want to search Apple Music or their Library for a particular song or artist. To display various options, add an array of titles to the **ScopeBarTitles** property.
-  ![Search bar scope titles](searchbar-images/image4.png)
+  ![Search bar scope titles.](searchbar-images/image4.png)
 
 - **Text behavior** – These options are used to address how the user input is formatted when they are typing. Capitalization will set the start of each word or sentence, or every character as upper case. Correction and Spell Checking with prompt the user with suggested spellings of words as they type.
 - **Keyboard** – Controls the keyboard style displayed for the input, and therefore what keys are available on the keyboard. This includes Number Pad, Phone Pad, Email, URL along with other options.

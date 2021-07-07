@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials, RefreshView, Universal Windows Platf
 
 # Xamarin.Forms RefreshView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
 The `RefreshView` is a container control that provides pull to refresh functionality for scrollable content. Therefore, the child of a `RefreshView` must be a scrollable control, such as [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView), or [`ListView`](xref:Xamarin.Forms.ListView).
 
@@ -70,7 +70,7 @@ The value of the `RefreshView.IsRefreshing` property indicates the current state
 
 When the user initiates a refresh, the `ICommand` defined by the `Command` property is executed, which should refresh the items being displayed. A refresh visualization is shown while the refresh occurs, which consists of an animated progress circle:
 
-[![Screenshot of a RefreshView refreshing data, on iOS and Android](refreshview-images/default-progress-circle.png "RefreshView refreshing data")](refreshview-images/default-progress-circle-large.png#lightbox "RefreshView refreshing data")
+[![Screenshot of a RefreshView refreshing data, on iOS and Android](refreshview-images/default-progress-circle.png "RefreshView refreshing data."](refreshview-images/default-progress-circle-large.png#lightbox "RefreshView refreshing data")
 
 > [!NOTE]
 > Manually setting the `IsRefreshing` property to `true` will trigger the refresh visualization, and will execute the `ICommand` defined by the `Command` property.
@@ -86,7 +86,7 @@ In addition to the properties that `RefreshView` inherits from the [`VisualEleme
 
 The following screenshot shows a `RefreshView` with the `RefreshColor` property set:
 
-[![Screenshot of a RefreshView with a teal progress circle, on iOS and Android](refreshview-images/teal-progress-circle.png "RefreshView with a teal progress circle")](refreshview-images/teal-progress-circle-large.png#lightbox "RefreshView with a teal progress circle")
+[![Screenshot of a RefreshView with a teal progress circle, on iOS and Android](refreshview-images/teal-progress-circle.png "RefreshView with a teal progress circle."](refreshview-images/teal-progress-circle-large.png#lightbox "RefreshView with a teal progress circle")
 
 In addition, the `BackgroundColor` property can be set to a [`Color`](xref:Xamarin.Forms.Color) that represents the background color of the progress circle.
 

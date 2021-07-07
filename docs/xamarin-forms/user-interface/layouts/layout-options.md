@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Layout Options in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _Every Xamarin.Forms view has HorizontalOptions and VerticalOptions properties, of type LayoutOptions. This article explains the effect that each LayoutOptions value has on the alignment and expansion of a view._
 
@@ -87,7 +87,7 @@ Content = new StackLayout
 
 The code results in the layout shown in the following screenshots:
 
-[![Alignment Layout Options](layout-options-images/alignment.png)](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
+[![Alignment Layout Options.](layout-options-images/alignment.png)](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
 
 ## Expansion
 
@@ -140,7 +140,7 @@ Content = new StackLayout
 
 The code results in the layout shown in the following screenshots:
 
-[![Expansion Layout Options](layout-options-images/expansion.png)](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
+[![Expansion Layout Options.](layout-options-images/expansion.png)](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
 
 Each [`Label`](xref:Xamarin.Forms.Label) occupies the same amount of space within the [`StackLayout`](xref:Xamarin.Forms.StackLayout). However, only the final `Label`, which sets its [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) property to [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) has a different size. In addition, each `Label` is separated by a small red [`BoxView`](xref:Xamarin.Forms.BoxView), which enables the space the `Label` occupies to be easily viewed.
 

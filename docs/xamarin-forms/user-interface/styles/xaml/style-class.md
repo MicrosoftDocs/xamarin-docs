@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Style Classes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Xamarin.Forms style classes enable multiple styles to be applied to a control, without resorting to style inheritance._
 
@@ -199,7 +199,7 @@ The following example shows three [`BoxView`](xref:Xamarin.Forms.BoxView) instan
 
 In this example, the first [`BoxView`](xref:Xamarin.Forms.BoxView) is styled to be a line separator, while the third `BoxView` is circular. The second `BoxView` has two style classes applied to it, which give it rounded corners and rotate it 45 degrees:
 
-![BoxViews styled with style classes](style-class-images/boxviews.png)
+![BoxViews styled with style classes.](style-class-images/boxviews.png)
 
 > [!IMPORTANT]
 > Multiple style classes can be applied to a control because the [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) property is of type `IList<string>`. When this occurs, style classes are applied in ascending list order. Therefore, when multiple style classes set identical properties, the property in the style class that's in the highest list position will take precedence.

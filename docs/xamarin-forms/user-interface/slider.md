@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Slider
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Use a Slider for selecting from a range of continuous values._
 
@@ -107,7 +107,7 @@ The `Slider` is initialized to have a `Maximum` property of 360. The `ValueChang
 
 Here's the program running on iOS and Android devices:
 
-[![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
+[![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code."](slider-images/BasicSliderCode-Large.png#lightbox)
 
 The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#platform-implementation-differences).
 
@@ -375,7 +375,7 @@ public partial class RgbColorSlidersPage : ContentPage
 
 The first section sets the `Text` property of one of the `Label` instances to a short text string indicating the value of the `Slider` in hexadecimal. Then, all three `Slider` instances are accessed to create a `Color` value from the RGB components:
 
-[![RGB Color Sliders](slider-images/RgbColorSliders.png "RGB Color Sliders")](slider-images/RgbColorSliders-Large.png#lightbox)
+[![RGB Color Sliders](slider-images/RgbColorSliders.png "RGB Color Sliders."](slider-images/RgbColorSliders-Large.png#lightbox)
 
 ### Binding the Slider to a ViewModel
 
@@ -495,7 +495,7 @@ The **HslColorSlidersPage.xaml** file instantiates the `HslColorViewModel` and s
 
 As the `Slider` elements are manipulated, the `BoxView` and `Label` elements are updated from the ViewModel:
 
-[![HSL Color Sliders](slider-images/HslColorSliders.png "HSL Color Sliders")](slider-images/HslColorSliders-Large.png#lightbox)
+[![HSL Color Sliders](slider-images/HslColorSliders.png "HSL Color Sliders."](slider-images/HslColorSliders-Large.png#lightbox)
 
 The `StringFormat` component of the `Binding` markup extension is set for a format of "F2" to display two decimal places. (String formatting in data bindings is discussed in the article [String Formatting](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) However, the UWP version of the program is limited to values of 0, 0.1, 0.2, ... 0.9, and 1.0. This is a direct result of the implementation of the UWP `Slider` as described above in the section [Platform implementation differences](#platform-implementation-differences).
 

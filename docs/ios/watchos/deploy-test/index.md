@@ -51,7 +51,7 @@ All three projects require a matching Distribution Provisioning Profile,
 Create an **App ID** for each project's Bundle ID (which will look like
   this on the iOS Dev Center):
 
-![The Bundle IDs in the iOS Dev Center](images/appids-specific-sml.png)
+![The Bundle IDs in the iOS Dev Center.](images/appids-specific-sml.png)
 
 When creating or configuring App IDs, remember to enable the specific
   features your app requires. This could include push notifications
@@ -93,17 +93,17 @@ To use an App Group, create an entry in the **App Groups**
   the same reverse-DNS style that is commonly used for
   App IDs, but with the `group.` prefix (which is required):
 
-![The Identifier](images/appgroups-new-sml.png)
+![The Identifier.](images/appgroups-new-sml.png)
 
 The app group will then appear in the list:
 
-![The Identifier list](images/appgroups-setup-sml.png)
+![The Identifier list.](images/appgroups-setup-sml.png)
 
 Once the group is created, it can be referenced in your
   **App ID** configuration. Remember to include it both the
   iOS App and Watch Extension **App IDs**.
 
-![Available configurations](images/appgroups-sml.png)
+![Available configurations.](images/appgroups-sml.png)
 
 Do **not** enable App Groups in the Apple Watch App ID. It is not
   required to be enabled on the watch itself.
@@ -116,7 +116,7 @@ Some app features (eg. App Groups) require you to set your entitlements.
 - iOS App project
 - Watch Extension project
 
-.![The Entitlements.plist editor](images/entitlements-plist-sml.png)
+.![The Entitlements.plist editor.](images/entitlements-plist-sml.png)
 
 Do **not** enable entitlements in the Watch App project. It is not
   required to be enabled on the watch itself.

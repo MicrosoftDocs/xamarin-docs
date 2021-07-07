@@ -19,13 +19,13 @@ If your iOS app already supports mobile deep linking and your website presented
 deep links to content within your app, Apple's _Applebot_ web crawler will index
 this content and automatically add it to their Cloud Index:
 
-[![Cloud Index overview](web-markup-images/webmarkup01.png)](web-markup-images/webmarkup01.png#lightbox)
+[![Cloud Index overview.](web-markup-images/webmarkup01.png)](web-markup-images/webmarkup01.png#lightbox)
 
 Apple will surface these results in Spotlight Search and Safari Search results.
 If the user taps on one of these results (and they have your app installed) then
 they will be taken to the content in your app:
 
-[![Deep linking from a website in search results](web-markup-images/webmarkup02.png)](web-markup-images/webmarkup02.png#lightbox)
+[![Deep linking from a website in search results.](web-markup-images/webmarkup02.png)](web-markup-images/webmarkup02.png#lightbox)
 
 ## Enabling Web Content Indexing
 
@@ -152,7 +152,7 @@ The same information can be represented in schema.org's JSON-LD format:
 
 The following shows an example of metadata from your website providing rich search results to the end user:
 
-[![Rich search results via Structured Data Markup](web-markup-images/deeplink01.png)](web-markup-images/deeplink01.png#lightbox)
+[![Rich search results via Structured Data Markup.](web-markup-images/deeplink01.png)](web-markup-images/deeplink01.png#lightbox)
 
 Apple currently supports the following schema types from schema.org:
 

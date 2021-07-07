@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CarouselView Layout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines the following properties that control layout:
 
@@ -104,7 +104,7 @@ CarouselView carouselView = new CarouselView
 
 This results in a layout that grows horizontally as new items are added:
 
-[![Screenshot of a CarouselView horizontal layout, on iOS and Android](layout-images/horizontal.png "CarouselView horizontal layout")](layout-images/horizontal-large.png#lightbox "CarouselView horizontal layout")
+[![Screenshot of a CarouselView horizontal layout, on iOS and Android](layout-images/horizontal.png "CarouselView horizontal layout."](layout-images/horizontal-large.png#lightbox "CarouselView horizontal layout")
 
 ## Vertical layout
 
@@ -163,7 +163,7 @@ CarouselView carouselView = new CarouselView
 
 This results in a layout that grows vertically as new items are added:
 
-[![Screenshot of a CarouselView vertical layout, on iOS and Android](layout-images/vertical.png "CarouselView vertical layout")](layout-images/vertical-large.png#lightbox "CarouselView vertical layout")
+[![Screenshot of a CarouselView vertical layout, on iOS and Android](layout-images/vertical.png "CarouselView vertical layout."](layout-images/vertical-large.png#lightbox "CarouselView vertical layout")
 
 ## Partially visible adjacent items
 
@@ -188,7 +188,7 @@ CarouselView carouselView = new CarouselView
 
 The result is that adjacent items are partially exposed on screen:
 
-[![Screenshot of a CollectionView with partially visible adjacent items, on iOS and Android](layout-images/peek-items.png "CarouselView peek area insets")](layout-images/peek-items-large.png#lightbox "CarouselView peak area insets")
+[![Screenshot of a CollectionView with partially visible adjacent items, on iOS and Android](layout-images/peek-items.png "CarouselView peek area insets."](layout-images/peek-items-large.png#lightbox "CarouselView peak area insets")
 
 ## Item spacing
 
@@ -240,7 +240,7 @@ void OnImageTapped(object sender, EventArgs e)
 
 The `OnImageTapped` event handler is executed in response to an [`Image`](xref:Xamarin.Forms.Image) object being tapped, and changes the dimensions of the image (and its parent `Frame`), so that it's more easily viewed:
 
-[![Screenshot of a CarouselView with dynamic item sizing, on iOS and Android](layout-images/runtime-resizing.png "CarouselView dynamic item sizing")](layout-images/runtime-resizing-large.png#lightbox "CarouselView dynamic item sizing")
+[![Screenshot of a CarouselView with dynamic item sizing, on iOS and Android](layout-images/runtime-resizing.png "CarouselView dynamic item sizing."](layout-images/runtime-resizing-large.png#lightbox "CarouselView dynamic item sizing")
 
 ## Right-to-left layout
 

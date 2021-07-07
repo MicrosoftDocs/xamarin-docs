@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 12. Styles
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -33,7 +33,7 @@ You can specify the `Value` setting using the property element `<Setter.Value>`.
 
 The [**BasicStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) program demonstrates the basic syntax and shows how to reference the `Style` with a `StaticResource` markup extension:
 
-[![Triple screenshot of basic style](images/ch12fg01-small.png "Basic Styles")](images/ch12fg01-large.png#lightbox "Basic Styles")
+[![Triple screenshot of basic style](images/ch12fg01-small.png "Basic Styles."](images/ch12fg01-large.png#lightbox "Basic Styles")
 
 The `Style` object and any object created in the `Style` object as a `Value` setting are shared among all views referencing that `Style`. The `Style` cannot contain anything that cannot be shared, such as a `View` derivative.
 

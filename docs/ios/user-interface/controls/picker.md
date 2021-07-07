@@ -43,7 +43,7 @@ UIPickerView pickerView = new UIPickerView(
 To create a picker in the **iOS Designer**, drag a **Picker View** from
 the **Toolbox** to the design surface.
 
-![Drag a Picker View to the design surface](picker-images/image1.png "Drag a Picker View to the design surface")
+![Drag a Picker View to the design surface.](picker-images/image1.png "Drag a Picker View to the design surface")
 
 ### Working with a picker control
 
@@ -129,7 +129,7 @@ A picker can have multiple columns, or _components_. Components partition
 a picker into multiple sections, allowing for easier and more specific data
 selection:
 
-![Picker with two components](picker-images/image3.png "Picker with two components")
+![Picker with two components.](picker-images/image3.png "Picker with two components")
 
 To specify the number of components in a picker, use the 
 [`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
@@ -164,7 +164,7 @@ UIPickerView pickerView = new UIPickerView(
 To create a date picker in the **iOS Designer**, drag a **Date Picker** from
 the **Toolbox** to the design surface.
 
-![Drag a Date Picker to the design surface](picker-images/image2.png "Drag a Date Picker to the design surface")
+![Drag a Date Picker to the design surface.](picker-images/image2.png "Drag a Date Picker to the design surface")
 
 ### Date picker properties
 
@@ -218,7 +218,7 @@ and an optional AM or PM designation:
 datePickerView.Mode = UIDatePickerMode.Time;
 ```
 
-![UIDatePickerMode.Time](picker-images/image8.png "UIDatePickerMode.Time")
+![UIDatePickerMode.Time.](picker-images/image8.png "UIDatePickerMode.Time")
 
 ##### UIDatePickerMode.Date
 
@@ -229,7 +229,7 @@ selector:
 datePickerView.Mode = UIDatePickerMode.Date;
 ```
 
-![UIDatePickerMode.Date](picker-images/image7.png "UIDatePickerMode.Date")
+![UIDatePickerMode.Date.](picker-images/image7.png "UIDatePickerMode.Date")
 
 The order of the selectors depends on the date picker's locale, which by
 default uses the system locale. The image above shows the layout of the
@@ -240,7 +240,7 @@ Day | Month | Year:
 datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 ```
 
-![Day | Month | Year](picker-images/image9.png "Day | Month | Year")
+![Day | Month | Year.](picker-images/image9.png "Day | Month | Year")
 
 ##### UIDatePickerMode.DateAndTime
 
@@ -252,7 +252,7 @@ time in hours and minutes, and an optional AM or PM designation (depending
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-![UIDatePickerMode.DateAndTime](picker-images/image6.png "UIDatePickerMode.DateAndTime")
+![UIDatePickerMode.DateAndTime.](picker-images/image6.png "UIDatePickerMode.DateAndTime")
 
 As with [`UIDatePickerMode.Date`](#uidatepickermodedate), the order of
 the selectors and the use of a 12 or 24 hour clock depends on the locale of
@@ -271,7 +271,7 @@ the date picker.
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;
 ```
 
-!["UIDatePickerMode.CountDownTimer"](picker-images/image5.png "UIDatePickerMode.CountDownTimer")
+!["UIDatePickerMode.CountDownTimer."](picker-images/image5.png "UIDatePickerMode.CountDownTimer")
 
 The `CountDownDuration` property captures the value of a date picker in
 `UIDatePickerMode.CountDownTimer` mode. For example, to add the countdown

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Text in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Using Xamarin.Forms to enter or display text._
 
@@ -28,7 +28,7 @@ Text appearance can be changed using built-in or custom [styles](#styles) and so
 
 The `Label` view is used to display text. It can show multiple lines of text or a single line of text. `Label` can present text with multiple formatting options used in inline. The label view can wrap or truncate text when it can't fit on one line.
 
-![Label Example](images/label.png)
+![Label Example.](images/label.png)
 
 See the [Label](label.md) article for more detailed information.
 
@@ -38,7 +38,7 @@ For information on customizing the font used in a label, see [Fonts](fonts.md).
 
 `Entry` is used to accept single-line text input. `Entry` offers control over colors and fonts. `Entry` has a password mode and can show placeholder text until text is entered.
 
-![Entry Example](images/entry.png)
+![Entry Example.](images/entry.png)
 
 See the [Entry](entry.md) article for more information.
 
@@ -48,7 +48,7 @@ Note that, unlike `Label`, `Entry` cannot have custom font settings.
 
 `Editor` is used to accept multi-line text input. `Editor` offers control over colors and fonts.
 
-![Editor Example](images/editor.png)
+![Editor Example.](images/editor.png)
 
 See the [Editor](editor.md) article for more information.
 

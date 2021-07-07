@@ -26,7 +26,7 @@ For more information about using Source Link, see [Source Link Documentation](/d
 
 Using Source Link requires enabling debugging for external code, otherwise the debugger will step past calls to code not contained in the current solution. In Visual Studio 2019 this can be found under the **Options** menu in the **Debugging** section:
 
-[![Enable Source Link in Visual Studio 2019](sourcelink-images/sourcelink-enable-pc-cropped.png)](sourcelink-images/sourcelink-enable-pc.png#lightbox)
+[![Enable Source Link in Visual Studio 2019.](sourcelink-images/sourcelink-enable-pc-cropped.png)](sourcelink-images/sourcelink-enable-pc.png#lightbox)
 
 Ensure that **Enable just my code** is disabled and that **Enable Source Link support** is enabled.
 
@@ -37,7 +37,7 @@ Ensure that **Enable just my code** is disabled and that **Enable Source Link su
 
 Using Source Link requires enabling debugging for external code, otherwise the debugger will step past calls to code not contained in the current solution. This option can be found in the **Preferences** window in the **Debugger** section:
 
-[![Enable Source Link in Visual Studio for Mac](sourcelink-images/sourcelink-enable-mac-cropped.png)](sourcelink-images/sourcelink-enable-mac.png#lightbox)
+[![Enable Source Link in Visual Studio for Mac.](sourcelink-images/sourcelink-enable-mac-cropped.png)](sourcelink-images/sourcelink-enable-mac.png#lightbox)
 
 Ensure that **Step into external code** is enabled.
 
@@ -47,11 +47,11 @@ Ensure that **Step into external code** is enabled.
 
 If debugging external packages is enabled, Visual Studio will use the Source Link mappings contained in the NuGet package to download and step through external source code. This can be tested by setting a breakpoint on a call to a method provided by Xamarin.Forms:
 
-[![Breakpoint set on Xamarin.Forms method](sourcelink-images/breakpoint-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
+[![Breakpoint set on Xamarin.Forms method.](sourcelink-images/breakpoint-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
 
 Depending on the settings you specified in the **Debugger** options, Visual Studio will warn you that it is downloading source files:
 
-[![Visual Studio external code warning](sourcelink-images/external-code-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
+[![Visual Studio external code warning.](sourcelink-images/external-code-cropped.png)](sourcelink-images/external-code-available.png#lightbox)
 
 Once you allow Visual Studio to download the files, the debugger will step into the external code.
 
@@ -61,7 +61,7 @@ Once you allow Visual Studio to download the files, the debugger will step into 
 
 Source Link uses caching for performance. The caching directory for Source link is defined in the **Options** menu under **Debugging** in the **Symbols** section:
 
-[![Visual Studio Source Link caching](sourcelink-images/sourcelink-caching-pc-cropped.png)](sourcelink-images/sourcelink-caching-pc.png#lightbox)
+[![Visual Studio Source Link caching.](sourcelink-images/sourcelink-caching-pc-cropped.png)](sourcelink-images/sourcelink-caching-pc.png#lightbox)
 
 This menu allows you to specify the caching directory for all debug symbols, as well as clear the cache if you encounter issues with cached symbols.
 

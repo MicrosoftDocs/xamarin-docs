@@ -22,12 +22,12 @@ In Visual Studio 2019, verify that Xamarin is installed by
 clicking the **Help** menu. If Xamarin is installed, you should
 see a **Xamarin** menu item as shown in this screenshot:
 
-![Xamarin menu item on the Help menu](windows-images/12-xamarin-menu-item.png "Xamarin menu item on the Help menu")
+![Xamarin menu item on the Help menu.](windows-images/12-xamarin-menu-item.png "Xamarin menu item on the Help menu")
 
 You can also click **Help > About Microsoft Visual Studio** and scroll
 through the list of installed products to see if Xamarin is installed:
 
-![Visual Studio 2019 installed products screen](windows-images/13-xamarin-is-installed.png "Visual Studio 2019 installed products screen")
+![Visual Studio 2019 installed products screen.](windows-images/13-xamarin-is-installed.png "Visual Studio 2019 installed products screen")
 
 For more information about locating version information, see
 [Where can I find my version information and logs?](~/cross-platform/troubleshooting/questions/version-logs.md)

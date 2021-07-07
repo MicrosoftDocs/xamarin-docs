@@ -35,7 +35,7 @@ Xamarin.Mac uses the Xcode Interface Builder to edit storyboard files.
 Accessibility information can be edited in the **Identity inspector**
 when a control is selected on the design surface (as shown in the screenshot below):
 
-[![Adding accessibility in Xcode's Interface Builder](accessibility-images/xcode.png "Adding accessibility in Xcode's Interface Builder")](accessibility-images/xcode-large.png#lightbox)
+[![Adding accessibility in Xcode's Interface Builder](accessibility-images/xcode.png "Adding accessibility in Xcode's Interface Builder."](accessibility-images/xcode-large.png#lightbox)
 
 ### Code
 
@@ -87,19 +87,19 @@ accessibility functionality. The inspector is included with Xcode.
 The first time it is launched, the **Accessibility Inspector** will
 require permission to control the computer via accessibility:
 
-![Accessibility Inspector requesting permission to run](accessibility-images/accessibility-inspector-1.png "Accessibility Inspector requesting permission to run")
+![Accessibility Inspector requesting permission to run.](accessibility-images/accessibility-inspector-1.png "Accessibility Inspector requesting permission to run")
 
 Unlock the settings screen (if required, on the lower-left) and tick
 the **Accessibility Inspector**:
 
-![Settings screen to enable Accessibility Inspector](accessibility-images/accessibility-inspector-2.png "Settings screen to enable Accessibility Inspector")
+![Settings screen to enable Accessibility Inspector.](accessibility-images/accessibility-inspector-2.png "Settings screen to enable Accessibility Inspector")
 
 Once enabled, the inspector appears as a floating window that can be moved around
 the screen. The screenshot below shows the inspector running next to a sample Mac app. As the cursor
 is moved over the window, the inspector displays all the accessible properties
 of each control:
 
-[![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running")](accessibility-images/accessibility-example-large.png#lightbox)
+[![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running."](accessibility-images/accessibility-example-large.png#lightbox)
 
 For more information, read the [testing accessibility for OS X guide](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

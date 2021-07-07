@@ -33,7 +33,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances")](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
+    [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances."](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
 
     For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
@@ -70,6 +70,6 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances")](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
+    [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances."](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
 
     For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).

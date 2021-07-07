@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Consume an ASP.NET Web Service (ASMX)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _ASMX provides the ability to build web services that send messages using the Simple Object Access Protocol (SOAP). SOAP is a platform-independent and language-independent protocol for building and accessing web services. Consumers of an ASMX service do not need to know anything about the platform, object model, or programming language used to implement the service. They only need to understand how to send and receive SOAP messages. This article demonstrates how to consume an ASMX SOAP service from a Xamarin.Forms application._
 
@@ -27,7 +27,7 @@ SOAP can operate over many transport protocols, including HTTP, SMTP, TCP, and U
 
 This sample includes the mobile applications that run on physical or emulated devices, and an ASMX service that provides methods to get, add, edit, and delete data. When the mobile applications are run, they connect to the locally-hosted ASMX service as shown in the following screenshot:
 
-![Sample Application](asmx-images/portal.png)
+![Sample Application.](asmx-images/portal.png)
 
 > [!NOTE]
 > In iOS 9 and greater, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and the app, thereby preventing accidental disclosure of sensitive information. Since ATS is enabled by default in apps built for iOS 9, all connections will be subject to ATS security requirements. If connections do not meet these requirements, they will fail with an exception.

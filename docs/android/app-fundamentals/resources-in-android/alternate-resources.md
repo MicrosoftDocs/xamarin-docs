@@ -33,11 +33,11 @@ screen density, screen size, and orientation:
 
 # [Visual Studio](#tab/windows)
 
-![Alternate resources](alternate-resources-images/alternate-resources-vs.png)
+![Alternate resources.](alternate-resources-images/alternate-resources-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Alternate resources](alternate-resources-images/alternate-resources-xs.png)
+![Alternate resources.](alternate-resources-images/alternate-resources-xs.png)
 
 -----
 
@@ -228,7 +228,7 @@ test of rules:
 
 These rules are also illustrated in the following flowchart:
 
-[![Resources flowchart](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
+[![Resources flowchart.](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 When the system is looking for density-specific resources and cannot
 find them, it will attempt to locate other density specific resources

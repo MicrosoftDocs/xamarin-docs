@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 8. Code and XAML in harmony
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -72,7 +72,7 @@ Any `View` object can obtain touch input and generate events from that input. Th
 
 The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) generates [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) events. The [**MonkeyTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) program demonstrates how to attach `TapGestureRecognizer` objects to four `BoxView` elements to create an imitation game:
 
-[![Triple screenshot of monkey tap](images/ch08fg07-small.png "Imitation Game")](images/ch08fg07-large.png#lightbox "Imitation Game")
+[![Triple screenshot of monkey tap](images/ch08fg07-small.png "Imitation Game."](images/ch08fg07-large.png#lightbox "Imitation Game")
 
 But the **MonkeyTap** program really needs sound. (See [the next chapter](chapter09.md).)
 

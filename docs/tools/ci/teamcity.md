@@ -60,7 +60,7 @@ A crucial step in configuring a build server is to install all of the necessary 
 
 The following diagram illustrates all of these components:
 
-![This diagram illustrates all of these components](teamcity-images/image1.png)
+![This diagram illustrates all of these components.](teamcity-images/image1.png)
 
 Once all of the software is installed, log in to the user account and confirm that all of the software is properly installed and working. This should involve compiling the solution and submitting the application to App Center Test. This can be simplified by running the build script, as described in the next section.
 
@@ -160,37 +160,37 @@ Once TeamCity is installed and Visual Studio for Mac can build your project, it'
 
 1. Started by logging into TeamCity via the web browser. Navigate to the Root Project:
 
-    ![Navigate to the Root Project](teamcity-images/image2.png "Navigate to the Root Project")
+    ![Navigate to the Root Project.](teamcity-images/image2.png "Navigate to the Root Project")
 Underneath the Root Project, create a new subproject:
 
-    ![Navigate to the Root Project Underneath the Root Project, create a new subproject](teamcity-images/image3.png "Navigate to the Root Project Underneath the Root Project, create a new sub-project")
+    ![Navigate to the Root Project Underneath the Root Project, create a new subproject.](teamcity-images/image3.png "Navigate to the Root Project Underneath the Root Project, create a new sub-project")
 2. Once the subproject is created, add a new Build Configuration:
 
-    ![Once the subproject is created, add a new Build Configuration](teamcity-images/image5.png "Once the sub-project has been created, add a new Build Configuration")
+    ![Once the subproject is created, add a new Build Configuration.](teamcity-images/image5.png "Once the sub-project has been created, add a new Build Configuration")
 3. Attach a VCS project to the Build Configuration. This is done via the Version Control Setting screen:
 
-    ![This is done via the Version Control Setting screen](teamcity-images/image6.png "This is done via the Version Control Setting screen")
+    ![This is done via the Version Control Setting screen.](teamcity-images/image6.png "This is done via the Version Control Setting screen")
 
     If there's no VCS project created, you can create one from the New VCS Root page shown below:
 
-    ![If there's no VCS project created, you can create one from the New VCS Root page](teamcity-images/image7.png "If there is no VCS project created, you have the option to create one from the New VCS Root page")
+    ![If there's no VCS project created, you can create one from the New VCS Root page.](teamcity-images/image7.png "If there is no VCS project created, you have the option to create one from the New VCS Root page")
 
     Once the VCS root has been attached,  TeamCity will check out the project and try to auto detect build steps. If you're familiar with TeamCity, then you can select one of the detected build steps. It's safe to ignore the detected build steps for now.
 
 4. Next, configure a Build Trigger. This will queue up a build when certain conditions are met, such as when a user commits code to the repository. The following screenshot shows how to add a build trigger:
 
-    ![This screenshot shows how to add a build trigger](teamcity-images/image8.png "This screenshot shows how to add a build trigger")
+    ![This screenshot shows how to add a build trigger.](teamcity-images/image8.png "This screenshot shows how to add a build trigger")
     An example of configuring a build trigger can be seen in the following screenshot:
 
-    ![An example of configuring a build trigger can be seen in this screenshot](teamcity-images/image9.png "An example of configuring a build trigger can be seen in this screenshot")
+    ![An example of configuring a build trigger can be seen in this screenshot.](teamcity-images/image9.png "An example of configuring a build trigger can be seen in this screenshot")
 
 5. The previous section, Parameterizing the Build Script, suggested storing some values as environment variables. These variables can be added to the build configuration via the Parameters screen. Add the variables for the App Center [API Key](/appcenter/api-docs/), the iOS device ID, and the Android Device ID as shown in the screenshot below:
 
-    ![Add the variables for the App Center Test API Key, the iOS device ID, and the Android Device ID](teamcity-images/image11.png "Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID")
+    ![Add the variables for the App Center Test API Key, the iOS device ID, and the Android Device ID.](teamcity-images/image11.png "Add the variables for the Test Cloud API Key, the iOS device ID, and the Android Device ID")
 
 6. The final step is to add a build step that will invoke the build script to compile the application and enqueue the application to App Center Test. The following screenshot is an example of a build step that uses a Rakefile to build an application:
 
-    ![This screenshot is an example of a build step that uses a Rakefile to build an application](teamcity-images/image12.png "This screenshot is an example of a build step that uses a Rakefile to build an application")
+    ![This screenshot is an example of a build step that uses a Rakefile to build an application.](teamcity-images/image12.png "This screenshot is an example of a build step that uses a Rakefile to build an application")
 
 7. At this point, the build configuration is complete. It's a good idea to trigger a build to confirm that the project is properly configured. A good way to do this is to commit a small, insignificant change to the repository. TeamCity should detect the commit and start a build.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Triggers
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Triggers allow you to express actions declaratively in XAML that change the appearance of controls based on events or property changes. In addition, state triggers, which are a specialized group of triggers, define when a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
@@ -307,7 +307,7 @@ These screenshots show the difference between the two multi
     In the bottom part of the screens, the **Login** button
     remains inactive until both fields contain data.
 
-![MultiTrigger Examples](triggers-images/multi-requireall.png)
+![MultiTrigger Examples.](triggers-images/multi-requireall.png)
 
 ## EnterActions and ExitActions
 
@@ -499,8 +499,8 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the implicit [`Style`](xref:Xamarin.Forms.Style) targets [`StackLayout`](xref:Xamarin.Forms.StackLayout) objects. When the window width is between 0 and 800 device-independent units, `StackLayout` objects to which the `Style` is applied will have a vertical orientation. When the window width is >= 800 device-independent units, the [`VisualState`](xref:Xamarin.Forms.VisualState) change is triggered, and the `StackLayout` orientation changes to horizontal:
 
-![Vertical StackLayout VisualState](triggers-images/adaptivetrigger-vertical.png "AdaptiveTrigger example")
-![Horizontal StackLayout VisualState](triggers-images/adaptivetrigger-horizontal.png "AdaptiveTrigger example")
+![Vertical StackLayout VisualState.](triggers-images/adaptivetrigger-vertical.png "AdaptiveTrigger example")
+![Horizontal StackLayout VisualState.](triggers-images/adaptivetrigger-horizontal.png "AdaptiveTrigger example")
 
 The [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) and [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) properties can be used independently or in conjunction with each other. The following XAML shows an example of setting both properties:
 
@@ -626,7 +626,7 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the explicit [`Style`](xref:Xamarin.Forms.Style) targets [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. `ContentPage` objects that consume the style set their background color to silver on iOS, to pale blue on Android, and to aquamarine on UWP. The following screenshots show the resulting pages on iOS and Android:
 
-[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/devicestatetrigger.png "DeviceStateTrigger example")](triggers-images/devicestatetrigger-large.png#lightbox "DeviceStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/devicestatetrigger.png "DeviceStateTrigger example."](triggers-images/devicestatetrigger-large.png#lightbox "DeviceStateTrigger example")
 
 ### Orientation state trigger
 

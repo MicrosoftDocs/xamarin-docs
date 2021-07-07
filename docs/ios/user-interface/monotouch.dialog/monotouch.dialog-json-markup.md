@@ -73,7 +73,7 @@ be passed into JsonElement.
 
 The above markup produces the following UI:
 
- [![The UI created by the given markup](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
+ [![The UI created by the given markup.](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 Every element in the tree can contain the property `"id"`. It is
 possible at runtime to reference individual sections or elements using the

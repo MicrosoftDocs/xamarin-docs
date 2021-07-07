@@ -18,15 +18,15 @@ _Fragments are self-contained, modular components that can help address the comp
 
 In this section, you'll walk through how to create and use fragments in a Xamarin.Android application. This application will display the titles of several plays by William Shakespeare in a list. When the user taps on the title of a play, then the app will display a quote from that play in a separate activity:
 
-[![App running on an Android phone in portrait mode](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
+[![App running on an Android phone in portrait mode.](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 When the phone is rotated to landscape mode, the appearance of the app will change: both the list of plays and quotes will appear in the same activity. When a play is selected, the quote will be display in the same activity:
 
-[![App running on an Android phone in landscape mode](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![App running on an Android phone in landscape mode.](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
 Finally, if the app is running on a tablet:
 
-[![App running on an Android tablet](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
+[![App running on an Android tablet.](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
 This sample application can easily adapt to the different form factors and orientations with minimal code changes by using fragments and [Alternate Layouts](../../../app-fundamentals/resources-in-android/alternate-resources.md).
 

@@ -39,7 +39,7 @@ In this walkthrough, you are going to create a Xamarin.Forms application, a Xama
 
 1. Open Visual Studio for Mac, create a new Xamarin.Forms project using the **Blank Forms App** template, and name it **FormsShareExtension**:
 
-    ![Create Project](extensions-xf-images/1.walkthrough-createproject.png)
+    ![Create Project.](extensions-xf-images/1.walkthrough-createproject.png)
 
 1. In **FormsShareExtension/MainPage.xaml**, replace the content with the following layout:
 
@@ -177,7 +177,7 @@ In this walkthrough, you are going to create a Xamarin.Forms application, a Xama
 
     Build and run in the iOS simulator or a device:
 
-    ![Xamarin.Forms in iOS Extension](extensions-xf-images/7.walkthrough-result.png)
+    ![Xamarin.Forms in iOS Extension.](extensions-xf-images/7.walkthrough-result.png)
 
     > [!IMPORTANT]
     > For the device build make sure to use proper build settings and the **Release** configuration as [described here](~/iOS/platform/extensions.md#debug-and-release-versions-of-extensions).

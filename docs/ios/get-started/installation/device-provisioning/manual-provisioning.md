@@ -145,7 +145,7 @@ At this point provisioning should be complete, and the app is ready to be deploy
 2. Open **Info.plist** and make sure the **Bundle Identifier** matches the App ID created earlier (unless the App ID is a wildcard).
 3. In the **Signing** section, select **Manual Provisioning** as the **Scheme**:
 
-    ![Screenshot of Info.plist in Visual Studio for Mac with manual provisioning selected](manual-provisioning-images/vsm-info-plist.png)
+    ![Screenshot of Info.plist in Visual Studio for Mac with manual provisioning selected.](manual-provisioning-images/vsm-info-plist.png)
 
 4. Click **Bundle Signing Options...**
 5. Make sure the build configuration is set to **Debug|iPhone**. Open both the **Signing Identity** and **Provisioning Profile** dropdown menus to verify that the correct certificates and provisioning profiles are listed: 
@@ -164,7 +164,7 @@ At this point provisioning should be complete, and the app is ready to be deploy
 3. In the **Solution Explorer**, right-click the iOS project name, select **Properties** and navigate to the **iOS Bundle Signing** tab.
 4. Make sure the build configuration is set to **Debug|iPhone**. Under **Bundle Signing**, select **Manual Provisioning** as the **Scheme**:
 
-    ![Screenshot of Info.plist in Visual Studio for Mac with manual provisioning selected](manual-provisioning-images/vs-bundle-signing.png)
+    ![Screenshot of Info.plist in Visual Studio for Mac with manual provisioning selected.](manual-provisioning-images/vs-bundle-signing.png)
 
 5. Open both the **Signing Identity** and **Provisioning Profile** dropdown menus to verify that the correct certificates and provisioning profiles are listed.
 6. Select a specific identity and profile to use, or leave it as **Automatic**. When set to **Automatic**, Visual Studio will select the identity and profile based on the **Bundle Identifier** in **Info.plist**. 

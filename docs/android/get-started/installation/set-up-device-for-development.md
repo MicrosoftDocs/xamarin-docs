@@ -47,7 +47,7 @@ these steps:
 2. Select **About Phone**.
 3. Tap **Build Number** 7 times until **You are now a developer!** is visible.
 
-[![Developer options screen on Android 9.0](set-up-device-for-development-images/build-version-sml.png)](set-up-device-for-development-images/build-version.png#lightbox)
+[![Developer options screen on Android 9.0.](set-up-device-for-development-images/build-version-sml.png)](set-up-device-for-development-images/build-version.png#lightbox)
 
 ### Verify that USB debugging is enabled
 
@@ -69,7 +69,7 @@ Navigate to **Settings > Developer Options** and enable **USB Debugging**.
 Once the **Developer Options** tab is available under **Settings >
 System**, open it to reveal developer settings:
 
-[![Developer options screen on Android](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
+[![Developer options screen on Android.](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
 
 This is the place to enable developer options such as USB debugging and
 stay awake mode.
@@ -83,7 +83,7 @@ You will receive a prompt to trust the computer on your device if you have
 not used it for debugging before. You can also check **Always allow from this 
 computer** to prevent requiring this prompt each time you connect the device.
 
-![Google USB](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
+![Google USB.](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
 
 ## Alternate connection via Wifi
 
@@ -105,7 +105,7 @@ from the command line:
     **Advanced**. This will open a dropdown showing information about the network
     connection, similar to what is seen in the screenshot below:
 
-    [![IP address](set-up-device-for-development-images/ip-settings-sml.png)](set-up-device-for-development-images/ip-settings.png#lightbox)
+    [![IP address.](set-up-device-for-development-images/ip-settings-sml.png)](set-up-device-for-development-images/ip-settings.png#lightbox)
 
     On some versions of Android the IP address won't be listed there
     but can be found instead under **Settings > About phone > Status**.
@@ -182,7 +182,7 @@ Install the **Google USB Driver** package by starting the Android SDK
 Manager, and expanding the **Extras** folder, as can be seen in the
 follow screenshot:
 
-![Google USB driver selected](set-up-device-for-development-images/google-usb-driver.png)
+![Google USB driver selected.](set-up-device-for-development-images/google-usb-driver.png)
 
 Check the **Google USB Driver** box, and click the **Apply Changes** button.
 The driver files are downloaded to the following location:

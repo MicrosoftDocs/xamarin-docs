@@ -21,7 +21,7 @@ For example, the image below shows the same application running in
 three different device locales, but the text displayed in each button
 is specific to the locale that each device is set to:
 
-[![Examples of three different locales](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
+[![Examples of three different locales.](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 In this example, the contents of a layout file, **Main.axml** looks
 something like this:
@@ -47,11 +47,11 @@ resources by providing the resource ID for the string:
 
 # [Visual Studio](#tab/windows)
 
-![Resource strings for three languages](application-localization-images/02-resource-strings-vs.png)
+![Resource strings for three languages.](application-localization-images/02-resource-strings-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Resource strings for three languages](application-localization-images/02-resource-strings-xs.png)
+![Resource strings for three languages.](application-localization-images/02-resource-strings-xs.png)
 
 -----
 

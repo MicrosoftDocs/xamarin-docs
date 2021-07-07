@@ -27,7 +27,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of a centered Label on iOS and Android](../images/create-label.png "A centered Label")](../images/create-label-large.png#lightbox "A centered Label")
+    [![Screenshot of a centered Label on iOS and Android](../images/create-label.png "A centered Label."](../images/create-label-large.png#lightbox "A centered Label")
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -58,4 +58,4 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a centered Label on iOS and Android](../images/create-label.png "A centered Label")](../images/create-label-large.png#lightbox "A centered Label")
+    [![Screenshot of a centered Label on iOS and Android](../images/create-label.png "A centered Label."](../images/create-label-large.png#lightbox "A centered Label")

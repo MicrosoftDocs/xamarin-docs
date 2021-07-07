@@ -11,7 +11,7 @@ ms.date: 09/10/2019
 
 # Sign In with Apple in Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Sign In with Apple is a new service that provides identity protection for users of third-party authentication services. Beginning with iOS 13, Apple requires that any new app using a third-party authentication services should also provide Sign In with Apple. Existing apps being updated do not need to add Sign In with Apple until April 2020.
 
@@ -124,7 +124,7 @@ public partial class LoginViewController : UIViewController, IASAuthorizationCon
 }
 ```
 
-![Animation of sample app using Sign In with Apple](sign-in-images/sign-in-flow.png)
+![Animation of sample app using Sign In with Apple.](sign-in-images/sign-in-flow.png)
 
 This example code checks the current login status in `PerformExistingAccountSetupFlows` and connects to the current view as a delegate. If an existing iCloud Keychain credential or Apple ID credential is found, the user will be prompted to use that.
 

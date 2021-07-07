@@ -23,7 +23,7 @@ Dark Mode requires iOS 13 and Xcode 11, Xamarin.iOS 12.99, and Visual Studio 201
 
 Apple provides a developer menu in iOS 13 to toggle between dark and light modes. In the iOS 13 simulator open **Settings** and choose the **Developer** section, then scroll to the **Dark Appearance** switch. The change will be reflected across the entire simulator environment:
 
-![Turning on Dark Mode](dark-mode-images/LightAndDark_DeveloperSetting.png)
+![Turning on Dark Mode.](dark-mode-images/LightAndDark_DeveloperSetting.png)
 
 ## Assets for Light and Dark Modes
 
@@ -31,7 +31,7 @@ The Asset Catalog in Visual Studio now supports optional images and colors for e
 
 Open your **Assets.xcassets** file in your iOS project and add a new image set. Notice you can specify universal, dark, and light images at any of the target resolutions. In the screenshot below, there is an image for dark and for light with the name of “MicrosoftLogo”:
 
-![Assets for Light and Dark Modes](dark-mode-images/LightAndDark_AssetCatalog2.png)
+![Assets for Light and Dark Modes.](dark-mode-images/LightAndDark_AssetCatalog2.png)
 
 **Assets.xcassets** also contains entries for **BackgroundColor** and **TitleColor**, which are color definitions. Those colors are now available by name to be used throughout the application. The **BackgroundColor** has been assigned to the background of the view, and the **TitleColor** to the label, as shown in this screenshot:
 

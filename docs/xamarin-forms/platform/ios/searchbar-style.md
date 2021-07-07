@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SearchBar style on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific controls whether a [`SearchBar`](xref:Xamarin.Forms.SearchBar) has a background. It's consumed in XAML by setting the `SearchBar.SearchBarStyle` bindable property to a value of the `UISearchBarStyle` enumeration:
 
@@ -48,11 +48,11 @@ In addition, the `SearchBar.GetSearchBarStyle` method can be used to return the 
 
 The result is that a specified `UISearchBarStyle` member is applied to a [`SearchBar`](xref:Xamarin.Forms.SearchBar), which controls whether the `SearchBar` has a background:
 
-![Screenshot of SearchBar styles, on iOS](searchbar-style-images/searchbar-styles.png "SearchBar styles on iOS")
+![Screenshot of SearchBar styles, on iOS.](searchbar-style-images/searchbar-styles.png "SearchBar styles on iOS")
 
 The following screenshots show the `UISearchBarStyle` members applied to [`SearchBar`](xref:Xamarin.Forms.SearchBar) objects that have their `BackgroundColor` property set:
 
-![Screenshot of SearchBar styles with background color, on iOS](searchbar-style-images/searchbar-background-styles.png "SearchBar styles with background color on iOS")
+![Screenshot of SearchBar styles with background color, on iOS.](searchbar-style-images/searchbar-background-styles.png "SearchBar styles with background color on iOS")
 
 ## Related links
 

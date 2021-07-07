@@ -11,11 +11,11 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In **Solution Explorer**, select the **WebServiceTutorial** project, right-click and select **Manage NuGet Packages...**:
 
-    ![Screenshot of the Add NuGet Packages menu item being selected](../images/vs/add-nuget-packages.png "Add NuGet Packages menu item")
+    ![Screenshot of the Add NuGet Packages menu item being selected.](../images/vs/add-nuget-packages.png "Add NuGet Packages menu item")
 
 1. In the **NuGet Package Manager**, select the **Browse** tab, search for the **Newtonsoft.Json** NuGet package, select it, and click the **Install** button to add it to the project:
 
-    ![Screenshot of the Newtonsoft.Json NuGet Package in the NuGet Package Manager](../images/vs/add-package.png "Newtonsoft.Json NuGet Package")
+    ![Screenshot of the Newtonsoft.Json NuGet Package in the NuGet Package Manager.](../images/vs/add-package.png "Newtonsoft.Json NuGet Package")
 
     This package will be used to incorporate JSON deserialization into the application.
 
@@ -34,11 +34,11 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In **Solution Pad**, select the **WebServiceTutorial** project, right-click and select **Manage NuGet Packages...**:
 
-    ![Screenshot of the Add NuGet Packages menu item being selected](../images/vsmac/add-nuget-packages.png "Add NuGet Packages menu item")
+    ![Screenshot of the Add NuGet Packages menu item being selected.](../images/vsmac/add-nuget-packages.png "Add NuGet Packages menu item")
 
 1. In the **Manage NuGet Packages** window, search for the **Newtonsoft.Json** NuGet package, select it, and click the **Add Package** button to add it to the project:
 
-    ![Screenshot of the Newtonsoft.Json NuGet Package in the NuGet Package Manager](../images/vsmac/add-package.png "Newtonsoft.Json NuGet Package")
+    ![Screenshot of the Newtonsoft.Json NuGet Package in the NuGet Package Manager.](../images/vsmac/add-package.png "Newtonsoft.Json NuGet Package")
 
     This package will be used to incorporate JSON deserialization into the application.
 

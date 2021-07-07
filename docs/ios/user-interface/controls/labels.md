@@ -25,11 +25,11 @@ UILabel label = new UILabel();
 
 You can also add a Label to your UI when using the iOS Designer. Search for **Label** in the **Toolbox** and drag it to your view:
 
-![Label in toolbox](labels-images/image3.png)
+![Label in toolbox.](labels-images/image3.png)
 
 The following properties can be adjusted on the properties pad:
 
-![Label property panel](labels-images/image2.png)
+![Label property panel.](labels-images/image2.png)
 
 - **Text Context** – Plain or Attributed. Plain text allows you to set the [formatting attributes](#Formatting_Text_and_Label) on the entire string. Attributed texts allows you to set formatting to different characters or words in the string.
 - **Color, Font, Alignment** – Formatting Attributes that can be applied to the label.
@@ -79,7 +79,7 @@ label.Enabled = false;
 
 This sets the label to a light grey color, as illustrated in the following example image of the Restrictions screen in iOS:
 
-![Disabled button in iOS](labels-images/image1.png)
+![Disabled button in iOS.](labels-images/image1.png)
 
 You can also set the Highlight and Shadow text colors to your label text for additional effects:
 
@@ -93,6 +93,6 @@ label.ShadowOffset = new CoreGraphics.CGSize(1.0f, 1.0f);
 
 Which displays the text like this:
 
-![Highlight and Shadow set on text](labels-images/image4.png)
+![Highlight and Shadow set on text.](labels-images/image4.png)
 
 For more information on changing the font of a UILabel, refer to the [Change The Font](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) recipe.

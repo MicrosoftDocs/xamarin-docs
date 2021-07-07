@@ -10,7 +10,7 @@ ms.date: 11/12/2018
 ---
 # File system access in Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/ios-samples/filesystemsamplecode)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/ios-samples/filesystemsamplecode)
 
 You can use Xamarin.iOS and the `System.IO` classes in the *.NET Base Class Library (BCL)* to access the iOS file system. The `File` class lets you create, delete, and read files, and the `Directory` class allows you to create, delete, or enumerate the
 contents of directories. You can also use `Stream` subclasses, which
@@ -30,7 +30,7 @@ also share files with each other and the **Files** app (since iOS 11), and via i
 
 This article discusses the features and restrictions of the iOS file system, and includes a sample application that demonstrates how to use Xamarin.iOS to execute some simple file system operations:
 
-[![A sample of iOS executing some simple file system operations](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
+[![A sample of iOS executing some simple file system operations.](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
 
 ## General file access
 
@@ -106,7 +106,7 @@ For more information see the [System.IO API reference](xref:System.IO).
 
 [Json.NET](http://www.newtonsoft.com/json) is a high-performance JSON framework that works with Xamarin.iOS and is available on NuGet. Add the NuGet package to your application project, using **Add NuGet** in Visual Studio for Mac:
 
-[![Adding the NuGet package to the applications project](file-system-images/json01.png)](file-system-images/json01.png#lightbox)
+[![Adding the NuGet package to the applications project.](file-system-images/json01.png)](file-system-images/json01.png#lightbox)
 
 Next, add a class to act as the data model for serialization/deserialization (in this case `Account.cs`):
 
@@ -223,13 +223,13 @@ project in **Visual Studio for Mac** and select **Reveal in Finder**. Then
 navigate to the **bin/** directory where you should find an application
 icon (similar to the screenshot below).
 
-![Navigate through the bin directory to find an application icon similar to this screenshot](file-system-images/40-bundle.png)
+![Navigate through the bin directory to find an application icon similar to this screenshot.](file-system-images/40-bundle.png)
 
 Right-click on this icon and choose **Show Package Contents** to
 browse the contents of the Application Bundle directory. The contents appear
 just like the contents of a regular directory, as shown here:
 
-[![The contents of the app bundle](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
+[![The contents of the app bundle.](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
 
 The application bundle is what’s installed on the simulator or on your
 device during testing, and ultimately it is what’s submitted to Apple for
@@ -257,7 +257,7 @@ These directories, how to determine their path, and their purposes are listed be
 
 This screenshot shows the directory structure in a Finder window:
 
-[![This screenshot shows the directory structure in a Finder window](file-system-images/08-library-directory.png)](file-system-images/08-library-directory.png#lightbox)
+[![This screenshot shows the directory structure in a Finder window.](file-system-images/08-library-directory.png)](file-system-images/08-library-directory.png#lightbox)
 
 ### Accessing other directories programmatically
 
@@ -294,25 +294,25 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 iOS 11 introduced the **Files** app - a file browser for iOS that allows the user to see and interact with their files in iCloud and also stored by any application that supports it. To allow the user to directly access files in your app, create a new boolean key in the **Info.plist** file `LSSupportsOpeningDocumentsInPlace` and set it to `true`, as here:
 
-![Set LSSupportsOpeningDocumentsInPlace in Info.plist](file-system-images/51-supports-opening.png)
+![Set LSSupportsOpeningDocumentsInPlace in Info.plist.](file-system-images/51-supports-opening.png)
 
 The app's **Documents** directory will now be available for browsing in the **Files** app. In the **Files** app, navigate to **On My iPhone** and each app with shared files will be visible. The screenshots below show what the [FileSystem sample app](/samples/xamarin/ios-samples/filesystemsamplecode) looks like:
 
-![iOS 11 Files app](file-system-images/50-files-app-1-sml.png) ![Browse my iPhone files](file-system-images/50-files-app-2-sml.png) ![Sample app files](file-system-images/50-files-app-3-sml.png)
+![iOS 11 Files app.](file-system-images/50-files-app-1-sml.png) ![Browse my iPhone files](file-system-images/50-files-app-2-sml.png) ![Sample app files](file-system-images/50-files-app-3-sml.png)
 
 ## Sharing files with the user through iTunes
 
 Users can access the files in your application’s Documents directory by editing `Info.plist` and
 creating an **Application that supports iTunes sharing** (`UIFileSharingEnabled`) entry in the **Source** view, as shown here:
 
-[![Adding the Application supports iTunes sharing property](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
+[![Adding the Application supports iTunes sharing property.](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 These files can be accessed in iTunes when the device is connected and the
 user chooses the `Apps` tab. For example, the following screenshot
 shows the files in selected app shared
 via iTunes:
 
-[![This screenshot shows the files in selected app shared via iTunes](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
+[![This screenshot shows the files in selected app shared via iTunes.](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 Users can only access the top-level items in this directory via iTunes. They
 cannot see the contents of any subdirectories (although they can copy them to
@@ -328,7 +328,7 @@ The sample code for this article creates both a file and a folder in the
 Documents folder (in **SampleCode.cs**) and enables file sharing in the **Info.plist**
 file. This screenshot shows how these appear in iTunes:
 
-[![This screenshot shows how the files appear in iTunes](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
+[![This screenshot shows how the files appear in iTunes.](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 Refer to the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) article for information about how to set icons for the application
 and for any custom document types you create.

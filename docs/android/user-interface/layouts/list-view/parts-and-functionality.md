@@ -27,7 +27,7 @@ A `ListView` consists of the following parts:
 These screenshots use a basic `ListView` control to
 show how Fast Scrolling and Section Index are rendered:
 
-[![Screenshots of apps using Plain old rows, fast scrolling, and section index](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
+[![Screenshots of apps using Plain old rows, fast scrolling, and section index.](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 The elements that make up a `ListView` are described in
 more detail below:
@@ -64,7 +64,7 @@ with fast scrolling.
 
 The primary classes used to display `ListViews` are shown here:
 
-[![UML diagram illustrating relationships between ListView and associated classes](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
+[![UML diagram illustrating relationships between ListView and associated classes.](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 The purpose of each class is described below:
 

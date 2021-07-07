@@ -85,7 +85,7 @@ to the style definition:
 This gives the bottom toolbar a dark amber color. Building and running 
 the app displays a blank second toolbar at the bottom of the screen: 
 
-[![Screenshot of app with yellow second toolbar at the bottom of the screen](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
+[![Screenshot of app with yellow second toolbar at the bottom of the screen.](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 ## Add Edit Menu Items 
 
@@ -161,16 +161,16 @@ toast to indicate which editing icon was tapped.
 Build and run the app. When the app runs, the text and icons added 
 above will appear as shown here: 
 
-[![Diagram of bottom Toolbar with Cut, Copy, and Paste icons](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
+[![Diagram of bottom Toolbar with Cut, Copy, and Paste icons.](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
 Tapping the **Cut** menu icon causes the following toast to be 
 displayed: 
 
-[![Screenshot of Toast indicating that the Cut menu icon was tapped](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
+[![Screenshot of Toast indicating that the Cut menu icon was tapped.](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 Tapping menu items on either toolbar displays the resulting toasts: 
 
-[![Screenshots of Toasts for Save, Copy, and Paste menu items being tapped](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
+[![Screenshots of Toasts for Save, Copy, and Paste menu items being tapped.](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 ## The Up Button 
 
@@ -214,7 +214,7 @@ When the user navigates from `MainActivity` to `DetailActivity`,
 the `DetailActivity` displays an **Up** button (left pointing arrow)
 as shown in the screenshot:
 
-[![Screenshot example of an Up button left arrow in the toolbar](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
+[![Screenshot example of an Up button left arrow in the toolbar.](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Tapping this **Up** button causes the app to return to `MainActivity`. 
 In a more complex app with multiple levels of hierarchy, tapping this 

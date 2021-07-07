@@ -13,7 +13,7 @@ ms.date: 04/26/2019
 The Remoted iOS Simulator for Windows allows you to test your apps on an
 iOS simulator displayed in Windows alongside Visual Studio 2019 and Visual Studio 2017.
 
-[![iOS simulator running on Windows](images/hero-sml.png "iOS simulator running on Windows")](images/hero.png#lightbox)
+[![iOS simulator running on Windows](images/hero-sml.png "iOS simulator running on Windows."](images/hero.png#lightbox)
 
 ## Getting started
 
@@ -36,13 +36,13 @@ The toolbar at the top of the simulator's window contains a number of useful but
 - [**Settings**](#settings) – Displays keyboard, location, and other settings.
 - [**Other options**](#other-options) – Brings up various simulator options such as rotation, shake gestures, and Touch ID.
 
-    [![iOS simulator maps example](images/maps-app-sml.png "iOS simulator maps example")](images/maps-app.png#lightbox)
+    [![iOS simulator maps example](images/maps-app-sml.png "iOS simulator maps example."](images/maps-app.png#lightbox)
 
 ## Settings
 
 Clicking the toolbar's gear icon opens the **Settings** window:
 
-[![iOS simulator settings](images/settings-sml.png "iOS simulator settings")](images/settings.png#lightbox)
+[![iOS simulator settings](images/settings-sml.png "iOS simulator settings."](images/settings.png#lightbox)
 
 These settings allow you to enable the hardware keyboard, choose a
 location that the device should report (static and moving locations are
@@ -55,7 +55,7 @@ The toolbar's ellipsis button reveals other options such as rotation,
 shake gestures, and rebooting. These same options can be viewed as a list
 by right-clicking anywhere in the simulator's window:
 
-[![iOS simulator additional settings](images/more-sml.png "iOS simulator additional settings")](images/more.png#lightbox)
+[![iOS simulator additional settings](images/more-sml.png "iOS simulator additional settings."](images/more.png#lightbox)
 
 ## Touchscreen support
 
@@ -78,7 +78,7 @@ To disable the Remoted iOS Simulator for Windows, navigate to
 **Tools > Options > Xamarin > iOS Settings** and uncheck
 **Remote Simulator to Windows**.
 
-[![checkbox to use simulator](images/options-sml.png "checkbox to use simulator")](images/options.png#lightbox)
+[![checkbox to use simulator](images/options-sml.png "checkbox to use simulator."](images/options.png#lightbox)
 
 With this option disabled, debugging opens the iOS Simulator on the connected Mac build host.
 

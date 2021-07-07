@@ -75,7 +75,7 @@ When including 3rd party libraries in your Xamarin.Mac app, you might get an err
 
 This can be solved by opening the options for the Xamarin.Mac project, going to **Mac Build** > **Internationalization** and checking the **West** internationalization:
 
-[![Editing the build options](troubleshooting-images/issue01.png "Editing the build options")](troubleshooting-images/issue01-large.png#lightbox)
+[![Editing the build options](troubleshooting-images/issue01.png "Editing the build options."](troubleshooting-images/issue01-large.png#lightbox)
 
 ### Failed to compile (mm5103)
 
@@ -91,19 +91,19 @@ The latest version of Visual Studio for Mac has removed the Entitlements section
 
 With the new Visual Studio for Mac installed, when you create a new Xamarin.Mac app project, an **Entitlements.plist** file will automatically be added to the project tree:
 
-![Selecting entitlements](troubleshooting-images/entitlements01.png "Selecting entitlements")
+![Selecting entitlements.](troubleshooting-images/entitlements01.png "Selecting entitlements")
 
 If you double-click the **Entitlements.plist** file, the Entitlements Editor will be displayed:
 
-[![Editing the entitlements](troubleshooting-images/entitlements02.png "Editing the entitlements")](troubleshooting-images/entitlements02-large.png#lightbox)
+[![Editing the entitlements](troubleshooting-images/entitlements02.png "Editing the entitlements."](troubleshooting-images/entitlements02-large.png#lightbox)
 
 For existing Xamarin.Mac projects, you will need to manually create the **Entitlements.plist** file by right-clicking on the project in the **Solution Pad** and selecting **Add** > **New File...**. Next, select **Xamarin.Mac** > **Empty Property List**:
 
-![Adding a new property list](troubleshooting-images/entitlements03.png "Adding a new property list")
+![Adding a new property list.](troubleshooting-images/entitlements03.png "Adding a new property list")
 
 Enter `Entitlements` for the name and click the **New** button. If your project previously included an Entitlements file, you will be prompted to add it to the project instead of creating a new file:
 
-[![Verifying the overwrite of a file](troubleshooting-images/entitlements04.png "Verifying the overwrite of a file")](troubleshooting-images/entitlements04-large.png#lightbox)
+[![Verifying the overwrite of a file](troubleshooting-images/entitlements04.png "Verifying the overwrite of a file."](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## Community support on the forums
 

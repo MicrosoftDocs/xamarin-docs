@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 27. Custom renderers
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -70,7 +70,7 @@ The [`HelloViewRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/
 
 All the `ViewRenderer` derivatives contain an `ExportRenderer` attribute on the assembly level that associates the `HelloView` class with the particular `HelloViewRenderer` class. This is how Xamarin.Forms locates renderers in the individual platform projects:
 
-[![Triple screenshot of Hello View](images/ch27fg02-small.png "Custom Renderers")](images/ch27fg02-large.png#lightbox "Custom Renderers")
+[![Triple screenshot of Hello View](images/ch27fg02-small.png "Custom Renderers."](images/ch27fg02-large.png#lightbox "Custom Renderers")
 
 ## Renderers and properties
 
@@ -93,7 +93,7 @@ The `OnElementPropertyChanged` override can therefore transfer the `Color` value
 
 The [**EllipseDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) class displays several of these `EllipseView` objects:
 
-[![Triple screenshot of Ellipse Demo](images/ch27fg03-small.png "EllipseView Custom Renderers")](images/ch27fg03-large.png#lightbox "EllipseView Custom Renderers")
+[![Triple screenshot of Ellipse Demo](images/ch27fg03-small.png "EllipseView Custom Renderers."](images/ch27fg03-large.png#lightbox "EllipseView Custom Renderers")
 
 The [**BouncingBall**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) bounces an `EllipseView` off the sides of the screen.
 

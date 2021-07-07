@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Clipping with Paths and Regions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use paths to clip graphics to specific areas, and to create regions_
 
 It's sometimes necessary to restrict the rendering of graphics to a particular area. This is known as *clipping*. You can use clipping for special effects, such as this image of a monkey seen through a keyhole:
 
-![Monkey through a keyhole](clipping-images/clippingsample.png)
+![Monkey through a keyhole.](clipping-images/clippingsample.png)
 
 The *clipping area* is the area of the screen in which graphics are rendered. Anything that is displayed outside of the clipping area is not rendered. The clipping area is usually defined by a rectangle or an [`SKPath`](xref:SkiaSharp.SKPath) object, but you can alternatively define a clipping area using an [`SKRegion`](xref:SkiaSharp.SKRegion) object. These two types of objects at first seem related because you can create a region from a path. However, you cannot create a path from a region, and they are very different internally: A path comprises a series of lines and curves, while a region is defined by a series of horizontal scan lines.
 
@@ -95,7 +95,7 @@ canvas.ClipPath(keyholePath);
 
 The `PaintSurface` handler then resets the transforms with a call to `ResetMatrix` and draws the bitmap to extend to the full height of the screen. This code assumes that the bitmap is square, which this particular bitmap is. The bitmap is rendered only within the area defined by the clipping path:
 
-[![Triple screenshot of the Monkey through Keyhole page](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
+[![Triple screenshot of the Monkey through Keyhole page.](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
 
 The clipping path is subject to the transforms in effect when the `ClipPath` method is called, and not to the transforms in effect when a graphical object (such as a bitmap) is displayed. The clipping path is part of the canvas state that is saved with the `Save` method and restored with the `Restore` method.
 
@@ -162,7 +162,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 What's left is the intersection of these four circles:
 
-[![Triple screenshot of the Four Circle Intersect Clip page](clipping-images//fourcircleintersectclip-small.png)](clipping-images/fourcircleintersectclip-large.png#lightbox)
+[![Triple screenshot of the Four Circle Intersect Clip page.](clipping-images//fourcircleintersectclip-small.png)](clipping-images/fourcircleintersectclip-large.png#lightbox)
 
 The [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) enumeration has only two members:
 
@@ -172,13 +172,13 @@ The [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) enumeration has only two
 
 If you replace the four `SKClipOperation.Intersect` arguments in the `FourCircleIntersectClipPage` class with `SKClipOperation.Difference`, you'll see the following:
 
-[![Triple screenshot of the Four Circle Intersect Clip page with difference operation](clipping-images//fourcircledifferenceclip-small.png)](clipping-images/fourcircledifferenceclip-large.png#lightbox)
+[![Triple screenshot of the Four Circle Intersect Clip page with difference operation.](clipping-images//fourcircledifferenceclip-small.png)](clipping-images/fourcircledifferenceclip-large.png#lightbox)
 
 Four overlapping circles have been removed from the clipping area.
 
 The **Clip Operations** page illustrates the difference between these two operations with just a pair of circles. The first circle on the left is added to the clipping area with the default clip operation of `Intersect`, while the second circle on the right is added to the clipping area with the clip operation indicated by the text label:
 
-[![Triple screenshot of the Clip Operations page](clipping-images//clipoperations-small.png)](clipping-images/clipoperations-large.png#lightbox)
+[![Triple screenshot of the Clip Operations page.](clipping-images//clipoperations-small.png)](clipping-images/clipoperations-large.png#lightbox)
 
 The [`ClipOperationsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) class defines two `SKPaint` objects as fields, and then divides the screen up into two rectangular areas. These areas are different depending on whether the phone is in portrait or landscape mode. The `DisplayClipOp` class then displays the text and calls `ClipPath` with the two circle paths to illustrate each clip operation:
 
@@ -277,7 +277,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 The following screenshot shows clipping areas based on the six region operations. The left circle is the region that the `Op` method is called on, and the right circle is the region passed to the `Op` method:
 
-[![Triple screenshot of the Region Operations page](clipping-images//regionoperations-small.png)](clipping-images/regionoperations-large.png#lightbox)
+[![Triple screenshot of the Region Operations page.](clipping-images//regionoperations-small.png)](clipping-images/regionoperations-large.png#lightbox)
 
 Are these all the possibilities of combining these two circles? Consider the resultant image as a combination of three components, which by themselves are seen in the `Difference`, `Intersect`, and `ReverseDifference` operations. The total number of combinations is two to the third power, or eight. The two that are missing are the original region (which results from not calling `Op` at all) and an entirely empty region.
 
@@ -418,7 +418,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The `DrawRegion` call fills the region in orange, while the `DrawPath` call strokes the original path in blue for comparison:
 
-[![Triple screenshot of the Region Paint page](clipping-images//regionpaint-small.png)](clipping-images/regionpaint-large.png#lightbox)
+[![Triple screenshot of the Region Paint page.](clipping-images//regionpaint-small.png)](clipping-images/regionpaint-large.png#lightbox)
 
 The region is clearly a series of discrete coordinates.
 
@@ -504,7 +504,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 It doesn't really look like a four-leaf clover, but it's an image that might otherwise be hard to render without clipping:
 
-[![Triple screenshot of the Four-Leaf Clover page](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
+[![Triple screenshot of the Four-Leaf Clover page.](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 ## Related Links
 

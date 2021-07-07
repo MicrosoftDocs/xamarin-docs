@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Polygon
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Polygon` class derives from the `Shape` class, and can be used to draw polygons, which are connected series of lines that form closed shapes. For information on the properties that the `Polygon` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -42,7 +42,7 @@ The following XAML example shows how to draw a filled polygon:
 
 In this example, a filled polygon that represents a triangle is drawn:
 
-![Filled polygon](polygon-images/filled.png "Filled polygon")
+![Filled polygon.](polygon-images/filled.png "Filled polygon")
 
 The following XAML example shows how to draw a dashed polygon:
 
@@ -57,7 +57,7 @@ The following XAML example shows how to draw a dashed polygon:
 
 In this example, the polygon outline is dashed:
 
-![Dashed polygon](polygon-images/dashed.png "Dashed polygon")
+![Dashed polygon.](polygon-images/dashed.png "Dashed polygon")
 
 For more information about drawing a dashed polygon, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
@@ -72,7 +72,7 @@ The following XAML example shows a polygon that uses the default fill rule:
 
 In this example, the fill behavior of each polygon is determined using the `EvenOdd` fill rule.
 
-![EvenOdd polygon](polygon-images/evenodd.png "EvenOdd polygon")
+![EvenOdd polygon.](polygon-images/evenodd.png "EvenOdd polygon")
 
 The following XAML example shows a polygon that uses the `Nonzero` fill rule:
 
@@ -84,7 +84,7 @@ The following XAML example shows a polygon that uses the `Nonzero` fill rule:
          StrokeThickness="3" />
 ```
 
-![Nonzero polygon](polygon-images/nonzero.png "Nonzero polygon")
+![Nonzero polygon.](polygon-images/nonzero.png "Nonzero polygon")
 
 In this example, the fill behavior of each polygon is determined using the `Nonzero` fill rule.
 

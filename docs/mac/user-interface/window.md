@@ -24,7 +24,7 @@ Windows can be used in a Modeless state (such as a text editor that can have mul
 
 Panels are a special kind of Window (a subclass of the base `NSWindow` class), that typically serve an auxiliary function in an application, such as utility windows like Text format inspectors and system Color Picker.
 
-[![Editing a window in Xcode](window-images/intro01.png)](window-images/intro01.png#lightbox)
+[![Editing a window in Xcode.](window-images/intro01.png)](window-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of working with Windows and Panels in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -81,7 +81,7 @@ For more information, see the [Full-Screen Windows](https://developer.apple.com/
 
 A Panel is an auxiliary window that contains controls and options that affect the active document or selection (such as the system Color Picker):
 
-[![A color panel](window-images/panel01.png)](window-images/panel01.png#lightbox)
+[![A color panel.](window-images/panel01.png)](window-images/panel01.png#lightbox)
 
 Panels can be either _App-Specific_ or _Systemwide_. App-Specific Panels float over the top of the application's document windows and disappear when the application is in the background. Systemwide Panels (such as the **Fonts** panel), float on top of all open windows no matter the application. 
 
@@ -97,7 +97,7 @@ Apple suggests the following guidelines:
 
 Most modern macOS applications present auxiliary controls and options that affect the active document or selection as _Inspectors_ that are part of the Main Window (like the **Pages** app shown below), instead of using Panel Windows:
 
-[![An example inspector](window-images/panel02.png)](window-images/panel02.png#lightbox)
+[![An example inspector.](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
 For more information, see the [Panels](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section of Apple's [macOS design themes](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) and our [MacInspector](/samples/xamarin/mac-samples/macinspector) sample app for a full implementation of an **Inspector Interface** in a Xamarin.Mac app.
 
@@ -105,11 +105,11 @@ For more information, see the [Panels](https://developer.apple.com/library/mac/d
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
-[![Selecting the main storyboard](window-images/edit01.png)](window-images/edit01.png#lightbox)
+[![Selecting the main storyboard.](window-images/edit01.png)](window-images/edit01.png#lightbox)
 
 This will open the window design in Xcode's Interface Builder:
 
-[![Editing the UI in Xcode](window-images/edit02.png)](window-images/edit02.png#lightbox)
+[![Editing the UI in Xcode.](window-images/edit02.png)](window-images/edit02.png#lightbox)
 
 In the **Attribute Inspector**, there are several properties that you can use to define and control your window:
 
@@ -141,7 +141,7 @@ See Apple's [Introduction to Windows](https://developer.apple.com/library/mac/do
 
 To set the initial position of your window and to control it's size, switch to the **Size Inspector**:
 
-[![The default size and location](window-images/edit07.png)](window-images/edit07.png#lightbox)
+[![The default size and location.](window-images/edit07.png)](window-images/edit07.png#lightbox)
 
 From here you can set the initial size of the window, give it a minimum and maximum size, set the initial location on the screen and control the borders around the window.
 
@@ -155,15 +155,15 @@ Do the following:
 2. Select the `NSWindowController` in the  Design Surface.
 3. Switch to the **Identity Inspector** view and enter `WindowController` as the **Class Name**: 
 
-    [![Setting the class name](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
+    [![Setting the class name.](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
 4. Save your changes and return to Visual Studio for Mac to sync.
 5. A `WindowController.cs` file will be added to your Project in the **Solution Explorer** in Visual Studio for Mac: 
 
-    [![Selecting the windows controller](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
+    [![Selecting the windows controller.](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
 6. Reopen the Storyboard in Xcode's Interface Builder.
 7. The `WindowController.h` file will be available for use: 
 
-    [![Editing the WindowController.h file](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
+    [![Editing the WindowController.h file.](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
 
 ### Adding UI elements
 
@@ -171,21 +171,21 @@ To define the content of a window, drag controls from the **Library Inspector** 
 
 As an example, let's drag a Toolbar from the **Library Inspector** onto the window in the **Interface Editor**:
 
-[![Selecting a Toolbar from the Library](window-images/edit03.png)](window-images/edit03.png#lightbox)
+[![Selecting a Toolbar from the Library.](window-images/edit03.png)](window-images/edit03.png#lightbox)
 
 Next, drag in a **Text View** and size it to fill the area under the toolbar:
 
-[![Adding a Text View](window-images/edit04.png)](window-images/edit04.png#lightbox)
+[![Adding a Text View.](window-images/edit04.png)](window-images/edit04.png#lightbox)
 
 Since we want the **Text View** to shrink and grow as the window's size changes, let's switch to the **Constraint Editor** and add the following constraints:
 
-[![Editing constraints](window-images/edit05.png)](window-images/edit05.png#lightbox)
+[![Editing constraints.](window-images/edit05.png)](window-images/edit05.png#lightbox)
 
 By clicking the four **Red I-Beams** at the top of the editor and clicking **Add 4 Constraints**, we are telling the text view to stick to the given X,Y coordinates and grow or shrink horizontally and vertically as the window is resized.
 
 Finally, expose the **Text View** to code using an **Outlet** (making sure to select the `ViewController.h` file):
 
-[![Configuring an outlet](window-images/edit06.png)](window-images/edit06.png#lightbox)
+[![Configuring an outlet.](window-images/edit06.png)](window-images/edit06.png#lightbox)
 
 Save your changes and switch back to Visual Studio for Mac to sync with Xcode.
 
@@ -210,17 +210,17 @@ Now that we have a basic window created, we'll look at the typical processes a X
 
 By default, a new Xamarin.Mac application will automatically display the window defined in the `MainWindow.xib` file when it is started:
 
-[![An example window running](window-images/display01.png)](window-images/display01.png#lightbox)
+[![An example window running.](window-images/display01.png)](window-images/display01.png#lightbox)
 
 Since we modified the design of that window above, it now includes a default Toolbar and **Text View** control. The following section in the `Info.plist` file is responsible for displaying this window:
 
-[![Editing Info.plist](window-images/display00.png)](window-images/display00.png#lightbox)
+[![Editing Info.plist.](window-images/display00.png)](window-images/display00.png#lightbox)
 
 The **Main Interface** dropdown is used to select the Storyboard that will be used as the main app UI (in this case `Main.storyboard`).
 
 A View Controller is automatically added to the project to control that Main Windows that is displayed (along with its primary View). It is defined in the `ViewController.cs` file and attached to the **File's Owner** in Interface Builder under the **Identity Inspector**:
 
-[![Setting the file's owner](window-images/display02.png)](window-images/display02.png#lightbox)
+[![Setting the file's owner.](window-images/display02.png)](window-images/display02.png#lightbox)
 
 For our window, we'd like it to have a title of `untitled` when it first opens so let's override the `ViewWillAppear` method in the `ViewController.cs` to look like the following:
 
@@ -278,11 +278,11 @@ Would to close the `MyWindow` `NSWindow` instance.
 
 In macOS, Apple has provided a way to inform the user that the contents of a Window (`NSWindow`) has been modified by the user and needs to be saved. If the Window contains modified content, a small black dot will be displayed in it's **Close** widget:
 
-[![A window with the modified marker](window-images/close01.png)](window-images/close01.png#lightbox)
+[![A window with the modified marker.](window-images/close01.png)](window-images/close01.png#lightbox)
 
 If the user attempts to close the Window or quit the Mac App while there are unsaved changes to the Window's content, you should present a [Dialog Box](~/mac/user-interface/dialog.md) or [Modal Sheet](~/mac/user-interface/dialog.md) and allow the user to save their changes first:
 
-[![A save sheet being shown when the window is closed](window-images/close02.png)](window-images/close02.png#lightbox)
+[![A save sheet being shown when the window is closed.](window-images/close02.png)](window-images/close02.png#lightbox)
 
 ### Marking a window as modified
 
@@ -448,11 +448,11 @@ void NewDocument (NSObject sender) {
 
 This code creates a new version of our Window Controller, loads the new Window, makes it the Main and Key Window, and sets it title. Now if we run our application, and select **New** from the **File** menu a new editor window will be opened and displayed:
 
-[![A new untitled window was added](window-images/display04.png)](window-images/display04.png#lightbox)
+[![A new untitled window was added.](window-images/display04.png)](window-images/display04.png#lightbox)
 
 If we open the **Windows** menu, you can see the application is automatically tracking and handling our open windows:
 
-[![The windows menu](window-images/display05.png)](window-images/display05.png#lightbox)
+[![The windows menu.](window-images/display05.png)](window-images/display05.png#lightbox)
 
 For more information on working with Menus in a Xamarin.Mac application, please see our [Working with Menus](~/mac/user-interface/menu.md) documentation.
 
@@ -514,7 +514,7 @@ There might be times where you need to monitor changes in a Window's size inside
 
 To monitor size changes, first ensure that you have assigned a custom class for the Window Controller in Xcode's Interface Builder. For example, `MasterWindowController` in the following:
 
-[![The Identity Inspector](window-images/resize01.png)](window-images/resize01.png#lightbox)
+[![The Identity Inspector.](window-images/resize01.png)](window-images/resize01.png#lightbox)
 
 Next, edit the custom Window Controller class and monitor the `DidResize` event on the Controller's Window to be notified of live size changes. For example:
 
@@ -596,11 +596,11 @@ public override void AwakeFromNib ()
 
 We are also monitoring the `WillClose` event on the window and checking the state of the `DocumentEdited` property. If it is `true` we need to give the user the ability to save the changes to the file. If we run our app and enter some text, the dot will be displayed:
 
-[![A changed window](window-images/file01.png)](window-images/file01.png#lightbox)
+[![A changed window.](window-images/file01.png)](window-images/file01.png#lightbox)
 
 If you try to close the window, you get an alert:
 
-[![Displaying a save dialog](window-images/file02.png)](window-images/file02.png#lightbox)
+[![Displaying a save dialog.](window-images/file02.png)](window-images/file02.png#lightbox)
 
 If you are loading a document from a file, set the title of the window to the file's name using the `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` method (given that `path` is a string representing the file being opened). Additionally, you can set the URL of the file using the `window.RepresentedUrl = url;` method.
 
@@ -643,11 +643,11 @@ void OpenDialog (NSObject sender)
 
 Now if we run our app, select **Open...** from the **File** menu, select a text file from the **Open** Dialog box and open it:
 
-[![An open dialog box](window-images/file03.png)](window-images/file03.png#lightbox)
+[![An open dialog box.](window-images/file03.png)](window-images/file03.png#lightbox)
 
 The file will be displayed and the title will be set with the icon of the file:
 
-[![The contents of a file loaded](window-images/file04.png)](window-images/file04.png#lightbox)
+[![The contents of a file loaded.](window-images/file04.png)](window-images/file04.png#lightbox)
 
 ## Adding a new window to a project
 
@@ -658,22 +658,22 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing in Xcode's Interface Builder.
 2. Drag a new **Window Controller** from the **Library** and drop it on the **Design Surface**:
 
-    [![Selecting a new Window Controller in the Library](window-images/new01.png)](window-images/new01.png#lightbox)
+    [![Selecting a new Window Controller in the Library.](window-images/new01.png)](window-images/new01.png#lightbox)
 3. In the **Identity Inspector**, enter `PreferencesWindow` for the **Storyboard ID**: 
 
-    [![Setting the storyboard ID](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![Setting the storyboard ID.](window-images/new02.png)](window-images/new02.png#lightbox)
 4. Design your interface: 
 
-    [![Designing the UI](window-images/new03.png)](window-images/new03.png#lightbox)
+    [![Designing the UI.](window-images/new03.png)](window-images/new03.png#lightbox)
 5. Open the App Menu (`MacWindows`), select **Preferences...**, Control-Click and drag to the new window: 
 
-    [![Creating a segue](window-images/new05.png)](window-images/new05.png#lightbox)
+    [![Creating a segue.](window-images/new05.png)](window-images/new05.png#lightbox)
 6. Select **Show** from the popup menu.
 7. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 If we run the code and select the **Preferences...** from the **Application Menu**, the window will be displayed:
 
-[![A sample preferences menu](window-images/new04.png)](window-images/new04.png#lightbox)
+[![A sample preferences menu.](window-images/new04.png)](window-images/new04.png#lightbox)
 
 ## Working with panels
 
@@ -691,7 +691,7 @@ Just like any other type of window that you create and work with in your Xamarin
 
 In the **Attribute Inspector**, you have the following options specific to Panels:
 
-[![The Attribute Inspector](window-images/panel03.png)](window-images/panel03.png#lightbox)
+[![The Attribute Inspector.](window-images/panel03.png)](window-images/panel03.png#lightbox)
 
 - **Style** - Allow you to adjust the style of the panel from: Regular Panel (looks like a standard window), Utility Panel (has a smaller Title bar), HUD Panel (is translucent and the title bar is part of the background).
 - **Non Activating** - Determines in the panel becomes the key window.
@@ -702,24 +702,24 @@ To add a new Panel, do the following:
 1. In the **Solution Explorer**, right-click on the Project and select **Add** > **New File...**.
 2. In the New File dialog box, select **Xamarin.Mac** > **Cocoa Window with Controller**:
 
-    [![Adding a new window controller](window-images/panels00.png)](window-images/panels00.png#lightbox)
+    [![Adding a new window controller.](window-images/panels00.png)](window-images/panels00.png#lightbox)
 
 3. Enter `DocumentPanel` for the **Name** and click the **New** button.
 4. Double-click the `DocumentPanel.xib` file to open it for editing in Interface Builder: 
 
-    [![Editing the panel](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![Editing the panel.](window-images/new02.png)](window-images/new02.png#lightbox)
 
 5. Delete the existing Window and drag a Panel from the **Library Inspector** in the **Interface Editor**: 
 
-    [![Deleting the existing window](window-images/panels01.png)](window-images/panels01.png#lightbox)
+    [![Deleting the existing window.](window-images/panels01.png)](window-images/panels01.png#lightbox)
 
 6. Hook the panel up to the **File's Owner** - **window** - **Outlet**: 
 
-    [![Dragging to wire up the panel](window-images/panels02.png)](window-images/panels02.png#lightbox)
+    [![Dragging to wire up the panel.](window-images/panels02.png)](window-images/panels02.png#lightbox)
 
 7. Switch to the **Identity Inspector** and set the Panel's class to `DocumentPanel`: 
 
-    [![Setting the panel's class](window-images/panels03.png)](window-images/panels03.png#lightbox)
+    [![Setting the panel's class.](window-images/panels03.png)](window-images/panels03.png#lightbox)
 
 8. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 9. Edit the `DocumentPanel.cs` file and change the class definition to the following: 
@@ -742,7 +742,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 If we run our application, the panel will be displayed:
 
-[![The panel in a running app](window-images/panels04.png)](window-images/panels04.png#lightbox)
+[![The panel in a running app.](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](/samples/xamarin/mac-samples/macinspector) sample app.

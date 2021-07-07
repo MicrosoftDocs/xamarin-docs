@@ -11,7 +11,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Implementing a View
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
 _Xamarin.Forms custom user interface controls should derive from the View class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera._
 
@@ -22,7 +22,7 @@ Every Xamarin.Forms view has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`View`](xref:Xamarin.Forms.View) and the corresponding native controls that implement it:
 
-![Relationship Between the View Class and its Implementing Native Classes](view-images/view-classes.png)
+![Relationship Between the View Class and its Implementing Native Classes.](view-images/view-classes.png)
 
 The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`View`](xref:Xamarin.Forms.View) on each platform. The process for doing this is as follows:
 
@@ -122,11 +122,11 @@ The process for creating the custom renderer class on Android, as a fast rendere
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![CameraPreview Custom Renderer Project Responsibilities](view-images/solution-structure.png)
+![CameraPreview Custom Renderer Project Responsibilities.](view-images/solution-structure.png)
 
 The `CameraPreview` custom control is rendered by platform-specific renderer classes, which derive from the `ViewRenderer` class on iOS and UWP, and from the `FrameLayout` class on Android. This results in each `CameraPreview` custom control being rendered with platform-specific controls, as shown in the following screenshots:
 
-![CameraPreview on each Platform](view-images/screenshots.png)
+![CameraPreview on each Platform.](view-images/screenshots.png)
 
 The `ViewRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms custom control is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application, the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `CameraPreview` instance.
 

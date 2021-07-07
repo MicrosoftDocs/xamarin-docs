@@ -18,7 +18,7 @@ iOS 11 adds the following new features to MapKit:
 - [Scale View](#scale)
 - [User Tracking Button](#user-tracking)
 
-![Map showing clustered markers and compass button](mapkit-images/cyclemap-heading.png)
+![Map showing clustered markers and compass button.](mapkit-images/cyclemap-heading.png)
 
 <a name="clustering"></a>
 
@@ -189,7 +189,7 @@ When the map is rendered, annotation markers will be clustered or rendered
 depending on the zoom level. As the zoom level changes, markers animate
 in and out of clusters.
 
-![Simulator showing clustered markers on map](mapkit-images/cyclemap-sml.png)
+![Simulator showing clustered markers on map.](mapkit-images/cyclemap-sml.png)
 
 Refer to the [Maps section](~/ios/user-interface/controls/ios-maps/index.md)
 for more information on displaying data with MapKit.
@@ -202,7 +202,7 @@ iOS 11 adds the ability to pop the compass out of the map and render it elsewher
 
 Create a button that looks like a compass (including live animation when the map orientation is changed), and renders it on another control.
 
-![Compass button in navigation bar](mapkit-images/compass-sml.png)
+![Compass button in navigation bar.](mapkit-images/compass-sml.png)
 
 The code below creates a compass button and renders it on the navigation bar:
 
@@ -222,7 +222,7 @@ The `ShowsCompass` property can be used to control visibility of the default com
 Add the scale elsewhere in the view using the `MKScaleView.FromMapView()` method
 to get an instance of the scale view to add elsewhere in the view hierarchy.
 
-![Scale view overlaid on a map](mapkit-images/scale-sml.png)
+![Scale view overlaid on a map.](mapkit-images/scale-sml.png)
 
 ```csharp
 var scale = MKScaleView.FromMapView(MapView);
@@ -242,7 +242,7 @@ The user tracking button centers the map on the user's current location. Use the
 `MKUserTrackingButton.FromMapView()` method to get an instance of the button,
 apply formatting changes, and add elsewhere in the view hierarchy.
 
-![User location button overlaid on a map](mapkit-images/user-location-sml.png)
+![User location button overlaid on a map.](mapkit-images/user-location-sml.png)
 
 ```csharp
 var button = MKUserTrackingButton.FromMapView(MapView);

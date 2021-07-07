@@ -18,7 +18,7 @@ These types can be divided into pages, layouts, views, and cells. A Xamarin.Form
 
 The following class diagram shows the hierarchy of types that are typically used to build a user interface in Xamarin.Forms:
 
-[![Xamarin.Forms Controls Class Diagram](class-hierarchy-images/class-diagram.png "Xamarin.Forms controls class diagram")](class-hierarchy-images/class-diagram-large.png#lightbox "Xamarin.Forms controls class diagram")
+[![Xamarin.Forms Controls Class Diagram](class-hierarchy-images/class-diagram.png "Xamarin.Forms controls class diagram."](class-hierarchy-images/class-diagram-large.png#lightbox "Xamarin.Forms controls class diagram")
 
 However, note that the diagram only shows a single Shell type.
 

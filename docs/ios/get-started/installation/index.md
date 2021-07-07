@@ -23,7 +23,7 @@ For specific version requirements, refer to the [latest Xamarin.iOS release note
 
 The latest version of Xcode can be downloaded from the [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (login required), or via the Mac App Store:
 
-![Screenshot of Xcode listing page in Mac App Store](images/xcode.png "Xcode in the Mac App Store")
+![Screenshot of Xcode listing page in Mac App Store.](images/xcode.png "Xcode in the Mac App Store")
 
 ## Mac Installation
 

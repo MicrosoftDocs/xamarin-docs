@@ -48,11 +48,11 @@ Point the IDE to the new JDK:
 
 - **Mac** &ndash; Click **Tools > SDK Manager > Locations** and change the **Java SDK (JDK) Location** to the full path of the OpenJDK installation. In the following example, this path is set to  **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9** but your version may be newer.
 
-![Setting the JDK path for the Microsoft Mobile OpenJDK distribution on the Mac](openjdk-images/vsm.png)
+![Setting the JDK path for the Microsoft Mobile OpenJDK distribution on the Mac.](openjdk-images/vsm.png)
 
 - **Windows** &ndash; Click **Tools > Options > Xamarin > Android Settings** and change the **Java Development Kit Location** to the full path of the OpenJDK installation. In the following example, this path is set to **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**, but your version may be newer:
 
-![Setting the JDK path for the Microsoft Mobile OpenJDK distribution on Windows](openjdk-images/vs.png)
+![Setting the JDK path for the Microsoft Mobile OpenJDK distribution on Windows.](openjdk-images/vs.png)
 
 ## Known Issues
 

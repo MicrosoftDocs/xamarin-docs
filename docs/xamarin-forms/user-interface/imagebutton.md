@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms ImageButton
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _The ImageButton displays an image and responds to a tap or click that directs an application to carry out a particular task._
 
@@ -49,7 +49,7 @@ The following example shows how to instantiate a `ImageButton` in XAML:
 
 The `Source` property specifies the image that appears in the `ImageButton`. In this example it's set to a local file that will be loaded from each platform project, resulting in the following screenshots:
 
-[![Basic ImageButton](imagebutton-images/BasicImageButton.png "Basic ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "Basic ImageButton")
+[![Basic ImageButton](imagebutton-images/BasicImageButton.png "Basic ImageButton."](imagebutton-images/BasicImageButton-Large.png#lightbox "Basic ImageButton")
 
 By default, the `ImageButton` is rectangular, but you can give it rounded corners by using the `CornerRadius` property. For more information about `ImageButton` appearance, see [ImageButton appearance](#imagebutton-appearance).
 
@@ -143,7 +143,7 @@ When the `ImageButton` is tapped, the `OnImageButtonClicked` method executes. Th
 
 This particular `Clicked` handler increments a counter and displays the counter value in a [`Label`](xref:Xamarin.Forms.Label):
 
-[![Basic ImageButton Click](imagebutton-images/ImageButton.png "Basic ImageButton Click")](imagebutton-images/ImageButton-Large.png#lightbox "Basic ImageButton Click")
+[![Basic ImageButton Click](imagebutton-images/ImageButton.png "Basic ImageButton Click."](imagebutton-images/ImageButton-Large.png#lightbox "Basic ImageButton Click")
 
 The following example shows how to create a page that is functionally equivalent to the previous XAML example, but entirely in C#:
 

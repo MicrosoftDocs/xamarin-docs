@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Display Pop-ups
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
 Displaying an alert, asking a user to make a choice, or displaying a prompt is a common UI task. Xamarin.Forms has three methods on the [`Page`](xref:Xamarin.Forms.Page) class for interacting with the user via a pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), and `DisplayPromptAsync`. They are rendered with appropriate native controls on each platform.
 
@@ -24,7 +24,7 @@ All Xamarin.Forms-supported platforms have a modal pop-up to alert the user or a
 await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-[![Alert dialog with one button, on iOS and Android](pop-ups-images/simple-alert.png)](pop-ups-images/simple-alert-large.png#lightbox)
+[![Alert dialog with one button, on iOS and Android.](pop-ups-images/simple-alert.png)](pop-ups-images/simple-alert-large.png#lightbox)
 
 This example does not collect information from the user. The alert displays modally and once dismissed the user continues interacting with the application.
 
@@ -38,7 +38,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![Alert dialog with two buttons](pop-ups-images/two-button-alert.png)](pop-ups-images/two-button-alert.png#lightbox)
+[![Alert dialog with two buttons.](pop-ups-images/two-button-alert.png)](pop-ups-images/two-button-alert.png#lightbox)
 
 The [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) method also has overloads that accept a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the alert. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
@@ -59,7 +59,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-[![ActionSheet dialog, on iOS and Android](pop-ups-images/simple-actionsheet.png)](pop-ups-images/simple-actionsheet-large.png#lightbox)
+[![ActionSheet dialog, on iOS and Android.](pop-ups-images/simple-actionsheet.png)](pop-ups-images/simple-actionsheet-large.png#lightbox)
 
 The `destroy` button is rendered differently to the other buttons on iOS, and can be left `null` or specified as the third string parameter. The following example uses the `destroy` button:
 
@@ -71,7 +71,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![ActionSheet dialog with destroy button, on iOS and Android](pop-ups-images/actionsheet-destroy-button.png)](pop-ups-images/actionsheet-destroy-button-large.png#lightbox)
+[![ActionSheet dialog with destroy button, on iOS and Android.](pop-ups-images/actionsheet-destroy-button.png)](pop-ups-images/actionsheet-destroy-button-large.png#lightbox)
 
 The [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) method also has an overload that accepts a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argument that specifies the direction in which UI elements flow within the action sheet. For more information about flow direction, see [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
@@ -85,7 +85,7 @@ string result = await DisplayPromptAsync("Question 1", "What's your name?");
 
 The prompt is displayed modally:
 
-[![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/simple-prompt.png "Modal prompt")](pop-ups-images/simple-prompt-large.png#lightbox "Modal prompt")
+[![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/simple-prompt.png "Modal prompt."](pop-ups-images/simple-prompt-large.png#lightbox "Modal prompt")
 
 If the OK button is tapped, the entered response is returned as a `string`. If the Cancel button is tapped, `null` is returned.
 
@@ -108,7 +108,7 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 
 This code displays a predefined response of 10, limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
 
-[![Screenshot of an optional modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
+[![Screenshot of an optional modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt."](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
 
 > [!WARNING]
 > By default on UWP, when a prompt is displayed any access keys that are defined on the page behind the prompt can still be activated. For more information, see [VisualElement Access Keys on Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).

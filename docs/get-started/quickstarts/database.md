@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Store data in a local SQLite.NET database
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 In this quickstart, you will learn how to:
 
@@ -23,8 +23,8 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to store data in a local SQLite.NET database, from a Xamarin.Forms Shell application. The final application is shown below:
 
-[![Notes Page](database-images/screenshots1-sml.png)](database-images/screenshots1.png#lightbox)
-[![Note Entry Page](database-images/screenshots2-sml.png)](database-images/screenshots2.png#lightbox)
+[![Notes Page.](database-images/screenshots1-sml.png)](database-images/screenshots1.png#lightbox)
+[![Note Entry Page.](database-images/screenshots2-sml.png)](database-images/screenshots2.png#lightbox)
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ You should successfully complete the [previous quickstart](navigation.md) before
 
 2. In **Solution Explorer**, right-click the **Notes** solution and select **Manage NuGet Packages for Solution...**:
 
-    ![Manage NuGet Packages](database-images/vs/manage-nuget-packages.png)    
+    ![Manage NuGet Packages.](database-images/vs/manage-nuget-packages.png)    
 
 3. In the **NuGet Package Manager**, select the **Browse** tab, and search for the **sqlite-net-pcl** NuGet package.
 
@@ -51,7 +51,7 @@ You should successfully complete the [previous quickstart](navigation.md) before
 
     In the **NuGet Package Manager**, select the correct **sqlite-net-pcl** package, check the **Project** checkbox, and click the **Install** button to add it to the solution:
 
-    ![Select sqlite-net-pcl](database-images/vs/select-package.png)
+    ![Select sqlite-net-pcl.](database-images/vs/select-package.png)
 
     This package will be used to incorporate database operations into the application, and will be added to every project in the solution.
 
@@ -295,7 +295,7 @@ You should successfully complete the [previous quickstart](navigation.md) before
 
 2. In the **Solution Pad**, right-click the **Notes** solution and select **Manage NuGet Packages...**:
 
-    ![Manage NuGet Packages](database-images/vsmac/manage-nuget-packages.png)    
+    ![Manage NuGet Packages.](database-images/vsmac/manage-nuget-packages.png)    
 
 3. In the **Manage NuGet Packages** dialog, select the **Browse** tab, and search for the **sqlite-net-pcl** NuGet package.
 
@@ -308,13 +308,13 @@ You should successfully complete the [previous quickstart](navigation.md) before
 
     In the **Manage NuGet Packages** dialog, select the **sqlite-net-pcl** package, and click the **Add Package** button to add it to the solution:
 
-      ![Select sqlite-net-pcl](database-images/vsmac/select-package.png)
+      ![Select sqlite-net-pcl.](database-images/vsmac/select-package.png)
 
     This package will be used to incorporate database operations into the application.
 
 4. In the **Select Projects** dialog, ensure that every checkbox is checked and press the **Ok** button:
 
-    ![Add Package to All Projects](database-images/vsmac/add-package.png)
+    ![Add Package to All Projects.](database-images/vsmac/add-package.png)
 
     This will add the NuGet package to every project in the solution.
 

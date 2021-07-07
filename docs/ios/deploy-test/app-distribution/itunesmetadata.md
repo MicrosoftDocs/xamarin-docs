@@ -295,26 +295,26 @@ Do the following:
 1. In the **Solution Explorer**, right-click the Xamarin.iOS project file and select **Add** > **New File...**
 2. From the New File Dialog, select **iOS** > **Property List**:
 
-    ![Select iOS Property List](itunesmetadata-images/image01.png)
+    ![Select iOS Property List.](itunesmetadata-images/image01.png)
 3. Enter `iTunesMetadata` for the **Name** and click the **New** button.
 4. Double-click the `iTunesMetadata.plist` file in the **Solution Explorer** to open it for editing:
 
-    ![The iTunesMetadata.plist editor](itunesmetadata-images/image02.png)
+    ![The iTunesMetadata.plist editor.](itunesmetadata-images/image02.png)
 5. Click the green **+** to create a new entry and enter `UIRequiredDeviceCapabilities` as the key name:
 
-    ![Create a new entry and enter UIRequiredDeviceCapabilities as the key name](itunesmetadata-images/image03.png)
+    ![Create a new entry and enter UIRequiredDeviceCapabilities as the key name.](itunesmetadata-images/image03.png)
 6. Click on the **String** value type and select **Dictionary** from the popup list:
 
-    ![Select Dictionary from the popup list](itunesmetadata-images/image04.png)
+    ![Select Dictionary from the popup list.](itunesmetadata-images/image04.png)
 7. Click the turndown at the left of the Property's name to reveal the dictionary's entries:
 
-    ![Reveal the dictionary entries](itunesmetadata-images/image05.png)
+    ![Reveal the dictionary entries.](itunesmetadata-images/image05.png)
 8. Click on the **Add new entry** text, then click the green **+** to add an entry to the dictionary:
 
-    ![Add an entry to the dictionary](itunesmetadata-images/image06.png)
+    ![Add an entry to the dictionary.](itunesmetadata-images/image06.png)
 9. Enter `armv7` for the key name, select a type of **Boolean** and enter **Yes** as the value:
 
-    ![Enter armv7 for the key name, select a type of Boolean and enter Yes as the value](itunesmetadata-images/image07.png)
+    ![Enter armv7 for the key name, select a type of Boolean and enter Yes as the value.](itunesmetadata-images/image07.png)
 10. Repeat the steps above until you have filled out the `iTunesMetadata.plist` file with all of the key/value pairs required (see the [The iTunesMetadata.plist Contents](#iTunesMetadata_contents) section above for more details).
 
 11. Save the changes to the plist file.

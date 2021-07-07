@@ -58,7 +58,7 @@ PresentViewController(sfViewController, true, null);
 
 This produces the following web view:
 
-[![An example web view with SFSafariViewController](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
+[![An example web view with SFSafariViewController.](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
 
 ## Safari
 
@@ -72,7 +72,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 This produces the following web view:
 
-[![A web page presented in Safari](webview-images/safari.png)](webview-images/safari.png#lightbox)
+[![A web page presented in Safari.](webview-images/safari.png)](webview-images/safari.png#lightbox)
 
 Navigating users away from your app to Safari should generally always be avoided. Most users will not expect navigation outside of your application, so if you navigate away from your app, users may never return it, essentially killing engagement.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 13. Bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -82,7 +82,7 @@ The best approach is to begin with a bitmap wider than the phone width in device
 
 The [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) displays Chapter 7 of Lewis Carroll's *Alice's Adventures in Wonderland* with the original illustrations by John Tenniel:
 
-[![Triple screenshot of mad tea party](images/ch13fg16-small.png "Mad Hatters Tea Party Book Text")](images/ch13fg16-large.png#lightbox "Mad Hatters Tea Party Book Text")
+[![Triple screenshot of mad tea party](images/ch13fg16-small.png "Mad Hatters Tea Party Book Text."](images/ch13fg16-large.png#lightbox "Mad Hatters Tea Party Book Text")
 
 ### Browsing and waiting
 

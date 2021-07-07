@@ -38,11 +38,11 @@ The [Watch Kit Catalog sample](/samples/xamarin/ios-samples/watchos-watchkitcata
 
 # [Visual Studio for Mac](#tab/macos)
 
-![The solution in Visual Studio](installation-images/catalog-solution.png)
+![The solution in Visual Studio.](installation-images/catalog-solution.png)
 
 # [Visual Studio](#tab/windows)
 
-![The solution in Visual Studio](installation-images/catalog-solution-vs.png)
+![The solution in Visual Studio.](installation-images/catalog-solution-vs.png)
 
 -----
 
@@ -60,24 +60,24 @@ You cannot create a new "Watch Solution"... rather you can add
     an existing project, first choose **File > New Solution** and
     create an iOS app (for example, a **Single View App**):
 
-    [![Choose File > New Solution and create an iOS app](installation-images/cycle8-2-sml.png)](installation-images/cycle8-2.png#lightbox)
+    [![Choose File > New Solution and create an iOS app.](installation-images/cycle8-2-sml.png)](installation-images/cycle8-2.png#lightbox)
 
 2. Once the iOS app is created (or you plan to use your existing iOS app),
     right-click on the solution
     and choose **Add > Add New Project..**. In the **New Project**
     window select **watchOS > App > WatchKit App**:
 
-    [![Select watchOS > App > WatchKit App](installation-images/cycle8-6-sml.png)](installation-images/cycle8-6.png#lightbox)
+    [![Select watchOS > App > WatchKit App.](installation-images/cycle8-6-sml.png)](installation-images/cycle8-6.png#lightbox)
 
 3. The next screen lets you choose which iOS app project
     should include the watch app:
 
-    [![Choose which iOS app project should include the watch app](installation-images/cycle8-7-sml.png)](installation-images/cycle8-7.png#lightbox)
+    [![Choose which iOS app project should include the watch app.](installation-images/cycle8-7-sml.png)](installation-images/cycle8-7.png#lightbox)
 
 4. Finally, choose the location to save the project
     (and optionally enabled source control):
 
-    [![Choose the location to save the project](installation-images/cycle8-8-sml.png)](installation-images/cycle8-8.png#lightbox)
+    [![Choose the location to save the project.](installation-images/cycle8-8-sml.png)](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio for Mac automatically configures [project references
     and **Info.plist** settings](~/ios/watchos/get-started/project-references.md) for you.
@@ -95,11 +95,11 @@ Double-click on the watch app's **Interface.storyboard** to edit
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The storyboard in the Designer](installation-images/iosdesigner-sml.png)](installation-images/iosdesigner.png#lightbox)
+[![The storyboard in the Designer.](installation-images/iosdesigner-sml.png)](installation-images/iosdesigner.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![The storyboard in the Designer](installation-images/iosdesigner-sml-vs.png)](installation-images/iosdesigner-vs.png#lightbox)
+[![The storyboard in the Designer.](installation-images/iosdesigner-sml-vs.png)](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -109,11 +109,11 @@ You should give each new interface controller a **Class**
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Give each new interface controller a Class](installation-images/iosdesigner-classname.png)
+![Give each new interface controller a Class.](installation-images/iosdesigner-classname.png)
 
 # [Visual Studio](#tab/windows)
 
-![Give each new interface controller a Class](installation-images/iosdesigner-classname-vs.png)
+![Give each new interface controller a Class.](installation-images/iosdesigner-classname-vs.png)
 
 -----
 
@@ -138,7 +138,7 @@ Visual Studio users can also use Xcode to build their user interface
 
 -----
 
-![Open the Interface.storyboard in Xcode Interface Builder](installation-images/openwith-xcode.png)
+![Open the Interface.storyboard in Xcode Interface Builder.](installation-images/openwith-xcode.png)
 
 If using Xcode, then you should follow the same steps
   for watch apps as for normal
@@ -190,7 +190,7 @@ When you select the Watch App project and make it the
 startup project, the simulator list will show *iOS Simulators* to choose from
 (as shown below).
 
-[![Selecting the Simulator type](installation-images/xs-xcode8-watchos3-sml.png)](installation-images/xs-xcode8-watchos3.png#lightbox)
+[![Selecting the Simulator type.](installation-images/xs-xcode8-watchos3-sml.png)](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 When you start debugging, *two* simulators should start - the iOS Simulator
 *and* the Apple Watch Simulator. Use **Command+Shift+H** to navigate
@@ -247,13 +247,13 @@ Visual Studio for Mac can start the watch app with a notification
 Right-click on the watch app project and choose
   **Run With > Custom Configuration...**:
 
-[![Running a Custom Configuration](installation-images/runwith-customparams-sml.png)](installation-images/runwith-customparams.png#lightbox)
+[![Running a Custom Configuration.](installation-images/runwith-customparams-sml.png)](installation-images/runwith-customparams.png#lightbox)
 
 This opens the **Custom Parameters** window where you can select
   **Notification** (and provide a JSON
   payload), then press **Run** to start the watch app in the simulator:
 
-[![Setting the Notification and Payload](installation-images/runwith-execargs-sml.png)](installation-images/runwith-execargs.png#lightbox)
+[![Setting the Notification and Payload.](installation-images/runwith-execargs-sml.png)](installation-images/runwith-execargs.png#lightbox)
 
 ## Debugging
 
@@ -262,7 +262,7 @@ Debugging is supported in both Visual Studio for Mac and Visual Studio.
   notifications mode. This screenshot shows a debug breakpoint
   being hit in a watch app:
 
-![This screenshot shows a debug breakpoint being hit in a watch app](installation-images/debug-sml.png)
+![This screenshot shows a debug breakpoint being hit in a watch app.](installation-images/debug-sml.png)
 
 After following the launch instructions you will end up with
   your watch app running on the **iOS Simulator (Watch)**.

@@ -184,7 +184,7 @@ The design surface can often catch exceptions thrown by individual controls whil
 render other controls. The faulty control is replaced with a red placeholder, and you can view the
 exception trace by clicking on the exclamation icon:
 
- ![A faulty control as red placeholder and the exception details](ios-designable-controls-overview-images/exception-box.png)
+ ![A faulty control as red placeholder and the exception details.](ios-designable-controls-overview-images/exception-box.png)
 
 If debug symbols are available for the control, the trace will have file names and line numbers.
 Double clicking a line in the stack trace will jump to that line in the source code.
@@ -192,7 +192,7 @@ Double clicking a line in the stack trace will jump to that line in the source c
 If the designer can't isolate the faulty control, a warning message will appear
 at the top of the design surface:
 
- ![A warning message at the top of the design surface](ios-designable-controls-overview-images/info-bar.png)
+ ![A warning message at the top of the design surface.](ios-designable-controls-overview-images/info-bar.png)
 
 Full rendering will resume when the faulty control is fixed or removed from the design surface.
 

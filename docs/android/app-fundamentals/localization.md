@@ -86,7 +86,7 @@ letting Android choose the correct version for each device. The same
 mechanism is used to provide multiple language translations by
 suffixing resource directories with language and culture identifiers.
 
-![Screenshot of Resources/drawable and Resources/values folders for multiple cultural identifiers](localization-images/resources.png)
+![Screenshot of Resources/drawable and Resources/values folders for multiple cultural identifiers.](localization-images/resources.png)
 
 > [!NOTE]
 > When specifying a top-level language like `es` only
@@ -145,7 +145,7 @@ name (**Strings.xml**) that contains the translations:
 </resources>
 ```
 
-![Screenshot of multiple values folders, each containing a Strings.xml file](localization-images/values.png)
+![Screenshot of multiple values folders, each containing a Strings.xml file.](localization-images/values.png)
 
 With the strings files set-up, the translated values can be referenced
 in both layouts and code.
@@ -236,7 +236,7 @@ such as **drawable-es** or **drawable-ja** (dpi specifiers can also be added).
 In this screenshot, four images are saved in the **drawable** directory, but only
 one, **flag.png**, has localized copies in other directories.
 
-![Screenshot of multiple drawable folders, each containing one or more localized .png files](localization-images/drawable.png)
+![Screenshot of multiple drawable folders, each containing one or more localized .png files.](localization-images/drawable.png)
 
 #### Other Resource Types
 
@@ -280,11 +280,11 @@ screens that adapt for RTL readers.
 
 The following screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic:
 
-[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
+[![Screenshot of Tasky app in Arabic.](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 The next screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Hebrew:
 
-[![Screenshot of Tasky app in Hebrew](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
+[![Screenshot of Tasky app in Hebrew.](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 RTL text is localized using **Strings.xml** files in the same way as
 LTR text.

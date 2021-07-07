@@ -28,7 +28,7 @@ According to Apple, the Speech Recognition API has the following features and be
 
 Speech Recognition is implemented in an iOS app by acquiring either live or pre-recorded audio (in any of the spoken languages that the API supports) and passing it to a Speech Recognizer which returns a plain-text transcription of the spoken words.
 
-[![How Speech Recognition Works](speech-images/speech01.png)](speech-images/speech01.png#lightbox)
+[![How Speech Recognition Works.](speech-images/speech01.png)](speech-images/speech01.png#lightbox)
 
 ### Keyboard Dictation
 
@@ -99,13 +99,13 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 1. Double-click the `Info.plist` file to open it for editing.
 2. Switch to the **Source** view: 
 
-    [![The Source view](speech-images/speech02.png)](speech-images/speech02.png#lightbox)
+    [![The Source view.](speech-images/speech02.png)](speech-images/speech02.png#lightbox)
 3. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-    [![Adding NSSpeechRecognitionUsageDescription](speech-images/speech03.png)](speech-images/speech03.png#lightbox)
+    [![Adding NSSpeechRecognitionUsageDescription.](speech-images/speech03.png)](speech-images/speech03.png#lightbox)
 4. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-    [![Adding NSMicrophoneUsageDescription](speech-images/speech04.png)](speech-images/speech04.png#lightbox)
+    [![Adding NSMicrophoneUsageDescription.](speech-images/speech04.png)](speech-images/speech04.png#lightbox)
 5. Save the changes to the file.
 
 # [Visual Studio](#tab/windows)
@@ -113,10 +113,10 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 1. Double-click the `Info.plist` file to open it for editing.
 2. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-    [![Adding NSSpeechRecognitionUsageDescription](speech-images/speech03w.png)](speech-images/speech03w.png#lightbox)
+    [![Adding NSSpeechRecognitionUsageDescription.](speech-images/speech03w.png)](speech-images/speech03w.png#lightbox)
 3. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
 
-    [![Adding NSMicrophoneUsageDescription](speech-images/speech04w.png)](speech-images/speech04w.png#lightbox)
+    [![Adding NSMicrophoneUsageDescription.](speech-images/speech04w.png)](speech-images/speech04w.png#lightbox)
 4. Save the changes to the file.
 
 -----

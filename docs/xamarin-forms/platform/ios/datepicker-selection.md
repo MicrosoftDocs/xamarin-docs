@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # DatePicker item selection on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific controls when item selection occurs in a [`DatePicker`](xref:Xamarin.Forms.DatePicker), allowing the user to specify that item selection occurs when browsing items in the control, or only once the **Done** button is pressed. It's consumed in XAML by setting the `DatePicker.UpdateMode` attached property to a value of the `UpdateMode` enumeration:
 
@@ -59,7 +59,7 @@ switch (datePicker.On<iOS>().UpdateMode())
 
 The result is that a specified `UpdateMode` is applied to the [`DatePicker`](xref:Xamarin.Forms.DatePicker), which controls when item selection occurs:
 
-[![Screenshot of DatePicker update modes](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
+[![Screenshot of DatePicker update modes](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific."](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
 
 ## Related links
 

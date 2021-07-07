@@ -85,7 +85,7 @@ To some extent both disadvantages can be circumvented using the Provider pattern
 
 This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features:
 
-[![This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features](pcl-images/image1.png)](pcl-images/image1.png#lightbox)
+[![This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features.](pcl-images/image1.png)](pcl-images/image1.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -99,11 +99,11 @@ Adding a Portable Class Library to your solution is very similar to adding a reg
 
 1. In the **New Project** dialog select the **Multiplatform > Library > Portable Library** option:
 
-    ![Create a new PCL project](pcl-images/image2.png)
+    ![Create a new PCL project.](pcl-images/image2.png)
 
 1. When a PCL is created in Visual Studio for Mac it is automatically configured with a Profile that works for Xamarin.iOS and Xamarin.Android. The PCL project will appear as shown in this screenshot:
 
-    ![PCL project in the solution pad](pcl-images/image3.png)
+    ![PCL project in the solution pad.](pcl-images/image3.png)
 
 The PCL is now ready for code to be added. It can also be referenced by other projects (Application projects, Library projects and even other PCL projects).
 
@@ -111,7 +111,7 @@ The PCL is now ready for code to be added. It can also be referenced by other pr
 
 To view and change the PCL settings for this project, right-click the project and choose **Options > Build > General** to see the screen shown here:
 
-[![PCL Project Options to set the profile](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
+[![PCL Project Options to set the profile.](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
 
 Click **Change...** to alter the target profile for this portable class library.
 
@@ -121,11 +121,11 @@ If the profile is changed after code has already been added to the PCL, it's pos
 
 When code is written in a PCL library, the Visual Studio for Mac editor will recognize the limitations of the selected profile and adjust auto-complete options accordingly. For example, this screenshot shows the auto-complete options for System.IO using the default profile (Profile136) used in Visual Studio for Mac – notice the scrollbar which indicates about half of the available classes are displayed (in fact there are only 14 classes available).
 
-[![Intellisense list of 14 classes in the System.IO class of a PCL](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
+[![Intellisense list of 14 classes in the System.IO class of a PCL.](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
 Compare that with the System.IO auto-complete in a Xamarin.iOS or Xamarin.Android project – there are 40 classes available including commonly used classes like `File` and `Directory` which are not in any PCL profile.
 
-[![Intellisense list of 40 classes in .NET Framework System.IO namespace](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
+[![Intellisense list of 40 classes in .NET Framework System.IO namespace.](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
 This reflects the underlying trade-off of using PCL – the ability to share code seamlessly across many platforms means certain APIs are not available to you because they don’t have comparable implementations across all possible platforms.
 
@@ -133,11 +133,11 @@ This reflects the underlying trade-off of using PCL – the ability to share cod
 
 Once a PCL project has been created, you can add a reference to it from any compatible Application or Library project in the same way you normally add references. In Visual Studio for Mac, right-click on the References node and choose **Edit References...** then switch to the **Projects** tab as shown:
 
-[![Add a reference to a PCL via Edit References option](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
+[![Add a reference to a PCL via Edit References option.](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
 The following screenshot shows the Solution pad for the TaskyPortable sample app, showing the PCL library at the bottom and a reference to that PCL library in the Xamarin.iOS project.
 
-[![TaskyPortable sample solution showing PCL project](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
+[![TaskyPortable sample solution showing PCL project.](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
 The output from a PCL (ie. the resulting assembly DLL) can also be added as a reference to most projects. This makes PCL an ideal way to ship cross-platform components and libraries.
 
@@ -154,16 +154,16 @@ Adding a PCL to your solution in Visual Studio is slightly different to adding a
 
 1. In the **Add New Project** screen, select the **Class Library (Legacy Portable)** option. Note the description on the right advises that this project type has been deprecated.
 
-    [![New Project window to create a portable class library](pcl-images/image10-sml.png "Portable Class Library")](pcl-images/image10.png#lightbox)
+    [![New Project window to create a portable class library](pcl-images/image10-sml.png "Portable Class Library."](pcl-images/image10.png#lightbox)
 
 2. Visual Studio will immediately prompt with the following dialog so that the profile can be configured.
  Tick the platforms you need to support and press OK.
 
-    [![Select the target platforms for the library](pcl-images/image11-sml.png "Tick the platforms you need to support and press OK")](pcl-images/image11.png#lightbox)
+    [![Select the target platforms for the library](pcl-images/image11-sml.png "Tick the platforms you need to support and press OK."](pcl-images/image11.png#lightbox)
 
 3. The PCL project will appear as shown in the Solution Explorer &ndash; the text **(Portable)** appears beside the project name to indicate it is a PCL:
 
-    ![NET Framework defined by the PCL profile](pcl-images/image12.png "NET Framework defined by the PCL profile")
+    ![NET Framework defined by the PCL profile.](pcl-images/image12.png "NET Framework defined by the PCL profile")
 
 The PCL is now ready for code to be added. It can also be referenced by other projects (application
 projects, library projects, and even other PCL projects).
@@ -172,7 +172,7 @@ projects, library projects, and even other PCL projects).
 
 The PCL settings can be viewed and changed by right-clicking on the project and choosing **Properties > Library** , as shown in this screenshot:
 
-[![Edit the platform targets](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
+[![Edit the platform targets.](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
 
 If the profile is changed after code has already been added to the PCL, it’s possible that the library will no longer compile if the code references features that are not part of the newly-selected profile.
 
@@ -183,12 +183,12 @@ If the profile is changed after code has already been added to the PCL, it’s p
 
 When code is written in a PCL library, Visual Studio will recognize the limitations of the selected profile and adjust Intellisense options accordingly. For example, this screenshot shows the auto-complete options for System.IO using the default profile (Profile136) – notice the scrollbar which indicates about half of the available classes are displayed (in fact there are only 14 classes available).
 
-[![Reduced number of IO classes available in a PCL](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
+[![Reduced number of IO classes available in a PCL.](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
 
 Compare that with the System.IO auto-complete in a regular project – there are 40 classes available including
  commonly used classes like `File` and `Directory` which are not in any PCL profile.
 
-[![Many more IO classes available in the .NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
+[![Many more IO classes available in the .NET Framework.](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
 
 This reflects the underlying trade-off of using PCL – the ability to share code seamlessly across many platforms means certain APIs are not available to you because they don’t have comparable implementations across all possible platforms.
 
@@ -200,11 +200,11 @@ This reflects the underlying trade-off of using PCL – the ability to share cod
 
 Once a PCL project has been created, you can add a reference to it from any compatible Application or Library project in the same way you normally add references. In Visual Studio, right-click on the References node and choose `Add Reference...` then switch to the **Solution > Projects** tab as shown:
 
-[![Add a reference to a PCL via the Add Reference Projects tab](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
+[![Add a reference to a PCL via the Add Reference Projects tab.](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
 The following screenshot shows the Solution pane for the TaskyPortable sample app, showing the PCL library at the bottom and a reference to that PCL library in the Xamarin.iOS project.
 
-[![TaskyPortable sample solution showing a PCL library](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
+[![TaskyPortable sample solution showing a PCL library.](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 
 The output from a PCL (ie. the resulting assembly DLL) can also be added as a reference to most projects.
  This makes PCL an ideal way to ship cross-platform components and libraries.
@@ -217,14 +217,14 @@ The [TaskyPortable](/samples/xamarin/mobile-samples/taskyportable/)
 sample application demonstrates how a Portable Class Library can be used with Xamarin.
 Here are some screenshots of the resulting apps running on iOS and Android:
 
-[![Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
+[![Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone.](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
 
 It shares a number of data and logic classes that are purely portable code, and it also demonstrates how to
   incorporate platform-specific requirements using Dependency Injection for the SQLite database implementation.
 
 The solution structure is shown below (in Visual Studio for Mac and Visual Studio respectively):
 
-[![The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively](pcl-images/image19.png)](pcl-images/image19.png#lightbox)
+[![The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively.](pcl-images/image19.png)](pcl-images/image19.png#lightbox)
 
 Because the SQLite-NET code has platform-specific pieces (to work with the SQLite implementations on each different operating system) for demonstration purposes it has been refactored into an abstract class that can be compiled into a Portable Class Library, and the actual code implemented as subclasses in the iOS and Android projects.
 

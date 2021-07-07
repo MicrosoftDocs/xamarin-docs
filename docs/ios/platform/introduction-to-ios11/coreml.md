@@ -26,7 +26,7 @@ This introduction covers the following:
 
 These steps describe how to add CoreML to an iOS project. Refer to the [Mars Habitat Pricer sample](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) for a practical example.
 
-![Mars Habitat Price Predictor sample screenshot](coreml-images/marspricer-heading.png)
+![Mars Habitat Price Predictor sample screenshot.](coreml-images/marspricer-heading.png)
 
 ### 1. Add the CoreML model to the project
 
@@ -97,7 +97,7 @@ The steps below describe how CoreML and Vision are used together in the
 [CoreMLVision sample](/samples/xamarin/ios-samples/ios11-coremlvision). The sample combines
 the [rectangles recognition](~/ios/platform/introduction-to-ios11/vision.md#rectangles) from the Vision framework with the _MNINSTClassifier_ CoreML model to identify a handwritten digit in a photograph.
 
-![Image recognition of number 3](coreml-images/vision3.png) ![Image recognition of number 5](coreml-images/vision5.png)
+![Image recognition of number 3.](coreml-images/vision3.png) ![Image recognition of number 5](coreml-images/vision5.png)
 
 ### 1. Create a Vision CoreML model
 

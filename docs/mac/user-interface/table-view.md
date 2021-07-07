@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 A Table View displays data in a tabular format containing one or more columns of information in multiple rows. Based on the type of Table View being created, the user can sort by column, reorganize columns, add columns, remove columns or edit the data contained within the table.
 
-[![An example table](table-view-images/intro01.png)](table-view-images/intro01.png#lightbox)
+[![An example table.](table-view-images/intro01.png)](table-view-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of working with Table Views in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -46,19 +46,19 @@ For more information, please see the [Content Views](https://developer.apple.com
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
-[![Selecting the main storyboard](table-view-images/edit01.png)](table-view-images/edit01.png#lightbox)
+[![Selecting the main storyboard.](table-view-images/edit01.png)](table-view-images/edit01.png#lightbox)
 
 This will open the window design in Xcode's Interface Builder:
 
-[![Editing the UI in Xcode](table-view-images/edit02.png)](table-view-images/edit02.png#lightbox)
+[![Editing the UI in Xcode.](table-view-images/edit02.png)](table-view-images/edit02.png#lightbox)
 
 Type `table` into the **Library Inspector's** Search Box to make it easier to find the Table View controls:
 
-[![Selecting a Table View from the Library](table-view-images/edit03.png)](table-view-images/edit03.png#lightbox)
+[![Selecting a Table View from the Library.](table-view-images/edit03.png)](table-view-images/edit03.png#lightbox)
 
 Drag a Table View onto the View Controller in the **Interface Editor**, make it fill the content area of the View Controller and set it to where it shrinks and grows with the window in the **Constraint Editor**:
 
-[![Editing constraints](table-view-images/edit04.png)](table-view-images/edit04.png#lightbox)
+[![Editing constraints.](table-view-images/edit04.png)](table-view-images/edit04.png#lightbox)
 
 Select the Table View in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
@@ -136,7 +136,7 @@ The most important settings here are:
 
 Select the Table Cell View (`NSTableFieldCell`) at the bottom of a Table Column in the **Interface Hierarchy**:
 
-[![Selecting the Table Cell View](table-view-images/edit10.png)](table-view-images/edit10.png#lightbox)
+[![Selecting the Table Cell View.](table-view-images/edit10.png)](table-view-images/edit10.png#lightbox)
 
 This allows you to edit the Table Cell View used as the base _Pattern_ for all cells created for the given column.
 
@@ -150,7 +150,7 @@ The process is the same for any Table View element that we want to expose:
 
 1. Switch to the **Assistant Editor** and ensure that the `ViewController.h` file is selected: 
 
-    [![The Assistant Editor](table-view-images/edit11.png)](table-view-images/edit11.png#lightbox)
+    [![The Assistant Editor.](table-view-images/edit11.png)](table-view-images/edit11.png#lightbox)
 2. Select the Table View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
 3. Create an **Outlet** for the Table View called `ProductTable`: 
 
@@ -170,7 +170,7 @@ With our Table View designed in Interface Builder and exposed via an **Outlet**,
 
 First, let's create a new `Product` class to hold the information for the individual rows. In the **Solution Explorer**, right-click the Project and select **Add** > **New File...** Select **General** > **Empty Class**, enter `Product` for the **Name** and click the **New** button:
 
-[![Creating an empty class](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
+[![Creating an empty class.](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
 
 Make the `Product.cs` file look like the following:
 
@@ -390,7 +390,7 @@ The `Sort` method allow us to sort the data in the Data Source based on a given 
 
 If we run the application and click in the Column Headers, the rows will be sorted by that column:
 
-[![An example app run](table-view-images/sort03.png)](table-view-images/sort03.png#lightbox)
+[![An example app run.](table-view-images/sort03.png)](table-view-images/sort03.png#lightbox)
 
 <a name="Row_Selection"></a>
 
@@ -459,7 +459,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 
 If you want to allow the user to type a character with the Table View selected and select the first row that has that character, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Table View in the **Interface Hierarchy** and check the **Type Select** checkbox in the **Attribute Inspector**:
 
-[![Setting the selection type](table-view-images/type01.png)](table-view-images/type01.png#lightbox)
+[![Setting the selection type.](table-view-images/type01.png)](table-view-images/type01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -512,7 +512,7 @@ The `ShouldReorder` method should return `true` for any column that it want to a
 
 If we run the application, we can drag Column Headers around to reorder our columns:
 
-[![An example of the reordered columns](table-view-images/reorder02.png)](table-view-images/reorder02.png#lightbox)
+[![An example of the reordered columns.](table-view-images/reorder02.png)](table-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells"></a>
 
@@ -568,7 +568,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 Now if we run the application, the user can edit the cells in the Table View:
 
-[![An example of editing a cell](table-view-images/editing01.png)](table-view-images/editing01.png#lightbox)
+[![An example of editing a cell.](table-view-images/editing01.png)](table-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Table_Views"></a>
 
@@ -643,7 +643,7 @@ Based on the requirements of your app, there might be occasions where you need t
 
 First, edit the `Main.storyboard` in Xcode's Interface Builder, select the Table View and increase the number of columns to three (3). Next, change the **Title** of the new column to `Action`:
 
-[![Editing the column name](table-view-images/delete01.png)](table-view-images/delete01.png#lightbox)
+[![Editing the column name.](table-view-images/delete01.png)](table-view-images/delete01.png#lightbox)
 
 Save the changes to the Storyboard and return to Visual Studio for Mac to sync the changes.
 
@@ -890,15 +890,15 @@ For the **Action** column, all Sub Views are scanned until the `NSButton` is fou
 
 With these changes in place, when the app is run each row will have a **Delete** button:
 
-[![The table view with deletion buttons](table-view-images/delete02.png)](table-view-images/delete02.png#lightbox)
+[![The table view with deletion buttons.](table-view-images/delete02.png)](table-view-images/delete02.png#lightbox)
 
 When the user clicks a **Delete** button, an alert will be displayed asking them to delete the given Row:
 
-[![A delete row alert](table-view-images/delete03.png)](table-view-images/delete03.png#lightbox)
+[![A delete row alert.](table-view-images/delete03.png)](table-view-images/delete03.png#lightbox)
 
 If the user chooses delete, the row will be removed and the table will be redrawn:
 
-[![The table after the row is deleted](table-view-images/delete04.png)](table-view-images/delete04.png#lightbox)
+[![The table after the row is deleted.](table-view-images/delete04.png)](table-view-images/delete04.png#lightbox)
 
 <a name="Data_Binding_Table_Views"></a>
 

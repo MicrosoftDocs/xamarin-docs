@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Segmented display of SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The SkiaSharp `SKCanvas` object defines a method named `DrawBitmapNinePatch` and two methods named `DrawBitmapLattice` that are very similar. Both these methods render a bitmap to the size of a destination rectangle, but instead of stretching the bitmap uniformly, they display portions of the bitmap in its pixel dimensions and stretch other parts of the bitmap so that it fits the rectangle:
 
-![Segmented Samples](segmented-images/SegmentedSample.png "Segmented Sample")
+![Segmented Samples.](segmented-images/SegmentedSample.png "Segmented Sample")
 
 These methods are generally used for rendering bitmaps that form part of user-interface objects such as buttons. When designing a button, generally you want the size of a button to be based on the content of the button, but you probably want the button's border to be the same width regardless of the button's content. That's an ideal application of `DrawBitmapNinePatch`.
 
@@ -26,7 +26,7 @@ These methods are generally used for rendering bitmaps that form part of user-in
 
 Conceptually, [`DrawBitmapNinePatch`](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divides a bitmap into nine rectangles:
 
-![Nine Patch](segmented-images/NinePatch.png "Nine Patch")
+![Nine Patch.](segmented-images/NinePatch.png "Nine Patch")
 
 The rectangles at the four corners are displayed in their pixel sizes. As the arrows indicate, the other areas on the edges of the bitmap are stretched horizontally or vertically to the area of the destination rectangle. The rectangle in the center is stretched both horizontally and vertically. 
 
@@ -70,7 +70,7 @@ public partial class NinePatchDisplayPage : ContentPage
 
 Two other pages in this article use that same bitmap. The bitmap is 500 pixels square, and consists of an array of 25 circles, all the same size, each occupying a 100-pixel square area:
 
-![Circle Grid](segmented-images/CircleGrid.png "Circle Grid")
+![Circle Grid.](segmented-images/CircleGrid.png "Circle Grid")
 
 The program's instance constructor creates an `SKCanvasView` with a `PaintSurface` handler that uses `DrawBitmapNinePatch` to display the bitmap stretched to its entire display surface:
 
@@ -103,7 +103,7 @@ public class NinePatchDisplayPage : ContentPage
 
 The `centerRect` rectangle encompasses the central array of 16 circles. The circles in the corners are displayed in their pixel dimensions, and everything else is stretched accordingly:
 
-[![Nine-Patch Display](segmented-images/NinePatchDisplay.png "Nine-Patch Display")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![Nine-Patch Display](segmented-images/NinePatchDisplay.png "Nine-Patch Display."](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
 The UWP page happens to be 500 pixels wide, and hence displays the top and bottom rows as a series of circles of the same size. Otherwise, all the circles that are not in the corners are stretched to form ellipses.
 
@@ -175,7 +175,7 @@ Both the `XDivs` and `YDivs` properties are set to arrays of just two integers, 
 
 The display is identical to the previous program:
 
-[![Lattice Nine-Patch](segmented-images/LatticeNinePatch.png "Lattice Nine-Patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![Lattice Nine-Patch](segmented-images/LatticeNinePatch.png "Lattice Nine-Patch."](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
 The **Lattice Display** page divides the bitmap into 16 rectangles:
 
@@ -215,7 +215,7 @@ public class LatticeDisplayPage : ContentPage
 
 The `XDivs` and `YDivs` arrays are somewhat different, causing the display to be not quite as symmetrical as the previous examples:
 
-[![Lattice Display](segmented-images/LatticeDisplay.png "Lattice Display")](segmented-images/LatticeDisplay-Large.png#lightbox)
+[![Lattice Display](segmented-images/LatticeDisplay.png "Lattice Display."](segmented-images/LatticeDisplay-Large.png#lightbox)
 
 In the iOS and Android images on the left, only the smaller circles are rendered in their pixel sizes. Everything else is stretched.
 

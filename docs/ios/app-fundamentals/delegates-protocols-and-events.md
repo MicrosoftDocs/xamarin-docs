@@ -37,8 +37,8 @@ foundation for handling callback scenarios in Xamarin.iOS, including:
 To illustrate protocols and delegates, we’ll build a simple map application
 that adds an annotation to a map as shown here:
 
-[![An example of a simple map application that adds an annotation to a map](delegates-protocols-and-events-images/01-map-sml.png)](delegates-protocols-and-events-images/01-map.png#lightbox)
-[![An example annotation added to a map](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![An example of a simple map application that adds an annotation to a map.](delegates-protocols-and-events-images/01-map-sml.png)](delegates-protocols-and-events-images/01-map.png#lightbox)
+[![An example annotation added to a map.](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Before tackling this app, let’s get started by looking at .NET events under
 the UIKit.
@@ -182,7 +182,7 @@ appears when the user taps on the annotation (as shown in the screenshot below)
 comes from the `Title` property in the class that implements the
 protocol:
 
- [![Example text for the callout when the user taps on the annotation](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![Example text for the callout when the user taps on the annotation.](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 As described in the next section, [Protocols Deep Dive](#protocols-deep-dive), Xamarin.iOS binds
 protocols to abstract classes. For the `MKAnnotation` protocol, the

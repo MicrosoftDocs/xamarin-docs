@@ -47,7 +47,7 @@ that debugging audio on Android must be done on a device.
 
 It is necessary to request the `RECORD_AUDIO` permissions in **AndroidManifest.XML**:
 
-![Required permissions section of Android Manifest with RECORD\_AUDIO enabled](android-audio-images/image01.png)
+![Required permissions section of Android Manifest with RECORD\_AUDIO enabled.](android-audio-images/image01.png)
 
 ## Playing Audio with the MediaPlayer Class
 

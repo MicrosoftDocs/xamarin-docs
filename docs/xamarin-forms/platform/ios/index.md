@@ -69,7 +69,7 @@ Xamarin.Forms enables cross-platform user interface styles and colors to be set 
 
 [Read more](formatting.md) about formatting the user interface using iOS-specific APIs, such as **Info.plist** configuration and the `UIAppearance` API.
 
-![iOS Theming](images/status-white-sml.png)
+![iOS Theming.](images/status-white-sml.png)
 
 ## Other iOS features
 

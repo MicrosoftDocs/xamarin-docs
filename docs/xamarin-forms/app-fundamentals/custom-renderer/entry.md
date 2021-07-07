@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing an Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -20,7 +20,7 @@ Every Xamarin.Forms control has an accompanying renderer for each platform that 
 
 The following diagram illustrates the relationship between the [`Entry`](xref:Xamarin.Forms.Entry) control and the corresponding native controls that implement it:
 
-![Relationship Between Entry Control and Implementing Native Controls](entry-images/entry-classes.png)
+![Relationship Between Entry Control and Implementing Native Controls.](entry-images/entry-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for the [`Entry`](xref:Xamarin.Forms.Entry) control on each platform. The process for doing this is as follows:
 
@@ -101,11 +101,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![MyEntry Custom Renderer Project Responsibilities](entry-images/solution-structure.png)
+![MyEntry Custom Renderer Project Responsibilities.](entry-images/solution-structure.png)
 
 The `MyEntry` control is rendered by platform-specific `MyEntryRenderer` classes, which all derive from the `EntryRenderer` class for each platform. This results in each `MyEntry` control being rendered with a platform-specific background color, as shown in the following screenshots:
 
-![MyEntry Control on each Platform](entry-images/screenshots.png)
+![MyEntry Control on each Platform.](entry-images/screenshots.png)
 
 The `EntryRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms control is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `MyEntry` control.
 

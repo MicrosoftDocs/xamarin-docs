@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Button Padding and Shadows on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific controls whether Xamarin.Forms buttons use the default padding and shadow values of Android buttons. It's consumed in XAML by setting the [`Button.UseDefaultPadding`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) and [`Button.UseDefaultShadow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) attached properties to `boolean` values:
 
@@ -42,7 +42,7 @@ The `Button.On<Android>` method specifies that this platform-specific will only 
 
 The result is that Xamarin.Forms buttons can use the default padding and shadow values of Android buttons:
 
-![Default Padding and Shadow Values on Android Buttons](button-padding-shadow-images/button-padding-and-shadow.png)
+![Default Padding and Shadow Values on Android Buttons.](button-padding-shadow-images/button-padding-and-shadow.png)
 
 Note that in the screenshot above each [`Button`](xref:Xamarin.Forms.Button) has identical definitions, except that the right-hand `Button` uses the default padding and shadow values of Android buttons.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # FlyoutPage Shadow on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This platform-specific controls whether the detail page of a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) has shadow applied to it, when revealing the flyout page. It's consumed in XAML by setting the `FlyoutPage.ApplyShadow` bindable property to `true`:
 
@@ -45,7 +45,7 @@ The `FlyoutPage.On<iOS>` method specifies that this platform-specific will only 
 
 The result is that the detail page of a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) can have shadow applied to it, when revealing the flyout page:
 
-[![Screenshot of a FlyoutPage with and without shadow](flyoutpage-shadow-images/shadow.png "FlyoutPage with and without shadow")](flyoutpage-shadow-images/shadow-large.png#lightbox "FlyoutPage with and without shadow")
+[![Screenshot of a FlyoutPage with and without shadow](flyoutpage-shadow-images/shadow.png "FlyoutPage with and without shadow."](flyoutpage-shadow-images/shadow-large.png#lightbox "FlyoutPage with and without shadow")
 
 ## Related links
 

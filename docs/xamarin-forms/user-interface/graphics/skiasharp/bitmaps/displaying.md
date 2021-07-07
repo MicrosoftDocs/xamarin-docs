@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Displaying SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The subject of SkiaSharp bitmaps was introduced in the article **[Bitmap Basics in SkiaSharp](../basics/bitmaps.md)**. That article showed three ways to load bitmaps and three ways to display bitmaps. This article reviews the techniques to load bitmaps and goes deeper into the use of the `DrawBitmap` methods of `SKCanvas`.
 
-![Displaying Sample](displaying-images/DisplayingSample.png "Displaying Sample")
+![Displaying Sample.](displaying-images/DisplayingSample.png "Displaying Sample")
 
 The `DrawBitmapLattice` and `DrawBitmapNinePatch` methods are discussed in the article **[Segmented display of SkiaSharp bitmaps](segmented.md)**.
 
@@ -184,7 +184,7 @@ public class PixelDimensionsPage : ContentPage
 
 The `PaintSurface` handler centers the bitmap by calculating `x` and `y` values based on the pixel dimensions of the display surface and the pixel dimensions of the bitmap:
 
-[![Pixel Dimensions](displaying-images/PixelDimensions.png "Pixel Dimensions")](displaying-images/PixelDimensions-Large.png#lightbox)
+[![Pixel Dimensions](displaying-images/PixelDimensions.png "Pixel Dimensions."](displaying-images/PixelDimensions-Large.png#lightbox)
 
 If the application wishes to display the bitmap in its upper-left corner, it would simply pass coordinates of (0, 0). 
 
@@ -256,7 +256,7 @@ public class FillRectanglePage : ContentPage
 
 Notice the use of the new `BitmapExtensions.LoadBitmapResource` method to set the `SKBitmap` field. The destination rectangle is obtained from the [`Rect`](xref:SkiaSharp.SKImageInfo.Rect) property of `SKImageInfo`, which desribes the size of the display surface:
 
-[![Fill Rectangle](displaying-images/FillRectangle.png "Fill Rectangle")](displaying-images/FillRectangle-Large.png#lightbox)
+[![Fill Rectangle](displaying-images/FillRectangle.png "Fill Rectangle."](displaying-images/FillRectangle-Large.png#lightbox)
 
 This is usually _not_ what you want. The image is distorted by being stretched differently in the horizontal and vertical directions. When displaying a bitmap in something other than its pixel size, usually you want to preserve the bitmap's original aspect ratio.
 
@@ -301,15 +301,15 @@ public class UniformScalingPage : ContentPage
 
 The `PaintSurface` handler calculates a `scale` factor that is the minimum of the ratio of the display width and height to the bitmap width and height. The `x` and `y` values can then be calculated for centering the scaled bitmap within the display width and height. The destination rectangle has an upper-left corner of `x` and `y` and a lower-right corner of those values plus the scaled width and height of the bitmap:
 
-[![Uniform Scaling](displaying-images/UniformScaling.png "Uniform Scaling")](displaying-images/UniformScaling-Large.png#lightbox)
+[![Uniform Scaling](displaying-images/UniformScaling.png "Uniform Scaling."](displaying-images/UniformScaling-Large.png#lightbox)
 
 Turn the phone sideways to see the bitmap stretched to that area:
 
-[![Uniform Scaling landscape](displaying-images/UniformScaling-Landscape.png "Uniform Scaling landscape")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
+[![Uniform Scaling landscape](displaying-images/UniformScaling-Landscape.png "Uniform Scaling landscape."](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
 The advantage of using this `scale` factor becomes obvious when you want to implement a slightly different algorithm. Suppose you want to preserve the bitmap's aspect ratio but also fill the destination rectangle. The only way this is possible is by cropping part of the image, but you can implement that algorithm simply by changing `Math.Min` to `Math.Max` in the above code. Here's the result: 
 
-[![Uniform Scaling alternative](displaying-images/UniformScaling-Alternative.png "Uniform Scaling alternative")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
+[![Uniform Scaling alternative](displaying-images/UniformScaling-Alternative.png "Uniform Scaling alternative."](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 
 The bitmap's aspect ratio is preserved but areas on the left and right of the bitmap are cropped.
 
@@ -614,7 +614,7 @@ public partial class ScalingModesPage : ContentPage
 
 Here are some combinations of options:
 
-[![Scaling Modes](displaying-images/ScalingModes.png "Scaling Modes")](displaying-images/ScalingModes-Large.png#lightbox)
+[![Scaling Modes](displaying-images/ScalingModes.png "Scaling Modes."](displaying-images/ScalingModes-Large.png#lightbox)
 
 The **Rectangle Subset** page has virtually the same XAML file as **Scaling Modes**, but the code-behind file defines a rectangular subset of the bitmap given by the `SOURCE` field: 
 
@@ -658,7 +658,7 @@ public partial class ScalingModesPage : ContentPage
 
 This rectangle source isolates the monkey's head, as shown in these screenshots:
 
-[![Rectangle Subset](displaying-images/RectangleSubset.png "Rectangle Subset")](displaying-images/RectangleSubset-Large.png#lightbox)
+[![Rectangle Subset](displaying-images/RectangleSubset.png "Rectangle Subset."](displaying-images/RectangleSubset-Large.png#lightbox)
 
 ## Related links
 

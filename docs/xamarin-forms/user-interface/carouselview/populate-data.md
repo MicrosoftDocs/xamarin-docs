@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CarouselView Data
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) includes the following properties that define the data to be displayed, and its appearance:
 
@@ -144,7 +144,7 @@ public class Monkey
 
 The following screenshots show the result of templating each item:
 
-[![Screenshot of CarouselView where each item is templated, on iOS and Android](populate-data-images/datatemplate.png "Templated items in a CarouselView")](populate-data-images/datatemplate-large.png#lightbox "Templated items in a CarouselView")
+[![Screenshot of CarouselView where each item is templated, on iOS and Android](populate-data-images/datatemplate.png "Templated items in a CarouselView."](populate-data-images/datatemplate-large.png#lightbox "Templated items in a CarouselView")
 
 For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -202,7 +202,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 The `MonkeyDataTemplateSelector` class defines `AmericanMonkey` and `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` override returns the `AmericanMonkey` template when the monkey name contains "America". When the monkey name doesn't contain "America", the `OnSelectTemplate` override returns the `OtherMonkey` template, which displays its data grayed out:
 
-[![Screenshot of CarouselView runtime item template selection, on iOS and Android](populate-data-images/datatemplateselector.png "Runtime item template selection in a CarouselView")](populate-data-images/datatemplateselector-large.png#lightbox "Runtime item template selection in a CarouselView")
+[![Screenshot of CarouselView runtime item template selection, on iOS and Android](populate-data-images/datatemplateselector.png "Runtime item template selection in a CarouselView."](populate-data-images/datatemplateselector-large.png#lightbox "Runtime item template selection in a CarouselView")
 
 For more information about data template selectors, see [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
@@ -230,7 +230,7 @@ Indicators, that represent the number of items and current position in a `Carous
 
 In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `CarouselView.IndicatorView` property to the `IndicatorView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray:
 
-[![Screenshot of a CarouselView and IndicatorView, on iOS and Android](populate-data-images/indicators.png "IndicatorView circles")](populate-data-images/indicators-large.png#lightbox "IndicatorView circles")
+[![Screenshot of a CarouselView and IndicatorView, on iOS and Android](populate-data-images/indicators.png "IndicatorView circles."](populate-data-images/indicators-large.png#lightbox "IndicatorView circles")
 
 > [!IMPORTANT]
 > Setting the `CarouselView.IndicatorView` property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
@@ -328,8 +328,8 @@ carouselView.ItemTemplate = new DataTemplate(() =>
 
 In this example, the `SwipeView` content is a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each item that's surrounded by a [`Frame`](xref:Xamarin.Forms.Frame) in the [`CarouselView`](xref:Xamarin.Forms.CarouselView). The swipe items are used to perform actions on the `SwipeView` content, and are revealed when the control is swiped from the top and from the bottom:
 
-[![Screenshot of CarouselView bottom context menu item, on iOS and Android](populate-data-images/swipeview-bottom.png "CarouselView with bottom SwipeView context menu item")](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView with bottom SwipeView context menu item")
-[![Screenshot of CarouselView top menu item, on iOS and Android](populate-data-images/swipeview-top.png "CarouselView with top SwipeView context menu item")](populate-data-images/swipeview-top-large.png#lightbox "CarouselView with top SwipeView context menu item")
+[![Screenshot of CarouselView bottom context menu item, on iOS and Android](populate-data-images/swipeview-bottom.png "CarouselView with bottom SwipeView context menu item."](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView with bottom SwipeView context menu item")
+[![Screenshot of CarouselView top menu item, on iOS and Android](populate-data-images/swipeview-top.png "CarouselView with top SwipeView context menu item."](populate-data-images/swipeview-top-large.png#lightbox "CarouselView with top SwipeView context menu item")
 
 `SwipeView` supports four different swipe directions, with the swipe direction being defined by the directional `SwipeItems` collection the `SwipeItems` objects are added to. By default, a swipe item is executed when it's tapped by the user. In addition, once a swipe item has been executed the swipe items are hidden and the `SwipeView` content is re-displayed. However, these behaviors can be changed.
 
@@ -368,7 +368,7 @@ refreshView.Content = carouselView;
 
 When the user initiates a refresh, the `ICommand` defined by the `Command` property is executed, which should refresh the items being displayed. A refresh visualization is shown while the refresh occurs, which consists of an animated progress circle:
 
-[![Screenshot of CarouselView pull-to-refresh, on iOS and Android](populate-data-images/pull-to-refresh.png "CarouselView pull-to-refresh")](populate-data-images/pull-to-refresh-large.png#lightbox "CarouselView pull-to-refresh")
+[![Screenshot of CarouselView pull-to-refresh, on iOS and Android](populate-data-images/pull-to-refresh.png "CarouselView pull-to-refresh."](populate-data-images/pull-to-refresh-large.png#lightbox "CarouselView pull-to-refresh")
 
 The value of the `RefreshView.IsRefreshing` property indicates the current state of the `RefreshView`. When a refresh is triggered by the user, this property will automatically transition to `true`. Once the refresh completes, you should reset the property to `false`.
 

@@ -39,7 +39,7 @@ dropdown in **Project Options**. To access
 this double-click on the iOS project and browse to **iOS Build > Linker Options**, as illustrated
 below:
 
-[![Linker Options](linker-images/image1.png)](linker-images/image1.png#lightbox)
+[![Linker Options.](linker-images/image1.png)](linker-images/image1.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -49,10 +49,10 @@ Do the following:
 
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Properties**:
 
-    ![Right-click on the Project Name in the Solution Explorer and select Properties](linker-images/linking01w.png)
+    ![Right-click on the Project Name in the Solution Explorer and select Properties.](linker-images/linking01w.png)
 2. In the **Project Properties**, select **IOS Build**:
 
-    ![Select IOS Build](linker-images/linking02w.png)
+    ![Select IOS Build.](linker-images/linking02w.png)
 3. Follow the instructions below to change the linking options.
 
 -----

@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Visual State Manager
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Use the Visual State Manager to make changes to XAML elements based on visual states set from code._
 
@@ -242,17 +242,17 @@ Markup similar to this is the basis of the **VSM on View** page in the **[VsmDem
 
 Notice that the second `Entry` also has a `DataTrigger` as part of its `Trigger` collection. This causes the `Entry` to be disabled until something is typed into the third `Entry`. Here's the page at startup running on iOS, Android, and the Universal Windows Platform (UWP):
 
-[![VSM on View: Disabled](vsm-images/VsmOnViewDisabled.png "VSM on view - disabled")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
+[![VSM on View: Disabled](vsm-images/VsmOnViewDisabled.png "VSM on view - disabled."](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
 The current visual state is "Disabled" so the background of the second `Entry` is pink on the iOS and Android screens. The UWP implementation of `Entry` does not allow setting the background color when the `Entry` is disabled.
 
 When you enter some text into the third `Entry`, the second `Entry` switches into the "Normal" state, and the background is now lime:
 
-[![VSM on View: Normal](vsm-images/VsmOnViewNormal.png "VSM on view - normal")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
+[![VSM on View: Normal](vsm-images/VsmOnViewNormal.png "VSM on view - normal."](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
 When you touch the second `Entry`, it gets the input focus. It switches to the "Focused" state and expands to twice its height:
 
-[![VSM on View: Focused](vsm-images/VsmOnViewFocused.png "VSM on view - focused")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
+[![VSM on View: Focused](vsm-images/VsmOnViewFocused.png "VSM on view - focused."](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
 Notice that the `Entry` does not retain the lime background when it gets the input focus. As the Visual State Manager switches between the visual states, the properties set by the previous state are unset. Keep in mind that the visual states are mutually exclusive. The "Normal" state does not mean solely that the `Entry` is enabled. It means that the `Entry` is enabled and does not have input focus.
 
@@ -395,7 +395,7 @@ Here's the **VSM in Style** page showing the complete VSM markup:
 
 Now all the `Entry` views on this page respond the same way to their visual states. Notice also that the "Focused" state now includes a second `Setter` that gives each `Entry` a lime background also when it has input focus:
 
-[![VSM in Style](vsm-images/VsmInStyle.png "VSM in style")](vsm-images/VsmInStyle-Large.png#lightbox)
+[![VSM in Style](vsm-images/VsmInStyle.png "VSM in style."](vsm-images/VsmInStyle-Large.png#lightbox)
 
 ## Visual states in Xamarin.Forms
 
@@ -467,11 +467,11 @@ VSM markup is attached to the `StackLayout`. There are two mutually-exclusive st
 
 The "Normal" state is active when the `Button` isn't pressed, and a response to the question can be entered:
 
-[![VSM Setter TargetName: Normal State](vsm-images/VsmSetterTargetNameNormal.png "VSM setter targetname - normal")](vsm-images/VsmSetterTargetNameNormal-Large.png#lightbox)
+[![VSM Setter TargetName: Normal State](vsm-images/VsmSetterTargetNameNormal.png "VSM setter targetname - normal."](vsm-images/VsmSetterTargetNameNormal-Large.png#lightbox)
 
 The "Pressed" state becomes active when the `Button` is pressed:
 
-[![VSM Setter TargetName: Pressed State](vsm-images/VsmSetterTargetNamePressed.png "VSM setter targetname - pressed")](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
+[![VSM Setter TargetName: Pressed State](vsm-images/VsmSetterTargetNamePressed.png "VSM setter targetname - pressed."](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
 
 The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from the default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the result is that when the `Button` is pressed it's rescaled to be slightly smaller, and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1 ,and the `Entry` displays any previously entered text.
 
@@ -548,11 +548,11 @@ VSM markup is attached to the `StackLayout` (named `stackLayout`). There are two
 
 If the `Entry` does not contain a valid phone number, then the current state is "Invalid", and so the `Entry` has a pink background, the second `Label` is visible, and the `Button` is disabled:
 
-[![VSM Validation: Invalid State](vsm-images/VsmValidationInvalid.png "VSM validation - invalid")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
+[![VSM Validation: Invalid State](vsm-images/VsmValidationInvalid.png "VSM validation - invalid."](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
 When a valid phone number is entered, then the current state becomes "Valid". The `Entry` gets a lime background, the second `Label` disappears, and the `Button` is now enabled:
 
-[![VSM Validation: Valid State](vsm-images/VsmValidationValid.png "VSM validation - valid")](vsm-images/VsmValidationValid-Large.png#lightbox)
+[![VSM Validation: Valid State](vsm-images/VsmValidationValid.png "VSM validation - valid."](vsm-images/VsmValidationValid-Large.png#lightbox)
 
 The code-behind file is responsible for handling the `TextChanged` event from the `Entry`. The handler uses a regular expression to determine if the input string is valid or not. The method in the code-behind file named `GoToState` calls the static `VisualStateManager.GoToState` method for `stackLayout`:
 
@@ -610,11 +610,11 @@ This technique is sometimes known as _adaptive layout_. Because adaptive layout 
 
 A simple example is an application that displays a small collection of buttons that affect the application's content. In portrait mode, these buttons might be displayed in a horizontal row on the top of the page:
 
-[![VSM Adaptive Layout: Portrait](vsm-images/VsmAdaptiveLayoutPortrait.png "VSM adaptive layout - portrait")](vsm-images/VsmAdaptiveLayoutPortrait-Large.png#lightbox)
+[![VSM Adaptive Layout: Portrait](vsm-images/VsmAdaptiveLayoutPortrait.png "VSM adaptive layout - portrait."](vsm-images/VsmAdaptiveLayoutPortrait-Large.png#lightbox)
 
 In landscape mode, the array of buttons might be moved to one side, and displayed in a column:
 
-[![VSM Adaptive Layout: Landscape](vsm-images/VsmAdaptiveLayoutLandscape.png "VSM adaptive layout - landscape")](vsm-images/VsmAdaptiveLayoutLandscape-Large.png#lightbox)
+[![VSM Adaptive Layout: Landscape](vsm-images/VsmAdaptiveLayoutLandscape.png "VSM adaptive layout - landscape."](vsm-images/VsmAdaptiveLayoutLandscape-Large.png#lightbox)
 
 From top to bottom, the program is running on the Universal Windows Platform, Android, and iOS.
 

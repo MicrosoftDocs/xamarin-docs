@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp image filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Image filters are effects that operate on all the color bits of pixels that make up an image. They are more versatile than mask filters, which only operate on the alpha channel as described in the article [**SkiaSharp mask filters**](mask-filters.md). To use an image filter, set the [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) property of `SKPaint` to an object of type [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) that you've created by calling one of the class's static methods.
 
 The best way to become familiar with mask filters is by experimenting with these static methods. You can use a mask filter to blur an entire bitmap:
 
-![Blur Example](image-filters-images/ImageFilterExample.png "Blur Example")
+![Blur Example.](image-filters-images/ImageFilterExample.png "Blur Example")
 
 This article also demonstrates using an image filter to create a drop shadow, and for embossing and engraving effects.
 
@@ -133,7 +133,7 @@ public partial class ImageBlurExperimentPage : ContentPage
 
 The three screenshots show various settings for the `sigmaX` and `sigmaY` settings:
 
-[![Image Blur Experiment](image-filters-images/ImageBlurExperiment.png "Image Blur Experiment")](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
+[![Image Blur Experiment](image-filters-images/ImageBlurExperiment.png "Image Blur Experiment."](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
 
 To keep the blur consistent among different display sizes and resolutions, set `sigmaX` and `sigmaY` to values that are proportional to the rendered pixel size of the image that the blur is applied to.
 
@@ -279,7 +279,7 @@ public partial class DropShadowExperimentPage : ContentPage
 
 Here's the program running:
 
-[![Drop Shadow Experiment](image-filters-images/DropShadowExperiment.png "Drop Shadow Experiment")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
+[![Drop Shadow Experiment](image-filters-images/DropShadowExperiment.png "Drop Shadow Experiment."](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
 The negative offset values in the Universal Windows Platform screenshot at the far right cause the shadow to appear above and to the left of the text. This suggests a light source in the lower right, which is not the convention for computer graphics. But it doesn't seem wrong in any way, perhaps because the shadow is also made very blurry and seems more ornamental than most drop shadows.
 
@@ -430,7 +430,7 @@ The `lightConstant` value should be positive. (The program allows negative value
 
 These factors can be balanced to obtain an embossed effect when `surfaceScale` is negative (as with the iOS and Android screenshots) and an engraved effect when `surfaceScale` is positive, as with the UWP screenshot at the right:
 
-[![Distant Light Experiment](image-filters-images/DistantLightExperiment.png "Distant Light Experiment")](image-filters-images/DistantLightExperiment-Large.png#lightbox)
+[![Distant Light Experiment](image-filters-images/DistantLightExperiment.png "Distant Light Experiment."](image-filters-images/DistantLightExperiment-Large.png#lightbox)
 
 The Android screenshot has a Z value of 0, which means that the light is only pointing down and to the right. The background isn't illuminated and the surface of the text string isn't illuminated either. The light only effects the edge of the text for a very subtle effect.
 

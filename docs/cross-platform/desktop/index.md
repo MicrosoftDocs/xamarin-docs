@@ -33,4 +33,4 @@ porting code from WPF to Xamarin.Forms.
 
 ## Learn More
 
-[![Creating Mobile Apps eBook](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [![Enterprise Application Patterns eBook](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+[![Creating Mobile Apps eBook.](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [![Enterprise Application Patterns eBook](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)

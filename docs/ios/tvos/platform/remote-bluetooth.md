@@ -15,7 +15,7 @@ Users of your Xamarin.tvOS app will not be interacting with it's interface direc
 
 If your app is a game, you can optionally build in support for 3rd party, Made For iOS (MFI) [Bluetooth Game Controllers](#Bluetooth-Game-Controllers) in your app as well.
 
-[![The Bluetooth Remote and Game Controller](remote-bluetooth-images/intro01.png)](remote-bluetooth-images/intro01.png#lightbox)
+[![The Bluetooth Remote and Game Controller.](remote-bluetooth-images/intro01.png)](remote-bluetooth-images/intro01.png#lightbox)
 
 This article describes the [Siri Remote](#The-Siri-Remote), [Touch Surface Gestures](#Touch-Surface-Gestures) and [Siri Remote Buttons](#Siri-Remote-Buttons) and shows how to work with them via [Gestures and Storyboards](#Gestures-and-Storyboards), [Gestures and Code](#Gestures-and-Code) and [Low-Level Event Handling](#Low-Level-Event-Handling). Finally, it discusses [Working with Game Controllers](#Working-with-Game-Controllers) in a Xamarin.tvOS app.
 
@@ -27,7 +27,7 @@ The main way that users will be interacting with the Apple TV, and your Xamarin.
 
 Your challenge as a tvOS app developer is the create a quick, easy to use and visually compelling user interface that leverages the Siri Remote's touch surface, accelerometer, gyroscope and buttons.
 
-[![The Siri Remote](remote-bluetooth-images/remote01.png)](remote-bluetooth-images/remote01.png#lightbox)
+[![The Siri Remote.](remote-bluetooth-images/remote01.png)](remote-bluetooth-images/remote01.png#lightbox)
 
 The Siri Remote has the following features and expected usages within your tvOS app:
 
@@ -48,7 +48,7 @@ The Siri Remote's Touch Surface is able to detect a variety of single-finger ges
 
 |Swipe|Click|Tap|
 |---|---|---|
-|![Moves selection](remote-bluetooth-images/Gesture01.png)|![Actives the selected item](remote-bluetooth-images/Gesture02.png)|![Directional buttons](remote-bluetooth-images/Gesture03.png)|
+|![Moves selection.](remote-bluetooth-images/Gesture01.png)|![Actives the selected item](remote-bluetooth-images/Gesture02.png)|![Directional buttons](remote-bluetooth-images/Gesture03.png)|
 |Moves selection (focus) between UI elements on screen (up, down left, right). Swiping can be used to scroll through large lists of content quickly using inertia.|Activates the selected (in-focus) item or acts like the primary button in a game. Clicking and holding can activate contextual menus or secondary functions.|Lightly tapping the Touch Surface on the edges acts like directional buttons on a D-Pad, moving focus up, down, left or right depending on the area tapped. Depending on the app, can be used to reveal hidden controls.|
 
 Apple provides the following suggestions for working with Touch Surface gestures:
@@ -80,14 +80,14 @@ To add a Gestures Recognizer, do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing the Interface Designer.
 2. Drag a **Tap Gesture Recognizer** from the **Library** and drop it on the View:
 
-    [![A Tap Gesture Recognizer](remote-bluetooth-images/storyboard01.png)](remote-bluetooth-images/storyboard01.png#lightbox)
+    [![A Tap Gesture Recognizer.](remote-bluetooth-images/storyboard01.png)](remote-bluetooth-images/storyboard01.png#lightbox)
 3. Check **Select** in the **Button** section of the **Attribute Inspector**:
 
-    [![Check Select](remote-bluetooth-images/storyboard02.png)](remote-bluetooth-images/storyboard02.png#lightbox)
+    [![Check Select.](remote-bluetooth-images/storyboard02.png)](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Select** means the gesture will respond to the user clicking the **Touch Surface** on the Siri Remote. You also have the option of responding to the **Menu**, **Play/Pause**, **Up**, **Down**, **Left** and **Right** buttons.
 5. Next, wire up an **Action** from the **Tap Gesture Recognizer** and call it `TouchSurfaceClicked`:
 
-    [![An Action from the Tap Gesture Recognizer](remote-bluetooth-images/storyboard03.png)](remote-bluetooth-images/storyboard03.png#lightbox)
+    [![An Action from the Tap Gesture Recognizer.](remote-bluetooth-images/storyboard03.png)](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac.
 
 Edit your View Controller (example `FirstViewController.cs`) file and add the following code to handle the gesture being triggered:
@@ -266,7 +266,7 @@ As with `UITouch` events, if you need to implement any of the `UIPress` event ov
 
 In addition to the standard Siri Remote that ships with the Apple TV, 3rd party, Made For iOS (MFI) Bluetooth Game Controllers can be paired with the Apple TV and used to control your Xamarin.tvOS app.
 
-[![Bluetooth Game Controllers](remote-bluetooth-images/game01.png)](remote-bluetooth-images/game01.png#lightbox)
+[![Bluetooth Game Controllers.](remote-bluetooth-images/game01.png)](remote-bluetooth-images/game01.png#lightbox)
 
 Game Controllers can be used to enhance gameplay and provide a sense of immersion in a game. They can also be used to control the standard Apple TV interface so the use doesn't have to switch between the remote and the controller.
 
@@ -324,7 +324,7 @@ Apple has several specific requirements that must be met if your Xamarin.tvOS ap
 
 To enable Game Controller support in your Xamarin.tvOS app, double-click the `Info.plist` file in the **Solution Explorer** to open it for editing:
 
-[![The Info.plist editor](remote-bluetooth-images/game02.png)](remote-bluetooth-images/game02.png#lightbox)
+[![The Info.plist editor.](remote-bluetooth-images/game02.png)](remote-bluetooth-images/game02.png#lightbox)
 
 Under the **Game Controller** section, place a check by **Enable Game Controllers**, then check all of the Game Controller types that will be supported by the app.
 

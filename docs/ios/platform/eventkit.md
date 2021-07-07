@@ -28,7 +28,7 @@ In this guide we’re going to cover:
 All tasks in this guide are available in the companion sample
 application:
 
- [![The companion sample application screens](eventkit-images/01.png)](eventkit-images/01.png#lightbox)
+ [![The companion sample application screens.](eventkit-images/01.png)](eventkit-images/01.png#lightbox)
 
 ## Requirements
 
@@ -201,7 +201,7 @@ The *EKEventEditViewController* does a lot of the heavy lifting for
 you if you want to create or edit an event with the same UI that’s presented
 to the user when using the Calendar Application:
 
- [![The UI that is presented to the user when using the Calendar Application](eventkit-images/02.png)](eventkit-images/02.png#lightbox)
+ [![The UI that is presented to the user when using the Calendar Application.](eventkit-images/02.png)](eventkit-images/02.png#lightbox)
 
 To use it, you’ll want to declare it as a class-level variable so that it
 doesn’t get garbage-collected if it’s declared within a method:

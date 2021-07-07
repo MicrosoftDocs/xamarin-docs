@@ -19,7 +19,7 @@ resource type:
 
 # [Visual Studio](#tab/windows)
 
-![Default resource files](default-resources-images/01-resource-files-vs.png)
+![Default resource files.](default-resources-images/01-resource-files-vs.png)
 
 In the image above, the project has default values for drawable resources,
 layouts, and values (XML files that contain simple values).
@@ -77,7 +77,7 @@ A complete list of resource types is provided below:
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Default resource files](default-resources-images/01-resource-files-xs.png)
+![Default resource files.](default-resources-images/01-resource-files-xs.png)
 
 In the image above, the project has default values for drawable resources,
 layouts, and values (XML files that contain simple values).

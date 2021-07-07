@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Editor
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 The [`Editor`](xref:Xamarin.Forms.Editor) control is used to accept multi-line input.
 
@@ -283,7 +283,7 @@ In XAML:
 </ContentPage>
 ```
 
-![Editor with BackgroundColor Example](editor-images/textbackgroundcolor.png)
+![Editor with BackgroundColor Example.](editor-images/textbackgroundcolor.png)
 
 Make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 

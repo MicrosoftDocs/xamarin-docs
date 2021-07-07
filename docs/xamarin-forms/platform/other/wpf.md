@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # WPF platform setup
 
-![Preview label](~/media/shared/preview.png)
+![Preview label.](~/media/shared/preview.png)
 
 Xamarin.Forms has preview support for the Windows Presentation Foundation (WPF), on .NET Framework and on .NET Core 3. This article demonstrates how to add a WPF project that targets .NET Framework, to a Xamarin.Forms solution.
 
@@ -45,17 +45,17 @@ Follow these instructions to add a WPF application that will run on the Windows 
 
 4. In the **Solution Explorer**, right click the new **BoxViewClock.WPF** project and select **Manage NuGet Packages...**. Select the **Browse** tab, and search for **Xamarin.Forms.Platform.WPF**:
 
-    ![Select the NuGet package](wpf-images/select-nuget-package.png "Select the NuGet package")
+    ![Select the NuGet package.](wpf-images/select-nuget-package.png "Select the NuGet package")
 
     Select the package and click the **Install** button.
 
 5. Right click the solution name in the **Solution Explorer** and select **Manage NuGet Packages for Solution...**. Select the **Updates** tab and then select the **Xamarin.Forms** package. Select all the projects and update them to the same Xamarin.Forms version:
 
-    ![Update the NuGet package](wpf-images/update-nuget-package.png "Update the NuGet package")
+    ![Update the NuGet package.](wpf-images/update-nuget-package.png "Update the NuGet package")
 
 6. In the WPF project, right-click on **References** and select **Add Reference...**. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the **BoxViewClock** project:
 
-    ![Reference the shared project](wpf-images/reference-shared-project.png "Reference the shared project")
+    ![Reference the shared project.](wpf-images/reference-shared-project.png "Reference the shared project")
 
     Press the **OK** button.
 
@@ -120,7 +120,7 @@ Follow these instructions to add a WPF application that will run on the Windows 
 
 9. Right-click the WPF project in the **Solution Explorer** and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
 
-    ![WPF BoxView Clock](wpf-images/wpf-boxviewclock.png "WPF BoxView Clock" )
+    ![WPF BoxView Clock.](wpf-images/wpf-boxviewclock.png "WPF BoxView Clock" )
 
 ## Platform specifics
 

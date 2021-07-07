@@ -211,7 +211,7 @@ resources.
 
 Run the application. Your grid layout should look something like this:
 
-[![Example screenshot of GridView displaying 15 images](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
+[![Example screenshot of GridView displaying 15 images.](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 
 Try experimenting with the behaviors of the
 [`GridView`](xref:Android.Widget.GridView) and

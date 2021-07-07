@@ -18,7 +18,7 @@ It is possible to automatically create NuGet packages to share code across platf
 
 The Nugetizer 3000 is included with Visual Studio for Mac &ndash; look for the **Library > Mulitplatform Library** project type in the **File > New** window:
 
-[![Create new Multiplatform Library window](images/mulitplatform-library-sml.png)](images/mulitplatform-library.png#lightbox)
+[![Create new Multiplatform Library window.](images/mulitplatform-library-sml.png)](images/mulitplatform-library.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 

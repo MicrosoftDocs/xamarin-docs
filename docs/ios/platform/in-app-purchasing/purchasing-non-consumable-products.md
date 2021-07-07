@@ -30,7 +30,7 @@ The purchase
 process is shown in this series of screenshots – the **Buy**
 button becomes the feature-activation button:   
 
- [![The purchase process is shown in this series of screenshots](purchasing-non-consumable-products-images/image34.png)](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![The purchase process is shown in this series of screenshots.](purchasing-non-consumable-products-images/image34.png)](purchasing-non-consumable-products-images/image34.png#lightbox)   
 
 The purchasing process is the same as a consumable product; the key
 difference is in how the purchase is tracked in the application code. In this
@@ -40,7 +40,7 @@ purchased, otherwise the button activates the feature itself.
 The following diagram shows the interactions between classes and the App Store
 server to perform a non-consumable product purchase:   
 
- [![The interactions between classes and the App Store server to perform a non-consumable product purchase](purchasing-non-consumable-products-images/image35.png)](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![The interactions between classes and the App Store server to perform a non-consumable product purchase.](purchasing-non-consumable-products-images/image35.png)](purchasing-non-consumable-products-images/image35.png#lightbox)   
 
 The key difference from the Consumable example is that once the
 purchase is complete the user-interface is updated to prevent re-purchasing. In

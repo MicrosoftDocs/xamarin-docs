@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _iOS 6 includes a variety of new technologies for developing apps, which Xamarin.iOS 6 brings to C# developers._
 
-[![The iOS 6 logo](images/ios6-large.jpg)](images/ios6-large.jpg#lightbox)
+[![The iOS 6 logo.](images/ios6-large.jpg)](images/ios6-large.jpg#lightbox)
 
 With iOS 6 and Xamarin.iOS 6, developers now have a wealth of capability at
 their disposal to create iOS applications, including ones that target iPhone 5.
@@ -99,14 +99,14 @@ iPhone 5 devices have a 640x1136 resolution. Applications that targeted
 previous versions of iOS will appear letterboxed when run on an iPhone 5, as
 shown below:
 
- [![Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5](images/01-letterboxed.png)](images/01-letterboxed.png#lightbox)
+ [![Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5.](images/01-letterboxed.png)](images/01-letterboxed.png#lightbox)
 
 In order for the application to appear full-screen on iPhone 5, simply add an
 image named `Default-568h@2x.png` having a resolution of 640x1136. The
 following screenshot shows the application running after this image has been
 included:
 
- [![This screenshot shows the application running after this image has been included](images/02-fullscreen.png)](images/02-fullscreen.png#lightbox)
+ [![This screenshot shows the application running after this image has been included.](images/02-fullscreen.png)](images/02-fullscreen.png#lightbox)
 
 ### Subclassing UINavigationBar
 
@@ -146,7 +146,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 Using this `UINavigationBar` subclass results in the image view
 being displayed as shown in the following screenshot:
 
- [![Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot](images/03-navbar.png)](images/03-navbar.png#lightbox)
+ [![Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot.](images/03-navbar.png)](images/03-navbar.png#lightbox)
 
 ### Interface Orientation
 

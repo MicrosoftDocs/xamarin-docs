@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Part 4. Data Binding Basics
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other. This is a very valuable tool, and while data bindings can be defined entirely in code, XAML provides shortcuts and convenience. Consequently, one of the most important markup extensions in Xamarin.Forms is Binding._
 
@@ -98,7 +98,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Here’s the running program:
 
-[![View-to-View Bindings](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
+[![View-to-View Bindings.](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
 
 ## The Binding Mode
 
@@ -197,7 +197,7 @@ The bindings on three of the `Slider` views are `OneWayToSource`, meaning that t
 
 However, the binding for the `Scale` property is `TwoWay`. This is because the `Scale` property has a default value of 1, and using a `TwoWay` binding causes the `Slider` initial value to be set at 1 rather than 0. If that binding were `OneWayToSource`, the `Scale` property would initially be set to 0 from the `Slider` default value. The `Label` would not be visible, and that might cause some confusion to the user.
 
- [![Backwards Bindings](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
+ [![Backwards Bindings.](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
 
  > [!NOTE]
  > The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also has [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which scale the `VisualElement` on the x-axis and y-axis respectively.
@@ -230,7 +230,7 @@ Setting the static `NamedColor.All` property to the `ItemsSource` of a `ListView
 
 The resultant display establishes that the items are truly of type `XamlSamples.NamedColor`:
 
-[![Binding to a Collection](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
+[![Binding to a Collection.](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
 
 It’s not much information, but the `ListView` is scrollable and selectable.
 
@@ -255,7 +255,7 @@ To define a template for the items, you’ll want to break out the `ItemTemplate
 
 The `Label` element is set to the `View` property of the `ViewCell`. (The `ViewCell.View` tags are not needed because the `View` property is the content property of `ViewCell`.) This markup displays the `FriendlyName` property of each `NamedColor` object:
 
-[![Binding to a Collection with a DataTemplate](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
+[![Binding to a Collection with a DataTemplate.](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
 
 Much better. Now all that’s needed is to spruce up the item template with more information and the actual color. To support this template, some values and objects have been defined in the page’s resource dictionary:
 
@@ -392,7 +392,7 @@ Three data bindings reference this single instance. Notice that the `Binding` ma
 
 Here’s the result:
 
-[![Binding to a Collection with a DataTemplate and Converters](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
+[![Binding to a Collection with a DataTemplate and Converters.](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
 The `ListView` is quite sophisticated in handling changes that might dynamically occur in the underlying data, but only if you take certain steps. If the collection of items assigned to the `ItemsSource` property of the `ListView` changes during runtime—that is, if items can be added to or removed from the collection—use an `ObservableCollection` class for these items. `ObservableCollection` implements the `INotifyCollectionChanged` interface, and `ListView` will install a handler for the `CollectionChanged` event.
 

@@ -94,7 +94,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
                 });
 ```
 
-![Browser Options](images/browser-options.png)
+![Browser Options.](images/browser-options.png)
 
 ## Platform Implementation Specifics
 

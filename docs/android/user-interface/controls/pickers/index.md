@@ -17,9 +17,9 @@ time by using dialogs that are provided by Android:
 - [Date Picker](~/android/user-interface/controls/pickers/date-picker.md) is used to select a date
     (year, month, and day).
 
-    ![Example Date Picker](images/date-picker.png)
+    ![Example Date Picker.](images/date-picker.png)
 
 - [Time Picker](~/android/user-interface/controls/pickers/time-picker.md) is used to select a time
     (hour, minute, and AM/PM).
 
-    ![Example Time Picker](images/time-picker.png)
+    ![Example Time Picker.](images/time-picker.png)

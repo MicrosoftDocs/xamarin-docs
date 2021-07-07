@@ -22,7 +22,7 @@ In this article we will be covering two ways to access SQLite data:
 1. **Direct Access** - By directly accessing a SQLite Database, we can use data from the database for key-value coding and data binding with UI elements created in Xcode's Interface Builder. By using key-value coding and data binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design.
 2. **SQLite.NET ORM** - By using the open source [SQLite.NET](https://www.sqlite.org) Object Relationship Manager (ORM) we can greatly reduce the amount of code required to read and write data from a SQLite database. This data can then be used to populate a user interface item such as a Table View.
 
-[![An example of the running app](databases-images/intro01.png "An example of the running app")](databases-images/intro01-large.png#lightbox)
+[![An example of the running app](databases-images/intro01.png "An example of the running app."](databases-images/intro01-large.png#lightbox)
 
 In this article, we'll cover the basics of working with key-value coding and data binding with SQLite Databases in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -47,7 +47,7 @@ Do the following:
 1. In the **Solution Pad**, right-click on the **References** folder and select **Edit References**.
 2. Select both the **Mono.Data.Sqlite** and **System.Data** assemblies: 
 
-    [![Adding the required references](databases-images/reference01.png "Adding the required references")](databases-images/reference01-large.png#lightbox)
+    [![Adding the required references](databases-images/reference01.png "Adding the required references."](databases-images/reference01-large.png#lightbox)
 3. Click the **OK** button to save your changes and add the references.
 
 ### Modifying the data model
@@ -1015,11 +1015,11 @@ The Menu Controls available to macOS (such as the Combo Box) can be set to popul
 
 As an example, edit the Simple Binding example above in Interface Builder, add a Combo Box and expose it using an outlet named `EmployeeSelector`:
 
-[![Exposing a combo box outlet](databases-images/combo01.png "Exposing a combo box outlet")](databases-images/combo01-large.png#lightbox)
+[![Exposing a combo box outlet](databases-images/combo01.png "Exposing a combo box outlet."](databases-images/combo01-large.png#lightbox)
 
 In the **Attributes Inspector**, check the **Autocompletes** and **Uses Data Source** properties:
 
-![Configuring the combo box attributes](databases-images/combo02.png "Configuring the combo box attributes")
+![Configuring the combo box attributes.](databases-images/combo02.png "Configuring the combo box attributes")
 
 Save your changes and return to Visual Studio for Mac to sync.
 
@@ -1920,7 +1920,7 @@ Do the following to add the package:
 1. In the **Solution Pad**, right-click the **Packages** folder and select **Add Packages...**
 2. Enter `SQLite.net` in the **Search Box** and select the **sqlite-net** entry:
 
-    [![Adding the SQLite NuGet package](databases-images/nuget01.png "Adding the SQLite NuGet package")](databases-images/nuget01-large.png#lightbox)
+    [![Adding the SQLite NuGet package](databases-images/nuget01.png "Adding the SQLite NuGet package."](databases-images/nuget01-large.png#lightbox)
 3. Click the **Add Package** button to finish.
 
 ### Creating the data model
@@ -2060,7 +2060,7 @@ conn.Insert (Occupation);
 
 As an example usage, we'll add a Table View to our UI in Xcode's Interface builder. We'll expose this Table View via an outlet (`OccupationTable`) so we can access it via C# code:
 
-[![Exposing a table view outlet](databases-images/table01.png "Exposing a table view outlet")](databases-images/table01-large.png#lightbox)
+[![Exposing a table view outlet](databases-images/table01.png "Exposing a table view outlet."](databases-images/table01-large.png#lightbox)
 
 Next, we'll add the custom classes to populate this table with data from the SQLite.NET database.
 

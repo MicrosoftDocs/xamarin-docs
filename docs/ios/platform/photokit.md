@@ -11,7 +11,7 @@ ms.date: 06/14/2017
 
 # PhotoKit in Xamarin.iOS
 
-[![Download Sample](~/media/shared/download.png) Download a code sample](/samples/xamarin/ios-samples/ios11-samplephotoapp/)
+[![Download Sample.](~/media/shared/download.png) Download a code sample](/samples/xamarin/ios-samples/ios11-samplephotoapp/)
 
 PhotoKit is a framework that allows applications to query the system image library and create custom user interfaces to view and modify its contents. It includes a number of classes that represent image and video assets, as well as collections of assets such as albums and folders.
 
@@ -57,7 +57,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 This results in a grid of images as shown below:
 
-![The running app displaying a grid of images](photokit-images/image4.png)
+![The running app displaying a grid of images.](photokit-images/image4.png)
 
 ## Saving Changes to the Photo Library
 
@@ -128,8 +128,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 When the user selects the button, the filter is applied:
 
-![Two examples, showing the photo before and after the filter is applied](photokit-images/image5.png)
+![Two examples, showing the photo before and after the filter is applied.](photokit-images/image5.png)
 
 And thanks to the `PHPhotoLibraryChangeObserver`, the change is reflected in the collection view when the user navigates back:
 
-![Photo collection view showing the modified photo](photokit-images/image6.png)
+![Photo collection view showing the modified photo.](photokit-images/image6.png)

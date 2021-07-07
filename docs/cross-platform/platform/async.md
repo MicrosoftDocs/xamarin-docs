@@ -22,7 +22,7 @@ For a more complete discussion of the new asynchronous features of C# 5 (includi
 
 The sample application makes a simple asynchronous web request (without blocking the main thread) then updates the UI with the downloaded html and character count.
 
- [![The sample application makes a simple asynchronous web request without blocking the main thread then updates the UI with the downloaded html and character count](async-images/AsyncAwait_427x368.png)](async-images/AsyncAwait.png#lightbox)
+ [![The sample application makes a simple asynchronous web request without blocking the main thread then updates the UI with the downloaded html and character count.](async-images/AsyncAwait_427x368.png)](async-images/AsyncAwait.png#lightbox)
 
 Xamarin's async support is built on the Mono 3.0 foundation and upgrades the API profile from the being a mobile-friendly version of Silverlight to be a mobile-friendly version of .NET 4.5.
 

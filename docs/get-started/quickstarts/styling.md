@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Style a cross-platform Xamarin.Forms application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 In this quickstart, you will learn how to:
 
@@ -26,9 +26,9 @@ The quickstart walks through how to style a cross-platform Xamarin.Forms applica
 
 The final application is shown below:
 
-[![Notes Page](styling-images/screenshots1-sml.png)](styling-images/screenshots1.png#lightbox)
-[![Note Entry Page](styling-images/screenshots2-sml.png)](styling-images/screenshots2.png#lightbox)
-[![About Page](styling-images/screenshots3-sml.png)](styling-images/screenshots3.png#lightbox)
+[![Notes Page.](styling-images/screenshots1-sml.png)](styling-images/screenshots1.png#lightbox)
+[![Note Entry Page.](styling-images/screenshots2-sml.png)](styling-images/screenshots2.png#lightbox)
+[![About Page.](styling-images/screenshots3-sml.png)](styling-images/screenshots3.png#lightbox)
 
 ### Prerequisites
 

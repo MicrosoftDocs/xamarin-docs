@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Create Xamarin.Forms behaviors
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _Xamarin.Forms behaviors are created by deriving from the Behavior or Behavior&lt;T&gt; class. This article demonstrates how to create and consume Xamarin.Forms behaviors._
 
@@ -106,7 +106,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 At runtime the behavior will respond to interaction with the control, according to the behavior implementation. The following screenshots demonstrate the behavior responding to invalid input:
 
-[![Sample Application with Xamarin.Forms Behavior](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
+[![Sample Application with Xamarin.Forms Behavior.](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > Behaviors are written for a specific control type (or a superclass that can apply to many controls), and they should only be added to a compatible control. Attempting to attach a behavior to an incompatible control will result in an exception being thrown.

@@ -52,7 +52,7 @@ Before diving into the code required to use the Document Picker with Xamarin, th
 
 Because a file can be modified from several different locations, coordination must be used to prevent data loss.
 
- [![Using File Coordination](document-picker-images/image1.png)](document-picker-images/image1.png#lightbox)
+ [![Using File Coordination.](document-picker-images/image1.png)](document-picker-images/image1.png#lightbox)
 
 Let's take a look at the above illustration:
 
@@ -191,7 +191,7 @@ The way to discover and list Documents is by using the existing `NSMetadataQuery
 
 Prior to iOS 8, `NSMetadataQuery` was slow to pickup local file changes such as: deletes, creates and renames.
 
- [![NSMetadataQuery local file changes overview](document-picker-images/image2.png)](document-picker-images/image2.png#lightbox)
+ [![NSMetadataQuery local file changes overview.](document-picker-images/image2.png)](document-picker-images/image2.png#lightbox)
 
 In the above diagram:
 
@@ -205,7 +205,7 @@ Because of the delay in the creation of the `NSMetadata` record, the application
 
 In iOS 8, `NSMetadataQuery` is easier to use directly with a new feature called Stitching:
 
- [![NSMetadataQuery with a new feature called Stitching](document-picker-images/image3.png)](document-picker-images/image3.png#lightbox)
+ [![NSMetadataQuery with a new feature called Stitching.](document-picker-images/image3.png)](document-picker-images/image3.png#lightbox)
 
 Using Stitching in the above diagram:
 
@@ -810,7 +810,7 @@ Prior to iOS 8, it was very difficult to access Documents from another applicati
 
 ### Existing Behavior
 
- [![Existing Behavior overview](document-picker-images/image31.png)](document-picker-images/image31.png#lightbox)
+ [![Existing Behavior overview.](document-picker-images/image31.png)](document-picker-images/image31.png#lightbox)
 
 Let's take a look at accessing an external document prior to iOS 8:
 
@@ -824,7 +824,7 @@ From there the Document is available for the second application to open and edit
 
 In iOS 8, an application is able to access Documents outside of its own Application Container with ease:
 
- [![Discovering Documents Outside of an App's Container](document-picker-images/image32.png)](document-picker-images/image32.png#lightbox)
+ [![Discovering Documents Outside of an App's Container.](document-picker-images/image32.png)](document-picker-images/image32.png#lightbox)
 
 Using the new iCloud Document Picker ( `UIDocumentPickerViewController`), an iOS application can directly discover and access outside of its Application Container. The `UIDocumentPickerViewController` provides a mechanism for the user to grant access to and edit those discovered Documents via permissions.
 
@@ -895,16 +895,16 @@ Here is an example of how the code above would display a Document Picker when ru
 
 1. The user starts the application and the main interface is displayed:   
 
-    [![The main interface is displayed](document-picker-images/image33.png)](document-picker-images/image33.png#lightbox)
+    [![The main interface is displayed.](document-picker-images/image33.png)](document-picker-images/image33.png#lightbox)
 1. The user taps the **Action** Button at the top of the screen and is asked to select a **Document Provider** from the list of available providers:   
 
-    [![Select a Document Provider from the list of available providers](document-picker-images/image34.png)](document-picker-images/image34.png#lightbox)
+    [![Select a Document Provider from the list of available providers.](document-picker-images/image34.png)](document-picker-images/image34.png#lightbox)
 1. The **Document Picker View Controller** is displayed for the selected **Document Provider**:   
 
-    [![The Document Picker View Controller is displayed](document-picker-images/image35.png)](document-picker-images/image35.png#lightbox)
+    [![The Document Picker View Controller is displayed.](document-picker-images/image35.png)](document-picker-images/image35.png#lightbox)
 1. The user taps on a **Document Folder** to display its contents:   
 
-    [![The Document Folder contents](document-picker-images/image36.png)](document-picker-images/image36.png#lightbox)
+    [![The Document Folder contents.](document-picker-images/image36.png)](document-picker-images/image36.png#lightbox)
 1. The user selects a **Document** and the **Document Picker** is closed.
 1. The main interface is redisplayed, the **Document** is loaded from the external Container and its contents displayed.
 
@@ -914,7 +914,7 @@ The actual display of the Document Picker View Controller depends on the Documen
 
 As discussed above, prior to iOS 8, an application could only access documents that were a part of its Application Container. In iOS 8 an application can access Documents from external sources:
 
- [![Managing External Documents overview](document-picker-images/image37.png)](document-picker-images/image37.png#lightbox)
+ [![Managing External Documents overview.](document-picker-images/image37.png)](document-picker-images/image37.png#lightbox)
 
 When the user selects a Document from an external source, a Reference Document is written to the Application Container that points to the original Document.
 
@@ -1005,10 +1005,10 @@ The Document Picker View Controller features two different modes of operation:
 
 1. **Open Mode** – In this mode, when the user selects and external Document, the Document Picker will create a Security Scoped Bookmark in the Application Container.   
 
-    [![A Security Scoped Bookmark in the Application Container](document-picker-images/image37.png)](document-picker-images/image37.png#lightbox)
+    [![A Security Scoped Bookmark in the Application Container.](document-picker-images/image37.png)](document-picker-images/image37.png#lightbox)
 1. **Import Mode** – In this mode, when the user selects and external Document, the Document Picker will not create a Bookmark, but instead, copy the file into a Temporary Location and provide the application access to the Document at this location:   
 
-    [![The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location](document-picker-images/image38.png)](document-picker-images/image38.png#lightbox)   
+    [![The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location.](document-picker-images/image38.png)](document-picker-images/image38.png#lightbox)   
  Once the application terminates for any reason, the Temporary Location is emptied and the file removed. If the application needs to maintain access to the file, it should make a copy and place it in its Application Container.
 
 The Open Mode is useful when the application wishes to collaborate with another application and share any changes made to the document with that application. The Import Mode is used when the application does not want to share its modifications to a Document with other applications.
@@ -1050,7 +1050,7 @@ This is implemented using two different extensions:
 
 The following diagram shows the typical data flow when working with Document Provider Extensions:
 
- [![This diagram shows the typical data flow when working with Document Provider Extensions](document-picker-images/image39.png)](document-picker-images/image39.png#lightbox)
+ [![This diagram shows the typical data flow when working with Document Provider Extensions.](document-picker-images/image39.png)](document-picker-images/image39.png#lightbox)
 
 The following process occurs:
 
@@ -1075,7 +1075,7 @@ For security purposes, iOS 8 has an Isolation Layer that persists the informatio
 
 The following diagram shows the data flow when working with Bookmarks and a Document Provider Extension:
 
- [![This diagram shows the data flow when working with Bookmarks and a Document Provider Extension](document-picker-images/image40.png)](document-picker-images/image40.png#lightbox)
+ [![This diagram shows the data flow when working with Bookmarks and a Document Provider Extension.](document-picker-images/image40.png)](document-picker-images/image40.png#lightbox)
 
 The following process occurs:
 

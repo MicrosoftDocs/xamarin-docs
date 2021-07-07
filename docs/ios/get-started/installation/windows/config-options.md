@@ -41,7 +41,7 @@ When an iOS project is open in Visual Studio 2019 or Visual Studio 2017, the iOS
 visible.  By default, it contains four buttons that are useful for
 Xamarin.iOS development:
 
-![Visual Studio 2019's iOS toolbar](config-options-images/ios-toolbar.png)
+![Visual Studio 2019's iOS toolbar.](config-options-images/ios-toolbar.png)
 
 - **Pair to Mac** – Opens the Pair to Mac dialog. Enabled when an iOS
   project is open in Visual Studio 2019 or Visual Studio 2017.
@@ -77,4 +77,4 @@ drop-down menu")
 With an iOS project open, the **Standard** and **iOS** toolbars should now 
 resemble the following screenshot:
 
-![Standard and iOS toolbars](config-options-images/toolbars.png "Standard and iOS toolbars")
+![Standard and iOS toolbars.](config-options-images/toolbars.png "Standard and iOS toolbars")

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # TabbedPage translucent tab bar on iOS
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific is used to set the translucency mode of the tab bar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). It's consumed in XAML by setting the `TabbedPage.TranslucencyMode` bindable property to a `TranslucencyMode` enumeration value:
 
@@ -44,7 +44,7 @@ In addition, the `GetTranslucencyMode` method can be used to retrieve the curren
 
 The result is that the translucency mode of the tab bar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) can be set:
 
-![Screenshot of translucent and opaque tab bars on iOS](tabbedpage-translucent-tabbar-images/translucencymodes.png "Translucent and opaque tab bars")
+![Screenshot of translucent and opaque tab bars on iOS.](tabbedpage-translucent-tabbar-images/translucencymodes.png "Translucent and opaque tab bars")
 
 ## Related links
 

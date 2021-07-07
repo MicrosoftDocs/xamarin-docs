@@ -23,7 +23,7 @@ used for C#.
 
 In Visual Studio for Mac choose **File > New Solution**. In the **New Project** dialog, select a project template. Use the drop-down to the right of the template to choose the language you wish to use:
 
- [![Use the drop-down to the right of the template to choose the language you wish to use](overview-images/choosefsharp.png)](overview-images/choosefsharp.png#lightbox)
+ [![Use the drop-down to the right of the template to choose the language you wish to use.](overview-images/choosefsharp.png)](overview-images/choosefsharp.png#lightbox)
 
 Select your project type and click **Next** to name and create it.
 
@@ -33,11 +33,11 @@ You are now ready to start creating some great F# applications!
 
 An F# tutorial can also be created from within the **New Solution** dialog in Visual Studio for Mac. Navigate to **Other > .NET > F# Tutorial**, as detailed in the image below:
 
- [![Navigate to Other / .NET / F# Tutorial](overview-images/fsharptutorial.png)](overview-images/fsharptutorial.png#lightbox)
+ [![Navigate to Other / .NET / F# Tutorial.](overview-images/fsharptutorial.png)](overview-images/fsharptutorial.png#lightbox)
 
 This opens a new interactive solution. Exploring this is a great way to get to grips with the basics of the language.
 
- [![Exploring this is a great way to get to grips with the basics of the language](overview-images/newtutorial-sml.png)](overview-images/newtutorial.png#lightbox)
+ [![Exploring this is a great way to get to grips with the basics of the language.](overview-images/newtutorial-sml.png)](overview-images/newtutorial.png#lightbox)
 
 Check out the [list of samples](~/cross-platform/platform/fsharp/samples.md) to see F# in action.
 

@@ -17,21 +17,21 @@ Xamarin.Mac sample apps and code demos to help you get started building mobile a
 
 :::row:::
     :::column:::
-[!["Hello, Mac"](images/hellomac.png)](/samples/xamarin/mac-samples/hello-mac/)
+[!["Hello, Mac."](images/hellomac.png)](/samples/xamarin/mac-samples/hello-mac/)
 
 ### [Hello, Mac](/samples/xamarin/mac-samples/hello-mac/)
 
 Hello World app to get started with Mac development.
     :::column-end:::
     :::column:::
-[!["MacControls"](images/controls.png)](/samples/xamarin/mac-samples/maccontrols/)
+[!["MacControls."](images/controls.png)](/samples/xamarin/mac-samples/maccontrols/)
 
 ### [MacControls](/samples/xamarin/mac-samples/maccontrols/)
 
 UI control examples for Mac apps.
     :::column-end:::
     :::column:::
-[!["MacImages"](images/images.png)](/samples/xamarin/mac-samples/macimages/)
+[!["MacImages."](images/images.png)](/samples/xamarin/mac-samples/macimages/)
 
 ### [MacImages](/samples/xamarin/mac-samples/macimages/)
 
@@ -41,7 +41,7 @@ UI control examples for Mac apps.
 
 :::row:::
     :::column:::
-[!["SourceWriter"](images/sourcewriter.png)](/samples/xamarin/mac-samples/sourcewriter/)
+[!["SourceWriter."](images/sourcewriter.png)](/samples/xamarin/mac-samples/sourcewriter/)
 
 ### [SourceWriter](/samples/xamarin/mac-samples/sourcewriter/)
 

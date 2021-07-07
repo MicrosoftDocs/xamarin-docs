@@ -12,7 +12,7 @@ ms.date: 08/21/2018
 
 This is the first part of a walkthrough that will create a Xamarin.Android app that targets an Android device in portrait orientation. This walkthrough will discuss how to create fragments in Xamarin.Android and how to add them to a sample.
 
-[![Walkthrough app screenshot](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
+[![Walkthrough app screenshot.](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 The following classes will be created for this app:
 
@@ -26,11 +26,11 @@ The following classes will be created for this app:
 Create a new Xamarin.Android project called **FragmentSample**.
 # [Visual Studio](#tab/windows)
 
-[![Create a new Xamarin.Android project](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[![Create a new Xamarin.Android project.](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Creating a new Xamarin.Android project](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[![Creating a new Xamarin.Android project.](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
 It is recommended to select **Modern Development** for this walkthrough.
 
@@ -80,11 +80,11 @@ The `PlayQuoteFragment` is an Android fragment that will display a quote for a S
 
 # [Visual Studio](#tab/windows)
 
-[![Add a new C# class](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
+[![Add a new C# class.](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Add a new C# class](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
+[![Add a new C# class.](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
 
 -----
 
@@ -136,11 +136,11 @@ Fragments must be hosted inside an Activity, so this app requires an Activity th
 
 # [Visual Studio](#tab/windows)
 
-[![Add Android Activity to project](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
+[![Add Android Activity to project.](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Add Android Activity to project](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
+[![Add Android Activity to project.](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
 
 -----
 
@@ -176,11 +176,11 @@ To get started, add a new fragment to the project and name it **TitlesFragment**
 
 # [Visual Studio](#tab/windows)
 
-[![Add Android fragment to project](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
+[![Add Android fragment to project.](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Add Android fragment to project](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
+[![Add Android fragment to project.](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
 
 -----
 

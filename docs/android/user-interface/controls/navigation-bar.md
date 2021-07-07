@@ -16,7 +16,7 @@ don't include hardware buttons for **Home**, **Back**, and **Menu**.
 The following screenshot shows the Navigation Bar from a Nexus Prime
 device:
 
- [![Example of an Android navigation bar](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
+ [![Example of an Android navigation bar.](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 Several new flags are available that control the visibility of the Navigation
 Bar and its controls, as well as the visibility of the System Bar that was
@@ -35,7 +35,7 @@ remove a view, any flags it has set will also be removed.
 The following example shows a simple application where clicking any of the
 buttons changes the `SystemUiVisibility`:
 
- [![Screenshots demonstrating Visible, Low Profile, and Hidden SystemUiVisibility](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Screenshots demonstrating Visible, Low Profile, and Hidden SystemUiVisibility.](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 The code to change the `SystemUiVisibility` sets the property on a
 `TextView` from each button's click event handler as shown below:

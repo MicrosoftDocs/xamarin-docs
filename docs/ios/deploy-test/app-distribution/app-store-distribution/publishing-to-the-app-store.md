@@ -139,7 +139,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
     After setting the options as described above, your build settings should
     look similar to this:
 
-    ![iOS Build settings](publishing-to-the-app-store-images/build-m157.png "iOS Build settings")
+    ![iOS Build settings.](publishing-to-the-app-store-images/build-m157.png "iOS Build settings")
 
     Also take a look at the [iOS build mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide, which further describes build settings.
 
@@ -150,7 +150,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
     Your project's bundle signing options should now look similar to this:
 
-    ![iOS Bundle Signing](publishing-to-the-app-store-images/bundleSigning-m157.png "iOS Bundle Signing")
+    ![iOS Bundle Signing.](publishing-to-the-app-store-images/bundleSigning-m157.png "iOS Bundle Signing")
 
 17. Click **OK** to save changes to the project properties.
 
@@ -174,7 +174,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
     After setting the options described above, your build settings should
     look similar to this:
 
-    ![iOS Build settings](publishing-to-the-app-store-images/build-w157.png "iOS Build settings")
+    ![iOS Build settings.](publishing-to-the-app-store-images/build-w157.png "iOS Build settings")
 
     Also take a look at the [iOS build mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide, which further describes build settings.
 
@@ -184,7 +184,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
     Your project's bundle signing options should now look similar to this:
 
-    ![iOS Bundle Signing settings](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
+    ![iOS Bundle Signing settings.](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
 
 14. Save the build configuration and close it.
 
@@ -208,7 +208,7 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
     After setting the options described above, your build settings should
     look similar to this:
 
-    ![iOS Build settings](publishing-to-the-app-store-images/build-w157.png "iOS Build settings")
+    ![iOS Build settings.](publishing-to-the-app-store-images/build-w157.png "iOS Build settings")
 
     Also take a look at the [iOS build mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide, which further describes build settings.
 
@@ -252,7 +252,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 
 1. In Visual Studio for Mac, select the **Release** build configuration and a device (not a simulator) for which to build.
 
-    ![Build configuration and platform selection](publishing-to-the-app-store-images/chooseConfig-m157.png "Build configuration and platform selection")
+    ![Build configuration and platform selection.](publishing-to-the-app-store-images/chooseConfig-m157.png "Build configuration and platform selection")
 
 2. From the **Build** menu, select **Archive for Publishing**.
 3. Once the archive has been created, the **Archives** view will be displayed. Click **Sign and Distribute...** to open the publishing wizard.
@@ -326,7 +326,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Select **Release** from the Visual Studio 2017 **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown.
 
-    ![Build configuration and platform selection](publishing-to-the-app-store-images/chooseConfig-w157.png "Build configuration and platform selection")
+    ![Build configuration and platform selection.](publishing-to-the-app-store-images/chooseConfig-w157.png "Build configuration and platform selection")
 
 3. Build the project. This creates an .ipa file.
 
@@ -352,16 +352,16 @@ With your build settings properly configured and iTunes Connect awaiting your su
 7. Log in to Application Loader (note that you must [create an app-specific password](https://support.apple.com/ht204397) for your Apple ID).
 8. Select **Deliver Your App** and click the **Choose** button:
 
-    ![Select Deliver Your App](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
+    ![Select Deliver Your App.](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
 
 9. Select the .ipa file created above and click **OK**.
 10. The Application Loader will validate the file:
 
-    ![The validation screen](publishing-to-the-app-store-images/publishvs02.png "The validation screen")
+    ![The validation screen.](publishing-to-the-app-store-images/publishvs02.png "The validation screen")
 
 11. Click the **Next** button and the application will be validated against the App Store:
 
-    ![Validating against the App Store](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")
+    ![Validating against the App Store.](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")
 
 12. Click the **Send** button to send the application to Apple for review.
 13. The Application Loader will inform you when the file has been successfully uploaded.
@@ -382,7 +382,7 @@ To see the status of your app submission, log in to iTunes Connect and
 select your app. The initial status should be **Waiting For Review**,
 though it may temporarily read **Upload Received** while it is being processed.
 
-![Waiting For Review](publishing-to-the-app-store-images/image21.png "Waiting For Review")
+![Waiting For Review.](publishing-to-the-app-store-images/image21.png "Waiting For Review")
 
 ## Tips and tricks
 

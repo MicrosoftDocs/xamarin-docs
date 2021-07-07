@@ -22,13 +22,13 @@ website.
 To build an app for deployment directly to users (NOT via the Mac App
 Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit the **Release** configuration.
 
- [![The Mac Signing options](signing-images/config02.png)](signing-images/config02.png#lightbox)
+ [![The Mac Signing options.](signing-images/config02.png)](signing-images/config02.png#lightbox)
 
 ## Build
 
 Before building, ensure to selected the correct configuration and select to create an install package in the **Mac Build** settings:
 
-[![The build options](signing-images/config03.png)](signing-images/config03.png#lightbox)
+[![The build options.](signing-images/config03.png)](signing-images/config03.png#lightbox)
 
 When building the app, the developer will be prompted to use both certificates:
 
@@ -40,7 +40,7 @@ After the application has been built, the developer can right-click on the proje
 installer for the application, so it can be distributed to any macOS user
 for installation.
 
- [![Selecting the app package in Finder](signing-images/image59.png)](signing-images/image59.png#lightbox)
+ [![Selecting the app package in Finder.](signing-images/image59.png)](signing-images/image59.png#lightbox)
 
 ## Related links
 

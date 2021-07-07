@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CheckBox
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
 The Xamarin.Forms `CheckBox` is a type of button that can either be checked or empty. When a checkbox is checked, it's considered to be on. When a checkbox is empty, it's considered to be off.
 
@@ -33,7 +33,7 @@ The following example shows how to instantiate a `CheckBox` in XAML:
 
 This XAML results in the appearance shown in the following screenshots:
 
-![Screenshot of an empty Checkbox, on iOS and Android](checkbox-images/checkbox-empty.png "Empty CheckBox")
+![Screenshot of an empty Checkbox, on iOS and Android.](checkbox-images/checkbox-empty.png "Empty CheckBox")
 
 By default, the `CheckBox` is empty. The `CheckBox` can be checked by user manipulation, or by setting the `IsChecked` property to `true`:
 
@@ -43,7 +43,7 @@ By default, the `CheckBox` is empty. The `CheckBox` can be checked by user manip
 
 This XAML results in the appearance shown in the following screenshots:
 
-![Screenshot of a checked Checkbox, on iOS and Android](checkbox-images/checkbox-checked.png "Checked CheckBox")
+![Screenshot of a checked Checkbox, on iOS and Android.](checkbox-images/checkbox-checked.png "Checked CheckBox")
 
 Alternatively, a `CheckBox` can be created in code:
 
@@ -104,7 +104,7 @@ In this example, the [`Label`](xref:Xamarin.Forms.Label) uses a binding expressi
 
 In the following screenshots, the iOS screenshot shows the [`Label`](xref:Xamarin.Forms.Label) formatting when the `CheckBox` is empty, while the Android screenshot shows the `Label` formatting when the `CheckBox` is checked:
 
-[![Screenshot of a data bound CheckBox, on iOS and Android](checkbox-images/checkbox-databinding.png "Data bound CheckBox")](checkbox-images/checkbox-databinding-large.png#lightbox "Data bound CheckBox")
+[![Screenshot of a data bound CheckBox, on iOS and Android](checkbox-images/checkbox-databinding.png "Data bound CheckBox."](checkbox-images/checkbox-databinding-large.png#lightbox "Data bound CheckBox")
 
 For more information about triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
@@ -122,7 +122,7 @@ In addition to the properties that `CheckBox` inherits from the [`View`](xref:Xa
 
 The following screenshots show a series of checked `CheckBox` objects, where each object has its `Color` property set to a different [`Color`](xref:Xamarin.Forms.Color):
 
-![Screenshot of colored CheckBoxes, on iOS and Android](checkbox-images/checkbox-colors.png "Colored CheckBox")
+![Screenshot of colored CheckBoxes, on iOS and Android.](checkbox-images/checkbox-colors.png "Colored CheckBox")
 
 ## CheckBox visual states
 

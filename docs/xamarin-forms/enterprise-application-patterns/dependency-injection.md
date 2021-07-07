@@ -58,7 +58,7 @@ There are many dependency injection containers available, with the eShopOnContai
 
 In TinyIoC, the `TinyIoCContainer` type provides the dependency injection container. Figure 3-1 shows the dependencies when using this container, which instantiates an `IOrderService` object and injects it into the `ProfileViewModel` class.
 
-![Dependencies example when using dependency injection](dependency-injection-images/dependencyinjection.png)
+![Dependencies example when using dependency injection.](dependency-injection-images/dependencyinjection.png)
 
 **Figure 3-1:** Dependencies when using dependency injection
 

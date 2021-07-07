@@ -39,7 +39,7 @@ the device drop-down menu. For example, in the following Visual Studio
 
 - **VisualStudio\_android-23\_x86\_tablet** 
 
-[![Virtual devices](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
+[![Virtual devices.](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
 
 Typically, you would select the **VisualStudio\_android-23\_x86\_phone**
 virtual device to test and debug a phone app. If one of these
@@ -56,7 +56,7 @@ example, the following project has a Target Framework set to **Android
 7.1 Nougat (API 25)**, which is incompatible with the **Android 6.0**
 virtual devices that are listed in this example:
 
-[![Incompatible virtual device](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
+[![Incompatible virtual device.](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
 
 You can click **Change Minimum Android Target** to change the project's
 Minimum Android Version so that it matches the API level of the
@@ -77,7 +77,7 @@ screenshot, two pre-configured virtual devices are available:
 
 - **Android\_ARMv7a**
 
-[![Virtual devices](debug-on-emulator-images/mac/01-virtual-devices-sml.png)](debug-on-emulator-images/mac/01-virtual-devices.png#lightbox)
+[![Virtual devices.](debug-on-emulator-images/mac/01-virtual-devices-sml.png)](debug-on-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 Typically, you would select the **Android\_Accelerated\_x86**
 virtual device to test and debug a phone app. If this
@@ -109,11 +109,11 @@ the Play button to run the application:
 
 # [Visual Studio](#tab/windows)
 
-[![Debug and Release modes, Play button](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
+[![Debug and Release modes, Play button.](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Debug and Release modes, Play button](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
+[![Debug and Release modes, Play button.](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 
@@ -123,7 +123,7 @@ image. An example screenshot of the Android Emulator is displayed
 below. In this example, the emulator is running a blank app called
 **MyApp**:
 
-![Emulator running a blank app](debug-on-emulator-images/emulator-running.png)
+![Emulator running a blank app.](debug-on-emulator-images/emulator-running.png)
 
 The emulator may be left running: it is not necessary to shut it down
 and wait for it to restart each time the app is launched. The first
@@ -154,17 +154,17 @@ installed, the Quick Boot feature is enabled by default.
 The first cold boot of the virtual device takes place without a speed
 improvement because a snapshot has not yet been created:
 
-![Cold Boot screenshot](debug-on-emulator-images/cold-boot.png)
+![Cold Boot screenshot.](debug-on-emulator-images/cold-boot.png)
 
 When you exit out of the emulator, Quick Boot saves the state of
 the emulator in a snapshot:
 
-![Saving state on shutdown](debug-on-emulator-images/saving-state.png)
+![Saving state on shutdown.](debug-on-emulator-images/saving-state.png)
 
 Subsequent virtual device starts are much faster because the emulator
 simply restores the state at which you closed the emulator.
 
-![Loading state on restart](debug-on-emulator-images/loading-state.png)
+![Loading state on restart.](debug-on-emulator-images/loading-state.png)
 
 ## Troubleshooting
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line text input. The `Entry`, like the [`Editor`](xref:Xamarin.Forms.Editor) view, supports multiple keyboard types. Additionally, the `Entry` can be used as a password field.
 
@@ -143,7 +143,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![Entry IsPassword Example](entry-images/password.png)
+![Entry IsPassword Example.](entry-images/password.png)
 
 Placeholders may be used with instances of `Entry` that are configured as password fields:
 
@@ -159,7 +159,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![Entry IsPassword and Placeholder Example](entry-images/passwordplaceholder.png)
+![Entry IsPassword and Placeholder Example.](entry-images/passwordplaceholder.png)
 
 ## Set the cursor position and text selection length
 
@@ -209,7 +209,7 @@ var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearBut
 
 The following screenshots show an [`Entry`](xref:Xamarin.Forms.Entry) with the clear button enabled:
 
-![Screenshot of an Entry with a clear button, on iOS and Android](entry-images/entry-clear-button.png)
+![Screenshot of an Entry with a clear button, on iOS and Android.](entry-images/entry-clear-button.png)
 
 ## Customize the keyboard
 
@@ -356,7 +356,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![Entry TextColor Example](entry-images/textcolor.png)
+![Entry TextColor Example.](entry-images/textcolor.png)
 
 Note that the placeholder is not affected by the specified `TextColor`.
 
@@ -373,7 +373,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![Entry BackgroundColor Example](entry-images/textbackgroundcolor.png)
+![Entry BackgroundColor Example.](entry-images/textbackgroundcolor.png)
 
 Be careful to make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 

@@ -22,11 +22,11 @@ references to your Android project, as shown here:
 
 # [Visual Studio](#tab/windows) 
 
-![Android references in Visual Studio](using-adonet-images/image7.png "Android references in Visual Studio") 
+![Android references in Visual Studio.](using-adonet-images/image7.png "Android references in Visual Studio") 
 
 # [Visual Studio for Mac](#tab/macos) 
 
-![Android references in Visual Studio for Mac](using-adonet-images/image5.png "Android references in Visual Studio for Mac") 
+![Android references in Visual Studio for Mac.](using-adonet-images/image5.png "Android references in Visual Studio for Mac") 
 
 -----
 
@@ -88,7 +88,7 @@ error table [Items] already exists**.
 The *DataAccess_Basic* sample code for this document looks like this
 when running on Android:
 
-![Android ADO.NET sample](using-adonet-images/image8.png "Android ADO.NET sample")
+![Android ADO.NET sample.](using-adonet-images/image8.png "Android ADO.NET sample")
 
 The code below illustrates how to perform simple SQLite operations and
 shows the results in as text in the application's main window.

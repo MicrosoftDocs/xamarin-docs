@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # NavigationPage Bar Height on Android
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific sets the height of the navigation bar on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). It's consumed in XAML by setting the [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) bindable property to an integer value:
 
@@ -44,7 +44,7 @@ The `NavigationPage.On<Android>` method specifies that this platform-specific wi
 
 The result is that the height of the navigation bar on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) can be set:
 
-![NavigationPage navigation bar height](navigationpage-bar-height-images/navigationpage-barheight.png)
+![NavigationPage navigation bar height.](navigationpage-bar-height-images/navigationpage-barheight.png)
 
 ## Related links
 

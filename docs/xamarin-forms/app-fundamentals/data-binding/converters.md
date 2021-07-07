@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Binding Value Converters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Data bindings usually transfer data from a source property to a target property, and in some cases from the target property to the source property. This transfer is straightforward when the source and target properties are of the same type, or when one type can be converted to the other type through an implicit conversion. When that is not the case, a type conversion must take place.
 
@@ -93,7 +93,7 @@ If a value converter is used in multiple pages of your application, you can inst
 
 The **Enable Buttons** page demonstrates a common need when a `Button` performs an operation based on text that the user types into an `Entry` view. If nothing has been typed into the `Entry`, the `Button` should be disabled. Each `Button` contains a data binding on its `IsEnabled` property. The data-binding source is the `Length` property of the `Text` property of the corresponding `Entry`. If that `Length` property is not 0, the value converter returns `true` and the `Button` is enabled:
 
-[![Enable Buttons](converters-images/enablebuttons-small.png "Enable Buttons")](converters-images/enablebuttons-large.png#lightbox "Enable Buttons")
+[![Enable Buttons](converters-images/enablebuttons-small.png "Enable Buttons."](converters-images/enablebuttons-large.png#lightbox "Enable Buttons")
 
 Notice that the `Text` property in each `Entry` is initialized to an empty string. The `Text` property is `null` by default, and the data binding will not work in that case.
 
@@ -234,7 +234,7 @@ The **Switch Indicators** page demonstrates how it can be used to display the va
 
 In the last of the three `Switch` and `Label` pairs, the generic argument is set to `Style`, and entire `Style` objects are provided for the values of `TrueObject` and `FalseObject`. These override the implicit style for `Label` set in the resource dictionary, so the properties in that style are explicitly assigned to the `Label`. Toggling the `Switch` causes the corresponding `Label` to reflect the change:
 
-[![Switch Indicators](converters-images/switchindicators-small.png "Switch Indicators")](converters-images/switchindicators-large.png#lightbox "Switch Indicators")
+[![Switch Indicators](converters-images/switchindicators-small.png "Switch Indicators."](converters-images/switchindicators-large.png#lightbox "Switch Indicators")
 
 It's also possible to use [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) to implement similar changes in the user-interface based on other views.
 
@@ -458,7 +458,7 @@ The values of the `Red` and `Green` properties are displayed with a `Binding` ma
 
 Here's the result:
 
-[![RGB Color Selector](converters-images/rgbcolorselector-small.png "RGB Color Selector")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
+[![RGB Color Selector](converters-images/rgbcolorselector-small.png "RGB Color Selector."](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
 
 ## Related Links
 

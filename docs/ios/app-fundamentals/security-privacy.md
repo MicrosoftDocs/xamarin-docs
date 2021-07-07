@@ -65,7 +65,7 @@ For more information on working with **Info.plist** keys, please see Apple's [In
 
 Take the following example of accessing HomeKit on iOS 10 (and greater), the developer will need to add the `NSHomeKitUsageDescription` key to the app's **Info.plist** file and provide a string declaring why the app wants to access the user's HomeKit database. This string will be presented to the user the first time they run the app:
 
-![An example NSHomeKitUsageDescription alert](security-privacy-images/info01.png "An example NSHomeKitUsageDescription alert")
+![An example NSHomeKitUsageDescription alert.](security-privacy-images/info01.png "An example NSHomeKitUsageDescription alert")
 
 # [Visual Studio](#tab/windows)
 
@@ -74,15 +74,15 @@ Xamarin.iOS for Visual Studio currently doesn't support editing the **Info.plist
 1. Right-click on the **Info.plist** file in the **Solution Explorer** and select **Open with...**.
 2. Select the **Generic PList Editor** from the list of programs to open the file, then click **OK**.
 
-    ![Select the Generic PList Editor](security-privacy-images/InfoEditorSelectionVs.png "Select the Generic PList Editor")
+    ![Select the Generic PList Editor.](security-privacy-images/InfoEditorSelectionVs.png "Select the Generic PList Editor")
 3. Click the **+** button on the last row in the editor to add a new entry to the list. This will be called "Custom Property", with the Type set to `String` and an empty value.
 4. Click the property name, and a dropdown will appear.
 5. From the dropdown list, select a Privacy key (such as **Privacy - HomeKit Usage Description**): 
 
-    ![Select a Privacy key](security-privacy-images/InfoPListEditorSelectKey.png "Select a Privacy key")
+    ![Select a Privacy key.](security-privacy-images/InfoPListEditorSelectKey.png "Select a Privacy key")
 6. Enter a description into the Value column for why the app wants to access the given feature or user information: 
 
-    ![Enter a description](security-privacy-images/InfoPListSetValue.png "Enter a description")
+    ![Enter a description.](security-privacy-images/InfoPListSetValue.png "Enter a description")
 7. Save the changes to the file.
 
 # [Visual Studio for Mac](#tab/macos)
@@ -94,10 +94,10 @@ To set any of the Privacy keys, do the following:
 3. Add a new **Entry** to the list.
 4. From the dropdown list, select a Privacy key (such as **Privacy - HomeKit Usage Description**): 
 
-    ![Select a Privacy key](security-privacy-images/info02.png "Select a Privacy key")
+    ![Select a Privacy key.](security-privacy-images/info02.png "Select a Privacy key")
 5. Enter a description for why the app wants to access the given feature or user information: 
 
-    ![Enter a description](security-privacy-images/info03.png "Enter a description")
+    ![Enter a description.](security-privacy-images/info03.png "Enter a description")
 6. Save the changes to the file.
 
 -----

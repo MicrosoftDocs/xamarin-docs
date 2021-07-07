@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing a ContentPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -20,7 +20,7 @@ Every Xamarin.Forms control has an accompanying renderer for each platform that 
 
 The following diagram illustrates the relationship between the [`ContentPage`](xref:Xamarin.Forms.ContentPage) and the corresponding native controls that implement it:
 
-![Relationship Between ContentPage Class and Implementing Native Controls](contentpage-images/contentpage-classes.png)
+![Relationship Between ContentPage Class and Implementing Native Controls.](contentpage-images/contentpage-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) on each platform. The process for doing this is as follows:
 
@@ -95,11 +95,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationship between them:
 
-![CameraPage Custom Renderer Project Responsibilities](contentpage-images/solution-structure.png)
+![CameraPage Custom Renderer Project Responsibilities.](contentpage-images/solution-structure.png)
 
 The `CameraPage` instance is rendered by platform-specific `CameraPageRenderer` classes, which all derive from the `PageRenderer` class for that platform. This results in each `CameraPage` instance being rendered with a live camera feed, as shown in the following screenshots:
 
-![CameraPage on each Platform](contentpage-images/screenshots.png)
+![CameraPage on each Platform.](contentpage-images/screenshots.png)
 
 The `PageRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms page is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `CameraPage` instance.
 

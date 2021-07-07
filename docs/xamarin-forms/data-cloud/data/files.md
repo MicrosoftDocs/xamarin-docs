@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # File Handling in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources._
 
@@ -52,7 +52,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 These operations are demonstrated in the sample app, which includes a page that saves and loads text:
 
-[![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
+[![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App."](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
 
 ## Loading Files Embedded as Resources
 
@@ -60,11 +60,11 @@ To embed a file into a **.NET Standard** assembly, create or add a file and ensu
 
 # [Visual Studio](#tab/windows)
 
-[![Configuring embedded resource build action](files-images/vs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
+[![Configuring embedded resource build action](files-images/vs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction."](files-images/vs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Text file embedded in .NET standard library, configuring embedded resource build action](files-images/xs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
+[![Text file embedded in .NET standard library, configuring embedded resource build action](files-images/xs-embeddedresource-sml.png "Setting EmbeddedResource BuildAction."](files-images/xs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 -----
 
@@ -82,7 +82,7 @@ using (var reader = new System.IO.StreamReader (stream))
 
 The `text` variable can then be used to display the text or otherwise use it in code. This screenshot of the [sample app](/samples/xamarin/xamarin-forms-samples/workingwithfiles) shows the text rendered in a `Label` control.
 
- [![Text file embedded in .NET standard library](files-images/pcltext-sml.png "Embedded Text File in .NET Standard Library Displayed in App")](files-images/pcltext.png#lightbox "Embedded Text File in .NET Standard Library Displayed in App")
+ [![Text file embedded in .NET standard library](files-images/pcltext-sml.png "Embedded Text File in .NET Standard Library Displayed in App."](files-images/pcltext.png#lightbox "Embedded Text File in .NET Standard Library Displayed in App")
 
 Loading and deserializing an XML is equally simple. The following code shows an XML file being loaded and deserialized from a resource, then bound to a `ListView` for display. The XML file contains an array of `Monkey` objects (the class is defined in the sample code).
 
@@ -98,7 +98,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Xml file embedded in .NET standard library, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in .NET standard library Displayed in ListView")](files-images/pclxml.png#lightbox "Embedded XML File in .NET standard library Displayed in ListView")
+ [![Xml file embedded in .NET standard library, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in .NET standard library Displayed in ListView."](files-images/pclxml.png#lightbox "Embedded XML File in .NET standard library Displayed in ListView")
 
 ## Embedding in Shared Projects
 

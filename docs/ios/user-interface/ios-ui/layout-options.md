@@ -47,7 +47,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 To test the Autosizing settings, enable different **Supported Device Orientations** in the 
 project’s options:
 
- [![Autosizing Settings](layout-options-images/image43a.png)](layout-options-images/image43a.png#lightbox)
+ [![Autosizing Settings.](layout-options-images/image43a.png)](layout-options-images/image43a.png#lightbox)
 
 In the code behind we can use the following code, which causes the two text controls to resize horizontally:
 
@@ -60,7 +60,7 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 We can also adjust the controls using the Designer. Selecting the struts as exhibited below will cause the image to stay 
 right-aligned without being clipped off the bottom of the view:
 
- [![Screenshot shows the Autosizing control with left and bottom selected. ](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
+ [![Screenshot shows the Autosizing control with left and bottom selected.](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
 
 These screenshots show how the controls resize or reposition themselves when the screen is rotated:
 

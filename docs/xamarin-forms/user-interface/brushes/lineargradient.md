@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Brushes: Linear gradients
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 The `LinearGradientBrush` class derives from the `GradientBrush` class, and paints an area with a linear gradient, which blends two or more colors along a line known as the gradient axis. `GradientStop` objects are used to specify the colors in the gradient and their positions. For more information about `GradientStop` objects, see [Xamarin.Forms Brushes: Gradients](gradient.md).
 
@@ -34,7 +34,7 @@ A linear gradient brush's gradient stops are positioned along the gradient axis.
 
 The `StartPoint` and `EndPoint` properties are relative to the area being painted. (0,0) represents the top-left corner of the area being painted, and (1,1) represents the bottom-right corner of the area being painted. The following diagram shows the gradient axis for a diagonal linear gradient brush:
 
-![Frame with a diagonal gradient axis](lineargradient-images/gradient-axis.png)
+![Frame with a diagonal gradient axis.](lineargradient-images/gradient-axis.png)
 
 In this diagram, the dashed line shows the gradient axis, which highlights the interpolation path of the gradient from the start point to the end point.
 
@@ -64,7 +64,7 @@ The following XAML example shows a horizontal `LinearGradientBrush` that's set a
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `LinearGradientBrush` that interpolates from yellow to green horizontally:
 
-![Frame painted with a horizontal LinearGradientBrush](lineargradient-images/horizontal.png)
+![Frame painted with a horizontal LinearGradientBrush.](lineargradient-images/horizontal.png)
 
 ### Create a vertical linear gradient
 
@@ -92,7 +92,7 @@ The following XAML example shows a vertical `LinearGradientBrush` that's set as 
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `LinearGradientBrush` that interpolates from yellow to green vertically:
 
-![Frame painted with a vertical LinearGradientBrush](lineargradient-images/vertical.png)
+![Frame painted with a vertical LinearGradientBrush.](lineargradient-images/vertical.png)
 
 ### Create a diagonal linear gradient
 
@@ -121,7 +121,7 @@ The following XAML example shows a diagonal `LinearGradientBrush` that's set as 
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `LinearGradientBrush` that interpolates from yellow to green diagonally:
 
-![Frame painted with a diagonal LinearGradientBrush](lineargradient-images/diagonal.png)
+![Frame painted with a diagonal LinearGradientBrush.](lineargradient-images/diagonal.png)
 
 ## Related links
 

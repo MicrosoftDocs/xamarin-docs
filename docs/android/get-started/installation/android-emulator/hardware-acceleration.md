@@ -102,7 +102,7 @@ to support the Windows Hypervisor Platform:
       section.
   4. Verify that the **Version** is at least 1803:
 
-      [![Windows specifications](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
+      [![Windows specifications.](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
 To verify that your computer hardware and software is compatible with
 Hyper-V, open a command prompt and type the following command:
@@ -114,7 +114,7 @@ systeminfo
 If all listed Hyper-V requirements have a value of **Yes**, then your
 computer can support Hyper-V. For example:
 
-[![Example systeminfo output](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
+[![Example systeminfo output.](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
 ### Enabling Hyper-V acceleration
 
@@ -126,7 +126,7 @@ to accelerate the Android emulator with Hyper-V:
    **Windows Features** dialog, enable both **Hyper-V** and **Windows
    Hypervisor Platform**:
 
-    [![Enabling Hyper-V and Windows Hypervisor Platform](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
+    [![Enabling Hyper-V and Windows Hypervisor Platform.](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
 
    After making these changes, reboot your computer.
    
@@ -146,7 +146,7 @@ to accelerate the Android emulator with Hyper-V:
    the Android emulator version is at least 27.2.7. Also ensure that
    the Android SDK Tools version is 26.1.1 or later:
 
-    [![Android SDKs and Tools dialog](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
+    [![Android SDKs and Tools dialog.](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
@@ -180,7 +180,7 @@ following steps:
    you should see output listing the `intelhaxm` state as `RUNNING`. For
    example:
 
-    ![Output from sc query command when HAXM is available](hardware-acceleration-images/win/05-sc_query-w158.png)
+    ![Output from sc query command when HAXM is available.](hardware-acceleration-images/win/05-sc_query-w158.png)
 
    If `STATE` is not set to `RUNNING`, then HAXM is not installed.
 
@@ -204,7 +204,7 @@ page. Use the following steps to download and install HAXM:
 2. Run **intelhaxm-android.exe** to start the HAXM installer. Accept
    the default values in the installer dialogs:
 
-   ![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/win/06-haxm-installer.png)
+   ![Intel Hardware Accelerated Execution Manager Setup window.](hardware-acceleration-images/win/06-haxm-installer.png)
 
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
@@ -339,7 +339,7 @@ page. Use the following steps to download and install HAXM:
 
 2. Run the HAXM installer. Accept the default values in the installer dialogs:
 
-   [![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
+   [![Intel Hardware Accelerated Execution Manager Setup window.](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
 ## Troubleshooting
 

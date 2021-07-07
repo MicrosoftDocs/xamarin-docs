@@ -64,7 +64,7 @@ OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 
 A typical Layout Constraint can be expressed simply as a linear expression. Take the following example:
 
-[![A Layout Constraint expressed as a linear expression](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![A Layout Constraint expressed as a linear expression.](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 Which would be converted to the following line of C# code using Layout Anchors:
 

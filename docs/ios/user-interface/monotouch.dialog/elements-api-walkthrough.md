@@ -20,7 +20,7 @@ will be added to the table for the task. Selecting the row will navigate to the
 detail screen that allows us to update the task description and the due date, as
 illustrated below:
 
-[![Selecting the row will navigate to the detail screen that allows us to update the task description and the due date](elements-api-walkthrough-images/01-task-list-app.png)](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+[![Selecting the row will navigate to the detail screen that allows us to update the task description and the due date.](elements-api-walkthrough-images/01-task-list-app.png)](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
 ## Setting up MT.D
 
@@ -79,7 +79,7 @@ with the string “To Do List,” which serves as the title in the navigation
 controller’s navigation bar. At this point, running the application would
 present the screen shown below:
 
- [![Running the application will present the screen shown here](elements-api-walkthrough-images/02-to-do-list-screen-.png)](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
+ [![Running the application will present the screen shown here.](elements-api-walkthrough-images/02-to-do-list-screen-.png)](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 Let’s see how to use MonoTouch.Dialog’s hierarchical structure of `Sections` and `Elements` to add more screens.
 
@@ -156,13 +156,13 @@ The task detail screen itself is composed of two sections; each of these
 sections contains a single element. The first element is created from an `EntryElement` to provide an editable row for the task’s `Description` property. When the element is selected, a keyboard for
 text editing is presented as shown below:
 
- [![When the element is selected, a keyboard for text editing is presented as shown](elements-api-walkthrough-images/03-create-task.png)](elements-api-walkthrough-images/03-create-task.png#lightbox)
+ [![When the element is selected, a keyboard for text editing is presented as shown.](elements-api-walkthrough-images/03-create-task.png)](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 The second section contains a `DateElement` that lets us manage
 the task’s `DueDate` property. Selecting the date automatically
 loads a date picker as shown:
 
- [![Selecting the date automatically loads a date picker as](elements-api-walkthrough-images/04-date-picker.png)](elements-api-walkthrough-images/04-date-picker.png#lightbox)
+ [![Selecting the date automatically loads a date picker as.](elements-api-walkthrough-images/04-date-picker.png)](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 In both the `EntryElement` and `DateElement` cases (or
 for any data-entry element in MonoTouch.Dialog), any changes to the values are

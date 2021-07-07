@@ -25,7 +25,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS remote simulator or Android emulator:
 
-    [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows")](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
+    [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows."](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
 
     In Visual Studio, stop the application.
 
@@ -58,7 +58,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows")](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
+    [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows."](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
 
     In Visual Studio for Mac, stop the application.
 

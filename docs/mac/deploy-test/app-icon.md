@@ -19,7 +19,7 @@ When working with C# and .NET in a Xamarin.Mac application, a developer has acce
 
 A great Icon should convey the main purpose of a Xamarin.Mac app and hint experience the user should expect when using the app. This article covers all of the steps necessary to create the Image Assets required for an Icon, packaging those assets into a `AppIcon.appiconset` file and consuming that file in a Xamarin.Mac app.
 
-![The AppIcon.appiconset editor](app-icon-images/intro01.png "The AppIcon.appiconset editor")
+![The AppIcon.appiconset editor.](app-icon-images/intro01.png "The AppIcon.appiconset editor")
 
 ## Application icon
 
@@ -75,10 +75,10 @@ Do the following:
 
 1. In the **Solution Pad**, open **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Editing the AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
+    ![Editing the AppIcon.appiconset.](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
 2. For each icon size required, click the icon and select the corresponding image file that were created above: 
 
-    [![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
+    [![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image."](app-icon-images/intro02-large.png#lightbox)
 3. Save your changes.
 
 ## Using the icon
@@ -90,12 +90,12 @@ Do the following:
 1. Double-click the **Info.plist** in the **Solution Pad** to open the **Project Options**.
 2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcon.appiconset` file: 
 
-    [![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
+    [![Setting the icon set](app-icon-images/icon01.png "Setting the icon set."](app-icon-images/icon01-large.png#lightbox)
 3. Save the changes.
 
 When the app is run, the new icon will be displayed in the dock:
 
-![An example of an app icon in the macOS dock](app-icon-images/icon04.png "An example of an app icon in the macOS dock")
+![An example of an app icon in the macOS dock.](app-icon-images/icon04.png "An example of an app icon in the macOS dock")
 
 ## Summary
 

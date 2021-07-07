@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 4. Scrolling the stack
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
+[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -102,7 +102,7 @@ Often, you'll set the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthReq
 
 You can use several instances of `StackLayout` to combine a `BoxView` and several `Label` instances in a `Frame` to display a particular color, and then put each of these views in a `StackLayout` in a `ScrollView` to create the attractive list of colors shown in the [**ColorBlocks**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) sample:
 
-[![Triple screenshot of color blocks](images/ch04fg11-small.png "List of Colors")](images/ch04fg11-large.png#lightbox "List of Colors")
+[![Triple screenshot of color blocks](images/ch04fg11-small.png "List of Colors."](images/ch04fg11-large.png#lightbox "List of Colors")
 
 ## A ScrollView in a StackLayout?
 

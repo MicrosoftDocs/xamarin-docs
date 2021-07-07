@@ -12,47 +12,47 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Porter-Duff blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The Porter-Duff blend modes are named after Thomas Porter and Tom Duff, who developed an algebra of compositing while working for Lucasfilm. Their paper [_Compositing Digital Images_](https://graphics.pixar.com/library/Compositing/paper.pdf) was published in the July 1984 issue of _Computer Graphics_, pages 253 to 259. These blend modes are essential for compositing, which is assembling various images into a composite scene:
 
-![Porter-Duff Sample](porter-duff-images/PorterDuffSample.png "Porter-Duff Sample")
+![Porter-Duff Sample.](porter-duff-images/PorterDuffSample.png "Porter-Duff Sample")
 
 ## Porter-Duff concepts
 
 Suppose a brownish rectangle occupies the left and top two-thirds of your display surface:
 
-![Porter-Duff Destination](porter-duff-images/PorterDuffDst.png "Porter-Duff Destination")
+![Porter-Duff Destination.](porter-duff-images/PorterDuffDst.png "Porter-Duff Destination")
 
 This area is called the _destination_ or sometimes the _background_ or _backdrop_.
 
 You wish to draw the following rectangle, which is the same size of the destination. The rectangle is transparent except for a bluish area that occupies the right and bottom two-thirds:
 
-![Porter-Duff Source](porter-duff-images/PorterDuffSrc.png "Porter-Duff Source")
+![Porter-Duff Source.](porter-duff-images/PorterDuffSrc.png "Porter-Duff Source")
 
 This is called the _source_ or sometimes the _foreground_.
 
 When you display the source on the destination, here's what you expect:
 
-![Porter-Duff Source Over](porter-duff-images/PorterDuffSrcOver.png "Porter-Duff Source Over")
+![Porter-Duff Source Over.](porter-duff-images/PorterDuffSrcOver.png "Porter-Duff Source Over")
 
 The transparent pixels of the source allow the background to show through, while the bluish source pixels obscure the background. That's the normal case, and it is referred to in SkiaSharp as `SKBlendMode.SrcOver`. That value is the default setting of the `BlendMode` property when an `SKPaint` object is first instantiated.
 
 However, it's possible to specify a different blend mode for a different effect. If you specify `SKBlendMode.DstOver`, then in the area where the source and destination intersect, the destination appears instead of the source:
 
-![Porter-Duff Destination Over](porter-duff-images/PorterDuffDstOver.png "Porter-Duff Destination Over")
+![Porter-Duff Destination Over.](porter-duff-images/PorterDuffDstOver.png "Porter-Duff Destination Over")
 
 The `SKBlendMode.DstIn` blend mode displays only the area where the destination and source intersect using the destination color:
 
-![Porter-Duff Destination In](porter-duff-images/PorterDuffDstIn.png "Porter-Duff Destination In")
+![Porter-Duff Destination In.](porter-duff-images/PorterDuffDstIn.png "Porter-Duff Destination In")
 
 The blend mode of `SKBlendMode.Xor` (exclusive OR) causes nothing to appear where the two areas overlap:
 
-![Porter-Duff Exclusive Or](porter-duff-images/PorterDuffXor.png "Porter-Duff Exclusive Or")
+![Porter-Duff Exclusive Or.](porter-duff-images/PorterDuffXor.png "Porter-Duff Exclusive Or")
 
 The colored destination and source rectangles effectively divide the display surface into four unique areas that can be colored in various ways corresponding to the presence of the destination and source rectangles:
 
-![Porter-Duff](porter-duff-images/PorterDuff.png "Porter-Duff")
+![Porter-Duff.](porter-duff-images/PorterDuff.png "Porter-Duff")
 
 The upper-right and lower-left rectangles are always blank because both the destination and source are transparent in those areas. The destination color occupies the upper-left area, so that area can either be colored with the destination color or not at all. Similarly, the source color occupies the lower-right area, so that area can be colored with the source color or not at all. The intersection of the destination and source in the middle can be colored with the destination color, the source color, or not at all.
 
@@ -255,7 +255,7 @@ public class PorterDuffGridPage : ContentPage
 
 Here's the result:
 
-[![Porter-Duff Grid](porter-duff-images/PorterDuffGrid.png "Porter-Duff Grid")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
+[![Porter-Duff Grid](porter-duff-images/PorterDuffGrid.png "Porter-Duff Grid."](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
 You'll want to convince yourself that transparency is crucial to the proper functioning of the Porter-Duff blend modes. The `PorterDuffCanvasView` class contains a total of three calls to the `Canvas.Clear` method. All of them use the parameterless method, which sets all the pixels to transparent:
 
@@ -277,11 +277,11 @@ There might be a temptation to replace the bitmaps in the **Porter-Duff Grid** p
 
 The **Brick-Wall Compositing** page shows an example of a classic compositing task: A picture needs to be assembled from several pieces, including a bitmap with a background that needs to be eliminated. Here's the **SeatedMonkey.jpg** bitmap with the problematic background:
 
-![Seated Monkey](porter-duff-images/SeatedMonkey.jpg "Seated Monkey")
+![Seated Monkey.](porter-duff-images/SeatedMonkey.jpg "Seated Monkey")
 
 In preparation for compositing, a corresponding _matte_ was created, which is another bitmap that is black where you want the image to appear and transparent otherwise. This file is named **SeatedMonkeyMatte.png** and is among the resources in the **Media** folder in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
-![Seated Monkey Matte](porter-duff-images/SeatedMonkeyMatte.png "Seated Monkey Matte")
+![Seated Monkey Matte.](porter-duff-images/SeatedMonkeyMatte.png "Seated Monkey Matte")
 
 This is _not_ an expertly created matte. Optimally, the matte should include partially transparent pixels around the edge of the black pixels, and this matte does not.
 
@@ -359,7 +359,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 When the program first runs, nothing is visible except the `Button`:
 
-[![Brick-Wall Compositing Step 0](porter-duff-images/BrickWallCompositing0.png "Brick-Wall Compositing Step 0")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
+[![Brick-Wall Compositing Step 0.](porter-duff-images/BrickWallCompositing0.png "Brick-Wall Compositing Step 0")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
 Pressing the `Button` once causes `step` to increment to 1, and the `PaintSurface` handler now displays **SeatedMonkey.jpg**:
 
@@ -385,7 +385,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 There's no `SKPaint` object and hence no blend mode. The bitmap appears at the bottom of the screen:
 
-[![Brick-Wall Compositing Step 1](porter-duff-images/BrickWallCompositing1.png "Brick-Wall Compositing Step 1")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
+[![Brick-Wall Compositing Step 1.](porter-duff-images/BrickWallCompositing1.png "Brick-Wall Compositing Step 1")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
 Press the `Button` again and `step` increments to 2. This is the crucial step of displaying the **SeatedMonkeyMatte.png** file:
 
@@ -412,7 +412,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 The blend mode is `SKBlendMode.DstIn`, which means that the destination will be preserved in areas corresponding to non-transparent areas of the source. The remainder of the destination rectangle corresponding to the original bitmap becomes transparent:
 
-[![Brick-Wall Compositing Step 2](porter-duff-images/BrickWallCompositing2.png "Brick-Wall Compositing Step 2")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
+[![Brick-Wall Compositing Step 2.](porter-duff-images/BrickWallCompositing2.png "Brick-Wall Compositing Step 2")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
 
 The background has been removed. 
 
@@ -449,7 +449,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Because this sidewalk must go behind the monkey, the blend mode is `DstOver`. The destination appears only where the background is transparent:
 
-[![Brick-Wall Compositing Step 3](porter-duff-images/BrickWallCompositing3.png "Brick-Wall Compositing Step 3")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
+[![Brick-Wall Compositing Step 3.](porter-duff-images/BrickWallCompositing3.png "Brick-Wall Compositing Step 3")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
 
 The final step is adding a brick wall. The program uses the brick-wall bitmap tile available as the static property `BrickWallTile` in the `AlgorithmicBrickWallPage` class. A translation transform is added to the `SKShader.CreateBitmap` call to shift the tiles so that the bottom row is a full tile:
 
@@ -482,7 +482,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 For convenience, the `DrawRect` call displays this shader over the entire canvas, but the `DstOver` mode limits the output to only the area of the canvas that is still transparent:
 
-[![Brick-Wall Compositing Step 4](porter-duff-images/BrickWallCompositing4.png "Brick-Wall Compositing Step 4")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
+[![Brick-Wall Compositing Step 4.](porter-duff-images/BrickWallCompositing4.png "Brick-Wall Compositing Step 4")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
 
 Obviously there are other ways to compose this scene. It could be built up starting at the background and progressing to the foreground. But using the blend modes gives you more flexibility. In particular, the use of the matte allows the background of a bitmap to be excluded from the composed scene.
 
@@ -649,7 +649,7 @@ This program demonstrates that the Porter-Duff blend modes can be used with grap
 
 Here are three examples:
 
-[![Porter-Duff Transparency](porter-duff-images/PorterDuffTransparency.png "Porter-Duff Transparency")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
+[![Porter-Duff Transparency](porter-duff-images/PorterDuffTransparency.png "Porter-Duff Transparency."](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
 
 The configuration of the destination and source is very similar to the diagrams shown in page 255 of the original Porter-Duff [_Compositing Digital Images_](https://graphics.pixar.com/library/Compositing/paper.pdf) paper, but this page demonstrates that the blend modes are well-behaved for areas of partial transparency.
 
@@ -731,7 +731,7 @@ canvas.DrawColor(SKColors.Pink, SKBlendMode.DstOver);
 
 All the transparent areas of the canvas are colored pink:
 
-[![Compositing Mask](porter-duff-images/CompositingMask.png "Compositing Mask")](porter-duff-images/CompositingMask-Large.png#lightbox)
+[![Compositing Mask](porter-duff-images/CompositingMask.png "Compositing Mask."](porter-duff-images/CompositingMask-Large.png#lightbox)
 
 You can also use Porter-Duff modes and partially transparent gradients for transitions from one image to another. The **Gradient Transitions** page includes a `Slider` to indicate a progress level in the transition from 0 to 1, and a `Picker` to choose the type of transition you want:
 
@@ -894,7 +894,7 @@ In the final four statements of the `PaintSurface` handler, the two bitmaps are 
 
 The following screenshots show the three different transitions types, each at the 50% mark:
 
-[![Gradient Transitions](porter-duff-images/GradientTransitions.png "Gradient Transitions")](porter-duff-images/GradientTransitions-Large.png#lightbox)
+[![Gradient Transitions](porter-duff-images/GradientTransitions.png "Gradient Transitions."](porter-duff-images/GradientTransitions-Large.png#lightbox)
 
 ## Related links
 

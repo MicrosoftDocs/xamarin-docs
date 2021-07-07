@@ -16,7 +16,7 @@ ms.date: 11/16/2017
 In Visual Studio, navigate to **Tools > Options > Xamarin > Android
 Settings** to view and set the Android SDK location:
 
-[![Example Locations tab in Preferences](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
+[![Example Locations tab in Preferences.](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
 The default location for each path is as follows:
 
@@ -51,7 +51,7 @@ In Visual Studio for Mac, navigate to **Preferences > Projects > SDK
 Locations > Android**. In the **Android** page, click the **Locations**
 tab to view and set the SDK location:
 
-[![Example Locations tab in Preferences](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
+[![Example Locations tab in Preferences.](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
 The default location for each path is as follows:
 

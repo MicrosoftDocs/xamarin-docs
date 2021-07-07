@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Binding Mode
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In the [previous article](basic-bindings.md), the **Alternative Code Binding** and **Alternative XAML Binding** pages featured a `Label` with its `Scale` property bound to the `Value` property of a `Slider`. Because the `Slider` initial value is 0, this caused the `Scale` property of the `Label` to be set to 0 rather than 1, and the `Label` disappeared.
 
@@ -43,7 +43,7 @@ At first, this might seem backwards: Now the `Label` is the data-binding source,
 
 As you might expect, the `Slider` is initialized to the value 1 from the initial `Opacity` value of `Label`. This is shown in the iOS screenshot on the left:
 
-[![Reverse Binding](binding-mode-images/reversebinding-small.png "Reverse Binding")](binding-mode-images/reversebinding-large.png#lightbox "Reverse Binding")
+[![Reverse Binding](binding-mode-images/reversebinding-small.png "Reverse Binding."](binding-mode-images/reversebinding-large.png#lightbox "Reverse Binding")
 
 But you might be surprised that the `Slider` continues to work, as the Android screenshot demonstrates. This seems to suggest that the data binding works better when the `Slider` is the binding target rather than the `Label` because the initialization works like we might expect.
 
@@ -257,7 +257,7 @@ The `Value` property of the `Slider`, however, is `TwoWay`. This allows each `Sl
 
 When the program is first run, the `BoxView`, `Label`, and three `Slider` elements are all set from the ViewModel based on the initial `Color` property set when the ViewModel was instantiated. This is shown in the iOS screenshot at the left:
 
-[![Simple Color Selector](binding-mode-images/simplecolorselector-small.png "Simple Color Selector")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple Color Selector")
+[![Simple Color Selector](binding-mode-images/simplecolorselector-small.png "Simple Color Selector."](binding-mode-images/simplecolorselector-large.png#lightbox "Simple Color Selector")
 
 As you manipulate the sliders, the `BoxView` and `Label` are updated accordingly, as illustrated by the Android screenshot.
 
@@ -671,7 +671,7 @@ public partial class SampleSettingsPage : ContentPage
 
 The iOS screenshot at the left shows the program when it's first run. The constructor in `SampleSettingsViewModel` initializes the background color to white, and that's what's selected in the `ListView`:
 
-[![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
+[![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings."](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
 The other screenshot shows altered settings. When experimenting with this page, remember to put the program to sleep or to terminate it on the device or emulator that it's running. Terminating the program from the Visual Studio debugger will not cause the `OnSleep` override in the `App` class to be called.
 

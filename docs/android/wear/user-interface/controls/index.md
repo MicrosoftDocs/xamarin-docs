@@ -26,7 +26,7 @@ NuGet package. These controls include the following:
     selection (for more information, see
     [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
 
-    ![Example screenshot of a GridViewPager](images/gridviewpager.png)
+    ![Example screenshot of a GridViewPager.](images/gridviewpager.png)
 
 Other important controls for Wear apps include:
 

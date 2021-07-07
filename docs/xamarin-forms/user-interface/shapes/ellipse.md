@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Ellipse
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Ellipse` class derives from the `Shape` class, and can be used to draw ellipses and circles. For information on the properties that the `Ellipse` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -35,7 +35,7 @@ The following XAML example shows how to draw a filled ellipse:
 
 In this example, a red filled ellipse with dimensions 150x50 (device-independent units) is drawn:
 
-![Filled ellipse](ellipse-images/filled.png "Filled ellipse")
+![Filled ellipse.](ellipse-images/filled.png "Filled ellipse")
 
 The following XAML example shows how to draw a circle:
 
@@ -49,7 +49,7 @@ The following XAML example shows how to draw a circle:
 
 In this example, a red circle with dimensions 150x150 (device-independent units) is drawn:
 
-![Unfilled circle](ellipse-images/circle.png "Circle")
+![Unfilled circle.](ellipse-images/circle.png "Circle")
 
 For information about drawing a dashed ellipse, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 

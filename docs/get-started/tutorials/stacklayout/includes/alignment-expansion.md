@@ -45,7 +45,7 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set")](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
+    [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set."](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
 
     A [`StackLayout`](xref:Xamarin.Forms.StackLayout) only respects the alignment preferences on child views that are in the opposite direction to the `StackLayout` orientation. Therefore, the [`Label`](xref:Xamarin.Forms.Label) child views within the vertically oriented `StackLayout` set their [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) properties to one of the alignment fields:
 
@@ -103,7 +103,7 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set")](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
+    [![Screenshot of child views in a StackLayout, with alignment and expansion options set, on iOS and Android](../images/alignment-expansion.png "StackLayout containing Label instances, with alignment and expansion set."](../images/alignment-expansion-large.png#lightbox "StackLayout containing Label instances, with alignment and expansion set")
 
     A [`StackLayout`](xref:Xamarin.Forms.StackLayout) only respects the alignment preferences on child views that are in the opposite direction to the `StackLayout` orientation. Therefore, the [`Label`](xref:Xamarin.Forms.Label) child views within the vertically oriented `StackLayout` set their [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) properties to one of the alignment fields:
 

@@ -34,13 +34,13 @@ When adding a Visual Basic .NET Standard library in Visual Studio you must be ca
 
 2. Type **Visual Basic library** to filter the project options and choose the **Class Library (.NET Standard)** option with the Visual Basic icon:
 
-    [![Filter for Visual Basic library](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
+    [![Filter for Visual Basic library.](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
 3. On the next screen, type a name for the project and press **Create**.
 
 4. The Visual Basic project will appear as shown in the  **Solution Explorer** like this:
 
-    [![Empty Visual Basic project](images/new-library-sml.png)](images/new-library.png#lightbox)
+    [![Empty Visual Basic project.](images/new-library-sml.png)](images/new-library.png#lightbox)
 
 The project is now ready for Visual Basic code to be added. .NET Standard projects can be referenced by other projects (application projects or library projects).
 

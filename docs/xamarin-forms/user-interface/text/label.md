@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Label
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Display text in Xamarin.Forms_
 
@@ -44,7 +44,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 The following screenshots show the `TextDecorations` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
 
-![Labels with Text Decorations](label-images/label-textdecorations.png)
+![Labels with Text Decorations.](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#formatted-text).
@@ -158,7 +158,7 @@ public partial class LabelPage : ContentPage
 
 The following screenshots show the result of setting the `TextColor` property:
 
-![Label TextColor Example](label-images/textcolor.png)
+![Label TextColor Example.](label-images/textcolor.png)
 
 For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
@@ -206,7 +206,7 @@ var label =
 
 The following screenshots show the result of setting the `MaxLines` property to 2, when the text is long enough to occupy more than 2 lines:
 
-![Label MaxLines Example](label-images/label-maxlines.png)
+![Label MaxLines Example.](label-images/label-maxlines.png)
 
 ## Display HTML
 
@@ -248,7 +248,7 @@ In this example, the `Label.Text` property is set to the HTML string that's inli
 
 The following screenshots show a [`Label`](xref:Xamarin.Forms.Label) displaying HTML:
 
-![Screenshots of a Label displaying HTML, on iOS and Android](label-images/label-html.png)
+![Screenshots of a Label displaying HTML, on iOS and Android.](label-images/label-html.png)
 
 > [!IMPORTANT]
 > Displaying HTML in a [`Label`](xref:Xamarin.Forms.Label) is limited to the HTML tags that are supported by the underlying platform.
@@ -335,7 +335,7 @@ Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures t
 
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 
-![Label FormattedText Example](label-images/formattedtext.png)
+![Label FormattedText Example.](label-images/formattedtext.png)
 
 ## Line height
 
@@ -367,7 +367,7 @@ var label =
 
 The following screenshots show the result of setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property to 1.8:
 
-![Label LineHeight Example](label-images/label-lineheight.png)
+![Label LineHeight Example.](label-images/label-lineheight.png)
 
 The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property on a [`Span`](xref:Xamarin.Forms.Span):
 
@@ -407,7 +407,7 @@ var label = new Label
 
 The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
 
-![Span LineHeight Example](label-images/span-lineheight.png)
+![Span LineHeight Example.](label-images/span-lineheight.png)
 
 ## Padding
 
@@ -482,7 +482,7 @@ The following code example, taken from the [Hyperlink Demos](/samples/xamarin/xa
 
 In this example, the first and third [`Span`](xref:Xamarin.Forms.Span) instances comprise text, while the second `Span` represents a tappable hyperlink. It has its text color set to blue, and has an underline text decoration. This creates the appearance of a hyperlink, as shown in the following screenshots:
 
-[![Hyperlinks](label-images/hyperlinks-small.png "Hyperlinks")](label-images/hyperlinks-large.png#lightbox)
+[![Hyperlinks](label-images/hyperlinks-small.png "Hyperlinks."](label-images/hyperlinks-large.png#lightbox)
 
 When the hyperlink is tapped, the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) will respond by executing the `ICommand` defined by its [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) property. In addition, the URL specified by the [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property will be passed to the `ICommand` as a parameter.
 

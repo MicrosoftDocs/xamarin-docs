@@ -25,7 +25,7 @@ The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class 
 
 The [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class provides multicast publish-subscribe functionality. This means that there can be multiple publishers that publish a single message, and there can be multiple subscribers listening for the same message. Figure 4-1 illustrates this relationship:
 
-![Multicast publish-subscribe functionality](communicating-between-loosely-coupled-components-images/messagingcenter.png)
+![Multicast publish-subscribe functionality.](communicating-between-loosely-coupled-components-images/messagingcenter.png)
 
 **Figure 4-1:** Multicast publish-subscribe functionality
 

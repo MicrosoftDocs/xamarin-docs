@@ -38,17 +38,17 @@ To start creating your user interface in the iOS Designer, double-click on a sto
 
 # [Visual Studio for Mac](#tab/macos)
 
- [![Toolbox Pad](creating-ui-objects-images/image2b.png)](creating-ui-objects-images/image2b.png#lightbox)
+ [![Toolbox Pad.](creating-ui-objects-images/image2b.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
- [![Toolbox Pad - Visual Stuio](creating-ui-objects-images/image2b-vs.png)](creating-ui-objects-images/image2b.png#lightbox)
+ [![Toolbox Pad - Visual Stuio.](creating-ui-objects-images/image2b-vs.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 -----
 
 When a control is selected on the design surface the **Properties Pad** will show the attributes for that control. The **Widget > Identity > Name** field, which is populated in the screenshot below, is used as the *Outlet* name. This is how you can reference the control in C#:
 
- [![Properties Widget Pad](creating-ui-objects-images/image3b.png)](creating-ui-objects-images/image3b.png#lightbox)
+ [![Properties Widget Pad.](creating-ui-objects-images/image3b.png)](creating-ui-objects-images/image3b.png#lightbox)
 
 For a deeper dive into using the iOS designer, refer to the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) guide.
 
@@ -60,23 +60,23 @@ To open a Storyboard in Xcode, right-click to access the context menu for the st
 
 # [Visual Studio for Mac](#tab/macos)
 
- [![Storyboard context menu - Xcode](creating-ui-objects-images/imagexcode.png)](creating-ui-objects-images/imagexcode.png#lightbox)
+ [![Storyboard context menu - Xcode.](creating-ui-objects-images/imagexcode.png)](creating-ui-objects-images/imagexcode.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![Storyboard context menu - Xcode](creating-ui-objects-images/imagexcode-vs.png)](creating-ui-objects-images/imagexcode-vs.png#lightbox)
+[![Storyboard context menu - Xcode.](creating-ui-objects-images/imagexcode-vs.png)](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 Controls can be dragged onto the Design Surface from the **Object Library** illustrated below:
 
- [![Xcode Object Library](creating-ui-objects-images/image5a.png)](creating-ui-objects-images/image5a.png#lightbox)
+ [![Xcode Object Library.](creating-ui-objects-images/image5a.png)](creating-ui-objects-images/image5a.png#lightbox)
 
 When you design your UI with Interface Builder you must create an **Outlet** for each control that you wish to
 reference in C#. This is done by turning on the **Assistant Editor** using the center **Editor**
 button on the Xcode toolbar button:
 
- [![Assistant Editor button](creating-ui-objects-images/image6a.png)](creating-ui-objects-images/image6a.png#lightbox)
+ [![Assistant Editor button.](creating-ui-objects-images/image6a.png)](creating-ui-objects-images/image6a.png#lightbox)
 
 Click on a user interface object; then **Control Drag** into the .h file. To **Control Drag**, hold down the
 control key then click and hold over the user interface object that you are creating the outlet (or action) for. Keep
@@ -86,7 +86,7 @@ holding down the Control key while you drag into the header file. Finish draggin
 When you release the click you will be prompted to provide a name for the Outlet, which will be used to create a C#
 property that can be referenced in code:
 
- [![Creating an outlet](creating-ui-objects-images/image8a.png)](creating-ui-objects-images/image8a.png#lightbox)
+ [![Creating an outlet.](creating-ui-objects-images/image8a.png)](creating-ui-objects-images/image8a.png#lightbox)
 
 For more information on how Xcode's Interface Builder integrates with Visual Studio for Mac,
 refer to the [Xib Code Generation](~/ios/internals/xib-code-generation.md#generated) document.
@@ -123,7 +123,7 @@ public override void ViewDidLoad () {
 
 When View Controllers are added to the Design Surface, two corresponding C# files are created in the project. In this example, `ControlsViewController.cs` and `ControlsViewController.designer.cs` have been created automatically:
 
- [![ViewController partial class](creating-ui-objects-images/image9b.png)](creating-ui-objects-images/image9b.png#lightbox)
+ [![ViewController partial class.](creating-ui-objects-images/image9b.png)](creating-ui-objects-images/image9b.png#lightbox)
 
 The `ControlsViewController.cs` file is intended for *your code*. This is where the `View` lifecycle methods such as
 `ViewDidLoad` and `ViewWillAppear` are implemented and where you can add your own properties, fields and methods.

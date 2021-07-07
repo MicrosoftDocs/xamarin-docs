@@ -105,7 +105,7 @@ In this exercise, you'll modify the application to persist the text from an [`En
 
     In Visual Studio, stop the application and relaunch it again, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
 
-    [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes")](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
+    [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes."](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
 
     In Visual Studio, stop the application.
 
@@ -211,7 +211,7 @@ In this exercise, you'll modify the application to persist the text from an [`En
 
     In Visual Studio for Mac, stop the application and relaunch it again, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
 
-    [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes")](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
+    [![Screenshot of an Entry whose Text property is persisted across lifecycle state changes, on iOS and Android](../images/persist-data.png "Entry whose Text property persists across lifecycle state changes."](../images/persist-data-large.png#lightbox "Entry whose Text property persists across lifecycle state changes")
 
     In Visual Studio for Mac, stop the application.
 

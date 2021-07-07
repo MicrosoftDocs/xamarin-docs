@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Choose a Xamarin.Forms Layout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin.Forms layout classes allow you to arrange and group UI controls in your application. Choosing a layout class requires knowledge of how the layout positions its child elements, and how the layout sizes its child elements. In addition, it may be necessary to nest layouts to create your desired layout.
 
 The following image shows typical layouts that can be achieved with the main Xamarin.Forms layout classes:
 
-[![The main layout classes in Xamarin.Forms](images/layouts.png "Xamarin.Forms layout classes")](images/layouts-large.png#lightbox "Xamarin.Forms layout classes")
+[![The main layout classes in Xamarin.Forms](images/layouts.png "Xamarin.Forms layout classes."](images/layouts-large.png#lightbox "Xamarin.Forms layout classes")
 
 ## StackLayout
 

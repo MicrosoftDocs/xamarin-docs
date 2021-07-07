@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The non-separable blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**SkiaSharp separable blend modes**](separable.md), the separable blend modes perform operations on the red, green, and blue channels separately. The non-separable blend modes do not. By operating upon the Hue, Saturation, and Luminosity levels of color, the non-separable blend modes can alter colors in interesting ways:
 
-![Non-Separable Sample](non-separable-images/NonSeparableSample.png "Non-Separable Sample")
+![Non-Separable Sample.](non-separable-images/NonSeparableSample.png "Non-Separable Sample")
 
 ## The Hue-Saturation-Luminosity model
 
@@ -178,25 +178,25 @@ For example, `FromHsl` converts the HSL value (180, 50, 0) to the RGB color (0, 
 
 The `SKBlendModes.Hue` blend mode uses the Hue level of the source while retaining the Saturation and Luminosity levels of the destination. When you test this blend mode, the saturation and luminosity sliders must be set to something other than 0 or 100 because in those cases, the Hue is not uniquely defined.
 
-[![Non-Separable Blend Modes - Hue](non-separable-images/NonSeparableBlendModes-Hue.png "Non-Separable Blend Modes - Hue")](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
+[![Non-Separable Blend Modes - Hue](non-separable-images/NonSeparableBlendModes-Hue.png "Non-Separable Blend Modes - Hue."](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
 
 When you use set the slider to 0 (as with the iOS screenshot at the left), everything turns reddish. But this does not mean that the image is entirely absent of green and blue. Obviously there are still gray shades present in the result. For example, the RGB color (40, 40, C0) is equivalent to the HSL color (240, 50, 50). The Hue is blue, but the saturation value of 50 indicates that there are red and green components as well. If the Hue is set to 0 with `SKBlendModes.Hue`, the HSL color is (0, 50, 50), which is the RGB color (C0, 40, 40). There are still blue and green components but now the dominant component is red.
 
 The `SKBlendModes.Saturation` blend mode combines the Saturation level of the source with the Hue and Luminosity of the destination. Like the Hue, the Saturation is not well defined if the Luminosity is 0 or 100. In theory, any Luminosity setting between those two extremes should work. However, the Luminosity setting seems to affect the result more than it should. Set the luminosity to 50, and you can see how you can set the Saturation level of the picture:
 
-[![Non-Separable Blend Modes - Saturation](non-separable-images/NonSeparableBlendModes-Saturation.png "Non-Separable Blend Modes - Saturation")](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
+[![Non-Separable Blend Modes - Saturation](non-separable-images/NonSeparableBlendModes-Saturation.png "Non-Separable Blend Modes - Saturation."](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
 
 You can use this blend mode to increase the color Saturation of a dull image, or you can decrease the Saturation down to zero (as in the iOS screenshot at the left) for a resultant image composed of only gray shades.
 
 The `SKBlendModes.Color` blend mode retains the Luminosity of the destination but uses the Hue and Saturation of the source. Again, that implies that any setting of the Luminosity slider somewhere between the extremes should work. 
 
-[![Non-Separable Blend Modes - Color](non-separable-images/NonSeparableBlendModes-Color.png "Non-Separable Blend Modes - Color")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
+[![Non-Separable Blend Modes - Color](non-separable-images/NonSeparableBlendModes-Color.png "Non-Separable Blend Modes - Color."](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
 
 You'll see an application of this blend mode shortly.
 
 Finally, the `SKBlendModes.Luminosity` blend mode is the opposite of `SKBlendModes.Color`. It retains the Hue and Saturation of the destination but uses the Luminosity of the source. The `Luminosity` blend mode is the most mysterious of the batch: The Hue and Saturation sliders affect the image, but even at medium Luminosity, the image is not distinct:
 
-[![Non-Separable Blend Modes - Luminosity](non-separable-images/NonSeparableBlendModes-Luminosity.png "Non-Separable Blend Modes - Luminosity")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
+[![Non-Separable Blend Modes - Luminosity](non-separable-images/NonSeparableBlendModes-Luminosity.png "Non-Separable Blend Modes - Luminosity."](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
 In theory, increasing or decreasing the Luminosity of an image should make it lighter or darker. Interestingly, the [Luminosity example in the Skia **SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) is quite similar.
 
@@ -206,11 +206,11 @@ It is generally not the case that you'll want to use one of the non-separable bl
 
 Here's one of the bitmaps included as a resource in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **Banana.jpg**:
 
-![Banana Monkey](non-separable-images/Banana.jpg "Banana Monkey")
+![Banana Monkey.](non-separable-images/Banana.jpg "Banana Monkey")
 
 It's possible to create a matte that encompasses just the banana. This is also a resource in the [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The filename is **BananaMatte.png**:
 
-![Banana Matte](non-separable-images/BananaMatte.png "Banana Matte")
+![Banana Matte.](non-separable-images/BananaMatte.png "Banana Matte")
 
 Aside from the black banana shape, the rest of the bitmap is transparent.
 
@@ -281,7 +281,7 @@ public class BlueBananaPage : ContentPage
 
 The `PaintSurface` handler draws the bitmap with the monkey holding the banana. This code is followed by the display of `blueBananaBitmap` with `SKBlendMode.Color`. Over the surface of the banana, each pixel's Hue and Saturation is replaced by the solid blue, which corresponds to a hue value of 240 and a saturation value of 100. The Luminosity, however, remains the same, which means the banana continues to have a realistic texture despite its new color:
 
-[![Blue Banana](non-separable-images/BlueBanana.png "Blue Banana")](non-separable-images/BlueBanana-Large.png#lightbox)
+[![Blue Banana](non-separable-images/BlueBanana.png "Blue Banana."](non-separable-images/BlueBanana-Large.png#lightbox)
 
 Try changing the blend mode to `SKBlendMode.Saturation`. The banana remains yellow but it's a more intense yellow. In a real-life application, this might be a more desirable effect than turning the banana blue.
 

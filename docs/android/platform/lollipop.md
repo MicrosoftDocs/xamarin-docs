@@ -101,11 +101,11 @@ that targets Android 5.0:
    Open Android SDK Manager&hellip;**) and install Android SDK Tools
    23.0.5 or later:
 
-    [![Selecting Android SDK tools in the Android SDK Manager](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
+    [![Selecting Android SDK tools in the Android SDK Manager.](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
 
    Also, install the latest Android 5.0 SDK packages (API 21 or later):
 
-    [![Installing Android 5.0 SDK packages in the Android SDK Manager](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
+    [![Installing Android 5.0 SDK packages in the Android SDK Manager.](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
    For more information about using the Android SDK Manager, see
    [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
@@ -119,13 +119,13 @@ that targets Android 5.0:
    General** and set **Target framework** to **Android 5.0 (Lollipop)**
    or later:
 
-    ![Setting the Target Framwework to Android 5.0 Lollipop](lollipop-images/target-framework.png)
+    ![Setting the Target Framwework to Android 5.0 Lollipop.](lollipop-images/target-framework.png)
 
    Under **Project Options &gt; Build &gt; Android Application**, set
    minimum and target Android version to **Automatic - use target
    framework version**:
 
-    ![Setting the Minimum and Target Android versions to Automatic](lollipop-images/minimum-android-version.png)
+    ![Setting the Minimum and Target Android versions to Automatic.](lollipop-images/minimum-android-version.png)
 
 5. Configure an emulator or an Android device to test your app. If you
    are using an emulator, see
@@ -222,7 +222,7 @@ feel of the Android UI. Visual elements now use tactile surfaces that
 take on the bold graphics, typography, and bright colors of print-based
 design. Examples of Material Theme are depicted in the following screenshots:
 
-[![Screenshots of Material Theme Home Screen, Apps Screen, and Setting Screen](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
+[![Screenshots of Material Theme Home Screen, Apps Screen, and Setting Screen.](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
 
 Android 5.0 greets you with the home screen shown on the left. The
 center screenshot is the first screen of the app list, and the
@@ -236,7 +236,7 @@ app: the `Theme.Material` dark theme (the default), the
 `Theme.Material.Light` theme, and the
 `Theme.Material.Light.DarkActionBar` theme:
 
-[![Screenshots of Dark, Light, and DarkActionBar themes](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
+[![Screenshots of Dark, Light, and DarkActionBar themes.](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
 For more about using Material Theme features in Xamarin.Android apps, see
 [Material Theme](~/android/user-interface/material-theme.md).
@@ -260,7 +260,7 @@ view or extend beyond the bounds of the view. For example, the following
 sequence of screenshots illustrates the ripple effect in a button during
 touch animation:
 
-![Frame by frame screenshots of ripple animation on a button](lollipop-images/touch-animation.png)
+![Frame by frame screenshots of ripple animation on a button.](lollipop-images/touch-animation.png)
 
 Initial touch contact with the button occurs in the first image on the
 left, while the remaining sequence (from left to right) illustrates how
@@ -290,7 +290,7 @@ of transition animations:
 For example, the following sequence of screenshots illustrates a shared
 element transition:
 
-[![Frame by frame screenshots of a shared element transition animation](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
+[![Frame by frame screenshots of a shared element transition animation.](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
 
 A shared element (a photo of a caterpillar) is one of several views in
 the first activity; it enlarges to become the only view in the second
@@ -354,12 +354,12 @@ and final radius of the clipping circle. The following sequence of
 screenshots illustrates a reveal effect animation from the center of the
 screen:
 
-[![Frame by frame screenshots of reveal animation](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
+[![Frame by frame screenshots of reveal animation.](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
 
 The next sequence illustrates a reveal effect animation that takes place
 from the bottom left corner of the screen:
 
-[![Frame by frame screenshots of clipping animation](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
+[![Frame by frame screenshots of clipping animation.](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
 
 Reveal animations can be reversed; that is, the clipping circle can
 shrink to hide the view rather than enlarge to reveal the view.
@@ -402,7 +402,7 @@ The following example illustrates the shadows cast by an empty
 `TextView` control when its elevation attribute is set to 2dp, 4dp, and
 6dp, respectively:
 
-[![Screenshots of progessively larger view shadows](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
+[![Screenshots of progessively larger view shadows.](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
 
 View shadow settings can be static (as shown above) or they can be used
 in animations to make a view appear to temporarily rise above the
@@ -437,7 +437,7 @@ once and color them in your layout to match your theme.
 In the following example, a single image asset &ndash; a white logo with a
 transparent background &ndash; is used to create tint variations:
 
-![White Xamarin logo with transparent background](lollipop-images/xamarin-logo-white.png)
+![White Xamarin logo with transparent background.](lollipop-images/xamarin-logo-white.png)
 
 This logo is displayed above a blue circular background as shown in
 the following examples. The image on the left is how the logo appears
@@ -445,7 +445,7 @@ without a `tint` setting. In the center image, the logo's `tint`
 attribute is set to a dark gray. In the image on the right, `tint` is
 set to a light gray:
 
-![Examples of the above logo with different tint settings](lollipop-images/drawable-tinting.png)
+![Examples of the above logo with different tint settings.](lollipop-images/drawable-tinting.png)
 
 For more about drawable tinting in Android 5.0,
 see [Drawable Tinting](https://developer.android.com/training/material/drawables.html#DrawableTint).
@@ -474,7 +474,7 @@ For example, in the following screenshots, a photo viewing app extracts
 the prominent colors from the image on display and uses these colors to
 adapt the color scheme of the app to match the image:
 
-[![Screenshots of green, pink, and blue theme color extractions](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
+[![Screenshots of green, pink, and blue theme color extractions.](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
 
 In the above screenshots, the action bar is set to the extracted
 "vibrant light" color and the background is set to the extracted
@@ -499,7 +499,7 @@ and `CardView` uses view shadows to make each card appear to float above
 the background. Examples of these new widgets are shown in the following
 screenshots:
 
-[![Screenshots of apps built with RecyclerView](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
+[![Screenshots of apps built with RecyclerView.](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 The screenshot on the left is an example of `RecyclerView` as used in an
 email app, and the screenshot on the right is an example of `CardView`
@@ -519,12 +519,12 @@ When you use a `RecyclerView` widget, you must specify a `LayoutManager`
 and an adapter. As shown in this figure, `LayoutManager` is the
 intermediary between the adapter and the `RecyclerView`:
 
-![Diagram of RecyclerView with supporting LayoutManager, Adapter, and Dataset](lollipop-images/recyclerview-diagram.png)
+![Diagram of RecyclerView with supporting LayoutManager, Adapter, and Dataset.](lollipop-images/recyclerview-diagram.png)
 
 The following screenshots illustrate a `RecyclerView` that contains 100
 items (each item consists of an `ImageView` and a `TextView`):
 
-[![Screenshots of a RecyclerView app scrolling through images](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
+[![Screenshots of a RecyclerView app scrolling through images.](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
 
 `RecyclerView` handles this large data set with ease &ndash; scrolling
 from the beginning of the list to end of the list in this sample app
@@ -533,7 +533,7 @@ in fact, animations for adding and removing items are enabled by
 default. When an item is added to a `RecyclerView`, it fades in as shown
 in this sequence of screenshots:
 
-[![Frame by frame screenshot of a photo item fading in](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
+[![Frame by frame screenshot of a photo item fading in.](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
 
 For more about `RecyclerView`,
 see [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
@@ -545,7 +545,7 @@ corners. Because `CardView` has built-in view shadows, it provides
 an easy way for you to add visual depth to your app. The following
 screenshots show three text-oriented examples of `CardView`:
 
-[![Example screenshots of apps using RecyclerView with CardView-based items](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
+[![Example screenshots of apps using RecyclerView with CardView-based items.](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 Each of the cards in the above example contains a `TextView`; the
 background color is set via the `cardBackgroundColor` attribute.
@@ -560,7 +560,7 @@ a new visual format and new features. Notifications have a new look in
 Android 5.0. For example, notifications in Android 5.0 now use dark text
 over a light background:
 
-![Example of an Android 5.0 notification un-expanded](lollipop-images/expanded-notification-contracted.png)
+![Example of an Android 5.0 notification un-expanded.](lollipop-images/expanded-notification-contracted.png)
 
 When a large icon is displayed in a notification (as shown in the
 above example), Android 5.0 presents the small icon as a badge over the
@@ -570,7 +570,7 @@ In Android 5.0, notifications can also appear on the device lockscreen.
 For example, here is an example screenshot of a lockscreen with a single
 notification:
 
-[![Screenshot of notification appearing on the lock screen](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
+[![Screenshot of notification appearing on the lock screen.](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
 
 Users can double-tap a notification on the lockscreen to unlock
 the device and jump to the app that originated that notification,
@@ -588,7 +588,7 @@ of the user without disrupting the currently running activity.
 The following example illustrates a simple Heads-up notification that
 displays on top of an app:
 
-[![Example of a heads-up notification](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
+[![Example of a heads-up notification.](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
 Heads-up notifications are typically used for the following events:
 

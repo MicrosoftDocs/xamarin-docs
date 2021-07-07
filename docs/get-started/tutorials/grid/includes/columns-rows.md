@@ -38,7 +38,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows")](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")
+    [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows."](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -80,4 +80,4 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows")](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")
+    [![Screenshot of a Grid that has content laid out in columns and rows, on iOS and Android](../images/columns-rows.png "Grid with content in columns and rows."](../images/columns-rows-large.png#lightbox "Grid with content in columns and rows")

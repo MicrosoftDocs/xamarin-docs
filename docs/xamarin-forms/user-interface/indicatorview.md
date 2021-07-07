@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms IndicatorView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
 The [`IndicatorView`](xref:Xamarin.Forms.IndicatorView) is a control that displays indicators that represent the number of items, and current position, in a [`CarouselView`](xref:Xamarin.Forms.CarouselView):
 
-[![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles")](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
+[![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles."](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
 
 [`IndicatorView`](xref:Xamarin.Forms.IndicatorView) defines the following properties:
 
@@ -127,7 +127,7 @@ The elements specified in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 
 
 The following screenshots show indicators rendered using a font icon:
 
-[![Screenshot of a templated IndicatorView, on iOS and Android](indicatorview-images/templated.png "Templated IndicatorView")](indicatorview-images/templated-large.png#lightbox "Templated IndicatorView")
+[![Screenshot of a templated IndicatorView, on iOS and Android](indicatorview-images/templated.png "Templated IndicatorView."](indicatorview-images/templated-large.png#lightbox "Templated IndicatorView")
 
 ## Set visual states
 
@@ -180,7 +180,7 @@ The following screenshots show indicators rendered using a font icon:
 
 In this example, the `Selected` visual state specifies that the indicator that represents the current position will have its [`TextColor`](xref:Xamarin.Forms.Label.TextColor) set to black. Otherwise the `TextColor` of the indicator will be light gray:
 
-![Screenshot of IndicatorView selected visual state](indicatorview-images/visual-state.png)
+![Screenshot of IndicatorView selected visual state.](indicatorview-images/visual-state.png)
 
 For more information about visual states, see [Xamarin.Forms Visual State Manager](visual-state-manager.md).
 

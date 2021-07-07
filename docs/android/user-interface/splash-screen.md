@@ -11,7 +11,7 @@ ms.date: 10/02/2019
 
 # Splash Screen
 
-[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/monodroid-samples/splashscreen)
+[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/monodroid-samples/splashscreen)
 
 _An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 
@@ -33,7 +33,7 @@ an Android application. It covers the following steps:
 3. Adding a new Activity to the application that will be used as the
     splash screen defined by the theme created in the previous step.
 
-[![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[![Example Xamarin logo splash screen followed by app screen.](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## Requirements
 
@@ -285,7 +285,7 @@ To add a splash screen for landscape mode, use the following steps:
     the splash screen is still displayed. The splash screen changes to the
     landscape version:
 
-    [![Rotation of splash screen to landscape mode](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [![Rotation of splash screen to landscape mode.](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 Note that the use of a landscape-mode splash screen does not always
 provide a seamless experience. By default, Android launches the app in
