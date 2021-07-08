@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp transparency
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you've seen, the [`SKPaint`](xref:SkiaSharp.SKPaint) class includes a [`Color`](xref:SkiaSharp.SKPaint.Color) property of type [`SKColor`](xref:SkiaSharp.SKColor). `SKColor` includes an alpha channel, so anything that you color with an `SKColor` value can be partially transparent. 
 
@@ -134,7 +134,7 @@ paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 
 The animation alternates between the two words, urging the user to "code more" (or perhaps requesting "more code"):
 
-[![Code More Code](transparency-images/CodeMoreCode.png "Code More Code."](transparency-images/CodeMoreCode-Large.png#lightbox)
+[![Code More Code](transparency-images/CodeMoreCode.png "Code More Code")](transparency-images/CodeMoreCode-Large.png#lightbox)
 
 In the previous article on [**Bitmap Basics in SkiaSharp**](bitmaps.md), you saw how to display bitmaps using one of the [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap*) methods of `SKCanvas`. All the `DrawBitmap` methods include an `SKPaint` object as the last parameter. By default, this parameter is set to `null` and you can ignore it. 
 
@@ -229,7 +229,7 @@ The `Color` property of the `SKPaint` object is set to two complementary alpha l
 
 Moving the `Slider` dissolves between one bitmap and the other:
 
-[![Bitmap Dissolve](transparency-images/BitmapDissolve.png "Bitmap Dissolve."](transparency-images/BitmapDissolve-Large.png#lightbox)
+[![Bitmap Dissolve](transparency-images/BitmapDissolve.png "Bitmap Dissolve")](transparency-images/BitmapDissolve-Large.png#lightbox)
 
 In the past several articles, you have seen how to use SkiaSharp to draw text, circles, ellipses, rounded rectangles, and bitmaps. The next step is [SkiaSharp Lines and Paths](../paths/index.md) in which you will learn how to draw connected lines in a graphics path.
 

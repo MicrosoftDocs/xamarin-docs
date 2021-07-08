@@ -27,11 +27,11 @@ When a client is done with the service, it must unbind from it by calling the `U
 
 This diagram illustrates how the Activity, service connection, binder, and service all related to each other:
 
-![A diagram showing how the service components relate to each other.](bound-services-images/bound-services-02.png "A diagram showing how the service components relate to each other.")
+![A diagram showing how the service components relate to each other](bound-services-images/bound-services-02.png "A diagram showing how the service components relate to each other.")
 
 This guide will discuss how to extend the `Service` class to implement a bound service. It will also cover implementing `IServiceConnection` and extending `Binder` to allow a client to communicate with the service. A sample app accompanies this guide, which contain a solution with a single Xamarin.Android project called **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . This is a very basic application which demonstrates how to implement a service and how to bind an activity to it. The bound service has a very simple API with only one method, `GetFormattedTimestamp`, which returns a string that tells the user when the service has started and how long it has been running. The app also allows the user to manually unbind and bind to the service.
 
-[![Screenshot of the application running on an Android phone.](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
+[![Screenshot of the application running on an Android phone](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## Implementing and Consuming a Bound Service
 
@@ -56,7 +56,7 @@ Much like an activity, a bound service has it's own lifecycle and callback metho
 
 The key lifecycle events of a bound service are shown in this diagram:
 
-![A diagram showing the order in which the lifecycle methods are called.](bound-services-images/bound-services-01.png "A diagram showing the order in which the lifecycle methods are called.")
+![A diagram showing the order in which the lifecycle methods are called](bound-services-images/bound-services-01.png "A diagram showing the order in which the lifecycle methods are called.")
 
 The following code snippet, from the companion application that accompanies this guide, shows how to implement a bound service in Xamarin.Android:
 

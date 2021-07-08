@@ -16,7 +16,7 @@ Follow these [instructions](~/ios/platform/ios14/get-started.md) to get started.
 
 [`UIColorWell`](https://developer.apple.com/documentation/uikit/uicolorwell) is a new UIKit control for selecting colors from a selection of swatches, using a dropper, or by entering values manually. The control displays a circular color button that launches a modal form when tapped.
 
-![UIColorWell.](ios14-images/colorwell.png)
+![UIColorWell](ios14-images/colorwell.png)
 
 ```xaml
 <ios:UIColorWell
@@ -40,7 +40,7 @@ Several controls have received updates, most notably:
 - [UIDatePicker](https://developer.apple.com/documentation/uikit/uidatepicker) now supports multiple styles: Automatic (default), Compact, Inline, and Wheel.
 - [UISplitViewController](https://developer.apple.com/documentation/uikit/uisplitviewcontroller) now supports three columns: Primary, Secondary, and Supplementary.
  
-![Pre-release API.](~/media/shared/preview.png)
+![Pre-release API](~/media/shared/preview.png)
 
 ## Embedded WidgetKit Support
 
@@ -64,7 +64,7 @@ Change the path included on the first link to point to the build directory of yo
 
 It may be helpful to enable a project relative output location in your Xcode project (File → Project Settings) to have a simpler path to locate:
 
-![Xcode settings.](ios14-images/xcode-settings.png)
+![Xcode settings](ios14-images/xcode-settings.png)
 
 This [sample application](https://github.com/chamons/xamarin-ios-swift-extension/blob/master/App/TestApplication/TestApplication.csproj#L143) uses JSON serialization to transfer data from a Xamarin.iOS app to a sample Widget for display.
 

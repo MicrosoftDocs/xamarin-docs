@@ -14,7 +14,7 @@ The `GridLayout` is a new `ViewGroup` subclass that
 supports laying out views in a 2D grid, similar to an HTML table, as shown
 below:
 
- [![Cropped GridLayout displaying four cells.](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [![Cropped GridLayout displaying four cells](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` works with a flat-view hierarchy, where child views
 set their locations in the grid by specifying the rows and columns they should
@@ -52,11 +52,11 @@ The following XML adds several `TextView` controls to a *GridLayout*.
 The layout will adjust the row and column sizes so that the cells can fit
 their content, as illustrated by the following diagram:
 
- [![Diagram of layout showing two cells on the left smaller than on the right.](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [![Diagram of layout showing two cells on the left smaller than on the right](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 This results in the following user interface when run in an application:
 
- [![Screenshot of GridLayoutDemo app displaying four cells.](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [![Screenshot of GridLayoutDemo app displaying four cells](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## Specifying Orientation
 
@@ -79,11 +79,11 @@ like this:
 Now, the `GridLayout` will position the cells from top to bottom
 in each column, instead of left to right, as shown below:
 
- [![Diagram illustrating how cells are positioned in vertical orientation.](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [![Diagram illustrating how cells are positioned in vertical orientation](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 This results in the following user interface at runtime:
 
- [![Screenshot of GridLayoutDemo with cells positioned in vertical orientation.](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [![Screenshot of GridLayoutDemo with cells positioned in vertical orientation](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### Specifying Explicit Position
 
@@ -179,7 +179,7 @@ that provides spacing between the `TextViews`.
 
 This XML creates spacing in the `GridLayout` as shown below:
 
- [![Screenshot of GridLayoutDemo illustrating larger cells with spacing.](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [![Screenshot of GridLayoutDemo illustrating larger cells with spacing](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 The benefit of using the new `Space` view is that it allows for
 spacing and doesn’t require us to set attributes on every child view.
@@ -233,7 +233,7 @@ and rows. For example, say we add another row containing a button to the `GridLa
 This will result in the first column of the `GridLayout` being
 stretched to accommodate the size of the button, as we see here:
 
-[![Screenshot of GridLayoutDemo with button spanning only the first column.](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[![Screenshot of GridLayoutDemo with button spanning only the first column](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 To keep the first column from stretching, we can set the button to
 span two columns by setting its columnspan like this:
@@ -250,7 +250,7 @@ span two columns by setting its columnspan like this:
 Doing this results in a layout for the `TextViews` that is similar
 to the layout we had earlier, with the button added to the bottom of the `GridLayout` as shown below:
 
- [![Screenshot of GridLayoutDemo with button spanning both columns.](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [![Screenshot of GridLayoutDemo with button spanning both columns](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## Related Links
 

@@ -40,7 +40,7 @@ There are two different ways to apply a custom appearance:
 The Appearance sample application demonstrates all three methods, as shown in
 these screenshots:
 
-[![The Appearance sample application demonstrates all three methods.](introduction-to-the-appearance-api-images/appearance01-sml.png)](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![The Appearance sample application demonstrates all three methods](introduction-to-the-appearance-api-images/appearance01-sml.png)](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 As of iOS 8, the Appearance proxy has been extended to TraitCollections.
  `AppearanceForTraitCollection` can be used to set the default appearance on a
@@ -104,11 +104,11 @@ sg1.TintColor = UIColor.Magenta;
 
 Alternatively, set the value in the Properties pad of the Designer:
 
-[![Properties Pad Tint.](introduction-to-the-appearance-api-images/propertiespadtint.png)](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
+[![Properties Pad Tint](introduction-to-the-appearance-api-images/propertiespadtint.png)](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 The image below illustrates that this sets the tint on only the control named 'sg1'.
 
-[![Setting the individual control tint.](introduction-to-the-appearance-api-images/image53.png)](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![Setting the individual control tint](introduction-to-the-appearance-api-images/image53.png)](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 To set many controls in this way would be completely inefficient, so we can instead set the static `Appearance` property on
 the class itself. This is shown in the code below:
@@ -119,7 +119,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 The Image below now illustrates both segmented controls with the appearance set to Magenta:
 
-[![Setting the Appearance control tint.](introduction-to-the-appearance-api-images/image54.png)](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![Setting the Appearance control tint](introduction-to-the-appearance-api-images/image54.png)](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` properties should be set early in the application lifecycle, such as in the AppDelegate’s `FinishedLaunching`
 event, or in a ViewController before the affected controls are displayed.

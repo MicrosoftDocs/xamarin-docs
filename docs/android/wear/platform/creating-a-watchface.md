@@ -61,11 +61,11 @@ see [Hello, Android](~/android/get-started/hello-android/hello-android-quickstar
 
 # [Visual Studio](#tab/windows)
 
-[![New project dialog](creating-a-watchface-images/03-wear-project-vs-sml.png "Select Wear App in the New Project dialog."](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
+[![New project dialog](creating-a-watchface-images/03-wear-project-vs-sml.png "Select Wear App in the New Project dialog")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![New project dialog](creating-a-watchface-images/03-wear-project-xs-sml.png "Select Wear App in the New Project dialog."](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
+[![New project dialog](creating-a-watchface-images/03-wear-project-xs-sml.png "Select Wear App in the New Project dialog")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -73,11 +73,11 @@ Set the package name to `com.xamarin.watchface`:
 
 # [Visual Studio](#tab/windows)
 
-[![Package name setting](creating-a-watchface-images/04-package-name-vs.png "Set the package name to com.xamarin.watchface."](creating-a-watchface-images/04-package-name-vs.png#lightbox)
+[![Package name setting](creating-a-watchface-images/04-package-name-vs.png "Set the package name to com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Package name setting](creating-a-watchface-images/04-package-name-xs.png "Set the package name to com.xamarin.watchface."](creating-a-watchface-images/04-package-name-xs.png#lightbox)
+[![Package name setting](creating-a-watchface-images/04-package-name-xs.png "Set the package name to com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -86,14 +86,14 @@ Set the package name to `com.xamarin.watchface`:
 In addition, scroll down and enable the **INTERNET** and **WAKE_LOCK**
 permissions:
 
-[![Required permissions](creating-a-watchface-images/05-required-permissions-vs.png "Enable INTERNET and WAKE_LOCK permissions."](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
+[![Required permissions](creating-a-watchface-images/05-required-permissions-vs.png "Enable INTERNET and WAKE_LOCK permissions")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
 Set the Minimum Android version to **Android 5.1 (API level 22)**.
 Also, enable the **Internet** and **WakeLock** permissions:
 
-[![Required permissions](creating-a-watchface-images/05-required-permissions-xs.png "Enable Internet and WakeLock permissions."](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
+[![Required permissions](creating-a-watchface-images/05-required-permissions-xs.png "Enable Internet and WakeLock permissions")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -109,11 +109,11 @@ Start the NuGet Package Manager (in Visual Studio, right-click
 Packages ...**). Update the project to the latest stable version of
 **Xamarin.Android.Wear**:
 
-[![NuGet Package Manager add](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Add the Xamarin.Android.Wear package."](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
+[![NuGet Package Manager add](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Add the Xamarin.Android.Wear package")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 Next, if **Xamarin.Android.Support.v13** is installed, uninstall it:
 
-[![NuGet Package Manager remove.](creating-a-watchface-images/07-uninstall-v13-sml.png "Remove Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
+[![NuGet Package Manager remove](creating-a-watchface-images/07-uninstall-v13-sml.png "Remove Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -122,7 +122,7 @@ Start the NuGet Package Manager (in Visual Studio for Mac, right-click
 Update the project to the latest stable version of
 **Xamarin.Android.Wear**:
 
-[![NuGet Package Manager add](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Add the Xamarin.Android.Wear package."](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
+[![NuGet Package Manager add](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Add the Xamarin.Android.Wear package")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
@@ -131,7 +131,7 @@ information about how to do this, see the
 [Getting Started](~/android/wear/get-started/index.md) guide). You
 should see the following app screen on the Wear device:
 
-[![App screenshot](creating-a-watchface-images/08-app-screen.png "App screen on Wear device."](creating-a-watchface-images/08-app-screen.png#lightbox)
+[![App screenshot](creating-a-watchface-images/08-app-screen.png "App screen on Wear device")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 At this point, the basic Wear app does not have watch face
 functionality because it does not yet provide a watch face service
@@ -144,7 +144,7 @@ class. `CanvasWatchFaceService` is derived from `WatchFaceService`,
 which itself is derived from `WallpaperService` as shown in
 the following diagram:
 
-[![Inheritance Diagram](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService inheritance diagram."](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
+[![Inheritance Diagram](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService inheritance diagram")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` includes a nested
 `CanvasWatchFaceService.Engine`; it instantiates a
@@ -417,11 +417,11 @@ Set this file's build action to **AndroidResource**:
 
 # [Visual Studio](#tab/windows)
 
-[![Build Action](creating-a-watchface-images/10-android-resource-vs.png "Set build action to AndroidResource."](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
+[![Build Action](creating-a-watchface-images/10-android-resource-vs.png "Set build action to AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Build Action](creating-a-watchface-images/10-android-resource-xs.png "Set build action to AndroidResource."](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
+[![Build Action](creating-a-watchface-images/10-android-resource-xs.png "Set build action to AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -452,7 +452,7 @@ face:
 
 4. Select the **Xamarin Sample** watch face (shown on the right):
 
-    [![Watchface Picker](creating-a-watchface-images/11-watchface-picker.png "Swipe to locate Xamarin Sample watch face."](creating-a-watchface-images/11-watchface-picker.png#lightbox)
+    [![Watchface Picker](creating-a-watchface-images/11-watchface-picker.png "Swipe to locate Xamarin Sample watch face")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5. Tap the **Xamarin Sample** watch face to select it.
 

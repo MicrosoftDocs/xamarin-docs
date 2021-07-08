@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms WebView
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app:
 
-![In App Browser.](webview-images/in-app-browser.png)
+![In App Browser](webview-images/in-app-browser.png)
 
 ## Content
 
@@ -101,7 +101,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![WebView Displaying HTML String.](webview-images/html-string.png)
+![WebView Displaying HTML String](webview-images/html-string.png)
 
 In the above code, `@` is used to mark the HTML as a [verbatim string literal](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), meaning most escape characters are ignored.
 
@@ -143,7 +143,7 @@ To display local content using a `WebView`, you'll need to open the HTML file li
 
 The following screenshots show the result of displaying local content on each platform:
 
-![WebView Displaying Local Content.](webview-images/local-content.png)
+![WebView Displaying Local Content](webview-images/local-content.png)
 
 Although the first page has been loaded, the `WebView` has no knowledge of where the HTML came from. That is a problem when dealing with pages that reference local resources. Examples of when that might happen include when local pages link to each other, a page makes use of a separate JavaScript file, or a page links to a CSS stylesheet.  
 
@@ -172,11 +172,11 @@ On iOS, the web content should be located in the project's root directory or **R
 
 # [Visual Studio](#tab/windows)
 
-![Local Files on iOS.](webview-images/ios-vs.png)
+![Local Files on iOS](webview-images/ios-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Local Files on iOS.](webview-images/ios-xs.png)
+![Local Files on iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -202,11 +202,11 @@ On Android, place HTML, CSS, and images in the Assets folder with build action *
 
 # [Visual Studio](#tab/windows)
 
-![Local Files on Android.](webview-images/android-vs.png)
+![Local Files on Android](webview-images/android-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Local Files on Android.](webview-images/android-xs.png)
+![Local Files on Android](webview-images/android-xs.png)
 
 -----
 
@@ -324,7 +324,7 @@ public partial class InAppBrowserXaml : ContentPage
 
 That's it!
 
-![WebView Navigation Buttons.](webview-images/in-app-browser.png)
+![WebView Navigation Buttons](webview-images/in-app-browser.png)
 
 ## Events
 
@@ -575,7 +575,7 @@ Follow these steps for the linker to remove `UIWebView` references:
 
 You can see the window with the new flag in place in this screenshot:
 
-[![Setting the flag in the iOS Build section.](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+[![Setting the flag in the iOS Build section](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -588,7 +588,7 @@ Follow these steps for the linker to remove `UIWebView` references:
 
 You can see the window with the new flag in place in this screenshot:
 
-[![Setting the flag in the iOS Build section.](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+[![Setting the flag in the iOS Build section](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
 
 -----
 

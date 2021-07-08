@@ -13,11 +13,11 @@ ms.date: 03/14/2017
 
 A storyboard defines all of the UI for a given app broken down into a functional overview of its view controllers. In Xcode's Interface Builder, each of these controllers lives in its own Scene.
 
-[![A storyboard in Xcode's Interface Builder.](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
+[![A storyboard in Xcode's Interface Builder](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
 
 The storyboard is a resource file (with the extensions of `.storyboard`) that gets included in the Xamarin.Mac app's bundle when it is compiled and shipped. To define the starting Storyboard for your app, edit it's `Info.plist` file and select the **Main Interface** from the dropdown box: 
 
-[![The Info.plist editor.](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
+[![The Info.plist editor](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code"></a>
 
@@ -40,7 +40,7 @@ The `FromName` loads the Storyboard file with the given name that has been inclu
 
 Optionally, you can use the `InstantiateInitialController` method to load the View Controller that has been assigned the Initial Controller in Interface Builder:
 
-[![Setting the initial controller.](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
+[![Setting the initial controller](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
 
 It's marked by the **Storyboard Entry Point** and the open ended arrow above.
 
@@ -71,7 +71,7 @@ Several new methods have been added to the `NSViewController` class to support S
 
 Additionally, `NSViewControllers` are now part of the Window's _Responder Chain_:
 
-[![The Responder Chain.](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
+[![The Responder Chain](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
 And as such they are wired-up to receive and respond to events such as Cut, Copy and Paste menu item selections. This automatic View Controller wire-up only occurs on apps running on macOS Sierra (10.12) and greater.
 
@@ -81,13 +81,13 @@ And as such they are wired-up to receive and respond to events such as Cut, Copy
 
 In Storyboards, View Controllers (such as the Split View Controller and the Tab View Controller) can now implement _Containment_, such that they can "contain" other sub View Controllers:
 
-[![An example of View Controller Containment.](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
+[![An example of View Controller Containment](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 
 Child View Controllers contain methods and properties to tie them back to their Parent View Controller and to work with displaying and removing Views from the screen.
 
 All Container View Controllers built into macOS have a specific layout which Apple suggest that you follow if creating your own custom Container View Controllers:
 
-[![The View Controller layout.](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
+[![The View Controller layout](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
 
 The Collection View Controller contains an array of Collection View Items, each of which contain one or more View Controllers that contain their own Views.
 
@@ -126,7 +126,7 @@ PerformSegue("MyNamedSegue", this);
 
 The Segue ID is defined inside of Xcode's Interface Builder when you are laying out the app's UI:
 
-[![Entering a Segue Name.](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
+[![Entering a Segue Name](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
 
 In the View Controller that is acting as the source of the Segue, you should override the `PrepareForSegue` method and do any initialization required before the Segue is executed and the specified View Controller is displayed:
 
@@ -210,7 +210,7 @@ A couple of things to note here:
 
 To use this new Segue type in Xcode's Interface Builder, we need to compile the app first, then switch to Xcode and add a new Segue between two scenes. Set the **Style** to **Custom** and the **Segue Class** to `ReplaceViewSegue` (the name of our custom Segue class):
 
-[![Setting the Segue class.](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
+[![Setting the Segue class](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues"></a>
 
@@ -266,21 +266,21 @@ To add a reference to an external Storyboard, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project Name and select **Add** > **New File...** > **Mac** > **Storyboard**. Enter a **Name** for the new Storyboard and click the **New** button: 
 
-    [![Adding a new Storyboard.](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
+    [![Adding a new Storyboard](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
 2. In the **Solution Explorer**, double-click the new Storyboard name to open it for editing in Xcode's Interface Builder.
 3. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
 
-    [![Designing the interface.](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
+    [![Designing the interface](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
 4. Switch to the Storyboard that you are going to be adding the reference to in the Interface Builder.
 5. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
 
-    [![Selecting a Storyboard Reference in the Library.](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![Selecting a Storyboard Reference in the Library](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. In the **Attribute Inspector**, select the name of the **Storyboard** that you created above: 
 
-    [![Configuring the reference.](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
+    [![Configuring the reference](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
 7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created.  From the popup menu select **Show** to complete the Segue: 
 
-    [![Setting the Segue type.](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![Setting the Segue type](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Save your changes to the Storyboard.
 9. Return to Visual Studio for Mac to sync your changes.
 
@@ -295,20 +295,20 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 1. In the **Solution Explorer**, double-click the external Storyboard to open it for editing in Xcode's Interface Builder.
 2. Add a new Scene and design its layout as you normally would: 
 
-    [![Designing the layout in Xcode.](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
+    [![Designing the layout in Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
     [![Setting the Storyboard I D to AltScene under Identity.](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Open the Storyboard that you are going to be adding the reference to in Interface Builder.
 5. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
 
-    [![Selecting a Storyboard Reference from the Library.](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![Selecting a Storyboard Reference from the Library](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. In the **Identity Inspector**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
     [![Setting the Reference I D to AltScene under Storyboard Reference.](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
-    [![Setting the Segue Type.](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![Setting the Segue Type](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Save your changes to the Storyboard.
 9. Return to Visual Studio for Mac to sync your changes.
 
@@ -323,19 +323,19 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 1. In the **Solution Explorer**, double-click the Storyboard to open it for editing.
 2. Add a new Scene and design its layout as you normally would: 
 
-    [![Editing the storyboard in Xcode.](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
+    [![Editing the storyboard in Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
     [![Setting the Storyboard I D to IntScene under Identity.](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-    [![Selecting a Storyboard Reference from the Library.](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![Selecting a Storyboard Reference from the Library](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. In **Attribute Inspector**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
     [![Setting the Reference I D to IntScene under Storyboard Reference.](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
-    [![Selecting the Segue Type.](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![Selecting the Segue Type](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 7. Save your changes to the Storyboard.
 8. Return to Visual Studio for Mac to sync your changes.
 

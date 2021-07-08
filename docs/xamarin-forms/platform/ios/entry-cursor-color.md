@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Entry Cursor Color on iOS
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific sets the cursor color of an [`Entry`](xref:Xamarin.Forms.Entry) to a specified color. It's consumed in XAML by setting the [`Entry.CursorColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) bindable property to a [`Color`](xref:Xamarin.Forms.Color):
 
@@ -40,7 +40,7 @@ The `Entry.On<iOS>` method specifies that this platform-specific will only run o
 
 The result is that the cursor color in a [`Entry`](xref:Xamarin.Forms.Entry) can be set to a specific [`Color`](xref:Xamarin.Forms.Color):
 
-![Entry Cursor Color.](entry-cursor-color-images/entry-cursorcolor.png)
+![Entry Cursor Color](entry-cursor-color-images/entry-cursorcolor.png)
 
 ## Related links
 

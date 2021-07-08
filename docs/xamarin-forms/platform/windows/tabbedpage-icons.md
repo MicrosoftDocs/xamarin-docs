@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # TabbedPage Icons on Windows
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Universal Windows Platform platform-specific enables page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar, and provides the ability to optionally specify the icon size. It's consumed in XAML by setting the [`TabbedPage.HeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) attached property to `true`, and by optionally setting the [`TabbedPage.HeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) attached property to a [`Size`](xref:Xamarin.Forms.Size) value:
 
@@ -67,7 +67,7 @@ In addition, the `TabbedPage` class in the `Xamarin.Forms.PlatformConfiguration.
 
 The result is that page icons can be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar, with the icon size being optionally set to a desired size:
 
-![TabbedPage icons enabled platform-specific.](tabbedpage-icons-images/tabbedpage-icons.png "TabbedPage icons enabled platform-specific")
+![TabbedPage icons enabled platform-specific](tabbedpage-icons-images/tabbedpage-icons.png "TabbedPage icons enabled platform-specific")
 
 ## Related links
 

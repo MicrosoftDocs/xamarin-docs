@@ -57,7 +57,7 @@ Presents scenes like a stack that can be
   can be pushed onto the navigation stack and
   popped off (either programmatically or by user-selection).
 
-![Scenes can be pushed onto the navigation stack.](navigation-images/hierarchy-1.png) ![Scenes can be popped off of the navigation stack](navigation-images/hierarchy-2.png)
+![Scenes can be pushed onto the navigation stack](navigation-images/hierarchy-1.png) ![Scenes can be popped off of the navigation stack](navigation-images/hierarchy-2.png)
 
 As with iOS, a left-edge-swipe navigates back to the
   parent controller in a hierarchical navigation stack.
@@ -119,7 +119,7 @@ Page-based interfaces swipe left-to-right, similar to the way
   along the bottom of the screen to show which page is
   currently displayed.
 
-![Sample first page.](navigation-images/paged-1.png) ![Sample second page](navigation-images/paged-2.png) ![Sample fifth page](navigation-images/paged-5.png)
+![Sample first page](navigation-images/paged-1.png) ![Sample second page](navigation-images/paged-2.png) ![Sample fifth page](navigation-images/paged-5.png)
 
 To make a page-based interface the main UI for your watch app,
   use `ReloadRootControllers` with an array of interface

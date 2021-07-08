@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Fonts in Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
 By default, Xamarin.Forms uses a system font defined by each platform. However, controls that display text define properties that you can use to change this font:
 
@@ -152,7 +152,7 @@ Label label2 = new Label
 
 The following screenshots show the custom font:
 
-[![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example."](fonts-images/custom.png#lightbox "Custom Fonts Example")
+[![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png#lightbox "Custom Fonts Example")
 
 > [!IMPORTANT]
 > For release builds on Windows, ensure the assembly containing the custom font is passed as an argument in the `Forms.Init` method call. For more information, see [Troubleshooting](~/xamarin-forms/platform/windows/installation/index.md#troubleshooting).
@@ -252,7 +252,7 @@ image.Source = new FontImageSource
 
 The following screenshots, from the [Bindable Layouts](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) sample, show several font icons being displayed by a bindable layout:
 
-![Screenshot of font icons being displayed, on iOS and Android.](fonts-images/font-image-source.png "Font icons being displayed in an Image view")
+![Screenshot of font icons being displayed, on iOS and Android](fonts-images/font-image-source.png "Font icons being displayed in an Image view")
 
 ## Related links
 

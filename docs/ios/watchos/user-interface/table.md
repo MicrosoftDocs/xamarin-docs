@@ -16,7 +16,7 @@ The watchOS `WKInterfaceTable` control is much simpler than
   a scrolling list of rows that can have custom layouts, and
   which respond to touch events.
 
-![Watch table list.](table-images/table-list-sml.png) ![Watch table detail](table-images/table-detail-sml.png)
+![Watch table list](table-images/table-list-sml.png) ![Watch table detail](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## Adding a Table
@@ -24,7 +24,7 @@ The watchOS `WKInterfaceTable` control is much simpler than
 Drag the **Table** control into a scene. By default it will look
   like this (showing a single unspecified row layout):
 
-[![Adding a table.](table-images/add-table-sml.png)](table-images/add-table.png#lightbox)
+[![Adding a table](table-images/add-table-sml.png)](table-images/add-table.png#lightbox)
 
 Give the table a name in the **Properties** pad's **Name** box, so that
 it can be referred to in code.
@@ -37,7 +37,7 @@ The table automatically includes a single row, represented by a
 To set the **Class** for the row controller, select the row in the
   **Document Outline** and type a class name in the **Properties** pad:
 
-[![Entering a class name in the Properties pad.](table-images/add-row-controller-sml.png)](table-images/add-row-controller.png#lightbox)
+[![Entering a class name in the Properties pad](table-images/add-row-controller-sml.png)](table-images/add-row-controller.png#lightbox)
 
 Once the class for the row's controller is set, the IDE will create a
 corresponding C# file in the project. Drag controls (such as labels)
@@ -133,14 +133,14 @@ By default the table control has a single row type that you
   can design. To add more row 'templates' use the **Rows** box
   in the **Properties** pad to create more row controllers:
 
-![Setting the number of Prototype rows.](table-images/prototype-rows1.png)
+![Setting the number of Prototype rows](table-images/prototype-rows1.png)
 
 Setting the **Rows** property to **3** will create additional
   row placeholders for you to drag controls into. For each row,
   set the **Class** name in the **Properties** pad to ensure
   the row controller class is created.
 
-![The prototype rows in the designer.](table-images/prototype-rows2.png)
+![The prototype rows in the designer](table-images/prototype-rows2.png)
 
 To populate a table with different row types use the `SetRowTypes`
   method to specify the row controller type to be used for each
@@ -179,7 +179,7 @@ the detail pages related to each row, without having to go back to the
 table and choose another row. The detail screens can be scrolled by swiping
 up and down, or using the Digital Crown.
 
-![Vertical Detail Paging example.](table-images/table-scroll-sml.png) ![Vertical paging detail](table-images/table-detail-sml.png)
+![Vertical Detail Paging example](table-images/table-scroll-sml.png) ![Vertical paging detail](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > This feature is currently only available by editing the
@@ -188,7 +188,7 @@ up and down, or using the Digital Crown.
 To enable this feature, select the `WKInterfaceTable` on the design surface
 and tick the **Vertical Detail Paging** option:
 
-![Selecting the Vertical Detail Paging option.](table-images/vertical-detail-paging-sml.png)
+![Selecting the Vertical Detail Paging option](table-images/vertical-detail-paging-sml.png)
 
 As [explained by Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023)
 the table navigation must use segues for the paging feature to work. Re-write

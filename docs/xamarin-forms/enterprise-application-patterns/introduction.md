@@ -61,7 +61,7 @@ This guide includes a sample application, eShopOnContainers, that's an online st
 
 Figure 1-1 provides a high-level overview of the architecture of the sample application.
 
-![eShopOnContainers high-level architecture.](introduction-images/architecture.png)
+![eShopOnContainers high-level architecture](introduction-images/architecture.png)
 
 **Figure 1-1**: eShopOnContainers high-level architecture
 
@@ -88,7 +88,7 @@ For information about the implementation of the backend services, see [.NET Micr
 
 This guide focuses on building cross-platform enterprise apps using Xamarin.Forms, and uses the eShopOnContainers mobile app as an example. Figure 1-2 shows the pages from the eShopOnContainers mobile app that provide the functionality outlined earlier.
 
-[![The eShopOnContainers mobile app.](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
+[![The eShopOnContainers mobile app](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
 **Figure 1-2**: The eShopOnContainers mobile app
 

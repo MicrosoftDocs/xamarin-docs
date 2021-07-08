@@ -13,7 +13,7 @@ ms.date: 09/13/2016
 
 The iOS App Store has had a complete redesign, which not only allows users to efficiently navigate the store, but also allows you, as a developer, to promote your app to users. These promotions include updates to in-app purchases and updates to the product page. iOS 11 also adds updates regarding how to communicate with users, how to add your app icon, and how to release your app to the public.
 
-![New app store layout.](app-store-changes-images/image3.jpg)
+![New app store layout](app-store-changes-images/image3.jpg)
 
 The redesigned app store has the following sections:
 
@@ -43,7 +43,7 @@ Any in-app purchase promotions are subject to an app store review before it can 
 
 To make your in-app purchases available to promote, open your app and browse to **Features > In-App Purchases**. Go to the **App Store Promotion (Optional)** section and add a 1024 x 1024 image and **Save**, as illustrated in the following image:
 
-![App Store Promotion section in iTune Connect.](app-store-changes-images/image4.png)
+![App Store Promotion section in iTune Connect](app-store-changes-images/image4.png)
 
 You also need to add the `ShouldAddStorePayment` method to the `SKPaymentTransactionObserver` protocol in your app.
 
@@ -69,7 +69,7 @@ The following changes have been made to the product page:
 
 In 10.3, Apple launched a new way for developers to communicate directly with app users through the ability to respond to reviews. You can access this new functionality in iTunes connect by browsing to **App > Activity > Ratings and Reviews**, as illustrated in the following image:
 
-![Dialog showing area to enter reply to comment.](app-store-changes-images/image5.png)
+![Dialog showing area to enter reply to comment](app-store-changes-images/image5.png)
 
 There are a few things to be aware of when replying to users:
 
@@ -87,7 +87,7 @@ With iOS 11, Apple has implemented the option of phased releases for updates to 
 
 Phased Releases are enabled in iTunes Connect. Click on your app in the sidebar, scroll to the **Phased Release for Automatic Updates** section at the bottom, and select **Release update over 7-day period using phased release**:
 
-![Option showing phased release for automatic updates.](app-store-changes-images/image6.png)
+![Option showing phased release for automatic updates](app-store-changes-images/image6.png)
 
 Your update is available immediately for download in the Updates tab of the App Store. Phased releases are only available for users who have automatic downloads selected.
 

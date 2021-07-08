@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CollectionView Data
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) includes the following properties that define the data to be displayed, and its appearance:
 
@@ -140,7 +140,7 @@ public class Monkey
 
 The following screenshots show the result of templating each item in the list:
 
-[![Screenshot of CollectionView where each item is templated, on iOS and Android](populate-data-images/datatemplate.png "Templated items in a CollectionView."](populate-data-images/datatemplate-large.png#lightbox "Templated items in a CollectionView")
+[![Screenshot of CollectionView where each item is templated, on iOS and Android](populate-data-images/datatemplate.png "Templated items in a CollectionView")](populate-data-images/datatemplate-large.png#lightbox "Templated items in a CollectionView")
 
 For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -197,7 +197,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 The `MonkeyDataTemplateSelector` class defines `AmericanMonkey` and `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` override returns the `AmericanMonkey` template, which displays the monkey name and location in teal, when the monkey name contains "America". When the monkey name doesn't contain "America", the `OnSelectTemplate` override returns the `OtherMonkey` template, which displays the monkey name and location in silver:
 
-[![Screenshot of CollectionView runtime item template selection, on iOS and Android](populate-data-images/datatemplateselector.png "Runtime item template selection in a CollectionView."](populate-data-images/datatemplateselector-large.png#lightbox "Runtime item template selection in a CollectionView")
+[![Screenshot of CollectionView runtime item template selection, on iOS and Android](populate-data-images/datatemplateselector.png "Runtime item template selection in a CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Runtime item template selection in a CollectionView")
 
 For more information about data template selectors, see [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
@@ -277,7 +277,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 
 In this example, the `SwipeView` content is a [`Grid`](xref:Xamarin.Forms.Grid) that defines the appearance of each item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). The swipe items are used to perform actions on the `SwipeView` content, and are revealed when the control is swiped from the left side:
 
-[![Screenshot of CollectionView context menu items, on iOS and Android](populate-data-images/swipeview.png "CollectionView with SwipeView context menu items."](populate-data-images/swipeview-large.png#lightbox "CollectionView with SwipeView context menu items")
+[![Screenshot of CollectionView context menu items, on iOS and Android](populate-data-images/swipeview.png "CollectionView with SwipeView context menu items")](populate-data-images/swipeview-large.png#lightbox "CollectionView with SwipeView context menu items")
 
 `SwipeView` supports four different swipe directions, with the swipe direction being defined by the directional `SwipeItems` collection the `SwipeItems` objects are added to. By default, a swipe item is executed when it's tapped by the user. In addition, once a swipe item has been executed the swipe items are hidden and the `SwipeView` content is re-displayed. However, these behaviors can be changed.
 
@@ -316,7 +316,7 @@ refreshView.Content = collectionView;
 
 When the user initiates a refresh, the `ICommand` defined by the `Command` property is executed, which should refresh the items being displayed. A refresh visualization is shown while the refresh occurs, which consists of an animated progress circle:
 
-[![Screenshot of CollectionView pull-to-refresh, on iOS and Android](populate-data-images/pull-to-refresh.png "CollectionView pull-to-refresh."](populate-data-images/pull-to-refresh-large.png#lightbox "CollectionView pull-to-refresh")
+[![Screenshot of CollectionView pull-to-refresh, on iOS and Android](populate-data-images/pull-to-refresh.png "CollectionView pull-to-refresh")](populate-data-images/pull-to-refresh-large.png#lightbox "CollectionView pull-to-refresh")
 
 The value of the `RefreshView.IsRefreshing` property indicates the current state of the `RefreshView`. When a refresh is triggered by the user, this property will automatically transition to `true`. Once the refresh completes, you should reset the property to `false`.
 

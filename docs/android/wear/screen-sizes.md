@@ -13,7 +13,7 @@ ms.date: 04/25/2018
 Android Wear devices can have either a rectangular or a round display,
 which can also be different sizes.
 
-![Screenshots of rectangular and round Wear displays.](screen-sizes-images/moyeu-wear.png)
+![Screenshots of rectangular and round Wear displays](screen-sizes-images/moyeu-wear.png)
 
 ## Identifying Screen Type
 
@@ -49,7 +49,7 @@ different layouts for rectangular and round screens using the
 The solution contains different layouts for each style which will be
 selected at run-time:
 
-![Files shown under Resources/layout.](screen-sizes-images/solution.png)
+![Files shown under Resources/layout](screen-sizes-images/solution.png)
 
 ### BoxInsetLayout
 
@@ -66,15 +66,15 @@ rectangular and round screens.
 The Xamarin Android Designer supports both rectangular and round
 screens:
 
-![Selecting the Android Wear Square screen in the Xamarin Android Designer.](screen-sizes-images/design-screen-type.png)
+![Selecting the Android Wear Square screen in the Xamarin Android Designer](screen-sizes-images/design-screen-type.png)
 
 The design surface in rectangular style is shown here:
 
-![Design surface in rectangular style.](screen-sizes-images/design-rect.png) 
+![Design surface in rectangular style](screen-sizes-images/design-rect.png) 
 
 The design surface in round style is shown here:
 
-![Design surface in round style.](screen-sizes-images/design-round.png)
+![Design surface in round style](screen-sizes-images/design-round.png)
 
 ## Wear Simulator
 
@@ -82,15 +82,15 @@ The **Google Emulator Manager** contains device definitions for both
 screen types. You can create rectangular and round emulators to test
 your app.
 
-![Wear device definitions shown in the Google Emulator Manager.](screen-sizes-images/emulator-devices.png)
+![Wear device definitions shown in the Google Emulator Manager](screen-sizes-images/emulator-devices.png)
 
 The emulator will render like this for a rectangular screen:
 
-![Emulator rendering of a rectangular screen.](screen-sizes-images/recipe-2.png) 
+![Emulator rendering of a rectangular screen](screen-sizes-images/recipe-2.png) 
 
 It will render like this for a round screen:
 
-![Emulator rendering of a round screen.](screen-sizes-images/recipe-2-round.png)
+![Emulator rendering of a round screen](screen-sizes-images/recipe-2-round.png)
 
 ## Video
 

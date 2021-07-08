@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms MenuItem
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
 The Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) class defines menu items for menus such as `ListView` item context menus and Shell application flyout menus.
 
 The following screenshots show `MenuItem` objects in a `ListView` context menu on iOS and Android:
 
-[!["MenuItems on iOS and Android."](menuitem-images/menuitem-demo-cropped.png "MenuItems on iOS and Android."](menuitem-images/menuitem-demo-full.png#lightbox "MenuItems on iOS and Android full image")
+[!["MenuItems on iOS and Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems on iOS and Android")](menuitem-images/menuitem-demo-full.png#lightbox "MenuItems on iOS and Android full image")
 
 The `MenuItem` class defines the following properties:
 
@@ -189,7 +189,7 @@ public MenuItemXamlMvvmPage()
 
  Icons are specified using the `IconImageSource` property. If an icon is specified, the text specified by the `Text` property will not be displayed. The following screenshot shows a `MenuItem` with an icon on Android:
 
-!["Screenshot of MenuItem icon on Android."](menuitem-images/menuitem-android-icon.png "Screenshot of MenuItem icon on Android")
+!["Screenshot of MenuItem icon on Android"](menuitem-images/menuitem-android-icon.png "Screenshot of MenuItem icon on Android")
 
 For more information on using images in Xamarin.Forms, see [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
@@ -244,15 +244,15 @@ Context menus are accessed and displayed differently on each platform.
 
 On Android, the context menu is activated by long-press on a list item. The context menu replaces the title and navigation bar area and `MenuItem` options are displayed as horizontal buttons.
 
-!["Screenshot of context menu on Android."](menuitem-images/menuitem-android-icon.png "Screenshot of context menu on Android")
+!["Screenshot of context menu on Android"](menuitem-images/menuitem-android-icon.png "Screenshot of context menu on Android")
 
 On iOS, the context menu is activated by swiping on a list item. The context menu is displayed on the list item and `MenuItems` are displayed as horizontal buttons.
 
-!["Screenshot of context menu on iOS."](menuitem-images/menuitem-ios-contextmenu.png "Screenshot of context menu on iOS")
+!["Screenshot of context menu on iOS"](menuitem-images/menuitem-ios-contextmenu.png "Screenshot of context menu on iOS")
 
 On UWP, the context menu is activated by right-clicking on a list item. The context menu is displayed near the cursor as a vertical list.
 
-!["Screenshot of context menu on UWP."](menuitem-images/menuitem-uwp.png "Screenshot of context menu on UWP")
+!["Screenshot of context menu on UWP"](menuitem-images/menuitem-uwp.png "Screenshot of context menu on UWP")
 
 ## Related links
 

@@ -18,7 +18,7 @@ the confirmation dialog and Apple ID login. Assuming the transaction then
 succeeds, StoreKit notifies the application code, which must store the
 transaction result and provide the user with access to their purchase.   
 
- [![StoreKit notifies the application code, which must store the transaction result and provide the user with access to their purchase.](store-kit-overview-and-retreiving-product-information-images/image14.png)](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
+ [![StoreKit notifies the application code, which must store the transaction result and provide the user with access to their purchase](store-kit-overview-and-retreiving-product-information-images/image14.png)](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## Classes
 
@@ -41,7 +41,7 @@ number of product Ids.
 The following diagram shows the relationships between the various StoreKit
 classes (abstract classes must be implemented in your application):   
 
- [![The relationships between the various StoreKit classes abstract classes must be implemented in the app.](store-kit-overview-and-retreiving-product-information-images/image15.png)](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
+ [![The relationships between the various StoreKit classes abstract classes must be implemented in the app](store-kit-overview-and-retreiving-product-information-images/image15.png)](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
 
 These classes are explained in more detail later in this
 document.
@@ -70,18 +70,18 @@ To test StoreKit code you must logout of your regular iTunes test account and
 login with a special test account (created in iTunes Connect) that is linked to
 the test store. To sign out of the current account visit **Settings > iTunes and App Store** as shown here:
 
- [![To sign out of the current account visit Settings iTunes and App Store.](store-kit-overview-and-retreiving-product-information-images/image16.png)](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
+ [![To sign out of the current account visit Settings iTunes and App Store](store-kit-overview-and-retreiving-product-information-images/image16.png)](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
 
 then sign in with a test account *when requested by StoreKit within your app*:
 
 To create test users in iTunes Connect click on **Users and Roles**
 on the main page.
 
- [![To create test users in iTunes Connect click on Users and Roles on the main page.](store-kit-overview-and-retreiving-product-information-images/image17.png)](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
+ [![To create test users in iTunes Connect click on Users and Roles on the main page](store-kit-overview-and-retreiving-product-information-images/image17.png)](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 Select **Sandbox Testers**
 
- [![Selecting Sandbox Testers.](store-kit-overview-and-retreiving-product-information-images/image18.png)](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
+ [![Selecting Sandbox Testers](store-kit-overview-and-retreiving-product-information-images/image18.png)](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 The list of existing users is displayed. You can add a new user or delete an
 existing record. The portal does not (currently) let you view or edit existing
@@ -89,7 +89,7 @@ test users, so it’s recommended that you keep a good record of each test user
 that is created (especially the password you assign). Once you delete a test
 user the email address cannot be re-used for another test account.  
 
- [![The list of existing users is displayed.](store-kit-overview-and-retreiving-product-information-images/image19.png)](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
+ [![The list of existing users is displayed](store-kit-overview-and-retreiving-product-information-images/image19.png)](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
 
  New test users have similar attributes to a real Apple
 ID (such as name, password, secret question and answer). Keep a record of all
@@ -97,7 +97,7 @@ the details entered here. The **Select iTunes Store** field will
 determine which currency and language the in-app purchases will use when
 logged-in as that user.
 
- [![The Select iTunes Store field will determine the user's currency and language for their in-app purchases.](store-kit-overview-and-retreiving-product-information-images/image20.png)](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
+ [![The Select iTunes Store field will determine the user's currency and language for their in-app purchases](store-kit-overview-and-retreiving-product-information-images/image20.png)](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## Retrieving Product Information
 
@@ -120,7 +120,7 @@ The overall interaction looks like this ( **StoreKit** is
 built-in to iOS, and the **App Store** represents Apple’s
 servers):
 
- [![Retrieving Product Information graph.](store-kit-overview-and-retreiving-product-information-images/image21.png)](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
+ [![Retrieving Product Information graph](store-kit-overview-and-retreiving-product-information-images/image21.png)](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### Displaying Product Information Example
 
@@ -128,7 +128,7 @@ The [InAppPurchaseSample](/samples/xamarin/ios-samples/storekit) *Consumables* s
 product information can be retrieved. The main screen of the sample displays
 information for two products that is retrieved from the App Store:   
 
- [![The main screen displays information products  retrieved from the App Store.](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
+ [![The main screen displays information products  retrieved from the App Store](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
 
 The sample code to retrieve and display product information
 is explained in more detail below.
@@ -281,7 +281,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 This screenshot shows the sample application immediately after loading (when
 no product information is available):
 
- [![The sample app immediately after loading when no product information is available.](store-kit-overview-and-retreiving-product-information-images/image24.png)](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
+ [![The sample app immediately after loading when no product information is available](store-kit-overview-and-retreiving-product-information-images/image24.png)](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## Invalid Products
 
@@ -354,7 +354,7 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
 Using two different iTunes test accounts (one for the American store and one
 for the Japanese store) results in the following screenshots:   
 
- [![Two different iTunes test accounts showing language specific results.](store-kit-overview-and-retreiving-product-information-images/image25.png)](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
+ [![Two different iTunes test accounts showing language specific results](store-kit-overview-and-retreiving-product-information-images/image25.png)](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
 
 Notice that the store affects the language that is used
 for product information and price currency, while the device’s language

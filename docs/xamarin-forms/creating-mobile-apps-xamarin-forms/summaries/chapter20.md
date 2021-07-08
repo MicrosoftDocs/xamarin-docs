@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 20. Async and file I/O
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -164,7 +164,7 @@ The [**MandelbrotCancellation**](https://github.com/xamarin/xamarin-forms-book-s
 The
 [**MandelbrotXF**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotXF) sample has a more extensive user interface, and it's mostly based on a [`MandelbrotModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/MandelbrotXF/MandelbrotXF/MandelbrotXF/MandelbrotModel.cs) and [`MandelbrotViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/MandelbrotXF/MandelbrotXF/MandelbrotXF/MandelbrotViewModel.cs) classes:
 
-[![Triple screenshot of Mandelbrot X F](images/ch20fg13-small.png "MVVM Mandelbrot."](images/ch20fg13-large.png#lightbox "MVVM Mandelbrot")
+[![Triple screenshot of Mandelbrot X F](images/ch20fg13-small.png "MVVM Mandelbrot")](images/ch20fg13-large.png#lightbox "MVVM Mandelbrot")
 
 ## Back to the web
 

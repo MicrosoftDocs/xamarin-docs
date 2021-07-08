@@ -19,11 +19,11 @@ To update your app in Visual Studio for Mac, use the following steps:
 2. Browse to the **iOS Build** tab.
 3. Set the **Supported architectures** drop-down to **x86_64** for the **Debug|iPhoneSimulator** and **Release|iPhoneSimulator**:
 
-    ![Change Simulator architectures drop-down.](architecture-changes-images/image1.png)
+    ![Change Simulator architectures drop-down](architecture-changes-images/image1.png)
 
 4. For iOS devices, change the configuration to **Debug|iPhone** and set the **Supported architectures** drop-down to **ARM64**:
 
-    ![Change device architectures drop-down.](architecture-changes-images/image2.png)
+    ![Change device architectures drop-down](architecture-changes-images/image2.png)
 
 5. Change the configuration to **Release|iPhone** and set the **Supported architectures** drop-down to **ARM64**.
 

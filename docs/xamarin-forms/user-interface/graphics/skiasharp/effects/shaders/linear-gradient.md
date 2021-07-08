@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The SkiaSharp linear gradient
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [`SKPaint`](xref:SkiaSharp.SKPaint) class defines a [`Color`](xref:SkiaSharp.SKPaint.Color) property that is used to stroke lines or fill areas with a solid color. You can alternatively stroke lines or fill areas with _gradients_, which are gradual blends of colors:
 
-![Linear Gradient Sample.](linear-gradient-images/LinearGradientSample.png "Linear Gradient Sample")
+![Linear Gradient Sample](linear-gradient-images/LinearGradientSample.png "Linear Gradient Sample")
 
 The most basic type of gradient is a _linear_ gradient. The blend of colors occurs on a line (called the _gradient line_) from one point to another. Lines that are perpendicular to the gradient line have the same color. You create a linear gradient using one of the two static [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) methods. The difference between the two overloads is that one includes a matrix transform and the other does not. 
 
@@ -90,7 +90,7 @@ The `Shader` property of `SKPaint` is assigned the `SKShader` return value from 
 
 After the gradient object is created, the `DrawRect` method draws the 300-pixel square rectangle using the `SKPaint` object that includes the shader. Here it is running on iOS, Android, and the Universal Windows Platform (UWP):
 
-[![Corner-to-Corner Gradient](linear-gradient-images/CornerToCornerGradient.png "Corner-to-Corner Gradient."](linear-gradient-images/CornerToCornerGradient-Large.png#lightbox)
+[![Corner-to-Corner Gradient](linear-gradient-images/CornerToCornerGradient.png "Corner-to-Corner Gradient")](linear-gradient-images/CornerToCornerGradient-Large.png#lightbox)
 
 The gradient line is defined by the two points specified as the first two arguments. Notice that these points are relative to the _canvas_ and _not_ to the graphical object displayed with the gradient. Along the gradient line, the color gradually transitions from red at the upper left to blue at the lower right. Any line that is perpendicular to the gradient line has a constant color.
 
@@ -149,7 +149,7 @@ public class CornerToCornerGradientPage : ContentPage
 
 Here's what you'll see after tapping the screen:
 
-[![Corner-to-Corner Gradient Full](linear-gradient-images/CornerToCornerGradientFull.png "Corner-to-Corner Gradient Full."](linear-gradient-images/CornerToCornerGradientFull-Large.png#lightbox)
+[![Corner-to-Corner Gradient Full](linear-gradient-images/CornerToCornerGradientFull.png "Corner-to-Corner Gradient Full")](linear-gradient-images/CornerToCornerGradientFull-Large.png#lightbox)
 
 Notice that the gradient repeats itself in the same pattern beyond the points defining the gradient line. This repetition occurs because the last argument to `CreateLinearGradient` is `SKShaderTileMode.Repeat`. (You'll see the other options shortly.)
 
@@ -322,7 +322,7 @@ The gradient line connecting the two touchpoints is easy to draw, but the perpen
 
 The perpendicular lines coincide with the beginning and end of the gradient. What happens beyond those lines depends on the setting of the `SKShaderTileMode` enumeration:
 
-[![Interactive Linear Gradient](linear-gradient-images/InteractiveLinearGradient.png "Interactive Linear Gradient."](linear-gradient-images/InteractiveLinearGradient-Large.png#lightbox)
+[![Interactive Linear Gradient](linear-gradient-images/InteractiveLinearGradient.png "Interactive Linear Gradient")](linear-gradient-images/InteractiveLinearGradient-Large.png#lightbox)
 
 The three screenshots show the results of the three different values of [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode). The iOS screenshot shows `SKShaderTileMode.Clamp`, which just extends the colors on the border of the gradient. The `SKShaderTileMode.Repeat` option in the Android screenshot shows how the gradient pattern is repeated. The `SKShaderTileMode.Mirror` option in the UWP screenshot also repeats the pattern, but the pattern is reversed each time, resulting in no color discontinuities.
 
@@ -332,7 +332,7 @@ The `SKShader` class defines no public properties or methods except for `Dispose
 
 The **Gradient Text** page displays text and a brackground that are both colored with similar gradients:
 
-[![Gradient Text](linear-gradient-images/GradientText.png "Gradient Text."](linear-gradient-images/GradientText-Large.png#lightbox)
+[![Gradient Text](linear-gradient-images/GradientText.png "Gradient Text")](linear-gradient-images/GradientText-Large.png#lightbox)
 
 The only differences in the gradients are the start and end points. The gradient used for displaying text is based on two points on the corners of the bounding rectangle for the text. For the background, the two points are based on the entire canvas. Here's the code:
 
@@ -421,7 +421,7 @@ Now the upper-left and lower-right corners of the rectangle can be used to set t
 
 There are several ways to animate a gradient. One approach is to animate the start and end points. The **Gradient Animation** page moves the two points around in a circle that is centered on the canvas. The radius of this circle is half the width or height of the canvas, whichever is smaller. The start and end points are opposite each other on this circle, and the gradient goes from white to black with a `Mirror` tile mode:
 
-[![Gradient Animation](linear-gradient-images/GradientAnimation.png "Gradient Animation."](linear-gradient-images/GradientAnimation-Large.png#lightbox)
+[![Gradient Animation](linear-gradient-images/GradientAnimation.png "Gradient Animation")](linear-gradient-images/GradientAnimation-Large.png#lightbox)
 
 The constructor creates the `SKCanvasView`. The `OnAppearing` and `OnDisappearing` methods handle the animation logic:
 
@@ -615,7 +615,7 @@ public class RainbowGradientPage : ContentPage
 
 The two gradient points in the `CreateLinearGradient` method are based on two of the points that define this path: Both points are close to the upper-left corner. The first is on the upper edge of the canvas and the second is on the left edge of the canvas. Here's the result:
 
-[![Rainbow Gradient Faulty](linear-gradient-images/RainbowGradientFaulty.png "Rainbow Gradient Faulty."](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
+[![Rainbow Gradient Faulty](linear-gradient-images/RainbowGradientFaulty.png "Rainbow Gradient Faulty")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 
 This is an interesting image, but it's not quite the intent. The problem is that when creating a linear gradient, the lines of constant color are perpendicular to the gradient line. The gradient line is based on the points where the figure touches the top and left sides, and that line is generally not perpendicular to the edges of the figure that extend to the bottom-right corner. This approach would work only if the canvas were square.
 
@@ -670,7 +670,7 @@ public class RainbowGradientPage : ContentPage
 
 Now the rainbow colors are aligned with the figure:
 
-[![Rainbow Gradient](linear-gradient-images/RainbowGradient.png "Rainbow Gradient."](linear-gradient-images/RainbowGradient-Large.png#lightbox)
+[![Rainbow Gradient](linear-gradient-images/RainbowGradient.png "Rainbow Gradient")](linear-gradient-images/RainbowGradient-Large.png#lightbox)
 
 **Infinity Colors**
 
@@ -820,7 +820,7 @@ Without the last argument to `CreateLinearGradient`, you'd see a rainbow gradien
 
 With that last argument to `CreateLinearGradient`, the gradient pattern continuously sweeps across the image:
 
-[![Infinity Colors](linear-gradient-images/InfinityColors.png "Infinity Colors."](linear-gradient-images/InfinityColors-Large.png#lightbox)
+[![Infinity Colors](linear-gradient-images/InfinityColors.png "Infinity Colors")](linear-gradient-images/InfinityColors-Large.png#lightbox)
 
 ## Transparency and gradients
 
@@ -828,7 +828,7 @@ The colors that contribute to a gradient can incorporate transparency. Instead o
 
 You can use this technique for some interesting effects. One of the classic examples shows a graphical object with its reflection:
 
-[![Reflection Gradient](linear-gradient-images/ReflectionGradient.png "Reflection Gradient."](linear-gradient-images/ReflectionGradient-Large.png#lightbox)
+[![Reflection Gradient](linear-gradient-images/ReflectionGradient.png "Reflection Gradient")](linear-gradient-images/ReflectionGradient-Large.png#lightbox)
 
 The text that is upside-down is colored with a gradient that is 50% transparent at the top to fully transparent at the bottom. These levels of transparency are associated with alpha values of 0x80 and 0.
 

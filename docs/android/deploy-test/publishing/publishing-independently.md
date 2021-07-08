@@ -43,7 +43,7 @@ installation from non-marketplace sources, a user must enable the
 application. The setting for this may be found under **Settings >
 Security**, as shown in the following diagram:
 
-[![Security settings screen.](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
+[![Security settings screen](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 > [!IMPORTANT]
 > Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
@@ -55,7 +55,7 @@ distribute an application to users. When the user opens the e-mail on
 an Android-powered device, Android will recognize the APK attachment
 and display an **Install** button as shown in the following image:
 
-[![Install button for attachment.](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
+[![Install button for attachment](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Although distribution via e-mail is simple, it provides few protections
 against piracy or unauthorized distribution. It is best reserved for

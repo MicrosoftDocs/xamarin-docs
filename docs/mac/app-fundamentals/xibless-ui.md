@@ -19,7 +19,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 You also have the option of creating some or all of your Xamarin.Mac application's UI directly in C# code. In this article, we'll cover the basics of creating user interfaces and UI elements in C# code.
 
-[![The Visual Studio for Mac code editor](xibless-ui-images/intro01.png "The Visual Studio for Mac code editor."](xibless-ui-images/intro01-large.png#lightbox)
+[![The Visual Studio for Mac code editor](xibless-ui-images/intro01.png "The Visual Studio for Mac code editor")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code"></a>
 
@@ -32,10 +32,10 @@ To switch to a Xibless window for an application, do the following:
 1. Open the application that you want to stop using `.storyboard` or .xib files to define the user interface in Visual Studio for Mac.
 2. In the **Solution Pad**, right-click on the **Main.storyboard** or **MainWindow.xib** file and select **Remove**:
 
-    ![Removing the main storyboard or window.](xibless-ui-images/switch01.png "Removing the main storyboard or window")
+    ![Removing the main storyboard or window](xibless-ui-images/switch01.png "Removing the main storyboard or window")
 3. From the **Remove Dialog**, click the **Delete** button to remove the .storyboard or .xib completely from the project:
 
-    ![Confirming the deletion.](xibless-ui-images/switch02.png "Confirming the deletion")
+    ![Confirming the deletion](xibless-ui-images/switch02.png "Confirming the deletion")
 
 Now we'll need to modify the **MainWindow.cs** file to define the window's layout and modify the **ViewController.cs** or **MainWindowController.cs** file to create an instance of our `MainWindow` class since we are no longer using the .storyboard or .xib file.
 
@@ -277,13 +277,13 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 At this point, if the application is run and the button clicked a couple of times, the following will be displayed:
 
-![An example app run.](xibless-ui-images/run01.png "An example app run")
+![An example app run](xibless-ui-images/run01.png "An example app run")
 
 ## Adding a code only window
 
 If we want to add a code only, xibless window to an existing Xamarin.Mac application, right-click on the project in the **Solution Pad** and select **Add** > **New File..**. In the **New File** dialog choose **Xamarin.Mac** > **Cocoa Window with Controller**, as illustrated below:
 
-![Adding a new window controller.](xibless-ui-images/add01.png "Adding a new window controller")
+![Adding a new window controller](xibless-ui-images/add01.png "Adding a new window controller")
 
 Just like before, we'll delete the default .storyboard or .xib file from the project (in this case **SecondWindow.xib**) and follow the steps in the [Switching a Window to use Code](#Switching_a_Window_to_use_Code) section above to cover the window's definition to code.
 

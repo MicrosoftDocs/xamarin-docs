@@ -130,7 +130,7 @@ application. It is a `.zip` file, but uses the `.apk` file name
 extension. When expanded, the contents of an `.apk` created by
 Xamarin.Android can be seen in the screenshot below:
 
-[![Contents of the .apk.](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
+[![Contents of the .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
 
 A quick description of the contents of the `.apk` file:
 
@@ -332,13 +332,13 @@ Options for a Xamarin.Android project. In Visual Studio, this can be
 set in the **Android Options** page of project **Properties**, under
 the **Advanced** tab, as shown in the following screenshot:
 
-![Android Options Advanced properties.](multicore-devices-images/vs-abi-selections.png)
+![Android Options Advanced properties](multicore-devices-images/vs-abi-selections.png)
 
 In Visual Studio for Mac, the supported architectures may be selected on the
 **Android Build** page of **Project Options**, under the **Advanced**
 tab, as shown in the following screenshot:
 
-[![Android Build Supported ABIs.](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
+[![Android Build Supported ABIs](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
 
 There are some situations when it may be necessary to declare
 additional ABI support such as when:

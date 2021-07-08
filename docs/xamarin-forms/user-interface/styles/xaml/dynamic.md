@@ -13,7 +13,7 @@ ms.custom: video
 
 # Dynamic Styles in Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Styles do not respond to property changes, and remain unchanged for the duration of an application. For example, after assigning a Style to a visual element, if one of the Setter instances is modified, removed, or a new Setter instance added, the changes won't be applied to the visual element. However, applications can respond to style changes dynamically at runtime by using dynamic resources._
 
@@ -80,8 +80,8 @@ public partial class DynamicStylesPage : ContentPage
 
 When the `OnButtonClicked` event handler is executed, `searchBarStyle` will switch between `blueSearchBarStyle` and `greenSearchBarStyle`. This results in the appearance shown in the following screenshots:
 
-[![Blue Dynamic Style Example.](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
-[![Green Dynamic Style Example.](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
+[![Blue Dynamic Style Example](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+[![Green Dynamic Style Example](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 The following code example demonstrates the equivalent page in C#:
 
@@ -159,8 +159,8 @@ The [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances use the `StaticResourc
 
 In the code-behind file, the constructor creates a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) entry with the key `searchBarStyle`, as per the previous example that demonstrated dynamic styles. When the `OnButtonClicked` event handler is executed, `searchBarStyle` will switch between `blueSearchBarStyle` and `greenSearchBarStyle`. This results in the appearance shown in the following screenshots:
 
-[![Blue Dynamic Style Inheritance Example.](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
-[![Green Dynamic Style Inheritance Example.](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
+[![Blue Dynamic Style Inheritance Example](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+[![Green Dynamic Style Inheritance Example](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 The following code example demonstrates the equivalent page in C#:
 

@@ -44,13 +44,13 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 4. In the **Signing** section, select **Automatic Provisioning**:
 
-    ![Team selector dropdown.](automatic-provisioning-images/image2.png)
+    ![Team selector dropdown](automatic-provisioning-images/image2.png)
 
 5. Select your team from the **Team** dropdown.
 
 6. After a few seconds a Signing Certificate and Provisioning profile will be created:
 
-    ![successfully created certificate and profile.](automatic-provisioning-images/image5.png)
+    ![successfully created certificate and profile](automatic-provisioning-images/image5.png)
 
     If the automatic signing fails the **Automatic signing pad** will display the reason for the error.
 

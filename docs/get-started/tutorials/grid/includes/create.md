@@ -31,7 +31,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS remote simulator or Android emulator:
 
-    [![Screenshot of a Label in a Grid, on iOS and Android](../images/create-grid.png "Grid containing a Label."](../images/create-grid-large.png#lightbox "Grid containing a Labels")
+    [![Screenshot of a Label in a Grid, on iOS and Android](../images/create-grid.png "Grid containing a Label")](../images/create-grid-large.png#lightbox "Grid containing a Labels")
 
     For more information about the [`Grid`](xref:Xamarin.Forms.Grid), see [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -66,6 +66,6 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a Label in a Grid, on iOS and Android](../images/create-grid.png "Grid containing a Label."](../images/create-grid-large.png#lightbox "Grid containing a Labels")
+    [![Screenshot of a Label in a Grid, on iOS and Android](../images/create-grid.png "Grid containing a Label")](../images/create-grid-large.png#lightbox "Grid containing a Labels")
 
     For more information about the [`Grid`](xref:Xamarin.Forms.Grid), see [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).

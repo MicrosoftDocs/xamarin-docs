@@ -48,7 +48,7 @@ to use them.
 The Material Design Grid menu is available from the toolbar at the top
 of the Designer:
 
-[![Material Design grid.](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
+[![Material Design grid](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
 
 When you click the Material Design Grid icon, the Designer displays an
 overlay on the Design Surface that includes the following elements:
@@ -66,7 +66,7 @@ disable/enable the grid, configure the placement of keylines, and set
 spacings. Note that all values are expressed in `dp`
 (density-independent pixels):
 
-[![Grid, keyline, and spacing configuration.](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
+[![Grid, keyline, and spacing configuration](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
 
 To add a new keyline, enter a new offset value in the **Offset** box,
 select a location (**left**, **top**, **right**, or **bottom**) and
@@ -84,7 +84,7 @@ The **Theme Editor** lets you customize color information for a subset
 of theme attributes. To open the **Theme Editor**, click the paintbrush
 icon on the toolbar:
 
-[![Theme Editor icon.](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
+[![Theme Editor icon](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
 
 Although the **Theme Editor** is accessible from the toolbar for
 all target Android versions and API levels, only a subset of
@@ -95,7 +95,7 @@ The left-hand panel of the  **Theme Editor** displays the list of
 colors that make up the currently selected theme (in this example,
 we are using the `Default Theme`):
 
-[![Theme Editor.](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
+[![Theme Editor](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
 
 When you select a color on the left, the right-hand panel provides the
 following tabs to help you edit that color:
@@ -120,7 +120,7 @@ Let's look at each one of these tabs in detail.
 As seen in the following example, the **Inherit** tab lists the
 style inheritance for the **Background** color of the **Default Theme**:
 
-[![Inherit Tab.](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
+[![Inherit Tab](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 In this example, the **Default Theme** inherits from a style that uses
 `@color/background_material_light` but overrides it with
@@ -132,7 +132,7 @@ For more information about style inheritance, see
 
 The following screenshot illustrates the **Color Picker**:
 
-[![Color Picker.](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
+[![Color Picker](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
 
 In this example, the **Background** color can be changed to any
 value through various means:
@@ -151,7 +151,7 @@ Material Design guidelines or to the set of available color resources.
 The **Resources** tab offers a list of color resources that are already
 present in the theme:
 
-[![Resources.](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
+[![Resources](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
 
 Using the **Resources** tab constrains your choices to this list of
 colors. Keep in mind that if you choose a color resource that is
@@ -165,7 +165,7 @@ The **Material Palette** tab opens the **Material Design Color
 Palette**. Choosing a color value from this palette constrains your
 color choice so that it is consistent with Material Design guidelines:
 
-[![Material Palette.](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
+[![Material Palette](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
 
 The top of the color palette displays primary Material Design colors
 while the bottom of the palette displays a range of hues for the
@@ -175,13 +175,13 @@ When you select a hue, the color of the property is changed to the
 selected hue. In the following example, the `Background Tint` of the
 button is changed to *Indigo 500*:
 
-![Select Indigo 500.](material-design-features-images/vs/10-indigo-w158.png)
+![Select Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
 
 `Background Tint` is set to the color code for *Indigo 500*
 (`#ff3f51b5`), and the Designer updates the background color to reflect
 this change:
 
-[![Background tint changed.](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
+[![Background tint changed](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
 
 For more information about the Material Design color palette, see the
 Material Design
@@ -193,12 +193,12 @@ In the following example, we'll use the Material Palette to create a
 new custom theme. First, we'll change the **Background** color to *Blue
 900*:
 
-![Change background to Blue 900.](material-design-features-images/vs/12-change-background-to-blue-w158.png)
+![Change background to Blue 900](material-design-features-images/vs/12-change-background-to-blue-w158.png)
 
 When a color resource is changed, a message pops up with the
 message, *The current theme has unsaved changes*:
 
-[![Unsaved changes warning.](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
+[![Unsaved changes warning](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
 
 The **Background** color in the Designer has changed to the new color
 selection, but this change has not yet been saved. At this point,
@@ -212,7 +212,7 @@ you can do one of the following:
 In the following example, <kbd>CTRL+S</kbd> was pressed so that the changes
 were saved to **AppTheme**:
 
-[![Changes saved to AppTheme.](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
+[![Changes saved to AppTheme](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
 
 ## Summary
 
@@ -252,7 +252,7 @@ to use them.
 The Material Design Grid menu is available from the toolbar at the top
 of the Designer:
 
-[![Material Design grid.](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
+[![Material Design grid](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 When you click the Material Design Grid icon, the Designer displays an
 overlay on the Design Surface that includes the following elements:
@@ -265,7 +265,7 @@ overlay on the Design Surface that includes the following elements:
 
 These elements can be seen in the following screenshot:
 
-[![Keyline, spacing, and grid.](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
+[![Keyline, spacing, and grid](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
 Each of these overlay items is configurable. When you click the ellipsis
 (&hellip;) next to the Material Design Grid menu, a dialog popover opens
@@ -273,7 +273,7 @@ that allows you to disable/enable the grid, configure the placement of
 keylines, and set the spacings. Note that all values are expressed in
 `dp` (density-independent pixels):
 
-[![Grid, keyline, and spacing configuration.](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
+[![Grid, keyline, and spacing configuration](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 To add a new keyline, enter a new offset value in the **Offset** box,
 select a location (**left**, **top**, **right**, or **bottom**) and
@@ -292,13 +292,13 @@ Every Property panel item that accepts a color now has an additional
 palette icon that you can use to open the Material Design Color
 Palette, as shown in this screenshot:
 
-[![Color icon.](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
+[![Color icon](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 When you click this icon, a dialog popover opens that makes it possible
 for you to configure the color of that property from the Material
 Design color palette:
 
-[![Material Design color palette.](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
+[![Material Design color palette](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 The top of the color palette displays primary Material Design colors
 while the bottom of the palette displays a range of hues for the
@@ -308,13 +308,13 @@ When you select a hue, the color of the property is changed to the
 selected hue. In the following example, the `Background Tint` of the
 button is changed to *Indigo 500*:
 
-[![Choose Indigo 500.](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` is set to the color code for *Indigo 500*
 (`#ff3f51b5`), and the Designer updates the background color of the
 button to reflect this change:
 
-[![Background tint changes.](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
+[![Background tint changes](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 For more information about the Material Design color palette, see the
 Material Design
@@ -326,25 +326,25 @@ The **Text Appearance** section of the **Property** pad **Style** tab
 has an icon that lets you select from a `TextAppearance` style that
 conforms to the Material Design specification:
 
-[![Style tab.](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
+[![Style tab](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 When you click this icon, it opens the **Typographic Scale** dialog
 popover, which presents a list of pre-configured text styles that you
 can choose from:
 
-[![Text style chooser.](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
+[![Text style chooser](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 In the following example, clicking **Display 1** changes the text of
 the button to the larger font of **Display 1**:
 
-[![Display 1 style.](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
+[![Display 1 style](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 The text style in the **Typographic Scale** dialog follows the
 **Theme** setting. For example, if the **Light** theme is chosen in the
 Designer, the list of available text styles mirrors the **Light**
 theme:
 
-[![Light theme.](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
+[![Light theme](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 ## Theme Editor
 
@@ -352,7 +352,7 @@ The **Theme Editor** lets you customize color information for a subset
 of theme attributes. To open the **Theme Editor**, click the paintbrush
 icon on the toolbar:
 
-[![Theme Editor icon.](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
+[![Theme Editor icon](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 Although the **Theme Editor** is accessible from the toolbar for
 all target Android versions and API levels, only a subset of
@@ -363,7 +363,7 @@ The left-hand panel of the  **Theme Editor** displays the list of
 colors that make up the currently selected theme (in this example,
 we are using the `Default Theme`):
 
-[![Theme Editor.](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
+[![Theme Editor](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 When you select a color on the left, the right-hand panel provides the
 following tabs to help you edit that color:
@@ -388,7 +388,7 @@ Let's look at each one of these tabs in detail.
 As seen in the following example, the **Inherit** tab lists the
 style inheritance for the **Background** color of the **Default Theme**:
 
-[![Inherit Tab.](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
+[![Inherit Tab](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 In this example, the **Default Theme** inherits from a style that uses
 `@color/background_material_dark` but overrides it with
@@ -400,7 +400,7 @@ For more information about style inheritance, see
 
 The following screenshot illustrates the **Color Picker**:
 
-[![Color Picker.](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
+[![Color Picker](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 In this example, the **Background** color can be changed to any
 value through various means:
@@ -419,7 +419,7 @@ Material Design guidelines or to the set of available color resources.
 The **Resources** tab offers a list of color resources that are already
 present in the theme:
 
-[![Resources.](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
+[![Resources](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 Using the **Resources** tab constrains your choices to this list of
 colors. Keep in mind that if you choose a color resource that is
@@ -434,7 +434,7 @@ described [earlier](#material-design-color-palette). Choosing a color value from
 constrains your color choice so that it is consistent with Material
 Design guidelines.
 
-[![Material Palette.](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
+[![Material Palette](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 ### Creating a new theme
 
@@ -442,12 +442,12 @@ In the following example, we'll use the Material Palette to create a
 new custom theme. First, we'll change the **Background** color to *Blue
 900*:
 
-[![Change background to Blue 900.](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
+[![Change background to Blue 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 When a color resource is changed, a message pops up with the
 message, *The current theme has unsaved changes*:
 
-[![Unsaved changes warning.](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
+[![Unsaved changes warning](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 The color change in the Designer has been made, but this change has not
 yet been saved. At this point, you can do one of the following:

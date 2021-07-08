@@ -31,12 +31,12 @@ You can then interact with Apply Changes with the following approaches:
 
 1. **Toolbar icon.** You can click on the Apply Changes toolbar icon to apply changes to your target device or emulator.
 
-    [![Apply Changes - Toolbar Icon.](apply-changes-images/Apply-Changes-Toolbar.png)](apply-changes-images/Apply-Changes-Toolbar.png#lightbox)
+    [![Apply Changes - Toolbar Icon](apply-changes-images/Apply-Changes-Toolbar.png)](apply-changes-images/Apply-Changes-Toolbar.png#lightbox)
 
 2. **Keyboard shortcut.** You can use the **Shift + Alt + F5** keyboard shortcut to apply changes to your target device or emulator.
 3. **Debug menu.** You can use the **Debug > Apply Changes** menu item to apply changes to your target device or emulator.
 
-    [![Apply Changes - Debug Menu.](apply-changes-images/Apply-Changes-Debug-Menu.png)](apply-changes-images/Apply-Changes-Debug-Menu.png#lightbox)
+    [![Apply Changes - Debug Menu](apply-changes-images/Apply-Changes-Debug-Menu.png)](apply-changes-images/Apply-Changes-Debug-Menu.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -49,7 +49,7 @@ You can then interact with Apply Changes with the following approaches:
 1. **Keyboard shortcut.** You can use the **⌥ + ⇧ + R** keyboard shortcut to apply changes to your target device or emulator.
 2. **Run menu.** You can use the **Run > Apply Changes** menu item to apply changes to your target device or emulator.
 
-    [![Apply Changes - Debug Menu.](apply-changes-images/Apply-Changes-Debug-Menu-Mac.png)](apply-changes-images/Apply-Changes-Debug-Menu-Mac.png#lightbox)
+    [![Apply Changes - Debug Menu](apply-changes-images/Apply-Changes-Debug-Menu-Mac.png)](apply-changes-images/Apply-Changes-Debug-Menu-Mac.png#lightbox)
 
 -----
 

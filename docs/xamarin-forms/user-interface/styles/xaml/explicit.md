@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Explicit Styles in Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _An explicit style is one that is selectively applied to controls by setting their Style properties._
 
@@ -62,7 +62,7 @@ The following code example shows *explicit* styles declared in XAML in a page's 
 
 The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) defines three *explicit* styles that are applied to the page's [`Label`](xref:Xamarin.Forms.Label) instances. Each `Style` is used to display text in a different color, while also setting the font size and horizontal and vertical layout options. Each `Style` is applied to a different `Label` by setting its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) properties using the `StaticResource` markup extension. This results in the appearance shown in the following screenshots:
 
-[![Explicit Styles Example.](explicit-images/explicit-styles.png)](explicit-images/explicit-styles-large.png#lightbox)
+[![Explicit Styles Example](explicit-images/explicit-styles.png)](explicit-images/explicit-styles-large.png#lightbox)
 
 In addition, the final [`Label`](xref:Xamarin.Forms.Label) has a [`Style`](xref:Xamarin.Forms.Style) applied to it, but also overrides the [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property to a different `Color` value.
 

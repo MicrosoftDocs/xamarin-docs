@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Accessing SkiaSharp bitmap pixel bits
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**Saving SkiaSharp bitmaps to files**](saving.md), bitmaps are generally stored in files in a compressed format, such as JPEG or PNG. In constrast, a SkiaSharp bitmap stored in memory is not compressed. It is stored as a sequential series of pixels. This uncompressed format facilitates the transfer of bitmaps to a display surface.
 
@@ -20,7 +20,7 @@ The memory block occupied by a SkiaSharp bitmap is organized in a very straightf
 
 This article describes how an application can get access to those pixels, either directly by accessing the bitmap's pixel memory block, or indirectly. In some instances, a program might want to analyze the pixels of an image and construct a histogram of some sort. More commonly, applications can construct unique images by algorithmically creating the pixels that make up the bitmap:
 
-![Pixel Bits Samples.](pixel-bits-images/PixelBitsSample.png "Pixel Bits Sample")
+![Pixel Bits Samples](pixel-bits-images/PixelBitsSample.png "Pixel Bits Sample")
 
 ## The techniques
 
@@ -478,7 +478,7 @@ public class GradientBitmapPage : ContentPage
 
 To allow the compiler to optimize the code, this page was run in **Release** mode. Here's that page running on an iPhone 8 simulator on a MacBook Pro, a Nexus 5 Android phone, and Surface Pro 3 running Windows 10. Because of the hardware differences, avoid comparing the performance times between the devices, but instead look at the relative times on each device:
 
-[![Gradient Bitmap](pixel-bits-images/GradientBitmap.png "Gradient Bitmap."](pixel-bits-images/GradientBitmap-Large.png#lightbox)
+[![Gradient Bitmap](pixel-bits-images/GradientBitmap.png "Gradient Bitmap")](pixel-bits-images/GradientBitmap-Large.png#lightbox)
 
 Here is a table that consolidates the execution times in milliseconds:
 
@@ -605,13 +605,13 @@ The `SKColor` value is stored in memory using this pointer:
 
 In the `PaintSurface` handler of the `SKCanvasView`, the bitmap is stretched to fill the display area:
 
-[![Rainbow Sine](pixel-bits-images/RainbowSine.png "Rainbow Sine."](pixel-bits-images/RainbowSine-Large.png#lightbox)
+[![Rainbow Sine](pixel-bits-images/RainbowSine.png "Rainbow Sine")](pixel-bits-images/RainbowSine-Large.png#lightbox)
 
 ## From one bitmap to another
 
 Very many image-processing tasks involve modifying pixels as they are transferred from one bitmap to another. This technique is demonstrated in the **Color Adjustment** page. The page loads one of the bitmap resources and then allows you to modify the image using three `Slider` views:
 
-[![Color Adjustment](pixel-bits-images/ColorAdjustment.png "Color Adjustment."](pixel-bits-images/ColorAdjustment-Large.png#lightbox)
+[![Color Adjustment](pixel-bits-images/ColorAdjustment.png "Color Adjustment")](pixel-bits-images/ColorAdjustment-Large.png#lightbox)
 
 For each pixel color, the first `Slider` adds a value from 0 to 360 to the hue, but then uses the modulo operator to keep the result between 0 and 360, effectively shifting the colors along the spectrum (as the UWP screenshot demonstrates). The second `Slider` lets you select a multiplicative factor between 0.5 and 2 to apply to the saturation, and the third `Slider` does the same for the luminosity, as demonstrated in the Android screenshot.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Bindable Layouts in Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 Bindable layouts enable any layout class that derives from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class to generate its content by binding to a collection of items, with the option to set the appearance of each item with a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Bindable layouts are provided by the `BindableLayout` class, which exposes the following attached properties:
 
@@ -89,7 +89,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 
 In this example, every item in the `TopFollowers` collection will be displayed by a `CircleImage` view defined in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
-![Bindable layout with a DataTemplate.](bindable-layouts-images/top-followers.png "Bindable layout with a data template")
+![Bindable layout with a DataTemplate](bindable-layouts-images/top-followers.png "Bindable layout with a data template")
 
 For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -129,7 +129,7 @@ public class TechItemTemplateSelector : DataTemplateSelector
 
 The `TechItemTemplateSelector` class defines `DefaultTemplate` and `XamarinFormsTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` method returns the `XamarinFormsTemplate`, which displays an item in dark red with a heart next to it, when the item is equal to "Xamarin.Forms". When the item isn't equal to "Xamarin.Forms", the `OnSelectTemplate` method returns the `DefaultTemplate`, which displays an item using the default color of a [`Label`](xref:Xamarin.Forms.Label):
 
-![Bindable layout with a DataTemplateSelector.](bindable-layouts-images/favorite-tech.png "Bindable layout with a data template selector")
+![Bindable layout with a DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Bindable layout with a data template selector")
 
 For more information about data template selectors, see [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
@@ -146,7 +146,7 @@ The `EmptyView` property can be set to a string, which will be displayed by a [`
 
 The result is that when the data bound collection is `null`, the string set as the `EmptyView` property value is displayed:
 
-[![Screenshot of a bindable layout string empty view, on iOS and Android](bindable-layouts-images/emptyview-string.png "Bindable layout string empty view."](bindable-layouts-images/emptyview-string-large.png#lightbox "Bindable layout string empty view")
+[![Screenshot of a bindable layout string empty view, on iOS and Android](bindable-layouts-images/emptyview-string.png "Bindable layout string empty view")](bindable-layouts-images/emptyview-string-large.png#lightbox "Bindable layout string empty view")
 
 ## Display views when data is unavailable
 
@@ -170,7 +170,7 @@ The `EmptyView` property can be set to a view, which will be displayed when the 
 
 The result is that when the data bound collection is `null`, the [`StackLayout`](xref:Xamarin.Forms.StackLayout) and its child views are displayed.
 
-[![Screenshot of a bindable layout empty view with multiple views, on iOS and Android](bindable-layouts-images/emptyview-views.png "Bindable layout empty view."](bindable-layouts-images/emptyview-views-large.png#lightbox "Bindable layout empty view")
+[![Screenshot of a bindable layout empty view with multiple views, on iOS and Android](bindable-layouts-images/emptyview-views.png "Bindable layout empty view")](bindable-layouts-images/emptyview-views-large.png#lightbox "Bindable layout empty view")
 
 Similarly, the `EmptyViewTemplate` can be set to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which will be displayed when the `ItemsSource` property is `null`, or when the collection specified by the `ItemsSource` property is `null` or empty. The `DataTemplate` can contain a single view, or a view that contains multiple child views. In addition, the `BindingContext` of the `EmptyViewTemplate` will be inherited from the `BindingContext` of the `BindableLayout`. The following XAML example shows the `EmptyViewTemplate` property set to a `DataTemplate` that contains a single view:
 
@@ -187,7 +187,7 @@ Similarly, the `EmptyViewTemplate` can be set to a [`DataTemplate`](xref:Xamarin
 
 The result is that when the data bound collection is `null`, the [`Label`](xref:Xamarin.Forms.Label) in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is displayed:
 
-[![Screenshot of a bindable layout empty view template, on iOS and Android](bindable-layouts-images/emptyviewtemplate.png "Bindable layout empty view template."](bindable-layouts-images/emptyviewtemplate-large.png#lightbox "Bindable layout empty view template")
+[![Screenshot of a bindable layout empty view template, on iOS and Android](bindable-layouts-images/emptyviewtemplate.png "Bindable layout empty view template")](bindable-layouts-images/emptyviewtemplate-large.png#lightbox "Bindable layout empty view template")
 
 > [!NOTE]
 > The `EmptyViewTemplate` property can't be set via a [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector).
@@ -242,7 +242,7 @@ void ToggleEmptyView(bool isToggled)
 
 The `ToggleEmptyView` method sets the `EmptyView` property of the `stackLayout` object to one of the two [`ContentView`](xref:Xamarin.Forms.ContentView) objects stored in the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), based on the value of the [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property. Then, when the data bound collection is `null`, the `ContentView` object set as the `EmptyView` property is displayed:
 
-[![Screenshot of empty view choice at runtime, on iOS and Android](bindable-layouts-images/emptyview-runtime.png "Bindable layout empty view runtime choice."](bindable-layouts-images/emptyview-runtime-large.png#lightbox "Bindable layout empty view runtime choice")
+[![Screenshot of empty view choice at runtime, on iOS and Android](bindable-layouts-images/emptyview-runtime.png "Bindable layout empty view runtime choice")](bindable-layouts-images/emptyview-runtime-large.png#lightbox "Bindable layout empty view runtime choice")
 
 ## Related links
 

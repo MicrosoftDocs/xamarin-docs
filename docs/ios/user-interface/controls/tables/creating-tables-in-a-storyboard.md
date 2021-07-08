@@ -38,7 +38,7 @@ The StoryboardTable example contains a simple master-detail app that uses
 both types of UITableView in a Storyboard. The remainder of this section
 describes how to build a small to-do list example that will look like this when complete:
 
- [![Example screens.](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
+ [![Example screens](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 The user-interface will be built with a storyboard, and both screens will use
 a UITableView. The main screen uses *prototype content* to layout the row,
@@ -49,7 +49,7 @@ using custom cell layouts.
 
 Create a new solution in Visual Studio using **(Create) New Project… > Single View App(C#)**, and call it _StoryboardTables_.
 
- [![Create a new project dialog.](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
+ [![Create a new project dialog](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 The solution will open with some C# files and a `Main.storyboard` file already created. Double-click the `Main.storyboard` file to open it in the iOS Designer.
 
@@ -76,13 +76,13 @@ replacing it with a UITableViewController. Follow these steps:
 2. Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox. 
 3. Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**. 
 4. Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:    
-  [![Naming segue in property panel.](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
+  [![Naming segue in property panel](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Next, configure the two Table Views by selecting them and using the Properties Pad. Make sure to select View and not View Controller – you can use the Document Outline to help with selection.
 
 6. Change the Root View Controller to be  **Content: Dynamic Prototypes** (the View on the Design Surface will be labelled  **Prototype Content** ):
 
-    [![Setting the Content property to dynamic prototypes.](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
+    [![Setting the Content property to dynamic prototypes](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7. Change the new **UITableViewController** to be  **Content: Static Cells**. 
 
@@ -90,12 +90,12 @@ replacing it with a UITableViewController. Follow these steps:
 identifier set. Select the View Controller and type _TaskDetailViewController_ for the **Class** in the **Properties Pad** – this will create a new `TaskDetailViewController.cs` file in the Solution Pad. Enter the **StoryboardID** as _detail_, as illustrated in the example below. This will be
 used later to load this view in C# code:  
 
-    [![Setting the Storyboard ID.](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
+    [![Setting the Storyboard ID](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. The storyboard design surface should now look like this (the Root View Controller's navigation item title
 has been changed to “Chore Board”):
 
-    [![Design surface.](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
+    [![Design surface](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 <a name="Create_the_UI"></a>
 
@@ -108,11 +108,11 @@ need to be added.
 
 First, select the prototype cell in the Master View Controller and set the **Identifier** as _taskcell_, as illustrated below. This will be used later in code to retrieve an instance of this UITableViewCell:
 
- [![setting the cell identifier.](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
+ [![setting the cell identifier](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 Next, you'll need to create a button that will add new tasks, as illustrated below:
 
-[![bar button item in the navigation bar.](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
+[![bar button item in the navigation bar](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 Do the following: 
 
@@ -126,7 +126,7 @@ The Detail View requires a lot more work. Table View Cells need to be dragged
 onto the view and then populated with labels, text views and buttons. The
 screenshot below shows the finished UI with two sections. One section has three cells, three labels, two text fields and one switch, while the second section has one cell with two buttons:
 
- [![detail view layout.](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
+ [![detail view layout](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 The steps to build the complete layout are:
 
@@ -139,7 +139,7 @@ Select the table view and open the **Property Pad**. Update the following proper
 
 Select the top section and under **Properties > Table View Section** change **Rows** to _3_, as illustrated below:
 
- [![setting the top section to three rows.](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
+ [![setting the top section to three rows](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 For each cell open the **Properties Pad** and set:
 
@@ -153,7 +153,7 @@ In the second section, set **Rows** to _1_ and grab the bottom resize handle of 
 - **Set the Background**:  _Clear Color_ .
 - Drag two buttons onto the cell and set their titles appropriately (i.e. _Save_ and _Delete_), as illustrated below:
 
-   [![setting two buttons in the bottom section.](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
+   [![setting two buttons in the bottom section](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 At this point you may also want to set constraints on your cells and controls to ensure an adaptive layout.
 
@@ -357,7 +357,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 That completes the Storyboard example – the finished app looks like
 this:
 
-[![Finished app.](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
+[![Finished app](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 The example demonstrates:
 

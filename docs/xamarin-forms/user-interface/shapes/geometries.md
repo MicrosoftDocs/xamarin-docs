@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Geometries
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Geometry` class, and the classes that derive from it, enable you to describe the geometry of a 2D shape. `Geometry` objects can be simple, such as rectangles and circles, or composite, created from two or more geometry objects. In addition, more complex geometries can be created that include arcs and curves.
 
@@ -67,7 +67,7 @@ The following example shows how to create and render an `EllipseGeometry` in a `
 
 In this example, the center of the `EllipseGeometry` is set to (50,50) and the x-radius and y-radius are both set to 50. This creates a red circle with a diameter of 100 device-independent units, whose interior is painted blue:
 
-![EllipseGeometry.](geometry-images/ellipse.png "EllipseGeometry")
+![EllipseGeometry](geometry-images/ellipse.png "EllipseGeometry")
 
 ### LineGeometry
 
@@ -93,7 +93,7 @@ The following example shows how to create and render a `LineGeometry` in a `Path
 
 In this example, a `LineGeometry` is drawn from (10,20) to (100,130):
 
-![LineGeometry.](geometry-images/line.png "LineGeometry")
+![LineGeometry](geometry-images/line.png "LineGeometry")
 
 > [!NOTE]
 > Setting the `Fill` property of a `Path` that renders a `LineGeometry` will have no effect, because a line has no interior.
@@ -117,7 +117,7 @@ The following example shows how to create and render a `RectangleGeometry` in a 
 
 The position and dimensions of the rectangle are defined by a `Rect` structure. In this example, the position is (10,10), the width is 150, and the height is 100 device-independent units:
 
-![RectangleGeometry.](geometry-images/rectangle.png "RectangleGeometry")
+![RectangleGeometry](geometry-images/rectangle.png "RectangleGeometry")
 
 ## Path geometries
 
@@ -531,7 +531,7 @@ Even more complex geometries can be created by using multiple `PathFigure` objec
 
 In this example, the word "Hello" is drawn using a combination of `LineSegment` and `BezierSegment` objects, along with a single `ArcSegment` object:
 
-![Multiple PathFigure objects.](geometry-images/multiple-pathfigures.png "Multiple PathFigure objects")
+![Multiple PathFigure objects](geometry-images/multiple-pathfigures.png "Multiple PathFigure objects")
 
 ## Composite geometries
 
@@ -624,7 +624,7 @@ The following example shows how to use a `Geometry` object as the clip region fo
 
 In this example, an `EllipseGeometry` with `RadiusX` and `RadiusY` values of 100, and a `Center` value of (180,180) is set to the `Clip` property of an [`Image`](xref:Xamarin.Forms.Image). Only the part of the image that is within the area of the ellipse will be displayed:
 
-![Clip an Image with an EllipseGeometry.](geometries-images/clip-ellipsegeometry.png "Clip an Image with an EllipseGeometry")
+![Clip an Image with an EllipseGeometry](geometries-images/clip-ellipsegeometry.png "Clip an Image with an EllipseGeometry")
 
 > [!NOTE]
 > Simple geometries, path geometries, and composite geometries can all be used to clip [`VisualElement`](xref:Xamarin.Forms.VisualElement) objects.

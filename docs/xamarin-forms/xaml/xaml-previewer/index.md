@@ -32,7 +32,7 @@ The XAML Previewer shows you how your Xamarin.Forms XAML page will look on iOS a
 
 You can open the XAML Previewer by clicking the arrows on the split view pane. If you want to change the default split view behavior, use the **Tools > Options > Xamarin > Xamarin.Forms XAML Previewer** dialog. In this dialog, you can select the default document view and the split orientation.
 
-[![Xamarin.Forms Previewer options in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Xamarin.Forms Previewer options in Visual Studio."](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Xamarin.Forms Previewer options in Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Xamarin.Forms Previewer options in Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 When you open a XAML file, the editor will open either full-sized or next to the previewer, based on the settings selected in the **Tools > Options > Xamarin > Xamarin.Forms XAML Previewer** dialog. However, the split can be changed for each file in the editor window.
 
@@ -40,11 +40,11 @@ When you open a XAML file, the editor will open either full-sized or next to the
 
 Choose whether you want to see your code, the XAML Previewer, or both by selecting these buttons on the split view pane. The middle button swaps what side the Previewer and your code are on:
 
-[![Xamarin.Forms Previewer controls to switch between design, source, and split view in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Xamarin.Forms Previewer controls to switch between design, source, and split view in Visual Studio."](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Xamarin.Forms Previewer controls to switch between design, source, and split view in Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Xamarin.Forms Previewer controls to switch between design, source, and split view in Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 You can change whether the screen is split vertically or horizontally, or collapse one pane altogether:
 
-[![Xamarin.Forms Previewer pane orientation controls in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Xamarin.Forms Previewer pane orientation controls in Visual Studio."](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Xamarin.Forms Previewer pane orientation controls in Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Xamarin.Forms Previewer pane orientation controls in Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 #### Enable or disable the XAML Previewer
 
@@ -57,7 +57,7 @@ You can turn the XAML Previewer off in the **Tools > Options > Xamarin > Xamarin
 
 The **Preview** button is displayed on the editor when you open a XAML page. Show or hide the Previewer by pressing the **Preview** or **Split** buttons in the bottom-left of any XAML document window:
 
-[![Xamarin.Forms Previewer enabled with the preview or split button.](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Xamarin.Forms Previewer enabled with the preview or split button](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > In older versions of Visual Studio for Mac, the **Preview** button was located in the top-right of the window.

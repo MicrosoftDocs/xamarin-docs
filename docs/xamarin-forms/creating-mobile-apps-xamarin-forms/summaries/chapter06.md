@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 6. Button clicks
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -55,7 +55,7 @@ Multiple `Button` objects can also be distinguished by setting the [`StyleId`](x
 
 The [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) sample uses the same event handler for all 10 number keys on a numeric keypad and distinguishes between them with the `StyleId` property:
 
-[![Triple screenshot of simplest keypad](images/ch06fg04-small.png "Calculator."](images/ch06fg04-large.png#lightbox "Calculator")
+[![Triple screenshot of simplest keypad](images/ch06fg04-small.png "Calculator")](images/ch06fg04-large.png#lightbox "Calculator")
 
 ## Saving transient data
 

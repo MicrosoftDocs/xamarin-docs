@@ -19,7 +19,7 @@ Any app that accepts input from users should ensure that the input is valid. An 
 
 In the context of the Model-View-ViewModel (MVVM) pattern, a view model or model will often be required to perform data validation and signal any validation errors to the view so that the user can correct them. The eShopOnContainers mobile app performs synchronous client-side validation of view model properties and notifies the user of any validation errors by highlighting the control that contains the invalid data, and by displaying error messages that inform the user of why the data is invalid. Figure 6-1 shows the classes involved in performing validation in the eShopOnContainers mobile app.
 
-[![Validation classes in the eShopOnContainers mobile app.](validation-images/validation.png)](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
+[![Validation classes in the eShopOnContainers mobile app](validation-images/validation.png)](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
 
 **Figure 6-1**: Validation classes in the eShopOnContainers mobile app
 
@@ -211,7 +211,7 @@ For more information about behaviors, see [Implementing Behaviors](~/xamarin-for
 
 The eShopOnContainers mobile app notifies the user of any validation errors by highlighting the control that contains the invalid data with a red line, and by displaying an error message that informs the user why the data is invalid below the control containing the invalid data. When the invalid data is corrected, the line changes to black and the error message is removed. Figure 6-2 shows the LoginView in the eShopOnContainers mobile app when validation errors are present.
 
-![Displaying validation errors during login.](validation-images/validation-login.png)
+![Displaying validation errors during login](validation-images/validation-login.png)
 
 **Figure 6-2:** Displaying validation errors during login
 
@@ -375,7 +375,7 @@ The `OnAttached` method retrieves the native control for the Xamarin.Forms [`Ent
 
 When valid data is entered in the [`Entry`](xref:Xamarin.Forms.Entry) control, it will apply a black line to the bottom of the control, to indicate that there is no validation error. Figure 6-3 shows an example of this.
 
-![Black line indicating no validation error.](validation-images/validation-blackline.png)
+![Black line indicating no validation error](validation-images/validation-blackline.png)
 
 **Figure 6-3**: Black line indicating no validation error
 
@@ -398,7 +398,7 @@ The [`Entry`](xref:Xamarin.Forms.Entry) control also has a [`DataTrigger`](xref:
 
 This [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) monitors the `UserName.IsValid` property, and if it's value becomes `false`, it executes the [`Setter`](xref:Xamarin.Forms.Setter), which changes the `LineColor` attached property of the `LineColorBehavior` attached behavior to red. Figure 6-4 shows an example of this.
 
-![Red line indicating validation error.](validation-images/validation-redline.png)
+![Red line indicating validation error](validation-images/validation-redline.png)
 
 **Figure 6-4**: Red line indicating validation error
 

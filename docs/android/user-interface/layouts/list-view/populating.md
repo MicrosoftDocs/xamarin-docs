@@ -48,7 +48,7 @@ another screen). To respond to user touches there needs to be one more
 method implemented in the `ListActivity` &ndash; `OnListItemClick`
 &ndash; like this:
 
-[![Screenshot of a SimpleListItem.](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
+[![Screenshot of a SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -60,7 +60,7 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 Now the user can touch a row and a `Toast` alert will appear:
 
-[![Screenshot of Toast that appears when a row is touched.](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
+[![Screenshot of Toast that appears when a row is touched](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
 ## Implementing a ListAdapter
 
@@ -174,7 +174,7 @@ Fast Scrolling helps the user to scroll through long lists by providing
 an additional 'handle' that acts as a scroll bar to directly access
 a part of the list. This screenshot shows the fast scroll handle:
 
-[![Screenshot of fast-scrolling with a scroll handle.](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
+[![Screenshot of fast-scrolling with a scroll handle](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Causing the fast scrolling handle to appear is as simple as setting the
 `FastScrollEnabled` property to `true`:
@@ -191,7 +191,7 @@ they have scrolled to. To cause the section index to appear the Adapter
 subclass must implement the `ISectionIndexer` interface to supply the
 index text depending on the rows being displayed:
 
-[![Screenshot of H appearing above section that starts with H.](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
+[![Screenshot of H appearing above section that starts with H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 To implement `ISectionIndexer` you need to add three methods to an
 adapter:

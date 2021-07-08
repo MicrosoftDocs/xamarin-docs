@@ -102,7 +102,7 @@ needs to check to see whether the expansion files exist and then download them,
 if necessary. The following flowchart displays the recommended workflow of this
 process:
 
-[![APK expansion flowchart.](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
+[![APK expansion flowchart](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 When an application starts up, it should check to see if the 
 appropriate expansion files exist on the current device. If they do 

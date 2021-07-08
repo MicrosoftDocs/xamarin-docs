@@ -73,7 +73,7 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
 
 1. Open the **Info.plist** file of your iOS application and select the **Automatically Provisioning** scheme and your **Team** from the combo box. Follow the steps in the [Automatic Provisioning](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) guide if you need help:
 
-    ![Automatically manage signing option.](images/manage-signing.png)
+    ![Automatically manage signing option](images/manage-signing.png)
 
 2. Open the **Entitlements.plist** file and select the capability that you wish to add:
 
@@ -97,7 +97,7 @@ Capabilities are added to the **Entitlements.plist**. To add capabilities in Vis
 
 3. Select the **Automatically Provisioning** scheme and your **Team** from the combo box. Follow the steps in the [Automatic Provisioning](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) guide if you need help:
 
-    ![Automatically manage signing option.](images/manage-signing-vs.png)
+    ![Automatically manage signing option](images/manage-signing-vs.png)
 
 4. Open the **Entitlements.plist** file and select the capability that you wish to add. Save the file.
 
@@ -119,25 +119,25 @@ Using the developer center is a two step process that requires creating an App I
 1. Browse to the [Apple Developer Center](https://developer.apple.com/account) on a Mac (the build host mac if using a windows machine) and log in.
 2. Select **Certificates, Identifiers, and Profiles**:
 
-    ![Apple Developer Center.](images/image5.png)
+    ![Apple Developer Center](images/image5.png)
 
 3. Under **Identifiers**, select **App IDs**:
 
-    ![App ID selection in Developer Center.](images/image6.png)
+    ![App ID selection in Developer Center](images/image6.png)
 
 4. Press the **+** button in the top right corner to create a new App ID.
 5. Enter an App ID description, select Explicit App ID, and enter a bundle ID in the format `com.domain.appname`. This bundle ID should match the bundle ID in your project:
 
-    ![Adding App ID details.](images/image7.png)
+    ![Adding App ID details](images/image7.png)
 
 6. Under **App Services** select the service or services that are required in your app:
 
-    ![App Services selection page.](images/image8.png)
+    ![App Services selection page](images/image8.png)
 
 7. Press **Continue**.
 8. Confirm your App ID. Each service will be in one of the following states: **Enabled**, **Disabled**, or **Configurable**, as illustrated below. If it’s **Enabled,** it is ready to be used in a provisioning profile. If it is **Configurable**, additional setup is required for this capability. These additional steps are described in more detail in later sections.
 
-    ![App ID confirmation.](images/image9.png)
+    ![App ID confirmation](images/image9.png)
 
 9. Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
 
@@ -149,28 +149,28 @@ Now create a provisioning profile that contains this App ID. Follow the steps be
 
 1. In the Apple Developer Center, browse to **Provisioning Profiles > All**:
 
-    ![Provisioning Profile section.](images/image10.png)
+    ![Provisioning Profile section](images/image10.png)
 
 2. Press the **+** button in the top right corner to create a new provisioning profile.
 3. Select the type of provisioning profile that you need, and click **Continue**:
 
-    ![Provisioning Profile selection.](images/image11.png)
+    ![Provisioning Profile selection](images/image11.png)
 
 4. From the dropdown list, select the App ID that was created in the steps above and press **Continue**:
 
-    ![App ID selection.](images/image12.png)
+    ![App ID selection](images/image12.png)
 
 5. Select the certificates used to sign the app and press **Continue**:
 
-    ![Certificate selection.](images/image13.png)
+    ![Certificate selection](images/image13.png)
 
 6. Select the devices to be included in this profile and press **Continue**:
 
-    ![Select devices for Provisioning Profile.](images/image14.png)
+    ![Select devices for Provisioning Profile](images/image14.png)
 
 7. Give the profile a name so that it can be identified and press **Continue** to generate the profile:
 
-    ![Name provisioning Profile.](images/image15.png)
+    ![Name provisioning Profile](images/image15.png)
 
 8. Press the **Download** button to download it, and double-click on the file in Finder to install the provisioning profile.
 
@@ -178,7 +178,7 @@ Now create a provisioning profile that contains this App ID. Follow the steps be
 
 10. In Visual Studio for Mac / Visual Studio, browse to **Project Options > Bundle Signing** and set the provisioning profile to the one that was just created:
 
-    ![Visual Studio for Mac Project Options.](images/image16.png)
+    ![Visual Studio for Mac Project Options](images/image16.png)
 
 > [!IMPORTANT]
 > You may also need to set entitlement keys in the Entitlement.plist file and privacy keys in the Info.plist file. More information on these entitlements is provided in the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.

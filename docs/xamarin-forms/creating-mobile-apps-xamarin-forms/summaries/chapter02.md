@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 2. Anatomy of an app
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -183,7 +183,7 @@ Generally these properties are not used directly. Instead, combinations of these
 
 Here's the result with the `HorizontalOptions` and `VerticalOptions` properties of `Label` both set to `LayoutOptions.Center`:
 
-[![Triple screenshot of greetings program](images/ch02fg05-small.png "Horizontally and Vertically Centered Label."](images/ch02fg05-large.png#lightbox "Horizontally and Vertically Centered Label")
+[![Triple screenshot of greetings program](images/ch02fg05-small.png "Horizontally and Vertically Centered Label")](images/ch02fg05-large.png#lightbox "Horizontally and Vertically Centered Label")
 
 ## Solution 5. Center the text within the Label
 

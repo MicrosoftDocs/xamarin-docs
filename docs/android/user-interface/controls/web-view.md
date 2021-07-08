@@ -34,7 +34,7 @@ project's properties to specify which permissions your application
 requires to operate. Enable the `INTERNET` permission as shown
 below:
 
-![Setting the INTERNET permission in the Android Manifest.](web-view-images/01-set-internet-permissions.png)
+![Setting the INTERNET permission in the Android Manifest](web-view-images/01-set-internet-permissions.png)
 
 Now open **MainActivity.cs** and add a using directive for Webkit:
 
@@ -123,7 +123,7 @@ JavaScript). Finally, an initial web page is loaded with
 Build and run the app. You should see a simple web page viewer app
 as the one seen in the following screenshot:
 
-[![Example of app displaying a WebView.](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
+[![Example of app displaying a WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 To handle the **BACK** button key press, add the following using
 statement:
@@ -164,7 +164,7 @@ is not met, then the event is sent back to the system.
 Run the application again. You should now be able to follow links and
 navigate back through the page history:
 
-[![Example screenshots of the Back button in action.](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
+[![Example screenshots of the Back button in action](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*

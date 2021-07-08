@@ -23,7 +23,7 @@ offline music playback. For Android Wear 2.0, Google has teamed
 up with LG for two new watches: the LG Watch Sport and the LG
 Watch Style.
 
-![Android Wear 2.0 devices.](intro-to-wear-images/hero-image.png "Example Android Wear 2.0 Devices")
+![Android Wear 2.0 devices](intro-to-wear-images/hero-image.png "Example Android Wear 2.0 Devices")
 
 Xamarin.Android 5.0 and later supports Android Wear through our Android
 4.4W (API 20) support and a NuGet package that adds additional
@@ -81,7 +81,7 @@ You typically associate the `GridViewPager` with a
 `FragmentGridPagerAdaptor` (or `GridPagerAdaptor`) that lets you 
 represent each row and column cells as a `Fragment`: 
 
-[![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation."](intro-to-wear-images/2d-picker.png#lightbox)
+[![Wear Navigation](intro-to-wear-images/2d-picker-sml.png "Wear Navigation")](intro-to-wear-images/2d-picker.png#lightbox)
 
 Wear also makes use of action buttons that consist of a big colored circle
 with small description text underneath it (as illustrated above).  The
@@ -186,7 +186,7 @@ To build a Wear 2.0 app with Xamarin.Android, you must add the
 **Xamarin.Android.Wear v2.0** package to your project (click the
 **Browse tab**):
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet."](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Install the Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 This NuGet package contains bindings for both the Android Support
 Wearable and Wear Compat libraries.
@@ -194,7 +194,7 @@ Wearable and Wear Compat libraries.
 In addition to **Xamarin.Android.Wear**, we recommend that you install 
 the **Xamarin.GooglePlayServices.Wearable** NuGet: 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet."](intro-to-wear-images/gpsw-nuget.png#lightbox)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
 ### Key Features of Wear 2.0
 
@@ -211,7 +211,7 @@ similar to desktop-style dashboard widgets; they display information
 such as the weather, battery life, calendar events, and fitness app 
 statistics: 
 
-![Complications example.](intro-to-wear-images/complications.png "Complications example")
+![Complications example](intro-to-wear-images/complications.png "Complications example")
 
 For more about complications, see the Android 
 [Watch Face Complications](https://developer.android.com/wear/preview/features/complications.html) 
@@ -225,7 +225,7 @@ between app views (as shown on the left below). The *action drawer*,
 which appears at the bottom of the screen (as shown on the right), 
 allows users to choose from a list of actions. 
 
-![Navigation and Action Drawers.](intro-to-wear-images/drawers.png "Navigation and Action Drawers")
+![Navigation and Action Drawers](intro-to-wear-images/drawers.png "Navigation and Action Drawers")
 
 For more information about these two new interactive drawers, see the 
 Android 
@@ -238,7 +238,7 @@ Wear 2.0 introduces new features for displaying curved layouts on round
 Wear devices. Specifically, the new `WearableRecyclerView` class is 
 optimized for displaying a list of vertical items on round displays: 
 
-![Curved Layout example.](intro-to-wear-images/curved-layout.png "Curved Layout example")
+![Curved Layout example](intro-to-wear-images/curved-layout.png "Curved Layout example")
 
 `WearableRecyclerView` extends the `RecyclerView` class to support 
 curved layouts and circular scrolling gestures. For more information, 

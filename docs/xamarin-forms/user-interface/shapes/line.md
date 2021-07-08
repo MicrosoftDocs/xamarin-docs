@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Line
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Line` class derives from the `Shape` class, and can be used to draw lines. For information on the properties that the `Line` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -46,7 +46,7 @@ The following XAML example shows how to draw a line:
 
 In this example, a red diagonal line is drawn from (40,0) to (0,120):
 
-![Diagonal line.](line-images/line.png "Line")
+![Diagonal line](line-images/line.png "Line")
 
 Because the `X1`, `Y1`, `X2`, and `Y2` properties have default values of 0, it's possible to draw some lines with minimal syntax:
 
@@ -71,7 +71,7 @@ The following XAML example shows how to draw a dashed line:
 
 In this example, a dark blue dashed diagonal line is drawn from (40,0) to (0,120):
 
-![Dashed line.](line-images/dashed-line.png "Dashed line")
+![Dashed line](line-images/dashed-line.png "Dashed line")
 
 For more information about drawing a dashed line, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 

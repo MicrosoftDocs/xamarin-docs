@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The separable blend modes
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**SkiaSharp Porter-Duff blend modes**](porter-duff.md), the Porter-Duff blend modes generally perform clipping operations. The separable blend modes are different. The separable modes alter the individual red, green, and blue color components of an image. Separable blend modes can mix color to demonstrate that the combination of red, green, and blue is indeed white:
 
-![Primary Colors.](separable-images/SeparableSample.png "Primary Colors")
+![Primary Colors](separable-images/SeparableSample.png "Primary Colors")
 
 ## Lighten and darken two ways 
 
@@ -121,7 +121,7 @@ The `PaintSurface` handler calculates a rectangle suitable for the bitmap. The h
 
 The screenshots from left to right show increasingly larger `Slider` values as the top image gets lighter and the bottom image gets darker:
 
-[![Lighten and Darken](separable-images/LightenAndDarken.png "Lighten and Darken."](separable-images/LightenAndDarken-Large.png#lightbox)
+[![Lighten and Darken](separable-images/LightenAndDarken.png "Lighten and Darken")](separable-images/LightenAndDarken-Large.png#lightbox)
 
 This program demonstrates the normal way in which the separable blend modes are used: The destination is an image of some sort, very often a bitmap. The source is a rectangle displayed using an `SKPaint` object with its `BlendMode` property set to a separable blend mode. The rectangle can be a solid color (as it is here) or a gradient. Transparency is _not_ generally used with the separable blend modes.
 
@@ -169,7 +169,7 @@ Notice the two modes named `ColorDodge` and `ColorBurn`. The words _dodge_ and _
 
 The **Dodge and Burn** program is very similar to **Lighten and Darken**. The XAML file is structured the same but with different element names, and the code-behind file is likewise quite similar, but the effect of these two blend modes is quite different:
 
-[![Dodge and Burn](separable-images/DodgeAndBurn.png "Dodge and Burn."](separable-images/DodgeAndBurn-Large.png#lightbox)
+[![Dodge and Burn](separable-images/DodgeAndBurn.png "Dodge and Burn")](separable-images/DodgeAndBurn-Large.png#lightbox)
 
 For small `Slider` values, the `Lighten` mode lightens dark areas first, while `ColorDodge` lightens more uniformly.
 
@@ -325,13 +325,13 @@ public partial class SeparableBlendModesPage : ContentPage
 
 Towards the bottom of the `PaintSurface` handler, a rectangle is drawn over the second bitmap with the selected blend mode and the selected color. You can compare the modified bitmap at the bottom with the original bitmap at the top:
 
-[![Separable Blend Modes](separable-images/SeparableBlendModes.png "Separable Blend Modes."](separable-images/SeparableBlendModes-Large.png#lightbox)
+[![Separable Blend Modes](separable-images/SeparableBlendModes.png "Separable Blend Modes")](separable-images/SeparableBlendModes-Large.png#lightbox)
 
 ## Additive and subtractive primary colors
 
 The **Primary Colors** page draws three overlapping circles of red, green, and blue:
 
-[![Additive Primary Colors](separable-images/PrimaryColors-Additive.png "Additive Primary Colors."](separable-images/PrimaryColors-Additive.png#lightbox)
+[![Additive Primary Colors](separable-images/PrimaryColors-Additive.png "Additive Primary Colors")](separable-images/PrimaryColors-Additive.png#lightbox)
 
 These are the additive primary colors. Combinations of any two produce cyan, magenta, and yellow, and a combination of all three is white.
 
@@ -419,7 +419,7 @@ public class PrimaryColorsPage : ContentPage
 
 The program includes a `TabGestureRecognizer`. When you tap or click the screen, the program uses `SKBlendMode.Multiply` to display the three subtractive primaries:
 
-[![Subtractive Primary Colors](separable-images/PrimaryColors-Subtractive.png "Subtractive Primary Colors."](separable-images/PrimaryColors-Subtractive-Large.png#lightbox)
+[![Subtractive Primary Colors](separable-images/PrimaryColors-Subtractive.png "Subtractive Primary Colors")](separable-images/PrimaryColors-Subtractive-Large.png#lightbox)
 
 The `Darken` mode also works for this same effect.
 

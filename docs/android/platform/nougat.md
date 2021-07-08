@@ -27,7 +27,7 @@ and later. Android Nougat adds many new APIs for the Nougat features
 described below; these APIs are available to Xamarin.Android apps when
 you use Xamarin.Android 7.0.
 
-[![Hero images of Android tablets and phones running Android Nougat.](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
+[![Hero images of Android tablets and phones running Android Nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 For more information about Android 7.x APIs, see
 [Android 7.1 for Developers](https://developer.android.com/preview/api-overview.html).
@@ -134,11 +134,11 @@ later. You must also install the latest **Android SDK Tools**:
 
 2. Install **Android 7.0 (API 24)** or later:
 
-    [![Selecting Android 7.0 packages in the Android SDK Manager.](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
+    [![Selecting Android 7.0 packages in the Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
 3. Install the latest Android SDK tools:
 
-    [![Selecting the latest Android SDK tools in the Android SDK Manager.](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
+    [![Selecting the latest Android SDK tools in the Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
     You must install Android SDK Tools revision 25.2.2 or later, Android
     SDK Platform tools 24.0.3 or later, and Android SDK Build tools 24.0.2
@@ -147,7 +147,7 @@ later. You must also install the latest **Android SDK Tools**:
 4. Verify that the **Java Development Kit Location**
     is configured for JDK 1.8:
 
-    [![Configuring the JDK 8 path under Tools options.](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
+    [![Configuring the JDK 8 path under Tools options](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
     To view this setting in Visual Studio, click **Tools > Options >
     Xamarin > Android Settings**. In Visual Studio for Mac,
@@ -184,7 +184,7 @@ device using the following settings:
 
 For example, this virtual device is configured to emulate a Nexus 6:
 
-[![Configuring an AVD using Nexus 6 device, Android 7.0 target, and Intel Atom x86 CPU/ABI.](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
+[![Configuring an AVD using Nexus 6 device, Android 7.0 target, and Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
 
 If you are using a physical device such as a Nexus 5X, 6, or 9, you can
 either update your device through automatic over the air (OTA) updates
@@ -212,7 +212,7 @@ multi-window mode, the selected activity continues to run while the
 unselected activity is paused but still visible. Multi-window
 mode does not modify the Android activity lifecycle.
 
-[![Example apps running in multi-window mode in both portrait and landscape.](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
+[![Example apps running in multi-window mode in both portrait and landscape](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
 You can configure how the activities of your Xamarin.Android app
 support multi-window mode. For example, you can configure attributes
@@ -256,7 +256,7 @@ This inline reply feature makes it possible for users to quickly
 respond to an SMS or text message directly within the notification
 interface:
 
-[![Screenshot of a notification with an inline Direct Reply field.](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
+[![Screenshot of a notification with an inline Direct Reply field](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
 
 To support this feature in your app, you must add *inline reply
 actions* to your app via a
@@ -312,7 +312,7 @@ dismiss or archive a group of notifications in one action. The user
 can slide down to expand the bundle of notifications to view each
 notification in detail:
 
-[![Screenshot example of bundled notifications.](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
+[![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 To support bundled notifications, your app can use the
 [Builder.SetGroup](xref:Android.App.Notification.Builder.SetGroup*)
@@ -353,7 +353,7 @@ To activate the menu of shortcuts, the user long-presses the app icon
 for a second or more &ndash; the menu appears with a quick vibration.
 Releasing the press causes the menu to remain:
 
-[![Example screen of an app shortcut menu for a messaging app.](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
+[![Example screen of an app shortcut menu for a messaging app](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
 This feature is available only API level 25 or higher.
 For more information about the new App Shortcuts feature in Android 7.1,

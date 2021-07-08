@@ -23,7 +23,7 @@ fonts in XML, downloadable fonts, autofill, and picture in picture
 these APIs are available to Xamarin.Android apps when you use
 Xamarin.Android 8.0 and later.
 
-[![Android Oreo hero image.](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
+[![Android Oreo hero image](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 This article is structured to help you get started in developing
 Xamarin.Android apps for Android 8.0 Oreo. It explains how to install
@@ -109,13 +109,13 @@ later.
    Android SDK emulator, be sure to include the **x86** system images that you
    will need:
 
-    [![Selecting Android 8.0 packages in the Android SDK Manager.](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [![Selecting Android 8.0 packages in the Android SDK Manager](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. Install **Android SDK Tools 26.0.2** or later, **Android SDK
    Platform-Tools 26.0.0** or later, and **Android SDK Build-Tools
    26.0.0** (or later):
 
-    [![Selecting Android SDK Tools 26 in the Android SDK Manager.](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
+    [![Selecting Android SDK Tools 26 in the Android SDK Manager](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -125,13 +125,13 @@ later.
    Android SDK emulator, be sure to include the **x86** system images
    that you will need:
 
-    [![Selecting Android 8.0 packages in the SDK Manager.](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [![Selecting Android 8.0 packages in the SDK Manager](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. Install **Android SDK Tools 26.0.2** or later, **Android SDK
    Platform-Tools 26.0.0** or later, and **Android SDK Build-Tools
    26.0.0** (or later):
 
-    [![Selecting Android SDK Tools 26 in the SDK Manager.](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [![Selecting Android SDK Tools 26 in the SDK Manager](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
@@ -159,11 +159,11 @@ tool **avdmanager** instead:
 
 # [Visual Studio](#tab/windows)
 
-![Android Emulator Manager warning dialog.](oreo-images/win/03-avd-warning.png)
+![Android Emulator Manager warning dialog](oreo-images/win/03-avd-warning.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Android Emulator Manager warning dialog.](oreo-images/mac/03-avd-warning.png)
+![Android Emulator Manager warning dialog](oreo-images/mac/03-avd-warning.png)
 
 -----
 
@@ -221,7 +221,7 @@ steps:
 After you **avdmanager** to create your virtual device, it will be
 included in the device pull-down menu:
 
-[![New AVD added to device pull-down menu.](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
+[![New AVD added to device pull-down menu](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -251,7 +251,7 @@ included in the device pull-down menu:
 After you use **avdmanager** to create your virtual device, it will be
 included in the device pull-down menu:
 
-[![New AVD added to device pull-down menu.](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
+[![New AVD added to device pull-down menu](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -296,7 +296,7 @@ notification options.
 Notification badges are small dots that appear over app icons as shown
 in this screenshot:
 
-[![Example notification badges on app icons.](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[![Example notification badges on app icons](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
 These dots indicate that there are new notifications for one or more
 notification channels in the app associated with that app icon &ndash;

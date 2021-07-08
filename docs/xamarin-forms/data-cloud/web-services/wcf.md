@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Consume a Windows Communication Foundation (WCF) Web Service
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF is Microsoft's unified framework for building service-oriented applications. It enables developers to build secure, reliable, transacted, and interoperable distributed applications. This article demonstrates how to consume an WCF Simple Object Access Protocol (SOAP) service from a Xamarin.Forms application._
 
@@ -34,7 +34,7 @@ There are differences between ASP.NET Web Services (ASMX) and WCF, but WCF suppo
 
 The sample application solution includes a WCF service which can be run locally, and is shown in the following screenshot:
 
-![Sample Application.](wcf-images/portal.png)
+![Sample Application](wcf-images/portal.png)
 
 > [!NOTE]
 > In iOS 9 and greater, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and the app, thereby preventing accidental disclosure of sensitive information. Since ATS is enabled by default in apps built for iOS 9, all connections will be subject to ATS security requirements. If connections do not meet these requirements, they will fail with an exception.

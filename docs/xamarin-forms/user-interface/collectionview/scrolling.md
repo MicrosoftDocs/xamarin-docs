@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CollectionView Scrolling
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines two [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods, that scroll items into view. One of the overloads scrolls the item at the specified index into view, while the other scrolls the specified item into view. Both overloads have additional arguments that can be specified to indicate the group the item belongs to, the exact position of the item after the scroll has completed, and whether to animate the scroll.
 
@@ -127,7 +127,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 This example code results in the minimal scrolling required to scroll the item into view:
 
-[![Screenshot of a CollectionView vertical list with ScrollToPosition.MakeVisible, on iOS and Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView vertical list with scrolled item."](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.MakeVisible, on iOS and Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 > [!NOTE]
 > The [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) member is used by default, if the `position` argument is not specified when calling the `ScrollTo` method.
@@ -142,7 +142,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 This example code results in the item being scrolled to the start of the view:
 
-[![Screenshot of a CollectionView vertical list with ScrollToPosition.Start, on iOS and Android](scrolling-images/scrolltoposition-start.png "CollectionView vertical list with scrolled item."](scrolling-images/scrolltoposition-start-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.Start, on iOS and Android](scrolling-images/scrolltoposition-start.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-start-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ### Center
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 This example code results in the item being scrolled to the center of the view:
 
-[![Screenshot of a CollectionView vertical list with ScrollToPosition.Center, on iOS and Android](scrolling-images/scrolltoposition-center.png "CollectionView vertical list with scrolled item."](scrolling-images/scrolltoposition-center-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.Center, on iOS and Android](scrolling-images/scrolltoposition-center.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-center-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ### End
 
@@ -166,7 +166,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 This example code results in the item being scrolled to the end of the view:
 
-[![Screenshot of a CollectionView vertical list with ScrollToPosition.End, on iOS and Android](scrolling-images/scrolltoposition-end.png "CollectionView vertical list with scrolled item."](scrolling-images/scrolltoposition-end-large.png#lightbox "CollectionView vertical list with scrolled item")
+[![Screenshot of a CollectionView vertical list with ScrollToPosition.End, on iOS and Android](scrolling-images/scrolltoposition-end.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-end-large.png#lightbox "CollectionView vertical list with scrolled item")
 
 ## Control scroll position when new items are added
 
@@ -223,7 +223,7 @@ The [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeration defines th
 
 By default, the [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) property is set to `SnapPointsType.None`, which ensures that scrolling does not snap items, as shown in the following screenshots:
 
-[![Screenshot of a CollectionView vertical list without snap points, on iOS and Android](scrolling-images/snappoints-none.png "CollectionView vertical list without snap points."](scrolling-images/snappoints-none-large.png#lightbox "CollectionView vertical list without snap points")
+[![Screenshot of a CollectionView vertical list without snap points, on iOS and Android](scrolling-images/snappoints-none.png "CollectionView vertical list without snap points")](scrolling-images/snappoints-none-large.png#lightbox "CollectionView vertical list without snap points")
 
 ### Snap points alignment
 
@@ -265,7 +265,7 @@ CollectionView collectionView = new CollectionView
 
 When a user swipes to initiate a scroll, the top item will be aligned with the top of the view:
 
-[![Screenshot of a CollectionView vertical list with start snap points, on iOS and Android](scrolling-images/snappoints-start.png "CollectionView vertical list with start snap points."](scrolling-images/snappoints-start-large.png#lightbox "CollectionView vertical list with start snap points")
+[![Screenshot of a CollectionView vertical list with start snap points, on iOS and Android](scrolling-images/snappoints-start.png "CollectionView vertical list with start snap points")](scrolling-images/snappoints-start-large.png#lightbox "CollectionView vertical list with start snap points")
 
 #### Center
 
@@ -298,7 +298,7 @@ CollectionView collectionView = new CollectionView
 
 When a user swipes to initiate a scroll, the top item will be center aligned at the top of the view:
 
-[![Screenshot of a CollectionView vertical list with center snap points, on iOS and Android](scrolling-images/snappoints-center.png "CollectionView vertical list with center snap points."](scrolling-images/snappoints-center-large.png#lightbox "CollectionView vertical list with center snap points")
+[![Screenshot of a CollectionView vertical list with center snap points, on iOS and Android](scrolling-images/snappoints-center.png "CollectionView vertical list with center snap points")](scrolling-images/snappoints-center-large.png#lightbox "CollectionView vertical list with center snap points")
 
 #### End
 
@@ -331,7 +331,7 @@ CollectionView collectionView = new CollectionView
 
 When a user swipes to initiate a scroll, the bottom item will be aligned with the bottom of the view:
 
-[![Screenshot of a CollectionView vertical list with end snap points, on iOS and Android](scrolling-images/snappoints-end.png "CollectionView vertical list with end snap points."](scrolling-images/snappoints-end-large.png#lightbox "CollectionView vertical list with end snap points")
+[![Screenshot of a CollectionView vertical list with end snap points, on iOS and Android](scrolling-images/snappoints-end.png "CollectionView vertical list with end snap points")](scrolling-images/snappoints-end-large.png#lightbox "CollectionView vertical list with end snap points")
 
 ## Related links
 

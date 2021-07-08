@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Layout Compression
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. This article explains how to enable layout compression and the benefits it can bring._
 
@@ -29,7 +29,7 @@ The result of the layout process is a hierarchy of native controls. However, thi
 
 For example, consider the following button from the sample application for logging into Facebook:
 
-![Facebook Button.](layout-compression-images/facebook-button.png)
+![Facebook Button](layout-compression-images/facebook-button.png)
 
 This button is specified as a custom control with the following XAML view hierarchy:
 
@@ -53,7 +53,7 @@ This button is specified as a custom control with the following XAML view hierar
 
 The resulting nested view hierarchy can be examined with the Live Visual Tree. On Android, the nested view hierarchy contains 17 views:
 
-![View Hierarchy for Facebook Button.](layout-compression-images/no-compression.png)
+![View Hierarchy for Facebook Button](layout-compression-images/no-compression.png)
 
 Layout compression, which is available for Xamarin.Forms applications on the iOS and Android platforms, aims to flatten the view nesting by removing specified layouts from the visual tree, which can improve page-rendering performance. The performance benefit that's delivered varies depending on the complexity of a page, the version of the operating system being used, and the device on which the application is running. However, the biggest performance gains will be seen on older devices.
 
@@ -94,7 +94,7 @@ For the Facebook button, layout compression can be enabled on the three layout c
 
 On Android, this results in a nested view hierarchy of 14 views:
 
-![View Hierarchy for Facebook Button with Layout Compression.](layout-compression-images/layout-compression.png)
+![View Hierarchy for Facebook Button with Layout Compression](layout-compression-images/layout-compression.png)
 
 Compared to the original nested view hierarchy of 17 views, this represents a reduction in the number of views of 17%. While this reduction may appear insignificant, the view reduction over an entire page can be more significant.
 
@@ -104,7 +104,7 @@ Fast renderers reduce the inflation and rendering costs of Xamarin.Forms control
 
 For the Facebook button in the sample application, combining layout compression and fast renderers produces a nested view hierarchy of 8 views:
 
-![View Hierarchy for Facebook Button with Layout Compression and Fast Renderers.](layout-compression-images/layout-compression-with-fast-renderers.png)
+![View Hierarchy for Facebook Button with Layout Compression and Fast Renderers](layout-compression-images/layout-compression-with-fast-renderers.png)
 
 Compared to the original nested view hierarchy of 17 views, this represents a reduction of 52%.
 

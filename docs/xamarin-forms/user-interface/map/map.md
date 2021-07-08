@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Map Control
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 The [`Map`](xref:Xamarin.Forms.Maps.Map) control is a cross-platform view for displaying and annotating maps. It uses the native map control for each platform, providing a fast and familiar maps experience for users:
 
-[![Screenshot of map control, on iOS and Android](map-images/map-default.png "Map control."](map-images/map-default-large.png#lightbox "Map control")
+[![Screenshot of map control, on iOS and Android](map-images/map-default.png "Map control")](map-images/map-default-large.png#lightbox "Map control")
 
 The [`Map`](xref:Xamarin.Forms.Maps.Map) class defines the following properties that control map appearance and behavior:
 
@@ -74,7 +74,7 @@ namespace WorkingWithMaps
 
 This example calls the default [`Map`](xref:Xamarin.Forms.Maps.Map) constructor, which centers the map on Rome:
 
-[![Screenshot of map control with default location, on iOS and Android](map-images/map-default.png "Map control with default location."](map-images/map-default-large.png#lightbox "Map control with default location")
+[![Screenshot of map control with default location, on iOS and Android](map-images/map-default.png "Map control with default location")](map-images/map-default-large.png#lightbox "Map control with default location")
 
 Alternatively, a [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argument can be passed to a [`Map`](xref:Xamarin.Forms.Maps.Map) constructor to set the center point and zoom level of the map when it's loaded. For more information, see [Display a specific location on a map](#display-a-specific-location-on-a-map).
 
@@ -103,15 +103,15 @@ Map map = new Map
 
 The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) when the [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) property is set to `Street`:
 
-[![Screenshot of map control with the street map type, on iOS and Android](map-images/maptype-street.png "Map control with the street maptype."](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
+[![Screenshot of map control with the street map type, on iOS and Android](map-images/maptype-street.png "Map control with the street maptype")](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
 
 The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) when the [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) property is set to `Satellite`:
 
-[![Screenshot of map control with the satellite map type, on iOS and Android](map-images/maptype-satellite.png "Map control with the satellite maptype."](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
+[![Screenshot of map control with the satellite map type, on iOS and Android](map-images/maptype-satellite.png "Map control with the satellite maptype")](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
 
 The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) when the [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) property is set to `Hybrid`:
 
-[![Screenshot of map control with the hybrid map type, on iOS and Android](map-images/maptype-hybrid.png "Map control with the hybrid maptype."](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
+[![Screenshot of map control with the hybrid map type, on iOS and Android](map-images/maptype-hybrid.png "Map control with the hybrid maptype")](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
 
 ## Display a specific location on a map
 
@@ -148,7 +148,7 @@ This example creates a [`Map`](xref:Xamarin.Forms.Maps.Map) object that shows th
 
 The result is that when the map is displayed, it's centered on a specific location, and spans a specific number of latitude and longitude degrees:
 
-[![Screenshot of map control with specified location, on iOS and Android](map-images/map-region.png "Map control with a specified location."](map-images/map-region-large.png#lightbox "Map control with a specified location")
+[![Screenshot of map control with specified location, on iOS and Android](map-images/map-region.png "Map control with a specified location")](map-images/map-region-large.png#lightbox "Map control with a specified location")
 
 ## Create a MapSpan object
 

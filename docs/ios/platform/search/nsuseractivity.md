@@ -23,7 +23,7 @@ searched from Spotlight Search and Safari. By marking a `NSUserActivity` as
 searchable and adding indexable metadata, the activity can be listed in the
 search results  on the iOS device.
 
-[![The App History overview.](nsuseractivity-images/apphistory01.png)](nsuseractivity-images/apphistory01.png#lightbox)
+[![The App History overview](nsuseractivity-images/apphistory01.png)](nsuseractivity-images/apphistory01.png#lightbox)
 
 If the user selects a search result that belongs to an activity from your app,
 the app will be launched and the activity described by the `NSUserActivity` will
@@ -64,7 +64,7 @@ The Activity Type Identifier is used when creating a `NSUserActivity` instance t
 
 To create the required Activity Type Identifiers to support this behavior, edit the **Info.plist** file and switch to the **Source** view. Add a `NSUserActivityTypes` key and create identifiers in the following format:
 
-[![The NSUserActivityTypes key and required identifiers in the plist editor.](nsuseractivity-images/type01.png)](nsuseractivity-images/type01.png#lightbox)
+[![The NSUserActivityTypes key and required identifiers in the plist editor](nsuseractivity-images/type01.png)](nsuseractivity-images/type01.png#lightbox)
 
 In the above example, we created one new Activity Type Identifier for the search activity (`com.xamarin.platform`). When creating your own apps, replace the contents of the `NSUserActivityTypes` array with the Activity Type Identifiers specific to the activities your app supports.
 
@@ -93,7 +93,7 @@ activity.BecomeCurrent();
 
 We could add further details by setting the `ContentAttributeSet` property of our `NSUserActivity` as follows:
 
-[![Addition Search Details overview.](nsuseractivity-images/apphistory02.png)](nsuseractivity-images/apphistory02.png#lightbox)
+[![Addition Search Details overview](nsuseractivity-images/apphistory02.png)](nsuseractivity-images/apphistory02.png#lightbox)
 
 By using a `ContentAttributeSet` you can create rich search results that entice the end user to interact with them.
 
@@ -120,7 +120,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 Note that this is the same method override used to respond to Handoff requests. Now if the user clicks on a link from our app in the Spotlight Search results, our app will be brought to the foreground (or started if not already running) and the content, navigation or feature represented by that link will be displayed:
 
-[![Restore Previous State from Search.](nsuseractivity-images/apphistory03.png)](nsuseractivity-images/apphistory03.png#lightbox)
+[![Restore Previous State from Search](nsuseractivity-images/apphistory03.png)](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing"></a>
 

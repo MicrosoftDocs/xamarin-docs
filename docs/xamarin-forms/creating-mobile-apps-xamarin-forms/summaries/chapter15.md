@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 15. The interactive interface
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -83,7 +83,7 @@ The `ValueChanged` event doesn't fire during `Slider` initialization unless the 
 
 The [**RgbSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/RgbSliders) program contains three `Slider` elements that allow you to interactively select a color by specifying its RGB values:
 
-[![Triple screenshot of R G B sliders](images/ch15fg03-small.png "RGB Sliders."](images/ch15fg03-large.png#lightbox "RGB Sliders")
+[![Triple screenshot of R G B sliders](images/ch15fg03-small.png "RGB Sliders")](images/ch15fg03-large.png#lightbox "RGB Sliders")
 
 The [**TextFade**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/TextFade) sample uses two `Slider` elements to move two `Label` elements across an `AbsoluteLayout` and fade one into the other.
 

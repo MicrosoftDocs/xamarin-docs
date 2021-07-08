@@ -21,11 +21,11 @@ A default set of analyzers is provided for a wide range of issues and each can b
 
 Make sure the layout diagnostics setting, **Enable layout diagnostics**, is enabled. To access this options page, choose **Tools** > **Options**, and then choose **Text Editor** > **Android XML** > **Advanced**:
 
-![Options dialog showing how to enable diagnostics option.](diagnostics-images/AndroidDiagnosticsEnableOption.png)
+![Options dialog showing how to enable diagnostics option](diagnostics-images/AndroidDiagnosticsEnableOption.png)
 
 Once enabled, the Android layout editor will display issues:
 
-![Android diagnostics enabled on Visual Studio 2019.](diagnostics-images/AndroidDiagnosticsEnabled.png)
+![Android diagnostics enabled on Visual Studio 2019](diagnostics-images/AndroidDiagnosticsEnabled.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -33,11 +33,11 @@ Once enabled, the Android layout editor will display issues:
 
 Make sure the layout diagnostics setting, **Enable layout diagnostics**, is enabled. To access this options page, choose **Visual Studio** > **Preferences...**, and then choose **Text Editor** > **Android XML**:
 
-![Preferences dialog showing how to enable diagnostics option.](diagnostics-images/AndroidDiagnosticsEnableOptionVSmac.png)
+![Preferences dialog showing how to enable diagnostics option](diagnostics-images/AndroidDiagnosticsEnableOptionVSmac.png)
 
 Once enabled, the Android layout editor will display issues:
 
-![Android diagnostics enabled on Visual Studio for Mac.](diagnostics-images/AndroidDiagnosticsEnabledVSmac.png)
+![Android diagnostics enabled on Visual Studio for Mac](diagnostics-images/AndroidDiagnosticsEnabledVSmac.png)
 
 -----
 
@@ -95,16 +95,16 @@ The severity levels are:
 
 Create a new XML file in the root of an Android app project. The name of the file isn't important, but this example uses `AndroidLayoutDiagnostics.xml`:
 
-![Add New Item.](diagnostics-images/AndroidDiagnosticsNewFileDialog.png)
+![Add New Item](diagnostics-images/AndroidDiagnosticsNewFileDialog.png)
 
 Once the new XML file is added, it should appear in the Android app project tree:
 
-![Android App Project Tree.](diagnostics-images/AndroidDiagnosticsFileAddToTree.png)
+![Android App Project Tree](diagnostics-images/AndroidDiagnosticsFileAddToTree.png)
 
 Make sure that the build action is set to **AndroidResourceAnalysisConfig** in the properties panel.
 The easiest way to pull up the property panel for the new file is to right-click on the file and select properties. Once the properties panel is showing, you should change the **Build Action** to **AndroidResourceAnalysisConfig**:
 
-![Set Build Action in Item Properties.](diagnostics-images/AndroidDiagnosticsSetBuildAction.png)
+![Set Build Action in Item Properties](diagnostics-images/AndroidDiagnosticsSetBuildAction.png)
 
 Now that you have a blank XML file you need to add the `<configuration>` root element. At this point, you can adjust the default behavior of any supported issues.
 If you want to ensure that hard-coded strings are treated as errors add:
@@ -114,11 +114,11 @@ If you want to ensure that hard-coded strings are treated as errors add:
 </issue>
 ```
 
-![Diagnostics Configuration File.](diagnostics-images/AndroidDiagnosticsConfigurationFileExample.png)
+![Diagnostics Configuration File](diagnostics-images/AndroidDiagnosticsConfigurationFileExample.png)
 
 Now that hard-coded text is considered an error, it's now flagged with a red squiggle in the layout editor:
 
-![Layout using Diagnostics Configuration.](diagnostics-images/AndroidDiagnosticsUsingConfiguration.png)
+![Layout using Diagnostics Configuration](diagnostics-images/AndroidDiagnosticsUsingConfiguration.png)
 
 > [!NOTE]
 > For any new configuration file changes to take effect, any currently open layout files need to be reopened.

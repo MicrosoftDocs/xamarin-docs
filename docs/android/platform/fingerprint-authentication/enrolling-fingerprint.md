@@ -27,25 +27,25 @@ To setup a screen lock, perform the following steps:
 
 1. Go to **Settings > Security**, and select **Screen lock**:
 
-    ![Location of Screen lock selection on the Security screen.](enrolling-fingerprint-images/testing-01.png)
+    ![Location of Screen lock selection on the Security screen](enrolling-fingerprint-images/testing-01.png)
 
 2. The next screen that appears will allow you select and configure one of the screen lock security methods: 
 
-    ![Select Swipe, Pattern, PIN, or Password.](enrolling-fingerprint-images/testing-02.png)
+    ![Select Swipe, Pattern, PIN, or Password](enrolling-fingerprint-images/testing-02.png)
 
    Select and complete one of the available screen lock methods.
 
 3. Once the screenlock is configured, return to the **Settings > Security** page and select **Fingerprint**:
 
-    ![Location of the Fingerprint selection on the Security screen.](enrolling-fingerprint-images/testing-03.png)
+    ![Location of the Fingerprint selection on the Security screen](enrolling-fingerprint-images/testing-03.png)
 
 4. From there, follow the sequence to add a fingerprint to the device:
 
-    [![Sequence of screenshots for adding a fingerprint to the device.](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
+    [![Sequence of screenshots for adding a fingerprint to the device](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. In the final screen you are prompted to place your finger on the fingerprint scanner: 
 
-    ![Screen that prompts you to put your finger on the sensor.](enrolling-fingerprint-images/testing-05.png)
+    ![Screen that prompts you to put your finger on the sensor](enrolling-fingerprint-images/testing-05.png)
 
     If you are using an Android device, complete the process by touching a finger to the scanner. 
 

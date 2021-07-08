@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Relative Bindings
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Relative bindings provide the ability to set the binding source relative to the position of the binding target. They are created with the `RelativeSource` markup extension, and set as the `Source` property of a binding expression.
 
@@ -49,7 +49,7 @@ The `Self` relative binding mode is used bind a property of an element to anothe
 
 In this example, the [`BoxView`](xref:Xamarin.Forms.BoxView) sets its `WidthRequest` property to a fixed size, and the `HeightRequest` property binds to the `WidthRequest` property. Therefore, both properties are equal and so a square is drawn:
 
-[![Screenshot of a Self mode relative binding, on iOS and Android](relative-bindings-images/self-relative-binding.png "Self relative binding mode."](relative-bindings-images/self-relative-binding-large.png#lightbox "Self relative binding mode")
+[![Screenshot of a Self mode relative binding, on iOS and Android](relative-bindings-images/self-relative-binding.png "Self relative binding mode")](relative-bindings-images/self-relative-binding-large.png#lightbox "Self relative binding mode")
 
 > [!IMPORTANT]
 > When binding a property of an element to another property on the same element, the properties must be the same type. Alternatively, you can specify a converter on the binding to convert the value.
@@ -109,7 +109,7 @@ The following XAML shows an example where the `Mode` property will be implicitly
 
 In this example, the `BindingContext` of the page is set to the `DefaultViewModel` property of itself. This property is defined in the code-behind file for the page, and provides a viewmodel instance. The [`ListView`](xref:Xamarin.Forms.ListView) binds to the `Employees` property of the viewmodel. The [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which defines the appearance of each item in the `ListView`, contains a [`Button`](xref:Xamarin.Forms.Button). The button's `Command` property is bound to the `DeleteEmployeeCommand` in its parent's viewmodel. Tapping a `Button` deletes an employee:
 
-[![Screenshot of a FindAncestor mode relative binding, on iOS and Android](relative-bindings-images/findancestor-relative-binding.png "FindAncestor relative binding mode."](relative-bindings-images/findancestor-relative-binding-large.png#lightbox "FindAncestor relative binding mode")
+[![Screenshot of a FindAncestor mode relative binding, on iOS and Android](relative-bindings-images/findancestor-relative-binding.png "FindAncestor relative binding mode")](relative-bindings-images/findancestor-relative-binding-large.png#lightbox "FindAncestor relative binding mode")
 
 In addition, the optional `AncestorLevel` property can help disambiguate ancestor lookup in scenarios where there is possibly more than one ancestor of that type in the visual tree:
 
@@ -173,7 +173,7 @@ The following XAML shows an example of the `TemplatedParent` relative binding mo
 
 In this example, the [`Frame`](xref:Xamarin.Forms.Frame), which is the root element of the `ControlTemplate`, has its `BindingContext` set to the runtime object instance to which the template is applied. Therefore, the `Frame` and its children resolve their binding expressions against the properties of each `CardView` object:
 
-[![Screenshot of a TemplatedParent mode relative binding, on iOS and Android](relative-bindings-images/templatedparent-relative-binding.png "TemplatedParent relative binding mode."](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "TemplatedParent relative binding mode")
+[![Screenshot of a TemplatedParent mode relative binding, on iOS and Android](relative-bindings-images/templatedparent-relative-binding.png "TemplatedParent relative binding mode")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "TemplatedParent relative binding mode")
 
 For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

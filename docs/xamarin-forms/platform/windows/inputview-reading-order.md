@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # InputView Reading Order on Windows
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Universal Windows Platform platform-specific enables the reading order (left-to-right or right-to-left) of bidirectional text in [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances to be detected dynamically. It's consumed in XAML by setting the [`InputView.DetectReadingOrderFromContent`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView.DetectReadingOrderFromContentProperty) (for `Entry` and `Editor` instances) or [`Label.DetectReadingOrderFromContent`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label.DetectReadingOrderFromContentProperty) attached property to a `boolean` value:
 
@@ -44,7 +44,7 @@ editor.On<Windows>().SetDetectReadingOrderFromContent(!editor.On<Windows>().GetD
 
 The result is that [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances can have the reading order of their content detected dynamically:
 
-[![InputView detecting reading order from content platform-specific](inputview-reading-order-images/editor-readingorder.png "InputView detecting reading order from content platform-specific."](inputview-reading-order-images/editor-readingorder-large.png#lightbox "InputView detecting reading order from content platform-specific")
+[![InputView detecting reading order from content platform-specific](inputview-reading-order-images/editor-readingorder.png "InputView detecting reading order from content platform-specific")](inputview-reading-order-images/editor-readingorder-large.png#lightbox "InputView detecting reading order from content platform-specific")
 
 > [!NOTE]
 > Unlike setting the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property, the logic for views that detect the reading order from their text content will not affect the alignment of text within the view. Instead, it adjusts the order in which blocks of bidirectional text are laid out.

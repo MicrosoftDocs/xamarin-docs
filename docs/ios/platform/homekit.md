@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 _HomeKit is Apple's framework for controlling home automation devices. This article introduces HomeKit and covers configuring test accessories in the HomeKit Accessory Simulator and writing a simple Xamarin.iOS app to interact with these accessories._
 
-[![An example HomeKit enabled App.](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
+[![An example HomeKit enabled App](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
 Apple introduced HomeKit in iOS 8 as a way to seamlessly integrate multiple home automation devices from a variety vendors into a single, coherent unit. By promoting a common protocol for discovering, configuring and controlling home automation devices, HomeKit allows devices from non-related vendors to work together, all without the individual vendors having to coordinate efforts.
 
@@ -52,21 +52,21 @@ Do the following:
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
 4. Ensure that the **HomeKit** service has been checked for the given ID: 
 
-    [![Enable the HomeKit service for the given ID.](homekit-images/provision01.png)](homekit-images/provision01.png#lightbox)
+    [![Enable the HomeKit service for the given ID](homekit-images/provision01.png)](homekit-images/provision01.png#lightbox)
 5. Save your changes.
 6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for your app: 
 
-    [![Create a new development provisioning profile for the app.](homekit-images/provision02.png)](homekit-images/provision02.png#lightbox)
+    [![Create a new development provisioning profile for the app](homekit-images/provision02.png)](homekit-images/provision02.png#lightbox)
 7. Either download and install the new provisioning profile or use Xcode to download and install the profile.
 8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created: 
 
-    [![Select provisioning profile just created.](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
+    [![Select provisioning profile just created](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
 9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
 
-    [![Set the App ID .](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
+    [![Set the App ID ](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
 10. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected: 
 
-    [![Enable the HomeKit entitlement.](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
+    [![Enable the HomeKit entitlement](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
 11. Save the changes to all files.
 
 With these settings in place, the application is now ready to access the HomeKit Framework APIs. For detailed information on provisioning, please see our [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Provisioning Your App](~/ios/get-started/installation/device-provisioning/index.md) guides.
@@ -87,7 +87,7 @@ Do the following:
 1. In a web browser, visit [Downloads for Apple Developers](https://developer.apple.com/download/more/?name=for%20Xcode)
 2. Download the **Additional Tools for Xcode xxx** (where xxx is the version of Xcode that you have installed): 
 
-    [![Download the Additional Tools for Xcode.](homekit-images/simulator01.png)](homekit-images/simulator01.png#lightbox)
+    [![Download the Additional Tools for Xcode](homekit-images/simulator01.png)](homekit-images/simulator01.png#lightbox)
 3. Open the disk image and install the tools in your **Applications** directory.
 
 With the HomeKit Accessory Simulator installed, virtual accessories can be created for testing.
@@ -98,22 +98,22 @@ To start the HomeKit Accessory Simulator and create a few virtual accessories, d
 
 1. From the Applications folder, start the HomeKit Accessory Simulator: 
 
-    [![The HomeKit Accessory Simulator.](homekit-images/simulator02.png)](homekit-images/simulator02.png#lightbox)
+    [![The HomeKit Accessory Simulator](homekit-images/simulator02.png)](homekit-images/simulator02.png#lightbox)
 2. Click the **+** button and select **New Accessory...**: 
 
-    [![Add a new accessory.](homekit-images/simulator03.png)](homekit-images/simulator03.png#lightbox)
+    [![Add a new accessory](homekit-images/simulator03.png)](homekit-images/simulator03.png#lightbox)
 3. Fill out the information about the new accessory and click the **Finish** button: 
 
-    [![Fill out the information about the new accessory.](homekit-images/simulator04.png)](homekit-images/simulator04.png#lightbox)
+    [![Fill out the information about the new accessory](homekit-images/simulator04.png)](homekit-images/simulator04.png#lightbox)
 4. Click the **Add Service..** button, and select a service type from the dropdown: 
 
-    [![Select a service type from the dropdown.](homekit-images/simulator05.png)](homekit-images/simulator05.png#lightbox)
+    [![Select a service type from the dropdown](homekit-images/simulator05.png)](homekit-images/simulator05.png#lightbox)
 5. Provide a **Name** for the service and click the **Finish** button: 
 
-    [![Enter a Name for the service.](homekit-images/simulator06.png)](homekit-images/simulator06.png#lightbox)
+    [![Enter a Name for the service](homekit-images/simulator06.png)](homekit-images/simulator06.png#lightbox)
 6. You can provide optional characteristics for a service by clicking the **Add Characteristic** button and configuring the required settings: 
 
-    [![Configuring the required settings.](homekit-images/simulator07.png)](homekit-images/simulator07.png#lightbox)
+    [![Configuring the required settings](homekit-images/simulator07.png)](homekit-images/simulator07.png#lightbox)
 7. Repeat the steps above to create one of each type of virtual home automation device that HomeKit supports.
 
 With some sample virtual HomeKit accessories created and configured, you can now consume and control these devices from your Xamarin.iOS app.
@@ -122,7 +122,7 @@ With some sample virtual HomeKit accessories created and configured, you can now
 
 New for iOS 10 (and greater), the developer will need to add the `NSHomeKitUsageDescription` key to the app's `Info.plist` file and provide a string declaring why the app wants to access the user's HomeKit database. This string will be presented to the user the first time they run the app:
 
-[![The HomeKit permission dialog.](homekit-images/info01.png)](homekit-images/info01.png#lightbox)
+[![The HomeKit permission dialog](homekit-images/info01.png)](homekit-images/info01.png#lightbox)
 
 To set this key, do the following:
 
@@ -131,10 +131,10 @@ To set this key, do the following:
 3. Add a new **Entry** to the list.
 4. From the dropdown list, select **Privacy - HomeKit Usage Description**: 
 
-    [![Select Privacy - HomeKit Usage Description.](homekit-images/info02.png)](homekit-images/info02.png#lightbox)
+    [![Select Privacy - HomeKit Usage Description](homekit-images/info02.png)](homekit-images/info02.png#lightbox)
 5. Enter a description for why the app wants to access the user's HomeKit database: 
 
-    [![Enter a description.](homekit-images/info03.png)](homekit-images/info03.png#lightbox)
+    [![Enter a description](homekit-images/info03.png)](homekit-images/info03.png#lightbox)
 6. Save the changes to the file.
 
 > [!IMPORTANT]
@@ -184,7 +184,7 @@ public override void FinishedLaunching (UIApplication application)
 
 When the application is first run, the user will be asked if they want to allow it to access their HomeKit information:
 
-[![The user will be asked if they want to allow it to access their HomeKit information.](homekit-images/home01.png)](homekit-images/home01.png#lightbox)
+[![The user will be asked if they want to allow it to access their HomeKit information](homekit-images/home01.png)](homekit-images/home01.png#lightbox)
 
 If the user answers **OK**, then the application will be able to work with their HomeKit Accessories otherwise it will not and any calls to HomeKit will fail with an error.
 
@@ -277,7 +277,7 @@ The `DiscoveredAccessories` list will contain a collection of `HMAccessory` obje
 
 Once the new accessory has been found, it should be presented to the user and so they can select it and add it to a home. Example:
 
-[![Finding a new accessory.](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
+[![Finding a new accessory](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
 Call the `AddAccessory` method to add the selected accessory to the home's collection. For example:
 
@@ -294,11 +294,11 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 If the `err` property is not `null`, an error has occurred and it should be presented to the user. Otherwise, the user will be asked to enter the setup code for the device to add:
 
-[![Enter the setup code for the device to add.](homekit-images/accessory02.png)](homekit-images/accessory02.png#lightbox)
+[![Enter the setup code for the device to add](homekit-images/accessory02.png)](homekit-images/accessory02.png#lightbox)
 
 In the HomeKit Accessory Simulator this number can be found under the **Setup Code** field:
 
-[![The Setup Code field in the HomeKit Accessory Simulator.](homekit-images/accessory03.png)](homekit-images/accessory03.png#lightbox)
+[![The Setup Code field in the HomeKit Accessory Simulator](homekit-images/accessory03.png)](homekit-images/accessory03.png#lightbox)
 
 For real HomeKit accessories, the setup code will either be printed on a label on the device itself, on the product box or in the accessory’s user manual.
 
@@ -314,7 +314,7 @@ For the sake of this example, we'll be keeping things simple and work with a hom
 
 The `HMHome` object contains a list of assigned accessory that can be presented to the user in its `Accessories` property. For example:
 
-[![An example accessory.](homekit-images/accessory04.png)](homekit-images/accessory04.png#lightbox)
+[![An example accessory](homekit-images/accessory04.png)](homekit-images/accessory04.png#lightbox)
 
 Form here, the user can select a given accessory and work with the services that it provides.
 
@@ -362,7 +362,7 @@ The following Service Types are available via the `HMServiceType` enum:
 
 After you load a `HMAccessory` you can query the individual `HNService` objects it provides and display that information to the user:
 
-[![Displaying Service Information.](homekit-images/accessory05.png)](homekit-images/accessory05.png#lightbox)
+[![Displaying Service Information](homekit-images/accessory05.png)](homekit-images/accessory05.png#lightbox)
 
 You should always should check the `Reachable` property of a `HMAccessory` before attempting to work with it. An accessory can be unreachable the user is not within range of the device or if it has been unplugged.
 
@@ -652,7 +652,7 @@ When working with `HMCharacteristics` and simulated accessories, modifications t
 
 With the **HomeKitIntro** app running on real iOS Device Hardware, changes to a characteristic’s value should be seen nearly instantly in the HomeKit Accessory Simulator. For example, changing the state of a light in the iOS app:
 
-[![Changing the state of a light in an iOS app.](homekit-images/test01.png)](homekit-images/test01.png#lightbox)
+[![Changing the state of a light in an iOS app](homekit-images/test01.png)](homekit-images/test01.png#lightbox)
 
 Should change the state of the light in the HomeKit Accessory Simulator. If the value does not change, check the state of the error message when writing new characteristic values and ensure that the accessory is still reachable.
 

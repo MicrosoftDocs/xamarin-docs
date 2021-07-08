@@ -12,15 +12,15 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms RadioButton
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
 The Xamarin.Forms [`RadioButton`](xref:Xamarin.Forms.RadioButton) is a type of button that allows users to select one option from a set. Each option is represented by one radio button, and you can only select one radio button in a group. By default, each [`RadioButton`](xref:Xamarin.Forms.RadioButton) displays text:
 
-![Screenshot of default RadioButtons.](radiobutton-images/radiobuttons-default.png "Default RadioButtons")
+![Screenshot of default RadioButtons](radiobutton-images/radiobuttons-default.png "Default RadioButtons")
 
 However, on some platforms a [`RadioButton`](xref:Xamarin.Forms.RadioButton) can display a [`View`](xref:Xamarin.Forms.View), and on all platforms the appearance of each `RadioButton` can be redefined with a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate):
 
-![Screenshot of redefined RadioButtons.](radiobutton-images/radiobuttons-controltemplate.png "Redefined RadioButtons")
+![Screenshot of redefined RadioButtons](radiobutton-images/radiobuttons-controltemplate.png "Redefined RadioButtons")
 
 The [`RadioButton`](xref:Xamarin.Forms.RadioButton) control defines the following properties:
 
@@ -74,7 +74,7 @@ A [`RadioButton`](xref:Xamarin.Forms.RadioButton) displays text when the `Conten
 
 In this example, [`RadioButton`](xref:Xamarin.Forms.RadioButton) objects are implicitly grouped inside the same parent container. This XAML results in the appearance shown in the following screenshots:
 
-![Screenshot of text-based RadioButtons.](radiobutton-images/radiobuttons-text.png "Text-based RadioButtons")
+![Screenshot of text-based RadioButtons](radiobutton-images/radiobuttons-text.png "Text-based RadioButtons")
 
 ### Display arbitrary content
 
@@ -108,11 +108,11 @@ On iOS and UWP, a [`RadioButton`](xref:Xamarin.Forms.RadioButton) can display ar
 
 In this example, [`RadioButton`](xref:Xamarin.Forms.RadioButton) objects are implicitly grouped inside the same parent container. This XAML results in the appearance shown in the following screenshots:
 
-![Screenshot of view-based RadioButtons.](radiobutton-images/radiobuttons-view.png "View-based RadioButtons")
+![Screenshot of view-based RadioButtons](radiobutton-images/radiobuttons-view.png "View-based RadioButtons")
 
 On Android, [`RadioButton`](xref:Xamarin.Forms.RadioButton) objects will display a string-based representation of the [`View`](xref:Xamarin.Forms.View) object that's been set as content:
 
-![Screenshot of view-based RadioButton on Android.](radiobutton-images/radiobutton-view-android.png "View-based RadioButton on Android")
+![Screenshot of view-based RadioButton on Android](radiobutton-images/radiobutton-view-android.png "View-based RadioButton on Android")
 
 > [!NOTE]
 > When a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) is applied to a [`RadioButton`](xref:Xamarin.Forms.RadioButton), a [`View`](xref:Xamarin.Forms.View) can be assigned to the `RadioButton.Content` property on all platforms. For more information, see [Redefine RadioButton appearance](#redefine-radiobutton-appearance).
@@ -301,7 +301,7 @@ The following XAML example shows how to define a visual state for the `Checked` 
 
 In this example, the implicit [`Style`](xref:Xamarin.Forms.Style) targets [`RadioButton`](xref:Xamarin.Forms.RadioButton) objects. The `Checked` [`VisualState`](xref:Xamarin.Forms.VisualState) specifies that when a `RadioButton` is checked, its `TextColor` property will be set to green with an `Opacity` value of 1. The `Unchecked` `VisualState` specifies that when a `RadioButton` is in a unchecked state, its `TextColor` property will be set to red with an `Opacity` value of 0.5. Therefore, the overall effect is that when a `RadioButton` is unchecked it's red and partially transparent, and is green without transparency when it's checked:
 
-![Screenshot of RadioButton visual states.](radiobutton-images/radiobuttons-visualstates.png "RadioButton visual states")
+![Screenshot of RadioButton visual states](radiobutton-images/radiobuttons-visualstates.png "RadioButton visual states")
 
 For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
@@ -448,7 +448,7 @@ The following XAML shows [`RadioButton`](xref:Xamarin.Forms.RadioButton) objects
 
 In this example, the visual structure defined for each [`RadioButton`](xref:Xamarin.Forms.RadioButton) is replaced with the visual structure defined in the [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), and so at runtime the objects in the `ControlTemplate` become part of the visual tree for each `RadioButton`. In addition, the content for each `RadioButton` is substituted into the [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) defined in the control template. This results in the following `RadioButton` appearance:
 
-![Screenshot of templated RadioButtons.](radiobutton-images/radiobuttons-templated.png "Templated RadioButtons")
+![Screenshot of templated RadioButtons](radiobutton-images/radiobuttons-templated.png "Templated RadioButtons")
 
 For more information about control templates, see [Xamarin.Forms control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

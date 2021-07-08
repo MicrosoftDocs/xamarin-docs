@@ -69,7 +69,7 @@ Android identify activities that are no longer in use, allowing the OS
 to reclaim memory and resources. The following diagram illustrates the
 states an Activity can go through during its lifetime:
 
-[![Activity states diagram.](images/image1-sml.png)](images/image1.png#lightbox)
+[![Activity states diagram](images/image1-sml.png)](images/image1.png#lightbox)
 
 These states can be broken into 4 main groups as follows:
 
@@ -136,7 +136,7 @@ notified by the OS, which calls specific methods on that activity. The
 following diagram illustrates these methods in relation to the
 Activity Lifecycle:
 
-[![Activity Lifecycle flowchart.](images/image2-sml.png)](images/image2.png#lightbox)
+[![Activity Lifecycle flowchart](images/image2-sml.png)](images/image2.png#lightbox)
 
 As a developer, you can handle state changes by overriding these
 methods within an activity. It's important to note, however, that all
@@ -331,7 +331,7 @@ Many Android devices have two distinct buttons: a "Back" button and
 a "Home" button. An example of this can be seen in the following
 screenshot of Android 4.0.3:
 
-[![Back and Home buttons.](images/image4-sml.png)](images/image4.png#lightbox)
+[![Back and Home buttons](images/image4-sml.png)](images/image4.png#lightbox)
 
 There is a subtle difference between the two buttons, even though they
 appear to have the same effect of putting an application in the
@@ -387,7 +387,7 @@ An Activity provides methods to help with saving and retrieving the instance sta
 
 The following diagram illustrates how these methods are used:
 
-[![Bundle states flowchart.](images/image3-sml.png)](images/image3.png#lightbox)
+[![Bundle states flowchart](images/image3-sml.png)](images/image3.png#lightbox)
 
 #### OnSaveInstanceState
 
@@ -432,7 +432,7 @@ named `output`. When a configuration change happens - for example, when
 the device is rotated - the above code would lose the value of `c`
 because the `bundle` would be `null`, as shown in the figure below:
 
-[![Display does not show previous value.](images/07-sml.png)](images/07.png#lightbox)
+[![Display does not show previous value](images/07-sml.png)](images/07.png#lightbox)
 
 To preserve the value of `c` in this example, the Activity can
 override `OnSaveInstanceState`, saving the value in the bundle as shown
@@ -476,7 +476,7 @@ Since the `EditText` control has an `id` assigned, when
 the user enters some data and rotates the device, the data is still displayed,
 as shown below:
 
-[![Data is preserved in landscape mode.](images/08-sml.png)](images/08.png#lightbox)
+[![Data is preserved in landscape mode](images/08-sml.png)](images/08.png#lightbox)
 
 #### OnRestoreInstanceState
 
@@ -605,7 +605,7 @@ public class NonConfigInstanceActivity : ListActivity
 This code retrieves results from the web formatted as JSON, parses them, and
 then presents the results in a list, as shown in the following screenshot:
 
-[![Results displayed on screen.](images/06-sml.png)](images/06.png#lightbox)
+[![Results displayed on screen](images/06-sml.png)](images/06.png#lightbox)
 
 When a configuration change occurs - for example, when a device is
 rotated - the code repeats the process. To reuse the

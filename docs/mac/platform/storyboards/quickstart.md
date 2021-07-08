@@ -13,15 +13,15 @@ ms.date: 05/02/2017
 
 As a quick introduction to using Storyboards to define a Xamarin.Mac app's User Interface, let's start a new Xamarin.Mac project. Select **Mac** > **App** > **Cocoa App** and click the **Next** button:
 
-[![Adding a new Cocoa App.](quickstart-images/qs01.png)](quickstart-images/qs01.png#lightbox)
+[![Adding a new Cocoa App](quickstart-images/qs01.png)](quickstart-images/qs01.png#lightbox)
 
 Use the **App Name** of `MacStoryboard` and click the **Next** button:
 
-[![Setting the App Name.](quickstart-images/qs02.png)](quickstart-images/qs02.png#lightbox)
+[![Setting the App Name](quickstart-images/qs02.png)](quickstart-images/qs02.png#lightbox)
 
 Use the default **Project Name** and **Solution Name** and click the **Create** button:
 
-[![The project and solution names.](quickstart-images/qs03.png)](quickstart-images/qs03.png#lightbox)
+[![The project and solution names](quickstart-images/qs03.png)](quickstart-images/qs03.png#lightbox)
 
 In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing in Xcode's Interface Builder:
 
@@ -31,23 +31,23 @@ As you can see above, the default Storyboard defines both the app's Menu Bar and
 
 To do this, we will need to first remove the default View Controller and View that comes with the Storyboard by select it in Interface Builder and pressing the **Delete** key:
 
-[![Removing the default view controller.](quickstart-images/qs05.png)](quickstart-images/qs05.png#lightbox)
+[![Removing the default view controller](quickstart-images/qs05.png)](quickstart-images/qs05.png#lightbox)
 
 Next, type `split` into the **Filter** area, select the Vertical Split View Controller and drag it onto the _Design Surface_:
 
-[![Searching for the split view controller.](quickstart-images/qs06.png)](quickstart-images/qs06.png#lightbox)
+[![Searching for the split view controller](quickstart-images/qs06.png)](quickstart-images/qs06.png#lightbox)
 
 Notice that the controller automatically included two child View Controllers (and their related views), wired-up to the left and right sides of the split view. To tie the split view to it's parent window, press the **Control** key, click on the Window Controller (the blue circle in the Window Controller's frame) and drag a line to the Split View Controller. Select **window content** from the popup:
 
-[![Setting the windows content view.](quickstart-images/qs07.png)](quickstart-images/qs07.png#lightbox)
+[![Setting the windows content view](quickstart-images/qs07.png)](quickstart-images/qs07.png#lightbox)
 
 This will tie the two interface element together using a Segue:
 
-[![The Segue between the window and the content.](quickstart-images/qs08.png)](quickstart-images/qs08.png#lightbox)
+[![The Segue between the window and the content](quickstart-images/qs08.png)](quickstart-images/qs08.png#lightbox)
 
 We want to place a Text View in the left side of the Split View and have it automatically fill the available area when either the Window or the Split View is resized. Drag a Text View onto the top View Controller attached to the Split View and click the **Pin** auto layout constraint (the second icon from the right at the bottom of the Design Surface).
 
-[![Configuring the constraints.](quickstart-images/qs09.png)](quickstart-images/qs09.png#lightbox)
+[![Configuring the constraints](quickstart-images/qs09.png)](quickstart-images/qs09.png#lightbox)
 
 From here we will click all four of the **I-Beam** icons around the bounding box at the top of the Constraints Popover and click the **Add 4 Constraints** button at the bottom to add the required constraints.
 
@@ -57,11 +57,11 @@ If we return to Visual Studio for Mac and run the project, notice that the Text 
 
 Since we are going to be using the right hand side of the split view as an Inspector area, we want it to have a smaller size and allow it to be collapsed. Return to Xcode and edit the View for the right side by selecting it in the Design Surface and clicking on the **Size Inspector**. From here enter a **Width** of `250`:
 
-[![Setting the width.](quickstart-images/qs11.png)](quickstart-images/qs11.png#lightbox)
+[![Setting the width](quickstart-images/qs11.png)](quickstart-images/qs11.png#lightbox)
 
 Next select the Split Item that represents the right side, set a higher **Holding Priority** and click the **User Can Collapse** checkbox:
 
-[![Editing the holding priority.](quickstart-images/qs12.png)](quickstart-images/qs12.png#lightbox)
+[![Editing the holding priority](quickstart-images/qs12.png)](quickstart-images/qs12.png#lightbox)
 
 If we return to Visual Studio for Mac and run the project now, notice that the right side keeps it's smaller size and the window is resized:
 
@@ -101,11 +101,11 @@ To define a standard Preference Dialog Window, first drag a Tab View Controller 
 
 Again, this will automatically come with two child View Controllers attached. For example sake, we'll add a label to each view that will center inside of it:
 
-[![Setting the constraints.](quickstart-images/qs19.png)](quickstart-images/qs19.png#lightbox)
+[![Setting the constraints](quickstart-images/qs19.png)](quickstart-images/qs19.png#lightbox)
 
 Next, we want to display the Preferences window when the user selects the **Preferences...** menu item. From the Menu Bar, select the preferences menu item, **Control** key-click and drag a line to our Tab View Controller:
 
-[![Dragging to create a segue.](quickstart-images/qs20.png)](quickstart-images/qs20.png#lightbox)
+[![Dragging to create a segue](quickstart-images/qs20.png)](quickstart-images/qs20.png#lightbox)
 
 From the popup, we'll select **Modal** to show this window as a Modal Dialog:
 
@@ -119,15 +119,15 @@ You might notice that this doesn't look like a standard macOS app Preference Dia
 
 Select the Tab View Controller and switch its **Style** to **Toolbar**: 
 
-[![Setting the tab bar style.](quickstart-images/qs23.png)](quickstart-images/qs23.png#lightbox)
+[![Setting the tab bar style](quickstart-images/qs23.png)](quickstart-images/qs23.png#lightbox)
 
 Select each Tab and give it a **Label** and select one of the images to represent it:
 
-[![Configuring each tab in Xcode.](quickstart-images/qs24.png)](quickstart-images/qs24.png#lightbox)
+[![Configuring each tab in Xcode](quickstart-images/qs24.png)](quickstart-images/qs24.png#lightbox)
 
 If we save our changes, return to Visual Studio for Mac, run the app and select the **Preferences...** menu item, the dialog will now be displayed like a standard macOS app:
 
-[![An example of the running preferences window.](quickstart-images/qs25.png)](quickstart-images/qs25.png#lightbox)
+[![An example of the running preferences window](quickstart-images/qs25.png)](quickstart-images/qs25.png#lightbox)
 
 For more information, please see our [Working with Images](~/mac/app-fundamentals/image.md), [Menus](~/mac/user-interface/menu.md), [Windows](~/mac/user-interface/window.md) and [Dialogs](~/mac/user-interface/dialog.md) documentation.
 

@@ -35,7 +35,7 @@ to add the code required to implement touch events:
 
 1. Open the project **Touch_Start**. First run the project to make sure everything is okay, and touch the **Touch Samples** button. You should see a screen similar to the following (although none of the buttons will work):
 
-    [![Sample app run with non-working buttons.](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![Sample app run with non-working buttons](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
 1. Edit the file **TouchViewController.cs** and add the following two
 instance variables to the class `TouchViewController`:
@@ -167,9 +167,9 @@ instance variables to the class `TouchViewController`:
 
 1. At this point the Touch Samples screen is finished. Notice how the screen changes as you interact with each of the images, as shown in the following screenshot:
 
-    [![The starting app screen.](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![The starting app screen](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
-    [![The screen after the user drags a button.](ios-touch-walkthrough-images/image5.png)](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![The screen after the user drags a button](ios-touch-walkthrough-images/image5.png)](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples"></a>
 
@@ -303,7 +303,7 @@ but instead of using a delegate for a target we are using an `Action`.
 1. Run the application, and interact with the two images.
 The following screenshot is one example of these interactions:
 
-    [![This screenshot shows a drag interaction.](ios-touch-walkthrough-images/image7.png)](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![This screenshot shows a drag interaction](ios-touch-walkthrough-images/image7.png)](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"></a>
 
@@ -314,7 +314,7 @@ custom gesture recognizer. The custom gesture recognizer will
 subclasses `UIGestureRecognizer`, and will recognize when the user draws a “V” on the screen
 then toggle a bitmap. The following screenshot is an example of this screen:
 
- [![The app will recognize when the user draws a `V` on the screen.](ios-touch-walkthrough-images/image8.png)](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![The app will recognize when the user draws a `V` on the screen](ios-touch-walkthrough-images/image8.png)](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Follow these steps to create a custom gesture recognizer:
 
@@ -490,9 +490,9 @@ the **CustomGestureViewController.cs** file and add the following two instance v
 
 1. Run the application, and try drawing a “V” on the screen. You should see the image being displayed change, as shown in the following screenshots:
 
-    [![The button checked.](ios-touch-walkthrough-images/image9.png)](ios-touch-walkthrough-images/image9.png#lightbox)
+    [![The button checked](ios-touch-walkthrough-images/image9.png)](ios-touch-walkthrough-images/image9.png#lightbox)
 
-    [![The button unchecked.](ios-touch-walkthrough-images/image10.png)](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![The button unchecked](ios-touch-walkthrough-images/image10.png)](ios-touch-walkthrough-images/image10.png#lightbox)
 
 The above three sections demonstrated different ways to respond to touch events in iOS: using
 touch events, built-in gesture recognizers, or with a custom gesture recognizer.

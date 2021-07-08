@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 11. The Bindable infrastructure
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -25,7 +25,7 @@ Xamarin.Forms defines an enhanced property definition called a *bindable propert
 
 The [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) sample uses reflection to display a class hierarchy of Xamarin.Forms and demonstrate the crucial role played by `BindableObject` in this hierarchy. `BindableObject` derives from `Object` and is the parent class to [`Element`](xref:Xamarin.Forms.Element) from which [`VisualElement`](xref:Xamarin.Forms.VisualElement) derives. This is the parent class to [`Page`](xref:Xamarin.Forms.Page) and [`View`](xref:Xamarin.Forms.View), which is the parent class to [`Layout`](xref:Xamarin.Forms.Layout):
 
-[![Triple screenshot of class hierarchy sharing](images/ch11fg01-small.png "Class Hierarchy Sharing."](images/ch11fg01-large.png#lightbox "Class Hierarchy Sharing")
+[![Triple screenshot of class hierarchy sharing](images/ch11fg01-small.png "Class Hierarchy Sharing")](images/ch11fg01-large.png#lightbox "Class Hierarchy Sharing")
 
 ## A peek into BindableObject and BindableProperty
 

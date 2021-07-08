@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell tabs
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The navigation experience provided by Xamarin.Forms Shell is based on flyouts and tabs. The top level of navigation in a Shell application is either a flyout or a bottom tab bar, depending on the navigation requirements of the application. When the navigation experience for an application begins with bottom tabs, the child of the subclassed [`Shell`](xref:Xamarin.Forms.Shell) object should be a [`TabBar`](xref:Xamarin.Forms.TabBar) object, which represents the bottom tab bar.
 
@@ -40,7 +40,7 @@ A single page Shell application can be created by adding a [`Tab`](xref:Xamarin.
 
 This code example results in the following single page application:
 
-[![Screenshot of a Shell single page app, on iOS and Android.](tabs-images/single-page-app.png)](tabs-images/single-page-app-large.png#lightbox)
+[![Screenshot of a Shell single page app, on iOS and Android](tabs-images/single-page-app.png)](tabs-images/single-page-app-large.png#lightbox)
 
 Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified, without introducing additional views into the visual tree. This is possible because a subclassed `Shell` object can only ever contain [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) objects or a [`TabBar`](xref:Xamarin.Forms.TabBar) object, which can only ever contain [`Tab`](xref:Xamarin.Forms.Tab) objects, which can only ever contain [`ShellContent`](xref:Xamarin.Forms.ShellContent) objects. These implicit conversion operators can be used to remove the `Tab` objects from the previous example:
 
@@ -84,11 +84,11 @@ This implicit conversion automatically wraps the [`ShellContent`](xref:Xamarin.F
 
 The [`Title`](xref:Xamarin.Forms.BaseShellItem.Title) property, of type `string`, defines the tab title. The [`Icon`](xref:Xamarin.Forms.BaseShellItem.Icon) property, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), defines the tab icon:
 
-[![Screenshot of a Shell two page app with bottom tabs, on iOS and Android.](tabs-images/two-page-app-bottom-tabs.png)](tabs-images/two-page-app-bottom-tabs-large.png#lightbox)
+[![Screenshot of a Shell two page app with bottom tabs, on iOS and Android](tabs-images/two-page-app-bottom-tabs.png)](tabs-images/two-page-app-bottom-tabs-large.png#lightbox)
 
 When there are more than five tabs on a [`TabBar`](xref:Xamarin.Forms.TabBar), a **More** tab will appear, which can be used to access the additional tabs:
 
-[![Screenshot of a Shell app with a More tab, on iOS and Android.](tabs-images/more-tabs.png)](tabs-images/more-tabs-large.png#lightbox)
+[![Screenshot of a Shell app with a More tab, on iOS and Android](tabs-images/more-tabs.png)](tabs-images/more-tabs-large.png#lightbox)
 
 In addition, Shell's implicit conversion operators can be used to remove the [`ShellContent`](xref:Xamarin.Forms.ShellContent) and [`Tab`](xref:Xamarin.Forms.Tab) objects from the previous example:
 
@@ -140,7 +140,7 @@ When more than one [`ShellContent`](xref:Xamarin.Forms.ShellContent) object is p
 
 This results in the layout shown in the following screenshots:
 
-[![Screenshot of a Shell two page app with top and bottom tabs, on iOS and Android](tabs-images/two-page-app-top-tabs.png "Shell two page app with top and bottom tabs."](tabs-images/two-page-app-top-tabs-large.png#lightbox "Shell two page app with top and bottom tabs")
+[![Screenshot of a Shell two page app with top and bottom tabs, on iOS and Android](tabs-images/two-page-app-top-tabs.png "Shell two page app with top and bottom tabs")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Shell two page app with top and bottom tabs")
 
 In addition, Shell's implicit conversion operators can be used to remove the second [`Tab`](xref:Xamarin.Forms.Tab) object from the previous example:
 

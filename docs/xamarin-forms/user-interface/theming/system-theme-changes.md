@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Respond to system theme changes in Xamarin.Forms applications
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
 Devices typically include light and dark themes, which each refer to a broad set of appearance preferences that can be set at the operating system level. Applications should respect these system themes, and respond immediately when the system theme changes.
 
@@ -30,8 +30,8 @@ The following requirements must be met for Xamarin.Forms to respond to a system 
 
 The following screenshots show themed pages, for light and dark system themes on iOS and Android:
 
-[![Screenshot of the main page of a themed app, on iOS and Android](system-theme-changes-images/main-page-both-themes.png "Main page of themed app."](system-theme-changes-images/main-page-both-themes-large.png#lightbox "Main page of themed app")
-[![Screenshot of the detail page of a themed app, on iOS and Android](system-theme-changes-images/detail-page-both-themes.png "Detail page of themed app."](system-theme-changes-images/detail-page-both-themes-large.png#lightbox "Detail page of themed app")
+[![Screenshot of the main page of a themed app, on iOS and Android](system-theme-changes-images/main-page-both-themes.png "Main page of themed app")](system-theme-changes-images/main-page-both-themes-large.png#lightbox "Main page of themed app")
+[![Screenshot of the detail page of a themed app, on iOS and Android](system-theme-changes-images/detail-page-both-themes.png "Detail page of themed app")](system-theme-changes-images/detail-page-both-themes-large.png#lightbox "Detail page of themed app")
 
 ## Define and consume theme resources
 

@@ -47,7 +47,7 @@ Xamarin.Forms defines a number of objects that derive from the `Shape` class. Th
 
 In this example, the stroke and fill of an `Ellipse` are specified:
 
-![Paint shapes.](images/ellipse.png "Paint shapes")
+![Paint shapes](images/ellipse.png "Paint shapes")
 
 > [!IMPORTANT]
 > `Brush` objects use a type converter that enables [`Color`](xref:Xamarin.Forms.Color) values to specified for the `Stroke` property.
@@ -85,7 +85,7 @@ The following XAML shows how to set the `Aspect` property:
 
 In this example, a `Path` object draws a heart. The `Path` object's `WidthRequest` and `HeightRequest` properties are set to 100 device-independent units, and its `Aspect` property is set to `Uniform`. As a result, the object's contents are resized to fit the destination dimensions, while preserving the aspect ratio:
 
-![Stretch shapes.](images/aspect.png "Stretch shapes")
+![Stretch shapes](images/aspect.png "Stretch shapes")
 
 ## Draw dashed shapes
 
@@ -110,7 +110,7 @@ The following XAML example shows how to draw a dashed rectangle:
 
 In this example, a filled rectangle with a dashed stroke is drawn:
 
-![Dashed rectangle.](images/dashed-rectangle.png "Dashed line")
+![Dashed rectangle](images/dashed-rectangle.png "Dashed line")
 
 ## Control line ends
 
@@ -139,7 +139,7 @@ The following XAML shows how to set the `StrokeLineCap` property:
 
 In this example, the red line is rounded at the start and end of the line:
 
-![Line caps.](images/linecap.png "Line caps")
+![Line caps](images/linecap.png "Line caps")
 
 ## Control line joins
 
@@ -163,7 +163,7 @@ The following XAML shows how to set the `StrokeLineJoin` property:
 
 In this example, the dark blue polyline has rounded joins at its vertices:
 
-![Line joins.](images/linejoin.png "Line joins")
+![Line joins](images/linejoin.png "Line joins")
 
 ## Related links
 

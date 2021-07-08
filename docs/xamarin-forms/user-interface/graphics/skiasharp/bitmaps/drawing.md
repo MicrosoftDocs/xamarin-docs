@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Creating and drawing on SkiaSharp bitmaps
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 You've seen how an application can load bitmaps from the Web, from application resources, and from the user's photo library. It's also possible to create new bitmaps within your application. The simplest approach involves one of the constructors of [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
@@ -29,7 +29,7 @@ After you've created a new bitmap, you need to get something on the surface of t
 
 This article demonstrates the first approach:
 
-![Drawing Sample.](drawing-images/DrawingSample.png "Drawing Sample")
+![Drawing Sample](drawing-images/DrawingSample.png "Drawing Sample")
 
 The second approach is discussed in the article [**Accessing SkiaSharp Bitmap Pixels**](pixel-bits.md).
 
@@ -109,7 +109,7 @@ public partial class HelloBitmapPage : ContentPage
 
 The `PaintSurface` handler renders the bitmap multiple times in rows and columns of the display. Notice that the `Clear` method in the `PaintSurface` handler has an argument of `SKColors.Aqua`, which colors the background of the display surface:
 
-[![Hello, Bitmap!.](drawing-images/HelloBitmap.png "Hello, Bitmap!")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello, Bitmap!](drawing-images/HelloBitmap.png "Hello, Bitmap!")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 The appearance of the aqua background reveals that the bitmap is transparent except for the text.
 
@@ -252,7 +252,7 @@ public partial class MonkeyMoustachePage : ContentPage
 
 The constructor concludes by creating an `SKCanvasView` whose `PaintSurface` handler simply displays the result:
 
-[![Monkey Moustache](drawing-images/MonkeyMoustache.png "Monkey Moustache."](drawing-images/MonkeyMoustache-Large.png#lightbox)
+[![Monkey Moustache](drawing-images/MonkeyMoustache.png "Monkey Moustache")](drawing-images/MonkeyMoustache-Large.png#lightbox)
 
 ## Copying and modifying bitmaps
 
@@ -262,7 +262,7 @@ The most versatile way to modify a bitmap is through accessing the actual pixel 
 
 The following bitmap included with the **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application is 360 pixels wide and 480 pixels in height:
 
-![Mountain Climbers.](drawing-images/MountainClimbers.jpg "Mountain Climbers")
+![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
 
 Suppose you haven't received permission from the monkey on the left to publish this photograph. One solution is to obscure the monkey's face using a technique called _pixelization_. The pixels of the face are replaced with blocks of color so you can't make out the features. The blocks of color are usually derived from the original image by averaging the colors of the pixels corresponding to these blocks. But you don't need to perform this averaging yourself. It happens automatically when you copy a bitmap into a smaller pixel dimension.
 
@@ -332,7 +332,7 @@ public class PixelizedImagePage : ContentPage
 
 The constructor concludes by creating an `SKCanvasView` to display the result:
 
-[![Pixelize Image](drawing-images/PixelizeImage.png "Pixelize Image."](drawing-images/PixelizeImage-Large.png#lightbox)
+[![Pixelize Image](drawing-images/PixelizeImage.png "Pixelize Image")](drawing-images/PixelizeImage-Large.png#lightbox)
 
 ## Rotating bitmaps
 
@@ -482,7 +482,7 @@ The `ValueChanged` handler of the `Slider` performs the operations that create a
 
 Notice the use of the `Clear` method to make the background of `rotatedBitmap` a light pink. This is solely to illustrate the size of `rotatedBitmap` on the display:
 
-[![Bitmap Rotator](drawing-images/BitmapRotator.png "Bitmap Rotator."](drawing-images/BitmapRotator-Large.png#lightbox)
+[![Bitmap Rotator](drawing-images/BitmapRotator.png "Bitmap Rotator")](drawing-images/BitmapRotator-Large.png#lightbox)
 
 The rotated bitmap is just large enough to include the entire original bitmap, but no larger.
 
@@ -586,7 +586,7 @@ The vertical flip is accomplished by a scaling transform with a horizontal scali
 
 As you can see from the reversed lettering on the monkey's shirt, flipping is not the same as rotation. But as the UWP screenshot on the right demonstrates, flipping both horizontally and vertically is the same as rotating 180 degrees:
 
-[![Bitmap Flipper](drawing-images/BitmapFlipper.png "Bitmap Flipper."](drawing-images/BitmapFlipper-Large.png#lightbox)
+[![Bitmap Flipper](drawing-images/BitmapFlipper.png "Bitmap Flipper")](drawing-images/BitmapFlipper-Large.png#lightbox)
 
 Another common task that can be handled using similar techniques is cropping a bitmap to a rectangular subset. This is described in the next article [**Cropping SkiaSharp Bitmaps**](cropping.md).
 

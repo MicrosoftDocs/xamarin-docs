@@ -80,7 +80,7 @@ To set the permissions, expand the **Properties** folder in the
 **Solution Pad** and double-click **AndroidManifest.xml**. The
 permissions will be listed under **Required Permissions**:
 
-[![Screenshot of the Android Manifest Required Permissions settings.](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
+[![Screenshot of the Android Manifest Required Permissions settings](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 Setting either of these permissions tells Android that your application needs permission from the user in order to access to the location providers. Devices that run API level 22 (Android 5.1) or lower will ask the user to grant these permissions each time the app is installed. On devices running API level 23 (Android 6.0) or higher, the app should perform a run-time permission check before making a request of the location provider. 
 
@@ -430,11 +430,11 @@ else
 > real device, be sure to enable GPS, Wi-Fi, and cellular networks under
 > **Google Settings > Location > Mode** as shown in this screenshot:
 >
-> [![Settings Location Mode screen on an Android phone.](location-images/location-02.png)](location-images/location-02.png#lightbox)
+> [![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
 >
 > The screenshot below demonstrates the location application running using `GetBestProvider`:
 >
-> [![GetBestProvider app displaying latitude, longitude, and provider.](location-images/location-03.png)](location-images/location-03.png#lightbox)
+> [![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
 >
 > Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
 

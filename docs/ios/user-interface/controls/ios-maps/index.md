@@ -25,7 +25,7 @@ View = map;
 
 `MKMapView` is a `UIView` subclass that displays a map. Simply adding the map using the code above produces an interactive map:
 
-![A sample map.](images/00-map.png)
+![A sample map](images/00-map.png)
 
 ## Map Style
 
@@ -39,7 +39,7 @@ map.MapType = MKMapType.Hybrid;
 
 The following screenshot show the different map styles that are available:
 
-![This screenshot show the different map styles that are available.](images/01-mapstyles.png)
+![This screenshot show the different map styles that are available](images/01-mapstyles.png)
 
 ## Panning and Zooming
 
@@ -80,13 +80,13 @@ Once you've updated **Info.plist** and prompted the user for permission to acces
 map.ShowsUserLocation = true;
 ```
 
- ![The allow location access alert.](images/02-location-alert.png)
+ ![The allow location access alert](images/02-location-alert.png)
 
 ## Annotations
 
  `MKMapView` also supports displaying images, known as annotations, on a map. These can be either custom images or system-defined pins of various colors. For example, the following screenshot shows a map with a both a pin and a custom image:
 
- ![This screenshot shows a map with a both a pin and a custom image.](images/03-annotations.png)
+ ![This screenshot shows a map with a both a pin and a custom image](images/03-annotations.png)
 
 ### Adding an annotation
 
@@ -144,7 +144,7 @@ MKAnnotationView pinView = (MKPinAnnotationView)mapView.DequeueReusableAnnotatio
 
 As mentioned earlier, an annotation can optionally show a callout. To show a callout simply set `CanShowCallout` to true on the `MKAnnotationView`. This results in the annotation's title being displayed when the annotation is tapped, as shown:
 
- ![The annotations title being displayed.](images/04-callout.png)
+ ![The annotations title being displayed](images/04-callout.png)
 
 ### Customizing the Callout
 
@@ -157,7 +157,7 @@ pinView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile ("monkey.png
 
 This code results in the following callout:
 
- ![An example callout.](images/05-callout-accessories.png)
+ ![An example callout](images/05-callout-accessories.png)
 
 To handle the user tapping the right accessory, simply implement the `CalloutAccessoryControlTapped` method in the `MKMapViewDelegate`:
 
@@ -210,7 +210,7 @@ public override MKOverlayView GetViewForOverlay (MKMapView mapView, NSObject ove
 
 This displays a circle on the map as shown:
 
- ![A circle displayed on the map.](images/06-circle-overlay.png)
+ ![A circle displayed on the map](images/06-circle-overlay.png)
 
 ## Local Search
 
@@ -268,7 +268,7 @@ We will take a look at how to implement both the `searchResultsController` and t
 
 This results in a search bar displayed over the map as shown below:
 
- ![A search bar displayed over the map.](images/07-searchbar.png)
+ ![A search bar displayed over the map](images/07-searchbar.png)
 
 ### Displaying the Search Results
 
@@ -388,7 +388,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 The implementation above adds an annotation to the map when an item is selected from the results, as shown below:
 
- ![An annotation added to the map when an item is selected from the results.](images/08-search-results.png)
+ ![An annotation added to the map when an item is selected from the results](images/08-search-results.png)
 
 > [!IMPORTANT]
 > `UISearchController` was implemented in iOS 8. If you wish to support devices earlier than this, then you will need to use `UISearchDisplayController`.

@@ -30,16 +30,16 @@ To create a new provisioning profile for use with Wallet, do the following:
 1. Browse to the [Certificates, Identifiers, and Profiles](https://developer.apple.com/account/ios/certificate/) section of the Apple Developer Portal.
 2. Under **Identifiers**, browse to **App IDs**: 
     
-    ![App ID selection.](wallet-capabilities-images/image17.png)
+    ![App ID selection](wallet-capabilities-images/image17.png)
 
 3. Click the **+** icon in the top right of the page.
 4. Register a new App ID by giving it a **Name** and a bundle identifier. (Note that this bundle identifier must match the bundle ID in your project):
    
-    ![Add App ID details.](wallet-capabilities-images/image18.png)
+    ![Add App ID details](wallet-capabilities-images/image18.png)
 
 5. Select the **Wallet** App Service from the list of services:
     
-    ![Select service screen.](wallet-capabilities-images/image19.png)
+    ![Select service screen](wallet-capabilities-images/image19.png)
 
 6. Press **Continue**, and then **Register** to create the App ID.
 
@@ -47,7 +47,7 @@ If required, existing App IDs can be edited to add the Wallet capability.
 
 This App ID can now be used to generate, or to re-generate, a new provisioning profile, as described in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide:
 
-![Using newly created App ID to create provisioning profile.](wallet-capabilities-images/image20.png)
+![Using newly created App ID to create provisioning profile](wallet-capabilities-images/image20.png)
 
 For more information on using Wallet refer to the following guides:
 

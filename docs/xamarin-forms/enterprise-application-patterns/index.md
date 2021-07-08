@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _Architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise applications_
 
-![Enterprise Application Patterns using Xamarin.Forms eBook.](images/cover-sml.png)
+![Enterprise Application Patterns using Xamarin.Forms eBook](images/cover-sml.png)
 
 > [!NOTE]
 > This eBook was published in the spring of 2017, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated.

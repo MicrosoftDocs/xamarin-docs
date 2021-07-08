@@ -132,7 +132,7 @@ The following screenshot lists the Solution's contents. This is the
 Solution Explorer, which contains the directory structure and all of
 the files associated with the Solution:
 
-[![Solution Explorer.](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
+[![Solution Explorer](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -141,7 +141,7 @@ The following screenshot lists the Solution's contents. This is the
 Solution Pad, which contains the directory structure and all of the
 files associated with the Solution:
 
-[![Solution Pad.](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
+[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 ::: zone-end
 
@@ -251,7 +251,7 @@ a single application screen, and it is responsible for drawing and
 powering the user interface. When Android creates an application's
 first Activity, it loads the entire application:
 
-[![Activity load.](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
+[![Activity load](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 Since there is no linear progression through an Android application
 (you can launch the application from several points), Android has a
@@ -265,7 +265,7 @@ application as a single Activity (screen) and a collection of resource
 and helper files tied together by the Android Manifest file, as
 illustrated by the diagram below:
 
-[![Resource helpers.](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
+[![Resource helpers](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 The next few sections explore the relationships between the various
 parts of the **Phoneword** application; this should provide you with a
@@ -289,12 +289,12 @@ Android's point of view &ndash; the layout file could have been named
 something else. When you open **activity_main.axml** in the IDE, it brings up the
 visual editor for Android layout files called the *Android Designer*:
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer."](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 In the **Phoneword** app, the **TranslateButton**'s ID is set to
 `@+id/TranslateButton`:
 
-[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting."](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
+[![TranslateButton id setting](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -306,12 +306,12 @@ Android's point of view &ndash; the layout file could have been named
 something else. When you open **Main.axml** in the IDE, it brings up the
 visual editor for Android layout files called the *Android Designer*:
 
-[![Android Designer.](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 In the **Phoneword** app, the **TranslateButton**'s ID is set to
 `@+id/TranslateButton`:
 
-[![TranslateButton id setting.](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
+[![TranslateButton id setting](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 
@@ -335,12 +335,12 @@ of the designer view, as illustrated by the screenshot below:
 
 ::: zone pivot="windows"
 
-[![Designer source view](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view."](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
+[![Designer source view](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-[![Designer source view.](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
+[![Designer source view](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 ::: zone-end
 
@@ -409,7 +409,7 @@ created, started and paused, resumed and destroyed, and so on. The
 in the screen's lifecycle. The following diagram illustrates a typical
 life of an Activity as well as some of the corresponding lifecycle methods:
 
-[![Activity Lifecycle.](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
+[![Activity Lifecycle](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 By overriding `Activity` lifecycle methods, you can control how the
 Activity loads, how it reacts to the user, and even what happens after
@@ -565,7 +565,7 @@ After the device is configured, you can deploy to it by plugging it in,
 selecting it from the **Select Device** dialog, and starting the
 application:
 
-![Select debug device.](hello-android-deepdive-images/vs/06-select-device.png "Select debug device")
+![Select debug device](hello-android-deepdive-images/vs/06-select-device.png "Select debug device")
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -574,13 +574,13 @@ After the device is configured, you can deploy to it by plugging it in,
 pressing **Start (Play)**, selecting it from the **Select Device**
 dialog, and pressing **OK**:
 
-[![Select debug device.](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
+[![Select debug device](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 ::: zone-end
 
 This launches the application on the device:
 
-[![Enter Phoneword.](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
+[![Enter Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
 ### Set icons for different screen densities
 
@@ -589,7 +589,7 @@ all images look good on all screens. For example, here is a screenshot
 of a low-density icon on a high-density Nexus 5. Notice how blurry it
 is compared to the surrounding icons:
 
-[![Blurry icon.](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
+[![Blurry icon](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 To account for this, it is good practice to add icons of different
 resolutions to the **Resources** folder. Android provides different
@@ -600,18 +600,18 @@ screens. Icons of varying sizes are stored in the appropriate
 
 ::: zone pivot="windows"
 
-![mipmap folders.](hello-android-deepdive-images/vs/07-mipmap-folders.png "mipmap folders")
+![mipmap folders](hello-android-deepdive-images/vs/07-mipmap-folders.png "mipmap folders")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-[![Mipmap folders.](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
+[![Mipmap folders](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 ::: zone-end
 
 Android will pick the icon with the appropriate density:
 
-[![Icons at appropriate density.](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
+[![Icons at appropriate density](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### Generate custom icons
 
@@ -670,12 +670,12 @@ To add one or more Google Play Service libraries, right-click the
 **Packages** node in your project tree and click **Add Google Play
 Service...**:
 
-[![Add Google Play Service.](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
+[![Add Google Play Service](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 When the **Add Google Play Services** dialog is presented, select the
 packages (nugets) that you want to add to your project:
 
-[![Select packages.](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
+[![Select packages](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 When you select a service and click **Add Package**, Visual Studio for Mac downloads and installs
 the package you select as well as any dependent Google Play Services
@@ -683,7 +683,7 @@ packages that it requires. In some cases, you may see a **License
 Acceptance** dialog that requires you to click **Accept** before the
 packages are installed:
 
-[![License acceptance.](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
+[![License acceptance](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
 ::: zone-end
 

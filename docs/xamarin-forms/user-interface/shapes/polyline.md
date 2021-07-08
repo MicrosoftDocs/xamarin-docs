@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes: Polyline
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Polyline` class derives from the `Shape` class, and can be used to draw a series of connected straight lines. A polyline is similar to a polygon, except the last point in a polyline is not connected to the first point. For information on the properties that the `Polyline` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -43,7 +43,7 @@ The following XAML example shows how to draw a polyline:
 
 In this example, a red polyline is drawn:
 
-![Polyline.](polyline-images/stroke.png "Polyline")
+![Polyline](polyline-images/stroke.png "Polyline")
 
 The following XAML example shows how to draw a dashed polyline:
 
@@ -57,7 +57,7 @@ The following XAML example shows how to draw a dashed polyline:
 
 In this example, the polyline is dashed:
 
-![Dashed polyline.](polyline-images/dashed.png "Dashed polyline")
+![Dashed polyline](polyline-images/dashed.png "Dashed polyline")
 
 For more information about drawing a dashed polyline, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
@@ -72,7 +72,7 @@ The following XAML example shows a polyline that uses the default fill rule:
 
 In this example, the fill behavior of the polyline is determined using the `EvenOdd` fill rule.
 
-![EvenOdd polyline.](polyline-images/evenodd.png "EvenOdd polyine")
+![EvenOdd polyline](polyline-images/evenodd.png "EvenOdd polyine")
 
 The following XAML example shows a polyline that uses the `Nonzero` fill rule:
 
@@ -84,7 +84,7 @@ The following XAML example shows a polyline that uses the `Nonzero` fill rule:
           StrokeThickness="3" />
 ```
 
-![Nonzero polyline.](polyline-images/nonzero.png "Nonzero polyline")
+![Nonzero polyline](polyline-images/nonzero.png "Nonzero polyline")
 
 In this example, the fill behavior of the polyline is determined using the `Nonzero` fill rule.
 

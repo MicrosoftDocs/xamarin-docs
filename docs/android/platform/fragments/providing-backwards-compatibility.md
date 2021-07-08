@@ -38,7 +38,7 @@ application include the
 component into your Xamarin.Android project, as illustrated in the following 
 screenshot: 
 
-[![Screenshot of Android Support Library v4 package being added to the project.](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
+[![Screenshot of Android Support Library v4 package being added to the project](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 After these steps have been performed, it becomes possible to use 
 Fragments in earlier versions of Android. The Fragment APIs will work 
@@ -47,7 +47,7 @@ the same now in these earlier versions, with the following exceptions:
 - **Change the minimum Android Version** &ndash; The application no 
     longer needs to target Android 3.0 or higher, as shown below: 
 
-    [![Screenshot of Minimum Android target being set under Android Manifest.](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
+    [![Screenshot of Minimum Android target being set under Android Manifest](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 - **Extend FragmentActivity** &ndash; The Activities that are hosting 
     Fragments must now inherit from 

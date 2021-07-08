@@ -19,7 +19,7 @@ Developing client-server applications has resulted in a focus on building tiered
 
 Particularly concerning in the age of the cloud, is that individual components can't be easily scaled. A monolithic application contains domain-specific functionality, and is typically divided by functional layers such as front end, business logic, and data storage. A monolithic application is scaled by cloning the entire application onto multiple machines, as illustrated in Figure 8-1.
 
-![Monolithic application scaling approach.](containerized-microservices-images/monolithicapp.png)
+![Monolithic application scaling approach](containerized-microservices-images/monolithicapp.png)
 
 **Figure 8-1**: Monolithic application scaling approach
 
@@ -83,7 +83,7 @@ Enterprises are increasingly adopting containers when implementing microservice 
 
 The eShopOnContainers reference application uses Docker to host four containerized back-end microservices, as illustrated in Figure 8-4.
 
-![eShopOnContainers reference application back-end microservices.](containerized-microservices-images/microservicesarchitecture.png)
+![eShopOnContainers reference application back-end microservices](containerized-microservices-images/microservicesarchitecture.png)
 
 **Figure 8-4**: eShopOnContainers reference application back-end microservices
 
@@ -116,19 +116,19 @@ Asynchronous messaging based event-driven communication is critical when propaga
 
 An event bus allows publish-subscribe communication between microservices, without requiring the components to be explicitly aware of each other, as shown in Figure 8-6.
 
-![Publish-subscribe with an event bus.](containerized-microservices-images/eventbus.png)
+![Publish-subscribe with an event bus](containerized-microservices-images/eventbus.png)
 
 **Figure 8-6:** Publish-subscribe with an event bus
 
 From an application perspective, the event bus is simply a publish-subscribe channel exposed via an interface. However, the way the event bus is implemented can vary. For example, an event bus implementation could use RabbitMQ, Azure Service Bus, or other service buses such as NServiceBus and MassTransit. Figure 8-7 shows how an event bus is used in the eShopOnContainers reference application.
 
-![Asynchronous event-driven communication in the reference application.](containerized-microservices-images/microservicesarchitecturewitheventbus.png)
+![Asynchronous event-driven communication in the reference application](containerized-microservices-images/microservicesarchitecturewitheventbus.png)
 
 **Figure 8-7:** Asynchronous event-driven communication in the reference application
 
 The eShopOnContainers event bus, implemented using RabbitMQ, provides one-to-many asynchronous publish-subscribe functionality. This means that after publishing an event, there can be multiple subscribers listening for the same event. Figure 8-9 illustrates this relationship.
 
-![One-to-many communication.](containerized-microservices-images/eventdrivencommunication.png)
+![One-to-many communication](containerized-microservices-images/eventdrivencommunication.png)
 
 **Figure 8-9**: One-to-many communication
 

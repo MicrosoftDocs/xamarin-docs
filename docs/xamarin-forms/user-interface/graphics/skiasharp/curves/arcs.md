@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Three Ways to Draw an Arc
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Learn how to use SkiaSharp to define arcs in three different ways_
 
 An arc is a curve on the circumference of an ellipse, such as the rounded parts of this infinity sign:
 
-![Infinity sign.](arcs-images/arcsample.png)
+![Infinity sign](arcs-images/arcsample.png)
 
 Despite the simplicity of that definition, there is no way to define an arc-drawing function that satisfies every need, and hence, no consensus among graphics systems of the best way to draw an arc. For this reason, the `SKPath` class does not restrict itself to just one approach.
 
@@ -38,21 +38,21 @@ These methods are identical to the Android [`AddArc`](xref:Android.Graphics.Path
 
 Both methods begin with an `SKRect` value that defines both the location and size of an ellipse:
 
-![The oval that begins an angle arc.](arcs-images/anglearcoval.png)
+![The oval that begins an angle arc](arcs-images/anglearcoval.png)
 
 The arc is a part of the circumference of this ellipse.
 
 The `startAngle` argument is a clockwise angle in degrees relative to a horizontal line drawn from the center of the ellipse to the right. The `sweepAngle` argument is relative to the `startAngle`. Here are `startAngle` and `sweepAngle` values of 60 degrees and 100 degrees, respectively:
 
-![The angles that define an angle arc.](arcs-images/anglearcangles.png)
+![The angles that define an angle arc](arcs-images/anglearcangles.png)
 
 The arc begins at the start angle. Its length is governed by the sweep angle. The arc is shown here in red:
 
-![The highlighted angle arc.](arcs-images/anglearchighlight.png)
+![The highlighted angle arc](arcs-images/anglearchighlight.png)
 
 The curve added to the path with the `AddArc` or `ArcTo` method is simply that part of the ellipse's circumference:
 
-![The angle arc by itself.](arcs-images/anglearc.png)
+![The angle arc by itself](arcs-images/anglearc.png)
 
 The `startAngle` or `sweepAngle` arguments can be negative: The arc is clockwise for positive values of `sweepAngle` and counter-clockwise for negative values.
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As you can see, both the start angle and the sweep angle can take on negative values:
 
-[![Triple screenshot of the Angle Arc page.](arcs-images/anglearc-small.png)](arcs-images/anglearc-large.png#lightbox)
+[![Triple screenshot of the Angle Arc page](arcs-images/anglearc-small.png)](arcs-images/anglearc-large.png#lightbox)
 
 This approach to generating an arc is algorithmically the simplest, and it's easy to derive the parametric equations that describe the arc. Knowing the size and location of the ellipse, and the start and sweep angles, the start and end points of the arc can be calculated using simple trigonometry:
 
@@ -204,11 +204,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A new `SKPath` object is created for each pie slice. The path consists of a line from the center, then an `ArcTo` to draw the arc, and another line back to the center results from the `Close` call. This program displays "exploded" pie slices by moving them all out from the center by 50 pixels. That task requires a vector in the direction of the midpoint of the sweep angle for each slice:
 
-[![Triple screenshot of the Exploded Pie Chart page.](arcs-images/explodedpiechart-small.png)](arcs-images/explodedpiechart-large.png#lightbox)
+[![Triple screenshot of the Exploded Pie Chart page](arcs-images/explodedpiechart-small.png)](arcs-images/explodedpiechart-large.png#lightbox)
 
 To see what it looks like without the "explosion," simply comment out the `Translate` call:
 
-[![Triple screenshot of the Exploded Pie Chart page without the explosion.](arcs-images/explodedpiechartunexploded-small.png)](arcs-images/explodedpiechartunexploded-large.png#lightbox)
+[![Triple screenshot of the Exploded Pie Chart page without the explosion](arcs-images/explodedpiechartunexploded-small.png)](arcs-images/explodedpiechartunexploded-large.png#lightbox)
 
 ## The Tangent Arc
 
@@ -230,23 +230,23 @@ The `ArcTo` method involves three points:
 - The first point argument to the `ArcTo` method, called the *corner point*
 - The second point argument to `ArcTo`, called the *destination point*:
 
-![Three points that begin a tangent arc.](arcs-images/tangentarcthreepoints.png)
+![Three points that begin a tangent arc](arcs-images/tangentarcthreepoints.png)
 
 These three points define two connected lines:
 
-![Lines connecting the three points of a tangent arc.](arcs-images/tangentarcconnectinglines.png)
+![Lines connecting the three points of a tangent arc](arcs-images/tangentarcconnectinglines.png)
 
 If the three points are colinear &mdash; that is, if they lie on the same straight line &mdash; no arc will be drawn.
 
 The `ArcTo` method also includes a `radius` parameter. This defines the radius of a circle:
 
-![The circle of a tangent arc.](arcs-images/tangentarccircle.png)
+![The circle of a tangent arc](arcs-images/tangentarccircle.png)
 
 The tangent arc is not generalized for an ellipse.
 
 If the two lines meet at any angle, that circle can be inserted between those lines so that it is tangent to both lines:
 
-![The tangent arc circle between the two lines.](arcs-images/tangentarctangentcircle.png)
+![The tangent arc circle between the two lines](arcs-images/tangentarctangentcircle.png)
 
 The curve that is added to the contour does not touch either of the points specified in the `ArcTo` method. It consists of a straight line from the current point to the first tangent point, and an arc that ends at the second tangent point, shown here in red:
 
@@ -254,7 +254,7 @@ The curve that is added to the contour does not touch either of the points speci
 
 Here's the final straight line and arc that is added to the contour:
 
-![The highlighted tangent arc between the two lines.](arcs-images/tangentarc.png)
+![The highlighted tangent arc between the two lines](arcs-images/tangentarc.png)
 
 The contour can be continued from the second tangent point.
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 
 Here's the **Tangent Arc** page running:
 
-[![Triple screenshot of the Tangent Arc page.](arcs-images/tangentarc-small.png)](arcs-images/tangentarc-large.png#lightbox)
+[![Triple screenshot of the Tangent Arc page](arcs-images/tangentarc-small.png)](arcs-images/tangentarc-large.png#lightbox)
 
 The tangent arc is ideal for creating rounded corners, such as a rounded rectangle. Because `SKPath` already includes an `AddRoundedRect` method, the **Rounded Heptagon** page demonstrates how to use `ArcTo` for rounding the corners of a seven-sided polygon. (The code is generalized for any regular polygon.)
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here's the program running:
 
-[![Triple screenshot of the Rounded Heptagon page.](arcs-images/roundedheptagon-small.png)](arcs-images/roundedheptagon-large.png#lightbox)
+[![Triple screenshot of the Rounded Heptagon page](arcs-images/roundedheptagon-small.png)](arcs-images/roundedheptagon-large.png#lightbox)
 
 ## The Elliptical Arc
 
@@ -503,31 +503,31 @@ The elliptical arc is consistent with the [elliptical arc](https://www.w3.org/TR
 
 These `ArcTo` methods draw an arc between two points, which are the current point of the contour, and the last parameter to the `ArcTo` method (the `xy` parameter or the separate `x` and `y` parameters):
 
-![The two points that defined an elliptical arc.](arcs-images/ellipticalarcpoints.png)
+![The two points that defined an elliptical arc](arcs-images/ellipticalarcpoints.png)
 
 The first point parameter to the `ArcTo` method (`r`, or `rx` and `ry`) is not a point at all but instead specifies the horizontal and vertical radii of an ellipse;
 
-![The ellipse that defined an elliptical arc.](arcs-images/ellipticalarcellipse.png)
+![The ellipse that defined an elliptical arc](arcs-images/ellipticalarcellipse.png)
 
 The `xAxisRotate` parameter is the number of clockwise degrees to rotate this ellipse:
 
-![The tilted ellipse that defined an elliptical arc.](arcs-images/ellipticalarctiltedellipse.png)
+![The tilted ellipse that defined an elliptical arc](arcs-images/ellipticalarctiltedellipse.png)
 
 If this tilted ellipse is then positioned so that it touches the two points, the points are connected by two different arcs:
 
-![The first set of elliptical arcs.](arcs-images/ellipticalarcellipse1.png)
+![The first set of elliptical arcs](arcs-images/ellipticalarcellipse1.png)
 
 These two arcs can be distinguished in two ways: The top arc is larger than the bottom arc, and as the arc is drawn from left to right, the top arc is drawn in a clockwise direction while the bottom arc is drawn in a counter-clockwise direction.
 
 It is also possible to fit the ellipse between the two points in another way:
 
-![The second set of elliptical arcs.](arcs-images/ellipticalarcellipse2.png)
+![The second set of elliptical arcs](arcs-images/ellipticalarcellipse2.png)
 
 Now there's a smaller arc on top that's drawn clockwise, and a larger arc on the bottom that's drawn counter-clockwise.
 
 These two points can therefore be connected by an arc defined by the tilted ellipse in a total of four ways:
 
-![All four elliptical arcs.](arcs-images/ellipticalarccolors.png)
+![All four elliptical arcs](arcs-images/ellipticalarccolors.png)
 
 These four arcs are distinguished by the four combinations of the [`SKPathArcSize`](xref:SkiaSharp.SKPathArcSize) and [`SKPathDirection`](xref:SkiaSharp.SKPathDirection) enumeration type arguments to the `ArcTo` method:
 
@@ -582,21 +582,21 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![Triple screenshot of the Elliptical Arc page.](arcs-images/ellipticalarc-small.png)](arcs-images/ellipticalarc-large.png#lightbox)
+[![Triple screenshot of the Elliptical Arc page](arcs-images/ellipticalarc-small.png)](arcs-images/ellipticalarc-large.png#lightbox)
 
 The **Arc Infinity** page uses the elliptical arc to draw an infinity sign. The infinity sign is based on two circles with radii of 100 units separated by 100 units:
 
-![Two circles.](arcs-images/infinitycircles.png)
+![Two circles](arcs-images/infinitycircles.png)
 
 Two lines crossing each other are tangent to both circles:
 
-![Two circles with tangent lines.](arcs-images/infinitycircleslines.png)
+![Two circles with tangent lines](arcs-images/infinitycircleslines.png)
 
 The infinity sign is a combination of parts of these circles and the two lines. To use the elliptical arc to draw the infinity sign, the coordinates where the two lines are tangent to the circles must be determined.
 
 Construct a right rectangle in one of the circles:
 
-![Two circles with tangent lines and embedded circle.](arcs-images/infinitytriangle.png)
+![Two circles with tangent lines and embedded circle](arcs-images/infinitytriangle.png)
 
 The radius of the circle is 100 units, and the hypotenuse of the triangle is 150 units, so the angle α is the arcsine (inverse sine) of 100 divided by 150, or 41.8 degrees. The length of the other side of the triangle is 150 times the cosine of 41.8 degrees, or 112, which can also be calculated by the Pythagorean theorem.
 
@@ -608,7 +608,7 @@ The coordinates of the tangent point can then be calculated using this informati
 
 The four tangent points are all that's necessary to draw an infinity sign centered on the point (0, 0) with circle radii of 100:
 
-![Two circles with tangent lines and coordinates.](arcs-images/infinitycoordinates.png)
+![Two circles with tangent lines and coordinates](arcs-images/infinitycoordinates.png)
 
 The `PaintSurface` handler in the [`ArcInfinityPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) class positions the infinity sign so that the (0, 0) point is positioned in the center of the page, and scales the path to the screen size:
 
@@ -650,7 +650,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The code uses the `Bounds` property of `SKPath` to determine the dimensions of the infinity sine to scale it to the size of the canvas:
 
-[![Triple screenshot of the Arc Infinity page.](arcs-images/arcinfinity-small.png)](arcs-images/arcinfinity-large.png#lightbox)
+[![Triple screenshot of the Arc Infinity page](arcs-images/arcinfinity-small.png)](arcs-images/arcinfinity-large.png#lightbox)
 
 The result seems a little small, which suggests that the `Bounds` property of `SKPath` is reporting a size larger than the path.
 
@@ -658,7 +658,7 @@ Internally, Skia approximates the arc using multiple quadratic Bézier curves. T
 
 To get a tighter fit, use the `TightBounds` property, which excludes the control points. Here's the program running in landscape mode, and using the `TightBounds` property to obtain the path bounds:
 
-[![Triple screenshot of the Arc Infinity page with tight bounds.](arcs-images/arcinfinitytightbounds-small.png)](arcs-images/arcinfinitytightbounds-large.png#lightbox)
+[![Triple screenshot of the Arc Infinity page with tight bounds](arcs-images/arcinfinitytightbounds-small.png)](arcs-images/arcinfinitytightbounds-large.png#lightbox)
 
 Although the connections between the arcs and straight lines are mathematically smooth, the change from arc to straight line might seem a little abrupt. A better infinity sign is presented in the next article on [**Three Types of Bézier Curves**](beziers.md).
 

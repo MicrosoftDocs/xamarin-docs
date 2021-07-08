@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # WebView Zoom on Android
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Android platform-specific enables pinch-to-zoom and a zoom control on a [`WebView`](xref:Xamarin.Forms.WebView). It's consumed in XAML by setting the `WebView.EnableZoomControls` and `WebView.DisplayZoomControls` bindable properties to `boolean` values:
 
@@ -43,7 +43,7 @@ The `WebView.On<Android>` method specifies that this platform-specific will only
 
 The result is that pinch-to-zoom can be enabled on a [`WebView`](xref:Xamarin.Forms.WebView), and zoom controls can be overlaid on the `WebView`:
 
-[![Screenshot of zoomed WebView on Android](webview-zoom-controls-images/webview-zoom.png "Zoomed WebView."](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Zoomed WebView")
+[![Screenshot of zoomed WebView on Android](webview-zoom-controls-images/webview-zoom.png "Zoomed WebView")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Zoomed WebView")
 
 > [!IMPORTANT]
 > Zoom controls must be both enabled and displayed, via the respective bindable properties or methods, to be overlaid on a [`WebView`](xref:Xamarin.Forms.WebView).

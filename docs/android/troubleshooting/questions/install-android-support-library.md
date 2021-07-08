@@ -38,7 +38,7 @@ returned from **ildasm**. Alternately, you can check which version of
 the _Android Support Repository_ you currently have installed in the
 Android SDK Manager:
 
-!["Android SDK Manager showing Android Support Repository version 32 installed."](install-android-support-library-images/sdk-extras.png)
+!["Android SDK Manager showing Android Support Repository version 32 installed"](install-android-support-library-images/sdk-extras.png)
 
 If the version matches the one you need for the NuGet package, then
 you don't have to download anything new. You can instead re-zip the
@@ -112,7 +112,7 @@ Download **android\_m2repository.zip** from Google using the
 version of the _Android Support Repository_ you currently have
 installed in the Android SDK Manager:
 
-!["Android SDK Manager showing Android Support Repository version 32 installed."](install-android-support-library-images/sdk-extras.png)
+!["Android SDK Manager showing Android Support Repository version 32 installed"](install-android-support-library-images/sdk-extras.png)
 
 If the version matches the one you need for the NuGet package, then
 you don't have to download anything new. You can instead re-zip the

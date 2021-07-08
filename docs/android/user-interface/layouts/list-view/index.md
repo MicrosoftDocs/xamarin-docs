@@ -211,7 +211,7 @@ Run the application. You can scroll the list, or type to filter it,
 then click an item to see a message. You should see something like
 this:
 
-[![Example screenshot of ListView with country names.](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
+[![Example screenshot of ListView with country names](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 Note that using a hard-coded string array is not the best design
 practice. One is used in this tutorial for simplicity, to
@@ -250,7 +250,7 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 Run the application. You should see something like this:
 
-[![Example screenshot of ListView with smaller list of names.](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
+[![Example screenshot of ListView with smaller list of names](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 ## Going Further with ListView
 

@@ -13,9 +13,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms AbsoluteLayout
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
-[![Xamarin.Forms AbsoluteLayout.](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
+[![Xamarin.Forms AbsoluteLayout](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
 
 An [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) is used to position and size children using explicit values. The position is specified by the upper-left corner of the child relative to the upper-left corner of the `AbsoluteLayout`, in device-independent units. `AbsoluteLayout` also implements a proportional positioning and sizing feature. In addition, unlike some other layout classes, `AbsoluteLayout` is able to position children so that they overlap.
 
@@ -81,7 +81,7 @@ In this example, the position of each [`BoxView`](xref:Xamarin.Forms.BoxView) ob
 
 The following screenshot shows the resulting layout:
 
-![Children placed in an AbsoluteLayout using absolute values.](absolutelayout-images/absolute-values.png)
+![Children placed in an AbsoluteLayout using absolute values](absolutelayout-images/absolute-values.png)
 
 The equivalent C# code is shown below:
 
@@ -184,7 +184,7 @@ In this example, each child is positioned using proportional values but sized us
 
 The following screenshot shows the resulting layout:
 
-![Children placed in an AbsoluteLayout using proportional position values.](absolutelayout-images/proportional-position.png)
+![Children placed in an AbsoluteLayout using proportional position values](absolutelayout-images/proportional-position.png)
 
 The equivalent C# code is shown below:
 

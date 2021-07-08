@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Images in Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithimages)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display._
 
@@ -69,7 +69,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 The following screenshots show the result of displaying a local image on each platform:
 
-[![Sample application displaying a local image.](images-images/local-sml.png)](images-images/local.png#lightbox)
+[![Sample application displaying a local image](images-images/local-sml.png)](images-images/local.png#lightbox)
 
 For more flexibility the `Device.RuntimePlatform` property can be used to select a different image file or path for some or all platforms, as shown in this code example:
 
@@ -93,7 +93,7 @@ Prior to iOS 9, retina versions of the image could be placed in the **Resources*
 
 Android alternate resolution images should be placed in [specially-named directories](https://developer.android.com/guide/practices/screens_support.html) in the Android project, as shown in the following screenshot:
 
-[![Android multiple-resolution image location.](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
+[![Android multiple-resolution image location](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
 UWP image file names [can be suffixed with `.scale-xxx` before the file extension](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), where `xxx` is the percentage of scaling applied to the asset, e.g. **myimage.scale-200.png**. Images can then be referred to in code or XAML without the scale modifier, e.g. just **myimage.png**. The platform will select the nearest appropriate asset scale based on the display's current DPI.
 
@@ -120,7 +120,7 @@ To embed an image in a project, right-click to add new items and select the imag
 
 # [Visual Studio](#tab/windows)
 
-[![Set build action to embedded resource.](images-images/vs-buildaction-sml.png)](images-images/vs-buildaction.png#lightbox)
+[![Set build action to embedded resource](images-images/vs-buildaction-sml.png)](images-images/vs-buildaction.png#lightbox)
 
 The **Build Action** can be viewed and changed in the
 **Properties** window for a file.
@@ -132,7 +132,7 @@ for this project with the filename, using a period (.) between each value.
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Set Build Action: EmbeddedResource.](images-images/xs-buildaction.png)
+![Set Build Action: EmbeddedResource](images-images/xs-buildaction.png)
 
 **Build Action** can also be viewed and changed in the
 **Properties** pad for a file.
@@ -144,7 +144,7 @@ for this project with the filename, using a period (.) between each value.
 This ID can be edited in the **Properties** pad,
 but for these examples the value **WorkingWithImages.beach.jpg** will be used.
 
-[![Embedded resource properties pad.](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
+[![Embedded resource properties pad](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 
@@ -166,7 +166,7 @@ Currently there is no implicit conversion for resource identifiers. Instead, you
 
 The following screenshots show the result of displaying an embedded image on each platform:
 
-[![Sample application displaying an embedded image.](images-images/resource-sml.png)](images-images/resource.png#lightbox)
+[![Sample application displaying an embedded image](images-images/resource-sml.png)](images-images/resource.png#lightbox)
 
 ### XAML
 
@@ -275,7 +275,7 @@ webImage.Source = "https://aka.ms/campus.jpg";
 
 The following screenshots show the result of displaying a remote image on each platform:
 
-[![Sample application displaying a downloaded image.](images-images/download-sml.png)](images-images/download.png#lightbox)
+[![Sample application displaying a downloaded image](images-images/download-sml.png)](images-images/download.png#lightbox)
 
 ### Downloaded image caching
 

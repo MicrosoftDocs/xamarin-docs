@@ -47,7 +47,7 @@ The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio for Mac by selecting the project type,
 **iOS > Library > Bindings Library**:
 
-[![Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library.](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
+[![Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -55,7 +55,7 @@ The easiest way to create a binding is to create a Xamarin.iOS Binding Project.
 You can do this from Visual Studio on Windows by selecting the project type,
 **Visual C# > iOS > Bindings Library (iOS)**:
 
-[![iOS Bindings Library iOS.](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
+[![iOS Bindings Library iOS](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
 > Note: Binding Projects for **Xamarin.Mac** are only supported in
@@ -136,7 +136,7 @@ components:
 
 This chart shows the relationship between the files:
 
- [![This chart shows the relationship between the files.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
+ [![This chart shows the relationship between the files](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
 
 The API Definition file will only contain namespaces and interface
 definitions (with any members that an interface can contain), and
@@ -193,7 +193,7 @@ the extension ".a". When you do this, Visual Studio for Mac will add two
 files: the .a file and an automatically populated C# file that
 contains information about what the native library contains:
 
- [![Native libraries by convention start with the word lib and end with the extension .a.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
+ [![Native libraries by convention start with the word lib and end with the extension .a](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
 The contents of the `libMagicChord.linkwith.cs` file has information about how
 this library can be used and instructs your IDE to package this binary into

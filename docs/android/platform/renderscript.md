@@ -52,7 +52,7 @@ There are two components to a Renderscript routine:
 
 The following diagram illustrates how these components relate:
 
-![Diagram illustrating how the Android Framework interacts with the Renderscript Runtime.](renderscript-images/renderscript-01.png)
+![Diagram illustrating how the Android Framework interacts with the Renderscript Runtime](renderscript-images/renderscript-01.png)
 
 There are three important concepts for using Renderscripts in an
 Android application:

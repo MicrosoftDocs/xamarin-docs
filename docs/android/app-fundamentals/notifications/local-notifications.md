@@ -19,7 +19,7 @@ notification icons and notification information to the user. When a
 notification is first published, its icon is displayed in 
 the *notification area*, as shown in the following screenshot:
 
-![Example notification area on a device.](local-notifications-images/01-notification-shade.png)
+![Example notification area on a device](local-notifications-images/01-notification-shade.png)
 
 To obtain details about the notification, the user can open the
 notification drawer (which expands each notification icon to reveal
@@ -27,7 +27,7 @@ notification content) and perform any actions associated with the
 notifications. The following screenshot shows a *notification drawer*
 that corresponds to the notification area displayed above:
 
-[![Example notification drawer displaying three notifications.](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
+[![Example notification drawer displaying three notifications](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Android notifications use two types of layouts:
 
@@ -60,7 +60,7 @@ at a minimum, includes the following elements:
 
 These elements are displayed as illustrated in the following diagram:
 
-[![Location of notification elements.](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
+[![Location of notification elements](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 Base layouts are limited to 64 density-independent pixels (dp) in
 height. Android creates this basic notification style by default.
@@ -70,12 +70,12 @@ application or the sender's photo. When a large icon is used in a
 notification in Android 5.0 and later, the small notification icon is
 displayed as a badge over the large icon:
 
-![Simple notification photo.](local-notifications-images/04-simple-notification-photo.png)
+![Simple notification photo](local-notifications-images/04-simple-notification-photo.png)
 
 Beginning with Android 5.0, notifications can also appear on the
 lock screen:
 
-[![Example lock screen notification.](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![Example lock screen notification](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
 The user can double-tap the lock screen notification to unlock the
 device and jump to the app that originated that notification, or swipe
@@ -89,7 +89,7 @@ called *Heads-up*. Heads-up notifications slide down from the top of
 the screen for a few seconds and then retreat back up to the
 notification area:
 
-[![Example heads-up notification.](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
+[![Example heads-up notification](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
 
 Heads-up notifications make it possible for the system UI to put
 important information in front of the user without disrupting the state
@@ -126,11 +126,11 @@ expanded layout styles that allow the user to expand the height of the
 notification to view more content. For example, the following example
 illustrates an expanded layout notification in contracted mode:
 
-![Contracted notification.](local-notifications-images/07-contracted-notification.png)
+![Contracted notification](local-notifications-images/07-contracted-notification.png)
 
 When this notification is expanded, it reveals the entire message:
 
-![Expanded notification.](local-notifications-images/08-expanded-notification.png)
+![Expanded notification](local-notifications-images/08-expanded-notification.png)
 
 Android supports three expanded layout styles for single-event
 notifications:
@@ -166,7 +166,7 @@ used for informational messages.
 The **YouTube** app that is installed with Android Oreo
 lists two notification categories: **Download notifications** and **General notifications**:
 
-[![Notification screens for YouTube in Android Oreo.](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
+[![Notification screens for YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Each of these categories corresponds to a notification channel. The
 YouTube app implements a **Download Notifications**  channel and a
@@ -174,7 +174,7 @@ YouTube app implements a **Download Notifications**  channel and a
 notifications**, which displays the settings screen for the app's
 download notifications channel:
 
-[![Download notifications screen for the YouTube app.](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
+[![Download notifications screen for the YouTube app](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 In this screen, the user can modify the behavior of the **Download**
 notifications channel by doing the following:
@@ -193,7 +193,7 @@ notifications channel by doing the following:
 
 The **General Notifications** channel has similar settings:
 
-[![General notifications screen for the YouTube app.](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
+[![General notifications screen for the YouTube app](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
 Notice that you do not have absolute control over how your notification
 channels interact with the user &ndash; the user can modify the
@@ -356,7 +356,7 @@ unique identifier. Reusing the previous identifier value in a call to
 When this code runs on an Android 5.0 device, it generates a
 notification that looks like the following example:
 
-![Notification result for the sample code.](local-notifications-images/09-hello-world.png)
+![Notification result for the sample code](local-notifications-images/09-hello-world.png)
 
 The notification icon is displayed on the left hand side of the
 notification &ndash; this image of a circled &ldquo;i&rdquo; has an
@@ -467,7 +467,7 @@ The new notification object is published using the identifier of the
 previous notification, and this updates the content of the
 previously-published notification:
 
-![Updated notification.](local-notifications-images/12-updated-notification.png)
+![Updated notification](local-notifications-images/12-updated-notification.png)
 
 The body of the previous notification is reused &ndash; only the title
 and the text of the notification changes while the notification is
@@ -545,7 +545,7 @@ method. The `PendingIntentFlags.OneShot` flag is passed to the
 only once. When this code runs, the following notification is
 displayed:
 
-![First action notification.](local-notifications-images/10-first-action-notification.png)
+![First action notification](local-notifications-images/10-first-action-notification.png)
 
 Tapping this notification takes the user back to the originating
 activity.
@@ -624,7 +624,7 @@ notification. When this code is run, a simple notification (similar to
 the previous example) is presented. Tapping on the notification takes
 the user to the `SecondActivity` screen:
 
-![Second activity screenshot.](local-notifications-images/11-second-activity.png)
+![Second activity screenshot](local-notifications-images/11-second-activity.png)
 
 The string message (passed into the intent's `PutExtra` method) is
 retrieved in `SecondActivity` via this line of code:
@@ -666,13 +666,13 @@ sender rather than the app icon.
 Here is an example of a basic Android 5.0 notification &ndash; it
 displays only the small app icon:
 
-![Example normal notification.](local-notifications-images/13-sample-notification.png)
+![Example normal notification](local-notifications-images/13-sample-notification.png)
 
 And here is a screenshot of the notification after modifying it to
 display a large icon &ndash; it uses an icon created from an image of a
 Xamarin code monkey:
 
-![Example large icon notification.](local-notifications-images/14-large-icon-sample.png)
+![Example large icon notification](local-notifications-images/14-large-icon-sample.png)
 
 Notice that when a notification is presented in large icon format, the
 small app icon is displayed as a badge on the lower right corner of the
@@ -705,13 +705,13 @@ displaying long messages in notifications. Like all expanded layout
 notifications, the Big Text notification is initially displayed in a
 compact presentation format:
 
-![Example Big Text notification.](local-notifications-images/15-big-text-notification.png)
+![Example Big Text notification](local-notifications-images/15-big-text-notification.png)
 
 In this format, only an excerpt of the message is shown, terminated by
 two periods. When the user drags down on the notification, it expands
 to reveal the entire notification message:
 
-![Expanded Big Text notification.](local-notifications-images/16-big-text-expanded.png)
+![Expanded Big Text notification](local-notifications-images/16-big-text-expanded.png)
 
 This expanded layout format also includes summary text at the bottom of
 the notification. The maximum height of the *Big Text* notification 
@@ -760,13 +760,13 @@ Like all expanded layout notifications, *Image* notifications are first
 displayed in a compact format that displays an excerpt of the
 accompanying message text:
 
-![Compact image notification shows no image.](local-notifications-images/17-image-compact.png)
+![Compact image notification shows no image](local-notifications-images/17-image-compact.png)
 
 When the user drags down on the *Image* notification, it expands to
 reveal an image. For example, here is the expanded version of the
 previous notification:
 
-![Expanded image notification reveals image.](local-notifications-images/18-image-expanded.png)
+![Expanded image notification reveals image](local-notifications-images/18-image-expanded.png)
 
 Notice that when the notification is displayed in compact format, it
 displays notification text (the text that is passed to the notification
@@ -831,7 +831,7 @@ In this example, the image file located at
 original size, and then converted to a bitmap for use in the
 notification:
 
-![Example T-shirt image in notification.](local-notifications-images/19-tshirt-notification.png)
+![Example T-shirt image in notification](local-notifications-images/19-tshirt-notification.png)
 
 If you don't know the size of the image file in advance, it's a good
 idea to wrap the call to
@@ -849,12 +849,12 @@ displaying separate lines of text (such as an email inbox summary) in
 the body of the notification. The *Inbox* format notification is first
 displayed in a compact format:
 
-![Example compact inbox notification.](local-notifications-images/20-inbox-compact.png)
+![Example compact inbox notification](local-notifications-images/20-inbox-compact.png)
 
 When the user drags down on the notification, it expands to reveal an
 email summary as seen in the screenshot below:
 
-![Example inbox notification expanded.](local-notifications-images/21-inbox-expanded.png)
+![Example inbox notification expanded](local-notifications-images/21-inbox-expanded.png)
 
 To create an *Inbox* notification, you instantiate a
 `NotificationCompat.Builder` object, as before, and add an
@@ -954,19 +954,19 @@ In the following example, the high priority notification, "An
 important message!" appears at the top of the notification
 drawer:
 
-![Example high-priority notification.](local-notifications-images/22-hi-priority-drawer.png)
+![Example high-priority notification](local-notifications-images/22-hi-priority-drawer.png)
 
 Because this is a high-priority notification, it is also displayed as a
 Heads-up notification above the user's current activity screen in
 Android 5.0:
 
-![Example Heads-up notification.](local-notifications-images/23-heads-up-example.png)
+![Example Heads-up notification](local-notifications-images/23-heads-up-example.png)
 
 In the next example, the low-priority "Thought for the day"
 notification is displayed under a higher-priority battery level
 notification:
 
-![Example low-priority notification.](local-notifications-images/24-lo-priority-drawer.png)
+![Example low-priority notification](local-notifications-images/24-lo-priority-drawer.png)
 
 Because the "Thought for the day" notification is a low-priority
 notification, Android will not display it in Heads-up format.
@@ -1007,7 +1007,7 @@ When a `Private` notification is posted, only the name and icon of the
 app is displayed on the secure lock screen. Instead of the notification
 message, the user sees "Unlock your device to see this notification":
 
-![Unlock your device notification message.](local-notifications-images/25-lockscreen-private.png)
+![Unlock your device notification message](local-notifications-images/25-lockscreen-private.png)
 
 In this example, **NotificationsLab** is the name of the originating
 app. This redacted version of the notification appears only when the
@@ -1072,7 +1072,7 @@ based on categories. For example, the *Do not disturb* screen in
 **Settings** allows the user to exempt notifications for phone calls
 and messages:
 
-![Do not disturb screen switches.](local-notifications-images/26-do-not-disturb.png)
+![Do not disturb screen switches](local-notifications-images/26-do-not-disturb.png)
 
 When the user configures *Do not disturb* to block all interrupts
 except for phone calls (as illustrated in the above screenshot),

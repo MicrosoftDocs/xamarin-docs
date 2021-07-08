@@ -18,7 +18,7 @@ AndroidX includes the following features:
 - `androidx` packages are separately maintained and updated. This means that you can update AndroidX libraries independently of each other.
 - As of v28 of the Android Support Library, there will be no more releases. All development will be included in `androidx` instead.
 
-![AndroidX Logo.](~/android/platform/androidx-images/AndroidXLogo.png)
+![AndroidX Logo](~/android/platform/androidx-images/AndroidXLogo.png)
 
 ## Requirements
 
@@ -59,11 +59,11 @@ There are three migration steps that you'll want to be aware of for your applica
 
 Enable the **AndroidX Migrator** via **Tools > Options > Xamarin > Android Settings** inside Visual Studio 2019 (you can skip this step on Visual Studio for Mac).
 
-![Enable AndroidX Migrator.](~/android/platform/androidx-images/EnableAndroidXMigrator.png)
+![Enable AndroidX Migrator](~/android/platform/androidx-images/EnableAndroidXMigrator.png)
 
 Right-click your project and **Migrate to AndroidX**.
 
-![Migrate To AndroidX.](~/android/platform/androidx-images/MigrateToAndroidX.png)
+![Migrate To AndroidX](~/android/platform/androidx-images/MigrateToAndroidX.png)
 
 > [!NOTE] 
 > You will need to make some manual namespace changes for scenarios the tool doesn't cover. While we will map the correct package for you, it is encouraged that you to take a look at the official 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Three Types of Bézier Curves
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore how to use SkiaSharp to render cubic, quadratic, and conic Bézier curves_
 
@@ -20,7 +20,7 @@ The Bézier curve is named after Pierre Bézier (1910 – 1999), a French engine
 
 Bézier curves are known for being well-suited to interactive design: They are well behaved &mdash; in other words, there aren't singularities that cause the curve to become infinite or unwieldy &mdash; and they are generally aesthetically pleasing:
 
-![A sample Bezier curve.](beziers-images/beziersample.png)
+![A sample Bezier curve](beziers-images/beziersample.png)
 
 Character outlines of computer-based fonts are usually defined with Bézier curves.
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![Triple screenshot of the Bezier Curve page.](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
+[![Triple screenshot of the Bezier Curve page](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
 
 Mathematically, the curve is a cubic polynomial. The curve intersects a straight line at three points at most. At the start point, the curve is always tangent to, and in the same direction as, a straight line from the start point to the first control point. At the end point, the curve is always tangent to, and in the same direction as, a straight line from the second control point to the end point.
 
@@ -121,7 +121,7 @@ It is sometimes convenient to use a Bézier curve to render a circular arc. A cu
 
 The following diagram shows four points labeled `pto`, `pt1`, `pt2`, and `pt3` defining a Bézier curve (shown in red) that approximates a circular arc:
 
-![Approximation of a circular arc with a Bézier curve.](beziers-images/bezierarc45.png)
+![Approximation of a circular arc with a Bézier curve](beziers-images/bezierarc45.png)
 
 The lines from the start and end points to the control points are tangent to the circle and to the Bézier curve, and they have a length of *L*. The first article cited above indicates that the Bézier curve best approximates a circular arc when that length *L* is calculated like this:
 
@@ -207,13 +207,13 @@ The start and end points (`point0` and `point3`) are calculated based on the nor
 
 Here's the program running with different angles:
 
-[![Triple screenshot of the Bezier Circular Arc page.](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
+[![Triple screenshot of the Bezier Circular Arc page](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
 
 Look closely at the third screenshot, and you'll see that the Bézier curve notably deviates from a semicircle when the angle is 180 degrees, but the iOS screen shows that it seems to fit a quarter-circle just fine when the angle is 90 degrees.
 
 Calculating the coordinates of the two control points is quite easy when the quarter circle is oriented like this:
 
-![Approximation of a quarter circle with a Bézier curve.](beziers-images/bezierarc90.png)
+![Approximation of a quarter circle with a Bézier curve](beziers-images/bezierarc90.png)
 
 If the radius of the circle is 100, then *L* is 55, and that's an easy number to remember.
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The points are interpolated based on a sinusoidally oscillating value of `t`. The interpolated points are then used to construct a series of four connected Bézier curves. Here's the animation running:
 
-[![Triple screenshot of the Squaring the Circle page.](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
+[![Triple screenshot of the Squaring the Circle page](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
 
 Such an animation would be impossible without curves that are algorithmically flexible enough to be rendered as both circular arcs and straight lines.
 
@@ -338,7 +338,7 @@ It might be a good exercise to plot these coordinates on graph paper to see how 
 
 Here's the infinity sign:
 
-[![Triple screenshot of the Bézier Infinity page.](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
+[![Triple screenshot of the Bézier Infinity page](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
 
 It is somewhat smoother towards the center than the infinity sign rendered by the **Arc Infinity** page from the [**Three Ways to Draw an Arc**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article.
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 And here it is running:
 
-[![Triple screenshot of the Quadratic Curve page.](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
+[![Triple screenshot of the Quadratic Curve page](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
 
 The dotted lines are tangent to the curve at the start point and end point, and meet at the control point.
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![Triple screenshot of the Conic Curve page.](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
+[![Triple screenshot of the Conic Curve page](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
 
 As you can see, the control point seems to pull the curve towards it more when the weight is higher. When the weight is zero, the curve becomes a straight line from the start point to the end point.
 
@@ -487,7 +487,7 @@ In theory, negative weights are allowed, and cause the curve to bend *away* from
 
 It is very easy to derive the control point and weight to use the `ConicTo` method to draw a circular arc up to (but not including) a semicircle. In the following diagram, tangent lines from the start and end points meet at the control point.
 
-![A conic arc rendering of a circular arc.](beziers-images/conicarc.png)
+![A conic arc rendering of a circular arc](beziers-images/conicarc.png)
 
 You can use trigonometry to determine the distance of the control point from the circle's center: It is the radius of the circle divided by the cosine of half the angle α. To draw a circular arc between the start and end points, set the weight to that same cosine of half the angle. Notice that if the angle is 180 degrees, then the tangent lines never meet and the weight is zero. But for angles less than 180 degrees, the math works fine.
 
@@ -543,7 +543,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As you can see, there is no visual difference between the `ConicTo` path shown in red and the underlying circle displayed for reference:
 
-[![Triple screenshot of the Conic Circular Arc page.](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
+[![Triple screenshot of the Conic Circular Arc page](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
 
 But set the angle to 180 degrees, and the mathematics fail.
 

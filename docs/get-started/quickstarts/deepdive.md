@@ -23,7 +23,7 @@ In the [Xamarin.Forms Quickstart](~/get-started/index.yml), the Notes applicatio
 
 Visual Studio organizes code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Notes application consists of one solution containing three projects, as shown in the following screenshot:
 
-![Visual Studio Solution Explorer.](deepdive-images/vs/solution.png)
+![Visual Studio Solution Explorer](deepdive-images/vs/solution.png)
 
 The projects are:
 
@@ -35,7 +35,7 @@ The projects are:
 
 The following screenshot shows the contents of the Notes .NET Standard library project in Visual Studio:
 
-![Phoneword .NET Standard Project Contents.](deepdive-images/vs/net-standard-project.png)
+![Phoneword .NET Standard Project Contents](deepdive-images/vs/net-standard-project.png)
 
 The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
@@ -49,7 +49,7 @@ The project has a **Dependencies** node that contains **NuGet** and **SDK** node
 
 [Visual Studio for Mac](/visualstudio/mac/) follows the Visual Studio practice of organizing code into *Solutions* and *Projects*. A solution is a container that can hold one or more projects. A project can be an application, a supporting library, a test application, and more. The Notes application consists of one solution containing three projects, as shown in the following screenshot:
 
-![Visual Studio for Mac Solution Pane.](deepdive-images/vsmac/solution.png)
+![Visual Studio for Mac Solution Pane](deepdive-images/vsmac/solution.png)
 
 The projects are:
 
@@ -61,7 +61,7 @@ The projects are:
 
 The following screenshot shows the contents of the Notes .NET Standard library project in Visual Studio for Mac:
 
-![Phoneword .NET Standard Library Project Contents.](deepdive-images/vsmac/net-standard-project.png)
+![Phoneword .NET Standard Library Project Contents](deepdive-images/vsmac/net-standard-project.png)
 
 The project has a **Dependencies** node that contains **NuGet** and **SDK** nodes:
 
@@ -92,7 +92,7 @@ For more information about the anatomy of a Xamarin.iOS application, see [Anatom
 
 A Xamarin.Forms application is architected in the same way as a traditional cross-platform application. Shared code is typically placed in a .NET Standard library, and platform-specific applications consume the shared code. The following diagram shows an overview of this relationship for the Notes application:
 
-![Notes Architecture.](deepdive-images/architecture.png)
+![Notes Architecture](deepdive-images/architecture.png)
 
 To maximize the reuse of startup code, Xamarin.Forms applications have a single class named `App` that is responsible for instantiating the application on each platform, as shown in the following code example:
 
@@ -431,7 +431,7 @@ Data binding is used to simplify how a Xamarin.Forms application displays and in
 
 Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.InputView.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
 
-![Data Binding.](deepdive-images/data-binding.png)
+![Data Binding](deepdive-images/data-binding.png)
 
 The main benefit of data binding is that you no longer have to worry about synchronizing data between your views and data source. Changes in the *source* object are automatically pushed to the *target* object behind-the-scenes by the binding framework, and changes in the target object can be optionally pushed back to the *source* object.
 

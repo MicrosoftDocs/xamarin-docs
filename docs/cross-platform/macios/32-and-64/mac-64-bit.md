@@ -23,11 +23,11 @@ compatible and will not require any changes.
 
 1. Open the **Project Options** window for your Xamarin.Mac app:
 
-   ![The contextual menu for the project.](mac-64-bit-images/1-contextual_menu-vsmac.png "The contextual menu for the project")
+   ![The contextual menu for the project](mac-64-bit-images/1-contextual_menu-vsmac.png "The contextual menu for the project")
 
 2. Select **Mac Build** and set **Supported architectures** to **x86\_64**:
 
-   [![Setting the supported architectures to x86_64.](mac-64-bit-images/2-project_options-vsmac.png "Setting the supported architectures to x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
+   [![Setting the supported architectures to x86_64](mac-64-bit-images/2-project_options-vsmac.png "Setting the supported architectures to x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 
 3. If your app has any external dependencies such as native references or
    binding projects, update them to target 64-bit.

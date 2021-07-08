@@ -28,17 +28,17 @@ On the storyboard notifications controllers have a
   a new **Notification Interface Controller** onto a
   storyboard it will automatically have a segue attached:
 
-![A new Notification Interface Controller with a segue attached.](notifications-images/notification-storyboard1.png)
+![A new Notification Interface Controller with a segue attached](notifications-images/notification-storyboard1.png)
 
 When the notification segue is selected you can edit
   its properties:
 
-![The notification segue selected.](notifications-images/notification-storyboard2.png)
+![The notification segue selected](notifications-images/notification-storyboard2.png)
 
 After you have customized the controller it may look like
   this example from the WatchKitCatalog:
 
-![The Notification Properties.](notifications-images/notifications-segue.png)
+![The Notification Properties](notifications-images/notifications-segue.png)
 
 There are two types of notification:
 
@@ -70,14 +70,14 @@ The OS decides whether to display the static or dynamic
 
 The static view should be simple and quick to display.
 
-![The static view.](notifications-images/notification-static.png)
+![The static view](notifications-images/notification-static.png)
 
 #### Dynamic
 
 The dynamic view can display more data and provide
   more interactivity.
 
-![The dynamic view.](notifications-images/notification-dynamic.png)
+![The dynamic view](notifications-images/notification-dynamic.png)
 
 ## Generating Notifications
 
@@ -94,7 +94,7 @@ Local notifications must have the `AlertTitle` set to be displayed on the Apple 
 This screenshot shows the `AlertTitle` being displayed in the notifications list, and the
   `AlertBody` displayed in the Long-Look interface:
 
-![This screenshot shows the AlertTitle being displayed in the notifications list.](notifications-images/watch-notificationslist-sml.png) ![The AlertBody displayed in the Long-Look interface](notifications-images/watch-notificationcontroller-sml.png)
+![This screenshot shows the AlertTitle being displayed in the notifications list](notifications-images/watch-notificationslist-sml.png) ![The AlertBody displayed in the Long-Look interface](notifications-images/watch-notificationcontroller-sml.png)
 
 ## Testing Notifications
 
@@ -130,13 +130,13 @@ Visual Studio for Mac will display additional options when a
   Right-click on the watch extension project and choose
   **Run With > Custom Parameters...**:
 
-[![Running with Custom Properties.](notifications-images/runwith-customparams-sml.png)](notifications-images/runwith-customparams.png#lightbox)
+[![Running with Custom Properties](notifications-images/runwith-customparams-sml.png)](notifications-images/runwith-customparams.png#lightbox)
 
 This opens the **Execution Arguments** window which contains a **WatchKit**
   tab. Select **Notification** and provide a JSON
   payload, then press **Execute** to start the watch app in the simulator:
 
-[![Select Notification Payload Default.](notifications-images/runwith-execargs-sml.png)](notifications-images/runwith-execargs.png#lightbox)
+[![Select Notification Payload Default](notifications-images/runwith-execargs-sml.png)](notifications-images/runwith-execargs.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -147,7 +147,7 @@ To set the test notification payload in Visual Studio
   the list (it will automatically list all the JSON
   files included in the project).
 
-[![Select a notifications JSON file.](notifications-images/runwith-execargs-sml-vs.png)](notifications-images/runwith-execargs-vs.png#lightbox)
+[![Select a notifications JSON file](notifications-images/runwith-execargs-sml-vs.png)](notifications-images/runwith-execargs-vs.png#lightbox)
 
 When the watch extension is the **Startup Project**,
   Visual Studio will display additional options
@@ -155,7 +155,7 @@ When the watch extension is the **Startup Project**,
   options to start the watch app in **Notification** mode
   (using the JSON file selected in the properties window):
 
-![The Device menu.](notifications-images/runwith-vs.png)
+![The Device menu](notifications-images/runwith-vs.png)
 
 -----
 
@@ -163,7 +163,7 @@ The default notification controller looks like this
   when testing on the simulator with the default
   payload JSON file:
 
-![An example notification.](notifications-images/notification-debug-sml.png)
+![An example notification](notifications-images/notification-debug-sml.png)
 
 It is also possible to use the
   [command line](~/ios/watchos/troubleshooting.md#command_line)

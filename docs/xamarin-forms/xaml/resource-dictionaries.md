@@ -13,7 +13,7 @@ ms.custom: video
 
 # Xamarin.Forms resource dictionaries
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) is a repository for resources that are used by a Xamarin.Forms application. Typical resources that are stored in a `ResourceDictionary` include [styles](~/xamarin-forms/user-interface/styles/index.md), [control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md), [data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colors, and converters.
 
@@ -104,7 +104,7 @@ The following XAML example shows how to consume resources, and also defines addi
 
 In this example, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object consumes the implicit style defined in the application level resource dictionary. The [`StackLayout`](xref:Xamarin.Forms.StackLayout) object consumes the `PageMargin` resource defined in the application level resource dictionary, while the [`Button`](xref:Xamarin.Forms.Button) object consumes the implicit style defined in the [`StackLayout`](xref:Xamarin.Forms.StackLayout) resource dictionary. This results in the appearance shown in the following screenshots:
 
-[![Consuming ResourceDictionary Resources](resource-dictionaries-images/consuming.png "Consuming ResourceDictionary resources."](resource-dictionaries-images/consuming-large.png#lightbox "Consuming ResourceDictionary resources")
+[![Consuming ResourceDictionary Resources](resource-dictionaries-images/consuming.png "Consuming ResourceDictionary resources")](resource-dictionaries-images/consuming-large.png#lightbox "Consuming ResourceDictionary resources")
 
 > [!IMPORTANT]
 > Resources that are specific to a single page shouldn't be included in an application level resource dictionary, as such resources will then be parsed at application startup instead of when required by a page. For more information, see [Reduce the Application Resource Dictionary Size](~/xamarin-forms/deploy-test/performance.md).

@@ -64,7 +64,7 @@ To set up the Mac build host, first enable remote login:
 
 2. Check **Remote Login** in the **Service** list.
 
-    ![Enabling Remote Login.](images/sharing.png "Enabling Remote Login")
+    ![Enabling Remote Login](images/sharing.png "Enabling Remote Login")
 
     Make sure that it is configured to allow access for **All users**, or
     that your Mac username or group is included in the list of allowed
@@ -93,14 +93,14 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
 
     - Use the **Pair to Mac** button iOS toolbar:
 
-      ![The iOS toolbar, with the Pair to Mac button highlighted.](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
+      ![The iOS toolbar, with the Pair to Mac button highlighted](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
 
     - Or, select **Tools > iOS > Pair to Mac**.
 
     - The **Pair to Mac** dialog displays a list of all previously-connected
       and currently-available Mac build hosts:
 
-      ![The Pair to Mac dialog.](images/pairtomac.png "The Pair to Mac dialog")
+      ![The Pair to Mac dialog](images/pairtomac.png "The Pair to Mac dialog")
 
 3. Select a Mac in the list. Click **Connect**.
 
@@ -109,7 +109,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
     - The first time you connect to any particular Mac, you are
       prompted to enter your username and password for that machine:
 
-      ![Entering a username and password for the Mac.](images/auth.png "Entering a username and password for the Mac")
+      ![Entering a username and password for the Mac](images/auth.png "Entering a username and password for the Mac")
 
       > [!TIP]
       > When logging in, use your system username rather than full name.
@@ -134,7 +134,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
       in the **Pair to Mac** dialog displays an icon indicating that
       it is currently connected:
 
-      ![A connected Mac.](images/connected.png "A connected Mac")
+      ![A connected Mac](images/connected.png "A connected Mac")
 
       There can be only one connected Mac at a time.
 
@@ -143,7 +143,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
       > menu that allows you to **Connect...**, **Forget this Mac**, or
       > **Disconnect**:
       >
-      > ![The Pair to Mac context menus.](images/contextmenu.png "The Pair to Mac context menus")
+      > ![The Pair to Mac context menus](images/contextmenu.png "The Pair to Mac context menus")
       >
       > If you choose **Forget this Mac**, your credentials for the selected
       > Mac will be forgotten. To reconnect to that Mac, you will need to re-enter
@@ -167,7 +167,7 @@ add it manually:
 
     - Open **System Preferences > Sharing > Remote Login** on your Mac:
 
-      [![The Mac's IP address in System Preferences > Sharing](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing."](images/sharing.png#lightbox)
+      [![The Mac's IP address in System Preferences > Sharing](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
 
     - Alternatively, use the command line. In Terminal, issue this command:
 
@@ -181,15 +181,15 @@ add it manually:
 
 2. In Visual Studio 2019's **Pair to Mac** dialog, select **Add Mac...**:
 
-    [![The Add Mac button in the Pair to Mac dialog](images/addtomac.png "The Add Mac button in the Pair to Mac dialog."](images/addtomac-large.png#lightbox)
+    [![The Add Mac button in the Pair to Mac dialog](images/addtomac.png "The Add Mac button in the Pair to Mac dialog")](images/addtomac-large.png#lightbox)
 
 3. Enter the Mac's IP address and click **Add**:
 
-    ![Entering the Mac's IP address.](images/enteripaddress.png "Entering the Mac's IP address")
+    ![Entering the Mac's IP address](images/enteripaddress.png "Entering the Mac's IP address")
 
 4. Enter your username and password for the Mac:
 
-    ![Enter a username and password.](images/auth.png "Entering a username and password")
+    ![Enter a username and password](images/auth.png "Entering a username and password")
 
    > [!TIP]
    > When logging in, use your system username rather than full name.
@@ -230,7 +230,7 @@ screenshots (click to zoom):
 
 |Mono|Install Check|Downloading|Installing
 |---|---|---|---|
-||[![Missing Mono installation](images/mono-missing.png "Missing Mono installation."](images/mono-missing-large.png#lightbox)|[![Downloading Mono](images/mono-downloading.png "Downloading Mono."](images/mono-downloading-large.png#lightbox)|[![Installing Mono](images/mono-installing.png "Installing Mono."](images/mono-installing-large.png#lightbox)|
+||[![Missing Mono installation](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![Downloading Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![Installing Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
 
 ### Xamarin.iOS
 
@@ -253,7 +253,7 @@ screenshots (click to zoom):
 
 |Xamarin.iOS|Install Check|Downloading|Installing
 |---|---|---|---|
-||[![Missing Xamarin.iOS installation](images/xamios-missing.png "Missing Xamarin.iOS installation."](images/xamios-missing-large.png#lightbox)|[![Downloading Xamarin.iOS](images/xamios-downloading.png "Downloading Xamarin.iOS."](images/xamios-downloading-large.png#lightbox)|[![Installing Xamarin.iOS](images/xamios-installing.png "Installing Xamarin.iOS."](images/xamios-installing-large.png#lightbox)|
+||[![Missing Xamarin.iOS installation](images/xamios-missing.png "Missing Xamarin.iOS installation")](images/xamios-missing-large.png#lightbox)|[![Downloading Xamarin.iOS](images/xamios-downloading.png "Downloading Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installing Xamarin.iOS](images/xamios-installing.png "Installing Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### Xcode tools and license
 
@@ -264,7 +264,7 @@ does prompt for license acceptance, as shown in the following screenshots
 
 |Xcode|Install Check|License Acceptance|
 |---|---|---|
-||[![Missing Xcode installation](images/xcode-missing.png "Missing Xcode installation."](images/xcode-missing-large.png#lightbox)|[![Xcode license](images/xcode-license.png "Xcode license."](images/xcode-license-large.png#lightbox)|
+||[![Missing Xcode installation](images/xcode-missing.png "Missing Xcode installation")](images/xcode-missing-large.png#lightbox)|[![Xcode license](images/xcode-license.png "Xcode license")](images/xcode-license-large.png#lightbox)|
 
 Additionally, Pair to Mac will install or update various packages
 distributed with Xcode. For example:

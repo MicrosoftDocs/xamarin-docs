@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Consuming XAML Markup Extensions
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 XAML markup extensions help enhance the power and flexibility of XAML by allowing element attributes to be set from a variety of sources. Several XAML markup extensions are part of the XAML 2009 specification. These appear in XAML files with the customary `x` namespace prefix, and are commonly referred to with this prefix. This article discusses the following markup extensions:
 
@@ -139,7 +139,7 @@ The final example displays the `Device.RuntimePlatform` value. The `Environment.
 
 Here's the sample running:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo."](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
+[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 ## x:Reference markup extension
 
@@ -181,7 +181,7 @@ The **x:Reference Demo** page shows two uses of `x:Reference` with data bindings
 
 Both `x:Reference` expressions use the abbreviated version of the `ReferenceExtension` class name and eliminate the `Name=` part of the expression. In the first example, the `x:Reference` markup extension is embedded in the `Binding` markup extension. Notice that the `Source` and `StringFormat` settings are separated by commas. Here's the program running:
 
-[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo."](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
+[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
 
 ## x:Type markup extension
 
@@ -234,7 +234,7 @@ This is how the navigation menu in `MainPage` in the **Markup Extensions** progr
 
 Here's the opening main page in **Markup Extensions**:
 
-[![Main Page](consuming-images/mainpage-small.png "Main Page."](consuming-images/mainpage-large.png#lightbox "Main Page")
+[![Main Page](consuming-images/mainpage-small.png "Main Page")](consuming-images/mainpage-large.png#lightbox "Main Page")
 
 Each `CommandParameter` property is set to an `x:Type` markup extension that references one of the other pages. The `Command` property is bound to a property named `NavigateCommand`. This property is defined in the `MainPage` code-behind file:
 
@@ -317,7 +317,7 @@ public partial class TypeDemoPage : ContentPage
 
 The method that is executed when a `Button` is pressed creates a new instance of the argument, sets its `VerticalOptions` property, and adds it to the `StackLayout`. The three `Button` elements then share the page with dynamically created views:
 
-[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo."](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
+[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
 
 ## x:Array markup extension
 
@@ -372,7 +372,7 @@ The **x:Array Demo** page shows how to use `x:Array` to add items to a `ListView
 
 The `ViewCell` creates a simple `BoxView` for each color entry:
 
-[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo."](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
+[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
 
 There are several ways to specify the individual `Color` items in this array. You can use an `x:Static` markup extension:
 
@@ -443,7 +443,7 @@ Then you discover that for one of the `Label` elements, you want all the propert
 
 Here's the program running:
 
-[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo."](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
+[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
 
 Notice that four of the `Label` elements have a serif font, but the center `Label` has the  default sans-serif font.
 
@@ -485,7 +485,7 @@ In this example, all three `OnPlatform` expressions use the abbreviated version 
 
 Here's the program running:
 
-[![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo."](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
+[![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
 
 ## OnIdiom markup extension
 
@@ -521,7 +521,7 @@ In this example, all three `OnIdiom` expressions use the abbreviated version of 
 
 Here's the program running:
 
-[![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo."](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
+[![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
 ## DataTemplate markup extension
 
@@ -569,7 +569,7 @@ In this example, the abbreviated version of the `FontImageExtension` class name 
 
 Here's the program running:
 
-[![Screenshot of the FontImage markup extension](consuming-images/fontimagedemo.png "FontImage Demo."](consuming-images/fontimagedemo-large.png#lightbox "FontImage Demo")
+[![Screenshot of the FontImage markup extension](consuming-images/fontimagedemo.png "FontImage Demo")](consuming-images/fontimagedemo-large.png#lightbox "FontImage Demo")
 
 For information about displaying font icons by specifying the font icon data in a `FontImageSource` object, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
@@ -621,7 +621,7 @@ In this example, the text color of the first [`Label`](xref:Xamarin.Forms.Label)
 
 Here's the program running:
 
-![AppThemeBinding Demo.](consuming-images/appthemebindingdemo.png "AppThemeBinding Demo")
+![AppThemeBinding Demo](consuming-images/appthemebindingdemo.png "AppThemeBinding Demo")
 
 ## Define markup extensions
 

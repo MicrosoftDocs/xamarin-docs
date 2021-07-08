@@ -22,7 +22,7 @@ toggle button known as a
 An example of a **ToggleButton** can be seen in the left hand pair of images,
 while the right hand pair of images presents an example of a **Switch**:
 
-![Examples of Switches and ToggleButtons in both on and off states.](toggle-button-images/togglebutton-switch.png)  
+![Examples of Switches and ToggleButtons in both on and off states](toggle-button-images/togglebutton-switch.png)  
 
 Which control an application uses is a matter of style. Both widgets
 are functionally equivalent.

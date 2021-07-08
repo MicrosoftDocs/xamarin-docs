@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Platform-Specifics
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects._
 
@@ -51,7 +51,7 @@ The result of exposing an Effect as a platform-specific is that the Effect can b
 
 The [sample application](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control:
 
-![Shadow Platform-Specific.](images/screenshots.png)
+![Shadow Platform-Specific](images/screenshots.png)
 
 The [sample application](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implements the `Shadow` platform-specific on each platform, for ease of understanding. However, aside from each platform-specific Effect implementation, the implementation of the Shadow class is largely identical for each platform. Therefore, this guide focusses on the implementation of the Shadow class and associated Effect on a single platform.
 

@@ -13,7 +13,7 @@ ms.custom: video
 
 # Xamarin.Forms Basic Bindings
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 A Xamarin.Forms data binding links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the *target* and the *source*:
 
@@ -93,7 +93,7 @@ However, including the class name is a good reminder of the target object.
 
 As you manipulate the `Slider`, the `Label` rotates accordingly:
 
-[![Basic Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding."](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
+[![Basic Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
 
 The **Basic Xaml Binding** page is identical to **Basic Code Binding** except that it defines the entire data binding in XAML:
 
@@ -189,7 +189,7 @@ The `Binding` constructor has 6 parameters, so the `source` parameter is specifi
 
 Running this program might be a little surprising:
 
-[![Alternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding."](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
+[![Alternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
 
 The iOS screen on the left shows how the screen looks when the page first appears. Where is the `Label`?
 
@@ -321,7 +321,7 @@ The **Binding Context Inheritance** sample is a simple demonstration of the inhe
 
 The `BindingContext` property of the `StackLayout` is set to the `slider` object. This binding context is inherited by both the `Label` and the `BoxView`, both of which have their `Rotation` properties set to the `Value` property of the `Slider`:
 
-[![Binding Context Inheritance](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance."](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
+[![Binding Context Inheritance](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
 
 In the [next article](binding-mode.md), you'll see how the *binding mode* can change the flow of data between target and source objects.
 

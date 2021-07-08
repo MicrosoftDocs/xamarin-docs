@@ -19,7 +19,7 @@ Permissions are declared in the **AndroidManifest.xml** by the application devel
 - For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
 - Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
 
-![Sample Permissions screen.](permissions-images/01-permissions-check.png) 
+![Sample Permissions screen](permissions-images/01-permissions-check.png) 
 
 Android apps must check at run-time to see if they have permission to access a protected resource. If the app does not have permission, then it must make requests using the new APIs provided by the Android SDK for the user to grant the permissions. Permissions are divided into two categories:
 
@@ -35,7 +35,7 @@ Before requesting one or more permissions, it is a best practice to provide a ra
 
 The whole workflow of checking and requesting permissions is known as a _run-time permissions_ check, and can be summarized in the following diagram: 
 
-[![Run-time permission check flow chart.](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
+[![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 The Android Support Library backports some of the new APIs for permissions to older versions of Android. These backported APIs will automatically check the version of Android on the device so it is not necessary to perform an API level check each time.  
 
@@ -76,15 +76,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click **Properties** in the **Solution Explorer** and select the **Android Manifest** tab in the Properties window:
 
-    [![Required permissions in the Android Manifest tab.](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
+    [![Required permissions in the Android Manifest tab](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. If the application does not already have an AndroidManifest.xml, click **No AndroidManifest.xml found. Click to add one** as shown below:
 
-    [![No AndroidManifest.xml message.](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
+    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and save:
 
-    [![Example CAMERA permissions selected.](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
+    [![Example CAMERA permissions selected](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -92,15 +92,15 @@ It is possible to declare the permissions using the tool support built into Visu
 
 1. Double-click the project in the **Solution Pad** and select **Options > Build > Android Application**:
 
-    [![Required Permissions section shown.](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
+    [![Required Permissions section shown](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Click the **Add Android Manifest** button if the project does not already have an **AndroidManifest.xml**:
 
-    [![The project's Android manifest is missing.](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
+    [![The project's Android manifest is missing](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Select any permissions your application needs from the **Required permissions** list and click **OK**:
 
-    [![Example CAMERA permissions selected.](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
+    [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -132,7 +132,7 @@ It is a best practice to inform the user as to why a permission is necessary for
 
 The `ActivityCompat.ShouldShowRequestPermissionRationale` method is used to determine if the rationale should be shown to the user. This method will return `true` if the rationale for a given permission should be displayed. This screenshot shows an example of a Snackbar displayed by an application that explains why the app needs to know the location of the device:
 
-![Rationale for location.](permissions-images/07-rationale-snackbar.png) 
+![Rationale for location](permissions-images/07-rationale-snackbar.png) 
 
 If the user grants the permission, the `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` method should be called. This method requires the following parameters:
 
@@ -169,7 +169,7 @@ else
 
 `RequestPermission` can be called even if the user has already granted permission. Subsequent calls are not necessary, but they provide the user with the opportunity to confirm (or revoke) the permission. When `RequestPermission` is called, control is handed off to the operating system, which will display a UI for accepting the permissions:  
 
-![Permssion Dialog.](permissions-images/08-location-permission-dialog.png)
+![Permssion Dialog](permissions-images/08-location-permission-dialog.png)
 
 After the user is finished, Android will return the results to the Activity via a callback method, `OnRequestPermissionResult`. This method is a part of the interface  `ActivityCompat.IOnRequestPermissionsResultCallback` which must be implemented by the Activity. This interface has a single method, `OnRequestPermissionsResult`, which will be invoked by Android to inform the Activity of the user's choices. If the user has granted the permission, then the app can go ahead and use the protected resource. An example of how to implement `OnRequestPermissionResult` is shown below: 
 

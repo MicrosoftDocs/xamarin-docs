@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 22. Animation
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -113,7 +113,7 @@ The [**CopterAnimation**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 [**RotatingSpokes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) revolves `BoxView` spokes around the center of the screen, and then rotates each spoke itself to create interesting patterns:
 
-[![Triple screenshot of Rotating Spokes](images/ch22fg21-small.png "Rotating Spokes."](images/ch22fg21-large.png#lightbox "Rotating Spokes")
+[![Triple screenshot of Rotating Spokes](images/ch22fg21-small.png "Rotating Spokes")](images/ch22fg21-large.png#lightbox "Rotating Spokes")
 
 However, progressively increasing the `Rotation` property of an element might not work in the long term, as the [**RotationBreakdown**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) sample demonstrates.
 
@@ -127,7 +127,7 @@ The `LayoutTo` method should be restricted to special purposes. The [**BouncingB
 
 The [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) sample uses `LayoutTo` to move tiles in an implementation of the classic 15-16 puzzle that displays a scrambled image rather than numbered tiles:
 
-[![Triple screenshot of Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game."](images/ch22fg26-large.png#lightbox "Xuzzle Puzzle Game")
+[![Triple screenshot of Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game")](images/ch22fg26-large.png#lightbox "Xuzzle Puzzle Game")
 
 ### Your own awaitable animations
 

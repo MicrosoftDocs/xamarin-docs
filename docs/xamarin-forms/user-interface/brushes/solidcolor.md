@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Brushes: Solid colors
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 The `SolidColorBrush` class derives from the `Brush` class, and is used to paint an area with a solid color. There are a variety of approaches to specifying the color of a `SolidColorBrush`. For example, you can specify its color with a [`Color`](xref:Xamarin.Forms.Color) value or by using one of the predefined `SolidColorBrush` objects provided by the `Brush` class.
 
@@ -39,7 +39,7 @@ Xamarin.Forms includes a type converter that creates a `SolidColorBrush` from a 
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a dark blue `SolidColorBrush`:
 
-![Frame painted with a predefined Color.](solidcolor-images/predefined-color.png)
+![Frame painted with a predefined Color](solidcolor-images/predefined-color.png)
 
 Alternatively, the [`Color`](xref:Xamarin.Forms.Color) value can be specified using property tag syntax:
 
@@ -83,7 +83,7 @@ Frame frame = new Frame
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with an indigo `SolidColorBrush`:
 
-![Frame painted with a predefined SolidColorBrush.](solidcolor-images/predefined-brush.png)
+![Frame painted with a predefined SolidColorBrush](solidcolor-images/predefined-brush.png)
 
 For a list of predefined `SolidColorBrush` objects provided by the `Brush` class, see [Solid color brushes](#solid-color-brushes).
 
@@ -110,7 +110,7 @@ The following example sets the color value of a `SolidColorBrush` using hexadeci
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a salmon-colored `SolidColorBrush`:
 
-![Frame painted with a SolidColorBrush created using hexadecimal notation.](solidcolor-images/hex.png)
+![Frame painted with a SolidColorBrush created using hexadecimal notation](solidcolor-images/hex.png)
 
 For other ways of describing color, see [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md).
 
@@ -118,7 +118,7 @@ For other ways of describing color, see [Colors in Xamarin.Forms](~/xamarin-form
 
 For convenience, the `Brush` class provides a set of commonly used `SolidColorBrush` objects, such as `AliceBlue` and `YellowGreen`. The following image shows the color of each predefined brush, its name, and its hexadecimal value:
 
-[![Color table including a color swatch, color name, and hexadecimal value.](solidcolor-images/solidcolorbrushes.png)](solidcolor-images/solidcolorbrushes-large.png#lightbox)
+[![Color table including a color swatch, color name, and hexadecimal value](solidcolor-images/solidcolorbrushes.png)](solidcolor-images/solidcolorbrushes-large.png#lightbox)
 
 ## Related links
 

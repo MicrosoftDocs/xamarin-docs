@@ -55,11 +55,11 @@ Launch the **Android SDK Manager**:
 
 # [Visual Studio](#tab/windows)
 
-![How to launch the Android SDK Manager in Visual Studio.](installation-images/vs/sdk-menu.png)
+![How to launch the Android SDK Manager in Visual Studio](installation-images/vs/sdk-menu.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![How to launch the Android SDK Manager in Visual Studio for Mac.](installation-images/xs/sdk-menu.png)
+![How to launch the Android SDK Manager in Visual Studio for Mac](installation-images/xs/sdk-menu.png)
 
 -----
 
@@ -75,11 +75,11 @@ find them &ndash; the API selection is shown below):
 
 # [Visual Studio](#tab/windows)
 
-![Example SDK Manager screenshot of enabling Android 5.0.1 components.](installation-images/vs/sdk-select.png)
+![Example SDK Manager screenshot of enabling Android 5.0.1 components](installation-images/vs/sdk-select.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Example SDK Manager screenshot of enabling Android 4.4 and 5.0.1 components.](installation-images/xs/sdk-select.png)
+![Example SDK Manager screenshot of enabling Android 4.4 and 5.0.1 components](installation-images/xs/sdk-select.png)
 
 -----
 
@@ -95,11 +95,11 @@ Wear Android Virtual Device (AVD) using the **Google Emulator Manager**:
 
 # [Visual Studio](#tab/windows)
 
-![How to launch the Android Emulator Manager from Visual Studio.](installation-images/vs/emulator-menu.png)
+![How to launch the Android Emulator Manager from Visual Studio](installation-images/vs/emulator-menu.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![How to launch the Android Emulator Manager from Visual Studio for Mac.](installation-images/xs/emulator-menu.png)
+![How to launch the Android Emulator Manager from Visual Studio for Mac](installation-images/xs/emulator-menu.png)
 
 -----
 

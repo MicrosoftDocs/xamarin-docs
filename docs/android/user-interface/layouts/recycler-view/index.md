@@ -25,7 +25,7 @@ collection. The following is a screenshot of an example app that uses
 `RecyclerView` to display email inbox contents in a vertical
 scrolling list:
 
-[![Example app using RecyclerView to list inbox messages.](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
+[![Example app using RecyclerView to list inbox messages](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` offers two compelling features:
 

@@ -15,7 +15,7 @@ _This article covers working with UIAlertController to display an alert message 
 
 If you need to get the attention of the tvOS user or ask permission to perform a destructive action (such as deleting a file), you can present an alert message using the `UIAlertViewController`:
 
-[![An example UIAlertViewController.](alerts-images/alert01.png)](alerts-images/alert01.png#lightbox)
+[![An example UIAlertViewController](alerts-images/alert01.png)](alerts-images/alert01.png#lightbox)
 
 If addition to displaying a message, you can add buttons and text fields to an alert to allow the user to respond to actions and provide feedback.
 
@@ -25,7 +25,7 @@ If addition to displaying a message, you can add buttons and text fields to an a
 
 As stated above, alerts are used to get the user's attention and inform them of the state of your app or request feedback. Alerts must present a Title, they can optionally have a message and one or more buttons or text fields.
 
-[![An example alert.](alerts-images/alert04.png)](alerts-images/alert04.png#lightbox)
+[![An example alert](alerts-images/alert04.png)](alerts-images/alert04.png#lightbox)
 
 Apple has the following suggestions for working with Alerts:
 
@@ -112,11 +112,11 @@ The `AddAction` method adds the given action to the `UIAlertViewController` and 
 
 In addition to adding Actions (buttons) to the Alert, you can add Text Fields to the Alert to allow the user to fill in information such as user IDs and passwords:
 
-[![Text Field in an alert.](alerts-images/alert02.png)](alerts-images/alert02.png#lightbox)
+[![Text Field in an alert](alerts-images/alert02.png)](alerts-images/alert02.png#lightbox)
 
 If the user selects the Text Field, the standard tvOS keyboard will be displayed allowing them to enter a value for the field:
 
-[![Entering text.](alerts-images/alert03.png)](alerts-images/alert03.png#lightbox)
+[![Entering text](alerts-images/alert03.png)](alerts-images/alert03.png#lightbox)
 
 The following code displays an OK/Cancel Alert with a single Text Field for entering a value:
 

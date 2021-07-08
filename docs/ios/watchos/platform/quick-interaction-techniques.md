@@ -72,7 +72,7 @@ In code, respond to the Action of the recognizer to handle the gesture being tri
 
 For Discrete Gestures, the Action is called when the gesture is recognized and a State (`WKGestureRecognizerState`) is assigned as:
 
-[![Discrete Gesture States.](quick-interaction-techniques-images/quick01.png)](quick-interaction-techniques-images/quick01.png#lightbox)
+[![Discrete Gesture States](quick-interaction-techniques-images/quick01.png)](quick-interaction-techniques-images/quick01.png#lightbox)
 
 All Discrete Gestures start out in the `Possible` state and transition into either the `Failed` or `Recognized` state. When using Discrete Gestures, the developer generally doesn't deal directly with the State. Instead, they rely on the Action being called when the gesture is recognized only.
 
@@ -80,7 +80,7 @@ All Discrete Gestures start out in the `Possible` state and transition into eith
 
 Continuous Gestures are slightly different from Discrete Gestures, where the Action is called multiple times as the gesture is being recognized:
 
-[![Continuous Gesture States.](quick-interaction-techniques-images/quick02.png)](quick-interaction-techniques-images/quick02.png#lightbox)
+[![Continuous Gesture States](quick-interaction-techniques-images/quick02.png)](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Again, Continuous Gestures starts out in the `Possible` state, but they progress over multiple updates. Here the developer will need to consider recognizer's state and update the app's UI during the `Changed` phase until the gesture is finally `Recognized` or `Canceled`.
 
@@ -163,7 +163,7 @@ Apple has left it up to the developer to determine how the rotation counts corre
 
 The sign (`+/-`) of the Rotational Delta indicates the direction that the user is turning the Digital Crown:
 
-[![The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown.](quick-interaction-techniques-images/quick03.png)](quick-interaction-techniques-images/quick03.png#lightbox)
+[![The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown](quick-interaction-techniques-images/quick03.png)](quick-interaction-techniques-images/quick03.png#lightbox)
 
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 
@@ -183,15 +183,15 @@ It is up to the developer to determine when their custom interface element needs
 
 The standard way that a user navigates a Table View in a watchOS app is to scroll to the desired piece of data, tap on a specific row to display the Detailed View, tap the back button when finished viewing the details and repeat the process for any other information that they are interested in from within the table:
 
-[![Moving between a table and the Detail view.](quick-interaction-techniques-images/quick04.png)](quick-interaction-techniques-images/quick04.png#lightbox)
+[![Moving between a table and the Detail view](quick-interaction-techniques-images/quick04.png)](quick-interaction-techniques-images/quick04.png#lightbox)
 
 New to watchOS 3, the developer can enable Vertical Paging on their Table View controls. With this feature enabled, the user can scroll to find a Table View row and tap the row to view its detail as before. However, they can now swipe up to select the next row in the table or down to select the previous row (or use the Digital Crown), all without having to return to the Table View first:
 
-[![Moving between a table and the Detail view and swiping up and down to move between the other rows.](quick-interaction-techniques-images/quick05.png)](quick-interaction-techniques-images/quick05.png#lightbox)
+[![Moving between a table and the Detail view and swiping up and down to move between the other rows](quick-interaction-techniques-images/quick05.png)](quick-interaction-techniques-images/quick05.png#lightbox)
 
 To enable this mode, open the watchOS app's Storyboard in Xcode for editing, select the Table View and check the **Vertical Detail Paging** checkbox:
 
-[![Check the Vertical Detail Paging checkbox.](quick-interaction-techniques-images/quick06.png)](quick-interaction-techniques-images/quick06.png#lightbox)
+[![Check the Vertical Detail Paging checkbox](quick-interaction-techniques-images/quick06.png)](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Ensure that the Table is using Segues to display the Detailed View and Save the changes to the Storyboard and return to Visual Studio for Mac to sync.
 
@@ -307,7 +307,7 @@ A well designed quick interaction experience will give the user the confidence t
 
 Where this specifically becomes an issue is when the watch app is doing any type of network connection or sharing information with its companion iPhone app. This can often lead to a waiting indicator while the transaction is taking place, which is not desirable during a quick interaction. Take the following example:
 
-[![Diagram of the watch app doing a network connection and sharing information with its companion iPhone app.](quick-interaction-techniques-images/quick07.png)](quick-interaction-techniques-images/quick07.png#lightbox)
+[![Diagram of the watch app doing a network connection and sharing information with its companion iPhone app](quick-interaction-techniques-images/quick07.png)](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. The user chooses an item to purchase on the watch.
 2. They tap the buy button.
@@ -319,7 +319,7 @@ From the time the user taps the buy button until the transaction is completed, t
 
 Using Apple's suggested model, take a look at the same quick interaction again:
 
-[![Apples suggested model diagram.](quick-interaction-techniques-images/quick08.png)](quick-interaction-techniques-images/quick08.png#lightbox)
+[![Apples suggested model diagram](quick-interaction-techniques-images/quick08.png)](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. The user chooses an item to purchase on the watch.
 2. They tap the buy button.

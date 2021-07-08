@@ -156,7 +156,7 @@ Activity used here is a subclass of `ListActivity`; it includes the
 Here's a screenshot showing the end result, with the calendar info
 displayed in the `ListView`:
 
-[![CalendarDemo running in emulator, displaying two calendar entries.](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
+[![CalendarDemo running in emulator, displaying two calendar entries](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
 
 ## Listing Calendar Events
 
@@ -272,7 +272,7 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 This displays a list of events as shown below:
 
-[![Screenshot of example app displaying three calendar events.](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
+[![Screenshot of example app displaying three calendar events](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
 ## Adding a Calendar Event
 
@@ -336,12 +336,12 @@ If we add a button to the event list UI and run the above code in the
 button's click event handler, the event is added to the calendar and
 updated in our list as shown below:
 
-[![Screenshot of example app with calendar events followed by Add Sample Event button.](calendar-images/13.png)](calendar-images/13.png#lightbox)
+[![Screenshot of example app with calendar events followed by Add Sample Event button](calendar-images/13.png)](calendar-images/13.png#lightbox)
 
 If we open the calendar app, then we will see that the event is written
 there as well:
 
-[![Screenshot of calendar app displaying the selected calendar event.](calendar-images/14.png)](calendar-images/14.png#lightbox)
+[![Screenshot of calendar app displaying the selected calendar event](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 As you can see, Android allows powerful and easy access to retrieve and
 persist calendar data, allowing applications to seamlessly integrate

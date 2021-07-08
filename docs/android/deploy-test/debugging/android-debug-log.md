@@ -40,7 +40,7 @@ disconnected from Visual Studio).
 To open the **Device Log** tool, click **Device Log (logcat)** icon on the
 toolbar:
 
-[![Location of Device Log tool on the toolbar.](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
+[![Location of Device Log tool on the toolbar](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
 
 Alternately, launch the **Device Log** tool from one of the following
 menu selections:
@@ -51,7 +51,7 @@ menu selections:
 The following screenshot illustrates the various parts of the **Debug
 Tool** window:
 
-[![Parts of the Debug Tool window.](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
+[![Parts of the Debug Tool window](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
 - **Device Selector** &ndash; Selects which physical device or
     running emulator to monitor.
@@ -71,7 +71,7 @@ Tool** window:
 When the **Debug Log** tool window is displayed, use the device pull-down
 menu to choose the Android device to monitor:
 
-[![Location of Device Selector.](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+[![Location of Device Selector](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 After the device is selected, the **Device Log** tool automatically adds
 log entries from a running app &ndash; these log entries are shown in
@@ -85,11 +85,11 @@ the Visual Studio device drop-down menu next to the **Start** button.
 
 To open the **Device Log**, click **View > Pads > Device Log**:
 
-[![Location of Device Log menu item.](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
+[![Location of Device Log menu item](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
 
 The following screenshot illustrates the various parts of the **Debug Tool** window:
 
-[![Features of the Debug Tool window.](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
+[![Features of the Debug Tool window](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
 - **Device Selector** &ndash; Selects which physical device or
     running emulator to monitor.
@@ -116,7 +116,7 @@ The following screenshot illustrates the various parts of the **Debug Tool** win
 When the Debug Log tool window is displayed, use the device pull-down
 menu to choose the Android device to monitor:
 
-[![Location of Device selector.](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+[![Location of Device selector](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
 After the device is selected, the **Device Log** tool automatically adds
 log entries from a running app &ndash; these log entries are shown in

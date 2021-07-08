@@ -17,7 +17,7 @@ topic explores the
 app, a simple code example that uses `RecyclerView` to display a large
 collection of photos: 
 
-[![Two screenshots of a RecyclerView app that uses CardViews to display photos.](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
+[![Two screenshots of a RecyclerView app that uses CardViews to display photos](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** uses
 [CardView](~/android/user-interface/controls/card-view.md) to
@@ -163,7 +163,7 @@ The view holder class is called `PhotoViewHolder`. Each
 `TextView` of an associated row item, which is laid out in a `CardView`
 as diagrammed here:
 
-[![Diagram of CardView containing an ImageView and TextView.](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
+[![Diagram of CardView containing an ImageView and TextView](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
 
 `PhotoViewHolder` derives from `RecyclerView.ViewHolder` and contains properties
 to store references to the `ImageView` and `TextView` shown in the above layout.
@@ -462,7 +462,7 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 When this code is compiled and run, it creates the basic photo viewing
 app as shown in the following screenshots:
 
-[![Two screenshots of photo viewing app with vertically scrolling photo cards.](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
+[![Two screenshots of photo viewing app with vertically scrolling photo cards](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
 If shadows are not being drawn (as seen in the above screenshot), edit
 **Properties/AndroidManifest.xml** and add the following attribute
@@ -496,7 +496,7 @@ scroll in the horizontal direction. When you compile and run the app
 again, you'll see that the photographs are displayed in a grid and that
 scrolling is horizontal rather than vertical:
 
-[![Example screenshot of app with horizontally-scrolling photos in a grid.](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
+[![Example screenshot of app with horizontally-scrolling photos in a grid](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
 By changing only one line of code, it is possible to modify the
 photo-viewing app to use a different layout with different behavior.

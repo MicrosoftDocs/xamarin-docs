@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # WebView Execution Mode on Windows
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This platform-specific sets the thread on which a [`WebView`](xref:Xamarin.Forms.WebView) hosts its content. It's consumed in XAML by setting the `WebView.ExecutionMode` bindable property to a `WebViewExecutionMode` enumeration value:
 

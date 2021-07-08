@@ -10,11 +10,11 @@ ms.date: 04/24/2019
 
 # Visual Basic in Xamarin Android and iOS
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 
 The [TaskyVB](/samples/xamarin/mobile-samples/visualbasic-taskyvb/) sample application demonstrates how Visual Basic code compiled into a .NET Standard library can be used with Xamarin. Here are some screenshots of the resulting apps running on Android and iOS:
 
- [![Android and iOS running an app built with Visual Basic.](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
+ [![Android and iOS running an app built with Visual Basic](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
 
 The Android and iOS projects in the example are all written in C#. The user interface for each application is built with native technologies, while the `TodoItem` management is provided by the Visual Basic .NET Standard library using an XML file (for demonstration purposes, not a full database).
 

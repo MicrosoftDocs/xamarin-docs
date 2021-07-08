@@ -18,11 +18,11 @@ ms.date: 03/21/2017
 The slider control allows for simple selection of a numeric value within a range. The control defaults to a value between 
 0 and 1 but these limits can be customized.
 
- [![Slider.](slider-switch-segmented-controls-images/image25a.png)](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![Slider](slider-switch-segmented-controls-images/image25a.png)](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 The following screenshot shows the properties that are editable in the Designer:
 
- [![Slider Properties.](slider-switch-segmented-controls-images/image26a.png)](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![Slider Properties](slider-switch-segmented-controls-images/image26a.png)](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 You can set these values in code as shown below, including wiring up a handler to display the currently selected value 
 in a `UILabel` control:
@@ -44,7 +44,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 The customized slider looks like this:
 
- [![Custom Slider.](slider-switch-segmented-controls-images/image27a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![Custom Slider](slider-switch-segmented-controls-images/image27a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
 > There is currently a [bug](https://stackoverflow.com/a/19496179) causing the `ThumbTint` to not 
@@ -62,12 +62,12 @@ workaround. [[Source](https://stackoverflow.com/a/21396794)]:
 iOS uses the `UISwitch` as a boolean input that may be represented by a radio-button on other platforms. The user can 
 manipulate the control by moving the *thumb* between the **On/Off** positions.
 
- [![Switch.](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![Switch](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 The appearance of the switch can be customized in the **Properties Pad** of the designer, which 
 will let you control the default state, **On/Off tint** colors and an **On/Off Image**. This is illustrated in the image below:
 
- [![Switch Properties.](slider-switch-segmented-controls-images/image29a.png)](slider-switch-segmented-controls-images/image29a.png#lightbox)
+ [![Switch Properties](slider-switch-segmented-controls-images/image29a.png)](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
 The properties of the switch can also be set in code, for example the code below will show a switch with the default 
 value of `On`:

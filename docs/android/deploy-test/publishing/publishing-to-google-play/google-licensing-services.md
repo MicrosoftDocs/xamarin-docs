@@ -35,7 +35,7 @@ service hosted by the Google Play application on the device. Google Play then
 sends this request on to the Google Licensing server, which responds with the
 license status: 
 
-[![Licensing server workflow diagram.](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
+[![Licensing server workflow diagram](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 The above diagram illustrates this workflow: 
 

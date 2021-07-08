@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 18. MVVM
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -29,7 +29,7 @@ An MVVM application has three layers:
 
 The Model is ignorant of the ViewModel and the ViewModel is ignorant of the View. These three layers generally connect to each other using the following mechanisms:
 
-![View, ViewModel, and View.](images/ch18fg03.png "MVVM")
+![View, ViewModel, and View](images/ch18fg03.png "MVVM")
 
 In many smaller programs (and even larger ones), often the Model is absent or its functionality is integrated into the ViewModel.
 
@@ -55,7 +55,7 @@ Properties in a ViewModel can be more interactive, as demonstrated by the [`Simp
 The
 [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) library integrates the RGB and HSL color models. It is demonstrated in the [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders) sample:
 
-[![Triple screenshot of TK](images/ch18fg08-small.png "HSL Color Model."](images/ch18fg08-large.png#lightbox "HSL Color Model")
+[![Triple screenshot of TK](images/ch18fg08-small.png "HSL Color Model")](images/ch18fg08-large.png#lightbox "HSL Color Model")
 
 ### Streamlining the ViewModel
 

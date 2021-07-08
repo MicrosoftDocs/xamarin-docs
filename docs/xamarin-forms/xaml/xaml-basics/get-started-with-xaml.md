@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Part 1. Getting Started with XAML
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a C# code-behind file._
 
@@ -28,17 +28,17 @@ To begin editing your first XAML file, use Visual Studio or Visual Studio for Ma
 
 In Windows, launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project:
 
-![New Solution Window.](get-started-with-xaml-images/win/new-solution-2019.png)
+![New Solution Window](get-started-with-xaml-images/win/new-solution-2019.png)
 
 In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)** template, and click the **Next** button:
 
-![New Project Window.](get-started-with-xaml-images/win/new-project-2019.png)
+![New Project Window](get-started-with-xaml-images/win/new-project-2019.png)
 
 In the **Configure your new project** window, set the **Project name** to **XamlSamples** (or whatever your prefer), and click the **Create** button.
 
 In the **New Cross Platform App** dialog, click **Blank**, and click the **OK** button:
 
-![New App Dialog.](get-started-with-xaml-images/win/new-cross-platform-app.png)
+![New App Dialog](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
 Four projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, **XamlSamples.iOS**, and the Universal Windows Platform solution, **XamlSamples.UWP**.
 
@@ -46,19 +46,19 @@ Four projects are created in the solution: the **XamlSamples** .NET Standard lib
 
 In Visual Studio for Mac, select **File > New Solution** from the menu. In the **New Project** dialog, select **Multiplatform > App** at the left, and **Blank Forms App** (*not* **Forms App**) from the template list:
 
-![New Project Dialog 1.](get-started-with-xaml-images/mac/newprojectdialog1.png)
+![New Project Dialog 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
 Press **Next**.
 
 In the next dialog, give the project a name of **XamlSamples** (or whatever you prefer). Make sure that the **Use .NET Standard** radio button is selected:
 
-![New Project Dialog 2.](get-started-with-xaml-images/mac/newprojectdialog2.png)
+![New Project Dialog 2](get-started-with-xaml-images/mac/newprojectdialog2.png)
 
 Press **Next**.
 
 In the following dialog, you can select a location for the project:
 
-![New Project Dialog 3.](get-started-with-xaml-images/mac/newprojectdialog3.png)
+![New Project Dialog 3](get-started-with-xaml-images/mac/newprojectdialog3.png)
 
 Press **Create**
 
@@ -141,7 +141,7 @@ Although you normally don’t need to spend much time with generated code files,
 
 When you compile and run this program, the `Label` element appears in the center of the page as the XAML suggests:
 
-[![Default Xamarin.Forms display.](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
+[![Default Xamarin.Forms display](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 For more interesting visuals, all you need is more interesting XAML.
 
@@ -151,13 +151,13 @@ For more interesting visuals, all you need is more interesting XAML.
 
 To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project, right-click, and select **Add > New Item...**. In the **Add New Item** dialog, select **Visual C# Items > Xamarin.Forms > Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage**:
 
-![Add New Item Dialog.](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
+![Add New Item Dialog](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
 To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project and invoke the **File > New File** menu item. At the left of the **New File** dialog, select **Forms** at the left, and **Forms ContentPage Xaml** (not **Forms ContentPage**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage**:
 
-![New File Dialog.](get-started-with-xaml-images/mac/newfiledialog.png)
+![New File Dialog](get-started-with-xaml-images/mac/newfiledialog.png)
 
 -----
 
@@ -279,7 +279,7 @@ public MainPage()
 
 Setting the `Content` property of the page replaces the setting of the `Content` property in the XAML file. When you compile and deploy the new version of this program, a button appears on the screen. Pressing it navigates to `HelloXamlPage`. Here’s the resultant page on iPhone, Android, and UWP:
 
-[![Rotated Label Text.](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
+[![Rotated Label Text](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
 
 You can navigate back to `MainPage` using the **< Back** button on iOS, using the left arrow at the top of the page or at the bottom of the phone on Android, or using the left arrow at the top of the page on Windows 10.
 
@@ -289,7 +289,7 @@ Feel free to experiment with the XAML for different ways to render the `Label`. 
 
 Here’s what it looks like:
 
-[![Rotated Label Text with Unicode Characters.](get-started-with-xaml-images/helloxaml2.png)](get-started-with-xaml-images/helloxaml2-large.png#lightbox)
+[![Rotated Label Text with Unicode Characters](get-started-with-xaml-images/helloxaml2.png)](get-started-with-xaml-images/helloxaml2-large.png#lightbox)
 
 ## XAML and Code Interactions
 
@@ -317,7 +317,7 @@ The **HelloXamlPage** sample contains only a single `Label` on the page, but thi
 
 This XAML file is syntactically complete, and here’s what it looks like:
 
-[![Multiple Controls on a Page.](get-started-with-xaml-images/xamlpluscode1.png)](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox)
+[![Multiple Controls on a Page](get-started-with-xaml-images/xamlpluscode1.png)](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox)
 
 However, you are likely to consider this program to be functionally deficient. Perhaps the `Slider` is supposed to cause the `Label` to display the current value, and the `Button` is probably intended to do something within the program.
 
@@ -408,7 +408,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 When you first run the program, the `Label` doesn’t display the `Slider` value because the `ValueChanged` event hasn’t yet fired. But any manipulation of the `Slider` causes the value to be displayed:
 
-[![Slider Value Displayed.](get-started-with-xaml-images/xamlpluscode2.png)](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox)
+[![Slider Value Displayed](get-started-with-xaml-images/xamlpluscode2.png)](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox)
 
 Now for the `Button`. Let’s simulate a response to a `Clicked` event by displaying an alert with the `Text` of the button. The event handler can safely cast the `sender` argument to a `Button` and then access its properties:
 

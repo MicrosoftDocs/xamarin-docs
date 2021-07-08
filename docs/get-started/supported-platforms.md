@@ -46,17 +46,17 @@ Additionally, the target/compile version for Android projects **must** be set to
 
 **Project Options > Application > Application Properties**
 
-![Android build options in Visual Studio.](requirements-images/options-android-vs-sml.png)
+![Android build options in Visual Studio](requirements-images/options-android-vs-sml.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
 **Build > General**
 
-![Select the latest target framework.](requirements-images/options-general-sml.png)
+![Select the latest target framework](requirements-images/options-general-sml.png)
 
 **Build > Android Application**
 
-![Select the minimum and target Android versions for your app.](requirements-images/options-android-sml.png)
+![Select the minimum and target Android versions for your app](requirements-images/options-android-sml.png)
 
 -----
 

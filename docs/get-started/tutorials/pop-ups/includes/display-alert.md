@@ -53,11 +53,11 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Then, tap the first [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot of an alert on iOS and Android](../images/alert.png "Alert."](../images/alert-large.png#lightbox "Alert")
+    [![Screenshot of an alert on iOS and Android](../images/alert.png "Alert")](../images/alert-large.png#lightbox "Alert")
 
     After dismissing the alert, tap the second [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot of an alert that asks a question, on iOS and Android](../images/alert-question.png "Alert that asks a question."](../images/alert-question-large.png#lightbox "Alert that asks a question")
+    [![Screenshot of an alert that asks a question, on iOS and Android](../images/alert-question.png "Alert that asks a question")](../images/alert-question-large.png#lightbox "Alert that asks a question")
 
     Observe that, after selecting a response to the question, the response is output to the Visual Studio **Output** window. If this window is not visible, it can be made visible by selecting the **View > Output** menu option.
 
@@ -118,11 +118,11 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Then, tap the first [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot of an alert on iOS and Android](../images/alert.png "Alert."](../images/alert-large.png#lightbox "Alert")
+    [![Screenshot of an alert on iOS and Android](../images/alert.png "Alert")](../images/alert-large.png#lightbox "Alert")
 
     After dismissing the alert, tap the second [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Screenshot of an alert that asks a question, on iOS and Android](../images/alert-question.png "Alert that asks a question."](../images/alert-question-large.png#lightbox "Alert that asks a question")
+    [![Screenshot of an alert that asks a question, on iOS and Android](../images/alert-question.png "Alert that asks a question")](../images/alert-question-large.png#lightbox "Alert that asks a question")
 
     Observe that, after selecting a response to the question, the response is output to the Visual Studio for Mac **Application Output** window. If this window is not visible, it can be made visible by selecting the **View > Other Windows > Application Output** menu option.
 

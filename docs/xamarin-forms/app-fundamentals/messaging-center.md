@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms MessagingCenter
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 The publish-subscribe pattern is a messaging pattern in which publishers send messages without having knowledge of any receivers, known as subscribers. Similarly, subscribers listen for specific messages, without having knowledge of any publishers.
 
@@ -22,7 +22,7 @@ The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class 
 
 The [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class provides multicast publish-subscribe functionality. This means that there can be multiple publishers that publish a single message, and there can be multiple subscribers listening for the same message:
 
-![Multicast publish-subscribe functionality.](messaging-center-images/messaging-center.png)
+![Multicast publish-subscribe functionality](messaging-center-images/messaging-center.png)
 
 Publishers send messages using the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method, while subscribers listen for messages using the [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method. In addition, subscribers can also unsubscribe from message subscriptions, if required, with the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method.
 

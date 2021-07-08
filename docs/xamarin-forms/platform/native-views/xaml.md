@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Native Views in XAML
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Native views from iOS, Android, and the Universal Windows Platform can be directly referenced from Xamarin.Forms XAML files. Properties and event handlers can be set on native views, and they can interact with Xamarin.Forms views. This article demonstrates how to consume native views from Xamarin.Forms XAML files._
 
@@ -99,8 +99,8 @@ The page contains an [`Entry`](xref:Xamarin.Forms.Entry) whose [`IsEnabled`](xre
 
 The page also contains a native switch for each platform. Each native switch uses a [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) binding to update the value of the `NativeSwitchPageViewModel.IsSwitchOn` property. Therefore, when the switch is off, the `Entry` is disabled, and when the switch is on, the `Entry` is enabled. The following screenshots show this functionality on each platform:
 
-![Native Switch Disabled.](xaml-images/native-switch-disabled.png)
-![Native Switch Enabled.](xaml-images/native-switch-enabled.png)
+![Native Switch Disabled](xaml-images/native-switch-disabled.png)
+![Native Switch Enabled](xaml-images/native-switch-enabled.png)
 
 Two-way bindings are automatically supported provided that the native property implements `INotifyPropertyChanged`, or supports Key-Value Observing (KVO) on iOS, or is a `DependencyProperty` on UWP. However, many native views don't support property change notification. For these views, you can specify an [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) property value as part of the binding expression. This property should be set to the name of an event in the native view that signals when the target property has changed. Then, when the value of the native switch changes, the `Binding` class is notified that the user has changed the switch value, and the `NativeSwitchPageViewModel.IsSwitchOn` property value is updated.
 
@@ -171,7 +171,7 @@ The [`FontFamily`](/uwp/api/Windows.UI.Xaml.Media.FontFamily) constructor is use
 
 The following screenshots show the result of specifying factory method and constructor arguments to set the font on different native views:
 
-![Setting Fonts on Native Views.](xaml-images/passing-arguments.png)
+![Setting Fonts on Native Views](xaml-images/passing-arguments.png)
 
 For more information about passing arguments in XAML, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
@@ -258,7 +258,7 @@ The [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) property is 
 
 The iOS and Android native buttons share the same `OnButtonTap` event handler, because each native button consumes an `EventHandler` delegate in response to a touch event. However, the Universal Windows Platform (UWP) uses a separate `RoutedEventHandler`, which in turn consumes the `OnButtonTap` event handler in this example. Therefore, when a native button is clicked, the `OnButtonTap` event handler executes, which scales and rotates the native control contained within the [`ContentView`](xref:Xamarin.Forms.ContentView) named `contentViewTextParent`. The following screenshots demonstrate this occurring on each platform:
 
-![ContentView Containing a Native Control.](xaml-images/contentview.png)
+![ContentView Containing a Native Control](xaml-images/contentview.png)
 
 ## Subclass native views
 
@@ -299,7 +299,7 @@ The page contains a [`Label`](xref:Xamarin.Forms.Label) that displays the fruit 
 
 The page also contains a native picker view for each platform. Each native view displays the collection of fruits by binding its `ItemSource` property to the `SubclassedNativeControlsPageViewModel.Fruits` collection. This allows the user to pick a fruit, as shown in the following screenshots:
 
-![Subclassed Native Views.](xaml-images/sub-classed.png)
+![Subclassed Native Views](xaml-images/sub-classed.png)
 
 On iOS and Android the native pickers use methods to setup the controls. Therefore, these pickers must be subclassed to expose properties to make them XAML-friendly. On the Universal Windows Platform (UWP), the `ComboBox` is already XAML-friendly, and so doesn't require subclassing.
 

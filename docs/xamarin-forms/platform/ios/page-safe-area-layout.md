@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Safe Area Layout Guide on iOS
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific is used to ensure that page content is positioned on an area of the screen that is safe for all devices that use iOS 11 and greater. Specifically, it will help to make sure that content isn't clipped by rounded device corners, the home indicator, or the sensor housing on an iPhone X. It's consumed in XAML by setting the `Page.UseSafeArea` attached property to a `boolean` value:
 
@@ -41,7 +41,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 The result is that page content can be positioned on an area of the screen that is safe for all iPhones:
 
-[![Safe Area Layout Guide.](page-safe-area-images/safe-area-layout.png)](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
+[![Safe Area Layout Guide](page-safe-area-images/safe-area-layout.png)](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
 
 > [!NOTE]
 > The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) property, and will override any previous values of this property that have been set.

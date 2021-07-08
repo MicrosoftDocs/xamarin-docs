@@ -20,7 +20,7 @@ native or managed system.
 
 The diagram below shows a basic overview of this architecture:
 
-[![This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture.](architecture-images/ios-arch-small.png)](architecture-images/ios-arch.png#lightbox)
+[![This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture](architecture-images/ios-arch-small.png)](architecture-images/ios-arch.png#lightbox)
 
 ## Native and Managed code: An Explanation
 
@@ -55,7 +55,7 @@ code. This produces a native iOS binary, optionally optimized with LLVM for devi
 can be deployed on Apple’s ARM-based processor. A rough diagram of how this fits
 together is illustrated below:
 
-[![A rough diagram of how this fits together.](architecture-images/aot.png)](architecture-images/aot-large.png#lightbox)
+[![A rough diagram of how this fits together](architecture-images/aot.png)](architecture-images/aot-large.png#lightbox)
 
 Using AOT has a number of limitations, which are detailed in the [Limitations](~/ios/internals/limitations.md)
 guide. It also provides a number of improvements over JIT through a reduction in the startup time, and various performance optimizations
@@ -153,7 +153,7 @@ time. This is used by default for device builds. The static registrar can also
 be used with the iOS simulator by passing `--registrar:static` as an `mtouch`
 attribute in your project’s build options, as shown below:
 
-    [![Setting Additional mtouch arguments.](architecture-images/image1.png)](architecture-images/image1.png#lightbox)
+    [![Setting Additional mtouch arguments](architecture-images/image1.png)](architecture-images/image1.png#lightbox)
 
 For more information on the specifics of the iOS Type Registration system used
 by Xamarin.iOS, refer to the [Type Registrar](~/ios/internals/registrar.md) guide.

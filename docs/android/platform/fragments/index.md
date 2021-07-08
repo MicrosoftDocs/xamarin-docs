@@ -33,7 +33,7 @@ Android 3.0 (API Level 11).
 For example, the image below illustrates how a single application uses
 Fragments across varying device form factors.
 
-[![Diagram of how fragments are used in Tablets and Handsets.](images/00.png)](images/00.png#lightbox)
+[![Diagram of how fragments are used in Tablets and Handsets](images/00.png)](images/00.png#lightbox)
 
 *Fragment A* contains a list, while *Fragment B* contains
 details for an item selected in that list. When the application is run on a
@@ -48,7 +48,7 @@ its own instance of a `FragmentManager` for adding, deleting, and
 finding hosted Fragments. The following diagram illustrates the relationship
 between Fragments and Activities:
 
-[![Diagram illustrating relationships between Activity, Fragment Manager, and Fragments.](images/01.png)](images/01.png#lightbox)
+[![Diagram illustrating relationships between Activity, Fragment Manager, and Fragments](images/01.png)](images/01.png#lightbox)
 
 In some regards, Fragments can be thought of as composite controls or as
 mini-Activities. They bundle up pieces of UI into reusable modules that can then
@@ -79,14 +79,14 @@ including:
 Fragments are available in the Android SDK starting with API level 11
 (Android 3.0), as shown in the following screenshot:
 
-[![Selecting the API level in the Android SDK Manager.](images/02.png)](images/02.png#lightbox)
+[![Selecting the API level in the Android SDK Manager](images/02.png)](images/02.png#lightbox)
 
 Fragments are available in Xamarin.Android 4.0 and higher. A
 Xamarin.Android application must target at least API level 11 (Android 3.0) or higher in
 order to use Fragments. The Target Framework may be set in the project Properties
 as shown below:
 
-[![Setting the Target Framework API level in the Project Options.](images/03-sml.png)](images/03.png#lightbox)
+[![Setting the Target Framework API level in the Project Options](images/03-sml.png)](images/03.png#lightbox)
 
 It is possible to use Fragments in older versions of Android by using the
 Android Support Package and Xamarin.Android 4.2 or higher. How to do this is

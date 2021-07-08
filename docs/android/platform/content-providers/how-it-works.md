@@ -64,7 +64,7 @@ Android offers access to a wide range of system and user data using `ContentProv
 The primary classes used when working with a `ContentProvider` are
 shown here:
 
-[![Class diagram of Content Provider application and Consuming application interactions.](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
+[![Class diagram of Content Provider application and Consuming application interactions](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
 In this diagram, the `ContentProvider` implements queries and registers
 URI's that other applications use to locate data. The `ContentResolver`

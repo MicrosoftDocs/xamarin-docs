@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell pages
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 A [`ShellContent`](xref:Xamarin.Forms.ShellContent) object represents the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object for each [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) or [`Tab`](xref:Xamarin.Forms.Tab). When more than one `ShellContent` object is present in a `Tab` object, the `ContentPage` objects will be navigable by top tabs. Within a page, additional `ContentPage` objects that are known as detail pages, can be navigated to.
 
@@ -43,7 +43,7 @@ In Xamarin.Forms Shell applications, pages are typically created on demand in re
 
 In this example, Shell's implicit conversion operators are used to remove the [`Tab`](xref:Xamarin.Forms.Tab) objects from the visual hierarchy. However, each [`ShellContent`](xref:Xamarin.Forms.ShellContent) object is rendered in a tab:
 
-[![Screenshot of a Shell app with three pages, on iOS and Android.](pages-images/three-pages.png)](pages-images/three-pages-large.png#lightbox)
+[![Screenshot of a Shell app with three pages, on iOS and Android](pages-images/three-pages.png)](pages-images/three-pages-large.png#lightbox)
 
 > [!NOTE]
 > The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of each [`ShellContent`](xref:Xamarin.Forms.ShellContent) object is inherited from the parent [`Tab`](xref:Xamarin.Forms.Tab) object.
@@ -205,7 +205,7 @@ While this property can be set on a subclassed [`Shell`](xref:Xamarin.Forms.Shel
 
 This results in the navigation bar becoming invisible when the page is presented:
 
-![Screenshot of Shell page with an invisible navigation bar, on iOS and Android.](pages-images/navigationbar-invisible.png)
+![Screenshot of Shell page with an invisible navigation bar, on iOS and Android](pages-images/navigationbar-invisible.png)
 
 ## Display views in the navigation bar
 
@@ -226,7 +226,7 @@ While this property can be set on a subclassed [`Shell`](xref:Xamarin.Forms.Shel
 
 This results in an image being displayed in the navigation bar on the page:
 
-![Screenshot of Shell page with a title view, on iOS and Android.](pages-images/titleview.png "Shell page with a title view")
+![Screenshot of Shell page with a title view, on iOS and Android](pages-images/titleview.png "Shell page with a title view")
 
 > [!IMPORTANT]
 > If the navigation bar has been made invisible, with the [`NavBarIsVisible`](xref:Xamarin.Forms.Shell.NavBarIsVisibleProperty) attached property, the title view will not be displayed.

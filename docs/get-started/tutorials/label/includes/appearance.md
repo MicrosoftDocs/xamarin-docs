@@ -15,7 +15,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
 
-    [![Screenshot of a Label with a changed visual appearance, on iOS and Android](../images/change-label-appearance.png "Label with changed appearance."](../images/change-label-appearance-large.png#lightbox "Label with changed appearance")
+    [![Screenshot of a Label with a changed visual appearance, on iOS and Android](../images/change-label-appearance.png "Label with changed appearance")](../images/change-label-appearance-large.png#lightbox "Label with changed appearance")
 
     For more information about setting [`Label`](xref:Xamarin.Forms.Label) appearance, see the [Xamarin.Forms Label](~/xamarin-forms/user-interface/text/label.md) guide.
 
@@ -36,6 +36,6 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Observe that the [`Label`](xref:Xamarin.Forms.Label) appearance has changed:
 
-    [![Screenshot of a Label with a changed visual appearance, on iOS and Android](../images/change-label-appearance.png "Label with changed appearance."](../images/change-label-appearance-large.png#lightbox "Label with changed appearance")
+    [![Screenshot of a Label with a changed visual appearance, on iOS and Android](../images/change-label-appearance.png "Label with changed appearance")](../images/change-label-appearance-large.png#lightbox "Label with changed appearance")
 
     For more information about setting [`Label`](xref:Xamarin.Forms.Label) appearance, see the [Xamarin.Forms Label](~/xamarin-forms/user-interface/text/label.md) guide.

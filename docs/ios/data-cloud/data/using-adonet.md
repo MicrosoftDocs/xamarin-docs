@@ -22,11 +22,11 @@ references to your iOS project, as shown here
 
 # [Visual Studio for Mac](#tab/macos)
 
- ![Assembly References in Visual Studio for Mac.](using-adonet-images/image4.png)
+ ![Assembly References in Visual Studio for Mac](using-adonet-images/image4.png)
 
 # [Visual Studio](#tab/windows)
 
-  ![Assembly References in Visual Studio.](using-adonet-images/image6.png)
+  ![Assembly References in Visual Studio](using-adonet-images/image6.png)
 
 -----
 
@@ -71,7 +71,7 @@ When executing SQL directly against the database you should take the normal prec
 
 The *DataAccess_Basic* sample code for this document looks like this when running on iOS:
 
- ![iOS ADO.NET sample.](using-adonet-images/image9.png)
+ ![iOS ADO.NET sample](using-adonet-images/image9.png)
 
 The code below illustrates how to perform simple SQLite operations and shows the results in as text in the application’s main window.
 

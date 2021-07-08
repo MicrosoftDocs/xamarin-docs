@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 17. Mastering the Grid
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -93,7 +93,7 @@ The [**GridCellBorders**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 The [**KeypadGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/KeypadGrid) sample uses a `Grid` to display a keypad:
 
-[![Triple screenshot of Keypad Grid](images/ch17fg12-small.png "Keypad Grid."](images/ch17fg12-large.png#lightbox "Keypad Grid")
+[![Triple screenshot of Keypad Grid](images/ch17fg12-small.png "Keypad Grid")](images/ch17fg12-large.png#lightbox "Keypad Grid")
 
 ### Responding to orientation changes
 

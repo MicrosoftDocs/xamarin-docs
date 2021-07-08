@@ -170,7 +170,7 @@ internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color
 
 The result looks like this:
 
-![point_cloud.](images/arkit_point_cloud.jpeg)
+![point_cloud](images/arkit_point_cloud.jpeg)
 
 ### Complex gestures
 
@@ -289,7 +289,7 @@ The final tracking configuration, `ARWorldTrackingConfiguration` , is the workho
 
 ARKit 2 supports "environmental texturing" that uses captured imagery to estimate lighting and even apply specular highlights to shiny objects. The environmental cubemap is built up dynamically and, once the camera has looked in all directions, can produce an impressively realistic experience:
 
-![environmental texturing demo image.](images/arkit_env_texturing.png)
+![environmental texturing demo image](images/arkit_env_texturing.png)
 
 In order to use environmental texturing:
 
@@ -385,7 +385,7 @@ As you can see, the position is encoded in the bottom row's first three elements
 
 In Xamarin, the common type for manipulating transformation matrices is `NVector4`, which by convention is interpreted in a column-major way. That is to say, the translation/position component is expected in M14, M24, M34, not M41, M42, M43:
 
-![row-major vs column-major.](images/arkit_row_vs_column.png)
+![row-major vs column-major](images/arkit_row_vs_column.png)
 
 Being consistent with the choice of matrix interpretation is vital to proper behavior. Since 3D transform matrices are 4x4, consistency mistakes will not produce any kind of compile-time or even run-time exception — it's just that operations will act unexpectedly. If your SceneKit / ARKit objects seem to be stuck, fly away, or jitter, an incorrect transform matrix is a good possibility. The solution is simple: [`NMatrix4.Transpose`](xref:OpenTK.NMatrix4.Transpose*) will perform an in-place transposition of elements.
 

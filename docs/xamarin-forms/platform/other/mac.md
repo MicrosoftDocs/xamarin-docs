@@ -33,13 +33,13 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and mac
 
 4. Review the configuration and press **Create**. These steps are shown in below:
 
-    ![Animated instructions showing how to add a Cocoa app.](mac-images/add-macos-proj.gif)
+    ![Animated instructions showing how to add a Cocoa app](mac-images/add-macos-proj.gif)
 
 5. In the Mac project, right-click on **Packages > Add Packages...** to add the [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/) NuGet. You should also update the other projects to use the same version of the Xamarin.Forms NuGet package.
 
 6. In the Mac project, right-click on **References** and add a reference to the Xamarin.Forms project (either Shared Project or .NET Standard library project).
 
-    ![Add a reference to the Xamarin.Forms shared code project.](mac-images/references-sml.png)
+    ![Add a reference to the Xamarin.Forms shared code project](mac-images/references-sml.png)
 
 7. Update **Main.cs** to initialize the `AppDelegate`:
 
@@ -92,7 +92,7 @@ Follow these instructions to add a Mac app that will run on macOS Sierra and mac
 
 9. Double-click **Main.storyboard** to edit in Xcode. Select the **Window** and _uncheck_ the **Is Initial Controller** checkbox (this is because the code above creates a window):
 
-    [![Uncheck the Is Initial Controller checkbox in Xcode.](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
+    [![Uncheck the Is Initial Controller checkbox in Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
     You can edit the menu system in the storyboard to remove unwanted items.
 

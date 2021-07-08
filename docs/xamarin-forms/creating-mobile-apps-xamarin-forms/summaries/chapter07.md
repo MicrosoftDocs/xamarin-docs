@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 7. XAML vs. code
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -74,7 +74,7 @@ The [**TextVariations**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
  When a multiline string is set to the `Text` property, end-of-line characters are converted to space characters, but the end-of-line characters are preserved when a multiline string appears as content of the `Label` or `Label.Text` tags:
 
- [![Triple screenshot of text variations sharing](images/ch07fg03-small.png "Formatted Text Variations."](images/ch07fg03-large.png#lightbox "Formatted Text Variations")
+ [![Triple screenshot of text variations sharing](images/ch07fg03-small.png "Formatted Text Variations")](images/ch07fg03-large.png#lightbox "Formatted Text Variations")
 
 ## Related links
 

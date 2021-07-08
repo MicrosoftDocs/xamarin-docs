@@ -176,17 +176,17 @@ distribution: **Ad Hoc** and **Google Play**. If the **Signing
 Identity** dialog is displayed instead, click **Back** to return to the
 **Distribution Channel** dialog. Select **Google Play**:
 
-[![Distribution Channel dialog.](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
+[![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 In the **Signing Identity** dialog, select the identity created in
 [Creating a New Certificate](~/android/deploy-test/signing/index.md#newcert)
 and click **Continue**:
 
-[![Signing Identity dialog.](images/vs/02-select-identity-sml.png)](images/vs/02-select-identity.png#lightbox)
+[![Signing Identity dialog](images/vs/02-select-identity-sml.png)](images/vs/02-select-identity.png#lightbox)
 
 In the **Google Play Accounts** dialog, click the **+** button to add a new Google Play Account:
 
-[![Google Play Accounts dialog.](images/vs/03-google-play-accounts-sml.png)](images/vs/03-google-play-accounts.png#lightbox)
+[![Google Play Accounts dialog](images/vs/03-google-play-accounts-sml.png)](images/vs/03-google-play-accounts.png#lightbox)
 
 In the **Register Google API Access** dialog, you must provide the
 _Client ID_ and _Client secret_ that provides API access to your Google
@@ -218,13 +218,13 @@ In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive)
 the **Sign and Distribute...** dialog presented two choices for
 distribution. Select **Google Play** and click **Next**:
 
-[![Select Android Distribution dialog.](images/xs/01-select-google-play-sml.png)](images/xs/01-select-google-play.png#lightbox)
+[![Select Android Distribution dialog](images/xs/01-select-google-play-sml.png)](images/xs/01-select-google-play.png#lightbox)
 
 In the **Google Play API Account** dialog, you must provide the _Client
 ID_ and _Client secret_ that provides API access to your Google Play
 Developer account:
 
-[![Google Play API Account dialog.](images/xs/02-google-play-api-account-sml.png)](images/xs/02-google-play-api-account.png#lightbox)
+[![Google Play API Account dialog](images/xs/02-google-play-api-account-sml.png)](images/xs/02-google-play-api-account.png#lightbox)
 
 The next section explains how to create a new Google API project and generate
 the needed _Client ID_ and _Client secret_.
@@ -242,7 +242,7 @@ Also, the Google Play Developer API [Getting Started](https://developers.google.
 explains how to use the Google Play Developer API. After you sign into
 the Google Play Developer Console, click **CREATE APPLICATION**:
 
-[![Create new project button.](images/01-create-new-project-sml.png)](images/01-create-new-project.png#lightbox)
+[![Create new project button](images/01-create-new-project-sml.png)](images/01-create-new-project.png#lightbox)
 
 After creating the new project, it will be
 linked to your Google Play Developer Console account.
@@ -253,32 +253,32 @@ data using your app, your OAuth Client ID is used to authenticate your app.
 
 Go to the **Settings** page.
 
-[![Settings icon.](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
+[![Settings icon](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
 
 In the **Settings** page, select **API access** and click **CREATE OAUTH CLIENT** to create a new OAuth client:
 
-[![Create OAuth Client button.](images/03-create-oauth-client-sml.png)](images/03-create-oauth-client.png#lightbox)
+[![Create OAuth Client button](images/03-create-oauth-client-sml.png)](images/03-create-oauth-client.png#lightbox)
 
 After a few seconds, a new Client ID is generated. Click **View in
 Google Developers Console** to see your new Client ID in the Google
 Developer's Console:
 
-[![Client ID displayed.](images/04-generated-client-id-sml.png)](images/04-generated-client-id.png#lightbox)
+[![Client ID displayed](images/04-generated-client-id-sml.png)](images/04-generated-client-id.png#lightbox)
 
 The Client ID is displayed along its name and creation date. Click the
 **Edit OAuth Client** icon to view the Client secret for your app:
 
-[![View app credentials.](images/05-google-developer-console-sml.png)](images/05-google-developer-console.png#lightbox)
+[![View app credentials](images/05-google-developer-console-sml.png)](images/05-google-developer-console.png#lightbox)
 
 The default name of the OAuth client is *Google Play Android
 Developer*. This can be changed to the name of Xamarin.Android app, or any suitable name. In this example, the
 OAuth Client name is changed to the name of the app, **MyApp**:
 
-[![Client ID and secret displayed.](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
+[![Client ID and secret displayed](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
 
 Click **Save** to save changes. This returns to the **Credentials** page where to download the credentials by clicking on the  **Download JSON** icon:
 
-[![Download JSON icon.](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
+[![Download JSON icon](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
 This JSON file contains the Client ID and Client secret that you can cut
 and paste into the **Sign and Distribute** dialog in the next step.
@@ -293,14 +293,14 @@ it possible to register more than one Google Play account and upload future APK'
 different Google Play accounts. Copy the Client ID and Client secret to this dialog
 and click **Register**:
 
-[![Register Google API Access dialog.](images/vs/05-enter-client-id-and-secret-sml.png)](images/vs/05-enter-client-id-and-secret.png#lightbox)
+[![Register Google API Access dialog](images/vs/05-enter-client-id-and-secret-sml.png)](images/vs/05-enter-client-id-and-secret.png#lightbox)
 
 A web browser will open and prompt you to sign into your Google Play Android
 Developer account (if you are not already signed in). After you sign in, the
 following prompt is displayed in the web browser.
 Click **Allow** to authorize the app:
 
-[![Authorize app dialog.](images/vs/06-authorize-app-sml.png)](images/vs/06-authorize-app.png#lightbox)
+[![Authorize app dialog](images/vs/06-authorize-app-sml.png)](images/vs/06-authorize-app.png#lightbox)
 
 #### Publish
 
@@ -309,7 +309,7 @@ code. Closing..._ and the app is added to the list of Google Play
 Accounts in Visual Studio. In the **Google Play Accounts** dialog,
 click **Continue**:
 
-[![Account added to Google Play Accounts.](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
+[![Account added to Google Play Accounts](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
 Next, the **Google Play Track** dialog is presented. Google Play offers
 five possible tracks for uploading your app:
@@ -322,7 +322,7 @@ five possible tracks for uploading your app:
 
 Choose which Google Play track will be used for uploading the app and click **Upload**.
 
-[![Account added to Google Play Track.](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
+[![Account added to Google Play Track](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
 For more information about Google Play testing, see
 [Set up open/closed/internal tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
@@ -330,16 +330,16 @@ For more information about Google Play testing, see
 Next, a dialog is presented to enter the password for the signing certificate.
 Enter the password and click **OK**:
 
-[![Signing password dialog.](images/vs/09-certificate-password-sml.png)](images/vs/09-certificate-password.png#lightbox)
+[![Signing password dialog](images/vs/09-certificate-password-sml.png)](images/vs/09-certificate-password.png#lightbox)
 
 The **Archive Manager** displays the progress of the upload:
 
-[![Uploading APK progress.](images/vs/10-uploading-apk-sml.png)](images/vs/10-uploading-apk.png#lightbox)
+[![Uploading APK progress](images/vs/10-uploading-apk-sml.png)](images/vs/10-uploading-apk.png#lightbox)
 
 When the upload finishes, completion status is shown in the lower
 left hand corner of Visual Studio:
 
-[![Publishing project completed message.](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
+[![Publishing project completed message](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
 
 ### Troubleshooting
 
@@ -350,14 +350,14 @@ store before the **Publish to Google Play** will work. If an APK is not
 already uploaded the Publishing Wizard will display the following error
 in the **Errors** pane:
 
-[![You must manually upload your first APK for this app.](images/vs/12-upload-error-sml.png)](images/vs/12-upload-error.png#lightbox)
+[![You must manually upload your first APK for this app](images/vs/12-upload-error-sml.png)](images/vs/12-upload-error.png#lightbox)
 
 When this error occurs, manually upload an APK (such as an Ad Hoc build) via
 the Google Play Developer Console and use the **Distribution Channel**
 dialog for subsequent APK updates.  For more information, see
 [Manually Uploading the APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md). The version code of the APK must change with each upload, otherwise the following error will occur:
 
-[![APK with version code (1) has already been updated.](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
+[![APK with version code (1) has already been updated](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
 To resolve this error, rebuild the app with a different version number
 and resubmit it to Google Play via the **Distribution Channel** dialog.
@@ -370,17 +370,17 @@ it possible to register more than one Google Play account and upload future APK'
 different Google Play accounts. Copy the Client ID and Client secret to this dialog
 and click **Register**:
 
-[![Authorize access dialog.](images/xs/03-register-sml.png)](images/xs/03-register.png#lightbox)
+[![Authorize access dialog](images/xs/03-register-sml.png)](images/xs/03-register.png#lightbox)
 
 If the Client ID and Client secret are accepted, a **Registration
 Successful** message is displayed. Click **Next**:
 
-[![Registration Successful message.](images/xs/04-registration-successful-sml.png)](images/xs/04-registration-successful.png#lightbox)
+[![Registration Successful message](images/xs/04-registration-successful-sml.png)](images/xs/04-registration-successful.png#lightbox)
 
 In the **Google Play Account** dialog, select a Google account and a track
 for uploading the application:
 
-[![Choose Google account dialog.](images/xs/05-choose-google-account-sml.png)](images/xs/05-choose-google-account.png#lightbox)
+[![Choose Google account dialog](images/xs/05-choose-google-account-sml.png)](images/xs/05-choose-google-account.png#lightbox)
 
 Google Play offers five possible tracks for uploading your app:
 
@@ -400,11 +400,11 @@ identity, otherwise consult the guide
 for information about creating a new key. After you have selected a
 certificate to sign the application, click **Next**:
 
-[![Android signing identity dialog.](images/xs/06-android-signing-identity-sml.png)](images/xs/06-android-signing-identity.png#lightbox)
+[![Android signing identity dialog](images/xs/06-android-signing-identity-sml.png)](images/xs/06-android-signing-identity.png#lightbox)
 
 At this point the app can be uploaded to Google Play. The **Publish to Google Play** dialog summarizes information about your app &ndash; click **Publish** to publish your app to Google Play:
 
-[![Publish to Google Play dialog.](images/xs/07-publish-to-google-play-sml.png)](images/xs/07-publish-to-google-play.png#lightbox)
+[![Publish to Google Play dialog](images/xs/07-publish-to-google-play-sml.png)](images/xs/07-publish-to-google-play.png#lightbox)
 
 ### Troubleshooting
 

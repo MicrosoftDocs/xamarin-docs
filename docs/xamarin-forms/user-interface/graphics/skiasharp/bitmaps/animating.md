@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Animating SkiaSharp bitmaps
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Applications that animate SkiaSharp graphics generally call `InvalidateSurface` on the `SKCanvasView` at a fixed rate, often every 16 milliseconds. Invalidating the surface triggers a call to the `PaintSurface` handler to redraw the display. As the visuals are redrawn 60 times a second, they appear to be smoothly animated.
 
@@ -24,7 +24,7 @@ Of course, that's potentially a lot of bitmaps, but that is how big-budget 3D an
 
 You can do something similar in SkiaSharp. This article demonstrates two types of bitmap animation. The first example is an animation of the Mandelbrot Set:
 
-![Animating Sample.](animating-images/AnimatingSample.png "Animating Sample")
+![Animating Sample](animating-images/AnimatingSample.png "Animating Sample")
 
 The second example shows how to use SkiaSharp to render an animated GIF file.
 
@@ -459,7 +459,7 @@ public partial class MainPage : ContentPage
 
 Here's the program running:
 
-[![Mandelbrot Animation](animating-images/MandelbrotAnimation.png "Mandelbrot Animation."](animating-images/MandelbrotAnimation-Large.png#lightbox)
+[![Mandelbrot Animation](animating-images/MandelbrotAnimation.png "Mandelbrot Animation")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
 ## GIF animation
 
@@ -649,7 +649,7 @@ public partial class AnimatedGifPage : ContentPage
 
 Each time the `currentframe` variable changes, the `SKCanvasView` is invalidated and the new frame is displayed:
 
-[![Animated GIF](animating-images/AnimatedGif.png "Animated GIF."](animating-images/AnimatedGif-Large.png#lightbox)
+[![Animated GIF](animating-images/AnimatedGif.png "Animated GIF")](animating-images/AnimatedGif-Large.png#lightbox)
 
 Of course, you'll want to run the program yourself to see the animation.
 

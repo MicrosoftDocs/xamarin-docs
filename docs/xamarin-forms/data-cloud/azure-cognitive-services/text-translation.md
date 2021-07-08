@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Text Translation Using the Translator API
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _The Microsoft Translator API can be used to translate speech and text through a REST API. This article explains how to use the Microsoft Translator Text API to translate text from one language to another in a Xamarin.Forms application._
 
@@ -136,7 +136,7 @@ The API response is returned in XML format. The following XML data shows a typic
 
 In the sample application, the XML response is parsed into a `XDocument` instance, with the XML root value being returned to the calling method for display as shown in the following screenshots:
 
-![Text Translation to German.](text-translation-images/text-translation.png)
+![Text Translation to German](text-translation-images/text-translation.png)
 
 ## Summary
 

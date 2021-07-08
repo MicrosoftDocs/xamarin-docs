@@ -66,13 +66,13 @@ several JDK alternatives to choose from:
 To start the SDK Manager in Visual Studio, click **Tools > Android >
 Android SDK Manager**:
 
-[![Location of the Android SDK Manager menu item.](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
+[![Location of the Android SDK Manager menu item](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 The Android SDK Manager opens in the **Android SDKs and
 Tools** screen. This screen has two tabs &ndash; **Platforms** and
 **Tools**:
 
-[![Screenshot of the Android SDK Manager open in the Platforms tab.](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
+[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 The **Android SDKs and Tools** screen is described in more detail in
 the following sections.
@@ -95,7 +95,7 @@ button to the far right of **Android SDK Location**. This opens the
 the Android SDK. In the following screenshot, the Android SDK under
 **Program Files (x86)\\Android** is being selected:
 
-![Screenshot of the Windows Browse For Folder dialog locating android sdk.](android-sdk-images/win/05-browse-for-folder.png)
+![Screenshot of the Windows Browse For Folder dialog locating android sdk](android-sdk-images/win/05-browse-for-folder.png)
 
 When you click **OK**, the SDK Manager will manage the Android SDK that
 is installed at the selected location.
@@ -111,12 +111,12 @@ For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
 button:
 
-[![Installing the Android Emulator from the Tools tab.](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
+[![Installing the Android Emulator from the Tools tab](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 A dialog may be shown with the message, _The following package requires
 that you accept its license terms before installing_:
 
-![License acceptance screen.](android-sdk-images/win/07-license-acceptance.png)
+![License acceptance screen](android-sdk-images/win/07-license-acceptance.png)
 
 Click **Accept** if you accept the Terms and Conditions. At the bottom
 of the window, a progress bar indicates download and installation
@@ -128,7 +128,7 @@ that the selected tools and extras were installed.
 The **Platforms** tab displays a list of platform SDK versions along
 with other resources (like system images) for each platform:
 
-[![Screenshot of the Platforms pane.](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
+[![Screenshot of the Platforms pane](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 This screen lists the Android version (such as **Android 8.0**), the
 code name (**Oreo**), the API level (such as **26**), and the sizes of
@@ -149,12 +149,12 @@ To add another platform to the SDK, click the box next to the platform
 until the checkmark appears to install all of its components, then
 click **Apply Changes**:
 
-[![Example of adding Android 7.1 Nougat components to the Android SDK.](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
+[![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 To install only specific components, click the box next to the platform
 once. You can then select any individual components that you need:
 
-[![Example of adding some Android 7.1 components.](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
+[![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 Notice that the number of components to install appears next to the
 **Apply Changes** button. After you click the **Apply Changes** button,
@@ -177,7 +177,7 @@ Google's repository. To make this switch, click the gear icon in the
 lower right-hand corner and select **Repository > Google
 (Unsupported)**:
 
-[![Selecting Google's repository.](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
+[![Selecting Google's repository](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 When the Google repository is selected, additional packages may appear
 in the **Platforms** tab that were not available previously. (In the
@@ -221,12 +221,12 @@ several JDK alternatives to choose from:
 
 To start the SDK Manager in Visual Studio for Mac, click **Tools > SDK Manager**:
 
-[![Location of the Android SDK Manager menu item.](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
+[![Location of the Android SDK Manager menu item](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 The **Android SDK Manager** opens in the **Preferences window**, which
 contains three tabs, **Platforms**, **Tools**, and **Locations**:
 
-[![Screenshot of the Android SDK Manager open in the Platforms tab.](android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
+[![Screenshot of the Android SDK Manager open in the Platforms tab](android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
 
 The tabs of the Android SDK Manager are described in the
 following sections.
@@ -242,7 +242,7 @@ When the SDK Manager starts, it automatically determines the path for
 each installed package and indicates that it was **Found** by placing a
 green checkmark icon next to the path:
 
-[![Screenshot of the Locations tab.](android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
+[![Screenshot of the Locations tab](android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
 
 Click the **Reset to Defaults** button to cause the SDK Manager to look
 for the SDK, NDK, and JDK at their default locations. 
@@ -264,12 +264,12 @@ For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
 button:
 
-[![Installing the Android Emulator from the Tools tab.](android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
+[![Installing the Android Emulator from the Tools tab](android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
 
 A dialog may be shown with the message, _The following package requires
 that you accept its license terms before installing_:
 
-[![License acceptance screen.](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
+[![License acceptance screen](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
 
 Click **Accept** if you accept the Terms and Conditions. At the bottom
 of the window, a progress bar indicates download and installation
@@ -281,7 +281,7 @@ that the selected tools and extras were installed.
 The **Platforms** tab displays a list of platform SDK versions along
 with other resources (like system images) for each platform:
 
-[![Screenshot of the Platforms pane.](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
+[![Screenshot of the Platforms pane](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
 
 This screen lists the Android version (such as **Android 8.1**), the
 code name (**Oreo**), the API level (such as **27**), and the sizes of
@@ -301,12 +301,12 @@ To add another platform to the SDK, click the box next to the platform
 until the checkmark appears to install all of its components, then
 click **Apply Changes**:
 
-[![Example of adding all components of a platform.](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
+[![Example of adding all components of a platform](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
 
 To install only some components, click the box next to the platform
 once. You can then select any individual components that you need:
 
-[![Example of adding some components.](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
+[![Example of adding some components](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
 
 Notice that the number of components to install appears next to the
 **Apply Changes** button. After you click the **Apply Changes** button,
@@ -329,7 +329,7 @@ Google's repository. To make this switch, click the gear icon in the
 lower right-hand corner and select **Repository > Google
 (Unsupported)**:
 
-[![Selecting Google's repository.](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
+[![Selecting Google's repository](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
 When the Google repository is selected, additional packages may appear
 in the **Platforms** tab that were not available previously. (In the

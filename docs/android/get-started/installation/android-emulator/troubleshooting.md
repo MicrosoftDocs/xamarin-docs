@@ -80,7 +80,7 @@ be sure to select one or both of the following options:
 
 For example, this virtual device will include Google Play Services and Google Play Store:
 
-[![Example AVD with Google Play Services and Google Play Store enabled.](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
+[![Example AVD with Google Play Services and Google Play Store enabled](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
 > Google Play Store images are available only for some base device types such
@@ -105,7 +105,7 @@ the Device Manager will produce a dialog with an error message
 indicating that the Windows Hypervisor Platform (WHPX) is not
 configured properly:
 
-![Example Device Manager warning.](troubleshooting-images/win/01-dev-mgr-warning-w158.png)
+![Example Device Manager warning](troubleshooting-images/win/01-dev-mgr-warning-w158.png)
 
 If this error message is displayed, see
 [Hardware acceleration issues](#accel-issues-win) below for steps you
@@ -118,7 +118,7 @@ virtual device (AVD). When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select an x86-based system image:
 
-[![Selecting an x86 system image for a virtual device.](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
+[![Selecting an x86 system image for a virtual device](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
 <a name="accel-issues-win"></a>
 
@@ -338,7 +338,7 @@ steps:
 
 2. Uncheck **Hyper-V**:
 
-    ![Disabling Hyper-V in the Windows Features dialog.](troubleshooting-images/win/03-uncheck-hyper-v.png)
+    ![Disabling Hyper-V in the Windows Features dialog](troubleshooting-images/win/03-uncheck-hyper-v.png)
 
 3. Restart the computer.
 
@@ -374,7 +374,7 @@ Guard** is running:
    Virtualization based security** is present and is in the **Running**
    state:
 
-   [![Device Guard is present and running.](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
+   [![Device Guard is present and running](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 If Device Guard is enabled, use the following steps to disable it:
 
@@ -388,7 +388,7 @@ If Device Guard is enabled, use the following steps to disable it:
 3. In the **Local Group Policy Editor**, navigate to **Computer
    Configuration > Administrative Templates > System > Device Guard**:
 
-   [![Device Guard in Local Group Policy Editor.](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
+   [![Device Guard in Local Group Policy Editor](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Change **Turn On Virtualization Based Security** to **Disabled** (as
    shown above) and exit the **Local Group Policy Editor**.
@@ -544,7 +544,7 @@ be sure to select one or both of the following:
 
 For example, this virtual device will include Google Play Services and Google Play Store:
 
-[![Example AVD with Google Play Services and Google Play Store enabled.](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+[![Example AVD with Google Play Services and Google Play Store enabled](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
 > Google Play Store images are available only for some base device types such
@@ -579,7 +579,7 @@ virtual device. When you create virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select an x86-based system image:
 
-[![Selecting an x86 system image for a virtual device.](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
+[![Selecting an x86 system image for a virtual device](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
 <a name="accel-issues-mac"></a>
 

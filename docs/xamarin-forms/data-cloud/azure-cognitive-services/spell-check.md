@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Spell Checking Using the Bing Spell Check API
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Bing Spell Check performs contextual spell checking for text, providing inline suggestions for misspelled words. This article explains how to use the Bing Spell Check REST API to correct spelling errors in a Xamarin.Forms application._
 
@@ -150,9 +150,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 This code iterates through the `FlaggedTokens` collection and replaces any misspelled or grammatically incorrect words in the source text with the first suggestion. The following screenshots show before and after the spell check:
 
-![Before Spell Check.](spell-check-images/before-spell-check.png)
+![Before Spell Check](spell-check-images/before-spell-check.png)
 
-![After Spell Check.](spell-check-images/after-spell-check.png)
+![After Spell Check](spell-check-images/after-spell-check.png)
 
 > [!NOTE]
 > The example above uses `Replace` for simplicity, but across a large amount of text it

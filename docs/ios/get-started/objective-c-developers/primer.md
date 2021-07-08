@@ -53,7 +53,7 @@ public static class UITextViewExtensions
 
 Then, when an instance of a `UITextView` is created in code, the method will be available in the autocomplete list as shown below:
 
- ![The method available in the autocomplete.](primer-images/01-extensionmethodintellisense.png)
+ ![The method available in the autocomplete](primer-images/01-extensionmethodintellisense.png)
 
 When the extension method is called the instance is passed to the argument, such as the `textView` in this example.
 

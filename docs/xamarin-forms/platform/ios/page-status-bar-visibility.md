@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Page Status Bar Visibility on iOS
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This iOS platform-specific is used to set the visibility of the status bar on a [`Page`](xref:Xamarin.Forms.Page), and it includes the ability to control how the status bar enters or leaves the `Page`. It's consumed in XAML by setting the `Page.PrefersStatusBarHidden` attached property to a value of the `StatusBarHiddenMode` enumeration, and optionally the `Page.PreferredStatusBarUpdateAnimation` attached property to a value of the `UIStatusBarAnimation` enumeration:
 
@@ -40,7 +40,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 The result is that the visibility of the status bar on a [`Page`](xref:Xamarin.Forms.Page) can be set:
 
-![Status Bar Visibility Platform-Specific.](page-status-bar-visibility-images/hide-status-bar.png)
+![Status Bar Visibility Platform-Specific](page-status-bar-visibility-images/hide-status-bar.png)
 
 > [!NOTE]
 > On a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), the specified `StatusBarHiddenMode` enumeration value will also update the status bar on all child pages. On all other [`Page`](xref:Xamarin.Forms.Page)-derived types, the specified `StatusBarHiddenMode` enumeration value will only update the status bar on the current page.

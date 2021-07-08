@@ -33,13 +33,13 @@ versions of Xamarin functionality, including:
 
 The **Preview Installer** screenshot below shows both Preview and Release options (notice the grey version numbers: version 15.0 is release and version 15.1 is a Preview):
 
-![installer showing preview options.](windows-images/vs2017-installer.jpg)
+![installer showing preview options](windows-images/vs2017-installer.jpg)
 
 During the installation process, an **Installation Nickname** can be
 applied to the side-by-side installation (so they can be distinguished
 in the Start menu), as shown below:
 
-[![edit nickname before installing](windows-images/vs2017-nickname-sml.png "edit nickname before installing."](windows-images/vs2017-nickname.png#lightbox)
+[![edit nickname before installing](windows-images/vs2017-nickname-sml.png "edit nickname before installing")](windows-images/vs2017-nickname.png#lightbox)
 
 ### Uninstalling Visual Studio 2019 Preview
 

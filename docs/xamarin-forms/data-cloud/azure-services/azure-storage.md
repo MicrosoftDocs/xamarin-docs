@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Store and Access Data in Azure Storage from Xamarin.Forms
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data._
 
@@ -39,7 +39,7 @@ For more information about Azure Storage, see [Introduction to Storage](https://
 
 Blob storage consists of three components, which are shown in the following diagram:
 
-![Blob Storage Concepts.](azure-storage-images/blob-storage.png)
+![Blob Storage Concepts](azure-storage-images/blob-storage.png)
 
 All access to Azure Storage is through a storage account. A storage account can contain an unlimited number of containers, and a container can store an unlimited number of blobs, up to the capacity limit of the storage account.
 

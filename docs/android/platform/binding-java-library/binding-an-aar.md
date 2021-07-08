@@ -80,7 +80,7 @@ public class TextCounter
 In addition, this sample app will retrieve and display an image
 resource that is packaged in **textanalyzer.aar**:
 
-[![Xamarin monkey image.](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
+[![Xamarin monkey image](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 This image resource resides at **res/drawable/monkey.png**
 in **textanalyzer.aar**.
@@ -95,30 +95,30 @@ Before commencing with the steps below, please download the example
     Visual Studio (the screenshots below show Visual Studio, but
     Visual Studio for Mac is very similar). Name the solution **AarBinding**:
 
-    [![Create AarBindings project.](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
+    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
 
 2. The template includes a **Jars** folder where you add your .AAR(s)
     to the Bindings Library project. Right-click the **Jars** folder
     and select **Add > Existing Item**:
 
-    [![Add existing item.](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
+    [![Add existing item](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 3. Navigate to the **textanalyzer.aar** file downloaded earlier, select it, and
     click **Add**:
 
-    [![Add textanalayzer.aar.](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
+    [![Add textanalayzer.aar](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 4. Verify that the **textanalyzer.aar** file was successfully added
     to the project:
 
-    [![The textanalyzer.aar file was added.](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
+    [![The textanalyzer.aar file was added](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
 5. Set the Build Action for **textanalyzer.aar** to
     `LibraryProjectZip`. In Visual Studio for Mac, right-click
     **textanalyzer.aar** to set the Build Action. In Visual Studio,
     the Build Action can be set in the **Properties** pane):
 
-    [![Setting the textanalyzer.aar build action to LibraryProjectZip.](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
+    [![Setting the textanalyzer.aar build action to LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
 6. Open the project Properties to configure the *Target Framework*. If
     the .AAR uses any Android APIs, set the Target Framework to the API
@@ -131,7 +131,7 @@ Before commencing with the steps below, please download the example
     level 23) because our **textanalyzer** does not have a dependency
     on Android APIs:
 
-    [![Setting the target level to API 23.](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
+    [![Setting the target level to API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
 7. Build the Bindings Library. The Bindings Library project should
     build successfully and produce an output .DLL at the following
@@ -149,21 +149,21 @@ a reference to the Bindings Library. Use the following steps:
     the Solution and select **Add New Project**. Name the new project
     **BindingTest**:
 
-    [![Create new BindingTest project.](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
+    [![Create new BindingTest project](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
 2. Right-click the **References** node of the **BindingTest** project and
     select **Add Reference...**:
 
-    [![Click Add Reference.](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
+    [![Click Add Reference](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
 3. Select the **AarBinding** project created earlier and click **OK**:
 
-    [![Check the AAR binding project.](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
+    [![Check the AAR binding project](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
 4. Open the **References** node of the **BindingTest** project to
     verify that the **AarBinding** reference is present:
 
-    [![AarBinding is listed under References.](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
+    [![AarBinding is listed under References](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
 If you would like to view the contents of the Binding Library project,
 you can double-click the reference to open it in the **Object
@@ -172,7 +172,7 @@ Browser**. You can see the mapped contents of the
 `com.xamarin.textanalyzezr` package) and you can view the members of
 the `TextCounter` class:
 
-[![Viewing the Object Browser.](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
+[![Viewing the Object Browser](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
 
 The above screenshot highlights the two `TextAnalyzer` methods that the
 example app will call: `NumConsonants` (which wraps the underlying Java
@@ -315,7 +315,7 @@ the screenshot on the left (the `EditText` is initialized with some
 text, but you can tap it to change it). When you tap **COUNT VOWELS**, a
 toast displays the number of vowels as shown on the right:
 
-[![Screenshots from running BindingTest.](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png#lightbox)
+[![Screenshots from running BindingTest](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png#lightbox)
 
 Try tapping the **COUNT CONSONANTS** button. Also, you can modify the
 line of text and tap these buttons again to test for different vowel
@@ -370,7 +370,7 @@ Compile and run the **BindingTest** project. The app will start and present
 the screenshot on the left &ndash; when you tap **COUNT CONSONANTS**, the
 results are displayed as shown on the right:
 
-[![BindingTest displaying consonant count.](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
+[![BindingTest displaying consonant count](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
 Congratulations! You've successfully bound a Java library .AAR!
 

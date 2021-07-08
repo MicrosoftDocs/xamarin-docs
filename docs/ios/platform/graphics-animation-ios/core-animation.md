@@ -65,7 +65,7 @@ PresentViewController (vc2, true, null);
 
 The following screenshot shows what the transition looks like for the `PartialCurl` case:
 
- ![This screenshot shows the PartialCurl transition.](core-animation-images/06-view-transitions.png)
+ ![This screenshot shows the PartialCurl transition](core-animation-images/06-view-transitions.png)
 
 ### View Transitions
 
@@ -87,7 +87,7 @@ UIView.Transition (
 
 The screenshot below show the animated transition between the image views when `TransitionFlipFromTop` is used:
 
- ![This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used.](core-animation-images/07-animated-transition.png)
+ ![This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used](core-animation-images/07-animated-transition.png)
 
 ### View Property Animations
 
@@ -120,11 +120,11 @@ UIView.Animate (
 
 This results in an image animating back and forth across the top of the screen, as shown below:
 
- ![An image animating back and forth across the top of the screen as the output.](core-animation-images/08-animate-center.png)
+ ![An image animating back and forth across the top of the screen as the output](core-animation-images/08-animate-center.png)
 
 As with the `Transition` method, `Animate` allows the duration to be set, along with the easing function. This example also used the `UIViewAnimationOptions.Autoreverse` option, which causes the animation to animate from the value back to the initial one. However, the code also sets the `Center` back to its initial value in a completion handler. While an animation is interpolating property values over time, the actual model value of the property is always the final value that has been set. In this example, the value is a point near the right side of the superview. Without setting the `Center` to the initial point, which is where the animation completes due to the `Autoreverse` being set, the image would snap back to the right side after the animation completes, as shown below:
 
- ![Without setting the Center to the initial point, the image would snap back to the right side after the animation completes.](core-animation-images/09-animation-complete.png)
+ ![Without setting the Center to the initial point, the image would snap back to the right side after the animation completes](core-animation-images/09-animation-complete.png)
 
 ## Using Core Animation
 
@@ -179,11 +179,11 @@ This code also animates the layer’s `Position`, which is the location of the l
 
 The following figure shows the position and anchor point:
 
- ![This figure shows the position and anchor point.](core-animation-images/10-postion-anchorpt.png)
+ ![This figure shows the position and anchor point](core-animation-images/10-postion-anchorpt.png)
 
 When the example is run, the `Position`, `BorderWidth` and `BorderColor` animate as shown in the following screenshots:
 
- ![When the example is run, the Position, BorderWidth and BorderColor animate as shown.](core-animation-images/11-implicit-animation.png)
+ ![When the example is run, the Position, BorderWidth and BorderColor animate as shown](core-animation-images/11-implicit-animation.png)
 
 ### Explicit Animations
 
@@ -224,7 +224,7 @@ This code changes the `Position` of the layer by creating a path that is then us
 
 The following screenshots show the layer containing the image animating through the specified path:
 
- ![This screenshot shows the layer containing the image animating through the specified path.](core-animation-images/12-explicit-animation.png)
+ ![This screenshot shows the layer containing the image animating through the specified path](core-animation-images/12-explicit-animation.png)
 
 ## Summary
 

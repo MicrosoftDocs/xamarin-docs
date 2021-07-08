@@ -19,7 +19,7 @@ Mobile applications no longer live in a silo &ndash; in many cases they are an i
 
 Android handles app-linking through the *intent system* &ndash; when the user clicks on a link in a mobile browser, the mobile browser will dispatch an intent that Android will delegate to a registered application. For example, clicking on a link on a cooking website would open a mobile app that is associated with that website and display a specific recipe to the user. If there is more than one application registered to handle that intent, then Android will raise what is known as a *disambiguation dialog* that will ask a user what application to select the application that should handle the intent, for example:
 
-![Example screenshot of a disambiguation dialog.](app-linking-images/01-disambiguation-dialog.png)
+![Example screenshot of a disambiguation dialog](app-linking-images/01-disambiguation-dialog.png)
 
 Android 6.0 improves on this by using automatic link handling. It is possible for Android to automatically register an application as the default handler for a URI &ndash; the app will automatically launch and navigate directly to the relevant Activity. How Android 6.0 decides to handle a URI click depends on the following criteria:
 

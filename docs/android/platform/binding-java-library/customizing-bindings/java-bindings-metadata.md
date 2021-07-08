@@ -28,7 +28,7 @@ bound. This list of APIs is stored in an XML file that can be found at
 and at **\{project directory}\obj\Debug\api.xml** for a **DEBUG**
 build.
 
-![Location of the api.xml file in the obj/Debug folder.](java-bindings-metadata-images/java-bindings-metadata-01.png)
+![Location of the api.xml file in the obj/Debug folder](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
 The Bindings Generator will use the **api.xml** file as a guideline for
 generating the necessary C# wrapper classes. The contents of this XML

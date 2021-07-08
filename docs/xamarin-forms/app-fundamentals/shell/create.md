@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Create a Xamarin.Forms Shell application
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The process for creating a Xamarin.Forms Shell application is as follows:
 
@@ -127,11 +127,11 @@ The following XAML shows an example of a subclassed [`Shell`](xref:Xamarin.Forms
 
 When run, this XAML displays the `CatsPage`, because it's the first item of content declared in the subclassed [`Shell`](xref:Xamarin.Forms.Shell) class:
 
-[![Screenshot of a Shell app, on iOS and Android.](create-images/cats.png)](create-images/cats-large.png#lightbox)
+[![Screenshot of a Shell app, on iOS and Android](create-images/cats.png)](create-images/cats-large.png#lightbox)
 
 Pressing the hamburger icon, or swiping from the left, displays the flyout:
 
-[![Screenshot of a Shell flyout, on iOS and Android.](create-images/flyout.png)](create-images/flyout-large.png#lightbox)
+[![Screenshot of a Shell flyout, on iOS and Android](create-images/flyout.png)](create-images/flyout-large.png#lightbox)
 
 Multiple items are displayed on the flyout because the [`FlyoutDisplayOptions`](xref:Xamarin.Forms.ShellGroupItem.FlyoutDisplayOptions) property is set to `AsMultipleItems`. For more information, see [Flyout display options](flyout.md#flyout-display-options).
 

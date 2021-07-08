@@ -26,7 +26,7 @@ Learn about [mobile app development with cloud services](/azure/mobile-apps/), i
 
 Download this [PDF (180kb)](/xamarin/guides/cross-platform/azure/Resources/poster.pdf) reference of the most popular Azure and App Center services available for mobile app development with Xamarin:
 
-[![Xamarin, Azure, and App Center post.](mobile-apps-images/azure-app-center.png)](/xamarin/guides/cross-platform/azure/Resources/poster.pdf)
+[![Xamarin, Azure, and App Center post](mobile-apps-images/azure-app-center.png)](/xamarin/guides/cross-platform/azure/Resources/poster.pdf)
 
 <!--
 NOTE TO AUTHORS: this page is referenced from

@@ -39,7 +39,7 @@ In this exercise, you will modify the **CollectionViewTutorial** project so that
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data."](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
+    [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data")](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
 
     In Visual Studio, stop the application.
 
@@ -80,6 +80,6 @@ In this exercise, you will modify the **CollectionViewTutorial** project so that
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data."](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
+    [![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance.png "CollectionView displaying templated data")](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
 
     In Visual Studio for Mac, stop the application.

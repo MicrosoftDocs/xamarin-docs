@@ -25,7 +25,7 @@
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Click the [`Button`](xref:Xamarin.Forms.Button) and observe that the text it displays changes:
 
-    [![Screenshot of Button text changing after receiving a click, on iOS and Android](../images/handle-button-click.png "Handle a button click."](../images/handle-button-click-large.png#lightbox "Handle a button click")
+    [![Screenshot of Button text changing after receiving a click, on iOS and Android](../images/handle-button-click.png "Handle a button click")](../images/handle-button-click-large.png#lightbox "Handle a button click")
 
     For more information about handling button clicks, see [Handling button clicks](~/xamarin-forms/user-interface/button.md#handling-button-clicks) in the [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md) guide.
 
@@ -56,6 +56,6 @@
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Click the [`Button`](xref:Xamarin.Forms.Button) and observe that the text it displays changes:
 
-    [![Screenshot of Button text changing after receiving a click, on iOS and Android](../images/handle-button-click.png "Handle a button click."](../images/handle-button-click-large.png#lightbox "Handle a button click")
+    [![Screenshot of Button text changing after receiving a click, on iOS and Android](../images/handle-button-click.png "Handle a button click")](../images/handle-button-click-large.png#lightbox "Handle a button click")
 
     For more information about handling button clicks, see [Handling button clicks](~/xamarin-forms/user-interface/button.md#handling-button-clicks) in the [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md) guide.

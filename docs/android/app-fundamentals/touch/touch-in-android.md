@@ -133,14 +133,14 @@ allows a developer to create pre-defined gestures that can be embedded
 in an application. The following screen shot shows an example of
 Gestures Builder:
 
-[![Screenshot of Gestures Builder with example gestures.](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
+[![Screenshot of Gestures Builder with example gestures](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 An improved version of this application called Gesture Tool can be
 found Google Play. Gesture Tool is very much like Gestures Builder
 except that it allows you to test gestures after they have been
 created. This next screenshot shows Gestures Builder:
 
-[![Screenshot of Gesture Tool with example gestures.](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
+[![Screenshot of Gesture Tool with example gestures](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Gesture Tool is a bit more useful for creating custom gestures as it
 allows the gestures to be tested as they are being created and is

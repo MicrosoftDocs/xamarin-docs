@@ -34,9 +34,9 @@ Xamarin.Essentials always tries to bring features to every platform, however som
 
 Icon Guide:
 
-* ![Full Support.](~/media/shared/yes.png "Full Support") - Full support
-* ![Limited Support.](~/media/shared/warn.png "Limited Support") - Limited support
-* ![Not Supported.](~/media/shared/no.png "Not supported") - Not supported
+* ![Full Support](~/media/shared/yes.png "Full Support") - Full support
+* ![Limited Support](~/media/shared/warn.png "Limited Support") - Limited support
+* ![Not Supported](~/media/shared/no.png "Not supported") - Not supported
 
 | Feature | Android | iOS | UWP | watchOS | tvOS | Tizen | macOS |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -11,7 +11,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Get started with Azure Functions
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 
 _Get started building your first Azure Function that interacts with Xamarin.Forms._
 

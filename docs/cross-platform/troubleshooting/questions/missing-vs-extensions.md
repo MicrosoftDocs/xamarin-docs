@@ -28,7 +28,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
 4. Make sure the **Xamarin for Visual Studio 2013** option is set to install:
 
-    ![Enable Xamarin for Visual Studio 2013 installation option.](missing-vs-extensions-images/installer.png)
+    ![Enable Xamarin for Visual Studio 2013 installation option](missing-vs-extensions-images/installer.png)
 
 5. Proceed through the rest of the installer wizard.
 
@@ -40,7 +40,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
     If the extensions are properly installed (for version 3.1.228), there will be 60 items in the folder:
 
-    ![List of Xamarin\3.1.228.0 folder contents in Explorer.](missing-vs-extensions-images/folder.png)
+    ![List of Xamarin\3.1.228.0 folder contents in Explorer](missing-vs-extensions-images/folder.png)
 
 2. After you have confirmed that this folder looks correct, tell Visual Studio to try setting up the extensions again:
 

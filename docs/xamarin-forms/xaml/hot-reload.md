@@ -40,7 +40,7 @@ Then, in your Android and iOS build settings, check that the Linker is set to "D
 
 You can use the following flowchart to check your existing project's setup for use with XAML Hot Reload:
 
-![XAML Hot Reload Setup.](hot-reload-images/hotreloadflowchart.png "XAML Hot Reload Setup Flowchart")
+![XAML Hot Reload Setup](hot-reload-images/hotreloadflowchart.png "XAML Hot Reload Setup Flowchart")
 
 <!-- https://aka.ms/xamarin-hot-reload-mode points to this section -->
 ## Hot Reload modes

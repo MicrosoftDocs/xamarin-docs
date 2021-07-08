@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing a ViewCell
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control. This stops the Xamarin.Forms layout calculations from being repeatedly called during ListView scrolling._
 
@@ -20,7 +20,7 @@ Every Xamarin.Forms cell has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`ViewCell`](xref:Xamarin.Forms.ViewCell) and the corresponding native controls that implement it:
 
-![Relationship Between the ViewCell Control and the Implementing Native Controls.](viewcell-images/viewcell-classes.png)
+![Relationship Between the ViewCell Control and the Implementing Native Controls](viewcell-images/viewcell-classes.png)
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) on each platform. The process for doing this is as follows:
 
@@ -157,11 +157,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![NativeCell Custom Renderer Project Responsibilities.](viewcell-images/solution-structure.png)
+![NativeCell Custom Renderer Project Responsibilities](viewcell-images/solution-structure.png)
 
 The `NativeCell` custom cell is rendered by platform-specific renderer classes, which all derive from the `ViewCellRenderer` class for each platform. This results in each `NativeCell` custom cell being rendered with platform-specific layout, as shown in the following screenshots:
 
-![NativeCell on each Platform.](viewcell-images/screenshots.png)
+![NativeCell on each Platform](viewcell-images/screenshots.png)
 
 The `ViewCellRenderer` class exposes platform-specific methods for rendering the custom cell. This is the `GetCell` method on the iOS platform, the `GetCellCore` method on the Android platform, and the `GetTemplate` method on UWP.
 

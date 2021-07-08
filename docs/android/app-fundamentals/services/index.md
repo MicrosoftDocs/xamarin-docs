@@ -25,7 +25,7 @@ Services, and their ability to perform background work, are crucial to providing
 
 To address this concern, a developer may use threads in an Activity to perform some work that would block the UI. However, this could cause problems. It is very possible that Android will destroy and recreate the multiple instances of the Activity. However, Android will not automatically destroy the threads, which could result in memory leaks. A prime example of this is when the [device is rotated](~/android/app-fundamentals/handling-rotation.md) &ndash; Android will try to destroy the instance of the Activity and then recreate a new one:
 
-![When device rotates, instance 1 is destroyed and instance 2 is created.](images/image-01.png)
+![When device rotates, instance 1 is destroyed and instance 2 is created](images/image-01.png)
 
 This is a potential memory leak &ndash; the thread created by the first instance of the Activity will still be running. If the thread has a reference to the first instance of the Activity, this will prevent Android from garbage collecting the object. However, the second instance of the Activity is still created (which in turn might create a new thread). Rotating the device several times in rapid succession may exhaust all the RAM and force Android to terminate the entire application to reclaim memory.
 

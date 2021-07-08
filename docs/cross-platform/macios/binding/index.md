@@ -58,7 +58,7 @@ A collection of third-party bindings that can be used as reference when creating
 
 Follow the [Mac binding](~/mac/platform/binding.md) instructions to bind macOS libraries. You can create a new **Mac Bindings Library** from the **New Project** window:
 
-[![File new mac bindings project dialog.](images/new-bindings-library-sml.png)](images/new-bindings-library.png#lightbox)
+[![File new mac bindings project dialog](images/new-bindings-library-sml.png)](images/new-bindings-library.png#lightbox)
 
 ## Related Links
 

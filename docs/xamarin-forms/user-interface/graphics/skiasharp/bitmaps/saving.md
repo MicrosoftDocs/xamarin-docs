@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Saving SkiaSharp bitmaps to files
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 After a SkiaSharp application has created or modified a bitmap, the application might want to save the bitmap to the user's photo library:
 
-![Saving Bitmaps.](saving-images/SavingSample.png "Saving Bitmaps")
+![Saving Bitmaps](saving-images/SavingSample.png "Saving Bitmaps")
 
 This task encompasses two steps:
 
@@ -437,7 +437,7 @@ Most of this method is devoted to handling problems or errors. If `Encode` creat
 
 Here is the program running:
 
-[![Save File Formats](saving-images/SaveFileFormats.png "Save File Formats."](saving-images/SaveFileFormats-Large.png#lightbox)
+[![Save File Formats](saving-images/SaveFileFormats.png "Save File Formats")](saving-images/SaveFileFormats-Large.png#lightbox)
 
 That screenshot shows the only three formats that are supported on these platforms:
 
@@ -692,11 +692,11 @@ The `ToArray` method of `SKData` obtains an array of bytes. This is what is pass
 
 Here's the program in action:
 
-[![Finger Paint Save](saving-images/FingerPaintSave.png "Finger Paint Save."](saving-images/FingerPaintSave-Large.png#lightbox)
+[![Finger Paint Save](saving-images/FingerPaintSave.png "Finger Paint Save")](saving-images/FingerPaintSave-Large.png#lightbox)
 
 A very similar technique is used in the [**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) sample. This is also a finger-painting program except that the user paints on a spinning disk that then reproduces the designs on its other four quadrants. The color of the finger paint changes as the disk is spinning:
 
-[![Spin Paint](saving-images/SpinPaint.png "Spin Paint."](saving-images/SpinPaint-Large.png#lightbox)
+[![Spin Paint](saving-images/SpinPaint.png "Spin Paint")](saving-images/SpinPaint-Large.png#lightbox)
 
 The **Save** button of `SpinPaint` class is similar to **Finger Paint** in that it saves the image to a fixed folder name (**SpainPaint**) and a filename constructed from the date and time.
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen design patterns
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 This guide introduces our recommended design patterns for dual-screen devices with code and samples to assist you in creating interfaces that provide engaging and useful user experiences.
 
@@ -20,7 +20,7 @@ This guide introduces our recommended design patterns for dual-screen devices wi
 
 The extended canvas pattern treats both screens as one large canvas for displaying a map, image, spreadsheet, or other such content that benefits from spreading to consume the maximum space:
 
-![Extended canvas sample.](design-patterns-images/extended-canvas-sample.png)
+![Extended canvas sample](design-patterns-images/extended-canvas-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -50,7 +50,7 @@ In this example. the `Grid` and inner content will expand to consume all of the 
 
 The master-detail pattern is for when the master view, typically a list on the left, provides content from which a user selects to view details about that item on the right:
 
-![Master detail sample.](design-patterns-images/master-detail-sample.png)
+![Master detail sample](design-patterns-images/master-detail-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -76,7 +76,7 @@ In this example, you can make use of `TwoPaneView` to set a list on one pane, an
 
 The two page pattern is ideal for content that lends itself to a two-up layout, such as a document reader, notes, or an art-board:
 
-![Two page sample.](design-patterns-images/two-page-sample.png)
+![Two page sample](design-patterns-images/two-page-sample.png)
 
 ```xaml
 <Grid x:Name="layout">
@@ -117,7 +117,7 @@ The [`CollectionView`](xref:Xamarin.Forms.CollectionView), with a grid layout th
 
 The dual view pattern may look just like the "Two page" view, but the distinction is in the content and user scenario. In this pattern, you are comparing content side by side, perhaps to edit a document or photo, to compare different restaurant menus, or to diff a merge conflict for code files:
 
-![Dual view sample.](design-patterns-images/dual-view-sample.png)
+![Dual view sample](design-patterns-images/dual-view-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -155,7 +155,7 @@ The dual view pattern may look just like the "Two page" view, but the distinctio
 
 The companion pattern demonstrates how you might use the second screen to provide a second level of content related to the primary view, like in the case of a drawing app, a game, or media editing:
 
-![Companion pane sample.](design-patterns-images/companion-pane-sample.png)
+![Companion pane sample](design-patterns-images/companion-pane-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"

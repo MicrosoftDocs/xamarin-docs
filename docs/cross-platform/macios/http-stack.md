@@ -26,7 +26,7 @@ To adjust the `HttpClient` being used by your app:
 2. Switch to the **Build** settings for your project (for example, **iOS Build** for a Xamarin.iOS app).
 3. From the **HttpClient Implementation** dropdown, select the `HttpClient` type as one of the following: **NSUrlSession** (recommended), **CFNetwork**, or **Managed**.
 
-[![Choose HttpClient implementation from Managed, CFNetwork, or NSUrlSession.](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
+[![Choose HttpClient implementation from Managed, CFNetwork, or NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
 > [!TIP]
 > For TLS 1.2 support the `NSUrlSession` option is recommended.
@@ -122,7 +122,7 @@ This section will cover known issues with TLS support in Xamarin.iOS.
 
 Xamarin.iOS 9.8 introduced some new settings contained the **.csproj** file for a Xamarin.iOS application. These changes  may cause problems when the project is opened with older versions of Xamarin.iOS. The following screenshot is a example of the error message that may be displayed in this scenario:
 
-![Screenshot of error while trying to load project, requested value legacy not found.](http-stack-images/tlserror-xs.png)
+![Screenshot of error while trying to load project, requested value legacy not found](http-stack-images/tlserror-xs.png)
 
 This error is caused by the introduction of the `MtouchTlsProvider` setting to the project file in Xamarin.iOS 9.8. If it is not possible to update to Xamarin.iOS 9.8 (or higher), the work around is to manually edit the **.csproj** file  application, remove the `MtouchTlsprovider` element, and then save the  changed project file.
 

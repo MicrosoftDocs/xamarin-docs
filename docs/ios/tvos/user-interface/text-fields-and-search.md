@@ -13,11 +13,11 @@ ms.date: 03/16/2017
 
 When required, your Xamarin.tvOS app can request small pieces of text from the user (such as User IDs and Passwords) using a Text Field and the on-screen keyboard:
 
-[![Sample Search Field.](text-fields-and-search-images/intro01.png)](text-fields-and-search-images/intro01.png#lightbox)
+[![Sample Search Field](text-fields-and-search-images/intro01.png)](text-fields-and-search-images/intro01.png#lightbox)
 
 You can optionally provide keyword search ability of the app's content using a Search Field:
 
-[![Sample Search Results.](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
+[![Sample Search Results](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
 
 This document will cover the details of working with Text and Search Fields in a Xamarin.tvOS app.
 
@@ -35,7 +35,7 @@ Additionally, if your app presents large amounts of content to the user (such as
 
 In tvOS, a Text Field is presented as a fixed-height, rounded-corner entry box that will bring up an on-screen keyboard when the user clicks on it:
 
-[![Text Fields In tvOS.](text-fields-and-search-images/text01.png)](text-fields-and-search-images/text01.png#lightbox)
+[![Text Fields In tvOS](text-fields-and-search-images/text01.png)](text-fields-and-search-images/text01.png#lightbox)
 
 When the user moves [Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) to a given Text Field, it will grow larger and display a deep shadow. You will need to keep this in mind when designing your User Interface, as Text Fields can overlap other UI elements when in-focus.
 
@@ -52,7 +52,7 @@ Apple has the following suggestions for working with Text Fields:
 
 Whenever the user clicks on a Text Field in the User Interface, a linear on-screen keyboard is displayed. The user uses the Touch Surface the [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) to select individual letters from the keyboard and enter the requested information:
 
-[![The Siri Remote keyboard.](text-fields-and-search-images/keyboard01.png)](text-fields-and-search-images/keyboard01.png#lightbox)
+[![The Siri Remote keyboard](text-fields-and-search-images/keyboard01.png)](text-fields-and-search-images/keyboard01.png#lightbox)
 
 If there is more than one Text Field on the current view, a **Next** button will automatically be displayed to take the user to the next Text Field. A **Done** button will be displayed for the last Text Field that will end text entry and return the user to the previous screen.
 
@@ -71,7 +71,7 @@ For more information about working with the on-screen keyboard, please see Apple
 
 A Search Field present a specialized screen providing a Text Field and on-screen keyboard that allows the user to filter a collection of items that are displayed below the keyboard:
 
-[![Sample search results.](text-fields-and-search-images/search01.png)](text-fields-and-search-images/search01.png#lightbox)
+[![Sample search results](text-fields-and-search-images/search01.png)](text-fields-and-search-images/search01.png#lightbox)
 
 As the user enters letters in the Search Field, the results below will automatically reflect the results of the search. At any time, the user can shift Focus to the results and select one of the items presented.
 
@@ -98,16 +98,16 @@ Do the following:
 1. In the **Solution Pad**, double-click the `Main.storyboard` file to open it for editing.
 1. Drag one or more **Text Fields** int the design surface onto a View:
 
-    [![A Text Field.](text-fields-and-search-images/text02.png)](text-fields-and-search-images/text02.png#lightbox)
+    [![A Text Field](text-fields-and-search-images/text02.png)](text-fields-and-search-images/text02.png#lightbox)
 1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Pad**:
 
-    [![The Widget tab of the Properties Pad.](text-fields-and-search-images/text03.png)](text-fields-and-search-images/text03.png#lightbox)
+    [![The Widget tab of the Properties Pad](text-fields-and-search-images/text03.png)](text-fields-and-search-images/text03.png#lightbox)
 1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**:
 
-    [![The Text Field section.](text-fields-and-search-images/text04.png)](text-fields-and-search-images/text04.png#lightbox)
+    [![The Text Field section](text-fields-and-search-images/text04.png)](text-fields-and-search-images/text04.png#lightbox)
 1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**:
 
-    [![Spell Checking, Capitalization and the default Keyboard Type.](text-fields-and-search-images/text05.png)](text-fields-and-search-images/text05.png#lightbox)
+    [![Spell Checking, Capitalization and the default Keyboard Type](text-fields-and-search-images/text05.png)](text-fields-and-search-images/text05.png#lightbox)
 1. Save the changes to your Storyboard.
 
 # [Visual Studio](#tab/windows)
@@ -115,16 +115,16 @@ Do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
 1. Drag one or more **Text Fields** int the design surface onto a View:
 
-    [![A Text Field.](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
+    [![A Text Field](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
 1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
     [![The Widget tab where you can enter a Name for each text field.](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
 1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**:
 
-    [![The Text Field section.](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
+    [![The Text Field section](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
 1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**:
 
-    [![Spell Checking, Capitalization and the default Keyboard Type.](text-fields-and-search-images/text05-vs.png)](text-fields-and-search-images/text05-vs.png#lightbox)
+    [![Spell Checking, Capitalization and the default Keyboard Type](text-fields-and-search-images/text05-vs.png)](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Save the changes to your Storyboard.
 
 -----
@@ -150,7 +150,7 @@ Do the following:
 1. In the **Solution Pad**, double-click the `Main.storyboard` file to open it for editing.
 1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search:
 
-    [![A Collection View Controller.](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
+    [![A Collection View Controller](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
 1. In the **Widget** tab of the **Properties Pad**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
     [![The Widget tab in Visual Studio for Mac where you can specify Class and Storyboard I D.](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
@@ -160,7 +160,7 @@ Do the following:
     [![The Widget tab in Visual Studio for Mac where you can specify Class and Identifier.](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
 1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-    [![Layout the design of the Cell Prototype.](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
+    [![Layout the design of the Cell Prototype](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
 1. Save the changes to your Storyboard.
 
 # [Visual Studio](#tab/windows)
@@ -168,7 +168,7 @@ Do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
 1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search:
 
-    [![A Collection View Controller.](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
+    [![A Collection View Controller](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
     [![The Widget tab where you can specify Class and Storyboard I D.](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
@@ -178,7 +178,7 @@ Do the following:
     [![The Widget tab where you can specify Class and Identifier.](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
 1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-    [![Layout the design of the Cell Prototype.](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)
+    [![Layout the design of the Cell Prototype](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Save the changes to your Storyboard.
 
 -----
@@ -191,13 +191,13 @@ Do the following:
 
 Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New File...** > **General** > **Empty Class** and provide a **Name**:
 
-[![Select Empty Class and provide a Name.](text-fields-and-search-images/search06.png)](text-fields-and-search-images/search06.png#lightbox)
+[![Select Empty Class and provide a Name](text-fields-and-search-images/search06.png)](text-fields-and-search-images/search06.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
 Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New Item...** > **Apple** > **Misc** > **Class** and provide a **Name**:
 
-[![Select Class and provide a Name.](text-fields-and-search-images/search06-vs.png)](text-fields-and-search-images/search06-vs.png#lightbox)
+[![Select Class and provide a Name](text-fields-and-search-images/search06-vs.png)](text-fields-and-search-images/search06-vs.png#lightbox)
 
 -----
 
@@ -765,11 +765,11 @@ public override void ViewDidAppear (bool animated)
 
 When the app is run and the Search Tab selected by the user, the full unfiltered list of items will be presented to the user:
 
-[![Default search results.](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
+[![Default search results](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
 
 As the user begins to enter a search term, the list of results will be filtered by that term and updated automatically:
 
-[![Filtered search results.](text-fields-and-search-images/intro03.png)](text-fields-and-search-images/intro03.png#lightbox)
+[![Filtered search results](text-fields-and-search-images/intro03.png)](text-fields-and-search-images/intro03.png#lightbox)
 
 At any time, the user can switch Focus to an item in the search results and click the Touch Surface of the Siri Remote to select it.
 

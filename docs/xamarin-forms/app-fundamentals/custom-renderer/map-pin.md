@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing a Map Pin
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _This article demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin and a customized view of the pin data on each platform._
 
@@ -20,7 +20,7 @@ Every Xamarin.Forms view has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`Map`](xref:Xamarin.Forms.Maps.Map) and the corresponding native controls that implement it:
 
-![Relationship Between the Map Control and the Implementing Native Controls.](map-pin-images/map-classes.png)
+![Relationship Between the Map Control and the Implementing Native Controls](map-pin-images/map-classes.png)
 
 The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`Map`](xref:Xamarin.Forms.Maps.Map) on each platform. The process for doing this is as follows:
 
@@ -128,11 +128,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![CustomMap Custom Renderer Project Responsibilities.](map-pin-images/solution-structure.png)
+![CustomMap Custom Renderer Project Responsibilities](map-pin-images/solution-structure.png)
 
 The `CustomMap` control is rendered by platform-specific renderer classes, which derive from the `MapRenderer` class for each platform. This results in each `CustomMap` control being rendered with platform-specific controls, as shown in the following screenshots:
 
-![CustomMap on each Platform.](map-pin-images/screenshots.png)
+![CustomMap on each Platform](map-pin-images/screenshots.png)
 
 The `MapRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms custom map is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `CustomMap` instance.
 

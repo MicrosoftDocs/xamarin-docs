@@ -78,7 +78,7 @@ system app.
    shared libraries that are required by the app on that particular
    ABI:
 
-    ![Screenshot of .so files in the armeabi-v7a folder of taskypro.zip.](install-system-app-images/install-system-app-01.png)
+    ![Screenshot of .so files in the armeabi-v7a folder of taskypro.zip](install-system-app-images/install-system-app-01.png)
 
    In the previous screenshot, there is only one supported ABI
    (**armeabi-v7a**) holding the two **.so** files that are required by

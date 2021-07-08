@@ -16,4 +16,4 @@ In this tutorial, you learn how to:
 
 You will use Visual Studio 2019, or Visual Studio for Mac, to create a simple application that demonstrates how to retrieve .NET repository data from the GitHub web API. The retrieved data will be displayed in a [`CollectionView`](xref:Xamarin.Forms.CollectionView). The following screenshots show the final application:
 
-[![Screenshot of GitHub .NET repositories, on iOS and Android.](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
+[![Screenshot of GitHub .NET repositories, on iOS and Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)

@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Perform navigation in a Xamarin.Forms application
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-navigation/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/getstarted-notes-navigation/)
 
 In this quickstart, you will learn how to:
 
@@ -25,8 +25,8 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to turn a cross-platform Xamarin.Forms Shell application, capable of storing a single note, into an application capable of storing multiple notes. The final application is shown below:
 
-[![Notes Page.](navigation-images/screenshots1-sml.png)](navigation-images/screenshots1.png#lightbox "Notes Page")
-[![Note Entry Page.](navigation-images/screenshots2-sml.png)](navigation-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes Page](navigation-images/screenshots1-sml.png)](navigation-images/screenshots1.png#lightbox "Notes Page")
+[![Note Entry Page](navigation-images/screenshots2-sml.png)](navigation-images/screenshots2.png#lightbox "Note Entry Page")
 
 ### Prerequisites
 
@@ -38,23 +38,23 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
 1. Launch Visual Studio. In the start window, click the **Notes** solution in the recent projects/solutions list, or click **Open a project or solution**, and in the **Open Project/Solution** dialog select the solution file for the Notes project:
 
-    ![Open Solution.](navigation-images/vs/open-solution.png)
+    ![Open Solution](navigation-images/vs/open-solution.png)
 
 2. In **Solution Explorer**, right-click on the **Notes** project, and select **Add > New Folder**:
 
-    ![Add New Folder.](navigation-images/vs/add-new-folder.png)
+    ![Add New Folder](navigation-images/vs/add-new-folder.png)
 
 3. In **Solution Explorer**, name the new folder **Models**:
 
-    ![Models Folder.](navigation-images/vs/name-folder.png)
+    ![Models Folder](navigation-images/vs/name-folder.png)
 
 4. In **Solution Explorer**, select the **Models** folder, right-click, and select **Add > Class...**:
 
-    ![Add New File.](navigation-images/vs/add-new-models-file.png)
+    ![Add New File](navigation-images/vs/add-new-models-file.png)
 
 5. In the **Add New Item** dialog, select **Visual C# Items > Class**, name the new file **Note**, and click the **Add** button:
 
-    ![Add Note Class.](navigation-images/vs/add-note-class.png)
+    ![Add Note Class](navigation-images/vs/add-note-class.png)
 
     This will add a class named **Note** to the **Models** folder of the **Notes** project.
 
@@ -80,7 +80,7 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
 7. In **Solution Explorer**, in the **Notes** project, select the **Views** folder, right-click, and select **Add > New Item...**. In the **Add New Item** dialog, select **Visual C# Items > Xamarin.Forms > Content Page**, name the new file **NoteEntryPage**, and click the **Add** button:
 
-    ![Add Xamarin.Forms ContentPage.](navigation-images/vs/add-note-entry-page.png)
+    ![Add Xamarin.Forms ContentPage](navigation-images/vs/add-note-entry-page.png)
 
     This will add a new page named **NoteEntryPage** to the **Views** folder of the project. This page will be used for note entry.
 
@@ -400,23 +400,23 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
 1. Launch Visual Studio for Mac. In the start window click **Open**, and in the dialog select the solution file for the Notes project:
 
-    ![Open Solution.](navigation-images/vsmac/open-solution.png)
+    ![Open Solution](navigation-images/vsmac/open-solution.png)
 
 2. In the **Solution Pad**, right-click on the **Notes** project, and select **Add > New Folder**:
 
-    ![Add New Folder.](navigation-images/vsmac/add-new-folder.png)
+    ![Add New Folder](navigation-images/vsmac/add-new-folder.png)
 
 3. In the **New Folder** dialog, name the new folder **Models**:
 
-    ![Models Folder.](navigation-images/vsmac/name-folder.png)
+    ![Models Folder](navigation-images/vsmac/name-folder.png)
 
 4. In the **Solution Pad**, select the **Models** folder, right-click, and select **Add > New Class...**:
 
-    ![Add New File.](navigation-images/vsmac/add-new-models-file.png)
+    ![Add New File](navigation-images/vsmac/add-new-models-file.png)
 
 5. In the **New File** dialog, select **General > Empty Class**, name the new file **Note**, and click the **New** button:
 
-    ![Add Note Class.](navigation-images/vsmac/add-note-class.png)
+    ![Add Note Class](navigation-images/vsmac/add-note-class.png)
 
     This will add a class named **Note** to the **Models** folder of the **Notes** project.
 
@@ -442,7 +442,7 @@ You should successfully complete the [previous quickstart](app.md) before attemp
 
 7. In the **Solution Pad**, select the **Notes** project, right-click, and select **Add > New File...**. In the **New File** dialog, select **Forms > Forms ContentPage XAML**, name the new file **NoteEntryPage**, and click the **New** button:
 
-    ![Add Xamarin.Forms ContentPage.](navigation-images/vsmac/add-note-entry-page.png)
+    ![Add Xamarin.Forms ContentPage](navigation-images/vsmac/add-note-entry-page.png)
 
     This will add a new page named **NoteEntryPage** to the **Views** folder of the project. This page will be used for note entry.
 

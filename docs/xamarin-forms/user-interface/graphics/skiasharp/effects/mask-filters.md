@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # SkiaSharp mask filters
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Mask filters are effects that manipulate the geometry and alpha channel of graphical objects. To use a mask filter, set the [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) property of `SKPaint` to an object of type [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) that you've created by calling one of the `SKMaskFilter` static methods.
 
 The best way to become familiar with mask filters is by experimenting with these static methods. The most useful mask filter creates a blur:
 
-![Blur Example.](mask-filters-images/MaskFilterExample.png "Blur Example")
+![Blur Example](mask-filters-images/MaskFilterExample.png "Blur Example")
 
 That's the only mask filter feature described in this article. The next article on [**SkiaSharp image filters**](image-filters.md) also describes a blur effect that you might prefer to this one. 
 
@@ -155,7 +155,7 @@ public partial class MaskBlurExperimentPage : ContentPage
 
 Here's the program running on iOS, Android, and the Universal Windows Platform (UWP) with the `Normal` blur style and increasing `sigma` levels:
 
-[![Mask Blur Experiment - Normal](mask-filters-images/MaskBlurExperiment-Normal.png "Mask Blur Experiment - Normal."](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
+[![Mask Blur Experiment - Normal](mask-filters-images/MaskBlurExperiment-Normal.png "Mask Blur Experiment - Normal")](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
 
 You'll notice that only the edges of the bitmap are affected by the blur. The `SKMaskFilter` class is not the correct effect to use if you want to blur an entire bitmap image. For that you'll want to use the [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) class as described in the next article on [**SkiaSharp image filters**](image-filters.md).
 
@@ -170,11 +170,11 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 Now the `Slider` has no effect, but the degree of blur is consistent among the platforms:
 
-[![Mask Blur Experiment - Consistent](mask-filters-images/MaskBlurExperiment-Consistent.png "Mask Blur Experiment - Consistent."](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
+[![Mask Blur Experiment - Consistent](mask-filters-images/MaskBlurExperiment-Consistent.png "Mask Blur Experiment - Consistent")](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
 
 All the screenshots so far have shown blur created with the `SKBlurStyle.Normal` enumeration member. The following screenshots show the effects of the `Solid`, `Outer`, and `Inner` blur styles:
 
-[![Mask Blur Experiment](mask-filters-images/MaskBlurExperiment.png "Mask Blur Experiment."](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
+[![Mask Blur Experiment](mask-filters-images/MaskBlurExperiment.png "Mask Blur Experiment")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
 The iOS screenshot shows the `Solid` style: The text characters are still present as solid black strokes, and the blur is added to the outside of these text characters. 
 
@@ -184,7 +184,7 @@ The UWP screenshot on the right shows the `Inner` style. The blur is restricted 
 
 The [**SkiaSharp linear gradient**](shaders/linear-gradient.md#transparency-and-gradients) article described a **Reflection Gradient** program that used a linear gradient and a transform to mimic a reflection of a text string:
 
-[![Reflection Gradient](shaders/linear-gradient-images/ReflectionGradient.png "Reflection Gradient."](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
+[![Reflection Gradient](shaders/linear-gradient-images/ReflectionGradient.png "Reflection Gradient")](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
 
 The **Blurry Reflection** page adds a single statement to that code:
 
@@ -265,7 +265,7 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 
 
 This blur filter causes the reflection to seem much more realistic:
 
-[![Blurry Reflection](mask-filters-images/BlurryReflection.png "Blurry Reflection."](mask-filters-images/BlurryReflection-Large.png#lightbox)
+[![Blurry Reflection](mask-filters-images/BlurryReflection.png "Blurry Reflection")](mask-filters-images/BlurryReflection-Large.png#lightbox)
 
 ## Related links
 

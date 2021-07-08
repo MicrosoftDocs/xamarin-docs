@@ -18,7 +18,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of an Image that's sized differently on iOS and Android](../images/customize-appearance.png "Image sized on a per-platform basis."](../images/customize-appearance-large.png#lightbox "Image sized on a per-platform basis")
+    [![Screenshot of an Image that's sized differently on iOS and Android](../images/customize-appearance.png "Image sized on a per-platform basis")](../images/customize-appearance-large.png#lightbox "Image sized on a per-platform basis")
 
     In Visual Studio, stop the application.
 
@@ -42,6 +42,6 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of an Image that's sized differently on iOS and Android](../images/customize-appearance.png "Image sized on a per-platform basis."](../images/customize-appearance-large.png#lightbox "Image sized on a per-platform basis")
+    [![Screenshot of an Image that's sized differently on iOS and Android](../images/customize-appearance.png "Image sized on a per-platform basis")](../images/customize-appearance-large.png#lightbox "Image sized on a per-platform basis")
 
     In Visual Studio for Mac, stop the application.

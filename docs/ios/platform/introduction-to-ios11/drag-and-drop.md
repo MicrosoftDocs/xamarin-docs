@@ -18,7 +18,7 @@ on the iPad. Users can select and drag all types of content from apps
 positioned side-by-side, or by dragging over an app icon which will
 trigger the app to open and to allow the data to be dropped:
 
-![Drag and drop example from custom app into Notes app.](drag-and-drop-images/drag-drop-sml.png)
+![Drag and drop example from custom app into Notes app](drag-and-drop-images/drag-drop-sml.png)
 
 > [!NOTE]
 > Drag and drop is only available within the same app on iPhone.
@@ -212,7 +212,7 @@ You must use an iPad to test the [sample](/samples/xamarin/ios-samples/ios11-dra
 Open the sample alongside another app (such as Notes) and
 drag rows and text between them:
 
-![screenshot of drag operation in progress.](drag-and-drop-images/01-sml.png)
+![screenshot of drag operation in progress](drag-and-drop-images/01-sml.png)
 
 ## Related Links
 

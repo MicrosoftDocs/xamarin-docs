@@ -17,7 +17,7 @@ A dialog appears in response to a user action and typically provides ways users 
 
 Windows can be used in a Modeless state (such as a text editor that can have multiple documents open at once) or Modal (such as an Export dialog that must be dismissed before the application can continue).
 
-[![An open dialog box.](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
+[![An open dialog box](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
 
 In this article, we'll cover the basics of working with Dialogs and Modal Windows in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -39,25 +39,25 @@ According to Apple, there are three ways to present a Dialog:
 
 Any standard `NSWindow` can be used as a customized dialog by displaying it modally:
 
-[![An example modal window.](dialog-images/modal01.png)](dialog-images/modal01.png#lightbox)
+[![An example modal window](dialog-images/modal01.png)](dialog-images/modal01.png#lightbox)
 
 ### Document Modal Dialog Sheets
 
 A _Sheet_ is a modal dialog that is attached to a given document window, preventing users from interacting with the window until they dismiss the dialog. A Sheet is attached to the window from which it emerges and only one sheet can be open for a window at any one time.
 
-[![An example modal sheet.](dialog-images/sheet08.png)](dialog-images/sheet08.png#lightbox)
+[![An example modal sheet](dialog-images/sheet08.png)](dialog-images/sheet08.png#lightbox)
 
 ### Preferences Windows
 
 A Preferences Window is a modeless dialog that contains the application's settings that the user changes infrequently. Preferences Windows often include a Toolbar that allows the user to switch between different groups of settings:
 
-[![An example preference window.](dialog-images/dialog02.png)](dialog-images/dialog02.png#lightbox)
+[![An example preference window](dialog-images/dialog02.png)](dialog-images/dialog02.png#lightbox)
 
 ### Open Dialog
 
 The Open Dialog gives users a consistent way to find and open an item in an application:
 
-[![A open dialog box.](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
+[![A open dialog box](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
 
 ### Print and Page Setup Dialogs
 
@@ -65,37 +65,37 @@ macOS provides standard Print and Page Setup Dialogs that your application can d
 
 The Print Dialog can be displayed as both a free floating dialog box:
 
-[![A print dialog box.](dialog-images/print01.png)](dialog-images/print01.png#lightbox)
+[![A print dialog box](dialog-images/print01.png)](dialog-images/print01.png#lightbox)
 
 Or it can be displayed as a Sheet:
 
-[![A print sheet.](dialog-images/print02.png)](dialog-images/print02.png#lightbox)
+[![A print sheet](dialog-images/print02.png)](dialog-images/print02.png#lightbox)
 
 The Page Setup Dialog can be displayed as both a free floating dialog box:
 
-[![A page setup dialog.](dialog-images/print03.png)](dialog-images/print03.png#lightbox)
+[![A page setup dialog](dialog-images/print03.png)](dialog-images/print03.png#lightbox)
 
 Or it can be displayed as a Sheet:
 
-[![A page setup sheet.](dialog-images/print04.png)](dialog-images/print04.png#lightbox)
+[![A page setup sheet](dialog-images/print04.png)](dialog-images/print04.png#lightbox)
 
 ### Save Dialogs
 
 The Save Dialog gives users a consistent way to save an item in an application. The Save Dialog has two states: **Minimal** (also known as Collapsed):
 
-[![A save dialog.](dialog-images/save01.png)](dialog-images/save01.png#lightbox)
+[![A save dialog](dialog-images/save01.png)](dialog-images/save01.png#lightbox)
 
 And the **Expanded** state:
 
-[![An expanded save dialog.](dialog-images/save02.png)](dialog-images/save02.png#lightbox)
+[![An expanded save dialog](dialog-images/save02.png)](dialog-images/save02.png#lightbox)
 
 The **Minimal** Save Dialog can also be displayed as a Sheet:
 
-[![A minimal save sheet.](dialog-images/save03.png)](dialog-images/save03.png#lightbox)
+[![A minimal save sheet](dialog-images/save03.png)](dialog-images/save03.png#lightbox)
 
 As can the **Expanded** Save Dialog:
 
-[![An expanded save sheet.](dialog-images/save04.png)](dialog-images/save04.png#lightbox)
+[![An expanded save sheet](dialog-images/save04.png)](dialog-images/save04.png#lightbox)
 
 For more information, see the [Dialogs](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -110,20 +110,20 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **View Controller** into the Design Surface:
 
-    [![Selecting a View Controller from the Library.](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
+    [![Selecting a View Controller from the Library](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
 3. In the **Identity Inspector**, enter `CustomDialogController` for the **Class Name**: 
 
     [![Setting the class name to CustomDialogController.](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
 4. Switch back to Visual Studio for Mac, allow it to sync with Xcode and create the `CustomDialogController.h` file.
 5. Return to Xcode and design your interface: 
 
-    [![Designing the UI in Xcode.](dialog-images/new03.png)](dialog-images/new03.png#lightbox)
+    [![Designing the UI in Xcode](dialog-images/new03.png)](dialog-images/new03.png#lightbox)
 6. Create a **Modal Segue** from the Main Window of your app to the new View Controller by control-dragging from the UI element that will open the dialog to the dialog's window. Assign the **Identifier** `ModalSegue`: 
 
-    [![A modal segue.](dialog-images/new06.png)](dialog-images/new06.png#lightbox)
+    [![A modal segue](dialog-images/new06.png)](dialog-images/new06.png#lightbox)
 7. Wire-up any **Actions** and **Outlets**: 
 
-    [![Configuring an Action.](dialog-images/new04.png)](dialog-images/new04.png#lightbox)
+    [![Configuring an Action](dialog-images/new04.png)](dialog-images/new04.png#lightbox)
 8. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 Make the `CustomDialogController.cs` file look like the following:
@@ -243,7 +243,7 @@ This code initializes the segue that we defined in Xcode's Interface Builder to 
 
 We can run our application and display the custom dialog:
 
-[![An example dialog.](dialog-images/new05.png)](dialog-images/new05.png#lightbox)
+[![An example dialog](dialog-images/new05.png)](dialog-images/new05.png#lightbox)
 
 For more information about using windows in a Xamarin.Mac application, please see our [Working with Windows](~/mac/user-interface/window.md) documentation.
 
@@ -258,19 +258,19 @@ To create a Custom Sheet in Xamarin.Mac, let's do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **View Controller** into the Design Surface:
 
-    [![Selecting a View Controller from the Library.](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
+    [![Selecting a View Controller from the Library](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
 3. Design your user interface:
 
-    [![The UI design.](dialog-images/sheet01.png)](dialog-images/sheet01.png#lightbox)
+    [![The UI design](dialog-images/sheet01.png)](dialog-images/sheet01.png#lightbox)
 4. Create a **Sheet Segue** from your Main Window to the new View Controller: 
 
-    [![Selecting the Sheet segue type.](dialog-images/sheet02.png)](dialog-images/sheet02.png#lightbox)
+    [![Selecting the Sheet segue type](dialog-images/sheet02.png)](dialog-images/sheet02.png#lightbox)
 5. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`: 
 
     [![Setting the class name to SheetViewController.](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
 6. Define any needed **Outlets** and **Actions**: 
 
-    [![Defining the required Outlets and Actions.](dialog-images/sheet04.png)](dialog-images/sheet04.png#lightbox)
+    [![Defining the required Outlets and Actions](dialog-images/sheet04.png)](dialog-images/sheet04.png#lightbox)
 7. Save your changes and return to Visual Studio for Mac to sync.
 
 Next, edit the `SheetViewController.cs` file and make it look like the following:
@@ -401,7 +401,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 If we run our application and open the Sheet, it will be attached to the window:
 
-[![An example sheet.](dialog-images/sheet08.png)](dialog-images/sheet08.png#lightbox)
+[![An example sheet](dialog-images/sheet08.png)](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog"></a>
 
@@ -475,28 +475,28 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **Window Controller** into the Design Surface:
 
-    [![Select a Window Controller from the Library.](dialog-images/pref01.png)](dialog-images/pref01.png#lightbox)
+    [![Select a Window Controller from the Library](dialog-images/pref01.png)](dialog-images/pref01.png#lightbox)
 3. Arrange the Window near the **Menu Bar** designer:
 
-    [![Adding the new Window.](dialog-images/pref02.png)](dialog-images/pref02.png#lightbox)
+    [![Adding the new Window](dialog-images/pref02.png)](dialog-images/pref02.png#lightbox)
 4. Create copies of the attached View Controller as there will be tabs in your preference view:
 
-    [![Adding the required View Controllers.](dialog-images/pref03.png)](dialog-images/pref03.png#lightbox)
+    [![Adding the required View Controllers](dialog-images/pref03.png)](dialog-images/pref03.png#lightbox)
 5. Drag a new **Toolbar Controller** from the **Library**:
 
-    [![Select a Toolbar Controller from the Library.](dialog-images/pref04.png)](dialog-images/pref04.png#lightbox)
+    [![Select a Toolbar Controller from the Library](dialog-images/pref04.png)](dialog-images/pref04.png#lightbox)
 6. And drop it on the Window in the Design Surface:
 
-    [![Adding a new Toolbar Controller.](dialog-images/pref05.png)](dialog-images/pref05.png#lightbox)
+    [![Adding a new Toolbar Controller](dialog-images/pref05.png)](dialog-images/pref05.png#lightbox)
 7. Layout the design of your toolbar:
 
-    [![Layout the toolbar.](dialog-images/pref06.png)](dialog-images/pref06.png#lightbox)
+    [![Layout the toolbar](dialog-images/pref06.png)](dialog-images/pref06.png#lightbox)
 8. Control-Click and drag from each **Toolbar Button** to the Views you created above. Select a **Custom** segue type:
 
     [![Setting a Custom segue type.](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
 9. Select the new Segue and set the **Class** to `ReplaceViewSegue`:
 
-    [![Setting the segue class.](dialog-images/pref08.png)](dialog-images/pref08.png#lightbox)
+    [![Setting the segue class](dialog-images/pref08.png)](dialog-images/pref08.png#lightbox)
 10. In the **Menubar Designer** on the Design Surface, from the Application Menu select **Preferences...**, control-click and drag to the Preferences Window to create a **Show** segue:
 
     [![Setting the segue type by dragging Preferences to the Preferences Window.](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
@@ -713,7 +713,7 @@ namespace SourceWriter
 
 Next, connect Preference class to UI elements on the Preference Window and Views created above. In Interface Builder, select a Preference View Controller and switch to the **Identity Inspector**, create a custom class for the controller: 
 
-[![The Identity Inspector.](dialog-images/prefs12.png)](dialog-images/prefs12.png#lightbox)
+[![The Identity Inspector](dialog-images/prefs12.png)](dialog-images/prefs12.png#lightbox)
 
 Switch back to Visual Studio for Mac to sync your changes and open the newly created class for editing. Make the class look like the following:
 
@@ -752,7 +752,7 @@ Notice that this class has done two things here: First, there is a helper `App` 
 
 Next, double click the Storyboard file to re-open it in Interface Builder (and see the changes just made above). Drag any UI controls required to build the preferences interface into the View. For each control, switch to the **Binding Inspector** and bind to the individual properties of the **AppPreference** class:
 
-[![The Binding Inspector.](dialog-images/prefs13.png)](dialog-images/prefs13.png#lightbox)
+[![The Binding Inspector](dialog-images/prefs13.png)](dialog-images/prefs13.png#lightbox)
 
 Repeat the above steps for all of the panels (View Controllers) and Preference Properties required.
 
@@ -948,7 +948,7 @@ The Open Dialog returns the user's selected files or directories as an array of 
 
 If we run the program and select the **Open...** item from the **File** menu, the following is displayed: 
 
-[![An open dialog box.](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
+[![An open dialog box](dialog-images/dialog03.png)](dialog-images/dialog03.png#lightbox)
 
 <a name="The_Print_and_Page_Setup_Dialogs"></a>
 
@@ -985,11 +985,11 @@ void ShowDocument (NSObject sender) {
 
 If we set the `ShowPrintAsSheet` property to `false`, run the application and display the print dialog, the following will be displayed:
 
-[![A print dialog box.](dialog-images/print01.png)](dialog-images/print01.png#lightbox)
+[![A print dialog box](dialog-images/print01.png)](dialog-images/print01.png#lightbox)
 
 If set the `ShowPrintAsSheet` property to `true`, run the application and display the print dialog, the following will be displayed:
 
-[![A print sheet.](dialog-images/print02.png)](dialog-images/print02.png#lightbox)
+[![A print sheet](dialog-images/print02.png)](dialog-images/print02.png#lightbox)
 
 The following code will display the Page Layout Dialog:
 
@@ -1016,11 +1016,11 @@ void ShowLayout (NSObject sender) {
 
 If we set the `ShowPrintAsSheet` property to `false`, run the application and display the print layout dialog, the following will be displayed:
 
-[![A page setup dialog.](dialog-images/print03.png)](dialog-images/print03.png#lightbox)
+[![A page setup dialog](dialog-images/print03.png)](dialog-images/print03.png#lightbox)
 
 If set the `ShowPrintAsSheet` property to `true`, run the application and display the print layout dialog, the following will be displayed:
 
-[![A page setup sheet.](dialog-images/print04.png)](dialog-images/print04.png#lightbox)
+[![A page setup sheet](dialog-images/print04.png)](dialog-images/print04.png#lightbox)
 
 For more information about working with the Print and Page Setup Dialogs, please see Apple's [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092) and [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) documentation.
 
@@ -1070,19 +1070,19 @@ The `AllowedFileTypes` property is a string array of file types that the user ca
 
 If we set the `ShowSaveAsSheet` property to `false`, run the application and select **Save As...** from the **File** menu, the following will be displayed:
 
-[![A save dialog box.](dialog-images/save01.png)](dialog-images/save01.png#lightbox)
+[![A save dialog box](dialog-images/save01.png)](dialog-images/save01.png#lightbox)
 
 The user can expand the dialog:
 
-[![An expanded save dialog box.](dialog-images/save02.png)](dialog-images/save02.png#lightbox)
+[![An expanded save dialog box](dialog-images/save02.png)](dialog-images/save02.png#lightbox)
 
 If we set the `ShowSaveAsSheet` property to `true`, run the application and select **Save As...** from the **File** menu, the following will be displayed:
 
-[![A save sheet.](dialog-images/save03.png)](dialog-images/save03.png#lightbox)
+[![A save sheet](dialog-images/save03.png)](dialog-images/save03.png#lightbox)
 
 The user can expand the dialog:
 
-[![An expanded save sheet.](dialog-images/save04.png)](dialog-images/save04.png#lightbox)
+[![An expanded save sheet](dialog-images/save04.png)](dialog-images/save04.png#lightbox)
 
 For more information on working with the Save Dialog, please see Apple's [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentation.
 

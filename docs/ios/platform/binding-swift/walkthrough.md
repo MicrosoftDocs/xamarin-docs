@@ -48,9 +48,9 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Open Xcode and create new Swift framework, which will be a proxy between Xamarin.iOS code and third-party Swift framework. Click **File > New > Project** and follow the wizard steps:
 
-    ![xcode create framework project.](walkthrough-images/xcode-create-framework-project.png)
+    ![xcode create framework project](walkthrough-images/xcode-create-framework-project.png)
 
-    ![xcode name framework project.](walkthrough-images/xcode-name-framework-project.png)
+    ![xcode name framework project](walkthrough-images/xcode-name-framework-project.png)
 
 1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.9](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.9.zip)
 
@@ -58,21 +58,21 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the **Copy items if needed** option while adding the framework:
 
-    ![xcode copy framework.](walkthrough-images/xcode-copy-framework.png)
+    ![xcode copy framework](walkthrough-images/xcode-copy-framework.png)
 
     Verify that the Swift framework has been added to the project otherwise the following options won't be available.
 
 1. Ensure that the **Do Not Embed** option is selected, which will be later controlled manually:
 
-    [![xcode donotembed option.](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
+    [![xcode donotembed option](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
 
 1. Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package:
 
-    [![xcode always embed false option.](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
+    [![xcode always embed false option](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
 
 1. Ensure that the **Enable  Bitcode** option is set to **No**. As of right now Xamarin.iOS doesn't include Bitcode while Apple requires all libraries to support the same architectures:
 
-    [![xcode enable bitcode false option.](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
+    [![xcode enable bitcode false option](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
 
     You can verify that the resulted framework has the Bitcode option disabled by running the following terminal command against the framework:
 
@@ -84,7 +84,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is **\<FrameworkName>-Swift.h**:
 
-    [![xcode objectice-c header enabled option.](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
+    [![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
 1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
 
@@ -115,9 +115,9 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the **Build Configuration** option to **Release**:
 
-    ![xcode edit scheme.](walkthrough-images/xcode-edit-scheme.png)
+    ![xcode edit scheme](walkthrough-images/xcode-edit-scheme.png)
 
-    ![xcode edit scheme release.](walkthrough-images/xcode-edit-scheme-release.png)
+    ![xcode edit scheme release](walkthrough-images/xcode-edit-scheme-release.png)
 
 1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild** tool:
 
@@ -240,12 +240,12 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
 1. Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
 
-    ![visual studio create binding library.](walkthrough-images/visualstudio-create-binding-library.png)
+    ![visual studio create binding library](walkthrough-images/visualstudio-create-binding-library.png)
 
 1. Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
 1. Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
 
-    ![visual studio project structure metadata.](walkthrough-images/visualstudio-project-structure-metadata.png)
+    ![visual studio project structure metadata](walkthrough-images/visualstudio-project-structure-metadata.png)
 
     The metadata itself describes each exposed Objective-C class and member using C# language. You are able to see the original Objective-C header definition alongside with the C# declaration:
 
@@ -266,7 +266,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
     - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
 
-    ![visual studio project structure native references.](walkthrough-images/visualstudio-project-structure-nativerefs.png)
+    ![visual studio project structure native references](walkthrough-images/visualstudio-project-structure-nativerefs.png)
 
     - Update properties of every native reference and check three important options:
 
@@ -274,7 +274,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
         - Set Force Load = false
         - Set list of Frameworks used to create the original frameworks. In this case each framework has only two dependencies: Foundation and UIKit. Set it to the Frameworks field:
 
-        ![visual studio nativeref proxy options.](walkthrough-images/visualstudio-nativeref-proxy-options.png)
+        ![visual studio nativeref proxy options](walkthrough-images/visualstudio-nativeref-proxy-options.png)
 
         If you have any additional linker flags to specify, set them in the linker flags field. In this case, keep it empty.
 
@@ -302,11 +302,11 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
 
 1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point:
 
-    ![visual studio app new.](walkthrough-images/visualstudio-app-new.png)
+    ![visual studio app new](walkthrough-images/visualstudio-app-new.png)
 
 1. Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library:
 
-    ![visual studio app refs.](walkthrough-images/visualstudio-app-refs.png)
+    ![visual studio app refs](walkthrough-images/visualstudio-app-refs.png)
 
 1. Update the source code of the app and add the initialization logic to the primary ViewController, which activates Gigya SDK
 
@@ -334,7 +334,7 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
 
 1. Run the app, in the debug output you should see the following line: `Gigya initialized with domain: us1.gigya.com`. Click the button to activate the authentication flow:
 
-    [![swift proxy result.](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
+    [![swift proxy result](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library, which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries, which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish:
 
@@ -344,13 +344,13 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
     ○ Archive the app. From the Visual Studio for Mac menu select **Build > Archive for Publishing**:
 
-    ![visual studio archive for publishing.](walkthrough-images/visualstudio-archiveforpublishing.png)
+    ![visual studio archive for publishing](walkthrough-images/visualstudio-archiveforpublishing.png)
 
     This action builds the project and achieves it to the Organizer, which is accessible by Xcode for distribution.
 
     ○ Distribute via Xcode. Open Xcode and navigate to the **Window > Organizer** menu option:
 
-    ![visual studio archives.](walkthrough-images/visualstudio-archives.png)
+    ![visual studio archives](walkthrough-images/visualstudio-archives.png)
 
     Select the archive created at the previous step and click the Distribute App button. Follow the wizard to upload the application to the AppStore.
 
@@ -358,7 +358,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
     - Create a UITest project and configure it for your Xamarin.iOS application:
 
-        ![visual studio uitest new.](walkthrough-images/visualstudio-uitest-new.png)
+        ![visual studio uitest new](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
         > You can find more information on how to create a UITest project and configure it for your app by [the following link](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
@@ -389,7 +389,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
     - Create an iOS app in app center, create a new test run with a new device set to run the test:
 
-        ![visual studio app center new.](walkthrough-images/visualstudio-appcenter-new.png)
+        ![visual studio app center new](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
         > Learn more about AppCenter Test Cloud by [the following link](/appcenter/test-cloud/).
@@ -411,11 +411,11 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
     - Verify the result. In the AppCenter portal, navigate to the **App > Test > Test runs**:
 
-        ![visual studio appcenter uitest result.](walkthrough-images/visualstudio-appcenter-uitest-result.png)
+        ![visual studio appcenter uitest result](walkthrough-images/visualstudio-appcenter-uitest-result.png)
 
         And select the desired test run and verify the result:
 
-        ![visual studio appcenter uitest runs.](walkthrough-images/visualstudio-appcenter-uitest-runs.png)
+        ![visual studio appcenter uitest runs](walkthrough-images/visualstudio-appcenter-uitest-runs.png)
 
 You have developed a basic Xamarin.iOS application that uses a native Swift framework via a Xamarin.iOS binding library. The example provides a simplistic way to use the selected framework and in real application you will be required to expose more APIs and prepare metadata for these APIs. The script to generate metadata will simplify the future changes to the framework APIs.
 

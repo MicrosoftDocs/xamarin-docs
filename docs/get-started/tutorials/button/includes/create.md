@@ -26,7 +26,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of a Button on iOS and Android](../images/create-button.png "Button containing text."](../images/create-button-large.png#lightbox "Button containing text")
+    [![Screenshot of a Button on iOS and Android](../images/create-button.png "Button containing text")](../images/create-button-large.png#lightbox "Button containing text")
 
     Note that by default a [`Button`](xref:Xamarin.Forms.Button) tends to occupy all the space that's allowed for it - in this case, the full width of its parent (the [`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
@@ -60,7 +60,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a Button on iOS and Android](../images/create-button.png "Button containing text."](../images/create-button-large.png#lightbox "Button containing text")
+    [![Screenshot of a Button on iOS and Android](../images/create-button.png "Button containing text")](../images/create-button-large.png#lightbox "Button containing text")
 
     Note that by default a [`Button`](xref:Xamarin.Forms.Button) tends to occupy all the space that's allowed for it - in this case, the full width of its parent (the [`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 

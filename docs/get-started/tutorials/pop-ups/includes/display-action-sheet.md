@@ -29,7 +29,7 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Then, tap the [`Button`](xref:Xamarin.Forms.Button) that you added to the [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task."](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
+    [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task")](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
 
     Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio **Output** window. If this window is not visible, it can be made visible by selecting the **View > Output** menu option.
 
@@ -65,7 +65,7 @@ Xamarin.Forms has a modal pop-up, known as an action sheet, that can be used to 
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Then, tap the [`Button`](xref:Xamarin.Forms.Button) that you added to the [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task."](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
+    [![Screenshot of an action sheet, on iOS and Android](../images/actionsheet.png "Actionsheet that guides users through a task")](../images/actionsheet-large.png#lightbox "Actionsheet that guides users through a task")
 
     Observe that, after selecting an alternative in the action sheet dialog, the selection is output to the Visual Studio for Mac **Application Output** window. If this window is not visible, it can be made visible by selecting the **View > Other Windows > Application Output** menu option.
 

@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 The resulting table looks like this:
 
- [![Sample table running.](populating-a-table-with-data-images/image3.png)](populating-a-table-with-data-images/image3.png#lightbox)
+ [![Sample table running](populating-a-table-with-data-images/image3.png)](populating-a-table-with-data-images/image3.png#lightbox)
 
 Most tables allow the user to touch a row to select it and perform some other
 action (such as playing a song, or calling a contact, or showing another
@@ -142,7 +142,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 Now the user can touch a row and an alert will appear:
 
- [![The row selected alert.](populating-a-table-with-data-images/image4.png)](populating-a-table-with-data-images/image4.png#lightbox)
+ [![The row selected alert](populating-a-table-with-data-images/image4.png)](populating-a-table-with-data-images/image4.png#lightbox)
 
 ## Cell Reuse
 
@@ -234,7 +234,7 @@ alphabetically although you can index by whatever criteria you wish. The
 demonstrate the index. Each item in the index corresponds to a ‘section’ of
 the table.
 
- [![The Index display.](populating-a-table-with-data-images/image5.png)](populating-a-table-with-data-images/image5.png#lightbox)
+ [![The Index display](populating-a-table-with-data-images/image5.png)](populating-a-table-with-data-images/image5.png#lightbox)
 
 To support ‘sections’ the data behind the table needs to be grouped, so
 the BasicTableIndex sample creates a `Dictionary<>` from the
@@ -288,7 +288,7 @@ structure required is very similar to adding an index – a `Dictionary<>` works
 to group the cells, this example will group the vegetables by botanical type.
 The output looks like this:
 
- [![Sample Headers and Footers.](populating-a-table-with-data-images/image6.png)](populating-a-table-with-data-images/image6.png#lightbox)
+ [![Sample Headers and Footers](populating-a-table-with-data-images/image6.png)](populating-a-table-with-data-images/image6.png#lightbox)
 
 To display headers and footers the `UITableViewSource` subclass
 requires these additional methods:

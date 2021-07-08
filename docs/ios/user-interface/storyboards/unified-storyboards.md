@@ -28,7 +28,7 @@ Devices are defined by Size Classes, in both vertical and horizontal axes, and t
 
 If the two concepts are used together, the result is a 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations, as seen in the following diagram:
 
- [![A 2 x 2 grid that defines the different possible sizes that can be used in Regular and Compact orientations.](unified-storyboards-images/sizeclassgrid.png)](unified-storyboards-images/sizeclassgrid.png#lightbox)
+ [![A 2 x 2 grid that defines the different possible sizes that can be used in Regular and Compact orientations](unified-storyboards-images/sizeclassgrid.png)](unified-storyboards-images/sizeclassgrid.png#lightbox)
 
 The developer can create a View Controller that uses any of the four possibilities that would result in different layouts (as seen in the graphics above).
 
@@ -36,13 +36,13 @@ The developer can create a View Controller that uses any of the four possibiliti
 
 The iPad, due to the size, has a **regular** class size for both orientations.
 
- [![iPad Size Classes.](unified-storyboards-images/image1.png)](unified-storyboards-images/image1.png#lightbox)
+ [![iPad Size Classes](unified-storyboards-images/image1.png)](unified-storyboards-images/image1.png#lightbox)
 
 ### iPhone Size Classes
 
 The iPhone has different size classes based on the orientation of the device:
 
- [![iPhone Size Classes.](unified-storyboards-images/iphonesizeclasses.png)](unified-storyboards-images/iphonesizeclasses.png#lightbox)
+ [![iPhone Size Classes](unified-storyboards-images/iphonesizeclasses.png)](unified-storyboards-images/iphonesizeclasses.png#lightbox)
 
 - When the device is in portrait mode, the screen has a **compact** class horizontally and **regular** vertically
 - When the device is in landscape mode, the screen classes are reversed from portrait mode.
@@ -51,7 +51,7 @@ The iPhone has different size classes based on the orientation of the device:
 
 The sizes are the same as the earlier iPhones when in portrait orientation, but different in landscape:
 
-[![iPhone 6 Plus Size Classes.](unified-storyboards-images/iphone6sizeclasses.png)](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
+[![iPhone 6 Plus Size Classes](unified-storyboards-images/iphone6sizeclasses.png)](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
 
 Because the iPhone 6 Plus has a large enough screen, it is able to have a Regular Width Size Class in the Landscape mode.
 
@@ -93,7 +93,7 @@ The developer uses the Trait Collection returned by a Trait Environment to deter
 
 All of the Trait Environments make a hierarchy as seen in the following diagram:
 
- [![The Trait Environments hierarchy diagram.](unified-storyboards-images/viewhierarchy.png)](unified-storyboards-images/viewhierarchy.png#lightbox)
+ [![The Trait Environments hierarchy diagram](unified-storyboards-images/viewhierarchy.png)](unified-storyboards-images/viewhierarchy.png#lightbox)
 
 The Trait Collection that each of the above Trait Environments have will flow, by default, from the parent to the child environment.
 
@@ -181,17 +181,17 @@ When an iPhone is in Landscape, the Split View Controller will present its Views
 
 Trait Environments cascade from the parent container down to the child containers, as in the following graphic showing a Split View Controller on an iPad in the landscape orientation:
 
- [![A Split View Controller on an iPad in the landscape orientation.](unified-storyboards-images/cascadingclasses01.png)](unified-storyboards-images/cascadingclasses01.png#lightbox)
+ [![A Split View Controller on an iPad in the landscape orientation](unified-storyboards-images/cascadingclasses01.png)](unified-storyboards-images/cascadingclasses01.png#lightbox)
 
 Since the iPad has a Regular Size Class in both the horizontal and vertical orientations, the Split View will display both the master and detail views.
 
 On an iPhone, where the Size Class is compact in both orientations, the Split View Controller only displays the detail view, as seen below:
 
- [![The Split View Controller only displays the detail view.](unified-storyboards-images/cascadingclasses02.png)](unified-storyboards-images/cascadingclasses02.png#lightbox)
+ [![The Split View Controller only displays the detail view](unified-storyboards-images/cascadingclasses02.png)](unified-storyboards-images/cascadingclasses02.png#lightbox)
 
 In an application where the developer wants to display both the master and detail view on an iPhone in the landscape orientation, the developer must insert a parent container for the Split View Controller and override the Trait Collection. As seen in the graphic below:
 
- [![The developer must insert a parent container for the Split View Controller and override the Trait Collection.](unified-storyboards-images/cascadingclasses03.png)](unified-storyboards-images/cascadingclasses03.png#lightbox)
+ [![The developer must insert a parent container for the Split View Controller and override the Trait Collection](unified-storyboards-images/cascadingclasses03.png)](unified-storyboards-images/cascadingclasses03.png#lightbox)
 
 A `UIView` is set as the parent of the Split View Controller and the `SetOverrideTraitCollection` method is called on the view passing in a new Trait Collection and targeting the Split View Controller. The new Trait Collection overrides the `HorizontalSizeClass`, setting it to `Regular`, so that the Split View Controller will display both the master and detail views on an iPhone in the landscape orientation.
 
@@ -201,7 +201,7 @@ Note that the `VerticalSizeClass` was set to `unspecified`, which allows the new
 
 This section will take a look, in detail, at how the Trait Collections transition when the Trait Environment changes. For example, when the device is rotated from portrait to landscape.
 
- [![The portrait to landscape Trait Changes overview.](unified-storyboards-images/traittransitions01.png)](unified-storyboards-images/traittransitions01.png#lightbox)
+ [![The portrait to landscape Trait Changes overview](unified-storyboards-images/traittransitions01.png)](unified-storyboards-images/traittransitions01.png#lightbox)
 
 First, iOS 8 does some setup to prepare for the transition to take place. Next, the system animates the transition state. Finally, iOS 8 cleans-up any temporary states required during the transition.
 
@@ -250,7 +250,7 @@ Developers can implement `ShowViewController` and `ShowDetailViewController` in 
 
 In this section we will take a look at how these methods are actually implemented in iOS 8. First let’s look at the new `GetTargetForAction` method:
 
- [![The new GetTargetForAction method.](unified-storyboards-images/gettargetforaction.png)](unified-storyboards-images/gettargetforaction.png#lightbox)
+ [![The new GetTargetForAction method](unified-storyboards-images/gettargetforaction.png)](unified-storyboards-images/gettargetforaction.png#lightbox)
 
 This method walks the hierarchy chain until the correct container view controller is found. For example:
 
@@ -285,7 +285,7 @@ Now let’s take a closer look at how the Adaptive Photos project is implementin
 
 When running the Adaptive Photos application on an iPhone, when the user rotates the device from portrait to landscape, the Split View Controller will display both the master and details view:
 
- [![The Split View Controller will display both the master and details view as seen here.](unified-storyboards-images/rotation.png)](unified-storyboards-images/rotation.png#lightbox)
+ [![The Split View Controller will display both the master and details view as seen here](unified-storyboards-images/rotation.png)](unified-storyboards-images/rotation.png#lightbox)
 
 This is accomplished by overriding the `UpdateConstraintsForTraitCollection` method of the View Controller and adjusting the constraints based on the value of the `VerticalSizeClass`. For example:
 
@@ -579,29 +579,29 @@ Do the following:
 1. Open **Visual Studio for Mac** and load the **Solution** to add the Dynamic Launch Screen to.
 2. In the **Solution Explorer**, right-click the `MainStoryboard.storyboard` file and select **Open With** > **Xcode Interface Builder**:
 
-    [![Open With Xcode Interface Builder.](unified-storyboards-images/dls01.png)](unified-storyboards-images/dls01.png#lightbox)
+    [![Open With Xcode Interface Builder](unified-storyboards-images/dls01.png)](unified-storyboards-images/dls01.png#lightbox)
 3. In Xcode, select **File** > **New** > **File...**:
 
-    [![Select File / New.](unified-storyboards-images/dls02.png)](unified-storyboards-images/dls02.png#lightbox)
+    [![Select File / New](unified-storyboards-images/dls02.png)](unified-storyboards-images/dls02.png#lightbox)
 4. Select **iOS** > **User Interface** > **Launch Screen** and click the **Next** button:
 
-    [![Select iOS / User Interface / Launch Screen.](unified-storyboards-images/dls03.png)](unified-storyboards-images/dls03.png#lightbox)
+    [![Select iOS / User Interface / Launch Screen](unified-storyboards-images/dls03.png)](unified-storyboards-images/dls03.png#lightbox)
 5. Name the file `LaunchScreen.xib` and click the **Create** button:
 
-    [![Name the file LaunchScreen.xib.](unified-storyboards-images/dls04.png)](unified-storyboards-images/dls04.png#lightbox)
+    [![Name the file LaunchScreen.xib](unified-storyboards-images/dls04.png)](unified-storyboards-images/dls04.png#lightbox)
 6. Edit the design of the launch screen by adding graphic elements and using Layout Constraints to position them for the given devices, orientations and screen sizes:
 
-    [![Editing the design of the launch screen.](unified-storyboards-images/dls05.png)](unified-storyboards-images/dls05.png#lightbox)
+    [![Editing the design of the launch screen](unified-storyboards-images/dls05.png)](unified-storyboards-images/dls05.png#lightbox)
 7. Save the changes to `LaunchScreen.xib`.
 8. Select the **Applications Target** and the **General** tab:
 
-    [![Select the Applications Target and the General tab.](unified-storyboards-images/dls06.png)](unified-storyboards-images/dls06.png#lightbox)
+    [![Select the Applications Target and the General tab](unified-storyboards-images/dls06.png)](unified-storyboards-images/dls06.png#lightbox)
 9. Click the **Choose Info.plist** button, select the `Info.plist` for the Xamarin app and click the **Choose** button:
 
-    [![Select the Info.plist for the Xamarin app.](unified-storyboards-images/dls07.png)](unified-storyboards-images/dls07.png#lightbox)
+    [![Select the Info.plist for the Xamarin app](unified-storyboards-images/dls07.png)](unified-storyboards-images/dls07.png#lightbox)
 10. In the **App Icons and Launch Images** section, open the **Launch Screen File** dropdown and choose the `LaunchScreen.xib` created above:
 
-    [![Choose the LaunchScreen.xib.](unified-storyboards-images/dls08.png)](unified-storyboards-images/dls08.png#lightbox)
+    [![Choose the LaunchScreen.xib](unified-storyboards-images/dls08.png)](unified-storyboards-images/dls08.png#lightbox)
 11. Save the changes to the file and return to Visual Studio for Mac.
 12. Wait for Visual Studio for Mac to finish syncing changes with Xcode.
 13. In the **Solution Explorer**, right-click on the **Resource** folder and select **Add** > **Add Files...**:
@@ -609,18 +609,18 @@ Do the following:
     [![Select Add / Add Files...](unified-storyboards-images/dls09.png)](unified-storyboards-images/dls09.png#lightbox)
 14. Select the `LaunchScreen.xib` file created above and click the **Open** button:
 
-    [![Select the LaunchScreen.xib file.](unified-storyboards-images/dls10.png)](unified-storyboards-images/dls10.png#lightbox)
+    [![Select the LaunchScreen.xib file](unified-storyboards-images/dls10.png)](unified-storyboards-images/dls10.png#lightbox)
 15. Build the application.
 
 ### Testing the Dynamic Launch Screen
 
 In Visual Studio for Mac, select the iPhone 4 Retina simulator and run the application. The Dynamic Launch Screen will be displayed in the correct format and orientation:
 
-[![The Dynamic Launch Screen displayed in the vertical orientation.](unified-storyboards-images/dls11.png)](unified-storyboards-images/dls11.png#lightbox)
+[![The Dynamic Launch Screen displayed in the vertical orientation](unified-storyboards-images/dls11.png)](unified-storyboards-images/dls11.png#lightbox)
 
 Stop the application in Visual Studio for Mac and select an iPad iOS 8 device. Run the application and the launch screen will be correctly formatted for this device and orientation:
 
-[![The Dynamic Launch Screen displayed in the horizontal orientation.](unified-storyboards-images/dls12.png)](unified-storyboards-images/dls12.png#lightbox)
+[![The Dynamic Launch Screen displayed in the horizontal orientation](unified-storyboards-images/dls12.png)](unified-storyboards-images/dls12.png#lightbox)
 
 Return to Visual Studio for Mac and stop the application from running.
 

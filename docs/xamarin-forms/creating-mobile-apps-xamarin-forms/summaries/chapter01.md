@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 1. How does Xamarin.Forms fit in?
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -51,7 +51,7 @@ The bulk of a Xamarin.Forms program exists in a library or an SAP. Each of the p
 
 The Xamarin.Forms APIs map to native controls on each platform, so that each platform maintains its characteristic look and feel:
 
-[![Triple screenshot of platform visuals sharing](images/ch01fg03-small.png "Xamarin.Forms Controls on Each Platform."](images/ch01fg03-large.png#lightbox "Xamarin.Forms Controls on Each Platform")
+[![Triple screenshot of platform visuals sharing](images/ch01fg03-small.png "Xamarin.Forms Controls on Each Platform")](images/ch01fg03-large.png#lightbox "Xamarin.Forms Controls on Each Platform")
 
 The screenshots from left to right show an iPhone and an Android phone:
 

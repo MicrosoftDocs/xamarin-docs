@@ -22,7 +22,7 @@ iOS has three ways to indicate to the user that a notification has been received
 iOS also provides a *Notification Center* that will display all the notifications, both local and remote, to
 the user. Users may access this by swiping down from the top of the screen:
 
-![The Notification Center.](local-notifications-in-ios-images/image13.png "The Notification Center")
+![The Notification Center](local-notifications-in-ios-images/image13.png "The Notification Center")
 
 ## Creating local notifications in iOS
 
@@ -40,7 +40,7 @@ var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
 application.RegisterUserNotificationSettings(notificationSettings);
 ```
 
-[![Confirming the ability to send a local notification](local-notifications-in-ios-images/image0-sml.png "Confirming the ability to send a local notification."](local-notifications-in-ios-images/image0.png#lightbox)
+[![Confirming the ability to send a local notification](local-notifications-in-ios-images/image0-sml.png "Confirming the ability to send a local notification")](local-notifications-in-ios-images/image0.png#lightbox)
 
 To schedule a local notification, create a `UILocalNotification` object,
 set the `FireDate`, and schedule it via the `ScheduleLocalNotification`
@@ -59,7 +59,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 The following screenshot shows what this alert looks like:
 
-[![An example alert.](local-notifications-in-ios-images/image2-sml.png)](local-notifications-in-ios-images/image2.png#lightbox)
+[![An example alert](local-notifications-in-ios-images/image2-sml.png)](local-notifications-in-ios-images/image2.png#lightbox)
 
 Note that if the user chose to *not allow* notifications then nothing
 will be displayed.

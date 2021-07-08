@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms FlyoutPage
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 
 A flyout page typically displays a list of items, as shown in the following screenshots:
 
-[![Flyout Page Components.](flyoutpage-images/flyoutpage-components.png)](flyoutpage-images/flyoutpage-components-large.png#lightbox "Flyout Page Components")
+[![Flyout Page Components](flyoutpage-images/flyoutpage-components.png)](flyoutpage-images/flyoutpage-components-large.png#lightbox "Flyout Page Components")
 
 The location of the list of items is identical on each platform, and selecting one of the items will navigate to the corresponding detail page. In addition, the flyout page also features a navigation bar that contains a button that can be used to navigate to the active detail page:
 
@@ -26,7 +26,7 @@ The location of the list of items is identical on each platform, and selecting o
 
 A detail page displays data that corresponds to the item selected on the flyout page, and the main components of the detail page are shown in the following screenshots:
 
-![Detail Page Components.](flyoutpage-images/detailpage-components.png)
+![Detail Page Components](flyoutpage-images/detailpage-components.png)
 
 The detail page contains a navigation bar, whose contents are platform-dependent:
 
@@ -207,7 +207,7 @@ public class FlyoutMenuPageCS : ContentPage
 
 The following screenshots show the flyout page on each platform:
 
-![Flyout Page Example.](flyoutpage-images/flyoutpage.png)
+![Flyout Page Example](flyoutpage-images/flyoutpage.png)
 
 ### Create and display the detail page
 
@@ -243,7 +243,7 @@ The `OnItemSelected` method performs the following actions:
 
 The following screenshots show the `ContactPage` detail page, which is shown after it's been selected on the flyout page:
 
-![Detail Page Example.](flyoutpage-images/detailpage.png)
+![Detail Page Example](flyoutpage-images/detailpage.png)
 
 ### Control the detail page layout behavior
 

@@ -16,7 +16,7 @@ SiriKit was introduced in iOS 10, with a number of service domains
 [SiriKit section](~/ios/platform/sirikit/index.md) for SiriKit
 concepts and how to implement SiriKit in your app.
 
-![Siri task list demo.](sirikit-images/sirikit.png)
+![Siri task list demo](sirikit-images/sirikit.png)
 
 SiriKit in iOS 11 adds these new and updated intent domains:
 
@@ -222,7 +222,7 @@ The following test phrases should work in the sample app:
 - "Mark buy iPhone as completed in TasksNotes"
 - "Remind me to leave home at 8am in TasksNotes"
 
-![Create a new list example.](sirikit-images/createtasklist-sml.png) ![Set task as complete example](sirikit-images/settaskattribute-sml.png)
+![Create a new list example](sirikit-images/createtasklist-sml.png) ![Set task as complete example](sirikit-images/settaskattribute-sml.png)
 
 > [!NOTE]
 > The iOS 11 Simulator supports testing with Siri (unlike earlier versions).
@@ -238,7 +238,7 @@ This new iOS 11 feature means that you can configure alternative names for your 
 to help users trigger it correctly with Siri. Add the following keys to the
 **Info.plist** file of the iOS app project:
 
-![Info.plist showing alternative app name keys and values.](sirikit-images/alternative-names.png)
+![Info.plist showing alternative app name keys and values](sirikit-images/alternative-names.png)
 
 With the alternative app names set, the following phrases will
 also work for the sample app (which is actually named **TasksNotes**):
@@ -258,7 +258,7 @@ _Objective-C exception thrown.  Name: NSInternalInconsistencyException Reason: U
 - SiriKit is ticked in **Entitlements.plist**.
 - **Entitlements.plist** is configured in the **Project Options > Build > iOS  Bundle Signing**.
 
-  [![Project options showing Entitlements correctly set.](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
+  [![Project options showing Entitlements correctly set](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (for device deployment) App ID has SiriKit enabled and provisioning profile downloaded.
 

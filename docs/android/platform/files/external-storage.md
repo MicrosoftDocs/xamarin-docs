@@ -136,19 +136,19 @@ All Android apps must declare one of the two permissions for external storage in
 
 The permissions may also be added using the **Android Manifest** tab of the **solution properties**:
 
-![Solution Explorer - Required Permissions for Visual Studio.](./images/required-permissions.w157.png)
+![Solution Explorer - Required Permissions for Visual Studio](./images/required-permissions.w157.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
 The permissions may also be added using the **Android Manifest** tab of the **solution properties pad**:
 
-[![Solution Pad - Required Permissions for Visual Studio for Mac.](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Solution Pad - Required Permissions for Visual Studio for Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
 Generally speaking, all dangerous permissions must be approved by the user. The permissions for external storage are an anomaly in that there are exceptions to this rule, depending on the version of Android that the app is running:
 
-![Flowchart of external storage permission checks.](./images/external-permission-check-flowchart.png)
+![Flowchart of external storage permission checks](./images/external-permission-check-flowchart.png)
 
 For more information on performing runtime permission requests, please consult the guide [Permissions In Xamarin.Android](~/android/app-fundamentals/permissions.md). The **monodroid-sample** [LocalFiles](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles) also demonstrates one way of performing runtime permission checks.
 

@@ -21,13 +21,13 @@ ARKit enables a wide variety of augmented reality applications and games
 
 To get started with augmented reality, the following instructions walk through a simple application: positioning a 3D model and letting ARKit keep the model in place with its tracking functionality.
 
-![Jet 3D model floating in camera image.](images/jet-sml.png)
+![Jet 3D model floating in camera image](images/jet-sml.png)
 
 ### 1. Add a 3D model
 
 Assets should be added to the project with the **SceneKitAsset** build action.
 
-![SceneKit assets in a project.](images/scene-assets.png)
+![SceneKit assets in a project](images/scene-assets.png)
 
 ### 2. Configure the view
 

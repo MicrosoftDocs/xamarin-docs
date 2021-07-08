@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Dots and Dashes in SkiaSharp
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Master the intricacies of drawing dotted and dashed lines in SkiaSharp_
 
 SkiaSharp lets you draw lines that are not solid but instead are composed of dots and dashes:
 
-![Dotted line.](dots-images/dottedlinesample.png)
+![Dotted line](dots-images/dottedlinesample.png)
 
 You do this with a *path effect*, which is an instance of the [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) class that you set to the [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) property of `SKPaint`. You can create a path effect (or combine path effects) using one of the static creation methods defined by `SKPathEffect`. (`SKPathEffect` is one of six effects supported by SkiaSharp; the others are described in the section [**SkiaSharp Effect**](../effects/index.md).)
 
@@ -146,7 +146,7 @@ float[] GetPickerArray(Picker picker)
 
 In the following screenshots, the iOS screen on the far left shows a dotted line:
 
-[![Triple screenshot of the Dots and Dashes page.](dots-images/dotsanddashes-small.png)](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
+[![Triple screenshot of the Dots and Dashes page](dots-images/dotsanddashes-small.png)](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
 
 However, the Android screen is also supposed to show a dotted line using the array { 10, 10 } but instead the line is solid. What happened? The problem is that the Android screen also has a stroke caps setting of `Square`. This extends all the dashes by half the stroke width, causing them to fill up the gaps.
 
@@ -207,7 +207,7 @@ public class AnimatedSpiralPage : ContentPage
 
 Of course, you'll have to actually run the program to see the animation:
 
-[![Triple screenshot of the Animated Spiral page.](dots-images/animatedspiral-small.png)](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
+[![Triple screenshot of the Animated Spiral page](dots-images/animatedspiral-small.png)](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
 
 ## Related Links
 

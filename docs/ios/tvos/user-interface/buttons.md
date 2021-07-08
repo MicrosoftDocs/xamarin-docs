@@ -18,7 +18,7 @@ ms.date: 03/07/2017
 
 Use an instance of the `UIButton` class to create a focusable, selectable button in a tvOS window. When the user selects a button, it sends an Action message to the target object allow your Xamarin.tvOS app respond to the user's input.
 
-[![Example buttons.](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
+[![Example buttons](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 For more information on working with Focus and navigating with the Siri Remote, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
@@ -28,7 +28,7 @@ For more information on working with Focus and navigating with the Siri Remote, 
 
 In tvOS, Buttons are used for app-specific actions and may contain a title, a icon or both. As the user navigates the app's User Interface using the [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), Focus shifts to the given Button making it change text and background colors. A shadow is also applied to the Button adding a 3D effect making it appear to rise above the rest of the User Interface.
 
-[![Example buttons.](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
+[![Example buttons](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 Apple has the following suggestions for working with Buttons:
 
@@ -66,19 +66,19 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-    [![A button.](buttons-images/storyboard01.png)](buttons-images/storyboard01.png#lightbox)
+    [![A button](buttons-images/storyboard01.png)](buttons-images/storyboard01.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-    [![Button properties.](buttons-images/storyboard02.png)](buttons-images/storyboard02.png#lightbox)
+    [![Button properties](buttons-images/storyboard02.png)](buttons-images/storyboard02.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-    [![The Events Tab.](buttons-images/storyboard03.png)](buttons-images/storyboard03.png#lightbox)
+    [![The Events Tab](buttons-images/storyboard03.png)](buttons-images/storyboard03.png#lightbox)
 1. You will be automatically switched to the `ViewController.cs` view where you can place the new Action in your code using the **Up** and **Down** arrow keys: 
 
-    [![Placing a new Action in code.](buttons-images/storyboard04.png)](buttons-images/storyboard04.png#lightbox)
+    [![Placing a new Action in code](buttons-images/storyboard04.png)](buttons-images/storyboard04.png#lightbox)
 1. Press the **Enter** to select the location: 
 
-    [![The code editor.](buttons-images/storyboard05.png)](buttons-images/storyboard05.png#lightbox)
+    [![The code editor](buttons-images/storyboard05.png)](buttons-images/storyboard05.png#lightbox)
 1. Save the changes to all files.
 
 # [Visual Studio](#tab/windows)
@@ -86,13 +86,13 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-    [![A button.](buttons-images/storyboard01vs.png)](buttons-images/storyboard01vs.png#lightbox)
+    [![A button](buttons-images/storyboard01vs.png)](buttons-images/storyboard01vs.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-    [![The Properties Explorer.](buttons-images/storyboard02vs.png)](buttons-images/storyboard02vs.png#lightbox)
+    [![The Properties Explorer](buttons-images/storyboard02vs.png)](buttons-images/storyboard02vs.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-    [![The Events Tab.](buttons-images/storyboard03vs.png)](buttons-images/storyboard03vs.png#lightbox)
+    [![The Events Tab](buttons-images/storyboard03vs.png)](buttons-images/storyboard03vs.png#lightbox)
 1. Save the changes to all files.
 
 Edit your View Controller (example `ViewController.cs`) file and add the following code to handle the button being selected:

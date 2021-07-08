@@ -101,7 +101,7 @@ There are two major areas where AOT can help a Xamarin.Mac app:
 
 AOT is enabled in Xamarin.Mac by double-clicking the **Project Name** in the **Solution Explorer**, navigating to **Mac Build** and adding `--aot:[options]` to the **Additional mmp arguments:** field (where `[options]` is one or more options to control the AOT type, see below). For example:
 
-![Adding AOT to additional mmp arguments.](how-it-works-images/aot01.png "Adding AOT to additional mmp arguments")
+![Adding AOT to additional mmp arguments](how-it-works-images/aot01.png "Adding AOT to additional mmp arguments")
 
 > [!IMPORTANT]
 > Enabling AOT compilation dramatically increases build time, sometimes up to several minutes, but it can improve app launch times by an average of 20%. As a result, AOT compilation should only be enabled on **Release** builds of a Xamarin.Mac app.
@@ -143,7 +143,7 @@ Partial Static Registration, first introduced in Xamarin.iOS 8.13, gives the dev
 
 The Partial Static Registrar is enabled in Xamarin.Mac by double-clicking the **Project Name** in the **Solution Explorer**, navigating to **Mac Build** and adding `--registrar:static` to the **Additional mmp arguments:** field. For example:
 
-![Adding the partial static registrar to additional mmp arguments.](how-it-works-images/psr01.png "Adding the partial static registrar to additional mmp arguments")
+![Adding the partial static registrar to additional mmp arguments](how-it-works-images/psr01.png "Adding the partial static registrar to additional mmp arguments")
 
 ## Additional resources
 

@@ -22,7 +22,7 @@ the following parts:
 
 These screenshots show how section rows, headers, footers, edit controls and the index are displayed.
 
- [![These screenshots show how section rows, headers, footers, edit controls and the index are displayed.](table-parts-and-functionality-images/image1a.png)](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![These screenshots show how section rows, headers, footers, edit controls and the index are displayed](table-parts-and-functionality-images/image1a.png)](table-parts-and-functionality-images/image1a.png#lightbox)
 
 These parts are described in more detail below:
 
@@ -74,7 +74,7 @@ features with Xamarin.iOS.
 
 The primary classes used to display table views are shown here:
 
-[![The primary classes used to display table views are shown here.](table-parts-and-functionality-images/classdiagram.png)](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![The primary classes used to display table views are shown here](table-parts-and-functionality-images/classdiagram.png)](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 The purpose of each class is described below:
 

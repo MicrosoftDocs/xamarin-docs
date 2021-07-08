@@ -25,7 +25,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 
     In Visual Studio for Mac, it will look like something like this:
 
-    [![Place a check by both the Enable Background Modes and the Location Updates checkboxes.](location-walkthrough-images/image7.png)](location-walkthrough-images/image7.png#lightbox)
+    [![Place a check by both the Enable Background Modes and the Location Updates checkboxes](location-walkthrough-images/image7.png)](location-walkthrough-images/image7.png#lightbox)
 
     In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
 
@@ -195,7 +195,7 @@ public override void ViewDidLoad ()
 
 Now, when the application is run, it should look something like this:
 
-[![An example app run.](location-walkthrough-images/image5.png)](location-walkthrough-images/image5.png#lightbox)
+[![An example app run](location-walkthrough-images/image5.png)](location-walkthrough-images/image5.png#lightbox)
 
 ## Handling Active and Background states
 
@@ -251,7 +251,7 @@ Now, when the application is run, it should look something like this:
 
     When the app is running, the output will look something like this:
 
-    ![Example of the location output in the console.](location-walkthrough-images/image6.png)
+    ![Example of the location output in the console](location-walkthrough-images/image6.png)
 
 1. The application prints location updates to the screen when operating in the foreground, and continues to print data to the application output window while operating in the background.
 

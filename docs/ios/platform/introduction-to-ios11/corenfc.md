@@ -63,7 +63,7 @@ capability using the following key/value pair in your **Entitlements.plist**:
 
 Create a new **App ID** and ensure that the **NFC Tag Reading** service is ticked:
 
-[![Developer Portal New App ID page with NFC Tag Reading selected.](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![Developer Portal New App ID page with NFC Tag Reading selected](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 You should then create a new provisioning profile for this App ID, then download and install it on your development Mac.
 
@@ -148,7 +148,7 @@ The parameters for the `NFCNdefReaderSession` constructor are as follows:
 The user can cancel the scanning session via a system-provided
 button in the user-interface:
 
-![Cancel button while scanning.](corenfc-images/scan-cancel-sml.png)
+![Cancel button while scanning](corenfc-images/scan-cancel-sml.png)
 
 The app can programmatically cancel the scan by calling the
 `InvalidateSession` method:

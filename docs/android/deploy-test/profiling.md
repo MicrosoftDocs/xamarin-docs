@@ -58,7 +58,7 @@ app is built and profiled using Android Profiler:
     is built without a dependency on the shared development-time Mono
     runtime.
 
-    ![Disabling Use Shared Runtime.](profiling-images/vswin/01-turn-off-shared-runtime.png)
+    ![Disabling Use Shared Runtime](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
 2. Build the app for **Debug** and deploy it to a physical device or
     emulator. This causes a signed **Debug** version of the APK to be built.
@@ -71,74 +71,74 @@ app is built and profiled using Android Profiler:
     screenshot, the APK **com.companyname.XamagonXuzzle-Signed.apk** is located
     and copied to the desktop:
 
-    [![Location of the debug signed APK file.](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
+    [![Location of the debug signed APK file](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
 4. Launch Android Studio and select **Profile or debug APK**:
 
-    ![Starting the profiler from the Android Studio launch screen.](profiling-images/vswin/03-android-studio.png)
+    ![Starting the profiler from the Android Studio launch screen](profiling-images/vswin/03-android-studio.png)
 
 5. In the **Select APK File** dialog, navigate to the APK that you
     built and copied earlier. Select the APK and click **OK**: 
     
-    ![Selecting the APK in the Select APK File dialog.](profiling-images/vswin/04-select-apk-dialog.png)
+    ![Selecting the APK in the Select APK File dialog](profiling-images/vswin/04-select-apk-dialog.png)
 
 6. Android Studio will load the APK and dissassembles **classes.dex**:
 
-    ![Setting up the APK.](profiling-images/vswin/05-setting-up-the-apk.png)
+    ![Setting up the APK](profiling-images/vswin/05-setting-up-the-apk.png)
 
 7. After the APK is loaded, Android Studio displays the following
     project screen for the APK. Right-click the app name in the tree
     view on the left and select **Open Module Settings**:
 
-    [![Location of Open Module Settings menu item.](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
+    [![Location of Open Module Settings menu item](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
 8. Navigate to **Project Settings > Modules**, select the **-Signed** node
     of the app, then click **&lt;No SDK&gt;**:
 
-    [![Navigating to the SDK setting.](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
+    [![Navigating to the SDK setting](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
 9. In the **Module SDK** pull-down menu, select the Android SDK level
     that was used to build the app (in this example, API level 26 was
     used to build **XamagonXuzzle**):
 
-    [![Setting the Project SDK level.](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
+    [![Setting the Project SDK level](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
 
     Click **Apply** and **OK** to save this setting.
 
 10. Launch the profiler from the toolbar icon:
 
-    [![Location of the profiler toolbar icon.](profiling-images/vswin/09-launch-profiler-sml.png)](profiling-images/vswin/09-launch-profiler.png#lightbox)
+    [![Location of the profiler toolbar icon](profiling-images/vswin/09-launch-profiler-sml.png)](profiling-images/vswin/09-launch-profiler.png#lightbox)
 
 11. Select the deployment target for running/profiling the app and
     click **OK**. The deployment target can be a physical device or a virtual device
     running in an emulator. In this example, a Nexus 5X device is used:
 
-    ![Selecting the deployment target.](profiling-images/vswin/10-select-deployment-target.png)
+    ![Selecting the deployment target](profiling-images/vswin/10-select-deployment-target.png)
 
 12. After the profiler starts, it will take a few seconds for it to
     connect to the deployment device and the app process. While it is
     installing the APK, Android Profiler will report **No connected
     devices** and **No debuggable processes**.
 
-    [![The profiler installs the APK.](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
+    [![The profiler installs the APK](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
 
 13. After several seconds, Android Profiler will complete APK
     installation and launch the APK, reporting the device name and the
     name of the app process being profiled (in this example, **LGE
     Nexus 5X** and **com.companyname.XamagonXuzzle**, respectively):
 
-    [![Profiler window after start.](profiling-images/vswin/12-profiler-starts-sml.png)](profiling-images/vswin/12-profiler-starts.png#lightbox)
+    [![Profiler window after start](profiling-images/vswin/12-profiler-starts-sml.png)](profiling-images/vswin/12-profiler-starts.png#lightbox)
 
 14. After the device and debuggable process are identified, Android
     Profiler begins profiling the app:
 
-    [![Profiler displays for the running app.](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
+    [![Profiler displays for the running app](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
 
 15. If you tap the **RANDOMIZE** button on **XamagonXuzzle** (which
     causes it to shift and randomize tiles), you will see the CPU usage
     increase during the app's randomization interval:
 
-    [![CPU usage when RANDOMIZE button is tapped.](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
+    [![CPU usage when RANDOMIZE button is tapped](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
 
 ### Using the Android Profiler
 

@@ -12,9 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Grid
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Xamarin.Forms Grid](grid-images/layouts.png "Xamarin.Forms Grid."](grid-images/layouts-large.png#lightbox "Xamarin.Forms Grid")
+[![Xamarin.Forms Grid](grid-images/layouts.png "Xamarin.Forms Grid")](grid-images/layouts-large.png#lightbox "Xamarin.Forms Grid")
 
 The [`Grid`](xref:Xamarin.Forms.Grid) is a layout that organizes its children into rows and columns, which can have proportional or absolute sizes. By default, a `Grid` contains one row and one column. In addition, a `Grid` can be used as a parent layout that contains other child layouts.
 
@@ -54,7 +54,7 @@ By default, a [`Grid`](xref:Xamarin.Forms.Grid) contains one row and one column:
 
 In this example, the [`Grid`](xref:Xamarin.Forms.Grid) contains a single child [`Label`](xref:Xamarin.Forms.Label) that's automatically positioned in a single location:
 
-[![Screenshot of a default Grid layout](grid-images/default.png "Default Grid layout."](grid-images/default-large.png#lightbox "Default Grid layout")
+[![Screenshot of a default Grid layout](grid-images/default.png "Default Grid layout")](grid-images/default-large.png#lightbox "Default Grid layout")
 
 The layout behavior of a [`Grid`](xref:Xamarin.Forms.Grid) can be defined with the [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) and [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) properties, which are collections of [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) and [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objects, respectively. These collections define the row and column characteristics of a `Grid`, and should contain one [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) object for each row in the `Grid`, and one [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) object for each column in the `Grid`.
 
@@ -158,7 +158,7 @@ The following XAML shows the same [`Grid`](xref:Xamarin.Forms.Grid) definition, 
 
 In this example, all three [`Grid`](xref:Xamarin.Forms.Grid) rows are occupied by [`BoxView`](xref:Xamarin.Forms.BoxView) and [`Label`](xref:Xamarin.Forms.Label) views. The third row is 100 device-independent units high, with the first two rows occupying the remaining space (the first row is twice as high as the second row). The two columns are equal in width and divide the `Grid` in half. The `BoxView` in the third row spans both columns.
 
-[![Screenshot of a basic Grid layout](grid-images/basic.png "Basic Grid layout."](grid-images/basic-large.png#lightbox "Basic Grid layout")
+[![Screenshot of a basic Grid layout](grid-images/basic.png "Basic Grid layout")](grid-images/basic-large.png#lightbox "Basic Grid layout")
 
 In addition, child views in a [`Grid`](xref:Xamarin.Forms.Grid) can share cells. The order that the children appear in the XAML is the order that the children are placed in the `Grid`. In the previous example, the [`Label`](xref:Xamarin.Forms.Label) objects are only visible because they are rendered on top of the [`BoxView`](xref:Xamarin.Forms.BoxView) objects. The `Label` objects would not be visible if the `BoxView` objects were rendered on top of them.
 
@@ -315,7 +315,7 @@ By default, [`Grid`](xref:Xamarin.Forms.Grid) rows are separated by 6 device-ind
 
 This example creates a [`Grid`](xref:Xamarin.Forms.Grid) that has no spacing between its rows and columns:
 
-[![Screenshot of Grid with no spacing between cells](grid-images/spacing.png "Grid without spacing between cells."](grid-images/spacing-large.png#lightbox "Grid without spacing between cells")
+[![Screenshot of Grid with no spacing between cells](grid-images/spacing.png "Grid without spacing between cells")](grid-images/spacing-large.png#lightbox "Grid without spacing between cells")
 
 > [!TIP]
 > The [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) and [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) properties can be set to negative values to make cell contents overlap.
@@ -435,7 +435,7 @@ The following XAML creates a [`Grid`](xref:Xamarin.Forms.Grid) with nine equal-s
 
 In this example, the [`Label`](xref:Xamarin.Forms.Label) objects in each row are all identically aligned vertically, but use different horizontal alignments. Alternatively, this can be thought of as the `Label` objects in each column being identically aligned horizontally, but using different vertical alignments:
 
-[![Screenshot of cell alignment within a Grid](grid-images/alignment.png "Cell alignment in a Grid."](grid-images/alignment-large.png#lightbox "Cell alignment in a Grid")
+[![Screenshot of cell alignment within a Grid](grid-images/alignment.png "Cell alignment in a Grid")](grid-images/alignment-large.png#lightbox "Cell alignment in a Grid")
 
 The equivalent C# code is:
 
@@ -643,7 +643,7 @@ The following XAML shows an example of nesting [`Grid`](xref:Xamarin.Forms.Grid)
 
 In this example, the root [`Grid`](xref:Xamarin.Forms.Grid) layout contains a [`BoxView`](xref:Xamarin.Forms.BoxView) in its first row, and a child `Grid` in its second row. The child `Grid` contains [`Slider`](xref:Xamarin.Forms.Slider) objects that manipulate the color displayed by the `BoxView`, and [`Label`](xref:Xamarin.Forms.Label) objects that display the value of each `Slider`:
 
-[![Screenshot of nested Grids](grid-images/nesting.png "Nested Grid objects."](grid-images/nesting-large.png#lightbox "Nested Grid objects")
+[![Screenshot of nested Grids](grid-images/nesting.png "Nested Grid objects")](grid-images/nesting-large.png#lightbox "Nested Grid objects")
 
 > [!IMPORTANT]
 > The deeper you nest [`Grid`](xref:Xamarin.Forms.Grid) objects and other layouts, the more the nested layouts will impact performance. For more information, see [Choose the correct layout](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).

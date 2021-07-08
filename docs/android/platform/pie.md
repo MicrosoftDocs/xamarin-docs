@@ -19,7 +19,7 @@ being made available in this release, and many of them are necessary to
 take advantage of new hardware capabilities in the latest Android
 devices.
 
-![Android Pie hero image.](pie-images/01-android-p-logo.png)
+![Android Pie hero image](pie-images/01-android-p-logo.png)
 
 This article is structured to help you get started in developing
 Xamarin.Android apps for Android Pie. It explains how to install the
@@ -98,14 +98,14 @@ level 28)** or later.
 
 2. In the lower right-hand corner, click the gear icon and select **Repository > Google (Unsupported)**:
 
-    [![Setting the Repository to Google.](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Setting the Repository to Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Install the **Android Pie** SDK packages, which are listed as
    **Android SDK Platform 28** in the **Platforms** tab (for more
    information about using the SDK Manager, see
    [Android SDK Setup](~/android/get-started/installation/android-sdk.md)):
 
-    [![Installing Android Pie packages.](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Installing Android Pie packages](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. If you are using an emulator, create a virtual device that supports
    **API Level 28**. For more information about creating virtual devices,
@@ -172,7 +172,7 @@ Many newer Android devices with edge-to-edge screens have a *Display
 Cutout* (or "notch") at the top of the display for camera and speaker.
 The following screenshot provides an emulator example of a cutout:
 
-[![Android emulator simulating a cutout.](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Android emulator simulating a cutout](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 To manage how your app window displays its content on devices with a
 display cutout, Android Pie has added a new
@@ -204,7 +204,7 @@ the center screenshot, the app goes full-screen with
 `LayoutInDisplayCutoutModeShortEdges`. Notice that the app's white
 background extends into the display cutout area:
 
-[![Example display cutout modes in emulator.](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Example display cutout modes in emulator](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 In the final screenshot (above on the right),
 `LayoutInDisplayCutoutMode` is set to
@@ -254,7 +254,7 @@ embedded image. When the notifications are expanded (as seen on the
 right), the text of the first notification is displayed and the
 image embedded in the second notification is enlarged:
 
-[![Example notification with image.](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Example notification with image](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 The following example illustrates how to include an image in an Android
 Pie notification, and it demonstrates usage of the new `Person` class:
@@ -320,7 +320,7 @@ that provide hardware support for IEEE 801.11mc, your app can offer
 navigation features such as location-based control of smart appliances
 or turn-by-turn instructions through a store:
 
-[![Example of indoor navigation using WiFi RTT.](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![Example of indoor navigation using WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 The new
 [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager)

@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms SwipeView
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
 The `SwipeView` is a container control that wraps around an item of content, and provides context menu items that are revealed by a swipe gesture:
 
-[![Screenshot of SwipeView swipe items in a CollectionView, on iOS and Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe items."](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe items")
+[![Screenshot of SwipeView swipe items in a CollectionView, on iOS and Android](swipeview-images/swipeview-collectionview.png "SwipeView swipe items")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView swipe items")
 
 `SwipeView` defines the following properties:
 
@@ -117,11 +117,11 @@ SwipeView swipeView = new SwipeView
 
 In this example, the `SwipeView` content is a [`Grid`](xref:Xamarin.Forms.Grid) that contains a [`Label`](xref:Xamarin.Forms.Label):
 
-[![Screenshot of SwipeView content, on iOS and Android](swipeview-images/swipeview-content.png "SwipeView content."](swipeview-images/swipeview-content-large.png#lightbox "SwipeView content")
+[![Screenshot of SwipeView content, on iOS and Android](swipeview-images/swipeview-content.png "SwipeView content")](swipeview-images/swipeview-content-large.png#lightbox "SwipeView content")
 
 The swipe items are used to perform actions on the `SwipeView` content, and are revealed when the control is swiped from the left side:
 
-[![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items."](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
+[![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
 
 By default, a swipe item is executed when it is tapped by the user. However, this behavior can be changed. For more information, see [Swipe mode](#swipe-mode).
 
@@ -169,7 +169,7 @@ The following example shows two `SwipeItem` objects in the `LeftItems` collectio
 
 The appearance of each `SwipeItem` is defined by a combination of the `Text`, `IconImageSource`, and `BackgroundColor` properties:
 
-[![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items."](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
+[![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
 
 When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. In addition, the `MenuItem.Clicked` event fires. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
 

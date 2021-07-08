@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 AppKit Controls are the UI Elements that are used to create the User Interface of your Xamarin.Mac application. They consist of elements such as Buttons, Labels, Text Fields, Check Boxes and Segmented Controls and cause instant actions or visible results when a user manipulates them.
 
-[![The example app main screen.](standard-controls-images/intro01.png)](standard-controls-images/intro01.png#lightbox)
+[![The example app main screen](standard-controls-images/intro01.png)](standard-controls-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of working with AppKit Controls in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -46,7 +46,7 @@ For more information, pleas see the [About Controls and Views](https://developer
 
 There are a subset of AppKit Controls that include a display style that allows them to be include in a Window's Frame area. For an example, see the Mail app's toolbar:
 
-[![A Mac Window frame.](standard-controls-images/mailapp.png)](standard-controls-images/mailapp.png#lightbox)
+[![A Mac Window frame](standard-controls-images/mailapp.png)](standard-controls-images/mailapp.png#lightbox)
 
 - **Round Textured Button** - A `NSButton` with a style of `NSTexturedRoundedBezelStyle`.
 - **Textured Rounded Segmented Control** - A `NSSegmentedControl` with a style of `NSSegmentStyleTexturedRounded`.
@@ -68,15 +68,15 @@ For more information, pleas see the [About Controls and Views](https://developer
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
-[![Selecting the Main Storyboard in the Solution Explorer.](standard-controls-images/edit01.png)](standard-controls-images/edit01.png#lightbox)
+[![Selecting the Main Storyboard in the Solution Explorer](standard-controls-images/edit01.png)](standard-controls-images/edit01.png#lightbox)
 
 This will open the window design in Xcode's Interface Builder:
 
-[![Editing the storyboard in Xcode.](standard-controls-images/edit02.png)](standard-controls-images/edit02.png#lightbox)
+[![Editing the storyboard in Xcode](standard-controls-images/edit02.png)](standard-controls-images/edit02.png#lightbox)
 
 To create your User Interface, you'll drag UI Elements (AppKit Controls) from the **Library Inspector** to the **Interface Editor** in Interface Builder. In the example below, a **Vertical Split View** control has been drug from the **Library Inspector** and placed on the Window in the **Interface Editor**:
 
-[![Selecting a Split View from the Library.](standard-controls-images/edit03.png)](standard-controls-images/edit03.png#lightbox)
+[![Selecting a Split View from the Library](standard-controls-images/edit03.png)](standard-controls-images/edit03.png#lightbox)
 
 For more information on creating a User Interface in Interface Builder, please see our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
@@ -86,21 +86,21 @@ For more information on creating a User Interface in Interface Builder, please s
 
 Once a control has been included in the User Interface, use the **Constraint editor** to set its location and size by entering values manually and control how the control is automatically positioned and sized when the parent Window or View is resized:
 
-[![Setting the constraints.](standard-controls-images/edit04.png)](standard-controls-images/edit04.png#lightbox)
+[![Setting the constraints](standard-controls-images/edit04.png)](standard-controls-images/edit04.png#lightbox)
 
 Use the **Red I-Beams** around the outside of the **Autoresizing** box to _stick_ a control to a given (x,y) location. For example: 
 
-[![Editing a constraint.](standard-controls-images/edit05.png)](standard-controls-images/edit05.png#lightbox)
+[![Editing a constraint](standard-controls-images/edit05.png)](standard-controls-images/edit05.png#lightbox)
 
 Specifies that the selected control (in the **Hierarchy View** & **Interface Editor**) will be stuck to the top and right location of the Window or View as it is resized or moved. 
 
 Other elements of the editor control properties such as Height and Width:
 
-[![Setting the height.](standard-controls-images/edit06.png)](standard-controls-images/edit06.png#lightbox)
+[![Setting the height](standard-controls-images/edit06.png)](standard-controls-images/edit06.png#lightbox)
 
 You can also control the alignment of elements with constraints using the **Alignment Editor**:
 
-[![The Alignment Editor.](standard-controls-images/edit07.png)](standard-controls-images/edit07.png#lightbox)
+[![The Alignment Editor](standard-controls-images/edit07.png)](standard-controls-images/edit07.png#lightbox)
 
 > [!IMPORTANT]
 > Unlike iOS where (0,0) is the upper left hand corner of the screen, in macOS (0,0) is the lower left hand corner. This is because macOS uses a mathematical coordinate system with the number values increasing in value upward and to the right. You need to take this into consideration when placing AppKit controls on a User Interface.
@@ -192,7 +192,7 @@ Where the `[Register("SourceListView")]` instruction exposes the `SourceListView
 
 With the above code in place, you can drag an AppKit Control, of the base type that you are extending, onto the design surface (in the example below, a **Source List**), switch to the **Identity Inspector** and set the **Custom Class** to the name that you exposed to Objective-C (example `SourceListView`):
 
-[![Setting a custom class in Xcode.](standard-controls-images/edit10.png)](standard-controls-images/edit10.png#lightbox)
+[![Setting a custom class in Xcode](standard-controls-images/edit10.png)](standard-controls-images/edit10.png#lightbox)
 
 <a name="Exposing_Outlets_and_Actions"></a>
 
@@ -200,15 +200,15 @@ With the above code in place, you can drag an AppKit Control, of the base type t
 
 Before an AppKit Control can be accessed in C# code, it needs to be exposed as either an **Outlet** or and **Action**. To do this select the given control in either the **Interface Hierarchy** or the **Interface Editor** and switch to the **Assistant View** (ensure that you have the `.h` of your Window selected for editing):
 
-[![Selecting the correct file to edit.](standard-controls-images/edit11.png)](standard-controls-images/edit11.png#lightbox)
+[![Selecting the correct file to edit](standard-controls-images/edit11.png)](standard-controls-images/edit11.png#lightbox)
 
 Control-drag from the AppKit control onto the give `.h` file to start creating an **Outlet** or **Action**:
 
-[![Dragging to create an Outlet or Action.](standard-controls-images/edit12.png)](standard-controls-images/edit12.png#lightbox)
+[![Dragging to create an Outlet or Action](standard-controls-images/edit12.png)](standard-controls-images/edit12.png#lightbox)
 
 Select the type of exposure to create and give the **Outlet** or **Action** a **Name**: 
 
-[![Configuring the Outlet or Action.](standard-controls-images/edit13.png)](standard-controls-images/edit13.png#lightbox)
+[![Configuring the Outlet or Action](standard-controls-images/edit13.png)](standard-controls-images/edit13.png#lightbox)
 
 For more information on working with **Outlets** and **Actions**, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) section of our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
@@ -220,7 +220,7 @@ When you switch back to Visual Studio for Mac from Xcode, any changes that you h
 
 If you select the `SplitViewController.designer.cs` in the **Solution Explorer** you'll be able to see how your **Outlet** and **Action** have been wired up in our C# code:
 
-[![Synchronizing Changes with Xcode.](standard-controls-images/sync01.png)](standard-controls-images/sync01.png#lightbox)
+[![Synchronizing Changes with Xcode](standard-controls-images/sync01.png)](standard-controls-images/sync01.png#lightbox)
 
 Notice how the definition in the `SplitViewController.designer.cs` file:
 
@@ -264,7 +264,7 @@ You normally will never need to open the `SplitViewController.designer.cs` yours
 
 AppKit provides several types of button that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![An example of the different button types.](standard-controls-images/buttons01.png)](standard-controls-images/buttons01.png#lightbox)
+[![An example of the different button types](standard-controls-images/buttons01.png)](standard-controls-images/buttons01.png#lightbox)
 
 If a button has been exposed via an **Outlet**, the following code will respond to it being pressed:
 
@@ -305,7 +305,7 @@ For any button that you have added to a user interface design, you can mark that
 
 To set a button as default, select it in Xcode's Interface Builder. Next, in the **Attribute Inspector**, select the **Key Equivalent** field and press the **Return/Enter** key:
 
-[![Editing the Key Equivalent.](standard-controls-images/buttons03.png)](standard-controls-images/buttons03.png#lightbox)
+[![Editing the Key Equivalent](standard-controls-images/buttons03.png)](standard-controls-images/buttons03.png#lightbox)
 
 Equally, you can assign any key sequence that can be used to activate the button using the keyboard instead of the mouse. For example, by pressing the Command-C keys in the image above.
 
@@ -317,7 +317,7 @@ When the app is run and the Window with the Button is Key and Focused, if the us
 
 AppKit provides several types of Checkboxes and Radio Button Groups that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![An example of the available checkbox types.](standard-controls-images/buttons02.png)](standard-controls-images/buttons02.png#lightbox)
+[![An example of the available checkbox types](standard-controls-images/buttons02.png)](standard-controls-images/buttons02.png#lightbox)
 
 Checkboxes and Radio Buttons (exposed via **Outlets**) have a state (like **On** and **Off**), the state can be checked or set with the `State` property against the `NSCellStateValue` enum. For example:
 
@@ -344,11 +344,11 @@ partial void SelectCar (Foundation.NSObject sender) {
 
 To get a collection of radio buttons to act as a group and automatically handle the selected state, create a new **Action** and attach every button in the group to it:
 
-![Creating a new Action.](standard-controls-images/buttons04.png)
+![Creating a new Action](standard-controls-images/buttons04.png)
 
 Next, assign a unique `Tag` to each radio button in the **Attribute Inspector**:
 
-![Editing a radio button tag.](standard-controls-images/buttons05.png)
+![Editing a radio button tag](standard-controls-images/buttons05.png)
 
 Save your changes and return to Visual Studio for Mac, add the code to handle the **Action** that all of the radio buttons are attached to:
 
@@ -368,7 +368,7 @@ You can use the `Tag` property to see which radio button was selected.
 
 AppKit provides several types of Menu Controls that can be used in your User Interface Design. For more information, please see the [Menu Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlswithMenus.html#//apple_ref/doc/uid/20000957-CH100-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![Example menu controls.](standard-controls-images/menu01.png)](standard-controls-images/menu01.png#lightbox)
+[![Example menu controls](standard-controls-images/menu01.png)](standard-controls-images/menu01.png#lightbox)
 
 <a name="Providing-Menu-Control-Data"></a>
 
@@ -422,7 +422,7 @@ The following methods are available to adjust the Menu Control's appearance:
 
 For Drop-Down types of `NSPopupButtons`, the first Menu Item provides the title for the control. For Example: 
 
-[![An example menu control.](standard-controls-images/menu02.png)](standard-controls-images/menu02.png#lightbox)
+[![An example menu control](standard-controls-images/menu02.png)](standard-controls-images/menu02.png#lightbox)
 
 To change the title, expose this item as an **Outlet** and use code like the following:
 
@@ -474,7 +474,7 @@ For more information on working with Menus and Menu Controls, please see our [Me
 
 AppKit provides several types of Selection Controls that can be used in your User Interface Design. For more information, please see the [Selection Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsSelection.html#//apple_ref/doc/uid/20000957-CH49-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![Example selection controls.](standard-controls-images/select01.png)](standard-controls-images/select01.png#lightbox)
+[![Example selection controls](standard-controls-images/select01.png)](standard-controls-images/select01.png#lightbox)
 
 There are two ways to track when a Selection Control has user interaction, by exposing it as an **Action**. For example:
 
@@ -519,7 +519,7 @@ The `NSDatePicker` has the following properties for working directly with Date a
 
 AppKit provides several types of Indicator Controls that can be used in your User Interface Design. For more information, please see the [Indicator Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsIndicators.html#//apple_ref/doc/uid/20000957-CH50-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![Example indicator controls.](standard-controls-images/level01.png)](standard-controls-images/level01.png#lightbox)
+[![Example indicator controls](standard-controls-images/level01.png)](standard-controls-images/level01.png#lightbox)
 
 There are two ways to track when a Indicator Control has user interaction, either by exposing it as an **Action** or an **Outlet** and attaching a **Delegate** to the `Activated` event. For example:
 
@@ -550,7 +550,7 @@ Calling the `StopAnimation` method will stop the animation.
 
 AppKit provides several types of Text Controls that can be used in your User Interface Design. For more information, please see the [Text Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsText.html#//apple_ref/doc/uid/20000957-CH51-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
-[![Example text controls.](standard-controls-images/text01.png)](standard-controls-images/text01.png#lightbox)
+[![Example text controls](standard-controls-images/text01.png)](standard-controls-images/text01.png#lightbox)
 
 For Text Fields (`NSTextField`), the following events can be used to track user interaction:
 
@@ -582,7 +582,7 @@ The SourceWriter code has been fully commented and, where available, links have 
 
 AppKit provides several types of Content Views that can be used in your User Interface Design. For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
-[![An example content view.](standard-controls-images/content01.png)](standard-controls-images/content01.png#lightbox)
+[![An example content view](standard-controls-images/content01.png)](standard-controls-images/content01.png#lightbox)
 
 <a name="Popovers"></a>
 
@@ -595,16 +595,16 @@ To create a popover, do the following:
 1. Open the `.storyboard` file of the window that you want to add a popover to by double-clicking it in the **Solution Explorer**
 2. Drag a **View Controller** from the **Library Inspector** onto the **Interface Editor**: 
 
-    [![Selecting a View Controller from the Library.](standard-controls-images/content02.png)](standard-controls-images/content02.png#lightbox)
+    [![Selecting a View Controller from the Library](standard-controls-images/content02.png)](standard-controls-images/content02.png#lightbox)
 3. Define the size and the layout of the **Custom View**: 
 
-    [![Editing the layout.](standard-controls-images/content04.png)](standard-controls-images/content04.png#lightbox)
+    [![Editing the layout](standard-controls-images/content04.png)](standard-controls-images/content04.png#lightbox)
 4. Control-click and drag from the source of the popup onto the **View Controller**: 
 
-    [![Dragging to create a segue.](standard-controls-images/content05.png)](standard-controls-images/content05.png#lightbox)
+    [![Dragging to create a segue](standard-controls-images/content05.png)](standard-controls-images/content05.png#lightbox)
 5. Select **Popover** from the popup menu: 
 
-    [![Setting the segue type.](standard-controls-images/content06.png)](standard-controls-images/content06.png#lightbox)
+    [![Setting the segue type](standard-controls-images/content06.png)](standard-controls-images/content06.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 <a name="Tab_Views"></a>
@@ -615,11 +615,11 @@ Tab Views consists of a Tab List (which looks similar to a Segmented Control) co
 
 When working with a Tab View in Xcode's Interface Builder, use the **Attribute Inspector** to set the number of Tabs:
 
-[![Editing the number of tabs.](standard-controls-images/content08.png)](standard-controls-images/content08.png#lightbox)
+[![Editing the number of tabs](standard-controls-images/content08.png)](standard-controls-images/content08.png#lightbox)
 
 Select each Tab in the **Interface Hierarchy** to set its **Title** and add UI Elements to its **Pane**:
 
-[![Editing the tabs in Xcode.](standard-controls-images/content09.png)](standard-controls-images/content09.png#lightbox)
+[![Editing the tabs in Xcode](standard-controls-images/content09.png)](standard-controls-images/content09.png#lightbox)
 
 <a name="Data_Binding_AppKit_Controls"></a>
 

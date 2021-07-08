@@ -37,7 +37,7 @@ For more information about Launch Screens on Xamarin.iOS, see [Xamarin.iOS Launc
 
 On UWP, the **Package.appxmanifest** contains a **Visual Assets** tab with a **Splash Screen** submenu. The splash screen graphics can be specified in this menu:
 
-[![Setting splash screen on UWP.](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
+[![Setting splash screen on UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
 ## Related links
 

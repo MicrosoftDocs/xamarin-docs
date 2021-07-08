@@ -48,7 +48,7 @@ Ideally the status bar would also be white - something we can accomplish
 directly in the iOS project. Add the following entries to the **Info.plist** to
 force the status bar to be white:
 
-![iOS Info.plist Entries.](theme-images/info-plist.png)
+![iOS Info.plist Entries](theme-images/info-plist.png)
 
 or edit the corresponding **Info.plist** file directly to include:
 
@@ -97,7 +97,7 @@ By default, the selected tab bar icon in a
 [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 would be blue:
 
-![Default iOS Tab Bar Icon in TabbedPage.](theme-images/tabbar-default.png)
+![Default iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-default.png)
 
 To change this behavior, set the `UITabBar.Appearance` property:
 
@@ -107,7 +107,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 This causes the selected tab to be green:
 
-![Green iOS Tab Bar Icon in TabbedPage.](theme-images/tabbar-custom.png)
+![Green iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-custom.png)
 
 Using this API lets you customize the appearance of the Xamarin.Forms
 `TabbedPage` on iOS with very little code. Refer to the
@@ -126,7 +126,7 @@ These two screen captures show the default `UISwitch` control on the left
 and the customized version (setting `Appearance`) on the right in the
 [Todo sample](/samples/xamarin/xamarin-forms-samples/todo):
 
-![Default UISwitch Color.](theme-images/switch-default.png) ![Customized UISwitch Color](theme-images/switch-custom.png)
+![Default UISwitch Color](theme-images/switch-default.png) ![Customized UISwitch Color](theme-images/switch-custom.png)
 
 ### Other controls
 

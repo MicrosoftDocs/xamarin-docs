@@ -294,7 +294,7 @@ The web service URL can either be a hosted remote source or local file system re
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix.](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
+[![The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
 
 This generates the proxy in the Web or Service References folder of the project. Since a proxy is generated code, it should not be modified.
 

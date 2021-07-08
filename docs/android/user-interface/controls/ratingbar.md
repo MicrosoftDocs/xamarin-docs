@@ -15,7 +15,7 @@ A RatingBar is a UI widget that displays a rating from one to five stars. The us
 In this section, you'll create a widget that allows the user to provide a
 rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
 
-![Example of a RatingBar.](ratingbar-images/01-ratingbar.png)
+![Example of a RatingBar](ratingbar-images/01-ratingbar.png)
 
 ## Creating a RatingBar
 

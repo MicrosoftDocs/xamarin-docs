@@ -28,7 +28,7 @@ In the first and second scenario there will already be a precompiled CocoaTouch 
 
 This article provides a step-by-step walkthrough of creating a binding project using the open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-C project as an example, however all information in this guide can be adapted for use with any third-party Objective-C library. The InfColorPicker library provides a reusable view controller that allows the user to select a color based on its HSB representation, making color selection more user-friendly.
 
-[![Example of the InfColorPicker library running on iOS.](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
+[![Example of the InfColorPicker library running on iOS](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
 
 We'll cover all the necessary steps to consume this particular Objective-C API in Xamarin.iOS:
 
@@ -79,13 +79,13 @@ You'll need to use one of the following methods to install the tools:
   ```
 
   - You'll be asked to install the command line tools, click the **Install** button:
-    [![Installing the command line tools.](walkthrough-images/xcode01.png)](walkthrough-images/xcode01.png#lightbox)
+    [![Installing the command line tools](walkthrough-images/xcode01.png)](walkthrough-images/xcode01.png#lightbox)
 
   - The tools will be downloaded and installed from Apple's servers:
-    [![Downloading the tools.](walkthrough-images/xcode02.png)](walkthrough-images/xcode02.png#lightbox)
+    [![Downloading the tools](walkthrough-images/xcode02.png)](walkthrough-images/xcode02.png#lightbox)
 
 - **Downloads for Apple Developers** - The Command Line Tools package is available the [Downloads for Apple Developers](https://developer.apple.com/downloads/index.action) web page. Log in with your Apple ID, then search for and download the Command Line Tools:
-[![Finding the Command Line Tools.](walkthrough-images/xcode03.png)](walkthrough-images/xcode03.png#lightbox)
+[![Finding the Command Line Tools](walkthrough-images/xcode03.png)](walkthrough-images/xcode03.png#lightbox)
 
 With the Command Line Tools installed, we're ready to continue on with the walkthrough.
 
@@ -106,7 +106,7 @@ Now that we understand what steps are involved, let's move on to the rest of the
 
 If we inspect the code for InfColorPicker in Github:
 
-[![Inspect the code for InfColorPicker in Github.](walkthrough-images/image02.png)](walkthrough-images/image02.png#lightbox)
+[![Inspect the code for InfColorPicker in Github](walkthrough-images/image02.png)](walkthrough-images/image02.png#lightbox)
 
 We can see the following three directories in the project:
 
@@ -116,7 +116,7 @@ We can see the following three directories in the project:
 
 Let's download the InfColorPicker project from [GitHub](https://github.com/InfinitApps/InfColorPicker/archive/master.zip) and unzip it in the directory of our choosing. Opening up the Xcode target for `PickerSamplePhone` project, we see the following project structure in the Xcode Navigator:
 
-[![The project structure in the Xcode Navigator.](walkthrough-images/image03.png)](walkthrough-images/image03.png#lightbox)
+[![The project structure in the Xcode Navigator](walkthrough-images/image03.png)](walkthrough-images/image03.png#lightbox)
 
 This project achieves code reuse by directly adding the InfColorPicker source code (in the red box) into each sample project. The code for the sample project is inside the blue box. Because this particular project does not provide us with a static library, it is necessary for us create an Xcode project to compile the static library.
 
@@ -128,45 +128,45 @@ The first step is for us to add the InfoColorPicker source code into the Static 
     [![Screenshot shows Project selected from the New menu of the File menu.](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
 3. Select **Framework & Library**, the **Cocoa Touch Static Library** template and click the **Next** button:
 
-    [![Select the Cocoa Touch Static Library template.](walkthrough-images/image05.png)](walkthrough-images/image05.png#lightbox)
+    [![Select the Cocoa Touch Static Library template](walkthrough-images/image05.png)](walkthrough-images/image05.png#lightbox)
 
 4. Enter `InfColorPicker` for the **Project Name** and click the **Next** button:
 
-    [![Enter InfColorPicker for the Project Name.](walkthrough-images/image06.png)](walkthrough-images/image06.png#lightbox)
+    [![Enter InfColorPicker for the Project Name](walkthrough-images/image06.png)](walkthrough-images/image06.png#lightbox)
 5. Select a location to save the project and click the **OK** button.
 6. Now we need to add the source from the InfColorPicker project to our static library project. Because the **InfColorPicker.h** file already exists in our static library (by default), Xcode will not allow us to overwrite it. From the **Finder**, navigate to the InfColorPicker source code in the original project that we unzipped from GitHub, copy all of the InfColorPicker files and paste them into our new static library project:
 
-    [![Copy all of the InfColorPicker files.](walkthrough-images/image12.png)](walkthrough-images/image12.png#lightbox)
+    [![Copy all of the InfColorPicker files](walkthrough-images/image12.png)](walkthrough-images/image12.png#lightbox)
 
 7. Return to Xcode, right click on the **InfColorPicker** folder and select **Add files to "InfColorPicker..."**:
 
-    [![Adding files.](walkthrough-images/image08.png)](walkthrough-images/image08.png#lightbox)
+    [![Adding files](walkthrough-images/image08.png)](walkthrough-images/image08.png#lightbox)
 
 8. From the Add Files dialog box, navigate to the InfColorPicker source code files that we just copied, select them all and click the **Add** button:
 
-    [![Select all and click the Add button.](walkthrough-images/image09.png)](walkthrough-images/image09.png#lightbox)
+    [![Select all and click the Add button](walkthrough-images/image09.png)](walkthrough-images/image09.png#lightbox)
 
 9. The source code will be copied into our project:
 
-    [![The source code will be copied into the project.](walkthrough-images/image10.png)](walkthrough-images/image10.png#lightbox)
+    [![The source code will be copied into the project](walkthrough-images/image10.png)](walkthrough-images/image10.png#lightbox)
 
 10. From the Xcode Project Navigator, select the **InfColorPicker.m** file and comment out the last two lines (because of the way this library was written, this file is not used):
 
-    [![Editing the InfColorPicker.m file.](walkthrough-images/image14.png)](walkthrough-images/image14.png#lightbox)
+    [![Editing the InfColorPicker.m file](walkthrough-images/image14.png)](walkthrough-images/image14.png#lightbox)
 
 11. We now need to check if there are any Frameworks required by the library. You can find this information either in the README, or by opening one of the sample projects provided. This example uses `Foundation.framework`, `UIKit.framework`, and `CoreGraphics.framework` so let's add them.
 
 12. Select the **InfColorPicker target > Build Phases** and expand the **Link Binary With Libraries** section:
 
-    [![Expand the Link Binary With Libraries section.](walkthrough-images/image16b.png)](walkthrough-images/image16b.png#lightbox)
+    [![Expand the Link Binary With Libraries section](walkthrough-images/image16b.png)](walkthrough-images/image16b.png#lightbox)
 
 13. Use the **+** button to open the dialog allowing you to add the required frames frameworks listed above:
 
-    [![Add the required frames frameworks listed above.](walkthrough-images/image16c.png)](walkthrough-images/image16c.png#lightbox)
+    [![Add the required frames frameworks listed above](walkthrough-images/image16c.png)](walkthrough-images/image16c.png#lightbox)
 
 14. The **Link Binary With Libraries** section should now look like the image below:
 
-    [![The Link Binary With Libraries section.](walkthrough-images/image16d.png)](walkthrough-images/image16d.png#lightbox)
+    [![The Link Binary With Libraries section](walkthrough-images/image16d.png)](walkthrough-images/image16d.png#lightbox)
 
 At this point we're close, but we're not quite done. The static library has been created, but we need to build it to create a Fat binary that includes all of the required architectures for both iOS device and iOS simulator.
 
@@ -219,15 +219,15 @@ Enter the **Makefile** commands in the plain text editor of your choosing, and u
 
 Save the file with the name **Makefile** to the same location as the InfColorPicker Xcode Static Library we created above:
 
-[![Save the file with the name Makefile.](walkthrough-images/lib00.png)](walkthrough-images/lib00.png#lightbox)
+[![Save the file with the name Makefile](walkthrough-images/lib00.png)](walkthrough-images/lib00.png#lightbox)
 
 Open the Terminal Application on your Mac and navigate to the location of your Makefile. Type `make` into the Terminal, press **Enter** and the **Makefile** will be executed:
 
-[![Sample makefile output.](walkthrough-images/lib01.png)](walkthrough-images/lib01.png#lightbox)
+[![Sample makefile output](walkthrough-images/lib01.png)](walkthrough-images/lib01.png#lightbox)
 
 When you run make, you will see a lot of text scrolling by. If everything worked correctly, you'll see the words **BUILD SUCCEEDED** and the `libInfColorPicker-armv7.a`, `libInfColorPicker-i386.a` and `libInfColorPickerSDK.a` files will be copied to the same location as the **Makefile**:
 
-[![The libInfColorPicker-armv7.a, libInfColorPicker-i386.a and libInfColorPickerSDK.a files generated by the Makefile.](walkthrough-images/lib02.png)](walkthrough-images/lib02.png#lightbox)
+[![The libInfColorPicker-armv7.a, libInfColorPicker-i386.a and libInfColorPickerSDK.a files generated by the Makefile](walkthrough-images/lib02.png)](walkthrough-images/lib02.png#lightbox)
 
 You can confirm the architectures within your Fat binary by using the following command:
 
@@ -256,21 +256,21 @@ Let's do the following:
 1. Start Visual Studio for Mac.
 1. From the **File** menu, select **New** > **Solution...**:
 
-    ![Starting a new solution.](walkthrough-images/bind01.png)
+    ![Starting a new solution](walkthrough-images/bind01.png)
 
 1. From the New Solution dialog box, select **Library** > **iOS Binding Project**:
 
-    ![Select iOS Binding Project.](walkthrough-images/bind02.png)
+    ![Select iOS Binding Project](walkthrough-images/bind02.png)
 
 1. Click the **Next** button.
 
 1. Enter "InfColorPickerBinding" as the **Project Name** and click the **Create** button to create the solution:
 
-    ![Enter InfColorPickerBinding as the Project Name.](walkthrough-images/bind02a.png)
+    ![Enter InfColorPickerBinding as the Project Name](walkthrough-images/bind02a.png)
 
 The solution will be created and two default files will be included:
 
-![The solution structure in the Solution Explorer.](walkthrough-images/bind03.png)
+![The solution structure in the Solution Explorer](walkthrough-images/bind03.png)
 
 # [Visual Studio](#tab/windows)
 
@@ -282,13 +282,13 @@ The solution will be created and two default files will be included:
 
 1. From the New Project dialog box, select **Visual C# > iPhone & iPad > iOS Bindings Library (Xamarin)**:
 
-    [![Select the iOS Bindings Library.](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
+    [![Select the iOS Bindings Library](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
 1. Enter "InfColorPickerBinding" as the **Name** and click the **OK** button to create the solution.
 
 The solution will be created and two default files will be included:
 
-![The solution structure in the Solution Explorer.](walkthrough-images/bind03vs.png)
+![The solution structure in the Solution Explorer](walkthrough-images/bind03vs.png)
 
 -----
 
@@ -307,14 +307,14 @@ Follow these steps to add the library:
 
 1. Right-click on the **Native References** folder in the Solution Pad and select **Add Native References**:
 
-    ![Add Native References.](walkthrough-images/bind04a.png)
+    ![Add Native References](walkthrough-images/bind04a.png)
 
 1. Navigate to the Fat Binary we made earlier (`libInfColorPickerSDK.a`) and press the **Open** button:
 
-    ![Select the libInfColorPickerSDK.a file.](walkthrough-images/bind05.png)
+    ![Select the libInfColorPickerSDK.a file](walkthrough-images/bind05.png)
 1. The file will be included in the project:
 
-    ![Including a file.](walkthrough-images/bind04.png)
+    ![Including a file](walkthrough-images/bind04.png)
 
 # [Visual Studio](#tab/windows)
 
@@ -322,11 +322,11 @@ Follow these steps to add the library:
 
 1. Right-click on the project and choose **Add > Existing Item...**:
 
-    ![Adding an existing file.](walkthrough-images/bind04vs.png)
+    ![Adding an existing file](walkthrough-images/bind04vs.png)
 
 1. Navigate to the `libInfColorPickerSDK.a` and press the **Add** button:
 
-    ![Adding libInfColorPickerSDK.a.](walkthrough-images/bind05vs.png)
+    ![Adding libInfColorPickerSDK.a](walkthrough-images/bind05vs.png)
 
 1. The file will be included in the project.
 
@@ -466,13 +466,13 @@ Europa:Resources kmullins$
 
 And the **InfColorPicker.enums.cs** and **InfColorPicker.cs** files will be created in our directory:
 
-[![The InfColorPicker.enums.cs and InfColorPicker.cs files.](walkthrough-images/os06.png)](walkthrough-images/os06.png#lightbox)
+[![The InfColorPicker.enums.cs and InfColorPicker.cs files](walkthrough-images/os06.png)](walkthrough-images/os06.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
 Open both of these files in the Binding project that we created above. Copy the contents of the **InfColorPicker.cs** file and paste it into the **ApiDefinition.cs** file, replacing the existing `namespace ...` code block with the contents of the **InfColorPicker.cs** file (leaving the `using` statements intact):
 
-![The InfColorPickerControllerDelegate file.](walkthrough-images/os07.png)
+![The InfColorPickerControllerDelegate file](walkthrough-images/os07.png)
 
 # [Visual Studio](#tab/windows)
 
@@ -493,11 +493,11 @@ Objective Sharpie sometimes has an issue translating `Delegates`, so we will nee
 
 So that the definition looks like:
 
-[![The definition.](walkthrough-images/os11.png)](walkthrough-images/os11.png#lightbox)
+[![The definition](walkthrough-images/os11.png)](walkthrough-images/os11.png#lightbox)
 
 Next, we do the same thing with the contents of the `InfColorPicker.enums.cs` file, copying and pasting them in the `StructsAndEnums.cs` file leaving the `using` statements intact:
 
-[![The contents the StructsAndEnums.cs file .](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
+[![The contents the StructsAndEnums.cs file ](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 You may also find that Objective Sharpie has annotated the binding with `[Verify]` attributes. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original C/Objective-C declaration (which will be provided in a comment above the bound declaration). Once you have verified the bindings, you should remove the verify attribute. For more information, refer to the [Verify](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) guide.
 
@@ -523,21 +523,21 @@ Follow these steps to create a sample iPhone application to use the iOS Binding 
 
 1. **Create Xamarin.iOS Project** - Add a new Xamarin.iOS project called **InfColorPickerSample** to the solution, as shown in the following screenshots:
 
-    ![Adding a Single View App.](walkthrough-images/use01.png)
+    ![Adding a Single View App](walkthrough-images/use01.png)
 
-    ![Setting the Identifier.](walkthrough-images/use01a.png)
+    ![Setting the Identifier](walkthrough-images/use01a.png)
 
 1. **Add Reference to the Binding Project** - Update the **InfColorPickerSample** project so that it has a reference to the **InfColorPickerBinding** project:
 
-    ![Adding Reference to the Binding Project.](walkthrough-images/use02.png)
+    ![Adding Reference to the Binding Project](walkthrough-images/use02.png)
 
 1. **Create the iPhone User Interface** - Double click on the **MainStoryboard.storyboard** file in the **InfColorPickerSample** project to edit it in the iOS Designer. Add a **Button** to the view and call it `ChangeColorButton`, as shown in the following:
 
-    ![Adding a Button to the view.](walkthrough-images/use03.png)
+    ![Adding a Button to the view](walkthrough-images/use03.png)
 
 1. **Add the InfColorPickerView.xib** - The InfColorPicker Objective-C library includes a **.xib** file. Xamarin.iOS will not include this **.xib** in the binding project, which will cause run-time errors in our sample application. The workaround for this is to add the **.xib** file to our Xamarin.iOS project. Select the Xamarin.iOS project, right-click and select **Add > Add Files**, and add the **.xib** file as shown in the following screenshot:
 
-    ![Add the InfColorPickerView.xib.](walkthrough-images/use04.png)
+    ![Add the InfColorPickerView.xib](walkthrough-images/use04.png)
 
 1. When asked, copy the **.xib** file into the project.
 
@@ -545,17 +545,17 @@ Follow these steps to create a sample iPhone application to use the iOS Binding 
 
 1. **Create Xamarin.iOS Project** - Add a new Xamarin.iOS project named **InfColorPickerSample** using the **Single View App** template:
 
-    [![iOS App (Xamarin) project.](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
+    [![iOS App (Xamarin) project](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
-    [![Select Template.](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
+    [![Select Template](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
 1. **Add Reference to the Binding Project** - Update the **InfColorPickerSample** project so that it has a reference to the **InfColorPickerBinding** project:
 
-    ![Add Reference to the Binding Project.](walkthrough-images/use02vs.png)
+    ![Add Reference to the Binding Project](walkthrough-images/use02vs.png)
 
 1. **Create the iPhone User Interface** - Double click on the **MainStoryboard.storyboard** file in the **InfColorPickerSample** project to edit it in the iOS Designer. Add a **Button** to the view and call it `ChangeColorButton`, as shown in the following:
 
-    ![Create the iPhone User Interface.](walkthrough-images/use03vs.png)
+    ![Create the iPhone User Interface](walkthrough-images/use03vs.png)
 
 1. **Add the InfColorPickerView.xib** - The InfColorPicker Objective-C library includes a **.xib** file. Xamarin.iOS will not include this **.xib** in the binding project, which will cause run-time errors in our sample application. The workaround for this is to add the **.xib** file to our Xamarin.iOS project from our **Mac Build Host**. Select the Xamarin.iOS project, right-click and select **Add** > **Existing Item...**, and add the **.xib** file.
 
@@ -677,7 +677,7 @@ We first obtain an instance of `InfColorPickerController` via a static method, a
 
 **Run the Application** - At this point we're done with all of our code. If you run the application, you should be able to change the background color of the `InfColorColorPickerSampleView` as shown in the following screenshots:
 
-[![Running the Application.](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
+[![Running the Application](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
 
 Congratulations! At this point you've successfully created and bound an Objective-C library for use in a Xamarin.iOS application. Next, let's learn about using weak delegates.
 

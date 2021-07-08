@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms TableView
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
 [`TableView`](xref:Xamarin.Forms.TableView) is a view for displaying scrollable lists of data or choices where there are rows that don't share the same template. Unlike [ListView](~/xamarin-forms/user-interface/listview/index.md), `TableView` does not have the concept of an `ItemsSource`, so items must be manually added as children.
 
-![TableView Example.](tableview-images/tableview-all-sml.png)
+![TableView Example](tableview-images/tableview-all-sml.png)
 
 ## Use cases
 
@@ -92,7 +92,7 @@ All of these properties are bindable.
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) also exposes the `OnChanged` event, allowing you to respond to changes in the cell's state.
 
-![SwitchCell Example.](tableview-images/switch-cell.png)
+![SwitchCell Example](tableview-images/switch-cell.png)
 
 ### EntryCell
 
@@ -108,7 +108,7 @@ All of these properties are bindable.
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) also exposes the `Completed` event, which is fired when the user hits the 'done' button on the keyboard while editing text.
 
-![EntryCell Example.](tableview-images/entry-cell.png)
+![EntryCell Example](tableview-images/entry-cell.png)
 
 ## Custom cells
 
@@ -118,7 +118,7 @@ All custom cells must derive from [`ViewCell`](xref:Xamarin.Forms.ViewCell), the
 
 This is an example of a custom cell:
 
-![Custom Cell Example.](tableview-images/custom-cell.png)
+![Custom Cell Example](tableview-images/custom-cell.png)
 
 The following example shows the XAML used to create the [`TableView`](xref:Xamarin.Forms.TableView) in the screenshots above:
 
@@ -235,11 +235,11 @@ The `OnViewCellTapped` event handler shows or hides the second [`Label`](xref:Xa
 
 The following screenshots show the cell prior to being tapped upon:
 
-![ViewCell before being resized.](tableview-images/cell-beforeresize.png)
+![ViewCell before being resized](tableview-images/cell-beforeresize.png)
 
 The following screenshots show the cell after being tapped upon:
 
-![ViewCell after being resized.](tableview-images/cell-afterresize.png)
+![ViewCell after being resized](tableview-images/cell-afterresize.png)
 
 > [!IMPORTANT]
 > There is a strong possibility of performance degradation if this feature is overused.

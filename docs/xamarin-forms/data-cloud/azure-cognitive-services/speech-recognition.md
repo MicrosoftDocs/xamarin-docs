@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Speech recognition using Azure Speech Service
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
 
 Azure Speech Service is a cloud-based API that offers the following functionality:
 
@@ -23,7 +23,7 @@ Azure Speech Service is a cloud-based API that offers the following functionalit
 
 This article explains how speech-to-text is implemented in the sample Xamarin.Forms application using the Azure Speech Service. The following screenshots show the sample application on iOS and Android:
 
-[![Screenshots of the sample application on iOS and Android.](speech-recognition-images/speech-recognition-cropped.png)](speech-recognition-images/speech-recognition.png#lightbox "Screenshots of the sample application on iOS and Android")
+[![Screenshots of the sample application on iOS and Android](speech-recognition-images/speech-recognition-cropped.png)](speech-recognition-images/speech-recognition.png#lightbox "Screenshots of the sample application on iOS and Android")
 
 ## Create an Azure Speech Service resource
 
@@ -453,7 +453,7 @@ The `UWPMicrophoneService` has the following features:
 
 Finally, the UWP **Package.appxmanifest** must specify that the application uses the microphone. Double-click the Package.appxmanifest file and select the **Microphone** option on the **Capabilities** tab in Visual Studio 2019:
 
-[![Screenshot of the manifest in Visual Studio 2019.](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Screenshot of the manifest in Visual Studio 2019")
+[![Screenshot of the manifest in Visual Studio 2019](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Screenshot of the manifest in Visual Studio 2019")
 
 ## Test the application
 

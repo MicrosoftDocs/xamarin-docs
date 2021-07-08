@@ -18,7 +18,7 @@ Now that we have seen the concepts and APIs surrounding Android 6.0 fingerprint 
 2. **Provide Alternatives to Fingerprint Authentication** &ndash; Fingerprint authentication is a great, quick way for an application to authenticate a user, however, it cannot be assumed that it will always work or be available. It is possible that the fingerprint scanner may fail, the lens maybe be dirty, the user may not have configured the device to use fingerprint authentication, or the fingerprints have since gone missing. It is also possible that the user may not wish to use fingerprint authentication with your application. For these reasons, an Android application should provide an alternate authentication process such as username and password.
 3. **Use Google's fingerprint icon** &ndash; All applications should use the same fingerprint icon provided by Google. The use of a standard icon makes it easy for Android users to recognize where in apps fingerprint authentication is used: 
     
-    ![Android fingerprint icon.](summary-images/ic-fp-40px.png)
+    ![Android fingerprint icon](summary-images/ic-fp-40px.png)
     
 4. **Notify the User** &ndash; An application should display some kind of notification to the user that the fingerprint scanner is active and awaiting a touch or swipe. 
 

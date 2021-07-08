@@ -15,7 +15,7 @@ completion suggestions automatically while the user is typing. The list
 of suggestions is displayed in a drop down menu from which the user can
 choose an item to replace the content of the edit box with.
 
-![Example of Auto Complete.](images/auto-complete.png)
+![Example of Auto Complete](images/auto-complete.png)
 
 ## Overview
 
@@ -183,7 +183,7 @@ widget.
 
 Run the application. As you type, you should see something like this:
 
-[![Example auto-complete screenshot listing names that contain "ca."](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
+[![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 ## More Information
 

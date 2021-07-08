@@ -17,11 +17,11 @@ default resources are setup by the Xamarin.Android project template:
 
 # [Visual Studio](#tab/windows)
 
-![Resource files.](android-resource-basics-images/01-resource-files-vs.png)
+![Resource files](android-resource-basics-images/01-resource-files-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Resource files.](android-resource-basics-images/01-resource-files-xs.png)
+![Resource files](android-resource-basics-images/01-resource-files-xs.png)
 
 -----
 
@@ -58,11 +58,11 @@ automatically set to **AndroidResource** by the Xamarin.Android tools:
 
 # [Visual Studio](#tab/windows)
 
-![Build action for Strings.xml set to AndroidResource.](android-resource-basics-images/02-build-action-vs.png)
+![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Build action for Strings.xml set to AndroidResource.](android-resource-basics-images/02-build-action-xs.png)
+![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-xs.png)
 
 -----
 
@@ -188,4 +188,4 @@ will look inside the directory **Resource/Drawable** for a file named
 When this application is run, it would look something like the
 following image:
 
-![Localized ImageView.](android-resource-basics-images/03-localized-screenshot.png)
+![Localized ImageView](android-resource-basics-images/03-localized-screenshot.png)

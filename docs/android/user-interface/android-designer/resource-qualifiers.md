@@ -25,7 +25,7 @@ the layout itself._
 **Resource qualifier options** can be accessed by clicking the
 ellipsis icon to the right of the **Landscape** mode button:
 
-[![Resource Qualifier Options.](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[![Resource Qualifier Options](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 This dialog presents pull-down menus for the following resource
 qualifiers:
@@ -47,13 +47,13 @@ resources defined (or **All languages**, which is the default). However,
 there is also an **Add language/region...** option that allows you to
 add a new language to the list:
 
-[![Add language/region.](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[![Add language/region](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 When you click **Add language/region...**, the **Select Language**
 dialog opens to display drop-down lists of available languages and
 regions:
 
-![List of languages.](resource-qualifiers-images/vs/10-languages.png "List of languages")
+![List of languages](resource-qualifiers-images/vs/10-languages.png "List of languages")
 
 In this example, we have chosen **fr (French)** for the language and
 **BE** (Belgium) for the regional dialect of French. Note that the
@@ -62,7 +62,7 @@ without regard for specific regions. When the **Language** pull-down
 menu is opened again, it displays the newly-added language/region
 resource:
 
-![Language and Region chosen.](resource-qualifiers-images/vs/11-language-region-added.png "Language and Region chosen")
+![Language and Region chosen](resource-qualifiers-images/vs/11-language-region-added.png "Language and Region chosen")
 
 Note that if you add a new language but you do not create new resources
 for it, the added language will no longer be shown the next time you
@@ -74,7 +74,7 @@ When you click the **UI Mode** pull-down menu, a list of modes is
 displayed, such as **Normal**, **Car Dock**, **Desk Dock**,
 **Television**, **Appliance**, and **Watch**:
 
-[![UI Mode menu.](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
+[![UI Mode menu](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Below this list are the night modes **Not Night** and **Night**,
 followed by the layout directions **Left to Right** and **Right to
@@ -93,7 +93,7 @@ For more information about Android UI modes, see
 The **Action bar settings** icon is available to the left of the
 paintbrush (Theme Editor) icon:
 
-![Action Bar settings.](resource-qualifiers-images/vs/14-action-bar.png "Action Bar settings")
+![Action Bar settings](resource-qualifiers-images/vs/14-action-bar.png "Action Bar settings")
 
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
@@ -115,7 +115,7 @@ The **Theme** drop-down menu displays all of the themes defined in the
 project. Selecting **More Themes** opens a dialog with a list of all
 themes available from the installed Android SDK, as shown below:
 
-[![More Themes list](resource-qualifiers-images/vs/15-theme-menu-sml.png "More Themes list."](resource-qualifiers-images/vs/15-theme-menu.png#lightbox)
+[![More Themes list](resource-qualifiers-images/vs/15-theme-menu-sml.png "More Themes list")](resource-qualifiers-images/vs/15-theme-menu.png#lightbox)
 
 When a theme is selected, the Design Surface is updated to show
 the effect of the new theme. Note that this change is made permanent only
@@ -123,7 +123,7 @@ if the **OK** button is clicked in the **Theme** dialog. Once a theme
 has been selected, it will be included in the **Theme** drop-down menu
 as shown below:
 
-![Light theme is now available.](resource-qualifiers-images/vs/16-light-theme.png "Light theme is now available")
+![Light theme is now available](resource-qualifiers-images/vs/16-light-theme.png "Light theme is now available")
 
 ## Android version
 
@@ -132,7 +132,7 @@ to render the layout in the Designer. The selector displays all
 versions that are compatible with the target framework version of the
 project:
 
-![List of Android versions.](resource-qualifiers-images/vs/17-android-version.png "List of Android versions")
+![List of Android versions](resource-qualifiers-images/vs/17-android-version.png "List of Android versions")
 
 The target framework version can be set in the project's settings under
 **Properties > Application > Compile using Android version**. For more
@@ -160,7 +160,7 @@ For more information about resource types, see
 **Resource qualifier options** can be accessed by clicking the
 ellipsis icon to the right of the **Landscape** mode button:
 
-[![Resource qualifier options.](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[![Resource qualifier options](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 This dialog presents pull-down menus for the following resource
 qualifiers:
@@ -182,13 +182,13 @@ resources defined (or **All languages**, which is the default). However,
 there is also an **Add language/region...** option that allows you to
 add a new language to the list:
 
-[![Add language/region.](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[![Add language/region](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 When you click **Add language/region...**, the **Select Language**
 dialog opens to display drop-down lists of available languages and
 regions:
 
-[![List of languages.](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![List of languages](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 In this example, we have chosen **fr (French)** for the language and
 **BE** (Belgium) for the regional dialect of French. Note that the
@@ -197,7 +197,7 @@ without regard for specific regions. When the **Language** pull-down
 menu is opened again, it displays the newly-added language/region
 resource:
 
-[![Language and Region Chosen.](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[![Language and Region Chosen](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 Note that if you add a new language but you do not create new resources
 for it, the added language will no longer be shown the next time you
@@ -209,7 +209,7 @@ When you click the **UI Mode** pull-down menu, a list of modes is
 displayed, such as **Normal**, **Car Dock**, **Desk Dock**,
 **Television**, **Appliance**, and **Watch**:
 
-[![UI Mode menu.](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
+[![UI Mode menu](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
 Below this list are the night modes **Not Night** and **Night**,
 followed by the layout directions **Left to Right** and **Right to
@@ -226,7 +226,7 @@ see [LayoutDirection](xref:Android.Util.LayoutDirection).
 The **Action bar settings** icon is available to the left of the
 paintbrush (Theme Editor) icon:
 
-[![Action Bar settings.](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[![Action Bar settings](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
@@ -248,7 +248,7 @@ The **Theme** drop-down menu displays all of the themes defined in the
 project. Selecting **More Themes** opens a dialog with a list of all
 themes available from the installed Android SDK, as shown below:
 
-[![More Themes list.](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[![More Themes list](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 When a theme is selected, the Design Surface is updated to show
 the effect of the new theme. Note that this change is made permanent only
@@ -256,7 +256,7 @@ if the **OK** button is clicked in the **Theme** dialog. Once a theme
 has been selected, it will be included in the **Theme** drop-down menu
 as shown below:
 
-[![Light theme is now available.](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[![Light theme is now available](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## Android version
 
@@ -265,7 +265,7 @@ to render the layout in the Designer. The selector displays all
 versions that are compatible with the target framework version of the
 project:
 
-[![List of Android versions.](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[![List of Android versions](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 The target framework version can be set in the project's settings under
 the **Project Options > Build > General** section. For more information

@@ -44,11 +44,11 @@ Message Apps Extensions are only supported on iOS 10, however, the content that 
 
 Interactive Messages present a Custom Message Bubble and are provided by a Message App Extension. They allow the user to create Interactive Message Content, insert it in the Message Input Field and send it.
 
-[![Creating Interactive Message Content.](advanced-message-app-extensions-images/interactive01.png)](advanced-message-app-extensions-images/interactive01.png#lightbox)
+[![Creating Interactive Message Content](advanced-message-app-extensions-images/interactive01.png)](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
 The receiving user can reply to an Interactive Message by tapping its Message Bubble in the Message History to load the Message App Extension that created it. The Extension will be launched full-screen and allow the user to compose a reply and send it back to the originating user.
 
-[![The Extension launched full-screen.](advanced-message-app-extensions-images/interactive02.png)](advanced-message-app-extensions-images/interactive02.png#lightbox)
+[![The Extension launched full-screen](advanced-message-app-extensions-images/interactive02.png)](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
 The following topics will be covered in detail below:
 
@@ -61,7 +61,7 @@ The following topics will be covered in detail below:
 
 When invoked by the user, a Message App Extension will be displayed at the bottom of the Message history in the compact view mode:
 
-[![Messages API Overview.](advanced-message-app-extensions-images/interactive03.png)](advanced-message-app-extensions-images/interactive03.png#lightbox)
+[![Messages API Overview](advanced-message-app-extensions-images/interactive03.png)](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
 1. The `MSMessageAppViewController` object in the Message App Extension is the main class that is called when the extension's view is displayed to the user.
 2. The conversation is presented to the user as a `MSConversation` object instance.
@@ -73,7 +73,7 @@ When invoked by the user, a Message App Extension will be displayed at the botto
 
 Take a look at the process of a Message App Extension becoming active:
 
-[![The process of a Message App Extension becoming active.](advanced-message-app-extensions-images/interactive04.png)](advanced-message-app-extensions-images/interactive04.png#lightbox)
+[![The process of a Message App Extension becoming active](advanced-message-app-extensions-images/interactive04.png)](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
 1. When an extension is launched (for example from the App Drawer), the Message app will launch a process.
 2. The `DidBecomeActive` method is called and passed a `MSConversation` that represents the conversation that the Message App Extension is running in.
@@ -81,7 +81,7 @@ Take a look at the process of a Message App Extension becoming active:
 
 Next, take a look at the process of a Message App Extension becoming deactivated:
 
-[![The process of a Message App Extension becoming deactivated.](advanced-message-app-extensions-images/interactive05.png)](advanced-message-app-extensions-images/interactive05.png#lightbox)
+[![The process of a Message App Extension becoming deactivated](advanced-message-app-extensions-images/interactive05.png)](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
 1. When the Message App Extension is being deactivated, the `ViewWillDisappear` method will be called first.
 2. Then the `ViewDidDisappear` method will be called.
@@ -121,7 +121,7 @@ If the user clicks on the Message Bubble in the conversation on macOS, the Mac w
 
 The `AccessibilityLabel` property is used by screen readers to read the transcript of the conversation to the user. The `Layout` property specifies how the message will be displayed, currently only the `MSMessageTemplateLayout` is supported and looks like the following:
 
-[![The MSMessageTemplateLayout template.](advanced-message-app-extensions-images/interactive06.png)](advanced-message-app-extensions-images/interactive06.png#lightbox)
+[![The MSMessageTemplateLayout template](advanced-message-app-extensions-images/interactive06.png)](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
 The `Image` property of the `MSMessageTemplateLayout` provides content for the main body of the MessageBubble on screen. The `MediaFileUrl` property also provides content for the body of the Message Bubble, but allows for content that is not supported by `UIImage` (such as a video file that would loop in the background). If both the `Image` and `MediaFileUrl` properties are provided, the `Image` property will take precedence. The `MediaFileUrl` supports the PNG, JPEG, GIF and video (in any format that can be played by the Media Player framework) media formats.
 
@@ -133,7 +133,7 @@ The `ImageTitle` and `ImageSubtitle` properties provide a description for the me
 
 The `Caption`, `SubCaption`, `TrailingCaption` and `TrailingSubcaption` properties further describe the image and will be rendered in a section below the image. Setting all of these properties to `null` will create a Message Bubble without the Caption Area:
 
-[![A Message Bubble without the Caption Area.](advanced-message-app-extensions-images/interactive07.png)](advanced-message-app-extensions-images/interactive07.png#lightbox)
+[![A Message Bubble without the Caption Area](advanced-message-app-extensions-images/interactive07.png)](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
 The last thing to note is that the Messages app will draw the Message App Extension's icon in the upper left hand corner of the Message Bubble.
 
@@ -174,7 +174,7 @@ Once the new content is on the Input Field, the user is able to send the message
 
 A Message App Extension can be displayed in one of two different view modes:
 
-[![A Message App Extension displayed in two different view modes: Compact & Expanded.](advanced-message-app-extensions-images/interactive08.png)](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![A Message App Extension displayed in two different view modes: Compact & Expanded](advanced-message-app-extensions-images/interactive08.png)](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** - This is the default mode where the Message App Extension takes up the bottom 25% of the Message View. In Compact mode, the app does not have access to the keyboard, horizontal scrolling or Swipe Gesture Recognizers. The app does have access to the Input Field and calls to `InsertMessage` will instantly be displayed to the user there.
 - **Expanded** -The Message App Extension fills the entire Message View. It does not have access to the Input Field, but does have access to the keyboard, horizontal scrolling and Swipe Gesture Recognizers.
@@ -377,7 +377,7 @@ Optionally, the app could have used the `WillTransition` method to handle the vi
 
 There are two cases that a Message App Extension will need to handle when replying to a message:
 
-[![The Message App Extension in the Inactive and Active modes.](advanced-message-app-extensions-images/interactive09.png)](advanced-message-app-extensions-images/interactive09.png#lightbox)
+[![The Message App Extension in the Inactive and Active modes](advanced-message-app-extensions-images/interactive09.png)](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
 - **Extension is Inactive** - There is one of the Message App Extension's Message Bubbles in the Message Transcript that the user can tap to activate the extensions and continue the interactive conversation.
 - **Extension is Active** - The user can tap the Message App Extension's Message Bubble in the Message Transcript to enter the Expanded view mode and continue the interactive process from where they left off.
@@ -386,7 +386,7 @@ There are two cases that a Message App Extension will need to handle when replyi
 
 When a Message Bubble is tapped by the user in the Message Transcript and the Message App Extension is inactive, the following process will happen:
 
-[![Handling an inactive Message Bubble.](advanced-message-app-extensions-images/interactive10.png)](advanced-message-app-extensions-images/interactive10.png#lightbox)
+[![Handling an inactive Message Bubble](advanced-message-app-extensions-images/interactive10.png)](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. The User taps the extension's Message Bubble.
 2. When an extension is launched, the Message app will launch a process.
@@ -399,7 +399,7 @@ When the process is complete, the Message App Extension will be presented in the
 
 When a Message Bubble is tapped by the user in the Message Transcript and the Message App Extension is active, the following process will happen:
 
-[![Handling an active Message Bubble.](advanced-message-app-extensions-images/interactive11.png)](advanced-message-app-extensions-images/interactive11.png#lightbox)
+[![Handling an active Message Bubble](advanced-message-app-extensions-images/interactive11.png)](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
 1. The User taps the extension's Message Bubble.
 2. Because the Message App Extension is already active, the `WillTransition` method of the `MSMessagesAppViewController` is called to handle switching from the Compact to the Expanded view mode.
@@ -449,11 +449,11 @@ The selected message should be shown in the Message App Extension's UI and the u
 
 In the process of sending the different steps of an interactive conversation between the two user's in the conversation, the partially completed Message Bubbles can start to clutter the Message Transcript:
 
-[![The partially completed Message Bubbles can cluttering the Message Transcript.](advanced-message-app-extensions-images/interactive12.png)](advanced-message-app-extensions-images/interactive12.png#lightbox)
+[![The partially completed Message Bubbles can cluttering the Message Transcript](advanced-message-app-extensions-images/interactive12.png)](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
 Instead, the Message App Extension should collapse the previous Message Bubbles into a succinct comment in the Message Transcript:
 
-[![Collapsing the previous Message Bubbles in the Message Transcript.](advanced-message-app-extensions-images/interactive13.png)](advanced-message-app-extensions-images/interactive13.png#lightbox)
+[![Collapsing the previous Message Bubbles in the Message Transcript](advanced-message-app-extensions-images/interactive13.png)](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
 This is handled using an `MSSession` to collapse all of the existing steps. So the `DidSelectMessage` method of the `MSMessagesAppViewController` class could be modified to look like the following:
 
@@ -508,7 +508,7 @@ A Message App Extension can be used while the users are involved in group conver
 
 Take a look at the following interaction in a group conversation with three users:
 
-[![Interaction in a group conversation with three users.](advanced-message-app-extensions-images/interactive14.png)](advanced-message-app-extensions-images/interactive14.png#lightbox)
+[![Interaction in a group conversation with three users](advanced-message-app-extensions-images/interactive14.png)](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
 1. User 1 sends a group Interactive Message asking User 2 and User 3 to choose a burger topping.
 2. User 2 chooses tomatoes.
@@ -523,7 +523,7 @@ When the user sends a message, a session token is generated and pushed to the cl
 
 To discuss accessing the identifier of the sender of a message, take the example of a group conversation given above:
 
-[![Group conversation sending Identifiers.](advanced-message-app-extensions-images/interactive15.png)](advanced-message-app-extensions-images/interactive15.png#lightbox)
+[![Group conversation sending Identifiers](advanced-message-app-extensions-images/interactive15.png)](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
 1. Again, User 1 sends a group Interactive Message asking User 2 and User 3 to choose a burger topping.
 2. User 3 picks pickles.

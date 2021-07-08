@@ -86,7 +86,7 @@ Depending on the server that you are talking to (especially if it is a 3rd party
 
 To set the HTTPClient Implementation used by an iOS app, double-click the **Project** in the **Solution Explorer** to open the **Project Options**. Navigate to **iOS Build** and select the desired client type under the **HttpClient implementation** dropdown:
 
-![Setting the iOS Build Options.](ats-images/client01.png)
+![Setting the iOS Build Options](ats-images/client01.png)
 
 #### Managed Handler
 

@@ -100,7 +100,7 @@ The following properties can be set on an `AppAction`:
 * Subtitle: If supported a sub-title to display under the title.
 * Icon: Must match icons in the corresponding resources directory on each platform.
 
-![App Actions on Homescreen.](images/appactions.png)
+![App Actions on Homescreen](images/appactions.png)
 
 ## Responding To Actions
 

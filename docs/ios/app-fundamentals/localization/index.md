@@ -330,9 +330,9 @@ The following screenshots show the
 [localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 in Arabic and Hebrew (although English has been entered in the fields):
 
-[![Localization in Arabic.](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Arabic")
+[![Localization in Arabic](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Arabic")
 
-[![Localization in Hebrew.](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebrew")
+[![Localization in Hebrew](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebrew")
 
 iOS automatically reverses the `UINavigationController`, and the other controls
 are placed inside `UIStackView` or aligned with Auto-Layout.
@@ -415,7 +415,7 @@ and check the ID to use for localization:
 This string value often has a form such as "NF3-h8-xmR", as shown in the
 following screenshot:
 
-![Xcode view of Storyboard localization.](images/xs-designer-localization-id.png)
+![Xcode view of Storyboard localization](images/xs-designer-localization-id.png)
 
 This value is used in the **.strings** file to assign translated text automatically
 to each control.
@@ -450,7 +450,7 @@ property; and `UIButton`s default text is set using `normalTitle`:
 > **MainStoryboard~iphone.strings** and **MainStoryboard~ipad.strings**, as
 > shown in the following screenshot:
 >
-> ![Strings files.](images/xs-dup-strings.png)
+> ![Strings files](images/xs-dup-strings.png)
 
 <a name="appstore"></a>
 

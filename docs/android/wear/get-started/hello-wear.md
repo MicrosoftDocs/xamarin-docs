@@ -13,7 +13,7 @@ ms.date: 04/10/2018
 
 _Create your first Android Wear app and run it on a Wear emulator or device. This walkthrough provides step-by-step instructions for creating a small Android Wear project that handles button clicks and displays a click counter on the Wear device. It explains how to debug the app using a Wear emulator or a Wear device that is connected via Bluetooth to an Android phone. It also provides a set of debugging tips for Android Wear._
 
-![Screenshot of the Wear app to be completed in this tutorial.](hello-wear-images/example.png)
+![Screenshot of the Wear app to be completed in this tutorial](hello-wear-images/example.png)
 
 ## Your first Wear app
 
@@ -27,11 +27,11 @@ Create a new **Android Wear Application**:
 
 # [Visual Studio](#tab/windows)
 
-[![Creating a new Android Wear Application in the New Project dialog.](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Creating a new Android Wear Application in the New Solution dialog.](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![Creating a new Android Wear Application in the New Solution dialog](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -48,13 +48,13 @@ double-check that you have installed a supported Android SDK.
 Ensure that **Minimum Android to target** is set to **Android 5.0 
 (Lollipop)** or later: 
 
-[![Setting the Target Framework to Android 5.0 in Visual Studio.](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![Setting the Target Framework to Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
 Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 
-[![Setting the Target Framework to Android 5.0 in Visual Studio for Mac.](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Setting the Target Framework to Android 5.0 in Visual Studio for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -158,11 +158,11 @@ deploy the app to the emulator or device.
 
 # [Visual Studio](#tab/windows)
 
-[![Choosing a Wear AVD in Visual Studio device menu.](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Choosing a Wear AVD in Visual Studio device menu](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Choosing a Wear AVD in Visual Studio for Mac device menu.](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Choosing a Wear AVD in Visual Studio for Mac device menu](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -180,12 +180,12 @@ deploy this app to an LG G Watch that is Bluetooth-connected to a Nexus
 After the app successfully deploys, the screen of the Wear device
 should display a screen like the following:
 
-[![Initial screen of Wear app.](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![Initial screen of Wear app](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Tap the **CLICK ME!** button on the face of the Wear device and
 see the count increment with each tap:
 
-[![Screenshot of Wear app after 3 clicks.](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![Screenshot of Wear app after 3 clicks](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## Next Steps
 

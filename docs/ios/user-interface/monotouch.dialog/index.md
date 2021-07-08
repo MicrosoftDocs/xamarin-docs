@@ -17,7 +17,7 @@ using information, rather than the tedium of creating view controllers, tables,
 etc. As such, it provides a significant simplification of UI development and
 code reduction. For example, consider the following screenshot:
 
- [![For example, consider this screenshot.](images/image1.png)](images/image1.png#lightbox)
+ [![For example, consider this screenshot](images/image1.png)](images/image1.png#lightbox)
 
 The following code was used to define this entire screen:
 
@@ -122,7 +122,7 @@ A section is a group of cells in a table. As with a normal table section, it
 can optionally have a header and footer that can either be text, or even custom
 views, as in the following screenshot:
 
- [![As with a normal table section, it can optionally have a header and footer that can either be text, or even custom views, as in this screenshot.](images/image2.png)](images/image2.png#lightbox)
+ [![As with a normal table section, it can optionally have a header and footer that can either be text, or even custom views, as in this screenshot](images/image2.png)](images/image2.png#lightbox)
 
 ### Element
 
@@ -131,7 +131,7 @@ wide variety of Elements that represent different data types or different
 inputs. For example, the following screenshots illustrate a few of the available
 elements:
 
- [![For example, this screenshots illustrate a few of the available elements.](images/image3.png)](images/image3.png#lightbox)
+ [![For example, this screenshots illustrate a few of the available elements](images/image3.png)](images/image3.png#lightbox)
 
 ## More on Sections and RootElements
 
@@ -149,8 +149,8 @@ the screenshot below shows a table on the left with a cell containing the title
 of the detail screen on the right, “Dessert”, along with the value of the
 selected desert.
 
- [![This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert.](images/image4.png)](images/image4.png#lightbox) 
- [![This screenshot below shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert.](images/image5.png)](images/image5.png#lightbox)
+ [![This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert](images/image4.png)](images/image4.png#lightbox) 
+ [![This screenshot below shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert](images/image5.png)](images/image5.png#lightbox)
 
 Root elements can also be used inside Sections to trigger loading a new
 nested configuration page, as shown above. When used in this mode the caption
@@ -248,7 +248,7 @@ var taskElement = new RootElement (task.Name) {
 This code creates a UI as shown below. For a complete walkthrough of this
 example, see the [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial.
 
- [![Combined with the Element.Value property, the callback can retrieve the value set in other elements.](images/image6.png)](images/image6.png#lightbox)
+ [![Combined with the Element.Value property, the callback can retrieve the value set in other elements](images/image6.png)](images/image6.png#lightbox)
 
 When the user presses the bottom table cell, the code in the anonymous
 function executes, writing the value from the `element` instance to
@@ -280,7 +280,7 @@ MonoTouch.Dialog, but it is not required for user-created elements.
 A `StringElement` shows a caption on the left side of a table cell
 and the string value on the right side of the cell.
 
- [![A StringElement shows a caption on the left side of a table cell and the string value on the right side of the cell.](images/image7.png)](images/image7.png#lightbox)
+ [![A StringElement shows a caption on the left side of a table cell and the string value on the right side of the cell](images/image7.png)](images/image7.png#lightbox)
 
 To use a `StringElement` as a button, provide a delegate.
 
@@ -290,14 +290,14 @@ new StringElement ("Click me", () => {
 });
 ```
 
- [![To use a StringElement as a button, provide a delegate.](images/image8.png)](images/image8.png#lightbox)
+ [![To use a StringElement as a button, provide a delegate](images/image8.png)](images/image8.png#lightbox)
 
 ### Styled String Element
 
 A `StyledStringElement` allows strings to be presented using
 either built-in table cell styles or with custom formatting.
 
- [![A StyledStringElement allows strings to be presented using either built-in table cell styles or with custom formatting.](images/image9.png)](images/image9.png#lightbox)
+ [![A StyledStringElement allows strings to be presented using either built-in table cell styles or with custom formatting](images/image9.png)](images/image9.png#lightbox)
 
 The `StyledStringElement` class derives from `StringElement`, but lets developers customize a handful of
 properties like the Font, text color, background cell color, line breaking mode,
@@ -305,7 +305,7 @@ number of lines to display, and whether an accessory should be displayed.
 
 ### Multiline Element
 
- [![Multiline Element.](images/image10.png)](images/image10.png#lightbox)
+ [![Multiline Element](images/image10.png)](images/image10.png#lightbox)
 
 ### Entry Element
 
@@ -313,7 +313,7 @@ The `EntryElement`, as the name implies, is used to get user
 input. It supports either regular strings or passwords, where characters are
 hidden.
 
- [![The EntryElement is used to get user input.](images/image11.png)](images/image11.png#lightbox)
+ [![The EntryElement is used to get user input](images/image11.png)](images/image11.png#lightbox)
 
 It is initialized with three values:
 
@@ -337,11 +337,11 @@ below:
 
 ### Boolean Element
 
- [![Boolean Element.](images/image12.png)](images/image12.png#lightbox)
+ [![Boolean Element](images/image12.png)](images/image12.png#lightbox)
 
 ### Checkbox Element
 
- [![Checkbox Element.](images/image13.png)](images/image13.png#lightbox)
+ [![Checkbox Element](images/image13.png)](images/image13.png#lightbox)
 
 ### Radio Element
 
@@ -352,7 +352,7 @@ specified in the `RootElement`.
 mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
- [![A RadioElement requires a RadioGroup to be specified in the RootElement.](images/image14.png)](images/image14.png#lightbox)
+ [![A RadioElement requires a RadioGroup to be specified in the RootElement](images/image14.png)](images/image14.png#lightbox)
 
  `RootElements` are also used to coordinate radio elements. The `RadioElement` members can span multiple Sections (for example to
 implement something similar to the ring tone selector and separate custom ring
@@ -370,56 +370,56 @@ is the index of the first selected item.
 
 ### Badge Element
 
- [![Badge Element.](images/image15.png)](images/image15.png#lightbox)
+ [![Badge Element](images/image15.png)](images/image15.png#lightbox)
 
 ### Float Element
 
- [![Float Element.](images/image16.png)](images/image16.png#lightbox)
+ [![Float Element](images/image16.png)](images/image16.png#lightbox)
 
 ### Activity Element
 
- [![Activity Element.](images/image17.png)](images/image17.png#lightbox)
+ [![Activity Element](images/image17.png)](images/image17.png#lightbox)
 
 ### Date Element
 
- ![Date Element.](images/image18.png)
+ ![Date Element](images/image18.png)
 
 When the cell corresponding to the DateElement is selected, a date picker is
 presented as shown below:
 
- [![When the cell corresponding to the DateElement is selected, a date picker is presented as shown.](images/image19.png)](images/image19.png#lightbox)
+ [![When the cell corresponding to the DateElement is selected, a date picker is presented as shown](images/image19.png)](images/image19.png#lightbox)
 
 ### Time Element
 
- [![Time Element.](images/image20.png)](images/image20.png#lightbox)
+ [![Time Element](images/image20.png)](images/image20.png#lightbox)
 
 When the cell corresponding to the TimeElement is selected, a time picker is
 presented as shown below:
 
- [![When the cell corresponding to the TimeElement is selected, a time picker is presented as shown.](images/image21.png)](images/image21.png#lightbox)
+ [![When the cell corresponding to the TimeElement is selected, a time picker is presented as shown](images/image21.png)](images/image21.png#lightbox)
 
 ### DateTime Element
 
- [![DateTime Element.](images/image22.png)](images/image22.png#lightbox)
+ [![DateTime Element](images/image22.png)](images/image22.png#lightbox)
 
 When the cell corresponding to the DateTimeElement is selected, a datetime
 picker is presented as shown below:
 
- [![When the cell corresponding to the DateTimeElement is selected, a datetime picker is presented as shown.](images/image23.png)](images/image23.png#lightbox)
+ [![When the cell corresponding to the DateTimeElement is selected, a datetime picker is presented as shown](images/image23.png)](images/image23.png#lightbox)
 
 ### HTML Element
 
- [![HTML Element.](images/image24.png)](images/image24.png#lightbox)
+ [![HTML Element](images/image24.png)](images/image24.png#lightbox)
 
 The `HTMLElement` displays the value of its `Caption`
 property in the table cell. Whe selected, the `Url` assigned to the
 element is loaded in a `UIWebView` control as shown below:
 
- [![Whe selected, the Url assigned to the element is loaded in a UIWebView control as shown below.](images/image25.png)](images/image25.png#lightbox)
+ [![Whe selected, the Url assigned to the element is loaded in a UIWebView control as shown below](images/image25.png)](images/image25.png#lightbox)
 
 ### Message Element
 
- [![Message Element.](images/image26.png)](images/image26.png#lightbox)
+ [![Message Element](images/image26.png)](images/image26.png#lightbox)
 
 ### Load More Element
 

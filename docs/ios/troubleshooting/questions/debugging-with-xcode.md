@@ -26,12 +26,12 @@ for Mac, you can use the following steps to achieve this:
     - You can find your Xamarin.iOS project's bundle identifier by
     opening the **Info.plist** file:
 
-        ![Editing Info.plist.](debugging-with-xcode-images/vsmac-infoplist.png "Editing Info.list")
+        ![Editing Info.plist](debugging-with-xcode-images/vsmac-infoplist.png "Editing Info.list")
 
     - In Xcode, you set the bundle identifier when creating your project or
     by selecting your target in the project:
 
-        ![Setting the Bundle Identifier in Xcode.](debugging-with-xcode-images/xcode-bundle.png "Setting the Bundle Identifier in Xcode")
+        ![Setting the Bundle Identifier in Xcode](debugging-with-xcode-images/xcode-bundle.png "Setting the Bundle Identifier in Xcode")
 
 2. Change the Xcode project to wait for launch instead of launching the app
    automatically:
@@ -43,7 +43,7 @@ for Mac, you can use the following steps to achieve this:
     **Launch** options. Select **Wait for executable to be launched** and
     click **Close**.
 
-        ![Wait for executable to be launched.](debugging-with-xcode-images/xcode-schemes.png "Wait for executable to be launched")
+        ![Wait for executable to be launched](debugging-with-xcode-images/xcode-schemes.png "Wait for executable to be launched")
 
 3. Run the Xcode project.
 

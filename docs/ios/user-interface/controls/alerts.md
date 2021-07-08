@@ -35,7 +35,7 @@ There are three necessary steps to take when creating an Alert Controller:
 
 The simplest alert contains a single button, as shown in this screenshot:
 
- ![Alert with one button.](alerts-images/alert1.png)
+ ![Alert with one button](alerts-images/alert1.png)
 
 The code to display a simple alert is as follows:
 
@@ -55,7 +55,7 @@ okayButton.TouchUpInside += (sender, e) => {
 
 Displaying an alert with multiple options, is done in a similar fashion but add two actions. For example, the following screenshot shows an alert with two buttons:
 
- ![Alert with two Buttons.](alerts-images/alert2.png)
+ ![Alert with two Buttons](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {
@@ -74,7 +74,7 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 
 Alerts can also display an action sheet, similar to the screenshot below:
 
- ![Action sheet alert.](alerts-images/alert3.png)
+ ![Action sheet alert](alerts-images/alert3.png)
 
 Buttons are added to the alert with the `AddAction` method:
 

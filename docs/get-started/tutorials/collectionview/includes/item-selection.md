@@ -23,7 +23,7 @@
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView that responds to item selection, on iOS and Android](../images/item-selection.png "CollectionView item selection."](../images/item-selection-large.png#lightbox "CollectionView item selection")
+    [![Screenshot of a CollectionView that responds to item selection, on iOS and Android](../images/item-selection.png "CollectionView item selection")](../images/item-selection-large.png#lightbox "CollectionView item selection")
 
     Set a breakpoint in the `OnSelectionChanged` event handler and select an item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine the value of the `selectedItem` variable, to ensure it contains the data for your selected item.
 
@@ -56,7 +56,7 @@
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView that responds to item selection, on iOS and Android](../images/item-selection.png "CollectionView item selection."](../images/item-selection-large.png#lightbox "CollectionView item selection")
+    [![Screenshot of a CollectionView that responds to item selection, on iOS and Android](../images/item-selection.png "CollectionView item selection")](../images/item-selection-large.png#lightbox "CollectionView item selection")
 
     Set a breakpoint in the `OnSelectionChanged` event handler and select an item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine the value of the `selectedItem` variable, to ensure it contains the data for your selected item.
 

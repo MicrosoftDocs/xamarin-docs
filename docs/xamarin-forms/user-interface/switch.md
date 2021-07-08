@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Switch
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
 The Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) control is a horizontal toggle button that can be manipulated by the user to toggle between on and off states, which are represented by a `boolean` value. The `Switch` class inherits from [`View`](xref:Xamarin.Forms.View).
 
 The following screenshots show a `Switch` control in its **on** and **off** toggle states on iOS and Android:
 
-![Screenshot of Switches in on and off states, on iOS and Android.](switch-images/switch-states-default.png "Switches on iOS and Android")
+![Screenshot of Switches in on and off states, on iOS and Android](switch-images/switch-states-default.png "Switches on iOS and Android")
 
 The `Switch` control defines the following properties:
 
@@ -145,8 +145,8 @@ The following XAML example shows how to define visual states for the `On` and `O
 
 In this example, the `On` [`VisualState`](xref:Xamarin.Forms.VisualState) specifies that when the [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property is `true`, the `ThumbColor` property will be set to medium spring green. The `Off` `VisualState` specifies that when the `IsToggled` property is `false`, the `ThumbColor` property will be set to red. Therefore, the overall effect is that when the `Switch` is in an off position its thumb is red, and its thumb is medium spring green when the `Switch` is in an on position:
 
-![Screenshot of Switch on VisualState, on iOS and Android.](switch-images/on-visualstate.png "Switch on VisualState")
-![Screenshot of Switch off VisualState, on iOS and Android.](switch-images/off-visualstate.png "Switch off VisualState")
+![Screenshot of Switch on VisualState, on iOS and Android](switch-images/on-visualstate.png "Switch on VisualState")
+![Screenshot of Switch off VisualState, on iOS and Android](switch-images/off-visualstate.png "Switch off VisualState")
 
 For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 

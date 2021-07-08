@@ -32,7 +32,7 @@ To create a new App Group, do the following:
 3. Under **Identifiers** select **App Groups** and click the **+** button to create a new group.
 4. Enter a **Name** and an **Identifier** for the new group and click the **Continue** button: 
    
-    ![Add App Group details.](app-groups-capabilities-images/image52.png)
+    ![Add App Group details](app-groups-capabilities-images/image52.png)
 
 5. Click the **Register** button to create the group and the **Done** to return to the list of registered App Groups.
 
@@ -48,7 +48,7 @@ Do the following:
 4. Enter a Name for the App ID and give it an Explicit App ID.
 5. Under **App Services** enable **App Groups**, then click the Continue button:
 
-    ![Add App Group App Services.](app-groups-capabilities-images/image53.png)
+    ![Add App Group App Services](app-groups-capabilities-images/image53.png)
 
 6. Verify the settings and click the **Register** button to create the App ID.
 7. Click the **Done** button to return to the list of registered App IDs.
@@ -62,7 +62,7 @@ Do the following:
 
 10. Select the App Group that was created above and click the **Continue** button:
 
-    ![Add App Group.](app-groups-capabilities-images/image56.png)
+    ![Add App Group](app-groups-capabilities-images/image56.png)
 
 11. Click the **Assign** button, then the **Done** button to return to the list of registered App IDs.
 12. Repeat these steps for any Apps (or Extensions) that will be using the App Group.

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CarouselView Interaction
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines the following properties that control user interaction:
 
@@ -77,7 +77,7 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
 
 In this example, the `OnCurrentItemChanged` event handler exposes the previous and current items:
 
-[![Screenshot of a CarouselView with previous and current items, on iOS and Android](interaction-images/current-item-events.png "CarouselView with current and previous items."](interaction-images/current-item-events-large.png#lightbox "CarouselView with current and previous items")
+[![Screenshot of a CarouselView with previous and current items, on iOS and Android](interaction-images/current-item-events.png "CarouselView with current and previous items")](interaction-images/current-item-events-large.png#lightbox "CarouselView with current and previous items")
 
 ### Command
 
@@ -150,7 +150,7 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
 
 In this example, the `OnCurrentItemChanged` event handler exposes the previous and current positions:
 
-[![Screenshot of a CarouselView with previous and current positions, on iOS and Android](interaction-images/current-position-events.png "CarouselView with current and previous positions."](interaction-images/current-position-events-large.png#lightbox "CarouselView with current and previous positions")
+[![Screenshot of a CarouselView with previous and current positions, on iOS and Android](interaction-images/current-position-events.png "CarouselView with current and previous positions")](interaction-images/current-position-events-large.png#lightbox "CarouselView with current and previous positions")
 
 ### Command
 
@@ -228,7 +228,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 In this example, the `CurrentItem` property is set to the fourth item in the `Monkeys` collection:
 
-[![Screenshot of a CarouselView with preset item, on iOS and Android](interaction-images/preset-item.png "CarouselView with preset item."](interaction-images/preset-item-large.png#lightbox "CarouselView with preset item")
+[![Screenshot of a CarouselView with preset item, on iOS and Android](interaction-images/preset-item.png "CarouselView with preset item")](interaction-images/preset-item-large.png#lightbox "CarouselView with preset item")
 
 ## Preset the position
 
@@ -271,7 +271,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 In this example, the `Position` property is set to the fourth item in the `Monkeys` collection:
 
-[![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position."](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
+[![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position")](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
 
 ## Define visual states
 
@@ -338,7 +338,7 @@ In this example, the `CurrentItem` visual state specifies that the current item 
 
 The following screenshots show the `CurrentItem`, `PreviousItem`, and `NextItem` visual states:
 
-[![Screenshot of a CarouselView using visual states, on iOS and Android](interaction-images/visual-states.png "CarouselView visual states."](interaction-images/visual-states-large.png#lightbox "CarouselView visual states")
+[![Screenshot of a CarouselView using visual states, on iOS and Android](interaction-images/visual-states.png "CarouselView visual states")](interaction-images/visual-states-large.png#lightbox "CarouselView visual states")
 
 For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 

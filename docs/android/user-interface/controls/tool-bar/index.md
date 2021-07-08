@@ -28,7 +28,7 @@ anywhere in an app layout, and it is much more customizable than an
 action bar. The following screenshot illustrates the customized 
 `Toolbar` example created in this guide: 
 
-[![Example screenshot of a Toolbar with edit, save, and overflow menu items.](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
+[![Example screenshot of a Toolbar with edit, save, and overflow menu items](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 There are some important differences between the `Toolbar` and the 
 action bar: 

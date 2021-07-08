@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Cropping SkiaSharp bitmaps
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [**Creating and Drawing SkiaSharp Bitmaps**](drawing.md) article described how an `SKBitmap` object can be passed to an `SKCanvas` constructor. Any drawing method called on that canvas causes graphics to be rendered on the bitmap. These drawing methods include `DrawBitmap`, which means that this technique allows transferring part or all of one bitmap to another bitmap, perhaps with transforms applied.
 
@@ -24,7 +24,7 @@ canvas.DrawBitmap(bitmap, sourceRect, destRect);
 
 However, applications that implement cropping often provide an interface for the user to interactively select the cropping rectangle:
 
-![Cropping Sample.](cropping-images/CroppingSample.png "Cropping Sample")
+![Cropping Sample](cropping-images/CroppingSample.png "Cropping Sample")
 
 This article focuses on that interface.
 
@@ -512,11 +512,11 @@ public partial class PhotoCroppingPage : ContentPage
 
 The user can then manipulate the cropping rectangle:
 
-[![Photo Cropper 1.](cropping-images/PhotoCropping1.png "Photo Cropper 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
+[![Photo Cropper 1](cropping-images/PhotoCropping1.png "Photo Cropper 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
 
 When a good cropping rectangle has been defined, click the **Done** button. The `Clicked` handler obtains the cropped bitmap from the `CroppedBitmap` property of `PhotoCropperCanvasView`, and replaces all the content of the page with a new `SKCanvasView` object that displays this cropped bitmap:
 
-[![Photo Cropper 2.](cropping-images/PhotoCropping2.png "Photo Cropper 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
+[![Photo Cropper 2](cropping-images/PhotoCropping2.png "Photo Cropper 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
 
 Try setting the second argument of `PhotoCropperCanvasView` to 1.78f (for example):
 
@@ -748,11 +748,11 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 
 This array of bitmaps is passed as a constructor to `PhotoPuzzlePage4`. That page is entirely Xamarin.Forms and doesn't use any SkiaSharp. It is very similar to [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), so it won't be described here, but it displays your selected photo divided into 15 square tiles:
 
-[![Photo Puzzle 1.](cropping-images/PhotoPuzzle1.png "Photo Puzzle 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
+[![Photo Puzzle 1](cropping-images/PhotoPuzzle1.png "Photo Puzzle 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
 
 Pressing the **Randomize** button mixes up all the tiles:
 
-[![Photo Puzzle 2.](cropping-images/PhotoPuzzle2.png "Photo Puzzle 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
+[![Photo Puzzle 2](cropping-images/PhotoPuzzle2.png "Photo Puzzle 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
 Now you can put them back in the correct order. Any tiles in the same row or column as the blank square can be tapped to move them into the blank square.
 

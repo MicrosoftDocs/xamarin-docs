@@ -25,13 +25,13 @@ In the same way that a Xamarin.iOS app can use image assets for UI controls and 
 
 - **Application Icon** - Every iOS app must define an application icon. This is the icon that the user will tap from the iOS home screen to launch the app. Additionally, this icon is used by Game Center, if applicable. Example:
 
-    [![Application Icon.](app-icons-images/000.png)](app-icons-images/000-full.png#lightbox)
+    [![Application Icon](app-icons-images/000.png)](app-icons-images/000-full.png#lightbox)
 - **Spotlight Icon** - Whenever the user enters the name of an app in a Spotlight Search, this icon is displayed. Example:
 
-    [![Spotlight Icon.](app-icons-images/000a.png)](app-icons-images/000a-full.png#lightbox)
+    [![Spotlight Icon](app-icons-images/000a.png)](app-icons-images/000a-full.png#lightbox)
 - **Settings Icon** - If the user enters the **Settings** app on their iOS device, this icon will be displayed at the end of the **Settings** list for the app. Example:
 
-    [![Settings Icon.](app-icons-images/000b.png)](app-icons-images/000b-full.png#lightbox)
+    [![Settings Icon](app-icons-images/000b.png)](app-icons-images/000b-full.png#lightbox)
 
 The following image asset sizes and resolutions will be needed to support all of the icon types required by an Xamarin.iOS app targeting iOS 5 through iOS 9 (or greater):
 
@@ -110,15 +110,15 @@ To use an Asset Catalog, follow these steps:
 2. Scroll down to the **iPhone Icons** section.
 3. Click the **Migrate to Asset Catalog** button:
 
-    ![Ensure AppIcon is selected.](app-icons-images/migrate01.png)
+    ![Ensure AppIcon is selected](app-icons-images/migrate01.png)
 
 4. From the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing:
 
-    ![The Assets.xcassets file in the Solution Explorer.](app-icons-images/asset01.png)
+    ![The Assets.xcassets file in the Solution Explorer](app-icons-images/asset01.png)
 
 5. Select `AppIcon` from the list of assets to display the `Icon Editor`:
 
-    ![The AppIcon editor.](app-icons-images/asset02.png)
+    ![The AppIcon editor](app-icons-images/asset02.png)
 
 6. Either click on given icon type and select an image file for the required type/size or drag in an image from a folder and drop it on the desired size.
 7. Click the **Open** button to include the image in the project and set it in the xcasset.
@@ -128,21 +128,21 @@ To use an Asset Catalog, follow these steps:
 
 1. Double-click the **Info.  ** file in the **Solution Explorer**:
 
-    ![Select Info.plist.](app-icons-images/icon01w.png)
+    ![Select Info.plist](app-icons-images/icon01w.png)
 
 2. Click on the **Visual Assets** tab and click on the **Use Asset Catalog** button under **App Icons**:
 
-    ![Select the Visual Assets tab.](app-icons-images/icon02w.png)
+    ![Select the Visual Assets tab](app-icons-images/icon02w.png)
 
     If there is no button, but instead a drop-down list, then an Asset Catalog has already been added to this project.
 
 3. From the **Solution Explorer**, expand the **Asset Catalog** folder:
 
-    ![Expand the Asset Catalog folder.](app-icons-images/image009.png)
+    ![Expand the Asset Catalog folder](app-icons-images/image009.png)
 
 4. Double-click the **Media** file to open it in the editor:
 
-    ![Open the Media file in the editor.](app-icons-images/image010.png)
+    ![Open the Media file in the editor](app-icons-images/image010.png)
 
 5. Under the **Properties Explorer** the developer can select the different types and sizes of icons required.
 6. Click on given icon type and select an image file for the required type/size.
@@ -166,7 +166,7 @@ To specify the iTunes Artwork, do the following:
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll to the **iTunes Artwork** section of the editor:
 
-    ![Scroll to the iTunes Artwork section of the editor.](app-icons-images/itunes01.png)
+    ![Scroll to the iTunes Artwork section of the editor](app-icons-images/itunes01.png)
 3. For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the **OK** button.
 4. Repeat this step until all needed images have been specified for the app.
 
@@ -176,7 +176,7 @@ To specify the iTunes Artwork, do the following:
 
 2. Click on the **Visual Assets** tab and expand the **iTunes Artwork**:
 
-    ![Editing iTunes Artwork in Visual Studio.](app-icons-images/itunes01w.png)
+    ![Editing iTunes Artwork in Visual Studio](app-icons-images/itunes01w.png)
 3. For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the **Open** button.
 4. Repeat this step until all needed images have been specified for the app.
 

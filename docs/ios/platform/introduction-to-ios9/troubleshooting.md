@@ -19,7 +19,7 @@ If you have installed Xcode 7 (or greater), it will automatically replace all of
 
 In Xcode, select the **Xcode** menu then **Preferences...** > **Downloads**:
 
-[![iOS 8 Simulators Downloads.](troubleshooting-images/ios8.png)](troubleshooting-images/ios8.png#lightbox)
+[![iOS 8 Simulators Downloads](troubleshooting-images/ios8.png)](troubleshooting-images/ios8.png#lightbox)
 
 Select the **Check and Install Now** button to reinstall the iOS 8 simulators.
 
@@ -133,26 +133,26 @@ this error; you should target iOS 8 to use WebKit in your app).
 
 When attempting to run the iOS 9 version of your Xamarin.iOS app on real iOS hardware, you might get a message saying that your developer account has not been trusted on the device. For example:
 
-[![Untrusted Enterprise Developer alert.](troubleshooting-images/untrusted01.png)](troubleshooting-images/untrusted01.png#lightbox)
+[![Untrusted Enterprise Developer alert](troubleshooting-images/untrusted01.png)](troubleshooting-images/untrusted01.png#lightbox)
 
 To solve this issue, do the following:
 
 1. Start Xcode (the latest beta version) on the development Mac.
 2. Select **Devices** from the **Window** menu to open the Devices Window: 
 
-    [![The Devices Window.](troubleshooting-images/untrusted02.png)](troubleshooting-images/untrusted02.png#lightbox)
+    [![The Devices Window](troubleshooting-images/untrusted02.png)](troubleshooting-images/untrusted02.png#lightbox)
 3. Under the **DEVICES** side panel, select your device, right-click, and select **Show Provisioning Profiles...**: 
 
-    [![SShow Provisioning Profiles.](troubleshooting-images/untrusted03.png)](troubleshooting-images/untrusted03.png#lightbox)
+    [![SShow Provisioning Profiles](troubleshooting-images/untrusted03.png)](troubleshooting-images/untrusted03.png#lightbox)
 4. Select each provisioning profile currently on the device and select the **-** button to delete it: 
 
-    [![Deleting a provisioning profile.](troubleshooting-images/untrusted04.png)](troubleshooting-images/untrusted04.png#lightbox)
+    [![Deleting a provisioning profile](troubleshooting-images/untrusted04.png)](troubleshooting-images/untrusted04.png#lightbox)
 5. From the **Xcode** menu, select **Preferences...** and **Accounts**: 
 
-    [![Xcode account preferences.](troubleshooting-images/untrusted05.png)](troubleshooting-images/untrusted05.png#lightbox)
+    [![Xcode account preferences](troubleshooting-images/untrusted05.png)](troubleshooting-images/untrusted05.png#lightbox)
 6. Click the **View Details...** button, then select the **Download all** button: 
 
-    [![Download all profiles.](troubleshooting-images/untrusted06.png)](troubleshooting-images/untrusted06.png#lightbox)
+    [![Download all profiles](troubleshooting-images/untrusted06.png)](troubleshooting-images/untrusted06.png#lightbox)
 7. When the list has finished updating, select the **Done** button and close the Preferences window.
 8. Remove the existing version of the Xamarin.iOS app that you were trying to test from the iOS device.
 9. Return to Visual Studio for Mac, do a clean build and try to rerun the app on the device.

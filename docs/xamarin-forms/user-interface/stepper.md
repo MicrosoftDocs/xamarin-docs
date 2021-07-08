@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Stepper
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Use a Stepper for selecting a numeric value from a range of values._
 
@@ -90,7 +90,7 @@ The [`Stepper`](xref:Xamarin.Forms.Stepper) is initialized to have a [`Maximum`]
 
 The following screenshots show the **Basic Stepper Code** page:
 
-[![Basic Stepper Code](stepper-images/basic-stepper-code.png "Basic Stepper Code."](stepper-images/basic-stepper-code-large.png#lightbox)
+[![Basic Stepper Code](stepper-images/basic-stepper-code.png "Basic Stepper Code")](stepper-images/basic-stepper-code-large.png#lightbox)
 
 The second [`Label`](xref:Xamarin.Forms.Label)  displays the text "(uninitialized)" until the [`Stepper`](xref:Xamarin.Forms.Stepper) is manipulated, which causes the first [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) event to be fired.
 

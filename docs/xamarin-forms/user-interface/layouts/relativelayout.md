@@ -13,9 +13,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms RelativeLayout
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 
-[![Xamarin.Forms RelativeLayout.](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
+[![Xamarin.Forms RelativeLayout](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
 
 A [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) is used to position and size children relative to properties of the layout or sibling elements. This allows UIs to be created that scale proportionally across device sizes. In addition, unlike some other layout classes, `RelativeLayout` is able to position children so that overlap.
 
@@ -101,7 +101,7 @@ In this example, the position of each [`BoxView`](xref:Xamarin.Forms.BoxView) ob
 
 The following screenshots show the resulting layout:
 
-![Children placed in a RelativeLayout using absolute values.](relativelayout-images/absolute-values.png)
+![Children placed in a RelativeLayout using absolute values](relativelayout-images/absolute-values.png)
 
 The equivalent C# code is shown below:
 
@@ -226,7 +226,7 @@ The black [`BoxView`](xref:Xamarin.Forms.BoxView) is positioned and sized relati
 
 The following screenshot shows the resulting layout:
 
-![Children placed in a RelativeLayout using relative values.](relativelayout-images/relative-values.png)
+![Children placed in a RelativeLayout using relative values](relativelayout-images/relative-values.png)
 
 ### Constraint objects
 

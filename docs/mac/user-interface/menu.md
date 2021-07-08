@@ -23,7 +23,7 @@ Menus are an integral part of a Mac application's user experience and commonly a
 - **Dock menu** - The menu for each application in the dock that appears when the user right-clicks or control-clicks the application's icon, or when the user left-clicks the icon and holds the mouse button down.
 - **Pop-up button and pull-down lists** - A pop-up button displays a selected item and presents a list of options to select from when clicked by the user. A pull-down list is a type of pop-up button usually used for selecting commands specific to the context of the current task. Both can appear anywhere in a window.
 
-[![An example menu](menu-images/intro01.png "An example menu."](menu-images/intro01-large.png#lightbox)
+[![An example menu](menu-images/intro01.png "An example menu")](menu-images/intro01-large.png#lightbox)
 
 In this article, we'll cover the basics of working with Cocoa menu bars, menus, and menu items in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -33,7 +33,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 Unlike applications running on the Windows OS where every window can have its own menu bar attached to it, every application running on macOS has a single menu bar that runs along the top of the screen that's used for every window in that application:
 
-[![A menu bar](menu-images/appmenu01.png "A menu bar."](menu-images/appmenu01-large.png#lightbox)
+[![A menu bar](menu-images/appmenu01.png "A menu bar")](menu-images/appmenu01-large.png#lightbox)
 
 Items on this menu bar are activated or deactivated based on the current context or state of the application and its user interface at any given moment. For example: if the user selects a text field, items on the **Edit** menu will be come enabled such as **Copy** and **Cut**.
 
@@ -55,7 +55,7 @@ For more information about the application menu bar and standard menus and menu 
 
 Whenever you create a new Xamarin.Mac project, you automatically get a standard, default application menu bar that has the typical items that a macOS application would normally have (as discussed in the section above). Your application's default menu bar is defined in the **Main.storyboard** file (along with the rest of your app's UI) under the project in the **Solution Pad**:  
 
-![Select the main storyboard.](menu-images/appmenu02.png "Select the main storyboard")
+![Select the main storyboard](menu-images/appmenu02.png "Select the main storyboard")
 
 Double-click the **Main.storyboard** file to open it for editing in Xcode's Interface Builder and you'll be presented with the menu editor interface:
 
@@ -63,17 +63,17 @@ Double-click the **Main.storyboard** file to open it for editing in Xcode's Inte
 
 From here we can click on items such as the **Open** menu item in the **File** menu and edit or adjust its properties in the **Attributes Inspector**:
 
-[![Editing a menu's attributes](menu-images/defaultbar02.png "Editing a menu's attributes."](menu-images/defaultbar02-large.png#lightbox)
+[![Editing a menu's attributes](menu-images/defaultbar02.png "Editing a menu's attributes")](menu-images/defaultbar02-large.png#lightbox)
 
 We'll get into adding, editing, and deleting menus and items later in this article. For now we just want to see what menus and menu items are available by default and how they have been automatically exposed to code via a set of predefined outlets and actions (for more information see our [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) documentation).
 
 For example, if we click on the **Connection Inspector** for the **Open** menu item we can see it is automatically wired up to the `openDocument:` action: 
 
-[![Viewing the attached action](menu-images/defaultbar03.png "Viewing the attached action."](menu-images/defaultbar03-large.png#lightbox)
+[![Viewing the attached action](menu-images/defaultbar03.png "Viewing the attached action")](menu-images/defaultbar03-large.png#lightbox)
 
 If you select the **First Responder** in the **Interface Hierarchy** and scroll down in the **Connection Inspector**, and you will see the definition of the `openDocument:` action that the **Open** menu item is attached to (along with several other default actions for the application that are and are not automatically wired up to controls):
 
-[![Viewing all attached actions](menu-images/defaultbar04.png "Viewing all attached actions."](menu-images/defaultbar04-large.png#lightbox) 
+[![Viewing all attached actions](menu-images/defaultbar04.png "Viewing all attached actions")](menu-images/defaultbar04-large.png#lightbox) 
 
 Why is this important? In the next section will see how these automatically-defined actions work with other Cocoa user interface elements to automatically enable and disable menu items, as well as, provide built-in functionality for the items.
 
@@ -85,23 +85,23 @@ Later we'll be using these built-in actions to enable and disable items from cod
 
 If you were the run a newly created Xamarin.Mac application before adding any UI items or code, you'll notice that some items are automatically wired-up and enabled for you (with fully functionality automatically built-in), such as the **Quit** item in the **App** menu:
 
-![An enabled menu item.](menu-images/appmenu03.png "An enabled menu item")
+![An enabled menu item](menu-images/appmenu03.png "An enabled menu item")
 
 While other menu items, such as **Cut**, **Copy**, and **Paste** are not:
 
-![Disabled menu items.](menu-images/appmenu04.png "Disabled menu items")
+![Disabled menu items](menu-images/appmenu04.png "Disabled menu items")
 
 Let's stop the application and double-click the **Main.storyboard** file in the **Solution Pad** to open it for editing in Xcode's Interface Builder. Next, drag a **Text View** from the **Library** onto the window's view controller in the **Interface Editor**:
 
-[![Selecting a Text View from the Library](menu-images/appmenu05.png "Selecting a Text View from the Library."](menu-images/appmenu05-large.png#lightbox)
+[![Selecting a Text View from the Library](menu-images/appmenu05.png "Selecting a Text View from the Library")](menu-images/appmenu05-large.png#lightbox)
 
 In the **Constraint Editor** let's pin the text view to the window's edges and set it where it grows and shrinks with the window by clicking all four red I-beams at the top of the editor and clicking the **Add 4 Constraints** button:
 
-[![Editing the contraints](menu-images/appmenu06.png "Editing the contraints."](menu-images/appmenu06-large.png#lightbox)
+[![Editing the contraints](menu-images/appmenu06.png "Editing the contraints")](menu-images/appmenu06-large.png#lightbox)
 
 Save your changes to the user interface design and switch back the Visual Studio for Mac to synchronize the changes with your Xamarin.Mac project. Now start the application, type some text into the text view, select it, and open the **Edit** menu:
 
-![The menu items are automatically enabled/disabled.](menu-images/appmenu07.png "The menu items are automatically enabled/disabled")
+![The menu items are automatically enabled/disabled](menu-images/appmenu07.png "The menu items are automatically enabled/disabled")
 
 Notice how the **Cut**, **Copy**, and **Paste** items are automatically enabled and fully functional, all without writing a single line of code. 
 
@@ -126,7 +126,7 @@ As stated above, for any menu item that is bound to a [Window or View Controller
 
 In the following example, the `Tag` property will be used to decide the type of menu item that will be enabled/disabled by the `validateMenuItem:` action based on the state of selected text in a `NSTextView`. The `Tag` property has been set in Interface Builder for each menu item:
 
-![Setting the Tag property.](menu-images/validate01.png "Setting the Tag property")
+![Setting the Tag property](menu-images/validate01.png "Setting the Tag property")
 
 And the following code added to the View Controller:
 
@@ -153,11 +153,11 @@ public bool ValidateMenuItem (NSMenuItem item) {
 
 When this code is run, and no text is selected in the `NSTextView`, the two wrap menu items are disabled (even though they are wired to actions on the view controller):
 
-![Showing disabled items.](menu-images/validate02.png "Showing disabled items")
+![Showing disabled items](menu-images/validate02.png "Showing disabled items")
 
 If a section of text is selected and the menu reopened, the two wrap menu items will be available:
 
-![Showing enabled items.](menu-images/validate03.png "Showing enabled items")
+![Showing enabled items](menu-images/validate03.png "Showing enabled items")
 
 ## Enabling and responding to menu items in code
 
@@ -167,7 +167,7 @@ For example, let say we want the user to be able to use the **Open** item in the
 
 In the **Solution Pad**, double-click the `AppDelegate.CS` file to open it for editing:
 
-![Selecting the app delegate.](menu-images/appmenu08.png "Selecting the app delegate")
+![Selecting the app delegate](menu-images/appmenu08.png "Selecting the app delegate")
 
 Add the following code below the `DidFinishLaunching` method:
 
@@ -192,19 +192,19 @@ void OpenDialog (NSObject sender)
 
 Let's run the application now and open the **File** menu: 
 
-![The File menu.](menu-images/appmenu09.png "The File menu")
+![The File menu](menu-images/appmenu09.png "The File menu")
 
 Notice that the **Open** menu item is now enabled. If we select it, the open dialog will be displayed:
 
-![An open dialog.](menu-images/appmenu10.png "An open dialog")
+![An open dialog](menu-images/appmenu10.png "An open dialog")
 
 If we click the **Open** button, our alert message will be displayed:
 
-![An example dialog message.](menu-images/appmenu11.png "An example dialog message")
+![An example dialog message](menu-images/appmenu11.png "An example dialog message")
 
 The key line here was `[Export ("openDocument:")]`, it tells `NSMenu` that our **AppDelegate** has a method `void OpenDialog (NSObject sender)` that responds to the `openDocument:` action. If you'll remember from above, the **Open** menu item is automatically wired-up to this action by default in Interface Builder:
 
-[![Viewing the attached actions](menu-images/defaultbar03.png "Viewing the attached actions."](menu-images/defaultbar03-large.png#lightbox)
+[![Viewing the attached actions](menu-images/defaultbar03.png "Viewing the attached actions")](menu-images/defaultbar03-large.png#lightbox)
 
 Next let's look at creating our own menu, menu items, and actions and responding to them in code.
 
@@ -432,23 +432,23 @@ public void defineKeyword (NSObject sender) {
 
 Next, double-click the app's storyboard file in the **Solution Pad** to open it for editing in Xcode's Interface Builder. Select the **First Responder** under the **Application Scene**, then switch to the **Attributes Inspector**:
 
-![The Attributes Inspector.](menu-images/action01.png "The Attributes Inspector")
+![The Attributes Inspector](menu-images/action01.png "The Attributes Inspector")
 
 Click the **+** button at the bottom of the **Attributes Inspector** to add a new custom action:
 
-![Adding a new action.](menu-images/action02.png "Adding a new action")
+![Adding a new action](menu-images/action02.png "Adding a new action")
 
 Give it the same name as the custom action that you created on your window controller:
 
-![Editing the action name.](menu-images/action03.png "Editing the action name")
+![Editing the action name](menu-images/action03.png "Editing the action name")
 
 Control-click and drag from a menu item to the **First Responder** under the **Application Scene**. From the popup list, select the new action you just created (`defineKeyword:` in this example):
 
-![Attaching an action.](menu-images/action04.png "Attaching an action")
+![Attaching an action](menu-images/action04.png "Attaching an action")
 
 Save the changes to the storyboard and return to Visual Studio for Mac to sync the changes. If you run the app, the menu item that you connected the custom action to will automatically be enabled/disabled (based on the window with the action being open) and selecting the menu item will fire off the action:
 
-[![Testing the new action](menu-images/action05.png "Testing the new action."](menu-images/action05-large.png#lightbox)
+[![Testing the new action](menu-images/action05.png "Testing the new action")](menu-images/action05-large.png#lightbox)
 
 <a name="Adding,_Editing_and_Deleting_Menus"></a>
 
@@ -464,75 +464,75 @@ Double-click the **Main.storyboard** file in the **Solution Pad** to open it for
 
 For our specific Xamarin.Mac application we are not going to be using the default **View** menu so we are going to remove it. In the **Interface Hierarchy** select the **View** menu item that is a part of the main menu bar:
 
-![Selecting the View menu item.](menu-images/maint02.png "Selecting the View menu item")
+![Selecting the View menu item](menu-images/maint02.png "Selecting the View menu item")
 
 Press delete or backspace to delete the menu. Next, we aren't going to be using all of the items in the **Format** menu and we want to move the items we are going to use out from under the sub menus. In the **Interface Hierarchy** select the following menu items:
 
-![Highlighting multiple items.](menu-images/maint03.png "Highlighting multiple items")
+![Highlighting multiple items](menu-images/maint03.png "Highlighting multiple items")
 
 Drag the items under the parent **Menu** from the sub-menu where they currently are:
 
-[![Dragging menu items to the parent menu](menu-images/maint04.png "Dragging menu items to the parent menu."](menu-images/maint04-large.png#lightbox)
+[![Dragging menu items to the parent menu](menu-images/maint04.png "Dragging menu items to the parent menu")](menu-images/maint04-large.png#lightbox)
 
 Your menu should now look like:
 
-[![The items in the new location](menu-images/maint05.png "The items in the new location."](menu-images/maint05-large.png#lightbox)
+[![The items in the new location](menu-images/maint05.png "The items in the new location")](menu-images/maint05-large.png#lightbox)
 
 Next let's drag the **Text** sub-menu out from under the **Format** menu and place it on the main menu bar between the **Format** and **Window** menus:
 
-[![The Text menu](menu-images/maint06.png "The Text menu."](menu-images/maint06-large.png#lightbox)
+[![The Text menu](menu-images/maint06.png "The Text menu")](menu-images/maint06-large.png#lightbox)
 
 Let's go back under the **Format** menu and delete the **Font** sub-menu item. Next, select the **Format** menu and rename it "Font":
 
-[![The Font menu](menu-images/maint07.png "The Font menu."](menu-images/maint07-large.png#lightbox)
+[![The Font menu](menu-images/maint07.png "The Font menu")](menu-images/maint07-large.png#lightbox)
 
 Next, let's create a custom menu of predefine phrases that will automatically get appended to the text in the text view when they are selected. In the search box at the bottom on the **Library Inspector** type in "menu." This will make it easier to find and work with all of the menu UI elements:
 
-![The Library Inspector.](menu-images/maint08.png "The Library Inspector")
+![The Library Inspector](menu-images/maint08.png "The Library Inspector")
 
 Now let's do the following to create our menu:
 
 1. Drag a **Menu Item** from the **Library Inspector** onto the menu bar between the **Text** and **Window** menus: 
 
-    ![Selecting a new menu item in the Library.](menu-images/maint10.png "Selecting a new menu item in the Library")
+    ![Selecting a new menu item in the Library](menu-images/maint10.png "Selecting a new menu item in the Library")
 2. Rename the item "Phrases": 
 
-    [![Setting the menu name](menu-images/maint09.png "Setting the menu name."](menu-images/maint09-large.png#lightbox)
+    [![Setting the menu name](menu-images/maint09.png "Setting the menu name")](menu-images/maint09-large.png#lightbox)
 3. Next drag a **Menu** from the **Library Inspector**: 
 
-    ![Selecting a menu from the Library.](menu-images/maint11.png "Selecting a menu from the Library")
+    ![Selecting a menu from the Library](menu-images/maint11.png "Selecting a menu from the Library")
 4. Drop then **Menu** on the new **Menu Item** we just created and change its name to "Phrases": 
 
-    [![Editing the menu name](menu-images/maint12.png "Editing the menu name."](menu-images/maint12-large.png#lightbox)
+    [![Editing the menu name](menu-images/maint12.png "Editing the menu name")](menu-images/maint12-large.png#lightbox)
 5. Now let's rename the three default **Menu Items** "Address", "Date," and "Greeting": 
 
-    [![The Phrases menu](menu-images/maint13.png "The Phrases menu."](menu-images/maint13-large.png#lightbox)
+    [![The Phrases menu](menu-images/maint13.png "The Phrases menu")](menu-images/maint13-large.png#lightbox)
 6. Let's add a fourth **Menu Item** by dragging a **Menu Item** from the **Library Inspector** and calling it "Signature": 
 
-    [![Editing the menu item name](menu-images/maint14.png "Editing the menu item name."](menu-images/maint14-large.png#lightbox)
+    [![Editing the menu item name](menu-images/maint14.png "Editing the menu item name")](menu-images/maint14-large.png#lightbox)
 7. Save the changes to the menu bar.
 
 Now let's create a set of custom actions so that our new menu items are exposed to C# code. In Xcode let's switch to the **Assistant** view:
 
-[![Creating the required actions](menu-images/maint15.png "Creating the required actions."](menu-images/maint15-large.png#lightbox)
+[![Creating the required actions](menu-images/maint15.png "Creating the required actions")](menu-images/maint15-large.png#lightbox)
 
 Let's do the following:
 
 1. Control-drag from the **Address** menu item to the **AppDelegate.h** file.
 2. Switch the **Connection** type to **Action**: 
 
-    [![Selecting the action type](menu-images/maint17.png "Selecting the action type."](menu-images/maint17-large.png#lightbox)
+    [![Selecting the action type](menu-images/maint17.png "Selecting the action type")](menu-images/maint17-large.png#lightbox)
 3. Enter a **Name** of "phraseAddress" and press the **Connect** button to create the new action: 
 
     [![Configuring the action by entering a name.](menu-images/maint18.png "Configuring the action")](menu-images/maint18-large.png#lightbox)
 4. Repeat the above steps for the **Date**, **Greeting**, and **Signature** menu items: 
 
-    [![The completed actions](menu-images/maint19.png "The completed actions."](menu-images/maint19-large.png#lightbox)
+    [![The completed actions](menu-images/maint19.png "The completed actions")](menu-images/maint19-large.png#lightbox)
 5. Save the changes to the menu bar.
 
 Next we need to create an outlet for our text view so that we can adjust its content from code. Select the **ViewController.h** file in the **Assistant Editor** and create a new outlet called `documentText`:
 
-[![Creating an outlet](menu-images/maint20.png "Creating an outlet."](menu-images/maint20-large.png#lightbox)
+[![Creating an outlet](menu-images/maint20.png "Creating an outlet")](menu-images/maint20-large.png#lightbox)
 
 Return to Visual Studio for Mac to sync the changes from Xcode. Next edit the **ViewController.cs** file and make it look like the following:
 
@@ -709,7 +709,7 @@ partial void phrasesSignature (Foundation.NSObject sender) {
 
 Now if we run our application, all of the items in the **Phrase** menu will be active and will add the give phrase to the text view when selected:
 
-![An example of the app running.](menu-images/maint21.png "An example of the app running")
+![An example of the app running](menu-images/maint21.png "An example of the app running")
 
 Now that we have the basics of working with the application menu bar down, let's look at creating a custom contextual menu.
 
@@ -862,7 +862,7 @@ FormattingCommands.Add(new LanguageFormatCommand("Image Link","[![](",")](LinkIm
 
 And that collection passed to the `AssembleMenu` function (with the **Format** Menu set as the base), the following dynamic menus and menu items would be created:
 
-![The new menu items in the running app.](menu-images/dynamic01.png "The new menu items in the running app")
+![The new menu items in the running app](menu-images/dynamic01.png "The new menu items in the running app")
 
 #### Removing menus and items
 
@@ -896,19 +896,19 @@ Let's do the following:
 
 1. Drag a **Label** from the **Library Inspector** onto the **Panel** window and set its text to "Property": 
 
-    [![Editing the label's value](menu-images/context03.png "Editing the label's value."](menu-images/context03-large.png#lightbox)
+    [![Editing the label's value](menu-images/context03.png "Editing the label's value")](menu-images/context03-large.png#lightbox)
 2. Next drag a **Menu** from the **Library Inspector** onto the View Controller in the View Hierarchy and rename the three default menu items **Document**, **Text** and **Font**:
 
-    [![The required menu items](menu-images/context02.png "The required menu items."](menu-images/context02-large.png#lightbox)
+    [![The required menu items](menu-images/context02.png "The required menu items")](menu-images/context02-large.png#lightbox)
 3. Now control-drag from the **Property Label** onto the **Menu**:
 
-    [![Dragging to create a segue](menu-images/context04.png "Dragging to create a segue."](menu-images/context04-large.png#lightbox)
+    [![Dragging to create a segue](menu-images/context04.png "Dragging to create a segue")](menu-images/context04-large.png#lightbox)
 4. From the popup dialog, select **Menu**: 
 
     ![Setting the segue type by selecting menu from Outlets in the Label context menu.](menu-images/context05.png "Setting the segue type")
 5. From the **Identity Inspector**, set the View Controller's class to "PanelViewController": 
 
-    [![Setting the segue class](menu-images/context10.png "Setting the segue class."](menu-images/context10-large.png#lightbox)
+    [![Setting the segue class](menu-images/context10.png "Setting the segue class")](menu-images/context10-large.png#lightbox)
 6. Switch back to Visual Studio for Mac to sync, then return to Interface Builder.
 7. Switch to the **Assistant Editor** and select the **PanelViewController.h** file.
 8. Create an action for the **Document** menu item called `propertyDocument`: 
@@ -919,7 +919,7 @@ Let's do the following:
     [![Repeating actions for the remaining menu items.](menu-images/context07.png "The required actions")](menu-images/context07-large.png#lightbox)
 10. Finally create an outlet for the **Property Label** called `propertyLabel`: 
 
-    [![Configuring the outlet](menu-images/context08.png "Configuring the outlet."](menu-images/context08-large.png#lightbox)
+    [![Configuring the outlet](menu-images/context08.png "Configuring the outlet")](menu-images/context08-large.png#lightbox)
 11. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 Edit the **PanelViewController.cs** file and add the following code:
@@ -940,7 +940,7 @@ partial void propertyText (Foundation.NSObject sender) {
 
 Now if we run the application and right-click on the property label in the panel, we'll see our custom contextual menu. If we select and item from the menu, the label's value will change:
 
-![The contextual menu running.](menu-images/context09.png "The contextual menu running")
+![The contextual menu running](menu-images/context09.png "The contextual menu running")
 
 Next let's look at creating status bar menus.
 
@@ -991,7 +991,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 If we run the application, the new status bar item will be displayed. Selecting an item from the menu will change the text in the text view: 
 
-![The status bar menu running.](menu-images/statusbar01.png "The status bar menu running")
+![The status bar menu running](menu-images/statusbar01.png "The status bar menu running")
 
 Next, let's look at creating custom dock menu items.
 
@@ -999,16 +999,16 @@ Next, let's look at creating custom dock menu items.
 
 The dock menu appears for you Mac application when the user right-clicks or control-clicks the application's icon in the dock:
 
-![A custom dock menu.](menu-images/dock01.png "A custom dock menu")
+![A custom dock menu](menu-images/dock01.png "A custom dock menu")
 
 Let's create a custom dock menu for our application by doing the following:
 
 1. In Visual Studio for Mac, right-click on the application's project and select **Add** > **New File...** From the new file dialog, select **Xamarin.Mac** > **Empty Interface Definition**, use "DockMenu" for the **Name** and click the **New** button to create the new **DockMenu.xib** file:
 
-    ![Adding an empty interface definition.](menu-images/dock02.png "Adding an empty interface definition")
+    ![Adding an empty interface definition](menu-images/dock02.png "Adding an empty interface definition")
 2. In the **Solution Pad**, double-click the **DockMenu.xib** file to open it for editing in Xcode. Create a new **Menu** with the following items: **Address**, **Date**, **Greeting**, and **Signature** 
 
-    [![Laying out the UI](menu-images/dock03.png "Laying out the UI."](menu-images/dock03-large.png#lightbox)
+    [![Laying out the UI](menu-images/dock03.png "Laying out the UI")](menu-images/dock03-large.png#lightbox)
 3. Next, let's connect our new menu items to our existing actions that we created for our custom menu in the [Adding, Editing and Deleting Menus](#Adding,_Editing_and_Deleting_Menus) section above. Switch to the **Connection Inspector** and select the **First Responder** in the **Interface Hierarchy**. Scroll down and find the `phraseAddress:` action. Drag a line from the circle on that action to the **Address** menu item:
 
     [![Dragging a line to the Address menu item.](menu-images/dock04.png "Dragging to wire up an action")](menu-images/dock04-large.png#lightbox)
@@ -1017,21 +1017,21 @@ Let's create a custom dock menu for our application by doing the following:
     [![Repeating for other menu items attaching them to their corresponding actions.](menu-images/dock05.png "The required actions")](menu-images/dock05-large.png#lightbox)
 5. Next, select the **Application** in the **Interface Hierarchy**. In the **Connection Inspector**, drag a line from the circle on the `dockMenu` outlet to the menu we just created:
 
-    [![Dragging the wire up the outlet](menu-images/dock06.png "Dragging the wire up the outlet."](menu-images/dock06-large.png#lightbox)
+    [![Dragging the wire up the outlet](menu-images/dock06.png "Dragging the wire up the outlet")](menu-images/dock06-large.png#lightbox)
 6. Save your changes and switch back to Visual Studio for Mac to sync with Xcode.
 7. Double-click the **Info.plist** file to open it for editing: 
 
-    [![Editing the Info.plist file](menu-images/dock07.png "Editing the Info.plist file."](menu-images/dock07-large.png#lightbox)
+    [![Editing the Info.plist file](menu-images/dock07.png "Editing the Info.plist file")](menu-images/dock07-large.png#lightbox)
 8. Click the **Source** tab at the bottom of the screen: 
 
-    [![Selecting the Source view](menu-images/dock08.png "Selecting the Source view."](menu-images/dock08-large.png#lightbox)
+    [![Selecting the Source view](menu-images/dock08.png "Selecting the Source view")](menu-images/dock08-large.png#lightbox)
 9. Click **Add new entry**, click the green plus button, set the property name to "AppleDockMenu" and the value to "DockMenu" (the name of our new .xib file without the extension): 
 
-    [![Adding the DockMenu item](menu-images/dock09.png "Adding the DockMenu item."](menu-images/dock09-large.png#lightbox)
+    [![Adding the DockMenu item](menu-images/dock09.png "Adding the DockMenu item")](menu-images/dock09-large.png#lightbox)
 
 Now if we run our application and right-click on its icon in the Dock, our new menu items will be displayed:
 
-![An example of the dock menu running.](menu-images/dock10.png "An example of the dock menu running")
+![An example of the dock menu running](menu-images/dock10.png "An example of the dock menu running")
 
 If we select one of the custom items from the menu, the text in our text view will be modified.
 
@@ -1045,21 +1045,21 @@ Let's create a custom pop-up button for our application by doing the following:
 
 1. Edit the **Main.storyboard** file in Xcode and drag a **Popup Button** from the **Library Inspector** onto the **Panel** window we created in the [Contextual Menus](#Contextual_Menus) section: 
 
-    [![Adding a popup button](menu-images/popup01.png "Adding a popup button."](menu-images/popup01-large.png#lightbox)
+    [![Adding a popup button](menu-images/popup01.png "Adding a popup button")](menu-images/popup01-large.png#lightbox)
 2. Add a new menu item and set the titles of the Items in the Popup to: **Address**, **Date**, **Greeting**, and **Signature** 
 
-    [![Configuring the menu items](menu-images/popup02.png "Configuring the menu items."](menu-images/popup02-large.png#lightbox)
+    [![Configuring the menu items](menu-images/popup02.png "Configuring the menu items")](menu-images/popup02-large.png#lightbox)
 3. Next, let's connect our new menu items to the existing actions that we created for our custom menu in the [Adding, Editing and Deleting Menus](#Adding,_Editing_and_Deleting_Menus) section above. Switch to the **Connection Inspector** and select the **First Responder** in the **Interface Hierarchy**. Scroll down and find the `phraseAddress:` action. Drag a line from the circle on that action to the **Address** menu item: 
 
-    [![Dragging to wire up an action](menu-images/popup03.png "Dragging to wire up an action."](menu-images/popup03-large.png#lightbox)
+    [![Dragging to wire up an action](menu-images/popup03.png "Dragging to wire up an action")](menu-images/popup03-large.png#lightbox)
 4. Repeat for all of the other menu items attaching them to their corresponding actions: 
 
-    [![All required actions](menu-images/popup04.png "All required actions."](menu-images/popup04-large.png#lightbox)
+    [![All required actions](menu-images/popup04.png "All required actions")](menu-images/popup04-large.png#lightbox)
 5. Save your changes and switch back to Visual Studio for Mac to sync with Xcode.
 
 Now if we run our application and select an item from the popup, the text in our text view will change:
 
-![An example of the popup running.](menu-images/popup05.png "An example of the popup running")
+![An example of the popup running](menu-images/popup05.png "An example of the popup running")
 
 You can create and work with pull-down lists in the exact same way as pop-up buttons. Instead of attaching to existing action, you could create your own custom actions just like we did for our contextual menu in the [Contextual Menus](#Contextual_Menus) section.
 

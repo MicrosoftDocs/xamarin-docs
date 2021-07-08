@@ -264,7 +264,7 @@ This type of processing allows the
 [FingerPaint](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
 program to track individual fingers and draw the results on the screen:
 
-[![Example screenshot from FingerPaint example.](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
+[![Example screenshot from FingerPaint example](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 You've now seen how you can track individual fingers on the screen and
 distinguish among them.

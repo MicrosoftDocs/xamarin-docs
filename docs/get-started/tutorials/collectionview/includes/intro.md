@@ -17,4 +17,4 @@ In this tutorial, you learn how to:
 
 You will use Visual Studio 2019, or Visual Studio for Mac, to create a simple application that demonstrates how to customize the appearance of a [`CollectionView`](xref:Xamarin.Forms.CollectionView). The following screenshots show the final application:
 
-[![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance-reduced.png "CollectionView displaying templated data."](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")
+[![Screenshot of a CollectionView whose items are templated with a data template](../images/customize-item-appearance-reduced.png "CollectionView displaying templated data")](../images/customize-item-appearance-large.png#lightbox "CollectionView displaying templated data")

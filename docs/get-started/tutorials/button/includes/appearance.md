@@ -18,7 +18,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator. Observe that the [`Button`](xref:Xamarin.Forms.Button) appearance has changed:
 
-    [![Screenshot of a Button with a changed visual appearance, on iOS and Android](../images/change-button-appearance.png "Button with changed appearance."](../images/change-button-appearance-large.png#lightbox "Button with changed appearance")
+    [![Screenshot of a Button with a changed visual appearance, on iOS and Android](../images/change-button-appearance.png "Button with changed appearance")](../images/change-button-appearance-large.png#lightbox "Button with changed appearance")
 
     In Visual Studio, stop the application.
 
@@ -44,7 +44,7 @@
 
 1. If the application is still running, save the changes to the file and the application user interface will automatically be updated in your simulator or emulator. Otherwise, in the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator. Observe that the [`Button`](xref:Xamarin.Forms.Button) appearance has changed:
 
-    [![Screenshot of a Button with a changed visual appearance, on iOS and Android](../images/change-button-appearance.png "Button with changed appearance."](../images/change-button-appearance-large.png#lightbox "Button with changed appearance")
+    [![Screenshot of a Button with a changed visual appearance, on iOS and Android](../images/change-button-appearance.png "Button with changed appearance")](../images/change-button-appearance-large.png#lightbox "Button with changed appearance")
 
     In Visual Studio for Mac, stop the application.
 

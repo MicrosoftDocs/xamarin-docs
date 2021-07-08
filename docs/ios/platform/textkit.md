@@ -31,7 +31,7 @@ These three classes are applied to a view that renders text. The built-in text h
 
 The following figure illustrates this architecture:
 
- ![This figure illustrates the TextKit architecture.](textkit-images/textkitarch.png)
+ ![This figure illustrates the TextKit architecture](textkit-images/textkitarch.png)
 
 ## Text Storage and Attributes
 
@@ -152,8 +152,8 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 The following screenshot illustrates how the text layout changes to flow around the drawn path:
 
-<!-- ![This screenshot illustrates how the text layout changes to flow around the drawn path.](textkit-images/exclusionpath1.png)-->
-![This screenshot illustrates how the text layout changes to flow around the drawn path.](textkit-images/exclusionpath2.png)
+<!-- ![This screenshot illustrates how the text layout changes to flow around the drawn path](textkit-images/exclusionpath1.png)-->
+![This screenshot illustrates how the text layout changes to flow around the drawn path](textkit-images/exclusionpath2.png)
 
 Notice that the layout manager’s `AllowsNonContiguousLayout` property is set to false in this case. This causes the layout to be recalculated for all cases where the text changes. Setting this to true may benefit performance by avoiding a full-layout refresh, especially in the case of large documents. However, setting `AllowsNonContiguousLayout` to true would prevent the exclusion path from updating the layout in some circumstances - for example, if text is entered at runtime without a trailing carriage return prior to the path being set.
 

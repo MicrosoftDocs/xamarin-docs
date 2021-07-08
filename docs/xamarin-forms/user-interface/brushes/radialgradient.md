@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Brushes: Radial gradients
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 The `RadialGradientBrush` class derives from the `GradientBrush` class, and paints an area with a radial gradient, which blends two or more colors across a circle. `GradientStop` objects are used to specify the colors in the gradient and their positions. For more information about `GradientStop` objects, see [Xamarin.Forms Brushes: Gradients](gradient.md).
 
@@ -57,7 +57,7 @@ The following XAML example shows a `RadialGradientBrush` that's set as the `Back
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `RadialGradientBrush` that interpolates from red to dark blue. The center of the radial gradient is positioned in the center of the `Frame`:
 
-![Frame painted with a centered RadialGradientBrush.](radialgradient-images/center.png)
+![Frame painted with a centered RadialGradientBrush](radialgradient-images/center.png)
 
 The following XAML example moves the center of the radial gradient to the top-left corner of the [`Frame`](xref:Xamarin.Forms.Frame):
 
@@ -73,7 +73,7 @@ The following XAML example moves the center of the radial gradient to the top-le
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `RadialGradientBrush` that interpolates from red to dark blue. The center of the radial gradient is positioned in the top-left of the `Frame`:
 
-![Frame painted with a top-left RadialGradientBrush.](radialgradient-images/top-left.png)
+![Frame painted with a top-left RadialGradientBrush](radialgradient-images/top-left.png)
 
 The following XAML example moves the center of the radial gradient to the bottom-right corner of the [`Frame`](xref:Xamarin.Forms.Frame):
 
@@ -89,7 +89,7 @@ The following XAML example moves the center of the radial gradient to the bottom
 
 In this example, the background of the [`Frame`](xref:Xamarin.Forms.Frame) is painted with a `RadialGradientBrush` that interpolates from red to dark blue. The center of the radial gradient is positioned in the bottom-right of the `Frame`:
 
-![Frame painted with a bottom-right RadialGradientBrush.](radialgradient-images/bottom-right.png)
+![Frame painted with a bottom-right RadialGradientBrush](radialgradient-images/bottom-right.png)
 
 ## Related links
 

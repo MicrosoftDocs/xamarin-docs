@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Button
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _The Button responds to a tap or click that directs an application to carry out a particular task._
 
@@ -73,7 +73,7 @@ When the `Button` is tapped, the `OnButtonClicked` method executes. The `sender`
 
 This particular `Clicked` handler calls an animation function that rotates the `Label` 360 degrees in 1000 milliseconds. Here's the program running on iOS and Android devices, and as a Universal Windows Platform (UWP) application on the Windows 10 desktop:
 
-[![Basic Button Click](button-images/BasicButtonClick.png "Basic Button Click."](button-images/BasicButtonClick-Large.png#lightbox "Basic Button Click")
+[![Basic Button Click](button-images/BasicButtonClick.png "Basic Button Click")](button-images/BasicButtonClick-Large.png#lightbox "Basic Button Click")
 
 Notice that the `OnButtonClicked` method includes the `async` modifier because `await` is used within the event handler. A `Clicked` event handler requires the `async` modifier only if the body of the handler uses `await`.
 
@@ -224,7 +224,7 @@ The **BasicButtonCommand.xaml** file sets its `BindingContext` to an instance of
 
 As the two `Button` elements are tapped, the commands are executed, and the number changes value:
 
-[![Basic Button Command](button-images/BasicButtonCommand.png "Basic Button Command."](button-images/BasicButtonCommand-Large.png#lightbox)
+[![Basic Button Command](button-images/BasicButtonCommand.png "Basic Button Command")](button-images/BasicButtonCommand-Large.png#lightbox)
 
 The advantage of this approach over `Clicked` handlers is that all the logic involving the functionality of this page is located in the viewmodel rather than the code-behind file, achieving a better separation of the user interface from the business logic.
 
@@ -260,7 +260,7 @@ class CommandDemoViewModel : INotifyPropertyChanged
 
 The calls to the `ChangeCanExecute` method of `Command` are necessary so that the `Command` method can call the `canExecute` method and determine whether the `Button` should be disabled or not. With this code change, as the number reaches the limit, the `Button` is disabled:
 
-[![Basic Button Command - Modified](button-images/BasicButtonCommandModified.png "Basic Button Command - Modified."](button-images/BasicButtonCommandModified-Large.png#lightbox)
+[![Basic Button Command - Modified](button-images/BasicButtonCommandModified.png "Basic Button Command - Modified")](button-images/BasicButtonCommandModified-Large.png#lightbox)
 
 It is possible for two or more `Button` elements to be bound to the same `ICommand` property. The `Button` elements can be distinguished using the [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) property of `Button`. In this case, you'll want to use the generic [`Command<T>`](xref:Xamarin.Forms.Command`1) class. The `CommandParameter` object is then passed as an argument to the `execute` and `canExecute` methods. This technique is shown in detail in the [**Basic Commanding**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) section of the [**Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) article.
 
@@ -403,7 +403,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 The result is that the `Label` only rotates while a finger is in contact with the `Button`, and stops when the finger is released:
 
-[![Press and Release Button](button-images/PressAndReleaseButton.png "Press and Release Button."](button-images/PressAndReleaseButton-Large.png)
+[![Press and Release Button](button-images/PressAndReleaseButton.png "Press and Release Button")](button-images/PressAndReleaseButton-Large.png)
 
 This kind of behavior has applications for games: A finger held on a `Button` might make an on-screen object move in a particular direction.
 
@@ -534,7 +534,7 @@ The `Button` at the top of the page has its three `Color` properties bound to `P
 
 This program allows you to experiment with combinations of all these properties:
 
-[![Button Appearance](button-images/ButtonAppearance.png "Button Appearance."](button-images/ButtonAppearance-Large.png)
+[![Button Appearance](button-images/ButtonAppearance.png "Button Appearance")](button-images/ButtonAppearance-Large.png)
 
 To see the `Button` border, you'll need to set a `BorderColor` to something other than `Default`, and the `BorderWidth` to a positive value.
 
@@ -739,7 +739,7 @@ public partial class ToggleButtonDemoPage : ContentPage
 
 Here's the program running on iOS, Android, and the UWP:
 
-[![Toggle Button Demo](button-images/ToggleButtonDemo.png "Toggle Button Demo."](button-images/ToggleButtonDemo-Large.png#lightbox)
+[![Toggle Button Demo](button-images/ToggleButtonDemo.png "Toggle Button Demo")](button-images/ToggleButtonDemo-Large.png#lightbox)
 
 ## Using bitmaps with buttons
 
@@ -879,7 +879,7 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
 
 The final four `Button` elements make use of the `ContentLayout` property to specify a position and spacing of the text and bitmap:
 
-[![Image Button Demo](button-images/ImageButtonDemo.png "Image Button Demo."](button-images/ImageButtonDemo-Large.png#lightbox)
+[![Image Button Demo](button-images/ImageButtonDemo.png "Image Button Demo")](button-images/ImageButtonDemo-Large.png#lightbox)
 
 You've now seen the various ways that you can handle `Button` events and change the `Button` appearance.
 

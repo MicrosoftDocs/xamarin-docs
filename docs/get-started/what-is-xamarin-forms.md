@@ -11,7 +11,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # What is Xamarin.Forms?
 
-[![Screenshots of example Xamarin.Forms application in iOS and Android.](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
+[![Screenshots of example Xamarin.Forms application in iOS and Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
 Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build Xamarin.Android, Xamarin.iOS, and Windows applications from a single shared codebase.
 
@@ -27,7 +27,7 @@ Xamarin.Forms is for developers with the following goals:
 
 ## How Xamarin.Forms works
 
-![Xamarin.Forms architecture diagram.](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
+![Xamarin.Forms architecture diagram](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
 
 Xamarin.Forms provides a consistent API for creating UI elements across platforms. This API can be implemented in either XAML or C# and supports databinding for patterns such as Model-View-ViewModel (MVVM).
 

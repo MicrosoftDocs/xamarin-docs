@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Summary of Chapter 9. Platform-specific API calls
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE]
 > This book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the material is outdated, and some topics are no longer entirely correct or complete.
@@ -23,7 +23,7 @@ It is sometimes necessary to run some code that varies by platform. This chapter
 
 A Xamarin.Forms Shared Asset Project can execute different code for each platform using the C# preprocessor directives `#if`, `#elif`, and `endif`. This is demonstrated in [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![Triple screenshot of variable formatted paragraph](images/ch09fg01-small.png "Device Model and Operating System."](images/ch09fg01-large.png#lightbox "Device Model and Operating System")
+[![Triple screenshot of variable formatted paragraph](images/ch09fg01-small.png "Device Model and Operating System")](images/ch09fg01-large.png#lightbox "Device Model and Operating System")
 
 However, the resultant code can be ugly and difficult to read.
 

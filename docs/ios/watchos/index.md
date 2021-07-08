@@ -11,7 +11,7 @@ ms.date: 03/17/2017
 
 # Building watchOS Apps with Xamarin
 
-![Apple Watch picker interface.](images/watch1.png) ![Apple Watch buttons](images/watch2.png) ![Apple Watch map interface](images/watch3.png)
+![Apple Watch picker interface](images/watch1.png) ![Apple Watch buttons](images/watch2.png) ![Apple Watch map interface](images/watch3.png)
 
 <!-- watch images courtesy of http://infinitapps.com/bezel/ -->
 

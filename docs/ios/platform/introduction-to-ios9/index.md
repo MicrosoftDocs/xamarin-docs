@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _This article introduces all of the new and modified APIs and features available in iOS 9 for Xamarin.iOS developers._
 
-![The iOS 9 logo.](images/ios9-sml.png)
+![The iOS 9 logo](images/ios9-sml.png)
 
 Apple has added several new APIs and services in iOS 9 along with many
 enhancements to existing features.

@@ -19,26 +19,26 @@ to use the most commonly-used layouts in Xamarin.Android apps.
     is a view group that displays child view elements in
     a linear direction, either vertically or horizontally.
 
-    ![Example Linear Layout.](images/linear-layout.png)
+    ![Example Linear Layout](images/linear-layout.png)
 
 - [RelativeLayout](~/android/user-interface/layouts/relative-layout.md)
     is view group that displays child view elements in
     a relative position. The position of a view can be specified as
     relative to sibling elements.
 
-    ![Example Relative Layout.](images/relative-layout.png)
+    ![Example Relative Layout](images/relative-layout.png)
 
 - [TableLayout](~/android/user-interface/layouts/table-layout.md)
     is a view group that displays child view elements in rows and
     columns.
 
-    ![Example Table Layout.](images/table-layout.png)
+    ![Example Table Layout](images/table-layout.png)
 
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
     is a UI element that displays a collection of items in
     a list or a grid, enabling the user to scroll through the collection.
 
-    ![Example Recycler View.](images/recycler-view.png)
+    ![Example Recycler View](images/recycler-view.png)
 
 - [ListView](~/android/user-interface/layouts/list-view/index.md)
     is a view group that creates a list of scrollable items. The
@@ -51,19 +51,19 @@ to use the most commonly-used layouts in Xamarin.Android apps.
     instance requires an Adapter to feed it with data contained in row
     views.
 
-    ![Example List View.](images/list-view.png)
+    ![Example List View](images/list-view.png)
 
 - [GridView](~/android/user-interface/layouts/grid-view.md)
     is a UI element that displays items in a two-dimensional
     grid that can be scrolled.
 
-    ![Example Grid View.](images/grid-view.png)
+    ![Example Grid View](images/grid-view.png)
 
 - [GridLayout](~/android/user-interface/layouts/grid-layout.md)
     is a view group that supports laying out views in a 2D
     grid, similar to an HTML table.
 
-    ![Example Grid Layout.](images/grid-layout.png)
+    ![Example Grid Layout](images/grid-layout.png)
 
 - [Tabbed Layouts](~/android/user-interface/layouts/tab-layout/index.md)
     are a popular user interface pattern in mobile applications
@@ -71,4 +71,4 @@ to use the most commonly-used layouts in Xamarin.Android apps.
     consistent, easy way to navigate between various screens in an
     application.
 
-    ![Example Tabbed Layout.](images/tabbed-layout.png)
+    ![Example Tabbed Layout](images/tabbed-layout.png)

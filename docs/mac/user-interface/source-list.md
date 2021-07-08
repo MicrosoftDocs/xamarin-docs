@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 A Source List is a special type of Outline View used to show the source of an action, like the side bar in Finder or iTunes.
 
-[![An example source list.](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
+[![An example source list](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 In this article, we'll cover the basics of working with Source Lists in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -45,7 +45,7 @@ A Source List is a special type of Outline View used to show the source of an ac
 
 First, let's create a new `SourceListItem` class to hold the data for our Source List. In the **Solution Explorer**, right-click the Project and select **Add** > **New File...** Select **General** > **Empty Class**, enter `SourceListItem` for the **Name** and click the **New** button:
 
-[![Adding an empty class.](source-list-images/source01.png)](source-list-images/source01.png#lightbox)
+[![Adding an empty class](source-list-images/source01.png)](source-list-images/source01.png#lightbox)
 
 Make the `SourceListItem.cs` file look like the following: 
 
@@ -535,11 +535,11 @@ Next, drag a Source List from the **Library Inspector**, add it to the left side
 
 Next, switch to the **Identity View**, select the Source List, and change it's **Class** to `SourceListView`:
 
-[![Setting the class name.](source-list-images/source03.png)](source-list-images/source03.png#lightbox)
+[![Setting the class name](source-list-images/source03.png)](source-list-images/source03.png#lightbox)
 
 Finally, create an **Outlet** for our Source List called `SourceList` in the `ViewController.h` file:
 
-[![Configuring an Outlet.](source-list-images/source04.png)](source-list-images/source04.png#lightbox)
+[![Configuring an Outlet](source-list-images/source04.png)](source-list-images/source04.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -609,7 +609,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 If we run our application, the following will be displayed:
 
-[![An example app run.](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
+[![An example app run](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 <a name="Summary"></a>
 

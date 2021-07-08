@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms SearchBar
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 The Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) is a user input control used to initiating a search. The `SearchBar` control supports placeholder text, query input, search execution, and cancellation. The following screenshot shows a `SearchBar` query with results displayed in a `ListView`:
 
-[![Screenshot of SearchBar on iOS and Android](searchbar-images/device-searchbars-cropped.png "SearchBar on iOS and Android."](searchbar-images/device-searchbars.png#lightbox "SearchBar on iOS and Android")
+[![Screenshot of SearchBar on iOS and Android](searchbar-images/device-searchbars-cropped.png "SearchBar on iOS and Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar on iOS and Android")
 
 The `SearchBar` class defines the following properties:
 
@@ -83,7 +83,7 @@ SearchBar searchBar = new SearchBar
 
 The following screenshot shows the resulting `SearchBar` control:
 
-[![Screenshot of customized SearchBar on iOS and Android](searchbar-images/device-searchbars-styled-cropped.png "Customized SearchBar on iOS and Android."](searchbar-images/device-searchbars-styled.png#lightbox "Customized SearchBar on iOS and Android")
+[![Screenshot of customized SearchBar on iOS and Android](searchbar-images/device-searchbars-styled-cropped.png "Customized SearchBar on iOS and Android")](searchbar-images/device-searchbars-styled.png#lightbox "Customized SearchBar on iOS and Android")
 
 > [!NOTE]
 > On iOS, the `SearchBarRenderer` class contains an overridable `UpdateCancelButton` method. This method controls when the cancel button appears, and can be overridden in a custom renderer. For more information about custom renderers, see [Xamarin.Forms Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).

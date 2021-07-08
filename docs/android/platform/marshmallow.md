@@ -31,7 +31,7 @@ Xamarin.Android supports Android Marshmallow and includes:
     information about Android 6.0 APIs, see 
     [Android 6.0 APIs](https://developer.android.com/preview/api-overview.html). 
 
-[![Hero images of tablets and phones running Marshmallow.](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
+[![Hero images of tablets and phones running Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
 Although the Marshmallow release is mainly focused on "polish and 
 quality", it also provides many new features of interest to 
@@ -151,11 +151,11 @@ use the Android SDK Manager to install the Android 6.0 SDK:
     use **Tools > Android > Android SDK Manager**) and install
     the latest Android SDK Tools:
 
-    [![Selecting Android SDK tools in the Android SDK Manager.](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
+    [![Selecting Android SDK tools in the Android SDK Manager](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
 
 - Also, install the latest **Android 6.0** SDK packages:
 
-    [![Selecting Android 6.0 SDK packages in the Android SDK Manager.](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
+    [![Selecting Android 6.0 SDK packages in the Android SDK Manager](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
 You must install Android SDK Tools revision 24.3.4 or later.
 For more information about using the Android SDK Manager to install the
@@ -186,7 +186,7 @@ device using the following settings:
 
 For example, this virtual device is configured to emulate a Nexus 5:
 
-[![Configuring an AVD using Nexus 5 device, Android 6.0 Target, and Intel Atom (x86).](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
+[![Configuring an AVD using Nexus 5 device, Android 6.0 Target, and Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
 If you are using a physical device such as a Nexus 5, 6, or 9, you can
 install a preview image of Android Marshmallow. For more information about

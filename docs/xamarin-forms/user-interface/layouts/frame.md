@@ -11,13 +11,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Xamarin.Forms Frame
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 The Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) class is a layout used to wrap a view with a border that can be configured with color, shadow, and other options. Frames are commonly used to create borders around controls but can be used to create more complex UI. For more information, see [Advanced Frame usage](#advanced-frame-usage).
 
 The following screenshot shows `Frame` controls on iOS and Android:
 
-[!["Frame examples on iOS and Android."](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Frame examples on iOS and Android")
+[!["Frame examples on iOS and Android"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Frame examples on iOS and Android")
 
 The `Frame` class defines the following properties:
 
@@ -79,7 +79,7 @@ The `Frame` class inherits from `ContentView`, which means it can contain any ty
 
 Combining a `Frame` object with a `Layout` object such as a `StackLayout` object allows the creation of more complex UI. The following screenshot shows an example card, created using a `Frame` object:
 
-[!["Screenshot of a card created with a Frame."](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot of a card created with a Frame")
+[!["Screenshot of a card created with a Frame"](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot of a card created with a Frame")
 
 The following XAML shows how to create a card with the `Frame` class:
 
@@ -136,7 +136,7 @@ Frame cardFrame = new Frame
 
 The `CornerRadius` property of the `Frame` control can be used to create a circle image. The following screenshot shows an example of a round image, created using a `Frame` object:
 
-[!["Screenshot of a circle image created with a Frame."](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot of a circle image created with a Frame")
+[!["Screenshot of a circle image created with a Frame"](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot of a circle image created with a Frame")
 
 The following XAML shows how to create a circle image in XAML:
 

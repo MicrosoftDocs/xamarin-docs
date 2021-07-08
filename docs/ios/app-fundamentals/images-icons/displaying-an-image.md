@@ -28,29 +28,29 @@ To create a new image set and add images to it, do the following:
 
 1. In the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing:
 
-    ![The Assets.xcassets in the Solution Explorer.](displaying-an-image-images/imageset01.png)
+    ![The Assets.xcassets in the Solution Explorer](displaying-an-image-images/imageset01.png)
 2. Right-click on the **Assets List** and select **New Image Set**:
 
-    ![Adding a New Image Set.](displaying-an-image-images/imageset02.png)
+    ![Adding a New Image Set](displaying-an-image-images/imageset02.png)
 3. Select the new image set and the editor will be displayed:
 
-    ![The Image Set editor.](displaying-an-image-images/imageset03.png)
+    ![The Image Set editor](displaying-an-image-images/imageset03.png)
 4. From here, drag in images for each of the different devices and resolutions required.
-5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![Editing the new image set's Name.](displaying-an-image-images/imageset04.png)
+5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![Editing the new image set's Name](displaying-an-image-images/imageset04.png)
 
 When using an **Image Set** in the iOS Designer, simply select the set's name from the dropdown list in the Property Editor:
 
-![Select an image set's name from the dropdown list.](displaying-an-image-images/imageset06.png)
+![Select an image set's name from the dropdown list](displaying-an-image-images/imageset06.png)
 
 # [Visual Studio](#tab/windows)
 
 1. Open the Asset Catalog from the **Solution Explorer**, and in the top left corner, click the **Plus** button:
 
-    ![Click the Plus button.](displaying-an-image-images/asset5.png)
+    ![Click the Plus button](displaying-an-image-images/asset5.png)
 
 2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and resolutions required.
 
-    ![The image set editor.](displaying-an-image-images/asset7.png)
+    ![The image set editor](displaying-an-image-images/asset7.png)
 
 ### Renaming an image set
 
@@ -58,13 +58,13 @@ To rename an Image Set, do the following:
 
 1. In the **Solution Explorer**, double-click the **Asset Catalog** file to open it for editing:
 
-    ![The Asset Catalog in the Solution Explorer.](displaying-an-image-images/rename01.png)
+    ![The Asset Catalog in the Solution Explorer](displaying-an-image-images/rename01.png)
 2. Select the **Image Set** to rename:
 
-    ![Select the Image Set to rename.](displaying-an-image-images/rename02.png)
+    ![Select the Image Set to rename](displaying-an-image-images/rename02.png)
 3. In the **Properties Explorer**, scroll to the bottom and select **Name**(under the **Misc** section):
 
-    ![Select Name under the Misc section.](displaying-an-image-images/rename03.png)
+    ![Select Name under the Misc section](displaying-an-image-images/rename03.png)
 4. Enter a new **Name** for the **Image Set** and save the changes.
 
 -----
@@ -84,11 +84,11 @@ As of iOS 8, special **Vector** class has been added to **Image Sets** that allo
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Vector Images in the Asset Catalogs editor.](displaying-an-image-images/imageset05.png)
+![Vector Images in the Asset Catalogs editor](displaying-an-image-images/imageset05.png)
 
 # [Visual Studio](#tab/windows)
 
-![Vector Images in the Asset Catalogs editor.](displaying-an-image-images/asset8.png)
+![Vector Images in the Asset Catalogs editor](displaying-an-image-images/asset8.png)
 
 -----
 
@@ -112,11 +112,11 @@ To easily achieve this effect, switch the _Render Mode_ of the Image Asset to **
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![The Render Mode set to Template Image.](displaying-an-image-images/templateimage01.png)](displaying-an-image-images/templateimage01.png#lightbox)
+[![The Render Mode set to Template Image](displaying-an-image-images/templateimage01.png)](displaying-an-image-images/templateimage01.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![The Render Mode set to Template.](displaying-an-image-images/templateimage01vs.png)](displaying-an-image-images/templateimage01vs.png#lightbox)
+[![The Render Mode set to Template](displaying-an-image-images/templateimage01vs.png)](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
@@ -124,11 +124,11 @@ From the iOS Designer, assign the Image Asset to a UI control, then set the **Ti
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Set the Tint to colorize the image.](displaying-an-image-images/templateimage03.png)](displaying-an-image-images/templateimage03.png#lightbox)
+[![Set the Tint to colorize the image](displaying-an-image-images/templateimage03.png)](displaying-an-image-images/templateimage03.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![Set the Tint to colorize the image.](displaying-an-image-images/templateimage03vs.png)](displaying-an-image-images/templateimage03vs.png#lightbox)
+[![Set the Tint to colorize the image](displaying-an-image-images/templateimage03vs.png)](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 
@@ -168,14 +168,14 @@ To add a new Assets Catalog to the project:
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**
 2. Select **iOS** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button:
 
-    ![Creating a new Asset Catalog.](displaying-an-image-images/asset01.png)
+    ![Creating a new Asset Catalog](displaying-an-image-images/asset01.png)
 
 # [Visual Studio](#tab/windows)
 
 1. In the Solution Explorer, right-click on **Asset Catalogs** folder, and select **Add > New Asset Catalog**.
 2. Give it a name and click **Add**:
 
-    ![Creating a new Asset Catalog.](displaying-an-image-images/asset1.png)
+    ![Creating a new Asset Catalog](displaying-an-image-images/asset1.png)
 
 -----
 
@@ -215,47 +215,47 @@ Once an image has been added to a Xamarin.iOS Project using an Asset Catalogs, i
 
 # [Visual Studio for Mac](#tab/macos)
 
-![A sample Image Asset has been added.](displaying-an-image-images/display01.png)
+![A sample Image Asset has been added](displaying-an-image-images/display01.png)
 
 Do the following to display it on a Storyboard:
 
 1. Double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in the iOS Designer.
 2. Select an **Image View** from the **Toolbox**:
 
-     ![Select an Image View from the Toolbox.](displaying-an-image-images/display02.png)
+     ![Select an Image View from the Toolbox](displaying-an-image-images/display02.png)
 3. Drag the Image View onto the design surface and position and size it as required:
 
-    ![A new Image View on the Design Surface.](displaying-an-image-images/display03.png)
+    ![A new Image View on the Design Surface](displaying-an-image-images/display03.png)
 4. In the **Widget** section of the **Property Explorer** select the desired **Image** asset to be displayed:
 
-    ![Select the desired Image asset to be displayed.](displaying-an-image-images/display04.png)
+    ![Select the desired Image asset to be displayed](displaying-an-image-images/display04.png)
 5. In the **View** section, use the **Mode** to control how the image will be resized when the **Image View** is resized.
 6. With the **Image View** selected, click it again to add **Constraints**:
 
-    ![Adding Constraints.](displaying-an-image-images/display05.png)
+    ![Adding Constraints](displaying-an-image-images/display05.png)
 7. Drag the "T" shaped handle on each edge of the **Image View** to the corresponding side of the screen to "pin" the image to the sides. In this way, the **Image View** will shrink and grow as the screen is resized.
 8. Save the changes to the Storyboard.
 
 # [Visual Studio](#tab/windows)
 
-![A sample Image Asset has been added.](displaying-an-image-images/display01vs.png)
+![A sample Image Asset has been added](displaying-an-image-images/display01vs.png)
 
 Do the following to display it on a Storyboard:
 
 1. Double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in the iOS Designer.
 2. Select an **Image View** from the **Toolbox**:
 
-     ![Select an Image View from the Toolbox.](displaying-an-image-images/display02vs.png)
+     ![Select an Image View from the Toolbox](displaying-an-image-images/display02vs.png)
 3. Drag the Image View onto the design surface and position and size it as required:
 
-    ![A new Image View on the Design Surface.](displaying-an-image-images/display03vs.png)
+    ![A new Image View on the Design Surface](displaying-an-image-images/display03vs.png)
 4. In the **Widget** section of the **Property Explorer** select the desired **Image** asset to be displayed:
 
-    ![Select the desired Image asset to be displayed.](displaying-an-image-images/display04vs.png)
+    ![Select the desired Image asset to be displayed](displaying-an-image-images/display04vs.png)
 5. In the **View** section, use the **Mode** to control how the image will be resized when the **Image View** is resized.
 6. With the **Image View** selected, click it again to add **Constraints**:
 
-    ![Adding Constraints.](displaying-an-image-images/display05vs.png)
+    ![Adding Constraints](displaying-an-image-images/display05vs.png)
 7. Drag the "T" shaped handle on each edge of the **Image View** to the corresponding side of the screen to "pin" the image to the sides. In this way, the **Image View** will shrink and grow as the screen is resized.
 8. Save the changes to the Storyboard.
 

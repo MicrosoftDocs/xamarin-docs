@@ -15,7 +15,7 @@ The `Switch` widget (shown below) allows a user
 to toggle between two states, such as ON or OFF. The `Switch` default
 value is OFF. The widget is shown below in both its ON and OFF states:
 
-[![Screenshots of a Switch widget in OFF and ON states.](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
+[![Screenshots of a Switch widget in OFF and ON states](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
 ## Creating a Switch
 
@@ -29,7 +29,7 @@ follows:
 
 This creates a basic switch as shown below:
 
-[![Screenshot of demo app displaying a Switch in the OFF state.](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
+[![Screenshot of demo app displaying a Switch in the OFF state](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
 ## Changing Default Values
 
@@ -62,7 +62,7 @@ The `Switch` widget also supports including a text label by setting the
 
 This markup produces the following screenshot at runtime:
 
-[![Screenshot of demo app with text horizontally preceding the Switch widget.](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
+[![Screenshot of demo app with text horizontally preceding the Switch widget](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
 When a `Switch`'s value changes, it raises a `CheckedChange` event.
 For example, in the following code we capture this event and present a

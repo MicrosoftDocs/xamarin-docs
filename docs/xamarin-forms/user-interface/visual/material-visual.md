@@ -12,13 +12,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Material Visual
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 [Material Design](https://material.io) is an opinionated design system created by Google, that prescribes the size, color, spacing, and other aspects of how views and layouts should look and behave.
 
 Xamarin.Forms Material Visual can be used to apply Material Design rules to Xamarin.Forms applications, creating applications that look largely identical on iOS and Android. When Material Visual is enabled, supported views adopt the same design cross-platform, creating a unified look and feel.
 
-[![Material Visual screenshots.](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
+[![Material Visual screenshots](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
 The process for enabling Xamarin.Forms Material Visual in your application is:
 
@@ -94,11 +94,11 @@ Setting the `VisualElement.Visual` property to `Material` directs your applicati
 
 The following screenshots show a user interface rendered using the default renderers:
 
-[![Screenshot of default renderers, on iOS and Android](material-visual-images/default-renderers.png "Views using default renderers."](material-visual-images/default-renderers-large.png#lightbox)
+[![Screenshot of default renderers, on iOS and Android](material-visual-images/default-renderers.png "Views using default renderers")](material-visual-images/default-renderers-large.png#lightbox)
 
 The following screenshots show the same user interface rendered using the Material renderers:
 
-[![Screenshot of Material renderers, on iOS and Android](material-visual-images/material-renderers.png "Views using Material renderers."](material-visual-images/material-renderers-large.png#lightbox)
+[![Screenshot of Material renderers, on iOS and Android](material-visual-images/material-renderers.png "Views using Material renderers")](material-visual-images/material-renderers-large.png#lightbox)
 
 The main visible differences between the default renderers and Material renderers, shown here, are that the Material renderers capitalize [`Button`](xref:Xamarin.Forms.Button) text, and round the corners of [`Frame`](xref:Xamarin.Forms.Frame) borders. However, Material renderers use native controls, and therefore there may still be user interface differences between platforms for areas such as fonts, shadows, colors, and elevation.
 

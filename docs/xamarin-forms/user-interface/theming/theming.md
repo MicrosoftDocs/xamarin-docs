@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Theme a Xamarin.Forms Application
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Xamarin.Forms applications can respond to style changes dynamically at runtime by using the `DynamicResource` markup extension. This markup extension is similar to the `StaticResource` markup extension, in that both use a dictionary key to fetch a value from a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). However, while the `StaticResource` markup extension performs a single dictionary lookup, the `DynamicResource` markup extension maintains a link to the dictionary key. Therefore, if the value associated with the key is replaced, the change is applied to the [`VisualElement`](xref:Xamarin.Forms.VisualElement). This enables runtime theming to be implemented in Xamarin.Forms applications.
 
@@ -28,8 +28,8 @@ The process for implementing runtime theming in a Xamarin.Forms application is a
 
 The following screenshots show themed pages, with the iOS application using a light theme and the Android application using a dark theme:
 
-[![Screenshot of the main page of a themed app, on iOS and Android](theming-images/main-page-both-themes.png "Main page of themed app."](theming-images/main-page-both-themes-large.png#lightbox "Main page of themed app")
-[![Screenshot of the detail page of a themed app, on iOS and Android](theming-images/detail-page-both-themes.png "Detail page of themed app."](theming-images/detail-page-both-themes-large.png#lightbox "Detail page of themed app")
+[![Screenshot of the main page of a themed app, on iOS and Android](theming-images/main-page-both-themes.png "Main page of themed app")](theming-images/main-page-both-themes-large.png#lightbox "Main page of themed app")
+[![Screenshot of the detail page of a themed app, on iOS and Android](theming-images/detail-page-both-themes.png "Detail page of themed app")](theming-images/detail-page-both-themes-large.png#lightbox "Detail page of themed app")
 
 > [!NOTE]
 > Changing a theme at runtime requires the use of XAML styles, and is not currently possible using CSS.

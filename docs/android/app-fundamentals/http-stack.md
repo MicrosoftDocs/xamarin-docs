@@ -26,7 +26,7 @@ The Xamarin.Android HttpClient configuration is in
 
 These are the recommended settings for TLS 1.2 support:
 
-[![Visual Studio Android Options.](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
+[![Visual Studio Android Options](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -35,7 +35,7 @@ settings and click on the **General** tab.
 
 These are the recommended settings for TLS 1.2 support:
 
-[![Visual Studio for Mac Android Options.](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
+[![Visual Studio for Mac Android Options](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
 
 -----
 
@@ -133,11 +133,11 @@ by all web request, both `HttpClient` and `WebRequest`. By default, TLS
 
 # [Visual Studio](#tab/windows)
 
-[![TLS/SSL implementation combo box in Visual Studio.](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
+[![TLS/SSL implementation combo box in Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![TLS/SSL implementation combo box in Visual Studio for Mac.](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
+[![TLS/SSL implementation combo box in Visual Studio for Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 

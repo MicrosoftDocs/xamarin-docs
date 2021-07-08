@@ -179,7 +179,7 @@ In this exercise, you will modify the **CollectionViewTutorial** project to popu
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote OS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView populated with data from a collection, on iOS and Android](../images/populate-data.png "CollectionView displaying data from a collection."](../images/populate-data-large.png#lightbox "CollectionView displaying data from a collection")
+    [![Screenshot of a CollectionView populated with data from a collection, on iOS and Android](../images/populate-data.png "CollectionView displaying data from a collection")](../images/populate-data-large.png#lightbox "CollectionView displaying data from a collection")
 
     The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is displaying the `Name` property for each `Monkey` in the `Monkeys` collection. This is because, by default, the `CollectionView` calls the `ToString` method when displaying the objects from a collection (which has been overridden in the `Monkey` class to return the `Name` property value).
 
@@ -362,7 +362,7 @@ In this exercise, you will modify the **CollectionViewTutorial** project to popu
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
-    [![Screenshot of a CollectionView populated with data from a collection, on iOS and Android](../images/populate-data.png "CollectionView displaying data from a collection."](../images/populate-data-large.png#lightbox "CollectionView displaying data from a collection")
+    [![Screenshot of a CollectionView populated with data from a collection, on iOS and Android](../images/populate-data.png "CollectionView displaying data from a collection")](../images/populate-data-large.png#lightbox "CollectionView displaying data from a collection")
 
     The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is displaying the `Name` property for each `Monkey` in the `Monkeys` collection. This is because, by default, the `CollectionView` calls the `ToString` method when displaying the objects from a collection (which has been overridden in the `Monkey` class to return the `Name` property value).
 

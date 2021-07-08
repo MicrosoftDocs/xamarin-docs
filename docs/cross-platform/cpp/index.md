@@ -28,7 +28,7 @@ Ultimately the code must compile and run successfully on all target platforms th
 
 The illustration below represents the four-stage approach used to transform C/C++ source code into a cross-platform Xamarin library that is shared via NuGet and then is consumed in a Xamarin.Forms app.
 
-![High-level approach for using C/C++ with Xamarin.](images/cpp-steps.jpg)
+![High-level approach for using C/C++ with Xamarin](images/cpp-steps.jpg)
 
 The 4 stages are:
 

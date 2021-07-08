@@ -12,11 +12,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms CollectionView Introduction
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) is a view for presenting lists of data using different layout specifications. It aims to provide a more flexible, and performant alternative to [`ListView`](xref:Xamarin.Forms.ListView). For example, the following screenshots show a `CollectionView` that uses a two column vertical grid, and which allows multiple selection:
 
-[![Screenshot of a CollectionView vertical grid layout, on iOS and Android](introduction-images/verticalgrid-multipleselection.png "CollectionView vertical grid layout with multiple selection."](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView vertical grid layout with multiple selection")
+[![Screenshot of a CollectionView vertical grid layout, on iOS and Android](introduction-images/verticalgrid-multipleselection.png "CollectionView vertical grid layout with multiple selection")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView vertical grid layout with multiple selection")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) should be used for presenting lists of data that require scrolling or selection. A bindable layout can be used when the data to be displayed doesn't require scrolling or selection. For more information, see [Bindable Layouts in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
 

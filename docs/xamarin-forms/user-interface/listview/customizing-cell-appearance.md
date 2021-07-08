@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Customizing ListView Cell Appearance
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 The Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) class is used to present scrollable lists, which can be customized through the use of `ViewCell` elements. A `ViewCell` element can display text and images, indicate a true/false state, and receive user input.
 
@@ -30,7 +30,7 @@ The [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) and [
 
 [`TextCell`](xref:Xamarin.Forms.TextCell) is a cell for displaying text, optionally with a second line as detail text. The following screenshot shows `TextCell` items on iOS and Android:
 
-![Default TextCell Example.](customizing-cell-appearance-images/text-cell-default.png)
+![Default TextCell Example](customizing-cell-appearance-images/text-cell-default.png)
 
 TextCells are rendered as native controls at runtime, so performance is very good compared to a custom `ViewCell`. TextCells are customizable, allowing you to set the following properties:
 
@@ -41,14 +41,14 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 
 The following screenshot shows `TextCell` items with customized color properties:
 
-![Custom TextCell Example.](customizing-cell-appearance-images/text-cell-custom.png)
+![Custom TextCell Example](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### ImageCell
 
 [`ImageCell`](xref:Xamarin.Forms.ImageCell), like `TextCell`, can be used for displaying text and secondary detail text, and it offers great performance by using each platform's native controls. `ImageCell` differs from `TextCell` in that it displays an image to the left of the text.
 
 The following screenshot shows `ImageCell` items on iOS and Android:
-!["Default ImageCell Example."](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
+!["Default ImageCell Example"](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
 
 `ImageCell` is useful when you need to display a list of data with a visual aspect, such as a list of contacts or movies. `ImageCell`s are customizable, allowing you to set:
 
@@ -59,7 +59,7 @@ The following screenshot shows `ImageCell` items on iOS and Android:
 - `ImageSource` &ndash; the image to display next to the text
 
 The following screenshot shows `ImageCell` items with customized color properties:
-!["Customized ImageCell Example."](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
+!["Customized ImageCell Example"](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
 
 ## Custom Cells
 Custom cells allow you to create cell layouts that aren't supported by the built-in cells. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
@@ -70,7 +70,7 @@ Xamarin.Forms offers a [caching behavior](~/xamarin-forms/user-interface/listvie
 
 The following screenshot shows an example of a custom cell:
 
-!["Custom Cell Example."](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
+!["Custom Cell Example"](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
 
 ### XAML
 The custom cell shown in the previous screenshot can be created with the following XAML:

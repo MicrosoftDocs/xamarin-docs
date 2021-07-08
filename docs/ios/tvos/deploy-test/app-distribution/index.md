@@ -15,7 +15,7 @@ _This document gives an overview of the distribution techniques that are availab
 
 Once your Xamarin.tvOS app has been developed, the next step in the software development lifecycle is to distribute your app to users, as shown in the highlighted section of the diagram below:
 
-[![The software development lifecycle overview.](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
+[![The software development lifecycle overview](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 Apple provides the following ways to distribute a tvOS app, which are supported by Xamarin.tvOS:
 

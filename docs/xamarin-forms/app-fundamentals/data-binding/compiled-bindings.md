@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Compiled Bindings
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _Compiled bindings are resolved more quickly than classic bindings, therefore improving data binding performance in Xamarin.Forms applications._
 
@@ -75,7 +75,7 @@ The [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label)
 
 When the application is first run, the [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label) elements, and [`Slider`](xref:Xamarin.Forms.Slider) elements are all set from the viewmodel based on the initial `Color` property set when the viewmodel was instantiated. This is shown in the following screenshots:
 
-[![Compiled Color Selector](compiled-bindings-images/compiledcolorselector-small.png "Compiled Color Selector."](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Compiled Color Selector")
+[![Compiled Color Selector](compiled-bindings-images/compiledcolorselector-small.png "Compiled Color Selector")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Compiled Color Selector")
 
 As the sliders are manipulated, the [`BoxView`](xref:Xamarin.Forms.BoxView) and [`Label`](xref:Xamarin.Forms.Label) elements are updated accordingly.
 
@@ -124,7 +124,7 @@ Note that the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) defines the `x:D
 
 When the application is first run, the [`ListView`](xref:Xamarin.Forms.ListView) is populated with `NamedColor` instances. When an item in the `ListView` is selected, the [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) property is set to the color of the selected item in the `ListView`:
 
-[![Compiled Color List.](compiled-bindings-images/compiledcolorlist-small.png "Compiled Color List]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Compiled Color List](compiled-bindings-images/compiledcolorlist-small.png "Compiled Color List]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
 
 Selecting other items in the [`ListView`](xref:Xamarin.Forms.BoxView) updates the color of the [`BoxView`](xref:Xamarin.Forms.BoxView).
 

@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Drawing a Simple Circle in SkiaSharp
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Learn the basics of SkiaSharp drawing, including canvases and paint objects_
 
@@ -20,7 +20,7 @@ This article introduces the concepts of drawing graphics in Xamarin.Forms using 
 
 The [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program contains all the sample code for this series of SkiaSharp articles. The first page is entitled **Simple Circle** and invokes the page class [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). This code shows how to draw a circle in the center of the page with a radius of 100 pixels. The outline of the circle is red, and the interior of the circle is blue.
 
-![A blue circle outlined in red.](circle-images/circleexample.png)
+![A blue circle outlined in red](circle-images/circleexample.png)
 
 The [`SimpleCircle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page class derives from `ContentPage` and contains two `using` directives for the SkiaSharp namespaces:
 
@@ -139,7 +139,7 @@ This time, the `DrawCircle` call fills the circle using the new properties of th
 
 Here's the program running on iOS and Android:
 
-[![Triple screenshot of the Simple Circle page.](circle-images/simplecircle-small.png)](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
+[![Triple screenshot of the Simple Circle page](circle-images/simplecircle-small.png)](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 
 When running the program yourself, you can turn the phone or simulator sideways to see how the graphic is redrawn. Each time the graphic needs to be redrawn, the `PaintSurface` event handler is called again.
 

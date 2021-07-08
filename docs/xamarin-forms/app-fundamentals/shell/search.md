@@ -12,15 +12,15 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shell search
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell includes integrated search functionality that's provided by the [`SearchHandler`](xref:Xamarin.Forms.SearchHandler) class. Search capability can be added to a page by setting the [`Shell.SearchHandler`](xref:Xamarin.Forms.SearchHandler) attached property to a subclassed `SearchHandler` object. This results in a search box being added at the top of the page:
 
-[![Screenshot of a Shell SearchHandler, on iOS and Android.](search-images/searchhandler.png)](search-images/searchhandler-large.png#lightbox)
+[![Screenshot of a Shell SearchHandler, on iOS and Android](search-images/searchhandler.png)](search-images/searchhandler-large.png#lightbox)
 
 When a query is entered into the search box, the [`Query`](xref:Xamarin.Forms.SearchHandler.Query) property is updated, and on each update the [`OnQueryChanged`](xref:Xamarin.Forms.SearchHandler.OnQueryChanged*) method is executed. This method can be overridden to populate the search suggestions area with data:
 
-[![Screenshot of a search results in a Shell SearchHandler, on iOS and Android.](search-images/search-suggestions.png)](search-images/search-suggestions-large.png#lightbox)
+[![Screenshot of a search results in a Shell SearchHandler, on iOS and Android](search-images/search-suggestions.png)](search-images/search-suggestions-large.png#lightbox)
 
 Then, when a result is selected from the search suggestions area, the [`OnItemSelected`](xref:Xamarin.Forms.SearchHandler.OnItemSelected*) method is executed. This method can be overridden to respond appropriately, such as by navigating to a detail page.
 
@@ -115,7 +115,7 @@ As the search query changes, the search suggestions area is updated:
 
 When a search result is selected, the `MonkeyDetailPage` is navigated to, and a detail page about the selected monkey is displayed:
 
-[![Screenshot of monkey details, on iOS and Android.](search-images/detailpage.png)](search-images/detailpage-large.png#lightbox)
+[![Screenshot of monkey details, on iOS and Android](search-images/detailpage.png)](search-images/detailpage-large.png#lightbox)
 
 ## Define search results item appearance
 
@@ -176,7 +176,7 @@ The elements specified in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 
 
 The following screenshots show the result of templating each item in the suggestions area:
 
-[![Screenshot of templated search results in a Shell SearchHandler, on iOS and Android.](search-images/search-results-template.png)](search-images/search-results-template-large.png#lightbox)
+[![Screenshot of templated search results in a Shell SearchHandler, on iOS and Android](search-images/search-results-template.png)](search-images/search-results-template-large.png#lightbox)
 
 For more information about data templates, see [Xamarin.Forms data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 

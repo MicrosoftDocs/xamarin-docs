@@ -13,11 +13,11 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms String and Image Localization
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 Localization is the process of adapting an application to meet the specific language or cultural requirements of a target market. To accomplish localization, the text and images in an application may need to be translated into multiple languages. A localized application automatically displays translated text based on the culture settings of the mobile device:
 
-![Screenshots of the localization application on iOS and Android.](text-images/localizationdemo-screenshots.png)
+![Screenshots of the localization application on iOS and Android](text-images/localizationdemo-screenshots.png)
 
 The .NET framework includes a built-in mechanism for localizing applications using [Resx resource files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). A resource file stores text and other content as name/value pairs that allow the application to retrieve content for a provided key. Resource files allow localized content to be separated from application code.
 
@@ -44,11 +44,11 @@ Resource files contain the following information for each item:
 
 A resource file is added with the **Add New Item** dialog in Visual Studio 2019:
 
-![Add a new Resource in Visual Studio 2019.](text-images/pc-add-resource-file.png)
+![Add a new Resource in Visual Studio 2019](text-images/pc-add-resource-file.png)
 
 Once the file is added, rows can be added for each text resource:
 
-![Specify default text resources in a .resx file.](text-images/pc-default-strings.png)
+![Specify default text resources in a .resx file](text-images/pc-default-strings.png)
 
 The **Access Modifier** drop down setting determines how Visual Studio generates the class used to access resources. Setting the Access Modifier to **Public** or **Internal** results in a generated class with the specified accessibility level. Setting the Access Modifier to **No code generation** does not generate a class file. The default resource file should be configured to generate a class file, which results in a file with the **.designer.cs** extension being added to the project.
 
@@ -62,7 +62,7 @@ At runtime, the application attempts to resolve a resource request in order of s
 
 The following screenshot shows a Spanish translation file named **AppResources.es.resx**:
 
-![Specify default Spanish text resources in a .resx file.](text-images/pc-spanish-strings.png)
+![Specify default Spanish text resources in a .resx file](text-images/pc-spanish-strings.png)
 
 The translation file uses the same **Name** values specified in the default file but contains Spanish language strings in the **Value** column. Additionally, the **Access Modifier** is set to **No code generation**.
 
@@ -71,7 +71,7 @@ The translation file uses the same **Name** values specified in the default file
 
 A resource file is added with the **Add New File** dialog in Visual Studio 2019 for Mac:
 
-![Add a new Resource in Visual Studio 2019 for Mac.](text-images/mac-add-resource-file.png)
+![Add a new Resource in Visual Studio 2019 for Mac](text-images/mac-add-resource-file.png)
 
 Once a default resource file has been created, text can be added by creating `data` elements within the `root` element in the resource file:
 
@@ -93,7 +93,7 @@ Once a default resource file has been created, text can be added by creating `da
 
 A **.designer.cs** class file can be created by setting a **Custom Tool** property in the resource file options:
 
-![Custom Tool specified in a resource file's properties.](text-images/mac-resx-properties.png)
+![Custom Tool specified in a resource file's properties](text-images/mac-resx-properties.png)
 
 Setting the **Custom Tool** to **PublicResXFileCodeGenerator** will result in generated class with `public` access. Setting the **Custom Tool** to **InternalResXFileCodeGenerator** will result in a generated class with `internal` access. An empty **Custom Tool** value will not generate a class. The generated class name will match the resource file name. For example, the **AppResources.resx** file will result in the creation of an `AppResources` class in a file called **AppResources.designer.cs**.
 
@@ -152,7 +152,7 @@ For more information about resource files, see [Create resource files for .NET a
 
 On iOS, you must declare all supported languages in the **Info.plist** file for your project. In the **Info.plist** file, use the **Source** view to set an array for the `CFBundleLocalizations` key, and provide values that correspond to the Resx files. In addition, ensure you set an expected language via the `CFBundleDevelopmentRegion` key:
 
-![Screenshot of the Info.plist editor showing the Localizations section.](text-images/info-plist.png)
+![Screenshot of the Info.plist editor showing the Localizations section](text-images/info-plist.png)
 
 Alternatively, open the **Info.plist** file in an XML editor and add the following:
 
@@ -247,7 +247,7 @@ On Android, localized drawables (images) are stored using a naming convention fo
 
 When a four-letter locale code is required, Android requires an additional **r** following the dash. For example, the Mexico locale (es-MX) folder should be named **drawable-es-rMX**. The image file names in each locale folder should be identical:
 
-![Localized images in the Android project.](text-images/pc-android-images.png)
+![Localized images in the Android project](text-images/pc-android-images.png)
 
 For more information, see [Android Localization](~/android/app-fundamentals/localization.md).
 
@@ -257,7 +257,7 @@ On iOS, localized images are stored using a naming convention for folders in the
 
 Four-letter local codes work just like two-letter language codes. For example, the Mexico locale (es-MX) folder should be named **es-MX.lproj**. The image file names in each locale folder should be identical:
 
-![Localized images in the iOS project.](text-images/pc-ios-images.png)
+![Localized images in the iOS project](text-images/pc-ios-images.png)
 
 > [!NOTE]
 > iOS supports creating a localized Asset Catalog instead of using the .lproj folder structure. However, these must be created and managed in Xcode.
@@ -268,7 +268,7 @@ For more information, see [iOS Localization](~/ios/app-fundamentals/localization
 
 On UWP, localized images are stored using a naming convention for folders in the **Assets/Images** directory. Folders are named with the language or locale. For example, the Spanish-language folder is named **es** and the Mexico locale folder should be named **es-MX**. The image file names in each locale folder should be identical:
 
-![Localized images in the UWP project.](text-images/pc-uwp-images.png)
+![Localized images in the UWP project](text-images/pc-uwp-images.png)
 
 For more information, see [UWP Localization](/windows/uwp/design/globalizing/globalizing-portal/).
 

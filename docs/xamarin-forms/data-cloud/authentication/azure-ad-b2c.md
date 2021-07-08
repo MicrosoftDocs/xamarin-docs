@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Authenticate Users with Azure Active Directory B2C
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C provides cloud identity management for consumer-facing web and mobile applications. This article shows how to use Azure Active Directory B2C to integrate identity management into a mobile application with the Microsoft Authentication Library._
 
@@ -40,7 +40,7 @@ To run the sample project, you must create an Azure Active Directory B2C tenant.
 
 Once you create a tenant, you will need the **tenant name** and **tenant ID** to configure the mobile application. The tenant ID and name are defined by the domain generated when you created your tenant URL. If your generated tenant URL is `https://contoso20190410tenant.onmicrosoft.com/` the **tenant ID** is `contoso20190410tenant.onmicrosoft.com` and the **tenant name** is `contoso20190410tenant`. Find the tenant domain in the Azure portal by clicking the **directory and subscription filter** in the top menu. The following screenshot shows the Azure directory and subscription filter button and the tenant domain:
 
-[![Tenant name in the Azure directory and subscription filter view.](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
+[![Tenant name in the Azure directory and subscription filter view](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
 
 In the sample project, edit the **Constants.cs** file to set the `tenantName` and `tenantId` fields. The following code shows how these values should be set if your tenant domain is `https://contoso20190410tenant.onmicrosoft.com/`, replace these values with values from your portal:
 
@@ -57,11 +57,11 @@ public static class Constants
 
 A mobile application must be registered with the tenant before it can connect and authenticate users. The registration process assigns a unique **Application ID** to the application, and a **Redirect URL** that directs responses back to the application after authentication. For more information, see [Azure Active Directory B2C: Register your application](/azure/active-directory-b2c/active-directory-b2c-app-registration/). You will need to know the **Application ID** assigned to your application, which is listed after the application name in the properties view. The following screenshot shows where to find the Application ID:
 
-[![Application ID in the Azure application properties view.](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
+[![Application ID in the Azure application properties view](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
 Microsoft Authentication Library expects the **Redirect URL** for your application to be your **Application ID** prefixed with the text "msal", and followed by an endpoint called "auth". If your Application ID is "1234abcd", the full URL should be `msal1234abcd://auth`. Make sure that your application has enabled the **Native client** setting and create a **Custom Redirect URI** using your Application ID as shown in the following screenshot:
 
-![Custom Redirect URI in the Azure application properties view.](azure-ad-b2c-images/azure-redirect-uri.png)
+![Custom Redirect URI in the Azure application properties view](azure-ad-b2c-images/azure-redirect-uri.png)
 
 The URL will be used later in both the Android **ApplicationManifest.xml** and the iOS **Info.plist**.
 
@@ -83,7 +83,7 @@ A policy is an experience users go through to complete a task such as creating a
 
 When you've completed policy setup, you should have two policies in the **User flows (policies)** view in the Azure portal. The following screenshot demonstrates two configured policies in the Azure portal:
 
-![Two configured policies in the Azure User flows (policies) view.](azure-ad-b2c-images/azure-application-policies.png)
+![Two configured policies in the Azure User flows (policies) view](azure-ad-b2c-images/azure-application-policies.png)
 
 In the sample project, edit the **Constants.cs** file to set the `policySignin` and `policyPassword` fields to reflect the names you chose during policy setup:
 
@@ -251,11 +251,11 @@ public partial class LogoutPage : ContentPage
 
 On iOS, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in **Info.plist**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following screenshot shows the custom URL scheme in **Info.plist**.
 
-!["Registering a custom URL scheme on iOS."](azure-ad-b2c-images/customurl-ios.png)
+!["Registering a custom URL scheme on iOS"](azure-ad-b2c-images/customurl-ios.png)
 
 MSAL also requires Keychain Entitlements on iOS, registered in the **Entitilements.plist**, as shown in the following screenshot:
 
-!["Setting application Entitlements on iOS."](azure-ad-b2c-images/entitlements-ios.png)
+!["Setting application Entitlements on iOS"](azure-ad-b2c-images/entitlements-ios.png)
 
 When Azure Active Directory B2C completes the authorization request, it redirects to the registered redirect URL. The custom URL scheme results in iOS launching the mobile application and passing in the URL as a launch parameter, where it's processed by the `OpenUrl` override of the application's `AppDelegate` class, and returns control of the experience to MSAL. The `OpenUrl` implementation is shown in the following code example:
 
@@ -333,7 +333,7 @@ No additional setup is required to use MSAL on the Universal Windows Platform
 
 Run the application on a virtual or physical device. Tapping the **Login** button should open the browser and navigate to a page where you can sign in or create an account. After completing the sign in process, you should be returned to the application's logout page. The following screenshot shows the user sign in screen running on Android and iOS:
 
-!["Azure ADB2C sign in screen on Android and iOS."](azure-ad-b2c-images/login.png)
+!["Azure ADB2C sign in screen on Android and iOS"](azure-ad-b2c-images/login.png)
 
 ## Related Links
 

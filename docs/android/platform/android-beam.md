@@ -14,7 +14,7 @@ Android Beam is a Near Field Communication (NFC) technology introduced in
 Android 4.0 that allows applications to share information over NFC when
 in close proximity.
 
-[![Diagram illustrating two devices in close proximity sharing information.](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[![Diagram illustrating two devices in close proximity sharing information](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Android Beam works by pushing messages over NFC when two devices are in
 range. Devices about 4cm from each other can share data using Android
@@ -99,7 +99,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 For a complete code example that uses Android Beam, shown running in the
 screenshot below, see the [Android Beam demo](/samples/xamarin/monodroid-samples/androidbeamdemo) in the Sample Gallery.
 
-[![Example screenshots from the Android Beam demo.](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![Example screenshots from the Android Beam demo](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 ## Related Links
 

@@ -12,9 +12,9 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms StackLayout
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
-[![Xamarin.Forms StackLayout](stacklayout-images/layouts.png "Xamarin.Forms StackLayout."](stacklayout-images/layouts-large.png#lightbox "Xamarin.Forms StackLayout")
+[![Xamarin.Forms StackLayout](stacklayout-images/layouts.png "Xamarin.Forms StackLayout")](stacklayout-images/layouts-large.png#lightbox "Xamarin.Forms StackLayout")
 
 A [`StackLayout`](xref:Xamarin.Forms.StackLayout) organizes child views in a one-dimensional stack, either horizontally or vertically. By default, a `StackLayout` is oriented vertically. In addition, a `StackLayout` can be used as a parent layout that contains other child layouts.
 
@@ -54,7 +54,7 @@ The following XAML shows how to create a vertically oriented [`StackLayout`](xre
 
 This example creates a vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing [`Label`](xref:Xamarin.Forms.Label) and [`BoxView`](xref:Xamarin.Forms.BoxView) objects. By default, there are six device-independent units of space between the child views:
 
-[![Screenshot of a vertically oriented StackLayout](stacklayout-images/vertical.png "Vertically oriented StackLayout."](stacklayout-images/vertical-large.png#lightbox "Vertically oriented StackLayout")
+[![Screenshot of a vertically oriented StackLayout](stacklayout-images/vertical.png "Vertically oriented StackLayout")](stacklayout-images/vertical-large.png#lightbox "Vertically oriented StackLayout")
 
 The equivalent C# code is:
 
@@ -110,7 +110,7 @@ The following XAML shows how to create a horizontally oriented [`StackLayout`](x
 
 This example creates a horizontal [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing [`BoxView`](xref:Xamarin.Forms.BoxView) objects, with six device-independent units of space between the child views:
 
-[![Screenshot of a horizontally oriented StackLayout](stacklayout-images/horizontal.png "Horizontally oriented StackLayout."](stacklayout-images/horizontal-large.png#lightbox "Horizontally oriented StackLayout")
+[![Screenshot of a horizontally oriented StackLayout](stacklayout-images/horizontal.png "Horizontally oriented StackLayout")](stacklayout-images/horizontal-large.png#lightbox "Horizontally oriented StackLayout")
 
 The equivalent C# code is:
 
@@ -161,7 +161,7 @@ The spacing between child views in a [`StackLayout`](xref:Xamarin.Forms.StackLay
 
 This example creates a vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing [`Label`](xref:Xamarin.Forms.Label) and [`BoxView`](xref:Xamarin.Forms.BoxView) objects that have no spacing between them:
 
-[![Screenshot of a StackLayout without any spacing](stacklayout-images/spacing.png "StackLayout without any spacing."](stacklayout-images/spacing-large.png#lightbox "StackLayout without any spacing")
+[![Screenshot of a StackLayout without any spacing](stacklayout-images/spacing.png "StackLayout without any spacing")](stacklayout-images/spacing-large.png#lightbox "StackLayout without any spacing")
 
 > [!TIP]
 > The [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) property can be set to negative values to make child views overlap.
@@ -234,7 +234,7 @@ The following XAML example sets alignment preferences on each child view in the 
 
 In this example, alignment preferences are set on the [`Label`](xref:Xamarin.Forms.Label) objects to control their position within the [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Start`](xref:Xamarin.Forms.LayoutOptions.Start), [`Center`](xref:Xamarin.Forms.LayoutOptions.Center), [`End`](xref:Xamarin.Forms.LayoutOptions.End), and [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) fields are used to define the alignment of the [`Label`](xref:Xamarin.Forms.Label) objects within the parent `StackLayout`:
 
-[![Screenshot of a StackLayout with alignment options set](stacklayout-images/alignment.png "StackLayout with alignment options."](stacklayout-images/alignment-large.png#lightbox "StackLayout with alignment options")
+[![Screenshot of a StackLayout with alignment options set](stacklayout-images/alignment.png "StackLayout with alignment options")](stacklayout-images/alignment-large.png#lightbox "StackLayout with alignment options")
 
 A [`StackLayout`](xref:Xamarin.Forms.StackLayout) only respects the alignment preferences on child views that are in the opposite direction to the `StackLayout` orientation. Therefore, the [`Label`](xref:Xamarin.Forms.Label) child views within the vertically oriented `StackLayout` set their [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) properties to one of the alignment fields:
 
@@ -304,7 +304,7 @@ The following XAML example sets expansion preferences on each [`Label`](xref:Xam
 
 In this example, expansion preferences are set on the [`Label`](xref:Xamarin.Forms.Label) objects to control their size within the [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand), [`CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand), [`EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand), and [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) fields are used to define the alignment preference, and whether the `Label` will occupy more space if available within the parent `StackLayout`:
 
-[![Screenshot of a StackLayout with expansion options set](stacklayout-images/expansion.png "StackLayout with expansion options."](stacklayout-images/expansion-large.png#lightbox "StackLayout with expansion options")
+[![Screenshot of a StackLayout with expansion options set](stacklayout-images/expansion.png "StackLayout with expansion options")](stacklayout-images/expansion-large.png#lightbox "StackLayout with expansion options")
 
 A [`StackLayout`](xref:Xamarin.Forms.StackLayout) can only expand child views in the direction of its orientation. Therefore, the vertically oriented `StackLayout` can expand [`Label`](xref:Xamarin.Forms.Label) child views that set their [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties to one of the expansion fields. This means that, for vertical alignment, each `Label` occupies the same amount of space within the `StackLayout`. However, only the final `Label`, which sets its [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) property to [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) has a different size.
 
@@ -391,7 +391,7 @@ The following XAML shows an example of nesting [`StackLayout`](xref:Xamarin.Form
 
 In this example, the parent [`StackLayout`](xref:Xamarin.Forms.StackLayout) contains nested `StackLayout` objects inside [`Frame`](xref:Xamarin.Forms.Frame) objects. The parent `StackLayout` is oriented vertically, while the child `StackLayout` objects are oriented horizontally:
 
-[![Screenshot of nested StackLayout objects](stacklayout-images/combined.png "Nested StackLayouts."](stacklayout-images/combined-large.png#lightbox "Nested StackLayouts")
+[![Screenshot of nested StackLayout objects](stacklayout-images/combined.png "Nested StackLayouts")](stacklayout-images/combined-large.png#lightbox "Nested StackLayouts")
 
 > [!IMPORTANT]
 > The deeper you nest [`StackLayout`](xref:Xamarin.Forms.StackLayout) objects and other layouts, the more the nested layouts will impact performance. For more information, see [Choose the correct layout](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).

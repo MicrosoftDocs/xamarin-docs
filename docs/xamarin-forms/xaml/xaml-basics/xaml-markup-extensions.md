@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Part 3. XAML Markup Extensions
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML markup extensions constitute an important feature in XAML that allow properties to be set to objects or values that are referenced indirectly from other sources. XAML markup extensions are particularly important for sharing objects, and referencing constants used throughout an application, but they find their greatest utility in data bindings._
 
@@ -297,7 +297,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
 
 The screenshots verify the consistent styling, and the platform-dependent styling:
 
-[![Styled Controls.](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
+[![Styled Controls](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Although it is most common to define the `Resources` collection at the top of the page, keep in mind that the `Resources` property is defined by `VisualElement`, and you can have `Resources` collections on other elements on the page. For example, try adding one to the `StackLayout` in this example:
 
@@ -435,7 +435,7 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 
 The size of the resultant `BoxView` relative to the screen is platform-dependent:
 
-[![Controls using x:Static Markup Extension.](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
+[![Controls using x:Static Markup Extension](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## Other Standard Markup Extensions
 
@@ -552,7 +552,7 @@ Perhaps the most important lesson you should take from this sample is the syntax
 
 Here’s the program running:
 
-[![Relative Layout using Constraints.](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
+[![Relative Layout using Constraints](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## Summary
 

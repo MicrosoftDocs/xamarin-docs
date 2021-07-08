@@ -13,11 +13,11 @@ ms.date: 04/26/2018
 
 The [Fragments Walkthrough &ndash; Part 1](./walkthrough.md) demonstrated how to create and use fragments in an Android app that targets the smaller screens on a phone. The next step in this walkthrough is to modify the application to take advantage of the extra horizontal space on tablet &ndash;  there will be one activity that will always be the list of plays (the `TitlesFragment`) and  `PlayQuoteFragment` will be dynamically added to the Activity in response to a selection made by the user:
 
-[![App running on tablet.](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
+[![App running on tablet](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
 Phones that are running in landscape mode will also benefit from this enhancement:
 
-[![App running on an Android phone in landscape mode.](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![App running on an Android phone in landscape mode](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
 ## Updating the app to handle landscape orientation
 
@@ -35,11 +35,11 @@ Create an alternate layout that targets **Landscape** orientation by following t
 
 # [Visual Studio](#tab/windows)
 
-[![Alternate layout in Solution Explorer.](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
+[![Alternate layout in Solution Explorer](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Alternate layout in Solution Pad.](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
+[![Alternate layout in Solution Pad](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 
 -----
 
@@ -231,6 +231,6 @@ This modification adds a check for the device orientation. If it is in landscape
 
 Once these changes are complete, run the app, rotate the device to landscape mode (if necessary), and then select a play. The quote should be displayed on the same screen as the list of plays:
 
-[![App running on an Android phone in landscape mode.](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![App running on an Android phone in landscape mode](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-[![App running on an Android tablet.](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
+[![App running on an Android tablet](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)

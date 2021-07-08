@@ -20,9 +20,9 @@ Right-click and download the three images below, then copy them to
 the **Resources/drawable** directory of your project. These will be
 used for the different button states.
 
- [![Green Android icon for normal state.](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox)
- [![Orange Android icon for focused state.](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox)
- [![Yellow Android icon for pressed state.](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
+ [![Green Android icon for normal state](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox)
+ [![Orange Android icon for focused state](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox)
+ [![Yellow Android icon for pressed state](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
 Create a new file in the **Resources/drawable** directory named
 **android_button.xml**. Insert the following XML:

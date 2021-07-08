@@ -21,7 +21,7 @@ few. Collectively, these non-source code files are referred to as resources and
 are compiled (along with the source code) during the build process and packaged
 as an APK for distribution and installation onto devices:
 
-![Packaging diagram.](images/packaging-diagram.png)
+![Packaging diagram](images/packaging-diagram.png)
 
 Resources offer several advantages to an Android application:
 
@@ -43,7 +43,7 @@ Resources is created, along with some subdirectories:
 
 # [Visual Studio](#tab/windows)
 
-![Resources folder and contents.](images/resources-folder-vs.png)
+![Resources folder and contents](images/resources-folder-vs.png)
 
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
@@ -51,7 +51,7 @@ to their type into these subdirectories: images will go in the
 
 # [Visual Studio for Mac](#tab/macos)
 
-![Resources folder and contents.](images/resources-folder-xs.png)
+![Resources folder and contents](images/resources-folder-xs.png)
 
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
@@ -82,7 +82,7 @@ images for devices set to a French locale. An example of providing
 alternate resources can be seen in the image below where the same
 application is being run with just the locale of the device changing:
 
-![Example screens for different locales.](images/localized-screenshots.png)
+![Example screens for different locales](images/localized-screenshots.png)
 
 This article will take a comprehensive look at using resources and cover the following topics:
 

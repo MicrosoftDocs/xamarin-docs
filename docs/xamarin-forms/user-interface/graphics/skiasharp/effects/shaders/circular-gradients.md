@@ -12,21 +12,21 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # The SkiaSharp circular gradients
 
-[![Download Sample.](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Download Sample](~/media/shared/download.png) Download the sample](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [`SKShader`](xref:SkiaSharp.SKShader) class defines static methods to create four different types of gradients. The [**SkiaSharp linear gradient**](linear-gradient.md) article discusses the [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) method. This article covers the other three types of gradients, all of which are based on circles.
 
 The [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient*) method creates a gradient that emanates from the center of a circle:
 
-![Radial Gradient Sample.](circular-gradients-images/RadialGradientSample.png)
+![Radial Gradient Sample](circular-gradients-images/RadialGradientSample.png)
 
 The [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient*) method creates a gradient that sweeps around the center of a circle:
 
-![Sweep Gradient Sample.](circular-gradients-images/SweepGradientSample.png)
+![Sweep Gradient Sample](circular-gradients-images/SweepGradientSample.png)
 
 The third type of gradient is quite unusual. It is called the two-point conical gradient and is defined by the [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient*) method. The gradient extends from one circle to another:
 
-![Conical Gradient Sample.](circular-gradients-images/ConicalGradientSample.png)
+![Conical Gradient Sample](circular-gradients-images/ConicalGradientSample.png)
 
 If the two circles are different sizes, then the gradient takes the form of a cone.
 
@@ -134,7 +134,7 @@ public partial class RadialGradientPage : ContentPage
 
 This code creates a gradient with black at the center, gradually fading to white 100 pixels from the center. What happens beyond that radius depends on the `SKShaderTileMode` argument:
 
-[![Radial Gradient](circular-gradients-images/RadialGradient.png "Radial Gradient."](circular-gradients-images/RadialGradient-Large.png#lightbox)
+[![Radial Gradient](circular-gradients-images/RadialGradient.png "Radial Gradient")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
 In all three cases, the gradient fills the canvas. On the iOS screen at the left, the gradient beyond the radius continues with the last color, which is white. That's the result of `SKShaderTileMode.Clamp`. The Android screen shows the effect of `SKShaderTileMode.Repeat`: At 100 pixels from the center, the gradient begins again with the first color, which is black. The gradient repeats every 100 pixels of radius. 
 
@@ -202,7 +202,7 @@ public class RainbowArcGradientPage : ContentPage
 
 Suppose the minimum of the width and height of the canvas is 1000, which means that the `rainbowWidth` value is 250. The `outerRadius` and `innerRadius` values are set to 1000 and 750, respectively. These values are used for calculating the `positions` array; the eight values range from 0.75f to 1. The `radius` value is used for stroking the circle. The value of 875 means that the 250-pixel stroke width extends between the radius of 750 pixels and the radius of 1000 pixels:
 
-[![Rainbow Arc Gradient](circular-gradients-images/RainbowArcGradient.png "Rainbow Arc Gradient."](circular-gradients-images/RainbowArcGradient-Large.png#lightbox)
+[![Rainbow Arc Gradient](circular-gradients-images/RainbowArcGradient.png "Rainbow Arc Gradient")](circular-gradients-images/RainbowArcGradient-Large.png#lightbox)
 
 If you filled the whole canvas with this gradient, you'd see that it's red within the inner radius. This is because the `positions` array doesn't start with 0. The first color is used for offsets of 0 through the first array value. The gradient is also red beyond the outer radius. That's the result of the `Clamp` tile mode. Because the gradient is used for stroking a thick line, these red areas aren't visible.
 
@@ -276,7 +276,7 @@ public class RadialGradientMaskPage : ContentPage
 
 After drawing the bitmap, some simple code converts `CENTER` and `RADIUS` to `center` and `radius`, which refer to the highlighted area in the bitmap that has been scaled and shifted for display. These values are used to create a radial gradient with that center and radius. The two colors begin at transparent in the center and for the first 60% of the radius. The gradient then fades to white:
 
-[![Radial Gradient Mask](circular-gradients-images/RadialGradientMask.png "Radial Gradient Mask."](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
+[![Radial Gradient Mask](circular-gradients-images/RadialGradientMask.png "Radial Gradient Mask")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
 This approach is not the best way to mask a bitmap. The problem is that the mask mostly has a color of white, which was chosen to match the background of the canvas. If the background is some other color &mdash; or perhaps a gradient itself &mdash; it won't match. A better approach to masking is shown in the article [SkiaSharp Porter-Duff blend modes](../blend-modes/porter-duff.md).
 
@@ -329,7 +329,7 @@ public class RadialSpecularHighlightPage : ContentPage
 
 The `CreateRadialGradient` call creates a gradient that begins at that `offCenter` point with white and ends with red at a distance of half the radius. Here's what it looks like:
 
-[![Radial Specular Highlight](circular-gradients-images/RadialSpecularHighlight.png "Radial Specular Highlight."](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
+[![Radial Specular Highlight](circular-gradients-images/RadialSpecularHighlight.png "Radial Specular Highlight")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 
 If you look closely at this gradient, you might decide that it is flawed. The gradient is centered around a particular point, and you might wish it were a little less symmetrical to reflect the rounded surface. In that case, you might prefer the specular highlight shown below in the section [**Conical gradients for specular highlights**](#conical-gradients-for-specular-highlights).
 
@@ -349,7 +349,7 @@ A [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient(SkiaSharp.
 
 The **Sweep Gradient** page uses a sweep gradient to color a circle with a stroke width of 50 pixels:
 
-[![Sweep Gradient](circular-gradients-images/SweepGradient.png "Sweep Gradient."](circular-gradients-images/SweepGradient-Large.png#lightbox)
+[![Sweep Gradient](circular-gradients-images/SweepGradient.png "Sweep Gradient")](circular-gradients-images/SweepGradient-Large.png#lightbox)
 
 The `SweepGradientPage` class defines an array of eight colors with different hue values. Notice that the array begins and ends with red (a hue value of 0 or 360), which appears at the far right in the screenshots:
 
@@ -419,7 +419,7 @@ public class SweepGradientPage : ContentPage
 
 The program also implements a `TapGestureRecognizer` that enables some code at the end of the `PaintSurface` handler. This code uses the same gradient to fill the canvas:
 
-[![Sweep Gradient Full](circular-gradients-images/SweepGradientFull.png "Sweep Gradient Full."](circular-gradients-images/SweepGradientFull-Large.png#lightbox)
+[![Sweep Gradient Full](circular-gradients-images/SweepGradientFull.png "Sweep Gradient Full")](circular-gradients-images/SweepGradientFull-Large.png#lightbox)
 
 These screenshots demonstrate that the gradient fills whatever area is colored by it. If the gradient does not begin and end with the same color, there will be a discontinuity to the right of the center point.
 
@@ -567,7 +567,7 @@ The `colors` array is red, green, and blue. The code towards the bottom of the `
 
 Notice that `DrawRect` call uses the gradient to color the entire canvas. In the general case, however, much of the canvas remains uncolored by the gradient. Here's the program showing three possible configurations:
 
-[![Conical Gradient](circular-gradients-images/ConicalGradient.png "Conical Gradient."](circular-gradients-images/ConicalGradient-Large.png#lightbox)
+[![Conical Gradient](circular-gradients-images/ConicalGradient.png "Conical Gradient")](circular-gradients-images/ConicalGradient-Large.png#lightbox)
 
 The iOS screen at the left shows the effect of the `SKShaderTileMode` setting of `Clamp`. The gradient begins with red inside the edge of the smaller circle that is opposite the side closest to the second circle. The `Clamp` value also causes red to continue to the point of the cone. The gradient ends with blue at the outer edge of the larger circle that is closest to the first circle, but continues with blue within that circle and beyond.
 
@@ -581,7 +581,7 @@ You might doubt the practical usefulness of the gradient when one circle is nest
 
 Earlier in this article you saw how to use a radial gradient to create a specular highlight. You can also use the two-point conical gradient for this purpose, and you might prefer how it looks:
 
-[![Conical Specular Highlight](circular-gradients-images/ConicalSpecularHighlight.png "Conical Specular Highlight."](circular-gradients-images/ConicalSpecularHighlight-Large.png#lightbox)
+[![Conical Specular Highlight](circular-gradients-images/ConicalSpecularHighlight.png "Conical Specular Highlight")](circular-gradients-images/ConicalSpecularHighlight-Large.png#lightbox)
 
 The asymmetrical appearance better suggests the rounded surface of the object. 
 

@@ -60,7 +60,7 @@ interfaces and classes for the individual services such as Maps. The
 following diagram shows the relationship between an Android application
 and Google Play Services:
 
-![Diagram illustrating the Google Play Store updating the Google Play Services APK.](maps-api-images/play-services-diagram.png)
+![Diagram illustrating the Google Play Store updating the Google Play Services APK](maps-api-images/play-services-diagram.png)
 
 The Android Maps API is provided as a part of Google Play Services.
 Before a Xamarin.Android application can use the Maps API, the Google
@@ -68,7 +68,7 @@ Play Services SDK must be installed using the [Android SDK Manager](~/android/ge
 screenshot shows where in the Android SDK Manager the Google Play
 services client can be found:
 
-![Google Play Services appears under Extras in the Android SDK Manager.](maps-api-images/image01.png)
+![Google Play Services appears under Extras in the Android SDK Manager](maps-api-images/image01.png)
 
 > [!NOTE]
 > The Google Play services APK is a licensed product
@@ -82,14 +82,14 @@ To add the Google Play Services Map package, right-click the
 **References** folder of your project in the Solution Explorer and
 click **Manage NuGet Packages...**:
 
-![Solution Explorer showing Manage NuGet Packages context menu item under References.](maps-api-images/image02.png)
+![Solution Explorer showing Manage NuGet Packages context menu item under References](maps-api-images/image02.png)
 
 This opens the **NuGet Package Manager**. Click **Browse** and enter
 **Xamarin Google Play Services Maps** in the search field. Select
 **Xamarin.GooglePlayServices.Maps** and click **Install**. (If
 this package had been installed previously, click **Update**.):
 
-[![NuGet Package Manager with Xamarin.GooglePlayServices.Maps package selected.](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
+[![NuGet Package Manager with Xamarin.GooglePlayServices.Maps package selected](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 Notice that the following dependency packages are also installed:
 
@@ -227,7 +227,7 @@ that a developer must manually implement.
 
 The following screenshot is an example of a simple `MapFragment`:
 
-[![Screenshot of a device displaying a Google Map fragment.](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
+[![Screenshot of a device displaying a Google Map fragment](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
 Similar to other Fragment classes, there are two ways to add a
 `MapFragment` to an Activity:
@@ -304,7 +304,7 @@ API:
 The image below shows three of the different types of maps, from
 left-to-right (normal, hybrid, terrain):
 
-[![Three map example screenshots: Normal, Hybrid, and Terrain.](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
+[![Three map example screenshots: Normal, Hybrid, and Terrain](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 The `GoogleMap.MapType` property is used to set or change which type of
 map is displayed. The following code snippet shows how to display a
@@ -434,7 +434,7 @@ viewing angle and specifies an angle of 25 degrees from the
 vertical. The following screenshot shows the `GoogleMap` after executing
 the preceding code:
 
-[![Example Google Map showing a specified location with a tilted viewing angle.](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
+[![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
 ### Drawing on the Map
 
@@ -479,7 +479,7 @@ The title of the marker will be displayed in an *info window* when the
 user taps on the marker. The following screenshot shows what this
 marker looks like:
 
-[![Example Google Map with a marker and an info window for Vimy Ridge.](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
+[![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
 ##### Customizing A Marker
 
@@ -589,7 +589,7 @@ GroundOverlay myOverlay = googleMap.AddGroundOverlay(groundOverlayOptions);
 
 The following screenshot shows this overlay on a map:
 
-[![Example map with an overlayed image of a polar bear.](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
+[![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
 #### Lines, Circles, and Polygons
 
