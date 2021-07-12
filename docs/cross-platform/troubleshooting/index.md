@@ -13,7 +13,7 @@ ms.date: 05/10/2018
 
 ## General Issues
 
-### [Frequently Asked Questions](questions/index.md)
+### [Frequently Asked Questions](questions/index.yml)
 
 Frequently Asked Questions about the Xamarin Platform, and answers specific to Visual Studio.
 
@@ -23,6 +23,6 @@ How to update existing Xamarin solutions to change Component references to NuGet
 
 ## Product-Specific Questions
 
-- [Android](~/android/troubleshooting/questions/index.md)
-- [iOS](~/ios/troubleshooting/questions/index.md)
+- [Android](~/android/troubleshooting/questions/index.yml)
+- [iOS](~/ios/troubleshooting/questions/index.yml)
 - [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)

@@ -622,7 +622,7 @@
         - name: Troubleshooting Tips
           href: troubleshooting/troubleshooting.md
         - name: Frequently Asked Questions
-          href: troubleshooting/questions/index.md
+          href: troubleshooting/questions/index.yml
           items:
             - name: Which Android SDK packages should I install?
               href: troubleshooting/questions/install-android-sdk-packages.md

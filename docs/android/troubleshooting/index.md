@@ -18,7 +18,7 @@ _Documents in this section cover features specific to troubleshooting with Andro
 
 Troubleshooting tips and tricks.
 
-## [Frequently Asked Questions](questions/index.md)
+## [Frequently Asked Questions](questions/index.yml)
 
 Frequently asked Xamarin.Android troubleshooting questions.
 
