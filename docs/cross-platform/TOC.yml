@@ -132,7 +132,7 @@
       items:
         - name: Frequently asked questions
           displayName: FAQ
-          href: troubleshooting/questions/index.md
+          href: troubleshooting/questions/index.yml
           items:
             - name: How can I view what libraries are supported in a PCL?
               href: troubleshooting/questions/pcl-support-libraries.md

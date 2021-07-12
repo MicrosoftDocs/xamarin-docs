@@ -826,7 +826,7 @@
         - name: Error messages (mtouch)
           href: troubleshooting/mtouch-errors.md
         - name: Frequently Asked Questions
-          href: troubleshooting/questions/index.md
+          href: troubleshooting/questions/index.yml
           items:
             - name: Can I use an older version of Xcode?
               href: troubleshooting/questions/old-version-xcode.md

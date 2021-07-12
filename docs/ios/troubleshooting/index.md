@@ -20,6 +20,6 @@ Troubleshooting tips and tricks
 
 An errors reference guide, showing the most common errors you may experience when using Xamarin.iOS in Visual Studio for Mac
 
-## [Frequently Asked Questions](questions/index.md)
+## [Frequently Asked Questions](questions/index.yml)
 
 Frequently asked Xamarin.iOS troubleshooting questions.
