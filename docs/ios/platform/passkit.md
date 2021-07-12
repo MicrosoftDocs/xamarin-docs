@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2018
+no-loc: [Objective-C]
 ---
 
 # PassKit in Xamarin.iOS

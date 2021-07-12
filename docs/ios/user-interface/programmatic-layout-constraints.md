@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
+no-loc: [Objective-C]
 ---
 
 # Programmatic Layout Constraints in Xamarin.iOS

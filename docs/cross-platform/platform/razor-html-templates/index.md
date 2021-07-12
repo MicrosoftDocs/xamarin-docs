@@ -6,6 +6,7 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: davidortinau
 ms.author: daortin
 ms.date: 07/24/2018
+no-loc: [Objective-C]
 ---
 
 # Building HTML views using Razor Templates

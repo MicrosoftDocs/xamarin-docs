@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
+no-loc: [Objective-C]
 ---
 
 # Can I add files to or remove files from an IPA file after building it in Visual Studio?

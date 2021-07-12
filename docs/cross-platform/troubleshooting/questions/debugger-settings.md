@@ -6,6 +6,7 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
+no-loc: [Objective-C]
 ---
 
 # What project settings are required for the debugger?

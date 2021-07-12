@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
+no-loc: [Objective-C, registrars]
 ---
 
 # Xamarin.Mac architecture
@@ -78,7 +79,7 @@ class MyViewController : UIViewController{
 ```objc
 @interface MyViewController : UIViewController
  - (void)myFunc;
-@end 
+@end
 
 @implementation MyViewController
 - (void)myFunc {

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017
+no-loc: [Objective-C]
 ---
 # Objective-C selectors in Xamarin.iOS
 

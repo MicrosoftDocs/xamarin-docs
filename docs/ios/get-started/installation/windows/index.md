@@ -8,6 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
+no-loc: [Objective-C]
 ---
 
 # Installing Xamarin.iOS on Windows

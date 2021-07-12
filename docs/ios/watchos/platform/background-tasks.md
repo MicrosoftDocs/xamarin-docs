@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
+no-loc: [Objective-C]
 ---
 
 # watchOS Background Tasks in Xamarin

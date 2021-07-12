@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2016
+no-loc: [Objective-C]
 ---
 
 # Deprecated Notification Technologies in Xamarin.iOS

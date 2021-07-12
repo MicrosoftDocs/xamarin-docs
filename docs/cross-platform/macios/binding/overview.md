@@ -6,6 +6,7 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
+no-loc: [Objective-C]
 ---
 
 # Overview of Objective-C Bindings

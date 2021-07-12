@@ -6,6 +6,7 @@ ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
+no-loc: [Objective-C]
 ---
 
 # Real-World Example using an Xcode Project

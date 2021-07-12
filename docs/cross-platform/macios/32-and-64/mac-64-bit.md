@@ -6,6 +6,7 @@ ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: davidortinau
 ms.author: daortin
 ms.date: 02/22/2018
+no-loc: [Objective-C]
 ---
 
 # Updating Xamarin.Mac Unified applications to 64-bit

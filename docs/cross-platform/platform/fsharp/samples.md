@@ -6,6 +6,7 @@ ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
+no-loc: [Objective-C]
 ---
 
 # F# Samples for Xamarin

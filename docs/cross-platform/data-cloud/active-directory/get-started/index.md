@@ -6,6 +6,7 @@ ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Azure Active Directory

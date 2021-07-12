@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: joshspicer
 ms.author: jospicer
 ms.date: 10/27/2020
+no-loc: [Objective-C]
 ---
 
 # Designing user interfaces with Xcode

@@ -6,6 +6,7 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
+no-loc: [Objective-C]
 ---
 # Shared Projects code sharing
 

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/29/2016
+no-loc: [Objective-C]
 ---
 
 # Xamarin.iOS performance

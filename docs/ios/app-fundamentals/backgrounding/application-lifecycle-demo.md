@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/17/2018
+no-loc: [Objective-C]
 ---
 # Application lifecycle demo for Xamarin.iOS
 

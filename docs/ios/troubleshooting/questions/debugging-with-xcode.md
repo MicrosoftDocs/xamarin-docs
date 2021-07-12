@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: migueldeicaza
 ms.author: miguel
 ms.date: 02/22/2018
+no-loc: [Objective-C]
 ---
 # Debugging Xamarin.iOS apps with Xcode
 

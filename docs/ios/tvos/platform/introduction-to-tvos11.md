@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018
+no-loc: [Objective-C]
 ---
 
 # Introduction to tvOS 11

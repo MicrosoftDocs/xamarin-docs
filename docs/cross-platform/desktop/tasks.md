@@ -5,6 +5,7 @@ description: "This document compares how to perform various common tasks on WPF 
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # Common Tasks Comparison

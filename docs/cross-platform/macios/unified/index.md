@@ -6,6 +6,7 @@ ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2018
+no-loc: [Objective-C]
 ---
 
 # Unified API for Xamarin.iOS and Xamarin.Mac

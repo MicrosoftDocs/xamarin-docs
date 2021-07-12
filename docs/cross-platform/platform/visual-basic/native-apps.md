@@ -6,6 +6,7 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
+no-loc: [Objective-C]
 ---
 
 # Visual Basic in Xamarin Android and iOS

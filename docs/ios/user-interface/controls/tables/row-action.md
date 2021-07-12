@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
+no-loc: [Objective-C]
 ---
 
 # Working with Row Actions in Xamarin.iOS

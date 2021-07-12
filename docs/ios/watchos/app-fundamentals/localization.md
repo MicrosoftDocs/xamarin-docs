@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
+no-loc: [Objective-C]
 ---
 
 # Working with watchOS Localization in Xamarin

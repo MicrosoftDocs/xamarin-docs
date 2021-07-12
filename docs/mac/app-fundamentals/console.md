@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: migueldeicaza
 ms.author: miguel
 ms.date: 07/27/2018
+no-loc: [Objective-C]
 ---
 # Xamarin.Mac bindings in console apps
 

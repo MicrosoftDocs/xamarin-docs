@@ -7,6 +7,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
+no-loc: [Objective-C]
 ---
 
 # Building mobile apps

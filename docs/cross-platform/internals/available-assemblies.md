@@ -6,6 +6,7 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
+no-loc: [Objective-C]
 ---
 
 # Available Assemblies

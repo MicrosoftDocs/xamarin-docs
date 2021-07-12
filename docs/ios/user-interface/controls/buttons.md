@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
+no-loc: [Objective-C]
 ---
 
 # Buttons in Xamarin.iOS

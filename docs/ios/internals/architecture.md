@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
+no-loc: [Objective-C, registrars, Registrars]
 ---
 
 # iOS App Architecture
@@ -80,7 +81,7 @@ object or class. With Objective-C this is done via the [objc_msgSend](~/cross-pl
 For more information on using Selectors, refer to the [Objective-C Selectors](~/ios/internals/objective-c-selectors.md)
 guide. There also has to be a way to expose managed code to Objective-C, which
 is more complicated due to the fact that Objective-C doesn’t know anything about
-the managed code. To get around this, we use *Registrars*. These are explained in
+the managed code. To get around this, we use Registrars. These are explained in
 more detail in the next section.
 
 ## Registrars

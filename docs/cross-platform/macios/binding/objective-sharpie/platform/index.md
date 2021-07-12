@@ -6,6 +6,7 @@ ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
+no-loc: [Objective-C]
 ---
 
 # Objective Sharpie Features

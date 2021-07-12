@@ -6,6 +6,7 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
+no-loc: [Objective-C]
 ---
 
 # Binding Objective-C libraries

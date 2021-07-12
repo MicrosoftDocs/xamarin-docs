@@ -5,6 +5,7 @@ description: "A simple explanation of how to decouple existing Windows Forms or 
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # Desktop app porting guidance

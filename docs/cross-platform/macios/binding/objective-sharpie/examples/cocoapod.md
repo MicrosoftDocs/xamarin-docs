@@ -6,6 +6,7 @@ ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: davidortinau
 ms.author: daortin
 ms.date: 03/28/2018
+no-loc: [Objective-C]
 ---
 
 # Real-world example using CocoaPods

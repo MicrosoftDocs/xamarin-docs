@@ -6,6 +6,7 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Part 4 - Dealing with Multiple Platforms

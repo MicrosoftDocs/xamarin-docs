@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/26/2018
+no-loc: [Objective-C]
 ---
 
 # Working with watchOS Icons in Xamarin

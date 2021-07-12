@@ -6,6 +6,7 @@ ms.assetid: 14FF03BD-AF41-4DB1-B307-2349C13DE7E4
 author: davidortinau
 ms.author: daortin
 ms.date: 07/27/2018
+no-loc: [Objective-C]
 ---
 
 # How can I view what libraries are supported in a PCL?

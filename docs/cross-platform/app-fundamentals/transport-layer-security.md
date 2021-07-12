@@ -6,6 +6,7 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
+no-loc: [Objective-C]
 ---
 # Transport Layer Security (TLS) 1.2
 

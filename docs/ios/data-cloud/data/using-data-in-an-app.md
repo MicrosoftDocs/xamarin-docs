@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016
+no-loc: [Objective-C]
 ---
 
 # Using Data in an iOS app

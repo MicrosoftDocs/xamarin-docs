@@ -6,6 +6,7 @@ ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: davidortinau
 ms.author: daortin
 ms.date: 02/18/2018
+no-loc: [Objective-C]
 ---
 
 # Programming Language Support in Xamarin

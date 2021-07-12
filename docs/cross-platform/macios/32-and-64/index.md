@@ -6,6 +6,7 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # 32/64-bit platform considerations

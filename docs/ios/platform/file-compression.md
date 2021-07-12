@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019
+no-loc: [Objective-C]
 ---
 # File compression in Xamarin.iOS
 

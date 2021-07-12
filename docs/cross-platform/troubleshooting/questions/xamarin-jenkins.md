@@ -7,6 +7,7 @@ ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
+no-loc: [Objective-C]
 ---
 
 # Why isn't Jenkins supported by Microsoft?

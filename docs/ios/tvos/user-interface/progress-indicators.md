@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
+no-loc: [Objective-C]
 ---
 
 # Working with tvOS progress indicators in Xamarin

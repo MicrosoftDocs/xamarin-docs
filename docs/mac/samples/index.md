@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/31/2019
+no-loc: [Objective-C]
 ---
 
 # Xamarin.Mac samples

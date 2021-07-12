@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/12/2017
+no-loc: [Objective-C]
 ---
 
 # WebKit and Safari changes in iOS 11

@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 07/18/2018
+no-loc: [Objective-C]
 ---
 # .NET Standard Library code sharing
 

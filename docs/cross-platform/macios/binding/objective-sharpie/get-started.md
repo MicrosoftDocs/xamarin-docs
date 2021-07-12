@@ -6,6 +6,7 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
+no-loc: [Objective-C]
 ---
 
 # Getting Started With Objective Sharpie

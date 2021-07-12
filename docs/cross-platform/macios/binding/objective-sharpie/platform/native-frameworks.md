@@ -6,6 +6,7 @@ ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
+no-loc: [Objective-C]
 ---
 
 # Binding Native Frameworks

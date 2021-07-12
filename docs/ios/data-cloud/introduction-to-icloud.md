@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
+no-loc: [Objective-C]
 ---
 
 # Using iCloud with Xamarin.iOS

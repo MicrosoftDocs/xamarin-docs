@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
+no-loc: [Objective-C]
 ---
 
 # Outline views in Xamarin.Mac

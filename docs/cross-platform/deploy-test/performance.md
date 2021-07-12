@@ -6,6 +6,7 @@ ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2017
+no-loc: [Objective-C]
 ---
 # Performance and Security
 

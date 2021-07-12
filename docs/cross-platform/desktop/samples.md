@@ -5,6 +5,7 @@ description: "This document links to various sample applications that have been 
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # Cross-platform desktop samples

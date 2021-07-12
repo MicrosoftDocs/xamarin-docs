@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/31/2018
+no-loc: [Objective-C]
 ---
 
 # Building User Interfaces with the iOS Designer

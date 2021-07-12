@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/12/2019
+no-loc: [Objective-C]
 ---
 # Troubleshooting tips for iOS 13 and Xamarin.iOS
 

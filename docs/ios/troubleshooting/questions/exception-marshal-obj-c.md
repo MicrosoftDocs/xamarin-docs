@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
+no-loc: [Objective-C]
 ---
 
 # Why does my iOS 9 app fail with: System.Exception: Failed to marshal the Objective-C object?

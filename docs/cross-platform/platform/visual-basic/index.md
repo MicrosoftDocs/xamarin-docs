@@ -6,6 +6,7 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
+no-loc: [Objective-C]
 ---
 
 # Visual Basic and .NET Standard

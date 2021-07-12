@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/22/2018
+no-loc: [Objective-C]
 ---
 # ARKit 2 in Xamarin.iOS
 

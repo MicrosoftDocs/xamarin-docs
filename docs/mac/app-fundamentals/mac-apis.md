@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
+no-loc: [Objective-C]
 ---
 
 # macOS APIs for Xamarin.Mac Developers

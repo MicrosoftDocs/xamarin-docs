@@ -8,6 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
+no-loc: [Objective-C, registrars]
 ---
 
 # Xamarin.iOS errors
@@ -1706,7 +1707,7 @@ The assembly causing the issue is named in the error message. To fix this issue 
 
 Mixed-mode assemblies can not be processed by the linker.
 
-See https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies for more information on mixed-mode assemblies.
+See [Mixed (native and managed) assemblies](/cpp/dotnet/mixed-native-and-managed-assemblies) for more information on mixed-mode assemblies.
 
 ## MT3xxx: AOT error messages
 

@@ -6,6 +6,7 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Unified API Overview

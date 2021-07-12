@@ -5,6 +5,7 @@ description: "This document provides a comparison of UI controls between Xamarin
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # UI Controls Comparison

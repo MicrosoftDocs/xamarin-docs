@@ -6,6 +6,7 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Apple Platform (iOS and Mac)

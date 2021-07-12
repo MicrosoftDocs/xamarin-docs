@@ -7,6 +7,7 @@ ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: davidortinau
 ms.author: daortin
 ms.date: 05/10/2018
+no-loc: [Objective-C]
 ---
 
 # Xamarin Troubleshooting

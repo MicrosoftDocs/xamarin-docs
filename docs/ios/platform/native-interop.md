@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/28/2016
+no-loc: [Objective-C]
 ---
 
 # Referencing Native Libraries in Xamarin.iOS

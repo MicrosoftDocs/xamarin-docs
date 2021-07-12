@@ -7,6 +7,7 @@ ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: davidortinau
 ms.author: daortin
 ms.date: 08/01/2018
+no-loc: [Objective-C]
 ---
 
 # When and how should I file a bug report?

@@ -6,6 +6,7 @@ ms.assetid: aaf675cd-d885-4dac-9754-77dbcaea3be9
 author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
+no-loc: [Objective-C]
 ---
 
 # Deploy checkboxes disabled in Configuration Manager

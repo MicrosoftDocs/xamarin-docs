@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2017
+no-loc: [Objective-C]
 ---
 
 # Events, Protocols and Delegates in Xamarin.iOS

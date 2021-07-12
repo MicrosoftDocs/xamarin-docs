@@ -6,6 +6,7 @@ ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Objective Sharpie Examples

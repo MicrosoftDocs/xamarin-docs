@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
+no-loc: [Objective-C]
 ---
 
 # Getting Started with watchOS in Xamarin

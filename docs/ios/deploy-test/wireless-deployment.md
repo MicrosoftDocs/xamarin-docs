@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
+no-loc: [Objective-C]
 ---
 
 # Wireless Deployment for Xamarin.iOS and tvOS Apps

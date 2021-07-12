@@ -4,6 +4,7 @@ description: "PCL case study: How can I resolve problems related to System.Diagn
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
+no-loc: [Objective-C]
 author: davidortinau
 ms.author: daortin
 ---

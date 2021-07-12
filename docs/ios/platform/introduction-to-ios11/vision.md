@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
+no-loc: [Objective-C]
 ---
 
 # Vision Framework in Xamarin.iOS

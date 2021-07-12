@@ -6,6 +6,7 @@ ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: davidortinau
 ms.author: daortin
 ms.date: 08/06/2018
+no-loc: [Objective-C]
 ---
 # Sharing code overview
 

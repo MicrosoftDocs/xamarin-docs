@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
+no-loc: [Objective-C]
 ---
 
 # Configuring Visual Studio for iOS development

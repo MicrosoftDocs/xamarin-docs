@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/15/2018
+no-loc: [Objective-C]
 ---
 
 # Appearance API in Xamarin.iOS

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2018
+no-loc: [Objective-C]
 ---
 # Get started with iOS 12, tvOS 12, and watchOS 5
 

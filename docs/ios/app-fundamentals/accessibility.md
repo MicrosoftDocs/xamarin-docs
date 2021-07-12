@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/18/2016
+no-loc: [Objective-C]
 ---
 
 # Accessibility on iOS

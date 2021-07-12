@@ -6,6 +6,7 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
+no-loc: [Objective-C]
 ---
 
 # Binding troubleshooting

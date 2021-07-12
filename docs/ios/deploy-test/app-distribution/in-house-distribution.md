@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
+no-loc: [Objective-C]
 ---
 
 # In-House Distribution for Xamarin.iOS Apps

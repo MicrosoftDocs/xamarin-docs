@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
+no-loc: [Objective-C]
 ---
 # Interactive notification user interfaces in Xamarin.iOS
 

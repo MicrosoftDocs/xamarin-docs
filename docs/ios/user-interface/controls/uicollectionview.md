@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
+no-loc: [Objective-C]
 ---
 
 # Collection Views in Xamarin.iOS

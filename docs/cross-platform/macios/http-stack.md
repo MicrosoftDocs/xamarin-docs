@@ -6,6 +6,7 @@ ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
+no-loc: [Objective-C]
 ---
 # HttpClient and SSL/TLS implementation selector for iOS/macOS
 

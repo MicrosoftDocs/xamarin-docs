@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/22/2016
+no-loc: [Objective-C]
 ---
 
 # Xamarin.Mac - macOS Sierra Troubleshooting

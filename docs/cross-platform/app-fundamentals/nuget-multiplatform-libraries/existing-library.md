@@ -6,6 +6,7 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2017
+no-loc: [Objective-C]
 ---
 
 # Creating a NuGet from Existing Library Projects

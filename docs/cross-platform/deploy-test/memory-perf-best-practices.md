@@ -6,6 +6,7 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
+no-loc: [Objective-C]
 ---
 
 # Cross-Platform Performance

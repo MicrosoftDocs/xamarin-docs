@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
+no-loc: [Objective-C]
 ---
 # Manual provisioning for Xamarin.iOS
 

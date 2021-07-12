@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018
+no-loc: [Objective-C]
 ---
 
 # How can I download a previous version of Xcode?

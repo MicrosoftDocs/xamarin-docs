@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/26/2019
+no-loc: [Objective-C]
 ---
 
 # Cross-platform samples

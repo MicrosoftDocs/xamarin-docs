@@ -6,6 +6,7 @@ ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
+no-loc: [Objective-C]
 ---
 
 # Getting Started with F&#35;

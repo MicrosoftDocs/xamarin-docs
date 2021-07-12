@@ -6,6 +6,7 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
+no-loc: [Objective-C]
 ---
 # Portable Class Libraries (PCL)
 

@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
+no-loc: [Objective-C]
 ---
 
 # Mac app configuration

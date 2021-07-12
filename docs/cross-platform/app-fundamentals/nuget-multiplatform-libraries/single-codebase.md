@@ -6,6 +6,7 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Creating a New Multiplatform Library for NuGet

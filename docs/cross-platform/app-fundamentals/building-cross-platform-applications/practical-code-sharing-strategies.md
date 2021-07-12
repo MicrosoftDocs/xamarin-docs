@@ -6,6 +6,7 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Part 5 - Practical Code Sharing Strategies

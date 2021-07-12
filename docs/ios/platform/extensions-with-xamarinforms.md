@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 05/13/2020
+no-loc: [Objective-C]
 ---
 # Reuse Xamarin.Forms pages in an iOS extension
 

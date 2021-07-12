@@ -6,6 +6,7 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
+no-loc: [Objective-C]
 ---
 
 # Custom Linker Configuration

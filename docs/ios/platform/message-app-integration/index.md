@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2016
+no-loc: [Objective-C]
 ---
 
 # Message App Integration in Xamarin.iOS

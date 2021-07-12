@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 06/17/2016
+no-loc: [Objective-C]
 ---
 
 # Common patterns and idioms in Xamarin.Mac

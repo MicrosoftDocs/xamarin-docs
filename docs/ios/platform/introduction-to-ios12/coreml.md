@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/15/2018
+no-loc: [Objective-C]
 ---
 # Core ML 2 in Xamarin.iOS
 

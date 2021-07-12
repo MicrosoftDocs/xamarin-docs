@@ -7,7 +7,7 @@ ms.custom: video
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/28/2020
-no-loc: [Xamarin.Forms, Xamarin.Essentials]
+no-loc: [Xamarin.Forms, Xamarin.Essentials, Registrars]
 ---
 
 # What is Xamarin?
@@ -63,7 +63,7 @@ For more information, see [Xamarin.Android architecture](~/android/internals/arc
 
 [![Xamarin.iOS architecture diagram](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
-Xamarin.iOS applications are fully **Ahead-of-Time (AOT)** compiled from C# into native ARM assembly code. Xamarin uses **Selectors** to expose Objective-C to managed C# and **Registrars** to expose managed C# code to Objective-C. Selectors and Registrars collectively are called "bindings" and allow Objective-C and C# to communicate.
+Xamarin.iOS applications are fully **Ahead-of-Time (AOT)** compiled from C# into native ARM assembly code. Xamarin uses **Selectors** to expose Objective-C to managed C# and Registrars to expose managed C# code to Objective-C. Selectors and Registrars collectively are called "bindings" and allow Objective-C and C# to communicate.
 
 For more information, see [Xamarin.iOS architecture](~/ios/internals/architecture.md).
 

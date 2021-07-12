@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
+no-loc: [Objective-C]
 ---
 # Advanced user notifications in Xamarin.iOS
 

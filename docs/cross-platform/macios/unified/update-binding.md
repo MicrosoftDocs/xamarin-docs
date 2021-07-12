@@ -6,6 +6,7 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Migrating a Binding to the Unified API

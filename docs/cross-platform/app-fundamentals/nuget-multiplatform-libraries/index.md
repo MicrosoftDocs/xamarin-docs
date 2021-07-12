@@ -6,6 +6,7 @@ ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
+no-loc: [Objective-C]
 ---
 
 # NuGet Multiplatform Library Projects (Nugetizer 3000)

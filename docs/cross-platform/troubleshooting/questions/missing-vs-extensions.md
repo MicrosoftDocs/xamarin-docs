@@ -6,6 +6,7 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
+no-loc: [Objective-C]
 ---
 
 # Missing Visual Studio extensions after installation

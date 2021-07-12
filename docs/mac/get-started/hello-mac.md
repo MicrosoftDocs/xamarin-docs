@@ -8,6 +8,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
+no-loc: [Objective-C]
 ---
 
 # Hello, Mac – Walkthrough

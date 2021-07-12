@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/01/2016
+no-loc: [Objective-C]
 ---
 
 # User Notifications Framework in Xamarin.iOS

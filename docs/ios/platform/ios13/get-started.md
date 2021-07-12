@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/01/2019
+no-loc: [Objective-C]
 ---
 # Get started with iOS 13
 

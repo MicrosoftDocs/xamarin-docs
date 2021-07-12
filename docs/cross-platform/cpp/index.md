@@ -5,6 +5,7 @@ description: "Visual Studio for Mac can be used to build and integrate cross-pla
 author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
+no-loc: [Objective-C]
 ---
 # Use C/C++ libraries with Xamarin
 

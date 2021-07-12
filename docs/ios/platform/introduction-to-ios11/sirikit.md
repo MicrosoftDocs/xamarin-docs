@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2017
+no-loc: [Objective-C]
 ---
 
 # SiriKit Updates in iOS 11

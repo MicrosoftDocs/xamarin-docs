@@ -17,6 +17,10 @@ The **Share** class enables an application to share data such as text and web li
 
 [!include[](~/essentials/includes/get-started.md)]
 
+# [Android](#tab/android)
+
+No additional setup required.
+
 # [iOS](#tab/ios)
 
 If your application shares media files, you must add the following keys to your `Info.plist`:
@@ -30,13 +34,11 @@ If your application shares media files, you must add the following keys to your 
 
 Ensure that you update the `<string>` in each to a text that's specific for your app, because it will be shown to your users.
 
-# [Android](#tab/android)
-
-No additional setup required.
-
 # [UWP](#tab/uwp)
 
 No additional setup required.
+
+-----
 
 ## Using Share
 

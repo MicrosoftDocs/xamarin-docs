@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
+no-loc: [Objective-C]
 ---
 
 # Why does my app submission fail with: Disallowed paths ( iTunesMetadata.plist ) found at ... ?

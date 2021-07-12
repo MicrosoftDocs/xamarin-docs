@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/08/2018
+no-loc: [Objective-C]
 ---
 # Introduction to iOS 12
 

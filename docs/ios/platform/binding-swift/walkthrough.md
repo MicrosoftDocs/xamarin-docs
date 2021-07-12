@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
+no-loc: [Objective-C]
 ---
 
 # Walkthrough: Bind an iOS Swift library

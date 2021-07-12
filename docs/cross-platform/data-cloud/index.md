@@ -6,6 +6,7 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: davidortinau
 ms.author: daortin
 ms.date: 10/09/2017
+no-loc: [Objective-C]
 ---
 
 # Microsoft Azure and Xamarin

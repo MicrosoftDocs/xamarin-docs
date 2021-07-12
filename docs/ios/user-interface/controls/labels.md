@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
+no-loc: [Objective-C]
 ---
 
 # Labels in Xamarin.iOS

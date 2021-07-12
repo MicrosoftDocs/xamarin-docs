@@ -6,6 +6,7 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2020
+no-loc: [Objective-C]
 ---
 
 # Apple Account Management

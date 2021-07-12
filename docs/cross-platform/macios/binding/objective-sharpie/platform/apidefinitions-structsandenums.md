@@ -6,6 +6,7 @@ ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # ApiDefinitions & StructsAndEnums Files

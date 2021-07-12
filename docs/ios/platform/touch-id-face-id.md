@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/16/2019
+no-loc: [Objective-C]
 ---
 
 # Use Touch ID and Face ID with Xamarin.iOS

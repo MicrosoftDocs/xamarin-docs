@@ -6,6 +6,7 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2017
+no-loc: [Objective-C]
 ---
 
 # Part 3 - Setting up a Xamarin cross-platform solution

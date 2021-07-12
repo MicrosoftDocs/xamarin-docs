@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
+no-loc: [Objective-C]
 ---
 
 # New Features in MapKit on iOS 11

@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
+no-loc: [Objective-C]
 ---
 
 # Introduction to tvOS in Xamarin

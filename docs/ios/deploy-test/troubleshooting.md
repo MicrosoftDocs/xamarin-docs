@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
+no-loc: [Objective-C]
 ---
 
 # Xamarin.iOS Testing and Deployment - Troubleshooting

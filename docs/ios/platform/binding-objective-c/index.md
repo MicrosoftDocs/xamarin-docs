@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
+no-loc: [Objective-C]
 ---
 
 # Binding iOS Libraries

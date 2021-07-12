@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
+no-loc: [Objective-C]
 ---
 
 # Working with tvOS Text and Search Fields in Xamarin

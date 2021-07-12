@@ -6,6 +6,7 @@ ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Updating Existing iOS Apps

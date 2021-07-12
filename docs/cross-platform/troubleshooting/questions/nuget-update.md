@@ -6,6 +6,7 @@ ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
+no-loc: [Objective-C]
 ---
 
 # How can I update NuGet?

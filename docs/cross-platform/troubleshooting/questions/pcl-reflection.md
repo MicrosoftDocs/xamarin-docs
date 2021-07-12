@@ -6,6 +6,7 @@ ms.assetid: 3137957A-478F-4DCC-BA58-EA14D99E2ED8
 author: davidortinau
 ms.author: daortin
 ms.date: 07/27/2018
+no-loc: [Objective-C]
 ---
 
 # PCL Reflection API

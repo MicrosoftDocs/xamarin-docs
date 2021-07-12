@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/06/2016
+no-loc: [Objective-C]
 ---
 
 # Working with Tables and Cells in Xamarin.iOS

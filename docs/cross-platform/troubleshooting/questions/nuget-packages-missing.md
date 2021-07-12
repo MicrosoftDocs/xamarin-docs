@@ -6,6 +6,7 @@ ms.assetid: D61CC966-1D4A-49A5-8A6F-41572E28329B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
+no-loc: [Objective-C]
 ---
 
 # Missing packages error after updating NuGet packages

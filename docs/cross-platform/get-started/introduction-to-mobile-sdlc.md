@@ -6,6 +6,7 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
+no-loc: [Objective-C]
 ---
 
 # Mobile software development lifecycle

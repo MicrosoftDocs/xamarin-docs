@@ -8,6 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
+no-loc: [Objective-C]
 ---
 # Sample App: Hello, iOS
 

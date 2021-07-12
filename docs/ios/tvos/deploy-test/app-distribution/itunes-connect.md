@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
+no-loc: [Objective-C]
 ---
 
 # Configure your tvOS App in iTunes Connect

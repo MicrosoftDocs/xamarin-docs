@@ -8,6 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/10/2020
+no-loc: [Objective-C]
 ---
 
 # Troubleshooting Tips for Xamarin.iOS

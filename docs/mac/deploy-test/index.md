@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 02/17/2018
+no-loc: [Objective-C]
 ---
 
 # Deploying and Testing Xamarin.Mac Apps

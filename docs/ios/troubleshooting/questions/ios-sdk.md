@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
+no-loc: [Objective-C]
 ---
 
 # Where can I set my iOS SDK locations?

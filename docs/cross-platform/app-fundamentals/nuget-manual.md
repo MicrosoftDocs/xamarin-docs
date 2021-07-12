@@ -6,6 +6,7 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
+no-loc: [Objective-C]
 ---
 
 # Manually Creating NuGet Packages for Xamarin

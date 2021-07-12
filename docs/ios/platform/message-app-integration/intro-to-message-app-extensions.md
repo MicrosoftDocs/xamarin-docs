@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
+no-loc: [Objective-C]
 ---
 
 # Message App Extension Basics in Xamarin.iOS

@@ -6,6 +6,7 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
+no-loc: [Objective-C]
 ---
 
 # Async Support Overview

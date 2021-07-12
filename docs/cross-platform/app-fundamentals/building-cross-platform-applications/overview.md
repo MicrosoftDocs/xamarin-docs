@@ -6,6 +6,7 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Building Cross Platform Applications Overview

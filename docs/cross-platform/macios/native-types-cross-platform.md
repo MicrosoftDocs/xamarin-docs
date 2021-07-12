@@ -6,6 +6,7 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: davidortinau
 ms.author: daortin
 ms.date: 04/07/2016
+no-loc: [Objective-C]
 ---
 
 # Working with Native Types in Cross-Platform Apps

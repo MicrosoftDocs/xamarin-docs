@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
+no-loc: [Objective-C]
 ---
 
 # Sign In with Apple in Xamarin.iOS

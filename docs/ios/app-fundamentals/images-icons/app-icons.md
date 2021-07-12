@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
+no-loc: [Objective-C]
 ---
 
 # Application Icons in Xamarin.iOS

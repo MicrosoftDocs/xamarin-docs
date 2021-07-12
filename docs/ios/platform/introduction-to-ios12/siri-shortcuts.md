@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/08/2018
+no-loc: [Objective-C]
 ---
 # Siri Shortcuts in Xamarin.iOS
 

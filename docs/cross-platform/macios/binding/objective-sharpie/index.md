@@ -6,6 +6,7 @@ ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
+no-loc: [Objective-C]
 ---
 
 # Creating Bindings with Objective Sharpie

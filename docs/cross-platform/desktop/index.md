@@ -5,6 +5,7 @@ description: "This document links to various guides that describe Xamarin.Forms 
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # Cross-Platform for Desktop Developers

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/23/2017
+no-loc: [Objective-C]
 ---
 
 # Custom Document Icons in Xamarin.iOS

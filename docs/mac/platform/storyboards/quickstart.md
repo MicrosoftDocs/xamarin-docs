@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
+no-loc: [Objective-C]
 ---
 
 # Storyboards in Xamarin.Mac – Quick Start

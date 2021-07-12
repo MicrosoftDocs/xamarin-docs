@@ -6,6 +6,7 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: davidortinau
 ms.author: daortin
 ms.date: 01/25/2016
+no-loc: [Objective-C]
 ---
 
 # Binding Objective-C

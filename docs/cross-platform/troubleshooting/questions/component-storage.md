@@ -6,6 +6,7 @@ ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
+no-loc: [Objective-C]
 ---
 
 # Where are the components stored on my machine?

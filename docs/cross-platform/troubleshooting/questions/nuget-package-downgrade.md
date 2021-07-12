@@ -6,6 +6,7 @@ ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
+no-loc: [Objective-C]
 ---
 
 # How do I downgrade a NuGet package?

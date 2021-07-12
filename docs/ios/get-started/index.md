@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
+no-loc: [Objective-C]
 ---
 
 # Get Started with Xamarin.iOS

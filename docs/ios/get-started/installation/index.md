@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
+no-loc: [Objective-C]
 ---
 # Xamarin.iOS Installation
 

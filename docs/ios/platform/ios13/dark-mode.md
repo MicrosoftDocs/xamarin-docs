@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
+no-loc: [Objective-C]
 ---
 
 # Dark Mode in Xamarin.iOS

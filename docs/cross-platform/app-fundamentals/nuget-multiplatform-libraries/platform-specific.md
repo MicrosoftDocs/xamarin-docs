@@ -6,6 +6,7 @@ ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Creating New Platform-Specific Library Projects for NuGet

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019
+no-loc: [Objective-C]
 ---
 
 # Multiple windows for iPad

@@ -6,6 +6,7 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/04/2021
+no-loc: [Objective-C]
 ---
 
 # Connect to local web services from iOS simulators and Android emulators

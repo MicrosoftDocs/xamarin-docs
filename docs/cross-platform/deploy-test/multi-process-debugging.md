@@ -6,6 +6,7 @@ ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
+no-loc: [Objective-C]
 ---
 
 # Multi-Process Debugging

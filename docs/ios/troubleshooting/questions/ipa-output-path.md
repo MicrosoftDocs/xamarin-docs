@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
+no-loc: [Objective-C]
 ---
 
 # Can I change the output path of the IPA file?

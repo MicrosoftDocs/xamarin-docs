@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
+no-loc: [Objective-C]
 ---
 
 # Working with Capabilities in Xamarin.iOS

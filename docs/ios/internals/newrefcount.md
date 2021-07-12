@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
+no-loc: [Objective-C]
 ---
 
 # New Reference Counting System in Xamarin.iOS

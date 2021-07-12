@@ -6,6 +6,7 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2017
+no-loc: [Objective-C]
 ---
 
 # Part 2 - Architecture

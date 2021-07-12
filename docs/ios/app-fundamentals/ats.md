@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
+no-loc: [Objective-C]
 ---
 
 # App Transport Security in Xamarin.iOS

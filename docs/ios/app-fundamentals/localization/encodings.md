@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
+no-loc: [Objective-C]
 ---
 
 # Internationalization Encodings in Xamarin.iOS

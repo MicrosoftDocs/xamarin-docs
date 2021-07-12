@@ -6,6 +6,7 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
+no-loc: [Objective-C]
 ---
 
 # Objective Sharpie Release History

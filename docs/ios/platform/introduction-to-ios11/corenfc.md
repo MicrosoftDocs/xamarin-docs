@@ -7,6 +7,7 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
+no-loc: [Objective-C]
 ---
 
 # Core NFC in Xamarin.iOS

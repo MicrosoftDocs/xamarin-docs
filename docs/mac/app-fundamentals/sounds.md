@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
+no-loc: [Objective-C]
 ---
 
 # Playing sound with AVAudioPlayer in Xamarin.Mac

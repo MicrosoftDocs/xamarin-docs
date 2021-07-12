@@ -7,6 +7,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
+no-loc: [Objective-C]
 ---
 
 # C# 6 New Features Overview

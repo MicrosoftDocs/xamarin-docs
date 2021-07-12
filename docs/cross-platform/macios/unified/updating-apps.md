@@ -6,6 +6,7 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Updating Existing Apps to the Unified API

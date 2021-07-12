@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/16/2018
+no-loc: [Objective-C]
 ---
 # Free provisioning for Xamarin.iOS apps
 

@@ -7,6 +7,7 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
+no-loc: [Objective-C]
 ---
 
 # Updating component references to NuGet

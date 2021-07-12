@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/14/2018
+no-loc: [Objective-C]
 ---
 # Picker control in Xamarin.iOS
 

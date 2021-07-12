@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018
+no-loc: [Objective-C]
 ---
 # Displaying an image in Xamarin.iOS
 

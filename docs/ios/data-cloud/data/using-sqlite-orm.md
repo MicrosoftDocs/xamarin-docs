@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
+no-loc: [Objective-C]
 ---
 
 # Using SQLite.NET with Xamarin.iOS

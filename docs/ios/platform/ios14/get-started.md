@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2020
+no-loc: [Objective-C]
 ---
 
 # Get started with iOS 14

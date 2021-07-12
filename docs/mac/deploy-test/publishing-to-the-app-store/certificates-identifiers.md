@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
+no-loc: [Objective-C]
 ---
 
 # Certificates and identifiers in Xamarin.Mac

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2016
+no-loc: [Objective-C]
 ---
 
 # watchOS User Interface Controls in Xamarin

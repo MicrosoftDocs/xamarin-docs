@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/09/2018
+no-loc: [Objective-C]
 ---
 
 # Where can I find the .dSYM file to symbolicate iOS crash logs?

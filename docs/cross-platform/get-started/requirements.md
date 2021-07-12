@@ -6,6 +6,7 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
+no-loc: [Objective-C]
 ---
 # System requirements
 

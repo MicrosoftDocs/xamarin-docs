@@ -6,6 +6,7 @@ ms.assetid: b9009db8-e716-43aa-b40e-6f28a8eb1b82
 author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
+no-loc: [Objective-C]
 ---
 
 # Why doesn't Visual Studio include my referenced library project in my build?

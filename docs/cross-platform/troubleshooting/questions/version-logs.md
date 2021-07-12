@@ -7,6 +7,7 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
+no-loc: [Objective-C]
 ---
 
 # Where can I find my version information and logs?

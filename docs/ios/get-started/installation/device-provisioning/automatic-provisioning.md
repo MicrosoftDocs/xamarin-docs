@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
+no-loc: [Objective-C]
 ---
 
 # Automatic Provisioning for Xamarin.iOS

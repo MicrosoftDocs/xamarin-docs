@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
+no-loc: [Objective-C]
 ---
 # Introduction to watchOS 4
 

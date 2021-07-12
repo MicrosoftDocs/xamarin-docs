@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
+no-loc: [Objective-C]
 ---
 
 # Using Core Graphics and Core Animation in Xamarin.iOS

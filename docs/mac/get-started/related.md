@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
+no-loc: [Objective-C]
 ---
 
 # Xamarin.Mac – Related Documentation

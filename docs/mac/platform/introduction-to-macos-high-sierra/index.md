@@ -7,6 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
+no-loc: [Objective-C]
 ---
 # Introduction to macOS High Sierra
 

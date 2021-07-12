@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
+no-loc: [Objective-C]
 ---
 
 # iOS Designer basics

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
+no-loc: [Objective-C]
 ---
 
 # Localization in Xamarin.iOS

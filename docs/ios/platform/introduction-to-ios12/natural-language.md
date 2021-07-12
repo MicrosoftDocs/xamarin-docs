@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/20/2018
+no-loc: [Objective-C]
 ---
 # Using the Natural Language framework with Xamarin.iOS
 

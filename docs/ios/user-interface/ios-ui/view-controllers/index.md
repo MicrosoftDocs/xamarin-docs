@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017
+no-loc: [Objective-C]
 ---
 
 # View Controllers in Xamarin.iOS

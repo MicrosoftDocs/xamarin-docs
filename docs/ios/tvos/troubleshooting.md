@@ -8,6 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
+no-loc: [Objective-C]
 ---
 
 # Troubleshooting tvOS apps built with Xamarin

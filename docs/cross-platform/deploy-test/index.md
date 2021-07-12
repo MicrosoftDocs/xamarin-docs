@@ -6,6 +6,7 @@ ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
 author: davidortinau
 ms.author: daortin
 ms.date: 01/22/2018
+no-loc: [Objective-C]
 ---
 
 # Deployment & Debugging

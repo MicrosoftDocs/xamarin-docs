@@ -5,6 +5,7 @@ description: "This document compares and contrasts WPF to Xamarin.Forms. It disc
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
+no-loc: [Objective-C]
 ---
 
 # WPF vs. Xamarin.Forms: Similarities & Differences

@@ -6,6 +6,7 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
+no-loc: [Objective-C]
 ---
 
 # Binding types reference guide

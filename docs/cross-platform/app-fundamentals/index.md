@@ -6,6 +6,7 @@ ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
+no-loc: [Objective-C]
 ---
 # Sharing code on multiple platforms
 

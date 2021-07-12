@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 08/07/2019
+no-loc: [Objective-C]
 ---
 
 # Compile error: Can not encode offset X in resulting scattered relocation

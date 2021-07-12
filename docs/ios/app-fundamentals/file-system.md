@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
+no-loc: [Objective-C]
 ---
 # File system access in Xamarin.iOS
 

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/26/2017
+no-loc: [Objective-C]
 ---
 
 # App Store Icons in Xamarin.iOS

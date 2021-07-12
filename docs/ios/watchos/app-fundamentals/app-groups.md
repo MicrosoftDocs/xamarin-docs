@@ -7,6 +7,7 @@ ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
+no-loc: [Objective-C]
 ---
 
 # Working with watchOS App Groups in Xamarin

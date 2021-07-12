@@ -6,6 +6,7 @@ ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
+no-loc: [Objective-C]
 ---
 
 # Objective Sharpie Verify Attributes

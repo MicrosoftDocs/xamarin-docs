@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
+no-loc: [Objective-C]
 ---
 # Publishing Xamarin.iOS apps to the App Store
 

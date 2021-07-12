@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 05/12/2020
+no-loc: [Objective-C]
 ---
 # iOS extensions in Xamarin.iOS
 

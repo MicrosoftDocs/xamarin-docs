@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/02/2020
+no-loc: [Objective-C]
 ---
 
 # Background transfer and NSURLSession in Xamarin.iOS

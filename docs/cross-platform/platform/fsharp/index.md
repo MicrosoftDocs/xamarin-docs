@@ -6,6 +6,7 @@ ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
+no-loc: [Objective-C]
 ---
 
 # Using F# With Xamarin

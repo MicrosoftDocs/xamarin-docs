@@ -6,6 +6,7 @@ ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
+no-loc: [Objective-C]
 ---
 
 # Accessing the Graph API

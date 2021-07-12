@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
+no-loc: [Objective-C]
 ---
 
 # Stack Views in Xamarin.iOS

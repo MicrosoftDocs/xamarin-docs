@@ -6,6 +6,7 @@ ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2018
+no-loc: [Objective-C]
 hide_comments: true
 hideEdit: true
 ---

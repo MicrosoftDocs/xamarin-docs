@@ -6,6 +6,7 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
+no-loc: [Objective-C]
 ---
 # Xamarin.Forms using Visual Basic.NET
 

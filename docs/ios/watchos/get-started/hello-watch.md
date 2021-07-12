@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
+no-loc: [Objective-C]
 ---
 
 # Hello, watchOS – Walkthrough

@@ -7,6 +7,7 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
+no-loc: [Objective-C]
 ---
 
 # Can I use an older version of Xcode or Xamarin.iOS?

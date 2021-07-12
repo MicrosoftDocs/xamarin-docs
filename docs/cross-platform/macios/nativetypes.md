@@ -6,6 +6,7 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: davidortinau
 ms.author: daortin
 ms.date: 01/25/2016
+no-loc: [Objective-C]
 ---
 
 # Native Types for iOS and macOS

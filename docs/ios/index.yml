@@ -29,7 +29,7 @@ landingContent:
           - text: Objective-C developers
             url: ~/ios/get-started/objective-c-developers/index.md
       - linkListType: get-started
-        links:            
+        links:
           - text: Xamarin.iOS on Q&A
             url: /answers/topics/dotnet-ios.html
 
