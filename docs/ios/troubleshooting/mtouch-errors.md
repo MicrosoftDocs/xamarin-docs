@@ -8,7 +8,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-no-loc: [Objective-C, registrars]
+no-loc: [Objective-C, registrars, Registrar, registrar]
 ---
 
 # Xamarin.iOS errors

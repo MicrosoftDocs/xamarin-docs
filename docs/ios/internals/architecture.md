@@ -7,7 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-no-loc: [Objective-C, registrars, Registrars]
+no-loc: [Objective-C, registrars, Registrars, Registrar, registrar]
 ---
 
 # iOS App Architecture

@@ -7,7 +7,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # Generic subclasses of NSObject in Xamarin.iOS

@@ -6,7 +6,7 @@ ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # Build optimizations

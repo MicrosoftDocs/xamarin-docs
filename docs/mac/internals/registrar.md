@@ -7,7 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # Xamarin.Mac registrar

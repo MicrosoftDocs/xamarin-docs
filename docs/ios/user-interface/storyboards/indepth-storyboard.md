@@ -6,7 +6,7 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # Storyboards in Xamarin.iOS
@@ -45,7 +45,7 @@ There are many advantages to using storyboards to create your application's UI, 
 it is a visual representation of the UI, as all objects –
 including [custom controls](../designer/ios-designable-controls-overview.md) – are rendered at design time.
 This means that before building or deploying your application, you can visualize its appearance and flow. Take the previous
-image, for example. We can tell from a quick look at the design surface how many Scenes there are, the layout of each view, 
+image, for example. We can tell from a quick look at the design surface how many Scenes there are, the layout of each view,
 and how everything is related. This is what makes Storyboards so powerful.
 
 You can also manage events with Storyboards.  Most UI controls have a list of possible events in the Properties Pad. The event handler can be added here and completed in a partial method in the View Controllers class.

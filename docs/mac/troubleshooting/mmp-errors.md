@@ -8,7 +8,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # Xamarin.Mac error messages (mmp)

@@ -7,7 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
-no-loc: [Objective-C, registrars]
+no-loc: [Objective-C, registrars, registrar, Registrar]
 ---
 
 # Under the hood in Xamarin.Mac

@@ -7,7 +7,7 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/25/2017
-no-loc: [Objective-C]
+no-loc: [Objective-C, registrar, Registrar]
 ---
 
 # How Xamarin.Mac works
