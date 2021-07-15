@@ -109,7 +109,7 @@ File.WriteAllText(file, "Content 2");
 await Share.RequestAsync(new ShareMultipleFilesRequest
 {
     Title = ShareFilesTitle,
-    Files = new ShareFile[] { new ShareFile(file1), new ShareFile(file2) }
+    Files = new List<ShareFile> { new ShareFile(file1), new ShareFile(file2) }
 });
 ```
 
