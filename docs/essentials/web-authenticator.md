@@ -146,6 +146,21 @@ The `WebAuthenticator` API takes care of launching the url in the browser and wa
 
 If the user cancels the flow at any point, a `TaskCanceledException` is thrown.
 
+### Private authentication session
+
+iOS 13 introduced an ephemeral web browser API for developers to launch the authentication session as private. This enables developers to request that no shared cookies or browsing data is available between authentication sessions and will be a fresh login session each time. This is available through the new `WebAuthenticatorOptions` that was introduced in Xamarin.Essentials 1.7 for iOS.
+
+```csharp
+var url = new Uri("https://mysite.com/mobileauth/Microsoft");
+var callbackUrl = new Uri("myapp://")
+var authResult = await WebAuthenticator.AuthenticateAsync(new WebAuthenticatorOptions
+    {
+        Url = url,
+        CallbackUrl = callbackUrl,
+        PrefersEphemeralWebBrowserSession = true
+    });
+```
+
 ## Platform differences
 
 # [Android](#tab/android)
