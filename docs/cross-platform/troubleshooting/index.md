@@ -26,4 +26,4 @@ How to update existing Xamarin solutions to change Component references to NuGet
 
 - [Android](~/android/troubleshooting/questions/index.yml)
 - [iOS](~/ios/troubleshooting/questions/index.yml)
-- [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)
+- [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.yml)

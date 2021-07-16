@@ -996,7 +996,7 @@
       href: troubleshooting/index.md
       items:
         - name: Frequently Asked Questions
-          href: troubleshooting/questions/index.md
+          href: troubleshooting/questions/index.yml
           items:
             - name: How do I migrate my app to Xamarin.Forms 5.0?
               href: troubleshooting/questions/forms5-migration.md
