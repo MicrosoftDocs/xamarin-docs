@@ -122,8 +122,6 @@ catch (Exception ex)
 }
 ```
 
-The altitude isn't always available. If it is not available, the `Altitude` property might be `null` or the value might be zero. If the altitude is available, the value is in meters above sea level.
-
 To query the current device's [location](xref:Xamarin.Essentials.Location) coordinates, the `GetLocationAsync` can be used. It is best to pass in a full `GeolocationRequest` and `CancellationToken` since it may take some time to get the device's location.
 
 ```csharp
@@ -167,6 +165,8 @@ protected override void OnDisappearing()
     base.OnDisappearing();
 }
 ```
+
+Note all values may be available due to how each device queries geolocation through different providers. For example, the `Altitude` property might be `null`, have a value of 0, or have a positive value, which is in meters above sea level. Other values that may not be present include `Speed` and `Course`.
 
 ## Geolocation Accuracy
 
