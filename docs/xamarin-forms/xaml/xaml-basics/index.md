@@ -35,7 +35,7 @@ There are also disadvantages, mostly related to limitations that are intrinsic t
 - XAML generally cannot instantiate classes that do not define a parameterless constructor. (However, there is sometimes a way around this restriction.)
 - XAML generally cannot call methods. (Again, this restriction can sometimes be overcome.)
 
-There is not yet a visual designer for generating XAML in Xamarin.Forms applications. All XAML must be hand-written, but you can use [XAML Hot Reload(~/xamarin-forms/xaml/hot-reload/index.md) in Visual Studio 2019 or 
+There is not yet a visual designer for generating XAML in Xamarin.Forms applications. All XAML must be hand-written, but you can use [XAML Hot Reload](~/xamarin-forms/xaml/hot-reload/index.md) in Visual Studio 2019 or 
 Visual Studio for Mac to view your screen designs as you edit them. Even developers with lots of experience in XAML know that experimentation is rewarding.
 
 XAML is basically XML, but XAML has some unique syntax features. The most important are:
