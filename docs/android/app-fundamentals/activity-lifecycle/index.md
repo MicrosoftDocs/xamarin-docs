@@ -214,7 +214,7 @@ Activities should override this method to perform tasks such as:
 As an example, the following code snippet shows how to initialize the camera:
 
 ```csharp
-public void OnResume()
+protected override void OnResume()
 {
     base.OnResume(); // Always call the superclass first.
 
@@ -254,7 +254,7 @@ As an example, the following code snippet will release the camera, as
 the Activity cannot make use of it while paused:
 
 ```csharp
-public void OnPause()
+protected override void OnPause()
 {
     base.OnPause(); // Always call the superclass first
 
