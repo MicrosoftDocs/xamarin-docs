@@ -66,4 +66,4 @@ This guide showed how to start Xcode Instruments to monitor an iOS app from with
 ## Related Links
 
 - [Instruments Walkthrough](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](https://web.archive.org/web/20200924201445/https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
