@@ -57,7 +57,7 @@ try
         await stream.CopyToAsync(memStream);
         memStream.Seek(0, SeekOrigin.Begin);
 
-        bitmap = SKBitmap.Decode(stream);
+        bitmap = SKBitmap.Decode(memStream);
         ···
     };
 }
