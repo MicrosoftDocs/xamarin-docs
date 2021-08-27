@@ -156,9 +156,6 @@ The following snippet is an example of the settings that must be added to **Andr
     <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
-    <!-- Necessary for apps that target Android 9.0 or higher -->
-    <uses-library android:name="org.apache.http.legacy" android:required="false" />
-
     <!-- Permission to receive remote notifications from Google Play Services -->
     <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
     <uses-permission android:name="<PACKAGE NAME>.permission.MAPS_RECEIVE" />
