@@ -11,6 +11,8 @@ ms.date: 03/01/2018
 
 # Introduction to Android Wear
 
+[Can this section get updated with some information regarding regarding Wear OS 3, please?]
+
 _With the introduction of Google's Android Wear, you are no longer restricted to just phones and tablets when it comes to developing great Android apps. Xamarin.Android's support for Android Wear makes it possible for you to run C# code on your wrist! This introduction provides a basic overview of Android Wear, describes its key features, and offers an overview of the features available in Android Wear 2.0. It lists some of the more popular Android Wear devices, and it provides links to essential Google Android Wear documentation for further reading._
 
 ## Overview
