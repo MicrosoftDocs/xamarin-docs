@@ -62,7 +62,7 @@ public static class ViewHelpers
 }
 ```
 
-This can then be used when calling `RequstAsync`:
+This can then be used when calling `RequestAsync`:
 
 ```csharp
 public Command<Xamarin.Forms.View> ShareCommand { get; } = new Command<Xamarin.Forms.View>(Share);
