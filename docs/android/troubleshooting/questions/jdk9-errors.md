@@ -24,6 +24,9 @@ require JDK 8 (1.8) or the Microsoft Mobile OpenJDK Preview. **Because
 the Android SDK tools available from Google are not yet compatible with
 JDK 9, Xamarin.Android does not work with JDK 9 or later.**
 
+>[!NOTE]
+>To target Android API 31, you need to install JDK 11. Learn more about JDK 11 impacts to Visual Studio [here](https://aka.ms/vs2019-and-jdk-11).
+
 ## JDK Errors
 
 If you try to build a Xamarin.Android project with a version of the
