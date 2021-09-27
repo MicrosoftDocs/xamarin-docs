@@ -6,11 +6,15 @@ ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/28/2019
+ms.date: 09/27/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms and Azure Services
+
+## [Azure Mobile Apps](/azure/developer/mobile-apps/azure-mobile-apps)
+
+Azure Mobile Apps provide authentication, data querying, and offline data synchronization functionality to your mobile app.
 
 ## [Consume an Azure Cosmos DB Document Database in Xamarin.Forms](azure-cosmosdb.md)
 

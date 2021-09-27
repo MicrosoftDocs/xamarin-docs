@@ -11,7 +11,7 @@ metadata:
   ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/27/2019
+  ms.date: 09/27/2021
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 landingContent:
@@ -28,6 +28,8 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
+          - text: Azure mobile apps
+            url: /azure/developer/mobile-apps/azure-mobile-apps
           - text: Azure Cosmos DB document database
             url: azure-services/azure-cosmosdb.md
           - text: Azure notification hubs
