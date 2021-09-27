@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms and Azure Services
 
-## [Azure Mobile Apps](/azure/developer/mobile-apps/azure-mobile-apps)
+## [Azure Mobile Apps](/azure/developer/mobile-apps/azure-mobile-apps/overview)
 
 Azure Mobile Apps provide authentication, data querying, and offline data synchronization functionality to your mobile app.
 

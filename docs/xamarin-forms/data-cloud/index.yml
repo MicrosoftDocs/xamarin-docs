@@ -29,7 +29,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Azure mobile apps
-            url: /azure/developer/mobile-apps/azure-mobile-apps
+            url: /azure/developer/mobile-apps/azure-mobile-apps/overview
           - text: Azure Cosmos DB document database
             url: azure-services/azure-cosmosdb.md
           - text: Azure notification hubs

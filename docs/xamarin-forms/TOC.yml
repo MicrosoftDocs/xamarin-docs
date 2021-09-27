@@ -915,7 +915,7 @@
             - name: Azure services overview
               href: data-cloud/azure-services/index.md
             - name: Azure Mobile Apps
-              href: /azure/developer/mobile-apps/azure-mobile-apps
+              href: /azure/developer/mobile-apps/azure-mobile-apps/overview
             - name: Azure Cosmos DB Document Database
               href: data-cloud/azure-services/azure-cosmosdb.md
             - name: Azure Notification Hubs
