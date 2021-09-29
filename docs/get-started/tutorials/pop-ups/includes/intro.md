@@ -4,10 +4,8 @@ Before attempting this tutorial, you should have successfully completed the:
 - [StackLayout](~/get-started/tutorials/stacklayout/index.yml) tutorial.
 - [Button](~/get-started/tutorials/button/index.yml) tutorial.
 
-In this tutorial, you learn how to:
+In this tutorial, you will learn how to:
 
-> [!div class="checklist"]
->
 > - Display an alert, to ask the user to make a choice.
 > - Display an action sheet, to guide the user through a task.
 
