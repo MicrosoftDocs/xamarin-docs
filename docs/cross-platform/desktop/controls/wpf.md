@@ -134,7 +134,7 @@ WPF includes a built in `RoutedCommand` which is sometimes used; Xamarin.Forms h
 
 Both interfaces are fully supported in Xamarin.Forms bindings. Unlike many XAML-based frameworks, property change notifications can be raised on background threads in Xamarin.Forms (just like WPF) and the binding engine will properly transition to the UI thread.
 
-In addition, both environments support `SynchronziationContext` and `async`/`await` to do proper thread marshalling. WPF includes the `Dispatcher` class on all visual elements, Xamarin.Forms has a static method `Device.BeginInvokeOnMainThread` which can also be used (although `SynchronizationContext` is preferred for cross-platform coding).
+In addition, both environments support `SynchronizationContext` and `async`/`await` to do proper thread marshalling. WPF includes the `Dispatcher` class on all visual elements, Xamarin.Forms has a static method `Device.BeginInvokeOnMainThread` which can also be used (although `SynchronizationContext` is preferred for cross-platform coding).
 
 - Xamarin.Forms includes an `ObservableCollection<T>` which supports collection change notifications.
 - You can use `BindingBase.EnableCollectionSynchronization` to enable cross-thread updates for a collection. The API is slightly different from the WPF variation, [check the docs for usage details](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*).
