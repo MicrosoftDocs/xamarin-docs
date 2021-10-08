@@ -25,7 +25,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-When working with `System.Drawing.Color` you can use the built in converters of Xamarin.Forms to create a color from Hsl, Hex, or UInt.
+When working with `System.Drawing.Color` you can use the built in converters of Xamarin.Essentials to create a color from Hsl, Hex, or UInt.
 
 ```csharp
 var blueHex = ColorConverters.FromHex("#3498db");
