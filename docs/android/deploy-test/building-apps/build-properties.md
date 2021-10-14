@@ -1116,16 +1116,16 @@ This property was *removed* in Xamarin.Android 11.2.
 
 A string property which allows
 the developer to customize the `versionCode` in the manifest.
-See [Creating the Version Code for the APK](~/android/deploy-test/building-apps/abi-specific-apks.md)
+See [Creating the Version Code for the APK](~/android/deploy-test/building-apps/abi-specific-apks.md#creating-the-version-code-for-the-apk)
 for information on deciding a `versionCode`.
 
-ome examples, if `abi` is `armeabi` and `versionCode` in the manifest
-s `123`, `{abi}{versionCode}`
-ill produce a versionCode of `1123` when `$(AndroidCreatePackagePerAbi)`
-s True, otherwise will produce a value of 123.
-f `abi` is `x86_64` and `versionCode` in the manifest
-s `44`. This will produce `544` when `$(AndroidCreatePackagePerAbi)`
-s True, otherwise will produce a value of `44`.
+Some examples, if `abi` is `armeabi` and `versionCode` in the manifest
+is `123`, `{abi}{versionCode}`
+will produce a versionCode of `1123` when `$(AndroidCreatePackagePerAbi)`
+is True, otherwise will produce a value of 123.
+If `abi` is `x86_64` and `versionCode` in the manifest
+is `44`. This will produce `544` when `$(AndroidCreatePackagePerAbi)`
+is True, otherwise will produce a value of `44`.
 
 If we include a left padding format string
 `{abi}{versionCode:0000}`,
