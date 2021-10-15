@@ -19,10 +19,6 @@ SkiaSharp is a 2D graphics system for .NET and C# powered by the open-source Ski
 
 This guide assumes that you are familiar with Xamarin.Forms programming.
 
-> [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
-
-**Webinar: SkiaSharp for Xamarin.Forms**
-
 ## SkiaSharp Preliminaries
 
 SkiaSharp for Xamarin.Forms is packaged as a NuGet package. After you've created a Xamarin.Forms solution in Visual Studio or Visual Studio for Mac, you can use the NuGet package manager to search for the **SkiaSharp.Views.Forms** package and add it to your solution. If you check the **References** section of each project after adding SkiaSharp, you can see that various **SkiaSharp** libraries have been added to each of the projects in the solution.
@@ -62,4 +58,3 @@ Effects are properties that alter the normal display of graphics, including line
 
 - [SkiaSharp APIs](/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [SkiaSharp with Xamarin.Forms Webinar (video)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
