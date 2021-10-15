@@ -19,13 +19,14 @@ While this higher precision is closer to what developers expect from
 floating point operations in C# on the desktop, on mobile, the
 performance impact can be significant.
 
-It is possible to compile your 32-bit floating point code to use
-32-bit floating point operations.  To do this, you need to use at
-least Xamarin.iOS 8.10 and set in your iOS build options's panel on
-the "mtouch extra arguments" entry line the following value:
+It is possible to compile your 32-bit floating point code to use 32-bit
+floating point operations.  To do this, you can either uncheck the "Perform
+all 32-bit float operations as 64-float." option in the iOS Build property
+page in Visual Studio, or set the `MtouchFloat32` property in the project file
+to `true` (create the property if it doesn't already exist):
 
-```
---aot-options=-O=float32
+```xml
+<MtouchFloat32>true</MtouchFloat32>
 ```
 
 This will inform the static compilers (either Mono's built-in static
