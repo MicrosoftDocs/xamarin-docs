@@ -58,7 +58,7 @@ next to a path that you want to change, then navigate to the new
 location.
 
 Xamarin.Android uses
-[JDK 11](https://docs.microsoft.com/java/openjdk/download#openjdk-11), which is required for API 31 and greater,
+[JDK 11](/java/openjdk/download#openjdk-11), which is required for API 31 and greater,
 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
 which is required if you are developing for API level 24 to 30 (JDK 8 also supports API levels earlier than 24). 
 
@@ -97,14 +97,14 @@ For more information about using the Xamarin Android SDK Manager, see
 
 ### Windows 11 Subsystem for Android (Preview)
 
-Windows 11 now includes a subsystem for running Android applications. This provides a new way to quickly debug your Android applications directly from Visual Studio without the need for another device or emulator. For complete instructions and requirements to enable this feature, follow the [Windows 11 guidance](https://docs.microsoft.com/en-us/windows/android/wsa/).
+Windows 11 now includes a subsystem for running Android applications. This provides a new way to quickly debug your Android applications directly from Visual Studio without the need for another device or emulator. For complete instructions and requirements to enable this feature, follow the [Windows 11 guidance](/windows/android/wsa/).
 
 Once connected with adb, your machine will show up in the run/debug menu alongside any emulators or devices you have configured.
 
 Known limitations and issues:
 
-* Google Play Services are not supported
-* Remaining on a breakpoint while debugging will eventually timeout and crash your app
+* Google Play Services are not supported.
+* Remaining on a breakpoint while debugging will eventually timeout and crash your app.
 
 ### Android Emulator
 
@@ -174,7 +174,7 @@ tutorials to learn how to create a working Xamarin.Android app.
 - [Installing Visual Studio Tools for Xamarin](~/get-started/installation/windows.md)
 - [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
-- [Windows Subsystem for Android](https://docs.microsoft.com/windows/android/wsa/)
+- [Windows Subsystem for Android](/windows/android/wsa/)
 - [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 - [Set Up Device For Development](~/android/get-started/installation/set-up-device-for-development.md)
 - [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator#Requirements)
