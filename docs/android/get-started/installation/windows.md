@@ -6,7 +6,7 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 06/22/2018
+ms.date: 10/21/2021
 ---
 
 # Windows Installation
@@ -15,12 +15,7 @@ _This guide describes the steps for installing Xamarin.Android for Visual Studio
 
 ## Overview
 
-Because Xamarin is now included with all editions of Visual Studio at
-no extra cost and does not require a separate license, you can use the
-Visual Studio installer to download and install Xamarin.Android tools.
-(The manual installation and licensing steps that were required for
-earlier versions of Xamarin.Android are no longer necessary.) In this
-guide, you will learn the following:
+In this guide, you will learn the following:
 
 - How to configure custom locations for the Java Development Kit,
     Android SDK, and Android NDK.
@@ -63,12 +58,9 @@ next to a path that you want to change, then navigate to the new
 location.
 
 Xamarin.Android uses
+[JDK 11](/java/openjdk/download#openjdk-11), which is required for API 31 and greater,
 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
-which is required if you are developing for API level 24 or greater
-(JDK 8 also supports API levels earlier than 24). You can continue to
-use
-[JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-if you are developing specifically for API level 23 or earlier.
+which is required if you are developing for API level 24 to 30 (JDK 8 also supports API levels earlier than 24). 
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
@@ -102,6 +94,17 @@ SDK Tools package.
 
 For more information about using the Xamarin Android SDK Manager, see
 [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
+
+### Windows 11 Subsystem for Android (Preview)
+
+Windows 11 now includes a subsystem for running Android applications. This provides a new way to quickly debug your Android applications directly from Visual Studio without the need for another device or emulator. For complete instructions and requirements to enable this feature, follow the [Windows 11 guidance](/windows/android/wsa/).
+
+Once connected with adb, your machine will show up in the run/debug menu alongside any emulators or devices you have configured.
+
+Known limitations and issues:
+
+* Google Play Services are not supported.
+* Remaining on a breakpoint while debugging will eventually timeout and crash your app.
 
 ### Android Emulator
 
@@ -171,6 +174,7 @@ tutorials to learn how to create a working Xamarin.Android app.
 - [Installing Visual Studio Tools for Xamarin](~/get-started/installation/windows.md)
 - [System Requirements](~/cross-platform/get-started/requirements.md)
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)
+- [Windows Subsystem for Android](/windows/android/wsa/)
 - [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md)
 - [Set Up Device For Development](~/android/get-started/installation/set-up-device-for-development.md)
 - [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator#Requirements)
