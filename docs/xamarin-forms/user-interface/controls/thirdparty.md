@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 In addition to the controls supplied with Xamarin.Forms, third-party controls are available from the following companies:
 
 - [Telerik](https://www.telerik.com/xamarin-ui)
-- [SyncFusion](https://www.syncfusion.com/xamarin-ui-controls)
+- [Syncfusion](https://www.syncfusion.com/xamarin-ui-controls)
 - [DevExpress](https://www.devexpress.com/xamarin/)
 - [Infragistics](https://www.infragistics.com/products/xamarin)
 - [ComponentOne](https://www.grapecity.com/componentone-xamarin/)
