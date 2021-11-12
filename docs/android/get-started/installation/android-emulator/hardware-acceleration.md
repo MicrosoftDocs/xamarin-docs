@@ -201,7 +201,7 @@ page. Use the following steps to download and install HAXM:
    installer directly from the Intel website is that you can be assured
    of using the latest version.
 
-2. Run **intelhaxm-android.exe** to start the HAXM installer. Accept
+2. Run **haxm-N.N.N-setup.exe** (where N.N.N is the version number) to start the HAXM installer. Accept
    the default values in the installer dialogs:
 
    ![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/win/06-haxm-installer.png)
