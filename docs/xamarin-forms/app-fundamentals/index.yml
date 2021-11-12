@@ -65,5 +65,3 @@ landingContent:
             url: dual-screen/index.md
           - text: Local notifications
             url: local-notifications.md
-          - text: Localization
-            url: localization/index.md
