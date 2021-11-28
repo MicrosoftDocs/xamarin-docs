@@ -152,7 +152,7 @@ iOS 13 introduced an ephemeral web browser API for developers to launch the auth
 
 ```csharp
 var url = new Uri("https://mysite.com/mobileauth/Microsoft");
-var callbackUrl = new Uri("myapp://")
+var callbackUrl = new Uri("myapp://");
 var authResult = await WebAuthenticator.AuthenticateAsync(new WebAuthenticatorOptions
     {
         Url = url,
