@@ -22,7 +22,7 @@ trigger the app to open and to allow the data to be dropped:
 ![Drag and drop example from custom app into Notes app](drag-and-drop-images/drag-drop-sml.png)
 
 > [!NOTE]
-> Drag and drop is only available within the same app on iPhone.
+> Prior to iOS 15, drag and drop is only available within the same app on iPhone. iOS 15 introduces cross-app drag and drop.
 
 Consider supporting drag and drop operations anywhere content can be
 created or edited:

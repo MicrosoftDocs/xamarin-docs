@@ -13,7 +13,7 @@
 ## [12. Styles](summaries/chapter12.md)
 ## [13. Bitmaps](summaries/chapter13.md)
 ## [14. Absolute layout](summaries/chapter14.md)
-## [15. The interative interface](summaries/chapter15.md)
+## [15. The interactive interface](summaries/chapter15.md)
 ## [16. Data binding](summaries/chapter16.md)
 ## [17. Mastering the Grid](summaries/chapter17.md)
 ## [18. MVVM](summaries/chapter18.md)
