@@ -84,6 +84,6 @@ public class PhoneDialerTest
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Phone-Dialer-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Phone-Dialer-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -139,4 +139,4 @@ You can get the current list of App Actions by calling `AppActions.GetAsync()`.
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/App-Actions-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/App-Actions-XamarinEssentials-API-of-the-Week/player]

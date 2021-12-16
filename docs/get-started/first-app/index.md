@@ -17,7 +17,7 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## Step-by-step instructions for Windows
 
@@ -97,12 +97,12 @@ It's possible to build and debug the iOS app from Visual Studio with a networked
 
 This video covers the process of building and testing an iOS app using Visual Studio 2019 on Windows:
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
 
 ## Step-by-step instructions for Windows
 
@@ -151,7 +151,7 @@ Follow these steps along with the video above:
 ::: zone-end
 ::: zone pivot="macos"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-iOS--Android-App-in-Visual-Studio-for-Mac/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Building-Your-First-iOS--Android-App-in-Visual-Studio-for-Mac/player]
 
 ## Step-by-step instructions for Mac
 

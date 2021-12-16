@@ -715,8 +715,8 @@ XAML is a powerful tool for defining user interfaces in Xamarin.Forms applicatio
 
 ## Related Videos
 
-> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-MVVM-with-XAML-6-of-11/player]
+> [!Video https://docs.microsoft.com/shows/Xamarin-101/XamarinForms-MVVM-with-XAML-6-of-11/player]
 
-> [!Video https://channel9.msdn.com/Series/Xamarin-101/XamarinForms-Navigation-with-XAML-7-of-11/player]
+> [!Video https://docs.microsoft.com/shows/Xamarin-101/XamarinForms-Navigation-with-XAML-7-of-11/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

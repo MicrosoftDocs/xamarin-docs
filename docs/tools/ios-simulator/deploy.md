@@ -12,6 +12,6 @@ ms.date: 08/08/2018
 
 Watch this video for step-by-step instructions on using Visual Studio 2017 on Windows to test your iOS apps with the remoted iOS simulator.
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Deploying--Debugging-NET-iOS-apps-with-Visual-Studio-2017/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Deploying--Debugging-NET-iOS-apps-with-Visual-Studio-2017/player]
 
 Learn more about the [Remoted iOS Simulators features](index.md).

@@ -249,6 +249,6 @@ When merged [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) resour
 
 ## Related video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Application-Resources/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/XamarinForms-101-Application-Resources/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

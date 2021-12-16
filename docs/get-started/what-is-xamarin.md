@@ -103,6 +103,6 @@ The following guides will help you build your first app using Xamarin:
 
 ## Related video
 
-> [!Video https://channel9.msdn.com/Series/Xamarin-101/What-is-Xamarin-1-of-11/player]
+> [!Video https://docs.microsoft.com/shows/Xamarin-101/What-is-Xamarin-1-of-11/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

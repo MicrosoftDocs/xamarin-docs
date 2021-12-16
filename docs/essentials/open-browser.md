@@ -133,6 +133,6 @@ The user's default browser will always be launched regardless of the `BrowserLau
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

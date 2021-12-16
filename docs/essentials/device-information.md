@@ -89,6 +89,6 @@ iOS does not expose an API for developers to get the model of the specific iOS d
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Information-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Device-Information-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

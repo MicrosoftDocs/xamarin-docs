@@ -170,6 +170,6 @@ This API is intended to store small amounts of text.  Performance may be slow if
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Secure-Storage-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

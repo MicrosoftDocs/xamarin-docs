@@ -116,6 +116,6 @@ It is important to note that it is possible that `Internet` is reported by `Netw
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Connectivity-Essential-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Connectivity-Essential-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -84,6 +84,6 @@ Add any file into the root in the UWP project and mark the Build Action as **Con
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/File-System-Helpers-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/File-System-Helpers-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

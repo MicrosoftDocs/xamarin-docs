@@ -98,6 +98,6 @@ This is only applied on the Android platform, and the parameter is ignored on iO
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Compass-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Compass-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

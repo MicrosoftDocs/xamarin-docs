@@ -241,6 +241,6 @@ For more information, see [Setup Windows Projects](~/xamarin-forms/platform/wind
 
 ## Related video
 
-> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+> [!Video https://docs.microsoft.com/shows/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

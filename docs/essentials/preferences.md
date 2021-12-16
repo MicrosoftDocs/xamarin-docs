@@ -116,6 +116,6 @@ When storing a string, this API is intended to store small amounts of text. Perf
 
 ## Related Video
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

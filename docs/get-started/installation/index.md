@@ -18,7 +18,7 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 
 ## Installing Xamarin on Windows
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
 
 ## Step-by-step instructions
 
@@ -29,7 +29,7 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 
 ## Installing Xamarin on Windows
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
 
 ## Step-by-step instructions
 
@@ -40,7 +40,7 @@ _How to set up Visual Studio and Xamarin to start building mobile apps with .NET
 
 ## Installing Xamarin on macOS
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-for-Mac-for-Mobile-Development-with-NET/player]
+> [!Video https://docs.microsoft.com/shows/XamarinShow/Installing-Visual-Studio-for-Mac-for-Mobile-Development-with-NET/player]
 
 ## Step-by-step instructions
 
