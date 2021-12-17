@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Profiler"
-description: "This guide explores the key features of the Xamarin Profiler. It look at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications."
+description: "This guide explores the key features of the Xamarin Profiler. It looks at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications."
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
@@ -10,13 +10,13 @@ ms.date: 06/03/2018
 
 # Xamarin Profiler
 
-_This guide explores the key features of the Xamarin Profiler. It look at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications._
+_This guide explores the key features of the Xamarin Profiler. It looks at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications._
 
 An application’s success depends on the end user experience. As a developer you might have implemented some really awesome features in your app, but if the app is sluggish or full of crashes, the user will likely get rid of it.
 
-Historically, Mono has featured a powerful command-line profiler for gathering information about programs running in the Mono runtime called the [Mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/). The Xamarin Profiler a graphical interface for the Mono log profiler, and supports profiling Android, iOS, tvOS, and Mac applications on Mac, and Android, iOS, and tvOS applications on Windows.
+Historically, Mono has featured a powerful command-line profiler for gathering information about programs running in the Mono runtime called the [Mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/). The Xamarin Profiler is a graphical interface for the Mono log profiler, and supports profiling Android, iOS, tvOS, and Mac applications on Mac, and Android, iOS, and tvOS applications on Windows.
 
-The Xamarin Profiler has a number of instruments available for profiling — Allocations, Cycles, and Time Profiler. This guide explores what these instruments measure and how they analyze your application, and clarifies the meaning of the data presented on each screen.
+The Xamarin Profiler has a number of instruments available for profiling — Allocations, Cycles, and Time Profiler. This guide explores what these instruments measure, how they analyze your application, and clarifies the meaning of the data presented on each screen.
 
 This guide examines common profiling scenarios and introduces the profiler as a tool to help analyze and optimize iOS and Android applications.
 
@@ -228,7 +228,7 @@ There are different data views in the Allocations instrument, which allow develo
 
 The Inspector view for Allocations provides options for filtering and grouping objects, providing statistics on memory allocated, and the top allocations, as well as views for Stack Trace and Path to Root.
 
-- **Call Tree** – This displays the entire call tree of all threads in the application and includes information about the memory allocated on each node. When an element is selected in the list, all sibling nodes will appear grey. You can expand the tree or double-click the element to drill down into it.When displaying this data view, the display settings inspector view can be used to change the way it is presented. There are currently two options:
+- **Call Tree** – This displays the entire call tree of all threads in the application and includes information about the memory allocated on each node. When an element is selected in the list, all sibling nodes will appear grey. You can expand the tree or double-click the element to drill down into it. When displaying this data view, the display settings inspector view can be used to change the way it is presented. There are currently two options:
     1. **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
     2. **Separate by thread** – This option organizes the call tree by thread.
 
