@@ -191,7 +191,7 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 
 ### Local development
 
-If you are developing your REST web service locally with a framework such as ASP.NET Core Web API, you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text HTTP traffic for the iOS simualtor and Android emulator. For information about configuration your project to allow communication, see [Connect to local web services](~/cross-platform/deploy-test/connect-to-local-web-services.md).
+If you are developing your REST web service locally with a framework such as ASP.NET Core Web API, you can debug your web service and mobile app at the same time. In this scenario you must enable clear-text HTTP traffic for the iOS simulator and Android emulator. For information about configuration your project to allow communication, see [Connect to local web services](~/cross-platform/deploy-test/connect-to-local-web-services.md).
 
 ## Related links
 
