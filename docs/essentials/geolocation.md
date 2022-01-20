@@ -258,7 +258,7 @@ On iOS, [altitude](https://developer.apple.com/documentation/corelocation/clloca
 
 # [UWP](#tab/uwp)
 
-On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
+On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem) documentation for more information.
 
 -----
 
