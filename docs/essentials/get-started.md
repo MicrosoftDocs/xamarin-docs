@@ -76,7 +76,14 @@ Xamarin.Essentials is available as a NuGet package and is included in every new 
 
     # [iOS](#tab/ios)
 
-    No additional setup required.
+   Optionally, in the iOS project's AppDelegate that is launched, this plugin can be initialized in the FinishedLaunching method:
+
+    ```csharp
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
+        //...
+        Xamarin.Essentials.Platform.Init(() => provide your own сurrent UIViewController provider);
+        //...
+    ```
 
     # [UWP](#tab/uwp)
 
