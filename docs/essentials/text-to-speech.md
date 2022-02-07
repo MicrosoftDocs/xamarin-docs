@@ -17,6 +17,32 @@ The **TextToSpeech** class enables an application to utilize the built-in text-t
 
 [!include[](~/essentials/includes/get-started.md)]
 
+To access the **TextToSpeech** functionality the following platform specific setup is required.
+
+# [Android](#tab/android)
+
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.TTS_SERVICE" />
+  </intent>
+</queries>
+```
+
+# [iOS](#tab/ios)
+
+No platform setup.
+
+# [UWP](#tab/uwp)
+
+No platform setup.
+
+-----
+
 ## Using Text-to-Speech
 
 Add a reference to Xamarin.Essentials in your class:
