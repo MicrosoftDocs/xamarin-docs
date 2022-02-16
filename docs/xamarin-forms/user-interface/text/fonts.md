@@ -202,7 +202,7 @@ Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) 
 | `Medium` | 17 | 17 | 22.667 |
 | `Large` | 22 | 22 | 32 |
 | `Body` | 17 | 16 | 14 |
-| `Header` | 17 | 96 | 46 |
+| `Header` | 17 | 14 | 46 |
 | `Title` | 28 | 24 | 24 |
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
