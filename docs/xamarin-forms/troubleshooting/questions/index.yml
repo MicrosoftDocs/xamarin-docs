@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: "Xamarin.Forms Frequently Asked Questions"
-  ms.topic: troubleshooting
+  ms.topic: faq
   ms.prod: xamarin
   ms.assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C
   ms.technology: xamarin-forms
@@ -9,7 +9,6 @@ metadata:
   ms.author: dabritch
   ms.date: 10/15/2020
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-    
 title: Xamarin.Forms Frequently Asked Questions
 summary: |
 
