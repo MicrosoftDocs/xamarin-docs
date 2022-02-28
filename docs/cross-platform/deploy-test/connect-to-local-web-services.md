@@ -167,6 +167,7 @@ Then, configure the **networkSecurityConfig** property on the **application** no
     </application>
 </manifest>
 ```
+Make sure the Build Action is set as AndroidResource, otherwise the XML file will not be found at build time.
 
 ## Related links
 
