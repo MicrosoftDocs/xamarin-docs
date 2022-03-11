@@ -37,7 +37,7 @@ To get the application's top-level directory for any files that are not user dat
 var mainDir = FileSystem.AppDataDirectory;
 ```
 
-If you would like to open a file that has been bundled into the application package, you can use teh `OpenAppPackageFileAsync` method to read the contents. In the example below a file named `mybundledfile.txt` has been added to each platform. See the platform implementation specifics section for details.
+If you would like to open a file that has been bundled into the application package, you can use the `OpenAppPackageFileAsync` method to read the contents. In the example below a file named `mybundledfile.txt` has been added to each platform. See the platform implementation specifics section for details.
 
 ```csharp
  var fileName = "mybundledfile.txt";
