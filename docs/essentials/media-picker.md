@@ -49,6 +49,18 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 
 Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the these permissions. This will automatically update the **AndroidManifest.xml** file.
 
+If your project's Target Android version is set to **Android 11 (R API 30)** you must update your Android Manifest with queries that are used with the new [package visibility requirements](https://developer.android.com/preview/privacy/package-visibility).
+
+Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.media.action.IMAGE_CAPTURE" />
+  </intent>
+</queries>
+```
+
 # [iOS](#tab/ios)
 
 In your `Info.plist` add the following keys:
