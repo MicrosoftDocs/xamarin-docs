@@ -288,7 +288,7 @@ and paste into the **Sign and Distribute** dialog in the next step.
 # [Visual Studio](#tab/windows)
 
 Use the Client ID and Client secret to complete the **Google Play API Account** dialog in
-Visual Studio for Mac. It is possible to give the account a description &ndash; this makes
+Visual Studio. It is possible to give the account a description &ndash; this makes
 it possible to register more than one Google Play account and upload future APK's to
 different Google Play accounts. Copy the Client ID and Client secret to this dialog
 and click **Register**:
