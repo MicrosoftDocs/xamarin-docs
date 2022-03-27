@@ -112,6 +112,7 @@ namespace MacOpenTK
             // Create new Game View and replace the window content with it
             Game = new MonoMacGameView(ContentView.Frame);
             ContentView = Game;
+            Game.OpenGLContext.View = Game;
 
             // Wire-up any required Game events
             Game.Load += (sender, e) =>
