@@ -49,9 +49,9 @@ Shell has implicit conversion operators that enable the Shell visual hierarchy t
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
        x:Class="Xaminals.AppShell">
-    <Tab>
+    <TabBar>
         <ShellContent ContentTemplate="{DataTemplate views:CatsPage}" />
-    </Tab>
+    </TabBar>
 </Shell>
 ```
 
