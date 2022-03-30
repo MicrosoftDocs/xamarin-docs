@@ -383,7 +383,7 @@ Once all the build actions are in place, it is good practice to trigger a manual
 
 ### Submitting Tests to Test Cloud
 
-Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/frameworks/uitest/android/) and [Preparing Xamarin.iOS Apps](/appcenter/test-cloud/frameworks/uitest/ios/upload).
 
 ## Summary
 
