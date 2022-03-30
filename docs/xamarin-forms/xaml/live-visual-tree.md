@@ -30,7 +30,7 @@ Use the tree view to inspect the runtime UI hierarchy for your app, expanding/co
 
 ## Live visual tree toolbar 
 
-The view of XAML elements is simplified by default using the **Just My XAML** feature. Toggle the **Show Just My XAML** button, rightmost on the Live Visual Tree toolbar, to show all UI elements. If you wish you can [disable this setting](/visualstudio/debugger/general-debugging-options-dialog-box.md) in options to always show all XAML elements.
+The view of XAML elements is simplified by default using the **Just My XAML** feature. Toggle the **Show Just My XAML** button, rightmost on the Live Visual Tree toolbar, to show all UI elements. If you wish you can [disable this setting](/visualstudio/debugger/general-debugging-options-dialog-box) in options to always show all XAML elements.
 
 > [!NOTE]
 > Visual Studio for Mac doesn't currently support the **Just My XAML** feature.
