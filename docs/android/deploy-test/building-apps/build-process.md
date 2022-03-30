@@ -6,7 +6,7 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 03/01/2021
+ms.date: 03/29/2022
 ---
 
 # Build Process
@@ -70,9 +70,6 @@ Only the updated assemblies are resynchronized to the target device.
 
 > [!WARNING]
 > Fast deployment is known to fail on devices which block `run-as`, which often includes devices older than Android 5.0.
-> Fast deployment also fails for system applications (android:sharedUserId="android.uid.system") since `run-as` is also 
-> blocked for system applications.
- 
 
 Fast deployment is enabled by default, and may be disabled in Debug builds
 by setting the `$(EmbedAssembliesIntoApk)` property to `True`.

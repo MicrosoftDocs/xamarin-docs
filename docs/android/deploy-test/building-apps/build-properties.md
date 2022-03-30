@@ -6,7 +6,7 @@ ms.assetid: FC0DBC08-EBCB-4D2D-AB3F-76B54E635C22
 ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
-ms.date: 03/01/2021
+ms.date: 03/29/2022
 ---
 
 # Build Properties
@@ -129,14 +129,14 @@ Added in Xamarin.Android 6.1.
 
 A path to a directory containing
 the Android [binutils][binutils] such as `ld`, the native linker,
-and `as`, the native assembler. These tools are part of the Android
-NDK and are also included in the Xamarin.Android installation.
+and `as`, the native assembler. These tools are included in the
+Xamarin.Android installation.
 
-The default value is `$(MonoAndroidBinDirectory)\ndk\`.
+The default value is `$(MonoAndroidBinDirectory)\binutils\bin\`.
 
 Added in Xamarin.Android 10.0.
 
-[binutils]: https://android.googlesource.com/toolchain/binutils/
+[binutils]: https://github.com/xamarin/xamarin-android-binutils/
 
 ## AndroidBoundExceptionType
 
@@ -169,6 +169,32 @@ implements a .NET type or interface in terms of Java types, for example
 
 Added in Xamarin.Android 10.2.
 
+## AndroidBoundInterfacesContainConstants
+
+A boolean property that
+determines whether binding constants on interfaces will be supported,
+or the workaround of creating an `IMyInterfaceConsts` class
+will be used.
+
+Defaults to `True` in .NET 6 and `False` for legacy.
+
+## AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods
+
+A boolean property that
+whether default and static members on interfaces will be supported,
+or  old workaround of creating a sibling class containing static
+members like `abstract class MyInterface`.
+
+Defaults to `True` in .NET 6 and `False` for legacy.
+
+## AndroidBoundInterfacesContainTypes
+
+A boolean property that
+whether types nested in interfaces will be supported, or the workaround
+of creating a non-nested type like `IMyInterfaceMyNestedClass`.
+
+Defaults to `True` in .NET 6 and `False` for legacy.
+
 ## AndroidBuildApplicationPackage
 
 A boolean value that
@@ -198,14 +224,21 @@ Added in Xamarin.Android 10.3.
 
 [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
+## AndroidBundleToolExtraArgs
+
+Specifies additional
+command-line options to pass to the **bundletool** command when
+build app bundles.
+
+This property was added in Xamarin.Android 11.3.
+
 ## AndroidClassParser
 
 A string property which controls how
 `.jar` files are parsed. Possible values include:
 
 - **class-parse**: Uses `class-parse.exe` to parse Java bytecode
-  directly, without assistance of a JVM. This value is
-  experimental.
+  directly, without assistance of a JVM.
 
 - **jar2xml**: Use `jar2xml.jar` to use Java reflection to extract
   types and members from a `.jar` file.
@@ -219,12 +252,12 @@ The advantages of `class-parse` over `jar2xml` are:
 - `class-parse` doesn't "skip" classes which inherit from or
   contain members of unresolvable types.
 
-**Experimental**. Added in Xamarin.Android 6.0.
+Added in Xamarin.Android 6.0.
 
-The default value is `jar2xml`.
+The default value is `jar2xml` in "legacy" Xamarin.Android and
+`class-parse` in .NET 6 and higher.
 
-Support for `jar2xml` is obsolete, and support for `jar2xml` will be removed
-as part of .NET 6.
+Support for `jar2xml` is obsolete, and `jar2xml` is removed in .NET 6.
 
 ## AndroidCodegenTarget
 
@@ -255,6 +288,9 @@ The benefits of `XAJavaInterop1` include:
 
 The default value is `XAJavaInterop1`.
 
+Support for `XamarinAndroid` is obsolete, and support for `XamarinAndroid` will be removed
+as part of .NET 6.
+
 ## AndroidCreatePackagePerAbi
 
 A boolean property that determines if a *set* of files -- on per ABI
@@ -263,6 +299,28 @@ should be created instead of having support for all ABIs in a single `.apk`.
 
 See also the [Building ABI-Specific APKs](~/android/deploy-test/building-apps/abi-specific-apks.md)
 guide.
+
+## AndroidCreateProguardMappingFile
+
+A boolean property that controls if a proguard mapping file is
+generated as part of the build process.
+
+Adding the following to your csproj will cause the file to be
+generated. This uses the [`AndroidProguardMappingFile`](#androidproguardmappingfile) property
+to control the location of the final mapping file.
+
+```
+<AndroidCreateProguardMappingFile>True</AndroidCreateProguardMappingFile>
+```
+
+Note that if you are using `.aab` files the mapping file with be
+automatically included in your package. So there is no need to upload
+it to the Google Play Store manually. If you are using `.apk` files
+you will need to manually upload the [`AndroidProguardMappingFile`](#androidproguardmappingfile).
+
+The default value is `True` when using `AndroidLinkTool=r8`.
+
+Added in Xamarin.Android 12.3.
 
 ## AndroidDebugKeyAlgorithm
 
@@ -317,7 +375,7 @@ Currently defaults to `dx`. For further information see our
 documentation on [D8 and R8][d8-r8].
 
 [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
-[d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+[d8-r8]: https://github.com/xamarin/xamarin-android/blob/main/Documentation/guides/D8andR8.md
 
 ## AndroidEnableDesugar
 
@@ -528,9 +586,15 @@ Added in Xamarin.Android 9.2.
 
 ## AndroidGenerateLayoutBindings
 
-Enables generation of [layout code-behind](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)
+Enables generation of [layout code-behind](https://github.com/xamarin/xamarin-android/blob/main/Documentation/guides/LayoutCodeBehind.md)
 if set to `true` or disables it completely if set to `false`. The
 default value is `false`.
+
+## AndroidGenerateResourceDesigner
+
+Defaults to `true`. When set to `false`, disables the generation of `Resource.designer.cs`.
+
+Added in .NET 6 RC 1. Not supported in Xamarin.Android.
 
 ## AndroidHttpClientHandlerType
 
@@ -632,6 +696,32 @@ APK root directory. The format of the path is `lib\ARCH\wrap.sh` where
 + `x86_64`
 + `x86`
 
+## AndroidJavadocVerbosity
+
+Specifies how "verbose"
+[C# XML Documentation Comments](/dotnet/csharp/codedoc)
+should be when importing Javadoc documentation within binding projects.
+
+Requires use of the
+[`@(JavaSourceJar)`](~/android/deploy-test/building-apps/build-items.md#javasourcejar)
+build action.
+
+This is an enum-style property, with possible values of `full` or
+`intellisense`:
+
+  * `intellisense`: Only emit the XML comments:
+    [`<exception/>`](/dotnet/csharp/codedoc#exception),
+    [`<param/>`](/dotnet/csharp/codedoc#param),
+    [`<returns/>`](/dotnet/csharp/codedoc#returns),
+    [`<summary/>`](/dotnet/csharp/codedoc#summary).
+  * `full`: Emit `intellisense` elements, as well as
+    [`<remarks/>`](/dotnet/csharp/codedoc#remarks),
+    [`<seealso/>`](/dotnet/csharp/codedoc#seealso),
+    and anything else that's supportable.
+
+The default value is `intellisense`.
+
+Support for this property was added in Xamarin.Android 11.3.
 
 ## AndroidKeyStore
 
@@ -669,6 +759,27 @@ used in Android Application projects. The default value is
 <AndroidLinkMode>SdkOnly</AndroidLinkMode>
 ```
 
+## AndroidLinkResources
+
+When `true` this will make the build system link out the Nested Types
+of the Resource.Designer.cs `Resource` class in all assemblies. The
+IL code that uses those types will be updated to use the values
+directly rather than accessing fields.
+
+This can have a small impact on reducing the apk size, it might also
+help slightly with startup performance. This will only effect "Release"
+based builds.
+
+***Experimental***.  Only designed to work with code such as
+
+```
+var view = FindViewById(Resources.Ids.foo);
+```
+
+Any other scenarios (such as reflection) will not be supported.
+
+Support for this property was added in Xamarin.Android 11.3
+
 ## AndroidLinkSkip
 
 Specifies a semicolon-delimited (`;`)
@@ -688,7 +799,7 @@ used for Java code. Currently defaults to an empty string, or
 `proguard` if `$(AndroidEnableProguard)` is `True`. For further
 information see our documentation on [D8 and R8][d8-r8].
 
-[d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+[d8-r8]: https://github.com/xamarin/xamarin-android/blob/main/Documentation/guides/D8andR8.md
 
 ## AndroidLintEnabled
 
@@ -762,6 +873,20 @@ Introduced in Xamarin.Android 10.2
 
 [manifest-merger]: https://developer.android.com/studio/build/manifest-merge
 
+## AndroidManifestMergerExtraArgs
+
+A string property to provide additional arguments to the
+[Android documentation][manifest-merger] tool.
+
+If you want detailed output from the tool you can add the following to the
+`.csproj`.
+
+```xml
+<AndroidManifestMergerExtraArgs>--log VERBOSE</AndroidManifestMergerExtraArgs>
+```
+
+Introduced in Xamarin.Android 11.x
+
 ## AndroidManifestPlaceholders
 
 A semicolon-separated list of
@@ -824,6 +949,43 @@ properties are set, which are required for Android App Bundles:
 [apk]: https://en.wikipedia.org/wiki/Android_application_package
 [bundle]: https://developer.android.com/platform/technology/app-bundle
 
+This property will be deprecated for .net 6. Users should switch over to
+the newer [`AndroidPackageFormats`](~/android/deploy-test/building-apps/build-properties.md#androidpackageformats).
+
+## AndroidPackageFormats
+
+A semi-colon delimited property with valid values of `apk` and `aab`.
+This indicates if you want to package the Android application as
+an [APK file][apk] or [Android App Bundle][bundle]. App Bundles
+are a new format for `Release` builds that are intended for
+submission on Google Play.
+
+When building a Release build you might want to generate both
+and `aab` and an `apk` for distribution to various stores.
+
+Setting `AndroidPackageFormats` to `aab;apk` will result in both
+being generated. Setting `AndroidPackageFormats` to either `aab`
+or `apk` will generate only one file.
+
+For .net 6 `AndroidPackageFormats` will be set to `aab;apk` for
+`Release` builds only. It is recommended that you continue to use
+just `apk` for debugging.
+
+For Legacy Xamarin.Android this value currently defaults to `""`.
+As a result Legacy Xamarin.Android will NOT by default produce
+both as part of a release build. If a user wants to produce both
+outputs they will need to define the following in their `Release`
+configuration.
+
+```
+<AndroidPackageFormats>aab;apk</AndroidPackageFormats>
+```
+
+You will also need to remove the existing `AndroidPackageFormat` for
+that configuration if you have it.
+
+Added in Xamarin.Android 11.5.
+
 ## AndroidPackageNamingPolicy
 
 An enum-style property for
@@ -847,7 +1009,18 @@ mean the `mapping.txt` file will be produced in the `$(OutputPath)`
 folder. This file can then be used when uploading packages to the
 Google Play Store.
 
-The default value is `$(OutputPath)mapping.txt`.
+By default this file is produced automatically when using `AndroidLinkTool=r8`
+and will generate the following file `$(OutputPath)mapping.txt`.
+
+If you do not want to generate this mapping file you can use the
+[`AndroidCreateProguardMappingFile`](#androidcreateproguardmappingfile) property to stop creating it .
+Add the following in your project
+
+```
+<AndroidCreateProguardMappingFile>False</AndroidCreateProguardMappingFile>
+```
+
+or use `-p:AndroidCreateProguardMappingFile=False` on the command line.
 
 This property was added in Xamarin.Android 11.2.
 
@@ -986,6 +1159,20 @@ To use a file located at `C:\Users\user1\AndroidSigningPassword.txt`:
 > The `env:` prefix is not supported when [`$(AndroidPackageFormat)`](#androidpackageformat)
 > is set to `aab`.
 
+## AndroidSigningPlatformKey
+
+Specifies the key file to use to sign the apk.
+This is only used when building `system` applications.
+
+Support for this property was added in Xamarin.Android 11.3.
+
+## AndroidSigningPlatformCert
+
+Specifies the certificate file to use to sign the apk.
+This is only used when building `system` applications.
+
+Support for this property was added in Xamarin.Android 11.3.
+
 ## AndroidSupportedAbis
 
 A string property that contains a
@@ -1079,6 +1266,15 @@ To suppress the default AOT profiles, set the property to `false`.
 
 Added in Xamarin.Android 10.1.
 
+## AndroidUseInterpreter
+
+A boolean property which causes the `.apk` to contain the mono
+*interpreter*, and not the normal JIT.
+
+***Experimental***.
+
+Support for this property was added in Xamarin.Android 11.3.
+
 ## AndroidUseLegacyVersionCode
 
 A boolean property which allows
@@ -1111,6 +1307,25 @@ Prior to Xamarin.Android 11.2, this property should be `True` for
 Debug builds, and `False` for Release projects.
 
 This property was *removed* in Xamarin.Android 11.2.
+
+## AndroidVersionCode
+
+An MSBuild property that can be used as an alternative to
+`/manifest/@android:versionCode` in the [`AndroidManifest.xml`](~/android/platform/android-manifest.md)
+file. To opt into this feature you must also enable
+`<GenerateApplicationManifest>true</GenerateApplicationManifest>`.
+This will be the default going forward in .NET 6.
+
+This property is ignored if
+[`$(AndroidCreatePackagePerAbi)`](#androidcreatepackageperabi) and
+[`$(AndroidVersionCodePattern)`](#androidversioncodepattern) are used.
+
+`@android:versionCode` is an integer value that must be incremented
+for each Google Play release. See the [Android documentation][manifest-element]
+for further details about the requirements for
+`/manifest/@android:versionCode`.
+
+Support for this property was added in Xamarin.Android 11.3.
 
 ## AndroidVersionCodePattern
 
@@ -1173,6 +1388,49 @@ you can make use of existing or custom MSBuild properties in the
 string.
 
 Added in Xamarin.Android 7.2.
+
+## ApplicationId
+
+An MSBuild property that can be used as an alternative to
+`/manifest/@package` in the [`AndroidManifest.xml`](~/android/platform/android-manifest.md)
+file. To opt into this feature you must also enable
+`<GenerateApplicationManifest>true</GenerateApplicationManifest>`.
+This will be the default going forward in .NET 6.
+
+See the [Android documentation][manifest-element] for further details
+about the requirements for `/manifest/@package`.
+
+[manifest-element]: https://developer.android.com/guide/topics/manifest/manifest-element
+
+Support for this property was added in Xamarin.Android 11.3.
+
+## ApplicationTitle
+
+An MSBuild property that can be used as an alternative to
+`/manifest/application/@android:label` in the [`AndroidManifest.xml`](~/android/platform/android-manifest.md)
+file. To opt into this feature you must also enable
+`<GenerateApplicationManifest>true</GenerateApplicationManifest>`.
+This will be the default going forward in .NET 6.
+
+See the [Android documentation][application-element] for further details
+about the requirements for `/manifest/application/@android:label`.
+
+Support for this property was added in Xamarin.Android 11.3.
+
+[application-element]: https://developer.android.com/guide/topics/manifest/application-element
+
+## ApplicationVersion
+
+An MSBuild property that can be used as an alternative to
+`/manifest/@android:versionName` in the [`AndroidManifest.xml`](~/android/platform/android-manifest.md)
+file. To opt into this feature you must also enable
+`<GenerateApplicationManifest>true</GenerateApplicationManifest>`.
+This will be the default going forward in .NET 6.
+
+See the [Android documentation][manifest-element] for further details
+about the requirements for `/manifest/@android:versionName`.
+
+Support for this property was added in Xamarin.Android 11.3.
 
 ## AotAssemblies
 
@@ -1295,6 +1553,21 @@ When `True`,
 [@(ProguardConfiguration)](~/android/deploy-test/building-apps/build-items.md#proguardconfiguration)
 files will be used
 to control `proguard` execution.
+
+## GenerateApplicationManifest
+
+Enables or disables the following MSBuild properties that emit values
+in the final [`AndroidManifest.xml`](~/android/platform/android-manifest.md) file:
+
+- [`$(AndroidVersionCode)`](#androidversioncode)
+- [`$(ApplicationId)`](#applicationid)
+- [`$(ApplicationTitle)`](#applicationtitle)
+- [`$(ApplicationVersion)`](#applicationversion)
+
+`$(GenerateApplicationManifest)` defaults to `true` in .NET 6 and
+`false` in "legacy" Xamarin.Android.
+
+Support for this property was added in Xamarin.Android 11.3.
 
 ## JavaMaximumHeapSize
 
