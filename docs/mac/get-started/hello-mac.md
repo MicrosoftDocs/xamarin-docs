@@ -591,5 +591,4 @@ This article covered the basics of a standard Xamarin.Mac app. It covered creati
 
 ## Related Links
 
-- [Hello, Mac (sample)](/samples/xamarin/mac-samples/hello-mac)
 - [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
