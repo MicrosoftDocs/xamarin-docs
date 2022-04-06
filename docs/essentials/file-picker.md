@@ -20,23 +20,7 @@ To access the **FilePicker** functionality the following platform specific setup
 
 # [Android](#tab/android)
 
-The `ReadExternalStorage` permission is required and must be configured in the Android project. This can be added in the following ways:
-
-Open the **AssemblyInfo.cs** file under the **Properties** folder and add:
-
-```csharp
-[assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
-```
-
-OR Update Android Manifest:
-
-Open the **AndroidManifest.xml** file under the **Properties** folder and add the following inside of the **manifest** node.
-
-```xml
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-```
-
-Or right click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check this permission. This will automatically update the **AndroidManifest.xml** file.
+No additional setup required.
 
 # [iOS](#tab/ios)
 
