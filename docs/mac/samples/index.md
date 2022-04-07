@@ -18,9 +18,9 @@ Xamarin.Mac sample apps and code demos to help you get started building mobile a
 
 :::row:::
     :::column:::
-[!["Hello, Mac"](images/hellomac.png)](/samples/xamarin/mac-samples/hello-mac/)
+!["Hello, Mac"](images/hellomac.png)
 
-### [Hello, Mac](/samples/xamarin/mac-samples/hello-mac/)
+### Hello, Mac
 
 Hello World app to get started with Mac development.
     :::column-end:::
