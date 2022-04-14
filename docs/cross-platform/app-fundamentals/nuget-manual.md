@@ -70,6 +70,7 @@ To clarify:
 
 - **MonoAndroid403** matches Android 4.0.3 and newer (ie API level 15)
 - **Xamarin.iOS10** matches Xamarin.iOS 1.0 and newer
+   * _Warning: Only "Xamarin.iOS" and "Xamarin.iOS10" are valid, limiting the iOS version does not work._
 - **Xamarin.iOS1.0** also matches Xamarin.iOS 1.0 and newer
 
 ## PCL NuGets with Platform Dependencies
