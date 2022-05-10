@@ -30,9 +30,8 @@ party Objective-C library.
 Objective Sharpie can be downloaded as a standard OS X package installer.
 Run the installer and follow all of the on-screen prompts from the installation wizard:
 
-- **Current Version: 3.4**
+- **Current Version: 3.5**
   - [Download Latest Release](https://aka.ms/objective-sharpie)
-  - [Forum Announcement](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]
 > Use the `sharpie update` command to update to the latest version.
@@ -83,9 +82,3 @@ compiler flags used to build the native library are the same that must be
 passed to Objective Sharpie. This is a more manual process, and one that
 does require a bit of familiarity with compiling native code on the command
 line with the Clang toolchain.
-
-**NEW!** version 3.0 also introduces a tool for easily binding
-[CocoaPods](https://cocoapods.org) via the `sharpie pod` command.
-If the library you're interested in is available as a CocoaPod,
-we recommend you start by attempting to bind the CocoaPod with
-Objective Sharpie (versus attempting to bind against the source directly).
