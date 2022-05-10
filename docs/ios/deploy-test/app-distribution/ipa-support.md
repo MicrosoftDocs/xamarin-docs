@@ -200,7 +200,7 @@ For example, to output the **.ipa** file to the old default directory (as in Xam
         <MtouchTlsProvider>Default</MtouchTlsProvider>
         <PlatformTarget>x86&</PlatformTarget>
         <BuildIpa>true</BuildIpa>
-        <IpaPackageDir>$(OutputPath</IpaPackageDir>
+        <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 
