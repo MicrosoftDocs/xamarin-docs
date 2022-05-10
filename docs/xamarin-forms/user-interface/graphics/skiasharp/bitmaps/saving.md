@@ -250,7 +250,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 - `Ico` &mdash; Windows icon images
 - `Jpeg` &mdash; Joint Photographic Experts Group
 - `Ktx` &mdash; Khronos texture format for OpenGL
-- `Pkm` &mdash; Pokémon save file
+- `Pkm` &mdash; Custom format for GrafX2
 - `Png` &mdash; Portable Network Graphics
 - `Wbmp` &mdash; Wireless Application Protocol Bitmap Format (1 bit per pixel)
 - `Webp` &mdash; Google WebP format
