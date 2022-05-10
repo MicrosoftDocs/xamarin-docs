@@ -37,8 +37,8 @@ Examples of different services you can access include:
 ## Conclusion
 
 Using the steps above you can authenticate your mobile apps against
-  Azure Active Directory. The Active Directory
-  Authentication Library (ADAL) makes it much
+  Azure Active Directory. The [Microsoft
+  Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) makes it much
   easier with fewer lines of code, while keeping most
   of the code the same and thus making it shareable across platforms.
 
