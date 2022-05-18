@@ -630,6 +630,10 @@ To work around this problem,
 After these changes are made, the AVD will restart in a state that
 allows Wi-Fi to work again.
 
+### Device name is appearing incorrectly
+
+Currently the Android emulator only supports English alphabet characters for the device name. Please name your device using English characters to successfully create an Android emulator.
+
 -----
 
 ### Generating a Bug Report
