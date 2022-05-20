@@ -32,7 +32,7 @@ In order to complete this walk-through, you need:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
 - [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md#installing-objective-sharpie)
-- [AppCenter CLI](/appcenter/test-cloud/) (optional)
+- [AppCenter CLI](/appcenter/test-cloud/frameworks/uitest/) (optional)
 
 ## Build a native library
 
@@ -362,7 +362,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         ![visual studio uitest new](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
-        > You can find more information on how to create a UITest project and configure it for your app by [the following link](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+        > You can find more information on how to create a UITest project and configure it for your app by [the following link](/appcenter/test-cloud/frameworks/uitest/).
 
     - Create a basic test to run the app and use some of the Swift SDK features. This test activates the app, tries to log in and then presses the cancel button:
 
@@ -386,14 +386,14 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         ```
 
         > [!TIP]
-        > Read more about UITests framework and UI Automation by [the following link](/appcenter/test-cloud/uitest/).
+        > Read more about UITests framework and UI Automation by [the following link](/appcenter/test-cloud/frameworks/uitest/).
 
     - Create an iOS app in app center, create a new test run with a new device set to run the test:
 
         ![visual studio app center new](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
-        > Learn more about AppCenter Test Cloud by [the following link](/appcenter/test-cloud/).
+        > Learn more about AppCenter Test Cloud by [the following link](/appcenter/test-cloud/frameworks/uitest/).
 
     - Install the appcenter CLI
 
@@ -430,7 +430,7 @@ You have developed a basic Xamarin.iOS application that uses a native Swift fram
 - [Gigya iOS SDK (Swift framework)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Swift 5.1 ABI Stability](https://swift.org/blog/swift-5-1-released/)
 - [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Xamarin UITest automation](/appcenter/test-cloud/uitest/)
-- [Xamarin.iOS UITest configuration](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [AppCenter Test Cloud](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Xamarin UITest automation](/appcenter/test-cloud/frameworks/uitest/)
+- [Xamarin.iOS UITest configuration](/appcenter/test-cloud/frameworks/uitest/)
+- [AppCenter Test Cloud](/appcenter/test-cloud/frameworks/uitest/)
 - [Sample project repository](https://github.com/alexeystrakh/xamarin-binding-swift-framework)

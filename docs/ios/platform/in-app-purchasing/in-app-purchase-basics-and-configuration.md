@@ -274,6 +274,6 @@ version with in-app purchase capability has been approved, you can add further
 products and submit them for review at any time. You can also choose to submit a
 new version together with specific in-app purchase products, using the **Version Details** page as the prompt suggests.
 
-Refer to the [App Store Review Guidelines](https://developer.apple.com/appstore/guidelines.html) for more information.
+Refer to the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines) for more information.
 
  [Part 2 - Store Kit Overview and Retreiving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
