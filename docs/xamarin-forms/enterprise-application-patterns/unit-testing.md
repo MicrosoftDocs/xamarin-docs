@@ -64,7 +64,7 @@ Testing models and view models from MVVM applications is identical to testing an
 > [!TIP]
 > Test one thing with each unit test. Don't be tempted to make a unit test exercise more than one aspect of the unit's behavior. Doing so leads to tests that are difficult to read and update. It can also lead to confusion when interpreting a failure.
 
-The eShopOnContainers mobile app uses [xUnit](https://xunit.github.io/) to perform unit testing, which supports two different types of unit tests:
+The eShopOnContainers mobile app performs unit testing, which supports two different types of unit tests:
 
 - Facts are tests that are always true, which test invariant conditions.
 - Theories are tests that are only true for a particular set of data.

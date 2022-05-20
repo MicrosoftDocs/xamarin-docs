@@ -26,7 +26,7 @@ landingContent:
           - text: .NET Standard
             url: ~/cross-platform/app-fundamentals/net-standard.md
           - text: Cross-platform development on Q&A
-            url: /answers/topics/dotnet-crossplatform-general.html
+            url: /dotnet/standard/library-guidance/cross-platform-targeting
       - linkListType: how-to-guide
         links:
           - text: App development lifecycle

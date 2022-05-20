@@ -11,7 +11,7 @@ no-loc: [Objective-C]
 
 # Step 1. Register an app to use Azure Active Directory
 
-1. Navigate to [windowsazure.com](https://manage.windowsazure.com)
+1. Navigate to [windowsazure.com](https://windowsazure.com)
    and log in with your Microsoft Account or Organization Account
    in the Azure Portal. If you don’t have an Azure
    subscription, you can get a trial from

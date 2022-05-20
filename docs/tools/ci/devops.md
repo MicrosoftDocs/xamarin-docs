@@ -1,5 +1,6 @@
 ---
 title: "DevOps with Xamarin"
+description: Building cross-platform mobile apps targeting Android, iOS, and Windows using C#, .NET, and Visual Studio.
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 author: davidortinau
 ms.author: daortin
@@ -20,7 +21,7 @@ The following tables identify which DevOps features in Visual Studio you can exp
 
 ## Agile tools
 
-Reference link: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)**
+Reference link: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/backlogs-overview)**
 
 General Comment: all planning and tracking features are independent of project type and coding languages.
 
@@ -53,21 +54,21 @@ Design features are independent of coding language, or work with .NET languages 
 
 |Feature|Supported with Xamarin|Additional Comments|
 |-------------|----------------------------|-------------------------|
-|[Use Team Foundation Version Control (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts) or Azure Repos|Yes||
-|[Getting started with Git in Azure Repos](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio)|Yes||
+|[Use Team Foundation Version Control (TFVC)](/azure/devops/repos/tfvc/overview) or Azure Repos|Yes||
+|[Getting started with Git in Azure Repos](/azure/devops/repos/git/gitquickstart)|Yes||
 |[Improve Code Quality](/visualstudio/test/improve-code-quality)|Yes||
 |[Find code changes and other history](/visualstudio/ide/find-code-changes-and-other-history-with-codelens)|Yes|Except across platform-specific boundaries where the implementation isn't resolved until run time.|
 |[Use code maps to debug your applications](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|Yes||
 
 ## Build
 
-Reference link: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
+Reference link: **[Azure Pipelines](/azure/devops/pipelines/index)**
 
 |Feature|Supported with Xamarin|Additional Comments|
 |-------------|----------------------------|-------------------------|
-|On-premises TFS server|Yes|Build machines must have Xamarin installed and can be linked to an OSX computer to build for iOS. See [Use TFVC](/azure/devops/repos/tfvc/overview?view=vsts)|
-|On-premises build server linked to Azure Pipelines|Yes|See [Build and release agents](/azure/devops/pipelines/agents/agents?view=vsts) for instructions.|
-|Hosted controller service of Azure Pipelines|Yes|See [Build your Xamarin app](/azure/devops/pipelines/languages/xamarin?view=vsts&tabs=vsts).|
+|On-premises TFS server|Yes|Build machines must have Xamarin installed and can be linked to an OSX computer to build for iOS. See [Use TFVC](/azure/devops/repos/tfvc/overview)|
+|On-premises build server linked to Azure Pipelines|Yes|See [Build and release agents](/azure/devops/pipelines/agents/agents) for instructions.|
+|Hosted controller service of Azure Pipelines|Yes|See [Build your Xamarin app](/azure/devops/pipelines/languages/xamarin).|
 |Build definitions with pre- and post-scripts|Yes||
 |Continuous integration including gated check-ins|Yes|Gated check-ins for TFVC only as Git works on a pull-request model rather than check-ins.|
 
@@ -79,7 +80,7 @@ Reference link: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 |Manual testing|Yes||
 |Test Manager (record and playback tests)|Yes|Windows devices and Android emulators only from Visual Studio.|
 |Code coverage|n/a||
-|[Unit test your code](/visualstudio/test/unit-test-your-code/)|Yes|For Windows and Android targets, the built-in MSTest tools can be used. To run unit tests on Windows, Android, and iOS, Xamarin recommends NUnit. See [Use TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
+|[Unit test your code](/visualstudio/test/unit-test-your-code/)|Yes|For Windows and Android targets, the built-in MSTest tools can be used. To run unit tests on Windows, Android, and iOS, Xamarin recommends NUnit. See [Use TFVC](/azure/devops/repos/tfvc/overview).|
 |[Use UI automation to test your code](/visualstudio/test/use-ui-automation-to-test-your-code/)|Windows only|Visual Studio's UI test recorder is Windows only. For all platforms, see [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
 
 ## Improve code quality
@@ -96,7 +97,7 @@ Reference link: **[Improve Code Quality](/visualstudio/test/improve-code-quality
 
 ## Release management
 
-Reference link: **[Build and release in Azure Pipelines and TFS](/azure/devops/pipelines/overview?view=vsts)**
+Reference link: **[Build and release in Azure Pipelines and TFS](/azure/devops/pipelines/overview)**
 
 |Feature|Supported with Xamarin|Additional Comments|
 |-------------|----------------------------|-------------------------|
@@ -104,9 +105,9 @@ Reference link: **[Build and release in Azure Pipelines and TFS](/azure/devops/p
 |Deployment to servers for side-loading via scripts|Yes||
 |Upload to app store|Partial|Extensions are available that can automate this process for some app stores.  See [Extensions for Azure DevOps Services](https://marketplace.visualstudio.com/VSTS); for example, the [extension for Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|
 
-## Monitor with HockeyApp
+## Monitor with App Center SDK
 
-Reference link: **[Monitor with HockeyApp](https://www.hockeyapp.net/features/)**
+Reference link: **[Monitor with App Center SDK](/appcenter/sdk/)**
 
 |Feature|Supported with Xamarin|Additional Comments|
 |-------------|----------------------------|-------------------------|

@@ -214,7 +214,7 @@ IStorageFile storageFile = await localFolder.CreateFileAsync("MyFile.txt",
 await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 ```
 
-Refer to the [book chapter](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) for more details.
+Refer to the [book chapter 20](https://developer.xamarin.com/r/xamarin-forms/book/) for more details.
 
 <a name="Isolated_Storage"></a>
 
@@ -230,7 +230,7 @@ referenced across all three platforms in a [Shared Project](~/cross-platform/app
 
 Refer to the [Isolated Storage Overview for Windows Phone](/previous-versions/windows/apps/ff402541(v=vs.105)) for more information.
 
-The Isolated Storage APIs are not available in [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md). One alternative for PCL is the [PCLStorage NuGet](https://pclstorage.codeplex.com/)
+The Isolated Storage APIs are not available in [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md). One alternative for PCL is the [PCLStorage NuGet](https://www.nuget.org/packages/PCLStorage/)
 
 ### Cross-platform file access in PCLs
 
