@@ -632,7 +632,8 @@ allows Wi-Fi to work again.
 
 ### Device name is appearing incorrectly
 
-Currently the Android emulator only supports English alphabet characters for the device name. Please name your device using English characters to successfully create an Android emulator.
+The Android emulator can only be named with uppercase or lowercase letters (A-z), numbers from 0 to 9, periods (.), underscores (_), parentheses ( () ), dashes (-), and spaces.
+
 
 -----
 

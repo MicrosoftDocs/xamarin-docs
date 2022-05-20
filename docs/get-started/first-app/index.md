@@ -167,7 +167,8 @@ Follow these steps along with the video above:
 
     [![Android and iOS, with .NET Standard](images/02-sml.png)](images/02.png#lightbox)
 
-_Note: Certain characters are unsupported for both App Name and Organization ID, including Chinese characters and some accents. These characters will become a hyphen, 'x', or other incorrect representation. Please use supported characters only for your App Name and Organization ID._
+> [!NOTE]
+> Only A-Z, a-z, ‘_’, '.', and numbers are supported characters for your App Name and Organization Identifier.
 
 3. Restore NuGet packages, by right-clicking on the solution:
 

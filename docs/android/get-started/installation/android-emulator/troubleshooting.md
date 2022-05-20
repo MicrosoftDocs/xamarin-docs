@@ -664,6 +664,9 @@ acceleration):
 emulator: CPU Acceleration: working
 emulator: CPU Acceleration status: Hypervisor.Framework OS X Version 10.13
 ```
+### Issues with Naming Intent Extras
+
+When you set Intent Extras in your Android Run Configuration, only A-Z, a-z, ‘_’, '-', and numbers are supported. Additionally, all key values must be unique.
 
 ### Viewing Device Manager logs
 
