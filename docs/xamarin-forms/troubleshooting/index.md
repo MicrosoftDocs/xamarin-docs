@@ -66,6 +66,3 @@ versions, the simplest fix is to:
 2. Re-add the **Xamarin.Forms** package.
 
 This will automatically download the *correct* versions of the other packages.
-
-To see a video of this process, refer to this
-[forums post](https://forums.xamarin.com/discussion/comment/170012/#Comment_170012).

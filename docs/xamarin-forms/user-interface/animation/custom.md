@@ -116,7 +116,7 @@ new Animation (callback: v => BackgroundColor = Color.FromHsla (v, 1, 0.5),
 
 The resulting animation provides the appearance of advancing the page background through the colors of the rainbow.
 
-For more examples of creating complex animations, including a Bezier curve animation, see [Chapter 22](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) of [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
+For more examples of creating complex animations, including a Bezier curve animation, see Chapter 22 of [Creating Mobile Apps with Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/).
 
 ## Create a custom animation extension method
 

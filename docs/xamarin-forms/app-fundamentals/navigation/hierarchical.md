@@ -351,7 +351,7 @@ There are a number of limitations to be aware of when displaying a [`View`](xref
 
 ## Related Links
 
-- [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
+- [Page Navigation (chapter 24)](https://developer.xamarin.com/r/xamarin-forms/book/)
 - [Hierarchical (sample)](/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 - [PassingData (sample)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
 - [LoginFlow (sample)](/samples/xamarin/xamarin-forms-samples/navigation-loginflow)

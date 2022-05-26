@@ -38,7 +38,7 @@ Swiping from right to left again moves to the third page, while swiping from lef
 
 If a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is embedded into the [`Detail`](xref:Xamarin.Forms.FlyoutPage.Detail) page of a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), the [`FlyoutPage.IsGestureEnabled`](xref:Xamarin.Forms.FlyoutPage.IsGestureEnabledProperty) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `FlyoutPage`.
 
-For more information about the [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
+For more information about the [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/) of Charles Petzold's Xamarin.Forms book.
 
 ## Create a CarouselPage
 

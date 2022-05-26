@@ -286,6 +286,6 @@ public class MainPageCS : FlyoutPage
 
 ## Related links
 
-- [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
+- [Page Varieties (chapter 25)](https://developer.xamarin.com/r/xamarin-forms/book/)
 - [FlyoutPage (sample)](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 - [FlyoutPage API](xref:Xamarin.Forms.FlyoutPage)

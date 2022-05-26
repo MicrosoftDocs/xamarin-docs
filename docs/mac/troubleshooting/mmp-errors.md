@@ -115,9 +115,9 @@ An error occurred while loading the assemblies from the root assembly references
 
 <a name="MM0071"></a>
 
-#### MM0071: Unknown platform: *. This usually indicates a bug in Xamarin.Mac; please file a bug report at https://bugzilla.xamarin.com with a test case.
+#### MM0071: Unknown platform: *. This usually indicates a bug in Xamarin.Mac; please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
-This usually indicates a bug in Xamarin.Mac; please file a bug report at [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) with a test case.
+This usually indicates a bug in Xamarin.Mac; please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
 <a name="MM0073"></a>
 
@@ -168,7 +168,7 @@ A last-straw solution would be to use an older version of Xamarin.Mac, one that 
 
 <a name="MM0099"></a>
 
-#### MM0099: Internal error {0}. Please file a bug report with a test case (https://bugzilla.xamarin.com).
+#### MM0099: Internal error {0}. Please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
 <a name="MM0114"></a>
 
@@ -380,7 +380,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 An unexpected error occurred when processing an assembly.
 
-The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a [bug report](https://bugzilla.xamarin.com) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a [bug report](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MM2104"></a>
 
@@ -388,7 +388,7 @@ The assembly causing the issue is named in the error message. In order to fix th
 
 Mixed-mode assemblies can not be processed by the linker.
 
-See https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies for more information on mixed-mode assemblies.
+See /cpp/dotnet/mixed-native-and-managed-assemblies for more information on mixed-mode assemblies.
 
 <a name="MM2106"></a>
 
@@ -520,7 +520,7 @@ If this is not the case, please file an [issue](https://github.com/xamarin/xamar
 
 <a name="MM5103"></a>
 
-#### MM5103: Failed to compile. Error code - {0}. Please file a bug report at http://bugzilla.xamarin.com
+#### MM5103: Failed to compile. Error code - {0}. Please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
 <!-- 5104 used by mtouch -->
 
@@ -628,7 +628,7 @@ See the [equivalent mtouch warning](~/ios/troubleshooting/mtouch-errors.md#MT521
 
 #### MM8025: Failed to compute the token reference for the type '{type.AssemblyQualifiedName}' because {reasons}
 
-This indicates a bug in Xamarin.Mac. Please file a bug at [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac).
+This indicates a bug in Xamarin.Mac. Please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
 A potential workaround would be to disable the `register-protocols`
 optimization, by passing `--optimize:-register-protocols` as an additional mmp
@@ -638,7 +638,7 @@ argument in the project's Mac Build options.
 
 #### MM8026: * is not supported when the dynamic registrar has been linked away.
 
-This usually indicates a bug in Xamarin.Mac, because the dynamic registrar should not be linked away if it's needed. Please file a bug at [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+This usually indicates a bug in Xamarin.Mac, because the dynamic registrar should not be linked away if it's needed. Please [file a bug report](https://github.com/xamarin/xamarin-macios/issues/new) with a test case.
 
 It's possible to force the linker to keep the dynamic registrar by adding
 `--optimize=-remove-dynamic-registrar` to the additional mmp arguments in

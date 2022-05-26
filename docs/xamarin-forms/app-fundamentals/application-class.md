@@ -121,9 +121,7 @@ Xamarin.Forms 1.4 introduced an additional method on the `Application` class -
   due to a crash or being killed by the OS.
 
 You can find references to using the `Properties` dictionary in the
-**Creating Mobile Apps with Xamarin.Forms** book chapters [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf),
-[15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf), and [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf),
-and in the associated
+**Creating Mobile Apps with Xamarin.Forms** [book](https://developer.xamarin.com/r/xamarin-forms/book/) (see chapters 6, 15, and 20) and in the associated
 [samples](https://github.com/xamarin/xamarin-forms-book-preview-2).
 
 ## The Application class

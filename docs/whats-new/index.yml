@@ -69,4 +69,4 @@ landingContent:
       - linkListType: get-started
         links:
           - text: .NET on Q&A
-            url: /answers/topics/dotnet
+            url: /dotnet/standard/library-guidance/cross-platform-targeting
