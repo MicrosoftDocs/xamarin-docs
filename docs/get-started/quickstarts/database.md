@@ -106,38 +106,38 @@ You should successfully complete the [previous quickstart](navigation.md) before
                 database.CreateTableAsync<Note>().Wait();
             }
 
-            public Task<List<Note>> GetNotesAsync()
+            public async Task<List<Note>> GetNotesAsync()
             {
                 //Get all notes.
-                return database.Table<Note>().ToListAsync();
+                return await database.Table<Note>().ToListAsync();
             }
 
-            public Task<Note> GetNoteAsync(int id)
+            public async Task<Note> GetNoteAsync(int id)
             {
                 // Get a specific note.
-                return database.Table<Note>()
+                return await database.Table<Note>()
                                 .Where(i => i.ID == id)
                                 .FirstOrDefaultAsync();
             }
 
-            public Task<int> SaveNoteAsync(Note note)
+            public async Task<int> SaveNoteAsync(Note note)
             {
                 if (note.ID != 0)
                 {
                     // Update an existing note.
-                    return database.UpdateAsync(note);
+                    return await database.UpdateAsync(note);
                 }
                 else
                 {
                     // Save a new note.
-                    return database.InsertAsync(note);
+                    return await database.InsertAsync(note);
                 }
             }
 
-            public Task<int> DeleteNoteAsync(Note note)
+            public async Task<int> DeleteNoteAsync(Note note)
             {
                 // Delete a note.
-                return database.DeleteAsync(note);
+                return await database.DeleteAsync(note);
             }
         }
     }
