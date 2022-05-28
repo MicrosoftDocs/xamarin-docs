@@ -206,7 +206,7 @@ describe the steps required to complete this process:
 
 ### Enable Google Services for Your App
 
-1. Sign into the [Google Developers Console](https://developers.google.com/mobile/add?platform=android)
+1. Sign into the [Google Developers Console](https://firebase.google.com/docs/android/setup)
     with your Google account (i.e, your gmail address) and create a new
     project. If you have an existing project, choose the project that
     you want to become GCM-enabled. In the following example, a new

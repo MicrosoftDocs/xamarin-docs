@@ -240,7 +240,7 @@ of these folders with their contents:
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
 [Powershell](/powershell/) / [psake](https://github.com/psake/psake) or
-[Fake](https://fsharp.github.io/FAKE/).
+[Fake](https://fsharp.github.io/).
 
 ## Summary
 

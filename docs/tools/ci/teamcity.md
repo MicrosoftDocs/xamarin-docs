@@ -79,7 +79,7 @@ The build script can be as simple as a PowerShell file (on Windows) or a bash sc
 
 - [**psake**](https://github.com/psake/psake) – this is a Windows PowerShell library for building software
 
-- [**FAKE**](https://fsharp.github.io/FAKE/) – this is a DSL based in F# which makes it possible to use existing .NET libraries if necessary.
+- [**FAKE**](https://github.com/fsprojects/FAKE) – this is a DSL based in F# which makes it possible to use existing .NET libraries if necessary.
 
 Which scripting language is used depends on your preferences and requirements.
 

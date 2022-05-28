@@ -64,7 +64,7 @@ Additionally, Apple provides the following sample apps that can be transcoded to
 
 ## Known Issues and Troubleshooting
 
-If you encounter any problems building tvOS with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
+If you encounter any problems building tvOS with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
 
 Report new issues and suggestions [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
 

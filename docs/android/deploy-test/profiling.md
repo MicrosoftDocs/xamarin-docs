@@ -153,6 +153,6 @@ The following topics will be of interest to Xamarin Android developers:
     &ndash; Displays a real-time graph of the app's memory usage, and
     includes a button to record memory allocations for analysis.
 
-- [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html)
+- [Network Profiler](https://developer.android.com/studio/debug/network-profiler)
     &ndash; Displays real-time network activity of data sent and
     received by the app.

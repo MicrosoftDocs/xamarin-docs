@@ -82,7 +82,7 @@ Android 10 introduces a variety of new features. Some of these new features are 
 
 ## Enhance your app with Android 10 features and APIs
 
-Next, when you're ready, dive into Android 10 and learn about the [new features and APIs](https://developer.android.com/preview/api-overview.html) that you can use. Here are some of the top features to get started with.
+Next, when you're ready, dive into Android 10 and learn about the [new features and APIs](https://developer.android.com/about/versions/10) that you can use. Here are some of the top features to get started with.
 
 These features are recommend for every app:
 
