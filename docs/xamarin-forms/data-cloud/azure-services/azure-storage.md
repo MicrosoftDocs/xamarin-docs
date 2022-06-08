@@ -30,7 +30,7 @@ There are two types of storage accounts:
 
 This article, and accompanying sample application, demonstrates uploading image and text files to blob storage, and downloading them. In addition, it also demonstrates retrieving a list of files from blob storage, and deleting files.
 
-For more information about Azure Storage, see [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/).
+For more information about Azure Storage, see [Introduction to Storage](/azure/storage/common/storage-introduction).
 
 > [!NOTE]
 > If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
@@ -258,7 +258,7 @@ After retrieving a container reference, the method retrieves a blob reference fo
 ## Related Links
 
 - [Azure Storage (sample)](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
-- [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/)
+- [Introduction to Storage](/azure/storage/common/storage-introduction).
 - [How to use Blob Storage from Xamarin](/azure/storage/blobs/storage-quickstart-blobs-xamarin)
 - [Using Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview)
 - [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
