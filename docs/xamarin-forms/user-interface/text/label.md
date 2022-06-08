@@ -568,6 +568,6 @@ The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) and [`
 
 - [Text (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Hyperlinks (sample)](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
-- [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
+- [Creating Mobile Apps with Xamarin.Forms, Chapter 3 free download](https://aka.ms/xamformsebook)
 - [Label API](xref:Xamarin.Forms.Label)
 - [Span API](xref:Xamarin.Forms.Span)

@@ -198,7 +198,7 @@ Finally, the `SKBlendModes.Luminosity` blend mode is the opposite of `SKBlendMod
 
 [![Non-Separable Blend Modes - Luminosity](non-separable-images/NonSeparableBlendModes-Luminosity.png "Non-Separable Blend Modes - Luminosity")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
-In theory, increasing or decreasing the Luminosity of an image should make it lighter or darker. Interestingly, the [Luminosity example in the Skia **SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) is quite similar.
+In theory, increasing or decreasing the Luminosity of an image should make it lighter or darker. This [Luminosity property example](https://jetbrains.github.io/skiko/skiko/org.jetbrains.skia/-blend-mode/-l-u-m-i-n-o-s-i-t-y/index.html) or this [SKBlendMode Enum define](/dotnet/api/SkiaSharp.SKBlendMode?view=skiasharp-2.80.2&preserve-view=true) may be of interest.
 
 It is generally not the case that you'll want to use one of the non-separable blend modes with a source that consists of a single color applied to the entire destination image. The effect is just too great. You'll want to restrict the effect to one part of the image. In that case, the source will probably incorporate transparancy, or perhaps the source will be limited to a smaller graphic.
 

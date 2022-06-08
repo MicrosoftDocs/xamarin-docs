@@ -394,13 +394,13 @@ public void OnMapReady(GoogleMap map)
 ```
 
 The Maps API provides a
-[CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html)
+[CameraPosition](https://developers.google.com/android/reference/com/google/android/gms/maps/model/CameraPosition)
 which will aggregate all of the possible values for the camera
 position. An instance of this class can be provided to the
 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29)
 method which will return a `CameraUpdate` object. The Maps API also
 includes the
-[CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html)
+[CameraPosition.Builder](https://developers.google.com/android/reference/com/google/android/gms/maps/model/CameraPosition.Builder)
 class that provides a fluent API for creating `CameraPosition` objects.
 The following code snippet shows an example of creating a `CameraUpdate`
 from a `CameraPosition` and using that to change the camera position on a
@@ -459,7 +459,7 @@ clicks.
 
 To add a marker to a map, it is necessary create a new
 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) object and then call the
-[AddMarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29)
+[AddMarker](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29)
 method on a `GoogleMap` instance. This method will return a
 [Marker](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker)
 object.

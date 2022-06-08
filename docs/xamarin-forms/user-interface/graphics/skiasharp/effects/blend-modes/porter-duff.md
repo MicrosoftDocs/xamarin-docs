@@ -490,7 +490,7 @@ As you learned in the article [Clipping with Paths and Regions](../../curves/cli
 
 ## Gradient transparency and transitions
 
-The examples of the Porter-Duff blend modes shown earlier in this article have all involved images that consisted of opaque pixels and transparent pixels, but not partially transparent pixels. The blend-mode functions are defined for those pixels as well. The following table is a more formal definition of the Porter-Duff blend modes that uses notation found in the Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference). (Because **SkBlendMode Reference** is a Skia reference, C++ syntax is used.)
+The examples of the Porter-Duff blend modes shown earlier in this article have all involved images that consisted of opaque pixels and transparent pixels, but not partially transparent pixels. The blend-mode functions are defined for those pixels as well. The following table is a more formal definition of the Porter-Duff blend modes that uses notation found in the Skia [**SkBlendMode Reference**](https://skia.googlesource.com/skia.git/+/dfec731dbfcf2565007ca94d85f7297f4f468aee/site/user/api/SkBlendMode_Reference.md). (Because **SkBlendMode Reference** is a Skia reference, C++ syntax is used.)
 
 Conceptually, the red, green, blue, and alpha components of each pixel are converted from bytes to floating-point numbers in the range of 0 to 1. For the alpha channel, 0 is fully transparent and 1 is fully opaque
 

@@ -161,7 +161,7 @@ The following table shows all the separable blend modes with brief explanations 
 | `Exclusion`  | Black     | Similar to `Difference` but lower contrast |
 | `Multiply`   | White     | Darkens by multiplying colors: Sc·Dc |
 
-More detailed algorithms can be found in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification and the Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference), although the notation in these two sources is not the same. Keep in mind that `Plus` is commonly regarded as a Porter-Duff blend mode, and `Modulate` is not part of the W3C specification.
+More detailed algorithms can be found in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification and the Skia [**SkBlendMode Reference**](https://skia.googlesource.com/skia.git/+/dfec731dbfcf2565007ca94d85f7297f4f468aee/site/user/api/SkBlendMode_Reference.md), although the notation in these two sources is not the same. Keep in mind that `Plus` is commonly regarded as a Porter-Duff blend mode, and `Modulate` is not part of the W3C specification.
 
 If the source is transparent, then for all the separable blend modes except `Modulate`, the blend mode has no effect. As you've seen earlier, the `Modulate` blend mode incorporates the alpha channel in the multiplication. Otherwise, `Modulate` has the same effect as `Multiply`. 
 

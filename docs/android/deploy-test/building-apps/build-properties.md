@@ -1030,8 +1030,7 @@ Specifies
 the `-ignorewarnings` proguard rule for `r8`. This allows `r8`
 to continue with dex compilation even if certain warnings are
 encountered. Defaults to `True`, but can be set to `False` to
-enforce more strict behavior. See the [ProGuard manual](https://www.guardsquare.com/products/proguard/manual/usage)
-for details.
+enforce more strict behavior. See the [ProGuard manual](https://www.guardsquare.com/manual/configuration/usage) for details.
 
 Added in Xamarin.Android 10.3.
 
@@ -1578,7 +1577,7 @@ supplies **java** with a value of `1G`. This was found to be commonly
 required on Windows in comparison to other platforms.
 
 Specifying this property is necessary if the
-[`_CompileDex` target throws a `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327).
+[`_CompileDex` target throws a `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/18/18327/bug.html).
 
 Customize the value by changing:
 

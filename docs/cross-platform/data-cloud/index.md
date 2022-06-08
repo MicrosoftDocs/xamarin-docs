@@ -62,7 +62,6 @@ the following complete applications demonstrate various Azure features
 incorporated into Xamarin apps:
 
 - [Sport](https://github.com/xamarin/Sport) – friendly sports-league tracking app that uses data storage & push notifications.
-- [Moments](https://github.com/pierceboggan/Moments) – instant photo sharing that uses Azure Storage for images.
 - [Xamarin CRM](https://github.com/xamarin/app-crm) – uses Web API for the back-end.
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) - Azure Mobile Apps.
 
