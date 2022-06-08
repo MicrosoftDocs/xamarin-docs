@@ -146,13 +146,13 @@ The `TabIndex` property is an `int` value that defines the control order when ad
 
 ### [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)
 
-The `TranslationX` property is a `double` value that defines the delta translation to be applied on the X axis. Translation is applied after layout and is typically used for applying animations. Translating an element outside the bounds of its parent container my prevent inputs from working.
+The `TranslationX` property is a `double` value that defines the delta translation to be applied on the X axis. Translation is applied after layout and is typically used for applying animations. Translating an element outside the bounds of its parent container may prevent inputs from working.
 
 For more information, see [Animation in Xamarin.Forms](~/xamarin-forms/user-interface/animation/index.md).
 
 ### [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 
-The `TranslationY` property is a `double` value that defines the delta translation to be applied on the Y axis. Translation is applied after layout and is typically used for applying animations. Translating an element outside the bounds of its parent container my prevent inputs from working.
+The `TranslationY` property is a `double` value that defines the delta translation to be applied on the Y axis. Translation is applied after layout and is typically used for applying animations. Translating an element outside the bounds of its parent container may prevent inputs from working.
 
 For more information, see [Animation in Xamarin.Forms](~/xamarin-forms/user-interface/animation/index.md).
 
