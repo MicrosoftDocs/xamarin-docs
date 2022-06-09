@@ -101,15 +101,9 @@ The clipping path is subject to the transforms in effect when the `ClipPath` met
 
 ## Combining Clipping Paths
 
-Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the canvas. You can obtain the rectangular bounds of the clipping area using the [`ClipBounds`](xref:SkiaSharp.SKCanvas.ClipBounds) property or the [`ClipDeviceBounds`](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) property. The `ClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `ClipDeviceBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
+Strictly speaking, the clipping area is not "set" by the `ClipPath` method. Instead, it is combined with the existing clipping path, which begins as a rectangle equal in size to the canvas. You can obtain the rectangular bounds of the clipping area using the [`LocalClipBounds`](/dotnet/api/SkiaSharp.SKCanvas.LocalClipBounds) property or the [`DeviceClipBounds`](/dotnet/api/SkiaSharp.SKCanvas.DeviceClipBounds) property. The `LocalClipBounds` property returns an `SKRect` value that reflects any transforms that might be in effect. The `DeviceClipBounds` property returns a `RectI` value. This is a rectangle with integer dimensions, and describes the clipping area in actual pixel dimensions.
 
-Any call to `ClipPath` reduces the clipping area by combining the clipping area with a new area. The full syntax of the [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) method is:
-
-```csharp
-public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
-```
-
-There is also a [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean)) method that combines the clipping area with a rectangle:
+Any call to `ClipPath` reduces the clipping area by combining the clipping area with a new area. The full syntax of the [`ClipPath`](/dotnet/api/skiasharp.skcanvas.clippath) method that combines the clipping area with a rectangle:
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);

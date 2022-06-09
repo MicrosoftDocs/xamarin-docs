@@ -344,8 +344,7 @@ The screenshot below illustrates the scene after the animation:
 > [known bug](https://code.google.com/p/android/issues/detail?id=62450)
 > in the Android Transitions library that causes Scenes created using
 > `GetSceneForLayout` to break when a user navigates through an Activity
-> the second time. A java workaround is described
-> [here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
+> the second time.
 
 ##### Custom Transitions in Scenes
 
@@ -356,8 +355,7 @@ screenshot below:
 [![Location of transition.xml file under Resources/transition directory](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
 The following code sample defines a transition that animates for 5
-seconds and uses the
-[overshoot interpolator](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
+seconds. See [more animation info at](https://developer.android.com/reference/android/support/animation/package-summary).
 
 ```xml
 <changeBounds
@@ -553,7 +551,7 @@ Printing content is simplified in KitKat with the introduction of the
 and `PrintManager`. KitKat is also the first API version to fully
 leverage the
 [Google's Cloud Print service APIs](https://developers.google.com/cloud-print/) using the
-[Google Cloud Print application](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
+[Google Cloud Print applications](https://play.google.com/store/search?q=google+cloud+print+plugin&c=apps).
 Most devices that ship with KitKat automatically download Google Cloud
 Print app and the
 [HP Print Service Plugin](https://play.google.com/store/apps/details?id=com.hp.android.printservice)when
