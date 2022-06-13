@@ -228,8 +228,7 @@ class MyChild : UIView
 
 For more information about releasing strong references, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
-There's also a good discussion in this blog post:
-[Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me).
+There's also [more garbage collection information here](/xamarin/android/internals/garbage-collection).
 
 ### More information
 

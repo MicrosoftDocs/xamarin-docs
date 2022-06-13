@@ -44,12 +44,6 @@ Demo app that empowers salespeople to track their sales performance, manage lead
 
 ## Azure & enterprise
 
-:::row:::
-    :::column:::
-[![Acquaint screen](images/acquaint.jpg)](https://github.com/xamarinhq/app-acquaint/)
-
-### [Acquaint](https://github.com/xamarinhq/app-acquaint/)
-
 Contact list app with a detail & edit screen. Source code is available in both Xamarin.Forms and Xamarin native implementations.
     :::column-end:::
     :::column:::

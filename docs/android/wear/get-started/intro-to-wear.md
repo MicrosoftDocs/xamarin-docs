@@ -217,21 +217,6 @@ For more about complications, see the Android
 [Watch Face Complications](https://developer.android.com/wear/preview/features/complications.html) 
 topic. 
 
-#### Navigation and Action Drawers 
-
-Two new drawers are included in Wear 2.0. The *navigation drawer*, 
-which appears at the top of the screen, allows users to navigate 
-between app views (as shown on the left below). The *action drawer*, 
-which appears at the bottom of the screen (as shown on the right), 
-allows users to choose from a list of actions. 
-
-![Navigation and Action Drawers](intro-to-wear-images/drawers.png "Navigation and Action Drawers")
-
-For more information about these two new interactive drawers, see the 
-Android 
-[Wear Navigation and Actions](https://developer.android.com/wear/preview/features/ui-nav-actions.html) 
-topic. 
-
 #### Curved Layouts 
 
 Wear 2.0 introduces new features for displaying curved layouts on round 
@@ -255,20 +240,9 @@ the wearable device. For more information about this feature,
 see the Android [Standalone Apps](https://developer.android.com/wear/preview/features/standalone-apps.html)
 topic.
 
-#### Wrist Gestures 
+#### Features
 
-Wrist gestures make it possible for users to interact with your app 
-without using the touch screen &ndash; users can respond to the app 
-with a single hand. Two wrist gestures are supported: 
-
-- Flick wrist out
-- Flick wrist in
-
-For more information, see the Android 
-[Wrist Gestures](https://developer.android.com/wear/preview/features/gestures.html) 
-topic. 
-
-There are many more Wear 2.0 features such as inline actions, smart 
+There are numerous features such as inline actions, smart 
 reply, remote input, expanded notifications, and a new bridging mode 
 for notifications. For more information about the new Wear 2.0 features, 
 see the Android 
@@ -290,7 +264,7 @@ Here are some examples of the devices that can run Android Wear:
 Check out Google's Android Wear documentation:
 
 - [About Android Wear](https://www.android.com/wear/)
-- [Android Wear App Design](https://developer.android.com/design/wear/index.html)
+- [Android Wear App Design Principles](https://developer.android.com/training/wearables/principles)
 - [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 

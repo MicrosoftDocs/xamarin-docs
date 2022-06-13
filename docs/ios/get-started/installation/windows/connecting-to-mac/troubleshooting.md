@@ -119,7 +119,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 Known causes:
 
-- **Limitation** – This error can appear when attempting to log in to the build host using the account _Full Name_ if the name includes an accented character. This is a limitation of the [SSH.NET library](https://sshnet.codeplex.com/) that Xamarin uses for the SSH connection. **Workaround**: See step 5 above.
+- **Limitation** – This error can appear when attempting to log in to the build host using the account _Full Name_ if the name includes an accented character. This is a limitation of the **SSH.NET library** that Xamarin uses for the SSH connection. **Workaround**: See step 5 above.
 
 #### "Unable to authenticate with SSH keys. Please try to log in with credentials first"
 
@@ -282,7 +282,7 @@ If the normal log files still do not provide sufficient information to diagnose 
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
    ```
 
-If these verbose log files do not provide enough clues to resolve the issue directly, please [file a new bug report](https://bugzilla.xamarin.com/newbug) and attach both the .zip file from step 5 and the .log file from step 6.
+If these verbose log files do not provide enough clues to resolve the issue directly, please [file a new bug report](https://github.com/xamarin/xamarin-macios/wiki/Submitting-Bugs-&-Suggestions) and attach both the .zip file from step 5 and the .log file from step 6.
 
 ## Troubleshooting automatic Mac provisioning
 
