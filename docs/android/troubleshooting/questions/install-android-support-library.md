@@ -1,5 +1,6 @@
 ---
 title: "How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?"
+description: Download the desired Xamarin.Android.Support NuGet package (for example by installing it with the NuGet package manager).
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
@@ -173,7 +174,7 @@ Studio for Mac to find the correct version number. Look for the
 
 ## Additional references
 
-- [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) –
+- Search the Bugzilla read only archive for [Bug 43245](https://bugzilla.xamarin.com/all.html) –
   Inaccurate "Download failed. Please download {0} and put it to the
   {1} directory." and "Please install package: '{0}' available in SDK
   installer" error messages related to Xamarin.Android.Support packages

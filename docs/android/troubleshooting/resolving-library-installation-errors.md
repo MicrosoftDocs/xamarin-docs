@@ -148,8 +148,8 @@ but you are able to download the archive using a different computer.
     If the **m2repository** archive is not shown in this table, you can create
     the download URL by prepending `https://dl-ssl.google.com/android/repository/` to
     the name of the **m2repository** to download. For example,
-    use **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip**
-    to download **android\_m2repository\_r10.zip**.
+    use `https://dl-ssl.google.com/android/repository/android\_m2repository\_r_nn_.zip`
+    to download **android\_m2repository\_r_nn_.zip**.
 
 2. Rename the file to the corresponding MD5 hash of the download URL
     as shown in the above table. For example, if you downloaded
