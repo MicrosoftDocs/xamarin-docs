@@ -208,9 +208,7 @@ Android 5.0 requires the following steps:
     correctly in the new Android 5.0 *Do not disturb* mode.
 
 If your notifications present transport controls, display media playback status,
-use `RemoteControlClient`, or call `ActivityManager.GetRecentTasks`, see
-[Important Behavior Changes](https://developer.android.com/preview/api-overview.html#Behaviors)
-for more information about updating your notifications for Android 5.0.
+use `RemoteControlClient`, or call `ActivityManager.GetRecentTasks`.
 
 For information about creating notifications in Android, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
@@ -706,7 +704,7 @@ applications to work with directories and documents:
     call the new `Android.Content.Context.GetExternalMediaDirs` method.
 
 For more about new storage APIs in Android 5.0,
-see [Storage](https://developer.android.com/preview/api-overview.html#Storage).
+see [Storage](/xamarin/android/platform/files/).
 
 ### Wireless & Connectivity
 
@@ -720,9 +718,7 @@ Android 5.0 adds the following API enhancements for wireless and connectivity:
 
 - NFC enhancements that make it easier to use near-field communications
     functionality for sharing data with other devices.
-
-For more about the new wireless and connectivity APIs in Android 5.0,
-see [Wireless and Connectivity](https://developer.android.com/preview/api-overview.html#Wireless).
+.
 
 ### Job Scheduling
 
@@ -734,7 +730,7 @@ to that task, such as downloading a large file when the device is
 connected over a Wi-Fi network instead of a metered network.
 
 For more about the new job scheduling APIs in Android 5.0,
-see [Scheduling Jobs](https://developer.android.com/preview/api-overview.html#JobScheduler).
+see [Scheduling Jobs](/xamarin/android/platform/android-job-scheduler).
 
 ## Summary
 

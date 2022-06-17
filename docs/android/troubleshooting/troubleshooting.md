@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting Tips"
+description: Xamarin.Android has a few places to look when tracking down various bugs.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
@@ -643,7 +644,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 }
 ```
 
-[This will be fixed in a future release](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
+For more information on the above noted problem, refer to the Bugzilla read only archive for [Bug5401](https://bugzilla.xamarin.com/all.html).
 
 ## Unexpected NullReferenceExceptions
 
