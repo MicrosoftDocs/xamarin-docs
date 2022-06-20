@@ -189,7 +189,7 @@ Fix: Correct spelling to `AddEllipseInRect`. Other name changes include:
 
 When creating a custom annotation by subclassing MKAnnotation the Coordinate field has no setter, only a getter.
 
-[Fix](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
+The Fix
 
 - Add a field to keep track of the coordinate
 - return this field in the getter of the Coordinate property

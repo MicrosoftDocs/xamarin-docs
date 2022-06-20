@@ -86,7 +86,7 @@ The [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples
 
 ## Related links
 
-- [Chapter 6 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 6 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 - [Chapter 6 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)

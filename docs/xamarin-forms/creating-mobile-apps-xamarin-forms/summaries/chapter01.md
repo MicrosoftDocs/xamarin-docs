@@ -89,5 +89,5 @@ Once you can create and run projects for these individual platforms, you should 
 
 ## Related links
 
-- [Chapter 1 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 1 sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)

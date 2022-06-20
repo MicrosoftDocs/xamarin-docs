@@ -78,7 +78,7 @@ But the **MonkeyTap** program really needs sound. (See [the next chapter](chapte
 
 ## Related links
 
-- [Chapter 8 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 8 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 - [Chapter 8 F# sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

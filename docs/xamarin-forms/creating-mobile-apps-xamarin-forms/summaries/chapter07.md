@@ -78,7 +78,7 @@ The [**TextVariations**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ## Related links
 
-- [Chapter 7 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 7 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [Chapter 7 F# sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md)

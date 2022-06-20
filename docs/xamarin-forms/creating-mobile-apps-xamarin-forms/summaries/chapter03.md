@@ -136,7 +136,7 @@ The [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ## Related links
 
-- [Chapter 3 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 3 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
 - [Chapter 3 F# samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [Label](~/xamarin-forms/user-interface/text/label.md)

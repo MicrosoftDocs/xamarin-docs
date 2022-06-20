@@ -94,6 +94,6 @@ The [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samp
 
 ## Related links
 
-- [Chapter 10 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 10 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)

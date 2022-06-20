@@ -50,6 +50,6 @@ The [**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-sampl
 
 ## Related links
 
-- [Chapter 9 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 9 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 - [Dependency Service](~/xamarin-forms/app-fundamentals/dependency-service/index.md)

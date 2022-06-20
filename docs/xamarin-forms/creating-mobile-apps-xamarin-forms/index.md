@@ -29,7 +29,7 @@ Download your preferred eBook format from Microsoft Virtual Academy:
 
 - [**Kindle edition (325Mb)**](https://aka.ms/xamebook/mobi)
 
-You can also [download individual chapters](#download-chapters-and-summaries) as PDF files.
+You can also download individual chapter summaries as PDF files.
 
 ## Samples
 
@@ -37,9 +37,9 @@ The samples are [available on github](https://github.com/xamarin/xamarin-forms-b
 
 ## Chapter summaries
 
-Chapter summaries are available in the [chapter table](#download-chapters-and-summaries) show below. These summaries describe the contents of each chapter, and include several types of links:
+Chapter summaries are available in the chapter table shown below. These summaries describe the contents of each chapter, and include several types of links:
 
-- Links to the actual chapters of the book (at the bottom of the page), and to related articles
+- Link to the actual eBook (Free dpwnload)
 
 - Links to all the samples in the [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms-book-samples) GitHub repository
 
@@ -47,38 +47,38 @@ Chapter summaries are available in the [chapter table](#download-chapters-and-su
 
 These summaries also indicate when material in the chapter might be [somewhat outdated](#ways-in-which-the-book-is-outdated).
 
-## Download chapters and summaries
+## Download entire eBook or view a chapter summary
 
-| Chapter | Complete Text | Summary |
+| Chapter | Complete eBook | Chapter Summary |
 | ------- | ------------- | ------- |
-| Chapter 1. How Does Xamarin.Forms Fit In? | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [Summary](summaries/chapter01.md) |
-| Chapter 2. Anatomy of an App | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [Summary](summaries/chapter02.md) |
-| Chapter 3. Deeper into Text | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [Summary](summaries/chapter03.md) |
-| Chapter 4. Scrolling the Stack | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [Summary](summaries/chapter04.md) |
-| Chapter 5. Dealing with Sizes | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [Summary](summaries/chapter05.md) |
-| Chapter 6. Button Clicks | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [Summary](summaries/chapter06.md) |
-| Chapter 7. XAML vs. Code | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Summary](summaries/chapter07.md) |
-| Chapter 8. Code and XAML in Harmony | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [Summary](summaries/chapter08.md) |
-| Chapter 9. Platform-Specific API Calls | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [Summary](summaries/chapter09.md) |
-| Chapter 10. XAML Markup Extensions | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [Summary](summaries/chapter10.md) |
-| Chapter 11. The Bindable Infrastructure | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [Summary](summaries/chapter11.md) |
-| Chapter 12. Styles | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [Summary](summaries/chapter12.md) |
-| Chapter 13. Bitmaps | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [Summary](summaries/chapter13.md) |
-| Chapter 14. Absolute Layout | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [Summary](summaries/chapter14.md) |
-| Chapter 15. The Interactive Interface | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [Summary](summaries/chapter15.md) |
-| Chapter 16. Data Binding | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [Summary](summaries/chapter16.md) |
-| Chapter 17. Mastering the Grid | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [Summary](summaries/chapter17.md) |
-| Chapter 18. MVVM | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [Summary](summaries/chapter18.md) |
-| Chapter 19. Collection Views | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [Summary](summaries/chapter19.md) |
-| Chapter 20. Async and File I/O | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [Summary](summaries/chapter20.md) |
-| Chapter 21. Transforms | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [Summary](summaries/chapter21.md) |
-| Chapter 22. Animation | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [Summary](summaries/chapter22.md) |
-| Chapter 23. Triggers and Behaviors | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [Summary](summaries/chapter23.md) |
-| Chapter 24. Page Navigation | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [Summary](summaries/chapter24.md) |
-| Chapter 25. Page Varieties | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [Summary](summaries/chapter25.md) |
-| Chapter 26. Custom Layouts | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [Summary](summaries/chapter26.md) |
-| Chapter 27. Custom renderers | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [Summary](summaries/chapter27.md) |
-| Chapter 28. Location and Maps | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [Summary](summaries/chapter28.md) |
+| Chapter 1. How Does Xamarin.Forms Fit In? | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter01.md) |
+| Chapter 2. Anatomy of an App | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter02.md) |
+| Chapter 3. Deeper into Text | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter03.md) |
+| Chapter 4. Scrolling the Stack | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter04.md) |
+| Chapter 5. Dealing with Sizes | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter05.md) |
+| Chapter 6. Button Clicks | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter06.md) |
+| Chapter 7. XAML vs. Code | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter07.md) |
+| Chapter 8. Code and XAML in Harmony | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter08.md) |
+| Chapter 9. Platform-Specific API Calls | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter09.md) |
+| Chapter 10. XAML Markup Extensions | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter10.md) |
+| Chapter 11. The Bindable Infrastructure | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter11.md) |
+| Chapter 12. Styles | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter12.md) |
+| Chapter 13. Bitmaps | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter13.md) |
+| Chapter 14. Absolute Layout | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter14.md) |
+| Chapter 15. The Interactive Interface | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter15.md) |
+| Chapter 16. Data Binding | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter16.md) |
+| Chapter 17. Mastering the Grid | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter17.md) |
+| Chapter 18. MVVM | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter18.md) |
+| Chapter 19. Collection Views | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter19.md) |
+| Chapter 20. Async and File I/O | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter20.md) |
+| Chapter 21. Transforms | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter21.md) |
+| Chapter 22. Animation | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter22.md) |
+| Chapter 23. Triggers and Behaviors | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter23.md) |
+| Chapter 24. Page Navigation | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter24.md) |
+| Chapter 25. Page Varieties | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter25.md) |
+| Chapter 26. Custom Layouts | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter26.md) |
+| Chapter 27. Custom renderers | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter27.md) |
+| Chapter 28. Location and Maps | [Download book PDF](https://aka.ms/xamformsebook) | [Summary](summaries/chapter28.md) |
 
 ## Ways in which the book is outdated
 
