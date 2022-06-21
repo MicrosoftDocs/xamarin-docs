@@ -200,7 +200,7 @@ You can also use platform-specific bitmaps to set the [`Image`](xref:Xamarin.For
 
 ## Related links
 
-- [Chapter 13 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 13 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [Working with Images](~/xamarin-forms/user-interface/images.md)
 - [Using bitmaps with buttons](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

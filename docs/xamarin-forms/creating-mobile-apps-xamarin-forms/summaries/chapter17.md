@@ -67,7 +67,7 @@ The `RowDefinitions` and `ColumnDefinitions` collections aren't strictly require
 
 ### The Grid in code
 
-The [**GridCodeDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) sample demonstrates how to create and populate a `Grid` in code. You can set the attached properties for each child directly, or indirectly by calling additional `Add` methods such as [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) defined by the [Grid.IGridList<T>](xref:Xamarin.Forms.Grid.IGridList`1) interface.
+The [**GridCodeDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) sample demonstrates how to create and populate a `Grid` in code. You can set the attached properties for each child directly, or indirectly by calling additional `Add` methods such as [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) defined by the [Grid.IGridList\<T\>](xref:Xamarin.Forms.Grid.IGridList`1) interface.
 
 ### The Grid bar chart
 
@@ -104,6 +104,6 @@ The program initializes `Slider` elements to a range of 0 to 255, and uses data 
 
 ## Related links
 
-- [Chapter 17 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 17 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 - [Grid](~/xamarin-forms/user-interface/layouts/grid.md)

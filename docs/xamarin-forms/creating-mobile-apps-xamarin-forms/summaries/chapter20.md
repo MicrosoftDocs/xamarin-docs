@@ -174,6 +174,6 @@ sample demonstrates this.
 
 ## Related links
 
-- [Chapter 20 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 20 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 - [Working with Files](~/xamarin-forms/data-cloud/data/files.md)

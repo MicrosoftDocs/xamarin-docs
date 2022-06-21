@@ -92,6 +92,6 @@ This is demonstrated in the [`CountedLabel`](https://github.com/xamarin/xamarin-
 
 ## Related links
 
-- [Chapter 11 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 11 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)

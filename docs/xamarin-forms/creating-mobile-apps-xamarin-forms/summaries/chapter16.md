@@ -137,6 +137,6 @@ The [**NewCheckBoxDemo**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## Related links
 
-- [Chapter 16 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 16 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)

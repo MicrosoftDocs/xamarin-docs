@@ -98,6 +98,6 @@ These styles are illustrated by the [**DeviceStylesList**](https://github.com/xa
 
 ## Related links
 
-- [Chapter 12 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 12 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)

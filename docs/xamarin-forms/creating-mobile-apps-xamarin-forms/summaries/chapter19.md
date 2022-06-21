@@ -227,7 +227,7 @@ Another use of a `TableView` is a menu. The [**MenuCommands**](https://github.co
 
 ## Related links
 
-- [Chapter 19 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 19 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 - [Picker](~/xamarin-forms/user-interface/picker/index.md)
 - [ListView](~/xamarin-forms/user-interface/listview/index.md)
