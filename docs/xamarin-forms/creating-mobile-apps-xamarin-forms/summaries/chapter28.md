@@ -234,6 +234,6 @@ The [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-sampl
 
 ## Related links
 
-- [Chapter 28 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 28 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 - [Xamarin.Forms Map](~/xamarin-forms/user-interface/map/index.md)

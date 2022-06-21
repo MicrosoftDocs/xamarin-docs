@@ -192,7 +192,7 @@ The program also responds to changes in orientation between portrait and landsca
 
 ## Related links
 
-- [Chapter 23 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 23 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 - [Working with Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md)

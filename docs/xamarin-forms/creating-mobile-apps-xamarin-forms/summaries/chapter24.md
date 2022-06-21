@@ -175,7 +175,7 @@ The [**NoteTaker**](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 ## Related links
 
-- [Chapter 24 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 24 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 - [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md)

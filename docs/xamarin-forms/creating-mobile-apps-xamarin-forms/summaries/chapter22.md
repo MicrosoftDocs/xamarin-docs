@@ -205,6 +205,6 @@ It's sometimes useful to express animations in XAML and use them in conjunction 
 
 ## Related links
 
-- [Chapter 22 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 22 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 - [Animation](~/xamarin-forms/user-interface/animation/index.md)

@@ -116,7 +116,7 @@ However, this is problematic on iOS. Only a few of the items can be displayed, a
 
 ## Related links
 
-- [Chapter 25 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 25 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
 - [Master-Detail Page](~/xamarin-forms/app-fundamentals/navigation/flyoutpage.md)
 - [Tabbed Page](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)

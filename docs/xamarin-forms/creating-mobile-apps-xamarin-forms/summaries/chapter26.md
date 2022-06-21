@@ -194,6 +194,6 @@ A `Layout<T>` derivative can call `LayoutTo` rather than `Layout` to animate the
 
 ## Related links
 
-- [Chapter 26 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf)
+- [Full eBook text (PDF)](https://aka.ms/xamformsebook)
 - [Chapter 26 samples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
 - [Creating Custom Layouts](~/xamarin-forms/user-interface/layouts/custom.md)
