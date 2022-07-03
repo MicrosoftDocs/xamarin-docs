@@ -68,7 +68,7 @@ The Stack View control (`UIStackView`) leverages the power of Auto Layout and Si
 
 ## [Tables and Cells](tables/index.md)
 
-his section introduces the classes used to create and display tables then provides examples of how to use them in Xamarin.iOS. It will cover using the default appearance for tables, customizing the layout, implementing editing and using the Xamarin iOS Designer to design a table visually. Sometimes the display is obviously a list of rows (such as the Music app) and other times it is difficult to recognize the table control (such as editing in the Contacts app, or a conversation in Messages app).
+This section introduces the classes used to create and display tables then provides examples of how to use them in Xamarin.iOS. It will cover using the default appearance for tables, customizing the layout, implementing editing and using the Xamarin iOS Designer to design a table visually. Sometimes the display is obviously a list of rows (such as the Music app) and other times it is difficult to recognize the table control (such as editing in the Contacts app, or a conversation in Messages app).
 
 ## [Text Input](text-input.md)
 
