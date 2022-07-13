@@ -13,7 +13,7 @@ metadata:
   ms.author: dabritch
   ms.date: 01/22/2020
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
-  
+
 landingContent:
   - title: Testing
     linkLists:
@@ -43,5 +43,3 @@ landingContent:
         links:
           - text: Introduction to App Center
             url: /learn/modules/intro-to-app-center/
-          - text: Prepare to publish your Xamarin app
-            url: /learn/modules/prepare-to-publish-your-xamarin-application/

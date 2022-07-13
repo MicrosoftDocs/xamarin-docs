@@ -22,9 +22,6 @@ highlightedContent:
   - title: What's new?
     itemType: whats-new
     url: ~/whats-new/index.yml
-  - title: Improve your mobile development skills
-    itemType: learn
-    url: /learn/browse/?products=xamarin&roles=developer
 
 productDirectory:
   title: Get started
