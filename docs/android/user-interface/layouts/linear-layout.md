@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Android LinearLayout"
+description: Learn how to use Xamarin.Android LinearLayout by using this sample code in your local sample project.
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android

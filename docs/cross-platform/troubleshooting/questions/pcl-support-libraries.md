@@ -1,5 +1,6 @@
 ---
 title: "How can I view what libraries are supported in a PCL?"
+description: Learn how you can find an overview of the various features supported by the various PCL target platforms.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 14FF03BD-AF41-4DB1-B307-2349C13DE7E4

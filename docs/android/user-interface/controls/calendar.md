@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Android Calendar"
+description: Learn about a new set of calendar APIs introduced in Android 4 that support applications that are designed to read or write data to the calendar provider.
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android

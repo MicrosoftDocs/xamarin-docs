@@ -1,5 +1,6 @@
 ---
 title: "Error when submitting to App Store: “Invalid Bundle - Options not allowed to be embedded in bitcode are detected in the submission”"
+description: "Learn about an error when submitting to the App Store: Invalid Bundle - Options not allowed to be embedded in bitcode are detected in the submission."
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 137313FB-3D29-428B-93C1-5A05DC8F7C03

@@ -4,7 +4,7 @@ description: "Reload changes to your XAML file instantly on your running applica
 ms.prod: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
-author: maddyleger1
+author: maddymontaquila
 ms.author: maleger
 ms.date: 03/01/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
@@ -75,8 +75,8 @@ the error underlined in the editor and include it in the errors window. These ch
 
 XAML Hot Reload supports simultaneous debugging in Visual Studio and Visual Studio for Mac. You can deploy an Android and an iOS target at the same time to see your changes reflected on both platforms at once. To debug on multiple platforms, see:
 
-* **Windows** [How To: Set multiple startup projects](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
-* **Mac** [Set multiple startup projects](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
+* **Windows** [How To: Set multiple startup projects](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019&preserve-view=true)
+* **Mac** [Set multiple startup projects](/visualstudio/mac/set-startup-projects?view=vsmac-2019&preserve-view=true)
 
 ## Known limitations
 

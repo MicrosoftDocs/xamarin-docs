@@ -1,5 +1,6 @@
 ---
 title: "Using Data in an Android App"
+description: The DataAccess_Adv sample is a working application that allows user-input and create, read, update, and delete database functionality.
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android

@@ -1,5 +1,6 @@
 ---
 title: "iOS Designer Error with RegisterServicePort"
+description: Learn about errors with RegisterServicePort and similar error messages, which are commonly an issue with spyware/malware on the computer.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2

@@ -4,7 +4,7 @@ description: "This article describes how to show your custom controls in the XAM
 ms.prod: xamarin
 ms.assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7
 ms.technology: xamarin-forms
-author: maddyleger1
+author: maddymontaquila
 ms.author: maleger
 ms.date: 03/27/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]

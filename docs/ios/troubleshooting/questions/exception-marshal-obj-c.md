@@ -1,5 +1,6 @@
 ---
 title: "Why does my iOS 9 app fail with: System.Exception: Failed to marshal the Objective-C object?"
+description: 'Learn how to troubleshoot an iOS 9 app failure with the message System.Exception: Failed to marshal the Objective-C object.'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0

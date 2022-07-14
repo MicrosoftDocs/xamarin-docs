@@ -4,7 +4,7 @@ description: "This article explains how to use design time data to show data-hea
 ms.prod: xamarin
 ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
 ms.technology: xamarin-forms
-author: maddyleger1
+author: maddymontaquila
 ms.author: maleger
 ms.date: 03/27/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]

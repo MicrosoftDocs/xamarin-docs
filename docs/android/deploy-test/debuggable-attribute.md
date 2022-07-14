@@ -1,5 +1,6 @@
 ---
 title: "Debuggable Attribute"
+description: Android supports the Java Debug Wire Protocol. Learn how this technology makes debugging possible by allowing tools such as ADB to communicate with a JVM.
 ms.prod: xamarin
 ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android

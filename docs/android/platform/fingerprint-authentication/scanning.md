@@ -1,5 +1,6 @@
 ---
 title: "Scanning For Fingerprints"
+description: Learn about the role of the FingerprintManager.Authenticate method in the Android 6.0 fingerprint authentication.
 ms.prod: xamarin
 ms.assetid: 1CDDC096-77E0-47B3-BE0B-8953E2DDACD3
 ms.technology: xamarin-android

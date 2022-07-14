@@ -1,5 +1,6 @@
 ---
 title: "ToggleButton"
+description: Learn how to create a button used specifically for toggling between two states by using the ToggleButton widget.
 ms.prod: xamarin
 ms.assetid: 9ADA8FCF-63ED-897A-DD56-D7D86535A92C
 ms.technology: xamarin-android

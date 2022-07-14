@@ -1,5 +1,6 @@
 ---
 title: "Android Gallery control"
+description: Learn to create a gallery of photos using The Xamarin.Android Gallery control, a layout widget used to display items in a horizontally scrolling list.
 ms.prod: xamarin
 ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android

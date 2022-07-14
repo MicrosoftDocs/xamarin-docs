@@ -5,7 +5,7 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
-author: maddyleger1
+author: maddymontaquila
 ms.author: maleger
 ms.date: 03/16/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
