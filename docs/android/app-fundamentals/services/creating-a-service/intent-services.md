@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
+description: Learn how the IntentService provides an Android specific implementation of this pattern and will manage queueing work.
 ---
 
 # Intent Services in Xamarin.Android

@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 no-loc: [Objective-C]
+description: Learn how this runtime error is triggered when folders are missing from the .xcarchive for IPA creation.
 ---
 
 # Runtime error: The assembly mscorlib.dll was not found or could not be loaded

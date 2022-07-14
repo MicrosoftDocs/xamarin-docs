@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
+description: Learn how to use a Toolbar on versions of Android earlier than Android 5.0 Lollipop with supporting information.
 ---
 
 # Toolbar Compatibility

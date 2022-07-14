@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016
+description: Learn how to configure a Xamarin.Android application to use SQLite as well as how to store database files in internal or external storage.
 ---
 
 # Configuration

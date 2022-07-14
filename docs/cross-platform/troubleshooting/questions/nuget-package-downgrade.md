@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
 no-loc: [Objective-C]
+description: Learn how to downgrade a NuGet package on Visual Studios, including Visual Studio for Mac, with supporting information and examples.
 ---
 
 # How do I downgrade a NuGet package?

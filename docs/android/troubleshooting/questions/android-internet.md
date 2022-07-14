@@ -7,6 +7,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
+description: Learn how to get an Android release build to connect to the internet through the manifest editor or the manifest's source code.
 ---
 
 # Why can't my Android release build connect to the Internet?

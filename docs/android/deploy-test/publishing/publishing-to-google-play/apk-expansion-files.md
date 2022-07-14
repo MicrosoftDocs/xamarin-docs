@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
+description: Learn how APK Expansion Files go along with an APK in order to overcome maximum Android app size limits imposed by Google Play.
 ---
 
 # APK Expansion Files

@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
+description: Learn how to create, start, and register foreground services for Android with supporting information and screenshots.
 ---
 
 # Foreground Services

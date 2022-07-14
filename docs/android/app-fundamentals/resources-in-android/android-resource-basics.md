@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/01/2018
+description: Learn the Android Resource Basics, including user interface layouts in the form of XML files and the five files that make up the default resources.
 ---
 
 # Android Resource Basics

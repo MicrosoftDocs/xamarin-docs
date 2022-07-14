@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
+description: Learn how the Android Callable Wrappers for Xamarin.Android are required whenever the Android runtime invokes managed code.
 ---
 
 # Android Callable Wrappers for Xamarin.Android

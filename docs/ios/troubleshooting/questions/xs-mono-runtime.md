@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/31/2017
 no-loc: [Objective-C]
+description: Learn how to temporarily or permanently set Mono Runtime environment variables for iOS projects in Xamarin Studio.
 ---
 
 # How do I set Mono Runtime environment variables for iOS projects in Xamarin Studio?

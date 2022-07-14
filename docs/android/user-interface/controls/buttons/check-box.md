@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
+description: Learn how to create a checkbox for selecting items using the CheckBox widget and how to add the CheckBox element.
 ---
 
 # CheckBox

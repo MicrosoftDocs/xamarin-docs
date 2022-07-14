@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
 no-loc: [Objective-C]
+description: Learn how to use Visual Studio to use the configuration manager to determine which projects in a solution are included in a build or development configuration.
 ---
 
 # Why doesn't Visual Studio include my referenced library project in my build?

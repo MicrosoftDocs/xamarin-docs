@@ -8,6 +8,7 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+description: Learn how to resolve the Android build error for LinkAssembly failures by setting the Target Framework to the latest installed platform.
 ---
 
 # Android build error – The LinkAssemblies task failed unexpectedly

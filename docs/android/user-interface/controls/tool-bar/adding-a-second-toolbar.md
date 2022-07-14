@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
+description: Learn how the Toolbar is created, customized, duplicated, and can be used multiple times within an Activity.
 ---
 
 # Adding a Second Toolbar

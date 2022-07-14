@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
+description: Learn the basics for the creation, setup, and use of the Xamarin.Android Spinner with supporting information and screenshots.
 ---
 
 # Xamarin.Android Spinner

@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2017
 no-loc: [Objective-C]
+description: Learn how to collect the current call stacks of the Visual Studio process with supporting information and screenshots.
 ---
 
 # How do I collect the current call stacks of the Visual Studio process?

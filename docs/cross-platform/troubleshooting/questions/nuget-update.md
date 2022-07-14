@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
 no-loc: [Objective-C]
+description: Learn how to update and find extensions and add-ins for NuGet via the Updates tab in the NuGet Package Manager.
 ---
 
 # How can I update NuGet?

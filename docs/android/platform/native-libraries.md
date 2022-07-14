@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
+description: Learn how to use, debug, and deploy Native Libaries via the standard PInvoke mechanism on Xamarin.Android.
 ---
 
 # Using Native Libraries

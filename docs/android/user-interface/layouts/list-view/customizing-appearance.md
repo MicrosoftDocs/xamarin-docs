@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
+description: Learn how the appearance of a ListView is dictated by the layout of the displayed rows and how a different row layout must be used to change that appearance.
 ---
 
 # Customizing a ListView's Appearance with Xamarin.Android

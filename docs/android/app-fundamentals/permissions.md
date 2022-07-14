@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
+description: Learn how to add and check for permissions, the differences in how permissions work, and how to perform run-time permission checks in Xamarin.Android. 
 ---
 
 # Permissions In Xamarin.Android

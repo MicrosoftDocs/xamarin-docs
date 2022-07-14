@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
+description: Learn how to replace an app's default action bar with a customized Toolbar that can add brand information and custom views.
 ---
 
 # Replacing the Action Bar

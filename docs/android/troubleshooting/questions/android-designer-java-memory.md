@@ -7,6 +7,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
+description: Learn how to adjust the Java memory parameters for the Android designer and how these parameters can be customized.
 ---
 
 # Adjusting Java memory parameters for the Android designer

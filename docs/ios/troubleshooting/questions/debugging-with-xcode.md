@@ -8,6 +8,7 @@ author: migueldeicaza
 ms.author: miguel
 ms.date: 02/22/2018
 no-loc: [Objective-C]
+description: Learn how to debug Xamarin.iOS apps with Xcode with supporting screenshots and walk through information.
 ---
 # Debugging Xamarin.iOS apps with Xcode
 

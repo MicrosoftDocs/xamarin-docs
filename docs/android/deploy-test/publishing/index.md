@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
+description: Learn how to prepare an application for publication and distribution after it has been created with Xamarin.Android. 
 ---
 
 # Publishing an Application

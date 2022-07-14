@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017
+description: Learn how to populate a Xamarin.Android ListView and expose a ListAdapter property to supply the row views to display via an adapter.
 ---
 
 # Populating a Xamarin.Android ListView with data

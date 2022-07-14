@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
+description: Learn how Android can target a more specific device or run-time configuration as an alternate resource.
 ---
 
 # Alternate Resources

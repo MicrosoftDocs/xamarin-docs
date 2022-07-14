@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2018
+description: Learn how to update, use, and navigate between user profiles as well as how to request and manage permissions. 
 ---
 
 # User Profile

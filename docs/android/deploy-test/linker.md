@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
+description: Learn how to use Xamarin.Android applications to use a linker to reduce the size of an application with supporting information.
 ---
 
 # Linking on Android
