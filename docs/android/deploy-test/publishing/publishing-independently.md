@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
+description: Learn how to publish independently with other publishing methods and licensing levels and without using any of the existing Android marketplaces.
 ---
 
 # Publishing Independently

@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018
+description: Learn how specialized fragment classes, including ListFragment, DialogFragment, and PreferenceFragment are provided by the Fragments API.
 ---
 
 # Specialized Fragment Classes

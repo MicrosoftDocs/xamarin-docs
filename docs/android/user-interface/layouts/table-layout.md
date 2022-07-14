@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/08/2020
+description: Learn how Xamarin.Android TableLayout is a ViewGroup that displays child View elements in rows and columns.
 ---
 
 # Xamarin.Android TableLayout

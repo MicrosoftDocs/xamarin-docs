@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 no-loc: [Objective-C]
+description:  Learn how to work around the Error MT1009 issue in Xamarin.iOS 7.2.6 by opening the Terminal.app and running the stated command.
 ---
 
 # Error MT1009: Could not copy the assembly

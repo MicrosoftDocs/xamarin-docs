@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 12/20/2017
+description: Learn how Android applications function within Google Play and Google Licensing Services with supporting information and images.
 ---
 
 # Google Licensing Services

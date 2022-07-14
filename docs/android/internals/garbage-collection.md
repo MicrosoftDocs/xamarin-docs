@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
+description: Learn about aspects of the Garbage collection including Cross-VM Object Collections, Object Cycles, Minor and Major Collections, Configuration and more.
 ---
 
 # Garbage Collection

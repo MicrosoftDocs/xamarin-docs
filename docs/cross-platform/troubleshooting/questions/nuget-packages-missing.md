@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
 no-loc: [Objective-C]
+description: Learn how to fix the missing packages error that occurs after updating NuGet packages by deleting elements that reference the old version number.
 ---
 
 # Missing packages error after updating NuGet packages

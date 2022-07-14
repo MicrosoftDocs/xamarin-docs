@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
+description: Learn how Xamarin.Android WebView allows you to create your own window for viewing web pages or develop a complete browser.
 ---
 
 # Xamarin.Android Web View

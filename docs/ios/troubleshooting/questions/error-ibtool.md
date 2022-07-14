@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 no-loc: [Objective-C]
+description: Learn how to recognize and work around the IBTool Error by managing properties in code, moving images to the top resources folder, and setting the LogicalName.
 ---
 
 # IBTool Error: The operation couldn’t be completed.

@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 11/05/2018
+description: Learn how to run the Android emulator from the command line by using the emulator tool provided by the Android SDK.
 ---
 
 # Command Line Emulator

@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
+description: Learn the basics of publishing to Google Play including the size constraints and the necessary requirements and fees.
 ---
 
 # Publishing to Google Play

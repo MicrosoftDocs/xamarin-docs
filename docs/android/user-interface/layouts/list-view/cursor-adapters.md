@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/25/2017
+description: Learn how using CursorAdapters with Xamarin.Android provides a way to scroll through long lists of data that are stored in SQLite.
 ---
 
 # Using CursorAdapters with Xamarin.Android

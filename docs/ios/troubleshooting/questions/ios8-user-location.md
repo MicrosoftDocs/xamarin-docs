@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 no-loc: [Objective-C]
+description: Learn how to resolve a User Location not working in iOS 8 within a text editor and with the MainViewController.cs.
 ---
 
 # User Location not working in iOS 8

@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/28/2017
+description: Learn the basics of using a database including when to use it and what advantages it brings to mobile apps.
 ---
 # Introduction
 

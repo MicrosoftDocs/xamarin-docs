@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
+description: Learn how to use and access a ContentProvider with Xamarin.Android, allowing for the access of data exposed by other applications.
 ---
 
 # Using a ContentProvider with Xamarin.Android

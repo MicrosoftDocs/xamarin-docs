@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017
+description: Learn about Xamarin.Android ListView parts and functionality with supporting definitions and screenshots.
 ---
 
 # Xamarin.Android ListView Parts and Functionality

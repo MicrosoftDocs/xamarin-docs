@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
+description: Learn how to manually upload an APK the first time it is submitted to Google Play with the following guide.
 ---
 
 # Manually Uploading the APK

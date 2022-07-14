@@ -6,6 +6,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
+description: Learn how the GridViewPager sample demonstrates how to implement the 2D picker navigation pattern for Android Wear.
 ---
 
 # GridViewPager

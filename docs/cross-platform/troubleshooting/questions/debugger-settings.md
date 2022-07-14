@@ -7,6 +7,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
 no-loc: [Objective-C]
+description: Learn what steps to take to check environment settings in order for the debugger to work as expected.
 ---
 
 # What project settings are required for the debugger?

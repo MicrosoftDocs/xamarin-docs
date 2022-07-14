@@ -8,6 +8,7 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 no-loc: [Objective-C]
+description: Learn about the issues of previous versions of Xamarin that could cause the IPA file on Windows to be 0 bytes.
 ---
 
 # IPA file is 0 bytes

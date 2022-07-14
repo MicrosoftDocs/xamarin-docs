@@ -7,6 +7,7 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
+description: Learn basic troubleshooting tips for issues concerning Android.Support.v7.AppCompat - No resource found that matches the given name.
 ---
 
 # Android.Support.v7.AppCompat - No resource found that matches the given name: attr 'android:actionModeShareDrawable'
