@@ -1,5 +1,6 @@
 ---
 title: "Is it possible to create a .xcarchive archive from Visual Studio?"
+description: Learn how to create a .xcarchive archive from Visual Studio. As of Xamarin 4.x, it is now possible to create a .xcarchive from Windows.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 417D84FB-1BA9-4DB9-A683-66E960BA3D0D

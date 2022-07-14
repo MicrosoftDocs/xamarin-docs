@@ -1,5 +1,6 @@
 ---
 title: "Is it possible to connect to Android emulators running on a Mac from a Windows VM?"
+description: Learn about connecting to Android emulators running on a Mac from a Windows VM by following the steps listed in this article.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45

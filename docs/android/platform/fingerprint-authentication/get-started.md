@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with Fingerprint Authentication"
+description: Learn about getting started with or configuring fingerprint authentication in a Xamarin.Android project.
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android

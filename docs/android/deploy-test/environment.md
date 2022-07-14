@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Android Environment"
+description: Learn about the Xamarin.Android environment. The execution environment is the set of variables and system properties that influence program execution.
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
@@ -59,13 +60,13 @@ the `$(AndroidEnvironment)` Build action.
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 The assembly-qualified type which must inherit from
-[HttpMessageHandler](/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1)
+[HttpMessageHandler](/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1&preserve-view=true)
 and is constructed from the
-[`HttpClient()` default constructor](/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
+[`HttpClient()` default constructor](/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor&preserve-view=true).
 
 In Xamarin.Android 6.1, this environment variable is not set by
 default, and
-[HttpClientHandler](/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)
+[HttpClientHandler](/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1&preserve-view=true)
 will be used.
 
 Alternatively, the value `Xamarin.Android.Net.AndroidClientHandler` may

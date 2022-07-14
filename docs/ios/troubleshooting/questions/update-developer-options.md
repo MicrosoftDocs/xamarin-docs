@@ -1,5 +1,6 @@
 ---
 title: "How can I reenable developer options after updating iOS?"
+description: Learn how to reenable developer options after updating iOS. An iOS bug may cause the developer options to disappear after updating iOS versions.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F38BD21E-0C21-43FF-80A6-BB4A88DB88A5

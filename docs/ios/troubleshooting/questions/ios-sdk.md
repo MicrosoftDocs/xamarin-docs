@@ -1,5 +1,6 @@
 ---
 title: "Where can I set my iOS SDK locations?"
+description: Learn about setting iOS SDK locations. Xamarin.iOS & the Apple SDK (Xcode) will have the default location when the location box is left blank.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9D2AA00F-1EBD-40AA-87BF-0D7418E4B9EA

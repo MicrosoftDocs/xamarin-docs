@@ -1,5 +1,6 @@
 ---
 title: "GDB"
+description: Learn about Xamarin.Android GDB. Xamarin.Android 4.10 introduced partial support for using gdb by using the _Gdb MSBuild target. 
 ms.prod: xamarin
 ms.assetid: CD0BE462-FA38-4881-B481-82AD05B3B8FE
 ms.technology: xamarin-android

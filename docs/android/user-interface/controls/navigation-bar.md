@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Android Navigation Bar"
+description: Learn about the Xamarin.Android navigation bar, which provides navigation controls on devices that don't include hardware buttons for home, back, and menu.
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android

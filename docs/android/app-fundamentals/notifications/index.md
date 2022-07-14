@@ -1,5 +1,6 @@
 ---
 title: "Notifications in Xamarin.Android"
+description: Learn about the UI elements of an Android notification and the APIs involved with creating and displaying a notification.
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
