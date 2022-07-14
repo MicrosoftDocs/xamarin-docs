@@ -55,7 +55,7 @@ public class BasicBitmapsPage : ContentPage
 
 ## Loading a Bitmap from the Web
 
-To load a bitmap based on a URL, you can use the [`HttpClient`](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) class. You should instantiate only one instance of `HttpClient` and reuse it, so store it as a field:
+To load a bitmap based on a URL, you can use the [`HttpClient`](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0&preserve-view=true) class. You should instantiate only one instance of `HttpClient` and reuse it, so store it as a field:
 
 ```csharp
 HttpClient httpClient = new HttpClient();

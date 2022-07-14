@@ -266,9 +266,9 @@ public static string DatabaseFilePath {
 }
 ```
 
-Depending on the platform, the output will be “<app
-path>/Library/TaskDB.db3” for iOS, “<app
-path>/Documents/TaskDB.db3” for Android or just “TaskDB.db3” for
+Depending on the platform, the output will be “\<app
+path\>/Library/TaskDB.db3” for iOS, “\<app
+path\>/Documents/TaskDB.db3” for Android or just “TaskDB.db3” for
 Windows Phone.
 
 ### Business Layer (BL)

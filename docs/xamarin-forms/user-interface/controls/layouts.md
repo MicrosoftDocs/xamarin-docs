@@ -52,4 +52,4 @@ These classes derive from [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
 - [Xamarin.Forms FormsGallery sample](/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.Forms Samples](/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Xamarin.Forms API Documentation](/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.Forms API Documentation](/dotnet/api/xamarin.forms?view=xamarin-forms&preserve-view=true)

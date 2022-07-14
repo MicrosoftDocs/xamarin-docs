@@ -62,7 +62,7 @@ Now that you’ve found the Objective-C selector you need to invoke, the next st
     - Right-click `NSTableView`, go to declaration to Assembly Browser
     - Search for the selector in question
 
-3. You can use the [Xamarin.Mac API online documentation](/dotnet/api/?view=xamarinmac-3.0) .
+3. You can use the [Xamarin.Mac API online documentation](/dotnet/api/?view=xamarinmac-3.0&preserve-view=true) .
 
 4. Miguel provides a "Rosetta Stone" view of the Xamarin.Mac APIs [here](https://tirania.org/tmp/rosetta.html) that you can search through for a given API. If your API is not AppKit or macOS specific, you may find it there.
 

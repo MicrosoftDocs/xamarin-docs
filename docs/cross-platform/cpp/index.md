@@ -85,7 +85,7 @@ In order to follow along, the developer will need:
 
 ## Creating the native libraries (Stage 1)
 
-The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017&preserve-view=true).
 
 This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) or can be [downloaded](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) directly.
 
@@ -288,7 +288,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
     ```
 
     > [!NOTE]
-    > A [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) is the preferred way to work with unmanaged resources in managed code. This abstracts away a lot of boilerplate code related to critical finalization and object lifecycle. The owner of this handle can subsequently treat it like any other managed resource and will not have to implement the full [Disposable pattern](/dotnet/standard/garbage-collection/implementing-dispose).
+    > A [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2&preserve-view=true) is the preferred way to work with unmanaged resources in managed code. This abstracts away a lot of boilerplate code related to critical finalization and object lifecycle. The owner of this handle can subsequently treat it like any other managed resource and will not have to implement the full [Disposable pattern](/dotnet/standard/garbage-collection/implementing-dispose).
 
 #### Creating the internal wrapper class
 
@@ -597,9 +597,9 @@ The simplest form of NuGet feed is a local directory:
 
 ### [OPTIONAL] Using a private NuGet feed with Azure DevOps
 
-A more robust technique is described in [Get started with NuGet packages in Azure DevOps](/azure/devops/artifacts/get-started-nuget?tabs=new-nav&view=vsts#publish-a-package), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
+A more robust technique is described in [Get started with NuGet packages in Azure DevOps](/azure/devops/artifacts/get-started-nuget?tabs=new-nav&view=vsts#publish-a-package&preserve-view=true), which shows how to create a private feed and push the package (generated in the previous step) to that feed.
 
-It is ideal to have this workflow fully automated, for example using [Azure Pipelines](/azure/devops/pipelines/index?view=vsts). For more information, see [Get started with Azure Pipelines](/azure/devops/pipelines/get-started/index?view=vsts).
+It is ideal to have this workflow fully automated, for example using [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true). For more information, see [Get started with Azure Pipelines](/azure/devops/pipelines/get-started/index?view=vsts&preserve-view=true).
 
 ## Consuming the .NET wrapper from a Xamarin.Forms app
 

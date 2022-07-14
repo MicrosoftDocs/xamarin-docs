@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: B563ADE9-D0E3-4BC3-A288-66D2296BE706
 ms.technology: xamarin-ios
 author: alexeystrakh
-ms.author: alstrakh
+ms.author: dabritch
 ms.date: 02/11/2020
 no-loc: [Objective-C]
 ---

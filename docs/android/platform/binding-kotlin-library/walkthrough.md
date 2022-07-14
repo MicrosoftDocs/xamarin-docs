@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 5E45451F-514F-4F2B-A6E8-599ED2EFDA2C
 ms.technology: xamarin-android
 author: alexeystrakh
-ms.author: alstrakh
+ms.author: dabritch
 ms.date: 02/11/2020
 ---
 
