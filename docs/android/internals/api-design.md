@@ -1,5 +1,6 @@
 ---
 title: "Xamarin.Android API Design Principles"
+description: Learn about the Xamarin.Android API design principles.
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
@@ -367,7 +368,7 @@ The *Parcelable* interface contains methods, nested types, and
 constants. The *Parcelable* interface methods are placed into the
 [Android.OS.IParcelable](xref:Android.OS.IParcelable) interface.
 The *Parcelable* interface constants are placed into the
-[Android.OS.ParcelableConsts](xref:Android.OS.ParcelableConsts)
+[Android.OS.ParcelableConsts](xref:Android.OS.Parcelable)
 type. The nested
 [android.os.Parcelable.ClassLoaderCreator\<T>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
 and
@@ -419,9 +420,9 @@ generated. For example, the
 interface implements the
 [android.provider.MediaStore.MediaColumns](xref:Android.Provider.MediaStore.MediaColumns)
 interface. However, prior to 1.9, the
-[Android.Provider.MediaStore.Video.VideoColumnsConsts](xref:Android.Provider.MediaStore.Video.VideoColumnsConsts)
+[Android.Provider.MediaStore.Video.VideoColumnsConsts](xref:Android.Provider.MediaStore.Video.VideoColumns)
 type has no way of accessing the constants declared on
-[Android.Provider.MediaStore.MediaColumnsConsts](xref:Android.Provider.MediaStore.MediaColumnsConsts).
+[Android.Provider.MediaStore.MediaColumnsConsts](xref:Android.Provider.MediaStore.MediaColumns).
 As a result, the Java expression *MediaStore.Video.VideoColumns.TITLE*
 needs to be bound to the C# expression
 *MediaStore.Video.MediaColumnsConsts.Title* which is hard to discover

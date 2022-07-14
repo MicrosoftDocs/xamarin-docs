@@ -1,5 +1,6 @@
 ---
 title: "Deploy checkboxes disabled in Configuration Manager"
+description: Learn how to deploy checkboxes that were disabled in Configuration Manager.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: aaf675cd-d885-4dac-9754-77dbcaea3be9

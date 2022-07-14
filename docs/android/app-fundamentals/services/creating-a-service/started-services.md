@@ -1,5 +1,6 @@
 ---
 title: "Started Services with Xamarin.Android"
+description: Learn how to use Started Services in Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android

@@ -1,5 +1,6 @@
 ---
 title: "Working with Screen Sizes in Xamarin.Android and Wear OS"
+description: Learn how to work with various screen sizes in Xamarin.Android and Wear OS.
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android

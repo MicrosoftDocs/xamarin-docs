@@ -1,5 +1,6 @@
 ---
 title: "Smarter Xamarin Android Support v4 / v13 NuGet Packages"
+description: Learn about the support libraries in the Xamarin Android Support v4 and Xamarin Android Support v13 NuGet packages.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C

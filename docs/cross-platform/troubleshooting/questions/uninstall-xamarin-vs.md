@@ -1,5 +1,6 @@
 ---
 title: "How do I perform a thorough uninstall for Xamarin for Visual Studio?"
+description: Learn how to execute a complete uninstall for Xamarin in Visual Studio.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4

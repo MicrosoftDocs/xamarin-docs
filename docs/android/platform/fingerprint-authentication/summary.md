@@ -1,5 +1,6 @@
 ---
 title: "Fingerprint Authentication Guidance"
+description: Review the guidance for using fingerprint authentication allowing a Xamarin.Android application to verify users.
 ms.prod: xamarin
 ms.assetid: B40332CC-8123-4150-B47E-996214388842
 ms.technology: xamarin-android

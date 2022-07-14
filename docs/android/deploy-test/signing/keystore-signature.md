@@ -1,5 +1,6 @@
 ---
 title: "Finding your Keystore's Signature"
+description: Learn how to locate the keystore signature in Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android

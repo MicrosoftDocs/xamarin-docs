@@ -1,5 +1,6 @@
 ---
 title: "Application Localization and String Resources"
+description: Learn about the application localization and string resources in the Android operating system.
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android

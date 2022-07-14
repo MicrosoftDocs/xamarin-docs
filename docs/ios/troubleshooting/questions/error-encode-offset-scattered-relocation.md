@@ -1,5 +1,6 @@
 ---
 title: "Compile error: Can not encode offset X in resulting scattered relocation"
+description: Learn about the compile error message that is received when the final binary is too large for the native toolchain.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 84158C42-FE79-415A-A44A-D48C9E5E6760

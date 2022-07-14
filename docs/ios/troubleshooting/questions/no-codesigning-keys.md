@@ -1,5 +1,6 @@
 ---
 title: "Why does my iOS build fail with: no valid iPhone code signing keys found in keychain?"
+description: Learn why the "no valid iPhone code signing keys found in keychain" error occurs when valid code-signing credentials are not found.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0

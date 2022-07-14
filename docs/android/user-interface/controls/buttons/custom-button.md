@@ -1,5 +1,6 @@
 ---
 title: "Custom Button"
+description: Learn how to use the Button widget to create a button with a custom image to use in place of text.
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android

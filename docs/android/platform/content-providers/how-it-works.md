@@ -1,5 +1,6 @@
 ---
 title: "How Content Providers Work"
+description: Learn how Content Providers work in an Android operating system.
 ms.prod: xamarin
 ms.assetid: B9E2EF89-7EBE-45F5-1ED9-7D2C70BE792C
 ms.technology: xamarin-android

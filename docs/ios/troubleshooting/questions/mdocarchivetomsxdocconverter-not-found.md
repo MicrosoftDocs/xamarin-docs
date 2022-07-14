@@ -1,5 +1,6 @@
 ---
 title: "MDocArchiveToMsxDocConverter.exe not found rver.BaseCommand.OnRequest"
+description: Learn about the MDocArchiveToMsxDocConverter.exe not found rver.BaseCommand.OnRequest error message.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5AC6AC4-0E7C-4746-A7CF-872F0E75AFF4
