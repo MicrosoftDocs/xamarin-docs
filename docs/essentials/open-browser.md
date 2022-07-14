@@ -76,7 +76,7 @@ public class BrowserTest
 }
 ```
 
-This method returns after the browser was _launched_ and not necessarily _closed_ by the user.  The `bool` result indicates whether the launching was successful or not.
+This method returns after the browser was _launched_ and not necessarily _closed_ by the user.
 
 ## Customization
 
