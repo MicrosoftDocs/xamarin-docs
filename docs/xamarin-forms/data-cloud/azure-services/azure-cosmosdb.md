@@ -225,4 +225,4 @@ This article explained how to use the Azure Cosmos DB .NET Standard client libra
 - [Todo Azure Cosmos DB (sample)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Azure Cosmos DB Documentation](/azure/cosmos-db/)
 - [Azure Cosmos DB .NET Standard client library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)
+- [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet&preserve-view=true)

@@ -36,4 +36,4 @@ In addition to the controls supplied with Xamarin.Forms, third-party controls ar
 
 - [Xamarin.Forms FormsGallery sample](/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.Forms Controls Class Hierarchy](~/xamarin-forms/internals/class-hierarchy.md)
-- [API Documentation](/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [API Documentation](/dotnet/api/xamarin.forms?view=xamarin-forms&preserve-view=true)
