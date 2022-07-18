@@ -216,7 +216,7 @@ yourself.
 The following screenshot shows two view controllers on the design surface with no segue between them. The next section walks
 through how that transition can be set up in code.
 
-1. Add an _Empty iPhone Storyboard_ to an existing project project:
+1. Add an _Empty iPhone Storyboard_ to an existing project:
 
     [![Adding storyboard](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
 
