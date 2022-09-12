@@ -83,7 +83,7 @@ You might want to distribute a single executable to your users.  To do this, you
 First, make sure that your application compiles and runs.   Once you are satisfied with the results, you can run the following command from the command line:
 
 ```
-$ mkbundle --simple -o /tmp/consoleapp consoleapp.exe --library libxammac.dylib --config /Library/Frameworks/Mono.framework/Versions/Current/etc/mono/config --machine-config /Library/Frameworks/Mono.framework/Versions/Current//etc/mono/4.5/machine.config
+$ mkbundle --simple -o /tmp/consoleapp consoleapp.exe --library libxammac.dylib --config /Library/Frameworks/Mono.framework/Versions/Current/etc/mono/config --machine-config /Library/Frameworks/Mono.framework/Versions/Current/etc/mono/4.5/machine.config
 [Output from the bundling tool]
 $ _
 ```
@@ -97,8 +97,8 @@ The command line manually specified the **machine.config** file to use, and a sy
 You do not need a full project to create a self-contained Xamarin.Mac application, you can also use simple Unix makefiles to get the job done.   The following example shows how you can setup a makefile for a simple command line application:
 
 ```
-XAMMAC_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current//lib/x86_64/full/
-DYLD=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current//lib
+XAMMAC_PATH=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/x86_64/full/
+DYLD=/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib
 MONODIR=/Library/Frameworks/Mono.framework/Versions/Current/etc/mono
 
 all: consoleapp.exe
