@@ -87,7 +87,7 @@ The Digital Asset File contains the meta-data necessary for Android to verify th
 
 - `namespace` &ndash; the namespace of the Android application.
 - `package_name` &ndash; the package name of the Android application (declared in the application manifest).
-- `sha256_cert_fingerprints` &ndash; the SHA256 fingerprints of the signed application. Please see the guide [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) for more information on how to obtain the SHA1 fingerprint of an application.
+- `sha256_cert_fingerprints` &ndash; the SHA256 fingerprints of the signed application. Please see the guide [Finding your Keystore's Signature](~/android/deploy-test/signing/keystore-signature.md) for more information on how to obtain the SHA256 fingerprint of an application.
 
 The following snippet is an example of **assetlinks.json** with a
 single application listed:
@@ -95,13 +95,13 @@ single application listed:
 ```json
 [
    {
-      "relation":[
+      "relation": [
          "delegate_permission/common.handle_all_urls"
       ],
-      "target":{
-         "namespace":"android_app",
-         "package_name":"com.example",
-         "sha256_cert_fingerprints":[
+      "target": {
+         "namespace": "android_app",
+         "package_name": "com.example",
+         "sha256_cert_fingerprints": [
             "14:6D:E9:83:C5:73:06:50:D8:EE:B9:95:2F:34:FC:64:16:A0:83:42:E6:1D:BE:A8:8A:04:96:B2:3F:CF:44:E5"
          ]
       }
@@ -117,25 +117,25 @@ applications:
 ```json
 [
    {
-      "relation":[
+      "relation": [
          "delegate_permission/common.handle_all_urls"
       ],
-      "target":{
-         "namespace":"android_app",
-         "package_name":"example.com.puppies.app",
-         "sha256_cert_fingerprints":[
+      "target": {
+         "namespace": "android_app",
+         "package_name": "example.com.puppies.app",
+         "sha256_cert_fingerprints": [
             "14:6D:E9:83:C5:73:06:50:D8:EE:B9:95:2F:34:FC:64:16:A0:83:42:E6:1D:BE:A8:8A:04:96:B2:3F:CF:44:E5"
          ]
       }
    },
    {
-      "relation":[
+      "relation": [
          "delegate_permission/common.handle_all_urls"
       ],
-      "target":{
-         "namespace":"android_app",
-         "package_name":"example.com.monkeys.app",
-         "sha256_cert_fingerprints":[
+      "target": {
+         "namespace": "android_app",
+         "package_name": "example.com.monkeys.app",
+         "sha256_cert_fingerprints": [
             "14:6D:E9:83:C5:73:06:50:D8:EE:B9:95:2F:34:FC:64:16:A0:83:42:E6:1D:BE:A8:8A:04:96:B2:3F:CF:44:E5"
          ]
       }
