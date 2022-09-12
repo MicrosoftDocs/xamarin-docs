@@ -105,7 +105,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-The [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
+The [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Device.Styles`](xref:Xamarin.Forms.Device.Styles) class.
 
 ## Accessibility
 
