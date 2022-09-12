@@ -22,7 +22,7 @@ To make corrections and small updates - you can click the **Edit** button on any
 
 5. Make any necessary updates to your branch as discussed with the team via the PR.
 
-6. The maintainers will merge your PR once feedback has been applied and your change looks good. It will appear on docs.microsoft.com soon after.
+6. The maintainers will merge your PR once feedback has been applied and your change looks good. It will be published soon after.
 
 > [!NOTE]
 > If your PR is addressing an existing issue, add the `Fixes #Issue_Number` keyword to the commit message or PR description, so the issue can be automatically closed when the PR is merged. For more information, see [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
@@ -55,7 +55,7 @@ The Xamarin team will review your PR and let you know (via PR feedback) if the c
 
 The maintainers will then merge your PR once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from master branch into the live site and then you'll be able to see your contribution at https://docs.microsoft.com/xamarin/.
+On a certain cadence, we push all commits from master branch into the live site and then you'll be able to see your contribution at [Xamarin documentation](https://docs.microsoft.com/xamarin/).
 
 ### Contributing to International content
 

@@ -13,7 +13,7 @@ no-loc: [Objective-C]
 # Installing and Configuring Xamarin.iOS on a Mac
 
 > [!NOTE]
-> This content has moved to the Visual Studio for Mac install guides on [docs.microsoft.com](/visualstudio/mac/installation).
+> This content has moved to the [Visual Studio for Mac install guides](/visualstudio/mac/installation).
 
 ## Related Links
 

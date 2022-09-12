@@ -65,7 +65,7 @@ Using await does not block the caller’s thread – rather control is returned 
 
 When the task completes, the method resumes executing at the same point in the code. This includes returning to the try scope of a try-catch-finally block (if one is present). await cannot be used in a catch or finally block.
 
-Read more about [await](/dotnet/csharp/language-reference/keywords/await) on Microsoft Docs.
+Read more about [await](/dotnet/csharp/language-reference/keywords/await).
 
 ## Exception Handling
 

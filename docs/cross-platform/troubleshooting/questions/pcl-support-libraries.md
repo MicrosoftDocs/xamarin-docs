@@ -12,7 +12,7 @@ no-loc: [Objective-C]
 
 # How can I view what libraries are supported in a PCL?
 
-- You can find an overview of the various features supported by the various PCL target platforms under the *Supported Features* portion of this page: [https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
+- You can find an overview of the various features supported by the various PCL target platforms under the *Supported Features* portion of this page in [Cross-platform development with the Portable Class Library](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
 
 - Another option is to use the [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b) to assess whether your existing library can be converted to a PCL profile.
 
