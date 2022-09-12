@@ -21,7 +21,7 @@ This guide explains how to use the Xamarin Android SDK Manager in
 Visual Studio and Visual Studio for Mac.
 
 > [!NOTE]
-> This guide applies to Visual Studio 2019, Visual Studio 2017, and Visual Studio for Mac.  
+> This guide applies to Visual Studio 2022, Visual Studio 2019, Visual Studio 2017, and Visual Studio for Mac.  
 
 The Xamarin Android SDK Manager (installed as part of the **Mobile
 development with .NET** workload) helps you download the latest Android
@@ -34,6 +34,8 @@ replaces Google's standalone SDK Manager, which has been deprecated.
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
+- Visual Studio 2022 Community, Professional, or Enterprise.
+- 
 - Visual Studio 2019 Community, Professional, or Enterprise.
 
 - OR Visual Studio 2017 (Community, Professional, or Enterprise edition). Visual
