@@ -221,7 +221,7 @@ Font icons can be displayed by Xamarin.Forms applications by specifying the font
 - `FontFamily` – a `string` representing the font family to which the font icon belongs.
 - `Color` – an optional [`Color`](xref:Xamarin.Forms.Color) value to be used when displaying the font icon.
 
-This data is used to create a PNG, which can be displayed by any view that can display an `ImageSource`. This approach permits font icons, such as emojis, to be displayed by multiple views, as opposed to limiting font icon display to a single text presenting view, such as a [`Label`](xref:Xamarin.Forms.Label).
+The font data can be displayed by any view that can display an `ImageSource`. This approach permits font icons, such as emojis, to be displayed by multiple views, as opposed to limiting font icon display to a single text presenting view, such as a [`Label`](xref:Xamarin.Forms.Label).
 
 > [!IMPORTANT]
 > Font icons can only currently be specified by their unicode character representation.
