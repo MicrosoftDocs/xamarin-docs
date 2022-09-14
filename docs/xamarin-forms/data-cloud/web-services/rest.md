@@ -195,7 +195,7 @@ If you are developing your REST web service locally with a framework such as ASP
 
 ## Related links
 
-- [Microsoft Learn: Create a web API with ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
+- [Create a web API with ASP.NET Core](/training/modules/build-web-api-aspnet-core/)
 - [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
 - [Attribute routing for REST APIs](/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#ar&preserve-view=true)
 - [TodoREST (sample)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
