@@ -90,8 +90,8 @@ how to use `GridViewPager` and `GridPagerAdapter` in a Wear app.
 
 Android Wear 2.0 adds a navigation drawer, an action drawer, and inline 
 action buttons to the Wear user interface. For more about Android Wear 
-2.0 user interface elements, see the Android 
-[Anatomy](https://www.google.com/design/spec-wear/system-overview/anatomy.html) 
+2.0 user interface elements, see the [Android 
+Anatomy](https://developer.android.com/training/wearables/user-interfaces) 
 topic. 
 
 ### Communications
@@ -252,12 +252,12 @@ see the Android
 
 Here are some examples of the devices that can run Android Wear:
 
-- [Motorola 360](https://moto360.motorola.com/)
+- [Motorola 360](https://www.motorola.com)
 - [LG G Watch](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
 - [LG G Watch R](https://www.lg.com/us/smartwatch/g-watch-r)
 - [Samsung Gear Live](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
 - [Sony SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-- [ASUS ZenWatch](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+- [ASUS ZenWatch](https://www.asus.com)
 
 ## Further Reading
 
