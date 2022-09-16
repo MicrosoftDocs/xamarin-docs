@@ -30,7 +30,7 @@ you use Xamarin.Android 7.0.
 [![Hero images of Android tablets and phones running Android Nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 For more information about Android 7.x APIs, see
-[Android 7.1 for Developers](https://developer.android.com/preview/api-overview.html).
+[Android API Reference](https://developer.android.com/reference).
 For a list of known Xamarin.Android 7.0 issues, please see the
 [release notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
