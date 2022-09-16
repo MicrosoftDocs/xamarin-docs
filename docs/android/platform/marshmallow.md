@@ -29,7 +29,7 @@ Xamarin.Android supports Android Marshmallow and includes:
     APIs for the new features described below; these APIs are available 
     to Xamarin.Android apps when you target API Level 23. For more 
     information about Android 6.0 APIs, see 
-    [Android 6.0 APIs](https://developer.android.com/preview/api-overview.html). 
+    [Android 6.0 APIs](https://developer.android.com/reference). 
 
 [![Hero images of tablets and phones running Marshmallow](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
@@ -252,7 +252,7 @@ On devices that support fingerprint scanning hardware, you can use the
 new `FingerPrintManager` class to authenticate a user.
 For more information about the fingerprint authentication feature
 in Android Marshmallow, see [Fingerprint
-Authentication](https://developer.android.com/preview/api-overview.html#fingerprint-authentication).
+Authentication](https://android-developers.googleblog.com/2015/10/new-in-android-samples-authenticating.html).
 
 Xamarin provides a sample app that illustrates how to use registered
 fingerprints to authenticate a user in your app:
@@ -289,7 +289,7 @@ method of the `KeyGenerator`. Use the `KeyGuardManager`'s
 `CreateConfirmDeviceCredentialIntent` method to re-authenticate
 the user from within your app. For more information about this
 new feature in Android Marshmallow, see [Confirm
-Credential](https://developer.android.com/preview/api-overview.html#confirm-credential).
+Credential](https://developer.android.com/about/versions/marshmallow/android-6.0#confirm-credential).
 
 Xamarin provides a sample app that illustrates how to use device credentials
 (such as PIN, pattern, or password) in your app:
@@ -429,7 +429,7 @@ Xamarin.Android development.
 
 - [Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
-- [Feature Overview](https://developer.android.com/preview/api-overview.html)
+- [Feature Overview](https://developer.android.com/reference)
 - [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
 - [RuntimePermissions (sample)](/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
 - [ConfirmCredential (sample)](/samples/xamarin/monodroid-samples/android-m-confirmcredential)
