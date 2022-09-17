@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     SKPaint paint = new SKPaint
     {
         Style = SKPaintStyle.Stroke,
-        Color = Color.Red.ToSKColor(),
+        Color = Colors.Red.ToSKColor(),
         StrokeWidth = 25
     };
     ...
