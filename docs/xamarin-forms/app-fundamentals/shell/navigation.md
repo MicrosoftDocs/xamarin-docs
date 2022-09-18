@@ -240,7 +240,7 @@ In this example, the [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem) prope
 
 The [`Tab`](xref:Xamarin.Forms.Tab) class defines a [`Stack`](xref:Xamarin.Forms.ShellSection.Stack) property, of type `IReadOnlyList<Page>`, which represents the current navigation stack within the `Tab`. The class also provides the following overridable navigation methods:
 
-- [`GetNavigationStack`](xref:Xamarin.Forms.ShellSection.GetNavigationStack*), returns `IReadOnlyList<Page`>, the current navigation stack.
+- [`GetNavigationStack`](xref:Xamarin.Forms.ShellSection.GetNavigationStack*), returns `IReadOnlyList<Page>`, the current navigation stack.
 - [`OnInsertPageBefore`](xref:Xamarin.Forms.ShellSection.OnInsertPageBefore*), that's called when `INavigation.InsertPageBefore` is called.
 - [`OnPopAsync`](xref:Xamarin.Forms.ShellSection.OnPopAsync*), returns `Task<Page>`, and is called when `INavigation.PopAsync` is called.
 - [`OnPopToRootAsync`](xref:Xamarin.Forms.ShellSection.OnPopToRootAsync*), returns `Task`, and is called when `INavigation.OnPopToRootAsync` is called.
@@ -283,7 +283,7 @@ The [`Shell`](xref:Xamarin.Forms.Shell) class also defines the [`Navigated`](xre
 |---|---|---|
 | [`Current`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Current)  | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | The URI of the current page. |
 | [`Previous`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Previous) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | The URI of the previous page. |
-| [`Source`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Source) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | The type of navigation that occurred. |
+| [`Source`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Source) | [`ShellNavigationSource`](xref:Xamarin.Forms.ShellNavigationState) | The type of navigation that occurred. |
 
 > [!IMPORTANT]
 > The `OnNavigating` method is called when the [`Navigating`](xref:Xamarin.Forms.Shell.Navigating) event fires. Similarly, the `OnNavigated` method is called when the [`Navigated`](xref:Xamarin.Forms.Shell.Navigated) event fires. Both methods can be overridden in your [`Shell`](xref:Xamarin.Forms.Shell) subclass to intercept navigation requests.
