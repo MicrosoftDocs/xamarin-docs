@@ -37,9 +37,9 @@ landingContent:
           - text: Publish Universal Windows Platform apps
             url: /windows/uwp/packaging/
 
-  - title: Microsoft Learn modules
+  - title: Learn modules
     linkLists:
       - linkListType: learn
         links:
           - text: Introduction to App Center
-            url: /learn/modules/intro-to-app-center/
+            url: /training/modules/intro-to-app-center/
