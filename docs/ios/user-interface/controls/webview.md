@@ -28,7 +28,7 @@ The code below can be used to launch a `WKWebView` in your Xamarin.iOS app:
 WKWebView webView = new WKWebView(View.Frame, new WKWebViewConfiguration());
 View.AddSubview(webView);
 
-var url = new NSUrl("https://docs.microsoft.com");
+var url = new NSUrl("https://learn.microsoft.com");
 var request = new NSUrlRequest(url);
 webView.LoadRequest(request);
 ```
@@ -66,7 +66,7 @@ This produces the following web view:
 It is also possible to open the mobile Safari app from within your app, by using the code below:
 
 ```csharp
-var url = new NSUrl("https://docs.microsoft.com");
+var url = new NSUrl("https://learn.microsoft.com");
 
 UIApplication.SharedApplication.OpenUrl(url);
 ```

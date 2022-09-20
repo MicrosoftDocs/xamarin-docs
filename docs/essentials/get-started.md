@@ -95,7 +95,7 @@ Xamarin.Essentials is available as a NuGet package and is included in every new 
 
 ## Xamarin.Essentials - Cross-Platform APIs for Mobile Apps (video)
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 
 ## Other Resources
 

@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the Xamarin documentation!
 
-This page covers the basic process for updating content in the [Xamarin documentation](https://docs.microsoft.com/xamarin).
+This page covers the basic process for updating content in the [Xamarin documentation](https://learn.microsoft.com/xamarin).
 
 - [Contributor License Agreement](LICENSE)
 
@@ -55,7 +55,7 @@ The Xamarin team will review your PR and let you know (via PR feedback) if the c
 
 The maintainers will then merge your PR once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from master branch into the live site and then you'll be able to see your contribution at [Xamarin documentation](https://docs.microsoft.com/xamarin/).
+On a certain cadence, we push all commits from master branch into the live site and then you'll be able to see your contribution at [Xamarin documentation](https://learn.microsoft.com/xamarin/).
 
 ### Contributing to International content
 

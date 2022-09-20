@@ -70,6 +70,6 @@ Here is a list of available conversions:
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Unit-Conversion-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Unit-Conversion-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

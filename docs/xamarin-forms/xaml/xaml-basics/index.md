@@ -60,6 +60,6 @@ When you're familiar with Xamarin.Forms and XML, start reading [Part 1. Getting 
 
 ## Related video
 
-> [!Video https://docs.microsoft.com/shows/xamarin-101/xamarinforms-ui-with-xaml-5-of-11/player]
+> [!Video https://learn.microsoft.com/shows/xamarin-101/xamarinforms-ui-with-xaml-5-of-11/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

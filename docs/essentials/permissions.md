@@ -271,6 +271,6 @@ Read more on the [App Capability Declaration](/windows/uwp/packaging/app-capabil
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Permissions-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Permissions-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

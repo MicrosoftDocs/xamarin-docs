@@ -17,7 +17,7 @@ _Get started building your first Azure Function that interacts with Xamarin.Form
 
 ## [Visual Studio 2019](#tab/windows)
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
 ## Step-by-step instructions
 
@@ -28,7 +28,7 @@ In addition to the video, you can follow these instructions to [build your first
 
 ## [Visual Studio 2017](#tab/win-vs2017)
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
 ## Step-by-step instructions
 
@@ -39,7 +39,7 @@ In addition to the video, you can follow these instructions to [build your first
 
 ## [Visual Studio for Mac](#tab/macos)
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-for-Mac/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-for-Mac/player]
 
 ## Step-by-step instructions
 

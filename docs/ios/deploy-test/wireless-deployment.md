@@ -106,6 +106,6 @@ Wireless debugging is automatically enabled after wireless deployment, so you ca
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

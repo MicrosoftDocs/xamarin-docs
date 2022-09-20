@@ -41,6 +41,6 @@ Xamarin.Forms applications typically target multiple platforms, which means test
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Making-Mobile-Apps-Accessible/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Making-Mobile-Apps-Accessible/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

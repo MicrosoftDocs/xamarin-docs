@@ -319,7 +319,7 @@ The [`MenuItem`](xref:Xamarin.Forms.MenuItem) class has a [`Clicked`](xref:Xamar
     <MenuItem Text="Help"
               IconImageSource="help.png"
               Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
+              CommandParameter="https://learn.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -355,7 +355,7 @@ The appearance of each [`MenuItem`](xref:Xamarin.Forms.MenuItem) can be customiz
     <MenuItem Text="Help"
               IconImageSource="help.png"
               Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
+              CommandParameter="https://learn.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
 </Shell>
 ```
 

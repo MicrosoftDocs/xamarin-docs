@@ -74,6 +74,6 @@ You can read more on the [UWP Requested Theme Documentation](/uwp/api/windows.ui
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -86,7 +86,7 @@ Once a .NET Standard Library has been created, you can add a reference to it fro
 
 ## .NET Standard and Xamarin.Forms for the .NET Developer (video)
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## Related Links
 

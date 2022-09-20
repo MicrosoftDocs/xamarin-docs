@@ -79,6 +79,6 @@ The detect shake API uses raw readings from the accelerometer to calculate accel
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Detect-Shake-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Detect-Shake-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

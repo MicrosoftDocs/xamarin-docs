@@ -471,7 +471,7 @@ The following code example, taken from the [Hyperlink Demos](/samples/xamarin/xa
                   TextDecorations="Underline">
                 <Span.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                                          CommandParameter="https://learn.microsoft.com/xamarin/" />
                 </Span.GestureRecognizers>
             </Span>
             <Span Text=" to view Xamarin documentation." />
@@ -551,7 +551,7 @@ The `HyperlinkSpan` class can be consumed by adding an instance of the class to 
                 <FormattedString>
                     <Span Text="Alternatively, click " />
                     <local:HyperlinkSpan Text="here"
-                                         Url="https://docs.microsoft.com/appcenter/" />
+                                         Url="https://learn.microsoft.com/appcenter/" />
                     <Span Text=" to view AppCenter documentation." />
                 </FormattedString>
             </Label.FormattedText>

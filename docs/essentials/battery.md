@@ -183,6 +183,6 @@ No platform differences.
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

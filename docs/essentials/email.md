@@ -140,6 +140,6 @@ Not all email clients support sending attachments. See [documentation](/windows/
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Email-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Email-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

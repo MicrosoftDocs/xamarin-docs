@@ -215,6 +215,6 @@ The `tealSearchBarStyle` is assigned directly to the [`Style`](xref:Xamarin.Form
 
 ## Related video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/XamarinForms-101-Dynamic-Resources/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/XamarinForms-101-Dynamic-Resources/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

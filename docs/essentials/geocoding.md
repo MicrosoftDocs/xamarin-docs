@@ -124,6 +124,6 @@ The [`Location`](xref:Xamarin.Essentials.Location) and [`LocationExtensions`](xr
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/Geocoding-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/Geocoding-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

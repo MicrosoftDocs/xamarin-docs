@@ -678,6 +678,6 @@ provided troubleshooting tips for common problems.
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/How-to-Create-and-Manage-Your-Own-Android-Emulators/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/How-to-Create-and-Manage-Your-Own-Android-Emulators/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

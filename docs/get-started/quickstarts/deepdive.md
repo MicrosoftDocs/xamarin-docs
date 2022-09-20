@@ -573,6 +573,6 @@ This deep dive has examined the fundamentals of application development using Xa
 
 ## Related video
 
-> [!Video https://docs.microsoft.com/shows/Xamarin-101/Xamarin-Solution-Architecture-4-of-11  ]
+> [!Video https://learn.microsoft.com/shows/Xamarin-101/Xamarin-Solution-Architecture-4-of-11  ]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -28,7 +28,7 @@ productDirectory:
   summary: Learn how to build cross-platform Android & iOS applications using C# and .NET in Visual Studio on Windows and macOS.
   items:
     - title: Get started
-      imageSrc: https://docs.microsoft.com//media/common/i_get-started.svg
+      imageSrc: https://learn.microsoft.com//media/common/i_get-started.svg
       links:
         - url: ~/get-started/installation/index.md
           text: Installation
@@ -37,7 +37,7 @@ productDirectory:
         - url: ~/get-started/first-app/index.md
           text: Build your first app
     - title: Follow tutorials
-      imageSrc: https://docs.microsoft.com//media/common/i_overview.svg
+      imageSrc: https://learn.microsoft.com//media/common/i_overview.svg
       links:
         - url: ~/get-started/tutorials/stacklayout/index.yml
           text: Stack layout
@@ -50,7 +50,7 @@ productDirectory:
         - url: ~/get-started/tutorials/index.yml
           text: All Xamarin.Forms tutorials
     - title: Build a complete app
-      imageSrc: https://docs.microsoft.com//media/common/i_mobile-app-developement.svg
+      imageSrc: https://learn.microsoft.com//media/common/i_mobile-app-developement.svg
       links:
         - url: ~/get-started/quickstarts/app.md
           text: File > New
@@ -61,7 +61,7 @@ productDirectory:
         - url: ~/get-started/quickstarts/styling.md
           text: Style the app
     - title: Leverage existing knowledge
-      imageSrc: https://docs.microsoft.com//media/common/i_library.svg
+      imageSrc: https://learn.microsoft.com//media/common/i_library.svg
       links:
         - url: ~/cross-platform/desktop/index.md
           text: .NET desktop (UWP, WPF, WinForms)

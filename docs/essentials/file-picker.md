@@ -115,4 +115,4 @@ No platform differences.
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/File-Picker-XamarinEssentials-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/File-Picker-XamarinEssentials-API-of-the-Week/player]

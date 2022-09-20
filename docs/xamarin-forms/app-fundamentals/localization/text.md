@@ -137,7 +137,7 @@ using System.Resources;
 // language in this line will not by itself change the language shown in the
 // app. See the discussion of UltimateResourceFallbackLocation in the
 // documentation for additional information:
-// https://docs.microsoft.com/dotnet/api/system.resources.neutralresourceslanguageattribute
+// https://learn.microsoft.com/dotnet/api/system.resources.neutralresourceslanguageattribute
 [assembly: NeutralResourcesLanguage("en-US")]
 ```
 

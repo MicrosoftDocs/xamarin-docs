@@ -92,6 +92,6 @@ App information is taken from the `Package.appxmanifest` for the following field
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/App-Information-Essential-API-of-the-Week/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/App-Information-Essential-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -332,6 +332,6 @@ In the [next article](binding-mode.md), you'll see how the *binding mode* can ch
 
 ## Related Video
 
-> [!Video https://docs.microsoft.com/shows/XamarinShow/XamarinForms-101-Data-Binding/player]
+> [!Video https://learn.microsoft.com/shows/XamarinShow/XamarinForms-101-Data-Binding/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]
