@@ -5,24 +5,26 @@ groups:
   prompt: Choose your development environment
   pivots:
     - id: windows
-      title: Visual Studio 2019
+      title: Visual Studio
     - id: macos
       title: Visual Studio for Mac
-- id: platform-dev16
+- id: platform-all
   title: Platform
   prompt: Choose your development environment
   pivots:
-    - id: windows
+    - id: windows-vs2022
+      title: Visual Studio 2022
+    - id: windows-vs2019
       title: Visual Studio 2019
-    - id: win-vs2017
-      title: Visual Studio 2017
-    - id: macos
+    - id: macos-vs2022
+      title: Visual Studio 2022 for Mac
+    - id: macos-vs2019
       title: Visual Studio for Mac
 - id: platform-win
   title: Platform
   prompt: Choose your development environment
   pivots:
+    - id: windows-vs2022
+      title: Visual Studio 2022
     - id: windows
       title: Visual Studio 2019
-    - id: win-vs2017
-      title: Visual Studio 2017

@@ -5,8 +5,7 @@ Xamarin can be installed as part of a _new_ Visual Studio 2019 installation, wit
 
 1. Download Visual Studio 2019 Community, Visual Studio Professional, or
    Visual Studio Enterprise from the
-   [Visual Studio](https://visualstudio.microsoft.com/vs/) page (download
-   links are provided at the bottom).
+   [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) page.
 
 2. Double-click the downloaded package to start installation.
 
