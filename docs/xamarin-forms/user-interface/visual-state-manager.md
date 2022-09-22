@@ -473,7 +473,7 @@ The "Pressed" state becomes active when the `Button` is pressed:
 
 [![VSM Setter TargetName: Pressed State](vsm-images/VsmSetterTargetNamePressed.png "VSM setter targetname - pressed")](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
 
-The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from the default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the result is that when the `Button` is pressed it's rescaled to be slightly smaller, and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1 ,and the `Entry` displays any previously entered text.
+The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from the default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the result is that when the `Button` is pressed it's rescaled to be slightly smaller, and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1, and the `Entry` displays any previously entered text.
 
 > [!IMPORTANT]
 > Property paths are currently unsupported in `Setter` elements that specify the `TargetName` property.
