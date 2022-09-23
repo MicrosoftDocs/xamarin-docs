@@ -29,7 +29,7 @@ For more information about bindable properties, see [Bindable Properties](~/xama
 The process for creating an attached property is as follows:
 
 1. Create a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance with one of the [`CreateAttached`](xref:Xamarin.Forms.BindableProperty.CreateAttached*) method overloads.
-1. Provide `static` `Get`*PropertyName* and `Set`*PropertyName* methods as accessors for the attached property.
+1. Provide `static` `GetPropertyName` and `SetPropertyName` methods as accessors for the attached property.
 
 ### Create a property
 
@@ -53,21 +53,21 @@ For more information about creating bindable properties, including parameters th
 
 ### Create accessors
 
-Static `Get`*PropertyName* and `Set`*PropertyName* methods are required as accessors for the attached property, otherwise the property system will be unable to use the attached property. The `Get`*PropertyName* accessor should conform to the following signature:
+Static `GetPropertyName` and `SetPropertyName` methods are required as accessors for the attached property, otherwise the property system will be unable to use the attached property. The `GetPropertyName` accessor should conform to the following signature:
 
 ```csharp
 public static valueType GetPropertyName(BindableObject target)
 ```
 
-The `Get`*PropertyName* accessor should return the value that's contained in the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) method, passing in the bindable property identifier on which to get the value, and then casting the resulting value to the required type.
+The `GetPropertyName` accessor should return the value that's contained in the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) method, passing in the bindable property identifier on which to get the value, and then casting the resulting value to the required type.
 
-The `Set`*PropertyName* accessor should conform to the following signature:
+The `SetPropertyName` accessor should conform to the following signature:
 
 ```csharp
 public static void SetPropertyName(BindableObject target, valueType value)
 ```
 
-The `Set`*PropertyName* accessor should set the value of the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method, passing in the bindable property identifier on which to set the value, and the value to set.
+The `SetPropertyName` accessor should set the value of the corresponding `BindableProperty` field for the attached property. This can be achieved by calling the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method, passing in the bindable property identifier on which to set the value, and the value to set.
 
 For both accessors, the *target* object should be of, or derive from, [`BindableObject`](xref:Xamarin.Forms.BindableObject).
 
