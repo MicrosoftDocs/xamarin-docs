@@ -1,6 +1,6 @@
 ---
 title: "This Article's Title"
-description: "A good, solid description of this article. The content kept here is what the Microsoft Docs system returns with search results, so this had better be a complete description of the purpose and content for this document file"
+description: "A good, solid description of this article. The content kept here is what Microsoft Learn returns with search results, so this had better be a complete description of the purpose and content for this document file"
 keywords: keyword, list, for, internal, search
 author: conceptdev
 ms.author: crdun
@@ -20,10 +20,10 @@ When creating a Markdown file, you should copy this template to a new file, fill
 
 The full metadata block, with a bunch of annotations, is shown below:
 
-```
+```yaml
 ---
 title: This Article's Title
-description: A good, solid description of this article. The content kept here is what the Microsoft Docs system returns with search results, so this had better be a complete description of the purpose and content for this document file
+description: A good, solid description of this article. The content kept here is what Microsoft Learn returns with search results, so this had better be a complete description of the purpose and content for this document file
 keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, however, this, might, not, be, used, for, anything, much, anymore, but, still, good, to, have, if, you, want
 author: conceptdev (your Github user name)
 ms.author: crdun (your Microsoft Alias)
@@ -315,13 +315,13 @@ Use this special blockquote syntax:
 
 The YouTube video should contain `/embed/` (ie. follow the format above), otherwise it will attempt to render the whole page and may not work.
 
-## docs.microsoft extensions
+## Microsoft Learn extensions
 
-docs.microsoft provides a few additional extensions to GitHub Flavored Markdown.
+Microsoft Learn provides a few additional extensions to GitHub Flavored Markdown.
 
 ### Alerts
 
-It's important to use the following alert styles so they render with the proper style in the documentation site. However, the rendering engine on GitHub doesn't diferentiate them.
+It's important to use the following alert styles so they render with the proper style in the documentation site. However, the rendering engine on GitHub doesn't differentiate them.
 
 #### Note
 
@@ -362,7 +362,7 @@ And they'll render like this:
 [button links](../docs/core/index.md)
 ```
 
-You can see an example of buttons in action at the [Intune docs](/intune/get-started/choose-how-to-enroll-devices).
+You can see an example of buttons in action in the [Intune documentation](/intune/get-started/choose-how-to-enroll-devices).
 
 ### Selectors
 
@@ -372,7 +372,7 @@ You can see an example of buttons in action at the [Intune docs](/intune/get-sta
 - [Windows](../docs/core/tutorials/using-on-windows.md)
 ```
 
-You can see an example of selectors in action at the [Intune docs](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
+You can see an example of selectors in action in the [Intune documentation](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune#how-your-end-users-get-their-apps).
 
 ### Step-By-Steps
 
@@ -382,4 +382,4 @@ You can see an example of selectors in action at the [Intune docs](/intune/deplo
 [Next](../docs/csharp/expression-trees-translating.md)
 ```
 
-You can see an example of step-by-steps in action at the [Advanced Threat Analytics docs](/advanced-threat-analytics/deploy-use/install-ata-step2).
+You can see an example of step-by-steps in action in the [Advanced Threat Analytics documentation](/advanced-threat-analytics/deploy-use/install-ata-step2).
