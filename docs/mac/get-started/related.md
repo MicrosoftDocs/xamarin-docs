@@ -12,7 +12,7 @@ no-loc: [Objective-C]
 
 # Xamarin.Mac – Related Documentation
 
-In addition to the Mac section of [Microsoft Docs](~/mac/get-started/index.md) there are three great sources of documentation that can also be of assistance with Xamarin.Mac questions:
+In addition to the [Mac section of Microsoft Learn](~/mac/get-started/index.md) there are three great sources of documentation that can also be of assistance with Xamarin.Mac questions:
 
 - [**Xamarin.iOS documentation**](~/ios/get-started/index.md) - For many APIs (primarily outside of AppKit/UIKit) there are only small differences between the iOS and macOS versions. In some cases where a given iOS API has a name of `UIFoo`, a similar API named `NSFoo` can be found on macOS. These examples will be generally in C# already.
 
