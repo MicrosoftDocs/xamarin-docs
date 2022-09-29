@@ -1018,8 +1018,6 @@
               href: watchos/deploy-test/appstore.md
         - name: Troubleshooting
           href: watchos/troubleshooting.md
-        - name: Xamarin watchOS on Q&A
-          href: /answers/topics/dotnet-watchos.html
     - name: tvOS
       items:
         - name: Overview
@@ -1150,8 +1148,6 @@
               href: tvos/internals/assemblies.md
             - name: Frameworks
               href: tvos/internals/frameworks.md
-        - name: Xamarin.tvOS on Q&A
-          href: /answers/topics/dotnet-tvos.html
     - name: Xamarin.iOS on Q&A
       href: /answers/topics/dotnet-ios.html
     - name: Release Notes

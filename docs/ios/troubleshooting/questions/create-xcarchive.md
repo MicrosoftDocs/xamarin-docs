@@ -23,7 +23,7 @@ msbuild /p:Configuration=Release /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 The `.xcarchive` will be placed in the `$HOME/Library/Developer/Xcode/Archives` directory on the Mac build host that both Xcode and Xamarin Studio search to display previously built archives.
 
-See this [Xamarin Forums post](https://forums.xamarin.com/discussion/comment/156635/#Comment_156635) for some brief additional notes about the `ArchiveOnBuild` property. See the documentation about [Xamarin.iOS command line builds on Windows](~/ios/get-started/installation/windows/connecting-to-mac/index.md) for additional details about the `ServerAddress` and `ServerUser` properties.
+See the documentation about [Xamarin.iOS command line builds on Windows](~/ios/get-started/installation/windows/connecting-to-mac/index.md) for additional details about the `ServerAddress` and `ServerUser` properties.
 
 * * *
 
