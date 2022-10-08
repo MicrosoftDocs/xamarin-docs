@@ -64,7 +64,6 @@ When [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) is invok
 - The page calling `PushModalAsync` has its [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) override invoked, provided that the underlying platform isn't Android.
 - The page being navigated to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PushAsync` task completes.
-book
 However, the precise order that these events occur is platform dependent. For more information, see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/) of Charles Petzold's Xamarin.Forms book.
 
 > [!NOTE]
