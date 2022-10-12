@@ -25,7 +25,7 @@ An Azure Cosmos DB document database account can be provisioned using an Azure s
 
 An Azure Cosmos DB document database may contain zero or more document collections. Each document collection can have a different performance level, allowing more throughput to be specified for frequently accessed collections, and less throughput for infrequently accessed collections.
 
-Each document collection consists of zero or more JSON documents. Documents in a collection are schema-free, and so do not need to share the same structure or fields. As documents are added to a document collection, Cosmos DB automatically indexes them and they become available to be queried.
+Each document collection consists of zero or more JSON documents. Documents in a collection are schema-free, and so do not need to share the same structure or fields. As documents are added to a document collection, Azure Cosmos DB automatically indexes them and they become available to be queried.
 
 For development purposes, a document database can also be consumed through an emulator. Using the emulator, applications can be developed and tested locally, without creating an Azure subscription or incurring any costs. For more information about the emulator, see [Developing locally with the Azure Cosmos DB Emulator](/azure/cosmos-db/local-emulator/).
 
@@ -40,9 +40,9 @@ For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentati
 
 The process for integrating an Azure Cosmos DB document database into a Xamarin.Forms application is as follows:
 
-1. Create a Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account).
+1. Create an Azure Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account).
 1. Add the [Azure Cosmos DB .NET Standard client library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) NuGet package to the platform projects in the Xamarin.Forms solution.
-1. Add `using` directives for the `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, and `Microsoft.Azure.Documents.Linq` namespaces to classes that will access the Cosmos DB account.
+1. Add `using` directives for the `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, and `Microsoft.Azure.Documents.Linq` namespaces to classes that will access the Azure Cosmos DB account.
 
 After performing these steps, the Azure Cosmos DB .NET Standard client library can be used to configure and execute requests against the document database.
 
@@ -57,7 +57,7 @@ The `DocumentClient` type encapsulates the endpoint, credentials, and connection
 DocumentClient client = new DocumentClient(new Uri(Constants.EndpointUri), Constants.PrimaryKey);
 ```
 
-The Cosmos DB Uri and primary key must be provided to the `DocumentClient` constructor. These can be obtained from the Azure Portal. For more information, see [Connect to a Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect).
+The Azure Cosmos DB Uri and primary key must be provided to the `DocumentClient` constructor. These can be obtained from the Azure Portal. For more information, see [Connect to an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect).
 
 ### Creating a Database
 
@@ -108,7 +108,7 @@ The `CreateDocumentCollectionIfNotExistsAsync` method requires two compulsory ar
 > [!NOTE]
 > The `CreateDocumentCollectionIfNotExistsAsync` method returns a `Task<ResourceResponse<DocumentCollection>>` object, and the status code of the response can be checked to determine whether a document collection was created, or an existing document collection was returned.
 
-Optionally, the `CreateDocumentCollectionIfNotExistsAsync` method can also specify a `RequestOptions` object, which encapsulates options that can be specified for requests issued to the Cosmos DB account. The `RequestOptions.OfferThroughput` property is used to define the performance level of the document collection, and in the sample application, is set to 400 request units per second. This value should be increased or decreased depending on whether the collection will be frequently or infrequently accessed.
+Optionally, the `CreateDocumentCollectionIfNotExistsAsync` method can also specify a `RequestOptions` object, which encapsulates options that can be specified for requests issued to the Azure Cosmos DB account. The `RequestOptions.OfferThroughput` property is used to define the performance level of the document collection, and in the sample application, is set to 400 request units per second. This value should be increased or decreased depending on whether the collection will be frequently or infrequently accessed.
 
 > [!IMPORTANT]
 > Note that the `CreateDocumentCollectionIfNotExistsAsync` method will create a new collection with a reserved throughput, which has pricing implications.
@@ -208,7 +208,7 @@ The `DeleteDocumentCollectionAsync` method specifies a `Uri` argument that repre
 
 ### Deleting a Database
 
-A database can be deleted from a Cosmos DB database account with the `DocumentClient.DeleteDatabaesAsync` method:
+A database can be deleted from an Azure Cosmos DB database account with the `DocumentClient.DeleteDatabaesAsync` method:
 
 ```csharp
 await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.DatabaseName));

@@ -20,49 +20,49 @@ _Azure Cosmos DB document databases support partitioned collections, which can s
 
 A partition key must be specified when creating a partitioned collection, and documents with the same partition key will be stored in the same partition. Therefore, specifying the user's identity as a partition key will result in a partitioned collection that will only store documents for that user. This also ensures that the Azure Cosmos DB document database will scale as the number of users and items increase.
 
-Access must be granted to any collection, and the SQL API access control model defines two types of access constructs:
+Access must be granted to any collection, and the Azure Cosmos DB for NoSQL access control model defines two types of access constructs:
 
-- **Master keys** enable full administrative access to all resources within a Cosmos DB account, and are created when a Cosmos DB account is created.
-- **Resource tokens** capture the relationship between the user of a database and the permission the user has for a specific Cosmos DB resource, such as a collection or a document.
+- **Master keys** enable full administrative access to all resources within an Azure Cosmos DB account, and are created when an Azure Cosmos DB account is created.
+- **Resource tokens** capture the relationship between the user of a database and the permission the user has for a specific Azure Cosmos DB resource, such as a collection or a document.
 
-Exposing a master key opens a Cosmos DB account to the possibility of malicious or negligent use. However, Azure Cosmos DB resource tokens provide a safe mechanism for allowing clients to read, write, and delete specific resources in an Azure Cosmos DB account according to the granted permissions.
+Exposing a master key opens an Azure Cosmos DB account to the possibility of malicious or negligent use. However, Azure Cosmos DB resource tokens provide a safe mechanism for allowing clients to read, write, and delete specific resources in an Azure Cosmos DB account according to the granted permissions.
 
 A typical approach to requesting, generating, and delivering resource tokens to a mobile application is to use a resource token broker. The following diagram shows a high-level overview of how the sample application uses a resource token broker to manage access to the document database data:
 
 ![Document Database Authentication Process](azure-cosmosdb-auth-images/documentdb-authentication.png)
 
-The resource token broker is a mid-tier Web API service, hosted in Azure App Service, which possesses the master key of the Cosmos DB account. The sample application uses the resource token broker to manage access to the document database data as follows:
+The resource token broker is a mid-tier Web API service, hosted in Azure App Service, which possesses the master key of the Azure Cosmos DB account. The sample application uses the resource token broker to manage access to the document database data as follows:
 
 1. On login, the Xamarin.Forms application contacts Azure App Service to initiate an authentication flow.
 1. Azure App Service performs an OAuth authentication flow with Facebook. After the authentication flow completes, the Xamarin.Forms application receives an access token.
 1. The Xamarin.Forms application uses the access token to request a resource token from the resource token broker.
-1. The resource token broker uses the access token to request the user's identity from Facebook. The user's identity is then used to request a resource token from Cosmos DB, which is used to grant read/write access to the authenticated user's partitioned collection.
-1. The Xamarin.Forms application uses the resource token to directly access Cosmos DB resources with the permissions defined by the resource token.
+1. The resource token broker uses the access token to request the user's identity from Facebook. The user's identity is then used to request a resource token from Azure Cosmos DB, which is used to grant read/write access to the authenticated user's partitioned collection.
+1. The Xamarin.Forms application uses the resource token to directly access Azure Cosmos DB resources with the permissions defined by the resource token.
 
 > [!NOTE]
 > When the resource token expires, subsequent document database requests will receive a 401 unauthorized exception. At this point, Xamarin.Forms applications should re-establish the identity and request a new resource token.
 
-For more information about Cosmos DB partitioning, see [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/). For more information about Cosmos DB access control, see [Securing access to Cosmos DB data](/azure/cosmos-db/secure-access-to-data/) and [Access control in the SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).
+For more information about Azure Cosmos DB partitioning, see [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/). For more information about Azure Cosmos DB access control, see [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/) and [Access control in the Azure Cosmos DB for NoSQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
 ## Setup
 
 The process for integrating the resource token broker into a Xamarin.Forms application is as follows:
 
-1. Create a Cosmos DB account that will use access control. For more information, see [Azure Cosmos DB Configuration](#azure-cosmos-db-configuration).
+1. Create an Azure Cosmos DB account that will use access control. For more information, see [Azure Cosmos DB Configuration](#azure-cosmos-db-configuration).
 1. Create an Azure App Service to host the resource token broker. For more information, see [Azure App Service Configuration](#azure-app-service-configuration).
 1. Create a Facebook app to perform authentication. For more information, see [Facebook App Configuration](#facebook-app-configuration).
 1. Configure the Azure App Service to perform easy authentication with Facebook. For more information, see [Azure App Service Authentication Configuration](#azure-app-service-authentication-configuration).
-1. Configure the Xamarin.Forms sample application to communicate with Azure App Service and Cosmos DB. For more information, see [Xamarin.Forms Application Configuration](#xamarinforms-application-configuration).
+1. Configure the Xamarin.Forms sample application to communicate with Azure App Service and Azure Cosmos DB. For more information, see [Xamarin.Forms Application Configuration](#xamarinforms-application-configuration).
 
 > [!NOTE]
 > If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
 
 ### Azure Cosmos DB Configuration
 
-The process for creating a Cosmos DB account that will use access control is as follows:
+The process for creating an Azure Cosmos DB account that will use access control is as follows:
 
-1. Create a Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
-1. In the Cosmos DB account, create a new collection named `UserItems`, specifying a partition key of `/userid`.
+1. Create an Azure Cosmos DB account. For more information, see [Create an Azure Cosmos DB account](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
+1. In the Azure Cosmos DB account, create a new collection named `UserItems`, specifying a partition key of `/userid`.
 
 ### Azure App Service Configuration
 
@@ -70,10 +70,10 @@ The process for hosting the resource token broker in Azure App Service is as fol
 
 1. In the Azure portal, create a new App Service web app. For more information, see [Create a web app in an App Service Environment](/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase/).
 1. In the Azure portal, open the App Settings blade for the web app, and add the following settings:
-    - `accountUrl` – the value should be the Cosmos DB account URL from the Keys blade of the Cosmos DB account.
-    - `accountKey` – the value should be the Cosmos DB master key (primary or secondary) from the Keys blade of the Cosmos DB account.
-    - `databaseId` – the value should be the name of the Cosmos DB database.
-    - `collectionId` – the value should be the name of the Cosmos DB collection (in this case, `UserItems`).
+    - `accountUrl` – the value should be the Azure Cosmos DB account URL from the Keys blade of the Azure Cosmos DB account.
+    - `accountKey` – the value should be the Azure Cosmos DB master key (primary or secondary) from the Keys blade of the Azure Cosmos DB account.
+    - `databaseId` – the value should be the name of the Azure Cosmos DB database.
+    - `collectionId` – the value should be the name of the Azure Cosmos DB collection (in this case, `UserItems`).
     - `hostUrl` – the value should be the URL of the web app from the Overview blade of the App Service account.
 
     The following screenshot demonstrates this configuration:
@@ -120,7 +120,7 @@ The process for configuring the Xamarin.Forms sample application is as follows:
 
 1. Open the Xamarin.Forms solution.
 1. Open `Constants.cs` and update the values of the following constants:
-    - `EndpointUri` – the value should be the Cosmos DB account URL from the Keys blade of the Cosmos DB account.
+    - `EndpointUri` – the value should be the Azure Cosmos DB account URL from the Keys blade of the Azure Cosmos DB account.
     - `DatabaseName` – the value should be the name of the document database.
     - `CollectionName` – the value should be the name of the document database collection (in this case, `UserItems`).
     - `ResourceTokenBrokerUrl` – the value should be the URL of the resource token broker web app from the Overview blade of the App Service account.
@@ -176,7 +176,7 @@ auth.Completed += async (sender, e) =>
 
 The result of a successful authentication is an access token, which is available `AuthenticatorCompletedEventArgs.Account` property. The access token is extracted and used in a GET request to the resource token broker's `resourcetoken` API.
 
-The `resourcetoken` API uses the access token to request the user's identity from Facebook, which in turn is used to request a resource token from Cosmos DB. If a valid permission document already exists for the user in the document database, it's retrieved and a JSON document containing the resource token is returned to the Xamarin.Forms application. If a valid permission document doesn't exist for the user, a user and permission is created in the document database, and the resource token is extracted from the permission document and returned to the Xamarin.Forms application in a JSON document.
+The `resourcetoken` API uses the access token to request the user's identity from Facebook, which in turn is used to request a resource token from Azure Cosmos DB. If a valid permission document already exists for the user in the document database, it's retrieved and a JSON document containing the resource token is returned to the Xamarin.Forms application. If a valid permission document doesn't exist for the user, a user and permission is created in the document database, and the resource token is extracted from the permission document and returned to the Xamarin.Forms application in a JSON document.
 
 > [!NOTE]
 > A document database user is a resource associated with a document database, and each database may contain zero or more users. A document database permission is a resource associated with a document database user, and each user may contain zero or more permissions. A permission resource provides access to a security token that the user requires when attempting to access a resource such as a document.
@@ -192,7 +192,7 @@ If the `resourcetoken` API successfully completes, it will send HTTP status code
 }
 ```
 
-The `WebRedirectAuthenticator.Completed` event handler reads the response from the `resourcetoken` API and extracts the resource token and the user id. The resource token is then passed as an argument to the `DocumentClient` constructor, which encapsulates the endpoint, credentials, and connection policy used to access Cosmos DB, and is used to configure and execute requests against Cosmos DB. The resource token is sent with each request to directly access a resource, and indicates that read/write access to the authenticated users' partitioned collection is granted.
+The `WebRedirectAuthenticator.Completed` event handler reads the response from the `resourcetoken` API and extracts the resource token and the user id. The resource token is then passed as an argument to the `DocumentClient` constructor, which encapsulates the endpoint, credentials, and connection policy used to access Azure Cosmos DB, and is used to configure and execute requests against Azure Cosmos DB. The resource token is sent with each request to directly access a resource, and indicates that read/write access to the authenticated users' partitioned collection is granted.
 
 ## Retrieving Documents
 
@@ -247,7 +247,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
                  });
 ```
 
-This ensures that Cosmos DB knows which partitioned collection to delete the document from.
+This ensures that Azure Cosmos DB knows which partitioned collection to delete the document from.
 
 For more information about deleting a document from a document collection, see [Deleting a Document from a Document Collection](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#deleting-a-document-from-a-document-collection).
 
@@ -260,7 +260,7 @@ This article explained how to combine access control with partitioned collection
 - [Todo Azure Cosmos DB Auth (sample)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consuming an Azure Cosmos DB Document Database](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/)
-- [Access control in the SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).
+- [Access control in the Azure Cosmos DB for NoSQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [How to partition and scale in Azure Cosmos DB](/azure/cosmos-db/partition-data/)
 - [Azure Cosmos DB Client Library](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client)
