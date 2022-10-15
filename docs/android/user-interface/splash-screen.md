@@ -113,7 +113,7 @@ with a `style` named **MyTheme.Splash**:
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:windowBackground">@color/splash_background</item>
     <item name="android:windowNoTitle">true</item>  
     <item name="android:windowFullscreen">true</item>  
     <item name="android:windowContentOverlay">@null</item>  
