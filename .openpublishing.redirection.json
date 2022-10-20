@@ -1007,6 +1007,10 @@
     {
         "source_path": "docs/tools/live-player/troubleshooting.md",
         "redirect_url": "/xamarin/xamarin-forms/xaml/hot-reload"
+    },
+    {
+        "source_path": "docs/cross-platform/data-cloud/active-directory/graph.md",
+        "redirect_url": "/windows/apps/windows-dotnet-maui/tutorial-graph-api"      
     }
   ]
 }
