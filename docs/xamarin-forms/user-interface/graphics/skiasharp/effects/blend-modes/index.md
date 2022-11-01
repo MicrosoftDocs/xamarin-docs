@@ -42,7 +42,7 @@ The 29 members of the `SKBlendMode` enumeration can be divided into three catego
 
 The names of these three categories will take on more meaning in the discussions that follow. The order that the members are listed here is the same as in the definition of the `SKBlendMode` enumeration. The 13 enumeration members in the first column have the integer values 0 to 12. The second column are enumeration members that correspond to integers 13 to 24, and the members in the third column have values of 25 to 28.
 
-These blend modes are discussed in _approximately_ the same order in the W3C **Compositing and Blending Level 1** document, but there are a few differences: The `Src` mode is called _Copy_ in the W3C document, and `Plus` is called _Lighter_. The W3C document defines a _Normal_ blend mode that isn't included in `SKBlendModes` because it would be the same as `SrcOver`. The `Modulate` blend mode (at the top of the first column) isn't included in the W3C document, and discussion of the `Multiply` mode precedes `Screen`.
+These blend modes are discussed in _approximately_ the same order in the W3C **Compositing and Blending Level 1** document, but there are a few differences: The `Src` mode is called _Copy_ in the W3C document, and `Plus` is called _Lighter_. The W3C document defines a _Normal_ blend mode that isn't included in `SKBlendModes` because it would be the same as `SrcOver`. The `Modulate` blend mode (at the top of the second column) isn't included in the W3C document, and discussion of the `Multiply` mode precedes `Screen`.
 
 Because the `Modulate` blend mode is unique to Skia, it will be discussed as an additional Porter-Duff mode and as a separable mode.
 
