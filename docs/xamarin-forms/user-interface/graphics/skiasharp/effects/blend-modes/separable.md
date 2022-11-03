@@ -20,7 +20,7 @@ As you saw in the article [**SkiaSharp Porter-Duff blend modes**](porter-duff.md
 
 ## Lighten and darken two ways 
 
-It is common to have a bitmap that is somewhat too dark or too light. You can use separable blend modes to lighten or darken the imabe.  Indeed, two of the separable blend modes in the [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeration are named `Lighten` and `Darken`. 
+It is common to have a bitmap that is somewhat too dark or too light. You can use separable blend modes to lighten or darken the image.  Indeed, two of the separable blend modes in the [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeration are named `Lighten` and `Darken`. 
 
 These two modes are demonstrated in the **Lighten and Darken** page. The XAML file instantiates two `SKCanvasView` objects and two `Slider` views:
 
