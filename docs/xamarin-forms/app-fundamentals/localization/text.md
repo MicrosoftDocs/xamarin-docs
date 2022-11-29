@@ -184,7 +184,7 @@ This is only necessary if you generate an App Bundle when you package the app fo
 
 ## Localize text in Xamarin.Forms
 
-Text is localized in Xamarin.Forms using the generated `AppResources` class. This class is named based on the default resource file name. Since the sample project resource file is named **AppResources.cs**, Visual Studio generates a matching class called `AppResources`. Static properties are generated in the `AppResources` class for each row in the resource file. The following static properties are generated in the sample application's `AppResources` class:
+Text is localized in Xamarin.Forms using the generated `AppResources` class. This class is named based on the default resource file name. Since the sample project resource file is named **AppResources.resx**, Visual Studio generates a matching class called `AppResources`. Static properties are generated in the `AppResources` class for each row in the resource file. The following static properties are generated in the sample application's `AppResources` class:
 
 - AddButton
 - NotesLabel
