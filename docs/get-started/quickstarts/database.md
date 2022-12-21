@@ -55,6 +55,9 @@ You should successfully complete the [previous quickstart](navigation.md) before
 
     This package will be used to incorporate database operations into the application, and will be added to every project in the solution.
 
+    > [!IMPORTANT]
+    > SQLite.NET is a third-party library that's supported from the [praeclarum/sqlite-net repo](https://github.com/praeclarum/sqlite-net).
+
     Close the **NuGet Package Manager**.
 
 4. In **Solution Explorer**, in the **Notes** project, open **Note.cs** in the **Models** folder and replace the existing code with the following code:

@@ -25,8 +25,10 @@ To include the SQLite.NET library in a Xamarin app, add the following NuGet pack
 
 [![SQLite.NET NuGet package](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet package")](using-sqlite-orm-images/image1a.png#lightbox)
 
-> [!TIP]
-> There are a number of different SQLite packages available – be sure to choose the correct one (it might not be the top result in search).
+There are a number of different SQLite packages available – be sure to choose the correct one (it might not be the top result in search).
+
+> [!IMPORTANT]
+> SQLite.NET is a third-party library that's supported from the [praeclarum/sqlite-net repo](https://github.com/praeclarum/sqlite-net).
 
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 

@@ -26,6 +26,9 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
     This package will be used to incorporate database operations into the application.
 
+    > [!IMPORTANT]
+    > SQLite.NET is a third-party library that's supported from the [praeclarum/sqlite-net repo](https://github.com/praeclarum/sqlite-net).
+
 1. Build the solution to ensure there are no errors.
 
 # [Visual Studio for Mac](#tab/vsmac)
