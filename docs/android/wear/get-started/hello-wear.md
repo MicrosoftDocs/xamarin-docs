@@ -61,7 +61,7 @@ Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 For more information on setting the target framework, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
-### 3. Edit the **Main.axml** layout
+### 3. Edit the **Main.xaml** layout
 
 Configure the layout to contain a `TextView` and a `Button` for the 
 sample: 
