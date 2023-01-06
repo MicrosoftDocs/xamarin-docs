@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Mac Samples"
-description: "Xamarin.Mac sample apps and code demos to help you get started building mobile apps with C# and Xamarin."
+description: "Xamarin.Mac sample apps and code demos to help you get started building macOS apps with C# and Xamarin."
 ms.prod: xamarin
 ms.assetid: 40D70D08-985A-4FBB-A5EF-0165F1E2B7BE
 ms.technology: xamarin-mac
@@ -12,7 +12,7 @@ no-loc: [Objective-C]
 
 # Xamarin.Mac samples
 
-Xamarin.Mac sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
+Xamarin.Mac sample apps and code demos to help you get started building macOS apps with C# and Xamarin.
 
 [All Xamarin.Mac samples](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 
