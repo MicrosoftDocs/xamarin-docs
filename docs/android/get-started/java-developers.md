@@ -57,9 +57,6 @@ synchronization support.
 
 However, there are many differences between Java and C#. For example:
 
-- Java (as used on Android) does not support implicitly-typed local variables (C#
-    supports the `var` keyword).
-
 - In Java, you can pass parameters only by value, while in C# you can
     pass by reference as well as by value. (C# provides the `ref` and
     `out` keywords for passing parameters by reference; there is no
