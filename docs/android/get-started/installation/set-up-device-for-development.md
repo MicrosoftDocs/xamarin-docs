@@ -85,6 +85,10 @@ computer** to prevent requiring this prompt each time you connect the device.
 
 ![Google USB](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
 
+## Select the target device for debugging
+
+If Visual Studio's target device for debugging is not the one you just connected to, then select it from the dropdown in the Standard toolbar (View > Toolbars > Standard).
+
 ## Alternate connection via Wifi
 
 It is possible to connect an Android device to a computer without using a USB cable, over WiFi. This technique requires more effort but could be useful when the device is too far from the computer to remain constantly plugged-in via cable. 
