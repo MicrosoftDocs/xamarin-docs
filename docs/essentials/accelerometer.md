@@ -78,7 +78,7 @@ Examples:
 
 - When the device lies flat on a table and is pushed on its left side toward the right, the x acceleration value is positive.
 
-- When the device lies flat on a table, the acceleration value is +1.00 G or (+9.81 m/s^2), which correspond to the acceleration of the device (0 m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized as in G.
+- When the device lies flat on a table, the acceleration value is +1.00 G or (+9.81 m/s^2), which corresponds to the acceleration of the device (0 m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized as in G.
 
 - When the device lies flat on a table and is pushed toward the sky with an acceleration of A m/s^2, the acceleration value is equal to A+9.81 which corresponds to the acceleration of the device (+A m/s^2) minus the force of gravity (-9.81 m/s^2) and normalized in G.
 
