@@ -9,6 +9,9 @@ ms.date: 03/28/2018
 no-loc: [Objective-C]
 ---
 
+> [!NOTE]
+> This approach is deprecated as per [https://github.com/xamarin/xamarin-macios/issues/8238#issuecomment-606666460](this link)
+
 # Real-world example using CocoaPods
 
 > [!NOTE]
