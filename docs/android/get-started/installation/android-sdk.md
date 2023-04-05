@@ -34,13 +34,9 @@ replaces Google's standalone SDK Manager, which has been deprecated.
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
-- Visual Studio 2022 Community, Professional, or Enterprise.
-- 
-- Visual Studio 2019 Community, Professional, or Enterprise.
-
+- Visual Studio (2022 or 2019) Community, Professional, or Enterprise.
 - OR Visual Studio 2017 (Community, Professional, or Enterprise edition). Visual
   Studio 2017 version 15.7 or later is required.
-
 - Visual Studio Tools for Xamarin version 4.10.0 or later
   (installed as part of the **Mobile development with .NET** workload). 
 
