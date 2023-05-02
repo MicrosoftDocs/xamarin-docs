@@ -291,10 +291,8 @@ considered a good practice to set the `android:debuggable` attribute to
 statement in **AssemblyInfo.cs**:
 
 ```csharp
-#if DEBUG
-[assembly: Application(Debuggable=true)]
-#else
-[assembly: Application(Debuggable=false)]
+#if !DEBUG
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None)]
 #endif
 ```
 
