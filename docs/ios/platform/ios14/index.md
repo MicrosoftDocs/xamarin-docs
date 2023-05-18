@@ -67,7 +67,7 @@ It may be helpful to enable a project relative output location in your Xcode pro
 
 ![Xcode settings](ios14-images/xcode-settings.png)
 
-This [sample application](https://github.com/chamons/xamarin-ios-swift-extension/blob/master/App/TestApplication/TestApplication.csproj#L143) uses JSON serialization to transfer data from a Xamarin.iOS app to a sample Widget for display.
+This [sample application](https://github.com/chamons/xamarin-ios-swift-extension/blob/master/App/net6/TestApplication/TestApplication.csproj) uses JSON serialization to transfer data from a Xamarin.iOS app to a sample Widget for display.
 
 Those interested in WidgetKit are invited to provide their [feedback here](https://github.com/xamarin/xamarin-macios/issues/8933).
 

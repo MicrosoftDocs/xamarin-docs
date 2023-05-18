@@ -89,11 +89,11 @@ This causes the `ModalPage` instance to be removed from the modal stack, with th
 - The page being returned to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked, provided that the underlying platform isn't Android.
 - The `PopModalAsync` task returns.
 
-However, the precise order that these events occur is platform dependent. For more information, see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+However, the precise order that these events occur is platform dependent. For more information, see [Chapter 24](https://aka.ms/xamformsebook) of Charles Petzold's Xamarin.Forms book.
 
 ### Disabling the Back Button
 
-On Android, the user can always return to the previous page by pressing the standard *Back* button on the device. If the modal page requires the user to complete a self-contained task before leaving the page, the application must disable the *Back* button. This can be accomplished by overriding the [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) method on the modal page. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+On Android, the user can always return to the previous page by pressing the standard *Back* button on the device. If the modal page requires the user to complete a self-contained task before leaving the page, the application must disable the *Back* button. This can be accomplished by overriding the [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) method on the modal page. For more information see [Chapter 24](https://aka.ms/xamformsebook) of Charles Petzold's Xamarin.Forms book.
 
 ### Animating Page Transitions
 
