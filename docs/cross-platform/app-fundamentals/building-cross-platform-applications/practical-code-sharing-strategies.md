@@ -201,7 +201,7 @@ paths.
 ### Windows.Storage for Windows 8 and Windows 10
 
 The *Creating Mobile Apps with Xamarin.Forms* [book](https://developer.xamarin.com/r/xamarin-forms/book/)
-[Chapter 20. Async and File I/O](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf)
+[Chapter 20. Async and File I/O](https://aka.ms/xamformsebook)
 includes [samples for Windows 8.1 and Windows 10](https://github.com/xamarin/xamarin-forms-book-preview-2/tree/master/Chapter20).
 
 Using a [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) it's

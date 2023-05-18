@@ -104,7 +104,7 @@ Picasso.With (this)
 ### Creating the Bindings Library
 
 Before commencing with the steps below, please download
-[picasso-2.x.x.jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
+[picasso-2.x.x.jar](https://mvnrepository.com/artifact/com.squareup.picasso/picasso/2.5.2).
 
 First, create a new Bindings Library project. In Visual Studio for Mac or
 Visual Studio, create a new Solution and select the *Android

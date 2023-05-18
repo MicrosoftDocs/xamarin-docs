@@ -82,7 +82,7 @@ When the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method is i
 - The page being navigated to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PushAsync` task completes.
 
-However, the precise order in which these events occur is platform dependent. For more information, see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+However, the precise order in which these events occur is platform dependent. For more information, see [Chapter 24](https://aka.ms/xamformsebook) of Charles Petzold's Xamarin.Forms book.
 
 > [!NOTE]
 > Calls to the [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) and [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
@@ -106,7 +106,7 @@ This causes the `Page2Xaml` instance to be removed from the navigation stack, wi
 - The page being returned to has its [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) override invoked.
 - The `PopAsync` task returns.
 
-However, the precise order in which these events occur is platform dependent. For more information see [Chapter 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) of Charles Petzold's Xamarin.Forms book.
+However, the precise order in which these events occur is platform dependent. For more information see [Chapter 24](https://aka.ms/xamformsebook) of Charles Petzold's Xamarin.Forms book.
 
 As well as [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) and [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) methods, the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of each page also provides a [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) method, which is shown in the following code example:
 
