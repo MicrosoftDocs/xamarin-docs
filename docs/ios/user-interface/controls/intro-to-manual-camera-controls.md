@@ -6,7 +6,7 @@ ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 03/22/2017
+ms.date: 06/01/2023
 no-loc: [Objective-C]
 ---
 
@@ -262,13 +262,7 @@ With this code in place, the Manual Camera Controls can be easily implemented fo
 
 By allowing the end user to take controls of the focus directly, an application can provide more artistic control over the image taken.
 
-For example, a professional photographer can soften the focus of an image to achieve a [Bokeh Effect](https://en.wikipedia.org/wiki/Bokeh):
-
-[![A Bokeh Effect](intro-to-manual-camera-controls-images/image2.png)](intro-to-manual-camera-controls-images/image2.png#lightbox)
-
-Or, create a [Focus Pull Effect](http://www.mediacollege.com/video/camera/focus/pull.html), such as:
-
-[![The Focus Pull Effect](intro-to-manual-camera-controls-images/image3.png)](intro-to-manual-camera-controls-images/image3.png#lightbox)
+For example, a professional photographer can soften the focus of an image to achieve a [Bokeh Effect](https://en.wikipedia.org/wiki/Bokeh). Or, create a [Focus Pull Effect](http://www.mediacollege.com/video/camera/focus/pull.html).
 
 For scientists or a writer of medical applications, the application might want to programmatically move the lens around for experiments. Either way the new API allows either the end user or the application to take control over focus at the time the image is taken.
 
