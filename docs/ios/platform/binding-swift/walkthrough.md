@@ -127,7 +127,6 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ```bash
     xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
-      -sdk iphonesimulator16.4 \
       -scheme "SwiftFrameworkProxy" \
       -configuration Release \
       -archivePath "build/SwiftFrameworkProxy-simulator.xcarchive" \
@@ -137,7 +136,6 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
       BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
     xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
-      -sdk iphoneos16.4 \
       -scheme "SwiftFrameworkProxy" \
       -configuration Release \
       -archivePath "build/SwiftFrameworkProxy-ios.xcarchive" \
