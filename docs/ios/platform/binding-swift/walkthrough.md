@@ -53,7 +53,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ![xcode name framework project](walkthrough-images/xcode-name-framework-project.png)
 
-1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.9](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.9.zip)
+1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At the time of writing, the latest version is [Gigya Swift SDK 1.0.11](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.11.zip)
 
 1. Select the **SwiftFrameworkProxy** from the project files explorer then select the General tab
 
@@ -87,7 +87,10 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     [![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
-1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
+   > [!TIP]
+   > If this option is not available, first make sure to add a `.swift` file to the project as explained below, then return to the `Build Settings` and the setting should be discoverable.
+
+1. Expose desired methods and mark them with the `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
 
     ```swift
     import Foundation
@@ -109,7 +112,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     A few important notes on the code above:
 
-    - Import Gigya module here from the original third-party Gigya SDK and now can access any member of the framework.
+    - Importing the `Gigya` module here from the original third-party Gigya SDK allows access to any member of the framework.
     - Mark SwiftFrameworkProxy class with the `@objc` attribute specifying a name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. The type name should be clearly defined because it will be used later by its name.
     - Inherit the proxy class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
     - Mark all the members to be exposed as `public`.
@@ -120,7 +123,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ![xcode edit scheme release](walkthrough-images/xcode-edit-scheme-release.png)
 
-1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild** tool:
+1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single binary framework bundle (`.xcframework`). Identify installed SDK versions in order to build archives using the **xcodebuild** tool:
 
     ```bash
     xcodebuild -showsdks
@@ -130,28 +133,57 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ```bash
     iOS SDKs:
-            iOS 13.2                        -sdk iphoneos13.2
+	    iOS 16.4                     -sdk iphoneos16.4
+
+    iOS Additional SDKs:
+	    Asset Runtime SDK for macOS hosts targeting iOS 16.4	-sdk assetruntime.host.macosx.target.iphoneos16.4
+
     iOS Simulator SDKs:
-            Simulator - iOS 13.2            -sdk iphonesimulator13.2
+	    Simulator - iOS 16.4         -sdk iphonesimulator16.4
+
     macOS SDKs:
-            DriverKit 19.0                  -sdk driverkit.macosx19.0
-            macOS 10.15                     -sdk macosx10.15
+	    macOS 13.3                   -sdk macosx13.3
+	    macOS 13.3                   -sdk macosx13.3
+
     tvOS SDKs:
-            tvOS 13.2                       -sdk appletvos13.2
+	    tvOS 16.4                    -sdk appletvos16.4
+
+    tvOS Additional SDKs:
+	    Asset Runtime SDK for macOS hosts targeting tvOS 16.4	-sdk assetruntime.host.macosx.target.appletvos16.4
+
     tvOS Simulator SDKs:
-            Simulator - tvOS 13.2           -sdk appletvsimulator13.2
+	    Simulator - tvOS 16.4        -sdk appletvsimulator16.4
+
     watchOS SDKs:
-            watchOS 6.1                     -sdk watchos6.1
-    watchOS Simulator SDKs:
-            Simulator - watchOS 6.1         -sdk watchsimulator6.1
+	    watchOS 9.4                  -sdk watchos9.4
     ```
 
-    Pick a desired iOS SDK and iOS Simulator SDK version, in this case version 13.2 and execute the build with the following command
+    Pick a desired iOS SDK and iOS Simulator SDK version, in this case version 16.4, and execute the build with the following commands:
 
     ```bash
-    xcodebuild -sdk iphonesimulator13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
-    xcodebuild -sdk iphoneos13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
+    xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
+      -sdk iphonesimulator16.4 \
+      -scheme "SwiftFrameworkProxy" \
+      -configuration Release \
+      -archivePath "archives/SwiftFrameworkProxy-simulator.xcarchive" \
+      -destination "generic/platform=iOS Simulator" \
+      ENABLE_BITCODE=NO \
+      SKIP_INSTALL=NO \
+      BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+
+    xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
+      -sdk iphoneos16.4 \
+      -scheme "SwiftFrameworkProxy" \
+      -configuration Release \
+      -archivePath "archives/SwiftFrameworkProxy-ios.xcarchive" \
+      -destination "generic/platform=iOS" \
+      ENABLE_BITCODE=NO \
+      SKIP_INSTALL=NO \
+      BUILD_LIBRARY_FOR_DISTRIBUTION=YES
     ```
+
+    >[!TIP]
+    >See [more information about creating binary frameworks](https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle)
 
     > [!TIP]
     > If you have a workspace instead of project, build the workspace and specify the target as a required parameter. You also want to specify an output directory because for workspaces this directory will be different than for project builds.
@@ -159,7 +191,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
     > [!TIP]
     > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
-1. There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework, which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
+1. There are two archives, one for each platform, combine them as a single binary framework to be embedded into a Xamarin.iOS binding project later. In order to create a binary framework, which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
     - Navigate to the build output folder with **Release-iphoneos** and **Release-iphonesimulator** subfolders and copy one of the frameworks as an initial version of the final output (fat framework).
 
