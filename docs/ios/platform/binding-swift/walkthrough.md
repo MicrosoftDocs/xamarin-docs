@@ -157,7 +157,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
     > If you have a workspace instead of project, build the workspace and specify the target as a required parameter. You also want to specify an output directory because for workspaces this directory will be different than for project builds.
 
     > [!TIP]
-    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
 1. There are two archives with the generated frameworks, one for each platform, combine them as a single binary framework bundle to be embedded into a Xamarin.iOS binding project later. In order to create a binary framework bundle, which combines both architectures, you need to do the following steps. The .xcarchive package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
@@ -171,10 +171,10 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
         ```
 
     > [!TIP]
-    > If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the fat library and use the output framework from the device build earlier.
+    > If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the .xcframework library and use the output framework from the device build earlier.
 
     > [!TIP]
-    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) to create the .xcframework, which automates all steps above.
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L16-L24) to create the .xcframework, which automates all steps above.
 
 ## Prepare metadata
 
@@ -211,7 +211,7 @@ At this time, you should have the .xcframework with the Objective-C generated in
     > The header file name could be different if you changed the default Xcode settings for the header name. By default it has the name of a project with the **-Swift** suffix. You can always check the file and its name by navigating to the headers folder of the framework package.
 
     > [!TIP]
-    > As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L35) to generate metadata automatically once the fat framework is created.
+    > As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L35) to generate metadata automatically once the .xcframework is created.
 
 ## Build a binding library
 
