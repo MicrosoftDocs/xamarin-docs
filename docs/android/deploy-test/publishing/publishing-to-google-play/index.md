@@ -53,12 +53,12 @@ publisher account. To sign up for a publisher account follow these steps:
 1. Confirm verification by e-mail.
 1. After the account has been created, it is possible to publish applications using Google Play.
 
-Google Play does not support all countries in the world. The most up-to-date
-lists of countries can be found in the following links:
+Google Play does not support all countries/regions in the world. The most up-to-date
+lists of countries/regions can be found in the following links:
 
-1. [Supported Locations for Developer &amp; Merchant Registration](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; This is a list of all countries where developers may register as merchants and sell paid applications.
+1. [Supported Locations for Developer &amp; Merchant Registration](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; This is a list of all countries/regions where developers may register as merchants and sell paid applications.
 
-1. [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries where applications may be distributed.
+1. [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries/regions where applications may be distributed.
 
 ### Preparing Promotional Assets
 
