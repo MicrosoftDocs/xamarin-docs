@@ -73,7 +73,7 @@ The new Apple TV has the following hardware specifications:
 
 Based on the region, the supplied Apple TV Remote will come in either one configurations: Siri Remote or Apple TV Remote.
 
-The Siri Remote is currently available in the following countries:
+The Siri Remote is currently available in the following countries/regions:
 
 - Australia
 - Canada
@@ -84,7 +84,7 @@ The Siri Remote is currently available in the following countries:
 - United Kingdom
 - United States
 
-All other countries will receive the Apple TV Remote that replaces the Siri button with a Search button that brings up the default Search screen with text input for searching:
+All other countries/regions will receive the Apple TV Remote that replaces the Siri button with a Search button that brings up the default Search screen with text input for searching:
 
 [![Siri Remote](tvos9-images/remote02.png)](tvos9-images/remote02.png#lightbox)
 

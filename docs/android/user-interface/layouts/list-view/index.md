@@ -54,7 +54,7 @@ that creates a list of scrollable items. The list items are
 automatically inserted to the list using a
 [`IListAdapter`](xref:Android.Widget.IListAdapter).
 
-In this tutorial, you'll create a scrollable list of country names that
+In this tutorial, you'll create a scrollable list of country/region names that
 are read from a string array. When a list item is selected, a toast
 message will display the position of the item in the list.
 
@@ -211,7 +211,7 @@ Run the application. You can scroll the list, or type to filter it,
 then click an item to see a message. You should see something like
 this:
 
-[![Example screenshot of ListView with country names](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
+[![Example screenshot of ListView with country/region names](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 Note that using a hard-coded string array is not the best design
 practice. One is used in this tutorial for simplicity, to
