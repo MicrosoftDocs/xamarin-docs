@@ -545,7 +545,7 @@ _Listed by primary location, many partners provide services across borders._
 
 | Partner | Locations | Description |
 | --- | --- | --- |
-|[CyanSYS](http://www.cyansys.com)|Singapore; Kuala Lumpur, Malaysia; Makati, Philippines; Hong Kong; Kota Kinabalu, Sabah, Malaysia; Jakarta, Indonesia|CyanSYS strives to provide scalable & quality solutions to small and medium-sized companies, enabling them to compete & grow through Information Technology|
+|[CyanSYS](http://www.cyansys.com)|Singapore; Kuala Lumpur, Malaysia; Makati, Philippines; Hong Kong Special Administrative Region; Kota Kinabalu, Sabah, Malaysia; Jakarta, Indonesia|CyanSYS strives to provide scalable & quality solutions to small and medium-sized companies, enabling them to compete & grow through Information Technology|
 |[Xamariners](http://xamariners.com/)|Singapore|We build applications that run natively on iOS, Android, Windows and Mac with a single code base, as well as friendly Bots and Augmented Reality apps.|
 
 ## Slovakia
