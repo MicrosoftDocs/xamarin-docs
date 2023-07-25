@@ -59,7 +59,7 @@ Or directly into your **AndroidManifest.xml**:
 <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 ```
 
-If it recommended to read [Android documentation on background location updates](https://developer.android.com/training/location/permissions) as there are many restrictions that need to be considered.
+It is recommended to read [Android documentation on background location updates](https://developer.android.com/training/location/permissions) as there are many restrictions that need to be considered.
 
 [!include[](~/essentials/includes/android-permissions.md)]
 
