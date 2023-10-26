@@ -62,7 +62,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-The Email functionality works by calling the `ComposeAsync` method an `EmailMessage` that contains information about the email:
+The Email functionality works by calling the `ComposeAsync` method with an `EmailMessage` that contains information about the email:
 
 ```csharp
 public class EmailTest
