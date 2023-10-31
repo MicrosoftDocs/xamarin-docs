@@ -43,7 +43,6 @@
       "uhfHeaderId":"MSDocsHeader-Xamarin",
       "breadcrumb_path": "/xamarin/breadcrumb/toc.json",
       "titleSuffix": "Xamarin",
-      "extendBreadcrumb": true,
       "manager": "crdun",
       "audience": "developer",
       "ms.topic": "conceptual",
