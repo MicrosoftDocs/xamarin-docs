@@ -4,16 +4,8 @@
   items:
   - name: Xamarin
     tocHref: /xamarin/
-    topicHref: /xamarin/
+    topicHref: /xamarin/index
     items:
     - name: Xamarin.Forms
       tocHref: /xamarin/xamarin-forms/
-      topicHref: /xamarin/xamarin-forms/
-      items:
-      - name: Get Started
-        tocHref: /xamarin/get-started/
-        topicHref: /xamarin/get-started/
-        items:
-        - name: Tutorials
-          tocHref: /xamarin/get-started/tutorials/
-          topicHref: /xamarin/get-started/tutorials/
+      topicHref: /xamarin/xamarin-forms/index
