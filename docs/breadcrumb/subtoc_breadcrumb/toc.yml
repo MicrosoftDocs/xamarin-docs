@@ -4,8 +4,8 @@
   items:
   - name: Xamarin
     tocHref: /xamarin/
-    topicHref: /xamarin/
+    topicHref: /xamarin/index
     items:
     - name: Xamarin.Forms
       tocHref: /xamarin/xamarin-forms/
-      topicHref: /xamarin/xamarin-forms/
+      topicHref: /xamarin/xamarin-forms/index
