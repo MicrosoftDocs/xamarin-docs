@@ -14,7 +14,7 @@ no-loc: [Objective-C]
 
 _TestFlight is now owned by Apple, and is the primary way to beta test your Xamarin.iOS apps. This article will guide you through all steps of the TestFlight Process – from uploading your app, to working with iTunes Connect._
 
-Beta testing is an integral part of the software development cycle, and there are many cross-platform applications offering to streamline this process such as [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing), and of course Google Play’s Native App Beta Testing for Android apps. This document focuses on Apple’s TestFlight.
+Beta testing is an integral part of the software development cycle, and there are many cross-platform applications offering to streamline this process such as [ Visual Studio App Center](https://appcenter.ms/), [Applause](https://www.applause.com/mobile-app-testing), and of course Google Play’s Native App Beta Testing for Android apps. This document focuses on Apple’s TestFlight.
 
 TestFlight is Apple’s beta testing service for iOS apps, and is accessible only through [iTunes Connect](https://itunesconnect.apple.com/). It is currently available for iOS 8.0 apps and above. TestFlight allows for beta testing with both internal and external users, and due to a Beta app review for the latter, ensures a much easier process in your final review when publishing to the App Store.
 
@@ -117,7 +117,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
 ### Submitting your Build
- The publishing wizard will open the Application Loader program to all you to upload your build to iTunes Connect. Select the **Deliver Your App** option, and upload the `.ipa` file created above. The Application Loader will validate and upload your build to iTunes Connect.
+ The publishing wizard will open the Application Loader program to you to upload your build to iTunes Connect. Select the **Deliver Your App** option, and upload the `.ipa` file created above. The Application Loader will validate and upload your build to iTunes Connect.
 
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
@@ -256,7 +256,7 @@ Once your app opens in TestFlight, it will show details of what to test for, and
 
 Test builds will be indicated on the device's home screen by an orange dot preceding the application name.
 
-Testers can give feedback through the TestFlight app, and you will relieve this information at the email address provided in the metadata.
+Testers can give feedback through the TestFlight app, and you will receive this information at the email address provided in the metadata.
 
 ### Beta Testing Complete
 
