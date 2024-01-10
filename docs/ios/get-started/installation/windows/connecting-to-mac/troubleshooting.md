@@ -16,7 +16,7 @@ _This guide provides troubleshooting steps for issues that may be encountered us
 
 ## Log File Location
 
-- **Mac** – `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Mac** – `~/Library/Logs/Xamarin.Messaging-[VERSION.BUILD]`
 - **Windows** – `%LOCALAPPDATA%\Xamarin\Logs`
 
 The log files can be located by browsing to **Help &gt; Xamarin &gt; Zip Logs** in Visual Studio.
