@@ -110,7 +110,7 @@ contains all the extra libraries that are required for your program, for
 example:
 
 ```bash
--gcc_flags "-L${ProjectDir} -lMylibrary -force_load ${ProjectDir}/libMyLibrary.a"
+-gcc_flags "-L$(MSBuildProjectDirectory) -lMylibrary -force_load $(MSBuildProjectDirectory)/libMyLibrary.a"
 ```
 
 The above example will link **libMyLibrary.a**
@@ -120,7 +120,7 @@ pass to the GCC compiler used to do the final link of your executable. For
 example, this command line, also references the CFNetwork framework:
 
 ```bash
--gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
+-gcc_flags "-L$(MSBuildProjectDirectory) -lMylibrary -lSystemLibrary -framework CFNetwork -force_load $(MSBuildProjectDirectory)/libMyLibrary.a"
 ```
 
 If your native library contains C++ code you must also pass the -cxx flag in
@@ -128,7 +128,7 @@ your "Extra Arguments" so that Xamarin.iOS knows to use the correct compiler. Fo
 C++ the previous options would look like:
 
 ```bash
--cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
+-cxx -gcc_flags "-L$(MSBuildProjectDirectory) -lMylibrary -lSystemLibrary -framework CFNetwork -force_load $(MSBuildProjectDirectory)/libMyLibrary.a"
 ```
 
 <a name="Accessing_C_Methods_from_C#"></a>
