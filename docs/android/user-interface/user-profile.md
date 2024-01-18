@@ -1,8 +1,8 @@
 ---
 title: "User Profile"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2018

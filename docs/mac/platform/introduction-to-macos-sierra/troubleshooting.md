@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac - macOS Sierra Troubleshooting"
 description: "This document provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps. Tips relate to the Mac App Store, Apple Pay, binary compatibility, CFNetwork, CloudKit, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/22/2016

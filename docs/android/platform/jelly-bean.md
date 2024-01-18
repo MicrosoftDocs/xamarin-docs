@@ -1,9 +1,9 @@
 ---
 title: "Jelly Bean Features"
 description: "This document will provide a high level overview of the new features for developers that were introduced in Android 4.1. These features include: enhanced notifications, updates to Android Beam to share large files, updates to multimedia, peer-to-peer network discovery, animations, new permissions."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

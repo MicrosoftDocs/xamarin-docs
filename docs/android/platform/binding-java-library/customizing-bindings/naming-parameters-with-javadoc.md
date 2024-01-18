@@ -1,9 +1,9 @@
 ---
 title: "Naming Parameters With Javadoc"
 description: "This article explains how to recover parameter names in an Java Binding Project by using Javadoc generated from the Java project."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/20/2017

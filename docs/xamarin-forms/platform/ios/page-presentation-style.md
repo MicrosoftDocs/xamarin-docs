@@ -1,9 +1,9 @@
 ---
 title: "Modal Page Presentation Style on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that sets the presentation style of a modal page."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/02/2020

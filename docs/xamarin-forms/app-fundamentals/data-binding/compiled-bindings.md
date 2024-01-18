@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Compiled Bindings"
 description: "This article explains how to use compiled bindings to improve data binding performance in Xamarin.Forms applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2019

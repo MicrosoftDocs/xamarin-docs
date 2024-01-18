@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 23. Triggers and behaviors"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 23. Triggers and behaviors"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Managing Fragments"
 description: Learn about managing fragments in Android by using the FragmentManager class to automatically find or dynamically change an activity's fragments.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 02C5E8F0-32EF-4FD9-DC8B-04650E20722C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018

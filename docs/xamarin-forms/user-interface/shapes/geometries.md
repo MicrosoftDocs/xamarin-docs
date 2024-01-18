@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Geometries"
 description: "Xamarin.Forms geometry classes enable you to describe the geometry of a 2D shape."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/28/2020

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView EmptyView"
 description: "In CarouselView, an empty view can be specified that provides feedback to the user when no data is available for display. The empty view can be a string, a view, or multiple views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

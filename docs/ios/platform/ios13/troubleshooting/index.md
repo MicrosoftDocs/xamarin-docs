@@ -1,9 +1,9 @@
 ---
 title: "Xamarin and iOS 13 troubleshooting"
 description: "This section contains troubleshooting tips for Xamarin functionality related to iOS 13."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 00DE8C33-1407-45C0-A0C7-32AF1E490034
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/12/2019

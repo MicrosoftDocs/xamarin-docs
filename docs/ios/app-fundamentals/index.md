@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS application fundamentals"
 description: "This document links to various guides that describe concepts foundational to Xamarin.iOS development, such as app transport security, backgrounding, events, and threading."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017

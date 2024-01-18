@@ -1,9 +1,9 @@
 ---
 title: "Device Orientation"
 description: "This article explains how to layout Xamarin.Forms applications that look great in portrait and landscape orientations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/24/2020

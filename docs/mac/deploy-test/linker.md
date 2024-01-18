@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac linker options"
 description: "This document describes linking in Xamarin.Mac. Linking is a powerful optimization tool that reduces the size of your application by removing unused code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017

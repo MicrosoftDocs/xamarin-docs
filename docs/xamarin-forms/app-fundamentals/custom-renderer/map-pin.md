@@ -1,9 +1,9 @@
 ---
 title: "Customizing a Map Pin"
 description: "This article demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin and a customized view of the pin data on each platform."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019

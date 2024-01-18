@@ -2,9 +2,9 @@
 title: "Sample App: Hello, iOS"
 description: "This document links to guides that introduce the tools and concepts necessary to understand how to build and deploy a Xamarin.iOS application."
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: cf04736b-c95a-4e6f-b49f-b7f2b7ff62b9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

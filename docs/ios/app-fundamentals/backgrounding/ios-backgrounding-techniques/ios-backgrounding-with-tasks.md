@@ -1,9 +1,9 @@
 ---
 title: "iOS Backgrounding with Tasks"
 description: "This document describes how to use background tasks to perform long-running tasks after an application is placed in the background."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

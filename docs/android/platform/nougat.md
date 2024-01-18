@@ -1,9 +1,9 @@
 ---
 title: "Nougat Features"
 description: "How to get started using Xamarin.Android to develop apps for Android Nougat."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018

@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 6"
 description: "This document links to guides that describe features introduced in iOS 6. Collection views, PassKit, the Social Framework, and changes to StoreKit are all discussed."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

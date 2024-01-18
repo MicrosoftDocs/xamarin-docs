@@ -1,9 +1,9 @@
 ---
 title: "Free Provisioning for Xamarin.iOS Apps"
 description: "This document describes how Xamarin.iOS developers can test their app on a physical device without needing to sign up for Apple's paid Developer Program."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/16/2018

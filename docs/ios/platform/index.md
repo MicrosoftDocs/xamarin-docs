@@ -1,9 +1,9 @@
 ---
 title: "iOS platform features overview"
 description: "This document links to various guides that describe features introduced in various versions of iOS, and other iOS platform features."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018

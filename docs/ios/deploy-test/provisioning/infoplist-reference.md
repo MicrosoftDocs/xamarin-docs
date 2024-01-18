@@ -1,9 +1,9 @@
 ---
 title: "Info.plist Reference for Xamarin.iOS"
 description: "This document describes various key/value pairs that can be set in the Info.plist file of a Xamarin.iOS application. These keys are necessary if your app performs specific tasks such as accessing location, photos, the microphone, or the camera."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017

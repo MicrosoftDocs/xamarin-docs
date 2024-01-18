@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough - Using Local Notifications in Xamarin.iOS"
 description: "In this section we'll walk through how to use local notifications in a Xamarin.iOS application. It will demonstrate the basics of creating and publishing a notification that will pop up an alert when received by the app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

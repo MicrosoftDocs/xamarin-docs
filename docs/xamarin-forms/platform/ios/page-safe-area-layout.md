@@ -1,9 +1,9 @@
 ---
 title: "Safe Area Layout Guide on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that ensures that page content is positioned on an area of the screen that is safe for all devices that use iOS 11 and greater."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2B6789C1-39B4-4C16-ADE1-3ED3378EAC63
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

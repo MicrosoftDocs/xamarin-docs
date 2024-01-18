@@ -1,9 +1,9 @@
 ---
 title: "View Controllers in Xamarin.iOS"
 description: "This document links to a guide that describes how to customize the animated transitions between view controllers in Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 15846D93-26A7-4E7E-B6DA-8E20FCD995E7
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017

@@ -1,9 +1,9 @@
 ---
 title: "Main Thread Control Updates on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that enables control layout and rendering updates to be performed on the main thread."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 945E711D-9BD2-4BF9-9FB3-CBE0D5B25A49
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

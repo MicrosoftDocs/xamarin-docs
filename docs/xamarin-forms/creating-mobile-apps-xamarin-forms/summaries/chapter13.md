@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 13. Bitmaps"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 13. Bitmaps"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch

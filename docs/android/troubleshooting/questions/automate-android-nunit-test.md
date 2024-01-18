@@ -2,9 +2,9 @@
 title: "How do I automate an Android NUnit Test project?"
 description: This guide explains how to automate an Android NUnit test project, not a Xamarin.UITest project.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EA3CFCC4-2D2E-49D6-A26C-8C0706ACA045
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2018

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Accessibility"
 description: "Building an accessible application ensures that the application is usable by people who approach the user interface with a range of needs and experiences."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019

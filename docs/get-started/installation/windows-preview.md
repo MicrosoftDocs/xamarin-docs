@@ -1,7 +1,7 @@
 ---
 title: "Installing Xamarin Preview on Windows"
 description: "This document describes how to install a preview version of Xamarin on Visual Studio 2019 by using the Preview release channel."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: conceptdev
 ms.author: crdun

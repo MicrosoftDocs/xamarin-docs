@@ -1,9 +1,9 @@
 ---
 title: "Android Speech"
 description: "This article covers the basics of using the very powerful Android.Speech namespace. Since its inception, Android has been able to recognize speech and output it as text. It is a relatively simple process. For text to speech, however, the process is more involved, as not only does the speech engine have to be taken into account, but also the languages available and installed from the Text To Speech (TTS) system."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018

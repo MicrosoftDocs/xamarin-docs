@@ -1,8 +1,8 @@
 ---
 title: "Cropping SkiaSharp bitmaps"
 description: "Learn how to use SkiaSharp to design a user interface for interactively desribing a cropping rectangle."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch

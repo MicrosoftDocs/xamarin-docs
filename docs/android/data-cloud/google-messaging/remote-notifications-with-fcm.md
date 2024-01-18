@@ -1,9 +1,9 @@
 ---
 title: "Remote Notifications with Firebase Cloud Messaging"
 description: "This walkthrough provides a step-by-step explanation of how to use Firebase Cloud Messaging to implement remote notifications (also called push notifications) in a Xamarin.Android application. It illustrates how to implement the various classes that are needed for communications with Firebase Cloud Messaging (FCM), provides examples of how to configure the Android Manifest for access to FCM, and demonstrates downstream messaging using the Firebase Console."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018

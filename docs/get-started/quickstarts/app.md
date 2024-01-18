@@ -3,9 +3,9 @@ title: "Create a Xamarin.Forms application quickstart"
 description: "This article explains how to create a Xamarin.Forms Shell application, which reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 359F5012-4409-42A7-BEDF-C1DB9AF86DED
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.custom: contperf-fy21q3

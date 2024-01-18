@@ -1,9 +1,9 @@
 ---
 title: "Mac Platform Setup"
 description: "This article explains how to add a Mac project to a Xamarin.Forms project, that will produce an app capable of running on macOS Sierra and macOS El Capitan."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

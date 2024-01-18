@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough - Using Touch in Android"
 description: Learn about using touch in Android via this walkthrough that creates an application with four activities.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/09/2018

@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Data Storage in Xamarin.iOS Apps"
 description: "This document describes various means of data storage in a Xamarin.iOS application, and provides specific information about the benefits of SQLite."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016

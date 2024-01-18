@@ -1,9 +1,9 @@
 ---
 title: "Data binding and key-value coding in Xamarin.Mac"
 description: "This article covers using key-value coding and key-value observing to allow for data binding to UI elements in Xcode's Interface Builder."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

@@ -1,9 +1,9 @@
 ---
 title: "Creating a Service"
 description: Learn about creating a service in Xamarin.Android, which must obey two inviolable rules of Android services.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018

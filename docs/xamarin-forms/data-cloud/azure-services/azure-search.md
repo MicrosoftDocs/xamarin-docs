@@ -1,9 +1,9 @@
 ---
 title: "Search Data with Azure Search and Xamarin.Forms"
 description: "This article demonstrates how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016

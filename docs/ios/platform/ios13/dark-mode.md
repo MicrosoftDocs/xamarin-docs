@@ -1,9 +1,9 @@
 ---
 title: "Dark Mode in Xamarin.iOS"
 description: "Dark Mode is a new system-wide option for light and dark themes. iOS user may now choose a theme or allow iOS to dynamically change appearance."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4F44446E-36B6-4743-9B4D-32278D1D3D66
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019

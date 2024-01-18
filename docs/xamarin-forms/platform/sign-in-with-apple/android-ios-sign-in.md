@@ -1,9 +1,9 @@
 ---
 title: "Use Sign In with Apple for Xamarin.Forms"
 description: "Learn how to implement Sign In with Apple in your Xamarin.Forms mobile applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019

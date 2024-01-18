@@ -1,9 +1,9 @@
 ---
 title: "TabbedPage Icons on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that enables page icons to be displayed on a TabbedPage toolbar."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C5031A5-74EE-4469-994E-BEA7BA9D33CB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

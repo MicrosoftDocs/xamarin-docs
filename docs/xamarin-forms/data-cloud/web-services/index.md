@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms and Web Services"
 description: "This guide explains how to communicate with different web services to provide create, read, update, and delete (CRUD) functionality to a Xamarin.Forms application. Topics covered include communicating with ASMX services, WCF services, REST services."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019

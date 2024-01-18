@@ -1,9 +1,9 @@
 ---
 title: "Default image directory on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that defines the directory in the project that image assets will be loaded from."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 537A032B-74DD-4D43-864E-7D7113286D0D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020

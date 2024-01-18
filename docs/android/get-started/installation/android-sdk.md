@@ -1,9 +1,9 @@
 ---
 title: "Setting up the Android SDK for Xamarin.Android"
 description: "Visual Studio includes an Android SDK Manager that you use to download Android SDK tools, platforms, and other components that you need for developing Xamarin.Android apps."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018

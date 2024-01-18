@@ -1,9 +1,9 @@
 ---
 title: "Working with the watchOS Parent Application in Xamarin"
 description: "This document describes how to work with a watchOS parent application in Xamarin. It discusses watchOS app extensions, iOS apps, shared storage, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

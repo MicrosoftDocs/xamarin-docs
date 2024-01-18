@@ -1,9 +1,9 @@
 ---
 title: "SwipeView Swipe Transition Mode on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls the transition that's used when opening a SwipeView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C667F24C-BAD8-47E0-9285-D3546BEF703B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019

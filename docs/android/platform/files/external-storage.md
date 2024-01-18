@@ -1,9 +1,9 @@
 ---
 title: "File access on external storage with Xamarin.Android"
 description: "This guide will discuss file access on external storage in Xamarin.Android"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018

@@ -2,9 +2,9 @@
 title: "Profiling Android Apps"
 description: "This guide explains how to use profiler tools to examine the performance and memory usage of an Android app."
 ms.topic: article
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8C823FEE-A6F6-4C31-9EB6-E51407A2FD8E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018

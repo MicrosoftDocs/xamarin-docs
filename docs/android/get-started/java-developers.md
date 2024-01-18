@@ -1,9 +1,9 @@
 ---
 title: "Xamarin for Java developers"
 description: "If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018

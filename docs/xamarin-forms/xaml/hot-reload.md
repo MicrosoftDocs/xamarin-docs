@@ -1,9 +1,9 @@
 ---
 title: "XAML Hot Reload for Xamarin.Forms"
 description: "Reload changes to your XAML file instantly on your running application so you don't have to build your Xamarin.Forms project after every XAML change."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: maddymontaquila
 ms.author: maleger
 ms.date: 03/01/2021

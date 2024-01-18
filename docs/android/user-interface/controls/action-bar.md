@@ -1,9 +1,9 @@
 ---
 title: "ActionBar for Xamarin.Android"
 description: Learn about using the ActionBar in Xamarin.Android.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

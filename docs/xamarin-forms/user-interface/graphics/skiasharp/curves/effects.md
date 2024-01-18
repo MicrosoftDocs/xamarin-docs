@@ -1,8 +1,8 @@
 ---
 title: "Path Effects in SkiaSharp"
 description: "This article explains the various SkiaSharp path effects that allow paths to be used for stroking and filling, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch

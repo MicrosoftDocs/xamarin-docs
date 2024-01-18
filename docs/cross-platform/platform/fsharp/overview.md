@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with F#"
 description: "This document describes how to learn F# and use it to build Xamarin applications with Visual Studio 2019 and Visual Studio for Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: davidortinau
 ms.author: daortin

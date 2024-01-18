@@ -1,9 +1,9 @@
 ---
 title: "Backgrounding in Xamarin.iOS"
 description: "Background processing or backgrounding is the process of letting applications perform tasks in the background while another application is running in the foreground. This guide serves as an introduction to background processing in iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018

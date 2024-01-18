@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS API Design"
 description: "Guiding principles that were used to architect the Xamarin.iOS APIs and how they relate to Objective-C."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

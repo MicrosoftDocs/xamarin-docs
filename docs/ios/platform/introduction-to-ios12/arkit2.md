@@ -1,9 +1,9 @@
 ---
 title: "ARKit 2 in Xamarin.iOS"
 description: "This document describes updates to ARKit in iOS 12. It focuses on using reference objects and images for detection, includes code for environmental texturing, and discusses common issues in ARKit programming."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/22/2018

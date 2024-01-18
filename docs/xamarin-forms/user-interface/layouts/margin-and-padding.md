@@ -1,9 +1,9 @@
 ---
 title: "Margin and Padding"
 description: "The Margin and Padding properties control layout behavior when an element is rendered in the user interface. This article demonstrates the difference between the two properties, and how to set them."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016

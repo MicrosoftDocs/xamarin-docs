@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp shaders"
 description: "Use shaders to create gradients, bitmap tiles, and Perlin noise."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
 author: davidbritch
 ms.author: dabritch

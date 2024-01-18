@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Stepper"
 description: "The Xamarin.Forms Stepper allows a user to select a numeric value from a range of values. It consists of two buttons labeled with minus and plus signs. Manipulating the two buttons changes the selected value incrementally."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018

@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 7. XAML vs. code"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 7. XAML vs. code"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Working with the UI Thread in Xamarin.iOS"
 description: "This document describes how to work with the UI Thread in Xamarin.iOS. It discusses UI thread execution, provides a background thread example, and examines async/await."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

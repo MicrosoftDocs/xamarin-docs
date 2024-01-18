@@ -1,9 +1,9 @@
 ---
 title: "Customizing a ViewCell"
 description: "A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016

@@ -1,9 +1,9 @@
 ---
 title: "InputView Reading Order on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that enables the reading order of bidirectional text to be detected dynamically."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E61BAEE0-C8B7-4F33-8DDC-FA1B9CA8E81D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

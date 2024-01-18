@@ -1,9 +1,9 @@
 ---
 title: "Activity Indicator in Xamarin.Forms"
 description: "The ActivityIndicator control indicates to users that the application is engaged in a lengthy activity, without giving any indication of progress. This article explains how to use an ActivityIndicator in XAML and code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019

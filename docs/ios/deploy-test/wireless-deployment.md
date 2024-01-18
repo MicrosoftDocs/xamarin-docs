@@ -1,9 +1,9 @@
 ---
 title: "Wireless Deployment for Xamarin.iOS and tvOS Apps"
 description: "This document describes how to wirelessly deploy a Xamarin.iOS app to an iOS device from either Visual Studio for Mac or Visual Studio 2019."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.custom: video

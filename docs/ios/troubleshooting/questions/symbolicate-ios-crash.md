@@ -2,9 +2,9 @@
 title: "Where can I find the .dSYM file to symbolicate iOS crash logs?"
 description: Learn where to find the .dSYM file to symbolicate iOS crash logs, in the same directory hierarchy as your app's project file (.csproj).
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/09/2018

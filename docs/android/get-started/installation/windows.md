@@ -1,9 +1,9 @@
 ---
 title: "Windows Installation"
 description: "This guide describes the steps for installing Xamarin.Android for Visual Studio on Windows, and it explains how to configure Xamarin.Android for building your first Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/21/2021

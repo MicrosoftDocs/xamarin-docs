@@ -2,9 +2,9 @@
 title: "Hello, Mac – Walkthrough"
 description: "This document demonstrates how to create a Xamarin.Mac app and introduces Visual Studio for Mac, Xcode, and Interface Builder. It discusses exposing UI controls to code through outlets and actions, and it illustrates how to build, run, and test a Xamarin.Mac application."
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018

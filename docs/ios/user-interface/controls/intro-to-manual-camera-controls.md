@@ -1,9 +1,9 @@
 ---
 title: "Manual Camera Controls in Xamarin.iOS"
 description: "This document describes how the iOS AVFoundation framework can be used with Xamarin.iOS to enable manual camera controls. Manual camera controls allow a user to control focus, white balance, and exposure settings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/01/2023

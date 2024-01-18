@@ -7,8 +7,8 @@ metadata:
   title: Xamarin.Android
   description: Xamarin.Android exposes the complete Android SDK for .NET developers.
   ms.topic: landing-page
-  ms.prod: xamarin
-  ms.technology: xamarin-android
+  ms.service: xamarin
+  ms.subservice: xamarin-android
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020

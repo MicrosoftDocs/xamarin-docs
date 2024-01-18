@@ -1,8 +1,8 @@
 ---
 title: "Google Licensing Services"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E96BDCC3-454A-A797-5819-905E2BB1AC41
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 12/20/2017

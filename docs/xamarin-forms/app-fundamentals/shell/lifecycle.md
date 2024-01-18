@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell lifecycle"
 description: "Shell applications respect the Xamarin.Forms lifecycle, and additionally fire an Appearing event when a page is about to appear on the screen, and a Disappearing event when a page is about to disappear from the screen."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/15/2021

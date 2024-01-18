@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough: Using Touch in Xamarin.iOS"
 description: "This document describes how to handle touch in Xamarin.iOS applications, discussing sample touch interactions, gesture recognizers, and custom gesture recognizers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Ellipse"
 description: "The Xamarin.Forms Ellipse class can be used to draw ellipses and circles."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5BF81E25-12E5-49F0-A40C-0CF4C5D63B9B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2021

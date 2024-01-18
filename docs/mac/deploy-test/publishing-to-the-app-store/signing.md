@@ -1,9 +1,9 @@
 ---
 title: "Signing Xamarin.Mac Apps with a Developer ID"
 description: "This document describes how to sign a Xamarin.Mac app with a developer ID so that it can be distributed outside of the Mac App Store. It discusses code signing options and building."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

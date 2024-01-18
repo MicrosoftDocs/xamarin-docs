@@ -1,9 +1,9 @@
 ---
 title: "ListView Interactivity"
 description: "This article explains how to add interactivity to a Xamarin.Forms ListView by implementing selections, context actions, and pull-to-refresh."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019

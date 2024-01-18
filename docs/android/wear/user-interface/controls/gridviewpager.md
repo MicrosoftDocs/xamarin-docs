@@ -1,8 +1,8 @@
 ---
 title: "GridViewPager"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018

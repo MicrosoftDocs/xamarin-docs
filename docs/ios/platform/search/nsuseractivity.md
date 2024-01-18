@@ -1,9 +1,9 @@
 ---
 title: "Search with NSUserActivity in Xamarin.iOS"
 description: "This document describes how to index an NSUserActivity, making it searchable in Spotlight and Safari. It discusses how to respond to the selection of an NSUserActivity in search results."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

@@ -1,9 +1,9 @@
 ---
 title: "StoreKit Overview and Retrieving Product Info in Xamarin.iOS"
 description: "This document provides an overview of StoreKit. It describes classes used with StoreKit, testing StoreKit interactions, displaying products for sale, handling invalid products, and displaying localized prices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

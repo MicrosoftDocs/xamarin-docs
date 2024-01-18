@@ -1,9 +1,9 @@
 ---
 title: "Using Xamarin.Mac bindings for Console Apps"
 description: "Create a headless console app using Xamarin.Mac to access native macOS APIs."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9E52B4CC-F530-4B3E-984A-7F5719A6D528
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: migueldeicaza
 ms.author: miguel
 ms.date: 07/27/2018

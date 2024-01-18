@@ -1,7 +1,7 @@
 ---
 title: "SkiaSharp Graphics in Xamarin.Forms"
 description: "SkiaSharp is a 2D graphics system for .NET and C# powered by the open-source Skia graphics engine that is used extensively in Google products. This guide explains how to use SkiaSharp for 2D graphics in your Xamarin.Forms applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
 ms.author: dabritch

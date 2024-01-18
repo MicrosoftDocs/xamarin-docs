@@ -1,9 +1,9 @@
 ---
 title: "Customizing a WebView"
 description: "A Xamarin.Forms WebView is a view that displays web and HTML content in your app. This article explains how to create a custom renderer that extends the WebView to allow C# code to be invoked from JavaScript."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/31/2020

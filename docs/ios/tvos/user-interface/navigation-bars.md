@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Navigation Bars in Xamarin"
 description: "This document describes how to work with navigation bars in a tvOS app built with Xamarin. It discusses setting up navigation bars in a storyboard and responding to events from these buttons."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

@@ -1,9 +1,9 @@
 ---
 title: "Android Wear Controls"
 description: Android Wear apps can use many of the same controls already in use for regular Android apps. Learn which controls and layout controls are supported.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

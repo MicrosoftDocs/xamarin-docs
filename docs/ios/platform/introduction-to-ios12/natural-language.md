@@ -1,9 +1,9 @@
 ---
 title: "Using the Natural Language framework with Xamarin.iOS"
 description: "This document describes the Natural Language Framework. Introduced in iOS 12, the Natural Language framework is the preferred iOS API to use for language recognition, parts of speech identification, and named entity recognition."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/20/2018

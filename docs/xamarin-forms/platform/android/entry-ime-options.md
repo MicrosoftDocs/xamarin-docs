@@ -1,9 +1,9 @@
 ---
 title: "Entry Input Method Editor Options on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that sets the input method editor options for the soft keyboard for an Entry."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

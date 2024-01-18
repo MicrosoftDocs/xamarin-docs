@@ -1,9 +1,9 @@
 ---
 title: "VisualElement Legacy Color Mode on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that disables the Xamarin.Forms legacy color mode."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B8759309-07C7-4DCA-A18A-C1A198A7951B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

@@ -2,9 +2,9 @@
 title: "What version of Xamarin.Android added Lollipop support?"
 description: Learn about the addition of Lollipop support in Xamarin.Android version 4.20.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

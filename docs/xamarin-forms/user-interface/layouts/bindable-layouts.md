@@ -1,9 +1,9 @@
 ---
 title: "Bindable Layouts in Xamarin.Forms"
 description: "Bindable layouts enable layout classes to generate their content by binding to a collection of items, with the option to set the appearance of each item with a DataTemplate."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/09/2020

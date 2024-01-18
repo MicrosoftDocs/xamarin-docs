@@ -1,9 +1,9 @@
 ---
 title: "Graphics and Animation"
 description: "Android provides a very rich and diverse framework for supporting 2D graphics and animations. This topic introduces these frameworks and discusses how to create custom graphics and animations for use in a Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

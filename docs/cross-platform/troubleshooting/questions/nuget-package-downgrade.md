@@ -1,7 +1,7 @@
 ---
 title: "How do I downgrade a NuGet package?"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
 author: davidortinau
 ms.author: daortin

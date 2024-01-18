@@ -1,9 +1,9 @@
 ---
 title: "Broadcast Receivers in Xamarin.Android"
 description: "This section discusses how to use a Broadcast Receiver."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018

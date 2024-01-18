@@ -1,9 +1,9 @@
 ---
 title: "Installing Xamarin.iOS on Windows"
 description: "This document describes how to set up a Windows machine, set up a Mac build host, and pair Windows to the Mac for Xamarin.iOS development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018

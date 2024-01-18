@@ -46,13 +46,13 @@
       "manager": "crdun",
       "audience": "developer",
       "ms.topic": "conceptual",
-      "ms.technology": "xamarin-crossplatform",
-      "ms.prod": "xamarin",
+      "ms.service": "xamarin",
+      "ms.subservice": "xamarin-crossplatform",
       "searchScope": ["Xamarin"],
       "feedback_system": "None"
     },
     "fileMetadata": {
-      "ms.technology": {
+      "ms.subservice": {
         "essentials/**/**.md":"xamarin-essentials",
         "android/**/**.md":"xamarin-android",
         "android/**/**.yml":"xamarin-android",

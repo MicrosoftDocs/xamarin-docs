@@ -1,9 +1,9 @@
 ---
 title: "Touch Events and Gestures in Xamarin.iOS"
 description: "This document describes how to work with touch events, multi-touch, gestures, multiple gestures, and custom gestures in Xamarin.iOS applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

@@ -1,9 +1,9 @@
 ---
 title: "Multi-Touch Finger Tracking in Xamarin.iOS"
 description: "This document describes how to track individual fingers in multi-touch gestures in a Xamarin.iOS app. It centers around a finger-painting app example."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

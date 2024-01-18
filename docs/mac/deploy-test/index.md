@@ -1,9 +1,9 @@
 ---
 title: "Deploying and Testing Xamarin.Mac Apps"
 description: "This document links to various guides that describe how to deploy and test Xamarin.Mac apps. Linked guides discuss application icons, performance, and publishing to the App Store."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 02/17/2018

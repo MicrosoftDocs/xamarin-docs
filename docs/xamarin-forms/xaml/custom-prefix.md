@@ -1,9 +1,9 @@
 ---
 title: "XAML Namespace Recommended Prefixes in Xamarin.Forms"
 description: "The XmlnsPrefixAttribute class can be used by control authors to specify a recommended prefix to associate with a XAML namespace, for XAML usage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2019

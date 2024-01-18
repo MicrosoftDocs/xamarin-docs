@@ -1,9 +1,9 @@
 ---
 title: "Using Data in an iOS app"
 description: "This document describes the DataAccess_Adv sample, which demonstrates how to collect user input and perform create, read, update, and delete (CRUD) database operations in a Xamarin.iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016

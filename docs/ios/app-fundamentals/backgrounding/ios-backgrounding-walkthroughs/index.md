@@ -1,9 +1,9 @@
 ---
 title: "iOS Backgrounding Walkthroughs"
 description: "This document links to walkthroughs that demonstrate how to use location information in a backgrounded app and how to use background transfer service and NSURLSession."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

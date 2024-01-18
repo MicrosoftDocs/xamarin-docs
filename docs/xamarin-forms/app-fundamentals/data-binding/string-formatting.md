@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms String Formatting"
 description: "This article explains how to use Xamarin.FOrms data bindings to format and display objects as strings. This is achieved by setting the StringFormat of the Binding to a standard .NET formatting string with a placeholder."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018

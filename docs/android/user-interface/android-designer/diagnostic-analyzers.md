@@ -1,9 +1,9 @@
 ---
 title: "Android Layout Diagnostics Analyzers"
 description: "This guide lists all of the currently supported Android layout diagnostic analyzers on Xamarin.Android."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BD252EA7-7E69-4DB4-96AB-D52CC0510C8F
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: decriptor
 ms.author: stepsha
 ms.date: 04/07/2020

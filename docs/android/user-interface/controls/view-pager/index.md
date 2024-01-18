@@ -1,9 +1,9 @@
 ---
 title: "ViewPager"
 description: "ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement gestural navigation with ViewPager, with and without Fragments. It also describes how to add page indicators using PagerTitleStrip and PagerTabStrip."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

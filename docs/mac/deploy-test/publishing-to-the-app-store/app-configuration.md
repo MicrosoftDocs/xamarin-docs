@@ -1,9 +1,9 @@
 ---
 title: "Mac app configuration"
 description: "This document describes how to configure a Xamarin.Mac app for publication. It discusses application settings, signing settings, and build settings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017

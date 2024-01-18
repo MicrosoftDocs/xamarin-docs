@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Relative Bindings"
 description: "This article explains how to create relative bindings by using the RelativeSource markup extension to set the binding source relative to the position of the binding target."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019

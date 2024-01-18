@@ -1,9 +1,9 @@
 ---
 title: "Creating iOS User Interfaces in Code in Xamarin.iOS"
 description: "This document describes how to use code to build a user interface for a Xamarin.iOS app. It discusses view controllers, building a view hierarchy, handling a rotation, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018

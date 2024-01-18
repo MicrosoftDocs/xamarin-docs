@@ -1,9 +1,9 @@
 ---
 title: "Progress and Activity Indicators in Xamarin.iOS"
 description: "This document discusses how to use progress and activity indicators in Xamarin.iOS. It describes how to use them both programmatically and with a storyboard."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017

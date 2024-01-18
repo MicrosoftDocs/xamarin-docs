@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 7"
 description: "This article covers the major new APIs introduced in iOS 7, including View Controller transitions, enhancements to UIView animations, UIKit Dynamics and Text Kit. It also covers some of the changes to the user interface, and the new enchanced multitasking capabilities."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

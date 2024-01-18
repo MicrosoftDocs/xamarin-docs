@@ -1,9 +1,9 @@
 ---
 title: "Touch ID and Face ID with Xamarin.iOS"
 description: "This document provides a high-level description of biometric authentication in iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/16/2019

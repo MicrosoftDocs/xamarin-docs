@@ -1,9 +1,9 @@
 ---
 title: "XAML Field Modifiers in Xamarin.Forms"
 description: "The x:FieldModifier namespace attribute specifies the access level for generated fields for named XAML elements."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/02/2019

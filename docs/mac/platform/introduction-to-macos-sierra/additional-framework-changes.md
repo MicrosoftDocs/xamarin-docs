@@ -1,9 +1,9 @@
 ---
 title: "Additional macOS Sierra Framework Changes"
 description: "This document describes minor changes and enhancements to existing frameworks introduced in macOS Sierra. It examines changes to the Accelerate framework, AppKit, AVFoundation, Core Data, Core Image, Foundation, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

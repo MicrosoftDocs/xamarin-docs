@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac registrar"
 description: "This document describes the purpose of the Xamarin.Mac registrar and its dynamic, static, and partial static (hybrid) usage configurations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017

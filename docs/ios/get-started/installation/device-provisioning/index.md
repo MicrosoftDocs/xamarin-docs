@@ -1,9 +1,9 @@
 ---
 title: "Device Provisioning for Xamarin.iOS"
 description: "This document describes how to provision a device so that it can be used to test an application. It also discusses how to configure an app so that it can use capabilities such as push notifications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018

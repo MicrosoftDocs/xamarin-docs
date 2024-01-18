@@ -2,9 +2,9 @@
 title: "Managing Virtual Devices with the Android Device Manager"
 description: "This article explains how to use the Android Device Manager to create and configure Android Virtual Devices (AVDs) that emulate physical Android devices. You can use these virtual devices to run and test your app without having to rely on a physical device."
 zone_pivot_groups: platform
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.custom: video

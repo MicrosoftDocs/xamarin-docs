@@ -1,9 +1,9 @@
 ---
 title: "Background Transfer and NSURLSession in Xamarin.iOS"
 description: "This document provides a walkthrough that demonstrates how to use background transfer and NSUrlSession to kick off the download of a large image, and continue that download when the app is placed in the background."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/02/2020

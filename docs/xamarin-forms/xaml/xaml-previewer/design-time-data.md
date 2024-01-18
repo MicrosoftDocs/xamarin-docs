@@ -1,9 +1,9 @@
 ---
 title: "Use Design Time Data with the XAML Previewer"
 description: "This article explains how to use design time data to show data-heavy layouts in the XAML Previewer without running your app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: maddymontaquila
 ms.author: maleger
 ms.date: 03/27/2019

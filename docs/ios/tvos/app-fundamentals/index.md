@@ -1,9 +1,9 @@
 ---
 title: "tvOS Application Fundamentals"
 description: "This section presents the most common tasks and concepts that developers need to be aware of when writing Xamarin.tvOS apps."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

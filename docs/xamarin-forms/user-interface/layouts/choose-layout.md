@@ -1,9 +1,9 @@
 ---
 title: "Choose a Xamarin.Forms Layout"
 description: "Xamarin.Forms layout classes allow you to arrange and group UI controls in your application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018

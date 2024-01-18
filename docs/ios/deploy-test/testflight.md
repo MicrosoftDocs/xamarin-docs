@@ -1,9 +1,9 @@
 ---
 title: "Using TestFlight to Distribute Xamarin.iOS Apps"
 description: "TestFlight is now owned by Apple, and is the primary way to beta test your Xamarin.iOS apps. This article will guide you through all steps of the TestFlight Process – from uploading your app, to working with iTunes Connect."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

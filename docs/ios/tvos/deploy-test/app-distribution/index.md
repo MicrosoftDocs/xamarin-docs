@@ -1,9 +1,9 @@
 ---
 title: "tvOS App Distribution Overview"
 description: "This document gives an overview of the distribution techniques that are available for Xamarin.tvOS app and serves as a pointer to more detailed documents on the topic."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

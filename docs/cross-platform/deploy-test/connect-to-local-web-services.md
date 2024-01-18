@@ -1,7 +1,7 @@
 ---
 title: "Connect to Local Web Services from iOS Simulators and Android Emulators"
 description: "This article explains how a Xamarin mobile application running in the iOS simulator or Android emulator can consume a ASP.NET Core web service running locally."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch

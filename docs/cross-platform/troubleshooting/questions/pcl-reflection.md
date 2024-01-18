@@ -2,7 +2,7 @@
 title: "PCL Reflection API"
 description: Learn about the PCL Reflection API. Microsoft developed a new Reflection API for use in Portable Class Libraries.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3137957A-478F-4DCC-BA58-EA14D99E2ED8
 author: davidortinau
 ms.author: daortin

@@ -1,9 +1,9 @@
 ---
 title: "Keyboard Accessibility"
 description: "Rather than using the default tab sequence, it's sometimes necessary to tune the accessibility of your UI by specifying the tab sequence with a combination of the TabIndex and IsTabStop properties."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019

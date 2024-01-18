@@ -1,7 +1,7 @@
 ---
 title: "C# 6 New Features Overview"
 description: "Version 6 of the C# language continues to evolve the language to have less boilerplate code, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
 author: davidortinau

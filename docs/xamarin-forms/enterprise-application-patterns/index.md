@@ -1,9 +1,9 @@
 ---
 title: "Enterprise Application Patterns using Xamarin.Forms eBook"
 description: "This eBook provides architectural guidance for developing adaptable, maintainable, and testable Xamarin.Forms enterprise applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

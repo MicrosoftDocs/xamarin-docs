@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms ImageButton"
 description: "The ImageButton displays an image and responds to a tap or click that directs an application to carry out a particular task."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019

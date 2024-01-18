@@ -2,7 +2,7 @@
 title: "Updating component references to NuGet"
 description: "This document describes how to replace your component references with NuGet packages to future-proof your apps, since the Xamarin Component Store has been discontinued."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin

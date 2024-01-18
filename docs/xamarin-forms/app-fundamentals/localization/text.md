@@ -2,9 +2,9 @@
 title: "String and Image Localization in Xamarin.Forms"
 description: "Xamarin.Forms apps can be localized using .NET resource files."
 zone_pivot_groups: "platform"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/01/2019

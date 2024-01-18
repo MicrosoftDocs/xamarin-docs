@@ -1,9 +1,9 @@
 ---
 title: "Troubleshooting tips for iOS 12 and Xamarin.iOS"
 description: "This article describes resources that can be used for troubleshooting when developing Xamarin.iOS applications. It discusses known issues, reporting a new issue, and other troubleshooting resources."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2018

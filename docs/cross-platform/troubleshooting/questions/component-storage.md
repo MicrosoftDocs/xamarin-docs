@@ -2,7 +2,7 @@
 title: "Where are the components stored on my machine?"
 description: Learn how to locate where a list of components are stored.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
 author: davidortinau
 ms.author: daortin

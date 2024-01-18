@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Alerts in Xamarin"
 description: "This document describes how to work with tvOS alerts in Xamarin. It discusses displaying an alert, adding text fields, and a helper class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

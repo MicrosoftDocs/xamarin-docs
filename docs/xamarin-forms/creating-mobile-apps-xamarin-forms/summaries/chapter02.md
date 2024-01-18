@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 2. Anatomy of an app"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 2. Anatomy of an app"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch

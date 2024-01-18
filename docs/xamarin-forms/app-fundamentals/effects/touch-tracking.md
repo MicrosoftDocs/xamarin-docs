@@ -1,9 +1,9 @@
 ---
 title: "Invoking Events from Effects"
 description: "An effect can define and invoke an event, signaling changes in the underlying native view. This article shows how to implement low-level multi-touch finger tracking, and how to generate events that signal touch activity."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018

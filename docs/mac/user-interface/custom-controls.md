@@ -1,9 +1,9 @@
 ---
 title: "Creating Custom Controls in Xamarin.Mac"
 description: "This document describes how to build custom controls in Xamarin.Mac. It shows how to build the custom control, track its state, draw its interface, respond to user input, and use the control in an application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

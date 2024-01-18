@@ -1,7 +1,7 @@
 ---
 title: "Working with Native Types in Cross-Platform Apps"
 description: "This article covers using the new iOS Unified API Native types (nint, nuint, nfloat) in a cross-platform application where code is shared with non-iOS devices such as Android or Windows Phone OSes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: davidortinau
 ms.author: daortin

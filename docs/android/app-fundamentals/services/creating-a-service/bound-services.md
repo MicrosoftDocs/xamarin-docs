@@ -1,9 +1,9 @@
 ---
 title: "Bound Services in Xamarin.Android"
 description: "Bound services are Android services that provide a client-server interface that a client (such as an Android Activity) can interact with. This guide will discuss the key components involved with creating a bound service and how to use it in a Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/04/2018

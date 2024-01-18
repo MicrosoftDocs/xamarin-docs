@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Geocoding"
 description: "This article explains how to geocode and reverse geocode map data, using the Xamarin.Forms.Maps Geocoder class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/22/2019

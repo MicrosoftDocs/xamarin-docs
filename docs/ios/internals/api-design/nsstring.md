@@ -1,9 +1,9 @@
 ---
 title: "NSString in Xamarin.iOS and Xamarin.Mac"
 description: "This document describes how Xamarin.iOS transparently converts NSString objects to C# string objects, when this does not happen."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

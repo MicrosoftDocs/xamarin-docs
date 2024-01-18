@@ -1,7 +1,7 @@
 ---
 title: "Overview of Objective-C Bindings"
 description: "This document provides an overview of different ways to create C# bindings for Objective-C code, including command-line bindings, binding projects, and Objective Sharpie. It also discusses how binding works."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin

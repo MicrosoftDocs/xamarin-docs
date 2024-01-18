@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms local data storage"
 description: "Learn how to perform file handling from shared Xamarin.Forms code, and how to read and write data to a local SQLite database using SQLite.Net."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A324C247-7DA8-4B14-A813-25F85525E32B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019

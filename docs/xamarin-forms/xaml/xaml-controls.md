@@ -2,9 +2,9 @@
 title: "XAML Controls"
 description: "All of the views that are defined in Xamarin.Forms can be referenced from XAML files."
 ms.topic: article
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/09/2020

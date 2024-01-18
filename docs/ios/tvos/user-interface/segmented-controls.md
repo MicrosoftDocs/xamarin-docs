@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Segmented Controls in Xamarin"
 description: "This document describes how to work with tvOS segmented controls in an app built with Xamarin. It discusses segment icons and text, events, modifying the control's appearance, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

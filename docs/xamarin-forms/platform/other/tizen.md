@@ -1,9 +1,9 @@
 ---
 title: "Tizen .NET"
 description: "Tizen .NET allows you to develop applications for the Tizen operating system, which runs on Samsung devices, including TVs, wearables, mobile devices, and other IoT devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5A22A354-A4DD-480D-A1BB-6D0C38592E55
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2018

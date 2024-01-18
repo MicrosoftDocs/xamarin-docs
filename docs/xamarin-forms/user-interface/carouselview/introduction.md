@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView Introduction"
 description: "CarouselView is a view for presenting data in a scrollable layout, where users can swipe to move through a collection of items."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/28/2020

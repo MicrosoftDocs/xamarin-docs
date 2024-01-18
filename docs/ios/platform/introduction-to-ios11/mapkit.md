@@ -1,9 +1,9 @@
 ---
 title: "New Features in MapKit on iOS 11"
 description: "This document describes new MapKit features in iOS 11: grouping markers, the compass button, the scale view, and the user tracking button."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin for Objective-C Developers"
 description: "This document provides a description of Xamarin.iOS for Objective-C developers. It links to guides that describe how to transition to C# from Objective-C, how to bind an Objective-C library for use in C#, and how to build a cross-platform mobile application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

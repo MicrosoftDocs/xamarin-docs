@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell navigation"
 description: "Xamarin.Forms Shell applications can utilize a URI-based navigation experience that permits navigation to any page in the application, without having to follow a set navigation hierarchy."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/09/2021

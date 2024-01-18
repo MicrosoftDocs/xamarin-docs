@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android ListView and the Activity Lifecycle"
 description: Learn about Xamarin.Android ListView and the activity lifecycle. For more information, see the Activity Lifecycle Tutorial.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

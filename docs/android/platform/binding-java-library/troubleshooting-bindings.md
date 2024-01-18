@@ -1,9 +1,9 @@
 ---
 title: "Troubleshooting Bindings"
 description: "This article summarizes serveral common errors that may occur when generating bindings, along with possible causes and suggested ways to resolve them."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

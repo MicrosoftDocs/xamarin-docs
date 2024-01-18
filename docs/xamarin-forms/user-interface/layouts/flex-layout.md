@@ -1,9 +1,9 @@
 ---
 title: "The Xamarin.Forms FlexLayout"
 description: "Use FlexLayout for stacking or wrapping a collection of child views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

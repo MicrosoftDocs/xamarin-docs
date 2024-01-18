@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 9. Platform-specific API calls"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 9. Platform-specific API calls"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: davidbritch
 ms.author: dabritch

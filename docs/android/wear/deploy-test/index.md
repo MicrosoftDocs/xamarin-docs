@@ -1,9 +1,9 @@
 ---
 title: "Testing, Optimizing, and Deploying Wear OS Apps"
 description: "How to test your Wear OS app on an Android device (or emulator) and prepare it for deployment."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018

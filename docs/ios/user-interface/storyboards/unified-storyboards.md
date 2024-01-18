@@ -1,9 +1,9 @@
 ---
 title: "Unified Storyboards in Xamarin.iOS"
 description: "This document describes unified storyboards in Xamarin.iOS. Unified storyboards allow developers to support multiple screen sizes with a single interface definition."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Layouts"
 description: "Xamarin.Forms Layouts are used to compose user interface controls into visual structures. This article lists the layouts included in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018

@@ -1,8 +1,8 @@
 ---
 title: "ListView Parts and Functionality"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: ABA40FED-FF68-C0B0-BC43-C748CEE585D8
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017

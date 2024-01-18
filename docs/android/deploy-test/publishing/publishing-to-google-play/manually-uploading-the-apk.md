@@ -1,8 +1,8 @@
 ---
 title: "Manually Uploading the APK"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018

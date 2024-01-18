@@ -1,9 +1,9 @@
 ---
 title: "Perceived Emotion Recognition Using the Face API"
 description: "The Face API takes a facial expression in an image as an input, and returns data that includes confidence levels across a set of emotions for each face in the image. This article explains how to use the Face API to recognize emotion, to rate a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018

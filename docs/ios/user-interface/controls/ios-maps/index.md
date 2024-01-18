@@ -1,9 +1,9 @@
 ---
 title: "Maps in Xamarin.iOS"
 description: "This document describes the iOS MapKit framework and how it is used with Xamarin.iOS. It discusses how to add a map, style it, pan and zoom, work with user location, add annotations, work with callouts and overlays, and perform local search."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

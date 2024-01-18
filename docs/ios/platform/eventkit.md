@@ -1,9 +1,9 @@
 ---
 title: "EventKit in Xamarin.iOS"
 description: "This document describes EventKit and how to use it in Xamarin.iOS. It discusses calendars, calendar events, and reminders, looks at classes commonly used when programming with EventKit, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

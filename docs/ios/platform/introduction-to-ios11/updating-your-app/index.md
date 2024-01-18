@@ -1,9 +1,9 @@
 ---
 title: "Updating Your App to iOS 11"
 description: "This document links to various guides that describe new features available to Xamarin.iOS developers with the release of iOS 11. For example, visual design updates, App Store changes, and App Icon updates."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

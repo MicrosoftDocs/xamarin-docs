@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough - Background Location in Xamarin.iOS"
 description: "This document provides a walkthrough of how to use location information in a backgrounded Xamarin.iOS application. It describes necessary setup, user interface, and application states."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

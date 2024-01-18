@@ -1,9 +1,9 @@
 ---
 title: "Creating User Interface for Wear OS with Xamarin.Android"
 description: "Creating User Interfaces for Wear OS Apps"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 092A6E08-FB07-4AC2-A5BD-8A9D4E6268D8
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018

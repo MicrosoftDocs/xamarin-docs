@@ -1,9 +1,9 @@
 ---
 title: "Table Views in Xamarin.Mac"
 description: "This article covers working with table views in a Xamarin.Mac application. It describes creating table views in Xcode and Interface Builder and interacting with them in code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

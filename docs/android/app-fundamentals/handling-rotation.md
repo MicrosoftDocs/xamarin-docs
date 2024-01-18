@@ -1,9 +1,9 @@
 ---
 title: "Handling Rotation"
 description: "This topic describes how to handle device orientation changes in Xamarin.Android. It covers how to work with the Android resource system to automatically load resources for a particular device orientation as well as how to programmatically handle orientation changes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

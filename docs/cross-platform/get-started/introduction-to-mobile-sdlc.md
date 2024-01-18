@@ -1,7 +1,7 @@
 ---
 title: "Mobile software development lifecycle"
 description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin

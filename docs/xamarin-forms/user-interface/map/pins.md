@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Pins"
 description: "This article explains how to create pins on a Xamarin.Forms map."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019

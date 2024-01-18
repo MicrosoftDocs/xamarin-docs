@@ -1,9 +1,9 @@
 ---
 title: "Display Pop-ups"
 description: "Xamarin.Forms provides three pop-up-like user interface elements – an alert, an action sheet, and a prompt. This article demonstrates using alert, action sheet, and prompt APIs to display dialog boxes that ask users simple questions, guide users through tasks, and display prompts."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/10/2020

@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp Transforms"
 description: "This article explores transforms for displaying SkiaSharp graphics in Xamarin.Forms applications, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch

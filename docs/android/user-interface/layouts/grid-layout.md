@@ -1,9 +1,9 @@
 ---
 title: "GridLayout"
 description: Learn about Xamarin.Android GridLayout, a new subclass that supports laying out views in a 2D grid, similar to an HTML table.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

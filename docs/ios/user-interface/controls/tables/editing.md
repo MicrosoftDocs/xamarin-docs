@@ -1,9 +1,9 @@
 ---
 title: "Editing Tables with Xamarin.iOS"
 description: "This document describes how to edit tables in Xamarin.iOS. It discusses swipe to delete, edit mode, and row insertion."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

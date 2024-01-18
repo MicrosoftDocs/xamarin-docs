@@ -1,7 +1,7 @@
 ---
 title: "Deploying to the Remoted iOS Simulator"
 description: "How to deploy to the remoted iOS simulator from Visual Studio 2017 on Windows."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C213E293-61B1-4D1E-BDE9-E664667698D4
 author: davidortinau
 ms.author: daortin

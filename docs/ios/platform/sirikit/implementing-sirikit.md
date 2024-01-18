@@ -1,9 +1,9 @@
 ---
 title: "Implementing SiriKit in Xamarin.iOS"
 description: "This document describes the steps required to implement SiriKit support in a Xamarin.iOS apps. It discusses Intents extensions and Intents UI extensions."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018

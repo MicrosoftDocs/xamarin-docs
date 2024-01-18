@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Path markup syntax"
 description: "Xamarin.Forms Path markup syntax enables you to compactly specify path geometries in XAML."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/13/2020

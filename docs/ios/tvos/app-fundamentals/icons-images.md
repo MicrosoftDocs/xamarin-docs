@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Icons and Images in Xamarin"
 description: "This document describes how to work with icons and images in a tvOS app built with Xamarin. It discusses launch images, layered images, the app icon, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

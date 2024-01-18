@@ -1,7 +1,7 @@
 ---
 title: "What is Xamarin.Forms?"
 description: "This article introduces Xamarin.Forms and related libraries."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
 author: profexorgeek
 ms.author: jusjohns

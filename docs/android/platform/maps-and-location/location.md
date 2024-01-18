@@ -1,9 +1,9 @@
 ---
 title: "Location services on Android"
 description: "This guide introduces location-awareness in Android applications and illustrates how to get the user's location using the Android Location Service API, as well as the fused location provider available with the Google Location Services API."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018

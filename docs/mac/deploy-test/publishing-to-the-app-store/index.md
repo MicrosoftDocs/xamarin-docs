@@ -1,9 +1,9 @@
 ---
 title: "Publishing Xamarin.Mac Apps to the Mac App Store"
 description: "This document describes how to deploy a Xamarin.Mac app with Visual Studio for Mac. It explains how to set up a Mac Developer Account, how to create the certificates for code signing, and how to use them to build Mac apps that can be distributed directly or via the Mac App Store."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

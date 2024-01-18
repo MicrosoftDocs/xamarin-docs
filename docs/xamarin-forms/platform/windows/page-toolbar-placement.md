@@ -1,9 +1,9 @@
 ---
 title: "Page Toolbar Placement on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that changes the placement of a toolbar on a Page."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

@@ -1,9 +1,9 @@
 ---
 title: "Button Padding and Shadows on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that uses the default padding and shadow values of Android buttons."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BD2B60D1-DE6E-4691-A777-8EC5F560A4E9
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

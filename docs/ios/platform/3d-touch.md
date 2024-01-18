@@ -1,9 +1,9 @@
 ---
 title: "Introduction to 3D Touch in Xamarin.iOS"
 description: "This article describes how to use 3D Touch gestures introduced with the iPhone 6s and iPhone 6s Plus. These gestures enable pressure sensitivity, peek and pop, and quick actions."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

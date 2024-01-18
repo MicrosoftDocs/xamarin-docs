@@ -1,9 +1,9 @@
 ---
 title: "ListView Separator Style on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls whether the separator between cells in a ListView uses the full width of the ListView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

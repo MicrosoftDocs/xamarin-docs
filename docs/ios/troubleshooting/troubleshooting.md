@@ -2,9 +2,9 @@
 title: "Troubleshooting Tips for Xamarin.iOS"
 description: "This document provides various tips useful for troubleshooting during the development of Xamarin.iOS applications. It describes specific error messages and other potential problems."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/10/2020

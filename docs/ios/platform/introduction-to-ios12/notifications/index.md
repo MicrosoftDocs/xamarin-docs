@@ -1,9 +1,9 @@
 ---
 title: "Notifications in iOS 12"
 description: "This document links to guides that describe how to use  various notification-related features introduced in iOS 12: provisional notifications, grouped notifications, notification management, interactive notifications, dynamic notification action buttons, and critical alerts."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

@@ -1,9 +1,9 @@
 ---
 title: "Web Views in Xamarin.iOS"
 description: "This document describes the various ways a Xamarin.iOS app can display web content. It discusses WKWebView, SFSafariViewController, Safari, and app transport security."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

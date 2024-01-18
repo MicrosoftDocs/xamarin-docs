@@ -1,9 +1,9 @@
 ---
 title: "ViewCell Context Actions on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that enables ViewCell context actions legacy mode."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8BD71B10-5037-443F-9975-B941CE393E5A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2019

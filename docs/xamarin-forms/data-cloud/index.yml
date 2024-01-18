@@ -7,7 +7,7 @@ metadata:
   title: Data & Azure cloud services
   description: Learn how to store data, and build connected Xamarin.Forms applications with Azure cloud services.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4
   author: davidbritch
   ms.author: dabritch

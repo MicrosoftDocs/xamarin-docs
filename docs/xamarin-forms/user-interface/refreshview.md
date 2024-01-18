@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms RefreshView"
 description: "The Xamarin.Forms RefreshView is a container control that provides pull to refresh functionality for scrollable content."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 58DBD23B-ADB9-40DA-B331-4DDB6E698990
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019

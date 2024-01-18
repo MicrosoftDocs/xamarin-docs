@@ -1,9 +1,9 @@
 ---
 title: "Purchasing Non-Consumable Products in Xamarin.iOS"
 description: "This document describes non-consumable products in Xamarin.iOS, which are features purchased by a user that remain available indefinitely, regardless of device."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

@@ -1,9 +1,9 @@
 ---
 title: "Setup Steps - Sign In with Apple for Xamarin.Forms"
 description: "Sign In with Apple setup differs depending on the different platforms your mobile application targets."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019

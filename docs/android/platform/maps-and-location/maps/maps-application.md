@@ -1,9 +1,9 @@
 ---
 title: "Launching the Maps Application"
 description: "How to launch the built-in Maps application from within your Xamarin.Android app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018

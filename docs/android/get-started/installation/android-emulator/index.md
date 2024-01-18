@@ -1,9 +1,9 @@
 ---
 title: "Android Emulator Setup"
 description: "The Android Emulator can be run in a variety of configurations to simulate different devices. This guide explains how to prepare the Android Emulator for testing your app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/31/2021

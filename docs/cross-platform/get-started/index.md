@@ -1,7 +1,7 @@
 ---
 title: "Get Started With Xamarin"
 description: "This document links to various guides that describe how to get started with Xamarin development. The linked content discusses how to build a first app, and provides a general introduction to mobile development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: davidortinau

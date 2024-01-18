@@ -1,9 +1,9 @@
 ---
 title: "Dynamic Styles in Xamarin.Forms"
 description: "This article explains how a Xamarin.Forms application can respond to style changes dynamically at runtime by using dynamic resources."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019

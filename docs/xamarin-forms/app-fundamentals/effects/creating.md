@@ -1,9 +1,9 @@
 ---
 title: "Creating an Effect"
 description: "Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the Entry control when the control gains focus."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016

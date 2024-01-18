@@ -1,9 +1,9 @@
 ---
 title: "Updating a Xamarin.iOS App in the Background"
 description: "This document describes various ways to update a Xamarin.iOS app that is in the background, such as region monitoring, background fetch, and remote notifications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

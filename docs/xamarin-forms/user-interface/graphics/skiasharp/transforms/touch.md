@@ -1,8 +1,8 @@
 ---
 title: "Touch Manipulations"
 description: "This article explains how to use matrix transforms to implement touch dragging, pinching, and rotation, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch

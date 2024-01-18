@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms ScrollView"
 description: "The Xamarin.Forms ScrollView is a layout that's capable of scrolling its content."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/27/2020

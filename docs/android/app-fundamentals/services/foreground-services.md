@@ -1,8 +1,8 @@
 ---
 title: "Foreground Services"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018

@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 16. Data binding"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 16. Data binding"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch

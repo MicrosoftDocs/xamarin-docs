@@ -1,9 +1,9 @@
 ---
 title: "Loading XAML at Runtime in Xamarin.Forms"
 description: "XAML can be loaded and parsed at runtime with the LoadFromXaml extension methods."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/12/2018

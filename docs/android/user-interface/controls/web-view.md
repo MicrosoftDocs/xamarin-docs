@@ -1,8 +1,8 @@
 ---
 title: "Web View"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

@@ -7,7 +7,7 @@ metadata:
   title: Xamarin.Forms deployment and testing
   description: Learn how to stabilize and publish Xamarin.Forms applications. This includes tuning performance, and automating testing with Xamarin.UITest and Visual Studio App Center.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
   author: davidbritch
   ms.author: dabritch

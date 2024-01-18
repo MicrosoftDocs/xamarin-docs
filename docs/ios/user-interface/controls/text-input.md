@@ -1,9 +1,9 @@
 ---
 title: "Text Input in Xamarin.iOS"
 description: "This document describes text input in a Xamarin.iOS app. It discusses using UITextField and UITextVIew both programmatically and in the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

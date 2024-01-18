@@ -1,9 +1,9 @@
 ---
 title: "Accessibility Scaling for Named Font Sizes on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that disables accessibility scaling for named font sizes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019

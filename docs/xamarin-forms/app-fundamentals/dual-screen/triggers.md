@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms dual-screen triggers"
 description: "This article explains how to use Xamarin.Forms dual-screen triggers to respond to user interface changes with XAML."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2020

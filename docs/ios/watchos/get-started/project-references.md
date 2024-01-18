@@ -1,9 +1,9 @@
 ---
 title: "watchOS Project References in Xamarin"
 description: "This document describes the relationship between an iOS app, a watch app, and a watch app extension. It discusses project references and bundle identifiers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

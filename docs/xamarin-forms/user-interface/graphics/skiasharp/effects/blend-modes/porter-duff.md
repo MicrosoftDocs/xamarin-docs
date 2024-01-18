@@ -1,8 +1,8 @@
 ---
 title: "Porter-Duff blend modes"
 description: "Use the Porter-Duff blend modes to compose scenes based on source and destination images."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch

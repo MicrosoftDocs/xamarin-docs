@@ -1,9 +1,9 @@
 ---
 title: "Using Core Graphics and Core Animation in Xamarin.iOS"
 description: "This article demonstrates step by step how to create an application that uses Core Graphics and Core Animation. It shows how to draw on the screen in response to user touch as well as how to animate an image to travel along a path."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

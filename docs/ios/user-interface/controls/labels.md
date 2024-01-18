@@ -1,9 +1,9 @@
 ---
 title: "Labels in Xamarin.iOS"
 description: "This document discusses how to use labels in Xamarin.iOS. It describes how to create labels programmatically and with the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017

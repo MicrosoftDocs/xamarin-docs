@@ -1,9 +1,9 @@
 ---
 title: "Java integration with Xamarin.Android"
 description: "The Java ecosystem includes a diverse and immense collection of components. Many of these components can be used to reduce the time it takes to develop an Android application. This document will introduce and provide a high-level overview of some of the ways that developers can use these existing Java components to improve their Xamarin.Android application development experience."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017

@@ -1,7 +1,7 @@
 ---
 title: "Step 1. Register an app to use Azure Active Directory"
 description: "This document describes how to register an Azure application with Azure Active Directory so that it can be securely accessed by mobile clients."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: davidortinau
 ms.author: daortin

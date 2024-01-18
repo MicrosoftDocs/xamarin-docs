@@ -1,9 +1,9 @@
 ---
 title: "Compiling for Different Devices in Xamarin.iOS"
 description: "This document describes various build configuration options that can be used to customize a Xamarin.iOS build for different devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

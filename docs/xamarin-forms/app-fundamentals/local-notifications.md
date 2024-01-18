@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms local notifications"
 description: "This article explains how to send, schedule, and receive local notifications in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 02/12/2021

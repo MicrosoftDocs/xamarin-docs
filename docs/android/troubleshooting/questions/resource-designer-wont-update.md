@@ -2,9 +2,9 @@
 title: "My Android Resource.designer.cs file will not update"
 description: A bug previously corrupted .csproj files by partially or completely deleting the xml code in the .csproj file. Learn how to manually repair a project file.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3F7376E3-59CC-4722-AEED-BB50E4D952AA
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2017

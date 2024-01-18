@@ -1,9 +1,9 @@
 ---
 title: "Getting Started with watchOS in Xamarin"
 description: "This document links to various guides that describe how to get started with watchOS development using Xamarin. The linked content provides an introduction to watchOS, explains how to install watchOS support for Xamarin, and shows how to build an initial application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

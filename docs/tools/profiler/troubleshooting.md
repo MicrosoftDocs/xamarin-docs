@@ -1,7 +1,7 @@
 ---
 title: "Xamarin Profiler Troubleshooting"
 description: "This document provides troubleshooting information related to the Xamarin Profiler. It describes issues related to logging and diagnostics, the IDE, and other topics."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin

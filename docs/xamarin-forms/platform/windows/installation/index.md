@@ -1,9 +1,9 @@
 ---
 title: "Setup Windows Projects"
 description: "Older Xamarin.Forms solutions (or those created on macOS) will not have Universal Windows Platform projects, and so this article explains how to add a new UWP project to an existing Xamarin.Forms solution."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018

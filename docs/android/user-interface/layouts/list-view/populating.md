@@ -1,8 +1,8 @@
 ---
 title: "Populating a Xamarin.Android ListView With Data"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017

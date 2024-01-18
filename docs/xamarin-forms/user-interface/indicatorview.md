@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms IndicatorView"
 description: "The IndicatorView is a control that displays indicators that represent the number of items, and current position, in a CarouselView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/24/2021

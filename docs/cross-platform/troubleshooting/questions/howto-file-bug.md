@@ -2,7 +2,7 @@
 title: "When and how should I file a bug report?"
 description: "This document describes when, where, and how to file a bug report. It also provides bug report best practices that enable engineers to best diagnose the problem."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: davidortinau
 ms.author: daortin

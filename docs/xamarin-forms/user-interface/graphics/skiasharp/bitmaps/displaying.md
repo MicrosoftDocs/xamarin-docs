@@ -1,8 +1,8 @@
 ---
 title: "Displaying SkiaSharp bitmaps"
 description: "Learn how to display SkiaSharp bitmaps in pixel sizes and expanded to fill rectangles while preserving the aspect ratio."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch

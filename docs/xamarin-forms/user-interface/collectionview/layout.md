@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Layout"
 description: "By default, a CollectionView will display its items in a vertical list. However, vertical and horizontal lists and grids can be specified."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/20/2020

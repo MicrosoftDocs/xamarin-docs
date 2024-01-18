@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Custom Renderers"
 description: "Custom Renderers let developers override the rendering of the native controls on each platform, to customize the appearance and behavior of Xamarin.Forms controls."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019

@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 6. Button clicks"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 6. Button clicks"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: davidbritch
 ms.author: dabritch

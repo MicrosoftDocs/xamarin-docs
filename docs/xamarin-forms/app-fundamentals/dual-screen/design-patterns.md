@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Dual-Screen Design Patterns"
 description: "This guide explains how Xamarin.Forms supports a variety of different design patterns optimized for dual-screen devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020

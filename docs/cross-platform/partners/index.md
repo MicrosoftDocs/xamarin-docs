@@ -1,7 +1,7 @@
 ---
 title: "Xamarin Consulting Partners"
 description: "Certified consulting partners to deliver mobile solutions."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: davidortinau
 ms.author: daortin

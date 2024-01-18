@@ -1,9 +1,9 @@
 ---
 title: "watchOS Background Tasks in Xamarin"
 description: "This document describes how to use background tasks with watchOS in Xamarin, taking a look at types of background tasks, using resources, implementing background tasks, scheduling, best practices, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017

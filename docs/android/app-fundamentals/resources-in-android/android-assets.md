@@ -1,9 +1,9 @@
 ---
 title: "Using Android Assets"
 description: Assets provide a way to include arbitrary files like text, xml, fonts, music, and video in your application. Learn about using Android assets.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018

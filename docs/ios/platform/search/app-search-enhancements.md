@@ -1,9 +1,9 @@
 ---
 title: "App Search Enhancements in Xamarin.iOS"
 description: "This article covers the enhancements Apple has made to App Search in iOS 10 and how to implement them in Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017

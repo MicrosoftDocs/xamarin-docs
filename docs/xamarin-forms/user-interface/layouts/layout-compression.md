@@ -1,9 +1,9 @@
 ---
 title: "Layout Compression"
 description: "Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. This article explains how to enable layout compression and the benefits it can bring."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017

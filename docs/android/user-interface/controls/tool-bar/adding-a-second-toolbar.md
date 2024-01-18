@@ -1,8 +1,8 @@
 ---
 title: "Adding a Second Toolbar"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FCE0AD27-8B6B-47C6-AD19-2B1C12E1BBBF
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018

@@ -1,9 +1,9 @@
 ---
 title: "Manual provisioning for Xamarin.iOS"
 description: "Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using manual provisioning to set up development certificates and profiles."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020

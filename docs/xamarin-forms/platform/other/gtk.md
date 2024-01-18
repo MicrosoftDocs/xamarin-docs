@@ -1,9 +1,9 @@
 ---
 title: "GTK# Platform Setup"
 description: "Xamarin.Forms now has preview support for the GTK# platform"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018

@@ -1,9 +1,9 @@
 ---
 title: "Understanding Android API Levels"
 description: "Xamarin.Android has several Android API level settings that determine your app's compatibility with multiple versions of Android. This guide explains what these settings mean, how to configure them, and what effect they have on your app at run time."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018

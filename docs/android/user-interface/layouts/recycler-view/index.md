@@ -1,9 +1,9 @@
 ---
 title: "RecyclerView"
 description: "RecyclerView is a view group for displaying collections; it is designed to be a more flexible replacement for older view groups such as ListView and GridView.  This guide explains how to use and customize RecyclerView in Xamarin.Android applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 01/03/2018

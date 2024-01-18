@@ -1,9 +1,9 @@
 ---
 title: "Debug Xamarin.Android apps on Devices and Emulators"
 description: "How to test and debug your Xamarin.Android app"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018

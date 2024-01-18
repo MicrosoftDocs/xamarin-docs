@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 8"
 description: "With iOS 8, Apple has provided a plethora of new frameworks and APIs to excite and delight developers. In this guide we will introduce these new APIs and see how iOS 8 can benefit both developers and users."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017

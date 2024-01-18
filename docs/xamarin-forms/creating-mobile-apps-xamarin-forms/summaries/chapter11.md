@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 11. The Bindable infrastructure"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 11. The Bindable infrastructure"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: davidbritch
 ms.author: dabritch

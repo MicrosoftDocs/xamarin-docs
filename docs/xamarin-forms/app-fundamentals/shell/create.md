@@ -1,9 +1,9 @@
 ---
 title: "Create a Xamarin.Forms Shell application"
 description: "The process for creating a Xamarin.Forms Shell application is to create a XAML file that subclasses the Shell class, set the MainPage property of the application's App class to the subclassed Shell object, and then describe the visual hierarchy of the application in the subclassed Shell class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/15/2021

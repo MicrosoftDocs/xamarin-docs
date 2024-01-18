@@ -1,8 +1,8 @@
 ---
 title: "Bitmap Basics in SkiaSharp"
 description: "This article explains how to load bitmaps in SkiaSharp from various sources and display them in Xamarin.Forms applications, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch

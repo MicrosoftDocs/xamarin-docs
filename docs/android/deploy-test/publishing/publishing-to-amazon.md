@@ -1,9 +1,9 @@
 ---
 title: "Publishing to the Amazon App Store"
 description: Learn about publishing to the Amazon App Store. The Amazon Mobile App Distribution Program enables mobile app developers to publish their application on Amazon.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A3E9EAC7-2968-8891-CDF2-B73FC0013EC9
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

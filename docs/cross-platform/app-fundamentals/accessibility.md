@@ -1,7 +1,7 @@
 ---
 title: "Accessibility in Xamarin Apps"
 description: "This document provides various tips for the creation of accessible apps. For example, it includes recommendations about large fonts, high contrast, self-describing interfaces, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: davidortinau
 ms.author: daortin

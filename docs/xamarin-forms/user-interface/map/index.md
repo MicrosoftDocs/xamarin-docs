@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map"
 description: "The Map control displays a map, and requires the Xamarin.Forms.Maps NuGet package."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019

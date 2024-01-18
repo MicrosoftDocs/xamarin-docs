@@ -1,9 +1,9 @@
 ---
 title: "Dynamic notification action buttons in Xamarin.iOS"
 description: "With iOS 12, a notification content extension can add, remove, and update the action buttons displayed alongside a notification. This document describes how to use dynamic notification action buttons with Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

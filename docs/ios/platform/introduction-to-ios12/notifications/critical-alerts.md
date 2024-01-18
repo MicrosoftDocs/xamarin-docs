@@ -1,9 +1,9 @@
 ---
 title: "Critical alerts in Xamarin.iOS"
 description: "This document describes how to use critical alerts with Xamarin.iOS. Critical alerts, introduced with iOS 12, are disruptive notifications that play a sound regardless of whether Do Not Disturb is on or the ringer switch is off."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

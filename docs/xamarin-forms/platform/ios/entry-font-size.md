@@ -1,9 +1,9 @@
 ---
 title: "Entry Font Size on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that scales the font size of an Entry."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E8881D4E-902B-4397-A43E-916B2885EC87
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

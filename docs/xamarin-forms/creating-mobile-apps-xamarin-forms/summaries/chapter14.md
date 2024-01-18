@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 14. Absolute layout"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 14. Absolute layout"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Core Graphics in Xamarin.iOS"
 description: "This article discusses the Core Graphics iOS frameworks. It shows how to use Core Graphics to draw geometry, images and PDFs."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

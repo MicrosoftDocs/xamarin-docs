@@ -1,9 +1,9 @@
 ---
 title: "watchOS Menu Control (Force Touch) in Xamarin"
 description: "This document describes how to use the watchOS force touch gesture in Xamarin. It discusses how to respond to a force touch, how to add a menu, and changing the menu items."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

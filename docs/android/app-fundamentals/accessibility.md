@@ -1,9 +1,9 @@
 ---
 title: "Accessibility on Android"
 description: Learn about accessibility on Android and how to use the Android Accessibility APIs to build apps according to the accessibility checklist.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/28/2018

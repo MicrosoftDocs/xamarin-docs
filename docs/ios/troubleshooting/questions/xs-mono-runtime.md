@@ -1,9 +1,9 @@
 ---
 title: "How do I set Mono Runtime environment variables for iOS projects in Xamarin Studio?"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1176CEA9-C7F1-411B-8F1A-99374E8AFF33
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/31/2017

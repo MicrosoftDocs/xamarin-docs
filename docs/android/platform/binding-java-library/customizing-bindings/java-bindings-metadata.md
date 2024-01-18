@@ -1,9 +1,9 @@
 ---
 title: "Java Bindings Metadata"
 description: "C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018

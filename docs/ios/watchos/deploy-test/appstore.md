@@ -1,9 +1,9 @@
 ---
 title: "Deploying watchOS Apps to the App Store"
 description: "This document describes how to deploy watchOS apps built with Xamarin to the App Store. It takes a look at distribution provisioning profiles and iTunes Connect, and it also provides some troubleshooting tips."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

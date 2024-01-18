@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp color filters"
 description: "Use color filters to convert colors with transforms or tables."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch

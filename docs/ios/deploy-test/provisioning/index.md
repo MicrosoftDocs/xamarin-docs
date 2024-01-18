@@ -1,9 +1,9 @@
 ---
 title: "Code Signing and Provisioning for Xamarin.iOS Apps"
 description: "This document links to guides that describe device provisioning, working with capabilities, working with entitlements, and the Info.plist file."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017

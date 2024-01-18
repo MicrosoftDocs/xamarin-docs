@@ -1,9 +1,9 @@
 ---
 title: "Reusable EffectBehavior"
 description: "Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016

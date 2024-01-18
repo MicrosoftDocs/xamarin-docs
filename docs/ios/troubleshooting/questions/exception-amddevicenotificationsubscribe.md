@@ -2,9 +2,9 @@
 title: "System.Exception AMDeviceNotificationSubscribe returned ..."
 description: Learn about the System.Exception AMDeviceNotificationSubscribe error message.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

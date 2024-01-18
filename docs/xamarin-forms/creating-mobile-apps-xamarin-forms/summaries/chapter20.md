@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 20. Async and file I/O"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 20. Async and file I/O"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch

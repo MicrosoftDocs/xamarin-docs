@@ -1,9 +1,9 @@
 ---
 title: "Working With Property Lists in Xamarin.iOS"
 description: "This document introduces Visual Studio for Mac's graphical and advanced property list (.plist) editor for working with Info.plist and Entitlements.plist. It illustrates setting icons and launch images for iOS applications from inside Visual Studio for Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

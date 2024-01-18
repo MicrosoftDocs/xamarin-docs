@@ -1,9 +1,9 @@
 ---
 title: "Using the RelativeLayout in Xamarin.Android"
 description: "How to use RelativeLayout in a Xamarin.Android application"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/29/2018

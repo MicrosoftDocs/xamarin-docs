@@ -1,9 +1,9 @@
 ---
 title: "Handling Touch in Xamarin.iOS Apps"
 description: "This document links to guides that describe how to work with touch, multi-touch, gestures, and 3D Touch in a Xamarin.iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/23/2017

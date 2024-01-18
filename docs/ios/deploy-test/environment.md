@@ -1,9 +1,9 @@
 ---
 title: "Execution Environment for Xamarin.iOS Apps"
 description: "This document describes how to set up temporary and permanent environment variables for a Xamarin.iOS app. The variables can be specified in a project's properties or as extra arguments to the mtouch packaging tool."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

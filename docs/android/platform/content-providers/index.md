@@ -1,9 +1,9 @@
 ---
 title: "Intro to ContentProviders"
 description: "The Android operating system uses content providers to facilitate access to shared data such as media files, contacts and calendar information. This article introduces the ContentProvider class, and provides two examples of how to use it."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018

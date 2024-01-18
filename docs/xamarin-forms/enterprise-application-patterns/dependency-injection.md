@@ -1,9 +1,9 @@
 ---
 title: "Dependency Injection"
 description: "This chapter explains how the eShopOnContainers mobile app uses dependency injection to decouple concrete types from the code that depends on these types."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019

@@ -1,9 +1,9 @@
 ---
 title: "Common patterns and idioms in Xamarin.Mac"
 description: "This document describes common design patterns used when building Xamarin.Mac apps. It discusses the model-view-controller pattern, the data source and delegate patterns, and protocols."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 06/17/2016

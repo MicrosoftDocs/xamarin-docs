@@ -1,9 +1,9 @@
 ---
 title: "Style Inheritance in Xamarin.Forms"
 description: "Styles can inherit from other styles to reduce duplication and enable reuse. This article explains how to perform style inheritance in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016

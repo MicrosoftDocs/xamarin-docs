@@ -1,9 +1,9 @@
 ---
 title: "Introduction to tvOS 9"
 description: "This article introduces all of the new and modified APIs and features available in tvOS 9 for Xamarin.tvOS developers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

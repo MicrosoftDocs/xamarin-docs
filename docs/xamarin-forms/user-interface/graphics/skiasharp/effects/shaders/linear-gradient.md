@@ -1,8 +1,8 @@
 ---
 title: "The SkiaSharp linear gradient"
 description: "Discover how to stroke lines or fill areas with gradients composed of a gradual blend of two colors."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch

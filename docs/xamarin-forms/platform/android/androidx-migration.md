@@ -1,9 +1,9 @@
 ---
 title: "AndroidX Migration in Xamarin.Forms"
 description: "This article explains why AndroidX exists and how to migrate to AndroidX in your Xamarin.Forms app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 01/13/2021

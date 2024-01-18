@@ -1,9 +1,9 @@
 ---
 title: "iOS Designer basics"
 description: "This guide introduces the Xamarin Designer for iOS. It demonstrates how to use the iOS Designer to visually lay out controls, how to access those controls in code, and how to edit properties."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018

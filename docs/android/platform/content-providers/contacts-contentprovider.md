@@ -1,9 +1,9 @@
 ---
 title: "Using the Contacts ContentProvider"
 description: Learn how to use the Android Contacts Provider to expose metadata that is used to determine the URI of the ContentProvider.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 01/22/2018

@@ -1,7 +1,7 @@
 ---
 title: "Updating Existing Apps to the Unified API"
 description: "This document links to various guides that describe how to update Xamarin applications to the Unified API. It discusses Xamarin.iOS apps, Xamarin.Mac apps. Xamarin.Forms apps, native types in cross-platform apps, and binding projects."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: davidortinau
 ms.author: daortin

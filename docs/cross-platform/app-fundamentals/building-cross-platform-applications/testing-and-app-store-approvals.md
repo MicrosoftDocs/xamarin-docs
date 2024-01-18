@@ -1,7 +1,7 @@
 ---
 title: "Part 6 - Testing and App Store Approvals"
 description: "This document describes how to test a cross-platform application on-device, manage test cases, automate tests, run unit tests, and work through the app submission process."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin

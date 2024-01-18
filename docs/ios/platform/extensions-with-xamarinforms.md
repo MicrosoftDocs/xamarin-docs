@@ -1,9 +1,9 @@
 ---
 title: "Reuse Xamarin.Forms pages in an iOS extension"
 description: "This document describes iOS Extensions and how to use Xamarin.Forms pages in them. It contains a walkthrough on how to create an extension, integrate Xamarin.Forms and render a simple ContentPage natively in an iOS Extension project."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 50076FFD-3EF6-41CC-BC7E-210DE3958F5B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: alexeystrakh
 ms.author: dabritch
 ms.date: 05/13/2020

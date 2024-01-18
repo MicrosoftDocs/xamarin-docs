@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Application Fundamentals"
 description: "Core Application Concepts"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

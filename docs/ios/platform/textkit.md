@@ -1,9 +1,9 @@
 ---
 title: "TextKit in Xamarin.iOS"
 description: "This document describes how to use TextKit in Xamarin.iOS. TextKit provides powerful text layout and rendering features."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

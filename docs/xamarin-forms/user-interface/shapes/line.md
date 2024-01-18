@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Line"
 description: "The Xamarin.Forms Line class can be used to draw lines."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2021

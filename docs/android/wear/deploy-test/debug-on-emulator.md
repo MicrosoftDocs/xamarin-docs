@@ -1,9 +1,9 @@
 ---
 title: "Debug Android Wear on an Emulator"
 description: "These articles explain how to debug a Xamarin.Android Wear application on an emulator."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018

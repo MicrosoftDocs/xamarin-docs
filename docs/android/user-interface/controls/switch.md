@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Switch"
 description: "How to use the Switch widget in a Xamarin.Android application"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/29/2018

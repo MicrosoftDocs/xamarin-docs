@@ -2,9 +2,9 @@
 title: "Troubleshooting tvOS apps built with Xamarin"
 description: "This article provides various tips to help troubleshoot during the development of a tvOS app built with Xamarin. It describes known issue and specific errors."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

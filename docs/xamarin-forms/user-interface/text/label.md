@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Label"
 description: "This article explains how to use the Xamarin.Forms Label class to display single and multi-line text in applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/21/2020

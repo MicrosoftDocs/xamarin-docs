@@ -1,9 +1,9 @@
 ---
 title: "HealthKit in Xamarin.iOS"
 description: "This document describes HealthKit, a framework introduced in iOS 8 that provides a centralized, coordinated, and secure datastore for health-related information. It discusses how to provision a HealthKit app and how to write code that uses the HealthKit framework."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

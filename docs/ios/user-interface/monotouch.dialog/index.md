@@ -1,9 +1,9 @@
 ---
 title: "Introduction to MonoTouch.Dialog for Xamarin.iOS"
 description: "This document describes MonoTouch.Dialog (MT.D), a framework for rapid, declarative UI development with Xamarin.iOS. It discusses how to use the MonoTouch.Dialog APIs to create an interface in code or JSON and use features like pull-to-refresh, search, background image loading, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 ms.date: 11/25/2015
 no-loc: [Objective-C]
 author: davidortinau

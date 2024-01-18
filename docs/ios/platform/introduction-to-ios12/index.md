@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 12"
 description: "This document provides a high-level description of some iOS 12 APIs for which Xamarin's preview release provides C# bindings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/08/2018

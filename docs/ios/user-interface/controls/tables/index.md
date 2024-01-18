@@ -1,9 +1,9 @@
 ---
 title: "Working with Tables and Cells in Xamarin.iOS"
 description: "This document links to various guides that describe how to display data with the UITableView control in a Xamarin.iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/06/2016

@@ -1,9 +1,9 @@
 ---
 title: "Working with watchOS Screen Sizes in Xamarin"
 description: "This document describes how to work with various watchOS screen sizes. It discusses the watchOS Interface Designer, the watchOS Simulator, and image resources."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

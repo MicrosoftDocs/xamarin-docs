@@ -1,9 +1,9 @@
 ---
 title: "The Xamarin.Forms Command Interface"
 description: "This article explains how to implement the Command property with Xamarin.Forms data bindings. The commanding interface provides an alternative approach to implementing commands that is much better suited to the MVVM architecture."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018

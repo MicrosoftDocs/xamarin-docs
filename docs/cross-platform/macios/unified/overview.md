@@ -1,7 +1,7 @@
 ---
 title: "Unified API Overview"
 description: "Xamarin's Unified API makes it possible to share code between Mac and iOS and support 32 and 64-bit applications with the same binary."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin

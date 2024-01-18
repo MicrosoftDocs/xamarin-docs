@@ -1,9 +1,9 @@
 ---
 title: "Consume a Windows Communication Foundation (WCF) Web Service"
 description: "This article demonstrates how to consume an WCF Simple Object Access Protocol (SOAP) service from a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019

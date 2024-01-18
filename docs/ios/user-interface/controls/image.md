@@ -1,9 +1,9 @@
 ---
 title: "Displaying images with Xamarin.iOS"
 description: "This document describes how to display images in Xamarin.iOS. It covers adding images to an app either programmatically or through the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018

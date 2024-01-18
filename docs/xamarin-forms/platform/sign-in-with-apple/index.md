@@ -1,9 +1,9 @@
 ---
 title: "Sign In with Apple in Xamarin.Forms"
 description: "Sign In with Apple provides identity protection for users, and can be implemented for cross-platform mobile scenarios in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 414465F8-0CC8-4078-B3D1-F36983069658
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019

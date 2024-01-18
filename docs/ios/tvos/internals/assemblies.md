@@ -1,9 +1,9 @@
 ---
 title: "Assemblies Supported by Xamarin for tvOS"
 description: "In order to help clarify the features available to tvOS applications, this document provides a list of assemblies supported by Xamarin for tvOS development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

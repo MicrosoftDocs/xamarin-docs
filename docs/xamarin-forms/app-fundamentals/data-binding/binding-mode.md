@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Binding Mode"
 description: "This article explains how to control the flow of information between source and target using a binding mode, which is specified with a member of the BindingMode enumeration. Every bindable property has a default binding mode, which indicates the mode in effect when that property is a data-binding target."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018

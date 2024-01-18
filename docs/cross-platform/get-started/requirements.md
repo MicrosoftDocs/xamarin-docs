@@ -1,7 +1,7 @@
 ---
 title: "System Requirements"
 description: "This document lists the system requirements for building apps with Xamarin on both Mac and Windows computers. It also links to installation instructions."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: davidortinau
 ms.author: daortin

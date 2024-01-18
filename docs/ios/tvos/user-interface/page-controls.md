@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Page Controls in Xamarin"
 description: "This document describes how to work with tvOS page controls in an app built with Xamarin. It provides a high-level description of page controls, discusses how to set them up in storyboards, and examines how to respond to page change events."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

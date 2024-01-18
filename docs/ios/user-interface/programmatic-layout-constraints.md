@@ -1,9 +1,9 @@
 ---
 title: "Programmatic Layout Constraints in Xamarin.iOS"
 description: "This guide presents working with iOS Auto Layout constraints in C# code instead of creating them in the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

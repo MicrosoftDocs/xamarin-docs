@@ -2,9 +2,9 @@
 title: "How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?"
 description: Download the desired Xamarin.Android.Support NuGet package (for example by installing it with the NuGet package manager).
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

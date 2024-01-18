@@ -1,9 +1,9 @@
 ---
 title: "Custom Controls in the Xamarin Designer for iOS"
 description: "The Xamarin Designer for iOS supports rendering custom controls created in your project or referenced from external sources like the Xamarin Component Store."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

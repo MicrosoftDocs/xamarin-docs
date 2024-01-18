@@ -3,9 +3,9 @@ title: "Hello, Android: Deep Dive"
 description: "In this two-part guide, you'll build your first Xamarin.Android application and develop an understanding of the fundamentals of Android application development with Xamarin. Along the way, you will be introduced to the tools, concepts, and steps required to build and deploy a Xamarin.Android application."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

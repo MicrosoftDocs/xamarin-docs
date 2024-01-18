@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell pages"
 description: "The Shell class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2021

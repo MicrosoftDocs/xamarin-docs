@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Text and Search Fields in Xamarin"
 description: "This document describes how to work with text and search fields in a tvOS app built with Xamarin. It provides a high-level overview of text and search fields, and discusses keyboards, storyboard integration, search data models, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

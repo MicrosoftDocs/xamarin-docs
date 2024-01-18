@@ -1,9 +1,9 @@
 ---
 title: "Obtaining a Google Maps API Key"
 description: "How to obtain a Google Maps API key for adding maps functionality to your app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018

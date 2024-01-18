@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView Scrolling"
 description: "When a user swipes to initiate a scroll, the end position of the scroll can be controlled so that items are fully displayed. In addition, CarouselView defines two ScrollTo methods, that programmatically scroll items into view."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

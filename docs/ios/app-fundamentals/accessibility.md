@@ -1,9 +1,9 @@
 ---
 title: "Accessibility on iOS"
 description: "This document describes accessibility in iOS, discussing various properties and features that can be used to make your application usable by as many users as possible."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/18/2016

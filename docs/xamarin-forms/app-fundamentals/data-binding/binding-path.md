@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Binding Path"
 description: "This article explains how to use Xamarin.Forms data bindings to access sub-properties and collection members with the Path property of the Binding class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018

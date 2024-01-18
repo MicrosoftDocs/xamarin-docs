@@ -1,9 +1,9 @@
 ---
 title: "SiriKit in Xamarin.iOS"
 description: "This article shows how to use SiriKit in a Xamarin.iOS app to provide services that are accessible to the user using Siri on an iOS device."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

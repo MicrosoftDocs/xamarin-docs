@@ -1,9 +1,9 @@
 ---
 title: "Extending the RecyclerView Example"
 description: "Adding item-click event handlers to the RecyclerView example app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 707EE1CE-C164-485B-944C-82C6795E8A24
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018

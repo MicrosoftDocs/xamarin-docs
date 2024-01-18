@@ -1,9 +1,9 @@
 ---
 title: "VisualElement Blur on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that applies blur to a VisualElement."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2DE3B65E-B96E-4ECD-92DF-AA42D5205C44
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

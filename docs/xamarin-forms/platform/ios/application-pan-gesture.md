@@ -1,9 +1,9 @@
 ---
 title: "Simultaneous Pan Gesture Recognition on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that enables simultaneous pan gesture recognition to be used in an application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

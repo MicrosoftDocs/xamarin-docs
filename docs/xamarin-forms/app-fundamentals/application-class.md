@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms App Class"
 description: "This article explains features of the default App class, which includes a property to set to the initial page for the app, and a persistent dictionary for store simple values across lifecycle state changes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: video
 author: davidbritch
 ms.author: dabritch

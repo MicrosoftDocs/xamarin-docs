@@ -1,9 +1,9 @@
 ---
 title: "Building Modern macOS Apps"
 description: "This article covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

@@ -7,7 +7,7 @@ metadata:
   title: Xamarin.Forms platform features
   description: Learn how to take advantage of platform-specific features in Xamarin.Forms, using a variety of techniques.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
   author: davidbritch
   ms.author: dabritch

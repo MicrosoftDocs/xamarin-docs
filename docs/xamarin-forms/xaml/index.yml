@@ -7,7 +7,7 @@ metadata:
   title: eXtensible Application Markup Language (XAML)
   description: Learn how to use XAML to define Xamarin.Forms user interfaces.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch

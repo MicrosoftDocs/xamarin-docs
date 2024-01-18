@@ -1,9 +1,9 @@
 ---
 title: "Configure your tvOS App in iTunes Connect"
 description: "This article provides a supplemental guide to the iOS Configure your App in iTunes Connect for the tvOS specific configurations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

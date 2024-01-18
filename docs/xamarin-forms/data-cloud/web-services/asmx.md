@@ -1,9 +1,9 @@
 ---
 title: "Consume an ASP.NET Web Service (ASMX)"
 description: "This article demonstrates how to consume an ASMX SOAP service from a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/02/2019

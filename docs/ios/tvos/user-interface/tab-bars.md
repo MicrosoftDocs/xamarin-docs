@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Tab Bar Controllers in Xamarin"
 description: "This document describes how to work with tab bar controllers in a tvOS app built with Xamarin. It provides a high-level over view of tab bars and discusses tab bar items, storyboard integration, and tab bar items."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

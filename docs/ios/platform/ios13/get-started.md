@@ -1,9 +1,9 @@
 ---
 title: "Get started with iOS 13, iPadOS 13, tvOS 13, and watchOS 6"
 description: "This document describes how to get set up to build iOS 13, iPadOS 13, tvOS 13, and watchOS 6 apps with Xamarin. It discusses how to download Xcode 11 and update Visual Studio for Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/01/2019

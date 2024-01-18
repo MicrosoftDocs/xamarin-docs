@@ -1,9 +1,9 @@
 ---
 title: "Implementing a View"
 description: "This article explains how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/30/2020

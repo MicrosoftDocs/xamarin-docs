@@ -1,9 +1,9 @@
 ---
 title: "Providing Haptic Feedback in Xamarin.iOS"
 description: "This document describes how to provide haptic feedback in a Xamarin.iOS app. It discusses UIImpactFeedbackGenerator, UINotificationFeedbackGenerator, and UISelectionFeedbackGenerator."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

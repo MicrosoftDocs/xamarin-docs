@@ -1,9 +1,9 @@
 ---
 title: "Threading in Xamarin.iOS"
 description: "This document describes how to use the System.Threading APIs in a Xamarin.iOS application. It discusses The Task Parallel Library, building responsive applications, and garbage collection."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

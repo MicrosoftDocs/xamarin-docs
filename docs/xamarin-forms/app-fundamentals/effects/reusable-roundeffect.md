@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Reusable RoundEffect"
 description: "RoundEffect is a reusable effect that can be applied to any control deriving from VisualElement to render the control as a circle."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/27/2020

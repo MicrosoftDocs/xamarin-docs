@@ -1,9 +1,9 @@
 ---
 title: "Handoff in Xamarin.iOS"
 description: "This article covers working with Handoff in a Xamarin.iOS app to transfer user activities between apps running on the user's other devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

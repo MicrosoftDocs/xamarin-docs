@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms and Azure Cognitive Services Introduction"
 description: "This article provides an introduction to a sample application that demonstrates how to invoke some of the Microsoft Cognitive Service APIs."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017

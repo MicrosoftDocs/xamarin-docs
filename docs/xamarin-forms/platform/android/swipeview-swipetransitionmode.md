@@ -1,9 +1,9 @@
 ---
 title: "SwipeView Swipe Transition Mode on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that controls the transition that's used when opening a SwipeView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6B1F8213-9D62-4C40-9F04-881F1371B5AA
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019

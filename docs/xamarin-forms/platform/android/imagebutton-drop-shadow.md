@@ -1,9 +1,9 @@
 ---
 title: "ImageButton Drop Shadows on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that enables a drop shadow on a ImageButton."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

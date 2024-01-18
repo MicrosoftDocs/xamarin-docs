@@ -1,8 +1,8 @@
 ---
 title: "Xamarin.Forms quickstarts"
 description: "Quickstarts about developing Xamarin.Forms applications with Visual Studio and Visual Studio for Mac."
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 3318B8F8-3B24-489E-8E7B-28FA948796F8
 author: davidbritch
 ms.author: dabritch

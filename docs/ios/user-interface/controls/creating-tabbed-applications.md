@@ -1,9 +1,9 @@
 ---
 title: "Tab Bars and Tab Bar Controllers in Xamarin.iOS"
 description: "This document describes iOS tab bar controllers and how to use them with Xamarin.iOS. It demonstrates how to set up a UITabBarController, work with images, set badge values, work with events, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

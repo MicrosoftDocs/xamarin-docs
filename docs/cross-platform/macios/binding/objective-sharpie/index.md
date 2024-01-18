@@ -1,7 +1,7 @@
 ---
 title: "Creating Bindings with Objective Sharpie"
 description: "This section provides an introduction to Objective Sharpie, Xamarin's command line tool used to automate the process of creating a binding to an Objective-C Library"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: davidortinau
 ms.author: daortin

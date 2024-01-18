@@ -2,9 +2,9 @@
 title: "XAML Previewer for Xamarin.Forms"
 description: "This article explains how to use the XAML Previewer to see your Xamarin.Forms layouts rendered as you type. The XAML Previewer is available in Visual Studio 2019 and Visual Studio 2019 for Mac."
 zone_pivot_groups: platform
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: maddymontaquila
 ms.author: maleger
 ms.date: 03/16/2020

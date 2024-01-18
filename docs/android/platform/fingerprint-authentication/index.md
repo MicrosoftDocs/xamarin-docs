@@ -1,9 +1,9 @@
 ---
 title: "Fingerprint Authentication"
 description: "This guide discusses how to add fingerprint authentication, introduced in Android 6.0, to a Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

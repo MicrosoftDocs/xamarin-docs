@@ -1,9 +1,9 @@
 ---
 title: "Speech Recognition in Xamarin.iOS"
 description: "This article presents the new Speech API and shows how to implement it in a Xamarin.iOS app to support continuous speech recognition and transcribe speech (from live or recorded audio streams) into text."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

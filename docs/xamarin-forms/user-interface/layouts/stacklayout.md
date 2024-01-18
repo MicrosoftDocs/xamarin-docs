@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms StackLayout"
 description: "A StackLayout organizes child views in a one-dimensional stack, either horizontally or vertically."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/11/2020

@@ -1,9 +1,9 @@
 ---
 title: "Binding Mac libraries for Xamarin.Mac"
 description: "This document links to guides that describe how to work with Objective-C bindings in a Xamarin.Mac application, including Objective Sharpie and sample code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 01/13/2017

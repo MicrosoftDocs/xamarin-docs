@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms ContentView"
 description: "This article explains how to use the ContentView class to create a custom control, such as the example CardView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 638402E7-CA44-456B-863B-791F6B6B561D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019

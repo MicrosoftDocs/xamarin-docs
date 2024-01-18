@@ -1,9 +1,9 @@
 ---
 title: "Alternative Layout Views"
 description: "This topic explains how layouts can be versioned by using resource qualifiers. For example, there can be a version of a layout that is only used when the device is in landscape mode and a layout version that is only for portrait mode."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018

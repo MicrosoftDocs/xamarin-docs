@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Environment"
 description: Learn about the Xamarin.Android environment. The execution environment is the set of variables and system properties that influence program execution.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018

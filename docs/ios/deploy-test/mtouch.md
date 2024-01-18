@@ -1,9 +1,9 @@
 ---
 title: "Using mtouch to Bundle Xamarin.iOS Apps"
 description: "This document describes mtouch, a tool that drives many of the steps required to turn a Xamarin.iOS application into a bundle, launch it in the simulator, and deploy it to a physical device."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

@@ -1,9 +1,9 @@
 ---
 title: "PhotoKit in Xamarin.iOS"
 description: "This document describes PhotoKit, discussing its model objects, how to query model data, and saving changes to the photo library."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017

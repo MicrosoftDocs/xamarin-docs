@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS API Overview"
 description: "This document links to the Xamarin API reference documentation, a guide that describes the Xamarin.iOS API design, and a list of assemblies that are available for use in Xamarin development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015

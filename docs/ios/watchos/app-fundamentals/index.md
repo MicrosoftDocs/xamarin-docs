@@ -1,9 +1,9 @@
 ---
 title: "watchOS Application Fundamentals"
 description: "This document provides links to various documents that describe concepts fundamental to watchOS application development using Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

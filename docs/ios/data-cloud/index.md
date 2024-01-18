@@ -1,9 +1,9 @@
 ---
 title: "Data and Cloud Services in Xamarin.iOS Apps"
 description: "This document links to guides that describe how to work with local data, iCloud, and CloudKit in a Xamarin.iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017

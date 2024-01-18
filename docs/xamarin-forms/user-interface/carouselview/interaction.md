@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView Interaction"
 description: "The currently displayed item in a CarouselView can be accessed through the CurrentItem and Position properties."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/28/2020

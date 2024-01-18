@@ -2,9 +2,9 @@
 title: "Source Link with Xamarin.Forms"
 description: "This article explains how to use Source Link to debug into Xamarin.Forms."
 zone_pivot_groups: "platform"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/26/2019

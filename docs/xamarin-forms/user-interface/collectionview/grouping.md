@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Grouping"
 description: "CollectionView can display correctly grouped data by setting its IsGrouped property to true."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019

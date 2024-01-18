@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell introduction"
 description: "Xamarin.Forms Shell provides the fundamental features that most applications require, including a common navigation user experience, a URI-based navigation scheme, and an integrated search handler."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/15/2021

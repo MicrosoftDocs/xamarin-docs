@@ -1,9 +1,9 @@
 ---
 title: "Standard controls in Xamarin.Mac"
 description: "This article covers working with the standard AppKit controls such as buttons, labels, text fields, check boxes, and segmented controls in a Xamarin.Mac application. It describes adding them to an interface with Interface Builder and interacting with them in code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

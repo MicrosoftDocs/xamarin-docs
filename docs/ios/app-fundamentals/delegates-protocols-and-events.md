@@ -1,9 +1,9 @@
 ---
 title: "Events, Protocols and Delegates in Xamarin.iOS"
 description: "This document describes how to work with events, protocols, and delegates in Xamarin.iOS. These fundamental concepts are ubiquitous in Xamarin.iOS development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2017

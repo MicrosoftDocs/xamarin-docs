@@ -1,9 +1,9 @@
 ---
 title: "Native Views in Xamarin.Forms"
 description: "Native views from iOS, Android, and the Universal Windows Platform (UWP) can be directly referenced from Xamarin.Forms and they can interact with Xamarin.Forms views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016

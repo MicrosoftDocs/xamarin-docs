@@ -1,9 +1,9 @@
 ---
 title: "User Interface Controls in Xamarin.iOS"
 description: "This document links to guides that describe the various iOS user interface controls available to Xamarin.iOS developers. Linked content discusses alerts, buttons, collection views, images, manual camera controls, maps, labels, pickers, date pickers, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

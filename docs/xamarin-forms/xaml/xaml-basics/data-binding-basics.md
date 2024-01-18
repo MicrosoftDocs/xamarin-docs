@@ -1,8 +1,8 @@
 ---
 title: "Part 4. Data Binding Basics"
 description: "Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other."
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch

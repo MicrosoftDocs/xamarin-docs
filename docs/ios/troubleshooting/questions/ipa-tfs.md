@@ -2,9 +2,9 @@
 title: "How can I copy IPA output files to the TFS drop folder?"
 description: Learn how to copy IPA output files to the TFS drop folder. This is the same general technique discussed on "Can I change the output path of the IPA file?"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

@@ -1,9 +1,9 @@
 ---
 title: "Fonts"
 description: Instruction for targeting API 26 or install the Android Support Library v26, then how to use two ways to employ fonts in an Android application.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/09/2018

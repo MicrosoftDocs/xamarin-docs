@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Switch"
 description: "The Xamarin.Forms Switch is a type of button that can be manipulated by the user to toggle between on and off states. This article explains how to use the Switch class to display a toggling UI element."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/19/2020

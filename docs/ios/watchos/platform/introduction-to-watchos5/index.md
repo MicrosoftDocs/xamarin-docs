@@ -1,9 +1,9 @@
 ---
 title: "Introduction to watchOS 5"
 description: "This document provides a high-level description of some watchOS 5 APIs for Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

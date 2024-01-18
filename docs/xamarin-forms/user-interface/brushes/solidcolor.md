@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Brushes: Solid colors"
 description: "The Xamarin.Forms SolidColorBrush class paints an area with a solid color."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4225D40A-16C1-40E1-ACBE-23E321E7FDE4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

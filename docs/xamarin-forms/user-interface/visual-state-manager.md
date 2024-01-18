@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Visual State Manager"
 description: "Use the Visual State Manager to make changes to XAML elements based on visual states set from code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

@@ -2,9 +2,9 @@
 title: "Which Android SDK packages should I install?"
 description: Installing the Android SDK doesn't automatically include all the minimum required packages for developing. Learn about which packages to install.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2018

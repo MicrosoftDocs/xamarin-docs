@@ -1,9 +1,9 @@
 ---
 title: "Auto-Sizing Row Height in Xamarin.iOS"
 description: "This document describes how to add to Xamarin.iOS apps table view rows whose heights vary based on content. It discusses cell layout in the iOS Designer and enabling auto-resizing height."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

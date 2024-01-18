@@ -1,9 +1,9 @@
 ---
 title: "Working with watchOS Settings in Xamarin"
 description: "This document describes how to work with watchOS settings in Xamarin. It discusses adding settings to a watch app solution, using those settings in the app, and the Apple Watch app on the iPhone."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

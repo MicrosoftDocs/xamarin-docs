@@ -1,9 +1,9 @@
 ---
 title: "Configuring Visual Studio for iOS development"
 description: "This article describes how to configure Visual Studio 2019 for Xamarin.iOS development. In particular, it discusses how to configure the installed version of Xamarin.iOS, the iOS toolbar, and the Solution Platforms drop-down menu."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018

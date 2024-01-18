@@ -1,9 +1,9 @@
 ---
 title: "Enhanced User Notifications in Xamarin.iOS"
 description: "This article describes the User Notifications framework introduced in iOS 10. It discusses local notifications, remote notifications, notification management, notification actions, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017

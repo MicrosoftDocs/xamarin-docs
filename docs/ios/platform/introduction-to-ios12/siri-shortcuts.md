@@ -1,9 +1,9 @@
 ---
 title: "Siri Shortcuts in Xamarin.iOS"
 description: "This document describes how to use Siri Shortcuts in iOS 12. It discusses NSUserActivities, custom intents, assigning voice shortcuts, relevant shortcuts, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/08/2018

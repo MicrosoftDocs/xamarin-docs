@@ -1,9 +1,9 @@
 ---
 title: "Binding an .AAR"
 description: "This walkthrough provides step-by-step instructions for creating a Xamarin.Android Java Bindings Library from an Android .AAR file."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018

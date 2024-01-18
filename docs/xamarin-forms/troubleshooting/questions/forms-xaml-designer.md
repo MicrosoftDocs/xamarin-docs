@@ -2,9 +2,9 @@
 title: "Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?"
 description: In this article, learn about why the Visual Studio XAML designer doesn't work for Xamarin.Forms XAML files.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017

@@ -1,9 +1,9 @@
 ---
 title: "iOS Backgrounding Techniques"
 description: "This document links to guides that describe various backgrounding techniques in iOS: background tasks, background transfer service, background fetch, and remote notifications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

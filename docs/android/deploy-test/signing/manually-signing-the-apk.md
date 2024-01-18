@@ -1,9 +1,9 @@
 ---
 title: "Manually Signing the APK"
 description: Learn how to manually sign the APK prior to distribution so that it can be run on an Android device. 
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

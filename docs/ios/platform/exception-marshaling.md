@@ -1,9 +1,9 @@
 ---
 title: "Exception Marshaling in Xamarin.iOS"
 description: "This document describes how to work with native and managed exceptions in a Xamarin.iOS or Xamarin.Mac app. It discusses problems that can occur and a solution for these problems."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2017

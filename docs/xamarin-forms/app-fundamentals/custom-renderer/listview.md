@@ -1,9 +1,9 @@
 ---
 title: "Customizing a ListView"
 description: "A Xamarin.Forms ListView is a view that displays a collection of data as a vertical list. This article demonstrates how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017

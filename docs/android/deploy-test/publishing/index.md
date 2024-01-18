@@ -1,8 +1,8 @@
 ---
 title: "Publishing an Application"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

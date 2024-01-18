@@ -1,9 +1,9 @@
 ---
 title: "Table Parts and Functionality in Xamarin.iOS"
 description: "This document describes the various pieces of a UITableView in iOS. It discusses section headers, cells, section footers, the index, and editing mode."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

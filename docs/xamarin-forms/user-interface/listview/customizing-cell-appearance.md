@@ -1,9 +1,9 @@
 ---
 title: "Customizing ListView Cell Appearance"
 description: "This article explores options for presenting data in Xamarin.Forms applications, while taking advantage of the convenience of the ListView control."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2019

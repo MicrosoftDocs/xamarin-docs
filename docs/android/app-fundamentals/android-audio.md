@@ -1,9 +1,9 @@
 ---
 title: "Android Audio"
 description: "The Android OS provides extensive support for multimedia, encompassing both audio and video. This guide focuses on audio in Android and covers playing and recording audio using the built-in audio player and recorder classes, as well as the low-level audio API. It also covers working with Audio events broadcast by other applications, so that developers can build well-behaved applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/28/2018

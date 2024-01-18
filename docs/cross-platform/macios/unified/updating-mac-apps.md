@@ -1,7 +1,7 @@
 ---
 title: "Updating Existing Mac Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Mac app from the Classic API to the Unified API."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: davidortinau
 ms.author: daortin

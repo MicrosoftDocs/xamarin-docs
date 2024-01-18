@@ -1,9 +1,9 @@
 ---
 title: "Activity Lifecycle"
 description: "Activities are a fundamental building block of Android applications and they can exist in a number of different states. The activity lifecycle begins with instantiation and ends with destruction, and includes many states in between. When an activity changes state, the appropriate lifecycle event method is called, notifying the activity of the impending state change and allowing it to execute code to adapt to that change. This article examines the lifecycle of activities and explains the responsibility that an activity has during each of these state changes to be part of a well-behaved, reliable application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/28/2018

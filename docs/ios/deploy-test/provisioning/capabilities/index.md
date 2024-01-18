@@ -1,9 +1,9 @@
 ---
 title: "Working with Capabilities in Xamarin.iOS"
 description: "Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for all capabilities."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018

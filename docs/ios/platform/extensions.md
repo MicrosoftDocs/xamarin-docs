@@ -1,9 +1,9 @@
 ---
 title: "iOS Extensions in Xamarin.iOS"
 description: "This document describes extensions, which are widgets presented by iOS in standard context such as within the Notification Center. It discusses how to create an extension and communicate with it from the parent app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin

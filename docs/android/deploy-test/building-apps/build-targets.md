@@ -1,9 +1,9 @@
 ---
 title: "Build Targets"
 description: "This document will list all supported targets in the Xamarin.Android build process."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 17DE89FF-F316-4620-B865-EF6E0963A29C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 03/29/2022

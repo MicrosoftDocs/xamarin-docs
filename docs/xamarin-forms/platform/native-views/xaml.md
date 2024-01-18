@@ -1,9 +1,9 @@
 ---
 title: "Native Views in XAML"
 description: "Native views from iOS, Android, and the Universal Windows Platform can be directly referenced from Xamarin.Forms XAML files. Properties and event handlers can be set on native views, and they can interact with Xamarin.Forms views. This article demonstrates how to consume native views from Xamarin.Forms XAML files."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2019

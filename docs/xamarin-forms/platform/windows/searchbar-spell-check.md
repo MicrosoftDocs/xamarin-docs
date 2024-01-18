@@ -1,9 +1,9 @@
 ---
 title: " SearchBar Spell Check on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that enables a SearchBar to interact with the spell check engine."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7974C91F-7502-4DB3-B0E9-C45E943DDA26
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

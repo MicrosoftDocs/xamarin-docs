@@ -1,7 +1,7 @@
 ---
 title: "Xamarin.Forms using Visual Basic.NET"
 description: "Xamarin.Forms project template can be modified to use Visual Basic for the main assembly, effectively allowing you to build cross-platform mobile apps using VB.NET."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin

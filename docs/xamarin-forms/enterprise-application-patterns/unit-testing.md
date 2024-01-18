@@ -1,9 +1,9 @@
 ---
 title: "Unit Testing Enterprise Apps"
 description: "This chapter explains how unit testing is performed in the eShopOnContainers mobile app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

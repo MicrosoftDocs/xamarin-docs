@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Path transforms"
 description: "A Xamarin.Forms transform defines how to transform a Path object from one coordinate space to another coordinate space."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

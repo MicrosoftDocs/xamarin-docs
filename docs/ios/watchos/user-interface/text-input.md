@@ -1,9 +1,9 @@
 ---
 title: "Working with watchOS Text Input in Xamarin"
 description: "This document describes watchOS text input in Xamarin. It discusses the PresentTextInputController method, scribbling, plain text, emojis, and dictation."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

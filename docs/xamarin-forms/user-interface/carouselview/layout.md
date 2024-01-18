@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView Layout"
 description: "By default, a CarouselView will display its items horizontally. However, a vertical orientation is also possible."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

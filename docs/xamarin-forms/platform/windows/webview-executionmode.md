@@ -1,9 +1,9 @@
 ---
 title: "WebView Execution Mode on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that sets the thread on which a WebView hosts its content."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D3C4112-0FF6-47F8-BC22-579D92032807
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/10/2020

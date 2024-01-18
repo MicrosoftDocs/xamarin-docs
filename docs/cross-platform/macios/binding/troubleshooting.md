@@ -1,7 +1,7 @@
 ---
 title: "Binding troubleshooting"
 description: "This guide describes what to do if you have difficulty binding an Objective-C library. In particular, it discusses missing bindings, argument exceptions when passing null to a binding, and reporting bugs."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin

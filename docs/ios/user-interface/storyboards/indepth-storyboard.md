@@ -1,8 +1,8 @@
 ---
 title: "Storyboards in Xamarin.iOS"
 description: "This document provides an introduction to storyboards in Xamarin.iOS. It describes how a storyboard is used to define a user interface, and segues."
-ms.prod: xamarin
-ms.technology: xamarin-ios
+ms.service: xamarin
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

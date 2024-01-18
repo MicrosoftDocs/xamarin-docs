@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms experimental flags"
 description: "Xamarin.Forms experimental flags enable the engineering team to ship new features to users more quickly, while still being able to change feature APIs before they move to a stable release."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2020

@@ -1,9 +1,9 @@
 ---
 title: "Improve Xamarin.Forms App Performance"
 description: "There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019

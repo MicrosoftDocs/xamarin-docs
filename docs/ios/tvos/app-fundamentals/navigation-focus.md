@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Navigation and Focus in Xamarin"
 description: "This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

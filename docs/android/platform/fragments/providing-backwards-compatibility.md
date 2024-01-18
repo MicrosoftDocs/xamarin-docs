@@ -1,9 +1,9 @@
 ---
 title: "Providing Backwards Compatibility with the Android Support Package"
 description: Learn how the support library backports some APIs from newer versions of Android for use with pre-Android 3.0 versions.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/12/2017

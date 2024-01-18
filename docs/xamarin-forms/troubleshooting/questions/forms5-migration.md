@@ -2,8 +2,8 @@
 title: "How do I migrate my app to Xamarin.Forms 5.0?"
 description: "How to migrate your app to Xamarin.Forms 5.0, with focus on Android on UWP."
 ms.assetid: AD04FEE9-B8F5-4CA5-AB31-EF1225867E4B
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.topic: troubleshooting
 author: davidbritch
 ms.author: dabritch

@@ -1,8 +1,8 @@
 ---
 title: "SVG Path Data in SkiaSharp"
 description: "This article explains how to define SkiaSharp paths using text strings in the Scalable Vector Graphics format, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch

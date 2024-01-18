@@ -2,7 +2,7 @@
 title: "Why isn't Jenkins supported by Microsoft?"
 description: "This document describes, at a high level, Xamarin's interaction with the Jenkins CI system. It also discusses a few common problems that come up when working with Jenkins."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 author: davidortinau
 ms.author: daortin

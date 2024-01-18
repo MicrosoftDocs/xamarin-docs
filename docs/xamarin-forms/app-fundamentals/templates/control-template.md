@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms control templates"
 description: "Xamarin.Forms control templates define the visual structure of ContentView derived custom controls, and ContentPage derived pages."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020

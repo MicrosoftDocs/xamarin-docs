@@ -1,9 +1,9 @@
 ---
 title: "Getting Started with tvOS in Xamarin"
 description: "This document describes how to get started building tvOS apps with Xamarin. It links to an installation guide and a quick start guide."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

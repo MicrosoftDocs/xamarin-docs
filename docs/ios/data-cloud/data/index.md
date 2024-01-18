@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS Data Access"
 description: "This document links to guides that describe how to work with local databases in a Xamarin.iOS application. Linked content discusses SQLite.NET, ADO.NET, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016

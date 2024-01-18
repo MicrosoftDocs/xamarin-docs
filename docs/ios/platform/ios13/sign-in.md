@@ -1,9 +1,9 @@
 ---
 title: "Sign In with Apple in Xamarin.iOS"
 description: "Sign In with Apple provides identity protection when using third-party authentication services."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CDA59BBF-AAE1-4D4F-B4AE-DB37220D41EB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019

@@ -1,9 +1,9 @@
 ---
 title: "Installing and Setting Up Xamarin.Android"
 description: "How to install and configure Xamarin.Android to work with Visual Studio."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018

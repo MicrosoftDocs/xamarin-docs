@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac ahead of time compilation"
 description: "This document describes ahead of time compilation in Xamarin.Mac. It compares AOT compilation to JIT compilation, explains how to enable AOT, and takes a look at hybrid AOT."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017

@@ -1,9 +1,9 @@
 ---
 title: "Binding a .JAR"
 description: "This walkthrough provides step-by-step instructions for creating a Xamarin.Android Java Bindings Library from an Android .JAR file."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
