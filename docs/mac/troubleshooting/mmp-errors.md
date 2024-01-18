@@ -31,7 +31,7 @@ The easiest way to get exact version information is to use the **Xamarin Studio*
 
 <a name="MM0001"></a>
 
-#### MM0001: This version of Xamarin.Mac requires Mono {0} (the current Mono version is {1}). Please update the Mono.framework from http://mono-project.com/Downloads
+#### MM0001: This version of Xamarin.Mac requires Mono {0} (the current Mono version is {1}). Please update the Mono.framework from https://mono-project.com/Downloads
 
 <a name="MM0003"></a>
 
@@ -528,7 +528,7 @@ If this is not the case, please file an [issue](https://github.com/xamarin/xamar
 
 <a name="MM5202"></a>
 
-#### MM5202: Mono.framework MDK is missing. Please install the MDK for your Mono.framework version from http://mono-project.com/Downloads
+#### MM5202: Mono.framework MDK is missing. Please install the MDK for your Mono.framework version from https://mono-project.com/Downloads
 
 <a name="MM5203"></a>
 
@@ -565,7 +565,7 @@ See the [equivalent mtouch warning](~/ios/troubleshooting/mtouch-errors.md#MT521
 
 <a name="MM5301"></a>
 
-#### MM5301: pkg-config could not be found. Please install the Mono.framework from http://mono-project.com/Downloads
+#### MM5301: pkg-config could not be found. Please install the Mono.framework from https://mono-project.com/Downloads
 
 <!-- 5302 used by mtouch -->
 <!-- 5303 used by mtouch -->

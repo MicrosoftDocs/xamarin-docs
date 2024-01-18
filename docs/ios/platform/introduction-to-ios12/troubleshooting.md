@@ -24,7 +24,7 @@ Check the following resources for known issues:
   - Visual Studio 2017 ([stable](/visualstudio/releasenotes/vs2017-relnotes), [preview](/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [Developer Community](https://developercommunity.visualstudio.com/search.html)
 - [GitHub](https://github.com/xamarin/xamarin-macios/issues)
-- [Xamarin Forums](https://learn.microsoft.com/en-us/answers/tags/18/xamarin)
+- [Xamarin Forums](https://learn.microsoft.com/answers/tags/18/xamarin)
 
 ## Report a new issue
 
