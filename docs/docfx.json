@@ -49,15 +49,7 @@
       "ms.technology": "xamarin-crossplatform",
       "ms.prod": "xamarin",
       "searchScope": ["Xamarin"],
-      "feedback_system": "OpenSource",
-      "feedback_github_repo": "MicrosoftDocs/xamarin-docs",
-      "feedback_product_url": "https://developercommunity.visualstudio.com/",
-      "open_source_feedback_contributorGuideUrl": "https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute",
-      "open_source_feedback_issueUrl": "https://github.com/MicrosoftDocs/xamarin-docs/issues/new?template=customer-feedback.yml",
-      "open_source_feedback_issueTitle": "",
-      "open_source_feedback_productName": "Xamarin",
-      "open_source_feedback_productLogoLightUrl": "https://learn.microsoft.com/media/logos/logo_xamarin.svg",
-      "open_source_feedback_productLogoDarkUrl": "https://learn.microsoft.com/media/logos/logo_xamarin.svg",
+      "feedback_system": "None"
     },
     "fileMetadata": {
       "ms.technology": {
@@ -75,20 +67,6 @@
         "get-started/quickstarts/**/**.md":"xamarin-forms",
         "get-started/tutorials/**/**.md":"xamarin-forms",
         "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": "xamarin-skiasharp"
-      },
-      "feedback_product_url": {
-        "essentials/**/**.md":"https://github.com/xamarin/Essentials/blob/master/PRODUCT-FEEDBACK.md"
-      },
-      "feedback_system": {
-        "android/**/*":"None",
-        "cross-platform/**/*":"None",
-        "ios/**/*":"None",
-        "mac/**/*":"None",
-        "tools/**/*":"None"
-      },
-      "open_source_feedback_productName": {
-         "xamarin-forms/**/*": "Xamarin.Forms",
-         "essentials/**/*": "Xamarin.Essentials"
       },
       "breadcrumb_path": {
         "get-started/tutorials/**/*.yml": "/xamarin/breadcrumb/tutorials/toc.json",
