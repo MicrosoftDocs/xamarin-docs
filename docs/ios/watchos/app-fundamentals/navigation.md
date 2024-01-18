@@ -1,9 +1,9 @@
 ---
 title: "Working with watchOS Navigation in Xamarin"
 description: "This document describes how to work with navigation in a watchOS application. It discusses modal interfaces, hierarchical navigation, and page-based interfaces."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

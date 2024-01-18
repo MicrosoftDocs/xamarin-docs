@@ -1,9 +1,9 @@
 ---
 title: "Validation in Enterprise Apps"
 description: "This chapter explains how the eShopOnContainers mobile app performs validation of user input. This includes specifying validation rules, triggering validation, and displaying validation errors."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

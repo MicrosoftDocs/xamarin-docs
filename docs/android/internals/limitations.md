@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android vs. Desktop - Differences in the Mono Runtime"
 description: Learn about the limitations of Xamarin.Android, including Android callable wrappers and missing constructors, among others.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018

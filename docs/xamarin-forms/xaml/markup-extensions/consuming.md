@@ -1,9 +1,9 @@
 ---
 title: "Consuming XAML Markup Extensions"
 description: "This article explains how to use Xamarin.Forms XAML markup extensions to enhance the power and flexibility of XAML by allowing element attributes to be set from a variety of sources."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/17/2020

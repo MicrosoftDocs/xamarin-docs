@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Multi-Bindings"
 description: "This article explains how to attach a collection of Binding objects to a single binding target property using the MultiBinding class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2020

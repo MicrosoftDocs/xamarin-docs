@@ -1,9 +1,9 @@
 ---
 title: "FlyoutPage Shadow on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls whether the detail page of a FlyoutPage has shadow applied to it, when revealing the flyout page."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FB907EA2-C00A-43A5-84B1-A43584C867A5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/05/2020

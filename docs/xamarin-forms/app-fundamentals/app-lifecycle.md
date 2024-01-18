@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms App Lifecycle"
 description: "This article explains how to respond to the application lifecycle, including lifecycle methods, page notification events, and modal navigation events."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018

@@ -1,9 +1,9 @@
 ---
 title: "watchOS 3 Troubleshooting"
 description: "This document provides several troubleshooting tips useful when working with watchOS 3 in Xamarin. Tips relate to activities, Apple Pay, background refresh, NSURLConnection, privacy, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

@@ -1,7 +1,7 @@
 ---
 title: "Xamarin Firewall Configuration Instructions"
 description: "This document provides a list of hosts that must be allowed in your firewall to allow Xamarin to work in a corporate environment."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: conceptdev
 ms.author: crdun

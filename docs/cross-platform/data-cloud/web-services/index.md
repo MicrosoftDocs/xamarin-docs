@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Web Services"
 description: "This guide demonstrates how to consume different web service technologies. Topics covered include communicating with REST services, SOAP services, and Windows Communication Foundation services."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin

@@ -1,9 +1,9 @@
 ---
 title: "Creating a CryptoObject"
 description: Integrity of fingerprint authentication results is important to an application. Learn about one technique for preserving the validity of fingerprint results.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

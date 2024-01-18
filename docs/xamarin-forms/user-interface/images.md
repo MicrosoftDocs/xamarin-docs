@@ -1,9 +1,9 @@
 ---
 title: "Images in Xamarin.Forms"
 description: "Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/19/2020

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Frame"
 description: "The Xamarin.Forms Frame class is a layout used to wrap a view or layout with a border that can be configured with color, shadow, and other options."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019

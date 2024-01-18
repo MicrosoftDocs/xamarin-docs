@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms gestures"
 description: "This guide explains how Xamarin.Forms gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/04/2020

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Material Visual"
 description: "Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications that look largely identical on iOS and Android."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/25/2019

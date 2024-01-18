@@ -1,9 +1,9 @@
 ---
 title: "In-House Distribution for Xamarin.iOS Apps"
 description: "This document gives a brief overview of distribution of applications In-House, as a member of the Apple Enterprise Developer Program."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

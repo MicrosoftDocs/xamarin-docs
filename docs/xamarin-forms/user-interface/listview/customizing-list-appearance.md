@@ -1,9 +1,9 @@
 ---
 title: "ListView Appearance"
 description: "This article explains how to customize ListViews in Xamarin.Forms applications by using headers, footers, groups, and variable height cells."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018

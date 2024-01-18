@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Bindable Properties"
 description: "This article provides an introduction to bindable properties, and demonstrates how to create and consume them."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020

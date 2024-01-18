@@ -1,8 +1,8 @@
 ---
 title: "Xamarin.Android Spinner"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

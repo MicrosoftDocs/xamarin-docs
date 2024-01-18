@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Brushes"
 description: "The Xamarin.Forms Brush class is an abstract class that paints an area with its output."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 44420FC2-304C-4175-8654-76769F79A813
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

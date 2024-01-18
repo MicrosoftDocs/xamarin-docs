@@ -1,7 +1,7 @@
 ---
 title: "Getting Started With Objective Sharpie"
 description: "This document provides a high-level overview of Objective Sharpie, the tool used to automate the creation of C# bindings to Objective-C code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: davidortinau
 ms.author: daortin

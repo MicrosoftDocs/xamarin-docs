@@ -1,9 +1,9 @@
 ---
 title: "OpenJDK binaries for Xamarin"
 description: "A step-by-step guide to configuring and troubleshooting the VS installed OpenJDK binaries for Mobile Development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: vyedin
 ms.author: dabritch
 ms.date: 07/22/2018

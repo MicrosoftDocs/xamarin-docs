@@ -1,9 +1,9 @@
 ---
 title: "Windows Platform Features"
 description: "This article explains the Windows platform support that's available in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/10/2020

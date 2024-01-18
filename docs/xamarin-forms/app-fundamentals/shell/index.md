@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell"
 description: "This guide explains how to use Xamarin.Forms Shell, which reduces the complexity of Xamarin.Forms applications by providing the fundamental features that most applications require."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2021

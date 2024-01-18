@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms and Azure Cognitive Services"
 description: "Add Intelligence to Xamarin.Forms applications with Azure Cognitive Services, including speech recognition, spell check, text translation, and emotion recognition."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 64386A65-FD31-4A1B-A769-91495E57345A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019

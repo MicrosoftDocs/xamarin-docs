@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough: Bind an iOS Swift library"
 description: "This article provides a hands-on walkthrough of creating a Xamarin.iOS binding for an existing Swift framework, Gigya. It covers topics such as compiling a Swift framework, binding it, and using the binding in a Xamarin.iOS application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B563ADE9-D0E3-4BC3-A288-66D2296BE706
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: alexeystrakh
 ms.author: dabritch
 ms.date: 02/11/2020

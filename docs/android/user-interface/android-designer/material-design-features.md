@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Designer Material Design Features"
 description: "This topic describes Designer features that make it easier for developers to create Material Design-compliant layouts. This section introduces and explains how to use the Material Grid, the Material Color Palette, the Typographic Scale, and the Theme Editor."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018

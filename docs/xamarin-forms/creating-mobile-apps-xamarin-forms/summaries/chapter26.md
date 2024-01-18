@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 26. Custom layouts"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 26. Custom layouts"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Authenticate Users with an Azure Cosmos DB Document Database and Xamarin.Forms"
 description: "This article explains how to combine access control with Azure Cosmos DB partitioned collections, so that a user can only access their own documents in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017

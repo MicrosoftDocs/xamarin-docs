@@ -1,9 +1,9 @@
 ---
 title: "Target Framework for Xamarin.Mac"
 description: "This article covers the target frameworks (Base Class Libraries) available for Xamarin.Mac, and the implications of using them in your Xamarin.Mac project."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017

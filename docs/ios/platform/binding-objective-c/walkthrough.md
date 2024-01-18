@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough: Binding an iOS Objective-C Library"
 description: "This article provides a hands-on walkthrough of creating a Xamarin.iOS binding for an existing Objective-C library, InfColorPicker. It covers topics such as compiling a static Objective-C library, binding it, and using the binding in a Xamarin.iOS application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017

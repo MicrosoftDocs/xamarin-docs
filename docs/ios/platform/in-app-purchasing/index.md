@@ -1,9 +1,9 @@
 ---
 title: "In-App Purchasing in Xamarin.iOS"
 description: "This document describes how to sell digital products and services using the StoreKit APIs. It links to guides that discuss configuration, consumable products, non-consumable products, transactions, subscriptions, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

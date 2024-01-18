@@ -1,9 +1,9 @@
 ---
 title: "Multiple Windows for iPad in Xamarin.iOS"
 description: "Add multiple window support to your iPad applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 524b6f2e-dbdf-11e9-8a34-2a2ae2dbcce4
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019

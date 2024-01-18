@@ -1,9 +1,9 @@
 ---
 title: "Profiling Xamarin.iOS Applications with Instruments"
 description: "This document describes how to use Apple's Instruments app to profile a Xamarin.iOS application installed on a device or a simulator."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

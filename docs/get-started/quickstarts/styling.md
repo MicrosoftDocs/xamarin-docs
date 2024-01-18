@@ -3,9 +3,9 @@ title: "Style a cross-platform Xamarin.Forms application"
 description: "This article explains how to style a cross-platform Xamarin.Forms Shell application with XAML styles, and use XAML Hot Reload to see these changes."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1C6ED8AF-41B4-4D6C-9BD8-C72D3F05E541
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.custom: contperf-fy21q3

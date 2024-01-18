@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms MenuItem"
 description: "The MenuItem class is used to create menu items for menus such as ListView item context menus and Shell application flyout menus."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019

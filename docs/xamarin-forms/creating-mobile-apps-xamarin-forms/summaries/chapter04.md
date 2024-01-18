@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 4. Scrolling the stack"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch

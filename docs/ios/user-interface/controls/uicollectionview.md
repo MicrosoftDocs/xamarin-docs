@@ -1,9 +1,9 @@
 ---
 title: "Collection Views in Xamarin.iOS"
 description: "Collection Views allow content to be displayed using arbitrary layouts. They allow easily creating grid-like layouts out of the box, while also supporting custom layouts."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

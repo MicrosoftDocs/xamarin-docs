@@ -3,9 +3,9 @@ title: "Store data in a local SQLite.NET database"
 description: "This article explains how to store data in a local SQLite.NET database, from a Xamarin.Forms Shell application."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F669CE4E-1E1B-409F-BC1C-8364633EB7EF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.custom: contperf-fy21q3

@@ -3,9 +3,9 @@ title: "Perform navigation in a Xamarin.Forms application"
 description: "This article explains how to turn the Xamarin.Forms Shell application, capable of storing a single note, into an application capable of storing multiple notes."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 030204F7-E9E4-4AE3-B9F7-915B697D0171
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.custom: contperf-fy21q3

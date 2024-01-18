@@ -1,9 +1,9 @@
 ---
 title: "ListView Performance"
 description: "Although ListView is a powerful view for displaying data, it has some limitations. This article explains how to ensure great performance with a Xamarin.Forms ListView in an application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017

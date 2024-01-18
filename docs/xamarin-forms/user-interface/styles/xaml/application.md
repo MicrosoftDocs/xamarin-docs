@@ -1,9 +1,9 @@
 ---
 title: "Global Styles in Xamarin.Forms"
 description: "Styles can be made available globally by adding them to the application's resource dictionary. This helps to avoid duplication of styles across pages or controls."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016

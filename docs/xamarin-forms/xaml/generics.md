@@ -1,9 +1,9 @@
 ---
 title: "Generics in Xamarin.Forms XAML"
 description: "Xamarin.Forms XAML provides support for consuming generic CLR types by specifying the generic constraints as type arguments."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/28/2020

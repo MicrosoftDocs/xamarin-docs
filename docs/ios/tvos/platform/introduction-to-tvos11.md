@@ -1,9 +1,9 @@
 ---
 title: "Introduction to tvOS 11"
 description: "This document provides a brief overview of the new features available to Xamarin developers in tvOS 11 and links to Apple's release notes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018

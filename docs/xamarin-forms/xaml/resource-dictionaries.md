@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms resource dictionaries"
 description: "Xamarin.Forms XAML resources are objects that can be shared and reused throughout a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/10/2020

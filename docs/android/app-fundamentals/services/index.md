@@ -1,9 +1,9 @@
 ---
 title: "Creating Android Services"
 description: "This guide discusses  Xamarin.Android services, which are Android components that allow work to be done without an active user interface. Services are very commonly used for tasks that are performed in the background, such as time consuming calculations, downloading files, playing music, and so on. It explains the different scenarios that services are suited for and shows how to implement them both for performing long-running background tasks as well as for providing an interface for remote procedure calls."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018

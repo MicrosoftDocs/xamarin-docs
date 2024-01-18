@@ -1,9 +1,9 @@
 ---
 title: "Dots and Dashes in SkiaSharp"
 description: "This article explores how to master the intricacies of drawing dotted and dashed lines in SkiaSharp, and demonstrates this with sample code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-skiasharp
+ms.subservice: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017

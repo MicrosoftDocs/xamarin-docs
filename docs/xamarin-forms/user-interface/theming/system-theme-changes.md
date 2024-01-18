@@ -2,8 +2,8 @@
 title: "Respond to system theme changes in Xamarin.Forms applications"
 description: "Xamarin.Forms applications can respond to operating system theme changes by using the OnAppTheme type, and the DynamicResource markup extension."
 ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/06/2020

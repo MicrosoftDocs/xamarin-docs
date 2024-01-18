@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms in Xamarin Native Projects"
 description: "This article explains how to consume ContentPage-derived pages that are directly added to Xamarin native projects, and how to navigate between them."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2021

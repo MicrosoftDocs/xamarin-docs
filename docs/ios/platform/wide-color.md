@@ -1,9 +1,9 @@
 ---
 title: "Wide Color in Xamarin.iOS"
 description: "This document discusses wide color and how it can be used in a Xamarin.iOS or Xamarin.Mac app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

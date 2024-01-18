@@ -1,9 +1,9 @@
 ---
 title: "Troubleshooting tvOS 10 Apps Built With Xamarin"
 description: "This article provides several troubleshooting tips for working with tvOS 10 in Xamarin apps. It describes issues related to the App Store, binary compatibility, the CFNetwork HttpProtocol, CloudKit, Core Image, NSUserActivity, and UIKit."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

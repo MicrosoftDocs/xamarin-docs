@@ -1,9 +1,9 @@
 ---
 title: "WebView Zoom on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that enables zoom on a WebView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DC1A3762-6A42-4298-929C-445F416C3E60
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019

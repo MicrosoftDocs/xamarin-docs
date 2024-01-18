@@ -1,9 +1,9 @@
 ---
 title: "Introduction to watchOS"
 description: "This document provides an overview of watchOS, describing the application lifecycle, user interface types, screen sizes, limitations, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

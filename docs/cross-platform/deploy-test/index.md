@@ -1,7 +1,7 @@
 ---
 title: "Deployment & Debugging"
 description: "This document links to guides that provide details about how work with multi-process debugging and custom linker configurations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
 author: davidortinau
 ms.author: daortin

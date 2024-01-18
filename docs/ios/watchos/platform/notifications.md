@@ -1,9 +1,9 @@
 ---
 title: "watchOS Notifications in Xamarin"
 description: "This document describes how to work with watchOS notifications in Xamarin. It discusses creating notification controllers, generating notifications, and testing notifications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

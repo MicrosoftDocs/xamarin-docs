@@ -1,9 +1,9 @@
 ---
 title: "Android Controls (Widgets)"
 description: "Building blocks for creating Xamarin.Android User Interfaces"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS performance"
 description: "This document describes techniques that can be used to improve performance and memory usage in Xamarin.iOS applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/29/2016

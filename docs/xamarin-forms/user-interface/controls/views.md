@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Views"
 description: "Xamarin.Forms views are the building blocks of cross-platform mobile user interfaces. This article lists the views that are included in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/09/2020

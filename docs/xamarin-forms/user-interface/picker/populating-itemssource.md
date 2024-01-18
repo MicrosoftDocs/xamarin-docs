@@ -1,9 +1,9 @@
 ---
 title: "Setting a Picker's ItemsSource Property"
 description: "The Picker view is a control for selecting a text item from a list of data. This article explains how to populate a Picker with data by setting the ItemsSource property, and how to respond to item selection by the user."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019

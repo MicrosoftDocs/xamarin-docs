@@ -7,7 +7,7 @@ metadata:
   title: Xamarin.Forms tutorials
   description: Tutorials about the basics of creating Xamarin.Forms applications with Visual Studio and Visual Studio for Mac.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
   author: davidbritch
   ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "SceneKit in Xamarin.iOS"
 description: "This document describes SceneKit, a 3D scene graph API that simplifies working with 3D graphics by abstracting away the complexities of OpenGL."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017

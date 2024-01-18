@@ -1,9 +1,9 @@
 ---
 title: "Animation in Xamarin.Forms"
 description: "Xamarin.Forms includes its own animation infrastructure that's straightforward for creating simple animations, while also being versatile enough to create complex animations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016

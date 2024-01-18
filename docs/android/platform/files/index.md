@@ -1,9 +1,9 @@
 ---
 title: "File access with Xamarin.Android"
 description: "This guide will explain file access in Xamarin.Android"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018

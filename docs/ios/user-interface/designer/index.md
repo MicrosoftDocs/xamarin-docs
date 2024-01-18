@@ -1,9 +1,9 @@
 ---
 title: "Building User Interfaces with the iOS Designer"
 description: "This document describes how to use the Xamarin Designer for iOS to build an app's user interface with storyboards and .xib files. It links to documents that discuss the tool's availability, its basic functionality, designable controls, and provide walkthroughs of its use."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/31/2018

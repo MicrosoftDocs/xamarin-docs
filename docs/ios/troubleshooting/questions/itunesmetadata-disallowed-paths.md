@@ -2,9 +2,9 @@
 title: "Why does my app submission fail with: Disallowed paths ( iTunesMetadata.plist ) found at ... ?"
 description: Learn about the ITMS-90047 Disallowed paths ("iTunesMetadata.plist") error received when submitting a Xamarin application for review in the AppStore.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AE1BBDC6-4D3A-4471-876B-FE28B6E59A24
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018

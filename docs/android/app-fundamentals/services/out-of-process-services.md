@@ -1,9 +1,9 @@
 ---
 title: "Running Android Services in Remote Processes"
 description: "Generally, all components in an Android application will run in the same process. Android services are a notable exception to this in that they can be configured to run in their own processes and shared with other applications, including those from other Android developers. This guide will discuss how to create and use an Android remote service using Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

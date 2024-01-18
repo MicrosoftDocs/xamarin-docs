@@ -1,9 +1,9 @@
 ---
 title: "Binding iOS Libraries"
 description: "This document describes how to create C# bindings to Objective-C code, making it possible to consume native libraries and CocoaPods in a Xamarin.iOS application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin

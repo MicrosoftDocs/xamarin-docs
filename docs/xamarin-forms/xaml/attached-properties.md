@@ -1,9 +1,9 @@
 ---
 title: "Attached Properties"
 description: "This article provides an introduction to attached properties, and demonstrates how to create and consume them."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016

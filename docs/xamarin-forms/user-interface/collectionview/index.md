@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView"
 description: "The CollectionView is a flexible and performant view for presenting lists of data using different layout specifications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019

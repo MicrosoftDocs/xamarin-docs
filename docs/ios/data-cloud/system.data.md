@@ -1,9 +1,9 @@
 ---
 title: "System.Data in Xamarin.iOS"
 description: "This document describes how to use System.Data and Mono.Data.Sqlite.dll to access SQLite data in a Xamarin.iOS application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015

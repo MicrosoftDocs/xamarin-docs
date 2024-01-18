@@ -3,9 +3,9 @@ title: "Hello, iOS – Deep dive"
 description: "This document takes a deeper look at the Hello, iOS sample application, considering its architecture, user interface, content view hierarchy, testing, deployment, and more."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

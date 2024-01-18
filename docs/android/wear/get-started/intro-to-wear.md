@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Android Wear"
 description: "With the introduction of Google's Android Wear, you are no longer restricted to just phones and tablets when it comes to developing great Android apps. Xamarin.Android's support for Android Wear makes it possible for you to run C# code on your wrist! This introduction provides a basic overview of Android Wear, describes its key features, and offers an overview of the features available in Android Wear 2.0. It lists some of the more popular Android Wear devices, and it provides links to essential Google Android Wear documentation for further reading."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

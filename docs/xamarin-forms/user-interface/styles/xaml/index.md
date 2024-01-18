@@ -1,9 +1,9 @@
 ---
 title: "Styling Xamarin.Forms Apps using XAML Styles"
 description: "This guide explains how to customize the appearance of a Xamarin.Forms application by using XAML styles."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019

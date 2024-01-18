@@ -1,9 +1,9 @@
 ---
 title: "Introduction to tvOS 12"
 description: "This document provides a high-level of overview of new and updated features in tvOS 12 for which Xamarin's preview release currently provides C# bindings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

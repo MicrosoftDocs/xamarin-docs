@@ -1,9 +1,9 @@
 ---
 title: "User Location not working in iOS 8"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9BE92C99-C9C5-427E-ADE4-789DF258BACE
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

@@ -1,9 +1,9 @@
 ---
 title: "Enterprise App Navigation"
 description: "This chapter explains how the eShopOnContainers mobile app performs view model-first navigation from view models."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

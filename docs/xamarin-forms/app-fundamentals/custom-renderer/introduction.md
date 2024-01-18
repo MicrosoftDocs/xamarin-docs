@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Custom Renderers"
 description: "This article provides an introduction to custom renderers, and outlines the process for creating a custom renderer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016

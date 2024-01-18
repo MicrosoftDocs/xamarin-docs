@@ -1,9 +1,9 @@
 ---
 title: "Part 1. Getting Started with XAML"
 description: "In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a code-behind file."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/30/2019

@@ -1,9 +1,9 @@
 ---
 title: "App-Linking in Android"
 description: "This guide will discuss how Android 6.0 supports app-linking, a technique that allows mobile apps to respond to URLs on websites. It will discuss what app-linking is, how to implement app-linking in an Android 6.0 application, and how to configure a website to grant permissions to the mobile app for a domain."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

@@ -1,9 +1,9 @@
 ---
 title: "XAML Markup Extensions"
 description: "The article explains how to use Xamarin.Forms XAML markup extensions to extend the power and flexibility of XAML by allowing element attributes to be set from sources other than literal text strings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018

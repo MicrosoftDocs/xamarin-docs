@@ -1,9 +1,9 @@
 ---
 title: "File compression in Xamarin.iOS"
 description: "This document describes how to work with the libcompression API in Xamarin.iOS. It discusses deflating, inflating, and the different supported algorithms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 94D05DAB-01E8-4C62-9CEF-9D6417EEA8EB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019

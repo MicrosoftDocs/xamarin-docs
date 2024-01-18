@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 21. Transforms"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 21. Transforms"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Grid"
 description: "The Xamarin.Forms Grid is a layout that organizes its children into rows and columns of cells."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/15/2020

@@ -1,9 +1,9 @@
 ---
 title: "Part 2. Essential XAML Syntax"
 description: "This article explains the essential XAML syntax features of property elements and attached properties."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017

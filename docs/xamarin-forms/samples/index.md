@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Samples"
 description: "Xamarin.Forms sample apps and code demos to help you get started and understand concepts in Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: jusjohns
 ms.date: 12/27/2019

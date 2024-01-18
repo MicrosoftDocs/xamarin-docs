@@ -3,9 +3,9 @@ title: "Hello, Android Multiscreen: Quickstart"
 description: "This two-part guide expands the Phoneword application to handle a second screen. Along the way, basic Android Application Building Blocks are introduced with a deeper dive into Android architecture."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

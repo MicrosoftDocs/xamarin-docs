@@ -1,9 +1,9 @@
 ---
 title: "Debugging a native crash in a Xamarin.Mac app"
 description: "This document describes how to debug exceptions that originate in the Objective-C runtime. It discusses assertion failures, issues with callbacks, exception bubbling, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016

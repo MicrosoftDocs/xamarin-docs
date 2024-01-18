@@ -1,9 +1,9 @@
 ---
 title: "Troubleshooting tips for iOS 11 and Xamarin.iOS"
 description: "This article describes resources that can be used for troubleshooting when developing Xamarin.iOS applications. It discusses bug reporting, release notes, the Xamarin Releases blog, and support options."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017

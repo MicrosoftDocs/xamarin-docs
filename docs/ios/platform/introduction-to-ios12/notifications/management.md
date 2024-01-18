@@ -1,9 +1,9 @@
 ---
 title: "Notification management in Xamarin.iOS"
 description: "This document describes how to use Xamarin.iOS to take advantage of new notification management features introduced in iOS 12."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

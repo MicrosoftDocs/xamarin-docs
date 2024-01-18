@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CarouselView Data"
 description: "A CarouselView is populated with data by setting its ItemsSource property to any collection that implements IEnumerable."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2020

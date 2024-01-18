@@ -1,10 +1,10 @@
 ---
 title: "Fragments Walkthrough - Part 2"
 description: Learn how to use fragments in an Android app to target the extra horizontal space when in landscape mode.
-ms.prod: xamarin
+ms.service: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018

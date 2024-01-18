@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView EmptyView"
 description: "In CollectionView, an empty view can be specified that provides feedback to the user when no data is available for display. The empty view can be a string, a view, or multiple views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/05/2020

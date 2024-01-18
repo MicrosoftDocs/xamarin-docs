@@ -1,10 +1,10 @@
 ---
 title: "Part 5. From Data Bindings to MVVM"
 description: "The MVVM pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel."
-ms.prod: xamarin
+ms.service: xamarin
 ms.custom: video
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017

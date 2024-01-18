@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Polyline"
 description: "The Xamarin.Forms Polyline class can be used to draw a series of connected straight lines."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2021

@@ -1,10 +1,10 @@
 ---
 title: "Xamarin.Android Fragments Walkthrough - Part 1"
 description: Learn about Xamarin.Android fragments in Part 1 of this walkthrough by creating an app that targets an Android device in portrait orientation.
-ms.prod: xamarin
+ms.service: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018

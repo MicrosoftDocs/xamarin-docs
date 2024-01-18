@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Web Services Introduction"
 description: "This guide provides a walkthrough of the Xamarin.Forms sample application that demonstrates how to communicate with different web services. While each web service uses a separate sample application, they are functionally similar and share common classes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017

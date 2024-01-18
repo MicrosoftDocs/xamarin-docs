@@ -1,9 +1,9 @@
 ---
 title: "Automation Properties"
 description: "This article explains how to use the AutomationProperties class in a Xamarin.Forms application, so that a screen reader can speak about the elements on the page."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018

@@ -1,9 +1,9 @@
 ---
 title: "WebView Mixed Content on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that displays mixed content in a WebView in applications that target API 21 or greater."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 68F908F3-04C5-4B91-B6E5-B7E8357B4154
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

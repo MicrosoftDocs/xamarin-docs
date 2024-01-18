@@ -1,9 +1,9 @@
 ---
 title: "Notifications in Xamarin.iOS"
 description: "This section shows how to implement local notifications in Xamarin.iOS. It will explain the various UI elements of an iOS notification and discuss the API's involved with creating and displaying a notification."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018

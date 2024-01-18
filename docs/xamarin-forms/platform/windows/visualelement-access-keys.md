@@ -1,9 +1,9 @@
 ---
 title: "VisualElement Access Keys on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that specifies an access key for a VisualElement."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

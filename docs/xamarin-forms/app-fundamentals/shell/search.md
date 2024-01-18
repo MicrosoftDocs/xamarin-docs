@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell search"
 description: "Xamarin.Forms Shell applications can use integrated search functionality that's provided by a search box that can be added to the top of each page."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2021

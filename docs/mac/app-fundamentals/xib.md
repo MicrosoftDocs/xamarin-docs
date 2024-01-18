@@ -1,9 +1,9 @@
 ---
 title: ".xib files in Xamarin.Mac"
 description: "This article covers working with .xib files created in Xcode's Interface Builder to create and maintain user interfaces for a Xamarin.Mac application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

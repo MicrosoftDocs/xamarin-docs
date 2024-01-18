@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms RadioButton"
 description: "The Xamarin.Forms RadioButton is a type of button that allows users to select one option from a set. Each option is represented by one radio button, and you can only select one radio button in a group."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2020

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Brushes: Radial gradients"
 description: "The Xamarin.Forms RadialGradientBrush class paints an area with a radial gradient."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 099BA530-3B38-4005-9B19-A0EB4D4DEEFC
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

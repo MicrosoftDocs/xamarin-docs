@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Triggers"
 description: "This article explains how to use Xamarin.Forms triggers to respond to user interface changes with XAML. Triggers allow you to express actions declaratively in XAML that change the appearance of controls based on events or property changes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2020

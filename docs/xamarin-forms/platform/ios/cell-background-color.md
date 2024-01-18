@@ -1,9 +1,9 @@
 ---
 title: "Cell Background Color on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that sets the default background color of cells on iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2A3FDACF-5AE2-40DE-8488-6FE41733712F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

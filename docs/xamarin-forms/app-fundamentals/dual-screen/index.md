@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Dual-Screen"
 description: "This guide explains how to create Xamarin.Forms apps for dual-screen devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020

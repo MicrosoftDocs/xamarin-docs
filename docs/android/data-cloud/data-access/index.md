@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Data Access"
 description: "Most applications have some requirement to save data on the device locally. Unless the amount of data is trivially small, this usually requires a database and a data layer in the application to manage database access.  Android has the SQLite database engine 'built in' and access to store and retrieve data is simplified by Xamarin's platform. This document shows how to access an SQLite database in a cross-platform way."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

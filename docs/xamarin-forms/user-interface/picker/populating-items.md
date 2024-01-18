@@ -1,9 +1,9 @@
 ---
 title: "Adding Data to a Picker's Items Collection"
 description: "The Picker view is a control for selecting a text item from a list of data. This article explains how to populate a Picker with data by adding it to the Items collection, and how to respond to item selection by the user."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019

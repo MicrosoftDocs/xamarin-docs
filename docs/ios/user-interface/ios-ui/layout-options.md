@@ -1,9 +1,9 @@
 ---
 title: "Layout Options in Xamarin.iOS"
 description: "This document describes different ways to lay out user interfaces in Xamarin.iOS. It discusses Autosizing and Auto Layout."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

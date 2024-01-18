@@ -1,8 +1,8 @@
 ---
 title: "Creating and drawing on SkiaSharp bitmaps"
 description: "Learn how to create SkiaSharp bitmaps and then draw on these bitmaps by creating a canvas based on them."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch

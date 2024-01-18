@@ -1,9 +1,9 @@
 ---
 title: "Touch in Android"
 description: Learn about the object created by the Android operating system which holds data about a user's physical touch interaction with the screen. 
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

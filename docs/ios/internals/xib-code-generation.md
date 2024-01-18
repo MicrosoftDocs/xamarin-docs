@@ -1,9 +1,9 @@
 ---
 title: ".xib Code Generation in Xamarin.iOS"
 description: "This document describes how Xamarin.iOS generates code to map '.xib' files to C#, making visual controls accessible programmatically."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

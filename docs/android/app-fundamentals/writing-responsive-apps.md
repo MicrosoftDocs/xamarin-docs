@@ -1,9 +1,9 @@
 ---
 title: "Writing Responsive Applications"
 description: Learn about writing responsive applications, keeping in mind one of the keys to maintaining a responsive GUI is to do long-running tasks on a background thread.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018

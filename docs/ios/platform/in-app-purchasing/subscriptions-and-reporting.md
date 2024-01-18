@@ -1,9 +1,9 @@
 ---
 title: "Subscriptions and Reporting in Xamarin.iOS"
 description: "This document describes non-renewing subscriptions, free subscriptions, auto-renewable subscriptions, and using iTunes Connect to report on these items."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

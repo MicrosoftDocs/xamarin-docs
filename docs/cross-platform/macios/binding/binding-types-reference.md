@@ -1,7 +1,7 @@
 ---
 title: "Binding types reference guide"
 description: "This reference guide describes various attributes and concepts that are necessary to understand when creating C# bindings to Objective-C libraries."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: davidortinau
 ms.author: daortin

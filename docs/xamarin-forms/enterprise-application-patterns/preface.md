@@ -1,9 +1,9 @@
 ---
 title: "Preface to Enterprise App Development"
 description: "This chapter provides a preface to Enterprise Application Patterns using Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

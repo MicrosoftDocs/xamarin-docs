@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Polygons, Polylines, and Circles"
 description: "This article explains how to create polygons, polylines, and circles on a Xamarin.Forms map instance."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2020

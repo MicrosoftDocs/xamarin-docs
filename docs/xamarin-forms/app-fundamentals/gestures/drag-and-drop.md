@@ -1,9 +1,9 @@
 ---
 title: "Add drag and drop gesture recognizers"
 description: "This article explains how to recognize drag and drop gestures with Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2021

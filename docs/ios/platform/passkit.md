@@ -1,9 +1,9 @@
 ---
 title: "PassKit in Xamarin.iOS"
 description: "The Wallet app allows iOS users to store digital passes on their devices. The PassKit framework allows developers to interact with passes programmatically."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2018

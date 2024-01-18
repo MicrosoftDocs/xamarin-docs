@@ -1,8 +1,8 @@
 ---
 title: "Using CursorAdapters"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 60DE467E-A5DA-4420-52E5-D86AD1678FE6
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/25/2017

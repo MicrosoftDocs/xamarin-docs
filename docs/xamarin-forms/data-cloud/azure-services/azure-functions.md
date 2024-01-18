@@ -1,7 +1,7 @@
 ---
 title: "Azure Functions with Xamarin.Forms"
 description: "Get started with Azure Functions using Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
 author: conceptdev
 ms.author: crdun

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Fill rules"
 description: "Xamarin.Forms Shapes fill rules determine whether a point is in the fill region of a shape."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5CABB22B-C6BE-43D1-91D9-6E90A4BD5622
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

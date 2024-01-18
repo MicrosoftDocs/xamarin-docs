@@ -1,9 +1,9 @@
 ---
 title: "User Notifications Framework in Xamarin.iOS"
 description: "Links to documents that describe the User Notifications framework and how to use it to send and receive local and remote notifications in a Xamarin.iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/01/2016

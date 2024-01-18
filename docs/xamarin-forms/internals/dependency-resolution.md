@@ -1,9 +1,9 @@
 ---
 title: "Dependency resolution in Xamarin.Forms"
 description: "This article explains how to inject a dependency resolution method into Xamarin.Forms so that an application's dependency injection container has control over the creation and lifetime of custom renderers, effects, and DependencyService implementations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018

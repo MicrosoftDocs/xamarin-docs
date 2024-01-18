@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough - Saving the Activity state"
 description: "We have covered the theory behind saving state in the Activity Lifecycle guide; now, let's walk through an example."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

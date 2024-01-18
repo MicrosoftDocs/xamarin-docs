@@ -1,9 +1,9 @@
 ---
 title: "App Store Changes in iOS 11"
 description: "This document explores changes to the App Store in iOS 11. It discusses an application's store icon, promoted in-app purchases, the redesigned product page, customer communication, and phased releases."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

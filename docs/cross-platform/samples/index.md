@@ -1,9 +1,9 @@
 ---
 title: "Cross-Platform Samples"
 description: "Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C234C9C6-A7AC-4439-B086-DF34B4E4753A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/26/2019

@@ -1,9 +1,9 @@
 ---
 title: "Changes to StoreKit in iOS 6"
 description: "iOS 6 introduces two changes to the Store Kit API: the ability to display iTunes (and App Store/iBookstore) products from within your app and a new in-app purchase option where Apple will host your downloadable files. This document explains how to implement those features with Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

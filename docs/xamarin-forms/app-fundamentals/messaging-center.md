@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms MessagingCenter"
 description: "The Xamarin.Forms MessagingCenter class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019

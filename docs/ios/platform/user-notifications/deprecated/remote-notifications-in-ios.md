@@ -1,9 +1,9 @@
 ---
 title: "Push Notifications in iOS"
 description: "This document describes how to work with push notifications in iOS 9 and earlier. It discusses certificates, registering with the Apple Push Notifications Gateway Service (APNS), and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

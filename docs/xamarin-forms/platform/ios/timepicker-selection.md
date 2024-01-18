@@ -1,9 +1,9 @@
 ---
 title: "TimePicker item selection on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls when item selection occurs in a TimePicker."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 554AC877-8698-4B8C-A676-80DD64305A06
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/15/2020

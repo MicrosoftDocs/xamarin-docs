@@ -1,9 +1,9 @@
 ---
 title: "Playing sound with AVAudioPlayer in Xamarin.Mac"
 description: "This document describes how to play sound with AVAudioPlayer in a Xamarin.Mac app. It discusses AVAudioPlayer at a high level and links to other documentation that explores it more fully."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016

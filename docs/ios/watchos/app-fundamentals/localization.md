@@ -1,9 +1,9 @@
 ---
 title: "Working with watchOS Localization in Xamarin"
 description: "This document describes how to localize watchOS apps built with Xamarin. It discusses watch apps, watch extensions, strings in code, storyboard text, testing, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

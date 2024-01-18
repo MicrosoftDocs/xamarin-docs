@@ -1,9 +1,9 @@
 ---
 title: "iOS 7 User Interface Overview"
 description: "iOS 7 introduces a plethora of user interface changes. This article highlights some of the larger changes, both in the visual appearance of controls and in the APIs that support the new design."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

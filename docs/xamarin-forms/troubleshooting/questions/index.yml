@@ -2,9 +2,9 @@
 metadata:
   title: "Xamarin.Forms Frequently Asked Questions"
   ms.topic: faq
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C
-  ms.technology: xamarin-forms
+  ms.subservice: xamarin-forms
   author: davidbritch
   ms.author: dabritch
   ms.date: 10/15/2020

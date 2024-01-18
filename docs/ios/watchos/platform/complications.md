@@ -1,9 +1,9 @@
 ---
 title: "watchOS Complications in Xamarin"
 description: "This document describes how to work with watchOS complications in Xamarin. It discusses how to add a complication, writing a complication, templates, and provides sample code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/03/2017

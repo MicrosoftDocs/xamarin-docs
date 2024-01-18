@@ -2,9 +2,9 @@
 title: "Troubleshooting Tips"
 description: Xamarin.Android has a few places to look when tracking down various bugs.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018

@@ -1,8 +1,8 @@
 ---
 title: "Permissions In Xamarin.Android"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018

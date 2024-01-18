@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Rectangle"
 description: "The Xamarin.Forms Rectangle class can be used to draw rectangles."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2DD663D3-DAEC-495C-AB6D-8A143FC97637
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2021

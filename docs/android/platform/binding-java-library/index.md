@@ -1,9 +1,9 @@
 ---
 title: "Binding a Java Library"
 description: "The Android community has many Java libraries that you may want to use in your app; this guide explains how to incorporate Java libraries into your Xamarin.Android application by creating a Bindings Library."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/01/2017

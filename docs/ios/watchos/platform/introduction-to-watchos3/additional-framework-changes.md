@@ -1,9 +1,9 @@
 ---
 title: "Additional watchOS 3 Frameworks Changes"
 description: "This document describes various framework changes introduced with watchOS 3, and how to work with them in Xamarin. Core Data, Core Motion, Foundation, HealthKit, HomeKit, PassKit, and UIKit are discussed."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

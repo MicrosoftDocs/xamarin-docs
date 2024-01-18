@@ -1,9 +1,9 @@
 ---
 title: "A Basic RecyclerView Example"
 description: "An example app that demonstrates how to use RecyclerView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/30/2018

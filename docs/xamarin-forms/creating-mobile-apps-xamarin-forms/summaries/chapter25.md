@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 25. Page varieties"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 25. Page varieties"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch

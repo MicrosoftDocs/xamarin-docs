@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Collection Views in Xamarin"
 description: "This document describes how to work with collection views in a tvOS app built with Xamarin. It covers collection view layouts, creating cells and supplementary views, responding to user events, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

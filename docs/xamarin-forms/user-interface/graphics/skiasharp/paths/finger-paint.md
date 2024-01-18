@@ -1,8 +1,8 @@
 ---
 title: "Finger Painting in SkiaSharp"
 description: "This article explains how to use your fingers to paint on the SkiaSharp canvas in a Xamarin.Forms application, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch

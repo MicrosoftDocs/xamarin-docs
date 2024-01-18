@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Polygon"
 description: "The Xamarin.Forms Polygon class can be used to draw polygons, which are connected series of lines that form closed shapes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D6539F60-A5AC-46EF-86EB-E9F508EB1FA8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2021

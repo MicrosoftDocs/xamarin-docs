@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell custom renderers"
 description: "Xamarin.Forms Shell applications are highly customizable through the properties and methods that the various Shell classes expose. However, it's also possible to create a Shell custom renderer when more sophisticated platform-specific customizations are required."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/15/2021

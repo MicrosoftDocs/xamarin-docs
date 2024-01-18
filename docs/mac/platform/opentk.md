@@ -1,9 +1,9 @@
 ---
 title: "Introduction to OpenTK in Xamarin.Mac"
 description: "This article provides an introduction to working with OpenTK in a Xamarin.Mac application. It covers creating and maintaining a Game Window, rendering a simple object and displaying the object to the user."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

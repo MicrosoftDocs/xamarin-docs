@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Initialization and Configuration"
 description: "The Xamarin.Forms.Maps NuGet package is required to use maps functionality in an application. In addition, accessing the user's location requires location permissions to have been granted to the application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020

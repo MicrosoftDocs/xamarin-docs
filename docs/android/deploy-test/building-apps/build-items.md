@@ -1,9 +1,9 @@
 ---
 title: "Build Items"
 description: "This document will list all supported item groups in the Xamarin.Android build process."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5EBEE1A5-3879-45DD-B1DE-5CD4327C2656
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 07/26/2022

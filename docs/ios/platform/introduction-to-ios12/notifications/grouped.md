@@ -1,9 +1,9 @@
 ---
 title: "Grouped notifications in Xamarin.iOS"
 description: "With iOS 12, it is possible to group notifications in Notification Center or the lock screen by application or by thread. This document describes how to send threaded and unthreaded notifications with Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

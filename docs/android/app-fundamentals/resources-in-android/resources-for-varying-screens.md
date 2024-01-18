@@ -1,9 +1,9 @@
 ---
 title: "Creating Resources for Varying Screens"
 description: Learn about creating resources for varying screens. Android itself runs on many different devices, each with different resolutions, screen sizes, and densities.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2018

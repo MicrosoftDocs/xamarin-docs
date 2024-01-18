@@ -1,9 +1,9 @@
 ---
 title: "WebView JavaScript Alerts on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that enables a WebView to display JavaScript alerts in a UWP message dialog."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 95A153A1-72A0-4C0B-A452-ACE966BB12CB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

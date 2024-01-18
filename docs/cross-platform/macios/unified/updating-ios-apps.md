@@ -1,7 +1,7 @@
 ---
 title: "Updating Existing iOS Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.iOS app from the Classic API to the Unified API."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: davidortinau
 ms.author: daortin

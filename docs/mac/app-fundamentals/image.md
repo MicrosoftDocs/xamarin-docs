@@ -1,9 +1,9 @@
 ---
 title: "Images in Xamarin.Mac"
 description: "This article covers working with images and icons in a Xamarin.Mac application. It describes creating and maintaining the images needed to create your application's icon and using images in both C# code and Xcode's Interface Builder."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017

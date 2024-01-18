@@ -1,9 +1,9 @@
 ---
 title: "Theme a Xamarin.Forms Application"
 description: "Theming can be implemented in Xamarin.Forms applications by creating a ResourceDictionary for each theme, and then loading the resources with the DynamicResource markup extension."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019

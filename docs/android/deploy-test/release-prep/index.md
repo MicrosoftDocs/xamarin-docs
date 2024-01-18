@@ -1,9 +1,9 @@
 ---
 title: "Preparing an Application for Release"
 description: After an application has been coded and tested, prepare a package for distribution. Learn about the steps to build the app for release.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018

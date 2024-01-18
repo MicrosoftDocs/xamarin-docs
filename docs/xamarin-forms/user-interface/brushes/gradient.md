@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Brushes: Gradients"
 description: "The Xamarin.Forms GradientBrush class is an abstract class that describes a gradient, composed of gradient stops."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 24763E56-74EC-4082-897B-E4EAACCADFEE
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms TableView"
 description: "This article explains how to use the Xamarin.Forms TableView class to present scrolling menus, settings and input forms in applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019

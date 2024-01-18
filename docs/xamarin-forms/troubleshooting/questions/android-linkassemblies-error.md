@@ -1,9 +1,9 @@
 ---
 title: "Android build error – The LinkAssemblies task failed unexpectedly"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: EB3BE685-CB72-48E3-89D7-C845E76B9FA2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019

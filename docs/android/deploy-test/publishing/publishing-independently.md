@@ -1,8 +1,8 @@
 ---
 title: "Publishing Independently"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6FB4DEF2-01AD-C5FE-0950-CE1BF088A9C6
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shell flyout"
 description: "A flyout is the optional root menu for a Shell application, and is accessible through an icon or by swiping from the side of the screen. The flyout consists of an optional header, flyout items, optional menu items, and an optional footer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2021

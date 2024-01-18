@@ -1,7 +1,7 @@
 ---
 title: "Cross-Platform Performance"
 description: "This document describes various techniques that can be used to improve the performance of a mobile application. It discusses the Profiler, IDisposable resource, weak references, the SGen garbage collector, size reduction techniques, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin

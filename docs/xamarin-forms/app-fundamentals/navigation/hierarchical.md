@@ -1,9 +1,9 @@
 ---
 title: "Hierarchical Navigation"
 description: "This article demonstrates how to use the NavigationPage class to perform navigation in a stack of last-in, first-out (LIFO) pages."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2020

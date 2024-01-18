@@ -1,9 +1,9 @@
 ---
 title: "Fonts in Xamarin.Forms"
 description: "This article explains how to specify font information on controls that display text in Xamarin.Forms applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2020

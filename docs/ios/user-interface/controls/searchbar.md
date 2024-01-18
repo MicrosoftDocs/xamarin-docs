@@ -1,9 +1,9 @@
 ---
 title: "Search Bars in Xamarin.iOS"
 description: "This document describes how to use search bars in Xamarin.iOS. It discusses how to create search bars programmatically and in a storyboard."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017

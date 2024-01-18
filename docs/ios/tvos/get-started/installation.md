@@ -1,9 +1,9 @@
 ---
 title: "Installing tvOS Support in Xamarin"
 description: "This article discusses the support for tvOS in Xcode 9 and Xamarin.iOS 11, and provides brief instructions regarding how to get set up to develop tvOS apps with Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018

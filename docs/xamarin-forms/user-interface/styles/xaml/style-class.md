@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Style Classes"
 description: "Xamarin.Forms style classes enable multiple styles to be applied to a control, without resorting to style inheritance."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019

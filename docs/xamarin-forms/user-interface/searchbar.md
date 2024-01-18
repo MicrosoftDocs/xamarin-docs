@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms SearchBar"
 description: "The Xamarin.Forms SearchBar is a user input control that is used for initiating a search. The SearchBar control supports placeholder text, query input, execution, and cancellation. This article explains how to use a SearchBar in XAML and code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/21/2020

@@ -1,9 +1,9 @@
 ---
 title: "Get started with iOS 14"
 description: "This document describes how to get set up to build iOS 14 apps with Xamarin. It discusses how to download Xcode 12 and update Visual Studio for Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0d721b4b-86bd-495a-8c0f-1f2f9fd6855e
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2020

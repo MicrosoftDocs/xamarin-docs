@@ -1,9 +1,9 @@
 ---
 title: "WebKit and Safari changes in iOS 11"
 description: "This document discusses changes made to WebKit and the Safari Services framework in iOS 11. It describes how to work with styling updates in SFSafariViewController and new features in WKWebView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/12/2017

@@ -1,9 +1,9 @@
 ---
 title: "Publishing to the Apple TV App Store"
 description: "This document describes how to publish an app to the Apple TV App Store. It discusses how to configure, provision, build, and submit a tvOS application built with Xamarin."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017

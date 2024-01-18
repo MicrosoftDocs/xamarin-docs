@@ -1,9 +1,9 @@
 ---
 title: "Edit Xamarin.Forms XAML using the toolbox"
 description: "The XAML toolbox contains all the built-in layouts and controls, which can be dragged directly into an open XAML file."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 513D1247-8AD0-4611-8660-1D277CD369E1
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018

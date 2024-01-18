@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms ListView"
 description: "This guide introduces the Xamarin.Forms ListView, which can be used to present data in interactive lists."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/04/2019

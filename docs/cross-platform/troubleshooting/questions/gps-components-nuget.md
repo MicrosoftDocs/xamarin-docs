@@ -2,7 +2,7 @@
 title: "Unifying Google Play Services Components and NuGet"
 description: Learn how the Google Play Services Components and NuGet packages were unified into two Google Play Services.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
 author: davidortinau
 ms.author: daortin

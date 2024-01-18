@@ -1,7 +1,7 @@
 ---
 title: "Native References iOS, Mac, and Bindings Projects"
 description: "Native references gives you the ability to embed a native framework into a Xamarin.iOS, Xamarin.Mac, or binding project."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: davidortinau
 ms.author: daortin

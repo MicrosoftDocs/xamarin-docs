@@ -1,9 +1,9 @@
 ---
 title: "Using ADO.NET with Xamarin.iOS"
 description: "This document describes how to use the ADO.NET as a method to access SQLite in a Xamarin.iOS application. It discusses assembly references, Mono.Data.Sqlite, and the BasicDataAccess sample."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

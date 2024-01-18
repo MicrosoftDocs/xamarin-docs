@@ -1,9 +1,9 @@
 ---
 title: "Core Image in Xamarin.iOS"
 description: "Core Image is a new framework introduced with iOS 5 to provide image processing and live video enhancement functionality. This article introduces these features with Xamarin.iOS samples."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

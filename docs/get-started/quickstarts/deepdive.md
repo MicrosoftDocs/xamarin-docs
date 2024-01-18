@@ -3,10 +3,10 @@ title: "Xamarin.Forms Quickstart Deep Dive"
 description: "This article examines the fundamentals of application development using Xamarin.Forms Shell. Topics covered included the anatomy of a Xamarin.Forms Shell application, architecture and application fundamentals, and the user interface."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.custom: video
 ms.assetid: F65C83B7-BC9F-425F-8662-931B652A2946
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/25/2021

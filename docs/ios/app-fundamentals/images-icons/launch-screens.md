@@ -1,9 +1,9 @@
 ---
 title: "Launch Screens for Xamarin.iOS Apps"
 description: "This article explains how to create an app Launch Screen for all iOS devices, at any resolution and orientation, using a single Unified Storyboard."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018

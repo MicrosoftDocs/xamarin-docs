@@ -1,9 +1,9 @@
 ---
 title: "Graphics and Animation in iOS"
 description: "This document links to various guides that discuss how to use the Core Image, Core Graphics, and Core Animation frameworks in Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

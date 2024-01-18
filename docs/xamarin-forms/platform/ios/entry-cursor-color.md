@@ -1,9 +1,9 @@
 ---
 title: "Entry Cursor Color on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that sets the cursor color of an Entry."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 867D70BA-53F9-4434-8094-85D71DCECC2D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

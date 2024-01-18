@@ -1,9 +1,9 @@
 ---
 title: "Objective-C Selectors in Xamarin.iOS"
 description: "This document discusses how to interact with Objective-C selectors from C#. It describes how to invoke selectors and technical considerations that must be taken into account when doing so."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017

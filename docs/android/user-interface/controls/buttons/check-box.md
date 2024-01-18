@@ -1,8 +1,8 @@
 ---
 title: "CheckBox"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A884AF10-D5EA-72CA-2301-B80CEC7FFBE7
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

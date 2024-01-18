@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Scrolling"
 description: "When a user swipes to initiate a scroll, the end position of the scroll can be controlled so that items are fully displayed. In addition, CollectionView defines two ScrollTo methods, that programmatically scroll items into view."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2021

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Other Platforms"
 description: "This guide explains the additional platforms supported by Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C713B905-0C98-4442-B5CB-91C384A384DA
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2019

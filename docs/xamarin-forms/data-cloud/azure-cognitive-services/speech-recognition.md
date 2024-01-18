@@ -1,9 +1,9 @@
 ---
 title: "Speech recognition using the Speech Service API"
 description: "This article explains how to use the Azure Speech Service API to transcribe speech into text in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 01/14/2020

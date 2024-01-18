@@ -1,9 +1,9 @@
 ---
 title: "Creating a Xamarin.iOS application using the Reflection API"
 description: "This document describes the MonoTouch.Dialog attribute-based Reflection API, which creates UI based on classes decorated with attributes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 ms.date: 11/25/2015
 no-loc: [Objective-C]
 author: davidortinau

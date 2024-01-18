@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp Drawing Basics"
 description: "This guide explains the basics of SkiaSharp graphics concepts and coordinates in Xamarin.Forms applications."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: davidbritch
 ms.author: dabritch

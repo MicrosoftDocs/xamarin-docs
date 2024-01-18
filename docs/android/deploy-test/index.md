@@ -1,9 +1,9 @@
 ---
 title: "Testing, Optimizing, and Deploying Xamarin.Android Apps"
 description: "This section includes guides that explain how to test an application, optimize its performance, prepare it for release, sign it with a certificate, and publish it to an app store"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018

@@ -1,9 +1,9 @@
 ---
 title: "Consume an Azure Cosmos DB Document Database in Xamarin.Forms"
 description: "This article explains how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

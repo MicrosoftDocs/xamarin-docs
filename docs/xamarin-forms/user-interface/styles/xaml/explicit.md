@@ -1,9 +1,9 @@
 ---
 title: "Explicit Styles in Xamarin.Forms"
 description: "An explicit style is one that is selectively applied to controls by setting their Style properties. This article explains how to consume explicit styles in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016

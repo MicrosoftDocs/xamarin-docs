@@ -1,9 +1,9 @@
 ---
 title: "Colors in Xamarin.Forms"
 description: "The Xamarin.Forms Color structure lets you specify colors as RGB values, HSL values, HSV values, or with a color name."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2021

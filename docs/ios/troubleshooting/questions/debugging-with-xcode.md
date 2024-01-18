@@ -1,9 +1,9 @@
 ---
 title: "Debugging Xamarin.iOS apps with Xcode"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5FDDEDB3-AEB9-4D9C-9F7B-FEFAA9AF0031
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: migueldeicaza
 ms.author: miguel
 ms.date: 02/22/2018

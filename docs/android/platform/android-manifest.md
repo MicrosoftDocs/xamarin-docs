@@ -1,9 +1,9 @@
 ---
 title: "Working with the Android Manifest"
 description: Learn about the AndroidManifest.xml file in the Android platform that allows you to describe the functionality and requirements of your application to Android.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018

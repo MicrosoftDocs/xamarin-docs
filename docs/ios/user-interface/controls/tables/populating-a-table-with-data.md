@@ -1,9 +1,9 @@
 ---
 title: "Populating a Table with Data in Xamarin.iOS"
 description: "This document describes how to populate a table with data in a Xamarin.iOS application. It discusses UITableViewSource, cell reuse, adding an index, and headers and footers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Effects"
 description: "Effects allow the native controls on each platform to be customized without having to resort to a custom renderer implementation."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017

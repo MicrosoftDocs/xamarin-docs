@@ -1,9 +1,9 @@
 ---
 title: "Signing the Android Application Package"
 description: "How to sign the Android Application Package (APK) for publication"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018

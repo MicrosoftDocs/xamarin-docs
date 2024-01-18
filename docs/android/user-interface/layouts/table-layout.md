@@ -1,8 +1,8 @@
 ---
 title: "Xamarin.Android TableLayout"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/08/2020

@@ -2,9 +2,9 @@
 title: "watchOS Troubleshooting"
 description: "This document discusses known issues and workarounds for watchOS development with Xamarin. It describes images with issues, manually adding interface controller files, launching a watch app from the command-line, and more."
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

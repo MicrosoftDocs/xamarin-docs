@@ -1,9 +1,9 @@
 ---
 title: "SkiaSharp Lines and Paths"
 description: "This article explains how to use SkiaSharp to draw lines and graphics paths in Xamarin.Forms applications, and demonstrates this with sample code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
-ms.technology: xamarin-skiasharp
+ms.subservice: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017

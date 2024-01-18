@@ -1,9 +1,9 @@
 ---
 title: "watchOS Table Controls in Xamarin"
 description: "This document describes how to use watchOS table controls in Xamarin. It discusses adding a table, adding a row controller, creating and populating rows, responding to taps, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms advanced concepts & internals"
 description: "Learn about advanced concepts and the internals of Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2020

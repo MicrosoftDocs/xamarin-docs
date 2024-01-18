@@ -1,9 +1,9 @@
 ---
 title: "WPF Platform Setup"
 description: "Xamarin.Forms has preview support for the WPF platform."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

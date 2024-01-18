@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms FlyoutPage"
 description: "The Xamarin.Forms FlyoutPage is a page that manages two related pages of information – a flyout page that presents items, and a detail page that presents details about items on the flyout page. This article explains how to use a FlyoutPage and navigate between its pages of information."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017

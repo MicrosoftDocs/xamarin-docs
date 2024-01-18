@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Control"
 description: "The Map control is a cross-platform view for displaying and annotating maps. It uses the native map control for each platform, providing a fast and familiar maps experience for users."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/20/2020

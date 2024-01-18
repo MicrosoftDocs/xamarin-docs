@@ -1,9 +1,9 @@
 ---
 title: "Type Registrar for Xamarin.iOS"
 description: "This document describes the Xamarin.iOS type registrar, which makes C# classes available to the Objective-C runtime."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018

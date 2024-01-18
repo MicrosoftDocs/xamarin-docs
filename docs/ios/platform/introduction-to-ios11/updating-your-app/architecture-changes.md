@@ -1,9 +1,9 @@
 ---
 title: "Architecture Changes in iOS 11"
 description: "This document describes the deprecation of 32-bit apps in iOS 11. It discusses how to update applications to target 64-bit architectures."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

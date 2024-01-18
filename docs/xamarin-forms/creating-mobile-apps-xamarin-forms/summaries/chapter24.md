@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 24. Page navigation"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 24. Page navigation"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch

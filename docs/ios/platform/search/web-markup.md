@@ -1,9 +1,9 @@
 ---
 title: "Search with Web Markup in Xamarin.iOS"
 description: "This document describes how to create web-based search results that link back to a Xamarin.iOS app. It discusses how to enable web content indexing, making your app’s website discoverable, using smart app banners, universal links, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

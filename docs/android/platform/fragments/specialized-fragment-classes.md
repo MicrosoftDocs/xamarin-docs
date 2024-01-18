@@ -1,8 +1,8 @@
 ---
 title: "Specialized Fragment Classes"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7A0AEB2C-EE77-63BF-652A-DA049B691C64
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018

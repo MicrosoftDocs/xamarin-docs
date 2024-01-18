@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Live Visual Tree"
 description: See the runtime UI hierarchy of your app while debugging.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 29c45b85-21b1-40ab-941f-4d9e57770c46
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: BretJohnson
 ms.author: bretjohn
 ms.date: 03/25/2021

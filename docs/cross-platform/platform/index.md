@@ -1,7 +1,7 @@
 ---
 title: "Programming Language Support in Xamarin"
 description: "This document describes various programming languages supported by Xamarin. It discusses C#, F#, portable Visual Basic.NET, and Razor Templates."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: davidortinau
 ms.author: daortin

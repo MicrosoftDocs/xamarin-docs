@@ -1,9 +1,9 @@
 ---
 title: "Simple Animations in Xamarin.Forms"
 description: "The ViewExtensions class provides extension methods that can be used to construct simple animations. This article demonstrates creating and canceling animations using the ViewExtensions class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/28/2020

@@ -1,9 +1,9 @@
 ---
 title: "CloudKit in Xamarin.iOS"
 description: "This document describes how to work with CloudKit in Xamarin.iOS. It provides an overview of CloudKit and discusses how to enable it, the CloudKit Convenience API, scalability, user accounts, and development and production environments."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016

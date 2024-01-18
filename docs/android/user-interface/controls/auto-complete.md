@@ -1,9 +1,9 @@
 ---
 title: "Auto Complete for Xamarin.Android"
 description: Learn about auto complete for Xamarin.Android. AutoCompleteTextView is a text view element that shows completion suggestions automatically.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2018

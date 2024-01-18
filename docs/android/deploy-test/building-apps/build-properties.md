@@ -1,9 +1,9 @@
 ---
 title: "Build Properties"
 description: "This document will list all supported properties in the Xamarin.Android build process."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FC0DBC08-EBCB-4D2D-AB3F-76B54E635C22
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 07/26/2022

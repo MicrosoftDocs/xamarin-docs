@@ -1,9 +1,9 @@
 ---
 title: "Installing and Using watchOS in Xamarin"
 description: "This document describes how to install and use watchOS with Xamarin. It discusses installation, watchOS project structure, how to use the iOS designer, Xcode integration, and provides troubleshooting tips."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017

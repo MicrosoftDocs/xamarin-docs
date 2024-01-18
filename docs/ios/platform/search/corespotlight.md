@@ -1,9 +1,9 @@
 ---
 title: "Search with Core Spotlight in Xamarin.iOS"
 description: "This document describes how to use Core Spotlight in a Xamarin.iOS application to provide links to in-app content. It discusses how to create, restore, update, and delete searchable items."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

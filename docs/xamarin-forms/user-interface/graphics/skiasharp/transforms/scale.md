@@ -1,8 +1,8 @@
 ---
 title: "The Scale Transform"
 description: "Thhis article explores the SkiaSharp scale transform for scaling objects to various sizes, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch

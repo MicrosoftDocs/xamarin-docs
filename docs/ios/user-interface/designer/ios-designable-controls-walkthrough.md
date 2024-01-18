@@ -1,9 +1,9 @@
 ---
 title: "Using Custom Controls with the iOS Designer"
 description: "This document describes how to create a custom control and use it with the Xamarin Designer for iOS. It shows how to make the control available in the iOS Designer's Toolbox, implement the control so that it renders correctly and design time, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

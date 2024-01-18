@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac architecture"
 description: "This guide explores Xamarin.Mac and its relationship to Objective-C at a low level. It explains concepts such as compilation, selectors, registrars, app launch, and the generator."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017

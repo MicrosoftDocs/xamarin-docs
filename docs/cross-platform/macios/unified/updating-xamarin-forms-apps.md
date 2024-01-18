@@ -1,7 +1,7 @@
 ---
 title: "Updating Existing Xamarin.Forms Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Forms app from the Classic API to the Unified API."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: davidortinau
 ms.author: daortin

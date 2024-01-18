@@ -1,8 +1,8 @@
 ---
 title: "Integrating Text and Graphics"
 description: "This article explains how to determine the size of rendered text string to integrate text with SkiaSharp graphics into Xamarin.Forms applications, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: davidbritch
 ms.author: dabritch

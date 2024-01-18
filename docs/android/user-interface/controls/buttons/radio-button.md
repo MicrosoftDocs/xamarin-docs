@@ -1,9 +1,9 @@
 ---
 title: "RadioButton"
 description: Learn about radio buttons by creating two mutually-exclusive radio buttons using the RadioGroup and RadioButton widgets.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3C32EA3F-D917-C988-72C5-A17354DA791E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

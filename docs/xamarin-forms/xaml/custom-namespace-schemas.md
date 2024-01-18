@@ -1,9 +1,9 @@
 ---
 title: "XAML Custom Namespace Schemas in Xamarin.Forms"
 description: "A XAML custom namespace schema can be defined with the XmlnsDefinitionAttribute class, which specifies a mapping between a custom URL and one or more CLR namespaces. The custom namespace schema can then be used in XAML namespace declarations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018

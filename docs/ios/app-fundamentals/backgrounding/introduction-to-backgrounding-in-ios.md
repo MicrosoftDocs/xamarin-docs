@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Backgrounding in iOS"
 description: "This document describes backgrounding in iOS: application states, application lifecycle methods, and background app refresh."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/24/2018

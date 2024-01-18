@@ -1,9 +1,9 @@
 ---
 title: "NavigationPage Bar Text Color Mode on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls whether the status bar text color on a NavigationPage matches the luminosity of the navigation bar."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 03698A44-39F1-4030-9AF5-F10A6713828A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

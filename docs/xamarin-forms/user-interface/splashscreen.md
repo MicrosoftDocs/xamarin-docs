@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms splash screen"
 description: "This article explains how to create a splash screen for a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 338C8F60-90F2-4B3D-BB47-7F846AE8DC6C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/1/2019

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CheckBox"
 description: "The Xamarin.Forms CheckBox is a type of button that can either be checked or empty. When a checkbox is checked, it's considered to be on. When a checkbox is empty, it's considered to be off."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019

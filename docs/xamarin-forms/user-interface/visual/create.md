@@ -1,9 +1,9 @@
 ---
 title: "Create a Xamarin.Forms Visual Renderer"
 description: "Create Xamarin.Forms Visuals to be selectively applied to VisualElement objects, without having to subclass Xamarin.Forms views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019

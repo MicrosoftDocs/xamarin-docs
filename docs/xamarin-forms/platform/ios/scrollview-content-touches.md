@@ -1,9 +1,9 @@
 ---
 title: "ScrollView Content Touches on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls whether a ScrollView handles a touch gesture or passes it to its content."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 99F823DB-B379-40F0-A343-A9783C341120
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

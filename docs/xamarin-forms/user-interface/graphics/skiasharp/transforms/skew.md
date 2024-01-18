@@ -1,8 +1,8 @@
 ---
 title: "The Skew Transform"
 description: "This article explains how the skew transform can create tilted graphical objects in SkiaSharp, and demonstrates this with sample code."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch

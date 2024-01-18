@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 13"
 description: "This document provides a high-level description of some iOS 13 APIs for which Xamarin's preview release provides C# bindings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019

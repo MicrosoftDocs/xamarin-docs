@@ -1,9 +1,9 @@
 ---
 title: "Creating User Interface Objects in Xamarin.iOS"
 description: "This document provides an overview of how to create a user interface in Xamarin.iOS. It discusses the iOS Designer, Xcode Interface Builder, C#, and storyboards."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

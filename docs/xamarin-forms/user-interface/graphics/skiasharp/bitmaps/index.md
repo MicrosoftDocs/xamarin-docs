@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp bitmaps"
 description: "Learn how to load, save, display, create, draw on, animate, and access the bits of SkiaSharp bitmaps."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Building tvOS User Interfaces with Xamarin"
 description: "General User Experience (UX) coverage including User Interface (UI) controls, use Xcode's Interface Builder and UX design principles when working with Xamarin.tvOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

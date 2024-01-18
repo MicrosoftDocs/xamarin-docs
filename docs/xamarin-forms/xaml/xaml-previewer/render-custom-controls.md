@@ -1,9 +1,9 @@
 ---
 title: "Render Custom Controls in the XAML Previewer"
 description: "This article describes how to show your custom controls in the XAML Previewer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: maddymontaquila
 ms.author: maleger
 ms.date: 03/27/2019

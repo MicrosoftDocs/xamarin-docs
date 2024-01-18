@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms common control properties, methods, and events"
 description: "This article describes common properties, methods, and events defined on the VisualElement class, that are commonly used in deriving classes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/22/2020

@@ -3,9 +3,9 @@ title: "Hello, iOS – Quickstart"
 description: "This walkthrough demonstrates how to build a simple Xamarin.iOS application called Hello, iOS. In doing so, it introduces the fundamental tools and concepts that must be understood to build Xamarin.iOS applications."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

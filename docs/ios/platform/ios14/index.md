@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 14"
 description: "This document provides a high-level description of some iOS 14 APIs for which Xamarin provides C# bindings."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4953216e-472b-4484-9c1e-7263ac537f21
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2020

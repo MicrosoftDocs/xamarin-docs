@@ -1,9 +1,9 @@
 ---
 title: "C# Primer for Objective-C Developers"
 description: "This document describes C# for Objective-C developers. It compares and contrasts the two languages by examining protocols and interfaces, categories and extension methods, frameworks and assemblies, selectors and named parameters, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

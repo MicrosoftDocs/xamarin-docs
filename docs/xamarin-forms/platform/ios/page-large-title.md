@@ -1,9 +1,9 @@
 ---
 title: "Large Page Titles on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that displays the page title as a large title on the navigation bar of a NavigationPage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 45FD9145-8319-452C-9AE6-624431A4D43C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

@@ -1,9 +1,9 @@
 ---
 title: "Hello, watchOS – Walkthrough"
 description: "This document provides a walkthrough of building a simple watchOS application using Xamarin. It describes how to work in both Visual Studio and Visual Studio for Mac, work with storyboards, and respond to events in code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016

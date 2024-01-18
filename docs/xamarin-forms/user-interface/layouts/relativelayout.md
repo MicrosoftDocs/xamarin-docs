@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms RelativeLayout"
 description: "The Xamarin.Forms RelativeLayout is used position and size children relative to properties of the layout or sibling elements."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2020

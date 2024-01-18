@@ -2,9 +2,9 @@
 metadata:
   title: "Xamarin.iOS Frequently Asked Questions"
   ms.topic: faq
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
-  ms.technology: xamarin-ios
+  ms.subservice: xamarin-ios
   author: davidortinau
   ms.author: daortin
   ms.date: 03/21/2017

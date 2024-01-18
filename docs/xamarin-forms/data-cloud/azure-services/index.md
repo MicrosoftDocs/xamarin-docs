@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms and Azure Services"
 description: "This article briefly discusses how to communicate with different Azure services from Xamarin.Forms applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/27/2021

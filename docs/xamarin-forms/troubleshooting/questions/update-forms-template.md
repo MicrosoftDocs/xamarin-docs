@@ -2,9 +2,9 @@
 title: "Can I update the Xamarin.Forms default template to a newer NuGet package?"
 description: Learn about updating the Xamarin.Forms default template to a newer NuGet package. This guide uses Xamarin.Forms .NET Standard library template as an example.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017

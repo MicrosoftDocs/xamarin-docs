@@ -1,9 +1,9 @@
 ---
 title: "macOS Platform Features"
 description: "This document links to guides that describe important macOS and Xamarin.Mac platform features: OpenTK, Storyboards, extensions, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

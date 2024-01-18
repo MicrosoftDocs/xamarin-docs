@@ -1,9 +1,9 @@
 ---
 title: "Working with User Defaults in Xamarin.iOS"
 description: "This article covers working with NSUserDefaults to save default settings in a Xamarin iOS app or extension. It describes NSUserDefaults at a high level and discusses how to read and write values."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

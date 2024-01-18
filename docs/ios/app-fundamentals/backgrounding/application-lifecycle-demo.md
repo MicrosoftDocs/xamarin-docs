@@ -1,9 +1,9 @@
 ---
 title: "Application Lifecycle Demo for Xamarin.iOS"
 description: "This document examines various lifecycle events handled by the app delegate in an iOS application, demonstrating when and how these events are handled."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/17/2018

@@ -1,7 +1,7 @@
 ---
 title: "Unified API for Xamarin.iOS and Xamarin.Mac" 
 description: "This document links to various guides that describe Xamarin's Unified API. Linked content provides an overview of the Unified API and discusses how to migrate existing projects."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
 author: davidortinau
 ms.author: daortin

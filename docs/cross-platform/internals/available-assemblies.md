@@ -1,7 +1,7 @@
 ---
 title: "Available Assemblies"
 description: "This document lists the assemblies available for use in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac. It also links to documentation about .NET Standard libraries and Portable Class Libraries."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: davidortinau
 ms.author: daortin

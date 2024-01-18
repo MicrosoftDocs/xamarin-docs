@@ -1,9 +1,9 @@
 ---
 title: "App Store Distribution"
 description: "This document describes how to distribute a Xamarin.iOS application on the App Store. It discusses how to create a distribution certificate, how to create a distribution provisioning profile, and how to configure iTunes Connect and submit the app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017

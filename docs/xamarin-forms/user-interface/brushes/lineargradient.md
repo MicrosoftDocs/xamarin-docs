@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Brushes: Linear gradients"
 description: "The Xamarin.Forms LinearGradientBrush class paints an area with a linear gradient."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BEA2B3F5-96B0-4E39-88A6-0FAFE95C3DCD
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

@@ -1,9 +1,9 @@
 ---
 title: "Registering Xamarin.iOS Apps to Run in the Background"
 description: "This document describes how to register a Xamarin.iOS application to run in the background. It discusses Audio apps, VoIP apps, external accessories and bluetooth, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

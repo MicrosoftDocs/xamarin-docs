@@ -1,9 +1,9 @@
 ---
 title: "Get started with iOS 12, tvOS 12, and watchOS 5"
 description: "This document describes how to get set up to build iOS 12, tvOS 12, and watchOS 5 apps with Xamarin. It discusses how to download Xcode 10 and update Visual Studio for Mac and Visual Studio 2017."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2018

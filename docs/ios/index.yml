@@ -7,7 +7,7 @@ metadata:
   title: Xamarin.iOS
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers.
   ms.topic: landing-page
-  ms.prod: xamarin
+  ms.service: xamarin
   ms.assetid: 7DF889E9-23F6-408F-B836-E0FDF5F0FA9B
   author: davidbritch
   ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms SwipeView"
 description: "The Xamarin.Forms SwipeView is a container control that wraps around an item of content, and provides context menu items that are revealed by a swipe gesture."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2020

@@ -1,9 +1,9 @@
 ---
 title: "TabbedPage Toolbar Placement and Color on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that sets the placement and color of the toolbar on a TabbedPage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A5C68D6A-9A5F-42EE-845D-1E5B0CB1544E
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

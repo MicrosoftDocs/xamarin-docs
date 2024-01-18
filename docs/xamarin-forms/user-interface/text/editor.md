@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Editor"
 description: "This article explains how to use the Xamarin.Forms Editor control to accept multi-line text input in an application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/21/2020

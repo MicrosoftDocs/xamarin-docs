@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Controls Class Hierarchy"
 description: "Developers should be familiar with the hierarchy of types used to create the user interface of a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C89E6B98-464D-4BBE-BF11-13A5FCBBF420
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2021

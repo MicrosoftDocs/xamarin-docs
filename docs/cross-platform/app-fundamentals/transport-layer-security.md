@@ -1,7 +1,7 @@
 ---
 title: "Transport Layer Security (TLS) 1.2"
 description: "This document describes how to enabling TLS 1.2 for Xamarin.iOS, Xamarin.Android, and Xamarin.Mac projects. It demonstrates how to do so in both Visual Studio 2019 and Visual Studio for Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: davidortinau
 ms.author: daortin

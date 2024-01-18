@@ -1,9 +1,9 @@
 ---
 title: "File system access in Xamarin.iOS"
 description: "This document describes how to work with the file system in Xamarin.iOS. It discusses directories, reading files, XML and JSON serialization, the application sandbox, sharing files through iTunes, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018

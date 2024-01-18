@@ -1,9 +1,9 @@
 ---
 title: "SearchBar Style on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls whether a SearchBar has a background."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3D512DD6-078E-4BC6-926E-62BA6F4DE640
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/05/2020

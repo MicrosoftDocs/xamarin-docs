@@ -1,8 +1,8 @@
 ---
 title: "The separable blend modes"
 description: "Use the separable blend modes to alter red, green, and blue colors."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch

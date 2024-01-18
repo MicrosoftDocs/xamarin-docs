@@ -1,9 +1,9 @@
 ---
 title: "GridView"
 description: Learn how Xamarin.Android GridView displays items in a two-dimensional, scrollable grid.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6992C4FF-ECBB-3493-AEE6-3E063C1A8C54
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

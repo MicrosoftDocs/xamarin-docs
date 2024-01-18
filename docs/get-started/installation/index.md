@@ -2,7 +2,7 @@
 title: "Installing Xamarin"
 description: "This section provides an overview of installation and setup practices that can be used to get set up with Xamarin on Visual Studio."
 zone_pivot_groups: platform-all
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
 author: conceptdev
 ms.author: crdun

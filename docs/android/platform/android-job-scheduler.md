@@ -1,9 +1,9 @@
 ---
 title: "Android Job Scheduler"
 description: "This guide discusses how to schedule background work using the Android Job Scheduler API."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 673BB8C3-C5CC-43EC-BA8F-758F15D986C9
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018

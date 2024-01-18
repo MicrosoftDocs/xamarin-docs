@@ -1,9 +1,9 @@
 ---
 title: "Advanced User Notifications in Xamarin.iOS"
 description: "This article takes a deeper look at the User Notifications framework, introduced in iOS 10. It discusses user notifications, the user notification interface, media attachments, custom user interfaces, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018

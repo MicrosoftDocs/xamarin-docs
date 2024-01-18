@@ -1,9 +1,9 @@
 ---
 title: "Document Picker in Xamarin.iOS"
 description: "This document describes the iOS Document Picker and discusses how to use it in Xamarin.iOS. It takes a look at iCloud, documents, common setup code, document provider extensions, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017

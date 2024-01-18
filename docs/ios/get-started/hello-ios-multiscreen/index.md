@@ -2,9 +2,9 @@
 title: "Hello, iOS Multiscreen"
 description: "This document links to walkthroughs that expand the Phoneword sample application to add a second screen. The walkthroughs explore the model-view-controller design pattern, iOS navigation, and other core iOS development concepts."
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

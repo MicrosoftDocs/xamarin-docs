@@ -1,9 +1,9 @@
 ---
 title: "XAML Compilation in Xamarin.Forms"
 description: "This article explains how XAML can be optionally compiled directly into intermediate language (IL) with the Xamarin.Forms XAML compiler (XAMLC)."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/03/2021

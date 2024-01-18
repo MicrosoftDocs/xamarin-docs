@@ -1,9 +1,9 @@
 ---
 title: "iOS Build Mechanics"
 description: "This guide explores how to time your apps and how to use methods that can be employed for quicker builds for all build configurations."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

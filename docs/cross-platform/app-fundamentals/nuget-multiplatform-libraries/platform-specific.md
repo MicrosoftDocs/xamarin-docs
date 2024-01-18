@@ -1,7 +1,7 @@
 ---
 title: "Creating New Platform-Specific Library Projects for NuGet"
 description: "This document describes how to create a single NuGet package that contains platform-specific code for multiple platforms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: davidortinau
 ms.author: daortin

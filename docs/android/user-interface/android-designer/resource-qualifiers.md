@@ -1,9 +1,9 @@
 ---
 title: "Resource Qualifiers and Visualization Options"
 description: "This topic explains how to define resources that will be used only when some qualifier values are matched. A simple example is a language-qualified string resource. A string resource can be defined as the default, with other alternative resources defined to be used for additional languages. All resource types can be qualified, including the layout itself."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018

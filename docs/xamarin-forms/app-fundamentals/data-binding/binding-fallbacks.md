@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Binding Fallbacks"
 description: "This article explains how to make bindings more robust by defining fallback values that will be used if binding fails."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018

@@ -1,9 +1,9 @@
 ---
 title: "Edit Text"
 description: "How to use the EditText widget to accept user input."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018

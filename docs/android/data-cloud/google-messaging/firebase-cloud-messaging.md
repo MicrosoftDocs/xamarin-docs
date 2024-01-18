@@ -1,9 +1,9 @@
 ---
 title: "Firebase Cloud Messaging"
 description: "Firebase Cloud Messaging (FCM) is a service that facilitates messaging between mobile apps and server applications. This article provides an overview of how FCM works, and it explains how to configure Google Services so that your app can use FCM."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018

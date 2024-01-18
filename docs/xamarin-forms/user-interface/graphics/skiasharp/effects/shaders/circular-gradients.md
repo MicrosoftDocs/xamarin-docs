@@ -1,8 +1,8 @@
 ---
 title: "The SkiaSharp circular gradients"
 description: "Learn about the different types of gradients based on circles."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch

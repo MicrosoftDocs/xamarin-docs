@@ -1,9 +1,9 @@
 ---
 title: "Using the Google Maps API in Your Application"
 description: "How to implement Google Maps API v2 features in your Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2018

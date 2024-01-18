@@ -2,9 +2,9 @@
 title: "Troubleshooting Xamarin.Forms"
 description: "Common error conditions and how to resolve them"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017

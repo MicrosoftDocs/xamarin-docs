@@ -1,9 +1,9 @@
 ---
 title: "Working with Storyboards in Xamarin.Mac"
 description: "This document describes how to work with storyboards in Xamarin.Mac, examining how to load them from code, the view controller lifecycle, the responder chain, segues, window controllers, gesture recognizers, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

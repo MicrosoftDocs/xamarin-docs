@@ -1,9 +1,9 @@
 ---
 title: "Building Apps"
 description: "Building and Packaging Xamarin.Android Apps"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F14D737A-8AAA-4416-ADA4-029D5A1B5076
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/13/2017

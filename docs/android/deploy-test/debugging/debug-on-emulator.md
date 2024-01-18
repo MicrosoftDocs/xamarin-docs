@@ -1,9 +1,9 @@
 ---
 title: "Debugging on the Android Emulator"
 description: "This guide explains how to launch and debug apps in Visual Studio using the Android Emulator."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018

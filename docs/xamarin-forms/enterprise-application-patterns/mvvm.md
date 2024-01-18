@@ -1,9 +1,9 @@
 ---
 title: "The Model-View-ViewModel Pattern"
 description: "This chapter explains how the eShopOnContainers mobile app uses the MVVM pattern to cleanly separate the business and presentation logic of the app from its user interface."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

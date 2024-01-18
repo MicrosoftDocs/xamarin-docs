@@ -1,9 +1,9 @@
 ---
 title: "Search and Home Screen Widget Enhancements in iOS 10"
 description: "This document describes the enhancements Apple has made to the Widgets in iOS 10, including updates to search and home screen widgets."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

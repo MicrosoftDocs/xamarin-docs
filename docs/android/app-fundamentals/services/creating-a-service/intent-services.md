@@ -1,8 +1,8 @@
 ---
 title: "Intent Services in Xamarin.Android"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

@@ -1,9 +1,9 @@
 ---
 title: "Responding to Authentication Callbacks"
 description: "Learn about responding authentication callbacks. An Android application must provide its own handler extending a class and implementing the specified methods."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017

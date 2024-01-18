@@ -1,9 +1,9 @@
 ---
 title: "Right-to-Left Localization"
 description: "Right-to-left localization adds support for right-to-left flow direction to Xamarin.Forms applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch

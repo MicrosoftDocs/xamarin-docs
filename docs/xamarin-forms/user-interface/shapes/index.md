@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes"
 description: "Xamarin.Forms Shapes are types of Views that enable you to draw shapes to the screen."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

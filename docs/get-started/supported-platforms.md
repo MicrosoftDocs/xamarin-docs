@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms supported platforms"
 description: "Platform and development system requirements for Xamarin.Forms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/13/2020

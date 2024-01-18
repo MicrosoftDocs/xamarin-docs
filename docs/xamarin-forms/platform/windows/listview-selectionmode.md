@@ -1,9 +1,9 @@
 ---
 title: "ListView SelectionMode on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that controls whether items in a ListView can respond to tap gestures."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 57EF3A7F-1407-4B31-AE21-D149293D4228
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

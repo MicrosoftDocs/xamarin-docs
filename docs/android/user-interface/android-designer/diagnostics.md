@@ -1,9 +1,9 @@
 ---
 title: "Android Layout Diagnostics"
 description: "Explains Android layout diagnostics and how to get started"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BD252EA7-7E69-4DB4-96AB-D52CC0510C8F
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: decriptor
 ms.author: stepsha
 ms.date: 03/24/2020

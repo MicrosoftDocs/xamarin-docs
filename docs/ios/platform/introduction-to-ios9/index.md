@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 9"
 description: "This article introduces all of the new and modified APIs and features available in iOS 9 for Xamarin.iOS developers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

@@ -1,9 +1,9 @@
 ---
 title: "Passing Effect Parameters as Common Language Runtime Properties"
 description: "Common Language Runtime (CLR) properties can be used to define effect parameters that don't respond to runtime property changes. This article demonstrates using CLR properties to pass parameters to an effect."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016

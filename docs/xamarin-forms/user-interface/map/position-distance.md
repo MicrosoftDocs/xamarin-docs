@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Map Position and Distance"
 description: "The Xamarin.Forms.Maps namespace contains a Position struct that's typically used when positioning a map and its pins, and a Distance struct that can optionally be used when positioning a map."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2020

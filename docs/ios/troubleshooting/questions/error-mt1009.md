@@ -1,9 +1,9 @@
 ---
 title: "Error MT1009: Could not copy the assembly"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F9FEDFF5-C84C-42B4-8F25-E34846E7315A
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Device Class"
 description: "This article explains how to use the Xamarin.Forms Device class, for fine-grained control over functionality and layouts on a per-platform basis."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/20/2020

@@ -1,9 +1,9 @@
 ---
 title: "Auto Layout with the Xamarin Designer for iOS"
 description: "This guide introduces iOS Auto Layout and describes how to use the Xamarin Designer for iOS to create and edit layouts using constraints. It also discusses modifying constraints in code, animating constraint changes, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

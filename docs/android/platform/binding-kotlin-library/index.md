@@ -1,9 +1,9 @@
 ---
 title: "Bind Android Kotlin libraries"
 description: "This document describes how to create C# bindings to Kotlin code, making it possible to consume native libraries in a Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: AB03A6C4-5A5A-4EAD-AD51-D887B20A3551
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: alexeystrakh
 ms.author: dabritch
 ms.date: 02/11/2020

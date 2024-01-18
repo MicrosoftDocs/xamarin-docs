@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms BoxView"
 description: "This article explains how to use a colored rectangle for decoration, graphics, and interaction in a Xamarin.Forms application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018

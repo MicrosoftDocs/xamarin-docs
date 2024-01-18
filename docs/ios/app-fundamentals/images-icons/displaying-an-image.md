@@ -1,9 +1,9 @@
 ---
 title: "Displaying an image in Xamarin.iOS"
 description: "This article covers including an image asset in a Xamarin.iOS app and displaying that image either by using C# code or by assigning it to a control in the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018

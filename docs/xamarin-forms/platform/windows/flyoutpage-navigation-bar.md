@@ -1,9 +1,9 @@
 ---
 title: "FlyoutPage Navigation Bar on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that collapses the navigation bar on a FlyoutPage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

@@ -1,9 +1,9 @@
 ---
 title: "Sandboxing a Xamarin.Mac app"
 description: "This article covers sandboxing a Xamarin.Mac application for release on the App Store. It covers all of the elements that go into sandboxing, such as container directories, entitlements, user-determined permissions, privilege separation, and kernel enforcement."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017

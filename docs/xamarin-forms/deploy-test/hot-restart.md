@@ -1,9 +1,9 @@
 ---
 title: "Xamarin Hot Restart"
 description: "This document describes how to setup and use Xamarin Hot Restart to debug an iOS app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: maddymontaquila
 ms.author: maleger
 ms.date: 03/16/2020

@@ -1,9 +1,9 @@
 ---
 title: "Embedded frameworks in Xamarin.iOS"
 description: "This document describes how to share code with embedded frameworks in a Xamarin.iOS application. This can be done with either the mtouch tool or native references."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018

@@ -1,9 +1,9 @@
 ---
 title: "Custom Document Icons in Xamarin.iOS"
 description: "This article covers including and managing an image asset in a Xamarin.iOS app to be used as a Custom Document Type Icon."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/23/2017

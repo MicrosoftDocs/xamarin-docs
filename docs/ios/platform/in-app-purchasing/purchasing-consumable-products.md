@@ -1,9 +1,9 @@
 ---
 title: "Purchasing Consumable Products in Xamarin.iOS"
 description: "This document describes consumable products in Xamarin.iOS. Consumable products are single-use pieces of functionality such as in-game currency."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017

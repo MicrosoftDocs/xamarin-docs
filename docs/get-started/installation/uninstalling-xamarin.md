@@ -1,7 +1,7 @@
 ---
 title: "Uninstall Xamarin"
 description: "This document describes how to uninstall Xamarin from Visual Studio on Windows."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun

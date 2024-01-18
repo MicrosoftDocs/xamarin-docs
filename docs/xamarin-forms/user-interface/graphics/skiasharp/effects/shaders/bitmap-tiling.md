@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp bitmap tiling"
 description: "Tile an area using bitmaps repeated horizontally and vertically."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS 9 – Troubleshooting"
 description: "This article provides various troubleshooting tips for working with iOS 9 in Xamarin.iOS. Tips cover XML parsing, simulators, layout constraints, network issues, and many other subjects."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017

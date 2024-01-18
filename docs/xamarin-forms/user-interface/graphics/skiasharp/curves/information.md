@@ -1,9 +1,9 @@
 ---
 title: "Path Information and Enumeration"
 description: "This article explains how to get information about SkiaSharp paths and enumerate the contents, and demonstrates this with sample code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
-ms.technology: xamarin-skiasharp
+ms.subservice: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017

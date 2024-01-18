@@ -1,9 +1,9 @@
 ---
 title: "TabbedPage Page Transition Animations on Android"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Android platform-specific that disables transition animations when navigating through pages in a TabbedPage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2DB4EA6D-9CED-4137-BAB2-B20A457B1CA3
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018

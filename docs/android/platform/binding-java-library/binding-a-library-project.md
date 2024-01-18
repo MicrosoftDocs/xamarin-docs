@@ -1,9 +1,9 @@
 ---
 title: "Binding an Eclipse Library Project"
 description: "This walkthrough explains how to use Xamarin.Android project templates to bind an Eclipse Android library project."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018

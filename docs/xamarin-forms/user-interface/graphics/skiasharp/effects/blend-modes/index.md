@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp blend modes"
 description: "Use blend modes to define what happens when graphical objects are stacked on one another."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch

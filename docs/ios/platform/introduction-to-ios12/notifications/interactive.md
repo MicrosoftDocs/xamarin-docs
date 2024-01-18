@@ -1,9 +1,9 @@
 ---
 title: "Interactive notification user interfaces in Xamarin.iOS"
 description: "With iOS 12, it is possible to create interactive user interfaces for local and remote notifications. This guide describes how to use these features with Xamarin.iOS."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

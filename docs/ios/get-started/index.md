@@ -1,9 +1,9 @@
 ---
 title: "Get Started with Xamarin.iOS"
 description: "This document links to guides that describe how to set up Xamarin.iOS and how to build a first application, and provides information about Xamarin to Objective-C developers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin

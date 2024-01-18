@@ -1,9 +1,9 @@
 ---
 title: "RefreshView Pull Direction on Windows"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the Windows platform-specific that enables the pull direction of a RefreshView to be changed."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 407A862B-281E-4384-9696-C0655830B84D
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019

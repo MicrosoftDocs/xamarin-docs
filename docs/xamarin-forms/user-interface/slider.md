@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Slider"
 description: "The Xamarin.Forms Slider is a horizontal bar that can be manipulated by the user to select a double value from a continuous range. This article explains how to use the Slider class to select a value from a range of continuous values."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019

@@ -1,8 +1,8 @@
 ---
 title: "Configuration"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 44526226-4E4E-4FFF-9A16-CA7B1E01BB8F
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016

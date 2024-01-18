@@ -1,9 +1,9 @@
 ---
 title: "New Reference Counting System in Xamarin.iOS"
 description: "This document describes Xamarin's enhanced reference counting system, enabled in all Xamarin.iOS applications by default."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015

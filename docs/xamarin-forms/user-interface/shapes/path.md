@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Shapes: Path"
 description: "The Xamarin.Forms Path class can be used to draw curves and complex shapes."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/24/2020

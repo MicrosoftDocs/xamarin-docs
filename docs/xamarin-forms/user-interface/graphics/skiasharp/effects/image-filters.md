@@ -1,8 +1,8 @@
 ---
 title: "SkiaSharp image filters"
 description: "Learn how to use the image filter to create blurs and drop shadows."
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
+ms.service: xamarin
+ms.subservice: xamarin-skiasharp
 ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch

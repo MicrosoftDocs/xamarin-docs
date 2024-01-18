@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.iOS Testing and Deployment - Troubleshooting"
 description: "This document provides troubleshooting tips related to code signing and provisioning, TestFlight, and copying the iOS app bundle from the Mac build host to Windows."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017

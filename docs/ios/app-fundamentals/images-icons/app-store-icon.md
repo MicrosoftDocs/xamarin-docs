@@ -1,9 +1,9 @@
 ---
 title: "App Store Icons in Xamarin.iOS"
 description: "This document describes how to use asset catalogs to manage an App Store icon for a Xamarin.iOS application. Previously, App Store icons were managed with iTunes Connect."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/26/2017

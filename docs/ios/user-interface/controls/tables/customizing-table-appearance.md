@@ -1,9 +1,9 @@
 ---
 title: "Customizing a Table's Appearance in Xamarin.iOS"
 description: "This document describes how to customize a table's appearance in Xamarin.iOS. It discusses cell styles, accessories, cell separators, and custom cell layouts."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017

@@ -2,9 +2,9 @@
 title: "Build your first Xamarin.Forms app"
 description: "Video guide showing how to build your first Xamarin.Forms application in Visual Studio."
 zone_pivot_groups: platform-all
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun

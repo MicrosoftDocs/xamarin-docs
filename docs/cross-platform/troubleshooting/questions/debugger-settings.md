@@ -1,7 +1,7 @@
 ---
 title: "What project settings are required for the debugger?"
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: davidortinau
 ms.author: daortin

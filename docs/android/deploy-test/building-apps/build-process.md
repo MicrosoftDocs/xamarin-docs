@@ -1,9 +1,9 @@
 ---
 title: "Build Process"
 description: "This document will provide an overview of the Xamarin.Android build process."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2022

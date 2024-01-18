@@ -1,9 +1,9 @@
 ---
 title: "Splash Screen"
 description: "An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019

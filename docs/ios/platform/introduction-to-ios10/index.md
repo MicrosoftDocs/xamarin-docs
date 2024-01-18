@@ -1,9 +1,9 @@
 ---
 title: "Introduction to iOS 10"
 description: "This article introduces all of the new and modified APIs and features available in iOS 10 for Xamarin.iOS developers."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017

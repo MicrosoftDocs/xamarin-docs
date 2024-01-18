@@ -1,9 +1,9 @@
 ---
 title: "iCloud Capabilities in Xamarin.iOS"
 description: "Adding capabilities to an application often requires additional provisioning setup. This guide explains the setup needed for iCloud capabilities."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017

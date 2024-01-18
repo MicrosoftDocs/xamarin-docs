@@ -1,9 +1,9 @@
 ---
 title: "SpriteKit in Xamarin.iOS"
 description: "This document describes SpriteKit, Apple's 2D graphics framework that integrates with SceneKit, incorporates physics and animation, includes support for lighting and shading, and more. SpriteKit can be used to create 2D games."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017

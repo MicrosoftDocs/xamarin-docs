@@ -1,9 +1,9 @@
 ---
 title: "Default Resources"
 description: Learn about the default resources in the Android operating system.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018

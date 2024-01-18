@@ -1,9 +1,9 @@
 ---
 title: "Passing Parameters to an Effect"
 description: "Effect parameters can be defined by properties, enabling the effect to be reused. Parameters can then be passed to the effect by specifying values for each property when instantiating the effect."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F6429859-6EF7-48BE-A0CB-8F42B8A75215
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016

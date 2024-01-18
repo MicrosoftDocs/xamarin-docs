@@ -2,9 +2,9 @@
 title: "Android Emulator Troubleshooting"
 description: "This article explains how to diagnose and work around problems that may occur when using the Android Emulator."
 zone_pivot_groups: platform
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018

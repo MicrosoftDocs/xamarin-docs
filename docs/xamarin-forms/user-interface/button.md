@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Button"
 description: "The Button responds to a tap or click that directs an application to carry out a particular task."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/21/2020

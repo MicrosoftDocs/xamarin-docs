@@ -1,9 +1,9 @@
 ---
 title: "Passing Effect Parameters as Attached Properties"
 description: "Attached properties can be used to define effect parameters that respond to runtime property changes. This article demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016

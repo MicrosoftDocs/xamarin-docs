@@ -1,7 +1,7 @@
 ---
 title: "NuGet Multiplatform Library Projects (aka Nugetizer 3000)"
 description: "This document describes how to use the Nugetizer 3000 tool to automatically create NuGet packages to share code across platforms."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin

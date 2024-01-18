@@ -1,9 +1,9 @@
 ---
 title: "NavigationPage Bar Translucency on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that changes the transparency of the navigation bar in a NavigationPage."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1150941B-56DB-4781-BE36-A4C4F9F2C500
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

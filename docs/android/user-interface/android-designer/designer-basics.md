@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Designer Basics"
 description: "This topic introduces Xamarin.Android Designer features, explains how to launch the Designer, describes the Design Surface, and details how to use the Properties pane to edit widget properties."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2018

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Mac Frameworks"
 description: "This document lists the various macOS frameworks available for use when developing Mac applications with Xamarin.Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016

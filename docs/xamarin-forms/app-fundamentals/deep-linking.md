@@ -1,9 +1,9 @@
 ---
 title: "Application Indexing and Deep Linking"
 description: "This article explains how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android devices."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018

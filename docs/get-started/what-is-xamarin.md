@@ -1,7 +1,7 @@
 ---
 title: "What is Xamarin?"
 description: "This article introduces the Xamarin platform and related libraries."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 ms.custom: video
 author: profexorgeek

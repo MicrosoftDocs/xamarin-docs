@@ -1,9 +1,9 @@
 ---
 title: "Bind iOS Swift libraries"
 description: "This document describes how to create C# bindings to Swift code, making it possible to consume native libraries and CocoaPods in a Xamarin.iOS application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 890EFCCA-A2A2-4561-88EA-30DE3041F61D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: alexeystrakh
 ms.author: dabritch
 ms.date: 02/11/2020

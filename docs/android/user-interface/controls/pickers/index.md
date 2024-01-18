@@ -1,9 +1,9 @@
 ---
 title: "Picker controls for Xamarin.Android"
 description: "Using built-in Android dialogs to query the user for time and date"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018

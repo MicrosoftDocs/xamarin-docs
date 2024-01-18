@@ -1,9 +1,9 @@
 ---
 title: "Containerized Microservices"
 description: "This chapter explains how to use microservices and containers to build agile, scalable, and reliable modern cloud applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017

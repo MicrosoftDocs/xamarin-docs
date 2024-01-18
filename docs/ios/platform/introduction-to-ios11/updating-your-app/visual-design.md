@@ -1,9 +1,9 @@
 ---
 title: "Visual Design Updates in iOS 11"
 description: "This document describes visual design updates introduced in iOS 11. It discusses changes to navigation bars, search controllers, margins, full-screen content, and table views."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016

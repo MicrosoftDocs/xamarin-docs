@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 3. Deeper into text"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch

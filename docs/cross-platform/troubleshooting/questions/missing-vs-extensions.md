@@ -2,7 +2,7 @@
 title: "Missing Visual Studio extensions after installation"
 description: Learn about missing Visual Studio extensions after installation, in Visual Studio 2017 or more recent.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: davidortinau
 ms.author: daortin

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Data"
 description: "A CollectionView is populated with data by setting its ItemsSource property to any collection that implements IEnumerable."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2020

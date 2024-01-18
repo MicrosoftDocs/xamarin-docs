@@ -1,9 +1,9 @@
 ---
 title: "macOS APIs for Xamarin.Mac Developers"
 description: "This document describes how to read Objective-C selectors and how to find their corresponding C# methods in a Xamarin.Mac app."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017

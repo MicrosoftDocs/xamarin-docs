@@ -1,9 +1,9 @@
 ---
 title: "Provisional notifications in Xamarin.iOS"
 description: "This document describes how to use Xamarin.iOS to work with provisional notifications. Provisional notifications, introduced in iOS 12, allow applications to send quiet notifications without explicit user permission."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018

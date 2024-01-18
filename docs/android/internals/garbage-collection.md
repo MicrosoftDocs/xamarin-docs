@@ -1,8 +1,8 @@
 ---
 title: "Garbage Collection"
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018

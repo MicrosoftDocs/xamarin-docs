@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Basic Bindings"
 description: "This article explains how to use Xamarin.Forms data binding, which links a pair of properties between two objects, at least one of which is usually a user-interface object. These two objects are called the target and the source."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019

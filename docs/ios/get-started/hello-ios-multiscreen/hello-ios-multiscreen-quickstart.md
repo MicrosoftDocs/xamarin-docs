@@ -3,9 +3,9 @@ title: "Hello, iOS Multiscreen – Quickstart"
 description: "This document demonstrates how to expand the Phoneword sample application to add a second screen, describing model-view-controller, iOS navigation, and other core iOS development concepts along the way."
 zone_pivot_groups: platform
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

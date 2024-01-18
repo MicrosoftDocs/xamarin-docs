@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms DependencyService"
 description: "The Xamarin.Forms DependencyService class is a service locator that enables Xamarin.Forms applications to invoke native platform functionality from shared code."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms ProgressBar"
 description: "The Xamarin.Forms ProgressBar is a control that visually represents progress as a horizontal bar that is filled based on a float property."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetId: C2F85FED-797C-466B-A0FD-E73CFB79B267
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/09/2019

@@ -1,9 +1,9 @@
 ---
 title: "Storyboards in Xamarin.Mac – Quick Start"
 description: "This document provides a quick start introduction to building macOS user interfaces with storyboards in Xamarin.Mac. It describes how to create a segue and create a preferences window."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
-ms.technology: xamarin-mac
+ms.subservice: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017

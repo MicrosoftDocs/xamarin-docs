@@ -1,9 +1,9 @@
 ---
 title: "Picker control in Xamarin.iOS"
 description: "This document describes how to design and work with picker controls in a Xamarin.iOS app. It discusses how to implement a picker in code and in the iOS Designer."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/14/2018

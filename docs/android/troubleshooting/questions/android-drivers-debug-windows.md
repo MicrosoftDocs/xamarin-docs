@@ -2,9 +2,9 @@
 title: "What USB drivers do I need to debug Android on Windows?"
 description: Learn how to select USB drivers when debugging Android devices in Windows.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018

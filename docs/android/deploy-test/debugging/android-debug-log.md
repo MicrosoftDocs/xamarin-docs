@@ -1,9 +1,9 @@
 ---
 title: "Android Debug Log"
 description: "How to use the debug log to debug Xamarin.Android applications."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018

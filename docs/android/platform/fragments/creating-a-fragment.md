@@ -1,9 +1,9 @@
 ---
 title: "Creating A Fragment"
 description: A comprehensive guide to creating a Fragment, adding it to an Activity, the Lifecycle, the State Management, and how they may contribute items to the menu of their hosting Activity.
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F2997242-BC29-1440-7F1A-CFC447CD73FA
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018

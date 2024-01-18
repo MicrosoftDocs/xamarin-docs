@@ -2,9 +2,9 @@
 title: "Where can I set my Android SDK locations?"
 description: Learn how to find where to set the Android SDK locations in Visual Studio.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 11/16/2017

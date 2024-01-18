@@ -1,8 +1,8 @@
 ---
 title: "Summary of Chapter 5. Dealing with sizes"
 description: "Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 5. Dealing with sizes"
-ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.service: xamarin
+ms.subservice: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch

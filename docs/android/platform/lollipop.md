@@ -1,9 +1,9 @@
 ---
 title: "Lollipop Features"
 description: "This article provides a high level overview of the new features introduced in Android 5.0 (Lollipop). These features include a new user interface style called Material Theme, as well as new supporting features such as animations, view shadows, and drawable tinting. Android 5.0 also includes enhanced notifications, two new UI widgets, a new job scheduler, and a handful of new APIs to improve storage, networking, connectivity, and multimedia capabilities."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

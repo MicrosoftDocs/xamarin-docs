@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Third-Party Controls"
 description: "Additional controls for Xamarin.Forms development are available from companies such as Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne, and Steema."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: C33A4848-3FC8-4A20-8275-387039F541AD
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019

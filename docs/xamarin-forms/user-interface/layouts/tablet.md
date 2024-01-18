@@ -1,9 +1,9 @@
 ---
 title: "Layout for Tablet and Desktop apps"
 description: "This article explains how to optimize Xamarin.Forms application layouts for tablets, as opposed to phones."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: D62F472B-4345-4983-8403-659A538B591F
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016

@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Introduction"
 description: "The CollectionView is a flexible and performant alternative to ListView."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/05/2020

@@ -1,9 +1,9 @@
 ---
 title: "Custom Animations in Xamarin.Forms"
 description: "This article demonstrates how to use the Xamarin.FOrms Animation class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2019

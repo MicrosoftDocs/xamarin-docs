@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Android Performance"
 description: "There are many techniques for increasing the performance of applications built with Xamarin.Android. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018

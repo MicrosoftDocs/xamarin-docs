@@ -1,8 +1,8 @@
 ---
 title: "Core NFC in Xamarin.iOS"
 description: "This document describes how to read near field communication tags in Xamarin.iOS using the APIs introduced in iOS 11."
-ms.prod: xamarin
-ms.technology: xamarin-ios
+ms.service: xamarin
+ms.subservice: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin

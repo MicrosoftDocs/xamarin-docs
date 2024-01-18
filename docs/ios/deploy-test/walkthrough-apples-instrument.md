@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough - Using Apple's Instruments Tool"
 description: "This article describes how to use Apple's Instruments tool to diagnose memory issues in an iOS application built with Xamarin. It demonstrates how to launch Instruments, take heap snapshots, analyze memory growth, and more."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

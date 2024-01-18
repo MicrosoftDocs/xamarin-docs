@@ -1,9 +1,9 @@
 ---
 title: "tvOS in Xamarin – Internals"
 description: "Documents describing the internal workings of tvOS on Xamarin, which is based on Xamarin.iOS. Link content discusses assemblies, target frameworks, and related iOS concepts."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016

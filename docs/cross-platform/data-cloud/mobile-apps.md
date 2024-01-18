@@ -1,7 +1,7 @@
 ---
 title: "Xamarin mobile apps with Azure and App Center"
 description: "This document links to guides for building Xamarin apps that connect to Azure or App Center."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: davidortinau
 ms.author: daortin

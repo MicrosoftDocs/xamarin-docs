@@ -2,9 +2,9 @@
 title: "Can I change the output path of the IPA file?"
 description: Learn how to change the output path of the IPA file by using customized MSBuild targets. The easiest option is to copy the IPA file after it has been built.
 ms.topic: troubleshooting
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017

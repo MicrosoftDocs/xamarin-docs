@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms AbsoluteLayout"
 description: "The Xamarin.Forms AbsoluteLayout is used to position and size elements using explicit values, or values proportional to the size of the layout."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020

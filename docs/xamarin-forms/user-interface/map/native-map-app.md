@@ -1,9 +1,9 @@
 ---
 title: "Launch the Native Map App from Xamarin.Forms"
 description: "The native maps app on each platform can be launched from a Xamarin.Forms application by the Xamarin.Essentials Launcher class."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/30/2019

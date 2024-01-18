@@ -1,9 +1,9 @@
 ---
 title: "Deploying and Testing watchOS Apps with Xamarin"
 description: "This document describes how to deploy and test watchOS apps built with Xamarin. It provides a deployment checklist, discusses explicit and wildcard app IDs, and takes a look at app groups."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017

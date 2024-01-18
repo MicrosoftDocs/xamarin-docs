@@ -1,9 +1,9 @@
 ---
 title: "Designing user interfaces with Xcode"
 description: "Learn about the recommended way to build iOS user interfaces directly by using Xcode on a Mac."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: af9f95db-5cd6-475d-867d-f73e1574e8fc
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: joshspicer
 ms.author: jospicer
 ms.date: 10/27/2020

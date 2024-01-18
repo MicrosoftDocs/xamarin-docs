@@ -2,9 +2,9 @@
 title: "Hello, iOS Multiscreen – Deep Dive"
 description: "This document takes a deeper look at the expanded Phoneword application, further considering model-view-controller, iOS navigation, and other iOS development concepts."
 ms.topic: quickstart
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018

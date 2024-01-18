@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Binding Value Converters"
 description: "This article explains how to cast or convert values within a Xamarin.Forms data binding by implementing a value converter (which is also known as a binding converter, or binding value converter)."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018

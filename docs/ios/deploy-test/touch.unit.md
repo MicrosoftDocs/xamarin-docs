@@ -1,9 +1,9 @@
 ---
 title: "Unit Testing Xamarin.iOS Apps"
 description: "This document provides an overview of how to unit test a Xamarin.iOS application. It describes how to create a unit test project, writing tests, and running tests."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017

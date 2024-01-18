@@ -1,9 +1,9 @@
 ---
 title: "Working with tvOS Buttons in Xamarin"
 description: "This document describes how to work with buttons in a tvOS app built with Xamarin. It discusses how to work with buttons in code and in storyboards, and it examines how to style a button."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
-ms.technology: xamarin-ios
+ms.subservice: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017

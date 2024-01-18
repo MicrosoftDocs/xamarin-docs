@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms Text Styles"
 description: "This article explains how to styling text in Xamarin.Forms applications. Styles can be defined once and used by many views, but a style can only be used with views of one type."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017

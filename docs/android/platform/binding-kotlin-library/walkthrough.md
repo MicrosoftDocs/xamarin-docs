@@ -1,9 +1,9 @@
 ---
 title: "Walkthrough: Bind an Android Kotlin library"
 description: "This article provides a hands-on walkthrough of creating a Xamarin.Android binding for an existing Kotlin library, BubblePicker. It covers topics such as compiling a Kotlin library, binding it, and using the binding in a Xamarin.Android application."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 5E45451F-514F-4F2B-A6E8-599ED2EFDA2C
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: alexeystrakh
 ms.author: dabritch
 ms.date: 02/11/2020

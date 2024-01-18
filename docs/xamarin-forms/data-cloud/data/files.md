@@ -1,9 +1,9 @@
 ---
 title: "File Handling in Xamarin.Forms"
 description: "File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018

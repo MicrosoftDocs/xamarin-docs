@@ -1,9 +1,9 @@
 ---
 title: "Creating a Xamarin.Forms DataTemplateSelector"
 description: "This article demonstrates how to create and consume a DataTemplateSelector, which can be used to choose a DataTemplate at runtime based on the value of a data-bound property."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016

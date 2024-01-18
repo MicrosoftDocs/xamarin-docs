@@ -1,9 +1,9 @@
 ---
 title: "Xamarin.Forms CollectionView Selection"
 description: "By default, CollectionView selection is disabled. However, single and multiple selection can be enabled."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019

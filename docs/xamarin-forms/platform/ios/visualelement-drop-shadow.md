@@ -1,9 +1,9 @@
 ---
 title: "VisualElement Drop Shadows on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that enables a drop shadow on a VisualElement."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 2147FD66-058E-4BE5-840A-369842B26EC4
-ms.technology: xamarin-forms
+ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018

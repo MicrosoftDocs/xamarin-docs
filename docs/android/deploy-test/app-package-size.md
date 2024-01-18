@@ -1,9 +1,9 @@
 ---
 title: "Application Package Size"
 description: "This article examines the constituent parts of a Xamarin.Android application package and the associated strategies that can be used for efficient package deployment during debug and release stages of development."
-ms.prod: xamarin
+ms.service: xamarin
 ms.assetid: 8D70CDDD-3D3C-9949-8045-AB8F93D18E74
-ms.technology: xamarin-android
+ms.subservice: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
