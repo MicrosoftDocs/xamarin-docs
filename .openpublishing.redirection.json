@@ -474,7 +474,11 @@
     },
     {
       "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/emotion-recognition.md",
-      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/emotion-recognition"
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/introduction"
+    },
+    {
+      "source_path": "docs/xamarin-forms/data-cloud/azure-cognitive-services/emotion-recognition.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/introduction"
     },
     {
       "source_path": "docs/graphics-games/cocossharp/bouncing-game.md",

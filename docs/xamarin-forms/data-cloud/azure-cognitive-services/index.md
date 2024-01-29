@@ -27,7 +27,3 @@ Bing Spell Check performs contextual spell checking for text, providing inline s
 ## [Text Translation](text-translation.md)
 
 The Microsoft Translator API can be used to translate speech and text through a REST API. This article explains how to use the Microsoft Translator Text API to translate text from one language to another in a Xamarin.Forms application.
-
-## [Perceived Emotion Recognition](emotion-recognition.md)
-
-The Face API takes a facial expression in an image as an input, and returns data that includes confidence levels across a set of emotions for each face in the image. This article explains how to use the Face API to recognize emotion, to rate a Xamarin.Forms application.

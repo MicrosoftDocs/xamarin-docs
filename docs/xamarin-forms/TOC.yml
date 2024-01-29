@@ -938,8 +938,6 @@
               href: data-cloud/azure-cognitive-services/spell-check.md
             - name: Text Translation
               href: data-cloud/azure-cognitive-services/text-translation.md
-            - name: Perceived Emotion Recognition
-              href: data-cloud/azure-cognitive-services/emotion-recognition.md
         - name: Web Services
           items:
             - name: Web services overview

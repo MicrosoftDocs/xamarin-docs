@@ -53,8 +53,6 @@ landingContent:
             url: azure-cognitive-services/spell-check.md
           - text: Text translation
             url: azure-cognitive-services/text-translation.md
-          - text: Emotion recognition
-            url: azure-cognitive-services/emotion-recognition.md
 
   - title: Web services
     linkLists:
