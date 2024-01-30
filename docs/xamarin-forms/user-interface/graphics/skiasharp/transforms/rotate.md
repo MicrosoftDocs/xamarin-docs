@@ -28,7 +28,7 @@ public void RotateDegrees (Single degrees)
 public Void RotateRadians (Single radians)
 ```
 
-A circle of 360 degrees is the same as twoπ radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the .NET [`Math`](xref:System.Math) class use units of radians.
+A circle of 360 degrees is the same as 2π radians, so it's easy to convert between the two units. Use whichever is convenient. All the trigonometric functions in the .NET [`Math`](xref:System.Math) class use units of radians.
 
 Rotation is clockwise for increasing angles. (Although rotation on the Cartesian coordinate system is counter-clockwise by convention, clockwise rotation is consistent with Y coordinates increasing going down as in SkiaSharp.) Negative angles and angles greater than 360 degrees are allowed.
 
