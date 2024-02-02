@@ -53,11 +53,11 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ![xcode name framework project](walkthrough-images/xcode-name-framework-project.png)
 
-1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.9](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.9.zip)
+1. Download the [Gigya xcframework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At the time of writing, the latest version is [Gigya Swift SDK 1.5.3](https://github.com/SAP/gigya-swift-sdk/releases/download/core%2Fv1.5.3/Gigya.xcframework.zip)
 
 1. Select the **SwiftFrameworkProxy** from the project files explorer then select the General tab
 
-1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the **Copy items if needed** option while adding the framework:
+1. Drag and drop the **Gigya.xcframework** package to the Xcode Frameworks and Libraries list under the General tab check the **Copy items if needed** option while adding the framework:
 
     ![xcode copy framework](walkthrough-images/xcode-copy-framework.png)
 
@@ -87,7 +87,10 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     [![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
-1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
+   > [!TIP]
+   > If this option is not available, first make sure to add a `.swift` file to the project as explained below, then return to the `Build Settings` and the setting should be discoverable.
+
+1. Expose desired methods and mark them with the `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
 
     ```swift
     import Foundation
@@ -109,7 +112,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     A few important notes on the code above:
 
-    - Import Gigya module here from the original third-party Gigya SDK and now can access any member of the framework.
+    - Importing the `Gigya` module here from the original third-party Gigya SDK allows access to any member of the framework.
     - Mark SwiftFrameworkProxy class with the `@objc` attribute specifying a name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. The type name should be clearly defined because it will be used later by its name.
     - Inherit the proxy class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
     - Mark all the members to be exposed as `public`.
@@ -120,86 +123,62 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     ![xcode edit scheme release](walkthrough-images/xcode-edit-scheme-release.png)
 
-1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild** tool:
+1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single binary framework bundle (`.xcframework`). Execute the build with the following commands:
 
     ```bash
-    xcodebuild -showsdks
+    xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
+      -scheme "SwiftFrameworkProxy" \
+      -configuration Release \
+      -archivePath "build/SwiftFrameworkProxy-simulator.xcarchive" \
+      -destination "generic/platform=iOS Simulator" \
+      -derivedDataPath "build" \
+      -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+      ENABLE_BITCODE=NO \
+      SKIP_INSTALL=NO \
+      BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+   ```   
+   ```bash
+    xcodebuild -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" archive \
+      -scheme "SwiftFrameworkProxy" \
+      -configuration Release \
+      -archivePath "build/SwiftFrameworkProxy-ios.xcarchive" \
+      -destination "generic/platform=iOS" \
+      -derivedDataPath "build" \
+      -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+      ENABLE_BITCODE=NO \
+      SKIP_INSTALL=NO \
+      BUILD_LIBRARY_FOR_DISTRIBUTION=YES
     ```
 
-    The output will be similar to the following:
-
-    ```bash
-    iOS SDKs:
-            iOS 13.2                        -sdk iphoneos13.2
-    iOS Simulator SDKs:
-            Simulator - iOS 13.2            -sdk iphonesimulator13.2
-    macOS SDKs:
-            DriverKit 19.0                  -sdk driverkit.macosx19.0
-            macOS 10.15                     -sdk macosx10.15
-    tvOS SDKs:
-            tvOS 13.2                       -sdk appletvos13.2
-    tvOS Simulator SDKs:
-            Simulator - tvOS 13.2           -sdk appletvsimulator13.2
-    watchOS SDKs:
-            watchOS 6.1                     -sdk watchos6.1
-    watchOS Simulator SDKs:
-            Simulator - watchOS 6.1         -sdk watchsimulator6.1
-    ```
-
-    Pick a desired iOS SDK and iOS Simulator SDK version, in this case version 13.2 and execute the build with the following command
-
-    ```bash
-    xcodebuild -sdk iphonesimulator13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
-    xcodebuild -sdk iphoneos13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
-    ```
+    >[!TIP]
+    >See [more information about creating binary frameworks](https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle)
 
     > [!TIP]
     > If you have a workspace instead of project, build the workspace and specify the target as a required parameter. You also want to specify an output directory because for workspaces this directory will be different than for project builds.
 
     > [!TIP]
-    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
-1. There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework, which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
+1. There are two archives with the generated frameworks, one for each platform, combine them as a single binary framework bundle to be embedded into a Xamarin.iOS binding project later. In order to create a binary framework bundle, which combines both architectures, you need to do the following steps. The .xcarchive package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
-    - Navigate to the build output folder with **Release-iphoneos** and **Release-iphonesimulator** subfolders and copy one of the frameworks as an initial version of the final output (fat framework).
-
-        ```bash
-        cp -R "Release-iphoneos" "Release-fat"
-        ```
-
-    - Combine modules from another build with the fat framework modules
+    - Create an `xcframework` with the previously-built frameworks in the archives:
 
         ```bash
-        cp -R "Release-iphonesimulator/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/" "Release-fat/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/"
-        ```
-
-    - Combine iphoneos + iphonesimulator configuration as a fat framework
-
-        ```bash
-        lipo -create -output "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphoneos/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphonesimulator/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
-        ```
-
-    - Verify results
-
-        ```bash
-        lipo -info "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
-        ```
-
-        The output should render the following, reflecting the name of the framework and included architectures:
-
-        ```bash
-        Architectures in the fat file: Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy are: x86_64 arm64
+        xcodebuild -create-xcframework \
+			-framework "build/SwiftFrameworkProxy-simulator.xcarchive/Products/Library/Frameworks/SwiftFrameworkProxy.framework" \
+  			-framework "build/SwiftFrameworkProxy-ios.xcarchive/Products/Library/Frameworks/SwiftFrameworkProxy.framework" \
+  			-output "build/SwiftFrameworkProxy.xcframework"
         ```
 
     > [!TIP]
-    > If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the fat library and use the output framework from the device build earlier.
+    > If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the .xcframework library and use the output framework from the device build earlier.
 
     > [!TIP]
-    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) to create the fat framework, which automates all steps above.
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L16-L24) to create the .xcframework, which automates all steps above.
 
 ## Prepare metadata
 
-At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) tool and the generated header file. Use Sharpie to generate the metadata:
+At this time, you should have the .xcframework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) tool and the generated header file. Use Sharpie to generate the metadata:
 
 1. Download the latest [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
 
@@ -210,16 +189,15 @@ At this time, you should have the framework with the Objective-C generated inter
 1. Generate metadata using sharpie and the autogenerated Objective-C header file:
 
     ```bash
-    sharpie bind --sdk=iphoneos13.2 --output="XamarinApiDef" --namespace="Binding" --scope="Release-fat/SwiftFrameworkProxy.framework/Headers/" "Release-fat/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
+    sharpie bind --sdk=iphoneos16.4 --output="XamarinApiDef" --namespace="Binding" --scope="build/SwiftFrameworkProxy.xcframework/ios-arm64/SwiftFrameworkProxy.framework/Headers/" "build/SwiftFrameworkProxy.xcframework/ios-arm64/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
     ```
 
-    The output reflects the metadata files being generated: **ApiDefinitions.cs** and **StructsAndEnums.cs**. Save these files for the next step to include them into a Xamarin.iOS binding project along with the native references:
+    The output reflects the metadata file being generated: **ApiDefinitions.cs**. Save this file for the next step to include it into a Xamarin.iOS binding project along with the native references:
 
     ```bash
     Parsing 1 header files...
     Binding...
         [write] ApiDefinitions.cs
-        [write] StructsAndEnums.cs
     ```
 
     The tool will generate C# metadata for each exposed Objective-C member, which will look similar to the following code. As you can see it could be defined manually because it has a human-readable format and straightforward members mapping:
@@ -233,7 +211,7 @@ At this time, you should have the framework with the Objective-C generated inter
     > The header file name could be different if you changed the default Xcode settings for the header name. By default it has the name of a project with the **-Swift** suffix. You can always check the file and its name by navigating to the headers folder of the framework package.
 
     > [!TIP]
-    > As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L35) to generate metadata automatically once the fat framework is created.
+    > As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.xcframework.sh#L35) to generate metadata automatically once the .xcframework is created.
 
 ## Build a binding library
 
@@ -243,7 +221,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
     ![visual studio create binding library](walkthrough-images/visualstudio-create-binding-library.png)
 
-1. Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
+1. Delete existing metadata file **ApiDefinition.cs** as it will be replaced completely with the metadata generated by the Objective Sharpie tool.
 1. Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
 
     ![visual studio project structure metadata](walkthrough-images/visualstudio-project-structure-metadata.png)
@@ -263,7 +241,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
     Even though it's a valid C# code, it's not used as is but instead is used by Xamarin.iOS tools to generate C# classes based on this metadata definition. As a result, instead of the interface SwiftFrameworkProxy you get a C# class with the same name, which can be instantiated by your Xamarin.iOS code. This class gets methods, properties, and other members defined by your metadata, which you will call in a C# manner.
 
-1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project:
+1. Add a native reference to the previously-generated binary framework bundle, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project:
 
     - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
 
