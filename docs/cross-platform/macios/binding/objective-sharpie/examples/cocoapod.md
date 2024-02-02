@@ -11,8 +11,8 @@ no-loc: [Objective-C]
 
 # Real-world example using CocoaPods
 
-> [!NOTE]
-> This example uses the [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
+> [!IMPORTANT]
+> `sharpie pod` is now deprecated. For more information, see [this GitHub issue](https://github.com/xamarin/xamarin-macios/issues/8238#issuecomment-606666460).
 
 New in version 3.0, Objective Sharpie supports binding CocoaPods, and even
 includes a command (`sharpie pod`) to make downloading, configuring, and
