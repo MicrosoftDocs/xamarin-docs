@@ -170,6 +170,7 @@ private HKHealthStore healthKitStore = new HKHealthStore ();
 
 public override void OnActivated (UIApplication application)
 {
+        base.OnActivated(application);
         ValidateAuthorization ();
 }
 
