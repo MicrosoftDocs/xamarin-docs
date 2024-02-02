@@ -15,7 +15,8 @@ version of Xamarin.Android is used) the APK must be manually uploaded
 through the [Google Play Developer Console](https://play.google.com/apps/publish).
 This guide explains the steps required for this process.
 
-**Please note this procedure is no longer possible to do. [Google Play Developer Console](https://play.google.com/apps/publish) now accept only AAB package.**
+> [!WARNING]
+> [Google Play Developer Console](https://play.google.com/apps/publish) now only accepts AAB packages.**
 
 ## Google Play Developer Console
 
