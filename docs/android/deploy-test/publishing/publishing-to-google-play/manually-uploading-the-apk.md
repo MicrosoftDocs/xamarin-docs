@@ -16,7 +16,7 @@ through the [Google Play Developer Console](https://play.google.com/apps/publish
 This guide explains the steps required for this process.
 
 > [!WARNING]
-> [Google Play Developer Console](https://play.google.com/apps/publish) now only accepts AAB packages.**
+> [Google Play Developer Console](https://play.google.com/apps/publish) now only accepts AAB packages.
 
 ## Google Play Developer Console
 
