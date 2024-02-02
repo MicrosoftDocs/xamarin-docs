@@ -8,7 +8,6 @@ ms.assetid: 359F5012-4409-42A7-BEDF-C1DB9AF86DED
 ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.custom: contperf-fy21q3
 ms.date: 01/26/2021
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---

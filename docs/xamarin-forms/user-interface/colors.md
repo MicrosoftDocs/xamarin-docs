@@ -7,7 +7,6 @@ ms.subservice: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2021
-ms.custom: contperf-fy21q4
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
