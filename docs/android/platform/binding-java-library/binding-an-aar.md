@@ -114,11 +114,11 @@ Before commencing with the steps below, please download the example
     [![The textanalyzer.aar file was added](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
 5. Set the Build Action for **textanalyzer.aar** to
-    `LibraryProjectZip`. In Visual Studio for Mac, right-click
+    `AndroidLibrary`. In Visual Studio for Mac, right-click
     **textanalyzer.aar** to set the Build Action. In Visual Studio,
     the Build Action can be set in the **Properties** pane):
 
-    [![Setting the textanalyzer.aar build action to LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
+    [![Setting the textanalyzer.aar build action to AndroidLibrary](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
 6. Open the project Properties to configure the *Target Framework*. If
     the .AAR uses any Android APIs, set the Target Framework to the API
