@@ -110,6 +110,35 @@ class Generic<T, U> : NSObject where T: NSObject
 `MyMethod` is constrained to be an `NSObject`, the unconstrained
 type `U` is not part of the signature.
 
+**Bad**:
+
+```csharp
+class Generic<T> : NSObject
+{
+    public T Storage { get; }
+
+    public Generic(T value)
+    {
+        Storage = value;
+    }
+}
+
+[Register("Foo")]
+class Foo: NSView
+{
+    [Export("Test")]
+    public Generic<int> Test { get; set; } = new Generic<int>(22);
+
+    [Export("Test1")]
+    public Generic<object> Test1 { get; set; } = new Generic<object>(new object());
+
+    [Export("Test2")]
+    public Generic<NSObject> Test2 { get; set; } = new Generic<NSObject>(new NSObject());
+
+}
+```
+**Reason**: the registrar doesn't support this scenario yet. For more information, see [this GitHub issues](https://github.com/xamarin/xamarin-macios/issues/15709).
+
 ### Instantiations of Generic Types from Objective-C
 
 Instantiation of generic types from Objective-C is not
