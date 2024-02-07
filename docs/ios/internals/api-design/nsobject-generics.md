@@ -137,7 +137,7 @@ class Foo: NSView
 
 }
 ```
-**Reason**: the registrar does not support such a scenario yet. Complete sample and additional details may be found in the folldwing issue https://github.com/xamarin/xamarin-macios/issues/15709
+**Reason**: the registrar doesn't support this scenario yet. For more information, see [this GitHub issues](https://github.com/xamarin/xamarin-macios/issues/15709).
 
 ### Instantiations of Generic Types from Objective-C
 
