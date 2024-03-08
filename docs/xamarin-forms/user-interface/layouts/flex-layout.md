@@ -255,7 +255,7 @@ Three attached bindable properties are demonstrated in this program:
 
 ### Catalog items with FlexLayout
 
-The **Catalog Items** page in the **[FlexLayoutDemos](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample is similar to [Example 1 in Section 1.1 of the CSS Flex Layout Box specification](https://www.w3.org//TR/css-flexbox-1/#overview) except that it displays a horizontally scrollable series of pictures and descriptions of three monkeys:
+The **Catalog Items** page in the **[FlexLayoutDemos](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample is similar to [Example 1 in Section 1.1 of the CSS Flex Layout Box specification](https://www.w3.org/TR/css-flexbox-1/#overview) except that it displays a horizontally scrollable series of pictures and descriptions of three monkeys:
 
 [![The Catalog Items Page](flex-layout-images/CatalogItems.png "The Catalog Items Page")](flex-layout-images/CatalogItems-Large.png#lightbox)
 

@@ -291,7 +291,7 @@ For example, for the default range of 0 to 1, the `StepFrequency` property is se
 
 ### The StepSlider solution
 
-A more versatile `StepSlider` is discussed in [Chapter 27. Custom renderers](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) of the book *Creating Mobile Apps with Xamarin.Forms*. The `StepSlider` is similar to `Slider` but adds a `Steps` property to specify the number of values between `Minimum` and `Maximum`.
+A more versatile `StepSlider` is discussed in [Chapter 27. Custom renderers](/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter27) of the book *Creating Mobile Apps with Xamarin.Forms*. The `StepSlider` is similar to `Slider` but adds a `Steps` property to specify the number of values between `Minimum` and `Maximum`.
 
 ## Sliders for color selection
 

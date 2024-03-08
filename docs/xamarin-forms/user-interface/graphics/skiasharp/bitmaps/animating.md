@@ -30,7 +30,7 @@ The second example shows how to use SkiaSharp to render an animated GIF file.
 
 ## Bitmap animation
 
-The Mandelbrot Set is visually fascinating but computionally lengthy. (For a discussion of the Mandelbrot Set and the mathematics used here, see [Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) starting on page 666. The following description assumes that background knowledge.)
+The Mandelbrot Set is visually fascinating but computionally lengthy. (For a discussion of the Mandelbrot Set and the mathematics used here, see [Chapter 20 of _Creating Mobile Apps with Xamarin.Forms_](/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter20) starting on page 666. The following description assumes that background knowledge.)
 
 The [**Mandelbrot Animation**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) sample uses bitmap animation to simulate a continuous zoom of a fixed point in the Mandelbrot Set. Zooming in is followed by zooming out, and then the cycle repeats forever or until you end the program.
 

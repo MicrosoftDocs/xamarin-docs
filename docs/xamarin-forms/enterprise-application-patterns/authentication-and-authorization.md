@@ -138,7 +138,7 @@ The OpenID Connect specification specifies some [standard identity resources](ht
 > [!NOTE]
 > The `IdentityResources` class supports all of the scopes defined in the OpenID Connect specification (openid, email, profile, telephone, and address).
 
-IdentityServer also supports defining custom identity resources. For more information, see [Defining custom identity resources](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) in the IdentityServer documentation. For more information about the `IdentityResource` type, see [Identity Resource](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) in the IdentityServer 4 documentation.
+IdentityServer also supports defining custom identity resources. For more information about the `IdentityResource` type, see [Identity Resource](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) in the IdentityServer 4 documentation.
 
 #### Configuring Clients
 
