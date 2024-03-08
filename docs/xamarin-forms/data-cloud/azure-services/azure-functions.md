@@ -11,8 +11,6 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Get started with Azure Functions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-
 _Get started building your first Azure Function that interacts with Xamarin.Forms._
 
 ## [Visual Studio 2019](#tab/windows)
@@ -54,4 +52,3 @@ that shows how to create and debug Azure Functions within Visual Studio for Mac.
 ## Related Links
 
 - [Azure Functions docs](/azure/azure-functions/)
-- [Implementing a simple Azure Function with a Xamarin.Forms client (sample)](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
