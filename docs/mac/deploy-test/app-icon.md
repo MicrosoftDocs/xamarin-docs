@@ -107,6 +107,6 @@ This article has taken a detailed look at working with Images required to create
 - [MacImages (sample)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Images](~/mac/app-fundamentals/image.md)
-- [macOS Human Interface Guidelines - Icons and Images](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/)
+- [macOS Human Interface Guidelines - Foundations](https://developer.apple.com/design/human-interface-guidelines/foundations)
 - [About High Resolution for OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)
 - [Icns Builder](https://itunes.apple.com/us/app/icns-builder/id554660130?mt=12)

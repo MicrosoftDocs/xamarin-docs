@@ -50,7 +50,7 @@ According to Apple and by default, all macOS applications have a standard set of
 - **Window menu** - Contains commands for working with windows in your application, as well as a list of current open windows.
 - **Help menu** - If your application provides onscreen help, the Help menu should be the right-most menu on the bar. 
 
-For more information about the application menu bar and standard menus and menu items, please see Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/).
+For more information about the application menu bar and standard menus and menu items, please see Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/menus).
 
 ### The default application menu bar
 
@@ -1072,5 +1072,5 @@ This article has taken a detailed look at working with menus and menu items in a
 
 - [MacMenus (sample)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Human Interface Guidelines - Menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
+- [Human Interface Guidelines - Menus](https://developer.apple.com/design/human-interface-guidelines/menus)
 - [Introduction to Application Menus and Pop-up Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

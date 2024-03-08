@@ -72,7 +72,7 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
 
     [![Add all the watchOS images, as shown in this screenshot](icons-images/appicons-sml.png)](icons-images/appicons.png#lightbox)
 
-    Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
+    Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/icons) for the required sizes
     (the dimensions are also shown on the screen). Remember
     that these icons will be automatically clipped to render
     in a circle.
@@ -99,4 +99,4 @@ You can verify the icons are configured correct by checking
 
 ## Related Links
 
-- [Apple's watchOS icon & images guide](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)
+- [Apple's watchOS icons guide](https://developer.apple.com/design/human-interface-guidelines/icons)

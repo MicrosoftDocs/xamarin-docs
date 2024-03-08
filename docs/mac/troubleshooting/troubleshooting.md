@@ -117,7 +117,6 @@ The community of developers using Xamarin products is amazing and many visit our
 Your feedback is important to us. If you find any problems with Xamarin.Mac:
 
 - Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues)
-- Before switching to GitHub issues, Xamarin issues were tracked on [Bugzilla](https://bugzilla.xamarin.com). Please search there for matching issues.
 - If you cannot find a matching issue, please file a new issue in the [GitHub issue repository](https://github.com/xamarin/xamarin-macios/issues/new).
 
 GitHub issues are all public. It’s not possible to hide comments or attachments.

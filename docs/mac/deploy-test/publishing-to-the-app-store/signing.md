@@ -47,6 +47,6 @@ for installation.
 
 - [Installation](~//mac/get-started/installation.md)
 - [Hello, Mac sample](~//mac/get-started/hello-mac.md)
-- [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
+- [Distribute your apps on the Mac App Store](https://developer.apple.com/distribute/)
 - [Tools Guide : Code Signing Your App](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

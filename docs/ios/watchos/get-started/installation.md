@@ -290,4 +290,4 @@ The watchOS template files (such as `InterfaceController`,
 
 - [WatchKitCatalog (sample)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
-- [Apple's WatchKit Tips](https://developer.apple.com/watchkit/tips/)
+- [Apple's WatchKit Documentation](https://developer.apple.com/documentation/watchkit/)

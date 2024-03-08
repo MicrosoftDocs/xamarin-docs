@@ -571,4 +571,4 @@ This article has taken a detailed look at working with .xib files in a Xamarin.M
 - [Menus](~/mac/user-interface/menu.md)
 - [Dialogs](~/mac/user-interface/dialog.md)
 - [Working with images](~/mac/app-fundamentals/image.md)
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-macos)

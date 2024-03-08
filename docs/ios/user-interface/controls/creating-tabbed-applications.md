@@ -202,7 +202,7 @@ to the root of the project (or a **Resources** directory). To support all screen
 
 ![The images added to the project](creating-tabbed-applications-images/tabbedimages7new.png)
 
-See the **Tab Bar Icon Size** section of [Apple's Custom Icons page](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons/) for guidance on the correct dimensions. The recommended size varies based on the style of the image (circular, square, wide, or tall).
+The recommended size varies based on the style of the image (circular, square, wide, or tall).
 
 The `Image` property only needs to be set to the **second.png** filename, iOS will automatically load the higher resolution files when needed. You can read more about this in the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) guides. By default tab bar items are grey, with a blue tint when selected.
 

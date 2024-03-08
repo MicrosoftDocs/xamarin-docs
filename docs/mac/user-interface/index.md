@@ -70,4 +70,4 @@ We also suggest taking a look at the [Mac Samples Gallery](/samples/browse/?prod
 
 ## Related links
 
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-macos)

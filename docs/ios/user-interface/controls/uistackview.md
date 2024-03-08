@@ -277,7 +277,6 @@ with a more detailed look at Stack Views and their properties and features.
 ## Related Links
 
 - [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [UIStackView Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)
 - [Introducing UIStackView (video)](https://university.xamarin.com/lightninglectures/introducing-uistackview-on-ios9)

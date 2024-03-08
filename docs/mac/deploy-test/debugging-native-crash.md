@@ -120,7 +120,7 @@ Process 79229 stopped
 
 This is an issue that was much more difficult to track down. When you see `at <unknown> <0xffffffff>` or `MonoMac.ObjCRuntime.Runtime.GetNSObject (IntPtr ptr)`  at the top of the managed stack trace, it suggests we are trying to execute some managed code with an object that has been garbage collected. The native stack trace shows `trackMouse:inRect:ofView:untilMouseUp` into `NSCell _sendActionFrom` so we are somewhere handling a click event, trying to call back into C# and dying.
 
-In general, errors like this are difficult to track down. I added `GC.Collect(2)` to a button handler to help track down this issue (forcing a garbage collection) to make the issue reproducible. After bisecting the example for a while, removing sections of code until the issue disappeared, it turned out to be [see Bugzilla bug id=23378](https://bugzilla.xamarin.com/).
+In general, errors like this are difficult to track down. I added `GC.Collect(2)` to a button handler to help track down this issue (forcing a garbage collection) to make the issue reproducible.
 
 ```csharp
 mainWindowController.Window.StandardWindowButton (NSWindowButton.CloseButton).Activated += HandleActivated;
@@ -185,7 +185,6 @@ Otherwise, search for an existing issue:
 
 - Check the [current bugs](https://github.com/xamarin/xamarin-macios/issues/)
 - Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues)
-- Before switching to GitHub issues, Xamarin issues were tracked on [Bugzilla](https://bugzilla.xamarin.com/). Please search there for matching issues.
 - If you cannot find a matching issue, please file a new issue in the [GitHub issue repository](https://github.com/xamarin/xamarin-macios/issues/new).
 
 GitHub issues are all public. It’s not possible to hide comments or attachments.

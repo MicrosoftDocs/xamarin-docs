@@ -446,5 +446,5 @@ This article has taken a detailed look at working with Images and Icons in a Xam
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Table views](~/mac/user-interface/table-view.md)
 - [Outline views](~/mac/user-interface/outline-view.md)
-- [macOS X Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS X Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-macos)
 - [About High Resolution for OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)

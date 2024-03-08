@@ -199,5 +199,5 @@ Once you have created, downloaded, and installed certificates, they'll be visibl
 
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
-- [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
+- [Distribute your apps on the Mac App Store](https://developer.apple.com/distribute/)
 - [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

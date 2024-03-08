@@ -121,7 +121,3 @@ Some app features (eg. App Groups) require you to set your entitlements.
 
 Do **not** enable entitlements in the Watch App project. It is not
   required to be enabled on the watch itself.
-
-## Related Links
-
-- [Apple WatchKit Submission Guide](https://developer.apple.com/app-store/watch/)

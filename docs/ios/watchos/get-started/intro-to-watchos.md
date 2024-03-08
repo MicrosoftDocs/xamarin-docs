@@ -116,7 +116,7 @@ methods `DidReceiveLocalNotification` and `DidReceiveRemoteNotification`.
 Override these methods to react to notification events.
 
 For more information on Notification UI design, refer to the
-[Apple Watch Human Interface Guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
+[Apple Watch Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos)
 
 ![Sample notifications](intro-to-watchos-images/notifications.png)
 
@@ -168,7 +168,7 @@ Check out the documentation from Apple:
 
 - [Watch Kit Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
-- [Apple Watch Human Interface Guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
+- [Apple Watch Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos)
 
 ## Related Links
 
@@ -177,5 +177,5 @@ Check out the documentation from Apple:
 - [Setup and Install](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's Developing for Watch Kit guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
-- [Apple's WatchKit Tips](https://developer.apple.com/watchkit/tips/)
+- [Apple's WatchKit Documentation](https://developer.apple.com/documentation/watchkit/)
 - [Introduction to watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

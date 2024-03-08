@@ -507,7 +507,7 @@ Most Xamarin.Mac apps are fully compatible with the App Sandbox and therefore, s
 
 If your app requires one of the following behaviors, it is incompatible with the App Sandbox:
 
-- **Authorization Services** - With the App Sandbox, you cannot work with the functions described in [Authorization Services C Reference](https://developer.apple.com/library/prerelease/mac/documentation/Security/Reference/authorization_ref/index.html#//apple_ref/doc/uid/TP30000826).
+- **Authorization Services** - With the App Sandbox, you cannot work with the functions described in [Authorization Services C Reference](https://developer.apple.com/documentation/security/authorization_services/).
 - **Accessibility APIs** - You cannot sandbox assistive apps such as screen readers or apps that control other applications.
 - **Send Apple Events to Arbitrary Apps** - If the app requires sending Apple events to an unknown, arbitrary app, it cannot be sandboxed. For a known list of called apps, the app can still be sandboxed and the Entitlements will need to include the called app list.
 - **Send User Info Dictionaries in Distributed Notifications to other Tasks** - With the App Sandbox, you cannot include a `userInfo` dictionary when posting to an `NSDistributedNotificationCenter` object for messaging other tasks.

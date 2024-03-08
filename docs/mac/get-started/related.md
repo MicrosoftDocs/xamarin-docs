@@ -16,7 +16,7 @@ In addition to the [Mac section of Microsoft Learn](~/mac/get-started/index.md) 
 
 - [**Xamarin.iOS documentation**](~/ios/get-started/index.md) - For many APIs (primarily outside of AppKit/UIKit) there are only small differences between the iOS and macOS versions. In some cases where a given iOS API has a name of `UIFoo`, a similar API named `NSFoo` can be found on macOS. These examples will be generally in C# already.
 
-- **Apple’s [Mac Dev Center](https://developer.apple.com/devcenter/mac/)** -  Many times an example of what APIs to call in Objective-C can be converted to C# in a straightforward manner. See [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md) for details on how to do this.
+- **Apple’s Mac Dev Center** -  Many times an example of what APIs to call in Objective-C can be converted to C# in a straightforward manner. See [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md) for details on how to do this.
 
 - [**Stack Overflow**](https://stackoverflow.com/) - A great resource for simple one off questions such as ["How do I auto expand all nodes in an NSOutlineView"](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). These examples will often be in Objective-C and need to be converted to C#, but there is a subset of answers in C#.
 

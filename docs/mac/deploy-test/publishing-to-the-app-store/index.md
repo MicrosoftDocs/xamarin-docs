@@ -25,7 +25,7 @@ type.
 
 ## Mac developer program
 
-When you join the [Mac Developer Program](https://developer.apple.com/devcenter/mac/) the developer will be offered a choice to join as an Individual or a Company, as shown in the screenshot below:
+When you join the Mac Developer Program, the developer will be offered a choice to join as an Individual or a Company, as shown in the screenshot below:
 
 [![The Apple Developer Portal](images/image1.png "The Apple Developer Portal")](images/image1-large.png#lightbox)
 

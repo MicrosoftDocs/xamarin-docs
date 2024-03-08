@@ -13,7 +13,7 @@ no-loc: [Objective-C]
 # Deploying watchOS Apps to the App Store
 
 > [!IMPORTANT]
-> Be sure to review [Apple's Watch Kit Submission Guide](https://developer.apple.com/app-store/watch/), and see the [Troubleshooting](#troubleshooting) section for any issues you may have.
+> Be sure to review the [Troubleshooting](#troubleshooting) section for any issues you may have.
 
 - Ensure you have:
   - [**Distribution Provisioning Profiles**](#provisioning) created
@@ -302,7 +302,3 @@ Error MT5309: Native linking error: clang: error: no such file or directory:
 This error is likely the result of your having renamed your
 Xcode installation from **Xcode.app**. For instance, this
 error will occur if you rename your installation to **XCode 6.2.app**.
-
-## Related Links
-
-- [Apple WatchKit Submission Guide](https://developer.apple.com/app-store/watch/)

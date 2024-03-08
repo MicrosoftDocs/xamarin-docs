@@ -195,6 +195,6 @@ check if any of the NuGets that have been included in your
 
 The **Microsoft.Bcl.Build.targets** file that is added to the
   **.csproj** can interfere with the packaging of iOS
-  extensions during deployment. You can track the [old bugs](https://bugzilla.xamarin.com/) or [current bugs](https://github.com/xamarin/xamarin-macios/issues).
+  extensions during deployment. 
   A possible workaround is to edit the .csproj file and manually
   move the **Microsoft.Bcl.Build.targets** to be the last element.
