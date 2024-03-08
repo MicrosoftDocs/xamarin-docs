@@ -704,7 +704,6 @@ This article has introduced Apple's HomeKit home automation framework. It showed
 ## Related Links
 
 - [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)
 - [HomeKit User Interface Guidelines](https://developer.apple.com/homekit/ui-guidelines/)

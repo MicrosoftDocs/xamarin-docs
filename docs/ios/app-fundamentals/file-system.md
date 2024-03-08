@@ -402,7 +402,7 @@ Since App Extensions run as part of a host application (as opposed to their cont
 
 The shared location is configured using an [App Group](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19),
   which is configured in the **Certificates, Identifiers & Profiles** section on
-  [iOS Dev Center](https://developer.apple.com/devcenter/ios/). This value
+  iOS Dev Center. This value
   must also be referenced in each project's **Entitlements.plist**.
 
 For information on creating and configuring an App Group, refer to the [App Group Capabilities](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) guide.

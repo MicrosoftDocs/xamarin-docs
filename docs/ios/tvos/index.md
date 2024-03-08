@@ -64,7 +64,7 @@ Additionally, Apple provides the following sample apps that can be transcoded to
 
 ## Known Issues and Troubleshooting
 
-If you encounter any problems building tvOS with Xamarin, check the [release notes](/xamarin/ios/release-notes/), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/), and [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
+If you encounter any problems building tvOS with Xamarin, check [GitHub](https://github.com/xamarin/xamarin-macios/issues) for existing issues.
 
 Report new issues and suggestions [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
@@ -76,6 +76,6 @@ Ask questions about building and deploying tvOS applications with Xamarin on [Q&
 
 - [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [tvOS Human Interface Guides](https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
 - [Building apps for tvOS with Xamarin (video)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

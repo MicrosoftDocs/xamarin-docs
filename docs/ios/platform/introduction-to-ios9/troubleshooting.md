@@ -189,6 +189,5 @@ In general, you should not initialize anything that can call back Objective-C co
 
 ## Related Links
 
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Updating your Xamarin.iOS apps to iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

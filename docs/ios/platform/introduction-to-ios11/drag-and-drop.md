@@ -217,7 +217,7 @@ drag rows and text between them:
 
 ## Related Links
 
-- [Drag and Drop Human Interface Guidelines (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
+- [Drag and Drop Human Interface Guidelines (Apple)](https://developer.apple.com/design/human-interface-guidelines/drag-and-drop)
 - [Drag and Drop Table View Sample](/samples/xamarin/ios-samples/ios11-draganddroptableview)
 - [Drag and Drop Collection View Sample](/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
 - [Introducing Drag and Drop (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/203/)

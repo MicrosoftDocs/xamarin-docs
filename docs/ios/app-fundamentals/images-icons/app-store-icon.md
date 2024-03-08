@@ -25,7 +25,7 @@ Apple suggests the following guidelines when designing your applications icon:
 
 A 1024 x 1024 pixel image is required for the App Icon that will be displayed in the App Store.  Apple have stated that the app store icon in the asset catalog can't be transparent nor contain an alpha channel.
 
-For more information, see Apple's [iOS Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/).
+For more information, see Apple's [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/images).
 
 ## Adding an App Store icon
 

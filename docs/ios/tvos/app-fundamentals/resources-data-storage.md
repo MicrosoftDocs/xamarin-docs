@@ -18,7 +18,7 @@ _This article covers working with resources and persistent data storage in a Xam
 
 ## tvOS Resource Limitations
 
-Unlike iOS devices, the new Apple TV provides extremely limited persistent, local storage for tvOS apps or data. For very small items (such as user preferences), your tvOS app still has access to `NSUserDefaults` with a [limit of 500 KB of data](https://forums.developer.apple.com/message/50696#50696). However, if your Xamarin.tvOS app needs to persist larger amounts of information, it must store and retrieve that data from [iCloud](#iCloud-Data-Storage).
+Unlike iOS devices, the new Apple TV provides extremely limited persistent, local storage for tvOS apps or data. For very small items (such as user preferences), your tvOS app still has access to `NSUserDefaults` with a [limit of 500 KB of data](https://forums.developer.apple.com/forums/thread/16967?answerId=50696022#50696022). However, if your Xamarin.tvOS app needs to persist larger amounts of information, it must store and retrieve that data from [iCloud](#iCloud-Data-Storage).
 
 Additionally, tvOS limits the size of an Apple TV app to 200MB. If your app requires resources beyond this size, they will need to be packaged and loaded using [On-Demand Resources](#On-Demand-Resources) (up to an additional 2GB). Given these limitations, it is critical that you correctly time the downloading of additional assets to provide the best experience for your app's users. For more information, please see Apple's [On-Demand Resources Guide](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
@@ -80,5 +80,5 @@ This article has covered the size, resource and data storage limitations placed 
 
 - [tvOS Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [tvOS Human Interface Guides](https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -56,7 +56,3 @@ In some cases the following two error messages might also appear repeatedly in `
 One guess at the root cause of the error is that the OS X system services responsible for reporting iOS device and simulator information can in rare cases enter an unexpected state. Xamarin cannot interact properly with the system services in this state. Rebooting the computer restarts the system services and solves the problem.
 
 Based on the errors from `system.log` it appears that this problem might be related to Bonjour (`mDNSResponder`). Changing between different WiFi networks seems to increase the chances of hitting the problem.
-
-## References
-
-* [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe returned: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

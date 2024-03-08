@@ -633,7 +633,6 @@ different types of Handoff continuations available and the Handoff best practice
 
 - [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [MonkeyBrowser Sample](/samples/xamarin/ios-samples/ios8-monkeybrowser)
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [What's New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)
 - [HomeKit User Interface Guidelines](https://developer.apple.com/homekit/ui-guidelines/)

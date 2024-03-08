@@ -25,7 +25,7 @@ At the center of push notifications in iOS is the *Apple Push Notification Gatew
     The following image illustrates the push notification topology for iOS:
  ![This image illustrates the push notification topology for iOS](remote-notifications-in-ios-images/image4.png)
 
-Remote notifications themselves are JSON formatted strings that adhere to the format and protocols specified in [The Notification Payload](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) section of the [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) in the [iOS developer documentation](https://developer.apple.com/devcenter/ios/index.action).
+Remote notifications themselves are JSON formatted strings that adhere to the format and protocols specified in [The Notification Payload](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) section of the [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) in the iOS developer documentation.
 
 Apple maintains two environments of APNS: a *Sandbox* and a *Production* environment. The Sandbox
     environment is meant for testing during the development phase and can be found at `gateway.sandbox.push.apple.com`

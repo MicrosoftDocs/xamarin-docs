@@ -458,6 +458,4 @@ shortcuts to your app's most commonly used features.
 
 - [iOS 9 ViewControllerPreview Sample](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
 - [iOS 9 ApplicationShortcuts Sample](/samples/xamarin/ios-samples/ios9-applicationshortcuts)
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Get your iPhone apps ready for 3D Touch](https://developer.apple.com/ios/3d-touch/)

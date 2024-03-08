@@ -29,7 +29,7 @@ See the documentation about [Xamarin.iOS command line builds on Windows](~/ios/g
 
 ## For Xamarin 3 and earlier
 
-The Xamarin 3.x Visual Studio extension does not provide a mechanism to produce `.xcarchive` archives. That said, the logic used to create `.xcarchive` archives in Xamarin Studio on Mac [is described here](https://bugzilla.xamarin.com/show_bug.cgi?id=35#c5), so you could probably create your own `.xcarchive` by hand if you wished.
+The Xamarin 3.x Visual Studio extension does not provide a mechanism to produce `.xcarchive` archives.
 
 But it's worth noting that you don't need a `.xcarchive` to submit to the App Store. You can submit an IPA file as long as it's signed with an App Store Distribution Profile (not an Ad Hoc Distribution Profile).
 

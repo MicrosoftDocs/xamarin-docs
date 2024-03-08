@@ -109,5 +109,5 @@ The following is a list of frameworks that are supported by iOS 9 but have been 
 ## Related Links
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [tvOS Human Interface Guides](https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -48,5 +48,5 @@ In addition to the Mac bindings, Xamarin.tvOS can consume [.NET Portable Class L
 ## Related Links
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [tvOS Human Interface Guides](https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

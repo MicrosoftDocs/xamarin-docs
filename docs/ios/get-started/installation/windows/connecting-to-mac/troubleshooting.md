@@ -129,7 +129,7 @@ Known cause:
 
 #### "Trying to connect..." never completes
 
-- **Bug [#52264](https://bugzilla.xamarin.com/all.html)** – This problem can happen on Xamarin 4.1 if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences &gt; Users &amp; Groups** is set to a value other than **/bin/bash**. (Starting with Xamarin 4.2, this scenario instead leads to the "Couldn't connect" error message.) **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
+- **Bug** – This problem can happen on Xamarin 4.1 if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences &gt; Users &amp; Groups** is set to a value other than **/bin/bash**. (Starting with Xamarin 4.2, this scenario instead leads to the "Couldn't connect" error message.) **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
 
 <a name="tryagain"></a>
 
@@ -141,11 +141,11 @@ Reported causes:
 
 - **Bug** – Some users have seen this error when attempting to connect to the build host by double-clicking the name of the Mac in the connection dialog. **Possible workaround**: [Manually add the Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) using the IP address.
 
-- **Bug [#35971](https://bugzilla.xamarin.com/all.html)** – Some users have run across this error when using a wireless network connection between the Mac build host and Windows. **Possible workaround**: Move both computers to a wired network connection.
+- **Bug** – Some users have run across this error when using a wireless network connection between the Mac build host and Windows. **Possible workaround**: Move both computers to a wired network connection.
 
-- **Bug [#36642](https://bugzilla.xamarin.com/all.html)** – On Xamarin 4.0, this message will appear anytime the **$HOME/.bashrc** file on the Mac contains an error. (Starting with Xamarin 4.1, errors in the **.bashrc** file will no longer affect the connection process.) **Workaround**: Move the **.bashrc** file to a backup location (or delete it if you know you don't need it).
+- **Bug** – On Xamarin 4.0, this message will appear anytime the **$HOME/.bashrc** file on the Mac contains an error. (Starting with Xamarin 4.1, errors in the **.bashrc** file will no longer affect the connection process.) **Workaround**: Move the **.bashrc** file to a backup location (or delete it if you know you don't need it).
 
-- **Bug [#52264](https://bugzilla.xamarin.com/all.html)** – This error can appear if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences > Users & Groups** is set to a value other than **/bin/bash**. **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
+- **Bug** – This error can appear if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences > Users & Groups** is set to a value other than **/bin/bash**. **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
 
 - **Limitation** – This error can appear if the Mac build host is connected to a router that has no access to the internet (or if the Mac is using a DNS server that times out when asked for the reverse-DNS lookup of the Windows computer). Visual Studio will take roughly 30 seconds to retrieve the SSH fingerprint and eventually fail to connect.
 
@@ -317,8 +317,6 @@ The following error is thrown because of this problem:
 error : Building from a network share path is not supported at the moment. Please map a network drive to '\\SharedSources\HelloWorld\HelloWorld' or copy the source to a local directory.
 ```
 
-related bug: [#36195](https://bugzilla.xamarin.com/all.html)
-
 ### Missing Provisioning Profiles or "Failed to create the a fat library" Error
 
 Launch Xcode on the Mac and ensure that your Apple developer account is logged in and your iOS Development Profile is downloaded:
@@ -329,11 +327,9 @@ Launch Xcode on the Mac and ensure that your Apple developer account is logged i
 
 Reported causes:
 
-- **Enhancement [#36118](https://bugzilla.xamarin.com/all.html)** – This error can prevent successful builds when Visual Studio is using an IPv6 address to connect to the build host. (The build host connection does not yet support IPv6 addresses.)
+- **Enhancement** – This error can prevent successful builds when Visual Studio is using an IPv6 address to connect to the build host. (The build host connection does not yet support IPv6 addresses.)
 
 ### Xamarin.iOS Visual Studio plugin fails to load after reinstallation of beta/alpha channel
-
-Relevant bug [#40781](https://bugzilla.xamarin.com/all.html).
 
 This issue may happen when Visual Studio fails to refresh the MEF component cache. If that's the case, installing this Visual Studio extension may help: [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 

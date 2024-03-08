@@ -15,7 +15,7 @@ description: Learn how to download a previous version of Xcode through the App s
 
 ## Current version
 
-The current version of Xcode can be accessed either through the App store, or the [Xcode downloads page](https://developer.apple.com/xcode/downloads/).
+The current version of Xcode can be accessed either through the App store, or the [Xcode downloads page](https://apps.apple.com/us/app/xcode/id497799835?mt=12/).
 
 ## Older versions
 

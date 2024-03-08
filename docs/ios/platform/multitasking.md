@@ -254,7 +254,6 @@ This article has covered the steps required to ensure that a Xamarin.iOS app wil
 - [iOS 9 Samples](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [MultiTask (sample)](/samples/xamarin/ios-samples/ios9-multitask)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
-- [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Adopting Multitasking Enhancements on iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)
 - [Blog post](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)

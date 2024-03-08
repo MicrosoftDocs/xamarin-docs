@@ -54,7 +54,7 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 ## Accessing an App Group NSUserDefaults Instance
 
-As stated above, by using App Groups, `NSUserDefaults` can be used to communicate between Apps (or Extensions) within a given group. First, you will need to ensure that the App Group and the required App IDs have been properly configured in the **Certificates, Identifiers & Profiles** section on [iOS Dev Center](https://developer.apple.com/devcenter/ios/) and have been installed in the development environment.
+As stated above, by using App Groups, `NSUserDefaults` can be used to communicate between Apps (or Extensions) within a given group. First, you will need to ensure that the App Group and the required App IDs have been properly configured in the **Certificates, Identifiers & Profiles** section on iOS Dev Center and have been installed in the development environment.
 
 Next, your App and/or Extension projects need to have one of the valid App IDs created above, and the `Entitlements.plist` file has to be included in the App Bundle with the App Groups enabled and specified.
 

@@ -14,7 +14,7 @@ no-loc: [Objective-C, registrars, Registrars, Registrar, registrar]
 
 Xamarin.iOS applications run within the Mono execution environment,
 and use full Ahead of Time (AOT) compilation  to compile C# code to ARM assembly
-language. This runs side-by-side with the [Objective-C Runtime](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Both runtime
+language. This runs side-by-side with the [Objective-C Runtime](https://developer.apple.com/documentation/objectivec/objective-c_runtime). Both runtime
 environments run on top of a UNIX-like kernel, specifically [XNU](https://en.wikipedia.org/wiki/XNU), and expose
 various APIs to the user code allowing developers to access the underlying
 native or managed system.
@@ -142,7 +142,7 @@ There are two types of registrars used in Xamarin.iOS – dynamic and static:
 
 - **Dynamic registrars** – The dynamic registrar does the registration of all types in
 your assembly at runtime. It does this by using functions provided by
-[Objective-C’s runtime API](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). The dynamic registrar therefore has a slower startup,
+[Objective-C’s runtime API](https://developer.apple.com/documentation/objectivec/objective-c_runtime). The dynamic registrar therefore has a slower startup,
 but a faster build time. This is default for the iOS Simulator. Native functions
 (usually in C), called trampolines, are used as method implementations when
 using the dynamic registrars. They vary between different architectures.

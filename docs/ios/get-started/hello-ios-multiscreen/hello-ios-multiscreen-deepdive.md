@@ -248,4 +248,3 @@ Next, let’s learn to build cross-platform applications with Xamarin with the [
 
 - [Hello, iOS (sample)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
