@@ -1629,9 +1629,6 @@ of the packaging process. If not specified, then the `-Xmx` option
 supplies **java** with a value of `1G`. This was found to be commonly
 required on Windows in comparison to other platforms.
 
-Specifying this property is necessary if the
-[`_CompileDex` target throws a `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/18/18327/bug.html).
-
 Customize the value by changing:
 
 ```xml
