@@ -40,7 +40,7 @@ your operating system version and follow the instructions for the [Xamarin insta
 
 > [!NOTE]
 > Xcode can be installed (and updated) on
->[developer.apple.com](https://developer.apple.com/xcode/download/) or via the Mac App Store.
+>[developer.apple.com](https://apps.apple.com/us/app/xcode/id497799835?mt=12/) or via the Mac App Store.
 
 ### Testing & debugging on macOS
 

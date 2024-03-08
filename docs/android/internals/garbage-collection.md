@@ -279,8 +279,7 @@ object graph you may need to manually call
 [GC.Collect()](xref:System.GC.Collect) 
 to prompt a GC to release the Java-side memory, or you can explicitly 
 dispose of *Java.Lang.Object* subclasses, breaking the mapping between 
-the managed callable wrapper and the Java instance. For example, see 
-[Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
+the managed callable wrapper and the Java instance.
 
 > [!NOTE]
 > You must be *extremely* careful when disposing of

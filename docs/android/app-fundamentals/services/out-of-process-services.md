@@ -71,7 +71,7 @@ A service that is meant to run in its own process is, fundamentally, still a bou
 
 1. `Exported` &ndash; This property must be set to `true` to allow other applications to interact with the service. The default value of this property is `false`.
 2. `Process` &ndash; This property must be set. It is used to specify the name of the process that the service will run in.
-3. `IsolatedProcess` &ndash; This property will enable extra security, telling Android to run the service in an isolated sandbox with minimal permission to interact with the rest of the system. See [Bugzilla 51940 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940).
+3. `IsolatedProcess` &ndash; This property will enable extra security, telling Android to run the service in an isolated sandbox with minimal permission to interact with the rest of the system.
 4. `Permission` &ndash; It is possible to control client access to the service by specifying a permission that clients must request (and be granted).
 
 To run a service its own process, the `Process` property on the `ServiceAttribute` must be set to the name of the service. To interact with outside applications, the `Exported` property should be set to `true`. If `Exported` is `false`, then only clients in the same APK (i.e. the same application) and running in the same process will be able to interact with the service.
@@ -117,9 +117,6 @@ What kind of process the service will run in depends on the value of the `Proces
              Process="com.xamarin.xample.messengerservice.timestampservice_process",
              Exported=true)]
     ```
-
-> [!IMPORTANT]
-> See [Bugzilla 51940 - Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)
 
 An isolated service is a simple way to secure an application and
 the device against untrusted code. For example, an app may download
@@ -430,10 +427,10 @@ There are two common ways to secure a service with Android permissions:
     service with applications from other developers. A custom permission
     requires a bit more effort to implement and will be covered below.
 
-A simplified example of creating a custom `normal` permission will be described in the next section. For more information about Android permissions, please consult Google's documentation for [Best Practices & Security](https://developer.android.com/training/articles/security-tips.html). For more information about Android permissions, see the [Permissions section](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms) of the Android documentation for the application manifest for more information about Android permissions.
+A simplified example of creating a custom `normal` permission will be described in the next section. For more information about Android permissions, please consult Google's documentation for [Best Practices & Security](https://developer.android.com/privacy-and-security/security-tips). For more information about Android permissions, see the [Permissions section](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms) of the Android documentation for the application manifest for more information about Android permissions.
 
 > [!NOTE]
-> In general, [Google discourages the use of custom permissions](https://developer.android.com/training/articles/security-tips.html#RequestingPermissions) as they may prove confusing to users.
+> In general, [Google discourages the use of custom permissions](https://developer.android.com/privacy-and-security/security-tips) as they may prove confusing to users.
 
 ### Creating a Custom Permission
 
@@ -507,8 +504,7 @@ This guide was an advanced discussion about how to run an Android service in a r
 - [Messenger](xref:Android.OS.Messenger)
 - [ServiceAttribute](xref:Android.App.ServiceAttribute)
 - [The Exported attribute](https://developer.android.com/guide/topics/manifest/service-element.html#exported)
-- [Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)
 - [Processes and Threads](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Android Manifest - Permissions](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
-- [Security Tips](https://developer.android.com/training/articles/security-tips.html)
+- [Security Tips](https://developer.android.com/privacy-and-security/security-tips)
 - [MessengerServiceDemo (sample)](/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)

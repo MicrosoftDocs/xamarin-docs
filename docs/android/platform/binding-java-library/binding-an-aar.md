@@ -32,7 +32,7 @@ in general (with a basic code example), see
 [Binding a Java Library](~/android/platform/binding-java-library/index.md).
 
 > [!IMPORTANT]
-> A binding project can only include one .AAR file. If the .AAR depends on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
+> A binding project can only include one .AAR file. If the .AAR depends on other .AAR, then those dependencies should be contained in their own binding project and then referenced.
 
 ## Walkthrough
 
@@ -388,4 +388,3 @@ resource that resides in the .AAR file.
 - [Binding a .JAR](~/android/platform/binding-java-library/binding-a-jar.md)
 - [Binding a Java Library](~/android/platform/binding-java-library/index.md)
 - [AarBinding (sample)](/samples/xamarin/monodroid-samples/javaintegration-aarbinding)
-- [Bug 44573 - One project cannot bind multiple .aar files](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)

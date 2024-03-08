@@ -172,13 +172,6 @@ Studio for Mac to find the correct version number. Look for the
 
 -----
 
-## Additional references
-
-- Search the Bugzilla read only archive for [Bug 43245](https://bugzilla.xamarin.com/all.html) –
-  Inaccurate "Download failed. Please download {0} and put it to the
-  {1} directory." and "Please install package: '{0}' available in SDK
-  installer" error messages related to Xamarin.Android.Support packages
-
 ### Next Steps
 
 This document discusses the current behavior as of August 2016. The

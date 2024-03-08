@@ -644,8 +644,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 }
 ```
 
-For more information on the above noted problem, refer to the Bugzilla read only archive for [Bug5401](https://bugzilla.xamarin.com/all.html).
-
 ## Unexpected NullReferenceExceptions
 
 Occasionally the

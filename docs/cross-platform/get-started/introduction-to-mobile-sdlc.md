@@ -104,7 +104,7 @@ about the actual UI design:
 When creating UX mockups, it’s important to consider the interface
 guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The official design guidelines for each platform are:
 
-1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
+1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/designing-for-ios)
 1. **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
 1. **UWP** –  [UWP Design basics](/windows/uwp/design/basics/)
 

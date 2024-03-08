@@ -15,7 +15,7 @@ When updating older Xamarin solutions to the Unified API, the following errors m
 
 ## NSInvalidArgumentException Could Not Find storyboard Error
 
-There is a [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=25569) in the current version of Visual Studio for Mac that can occur after using the automated migration tool to convert your project to the Unified APIs. After the update, if you get an error message in the form:
+There is a bug in the current version of Visual Studio for Mac that can occur after using the automated migration tool to convert your project to the Unified APIs. After the update, if you get an error message in the form:
 
 ```console
 Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not find a storyboard named 'xxx' in bundle NSBundle...

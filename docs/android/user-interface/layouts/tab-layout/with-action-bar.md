@@ -239,7 +239,7 @@ versions of Android.
 - [Toolbar](~/android/user-interface/controls/tool-bar/index.md)
 - [Fragments](~/android/platform/fragments/index.md)
 - [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
-- [ActionBarActivity](https://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
+- [ActionBarActivity](https://developer.android.com/reference/android/app/ActionBar)
 - [Action Bar Pattern](https://developer.android.com/design/patterns/actionbar.html)
 - [Android v7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat)
 - [Xamarin.Android Support Library v7 AppCompat NuGet Package](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)

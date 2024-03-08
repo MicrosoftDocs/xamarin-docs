@@ -348,4 +348,4 @@ This guide discussed the new APIs in Android 8.0 to support downloadable fonts a
 - [Using Fonts in Android](https://www.youtube.com/watch?v=TfB-TsLFJdM)
 - [CSS font weight specification](https://www.w3.org/TR/css-fonts-3/#font-weight-numeric-values)
 - [Google Fonts Open Source collection](https://fonts.google.com/)
-- [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro)
+- [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)

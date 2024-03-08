@@ -40,7 +40,7 @@ no-loc: [Objective-C]
 
     - "LegacySitePackage failed for package" (in Visual Studio's _ActivityLog.xml_)
 
-    (See also the [Clear MEF Component Cache](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) Visual Studio extension.  And see [Bug 40781, Comment 19](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) for a bit more context about the upstream issue in Visual Studio that can cause these errors.)
+    (See also the [Clear MEF Component Cache](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) Visual Studio extension.
 
 4. Also check in the _VirtualStore_ directory to see if Windows might have stored any overlay files for the _Extensions\\Xamarin_ or _ComponentModelCache_ directories there:
 

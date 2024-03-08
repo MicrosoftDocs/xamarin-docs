@@ -21,29 +21,21 @@ no-loc: [Objective-C]
 
 ## 3.3 (August 3, 2016)
 
-[Download v3.3.0](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-3.3.0.pkg)
-
 * Support for Xcode 8 Beta 4, iOS 10, macOS 10.12, tvOS 10 and watchOS 3.
 * Updated to latest Clang master build (2016-08-02)
 * [Persist telemetry submission options](https://twitter.com/Symbiatch/status/760373403878559744) from `sharpie pod bind` to `sharpie bind`.
 
 ## 3.2 (June 14, 2016)
 
-[Download v3.2.3](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-3.2.3.pkg)
-
 * Support for Xcode 8 Beta 1, iOS 10, macOS 10.12, tvOS 10 and watchOS 3.
 
 ## 3.1 (May 31, 2016)
-
-[Download v3.1.1](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-3.1.1.pkg)
 
 * Support for CocoaPods 1.0
 * Improved CocoaPods binding reliability by first building a native `.framework` and then binding that
 * Copy CocoaPods `.framework` and binding definition into a `Binding` directory to make integration with Xamarin.iOS and Xamarin.Mac binding projects easier
 
 ## 3.0 (October 5, 2015)
-
-[Download v3.0.8](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-3.0.8.pkg)
 
 * Support for new Objective-C language features including lightweight generics and nullability, as introduced in Xcode 7
 * Support for the latest iOS and Mac SDKs.
@@ -60,15 +52,6 @@ no-loc: [Objective-C]
 
 ## 2.1.0 (March 15, 2015)
 
-[Download v2.1.0](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.0.pkg)
-
-* [bxc#27849](https://bugzilla.xamarin.com/84/849/bug.html): Ensure `using ObjCRuntime;` is produced when `ArgumentSemantic` is used.
-* [bxc#27850](https://bugzilla.xamarin.com/85/850/bug.html): Ensure `using System.Runtime.InteropServices;` is produced when `DllImport` is used.
-* [bxc#27852](https://bugzilla.xamarin.com/85/852/bug.html): Default `DllImport` to loading symbols from `__Internal`.
-* [bxc#27848](https://bugzilla.xamarin.com/84/848/bug.html): Skip forward-declared Objective-C container declarations.
-* [bxc#27846](https://bugzilla.xamarin.com/84/846/bug.html): Bind protocol types with a single qualification as concrete interfaces (`id<Foo>` as `Foo` instead of `Foundation.NSObject<Foo>`).
-* [bxc#28037](https://bugzilla.xamarin.com/37/37/bug.html): Bind `UInt32`, `UInt64`, and `Int64` literals as `Int32` to drop the `u` and/or `uL` suffixes when the values can safely fit into `Int32`.
-* [bxc#28038](https://bugzilla.xamarin.com/38/38/bug.html): Fix enum name mapping when original native name starts with a `k` prefix.
 * `sizeof` C expressions whose argument type does not map to a C# primitive type will be evaluated in Clang and bound as an integer literal to avoid generating invalid C#.
 * Fix Objective-C syntax for properties whose type is a block (Objective-C code appears in comments above bound declarations).
 * Bind decayed types as their original type (`int[]` decays to `int*` during semantic analysis in Clang, but bind it as the original as-written `int[]` instead).
@@ -76,8 +59,6 @@ no-loc: [Objective-C]
 Thanks very much to Dave Dunkin for reporting many of the bugs fixed in this point release!
 
 ## 2.0.0: March 9, 2015
-
-[Download v2.0.0](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-2.0.0.pkg)
 
 Objective Sharpie 2.0 is a major release that features an improved Clang-based driver and parser and a new NRefactory-based binding engine. These improved components provide for _much_ better bindings, particularly around type binding. Many other improvements have been made that are internal to Objective Sharpie which will yield many user-visible features in future releases.
 
@@ -127,12 +108,8 @@ See the [Verify Attributes](~/cross-platform/macios/binding/objective-sharpie/pl
 
 ## 1.1.35: December 21, 2014
 
-[Download v1.1.35](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.35.pkg)
-
 Minor bug fixes.
 
 ## 1.1.1: December 15, 2014
-
-[Download v1.1.1](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1 was the first major release after 1.5 years of internal use and development at Xamarin following the initial preview of Objective Sharpie in April 2013. This release is the first to be generally considered stable and usable for a wide variety of native libraries, featuring a new Clang backend.

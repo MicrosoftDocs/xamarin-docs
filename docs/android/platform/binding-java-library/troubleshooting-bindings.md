@@ -227,8 +227,7 @@ are not automatically resolved. A Java library binding is not always
 generated against a user assembly that does not exist in the target
 device or emulator (such as Google Maps **maps.jar**). This is not the
 case for Android Library project support, as the library .JAR is
-embedded in the library dll. For example:
-[Bug 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+embedded in the library dll.
 
 ### Problem: Duplicate custom EventArgs types
 

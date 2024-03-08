@@ -80,7 +80,7 @@ discuss different approaches for creating NuGet packages that use PCL
 and native APIs to provide compatibility for Xamarin and other platforms:
 
 - [How to Make Portable Class Libraries Work for You](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [Creating a NuGet PCL that works with Xamarin.iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Creating a NuGet PCL that works with Xamarin.iOS](/nuget/guides/create-packages-for-xamarin)
 
 This external [list of PCL Profiles with their NuGet target name](https://portablelibraryprofiles.stephencleary.com)
 is also a useful reference.

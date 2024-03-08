@@ -213,7 +213,7 @@ To add menus to the `Toolbar`:
 
 1. Add menu icons (if required) to the `mipmap-` folders of 
     the app project. Google provides a set of free menu icons on the 
-    [Material icons](https://design.google.com/icons/) page. 
+    [Material icons](https://m3.material.io/components/icon-buttons/overview) page. 
 
 2. Define the contents of the menu items by adding a new menu resource 
     file under **Resources/menu**. 

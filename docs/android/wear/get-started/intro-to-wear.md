@@ -253,7 +253,6 @@ see the Android
 Here are some examples of the devices that can run Android Wear:
 
 - [Motorola 360](https://www.motorola.com)
-- [LG G Watch](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
 - [LG G Watch R](https://www.lg.com/us/smartwatch/g-watch-r)
 - [Samsung Gear Live](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
 - [Sony SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
