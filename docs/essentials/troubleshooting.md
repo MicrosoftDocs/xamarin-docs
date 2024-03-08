@@ -26,7 +26,4 @@ version of the dependency (in this case **Xamarin.Android.Support.Compat**) that
 
 To do this, add the NuGet that is the source of the conflict manually, and use the **Version** list to select a specific version. Currently version 28.0.0.3 of the Xamarin.Android.Support.Compat & Xamarin.Android.Support.Core.Util NuGet will resolve this error.
 
-Refer to [this blog post](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/)
-for more information and a video on how to resolve the issue.
-
 If run into any issues or find a bug please report it on the [Xamarin.Essentials GitHub repository](https://github.com/xamarin/Essentials).
