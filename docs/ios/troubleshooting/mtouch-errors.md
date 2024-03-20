@@ -1111,7 +1111,7 @@ Following this error there will be multiple [MT1036](#MT1036) errors listing the
 
 ### MT1036: Framework '{name}' included from: {path} (Related to previous error)
 
-This error is reported only together with [MT1036](#MT1036). Please see [MT1036](#MT1036) for more information.
+This error is reported only together with [MT1035](#MT1035). Please see [MT1035](#MT1035) for more information.
 
 ### MT11xx: Debug Service
 
