@@ -771,6 +771,11 @@ The Android activity to launch.
 
 ## AndroidLinkMode
 
+  > [!TIP]
+  > `AndroidLinkMode` is a legacy property. You should migrate to the
+  > new linker `PublishTrimmed` and `TrimMode` because the `AndroidLinkMode`
+  > setting will eventually be deprecated.
+
 Specifies which type of
 [linking](~/android/deploy-test/linker.md) should be
 performed on assemblies contained within the Android package. Only
